@@ -1,5 +1,9 @@
 # VisibilityChangeReason
 
+```TypeScript
+declare enum VisibilityChangeReason
+```
+
 NavDestination可见性发生变化的原因。
 
 **起始版本：** 21

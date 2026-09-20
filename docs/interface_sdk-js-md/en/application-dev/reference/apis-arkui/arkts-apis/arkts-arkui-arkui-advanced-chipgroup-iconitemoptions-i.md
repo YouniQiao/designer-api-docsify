@@ -1,5 +1,9 @@
 # IconItemOptions
 
+```TypeScript
+export interface IconItemOptions
+```
+
 Defines the trailing builder API, which is used to configure the display properties of the trailing icon and its background area.
 
 **Since:** 12

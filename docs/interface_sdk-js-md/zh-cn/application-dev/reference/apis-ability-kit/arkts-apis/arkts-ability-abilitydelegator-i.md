@@ -1,5 +1,9 @@
 # AbilityDelegator
 
+```TypeScript
+export interface AbilityDelegator
+```
+
 AbilityDelegator模块可以通过[AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例来监听和管理[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)生命周期的变化。例如获取UIAbility当前状态（如是否已创建/是否在前台等）、查询当前获焦的UIAbility、等待UIAbility进入某个生命周期节点（如等待UIAbility进入onForeground）、启动指定UIAbility、设置超时机制等功能。AbilityDelegator可以通过[getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md)方法获取。
 
 > **说明：** 
@@ -87,6 +91,8 @@ abilityDelegator.addAbilityMonitor(monitor).then(() => {
   console.info('addAbilityMonitor promise');
 });
 ```
+
+<a id="addabilitymonitor-1"></a>
 
 ## addAbilityMonitor
 
@@ -235,6 +241,8 @@ abilityDelegator.addAbilityStageMonitor({
   console.info('addAbilityStageMonitor promise');
 });
 ```
+
+<a id="addabilitystagemonitor-1"></a>
 
 ## addAbilityStageMonitor
 
@@ -420,6 +428,8 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+<a id="doabilitybackground-1"></a>
+
 ## doAbilityBackground
 
 ```TypeScript
@@ -535,6 +545,8 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+<a id="doabilityforeground-1"></a>
+
 ## doAbilityForeground
 
 ```TypeScript
@@ -646,6 +658,8 @@ abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
 });
 ```
 
+<a id="executeshellcommand-1"></a>
+
 ## executeShellCommand
 
 ```TypeScript
@@ -671,6 +685,8 @@ executeShellCommand(cmd: string, timeoutSecs: number, callback: AsyncCallback<Sh
 **示例**
 
 参见 [executeShellCommand](#executeshellcommand)
+
+<a id="executeshellcommand-2"></a>
 
 ## executeShellCommand
 
@@ -762,6 +778,8 @@ abilityDelegator.finishTest(msg, 0).then(() => {
   console.info('finishTest promise');
 });
 ```
+
+<a id="finishtest-1"></a>
 
 ## finishTest
 
@@ -950,6 +968,8 @@ abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
 });
 ```
 
+<a id="getcurrenttopability-1"></a>
+
 ## getCurrentTopAbility
 
 ```TypeScript
@@ -1031,6 +1051,8 @@ abilityDelegator.print(msg).then(() => {
   console.info('print promise');
 });
 ```
+
+<a id="print-1"></a>
 
 ## print
 
@@ -1174,6 +1196,8 @@ abilityDelegator.removeAbilityMonitor(monitor).then(() => {
   console.info('removeAbilityMonitor promise');
 });
 ```
+
+<a id="removeabilitymonitor-1"></a>
 
 ## removeAbilityMonitor
 
@@ -1322,6 +1346,8 @@ abilityDelegator.removeAbilityStageMonitor({
   console.info('removeAbilityStageMonitor promise');
 });
 ```
+
+<a id="removeabilitystagemonitor-1"></a>
 
 ## removeAbilityStageMonitor
 
@@ -1559,6 +1585,8 @@ abilityDelegator.startAbility(want).then((data: void) => {
 });
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -1718,6 +1746,8 @@ abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
 });
 ```
 
+<a id="waitabilitymonitor-1"></a>
+
 ## waitAbilityMonitor
 
 ```TypeScript
@@ -1750,6 +1780,8 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout: number, callback: AsyncCall
 **示例**
 
 参见 [waitAbilityMonitor](#waitabilitymonitor)
+
+<a id="waitabilitymonitor-2"></a>
 
 ## waitAbilityMonitor
 
@@ -1875,6 +1907,8 @@ abilityDelegator.waitAbilityStageMonitor({
 });
 ```
 
+<a id="waitabilitystagemonitor-1"></a>
+
 ## waitAbilityStageMonitor
 
 ```TypeScript
@@ -1907,6 +1941,8 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: number, callback:
 **示例**
 
 参见 [waitAbilityStageMonitor](#waitabilitystagemonitor)
+
+<a id="waitabilitystagemonitor-2"></a>
 
 ## waitAbilityStageMonitor
 

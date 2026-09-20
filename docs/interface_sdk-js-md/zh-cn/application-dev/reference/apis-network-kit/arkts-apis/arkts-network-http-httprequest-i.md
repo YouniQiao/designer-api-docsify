@@ -1,5 +1,9 @@
 # HttpRequest
 
+```TypeScript
+export interface HttpRequest
+```
+
 HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp()](arkts-network-http-createhttp-f.md)创建一个任务。
 
 **起始版本：** 6
@@ -536,6 +540,8 @@ promise.then((data:http.HttpResponse) => {
 });
 ```
 
+<a id="request-1"></a>
+
 ## request
 
 ```TypeScript
@@ -612,6 +618,8 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 **示例**
 
 参见 [request](#request)
+
+<a id="request-2"></a>
 
 ## request
 
@@ -834,6 +842,8 @@ promise.then((data: number) => {
 });
 ```
 
+<a id="requestinstream-1"></a>
+
 ## requestInStream
 
 ```TypeScript
@@ -900,6 +910,8 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 **示例**
 
 参见 [requestInStream](#requestinstream)
+
+<a id="requestinstream-2"></a>
 
 ## requestInStream
 

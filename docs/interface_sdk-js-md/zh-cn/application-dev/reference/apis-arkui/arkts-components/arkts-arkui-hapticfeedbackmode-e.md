@@ -1,5 +1,9 @@
 # HapticFeedbackMode
 
+```TypeScript
+declare enum HapticFeedbackMode
+```
+
 菜单弹出时振动效果。
 
 **起始版本：** 18

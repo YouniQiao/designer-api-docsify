@@ -1,5 +1,9 @@
 # TerminationInfo
 
+```TypeScript
+declare interface TerminationInfo
+```
+
 用于表示被拉起的EmbeddedUIExtensionAbility的返回结果。
 
 **起始版本：** 12

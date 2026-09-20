@@ -1,5 +1,9 @@
 # TouchObject
 
+```TypeScript
+declare interface TouchObject
+```
+
 Type of the touch event.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # CommonOptions
 
+```TypeScript
+declare class CommonOptions
+```
+
 Defines the common attributes and events of the **Counter** component.
 
 **Since:** 11

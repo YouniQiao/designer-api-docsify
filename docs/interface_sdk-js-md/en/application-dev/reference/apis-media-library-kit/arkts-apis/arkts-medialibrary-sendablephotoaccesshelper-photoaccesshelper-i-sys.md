@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper extends lang.ISendable
+```
+
 Helper functions to access photos and albums.
 
 **Inheritance/Implementation:** PhotoAccessHelper extends lang.ISendable
@@ -72,6 +76,8 @@ For details about how to create a phAccessHelper instance, see the example provi
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 ```
+
+<a id="createasset-1"></a>
 
 ## createAsset
 

@@ -1,5 +1,9 @@
 # SwipeGestureHandlerOptions
 
+```TypeScript
+interface SwipeGestureHandlerOptions extends BaseHandlerOptions
+```
+
 Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

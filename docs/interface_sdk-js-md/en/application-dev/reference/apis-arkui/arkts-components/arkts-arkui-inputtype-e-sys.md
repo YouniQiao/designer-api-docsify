@@ -1,5 +1,9 @@
 # InputType
 
+```TypeScript
+declare enum InputType
+```
+
 Sets the single-line text box type.
 
 **Since:** 7

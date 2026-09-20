@@ -1,5 +1,9 @@
 # IntelligentTrackingPreventionDetails
 
+```TypeScript
+declare interface IntelligentTrackingPreventionDetails
+```
+
 提供智能防跟踪拦截的详细信息，包括网站域名和追踪者域名。适用于需要监控广告拦截行为的场景，提升隐私保护的透明度和可控性。
 
 **起始版本：** 12

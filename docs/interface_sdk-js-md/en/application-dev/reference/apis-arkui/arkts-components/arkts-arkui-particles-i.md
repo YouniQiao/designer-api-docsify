@@ -1,5 +1,17 @@
 # Particles
 
+```TypeScript
+interface Particles<
+  PARTICLE extends ParticleType,
+  COLOR_UPDATER extends ParticleUpdater,
+  OPACITY_UPDATER extends ParticleUpdater,
+  SCALE_UPDATER extends ParticleUpdater,
+  ACC_SPEED_UPDATER extends ParticleUpdater,
+  ACC_ANGLE_UPDATER extends ParticleUpdater,
+  SPIN_UPDATER extends ParticleUpdater
+>
+```
+
 Defines the particle array.
 
 > **NOTE:** 

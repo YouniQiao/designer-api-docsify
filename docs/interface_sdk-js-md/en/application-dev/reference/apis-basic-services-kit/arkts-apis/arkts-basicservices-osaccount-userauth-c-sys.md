@@ -1,5 +1,9 @@
 # UserAuth (System API)
 
+```TypeScript
+class UserAuth
+```
+
 Provides APIs for user authentication.
 
 **Since:** 8
@@ -121,6 +125,8 @@ try {
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="auth-1"></a>
 
 ## auth
 
@@ -547,6 +553,8 @@ try {
 }
 ```
 
+<a id="getproperty-1"></a>
+
 ## getProperty
 
 ```TypeScript
@@ -846,6 +854,8 @@ try {
   console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setproperty-1"></a>
 
 ## setProperty
 

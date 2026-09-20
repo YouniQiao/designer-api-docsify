@@ -1,5 +1,9 @@
 # SwipeGestureHandler
 
+```TypeScript
+declare class SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>
+```
+
 快滑手势处理器对象类型。
 
 **继承/实现关系：** SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>

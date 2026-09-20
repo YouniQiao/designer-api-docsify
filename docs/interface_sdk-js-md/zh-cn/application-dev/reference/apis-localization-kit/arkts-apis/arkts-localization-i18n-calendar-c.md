@@ -1,5 +1,9 @@
 # Calendar
 
+```TypeScript
+export class Calendar
+```
+
 提供历法相关的能力，包括历法名称获取和日期计算等。
 
 **起始版本：** 7
@@ -463,6 +467,8 @@ import { i18n } from '@kit.LocalizationKit';
 let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
 calendar.setTime(10540800000);
 ```
+
+<a id="settime-1"></a>
 
 ## setTime
 

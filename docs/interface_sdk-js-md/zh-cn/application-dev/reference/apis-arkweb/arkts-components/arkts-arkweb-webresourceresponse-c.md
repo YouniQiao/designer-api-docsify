@@ -1,5 +1,9 @@
 # WebResourceResponse
 
+```TypeScript
+declare class WebResourceResponse
+```
+
 WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源响应的类。它在onHttpErrorReceive等事件中向应用提供服务器返回响应的状态码、状态描述、响应头、响应数据、编码、MIME类型等信息；在资源请求拦截场景中允许应用自定义响应的状态码、状态描述、响应头、响应数据、编码、MIME类型及数据就绪状态，从而由应用接管特定资源的返回内容。示例代码参考[onHttpErrorReceive事件](arkts-arkweb-web-comp-attribute.md#onhttperrorreceive)。
 
 **起始版本：** 8
@@ -86,7 +90,7 @@ getResponseData(): string
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-获取资源响应数据，支持多种数据类型。与getResponseData相比，该方法支持返回number（文件句柄）、ArrayBuffer（二进制数据）、Resource（&#36;rawfile资源）等多种类型，建议在需要灵活数据类型支持时优先使用。
+获取资源响应数据，支持多种数据类型。与getResponseData相比，该方法支持返回number（文件句柄）、ArrayBuffer（二进制数据）、Resource（$rawfile资源）等多种类型，建议在需要灵活数据类型支持时优先使用。
 
 **起始版本：** 13
 
@@ -96,7 +100,7 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`&#36;rawfile`资源。 如果没有可用数据，返回`undefined`。 |
+| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | string返回HTML格式的字符串。 number返回文件句柄。 ArrayBuffer返回二进制数据。 Resource返回`$rawfile`资源。 如果没有可用数据，返回`undefined`。 |
 
 ## getResponseEncoding
 

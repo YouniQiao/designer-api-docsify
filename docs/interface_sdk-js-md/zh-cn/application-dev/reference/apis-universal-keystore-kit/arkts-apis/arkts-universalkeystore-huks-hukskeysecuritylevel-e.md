@@ -1,5 +1,9 @@
 # HuksKeySecurityLevel
 
+```TypeScript
+export enum HuksKeySecurityLevel
+```
+
 表示密钥安全级别的枚举。
 
 **起始版本：** 26.0.0

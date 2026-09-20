@@ -1,5 +1,9 @@
 # AutoSaveCallback
 
+```TypeScript
+export interface AutoSaveCallback
+```
+
 Implements callbacks triggered when auto-save is complete.
 
 **Since:** 11

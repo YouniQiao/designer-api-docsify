@@ -1,5 +1,9 @@
 # TextMenuItemId
 
+```TypeScript
+declare class TextMenuItemId
+```
+
 Defines the unique identifier for a custom menu item. It is used to identify menu items. The IDs for built-in menu items are listed in the table below.
 
 **Since:** 12

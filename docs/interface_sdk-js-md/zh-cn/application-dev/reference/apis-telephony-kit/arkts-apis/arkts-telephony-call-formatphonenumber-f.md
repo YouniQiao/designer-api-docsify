@@ -81,6 +81,8 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 ```
 
 
+<a id="formatphonenumber-1"></a>
+
 ## formatPhoneNumber
 
 ```TypeScript
@@ -122,6 +124,8 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 
 参见 [formatPhoneNumber](#formatphonenumber)
 
+
+<a id="formatphonenumber-2"></a>
 
 ## formatPhoneNumber
 

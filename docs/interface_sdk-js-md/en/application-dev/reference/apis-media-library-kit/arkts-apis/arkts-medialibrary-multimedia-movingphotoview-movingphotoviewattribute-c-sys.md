@@ -1,5 +1,9 @@
 # MovingPhotoViewAttribute
 
+```TypeScript
+declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>
+```
+
 Defines the moving photo view attribute functions.
 
 @extends CommonMethod&lt;MovingPhotoViewAttribute&gt;

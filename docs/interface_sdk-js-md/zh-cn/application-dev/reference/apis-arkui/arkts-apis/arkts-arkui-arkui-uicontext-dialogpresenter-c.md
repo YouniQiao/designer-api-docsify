@@ -1,5 +1,9 @@
 # DialogPresenter
 
+```TypeScript
+export class DialogPresenter
+```
+
 提供统一的Dialog API，可创建并显示固定样式弹出框、自定义样式弹出框，并支持更新与关闭弹出框。适用于应用中需要弹出提示、确认、选择等弹出框交互的场景。
 
 > **说明：** 
@@ -90,6 +94,8 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 | --- | --- |
 | [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
 | [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
+
+<a id="present-1"></a>
 
 ## present
 

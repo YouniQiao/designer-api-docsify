@@ -1,5 +1,9 @@
 # TextBlob
 
+```TypeScript
+class TextBlob
+```
+
 TextBlob是由一个或多个具有相同字型的字符组成的字块。支持通过文本、字符串、RunBuffer等多种方式创建字形集合，适用于需要批量渲染文本或获取文字边界框的场景。
 
 > **说明：** 

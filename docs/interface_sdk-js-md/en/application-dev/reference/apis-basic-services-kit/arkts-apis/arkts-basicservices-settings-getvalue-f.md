@@ -97,6 +97,8 @@ settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value
 ```
 
 
+<a id="getvalue-1"></a>
+
 ## getValue
 
 ```TypeScript
@@ -133,6 +135,8 @@ Obtains the value of a specified character string in the database.
 See [getValue](#getvalue)
 
 
+<a id="getvalue-2"></a>
+
 ## getValue
 
 ```TypeScript
@@ -159,6 +163,8 @@ Get value from settingsdata
 
 See [getValue](#getvalue)
 
+
+<a id="getvalue-3"></a>
 
 ## getValue
 
@@ -191,6 +197,8 @@ Get value from settingsdata
 
 See [getValue](#getvalue)
 
+
+<a id="getvalue-4"></a>
 
 ## getValue
 

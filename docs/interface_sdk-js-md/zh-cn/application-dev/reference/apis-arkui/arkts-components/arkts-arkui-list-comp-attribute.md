@@ -1,5 +1,9 @@
 # List属性/事件
 
+```TypeScript
+declare class ListAttribute extends ScrollableCommonMethod<ListAttribute>
+```
+
 除支持通用属性和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还支持以下属性：
 
 除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
@@ -80,6 +84,8 @@ List下嵌套使用LazyForEach，并且LazyForEach下嵌套使用ListItemGroup�
 | --- | --- | --- | --- |
 | value | number | 是 | ListItem/ListItemGroup的预加载数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
 
+<a id="cachedcount-1"></a>
+
 ## cachedCount
 
 ```TypeScript
@@ -111,6 +117,8 @@ List设置cachedCount后，显示区域外上下各会预加载并布局cachedCo
 | --- | --- | --- | --- |
 | count | number | 是 | 列表的预加载行数。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。 <br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
 | show | boolean | 是 | 被预加载的ListItem/ListItemGroup是否需要显示。设置为true时显示预加载的ListItem/ListItemGroup，设置为false时不显示预加载的ListItem/ListItemGroup。<br> 默认值：false |
+
+<a id="cachedcount-2"></a>
 
 ## cachedCount
 
@@ -239,6 +247,8 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 | --- | --- | --- | --- |
 | value | number | 是 | 内容区末尾偏移量。<br>默认值：0<br>单位：vp <br>**说明：** <br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
 
+<a id="contentendoffset-1"></a>
+
 ## contentEndOffset
 
 ```TypeScript
@@ -286,6 +296,8 @@ contentStartOffset + contentEndOffset超过List内容区长度后contentStartOff
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 内容区域起始偏移量。<br>默认值：0<br>单位：vp <br>**说明：** <br>设置为负数时，按默认值处理。<br>取值范围：[0, +∞) |
+
+<a id="contentstartoffset-1"></a>
 
 ## contentStartOffset
 
@@ -534,6 +546,8 @@ lanes(value: number | LengthConstrain, gutter?: Dimension)
 | --- | --- | --- | --- |
 | value | number &#124; LengthConstrain | 是 | List组件的布局列数或行数。<br>默认值：1 <br>取值范围：[1, +∞)，传入小于1的值时按默认值处理。 |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 否 | 列间距或行间距。<br>默认值：0<br>参数类型为number时单位为vp。<br>取值范围：[0, +∞)，传入负值时按默认值处理。<br>**说明：** <br>gutter为列间距或行间距，当列数或行数大于1时生效。<br><br>**适用版本：** 10 |
+
+<a id="lanes-1"></a>
 
 ## lanes
 

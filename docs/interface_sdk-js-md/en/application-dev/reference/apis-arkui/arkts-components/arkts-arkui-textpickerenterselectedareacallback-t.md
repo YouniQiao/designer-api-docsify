@@ -1,7 +1,7 @@
 # TextPickerEnterSelectedAreaCallback
 
 ```TypeScript
-declare type TextPickerEnterSelectedAreaCallback = (value: string | string[], index: number | number[]) => void
+declare type TextPickerEnterSelectedAreaCallback = (value: string[], index: number[]) => void
 ```
 
 Defines the **onEnterSelectedArea** event callback signature.

@@ -1,5 +1,9 @@
 # NavigationToolbarOptions
 
+```TypeScript
+declare interface NavigationToolbarOptions
+```
+
 Defines the toolbar options.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # UserAuth（系统接口）
 
+```TypeScript
+class UserAuth
+```
+
 用户认证类。
 
 **起始版本：** 8
@@ -75,7 +79,7 @@ auth(
 | [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
 | 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
-| 12300211 | Server unreachable.<br>**适用版本：** 12+ |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -121,6 +125,8 @@ try {
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="auth-1"></a>
 
 ## auth
 
@@ -186,7 +192,7 @@ auth(
 | [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired. |
 | 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -297,7 +303,7 @@ authUser(
 | [12300117](../errorcode-account.md#12300117-pin码过期) | PIN is expired.<br>**适用版本：** 12+ |
 | 12300119 | Multi-factor authentication failed.<br>**适用版本：** 20+ |
 | [12300120](../errorcode-account.md#12300120-凭据已失效) | The credentials are no longer valid.<br>**适用版本：** 23+ |
-| 12300211 | Server unreachable.<br>**适用版本：** 12+ |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable.<br>**适用版本：** 12+ |
 
 **示例**
 
@@ -546,6 +552,8 @@ try {
   console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getproperty-1"></a>
 
 ## getProperty
 
@@ -846,6 +854,8 @@ try {
   console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setproperty-1"></a>
 
 ## setProperty
 

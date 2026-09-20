@@ -1,5 +1,9 @@
 # IndicatorComponentController
 
+```TypeScript
+declare class IndicatorComponentController
+```
+
 Provides methods for switching components.
 
 **Since:** 15

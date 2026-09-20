@@ -1,5 +1,9 @@
 # ChildProcessArgs
 
+```TypeScript
+export interface ChildProcessArgs
+```
+
 The module describes the parameters transferred to the child process. When starting a child process through [childProcessManager](arkts-ability-app-ability-childprocessmanager.md), you can transfer parameters to the child process through **ChildProcessArgs**.
 
 **Since:** 12

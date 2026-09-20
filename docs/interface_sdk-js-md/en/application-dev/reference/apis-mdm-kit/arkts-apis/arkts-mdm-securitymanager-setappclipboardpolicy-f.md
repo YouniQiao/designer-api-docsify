@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="setappclipboardpolicy-1"></a>
+
 ## setAppClipboardPolicy
 
 ```TypeScript

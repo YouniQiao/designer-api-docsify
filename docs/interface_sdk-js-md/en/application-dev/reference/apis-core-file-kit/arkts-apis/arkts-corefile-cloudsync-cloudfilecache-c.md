@@ -1,5 +1,9 @@
 # CloudFileCache
 
+```TypeScript
+class CloudFileCache
+```
+
 Provides APIs for the file manager application to download files from the Drive Kit to a local device.
 
 **Since:** 11
@@ -156,6 +160,8 @@ Removes the specified callback from the device-cloud file cache progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -207,6 +213,8 @@ Registers a listener for the download progress of a file from the Drive Kit.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -310,6 +318,8 @@ fileCache.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="start-1"></a>
 
 ## start
 
@@ -512,6 +522,8 @@ fileCache.stop(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

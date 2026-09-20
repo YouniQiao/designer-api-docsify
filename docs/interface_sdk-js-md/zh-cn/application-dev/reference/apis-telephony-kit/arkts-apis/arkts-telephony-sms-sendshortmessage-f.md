@@ -108,6 +108,8 @@ promise.then(() => {
 ```
 
 
+<a id="sendshortmessage-1"></a>
+
 ## sendShortMessage
 
 ```TypeScript

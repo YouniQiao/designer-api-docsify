@@ -1,5 +1,9 @@
 # NavigationInterception
 
+```TypeScript
+declare interface NavigationInterception
+```
+
 Navigation跳转拦截对象。
 
 ## InterceptionShowCallback<sup>12+</sup>

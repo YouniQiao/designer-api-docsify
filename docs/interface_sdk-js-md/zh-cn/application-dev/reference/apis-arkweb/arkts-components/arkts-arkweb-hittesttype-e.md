@@ -1,5 +1,9 @@
 # HitTestType
 
+```TypeScript
+declare enum HitTestType
+```
+
 点击事件检测结果类型。
 
 **起始版本：** 8

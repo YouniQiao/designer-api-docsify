@@ -1,5 +1,9 @@
 # LazyGridLayoutAttribute
 
+```TypeScript
+declare class LazyGridLayoutAttribute<T> extends CommonMethod<T>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：

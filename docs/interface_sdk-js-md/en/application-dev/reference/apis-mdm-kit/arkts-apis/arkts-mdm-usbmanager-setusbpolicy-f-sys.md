@@ -88,6 +88,8 @@ usbManager.setUsbPolicy(wantTemp, policy).then(() => {
 ```
 
 
+<a id="setusbpolicy-1"></a>
+
 ## setUsbPolicy
 
 ```TypeScript

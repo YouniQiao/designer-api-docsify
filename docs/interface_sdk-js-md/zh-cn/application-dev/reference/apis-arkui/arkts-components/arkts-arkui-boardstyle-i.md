@@ -1,5 +1,9 @@
 # BoardStyle
 
+```TypeScript
+interface BoardStyle
+```
+
 背板风格对象。
 
 **起始版本：** 10

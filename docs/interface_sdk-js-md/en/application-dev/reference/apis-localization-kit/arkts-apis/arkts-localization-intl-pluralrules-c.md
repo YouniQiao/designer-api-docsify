@@ -1,5 +1,9 @@
 # PluralRules
 
+```TypeScript
+export class PluralRules
+```
+
 Provides the capability for obtaining the plural rule type.
 
 **Since:** 8
@@ -49,6 +53,8 @@ import { intl } from '@kit.LocalizationKit';
 // Create a PluralRules object with the locale ID being zh-CN, localeMatcher being lookup, and type being cardinal.
 let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

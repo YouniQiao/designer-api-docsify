@@ -1,5 +1,9 @@
 # P2pServiceProtocolType
 
+```TypeScript
+enum P2pServiceProtocolType
+```
+
 Enumerates the P2P service protocol types.
 
 **Since:** 26.0.1

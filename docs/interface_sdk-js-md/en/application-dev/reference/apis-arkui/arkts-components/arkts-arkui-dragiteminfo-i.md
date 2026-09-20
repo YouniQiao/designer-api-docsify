@@ -1,5 +1,9 @@
 # DragItemInfo
 
+```TypeScript
+declare interface DragItemInfo
+```
+
 Defines the information about the dragged item during drag.
 
 **Since:** 8

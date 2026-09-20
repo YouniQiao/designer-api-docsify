@@ -1,5 +1,9 @@
 # ListScroller
 
+```TypeScript
+declare class ListScroller extends Scroller
+```
+
 Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # ShowToastOptions
 
+```TypeScript
+export interface ShowToastOptions
+```
+
 Defines the options of ShowToast.
 
 @interface ShowToastOptions

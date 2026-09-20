@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="setpointersize-1"></a>
+
 ## setPointerSize
 
 ```TypeScript

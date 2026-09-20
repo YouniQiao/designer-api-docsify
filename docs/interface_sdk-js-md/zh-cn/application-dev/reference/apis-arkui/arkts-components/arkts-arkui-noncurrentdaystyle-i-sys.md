@@ -1,5 +1,9 @@
 # NonCurrentDayStyle（系统接口）
 
+```TypeScript
+interface NonCurrentDayStyle
+```
+
 Non current day style.
 
 **起始版本：** 7

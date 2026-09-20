@@ -89,6 +89,8 @@ try {
 ```
 
 
+<a id="updatecontinuationstate-1"></a>
+
 ## updateContinuationState
 
 ```TypeScript

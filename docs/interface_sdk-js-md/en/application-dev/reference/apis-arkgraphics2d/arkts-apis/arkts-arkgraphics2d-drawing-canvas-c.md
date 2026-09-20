@@ -1,5 +1,9 @@
 # Canvas
 
+```TypeScript
+class Canvas
+```
+
 A carrier that carries the drawn content and drawing status.
 
 > **NOTE:** 
@@ -103,6 +107,8 @@ Clears the canvas with a given color. This API has the same effect as [drawColor
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -421,6 +427,8 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="drawcolor-1"></a>
+
 ## drawColor
 
 ```TypeScript
@@ -448,6 +456,8 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="drawcolor-2"></a>
 
 ## drawColor
 
@@ -873,6 +883,8 @@ Draws a rectangle. By default, black is used for filling.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
+<a id="drawrect-1"></a>
+
 ## drawRect
 
 ```TypeScript
@@ -978,6 +990,8 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="drawshadow-1"></a>
 
 ## drawShadow
 

@@ -1,5 +1,9 @@
 # Particle properties/events
 
+```TypeScript
+declare class ParticleAttribute extends CommonMethod<ParticleAttribute>
+```
+
 Defines the Particle component attribute functions.
 
 @extends CommonMethod&lt;ParticleAttribute&gt;

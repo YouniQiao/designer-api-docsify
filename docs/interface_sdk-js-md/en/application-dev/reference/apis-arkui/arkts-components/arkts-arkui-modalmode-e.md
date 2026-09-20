@@ -1,5 +1,9 @@
 # ModalMode
 
+```TypeScript
+declare enum ModalMode
+```
+
 Enumerates modal modes of the sub-window menu.
 
 **Since:** 20

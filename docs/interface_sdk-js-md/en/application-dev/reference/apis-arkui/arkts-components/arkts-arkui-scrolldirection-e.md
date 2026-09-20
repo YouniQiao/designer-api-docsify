@@ -1,5 +1,9 @@
 # ScrollDirection
 
+```TypeScript
+declare enum ScrollDirection
+```
+
 Enumerates the scrolling directions.
 
 **Since:** 7

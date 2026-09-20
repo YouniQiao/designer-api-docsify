@@ -1,5 +1,9 @@
 # NavRouter properties/events
 
+```TypeScript
+declare class NavRouterAttribute extends CommonMethod<NavRouterAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** NavRouterAttribute extends CommonMethod<NavRouterAttribute>

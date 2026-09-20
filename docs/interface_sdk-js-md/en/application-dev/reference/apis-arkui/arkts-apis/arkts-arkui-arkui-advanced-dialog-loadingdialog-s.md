@@ -1,5 +1,9 @@
 # LoadingDialog
 
+```TypeScript
+export declare struct LoadingDialog
+```
+
 Declare CustomDialog LoadingDialog
 
 **Since:** 18

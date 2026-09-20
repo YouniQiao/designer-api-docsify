@@ -81,6 +81,8 @@ statfs.getFreeSize(path, (err: BusinessError, number: number) => {
 ```
 
 
+<a id="getfreesize-1"></a>
+
 ## getFreeSize
 
 ```TypeScript

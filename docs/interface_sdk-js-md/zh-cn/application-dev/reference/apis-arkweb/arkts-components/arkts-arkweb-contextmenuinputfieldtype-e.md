@@ -1,5 +1,9 @@
 # ContextMenuInputFieldType
 
+```TypeScript
+declare enum ContextMenuInputFieldType
+```
+
 输入框类型。
 
 **起始版本：** 9

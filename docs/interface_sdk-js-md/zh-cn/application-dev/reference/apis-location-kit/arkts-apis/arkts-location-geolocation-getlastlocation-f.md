@@ -52,6 +52,8 @@ geolocation.getLastLocation().then((result) => {
 ```
 
 
+<a id="getlastlocation-1"></a>
+
 ## getLastLocation
 
 ```TypeScript

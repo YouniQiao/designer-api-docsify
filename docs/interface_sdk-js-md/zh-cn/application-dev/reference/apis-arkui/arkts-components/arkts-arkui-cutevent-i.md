@@ -1,5 +1,9 @@
 # CutEvent
 
+```TypeScript
+declare interface CutEvent
+```
+
 定义用户剪切事件。
 
 **起始版本：** 12

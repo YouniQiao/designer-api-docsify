@@ -1,5 +1,9 @@
 # HttpInterceptor
 
+```TypeScript
+export interface HttpInterceptor
+```
+
 Defines the HTTP interceptor API, which is used to define the interception processing function.
 
 **Since:** 22

@@ -1,5 +1,9 @@
 # AddressSanitizerPolicy
 
+```TypeScript
+interface AddressSanitizerPolicy
+```
+
 提供地址越界事件配置策略的定义。
 
 **起始版本：** 24

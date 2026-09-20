@@ -1,5 +1,9 @@
 # ImageAnimator properties/events
 
+```TypeScript
+declare class ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.

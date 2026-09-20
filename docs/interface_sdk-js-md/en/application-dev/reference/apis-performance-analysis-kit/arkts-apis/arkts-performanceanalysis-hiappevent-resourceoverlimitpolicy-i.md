@@ -1,5 +1,9 @@
 # ResourceOverlimitPolicy
 
+```TypeScript
+interface ResourceOverlimitPolicy
+```
+
 Defines the resource leak event configuration policy.
 
 **Since:** 24

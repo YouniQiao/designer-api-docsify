@@ -1,5 +1,9 @@
 # CanvasRenderingContext2D
 
+```TypeScript
+declare class CanvasRenderingContext2D extends CanvasRenderer
+```
+
 **CanvasRenderingContext2D** is the 2D drawing context object of the **Canvas** component, used for custom drawing on the **Canvas** component. It supports drawing shapes (rectangles, circles, ellipses, paths, etc.), text, images, gradients, shadows, and many other drawing types, and is suitable for scenarios such as data visualization, game development, image editing, and custom UI drawing. With this object, developers can flexibly control the drawing process to achieve complex 2D graphic effects.
 
 > **NOTE:** 
@@ -52,6 +56,8 @@ Constructs a canvas object, which supports configuration of parameters for the *
 ```TypeScript
 The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

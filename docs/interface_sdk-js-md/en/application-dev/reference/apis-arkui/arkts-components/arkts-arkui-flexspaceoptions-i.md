@@ -1,5 +1,9 @@
 # FlexSpaceOptions
 
+```TypeScript
+declare interface FlexSpaceOptions
+```
+
 Sets the spacing between child components along the main axis or cross axis of the **Flex** component.
 
 **Since:** 12

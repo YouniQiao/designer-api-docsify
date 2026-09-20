@@ -1,10 +1,16 @@
 # Scene
 
+```TypeScript
+export declare class Scene
+```
+
 用于设置场景。Scene采用树状层次结构组织场景节点，根节点（root）作为场景的入口。
 
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
+
+<a id="load-1"></a>
 
 ## load
 

@@ -1,5 +1,9 @@
 # PopupStateChangeParam
 
+```TypeScript
+declare interface PopupStateChangeParam
+```
+
 气泡的显示状态。
 
 @interface PopupStateChangeParam

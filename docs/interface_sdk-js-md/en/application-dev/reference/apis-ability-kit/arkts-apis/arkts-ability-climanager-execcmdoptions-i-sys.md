@@ -1,5 +1,9 @@
 # ExecCmdOptions (System API)
 
+```TypeScript
+interface ExecCmdOptions
+```
+
 Options for executing a command.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # MenuItemGroup属性/事件
 
+```TypeScript
+declare class MenuItemGroupAttribute extends CommonMethod<MenuItemGroupAttribute>
+```
+
 **继承/实现关系：** MenuItemGroupAttribute extends CommonMethod<MenuItemGroupAttribute>
 
 **起始版本：** 9

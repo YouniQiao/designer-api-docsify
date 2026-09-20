@@ -1,5 +1,9 @@
 # AudioLoopbackStatus
 
+```TypeScript
+enum AudioLoopbackStatus
+```
+
 表示返听状态的枚举。
 
 @enum { int }

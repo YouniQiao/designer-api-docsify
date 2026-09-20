@@ -1,5 +1,9 @@
 # ReusableMemOptStrategy
 
+```TypeScript
+declare enum ReusableMemOptStrategy
+```
+
 Defines a type for memory optimization strategy.
 
 @enum { number }

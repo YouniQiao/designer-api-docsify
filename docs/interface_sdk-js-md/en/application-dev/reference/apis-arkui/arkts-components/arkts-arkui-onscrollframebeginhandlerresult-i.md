@@ -1,5 +1,9 @@
 # OnScrollFrameBeginHandlerResult
 
+```TypeScript
+interface OnScrollFrameBeginHandlerResult
+```
+
 The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 18

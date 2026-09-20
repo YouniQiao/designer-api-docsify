@@ -1,5 +1,9 @@
 # SecureSession
 
+```TypeScript
+interface SecureSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom
+```
+
 **SecureSession** inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), and [Zoom](arkts-camera-camera-zoom-i.md).
 
 It implements a secure session, which provides operations on the flash, exposure, white balance, focus, and zoom.

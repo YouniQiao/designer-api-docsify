@@ -1,5 +1,9 @@
 # CounterType
 
+```TypeScript
+declare enum CounterType
+```
+
 Enumerates counter types.
 
 **Since:** 11

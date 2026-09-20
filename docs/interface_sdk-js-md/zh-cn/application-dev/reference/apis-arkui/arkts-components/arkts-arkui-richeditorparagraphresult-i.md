@@ -1,5 +1,9 @@
 # RichEditorParagraphResult
 
+```TypeScript
+declare interface RichEditorParagraphResult
+```
+
 后端返回的段落信息。
 
 **起始版本：** 11

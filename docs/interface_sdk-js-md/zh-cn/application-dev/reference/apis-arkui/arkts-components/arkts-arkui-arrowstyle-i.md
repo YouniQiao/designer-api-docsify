@@ -1,5 +1,9 @@
 # ArrowStyle
 
+```TypeScript
+declare interface ArrowStyle
+```
+
 左右箭头属性。
 
 **起始版本：** 10

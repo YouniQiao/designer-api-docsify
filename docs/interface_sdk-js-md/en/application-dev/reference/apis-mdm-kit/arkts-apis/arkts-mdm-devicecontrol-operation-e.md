@@ -1,5 +1,9 @@
 # Operation
 
+```TypeScript
+enum Operation
+```
+
 Defines the device operation.
 
 **Since:** 26.0.0

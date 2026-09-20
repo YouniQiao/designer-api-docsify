@@ -1,5 +1,9 @@
 # ReplaceEffectType
 
+```TypeScript
+declare enum ReplaceEffectType
+```
+
 替换动效类型的枚举值。
 
 **起始版本：** 20

@@ -1,5 +1,9 @@
 # PhotoViewPicker
 
+```TypeScript
+class PhotoViewPicker
+```
+
 图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用[PhotoAccessHelper的PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)。在使用前，需要先创建PhotoViewPicker实例。
 
 **起始版本：** 9
@@ -63,6 +67,8 @@ struct Index {
 ```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -211,6 +217,8 @@ async function example06(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -300,6 +308,8 @@ async function example06(context: common.UIAbilityContext) { // 需确保 contex
   }
 }
 ```
+
+<a id="save-2"></a>
 
 ## save
 
@@ -489,6 +499,8 @@ async function example03(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+<a id="select-1"></a>
+
 ## select
 
 ```TypeScript
@@ -501,7 +513,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-1)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -583,6 +595,8 @@ async function example03(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+<a id="select-2"></a>
+
 ## select
 
 ```TypeScript
@@ -595,7 +609,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

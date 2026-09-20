@@ -1,5 +1,9 @@
 # OnSearchResultReceiveEvent
 
+```TypeScript
+declare interface OnSearchResultReceiveEvent
+```
+
 定义网页页内查找结果的回调信息，包括匹配项序号和总数。适用于需要监控页内搜索行为的场景，提升搜索交互的可见性和用户体验。
 
 **起始版本：** 12

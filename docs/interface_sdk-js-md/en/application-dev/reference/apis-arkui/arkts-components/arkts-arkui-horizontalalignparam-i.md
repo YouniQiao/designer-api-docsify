@@ -1,5 +1,9 @@
 # HorizontalAlignParam
 
+```TypeScript
+declare interface HorizontalAlignParam
+```
+
 Defines the horizontal align rule of relative container.
 
 @interface HorizontalAlignParam

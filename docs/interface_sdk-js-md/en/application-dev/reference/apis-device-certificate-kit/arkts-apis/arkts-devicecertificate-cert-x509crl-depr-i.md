@@ -1,5 +1,9 @@
 # X509Crl
 
+```TypeScript
+interface X509Crl
+```
+
 Provides APIs for X.509 CRL operations.
 
 > **NOTE:** 
@@ -143,6 +147,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 
@@ -723,6 +729,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getrevokedcerts-1"></a>
 
 ## getRevokedCerts
 
@@ -1906,6 +1914,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
 });
 ```
 
+<a id="verify-1"></a>
+
 ## verify
 
 ```TypeScript
@@ -1917,7 +1927,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 > **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
-> [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify) instead.
+> [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify-1) instead.
 
 **Since:** 9
 

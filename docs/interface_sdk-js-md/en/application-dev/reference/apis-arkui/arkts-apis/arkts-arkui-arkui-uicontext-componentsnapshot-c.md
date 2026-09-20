@@ -1,5 +1,9 @@
 # ComponentSnapshot
 
+```TypeScript
+export class ComponentSnapshot
+```
+
 Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
 
 > **NOTE:** 
@@ -65,6 +69,8 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
 | [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 | [160004](../errorcode-snapshot.md#160004-offscreen-node-screenshot-does-not-support-setting-the-isauto-parameter-of-color-space-or-dynamic-range-mode-to-true) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
+
+<a id="createfrombuilder-1"></a>
 
 ## createFromBuilder
 
@@ -192,6 +198,8 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+
+<a id="get-1"></a>
 
 ## get
 

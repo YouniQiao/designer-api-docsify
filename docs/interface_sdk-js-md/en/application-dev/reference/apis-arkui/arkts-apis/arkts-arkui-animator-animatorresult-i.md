@@ -1,5 +1,9 @@
 # AnimatorResult
 
+```TypeScript
+export interface AnimatorResult
+```
+
 Defines the animator result.
 
 **Since:** 6
@@ -319,6 +323,8 @@ struct AnimatorTest {
 ```TypeScript
 See ArkTS-based Declarative Development Paradigm.
 ```
+
+<a id="reset-1"></a>
 
 ## reset
 

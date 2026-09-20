@@ -1,5 +1,9 @@
 # ScrollbarLayoutPolicy
 
+```TypeScript
+declare enum ScrollbarLayoutPolicy
+```
+
 Defines the enumeration type for scrollbar layout mode control parameters.
 
 **Since:** 26.0.0

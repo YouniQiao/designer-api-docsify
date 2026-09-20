@@ -84,6 +84,8 @@ bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
 ```
 
 
+<a id="getapplicationinfo-1"></a>
+
 ## getApplicationInfo
 
 ```TypeScript
@@ -114,6 +116,8 @@ No permission is required for obtaining the caller's own information.
 
 See [getApplicationInfo](#getapplicationinfo)
 
+
+<a id="getapplicationinfo-2"></a>
 
 ## getApplicationInfo
 

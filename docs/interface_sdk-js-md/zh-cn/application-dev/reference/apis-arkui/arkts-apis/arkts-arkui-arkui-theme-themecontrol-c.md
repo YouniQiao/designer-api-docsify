@@ -1,5 +1,9 @@
 # ThemeControl
 
+```TypeScript
+export declare class ThemeControl
+```
+
 ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随Theme切换。
 
 **起始版本：** 12

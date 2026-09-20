@@ -1,5 +1,9 @@
 # CalendarDay (System API)
 
+```TypeScript
+interface CalendarDay
+```
+
 Provides a monthly view component to display information such as date, shift break, and schedule.
 
 **Since:** 7

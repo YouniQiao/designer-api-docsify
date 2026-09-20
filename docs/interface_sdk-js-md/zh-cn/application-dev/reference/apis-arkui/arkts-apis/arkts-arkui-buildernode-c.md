@@ -1,5 +1,9 @@
 # BuilderNode
 
+```TypeScript
+export class BuilderNode<Args extends Object[]>
+```
+
 提供能够挂载系统组件的自定义节点BuilderNode。BuilderNode仅可作为叶子节点使用，支持通过@Builder生成组件树、实现组件复用与回收、跨节点事件分发以及状态同步，适用于在应用内动态创建和管理自定义组件节点的场景。使用方式参考[BuilderNode开发指南](../../../ui/arkts-user-defined-arktsNode-builderNode.md)。
 
 与BuilderNode相比，ReactiveBuilderNode能通过多参数的无状态UI方法@Builder生成组件树，适用于需要多参数数据绑定和响应式UI动态更新的场景。
@@ -129,6 +133,8 @@ struct Index {
   }
 }
 ```
+
+<a id="build-1"></a>
 
 ## build
 

@@ -1,5 +1,9 @@
 # DepthSpaceType (System API)
 
+```TypeScript
+declare enum DepthSpaceType
+```
+
 Depth space type enumeration.
 
 @enum { number }

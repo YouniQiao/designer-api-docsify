@@ -1,5 +1,9 @@
 # PromptAction
 
+```TypeScript
+export class PromptAction
+```
+
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
 
 > **NOTE:** 
@@ -57,6 +61,8 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
+
+<a id="closecustomdialog-1"></a>
 
 ## closeCustomDialog
 
@@ -271,6 +277,8 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
+
+<a id="opencustomdialog-1"></a>
 
 ## openCustomDialog
 
@@ -558,6 +566,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
+<a id="showactionmenu-1"></a>
+
 ## showActionMenu
 
 ```TypeScript
@@ -587,6 +597,8 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+<a id="showactionmenu-2"></a>
 
 ## showActionMenu
 
@@ -652,6 +664,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+<a id="showdialog-1"></a>
 
 ## showDialog
 

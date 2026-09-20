@@ -1,5 +1,9 @@
 # ContentTransitionEffect
 
+```TypeScript
+declare class ContentTransitionEffect
+```
+
 Defines the content transition effect.
 
 **Since:** 21

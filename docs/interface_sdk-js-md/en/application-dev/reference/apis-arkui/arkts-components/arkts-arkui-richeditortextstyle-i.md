@@ -1,5 +1,9 @@
 # RichEditorTextStyle
 
+```TypeScript
+declare interface RichEditorTextStyle
+```
+
 Provides text style information.
 
 **Since:** 10
@@ -40,7 +44,7 @@ fontColor?: ResourceColor
 
 Text color.
 
-Default value: &#36;r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
+Default value: $r('sys.color.font_primary'). When [shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md) is also set, shaderStyle takes precedence over fontColor.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

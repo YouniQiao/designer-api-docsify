@@ -1,5 +1,9 @@
 # KeyframeAnimateParam
 
+```TypeScript
+declare interface KeyframeAnimateParam
+```
+
 Provides animation configuration options.
 
 **Since:** 11

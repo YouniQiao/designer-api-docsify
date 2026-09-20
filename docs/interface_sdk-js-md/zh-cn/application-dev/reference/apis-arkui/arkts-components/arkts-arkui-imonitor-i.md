@@ -1,5 +1,9 @@
 # IMonitor
 
+```TypeScript
+declare interface IMonitor
+```
+
 当监听的状态变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型为IMonitor。
 
 **起始版本：** 12

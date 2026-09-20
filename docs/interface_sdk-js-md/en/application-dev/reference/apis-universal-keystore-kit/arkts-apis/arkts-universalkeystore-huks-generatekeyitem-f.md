@@ -182,6 +182,8 @@ huks.generateKeyItem(keyAlias, options)
 ```
 
 
+<a id="generatekeyitem-1"></a>
+
 ## generateKeyItem
 
 ```TypeScript

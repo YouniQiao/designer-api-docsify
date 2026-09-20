@@ -1,5 +1,9 @@
 # WaterFlow properties/events
 
+```TypeScript
+declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>
+```
+
 In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
 In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
@@ -33,6 +37,8 @@ This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Number of water flow items to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
+
+<a id="cachedcount-1"></a>
 
 ## cachedCount
 
@@ -104,6 +110,8 @@ You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string | Yes | Number of columns in the layout.<br>Default value: **'1fr'** |
+
+<a id="columnstemplate-1"></a>
 
 ## columnsTemplate
 

@@ -186,6 +186,8 @@ try {
 ```
 
 
+<a id="queryextensionabilityinfosync-1"></a>
+
 ## queryExtensionAbilityInfoSync
 
 ```TypeScript
@@ -236,6 +238,8 @@ No permission is required for obtaining the caller's own information.
 
 See [queryExtensionAbilityInfoSync](#queryextensionabilityinfosync)
 
+
+<a id="queryextensionabilityinfosync-2"></a>
 
 ## queryExtensionAbilityInfoSync
 

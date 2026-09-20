@@ -1,5 +1,9 @@
 # UnionEffectContainerOptions（系统接口）
 
+```TypeScript
+declare interface UnionEffectContainerOptions
+```
+
 设置UnionEffectContainer构造参数。
 
 **起始版本：** 23

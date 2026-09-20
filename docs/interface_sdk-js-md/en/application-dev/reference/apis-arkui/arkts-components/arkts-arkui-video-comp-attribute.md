@@ -1,5 +1,9 @@
 # Video properties/events
 
+```TypeScript
+declare class VideoAttribute extends CommonMethod<VideoAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.

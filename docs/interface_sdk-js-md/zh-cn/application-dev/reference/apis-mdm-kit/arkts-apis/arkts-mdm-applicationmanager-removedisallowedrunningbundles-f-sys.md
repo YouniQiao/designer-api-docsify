@@ -111,6 +111,8 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100).then(()
 ```
 
 
+<a id="removedisallowedrunningbundles-1"></a>
+
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ function removeDisallowedRunningBundles(admin: Want, appIds: Array<string>, user
 
 参见 [removeDisallowedRunningBundles](#removedisallowedrunningbundles)
 
+
+<a id="removedisallowedrunningbundles-2"></a>
 
 ## removeDisallowedRunningBundles
 

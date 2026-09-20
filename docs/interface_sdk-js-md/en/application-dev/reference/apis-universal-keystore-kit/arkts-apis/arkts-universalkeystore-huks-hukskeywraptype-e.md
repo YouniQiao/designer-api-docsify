@@ -1,5 +1,9 @@
 # HuksKeyWrapType
 
+```TypeScript
+export enum HuksKeyWrapType
+```
+
 Enumerates the key encryption types (exporting or importing keys).
 
 **Since:** 20

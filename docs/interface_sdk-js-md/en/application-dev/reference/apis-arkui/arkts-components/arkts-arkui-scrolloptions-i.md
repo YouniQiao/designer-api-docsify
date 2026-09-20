@@ -1,5 +1,9 @@
 # ScrollOptions
 
+```TypeScript
+declare interface ScrollOptions
+```
+
 Provides parameters for scrolling to a specific position in a scrollable container.
 
 **Since:** 18

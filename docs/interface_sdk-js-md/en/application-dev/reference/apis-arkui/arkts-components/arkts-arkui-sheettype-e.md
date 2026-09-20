@@ -1,5 +1,9 @@
 # SheetType
 
+```TypeScript
+declare enum SheetType
+```
+
 Defines the sheet type.
 
 **Since:** 11

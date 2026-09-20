@@ -1,5 +1,9 @@
 # GridLayoutAlgorithm
 
+```TypeScript
+export class GridLayoutAlgorithm implements LayoutAlgorithm
+```
+
 网格布局算法类。
 
 > **说明：** 

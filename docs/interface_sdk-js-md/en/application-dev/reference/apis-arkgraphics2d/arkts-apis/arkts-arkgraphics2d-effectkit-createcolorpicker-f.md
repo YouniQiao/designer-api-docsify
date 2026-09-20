@@ -155,6 +155,8 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 ```
 
 
+<a id="createcolorpicker-1"></a>
+
 ## createColorPicker
 
 ```TypeScript
@@ -195,6 +197,8 @@ Creates a ColorPicker instance for the selected region based on a pixel map. Thi
 See [createColorPicker](#createcolorpicker)
 
 
+<a id="createcolorpicker-2"></a>
+
 ## createColorPicker
 
 ```TypeScript
@@ -228,6 +232,8 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 
 See [createColorPicker](#createcolorpicker)
 
+
+<a id="createcolorpicker-3"></a>
 
 ## createColorPicker
 

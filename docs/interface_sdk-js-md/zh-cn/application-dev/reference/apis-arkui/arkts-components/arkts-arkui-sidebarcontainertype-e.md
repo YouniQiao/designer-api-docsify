@@ -1,5 +1,9 @@
 # SideBarContainerType
 
+```TypeScript
+declare enum SideBarContainerType
+```
+
 容器内侧边栏样式枚举。
 
 **起始版本：** 8

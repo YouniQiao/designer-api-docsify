@@ -93,6 +93,8 @@ cloudData.sharing.share('sharing_resource_test', participants, (err: BusinessErr
 ```
 
 
+<a id="share-1"></a>
+
 ## share
 
 ```TypeScript

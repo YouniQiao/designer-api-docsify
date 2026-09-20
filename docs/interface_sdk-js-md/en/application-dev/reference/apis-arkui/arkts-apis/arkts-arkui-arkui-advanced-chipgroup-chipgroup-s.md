@@ -1,5 +1,9 @@
 # ChipGroup
 
+```TypeScript
+export declare struct ChipGroup
+```
+
 The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience.
 
 > **NOTE:** 
@@ -31,7 +35,7 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `&#36;r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color. When **backgroundSystemMaterial** is set, **backgroundColor** should be set to **Color.Transparent**, otherwise it will conflict with the system material.
+System material style of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color. When **backgroundSystemMaterial** is set, **backgroundColor** should be set to **Color.Transparent**, otherwise it will conflict with the system material.
 
 Default value: **undefined**
 
@@ -133,7 +137,7 @@ Style of the chip, such as color and size. For details, see [ChipItemStyle](arkt
 
 Default value:
 
-**{size: ChipSize.NORMAL, backgroundColor: &#36;r('sys.color.ohos_id_color_button_normal'), fontColor: &#36;r('sys.color.ohos_id_color_text_primary'), selectedFontColor: &#36;r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: &#36;r('sys.color.ohos_id_color_emphasize')}**
+**{size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize')}**
 
 If **undefined**, the default value is used.
 
@@ -201,7 +205,7 @@ If **undefined**, this callback is not triggered.
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style for the selected state of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component when selected. When a system material with auto-invert is set, if **selectedFontColor** uses a system-predefined invertible color resource (such as `&#36;r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color. When **selectedBackgroundSystemMaterial** is set, **selectedBackgroundColor** should be set to **Color.Transparent**, otherwise it will conflict with the system material.
+System material style for the selected state of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component when selected. When a system material with auto-invert is set, if **selectedFontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color. When **selectedBackgroundSystemMaterial** is set, **selectedBackgroundColor** should be set to **Color.Transparent**, otherwise it will conflict with the system material.
 
 Default value: **undefined**
 

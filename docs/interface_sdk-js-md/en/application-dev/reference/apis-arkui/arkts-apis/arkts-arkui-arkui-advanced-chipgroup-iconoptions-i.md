@@ -1,5 +1,9 @@
 # IconOptions
 
+```TypeScript
+export interface IconOptions
+```
+
 Defines the common attributes of icons.
 
 **Since:** 12
@@ -23,9 +27,9 @@ Icon size. Percentages are not supported. Set this parameter when you need to cu
 Default value:
 
 - When **ChipItemStyle.size** is **ChipSize.SMALL**, the default value is:  
-**{width: &#36;r('sys.float.chip_small_icon_size'), height: &#36;r('sys.float.chip_small_icon_size')}**  
+**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**  
 - In other cases, the default value is:  
-**{width: &#36;r('sys.float.chip_normal_icon_size'), height: &#36;r('sys.float.chip_normal_icon_size')}**
+**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**
 
 If the value is **undefined**, the default value is used.
 

@@ -65,6 +65,8 @@ radio.getNROptionMode(slotId).then((data: radio.NROptionMode) => {
 ```
 
 
+<a id="getnroptionmode-1"></a>
+
 ## getNROptionMode
 
 ```TypeScript

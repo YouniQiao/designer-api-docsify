@@ -1,5 +1,9 @@
 # ScrollEffectType
 
+```TypeScript
+declare enum ScrollEffectType
+```
+
 Enumerates the scroll effect types.
 
 **Since:** 26.0.0

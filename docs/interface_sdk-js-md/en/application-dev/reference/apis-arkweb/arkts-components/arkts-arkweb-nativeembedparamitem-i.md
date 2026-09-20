@@ -1,5 +1,9 @@
 # NativeEmbedParamItem
 
+```TypeScript
+declare interface NativeEmbedParamItem
+```
+
 Provides detailed information about the **param** element embedded in the same-layer rendering tag **object**, including the status and parameters. It is suitable for scenarios where monitoring param element changes is required, improving same-layer element management flexibility and accuracy.
 
 **Since:** 21

@@ -83,6 +83,8 @@ promise.then((data) => {
 ```
 
 
+<a id="querykey-1"></a>
+
 ## queryKey
 
 ```TypeScript
@@ -117,6 +119,8 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 参见 [queryKey](#querykey)
 
 
+<a id="querykey-2"></a>
+
 ## queryKey
 
 ```TypeScript
@@ -147,6 +151,8 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 
 参见 [queryKey](#querykey)
 
+
+<a id="querykey-3"></a>
 
 ## queryKey
 
@@ -183,6 +189,8 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 参见 [queryKey](#querykey)
 
 
+<a id="querykey-4"></a>
+
 ## queryKey
 
 ```TypeScript
@@ -218,6 +226,8 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 
 参见 [queryKey](#querykey)
 
+
+<a id="querykey-5"></a>
 
 ## queryKey
 

@@ -1,5 +1,9 @@
 # CrossLanguageOptions
 
+```TypeScript
+declare interface CrossLanguageOptions
+```
+
 该接口用于配置或查询FrameNode的跨语言访问权限。例如，针对ArkTS语言创建的节点，可通过该接口控制是否允许通过非ArkTS语言进行属性访问或修改。
 
 **起始版本：** 15

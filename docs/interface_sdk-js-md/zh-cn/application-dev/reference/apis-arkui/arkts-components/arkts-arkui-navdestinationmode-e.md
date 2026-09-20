@@ -1,5 +1,9 @@
 # NavDestinationMode
 
+```TypeScript
+declare enum NavDestinationMode
+```
+
 NavDestination类型。
 
 **起始版本：** 11

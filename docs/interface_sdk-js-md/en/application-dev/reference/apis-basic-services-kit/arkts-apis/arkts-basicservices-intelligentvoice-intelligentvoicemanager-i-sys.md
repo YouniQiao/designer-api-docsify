@@ -1,5 +1,9 @@
 # IntelligentVoiceManager (System API)
 
+```TypeScript
+interface IntelligentVoiceManager
+```
+
 Implements intelligent voice management. @typedef IntelligentVoiceManager
 
 **Since:** 10

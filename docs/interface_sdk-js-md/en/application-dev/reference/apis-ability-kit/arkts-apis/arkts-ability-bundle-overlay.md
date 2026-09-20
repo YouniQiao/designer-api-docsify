@@ -26,11 +26,11 @@ import { overlay } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result. |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo-1) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result. |
 | [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses an asynchronous callback to return the result. |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result. |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos-1) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result. |
 | [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) | Enables or disables a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md) | Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result. |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled-1) | Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -38,13 +38,13 @@ import { overlay } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result. |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result. |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md) | Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-1) | Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-2) | Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result. |
 | [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result. |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result. |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-1) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-2) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result. |
 | [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | Enables or disables a module with the overlay feature in another application. This API uses an asynchronous callback to return the result. |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md) | Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result. |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename-1) | Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

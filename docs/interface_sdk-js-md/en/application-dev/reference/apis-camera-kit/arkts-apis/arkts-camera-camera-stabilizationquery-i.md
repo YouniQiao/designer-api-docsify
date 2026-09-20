@@ -1,5 +1,9 @@
 # StabilizationQuery
 
+```TypeScript
+interface StabilizationQuery
+```
+
 StabilizationQuery provides APIs to check the support for video stabilization.
 
 > **NOTE:** 

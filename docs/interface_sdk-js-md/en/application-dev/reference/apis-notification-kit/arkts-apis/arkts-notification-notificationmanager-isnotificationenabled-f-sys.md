@@ -129,6 +129,8 @@ notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
 ```
 
 
+<a id="isnotificationenabled-1"></a>
+
 ## isNotificationEnabled
 
 ```TypeScript
@@ -174,6 +176,8 @@ Checks whether notification is enabled for the specified application. This API u
 See [isNotificationEnabled](#isnotificationenabled)
 
 
+<a id="isnotificationenabled-4"></a>
+
 ## isNotificationEnabled
 
 ```TypeScript
@@ -213,6 +217,8 @@ Checks whether notification is enabled for a specified user. This API uses an as
 
 See [isNotificationEnabled](#isnotificationenabled)
 
+
+<a id="isnotificationenabled-5"></a>
 
 ## isNotificationEnabled
 

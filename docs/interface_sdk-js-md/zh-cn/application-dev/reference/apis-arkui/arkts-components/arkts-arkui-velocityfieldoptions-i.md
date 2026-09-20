@@ -1,5 +1,9 @@
 # VelocityFieldOptions
 
+```TypeScript
+declare interface VelocityFieldOptions
+```
+
 用于描述粒子速度场信息的参数。
 
 **起始版本：** 22

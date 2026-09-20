@@ -1,5 +1,9 @@
 # Pen
 
+```TypeScript
+class Pen
+```
+
 Defines a pen, which is used to describe the style and color to outline a shape.
 
 > **NOTE:** 
@@ -29,6 +33,8 @@ A constructor used to create a **Pen** object.
 **Since:** 12
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -397,6 +403,8 @@ Sets a color for this pen.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="setcolor-1"></a>
+
 ## setColor
 
 ```TypeScript
@@ -423,6 +431,8 @@ Sets a color for this pen. This API provides better performance than [setColor](
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
+
+<a id="setcolor-2"></a>
 
 ## setColor
 

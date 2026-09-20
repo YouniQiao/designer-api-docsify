@@ -122,6 +122,8 @@ notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
 ```
 
 
+<a id="setdonotdisturbdate-1"></a>
+
 ## setDoNotDisturbDate
 
 ```TypeScript
@@ -168,6 +170,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 参见 [setDoNotDisturbDate](#setdonotdisturbdate)
 
 
+<a id="setdonotdisturbdate-2"></a>
+
 ## setDoNotDisturbDate
 
 ```TypeScript
@@ -210,6 +214,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 参见 [setDoNotDisturbDate](#setdonotdisturbdate)
 
+
+<a id="setdonotdisturbdate-3"></a>
 
 ## setDoNotDisturbDate
 

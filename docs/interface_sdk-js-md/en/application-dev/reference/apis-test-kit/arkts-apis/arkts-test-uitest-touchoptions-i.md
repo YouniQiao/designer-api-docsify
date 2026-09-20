@@ -1,5 +1,9 @@
 # TouchOptions
 
+```TypeScript
+declare interface TouchOptions
+```
+
 Common options for touch operations.
 
 **Since:** 26.0.0

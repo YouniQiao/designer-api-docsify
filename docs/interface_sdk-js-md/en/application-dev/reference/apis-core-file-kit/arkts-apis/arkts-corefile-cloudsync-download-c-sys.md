@@ -1,5 +1,9 @@
 # Download (System API)
 
+```TypeScript
+class Download
+```
+
 Provides APIs for downloading image files to **Gallery**. Before using the APIs of **Download**, you need to create a **Download** instance.
 
 **Since:** 10
@@ -65,6 +69,8 @@ Removes the specified callback from the device-cloud download progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+<a id="off-1"></a>
 
 ## off
 
@@ -200,6 +206,8 @@ download.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="start-1"></a>
 
 ## start
 
@@ -338,6 +346,8 @@ download.stop(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

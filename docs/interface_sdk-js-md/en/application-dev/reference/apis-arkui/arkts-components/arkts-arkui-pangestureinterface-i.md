@@ -1,5 +1,9 @@
 # PanGestureInterface
 
+```TypeScript
+interface PanGestureInterface extends GestureInterface<PanGestureInterface>
+```
+
 PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value.
 
 **Inheritance/Implementation:** PanGestureInterface extends GestureInterface<PanGestureInterface>
@@ -33,6 +37,8 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 | Type | Description |
 | --- | --- |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -87,6 +93,8 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 | Type | Description |
 | --- | --- |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

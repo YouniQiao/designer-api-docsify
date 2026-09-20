@@ -84,6 +84,8 @@ try {
 ```
 
 
+<a id="getinclination-1"></a>
+
 ## getInclination
 
 ```TypeScript

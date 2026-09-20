@@ -1,5 +1,9 @@
 # TextInputStyle
 
+```TypeScript
+declare enum TextInputStyle
+```
+
 Text input style.
 
 **Since:** 9

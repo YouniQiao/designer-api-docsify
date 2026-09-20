@@ -1,5 +1,9 @@
 # AISessionType
 
+```TypeScript
+declare enum AISessionType
+```
+
 Defines the supported AI session types.
 
 **Since:** 26.0.0

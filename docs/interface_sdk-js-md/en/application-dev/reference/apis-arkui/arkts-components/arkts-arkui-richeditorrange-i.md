@@ -1,5 +1,9 @@
 # RichEditorRange
 
+```TypeScript
+declare interface RichEditorRange
+```
+
 Defines the range of the **RichEditor**.
 
 **Since:** 10

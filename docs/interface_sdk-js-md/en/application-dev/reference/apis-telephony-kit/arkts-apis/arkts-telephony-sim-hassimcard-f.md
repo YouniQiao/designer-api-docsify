@@ -58,6 +58,8 @@ sim.hasSimCard(0).then((data: boolean) => {
 ```
 
 
+<a id="hassimcard-1"></a>
+
 ## hasSimCard
 
 ```TypeScript

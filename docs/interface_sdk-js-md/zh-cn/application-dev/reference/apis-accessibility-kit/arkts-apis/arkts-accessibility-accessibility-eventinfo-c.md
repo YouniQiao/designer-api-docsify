@@ -1,5 +1,9 @@
 # EventInfo
 
+```TypeScript
+class EventInfo
+```
+
 无障碍事件信息，用于描述界面变更或交互事件，作为[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)的参数定义事件的类型和触发动作。发送的无障碍事件将被系统分发到已注册且匹配事件类型的辅助应用进行响应，详见[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)。
 
 **起始版本：** 7
@@ -53,6 +57,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 // 参数依次为：type、bundleName、triggerAction。
 let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
 ```
+
+<a id="constructor-2"></a>
 
 ## constructor
 
@@ -345,7 +351,7 @@ textMoveUnit?: TextMoveUnit
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-主动播报的内容支持传入Resource类型，且Resource只能引用string类型资源（如&#36;r('app.string.xxx')）。
+主动播报的内容支持传入Resource类型，且Resource只能引用string类型资源（如$r('app.string.xxx')）。
 
 **类型：** Resource
 

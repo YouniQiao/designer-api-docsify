@@ -1,5 +1,9 @@
 # TicketInfo（系统接口）
 
+```TypeScript
+interface TicketInfo
+```
+
 凭据信息。
 
 **起始版本：** 26.0.0

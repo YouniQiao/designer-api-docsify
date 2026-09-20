@@ -1,5 +1,9 @@
 # HuksParam
 
+```TypeScript
+export interface HuksParam
+```
+
 调用接口使用的options中的properties数组中的param。
 
 **起始版本：** 8

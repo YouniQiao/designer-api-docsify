@@ -1,5 +1,9 @@
 # Slider properties/events
 
+```TypeScript
+declare class SliderAttribute extends CommonMethod<SliderAttribute>
+```
+
 All the universal attributes except **responseRegion** are supported.
 
 In addition to the universal events, the following events are supported.
@@ -92,7 +96,9 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the thumb.<br>Default value: **$r('sys.color.ohos_id_color_foreground_contrary')** |
+
+<a id="blockcolor-1"></a>
 
 ## blockColor
 
@@ -122,7 +128,7 @@ When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the thumb.<br>Default value: **$r('sys.color.ohos_id_color_foreground_contrary')** |
 
 ## blockSize
 
@@ -413,7 +419,9 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the portion of the track between the minimum value and the thumb.<br> Default value: **&#36;r('sys.color.ohos_id_color_emphasize')** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the portion of the track between the minimum value and the thumb.<br> Default value: **$r('sys.color.ohos_id_color_emphasize')** |
+
+<a id="selectedcolor-1"></a>
 
 ## selectedColor
 
@@ -437,7 +445,7 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the portion of the track between the minimum value and the thumb.<br>Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**<br>**NOTE:** <br>With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Color of the portion of the track between the minimum value and the thumb.<br>Default value: **$r('sys.color.ohos_id_color_emphasize')**<br>**NOTE:** <br>With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
 
 ## showSteps
 
@@ -460,6 +468,8 @@ Sets whether to display the step markers along the slider track.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false** |
+
+<a id="showsteps-1"></a>
 
 ## showSteps
 
@@ -581,7 +591,7 @@ Sets the step color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Step color.<br>Default value:<br>**&#36;r('sys.color.ohos_id_color_foreground')** mixed with **&#36;r('sys.color.ohos_id_alpha_normal_bg')** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Step color.<br>Default value:<br>**$r('sys.color.ohos_id_color_foreground')** mixed with **$r('sys.color.ohos_id_alpha_normal_bg')** |
 
 ## stepSize
 
@@ -672,7 +682,7 @@ Since API version 12, **LinearGradient** can be used to create a gradient effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Background color of the track.<br>Default value: **&#36;r('sys.color.ohos_id_color_component_normal')**<br>**NOTE:** <br>1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied.<br>2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | Yes | Background color of the track.<br>Default value: **$r('sys.color.ohos_id_color_component_normal')**<br>**NOTE:** <br>1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied.<br>2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
 
 ## trackColorMetrics
 
@@ -694,7 +704,7 @@ Sets the linear gradient background color of the track.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **&#36;r('sys.color.ohos_id_color_component_normal')**. |
+| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **$r('sys.color.ohos_id_color_component_normal')**. |
 
 ## trackThickness
 

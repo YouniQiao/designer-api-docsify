@@ -1,5 +1,9 @@
 # TextBaseController
 
+```TypeScript
+declare interface TextBaseController
+```
+
 文本选择控制器。
 
 **起始版本：** 12

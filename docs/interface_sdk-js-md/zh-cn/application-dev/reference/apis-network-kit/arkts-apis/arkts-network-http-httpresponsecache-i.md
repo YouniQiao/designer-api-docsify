@@ -1,5 +1,9 @@
 # HttpResponseCache
 
+```TypeScript
+export interface HttpResponseCache
+```
+
 存储HTTP访问请求响应的对象。在调用HttpResponseCache的方法前，需要先通过[createHttpResponseCache()](arkts-network-http-createhttpresponsecache-f.md)创建一个任务。
 
 **响应头中的相应关键字使用**  
@@ -98,6 +102,8 @@ httpRequest.request("EXAMPLE_URL").then(data => {
 });
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -185,6 +191,8 @@ promise.then((data: http.HttpResponse) => {
   console.error('error:' + JSON.stringify(err));
 });
 ```
+
+<a id="flush-1"></a>
 
 ## flush
 

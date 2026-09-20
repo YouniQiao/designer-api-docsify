@@ -1,5 +1,9 @@
 # DataExchangeOperation
 
+```TypeScript
+interface DataExchangeOperation
+```
+
 Represents an operation for exchanging data.
 
 **Since:** 12

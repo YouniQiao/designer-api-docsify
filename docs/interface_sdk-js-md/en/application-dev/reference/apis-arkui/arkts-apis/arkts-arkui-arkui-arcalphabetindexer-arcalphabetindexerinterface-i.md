@@ -1,5 +1,9 @@
 # ArcAlphabetIndexerInterface
 
+```TypeScript
+export interface ArcAlphabetIndexerInterface
+```
+
 The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area.
 
 > **NOTE:** 

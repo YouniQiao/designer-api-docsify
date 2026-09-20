@@ -1,5 +1,9 @@
 # SweepRefractionParam (System API)
 
+```TypeScript
+interface SweepRefractionParam
+```
+
 Required parameters for creating a SweepRefractionMask.
 
 **Since:** 26.0.1

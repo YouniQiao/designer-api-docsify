@@ -1,5 +1,9 @@
 # CalendarController (System API)
 
+```TypeScript
+declare class CalendarController
+```
+
 Calendar controller.
 
 **Since:** 7

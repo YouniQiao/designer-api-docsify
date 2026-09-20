@@ -1,5 +1,9 @@
 # TLSSocketServer
 
+```TypeScript
+export interface TLSSocketServer
+```
+
 Defines a TLS socket server connection. Before calling TLSSocketServer APIs, you need to call [socket.constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md) to create a **TLSSocketServer** object.
 
 **Since:** 10
@@ -196,6 +200,8 @@ tlsServer.getCertificate().then((data: socket.X509CertRawData) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getcertificate-1"></a>
 
 ## getCertificate
 
@@ -459,6 +465,8 @@ tlsServer.getProtocol().then((data: string) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getprotocol-1"></a>
 
 ## getProtocol
 
@@ -744,6 +752,8 @@ tlsServer.getState().then(() => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -954,6 +964,8 @@ tlsServer.listen(tlsConnectOptions).then(() => {
   console.error("failed: " + JSON.stringify(err));
 });
 ```
+
+<a id="listen-1"></a>
 
 ## listen
 
@@ -1322,6 +1334,8 @@ tlsServer.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

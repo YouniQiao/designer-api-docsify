@@ -1,5 +1,9 @@
 # LocalUpdater (System API)
 
+```TypeScript
+export interface LocalUpdater
+```
+
 Defines a tool class for updating the local firmware, such as verifying the signature and integrity of the local upgrade package, installing the local upgrade package, and listening for local upgrade events.
 
 Use scenarios: offline system upgrade, upgrade with poor network connection, and controllable upgrade.
@@ -126,6 +130,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<a id="applynewversion-1"></a>
 
 ## applyNewVersion
 
@@ -420,6 +426,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<a id="verifyupgradepackage-1"></a>
 
 ## verifyUpgradePackage
 

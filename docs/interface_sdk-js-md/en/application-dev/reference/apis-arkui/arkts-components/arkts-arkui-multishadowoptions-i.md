@@ -1,5 +1,9 @@
 # MultiShadowOptions
 
+```TypeScript
+declare interface MultiShadowOptions
+```
+
 Defines shadow style properties.
 
 **Since:** 10

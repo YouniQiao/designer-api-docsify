@@ -1,5 +1,9 @@
 # UIAbilityContext
 
+```TypeScript
+declare class UIAbilityContext extends Context
+```
+
 UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends [Context](arkts-ability-context-c.md)
@@ -517,6 +521,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="disconnectserviceextensionability-1"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -1246,6 +1252,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="requestdialogservice-1"></a>
+
 ## requestDialogService
 
 ```TypeScript
@@ -1574,6 +1582,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setabilityinstanceinfo-1"></a>
+
 ## setAbilityInstanceInfo
 
 ```TypeScript
@@ -1746,6 +1756,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissioncontinuestate-1"></a>
+
 ## setMissionContinueState
 
 ```TypeScript
@@ -1852,6 +1864,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="setmissionlabel-1"></a>
 
 ## setMissionLabel
 
@@ -2360,6 +2374,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -2428,6 +2444,8 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 **Examples**
 
 See [startAbility](#startability)
+
+<a id="startability-2"></a>
 
 ## startAbility
 
@@ -2683,6 +2701,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilitybytype-2"></a>
+
 ## startAbilityByType
 
 ```TypeScript
@@ -2902,6 +2922,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresult-1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -2972,6 +2994,8 @@ UIAbility is started multiple times by different applications calling this API, 
 **Examples**
 
 See [startAbilityForResult](#startabilityforresult)
+
+<a id="startabilityforresult-2"></a>
 
 ## startAbilityForResult
 
@@ -3574,6 +3598,8 @@ The following is an example of calling terminateSelf to terminate a UIAbility. B
 (Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 ```
 
+<a id="terminateself-1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -3733,6 +3759,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="terminateselfwithresult-1"></a>
 
 ## terminateSelfWithResult
 

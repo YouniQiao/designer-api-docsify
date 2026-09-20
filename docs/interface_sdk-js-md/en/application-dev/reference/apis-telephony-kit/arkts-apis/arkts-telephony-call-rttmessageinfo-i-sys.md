@@ -1,5 +1,9 @@
 # RttMessageInfo (System API)
 
+```TypeScript
+export interface RttMessageInfo
+```
+
 Indicates the info of the rtt message.
 
 **Since:** 22

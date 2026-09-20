@@ -1,5 +1,9 @@
 # HdrCompositionConfig
 
+```TypeScript
+declare interface HdrCompositionConfig
+```
+
 Provides HDR composition configuration.
 
 **Since:** 26.0.0

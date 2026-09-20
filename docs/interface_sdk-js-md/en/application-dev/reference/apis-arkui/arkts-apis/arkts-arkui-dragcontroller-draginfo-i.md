@@ -1,5 +1,9 @@
 # DragInfo
 
+```TypeScript
+interface DragInfo
+```
+
 Defines the attributes required for initiating a drag action and information carried in the dragging process.
 
 **Since:** 10
@@ -15,7 +19,7 @@ import { dragController } from '@kit.ArkUI';
 ## autoHideComponentUniqueIds
 
 ```TypeScript
-autoHideComponentUniqueIds?: number | number[]
+autoHideComponentUniqueIds?: number[]
 ```
 
 Unique ID of the component that is automatically hidden by the system during proactive dragging. A single unique ID or an array of unique IDs can be passed.

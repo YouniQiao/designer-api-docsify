@@ -1,5 +1,9 @@
 # PopupMaskType
 
+```TypeScript
+declare interface PopupMaskType
+```
+
 设置遮罩层颜色。
 
 **起始版本：** 18

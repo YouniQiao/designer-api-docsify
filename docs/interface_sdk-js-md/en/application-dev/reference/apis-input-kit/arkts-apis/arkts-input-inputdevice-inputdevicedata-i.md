@@ -1,5 +1,9 @@
 # InputDeviceData
 
+```TypeScript
+interface InputDeviceData
+```
+
 Provides information about an input device.
 
 **Since:** 8

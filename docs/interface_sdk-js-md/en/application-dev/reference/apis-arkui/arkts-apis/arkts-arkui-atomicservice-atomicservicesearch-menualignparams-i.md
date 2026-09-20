@@ -1,5 +1,9 @@
 # MenuAlignParams
 
+```TypeScript
+export interface MenuAlignParams
+```
+
 Sets the alignment between the drop-down list button and the drop-down list box.
 
 **Since:** 18

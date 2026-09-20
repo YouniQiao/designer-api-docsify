@@ -1,5 +1,9 @@
 # TCPSocketServer
 
+```TypeScript
+export interface TCPSocketServer
+```
+
 Defines a TCP socket server connection. Before calling TCPSocketServer APIs, you need to call [socket.constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md) to create a **TCPSocketServer** object.
 
 **Since:** 10
@@ -266,6 +270,8 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -425,6 +431,8 @@ tcpServer.listen(listenAddr).then(() => {
   console.error('listen fail');
 });
 ```
+
+<a id="listen-1"></a>
 
 ## listen
 
@@ -733,6 +741,8 @@ tcpServer.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

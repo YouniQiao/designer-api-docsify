@@ -1,5 +1,9 @@
 # StickyStyle
 
+```TypeScript
+declare enum StickyStyle
+```
+
 ListItemGroup吸顶或吸底效果枚举。
 
 **起始版本：** 9

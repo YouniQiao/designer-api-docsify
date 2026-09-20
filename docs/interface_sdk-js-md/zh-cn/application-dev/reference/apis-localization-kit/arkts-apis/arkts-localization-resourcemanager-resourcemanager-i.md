@@ -1,12 +1,16 @@
 # ResourceManager
 
+```TypeScript
+export interface ResourceManager
+```
+
 提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。
 
 > **说明：** 
 > 
 > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。
 > 
-> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`&#36;r(资源地址).id`的方式获取，例如`&#36;r('app.string.test').id`。
+> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`$r(资源地址).id`的方式获取，例如`$r('app.string.test').id`。
 > 
 > - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源，
 > **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**，
@@ -157,6 +161,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="closerawfd-1"></a>
+
 ## closeRawFd
 
 ```TypeScript
@@ -296,6 +302,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="closerawfiledescriptor-1"></a>
+
 ## closeRawFileDescriptor
 
 ```TypeScript
@@ -418,6 +426,8 @@ try {
   console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getboolean-1"></a>
 
 ## getBoolean
 
@@ -634,6 +644,8 @@ this.context.resourceManager.getColor(resource)
   });
 ```
 
+<a id="getcolor-1"></a>
+
 ## getColor
 
 ```TypeScript
@@ -672,6 +684,8 @@ getColor(resId: number): Promise<number>
 **示例**
 
 参见 [getColor](#getcolor)
+
+<a id="getcolor-2"></a>
 
 ## getColor
 
@@ -712,6 +726,8 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 **示例**
 
 参见 [getColor](#getcolor)
+
+<a id="getcolor-3"></a>
 
 ## getColor
 
@@ -839,6 +855,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getcolorbyname-1"></a>
 
 ## getColorByName
 
@@ -1037,6 +1055,8 @@ try {
 }
 ```
 
+<a id="getcolorsync-1"></a>
+
 ## getColorSync
 
 ```TypeScript
@@ -1147,6 +1167,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getconfiguration-1"></a>
 
 ## getConfiguration
 
@@ -1276,6 +1298,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getdevicecapability-1"></a>
+
 ## getDeviceCapability
 
 ```TypeScript
@@ -1364,7 +1388,7 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -1452,7 +1476,7 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -1537,6 +1561,8 @@ try {
 }
 ```
 
+<a id="getdoublepluralstringvaluesync-2"></a>
+
 ## getDoublePluralStringValueSync
 
 ```TypeScript
@@ -1567,7 +1593,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -1693,6 +1719,8 @@ try {
   console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getdrawabledescriptor-1"></a>
 
 ## getDrawableDescriptor
 
@@ -1839,7 +1867,7 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -1927,7 +1955,7 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2012,6 +2040,8 @@ try {
 }
 ```
 
+<a id="getintpluralstringvaluesync-2"></a>
+
 ## getIntPluralStringValueSync
 
 ```TypeScript
@@ -2042,7 +2072,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的[单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2180,6 +2210,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getmedia-1"></a>
+
 ## getMedia
 
 ```TypeScript
@@ -2260,6 +2292,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getmediabase64-1"></a>
 
 ## getMediaBase64
 
@@ -2416,6 +2450,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabase64byname-1"></a>
+
 ## getMediaBase64ByName
 
 ```TypeScript
@@ -2449,6 +2485,8 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 **示例**
 
 参见 [getMediaBase64ByName](#getmediabase64byname)
+
+<a id="getmediabase64byname-2"></a>
 
 ## getMediaBase64ByName
 
@@ -2487,6 +2525,8 @@ getMediaBase64ByName(resName: string): Promise<string>
 **示例**
 
 参见 [getMediaBase64ByName](#getmediabase64byname)
+
+<a id="getmediabase64byname-3"></a>
 
 ## getMediaBase64ByName
 
@@ -2714,6 +2754,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabyname-1"></a>
+
 ## getMediaByName
 
 ```TypeScript
@@ -2747,6 +2789,8 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 **示例**
 
 参见 [getMediaByName](#getmediabyname)
+
+<a id="getmediabyname-2"></a>
 
 ## getMediaByName
 
@@ -2785,6 +2829,8 @@ getMediaByName(resName: string): Promise<Uint8Array>
 **示例**
 
 参见 [getMediaByName](#getmediabyname)
+
+<a id="getmediabyname-3"></a>
 
 ## getMediaByName
 
@@ -3111,6 +3157,8 @@ try {
 }
 ```
 
+<a id="getmediacontent-1"></a>
+
 ## getMediaContent
 
 ```TypeScript
@@ -3150,6 +3198,8 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 **示例**
 
 参见 [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-2"></a>
 
 ## getMediaContent
 
@@ -3194,6 +3244,8 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 **示例**
 
 参见 [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-3"></a>
 
 ## getMediaContent
 
@@ -3240,6 +3292,8 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 参见 [getMediaContent](#getmediacontent)
 
+<a id="getmediacontent-4"></a>
+
 ## getMediaContent
 
 ```TypeScript
@@ -3272,6 +3326,8 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 **示例**
 
 参见 [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-5"></a>
 
 ## getMediaContent
 
@@ -3306,6 +3362,8 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 **示例**
 
 参见 [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-6"></a>
 
 ## getMediaContent
 
@@ -3344,6 +3402,8 @@ getMediaContent(resId: number): Promise<Uint8Array>
 **示例**
 
 参见 [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-7"></a>
 
 ## getMediaContent
 
@@ -3605,6 +3665,8 @@ try {
 }
 ```
 
+<a id="getmediacontentbase64-1"></a>
+
 ## getMediaContentBase64
 
 ```TypeScript
@@ -3644,6 +3706,8 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 **示例**
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-2"></a>
 
 ## getMediaContentBase64
 
@@ -3688,6 +3752,8 @@ getMediaContentBase64(resource: Resource): Promise<string>
 **示例**
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-3"></a>
 
 ## getMediaContentBase64
 
@@ -3734,6 +3800,8 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
 
+<a id="getmediacontentbase64-4"></a>
+
 ## getMediaContentBase64
 
 ```TypeScript
@@ -3766,6 +3834,8 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 **示例**
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-5"></a>
 
 ## getMediaContentBase64
 
@@ -3800,6 +3870,8 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 **示例**
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-6"></a>
 
 ## getMediaContentBase64
 
@@ -3838,6 +3910,8 @@ getMediaContentBase64(resId: number): Promise<string>
 **示例**
 
 参见 [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-7"></a>
 
 ## getMediaContentBase64
 
@@ -3967,6 +4041,8 @@ try {
   console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getmediacontentbase64sync-1"></a>
 
 ## getMediaContentBase64Sync
 
@@ -4102,6 +4178,8 @@ try {
   console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getmediacontentsync-1"></a>
 
 ## getMediaContentSync
 
@@ -4263,6 +4341,8 @@ try {
   console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getnumber-1"></a>
 
 ## getNumber
 
@@ -4563,6 +4643,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getpluralstring-1"></a>
+
 ## getPluralString
 
 ```TypeScript
@@ -4693,6 +4775,8 @@ this.context.resourceManager.getPluralStringByName("test", 1)
     console.error(`promise getPluralStringByName failed, error code: ${error.code}, message: ${error.message}.`);
   });
 ```
+
+<a id="getpluralstringbyname-1"></a>
 
 ## getPluralStringByName
 
@@ -4966,6 +5050,8 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
   });
 ```
 
+<a id="getpluralstringvalue-1"></a>
+
 ## getPluralStringValue
 
 ```TypeScript
@@ -5017,6 +5103,8 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 参见 [getPluralStringValue](#getpluralstringvalue)
 
+<a id="getpluralstringvalue-2"></a>
+
 ## getPluralStringValue
 
 ```TypeScript
@@ -5060,6 +5148,8 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 **示例**
 
 参见 [getPluralStringValue](#getpluralstringvalue)
+
+<a id="getpluralstringvalue-3"></a>
 
 ## getPluralStringValue
 
@@ -5216,6 +5306,8 @@ try {
 }
 ```
 
+<a id="getpluralstringvaluesync-1"></a>
+
 ## getPluralStringValueSync
 
 ```TypeScript
@@ -5356,6 +5448,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfd-1"></a>
 
 ## getRawFd
 
@@ -5516,6 +5610,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getrawfile-1"></a>
+
 ## getRawFile
 
 ```TypeScript
@@ -5627,6 +5723,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfilecontent-1"></a>
 
 ## getRawFileContent
 
@@ -5779,6 +5877,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getrawfiledescriptor-1"></a>
+
 ## getRawFileDescriptor
 
 ```TypeScript
@@ -5886,6 +5986,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfilelist-1"></a>
 
 ## getRawFileList
 
@@ -6105,6 +6207,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getstring-1"></a>
+
 ## getString
 
 ```TypeScript
@@ -6185,6 +6289,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getstringarray-1"></a>
 
 ## getStringArray
 
@@ -6304,6 +6410,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringarraybyname-1"></a>
 
 ## getStringArrayByName
 
@@ -6548,6 +6656,8 @@ this.context.resourceManager.getStringArrayValue(resource)
   });
 ```
 
+<a id="getstringarrayvalue-1"></a>
+
 ## getStringArrayValue
 
 ```TypeScript
@@ -6593,6 +6703,8 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 参见 [getStringArrayValue](#getstringarrayvalue)
 
+<a id="getstringarrayvalue-2"></a>
+
 ## getStringArrayValue
 
 ```TypeScript
@@ -6626,6 +6738,8 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 **示例**
 
 参见 [getStringArrayValue](#getstringarrayvalue)
+
+<a id="getstringarrayvalue-3"></a>
 
 ## getStringArrayValue
 
@@ -6759,6 +6873,8 @@ try {
 }
 ```
 
+<a id="getstringarrayvaluesync-1"></a>
+
 ## getStringArrayValueSync
 
 ```TypeScript
@@ -6883,6 +6999,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringbyname-1"></a>
 
 ## getStringByName
 
@@ -7024,6 +7142,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getstringbynamesync-1"></a>
+
 ## getStringByNameSync
 
 ```TypeScript
@@ -7043,7 +7163,7 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -7206,6 +7326,8 @@ try {
 }
 ```
 
+<a id="getstringsync-1"></a>
+
 ## getStringSync
 
 ```TypeScript
@@ -7225,7 +7347,7 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -7246,6 +7368,8 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 **示例**
 
 参见 [getStringSync](#getstringsync)
+
+<a id="getstringsync-3"></a>
 
 ## getStringSync
 
@@ -7292,6 +7416,8 @@ getStringSync(resource: Resource): string
 
 参见 [getStringSync](#getstringsync)
 
+<a id="getstringsync-4"></a>
+
 ## getStringSync
 
 ```TypeScript
@@ -7317,7 +7443,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字&#36;d`、`%数字&#36;f`和`%数字&#36;s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字&#36;d`中的数字表示参数索引，从`1`开始计数。如`%1&#36;d`表示使用`args[0]`格式化，`%2&#36;d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -7425,6 +7551,8 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 });
 ```
 
+<a id="getstringvalue-1"></a>
+
 ## getStringValue
 
 ```TypeScript
@@ -7470,6 +7598,8 @@ getStringValue(resource: Resource): Promise<string>
 
 参见 [getStringValue](#getstringvalue)
 
+<a id="getstringvalue-2"></a>
+
 ## getStringValue
 
 ```TypeScript
@@ -7503,6 +7633,8 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 **示例**
 
 参见 [getStringValue](#getstringvalue)
+
+<a id="getstringvalue-3"></a>
 
 ## getStringValue
 
@@ -7619,6 +7751,8 @@ try {
   console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getsymbol-1"></a>
 
 ## getSymbol
 

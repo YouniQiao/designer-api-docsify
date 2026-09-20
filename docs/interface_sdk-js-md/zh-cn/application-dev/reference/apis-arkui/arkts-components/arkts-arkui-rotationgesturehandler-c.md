@@ -1,5 +1,9 @@
 # RotationGestureHandler
 
+```TypeScript
+declare class RotationGestureHandler extends GestureHandler<RotationGestureHandler>
+```
+
 旋转手势处理器对象类型。
 
 **继承/实现关系：** RotationGestureHandler extends GestureHandler<RotationGestureHandler>
@@ -57,6 +61,8 @@ onActionCancel(event: Callback<void>): RotationGestureHandler
 | 类型 | 说明 |
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 返回当前旋转手势处理器对象。 |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

@@ -1,5 +1,9 @@
 # CustomSpanMeasureInfo
 
+```TypeScript
+declare interface CustomSpanMeasureInfo
+```
+
 定义自定义绘制Span的测量信息接口。
 
 **起始版本：** 12

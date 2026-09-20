@@ -64,6 +64,8 @@ connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
 ```
 
 
+<a id="getdefaulthttpproxy-1"></a>
+
 ## getDefaultHttpProxy
 
 ```TypeScript

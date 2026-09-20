@@ -1,5 +1,9 @@
 # AtomicServiceBar
 
+```TypeScript
+export interface AtomicServiceBar
+```
+
 interface AtomicServiceBar
 
 **起始版本：** 11

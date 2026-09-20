@@ -1,5 +1,9 @@
 # WebviewController
 
+```TypeScript
+class WebviewController
+```
+
 WebviewController是Web组件各种行为的核心控制器，提供网页加载与导航控制、JavaScript交互、生命周期、滚动控制、页面缩放与内容查找、消息端口通信、缓存与证书管理等广泛功能。一个WebviewController对象只能控制一个Web组件，且必须在Web组件和WebviewController绑定后，才能调用WebviewController上的方法（静态方法除外）。
 
 **起始版本：** 9
@@ -529,6 +533,8 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid input parameter. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="createpdf-1"></a>
+
 ## createPdf
 
 ```TypeScript
@@ -652,6 +658,8 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) | Failed to register custom schemes.<br>**适用版本：** 12+ |
+
+<a id="customizeschemes-1"></a>
 
 ## customizeSchemes
 
@@ -1080,6 +1088,8 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a web component. |
+
+<a id="getcertificate-1"></a>
 
 ## getCertificate
 
@@ -1809,6 +1819,8 @@ hasImage(): Promise<boolean>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="hasimage-1"></a>
+
 ## hasImage
 
 ```TypeScript
@@ -2516,6 +2528,8 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**适用版本：** 22+ |
 
+<a id="prefetchpage-1"></a>
+
 ## prefetchPage
 
 ```TypeScript
@@ -2634,6 +2648,8 @@ refresh(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+<a id="refresh-1"></a>
 
 ## refresh
 
@@ -2948,6 +2964,8 @@ runJavaScript(script: string): Promise<string>
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
+<a id="runjavascript-1"></a>
+
 ## runJavaScript
 
 ```TypeScript
@@ -3025,6 +3043,8 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+<a id="runjavascriptext-1"></a>
 
 ## runJavaScriptExt
 
@@ -3575,6 +3595,8 @@ setErrorPageEnabled(enable: boolean): void
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="seterrorpageenabled-1"></a>
+
 ## setErrorPageEnabled
 
 ```TypeScript
@@ -3981,6 +4003,8 @@ setUrlTrustList(urlTrustList: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="seturltrustlist-1"></a>
+
 ## setUrlTrustList
 
 ```TypeScript
@@ -4111,6 +4135,8 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+<a id="setwebdebuggingaccess-1"></a>
 
 ## setWebDebuggingAccess
 
@@ -4384,6 +4410,8 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) | Invalid resource path or file type. |
+
+<a id="storewebarchive-1"></a>
 
 ## storeWebArchive
 

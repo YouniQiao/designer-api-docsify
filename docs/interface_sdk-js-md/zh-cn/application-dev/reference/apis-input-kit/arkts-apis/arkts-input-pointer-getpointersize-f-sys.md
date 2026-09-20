@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="getpointersize-1"></a>
+
 ## getPointerSize
 
 ```TypeScript

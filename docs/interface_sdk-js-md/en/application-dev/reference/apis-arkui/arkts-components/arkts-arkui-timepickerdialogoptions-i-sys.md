@@ -1,5 +1,9 @@
 # TimePickerDialogOptions
 
+```TypeScript
+declare interface TimePickerDialogOptions extends TimePickerOptions
+```
+
 Defines the configuration options of the time picker dialog box.
 
 Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).

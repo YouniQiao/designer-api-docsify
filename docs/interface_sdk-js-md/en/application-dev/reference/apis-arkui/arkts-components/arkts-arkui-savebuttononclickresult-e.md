@@ -1,5 +1,9 @@
 # SaveButtonOnClickResult
 
+```TypeScript
+declare enum SaveButtonOnClickResult
+```
+
 Enumerates the authorization results after the **SaveButton** component is tapped.
 
 **Since:** 10

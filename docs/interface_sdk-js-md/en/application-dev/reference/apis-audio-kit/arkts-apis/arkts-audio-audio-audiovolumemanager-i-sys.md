@@ -1,5 +1,9 @@
 # AudioVolumeManager
 
+```TypeScript
+interface AudioVolumeManager
+```
+
 This interface implements audio volume management.
 
 Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
@@ -501,6 +505,8 @@ async function getVolumeGroupInfos(){
   console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
 }
 ```
+
+<a id="getvolumegroupinfos-1"></a>
 
 ## getVolumeGroupInfos
 

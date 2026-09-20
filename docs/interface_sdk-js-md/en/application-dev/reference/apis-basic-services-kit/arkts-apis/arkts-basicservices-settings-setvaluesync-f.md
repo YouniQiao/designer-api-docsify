@@ -72,6 +72,8 @@ let ret:string = settings.setValueSync(helper, settings.display.SCREEN_BRIGHTNES
 ```
 
 
+<a id="setvaluesync-1"></a>
+
 ## setValueSync
 
 ```TypeScript
@@ -106,6 +108,8 @@ Set settingsdata value(synchronous method)
 
 See [setValueSync](#setvaluesync)
 
+
+<a id="setvaluesync-2"></a>
 
 ## setValueSync
 

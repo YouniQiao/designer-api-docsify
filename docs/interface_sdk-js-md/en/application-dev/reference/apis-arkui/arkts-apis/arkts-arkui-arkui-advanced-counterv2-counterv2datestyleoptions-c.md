@@ -1,5 +1,9 @@
 # CounterV2DateStyleOptions
 
+```TypeScript
+declare class CounterV2DateStyleOptions extends CounterV2CommonOptions
+```
+
 Defines the attributes and events of the inline date **CounterV2**.
 
 **Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)

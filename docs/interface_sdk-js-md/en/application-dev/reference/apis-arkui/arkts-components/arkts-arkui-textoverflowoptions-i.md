@@ -1,5 +1,9 @@
 # TextOverflowOptions
 
+```TypeScript
+declare interface TextOverflowOptions
+```
+
 Defines the configuration object for text overflow behavior.
 
 > **NOTE:** 

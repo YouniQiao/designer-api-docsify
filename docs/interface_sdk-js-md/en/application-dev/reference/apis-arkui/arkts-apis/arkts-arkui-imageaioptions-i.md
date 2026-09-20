@@ -1,5 +1,9 @@
 # ImageAIOptions
 
+```TypeScript
+declare interface ImageAIOptions
+```
+
 Provides the AI image analysis options.
 
 > **NOTE:** 

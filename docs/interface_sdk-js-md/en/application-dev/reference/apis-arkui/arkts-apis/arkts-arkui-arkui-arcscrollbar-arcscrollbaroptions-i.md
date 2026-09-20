@@ -1,5 +1,9 @@
 # ArcScrollBarOptions
 
+```TypeScript
+declare interface ArcScrollBarOptions
+```
+
 Represents the parameters used to construct an **ArcScrollBar** component.
 
 > **NOTE:** 

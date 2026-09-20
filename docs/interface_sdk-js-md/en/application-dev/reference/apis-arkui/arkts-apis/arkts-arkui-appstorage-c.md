@@ -1,5 +1,9 @@
 # AppStorage
 
+```TypeScript
+declare class AppStorage
+```
+
 For details about how to use AppStorage, see [AppStorage: Storing Application-wide UI State](../../../ui/state-management/arkts-appstorage.md).
 
 **Since:** 7

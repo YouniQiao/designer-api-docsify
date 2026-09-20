@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="getcrossingswitchstate-1"></a>
+
 ## getCrossingSwitchState
 
 ```TypeScript
@@ -85,7 +87,7 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 
 **废弃版本：** 11
 
-**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string)
+**替代接口：** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)(networkId: string)
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

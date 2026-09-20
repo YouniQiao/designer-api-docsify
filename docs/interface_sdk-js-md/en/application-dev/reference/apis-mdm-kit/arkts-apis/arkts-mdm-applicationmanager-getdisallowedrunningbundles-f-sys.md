@@ -104,6 +104,8 @@ applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisallowedrunningbundles-1"></a>
+
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ Obtains an application from the applications that are not allowed to run by the 
 
 See [getDisallowedRunningBundles](#getdisallowedrunningbundles)
 
+
+<a id="getdisallowedrunningbundles-2"></a>
 
 ## getDisallowedRunningBundles
 

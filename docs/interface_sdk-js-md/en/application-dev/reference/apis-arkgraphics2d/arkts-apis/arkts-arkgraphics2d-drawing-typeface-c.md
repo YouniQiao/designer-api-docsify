@@ -1,5 +1,9 @@
 # Typeface
 
+```TypeScript
+class Typeface
+```
+
 Describes the style of a typeface, such as SimSun or KaiTi.
 
 > **NOTE:** 
@@ -173,7 +177,7 @@ Constructs a typeface from a file, which must be stored in the **resources/rawfi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **&#36;rawfile** format are supported. The corresponding format is **&#36;rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. If the file is stored in **resources/rawfile**, the reference format is **&#36;rawfile('HarmonyOS_Sans_Bold.ttf')**. If the file is stored in a subdirectory, for example, in **resources/rawfile/ttf**, the reference format is **&#36;rawfile('ttf/HarmonyOS_Sans_Bold.ttf')**. |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. If the file is stored in **resources/rawfile**, the reference format is **$rawfile('HarmonyOS_Sans_Bold.ttf')**. If the file is stored in a subdirectory, for example, in **resources/rawfile/ttf**, the reference format is **$rawfile('ttf/HarmonyOS_Sans_Bold.ttf')**. |
 
 **Return value:**
 
@@ -199,7 +203,7 @@ Constructs a typeface from a file with typeface arguments, which must be stored 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **&#36;rawfile** format are supported. The corresponding format is **&#36;rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. |
+| rawfile | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object corresponding to the file. Currently, only resource objects referenced in **$rawfile** format are supported. The corresponding format is **$rawfile('filePath')**, where **filePath** is the relative path of the file to the **resources/rawfile** directory in the project. |
 | typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | Yes | Typeface arguments. |
 
 **Return value:**

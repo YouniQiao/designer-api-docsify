@@ -1,5 +1,9 @@
 # BundleInstallStatus
 
+```TypeScript
+export enum BundleInstallStatus
+```
+
 Enumerates the application installation statuses.
 
 **Since:** 26.0.1

@@ -1,5 +1,9 @@
 # DatePickerMode
 
+```TypeScript
+declare enum DatePickerMode
+```
+
 Enumerates date display modes.
 
 **Since:** 18

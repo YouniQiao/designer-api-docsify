@@ -1,5 +1,9 @@
 # RichEditorChangeValue
 
+```TypeScript
+declare interface RichEditorChangeValue
+```
+
 图文变化信息。
 
 **起始版本：** 12

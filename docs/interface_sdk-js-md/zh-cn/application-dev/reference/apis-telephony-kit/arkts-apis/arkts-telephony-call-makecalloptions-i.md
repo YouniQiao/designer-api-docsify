@@ -1,5 +1,9 @@
 # MakeCallOptions
 
+```TypeScript
+export interface MakeCallOptions
+```
+
 拨打电话的可选参数。
 
 **起始版本：** 24

@@ -62,6 +62,8 @@ radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) =
 ```
 
 
+<a id="getsignalinformation-1"></a>
+
 ## getSignalInformation
 
 ```TypeScript

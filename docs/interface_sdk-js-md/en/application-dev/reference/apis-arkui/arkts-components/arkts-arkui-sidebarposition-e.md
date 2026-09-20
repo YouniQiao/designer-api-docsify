@@ -1,5 +1,9 @@
 # SideBarPosition
 
+```TypeScript
+declare enum SideBarPosition
+```
+
 Enumerates the positions of the sidebar.
 
 **Since:** 9

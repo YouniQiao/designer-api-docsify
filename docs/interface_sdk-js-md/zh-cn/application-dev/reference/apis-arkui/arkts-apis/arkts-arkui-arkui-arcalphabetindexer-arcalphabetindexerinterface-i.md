@@ -1,5 +1,9 @@
 # ArcAlphabetIndexerInterface
 
+```TypeScript
+export interface ArcAlphabetIndexerInterface
+```
+
 弧形索引条是一种弧形排列、可按字母顺序快速定位的组件，可与容器组件联动，按逻辑结构快速定位至容器显示区域，适用于手表等圆形屏幕设备。
 
 > **说明：** 

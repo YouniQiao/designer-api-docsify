@@ -1,5 +1,9 @@
 # LayoutMode
 
+```TypeScript
+declare enum LayoutMode
+```
+
 页签内容排布方式枚举。
 
 **起始版本：** 10

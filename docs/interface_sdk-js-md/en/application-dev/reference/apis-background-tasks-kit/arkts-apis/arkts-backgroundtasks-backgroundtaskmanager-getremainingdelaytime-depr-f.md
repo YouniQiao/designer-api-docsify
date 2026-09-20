@@ -57,6 +57,8 @@ let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
 ```
 
 
+<a id="getremainingdelaytime-1"></a>
+
 ## getRemainingDelayTime
 
 ```TypeScript

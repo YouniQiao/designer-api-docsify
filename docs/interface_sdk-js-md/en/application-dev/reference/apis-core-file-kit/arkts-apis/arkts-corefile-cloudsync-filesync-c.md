@@ -1,5 +1,9 @@
 # FileSync
 
+```TypeScript
+class FileSync
+```
+
 Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit. Before using the APIs of this class, you need to create a **FileSync** instance.
 
 **Since:** 12
@@ -94,6 +98,8 @@ fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
   }
 });
 ```
+
+<a id="getlastsynctime-1"></a>
 
 ## getLastSyncTime
 
@@ -238,6 +244,8 @@ fileSync.start((err: BusinessError) => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -354,6 +362,8 @@ fileSync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

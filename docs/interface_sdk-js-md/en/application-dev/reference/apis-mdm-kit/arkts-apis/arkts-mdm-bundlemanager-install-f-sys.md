@@ -18,7 +18,7 @@ Installs specified applications. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [install](arkts-mdm-bundlemanager-install-f.md)(admin: Want, hapFilePaths: Array&lt;string&gt;, installParam?: InstallParam)
+**Substitutes:** [install](arkts-mdm-bundlemanager-install-f.md#install-2)(admin: Want, hapFilePaths: Array&lt;string&gt;, installParam?: InstallParam)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -146,6 +146,8 @@ bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
 ```
 
 
+<a id="install-1"></a>
+
 ## install
 
 ```TypeScript
@@ -158,7 +160,7 @@ Installs applications with specified parameters. This API uses an asynchronous c
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [install](arkts-mdm-bundlemanager-install-f.md)(admin: Want, hapFilePaths: Array&lt;string&gt;, installParam?: InstallParam)
+**Substitutes:** [install](arkts-mdm-bundlemanager-install-f.md#install-2)(admin: Want, hapFilePaths: Array&lt;string&gt;, installParam?: InstallParam)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 

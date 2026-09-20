@@ -1,5 +1,9 @@
 # BlankScreenDetectionMethod
 
+```TypeScript
+declare enum BlankScreenDetectionMethod
+```
+
 白屏检测使用的检测策略的方法，用于定义页面内容检测的具体算法和点位，帮助开发者在检测准确性和性能开销之间取得平衡，及时发现页面渲染异常。
 
 **起始版本：** 22

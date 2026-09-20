@@ -1,5 +1,9 @@
 # RowOptions
 
+```TypeScript
+declare interface RowOptions
+```
+
 设置Row组件的子组件间距属性。
 
 > **说明：** 

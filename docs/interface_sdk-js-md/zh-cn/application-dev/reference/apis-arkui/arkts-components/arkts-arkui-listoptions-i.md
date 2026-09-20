@@ -1,5 +1,9 @@
 # ListOptions
 
+```TypeScript
+interface ListOptions
+```
+
 用于设置List组件参数。
 
 > **说明：** 

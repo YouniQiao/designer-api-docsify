@@ -1,5 +1,9 @@
 # CustomPopupOptions
 
+```TypeScript
+declare interface CustomPopupOptions
+```
+
 Provides information for displaying a custom popup.
 
 **Since:** 8

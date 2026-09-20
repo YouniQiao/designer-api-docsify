@@ -196,11 +196,14 @@
   - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.file.fileExtensionInfo(User File Access and Management Attribute Information)](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
-  - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
-    - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md)
+  <!--Del-->
+  - [fileExtensionInfo(system api)](arkts-corefile-fileextensioninfo-n.md)<!--DelEnd-->
+    <!--Del-->
+    - [DeviceFlag(system api)](arkts-corefile-fileextensioninfo-deviceflag-n.md)<!--DelEnd-->
       <!--Del-->
       - [Constants(system api)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
-    - [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md)
+    <!--Del-->
+    - [DocumentFlag(system api)](arkts-corefile-fileextensioninfo-documentflag-n.md)<!--DelEnd-->
       <!--Del-->
       - [Constants(system api)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd-->
     <!--Del-->

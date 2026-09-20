@@ -1,5 +1,9 @@
 # TouchOptions
 
+```TypeScript
+declare interface TouchOptions
+```
+
 触摸操作的通用选项。
 
 **起始版本：** 26.0.0

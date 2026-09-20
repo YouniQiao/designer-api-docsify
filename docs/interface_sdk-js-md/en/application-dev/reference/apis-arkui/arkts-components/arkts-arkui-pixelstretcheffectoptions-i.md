@@ -1,5 +1,9 @@
 # PixelStretchEffectOptions
 
+```TypeScript
+declare interface PixelStretchEffectOptions
+```
+
 Describes the pixel stretch effect options.
 
 **Since:** 10

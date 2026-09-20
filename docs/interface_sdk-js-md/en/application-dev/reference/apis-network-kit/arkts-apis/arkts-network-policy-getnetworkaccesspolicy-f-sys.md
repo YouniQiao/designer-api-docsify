@@ -91,6 +91,8 @@ policy
 ```
 
 
+<a id="getnetworkaccesspolicy-1"></a>
+
 ## getNetworkAccessPolicy
 
 ```TypeScript

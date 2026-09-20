@@ -67,6 +67,8 @@ promise.then((data) => {
 ```
 
 
+<a id="queryholders-1"></a>
+
 ## queryHolders
 
 ```TypeScript
@@ -100,6 +102,8 @@ Queries all applications that have created contacts. This API uses an asynchrono
 See [queryHolders](#queryholders)
 
 
+<a id="queryholders-2"></a>
+
 ## queryHolders
 
 ```TypeScript
@@ -128,6 +132,8 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 See [queryHolders](#queryholders)
 
+
+<a id="queryholders-3"></a>
 
 ## queryHolders
 

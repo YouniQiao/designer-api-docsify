@@ -1,5 +1,9 @@
 # DistortionComponentOptions（系统接口）
 
+```TypeScript
+declare interface DistortionComponentOptions
+```
+
 空间扭曲形变选项。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # InsightIntentExecutor
 
+```TypeScript
+declare class InsightIntentExecutor
+```
+
 The module provides the base class for intent execution. You can use this module to interface with the [InsightIntent framework](../../../application-models/insight-intent-overview.md) on the device side and implement intent service logic through [configuration files](../../../application-models/insight-intent-config-development.md). In addition to developing intents via configuration files, intents can also be developed using decorators. For API version 20 and later, you are advised to [develop intents using decorators](../../../application-models/insight-intent-decorator-development.md).
 
 **Since:** 11
@@ -15,8 +19,7 @@ import { InsightIntentExecutor } from '@kit.AbilityKit';
 ## onExecuteInServiceExtensionAbility
 
 ```TypeScript
-onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
@@ -56,8 +59,7 @@ The code snippet below shows the promise-based asynchronous call that returns th
 ## onExecuteInUIAbilityBackgroundMode
 
 ```TypeScript
-onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
@@ -101,8 +103,7 @@ The code snippet below shows the promise-based asynchronous call that returns th
 ## onExecuteInUIAbilityForegroundMode
 
 ```TypeScript
-onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
@@ -149,8 +150,7 @@ The code snippet below shows the promise-based asynchronous call that returns th
 ## onExecuteInUIExtensionAbility
 
 ```TypeScript
-onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.

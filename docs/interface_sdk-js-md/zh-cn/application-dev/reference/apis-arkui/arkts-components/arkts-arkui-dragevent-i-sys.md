@@ -1,5 +1,9 @@
 # DragEvent
 
+```TypeScript
+declare interface DragEvent
+```
+
 拖拽事件信息。
 
 **起始版本：** 7

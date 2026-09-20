@@ -1,5 +1,9 @@
 # ListItemSwipeActionDirection
 
+```TypeScript
+declare enum ListItemSwipeActionDirection
+```
+
 Enumerates the swipe action menu display directions for ListItem components.
 
 **Since:** 21

@@ -1,5 +1,9 @@
 # TabBarOptions
 
+```TypeScript
+export declare class TabBarOptions
+```
+
 页签选项。
 
 **起始版本：** 12

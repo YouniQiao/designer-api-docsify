@@ -1,5 +1,9 @@
 # Scroll属性/事件
 
+```TypeScript
+declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
+```
+
 除支持通用属性和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还支持以下属性：
 
 除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
@@ -568,6 +572,8 @@ scrollBarColor(color: Color | number | string)
 | --- | --- | --- | --- |
 | color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | 是 | 滚动条的颜色。<br>默认值：'#66182431'<br>number为HEX格式颜色，支持rgb或者argb，取值范围：[0x0, 0xFFFFFFFF]，示例：0xffffff。<br>string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -609,6 +615,8 @@ scrollBarWidth(value: number | string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; string | 是 | 滚动条的宽度。<br>默认值：4<br>单位：vp <br>取值范围：设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

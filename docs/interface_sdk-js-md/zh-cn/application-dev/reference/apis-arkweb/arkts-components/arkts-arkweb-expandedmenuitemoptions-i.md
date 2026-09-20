@@ -1,5 +1,9 @@
 # ExpandedMenuItemOptions
 
+```TypeScript
+declare interface ExpandedMenuItemOptions
+```
+
 自定义菜单扩展项。
 
 **起始版本：** 12

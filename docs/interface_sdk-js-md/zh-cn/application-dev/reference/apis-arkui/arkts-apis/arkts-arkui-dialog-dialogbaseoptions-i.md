@@ -1,5 +1,9 @@
 # DialogBaseOptions
 
+```TypeScript
+declare interface DialogBaseOptions
+```
+
 所有Dialog类型共享的基本选项。
 
 **起始版本：** 26.0.1

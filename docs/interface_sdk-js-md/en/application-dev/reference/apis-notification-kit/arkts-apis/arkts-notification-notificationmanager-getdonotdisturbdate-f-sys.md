@@ -100,6 +100,8 @@ notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.
 ```
 
 
+<a id="getdonotdisturbdate-1"></a>
+
 ## getDoNotDisturbDate
 
 ```TypeScript
@@ -140,6 +142,8 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 See [getDoNotDisturbDate](#getdonotdisturbdate)
 
+
+<a id="getdonotdisturbdate-2"></a>
 
 ## getDoNotDisturbDate
 
@@ -184,6 +188,8 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 See [getDoNotDisturbDate](#getdonotdisturbdate)
 
+
+<a id="getdonotdisturbdate-3"></a>
 
 ## getDoNotDisturbDate
 

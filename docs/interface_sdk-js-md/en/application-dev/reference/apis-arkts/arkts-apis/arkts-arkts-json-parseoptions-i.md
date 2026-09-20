@@ -1,5 +1,9 @@
 # ParseOptions
 
+```TypeScript
+interface ParseOptions
+```
+
 Describes the parsing options, which can define the mode for processing BigInt.
 
 **Since:** 12

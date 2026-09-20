@@ -1,5 +1,9 @@
 # Lattice
 
+```TypeScript
+class Lattice
+```
+
 Lattice object. which is used to divide an image by lattice.
 
 > **NOTE:** 
@@ -56,6 +60,8 @@ Divides the image into lattices. The lattices on both even columns and even rows
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="createimagelattice-2"></a>
 
 ## createImageLattice
 

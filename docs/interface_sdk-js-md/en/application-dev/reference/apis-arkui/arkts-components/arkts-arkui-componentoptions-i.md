@@ -1,5 +1,9 @@
 # ComponentOptions
 
+```TypeScript
+declare interface ComponentOptions
+```
+
 Defines the options of Component ClassDecorator.
 
 **Since:** 11

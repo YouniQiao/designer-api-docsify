@@ -38,6 +38,8 @@ console.info("Result: " + result);
 ```
 
 
+<a id="isnrsupported-1"></a>
+
 ## isNRSupported
 
 ```TypeScript

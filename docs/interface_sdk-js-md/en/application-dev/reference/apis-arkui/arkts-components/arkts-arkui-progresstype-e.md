@@ -1,5 +1,9 @@
 # ProgressType
 
+```TypeScript
+declare enum ProgressType
+```
+
 Enumerates progress indicator types.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # ActiveStreamVolumeInfo（系统接口）
 
+```TypeScript
+interface ActiveStreamVolumeInfo
+```
+
 活动音频流的音量信息。
 
 @typedef ActiveStreamVolumeInfo

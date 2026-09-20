@@ -1,5 +1,9 @@
 # DialType (System API)
 
+```TypeScript
+export enum DialType
+```
+
 Enumerates dialup types.
 
 **Since:** 8

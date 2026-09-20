@@ -1,5 +1,9 @@
 # LocalDateTime
 
+```TypeScript
+interface LocalDateTime
+```
+
 Sets the time information for a calendar reminder.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # TextOptions
 
+```TypeScript
+declare interface TextOptions
+```
+
 Text初始化参数。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # SystemSoundManager（系统接口）
 
+```TypeScript
+interface SystemSoundManager
+```
+
 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f-sys.md)创建实例。
 
 **起始版本：** 10
@@ -110,6 +114,8 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, len
   console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="addcustomizedtone-1"></a>
 
 ## addCustomizedTone
 
@@ -663,6 +669,8 @@ systemSoundManagerInstance.getMockHapticRingtonePlayer(context, type, ringtoneUr
 });
 ```
 
+<a id="getmockhapticringtoneplayer-1"></a>
+
 ## getMockHapticRingtonePlayer
 
 ```TypeScript
@@ -936,6 +944,8 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: s
 });
 ```
 
+<a id="getsystemringtoneplayer-1"></a>
+
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -1032,6 +1042,8 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: stri
   console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="getsystemringtoneuri-1"></a>
 
 ## getSystemRingtoneUri
 
@@ -1783,6 +1795,8 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
   console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setsystemringtoneuri-1"></a>
 
 ## setSystemRingtoneUri
 

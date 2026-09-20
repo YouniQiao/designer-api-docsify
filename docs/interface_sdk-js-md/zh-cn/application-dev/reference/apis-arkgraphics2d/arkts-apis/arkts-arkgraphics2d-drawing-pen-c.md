@@ -1,5 +1,9 @@
 # Pen
 
+```TypeScript
+class Pen
+```
+
 画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。
 
 > **说明：** 
@@ -29,6 +33,8 @@ constructor()
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -397,6 +403,8 @@ setColor(color: common2D.Color): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="setcolor-1"></a>
+
 ## setColor
 
 ```TypeScript
@@ -423,6 +431,8 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
+
+<a id="setcolor-2"></a>
 
 ## setColor
 

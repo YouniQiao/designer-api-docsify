@@ -1,4 +1,4 @@
-# @ohos.arkui.componentUtils
+# @ohos.arkui.componentUtils(组件工具)
 
 提供获取组件绘制区域坐标和大小的能力。
 

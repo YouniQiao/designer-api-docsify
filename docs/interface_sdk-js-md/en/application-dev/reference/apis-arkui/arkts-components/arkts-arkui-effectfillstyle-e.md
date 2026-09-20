@@ -1,5 +1,9 @@
 # EffectFillStyle
 
+```TypeScript
+declare enum EffectFillStyle
+```
+
 The fill style of symbol effect.
 
 **Since:** 12

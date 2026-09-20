@@ -65,6 +65,8 @@ promise.then((data: sim.DsdsMode) => {
 ```
 
 
+<a id="getdsdsmode-1"></a>
+
 ## getDsdsMode
 
 ```TypeScript

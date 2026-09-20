@@ -1,5 +1,9 @@
 # RichEditorImageSpanStyleResult
 
+```TypeScript
+declare interface RichEditorImageSpanStyleResult
+```
+
 Provides the image span style information returned by the backend.
 
 **Since:** 10

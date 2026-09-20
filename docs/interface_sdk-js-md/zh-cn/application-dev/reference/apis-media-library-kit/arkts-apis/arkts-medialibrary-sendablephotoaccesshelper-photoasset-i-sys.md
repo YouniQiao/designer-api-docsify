@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset extends lang.ISendable
+```
+
 提供封装文件属性的方法。
 
 **继承/实现关系：** PhotoAsset extends lang.ISendable

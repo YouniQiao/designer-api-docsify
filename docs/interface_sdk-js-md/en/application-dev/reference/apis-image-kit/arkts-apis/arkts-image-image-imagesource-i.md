@@ -1,5 +1,9 @@
 # ImageSource
 
+```TypeScript
+interface ImageSource
+```
+
 The **ImageSource** class provides APIs to obtain image information.
 
 Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.
@@ -157,6 +161,8 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | --- | --- |
 | Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
+<a id="createpixelmap-2"></a>
+
 ## createPixelMap
 
 ```TypeScript
@@ -188,6 +194,8 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+
+<a id="createpixelmap-4"></a>
 
 ## createPixelMap
 
@@ -276,6 +284,8 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
+<a id="createpixelmaplist-1"></a>
+
 ## createPixelMapList
 
 ```TypeScript
@@ -323,6 +333,8 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
+
+<a id="createpixelmaplist-2"></a>
 
 ## createPixelMapList
 
@@ -610,6 +622,8 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
+<a id="getdelaytimelist-1"></a>
+
 ## getDelayTimeList
 
 ```TypeScript
@@ -700,6 +714,8 @@ Obtains the number of frames. This API uses a promise to return the result.
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
+<a id="getframecount-1"></a>
+
 ## getFrameCount
 
 ```TypeScript
@@ -755,6 +771,8 @@ Obtains the image information with the specified index. This API uses an asynchr
 | index | number | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
+<a id="getimageinfo-2"></a>
+
 ## getImageInfo
 
 ```TypeScript
@@ -776,6 +794,8 @@ Obtains the image information. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+
+<a id="getimageinfo-4"></a>
 
 ## getImageInfo
 
@@ -916,6 +936,8 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 
+<a id="getimageproperty-1"></a>
+
 ## getImageProperty
 
 ```TypeScript
@@ -947,6 +969,8 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
 
+<a id="getimageproperty-2"></a>
+
 ## getImageProperty
 
 ```TypeScript
@@ -971,6 +995,8 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | --- | --- | --- | --- |
 | key | string | Yes | Name of the property. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
+
+<a id="getimageproperty-3"></a>
 
 ## getImageProperty
 
@@ -1160,6 +1186,8 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
+<a id="modifyimageproperty-1"></a>
+
 ## modifyImageProperty
 
 ```TypeScript
@@ -1194,6 +1222,8 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="modifyimageproperty-2"></a>
 
 ## modifyImageProperty
 
@@ -1388,6 +1418,8 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1438,6 +1470,8 @@ Updates incremental data. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="updatedata-1"></a>
 
 ## updateData
 

@@ -1,5 +1,9 @@
 # ScrollEdgeOptions
 
+```TypeScript
+declare interface ScrollEdgeOptions
+```
+
 Provides parameters for scrolling to the edge of a scrollable container.
 
 **Since:** 12

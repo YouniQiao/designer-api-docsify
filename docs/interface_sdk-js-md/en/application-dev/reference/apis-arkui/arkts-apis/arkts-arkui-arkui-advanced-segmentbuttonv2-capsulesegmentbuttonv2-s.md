@@ -1,5 +1,9 @@
 # CapsuleSegmentButtonV2
 
+```TypeScript
+export declare struct CapsuleSegmentButtonV2
+```
+
 The segmented button component is used to create tab-type, single-selection, or multi-selection capsule segmented buttons. It supports multiple option types such as text, icons, and symbols, as well as graphic-text hybrid configurations, and allows customization of fonts, colors, corner radii, and other styles. The tab segmented button is suitable for tab switching scenarios, the single-selection capsule segmented button is suitable for single- selection switching scenarios, and the multi-selection capsule segmented button is suitable for multi-selection filtering scenarios.
 
 > **NOTE:** 
@@ -134,7 +138,7 @@ readonly buttonBackgroundColor?: ColorMetrics
 
 Background color of the segmented button.
 
-Default value: `&#36;r('sys.color.segment_button_v2_tab_button_background')`
+Default value: `$r('sys.color.segment_button_v2_tab_button_background')`
 
 When the value is **undefined**, the default value is used.
 
@@ -182,7 +186,7 @@ Corner radius of the segmented button background.
 
 Value range: [0, +∞)
 
-Default value: `&#36;r('sys.float.segment_button_v2_background_corner_radius')`
+Default value: `$r('sys.float.segment_button_v2_background_corner_radius')`
 
 If the value is out of range, the default value is used.
 
@@ -208,7 +212,7 @@ Minimum height of the segmented button.
 
 Value range: [0, +∞)
 
-Default value: when there are only text-only or icon-only options: `&#36;r('sys.float.segment_button_v2_singleline_background_height')`; when there are mixed icon and text items: `&#36;r('sys.float.segment_button_v2_doubleline_background_height')`
+Default value: when there are only text-only or icon-only options: `$r('sys.float.segment_button_v2_singleline_background_height')`; when there are mixed icon and text items: `$r('sys.float.segment_button_v2_doubleline_background_height')`
 
 If the value is out of range, the default value is used.
 
@@ -234,7 +238,7 @@ Padding of the segmented button.
 
 Value range: [0, +∞)
 
-Default value: `&#36;r('sys.float.padding_level1')`
+Default value: `$r('sys.float.padding_level1')`
 
 If the value is out of range, the default value is used.
 
@@ -284,7 +288,7 @@ Corner radius of the segmented button item.
 
 Value range: [0, +∞)
 
-Default value: `&#36;r('sys.float.segment_button_v2_selected_corner_radius')`
+Default value: `$r('sys.float.segment_button_v2_selected_corner_radius')`
 
 If the value is out of range, the default value is used.
 
@@ -308,7 +312,7 @@ readonly itemFontColor?: ColorMetrics
 
 Font color of the unselected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -396,7 +400,7 @@ readonly itemIconFillColor?: ColorMetrics
 
 Icon color of the unselected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -516,7 +520,7 @@ Value range: [0, +∞)
 
 Default value:
 
-When there are only text-only or icon-only options: `&#36;r('sys.float.segment_button_v2_singleline_selected_height')`; when there are mixed icon and text items: `&#36;r('sys.float.segment_button_v2_doubleline_selected_height')`
+When there are only text-only or icon-only options: `$r('sys.float.segment_button_v2_singleline_selected_height')`; when there are mixed icon and text items: `$r('sys.float.segment_button_v2_doubleline_selected_height')`
 
 If the value is out of range, the default value is used.
 
@@ -540,7 +544,7 @@ readonly itemPadding?: LocalizedPadding
 
 Padding of the segmented button item.
 
-Default value: `{ top: LengthMetrics.resource(&#36;r('sys.float.padding_level2')), bottom: LengthMetrics.resource(&#36;r('sys.float.padding_level2')), start: LengthMetrics.resource(&#36;r('sys.float.padding_level4')), end: LengthMetrics.resource(&#36;r('sys.float.padding_level4')) }`
+Default value: `{ top: LengthMetrics.resource($r('sys.float.padding_level2')), bottom: LengthMetrics.resource($r('sys.float.padding_level2')), start: LengthMetrics.resource($r('sys.float.padding_level4')), end: LengthMetrics.resource($r('sys.float.padding_level4')) }`
 
 When the value is **undefined**, the default value is used.
 
@@ -588,7 +592,7 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 
 Background color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.comp_background_emphasize')`
+Default value: `$r('sys.color.comp_background_emphasize')`
 
 When the value is **undefined**, the default value is used.
 
@@ -612,7 +616,7 @@ readonly itemSelectedFontColor?: ColorMetrics
 
 Font color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -700,7 +704,7 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 Icon color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -730,7 +734,7 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 HM Symbol-type icon color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -812,7 +816,7 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 HM Symbol-type icon color of the unselected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 

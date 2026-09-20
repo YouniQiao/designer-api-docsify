@@ -1,5 +1,9 @@
 # PluginComponent properties/events
 
+```TypeScript
+declare class PluginComponentAttribute extends CommonMethod<PluginComponentAttribute>
+```
+
 The width and height of the component must be explicitly set to non-zero valid values.
 
 Gesture events can be distributed to and processed inside the provider page.

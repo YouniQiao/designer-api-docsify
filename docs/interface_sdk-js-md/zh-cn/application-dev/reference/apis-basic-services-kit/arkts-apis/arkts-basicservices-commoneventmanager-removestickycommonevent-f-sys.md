@@ -65,6 +65,8 @@ commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
 ```
 
 
+<a id="removestickycommonevent-1"></a>
+
 ## removeStickyCommonEvent
 
 ```TypeScript

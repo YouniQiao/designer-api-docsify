@@ -1,5 +1,9 @@
 # FormHostServiceInfo (System API)
 
+```TypeScript
+interface FormHostServiceInfo
+```
+
 FormHostServiceInfo
 
 **Since:** 26.0.1

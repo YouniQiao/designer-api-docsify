@@ -1,5 +1,9 @@
 # BackgroundOptions
 
+```TypeScript
+declare interface BackgroundOptions
+```
+
 Defines background options.
 
 **Since:** 20

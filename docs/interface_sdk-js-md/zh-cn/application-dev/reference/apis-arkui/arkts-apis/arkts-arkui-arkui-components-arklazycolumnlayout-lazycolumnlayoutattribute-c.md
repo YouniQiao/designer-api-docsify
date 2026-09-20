@@ -1,5 +1,9 @@
 # LazyColumnLayoutAttribute
 
+```TypeScript
+export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
+```
+
 定义懒加载列布局属性。
 
 @extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;

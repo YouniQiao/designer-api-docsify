@@ -1,5 +1,9 @@
 # ImageSourceSize
 
+```TypeScript
+interface ImageSourceSize
+```
+
 图片解码尺寸。
 
 > **说明：** 

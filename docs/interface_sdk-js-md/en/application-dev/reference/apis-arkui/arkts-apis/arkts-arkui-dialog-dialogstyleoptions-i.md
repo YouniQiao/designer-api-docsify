@@ -1,5 +1,9 @@
 # DialogStyleOptions
 
+```TypeScript
+declare interface DialogStyleOptions extends DialogBaseOptions
+```
+
 Options for the fixed-style dialog.
 
 **Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)

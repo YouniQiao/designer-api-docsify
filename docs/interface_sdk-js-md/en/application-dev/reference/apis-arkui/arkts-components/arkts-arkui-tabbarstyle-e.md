@@ -1,5 +1,9 @@
 # TabBarStyle
 
+```TypeScript
+declare enum TabBarStyle
+```
+
 Enumerates the display styles of the tab bar.
 
 **Since:** 26.2.0

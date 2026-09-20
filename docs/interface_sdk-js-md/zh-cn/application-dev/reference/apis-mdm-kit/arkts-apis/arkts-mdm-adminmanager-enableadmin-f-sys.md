@@ -117,6 +117,8 @@ adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_
 ```
 
 
+<a id="enableadmin-1"></a>
+
 ## enableAdmin
 
 ```TypeScript
@@ -160,6 +162,8 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 
 参见 [enableAdmin](#enableadmin)
 
+
+<a id="enableadmin-2"></a>
 
 ## enableAdmin
 

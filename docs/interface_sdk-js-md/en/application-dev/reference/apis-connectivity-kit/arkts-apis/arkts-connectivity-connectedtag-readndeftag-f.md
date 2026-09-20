@@ -61,6 +61,8 @@ connectedTag.readNdefTag((err, data)=> {
 ```
 
 
+<a id="readndeftag-1"></a>
+
 ## readNdefTag
 
 ```TypeScript

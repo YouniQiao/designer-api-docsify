@@ -1,5 +1,9 @@
 # PromptOptionsV2
 
+```TypeScript
+export declare class PromptOptionsV2
+```
+
 Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to support deep observation and dynamic refresh of properties.
 
 **Since:** 26.0.0

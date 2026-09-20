@@ -1,5 +1,9 @@
 # PinchRecognizer
 
+```TypeScript
+declare class PinchRecognizer extends GestureRecognizer
+```
+
 Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

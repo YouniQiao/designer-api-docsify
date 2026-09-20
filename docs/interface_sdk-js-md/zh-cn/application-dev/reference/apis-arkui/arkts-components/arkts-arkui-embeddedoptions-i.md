@@ -1,5 +1,9 @@
 # EmbeddedOptions
 
+```TypeScript
+declare interface EmbeddedOptions
+```
+
 用于在EmbeddedComponent创建时传递可选的构造参数。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # Span properties/events
 
+```TypeScript
+declare class SpanAttribute extends BaseSpan<SpanAttribute>
+```
+
 Inherited from [BaseSpan](arkts-arkui-basespan-c.md).
 
 Among universal events, only onClick click events and onHover hover events are supported.
@@ -55,6 +59,8 @@ Sets the text style, covering the font size, font width, Font family, and font s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Font | Yes | Text style. |
+
+<a id="font-1"></a>
 
 ## font
 
@@ -212,6 +218,8 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.<br>Default value: **FontWeight.Normal**<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 

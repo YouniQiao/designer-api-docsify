@@ -1,5 +1,9 @@
 # LightSource（系统接口）
 
+```TypeScript
+declare interface LightSource
+```
+
 一个组件支持添加1个光源。
 
 **起始版本：** 11

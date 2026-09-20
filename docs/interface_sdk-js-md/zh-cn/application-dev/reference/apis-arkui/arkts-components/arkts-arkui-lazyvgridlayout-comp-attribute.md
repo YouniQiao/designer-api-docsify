@@ -1,5 +1,9 @@
 # LazyVGridLayout属性/事件
 
+```TypeScript
+declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：

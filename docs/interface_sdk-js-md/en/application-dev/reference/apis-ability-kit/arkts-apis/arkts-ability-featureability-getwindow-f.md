@@ -57,6 +57,8 @@ featureAbility.getWindow().then((data: window.Window) => {
 ```
 
 
+<a id="getwindow-1"></a>
+
 ## getWindow
 
 ```TypeScript

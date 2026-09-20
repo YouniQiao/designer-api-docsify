@@ -1,5 +1,9 @@
 # CrownEvent
 
+```TypeScript
+declare interface CrownEvent
+```
+
 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。
 
 **起始版本：** 18

@@ -1,5 +1,9 @@
 # PermissionUsedResponse (System API)
 
+```TypeScript
+interface PermissionUsedResponse
+```
+
 Represents the access records of all applications or devices.
 
 **Since:** 9

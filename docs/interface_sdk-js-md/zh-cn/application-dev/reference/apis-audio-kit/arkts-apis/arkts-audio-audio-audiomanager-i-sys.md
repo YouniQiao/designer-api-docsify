@@ -1,5 +1,9 @@
 # AudioManager
 
+```TypeScript
+interface AudioManager
+```
+
 管理音频音量和音频设备。在调用AudioManager的接口前，需要先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)创建实例。
 
 **起始版本：** 7
@@ -333,6 +337,8 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
   console.error(`Failed to set the audio scene mode ${err}`);
 });
 ```
+
+<a id="setaudioscene-1"></a>
 
 ## setAudioScene
 

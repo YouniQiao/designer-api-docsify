@@ -68,6 +68,8 @@ try {
 ```
 
 
+<a id="getsimplenumberformatbyskeleton-1"></a>
+
 ## getSimpleNumberFormatBySkeleton
 
 ```TypeScript

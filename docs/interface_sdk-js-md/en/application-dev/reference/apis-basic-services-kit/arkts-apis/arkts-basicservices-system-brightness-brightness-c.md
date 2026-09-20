@@ -1,5 +1,9 @@
 # Brightness
 
+```TypeScript
+export default class Brightness
+```
+
 The module provides APIs for querying and adjusting the screen brightness and mode.
 
 **Since:** 3

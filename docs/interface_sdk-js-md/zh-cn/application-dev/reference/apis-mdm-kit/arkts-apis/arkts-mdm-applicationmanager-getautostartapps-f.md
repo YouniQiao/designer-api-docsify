@@ -123,6 +123,8 @@ try {
 ```
 
 
+<a id="getautostartapps-1"></a>
+
 ## getAutoStartApps
 
 ```TypeScript
@@ -165,6 +167,8 @@ function getAutoStartApps(admin: Want | null): Array<Want>
 参见 [getAutoStartApps](#getautostartapps)
 
 
+<a id="getautostartapps-2"></a>
+
 ## getAutoStartApps
 
 ```TypeScript
@@ -206,6 +210,8 @@ function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 
 参见 [getAutoStartApps](#getautostartapps)
 
+
+<a id="getautostartapps-3"></a>
 
 ## getAutoStartApps
 

@@ -1,5 +1,9 @@
 # Web properties/events
 
+```TypeScript
+declare class WebAttribute extends CommonMethod<WebAttribute>
+```
+
 Defines the Web attribute functions.
 
 **Inheritance/Implementation:** WebAttribute extends CommonMethod<WebAttribute>
@@ -763,7 +767,7 @@ Sets whether to support an application to connect to media controller. If this a
 fileAccess(fileAccess: boolean)
 ```
 
-Sets whether to enable access to the file system in the application. This setting does not affect the access to the files specified through [&#36;rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#accessing-resources). For API version 11 and earlier versions, access to the file system in the application is enabled by default if this attribute is not explicitly called. Since API version 12, access to the file system in the application is disabled by default if this attribute is not explicitly called.
+Sets whether to enable access to the file system in the application. This setting does not affect the access to the files specified through [$rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#accessing-resources). For API version 11 and earlier versions, access to the file system in the application is enabled by default if this attribute is not explicitly called. Since API version 12, access to the file system in the application is disabled by default if this attribute is not explicitly called.
 
 **Since:** 8
 
@@ -1519,7 +1523,7 @@ Triggered when an SSL client certificate request is received.
 
 > **NOTE:** 
 > 
-> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm),[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore).
+> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm-1),[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore).
 > 
 > - If **ClientAuthenticationHandler.confirm** or **ClientAuthenticationHandler.cancel** is called, the **Web**component stores the authentication result in the memory (within the application lifecycle) and does not call
 > **onClientAuthenticationRequest()** again for the same host and port. If **onClientAuthenticationRequest.ignore**
@@ -2597,6 +2601,8 @@ For details about the component lifecycle, see [Lifecycle of the Web Components]
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRenderExitedEvent](arkts-arkweb-onrenderexitedevent-i.md)&gt; | Yes | Callback triggered when the rendering process exits abnormally.<br>**Since:** 12 |
 
+<a id="onrenderexited-1"></a>
+
 ## onRenderExited
 
 ```TypeScript
@@ -3002,7 +3008,7 @@ Triggered when an apple-touch-icon URL is received.
 ## onUrlLoadIntercept
 
 ```TypeScript
-onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest }) => boolean)
+onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest}) => boolean)
 ```
 
 Triggered when the **Web** component is about to access a URL. This API is used to determine whether to block the access.

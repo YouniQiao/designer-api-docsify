@@ -1,5 +1,9 @@
 # MarqueeUpdatePolicy
 
+```TypeScript
+declare enum MarqueeUpdatePolicy
+```
+
 跑马灯组件属性更新后，跑马灯的滚动策略。
 
 **起始版本：** 23

@@ -1,5 +1,9 @@
 # UnlockPolicy
 
+```TypeScript
+export enum UnlockPolicy
+```
+
 The policy of unlock device.
 
 **Since:** 26.0.1

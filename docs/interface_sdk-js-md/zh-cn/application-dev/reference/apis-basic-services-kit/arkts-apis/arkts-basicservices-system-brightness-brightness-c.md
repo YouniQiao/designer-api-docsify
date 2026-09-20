@@ -1,5 +1,9 @@
 # Brightness
 
+```TypeScript
+export default class Brightness
+```
+
 提供屏幕亮度、模式的查询、调节接口，以及屏幕常亮的设置接口。
 
 **起始版本：** 3

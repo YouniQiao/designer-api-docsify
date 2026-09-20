@@ -1,5 +1,9 @@
 # HuksKeyWrapType
 
+```TypeScript
+export enum HuksKeyWrapType
+```
+
 表示密钥加密类型（加密导出或导入密钥）的枚举。
 
 **起始版本：** 20

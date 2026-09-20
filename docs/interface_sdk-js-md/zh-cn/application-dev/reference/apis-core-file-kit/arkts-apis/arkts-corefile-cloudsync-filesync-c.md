@@ -1,5 +1,9 @@
 # FileSync
 
+```TypeScript
+class FileSync
+```
+
 云盘同步对象，用于支撑文件管理器应用完成云盘文件的端云同步流程。在使用前，需要先创建FileSync实例。
 
 **起始版本：** 12
@@ -94,6 +98,8 @@ fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
   }
 });
 ```
+
+<a id="getlastsynctime-1"></a>
 
 ## getLastSyncTime
 
@@ -238,6 +244,8 @@ fileSync.start((err: BusinessError) => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -354,6 +362,8 @@ fileSync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

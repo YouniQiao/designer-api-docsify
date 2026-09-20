@@ -1,5 +1,9 @@
 # RttState（系统接口）
 
+```TypeScript
+export enum RttState
+```
+
 rtt通话状态
 
 **起始版本：** 22

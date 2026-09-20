@@ -1,5 +1,9 @@
 # MenuElement
 
+```TypeScript
+declare interface MenuElement
+```
+
 Configures icon, text, and interaction information of a menu item.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # Session
 
+```TypeScript
+interface Session
+```
+
 会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能（录像，拍照）。
 
 **起始版本：** 11
@@ -170,6 +174,8 @@ commitConfig(callback: AsyncCallback<void>): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+<a id="commitconfig-1"></a>
+
 ## commitConfig
 
 ```TypeScript
@@ -222,6 +228,8 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="release-1"></a>
 
 ## release
 
@@ -335,6 +343,8 @@ start(callback: AsyncCallback<void>): void
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -388,6 +398,8 @@ stop(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="stop-1"></a>
 
 ## stop
 

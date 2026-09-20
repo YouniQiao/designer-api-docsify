@@ -1,5 +1,9 @@
 # ImmersiveOptions
 
+```TypeScript
+interface ImmersiveOptions
+```
+
 Immersive material parameters.
 
 **Since:** 26.0.0

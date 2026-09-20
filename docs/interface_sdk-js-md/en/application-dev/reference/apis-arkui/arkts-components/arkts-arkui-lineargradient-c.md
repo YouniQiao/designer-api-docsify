@@ -1,5 +1,9 @@
 # LinearGradient
 
+```TypeScript
+declare class LinearGradient
+```
+
 LinearGradient class
 
 **Since:** 10

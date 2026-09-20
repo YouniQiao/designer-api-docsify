@@ -63,6 +63,8 @@ connection.clearCustomDnsRules().then(() => {
 ```
 
 
+<a id="clearcustomdnsrules-1"></a>
+
 ## clearCustomDnsRules
 
 ```TypeScript

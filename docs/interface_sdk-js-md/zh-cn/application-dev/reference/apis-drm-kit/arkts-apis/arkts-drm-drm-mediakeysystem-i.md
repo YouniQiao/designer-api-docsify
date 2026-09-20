@@ -1,5 +1,9 @@
 # MediaKeySystem
 
+```TypeScript
+interface MediaKeySystem
+```
+
 支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)创建一个MediaKeySystem实例。
 
 **起始版本：** 11
@@ -74,6 +78,8 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+
+<a id="createmediakeysession-2"></a>
 
 ## createMediaKeySession
 

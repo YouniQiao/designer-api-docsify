@@ -1,5 +1,9 @@
 # OutlineStyle
 
+```TypeScript
+declare enum OutlineStyle
+```
+
 Enumerates outline styles.
 
 **Since:** 11

@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="getcalltransferinfo-1"></a>
+
 ## getCallTransferInfo
 
 ```TypeScript
@@ -82,6 +84,8 @@ call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY).then((data
 });
 ```
 
+
+<a id="getcalltransferinfo-2"></a>
 
 ## getCallTransferInfo
 

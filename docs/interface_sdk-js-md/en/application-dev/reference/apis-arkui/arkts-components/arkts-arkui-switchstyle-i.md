@@ -1,5 +1,9 @@
 # SwitchStyle
 
+```TypeScript
+declare interface SwitchStyle
+```
+
 Sets the style for the component of the **Switch** type.
 
 **Since:** 12
@@ -14,7 +18,7 @@ pointColor?: ResourceColor
 
 Color of the circular slider when the component is of the **Switch** type.
 
-Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')**
+Default value: **$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

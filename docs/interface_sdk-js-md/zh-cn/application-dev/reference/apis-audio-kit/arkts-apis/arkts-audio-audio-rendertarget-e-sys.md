@@ -1,5 +1,9 @@
 # RenderTarget（系统接口）
 
+```TypeScript
+enum RenderTarget
+```
+
 枚举，音频渲染器的渲染目标。
 
 @enum { int }

@@ -1,5 +1,9 @@
 # EditorEventInfo
 
+```TypeScript
+export interface EditorEventInfo
+```
+
 Provides the information about the selected content.
 
 **Since:** 11

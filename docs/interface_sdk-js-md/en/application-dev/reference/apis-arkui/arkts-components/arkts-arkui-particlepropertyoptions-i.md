@@ -1,5 +1,9 @@
 # ParticlePropertyOptions
 
+```TypeScript
+interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>
+```
+
 Defines the particle property Options. @interface ParticlePropertyOptions
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # RotateAngleOptions
 
+```TypeScript
+declare interface RotateAngleOptions
+```
+
 Rotation parameter option of the rotation angle on each axis.
 
 **Since:** 20

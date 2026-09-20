@@ -1,5 +1,9 @@
 # CalendarDay（系统接口）
 
+```TypeScript
+interface CalendarDay
+```
+
 Provides a monthly view component to display information such as date, shift break, and schedule.
 
 **起始版本：** 7

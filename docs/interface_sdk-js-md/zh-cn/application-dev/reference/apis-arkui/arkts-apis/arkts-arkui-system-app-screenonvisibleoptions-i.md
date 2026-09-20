@@ -1,5 +1,9 @@
 # ScreenOnVisibleOptions
 
+```TypeScript
+export interface ScreenOnVisibleOptions
+```
+
 定义屏幕上可见接口的选项。
 
 **起始版本：** 3

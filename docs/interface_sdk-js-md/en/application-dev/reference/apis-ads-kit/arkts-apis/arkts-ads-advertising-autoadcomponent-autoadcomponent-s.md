@@ -1,5 +1,9 @@
 # AutoAdComponent
 
+```TypeScript
+declare struct AutoAdComponent
+```
+
 The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **Since:** 11

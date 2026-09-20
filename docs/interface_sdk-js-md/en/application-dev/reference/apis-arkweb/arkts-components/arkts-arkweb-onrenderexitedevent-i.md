@@ -1,5 +1,9 @@
 # OnRenderExitedEvent
 
+```TypeScript
+declare interface OnRenderExitedEvent
+```
+
 Defines the callback triggered when the rendering process exits. It is suitable for scenarios where monitoring rendering process exceptions is required, improving rendering stability and troubleshooting efficiency.
 
 **Since:** 12

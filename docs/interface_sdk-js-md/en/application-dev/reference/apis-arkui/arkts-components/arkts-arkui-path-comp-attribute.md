@@ -1,5 +1,9 @@
 # Path properties/events
 
+```TypeScript
+declare class PathAttribute extends CommonShapeMethod<PathAttribute>
+```
+
 In addition to the universal attributes and universal drawing attributes, the following attributes are supported:
 
 **Inheritance/Implementation:** PathAttribute extends CommonShapeMethod<PathAttribute>

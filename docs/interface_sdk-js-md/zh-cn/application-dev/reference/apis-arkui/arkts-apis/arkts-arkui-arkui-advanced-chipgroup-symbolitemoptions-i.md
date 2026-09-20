@@ -1,5 +1,9 @@
 # SymbolItemOptions
 
+```TypeScript
+export interface SymbolItemOptions
+```
+
 ChipGroup的后缀图标选项类型。
 
 **起始版本：** 14

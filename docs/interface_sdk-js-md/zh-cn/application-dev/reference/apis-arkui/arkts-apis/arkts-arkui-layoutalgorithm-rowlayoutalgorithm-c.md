@@ -1,5 +1,9 @@
 # RowLayoutAlgorithm
 
+```TypeScript
+export class RowLayoutAlgorithm implements LayoutAlgorithm
+```
+
 水平方向线性布局算法类。
 
 > **说明：** 

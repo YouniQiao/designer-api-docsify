@@ -1,5 +1,9 @@
 # SystemRecordControllerChangeInfo（系统接口）
 
+```TypeScript
+interface SystemRecordControllerChangeInfo
+```
+
 定义系统记录控制器状态变化时所携带的信息。它包括启用状态、应用程序UID和预期的音频源类型。
 
 **起始版本：** 26.0.0

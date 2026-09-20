@@ -1,5 +1,9 @@
 # Map
 
+```TypeScript
+class Map<K, V>
+```
+
 一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。
 
 > **说明：** 
@@ -94,6 +98,8 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -405,6 +411,8 @@ putAll(from: Map<K, V>): void
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The putAll method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification exception |
+
+<a id="putall-1"></a>
 
 ## putAll
 

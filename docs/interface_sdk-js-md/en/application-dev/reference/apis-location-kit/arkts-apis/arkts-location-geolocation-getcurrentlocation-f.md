@@ -71,6 +71,8 @@ geolocation.getCurrentLocation(requestInfo).then((result) => {
 ```
 
 
+<a id="getcurrentlocation-1"></a>
+
 ## getCurrentLocation
 
 ```TypeScript
@@ -99,6 +101,8 @@ Obtain current location
 
 See [getCurrentLocation](#getcurrentlocation)
 
+
+<a id="getcurrentlocation-2"></a>
 
 ## getCurrentLocation
 

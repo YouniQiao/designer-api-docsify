@@ -1,5 +1,9 @@
 # TargetInfo
 
+```TypeScript
+export interface TargetInfo
+```
+
 Specifies the target node for component binding.
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # RouteInfo
 
+```TypeScript
+declare interface RouteInfo
+```
+
 Route information.
 
 **Since:** 10

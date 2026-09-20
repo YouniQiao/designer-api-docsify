@@ -1,5 +1,9 @@
 # WaterFlowOptions
 
+```TypeScript
+declare interface WaterFlowOptions
+```
+
 瀑布流组件参数对象。
 
 **起始版本：** 9

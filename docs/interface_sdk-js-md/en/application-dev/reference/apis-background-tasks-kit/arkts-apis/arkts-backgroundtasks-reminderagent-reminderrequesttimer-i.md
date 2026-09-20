@@ -1,5 +1,9 @@
 # ReminderRequestTimer
 
+```TypeScript
+interface ReminderRequestTimer extends ReminderRequest
+```
+
 Defines a reminder for a scheduled timer.
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

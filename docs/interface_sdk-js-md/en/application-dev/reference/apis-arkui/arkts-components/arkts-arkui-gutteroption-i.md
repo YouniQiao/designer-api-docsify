@@ -1,5 +1,9 @@
 # GutterOption
 
+```TypeScript
+declare interface GutterOption
+```
+
 Provides the gutter options for the grid layout to define the spacing between child components in different directions.
 
 **Since:** 9

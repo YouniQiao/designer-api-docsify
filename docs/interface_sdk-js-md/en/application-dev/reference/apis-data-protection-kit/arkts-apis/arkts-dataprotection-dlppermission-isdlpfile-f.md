@@ -79,6 +79,8 @@ dlpPermission.isDLPFile(file, (err, isDLPFile) => {
 ```
 
 
+<a id="isdlpfile-1"></a>
+
 ## isDLPFile
 
 ```TypeScript

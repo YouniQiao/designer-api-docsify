@@ -80,6 +80,8 @@ radio.getIMEI(slotId).then((data: string) => {
 ```
 
 
+<a id="getimei-1"></a>
+
 ## getIMEI
 
 ```TypeScript
@@ -124,6 +126,8 @@ Obtains the IMEI of a specified card slot of the device.
 
 See [getIMEI](#getimei)
 
+
+<a id="getimei-2"></a>
 
 ## getIMEI
 

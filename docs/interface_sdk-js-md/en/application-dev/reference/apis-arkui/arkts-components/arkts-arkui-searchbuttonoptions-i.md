@@ -1,5 +1,9 @@
 # SearchButtonOptions
 
+```TypeScript
+interface SearchButtonOptions
+```
+
 Defines the SearchButton options.
 
 **Since:** 10

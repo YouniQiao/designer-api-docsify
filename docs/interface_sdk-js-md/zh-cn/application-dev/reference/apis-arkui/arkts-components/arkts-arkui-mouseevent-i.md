@@ -1,5 +1,9 @@
 # MouseEvent
 
+```TypeScript
+declare interface MouseEvent extends BaseEvent
+```
+
 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

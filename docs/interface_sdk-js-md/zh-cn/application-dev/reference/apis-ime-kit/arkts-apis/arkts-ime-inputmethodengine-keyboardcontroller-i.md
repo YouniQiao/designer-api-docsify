@@ -1,5 +1,9 @@
 # KeyboardController
 
+```TypeScript
+interface KeyboardController
+```
+
 下列API均需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)获取到KeyboardController实例后，通过实例调用。
 
 **起始版本：** 8
@@ -60,6 +64,8 @@ keyboardController.exitCurrentInputType().then(() => {
   console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
 });
 ```
+
+<a id="exitcurrentinputtype-1"></a>
 
 ## exitCurrentInputType
 
@@ -137,6 +143,8 @@ keyboardController.hide().then(() => {
   console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
+
+<a id="hide-1"></a>
 
 ## hide
 
@@ -234,6 +242,8 @@ keyboardController.hideKeyboard().then(() => {
   console.error(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="hidekeyboard-1"></a>
 
 ## hideKeyboard
 

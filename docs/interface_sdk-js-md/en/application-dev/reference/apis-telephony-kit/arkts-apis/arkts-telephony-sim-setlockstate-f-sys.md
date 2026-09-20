@@ -77,6 +77,8 @@ sim.setLockState(0, lockInfo).then((data: sim.LockStatusResponse) => {
 ```
 
 
+<a id="setlockstate-1"></a>
+
 ## setLockState
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # SmartGestureShortcutOptions
 
+```TypeScript
+declare interface SmartGestureShortcutOptions
+```
+
 智慧手势响应行为配置对象。
 
 **起始版本：** 26.0.0

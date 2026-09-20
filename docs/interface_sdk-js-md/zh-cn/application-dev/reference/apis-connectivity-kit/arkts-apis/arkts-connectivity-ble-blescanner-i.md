@@ -1,5 +1,9 @@
 # BleScanner
 
+```TypeScript
+interface BleScanner
+```
+
 BLE扫描类，提供了扫描相关的操作方法。
 
 使用该类的方法前，需通过[createBleScanner](arkts-connectivity-ble-createblescanner-f.md)方法构造该类的实例。通过创建不同的该类实例，可以管理多路不同的扫描流程。

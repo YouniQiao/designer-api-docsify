@@ -1,5 +1,9 @@
 # WebStorage
 
+```TypeScript
+class WebStorage
+```
+
 Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object.
 
 > **NOTE:** 
@@ -98,6 +102,8 @@ Obtains the storage quota of an origin in the Web SQL Database and HTML5-support
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
+<a id="getoriginquota-1"></a>
+
 ## getOriginQuota
 
 ```TypeScript
@@ -152,6 +158,8 @@ Obtains information about origins that are currently using the Web SQL Database 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
+
+<a id="getorigins-1"></a>
 
 ## getOrigins
 
@@ -212,6 +220,8 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
+
+<a id="getoriginusage-1"></a>
 
 ## getOriginUsage
 

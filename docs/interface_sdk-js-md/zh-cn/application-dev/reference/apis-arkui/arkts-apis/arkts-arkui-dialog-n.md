@@ -1,5 +1,9 @@
 # dialog
 
+```TypeScript
+declare namespace dialog
+```
+
 提供统一的Dialog API。
 
 **起始版本：** 26.0.1

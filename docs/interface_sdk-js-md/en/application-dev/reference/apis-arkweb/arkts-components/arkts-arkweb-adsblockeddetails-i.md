@@ -1,5 +1,9 @@
 # AdsBlockedDetails
 
+```TypeScript
+declare interface AdsBlockedDetails
+```
+
 Provides detailed information about the blocked ads when ads are blocked.
 
 **Since:** 12

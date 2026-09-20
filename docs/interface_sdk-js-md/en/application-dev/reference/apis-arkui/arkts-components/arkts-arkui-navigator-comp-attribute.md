@@ -1,5 +1,9 @@
 # Navigator properties/events
 
+```TypeScript
+declare class NavigatorAttribute extends CommonMethod<NavigatorAttribute>
+```
+
 Declare navigator properties.
 
 **Inheritance/Implementation:** NavigatorAttribute extends CommonMethod<NavigatorAttribute>

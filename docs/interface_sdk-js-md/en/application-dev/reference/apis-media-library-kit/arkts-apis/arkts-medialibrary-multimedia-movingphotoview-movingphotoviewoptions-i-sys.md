@@ -1,5 +1,9 @@
 # MovingPhotoViewOptions
 
+```TypeScript
+declare interface MovingPhotoViewOptions
+```
+
 Defines the moving photo view options.
 
 @interface MovingPhotoViewOptions

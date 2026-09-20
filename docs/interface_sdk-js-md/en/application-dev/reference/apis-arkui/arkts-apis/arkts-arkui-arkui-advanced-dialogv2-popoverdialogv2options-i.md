@@ -1,5 +1,9 @@
 # PopoverDialogV2Options
 
+```TypeScript
+export declare interface PopoverDialogV2Options extends CustomPopupOptions
+```
+
 Defines PopoverDialogV2 Options
 
 @interface PopoverDialogV2Options @extends CustomPopupOptions

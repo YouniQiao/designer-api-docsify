@@ -1,5 +1,9 @@
 # ImageContent
 
+```TypeScript
+declare enum ImageContent
+```
+
 Defines the image content.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # FloatingTabBarWidth
 
+```TypeScript
+interface FloatingTabBarWidth
+```
+
 Provides an interface for the options for the floating bar width of the tab width at different breakpoints.
 
 **Since:** 26.0.0

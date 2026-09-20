@@ -1,5 +1,9 @@
 # ParticlePropertyUpdaterConfigs
 
+```TypeScript
+interface ParticlePropertyUpdaterConfigs<T>
+```
+
 设置粒子属性更新器配置。
 
 **起始版本：** 10

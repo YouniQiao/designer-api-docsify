@@ -130,6 +130,8 @@ globalContext.getApplicationContext()
 ```
 
 
+<a id="loadmodelfrombuffer-1"></a>
+
 ## loadModelFromBuffer
 
 ```TypeScript
@@ -165,6 +167,8 @@ Create a Model instance from buffer
 
 See [loadModelFromBuffer](#loadmodelfrombuffer)
 
+
+<a id="loadmodelfrombuffer-2"></a>
 
 ## loadModelFromBuffer
 

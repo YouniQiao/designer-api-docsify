@@ -1,5 +1,9 @@
 # CapsuleStyleOptions
 
+```TypeScript
+declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions
+```
+
 Capsule style options.
 
 Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).

@@ -1,5 +1,9 @@
 # LightWeightSet
 
+```TypeScript
+declare class LightWeightSet<T>
+```
+
 LightWeightSet stores a set of values, each of which must be unique.
 
 **Since:** 8

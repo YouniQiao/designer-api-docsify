@@ -93,6 +93,8 @@ huks.exportKeyItem(keyAlias, emptyOptions)
 ```
 
 
+<a id="exportkeyitem-1"></a>
+
 ## exportKeyItem
 
 ```TypeScript

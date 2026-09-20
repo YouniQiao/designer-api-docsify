@@ -1,5 +1,9 @@
 # UIInspector
 
+```TypeScript
+export class UIInspector
+```
+
 class UIInspector
 
 提供注册组件布局和组件绘制送显完成回调通知的能力。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作，适用于需要精确感知组件布局和绘制时机的场景。
@@ -44,6 +48,8 @@ createComponentObserver(id: string): inspector.ComponentObserver
 | 类型 | 说明 |
 | --- | --- |
 | [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+
+<a id="createcomponentobserver-1"></a>
 
 ## createComponentObserver
 

@@ -1,5 +1,9 @@
 # WebDarkMode
 
+```TypeScript
+declare enum WebDarkMode
+```
+
 Configures the web dark mode, which controls the dark theme display of web content and helps developers improve visual experience and readability based on user preferences and system themes.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # ChipV2PrefixImageIconConfig
 
+```TypeScript
+export interface ChipV2PrefixImageIconConfig extends ChipV2ImageIconConfig
+```
+
 Defines the attribute configuration of the prefix icon.
 
 This API inherits from [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md).

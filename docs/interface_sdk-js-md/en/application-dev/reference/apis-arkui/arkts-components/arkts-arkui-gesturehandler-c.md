@@ -1,5 +1,9 @@
 # GestureHandler
 
+```TypeScript
+declare class GestureHandler<T> implements GestureInterface<T>
+```
+
 Represents the base type for gesture handlers.
 
 **Inheritance/Implementation:** GestureHandler implements GestureInterface<T>

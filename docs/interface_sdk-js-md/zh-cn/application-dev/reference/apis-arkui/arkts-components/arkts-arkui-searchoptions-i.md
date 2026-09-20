@@ -1,5 +1,9 @@
 # SearchOptions
 
+```TypeScript
+declare interface SearchOptions
+```
+
 Search初始化参数。
 
 > **说明：** 

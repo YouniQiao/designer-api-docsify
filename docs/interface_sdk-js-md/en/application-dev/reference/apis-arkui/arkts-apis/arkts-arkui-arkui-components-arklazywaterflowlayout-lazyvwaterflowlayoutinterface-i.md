@@ -1,5 +1,9 @@
 # LazyVWaterFlowLayoutInterface
 
+```TypeScript
+export interface LazyVWaterFlowLayoutInterface
+```
+
 Defines the lazy vertical waterflow layout component.
 
 @interface LazyVWaterFlowLayoutInterface

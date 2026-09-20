@@ -52,6 +52,8 @@ let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.Ima
 ```
 
 
+<a id="createimagecreator-1"></a>
+
 ## createImageCreator
 
 ```TypeScript

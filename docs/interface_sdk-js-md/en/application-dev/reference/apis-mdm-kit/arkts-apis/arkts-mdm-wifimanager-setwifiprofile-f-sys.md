@@ -98,6 +98,8 @@ wifiManager.setWifiProfile(wantTemp, profile).then(() => {
 ```
 
 
+<a id="setwifiprofile-1"></a>
+
 ## setWifiProfile
 
 ```TypeScript

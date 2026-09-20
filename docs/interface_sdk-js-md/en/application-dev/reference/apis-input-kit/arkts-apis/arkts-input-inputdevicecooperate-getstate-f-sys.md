@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript

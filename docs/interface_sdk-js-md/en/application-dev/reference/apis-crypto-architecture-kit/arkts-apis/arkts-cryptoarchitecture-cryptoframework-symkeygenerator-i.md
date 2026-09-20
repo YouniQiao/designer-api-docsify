@@ -1,5 +1,9 @@
 # SymKeyGenerator
 
+```TypeScript
+interface SymKeyGenerator
+```
+
 Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a **SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md).
 
 **Since:** 9
@@ -100,6 +104,8 @@ function testConvertKey() {
     });
 }
 ```
+
+<a id="convertkey-1"></a>
 
 ## convertKey
 
@@ -310,6 +316,8 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
       console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
     });
 ```
+
+<a id="generatesymkey-1"></a>
 
 ## generateSymKey
 

@@ -1,5 +1,9 @@
 # RemoteGrantStatus（系统接口）
 
+```TypeScript
+enum RemoteGrantStatus
+```
+
 远程授权状态。
 
 **起始版本：** 26.0.1

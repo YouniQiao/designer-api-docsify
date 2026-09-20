@@ -1,5 +1,9 @@
 # ScrollAnimationOptions
 
+```TypeScript
+declare interface ScrollAnimationOptions
+```
+
 Provides parameters for customizing scroll animations.
 
 **Since:** 12

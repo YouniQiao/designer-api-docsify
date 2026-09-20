@@ -1,5 +1,9 @@
 # RectUtils
 
+```TypeScript
+class RectUtils
+```
+
 This module provides tools for processing rectangles. Use scenarios:
 
 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point.
@@ -96,6 +100,8 @@ Checks whether a rectangle completely contains another rectangle.
 | --- | --- |
 | boolean | Whether a rectangle completely contains another rectangle. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
 
+<a id="contains-1"></a>
+
 ## contains
 
 ```TypeScript
@@ -123,6 +129,8 @@ Checks whether a rectangle completely contains another rectangle (which is marke
 | Type | Description |
 | --- | --- |
 | boolean | Whether a rectangle completely contains another rectangle defined by the coordinates of its upper left and lower right corners. **true** means yes; **false** otherwise. An empty rectangle does not contain any other rectangle. |
+
+<a id="contains-2"></a>
 
 ## contains
 

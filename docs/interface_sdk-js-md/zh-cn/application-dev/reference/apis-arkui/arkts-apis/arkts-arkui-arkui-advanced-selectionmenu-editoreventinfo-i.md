@@ -1,5 +1,9 @@
 # EditorEventInfo
 
+```TypeScript
+export interface EditorEventInfo
+```
+
 选中内容信息。
 
 **起始版本：** 11

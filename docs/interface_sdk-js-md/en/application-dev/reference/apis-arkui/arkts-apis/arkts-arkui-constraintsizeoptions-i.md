@@ -1,5 +1,9 @@
 # ConstraintSizeOptions
 
+```TypeScript
+declare interface ConstraintSizeOptions
+```
+
 Defines the size constraints of a component during layout.
 
 > **NOTE:** 

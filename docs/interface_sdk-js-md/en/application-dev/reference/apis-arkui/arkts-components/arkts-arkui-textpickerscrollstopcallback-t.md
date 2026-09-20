@@ -1,7 +1,7 @@
 # TextPickerScrollStopCallback
 
 ```TypeScript
-declare type TextPickerScrollStopCallback = (value: string | string[], index: number | number[]) => void
+declare type TextPickerScrollStopCallback = (value: string[], index: number[]) => void
 ```
 
 Defines the **onScrollStop** event callback signature.

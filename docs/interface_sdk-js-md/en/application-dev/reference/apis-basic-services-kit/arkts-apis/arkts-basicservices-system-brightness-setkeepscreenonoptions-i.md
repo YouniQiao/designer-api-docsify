@@ -1,5 +1,9 @@
 # SetKeepScreenOnOptions
 
+```TypeScript
+export interface SetKeepScreenOnOptions
+```
+
 Options for setting the screen to be steady on.
 
 **Since:** 3

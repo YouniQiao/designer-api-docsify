@@ -91,6 +91,8 @@ struct Index {
 ```
 
 
+<a id="registerwebadinterface-1"></a>
+
 ## registerWebAdInterface
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # TabsAnimationEvent
 
+```TypeScript
+declare interface TabsAnimationEvent
+```
+
 Tabs组件动画相关信息集合。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # Flags
 
+```TypeScript
+export enum Flags
+```
+
 Enumerates the common preset keywords of the [Want.flags](arkts-ability-app-ability-want-want-c.md) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
 
 **Since:** 9

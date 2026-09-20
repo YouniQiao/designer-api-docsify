@@ -88,6 +88,8 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) =>
 ```
 
 
+<a id="vibrate-1"></a>
+
 ## vibrate
 
 ```TypeScript
@@ -99,13 +101,13 @@ function vibrate(duration: number): Promise<void>
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -128,6 +130,8 @@ function vibrate(duration: number): Promise<void>
 参见 [vibrate](#vibrate)
 
 
+<a id="vibrate-2"></a>
+
 ## vibrate
 
 ```TypeScript
@@ -139,13 +143,13 @@ function vibrate(effectId: EffectId): Promise<void>
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute)
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -167,6 +171,8 @@ function vibrate(effectId: EffectId): Promise<void>
 
 参见 [vibrate](#vibrate)
 
+
+<a id="vibrate-3"></a>
 
 ## vibrate
 

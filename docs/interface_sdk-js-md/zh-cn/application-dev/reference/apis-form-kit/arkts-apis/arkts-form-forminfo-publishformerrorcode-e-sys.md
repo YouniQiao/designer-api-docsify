@@ -1,5 +1,9 @@
 # PublishFormErrorCode（系统接口）
 
+```TypeScript
+enum PublishFormErrorCode
+```
+
 发布卡片加桌错误码枚举。
 
 **起始版本：** 12

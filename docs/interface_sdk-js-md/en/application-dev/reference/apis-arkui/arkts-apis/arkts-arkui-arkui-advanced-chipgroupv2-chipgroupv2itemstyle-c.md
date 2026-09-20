@@ -1,5 +1,9 @@
 # ChipGroupV2ItemStyle
 
+```TypeScript
+export declare class ChipGroupV2ItemStyle
+```
+
 Defines the common attribute class of **ChipV2**.
 
 **Since:** 26.0.0
@@ -44,7 +48,7 @@ public backgroundColor?: ColorMetrics
 
 Background color of **ChipV2**.
 
-Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
+Default value: **$r('sys.color.ohos_id_color_button_normal')**
 
 If the value is **undefined**, the default value is used.
 
@@ -94,7 +98,7 @@ public fontColor?: ColorMetrics
 
 Font color of **ChipV2**.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
+Default value: **$r('sys.color.ohos_id_color_text_primary')**
 
 If the value is **undefined**, the default value is used.
 
@@ -120,7 +124,7 @@ public selectedBackgroundColor?: ColorMetrics
 
 Background color of **ChipV2** when selected. After this attribute is set, when the **ChipV2** is selected, the background is filled with this color, replacing the **backgroundColor** in the unselected state.
 
-Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
+Default value: **$r('sys.color.ohos_id_color_emphasize')**
 
 If the value is **undefined**, the default value is used.
 
@@ -170,7 +174,7 @@ public selectedFontColor?: ColorMetrics
 
 Font color of **ChipV2** when selected. After this attribute is set, when the **ChipV2** is selected, the label text is displayed in this color, replacing the **fontColor** in the unselected state.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**
+Default value: **$r('sys.color.ohos_id_color_text_primary_contrary')**
 
 If the value is **undefined**, the default value is used.
 

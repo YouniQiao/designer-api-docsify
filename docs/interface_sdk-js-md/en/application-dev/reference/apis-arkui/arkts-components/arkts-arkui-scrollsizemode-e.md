@@ -1,5 +1,9 @@
 # ScrollSizeMode
 
+```TypeScript
+declare enum ScrollSizeMode
+```
+
 Define the scroll size mode of the sheet.
 
 **Since:** 12

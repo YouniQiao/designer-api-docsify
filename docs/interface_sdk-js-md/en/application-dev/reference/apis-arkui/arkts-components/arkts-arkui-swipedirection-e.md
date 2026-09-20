@@ -1,5 +1,9 @@
 # SwipeDirection
 
+```TypeScript
+declare enum SwipeDirection
+```
+
 Enumerates the directions in which the swipe gesture can be recognized.
 
 **Since:** 8

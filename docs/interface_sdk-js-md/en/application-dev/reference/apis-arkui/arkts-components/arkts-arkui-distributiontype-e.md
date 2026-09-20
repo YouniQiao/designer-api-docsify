@@ -1,5 +1,9 @@
 # DistributionType
 
+```TypeScript
+declare enum DistributionType
+```
+
 Enumerates the color distribution types of a particle.
 
 @enum { number }

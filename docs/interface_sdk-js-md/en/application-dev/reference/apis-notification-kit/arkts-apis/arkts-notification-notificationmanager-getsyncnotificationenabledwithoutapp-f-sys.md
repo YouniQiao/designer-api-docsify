@@ -74,6 +74,8 @@ notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boo
 ```
 
 
+<a id="getsyncnotificationenabledwithoutapp-1"></a>
+
 ## getSyncNotificationEnabledWithoutApp
 
 ```TypeScript

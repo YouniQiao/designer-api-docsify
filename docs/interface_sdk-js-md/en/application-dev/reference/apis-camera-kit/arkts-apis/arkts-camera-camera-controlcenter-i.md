@@ -1,5 +1,9 @@
 # ControlCenter
 
+```TypeScript
+interface ControlCenter extends ControlCenterQuery
+```
+
 **ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md).
 
 It is used to enable the camera controller.

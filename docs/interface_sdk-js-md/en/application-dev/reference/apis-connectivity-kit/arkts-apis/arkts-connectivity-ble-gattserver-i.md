@@ -1,5 +1,9 @@
 # GattServer
 
+```TypeScript
+interface GattServer
+```
+
 Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md) to create an GattServer instance.
 
 **Since:** 10
@@ -433,6 +437,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="notifycharacteristicchanged-1"></a>
 
 ## notifyCharacteristicChanged
 

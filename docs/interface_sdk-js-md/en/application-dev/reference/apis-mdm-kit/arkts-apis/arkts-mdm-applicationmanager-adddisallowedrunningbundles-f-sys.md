@@ -112,6 +112,8 @@ applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() =>
 ```
 
 
+<a id="adddisallowedrunningbundles-1"></a>
+
 ## addDisallowedRunningBundles
 
 ```TypeScript
@@ -158,6 +160,8 @@ Adds the applications that are not allowed to run under a specified user (specif
 
 See [addDisallowedRunningBundles](#adddisallowedrunningbundles)
 
+
+<a id="adddisallowedrunningbundles-2"></a>
 
 ## addDisallowedRunningBundles
 

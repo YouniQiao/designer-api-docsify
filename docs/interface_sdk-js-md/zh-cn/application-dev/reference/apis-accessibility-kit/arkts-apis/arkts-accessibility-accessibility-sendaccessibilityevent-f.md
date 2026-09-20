@@ -103,6 +103,8 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
 ```
 
 
+<a id="sendaccessibilityevent-1"></a>
+
 ## sendAccessibilityEvent
 
 ```TypeScript

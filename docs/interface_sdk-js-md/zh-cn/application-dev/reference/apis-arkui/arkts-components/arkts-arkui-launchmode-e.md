@@ -1,5 +1,9 @@
 # LaunchMode
 
+```TypeScript
+declare enum LaunchMode
+```
+
 路由栈操作模式。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # OverlayManager
 
+```TypeScript
+export class OverlayManager
+```
+
 class OverlayManager
 
 **起始版本：** 12

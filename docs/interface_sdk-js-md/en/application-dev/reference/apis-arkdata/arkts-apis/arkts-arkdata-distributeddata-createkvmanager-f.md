@@ -74,6 +74,8 @@ try {
 ```
 
 
+<a id="createkvmanager-1"></a>
+
 ## createKVManager
 
 ```TypeScript

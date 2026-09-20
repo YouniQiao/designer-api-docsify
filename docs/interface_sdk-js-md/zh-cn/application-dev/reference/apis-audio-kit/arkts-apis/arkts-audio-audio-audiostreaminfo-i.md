@@ -1,5 +1,9 @@
 # AudioStreamInfo
 
+```TypeScript
+interface AudioStreamInfo
+```
+
 音频流信息。
 
 **起始版本：** 8

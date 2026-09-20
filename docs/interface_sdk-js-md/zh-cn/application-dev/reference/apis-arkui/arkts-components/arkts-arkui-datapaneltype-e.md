@@ -1,5 +1,9 @@
 # DataPanelType
 
+```TypeScript
+declare enum DataPanelType
+```
+
 数据面板的类型。
 
 **起始版本：** 8

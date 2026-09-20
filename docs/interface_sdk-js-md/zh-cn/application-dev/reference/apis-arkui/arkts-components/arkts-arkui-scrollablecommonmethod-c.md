@@ -1,5 +1,9 @@
 # ScrollableCommonMethod
 
+```TypeScript
+declare class ScrollableCommonMethod<T> extends CommonMethod<T>
+```
+
 CommonScrollableMethod
 
 @extends CommonMethod&lt;T&gt;
@@ -871,6 +875,8 @@ scrollBarColor(color: Color | number | string): T
 | --- | --- |
 | T | 返回当前滚动组件。 |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -990,6 +996,8 @@ scrollBarWidth(value: number | string): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前滚动组件。 |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

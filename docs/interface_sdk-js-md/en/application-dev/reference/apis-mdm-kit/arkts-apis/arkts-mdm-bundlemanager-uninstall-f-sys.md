@@ -24,7 +24,7 @@ Uninstalls an application of the current user without retaining the bundle data.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -150,6 +150,8 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
 ```
 
 
+<a id="uninstall-1"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -168,7 +170,7 @@ Uninstalls an application of the specified user without retaining the bundle dat
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -202,6 +204,8 @@ Uninstalls an application of the specified user without retaining the bundle dat
 See [uninstall](#uninstall)
 
 
+<a id="uninstall-2"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -220,7 +224,7 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -254,6 +258,8 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 See [uninstall](#uninstall)
 
 
+<a id="uninstall-3"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -272,7 +278,7 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 

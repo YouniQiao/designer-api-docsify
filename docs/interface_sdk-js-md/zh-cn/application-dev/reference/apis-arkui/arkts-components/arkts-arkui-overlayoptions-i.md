@@ -1,5 +1,9 @@
 # OverlayOptions
 
+```TypeScript
+declare interface OverlayOptions
+```
+
 浮层的定位。
 
 > **说明：** 

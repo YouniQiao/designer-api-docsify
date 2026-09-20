@@ -1,5 +1,9 @@
 # ToolInfo (System API)
 
+```TypeScript
+export interface ToolInfo
+```
+
 ToolInfo describes the basic information of a cli tool.
 
 @typedef ToolInfo

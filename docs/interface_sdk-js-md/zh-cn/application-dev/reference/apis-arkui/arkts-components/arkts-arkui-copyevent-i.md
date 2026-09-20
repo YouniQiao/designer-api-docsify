@@ -1,5 +1,9 @@
 # CopyEvent
 
+```TypeScript
+declare interface CopyEvent
+```
+
 定义用户复制事件。
 
 **起始版本：** 12

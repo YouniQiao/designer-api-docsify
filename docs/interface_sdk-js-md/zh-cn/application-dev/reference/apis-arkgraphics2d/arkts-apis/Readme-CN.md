@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-arkgraphics2d-->
 
-- [@ohos.effectKit](arkts-arkgraphics2d-effectkit.md)
+- [@ohos.effectKit(图像效果)](arkts-arkgraphics2d-effectkit.md)
   - [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md)
   - [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)
   - [Color](arkts-arkgraphics2d-effectkit-color-i.md)
@@ -159,7 +159,7 @@
   - [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md)
   - [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md)
   - [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
-- [@ohos.graphics.uiEffect](arkts-arkgraphics2d-graphics-uieffect.md)
+- [@ohos.graphics.uiEffect(效果级联)](arkts-arkgraphics2d-graphics-uieffect.md)
   - [uiEffect](arkts-arkgraphics2d-uieffect-n.md)
     <!--Del-->
     - [createBrightnessBlender(系统接口)](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)<!--DelEnd-->

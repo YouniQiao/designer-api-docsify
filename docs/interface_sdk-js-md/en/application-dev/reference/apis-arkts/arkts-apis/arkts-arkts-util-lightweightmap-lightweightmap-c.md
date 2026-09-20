@@ -1,5 +1,9 @@
 # LightWeightMap
 
+```TypeScript
+declare class LightWeightMap<K, V>
+```
+
 LightWeightMap stores key-value (KV) pairs. Each key must be unique and have only one value.
 
 **Since:** 8

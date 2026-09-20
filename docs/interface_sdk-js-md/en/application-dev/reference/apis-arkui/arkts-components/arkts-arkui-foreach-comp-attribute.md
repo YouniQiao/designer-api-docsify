@@ -1,5 +1,9 @@
 # ForEach properties/events
 
+```TypeScript
+declare class ForEachAttribute extends DynamicNode<ForEachAttribute>
+```
+
 The drag-and-drop sorting attribute is supported.
 
 **Inheritance/Implementation:** ForEachAttribute extends DynamicNode<ForEachAttribute>

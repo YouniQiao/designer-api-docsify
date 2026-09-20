@@ -1,5 +1,9 @@
 # RichEditorParagraphStyle
 
+```TypeScript
+declare interface RichEditorParagraphStyle
+```
+
 段落样式。
 
 **起始版本：** 11

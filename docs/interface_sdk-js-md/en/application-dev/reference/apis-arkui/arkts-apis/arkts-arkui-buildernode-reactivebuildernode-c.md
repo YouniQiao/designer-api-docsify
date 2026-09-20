@@ -1,5 +1,9 @@
 # ReactiveBuilderNode
 
+```TypeScript
+export class ReactiveBuilderNode<Args extends Object[]>
+```
+
 **ReactiveBuilderNode** uses the stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) to generate a component tree and holds the root node of the component tree. A ReactiveBuilderNode cannot be defined as a state variable. FrameNode held in **ReactiveBuilderNode** is used only to mount the ReactiveBuilderNode as a child node to another FrameNode. Undefined behavior may occur if you set attributes or perform operations on subnodes of the FrameNode held by the ReactiveBuilderNode. Therefore, after you have obtained a RenderNode through the [getFrameNode](arkts-arkui-buildernode-c.md#getframenode) method of the ReactiveBuilderNode and the [getRenderNode](arkts-arkui-framenode-c.md#getrendernode) method of the FrameNode, avoid setting the attributes or operating the subnodes through APIs of [RenderNode](arkts-arkui-rendernode-c.md).
 
 **Since:** 22

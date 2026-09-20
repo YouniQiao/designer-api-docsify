@@ -1,5 +1,9 @@
 # Swiper properties/events
 
+```TypeScript
+declare class SwiperAttribute extends CommonMethod<SwiperAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -33,6 +37,8 @@ If [loop](#loop) is set to **false**, the automatic playback stops at the last p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable automatic playback for child components.<br>**true**: yes; **false**: no<br>If an invalid value is passed, the value **false** is used. |
+
+<a id="autoplay-1"></a>
 
 ## autoPlay
 
@@ -92,6 +98,8 @@ Sets the number of child components to be preloaded (cached), which are needed f
 | --- | --- | --- | --- |
 | value | number | Yes | Number of child components to be preloaded (cached).<br>Default value: **1**<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
 
+<a id="cachedcount-1"></a>
+
 ## cachedCount
 
 ```TypeScript
@@ -120,6 +128,8 @@ Sets the number of child components to be cached.
 | --- | --- | --- | --- |
 | count | number | Yes | Number of child components to be preloaded (cached).<br>Default value: **1**<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
 | isShown | boolean | Yes | Whether the cached nodes within the range rendered without being added to the render tree.<br>**true**: yes; **false**: no<br>If an invalid value is passed, the value **false** is used. |
+
+<a id="cachedcount-2"></a>
 
 ## cachedCount
 
@@ -331,6 +341,8 @@ Dots Displayed| Description|
 | value | number &#124; string &#124; [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | Yes | Number of elements to display per page.<br> Default value: **1**<br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used.<br>**Since:** 10 |
 | swipeByGroup | boolean | No | Whether to turn pages by group. The value **true** means to turn pages by group, and **false** means to turn pages by child element. When turning pages by group is used, the number of child elements per group is the value of **displayCount**.<br> Default value: **false**.<br>**Since:** 11 |
 
+<a id="displaycount-1"></a>
+
 ## displayCount
 
 ```TypeScript
@@ -442,7 +454,7 @@ index(value: number)
 
 Sets the index of the child component currently displayed in the container.
 
-Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 7
 
@@ -479,6 +491,8 @@ Sets the style of the navigation indicator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator**<br>**Since:** 10 |
+
+<a id="indicator-1"></a>
 
 ## indicator
 

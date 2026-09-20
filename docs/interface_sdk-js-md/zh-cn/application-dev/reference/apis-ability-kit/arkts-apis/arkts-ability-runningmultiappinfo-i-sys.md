@@ -1,5 +1,9 @@
 # RunningMultiAppInfo（系统接口）
 
+```TypeScript
+export interface RunningMultiAppInfo
+```
+
 定义应用多开在运行态的结构信息。
 
 **起始版本：** 12

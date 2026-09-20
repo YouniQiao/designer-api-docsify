@@ -1,5 +1,9 @@
 # TabsOptions
 
+```TypeScript
+declare interface TabsOptions
+```
+
 Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和页签栏（TabBar）的通用属性。
 
 **起始版本：** 15
@@ -20,11 +24,11 @@ barModifier?: CommonModifier
 
 由一个CommonModifier切换为另一个CommonModifier时，重复属性会进行覆盖，非重复属性会同时生效，不会重置前一个CommonModifier的通用属性。
 
-Tabs的[barWidth](arkts-arkui-tabs-comp-attribute.md#barwidth)、[barHeight](arkts-arkui-tabs-comp-attribute.md#barheight)、[barBackgroundColor](arkts-arkui-tabs-comp-attribute.md#barbackgroundcolor)、[barBackgroundBlurStyle](arkts-arkui-tabs-comp-attribute.md#barbackgroundblurstyle)、[barBackgroundEffect](arkts-arkui-tabs-comp-attribute.md#barbackgroundeffect)属性会覆盖CommonModifier的width、height、backgroundColor、backgroundBlurStyle、backgroundEffect属性。
+Tabs的[barWidth](arkts-arkui-tabs-comp-attribute.md#barwidth)、[barHeight](arkts-arkui-tabs-comp-attribute.md#barheight)、[barBackgroundColor](arkts-arkui-tabs-comp-attribute.md#barbackgroundcolor)、[barBackgroundBlurStyle](arkts-arkui-tabs-comp-attribute.md#barbackgroundblurstyle-1)、[barBackgroundEffect](arkts-arkui-tabs-comp-attribute.md#barbackgroundeffect)属性会覆盖CommonModifier的width、height、backgroundColor、backgroundBlurStyle、backgroundEffect属性。
 
-align属性仅在[BarMode.Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode)模式下生效，且Tabs为横向时还需[nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md)未设置或设置为异常值时才能生效。
+align属性仅在[BarMode.Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode-1)模式下生效，且Tabs为横向时还需[nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md)未设置或设置为异常值时才能生效。
 
-TabContent组件的[tabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar)属性为底部页签样式时不支持拖拽功能。
+TabContent组件的[tabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar-2)属性为底部页签样式时不支持拖拽功能。
 
 **类型：** [CommonModifier](arkts-arkui-commonmodifier-t.md)
 
@@ -91,7 +95,7 @@ index?: number
 
 直接修改index跳页时，切换动效不生效。 使用TabController的[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)时，默认生效切换动效，可以设置[animationDuration](arkts-arkui-tabs-comp-attribute.md#animationduration)为0关闭动画。
 
-从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 Tabs重建、系统资源切换（如系统字体切换、系统深浅色切换）或者组件属性变化时，会跳转到index对应的页面。若需要在上述情况下不跳转，建议使用双向绑定。
 

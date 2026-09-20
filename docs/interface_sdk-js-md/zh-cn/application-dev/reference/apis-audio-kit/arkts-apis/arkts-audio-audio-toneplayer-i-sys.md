@@ -1,5 +1,9 @@
 # TonePlayer（系统接口）
 
+```TypeScript
+interface TonePlayer
+```
+
 提供播放和管理DTMF（Dual Tone Multi Frequency，双音多频）音调的方法，包括各种系统监听音调、专有音调，如拨号音、通话回铃音等。在调用TonePlayer的接口前，需要先通过[createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md)创建实例。
 
 **起始版本：** 9
@@ -57,6 +61,8 @@ tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_1).then(() => {
   console.error('promise call load fail');
 });
 ```
+
+<a id="load-1"></a>
 
 ## load
 
@@ -130,6 +136,8 @@ tonePlayer.release().then(() => {
   console.error('promise call release fail');
 });
 ```
+
+<a id="release-1"></a>
 
 ## release
 
@@ -217,6 +225,8 @@ tonePlayer.start().then(() => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -302,6 +312,8 @@ tonePlayer.stop().then(() => {
   console.error('promise call stop fail');
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

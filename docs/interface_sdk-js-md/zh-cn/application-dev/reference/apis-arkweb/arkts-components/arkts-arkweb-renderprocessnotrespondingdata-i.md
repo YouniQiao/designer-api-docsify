@@ -1,5 +1,9 @@
 # RenderProcessNotRespondingData
 
+```TypeScript
+declare interface RenderProcessNotRespondingData
+```
+
 提供渲染进程无响应的详细信息。适用于需要诊断渲染进程异常的场景，提升故障排查的准确性和效率。
 
 **起始版本：** 12

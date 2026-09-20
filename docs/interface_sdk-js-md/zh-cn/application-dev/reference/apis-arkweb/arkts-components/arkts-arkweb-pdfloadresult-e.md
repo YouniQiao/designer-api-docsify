@@ -1,5 +1,9 @@
 # PdfLoadResult
 
+```TypeScript
+declare enum PdfLoadResult
+```
+
 定义PDF页面的加载结果，用于标识PDF文件加载过程中的各种状态和错误类型，帮助开发者在PDF显示失败时进行错误诊断和用户提示。
 
 **起始版本：** 20

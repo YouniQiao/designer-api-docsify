@@ -1,5 +1,9 @@
 # CacheMode
 
+```TypeScript
+declare enum CacheMode
+```
+
 Enumerates the cache modes.
 
 **Since:** 8

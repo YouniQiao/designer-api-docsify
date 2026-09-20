@@ -1,5 +1,9 @@
 # AssessmentError
 
+```TypeScript
+interface AssessmentError
+```
+
 Assessment error information.
 
 **Since:** 26.0.1

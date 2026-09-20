@@ -79,6 +79,8 @@ try {
 ```
 
 
+<a id="shareform-1"></a>
+
 ## shareForm
 
 ```TypeScript

@@ -64,6 +64,8 @@ promise.then((data) => {
 ```
 
 
+<a id="ismycard-1"></a>
+
 ## isMyCard
 
 ```TypeScript
@@ -97,6 +99,8 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 
 参见 [isMyCard](#ismycard)
 
+
+<a id="ismycard-2"></a>
 
 ## isMyCard
 
@@ -132,6 +136,8 @@ function isMyCard(id: number): Promise<boolean>
 
 参见 [isMyCard](#ismycard)
 
+
+<a id="ismycard-3"></a>
 
 ## isMyCard
 

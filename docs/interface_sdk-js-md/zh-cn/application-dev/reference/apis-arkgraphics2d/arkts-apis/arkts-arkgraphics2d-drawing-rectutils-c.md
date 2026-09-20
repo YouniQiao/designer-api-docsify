@@ -1,5 +1,9 @@
 # RectUtils
 
+```TypeScript
+class RectUtils
+```
+
 提供处理矩形的工具，支持矩形的快速构建与基本属性获取、边界计算与调整、平移与状态判断、边界规范化等功能。
 
 主要的使用场景：
@@ -100,6 +104,8 @@ static contains(rect: common2D.Rect, other: common2D.Rect): boolean
 | --- | --- |
 | boolean | 返回矩形是否完全包含另一个矩形的结果。true表示other在rect内部或者两者相等；false表示other矩形不完全在rect内部（即存在部分区域在rect外部），或者rect、other任一为空矩形。左边界和上边界属于矩形内部，右边界和下边界不属于矩形内部。 |
 
+<a id="contains-1"></a>
+
 ## contains
 
 ```TypeScript
@@ -127,6 +133,8 @@ static contains(rect: common2D.Rect, left: number, top: number, right: number, b
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回矩形是否完全包含由左上右下坐标组成的矩形的结果。true表示由left、top、right、bottom组成的矩形完全在rect矩形内部，或两个矩形完全相等。false表示该矩形不完全在rect内部（即存在部分区域在rect外部），或者rect、该矩形任一为空矩形。 |
+
+<a id="contains-2"></a>
 
 ## contains
 

@@ -1,5 +1,9 @@
 # HashAlg
 
+```TypeScript
+enum HashAlg
+```
+
 Defines the hash algorithms used for privacy-preserving computation.
 
 **Since:** 26.0.1

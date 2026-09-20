@@ -176,6 +176,8 @@ struct OffscreenSnapshotExample {
 ```
 
 
+<a id="createfrombuilder-1"></a>
+
 ## createFromBuilder
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # AlbumPickerOptions
 
+```TypeScript
+export declare class AlbumPickerOptions
+```
+
 Represents the **AlbumPicker** configuration.
 
 **Since:** 12

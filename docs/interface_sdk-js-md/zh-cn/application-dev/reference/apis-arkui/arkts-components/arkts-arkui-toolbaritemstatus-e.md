@@ -1,5 +1,9 @@
 # ToolbarItemStatus
 
+```TypeScript
+declare enum ToolbarItemStatus
+```
+
 工具栏单个选项的状态。
 
 **起始版本：** 10

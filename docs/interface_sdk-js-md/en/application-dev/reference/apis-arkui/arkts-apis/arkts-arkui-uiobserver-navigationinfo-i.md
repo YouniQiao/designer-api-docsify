@@ -1,5 +1,9 @@
 # NavigationInfo
 
+```TypeScript
+export interface NavigationInfo
+```
+
 Provides information about the **Navigation** component.
 
 **Since:** 12

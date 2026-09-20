@@ -88,6 +88,8 @@ try {
 ```
 
 
+<a id="clearupapplicationdata-1"></a>
+
 ## clearUpApplicationData
 
 ```TypeScript

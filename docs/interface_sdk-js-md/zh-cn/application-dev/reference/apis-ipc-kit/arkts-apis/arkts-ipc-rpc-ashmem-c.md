@@ -1,5 +1,9 @@
 # Ashmem
 
+```TypeScript
+class Ashmem
+```
+
 提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。
 
 共享内存只适用于本设备内跨进程通信。
@@ -117,6 +121,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="create-1"></a>
 
 ## create
 

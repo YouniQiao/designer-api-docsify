@@ -52,6 +52,8 @@ sim.isSimActive(0).then((data: boolean) => {
 ```
 
 
+<a id="issimactive-1"></a>
+
 ## isSimActive
 
 ```TypeScript

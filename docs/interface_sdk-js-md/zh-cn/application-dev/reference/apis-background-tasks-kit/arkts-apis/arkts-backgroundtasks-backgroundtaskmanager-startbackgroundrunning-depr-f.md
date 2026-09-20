@@ -47,6 +47,8 @@ FA模型示例（需使用js代码开发）：
 ```
 
 
+<a id="startbackgroundrunning-1"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
@@ -59,7 +61,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **废弃版本：** 9
 
-**替代接口：** [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md)(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent)
+**替代接口：** [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent)
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 

@@ -114,6 +114,8 @@ struct Index {
 ```
 
 
+<a id="setpointerstyle-1"></a>
+
 ## setPointerStyle
 
 ```TypeScript

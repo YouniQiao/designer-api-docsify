@@ -69,6 +69,8 @@ privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: b
 ```
 
 
+<a id="getpermissionusedrecordtogglestatus-1"></a>
+
 ## getPermissionUsedRecordToggleStatus
 
 ```TypeScript

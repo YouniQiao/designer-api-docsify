@@ -1,5 +1,9 @@
 # RealTimeWeatherInfo
 
+```TypeScript
+export interface RealTimeWeatherInfo
+```
+
 实时天气响应信息接口。
 
 **起始版本：** 26.0.1

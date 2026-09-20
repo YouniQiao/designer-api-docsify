@@ -1,5 +1,9 @@
 # RotationGestureHandler
 
+```TypeScript
+declare class RotationGestureHandler extends GestureHandler<RotationGestureHandler>
+```
+
 Defines a rotation gesture handler object.
 
 **Inheritance/Implementation:** RotationGestureHandler extends GestureHandler<RotationGestureHandler>
@@ -57,6 +61,8 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 | Type | Description |
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Rotation gesture handler object. |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

@@ -1,5 +1,9 @@
 # TextController
 
+```TypeScript
+declare class TextController
+```
+
 Defines the controller of the **Text** component.
 
 ## Objects to Import

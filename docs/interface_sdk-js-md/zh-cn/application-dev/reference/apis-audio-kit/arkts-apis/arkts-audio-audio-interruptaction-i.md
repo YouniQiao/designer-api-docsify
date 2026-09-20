@@ -1,5 +1,9 @@
 # InterruptAction
 
+```TypeScript
+interface InterruptAction
+```
+
 音频打断/获取焦点事件的回调方法。
 
 > **说明：** 

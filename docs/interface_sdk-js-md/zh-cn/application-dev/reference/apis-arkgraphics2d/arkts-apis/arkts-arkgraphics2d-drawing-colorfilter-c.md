@@ -1,5 +1,9 @@
 # ColorFilter
 
+```TypeScript
+class ColorFilter
+```
+
 颜色滤波器，用于对图像或图形的颜色进行变换和处理，支持创建混合模式颜色滤波器、组合颜色滤波器、矩阵颜色滤波器、伽马颜色空间转换滤波器、亮度颜色滤波器和光照颜色滤波器等多种类型。
 
 > **说明：** 
@@ -48,6 +52,8 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="createblendmodecolorfilter-2"></a>
 
 ## createBlendModeColorFilter
 

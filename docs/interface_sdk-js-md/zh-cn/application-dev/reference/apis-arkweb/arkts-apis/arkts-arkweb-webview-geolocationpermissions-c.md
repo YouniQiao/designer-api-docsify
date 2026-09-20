@@ -1,5 +1,9 @@
 # GeolocationPermissions
 
+```TypeScript
+class GeolocationPermissions
+```
+
 GeolocationPermissions是Web组件的地理位置权限管理对象，提供对Web组件中已保存的地理位置权限状态的查询、授权、删除等管理能力。通过GeolocationPermissions，应用可以在网页发起地理位置请求之前预先授权特定源的访问权限，也可以主动查询或清除已保存的权限记录，而无需依赖网页请求时的弹窗授权流程。
 
 GeolocationPermissions适用于需要主动管理Web组件地理位置权限的场景，例如：应用希望预先授权信任的网站访问地理位置，避免每次访问都弹出授权提示；或应用需要清除用户不再需要的地理位置权限记录。访问地理位置时需添加权限：ohos.permission.LOCATION、ohos.permission.APPROXIMATELY_LOCATION、ohos.permission.LOCATION_IN_BACKGROUND，具体权限说明请参考[申请位置权限开发指导](../../../device/location/location-permission-guidelines.md)。
@@ -124,6 +128,8 @@ static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<bo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
+<a id="getaccessiblegeolocation-1"></a>
+
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -184,6 +190,8 @@ static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+<a id="getstoredgeolocation-1"></a>
 
 ## getStoredGeolocation
 

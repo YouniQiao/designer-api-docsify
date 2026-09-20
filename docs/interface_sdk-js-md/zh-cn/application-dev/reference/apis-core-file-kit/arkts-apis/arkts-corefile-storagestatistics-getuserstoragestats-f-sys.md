@@ -85,6 +85,8 @@ storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStat
 ```
 
 
+<a id="getuserstoragestats-1"></a>
+
 ## getUserStorageStats
 
 ```TypeScript
@@ -121,6 +123,8 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 参见 [getUserStorageStats](#getuserstoragestats)
 
+
+<a id="getuserstoragestats-2"></a>
 
 ## getUserStorageStats
 
@@ -165,6 +169,8 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 
 参见 [getUserStorageStats](#getuserstoragestats)
 
+
+<a id="getuserstoragestats-3"></a>
 
 ## getUserStorageStats
 

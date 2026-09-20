@@ -81,6 +81,8 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 ```
 
 
+<a id="formatphonenumber-1"></a>
+
 ## formatPhoneNumber
 
 ```TypeScript
@@ -122,6 +124,8 @@ A formatted phone number is a standard numeric string, for example, 555 0100.
 
 See [formatPhoneNumber](#formatphonenumber)
 
+
+<a id="formatphonenumber-2"></a>
 
 ## formatPhoneNumber
 

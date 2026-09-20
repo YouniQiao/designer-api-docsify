@@ -1,5 +1,9 @@
 # CameraManager
 
+```TypeScript
+interface CameraManager
+```
+
 **CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md) to obtain a **CameraManager** instance.
 
 **Since:** 10
@@ -49,6 +53,8 @@ Before calling this API, call [getSupportedCameras](#getsupportedcameras) to obt
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+
+<a id="createcamerainput-1"></a>
 
 ## createCameraInput
 
@@ -223,6 +229,8 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 
+<a id="createphotooutput-1"></a>
+
 ## createPhotoOutput
 
 ```TypeScript
@@ -289,6 +297,8 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+
+<a id="createpreviewoutput-1"></a>
 
 ## createPreviewOutput
 
@@ -396,6 +406,8 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+
+<a id="createvideooutput-1"></a>
 
 ## createVideoOutput
 
@@ -614,6 +626,8 @@ Obtains the output capability supported by a camera device. This API returns the
 | Type | Description |
 | --- | --- |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
+
+<a id="getsupportedoutputcapability-1"></a>
 
 ## getSupportedOutputCapability
 

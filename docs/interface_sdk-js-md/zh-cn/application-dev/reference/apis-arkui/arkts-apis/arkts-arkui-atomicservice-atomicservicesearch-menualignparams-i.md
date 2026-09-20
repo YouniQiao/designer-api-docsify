@@ -1,5 +1,9 @@
 # MenuAlignParams
 
+```TypeScript
+export interface MenuAlignParams
+```
+
 下拉按钮与下拉菜单间的对齐方式设置项。
 
 **起始版本：** 18

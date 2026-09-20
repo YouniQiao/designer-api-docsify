@@ -1,5 +1,9 @@
 # UserRecognitionMgr
 
+```TypeScript
+interface UserRecognitionMgr
+```
+
 Provides APIs for querying and subscribing to user recognition results. Use [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md) to obtain a **UserRecognitionMgr** instance.
 
 **Since:** 26.0.1

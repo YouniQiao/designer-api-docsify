@@ -1,5 +1,9 @@
 # TransitionContext（系统接口）
 
+```TypeScript
+interface TransitionContext
+```
+
 属性转换的上下文信息。
 
 **起始版本：** 9

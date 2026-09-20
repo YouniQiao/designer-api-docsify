@@ -1,5 +1,9 @@
 # Storage (System API)
 
+```TypeScript
+declare class Storage
+```
+
 Defines the base class of storage.
 
 **Since:** 7

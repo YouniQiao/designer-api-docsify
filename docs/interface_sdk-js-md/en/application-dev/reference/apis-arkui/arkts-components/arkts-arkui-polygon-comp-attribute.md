@@ -1,5 +1,9 @@
 # Polygon properties/events
 
+```TypeScript
+declare class PolygonAttribute extends CommonShapeMethod<PolygonAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [common attributes of drawing components](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** PolygonAttribute extends CommonShapeMethod<PolygonAttribute>

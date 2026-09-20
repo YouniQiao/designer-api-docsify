@@ -64,6 +64,8 @@ sim.getSimLabel(0).then((data: sim.SimLabel) => {
 ```
 
 
+<a id="getsimlabel-1"></a>
+
 ## getSimLabel
 
 ```TypeScript

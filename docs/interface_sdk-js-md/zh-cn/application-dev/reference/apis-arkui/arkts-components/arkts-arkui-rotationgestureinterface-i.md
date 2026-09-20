@@ -1,5 +1,9 @@
 # RotationGestureInterface
 
+```TypeScript
+interface RotationGestureInterface extends GestureInterface<RotationGestureInterface>
+```
+
 用于触发旋转手势，最少需要2指，最多5指，最小改变度数为1度。该手势不支持通过触控板双指旋转操作触发。
 
 **继承/实现关系：** RotationGestureInterface extends GestureInterface<RotationGestureInterface>
@@ -33,6 +37,8 @@
 | 类型 | 说明 |
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -87,6 +93,8 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 | 类型 | 说明 |
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

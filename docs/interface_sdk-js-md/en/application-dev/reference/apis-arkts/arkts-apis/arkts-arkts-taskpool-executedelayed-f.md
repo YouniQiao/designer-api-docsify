@@ -84,6 +84,8 @@ taskpool.executeDelayed<[number], string>(1000, task).then((res: string) => { //
 ```
 
 
+<a id="executedelayed-1"></a>
+
 ## executeDelayed
 
 ```TypeScript

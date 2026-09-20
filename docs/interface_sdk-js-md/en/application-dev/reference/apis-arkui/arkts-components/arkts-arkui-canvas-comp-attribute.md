@@ -1,5 +1,9 @@
 # Canvas properties/events
 
+```TypeScript
+declare class CanvasAttribute extends CommonMethod<CanvasAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 The universal events are supported.
@@ -65,6 +69,8 @@ When this event is triggered, the canvas is cleared. The width and height of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback event triggered when the **Canvas** component initialization is complete or when its size changes. |
+
+<a id="onready-1"></a>
 
 ## onReady
 

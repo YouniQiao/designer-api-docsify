@@ -76,6 +76,8 @@ sms.addSimMessage(simMessageOptions).then(() => {
 ```
 
 
+<a id="addsimmessage-1"></a>
+
 ## addSimMessage
 
 ```TypeScript

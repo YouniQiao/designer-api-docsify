@@ -1,5 +1,9 @@
 # TextOverflowOptions
 
+```TypeScript
+declare interface TextOverflowOptions
+```
+
 文本超长显示方式对象。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # FloatViewController
 
+```TypeScript
+interface FloatViewController
+```
+
 Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
 
 Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).

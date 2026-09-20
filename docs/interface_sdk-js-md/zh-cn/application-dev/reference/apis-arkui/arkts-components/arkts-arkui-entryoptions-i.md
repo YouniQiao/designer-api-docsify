@@ -1,5 +1,9 @@
 # EntryOptions
 
+```TypeScript
+declare interface EntryOptions
+```
+
 页面入口配置选项，用于在\@Entry装饰页面时配置路由名称、状态存储和共享存储等参数。
 
 **起始版本：** 10

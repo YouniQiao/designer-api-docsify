@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="setformnextrefreshtime-1"></a>
+
 ## setFormNextRefreshTime
 
 ```TypeScript

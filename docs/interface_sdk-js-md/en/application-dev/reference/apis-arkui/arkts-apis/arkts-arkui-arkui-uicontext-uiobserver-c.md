@@ -1,5 +1,9 @@
 # UIObserver
 
+```TypeScript
+export class UIObserver
+```
+
 Provides APIs for listening for UI component behavior changes.
 
 > **NOTE:** 
@@ -774,6 +778,8 @@ Unregister the listener for content switching events of the **Swiper** component
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **Swiper** component are unregistered. |
 
+<a id="offswipercontentupdate-1"></a>
+
 ## offSwiperContentUpdate
 
 ```TypeScript
@@ -1531,6 +1537,8 @@ Listens for content switching events of the **Swiper** component. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides the **Swiper** content switching information using a **SwiperContentInfo** object. |
+
+<a id="onswipercontentupdate-1"></a>
 
 ## onSwiperContentUpdate
 

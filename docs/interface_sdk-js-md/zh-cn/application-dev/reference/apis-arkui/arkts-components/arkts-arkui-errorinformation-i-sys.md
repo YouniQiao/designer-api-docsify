@@ -1,5 +1,9 @@
 # ErrorInformation（系统接口）
 
+```TypeScript
+interface ErrorInformation
+```
+
 卡片错误信息。
 
 **起始版本：** 18

@@ -1,5 +1,9 @@
 # DisappearSymbolEffect
 
+```TypeScript
+declare class DisappearSymbolEffect extends SymbolEffect
+```
+
 DisappearSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

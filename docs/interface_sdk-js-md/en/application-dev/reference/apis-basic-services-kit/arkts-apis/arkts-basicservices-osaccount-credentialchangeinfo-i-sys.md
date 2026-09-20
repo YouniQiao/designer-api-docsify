@@ -1,5 +1,9 @@
 # CredentialChangeInfo (System API)
 
+```TypeScript
+interface CredentialChangeInfo
+```
+
 Defines the credential change information.
 
 **Since:** 23

@@ -1,5 +1,9 @@
 # TextInputClient
 
+```TypeScript
+interface TextInputClient
+```
+
 In the following API examples, you must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart) to obtain a **TextInputClient** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
@@ -72,6 +76,8 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
   console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deletebackward-1"></a>
 
 ## deleteBackward
 
@@ -192,6 +198,8 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 });
 ```
 
+<a id="deleteforward-1"></a>
+
 ## deleteForward
 
 ```TypeScript
@@ -303,6 +311,8 @@ textInputClient.getBackward(length).then((text: string) => {
 });
 ```
 
+<a id="getbackward-1"></a>
+
 ## getBackward
 
 ```TypeScript
@@ -407,6 +417,8 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 });
 ```
 
+<a id="geteditorattribute-1"></a>
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -505,6 +517,8 @@ textInputClient.getForward(length).then((text: string) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getforward-1"></a>
 
 ## getForward
 
@@ -615,6 +629,8 @@ textInputClient.insertText('test').then((result: boolean) => {
 });
 ```
 
+<a id="inserttext-1"></a>
+
 ## insertText
 
 ```TypeScript
@@ -627,7 +643,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text: string): Promise&lt;boolean&gt;
+**Substitutes:** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext-1)(text: string): Promise&lt;boolean&gt;
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -731,6 +747,8 @@ textInputClient.sendKeyFunction(action).then((result: boolean) => {
   console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="sendkeyfunction-1"></a>
 
 ## sendKeyFunction
 

@@ -1,5 +1,9 @@
 # EventTargetInfo
 
+```TypeScript
+declare class EventTargetInfo
+```
+
 手势识别器对应组件的信息。
 
 **起始版本：** 12
@@ -49,6 +53,8 @@ Returns the component's unique id.
 | 类型 | 说明 |
 | --- | --- |
 | number | the unique id of the component |
+
+<a id="getuniqueid-1"></a>
 
 ## getUniqueId
 

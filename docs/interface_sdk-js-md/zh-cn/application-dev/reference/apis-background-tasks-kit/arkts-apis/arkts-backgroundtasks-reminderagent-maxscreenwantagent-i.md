@@ -1,5 +1,9 @@
 # MaxScreenWantAgent
 
+```TypeScript
+interface MaxScreenWantAgent
+```
+
 全屏显示提醒到达时自动拉起的目标ability信息，该接口预留。
 
 **起始版本：** 7

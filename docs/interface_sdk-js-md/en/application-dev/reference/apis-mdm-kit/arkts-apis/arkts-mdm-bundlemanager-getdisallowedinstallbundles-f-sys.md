@@ -104,6 +104,8 @@ bundleManager.getDisallowedInstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisallowedinstallbundles-1"></a>
+
 ## getDisallowedInstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ Obtains the applications that cannot be installed by the user specified by **use
 
 See [getDisallowedInstallBundles](#getdisallowedinstallbundles)
 
+
+<a id="getdisallowedinstallbundles-2"></a>
 
 ## getDisallowedInstallBundles
 

@@ -1,5 +1,9 @@
 # ParticleUpdaterOptions
 
+```TypeScript
+interface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater>
+```
+
 属性变化配置。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # XComponentType
 
+```TypeScript
+declare enum XComponentType
+```
+
 The type of XComponent
 
 @enum { number }

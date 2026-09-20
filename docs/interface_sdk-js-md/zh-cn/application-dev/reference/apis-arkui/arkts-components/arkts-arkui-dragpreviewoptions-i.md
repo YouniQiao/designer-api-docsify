@@ -1,5 +1,9 @@
 # DragPreviewOptions
 
+```TypeScript
+declare interface DragPreviewOptions
+```
+
 设置拖拽过程中预览图处理模式及数量角标的显示。
 
 **起始版本：** 11

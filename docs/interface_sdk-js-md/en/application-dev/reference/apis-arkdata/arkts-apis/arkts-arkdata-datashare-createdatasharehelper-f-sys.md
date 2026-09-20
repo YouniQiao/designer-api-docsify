@@ -120,6 +120,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="createdatasharehelper-1"></a>
+
 ## createDataShareHelper
 
 ```TypeScript
@@ -162,6 +164,8 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 
 See [createDataShareHelper](#createdatasharehelper)
 
+
+<a id="createdatasharehelper-2"></a>
 
 ## createDataShareHelper
 

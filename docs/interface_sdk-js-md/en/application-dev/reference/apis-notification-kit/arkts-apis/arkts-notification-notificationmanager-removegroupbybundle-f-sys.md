@@ -75,6 +75,8 @@ notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
 ```
 
 
+<a id="removegroupbybundle-1"></a>
+
 ## removeGroupByBundle
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # EditableTitleBar
 
+```TypeScript
+export declare struct EditableTitleBar
+```
+
 The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page.
 
 > **NOTE:** 
@@ -68,7 +72,7 @@ Content margin. Negative numbers are not supported.
 
 Default value:
 
-{start: LengthMetrics.resource(*&#36;r('sys.float.margin_left')*), end: LengthMetrics.resource(*&#36;r('sys.float.margin_right')*)}
+{start: LengthMetrics.resource(*$r('sys.float.margin_left')*), end: LengthMetrics.resource(*$r('sys.float.margin_right')*)}
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 

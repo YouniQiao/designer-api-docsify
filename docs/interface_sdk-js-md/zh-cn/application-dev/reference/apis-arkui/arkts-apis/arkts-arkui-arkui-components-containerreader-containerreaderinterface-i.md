@@ -1,5 +1,9 @@
 # ContainerReaderInterface
 
+```TypeScript
+export interface ContainerReaderInterface
+```
+
 定义ContainerReader组件。用于在动态场景下基于尺寸断点读取和分析容器布局信息。提供容器尺寸分析和断点检测能力。
 
 **起始版本：** 26.0.0

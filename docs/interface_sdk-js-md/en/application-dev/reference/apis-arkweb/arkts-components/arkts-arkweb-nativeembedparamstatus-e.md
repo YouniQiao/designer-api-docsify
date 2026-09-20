@@ -1,5 +1,9 @@
 # NativeEmbedParamStatus
 
+```TypeScript
+declare enum  NativeEmbedParamStatus
+```
+
 Enumerates the status change types of the **param** element embedded in the same-layer rendering tag **object**. **ADD** is triggered when the **param** element is added, **UPDATE** is triggered when it is modified, and **DELETE** is triggered when it is deleted.
 
 **Since:** 21

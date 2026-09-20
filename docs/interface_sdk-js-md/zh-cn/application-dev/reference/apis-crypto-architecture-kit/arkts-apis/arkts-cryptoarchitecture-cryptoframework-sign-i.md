@@ -1,5 +1,9 @@
 # Sign
 
+```TypeScript
+interface Sign
+```
+
 签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过[createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、update（可选）、sign方法完成签名操作。签名操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
 
 <br>Sign实例不支持重复初始化，当业务方需要使用新密钥签名时，需要重新创建新Sign实例并调用init初始化。
@@ -111,6 +115,8 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**适用版本：** 26.0.0+ |
+
+<a id="init-1"></a>
 
 ## init
 
@@ -242,6 +248,8 @@ function testSetSignSpec() {
 }
 ```
 
+<a id="setsignspec-1"></a>
+
 ## setSignSpec
 
 ```TypeScript
@@ -282,6 +290,8 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 **示例**
 
 参见 [setSignSpec](#setsignspec)
+
+<a id="setsignspec-2"></a>
 
 ## setSignSpec
 
@@ -356,6 +366,8 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
+<a id="sign-1"></a>
+
 ## sign
 
 ```TypeScript
@@ -388,6 +400,8 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+<a id="sign-2"></a>
 
 ## sign
 
@@ -426,6 +440,8 @@ sign(data: DataBlob): Promise<DataBlob>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+<a id="sign-3"></a>
 
 ## sign
 
@@ -559,6 +575,8 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
+
+<a id="update-1"></a>
 
 ## update
 

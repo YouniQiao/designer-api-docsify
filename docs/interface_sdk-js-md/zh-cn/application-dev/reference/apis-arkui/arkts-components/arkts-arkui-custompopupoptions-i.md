@@ -1,5 +1,9 @@
 # CustomPopupOptions
 
+```TypeScript
+declare interface CustomPopupOptions
+```
+
 弹出自定义气泡的信息。
 
 **起始版本：** 8

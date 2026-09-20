@@ -1,5 +1,9 @@
 # RenderingContextSettings
 
+```TypeScript
+declare class RenderingContextSettings
+```
+
 用于配置CanvasRenderingContext2D对象的参数，包括是否开启抗锯齿。
 
 **起始版本：** 8

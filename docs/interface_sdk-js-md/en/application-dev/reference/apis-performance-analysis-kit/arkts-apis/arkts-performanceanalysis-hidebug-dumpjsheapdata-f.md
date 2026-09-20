@@ -60,6 +60,8 @@ try {
 ```
 
 
+<a id="dumpjsheapdata-1"></a>
+
 ## dumpJsHeapData
 
 ```TypeScript

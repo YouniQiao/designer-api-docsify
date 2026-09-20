@@ -1,5 +1,9 @@
 # DataExchangeOperation
 
+```TypeScript
+interface DataExchangeOperation
+```
+
 交换数据操作。
 
 **起始版本：** 12

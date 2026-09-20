@@ -1,5 +1,9 @@
 # InvokeOptions (System API)
 
+```TypeScript
+interface InvokeOptions
+```
+
 Invoke options for function execution.
 
 **Since:** 26.0.0

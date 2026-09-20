@@ -1,5 +1,9 @@
 # AssessmentErrorCode
 
+```TypeScript
+enum AssessmentErrorCode
+```
+
 Assessment error code.
 
 **Since:** 26.0.1

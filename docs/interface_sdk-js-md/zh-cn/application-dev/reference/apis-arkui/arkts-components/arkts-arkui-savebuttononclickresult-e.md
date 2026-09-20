@@ -1,5 +1,9 @@
 # SaveButtonOnClickResult
 
+```TypeScript
+declare enum SaveButtonOnClickResult
+```
+
 保存控件点击后的授权结果。
 
 **起始版本：** 10

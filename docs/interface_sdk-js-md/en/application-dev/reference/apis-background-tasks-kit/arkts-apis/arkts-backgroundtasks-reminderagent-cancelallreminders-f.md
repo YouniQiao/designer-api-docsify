@@ -48,6 +48,8 @@ reminderAgent.cancelAllReminders().then(() => {
 ```
 
 
+<a id="cancelallreminders-1"></a>
+
 ## cancelAllReminders
 
 ```TypeScript

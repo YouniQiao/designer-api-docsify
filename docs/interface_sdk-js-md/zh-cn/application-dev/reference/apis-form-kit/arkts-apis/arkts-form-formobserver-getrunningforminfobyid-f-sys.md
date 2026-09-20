@@ -118,6 +118,8 @@ try {
 ```
 
 
+<a id="getrunningforminfobyid-1"></a>
+
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -165,6 +167,8 @@ function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Prom
 参见 [getRunningFormInfoById](#getrunningforminfobyid)
 
 
+<a id="getrunningforminfobyid-2"></a>
+
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -205,6 +209,8 @@ function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo
 
 参见 [getRunningFormInfoById](#getrunningforminfobyid)
 
+
+<a id="getrunningforminfobyid-3"></a>
 
 ## getRunningFormInfoById
 

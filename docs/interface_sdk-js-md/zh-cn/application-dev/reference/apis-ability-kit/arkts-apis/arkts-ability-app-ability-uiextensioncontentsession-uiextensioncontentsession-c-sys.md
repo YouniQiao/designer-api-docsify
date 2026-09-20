@@ -1,5 +1,9 @@
 # UIExtensionContentSession
 
+```TypeScript
+declare class UIExtensionContentSession
+```
+
 UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
 **起始版本：** 10
@@ -450,6 +454,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -504,6 +510,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 **示例**
 
 参见 [startAbility](#startability)
+
+<a id="startability-2"></a>
 
 ## startAbility
 
@@ -701,6 +709,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startabilityascaller-1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -749,6 +759,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 **示例**
 
 参见 [startAbilityAsCaller](#startabilityascaller)
+
+<a id="startabilityascaller-2"></a>
 
 ## startAbilityAsCaller
 
@@ -935,6 +947,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startabilityforresult-1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -993,6 +1007,8 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 **示例**
 
 参见 [startAbilityForResult](#startabilityforresult)
+
+<a id="startabilityforresult-2"></a>
 
 ## startAbilityForResult
 

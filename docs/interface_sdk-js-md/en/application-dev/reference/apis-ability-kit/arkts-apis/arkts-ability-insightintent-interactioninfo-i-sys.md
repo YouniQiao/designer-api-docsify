@@ -1,5 +1,9 @@
 # InteractionInfo (System API)
 
+```TypeScript
+interface InteractionInfo
+```
+
 Defines the interaction information returned after the current intent execution completes, including the next intent to be triggered and the interaction UI to be displayed.
 
 **Since:** 26.0.1

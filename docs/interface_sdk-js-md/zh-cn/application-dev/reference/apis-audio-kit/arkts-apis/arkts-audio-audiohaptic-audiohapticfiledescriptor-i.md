@@ -1,5 +1,9 @@
 # AudioHapticFileDescriptor
 
+```TypeScript
+interface AudioHapticFileDescriptor
+```
+
 描述音振文件描述符。
 
 > **注意：**

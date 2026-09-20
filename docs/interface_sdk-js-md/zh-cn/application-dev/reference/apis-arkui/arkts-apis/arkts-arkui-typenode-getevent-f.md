@@ -30,6 +30,8 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 | [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) &#124; undefined | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
+<a id="getevent-1"></a>
+
 ## getEvent
 
 ```TypeScript
@@ -60,6 +62,8 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 | [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) &#124; undefined | List节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
+<a id="getevent-2"></a>
+
 ## getEvent
 
 ```TypeScript
@@ -89,6 +93,8 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 | --- | --- |
 | [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) &#124; undefined | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
 
+
+<a id="getevent-3"></a>
 
 ## getEvent
 

@@ -1,5 +1,9 @@
 # CustomEnvKey
 
+```TypeScript
+declare class CustomEnvKey<S>
+```
+
 自定义环境变量的Key的类型。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # ConsoleMessageSource
 
+```TypeScript
+declare enum ConsoleMessageSource
+```
+
 ConsoleMessage的日志来源。
 
 **起始版本：** 23

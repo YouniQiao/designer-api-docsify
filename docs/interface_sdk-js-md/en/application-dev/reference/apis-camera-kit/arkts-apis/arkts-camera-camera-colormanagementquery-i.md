@@ -1,5 +1,9 @@
 # ColorManagementQuery
 
+```TypeScript
+interface ColorManagementQuery
+```
+
 ColorManagementQuery provides the APIs for color space query.
 
 **Since:** 12

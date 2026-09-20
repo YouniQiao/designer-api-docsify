@@ -1,5 +1,9 @@
 # PreviewConfiguration
 
+```TypeScript
+declare interface PreviewConfiguration
+```
+
 Configures the style of the preview image during custom drag operations.
 
 **Since:** 15

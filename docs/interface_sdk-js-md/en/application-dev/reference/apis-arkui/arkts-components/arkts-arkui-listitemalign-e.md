@@ -1,5 +1,9 @@
 # ListItemAlign
 
+```TypeScript
+declare enum ListItemAlign
+```
+
 Sets the alignment mode of child components in the cross-axis direction of the list.
 
 **Since:** 9

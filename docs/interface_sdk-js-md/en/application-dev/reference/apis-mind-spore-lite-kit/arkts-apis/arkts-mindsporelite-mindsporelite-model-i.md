@@ -1,5 +1,9 @@
 # Model
 
+```TypeScript
+interface Model
+```
+
 Provides manages model function. Including get inputs, predict ,resize.
 
 **Since:** 10
@@ -325,6 +329,8 @@ globalContext.getApplicationContext()
     console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
+
+<a id="predict-1"></a>
 
 ## predict
 

@@ -59,6 +59,8 @@ reminderAgent.addNotificationSlot(mySlot).then(() => {
 ```
 
 
+<a id="addnotificationslot-1"></a>
+
 ## addNotificationSlot
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # SystemProperties
 
+```TypeScript
+declare enum SystemProperties
+```
+
 Defining Environment variable enumeration value.
 
 @enum { string }

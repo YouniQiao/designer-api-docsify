@@ -1,5 +1,9 @@
 # GridContainerOptions
 
+```TypeScript
+declare interface GridContainerOptions
+```
+
 Defines the grid layout container configuration parameter object, used to set the number of columns, device width type, gutter, and margin for the **GridContainer** component.
 
 **Since:** 7

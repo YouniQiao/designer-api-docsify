@@ -178,6 +178,8 @@ try {
 ```
 
 
+<a id="queryabilityinfo-1"></a>
+
 ## queryAbilityInfo
 
 ```TypeScript
@@ -222,6 +224,8 @@ No permission is required for obtaining the caller's own information.
 
 See [queryAbilityInfo](#queryabilityinfo)
 
+
+<a id="queryabilityinfo-2"></a>
 
 ## queryAbilityInfo
 
@@ -272,6 +276,8 @@ No permission is required for obtaining the caller's own information.
 
 See [queryAbilityInfo](#queryabilityinfo)
 
+
+<a id="queryabilityinfo-3"></a>
 
 ## queryAbilityInfo
 

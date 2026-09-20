@@ -1,5 +1,9 @@
 # Md
 
+```TypeScript
+interface Md
+```
+
 Message digest interface, defining methods for calculating message digests. Before use, you must create an **Md** instance by using [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md).
 
 **Since:** 9
@@ -147,6 +151,8 @@ export default {
     }
 };
 ```
+
+<a id="digest-1"></a>
 
 ## digest
 
@@ -456,6 +462,8 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+<a id="update-1"></a>
 
 ## update
 

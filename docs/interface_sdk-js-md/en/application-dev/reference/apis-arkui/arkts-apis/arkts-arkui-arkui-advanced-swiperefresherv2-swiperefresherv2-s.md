@@ -1,5 +1,9 @@
 # SwipeRefresherV2
 
+```TypeScript
+export declare struct SwipeRefresherV2
+```
+
 The **SwipeRefresherV2** component is used to implement the pull-to-refresh feature. It supports custom loading prompt text and loading state control, and is suitable for scenarios where pull-to-refresh interaction needs to be implemented on a page.
 
 This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). It provides developers with a standardized pull-to-refresh UI and simplifies the implementation of refresh logic. Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), state management V2 delivers enhanced capabilities for deep observation and management of data objects, and is no longer limited to the component level. Developers can more flexibly control the data and state of content loading, achieving more efficient UI refresh.

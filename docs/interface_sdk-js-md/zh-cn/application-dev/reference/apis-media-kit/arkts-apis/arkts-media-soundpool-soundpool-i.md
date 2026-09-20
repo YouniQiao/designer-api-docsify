@@ -1,5 +1,9 @@
 # SoundPool
 
+```TypeScript
+export declare interface SoundPool
+```
+
 音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过[createSoundPool](arkts-media-media-createsoundpool-f.md)创建实例。
 
 > **说明：** 
@@ -61,6 +65,8 @@ load(uri: string, callback: AsyncCallback<number>): void
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="load-1"></a>
+
 ## load
 
 ```TypeScript
@@ -103,6 +109,8 @@ load(uri: string): Promise<number>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
+<a id="load-2"></a>
+
 ## load
 
 ```TypeScript
@@ -139,6 +147,8 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="load-3"></a>
 
 ## load
 
@@ -400,6 +410,8 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="play-1"></a>
+
 ## play
 
 ```TypeScript
@@ -426,6 +438,8 @@ play(soundID: number, callback: AsyncCallback<number>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="play-2"></a>
 
 ## play
 
@@ -483,6 +497,8 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="release-1"></a>
 
 ## release
 
@@ -556,6 +572,8 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="setloop-1"></a>
+
 ## setLoop
 
 ```TypeScript
@@ -617,6 +635,8 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="setpriority-1"></a>
+
 ## setPriority
 
 ```TypeScript
@@ -677,6 +697,8 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="setrate-1"></a>
 
 ## setRate
 
@@ -740,6 +762,8 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="setvolume-1"></a>
+
 ## setVolume
 
 ```TypeScript
@@ -801,6 +825,8 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="stop-1"></a>
+
 ## stop
 
 ```TypeScript
@@ -859,6 +885,8 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="unload-1"></a>
 
 ## unload
 

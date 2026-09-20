@@ -1,5 +1,9 @@
 # ScrollBarOptions
 
+```TypeScript
+declare interface ScrollBarOptions
+```
+
 滚动条组件参数。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # ToolbarItemStatus
 
+```TypeScript
+declare enum ToolbarItemStatus
+```
+
 Enumerates the toolbar item states.
 
 **Since:** 10

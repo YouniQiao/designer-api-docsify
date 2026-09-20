@@ -1,5 +1,9 @@
 # StarStyleOptions
 
+```TypeScript
+declare interface StarStyleOptions
+```
+
 评分组件选中、未选中以及部分选中的星级样式。
 
 > **说明：** 

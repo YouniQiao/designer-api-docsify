@@ -1,5 +1,9 @@
 # Toggle属性/事件
 
+```TypeScript
+declare class ToggleAttribute extends CommonMethod<ToggleAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -74,7 +78,7 @@ selectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 组件打开状态的背景颜色。<br>默认值：<br>当ToggleType为Switch时，默认值为`&#36;r('sys.color.ohos_id_color_emphasize')`。<br>当ToggleType为Checkbox时，默认值为`&#36;r('sys.color.ohos_id_color_emphasize')`。<br>当ToggleType为Button时，默认值为`&#36;r('sys.color.ohos_id_color_emphasize')`混合`&#36;r('sys.float.ohos_id_alpha_highlight_bg')`的透明度。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 组件打开状态的背景颜色。<br>默认值：<br>当ToggleType为Switch时，默认值为`$r('sys.color.ohos_id_color_emphasize')`。<br>当ToggleType为Checkbox时，默认值为`$r('sys.color.ohos_id_color_emphasize')`。<br>当ToggleType为Button时，默认值为`$r('sys.color.ohos_id_color_emphasize')`混合`$r('sys.float.ohos_id_alpha_highlight_bg')`的透明度。 |
 
 ## switchPointColor
 
@@ -96,7 +100,7 @@ switchPointColor(color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br>默认值：&#36;r('sys.color.ohos_id_color_foreground_contrary')<br> **说明：** <br>同时设置了systemMaterial新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br>默认值：$r('sys.color.ohos_id_color_foreground_contrary')<br> **说明：** <br>同时设置了systemMaterial新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
 
 ## switchStyle
 

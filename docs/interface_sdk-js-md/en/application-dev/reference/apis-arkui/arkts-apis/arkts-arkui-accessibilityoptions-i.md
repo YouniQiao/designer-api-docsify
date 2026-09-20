@@ -1,5 +1,9 @@
 # AccessibilityOptions
 
+```TypeScript
+declare interface AccessibilityOptions
+```
+
 Defines the struct of AccessibilityOptions.
 
 **Since:** 14

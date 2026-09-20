@@ -1,5 +1,9 @@
 # FoldedRegionLayoutOptions
 
+```TypeScript
+export interface FoldedRegionLayoutOptions
+```
+
 Defines the layout information for the folded state.
 
 **Since:** 12

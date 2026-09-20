@@ -1,5 +1,9 @@
 # MultiCapsuleSegmentButtonV2
 
+```TypeScript
+export declare struct MultiCapsuleSegmentButtonV2
+```
+
 The segmented button component is used to create tab-type, single-selection, or multi-selection capsule segmented buttons. It supports multiple option types such as text, icons, and symbols, as well as graphic-text hybrid configurations, and allows customization of fonts, colors, corner radii, and other styles. The tab segmented button is suitable for tab switching scenarios, the single-selection capsule segmented button is suitable for single- selection switching scenarios, and the multi-selection capsule segmented button is suitable for multi-selection filtering scenarios.
 
 **Since:** 18
@@ -100,7 +104,7 @@ readonly itemBackgroundColor?: ColorMetrics
 
 Background color of unselected segmented button items.
 
-Default value: **&#36;r('sys.color.segment_button_v2_multi_capsule_button_background')**
+Default value: **$r('sys.color.segment_button_v2_multi_capsule_button_background')**
 
 If the value is **undefined**, the default value is used.
 
@@ -148,7 +152,7 @@ Border radius of segmented button items.
 
 Value range: [0, +∞)
 
-Default value: **&#36;r('sys.float.segment_button_v2_multi_corner_radius')**
+Default value: **$r('sys.float.segment_button_v2_multi_corner_radius')**
 
 If the value is out of the range, the default value is used.
 
@@ -172,7 +176,7 @@ readonly itemFontColor?: ColorMetrics
 
 Font color of unselected options in the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -258,7 +262,7 @@ readonly itemIconFillColor?: ColorMetrics
 
 Icon color of unselected options in the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -376,7 +380,7 @@ Value range: [0, +∞)
 
 Default value:
 
-**&#36;r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **&#36;r('sys.float.segment_button_v2_doubleline_selected_height')** for text+icon buttons.
+**$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **$r('sys.float.segment_button_v2_doubleline_selected_height')** for text+icon buttons.
 
 If the value is out of the range, the default value is used.
 
@@ -400,7 +404,7 @@ readonly itemPadding?: LocalizedPadding
 
 Padding of the segmented button item.
 
-Default value: **{top: LengthMetrics.resource (&#36;r('sys.float.padding_level2')), bottom: LengthMetrics.resource (&#36;r('sys.float.padding_level2')), start: LengthMetrics.resource(&#36;r('sys.float.padding_level4')), end: LengthMetrics.resource(&#36;r('sys.float.padding_level4'))}**
+Default value: **{top: LengthMetrics.resource ($r('sys.float.padding_level2')), bottom: LengthMetrics.resource ($r('sys.float.padding_level2')), start: LengthMetrics.resource($r('sys.float.padding_level4')), end: LengthMetrics.resource($r('sys.float.padding_level4'))}**
 
 If the value is **undefined**, the default value is used.
 
@@ -448,7 +452,7 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 
 Background color of the selected segmented button item.
 
-Default value: **&#36;r('sys.color.comp_background_emphasize')**
+Default value: **$r('sys.color.comp_background_emphasize')**
 
 If the value is **undefined**, the default value is used.
 
@@ -472,7 +476,7 @@ readonly itemSelectedFontColor?: ColorMetrics
 
 Font color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -558,7 +562,7 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 Icon color of the selected option in the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -586,7 +590,7 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 Color of HM Symbol-type icons in the selected option of the segmented button.
 
-Default value: `&#36;r('sys.color.font_on_primary')`
+Default value: `$r('sys.color.font_on_primary')`
 
 When the value is **undefined**, the default value is used.
 
@@ -642,7 +646,7 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 Color of HM Symbol-type icons in unselected options of the segmented button.
 
-Default value: `&#36;r('sys.color.font_secondary')`
+Default value: `$r('sys.color.font_secondary')`
 
 When the value is **undefined**, the default value is used.
 

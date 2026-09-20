@@ -1,5 +1,9 @@
 # OsAccountSubProfileManager（系统接口）
 
+```TypeScript
+interface OsAccountSubProfileManager
+```
+
 系统账号子身份资料管理器类。
 
 **起始版本：** 26.0.0
@@ -163,6 +167,8 @@ try {
 获取ID为100的系统账号的前台子身份资料标识符。
 ```
 
+<a id="getosaccountforegroundsubprofileid-1"></a>
+
 ## getOsAccountForegroundSubProfileId
 
 ```TypeScript
@@ -295,6 +301,8 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 获取ID为100的系统账号中ID为100001的子身份资料对象信息。
 ```
 
+<a id="getosaccountsubprofile-1"></a>
+
 ## getOsAccountSubProfile
 
 ```TypeScript
@@ -392,6 +400,8 @@ try {
 ```TypeScript
 获取ID为100的系统账号的子身份资料标识符列表。
 ```
+
+<a id="getosaccountsubprofileids-1"></a>
 
 ## getOsAccountSubProfileIds
 

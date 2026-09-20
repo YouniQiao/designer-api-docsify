@@ -81,6 +81,8 @@ formHost.acquireFormState(want).then((data: formInfo.FormStateInfo) => {
 ```
 
 
+<a id="acquireformstate-1"></a>
+
 ## acquireFormState
 
 ```TypeScript

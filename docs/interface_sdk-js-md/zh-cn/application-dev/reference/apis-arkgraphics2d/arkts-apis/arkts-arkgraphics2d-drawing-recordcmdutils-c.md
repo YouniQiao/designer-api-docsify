@@ -1,5 +1,9 @@
 # RecordCmdUtils
 
+```TypeScript
+class RecordCmdUtils
+```
+
 该类提供了一组录制回放命令的操作。
 
 **起始版本：** 26.0.1

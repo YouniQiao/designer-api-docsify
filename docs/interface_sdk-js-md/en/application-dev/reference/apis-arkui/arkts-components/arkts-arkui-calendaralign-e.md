@@ -1,5 +1,9 @@
 # CalendarAlign
 
+```TypeScript
+declare enum CalendarAlign
+```
+
 Enumerates alignment types.
 
 **Since:** 10

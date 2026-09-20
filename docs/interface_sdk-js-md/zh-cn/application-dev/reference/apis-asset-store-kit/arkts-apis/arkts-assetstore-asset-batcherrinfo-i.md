@@ -1,5 +1,9 @@
 # BatchErrInfo
 
+```TypeScript
+interface BatchErrInfo
+```
+
 批量操作中单个关键资产的错误信息。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # ProgressMask
 
+```TypeScript
+declare class ProgressMask
+```
+
 ProgressMask用于设置遮罩的进度、最大值和颜色。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # ImageFilter
 
+```TypeScript
+class ImageFilter
+```
+
 Implements an image filter.
 
 > **NOTE:** 

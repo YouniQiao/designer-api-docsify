@@ -1,5 +1,9 @@
 # HdrType
 
+```TypeScript
+declare enum HdrType
+```
+
 设置XComponent的HDR类型。
 
 **起始版本：** 24

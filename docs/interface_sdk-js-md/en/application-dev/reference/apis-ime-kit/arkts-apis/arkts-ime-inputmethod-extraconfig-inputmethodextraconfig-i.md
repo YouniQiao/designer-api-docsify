@@ -1,5 +1,9 @@
 # InputMethodExtraConfig
 
+```TypeScript
+export interface InputMethodExtraConfig
+```
+
 Represents the extension information of an input method.
 
 **Since:** 22

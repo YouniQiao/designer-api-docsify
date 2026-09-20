@@ -1,5 +1,9 @@
 # CheckboxOptions
 
+```TypeScript
+declare interface CheckboxOptions
+```
+
 Provides information about the check box.
 
 **Since:** 8

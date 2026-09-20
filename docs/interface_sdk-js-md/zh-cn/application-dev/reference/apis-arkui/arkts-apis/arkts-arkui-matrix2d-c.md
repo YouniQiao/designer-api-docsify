@@ -1,5 +1,9 @@
 # Matrix2D
 
+```TypeScript
+declare class Matrix2D
+```
+
 用于画布绘制[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md)、[OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-offscreencanvasrenderingcontext2d-c.md)、CanvasPattern和[Path2D](../arkts-components/arkts-arkui-path2d-c.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
@@ -23,6 +27,8 @@ constructor()
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -150,6 +156,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 | 类型 | 说明 |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+
+<a id="rotate-1"></a>
 
 ## rotate
 

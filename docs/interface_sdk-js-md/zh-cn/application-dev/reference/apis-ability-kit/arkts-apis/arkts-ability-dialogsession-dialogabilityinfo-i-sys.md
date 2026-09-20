@@ -1,5 +1,9 @@
 # DialogAbilityInfo（系统接口）
 
+```TypeScript
+export interface DialogAbilityInfo
+```
+
 提供会话组件信息，包括包名、模块名、组件名等信息。
 
 **起始版本：** 11

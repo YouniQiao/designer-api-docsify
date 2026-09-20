@@ -1,5 +1,9 @@
 # FaceAuthManager (System API)
 
+```TypeScript
+class FaceAuthManager
+```
+
 Provides APIs for facial authentication management. It provides management features during face enrollment, including setting the **SurfaceId** of the face preview page.
 
 **Since:** 9

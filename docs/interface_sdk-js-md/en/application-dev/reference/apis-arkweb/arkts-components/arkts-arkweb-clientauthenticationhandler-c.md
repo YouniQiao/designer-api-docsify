@@ -1,5 +1,9 @@
 # ClientAuthenticationHandler
 
+```TypeScript
+declare class ClientAuthenticationHandler
+```
+
 ClientAuthenticationHandler is a class in the **Web** component that handles SSL client certificate authentication requests. When a server requests a client certificate for TLS mutual authentication, this handler is provided to the app through the `onClientAuthenticationRequest` event callback, allowing the app to select appropriate certificate credentials for response. For sample code, see [onClientAuthenticationRequest](arkts-arkweb-web-comp-attribute.md#onclientauthenticationrequest).
 
 **Since:** 9
@@ -41,6 +45,8 @@ Uses the specified private key and client certificate chain.
 | priKeyFile | string | Yes | Full path for storing the private key file. |
 | certChainFile | string | Yes | Full path for storing the certificate chain file. |
 
+<a id="confirm-1"></a>
+
 ## confirm
 
 ```TypeScript
@@ -60,6 +66,8 @@ Instructs the **Web** component to use the specified credentials (obtained from 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authUri | string | Yes | Key value of the credentials. |
+
+<a id="confirm-2"></a>
 
 ## confirm
 

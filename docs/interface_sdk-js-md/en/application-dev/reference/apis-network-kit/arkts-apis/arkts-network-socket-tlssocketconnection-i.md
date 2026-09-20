@@ -1,5 +1,9 @@
 # TLSSocketConnection
 
+```TypeScript
+export interface TLSSocketConnection
+```
+
 Defines a **TLSSocketConnection** object, that is, the connection between the TLSSocket client and the server. Before calling TLSSocketConnection APIs, you need to obtain a **TLSSocketConnection** object.
 
 > **NOTE:** 
@@ -125,6 +129,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -341,6 +347,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="getciphersuite-1"></a>
 
 ## getCipherSuite
 
@@ -626,6 +634,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
+<a id="getremoteaddress-1"></a>
+
 ## getRemoteAddress
 
 ```TypeScript
@@ -843,6 +853,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
+<a id="getremotecertificate-1"></a>
+
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1059,6 +1071,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="getsignaturealgorithms-1"></a>
 
 ## getSignatureAlgorithms
 
@@ -1500,6 +1514,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

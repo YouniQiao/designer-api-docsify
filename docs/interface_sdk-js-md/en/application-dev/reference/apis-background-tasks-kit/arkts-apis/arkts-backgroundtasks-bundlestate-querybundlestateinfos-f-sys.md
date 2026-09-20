@@ -64,6 +64,8 @@ bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.Bund
 ```
 
 
+<a id="querybundlestateinfos-1"></a>
+
 ## queryBundleStateInfos
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # SearchButtonOptions
 
+```TypeScript
+interface SearchButtonOptions
+```
+
 定义搜索按钮选项。
 
 **起始版本：** 10

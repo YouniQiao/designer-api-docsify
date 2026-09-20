@@ -1,5 +1,9 @@
 # MenuOptions
 
+```TypeScript
+declare interface MenuOptions extends ContextMenuOptions
+```
+
 配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。
 
 **继承/实现关系：** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)

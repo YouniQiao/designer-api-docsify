@@ -1,5 +1,9 @@
 # AVCastPickerHelper
 
+```TypeScript
+class AVCastPickerHelper
+```
+
 投播半模态对象，可拉起半模态窗口，选择投播设备。在使用前，需要创建AVCastPickerHelper实例。
 
 > **说明：** 

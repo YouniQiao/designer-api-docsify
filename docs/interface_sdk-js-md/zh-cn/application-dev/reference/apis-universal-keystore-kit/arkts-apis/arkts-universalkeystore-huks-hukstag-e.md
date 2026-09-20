@@ -1,5 +1,9 @@
 # HuksTag
 
+```TypeScript
+export enum HuksTag
+```
+
 表示调用参数的Tag。
 
 **起始版本：** 8

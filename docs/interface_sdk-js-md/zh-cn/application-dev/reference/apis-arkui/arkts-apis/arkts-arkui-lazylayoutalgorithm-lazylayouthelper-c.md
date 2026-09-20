@@ -1,5 +1,9 @@
 # LazyLayoutHelper
 
+```TypeScript
+export class LazyLayoutHelper
+```
+
 懒加载布局辅助类，提供布局方向和可视区域位置信息。
 
 **起始版本：** 26.0.0

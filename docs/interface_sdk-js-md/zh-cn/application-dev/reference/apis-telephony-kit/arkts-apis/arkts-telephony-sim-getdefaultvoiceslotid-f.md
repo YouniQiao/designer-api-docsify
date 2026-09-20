@@ -51,6 +51,8 @@ sim.getDefaultVoiceSlotId().then((data: number) => {
 ```
 
 
+<a id="getdefaultvoiceslotid-1"></a>
+
 ## getDefaultVoiceSlotId
 
 ```TypeScript

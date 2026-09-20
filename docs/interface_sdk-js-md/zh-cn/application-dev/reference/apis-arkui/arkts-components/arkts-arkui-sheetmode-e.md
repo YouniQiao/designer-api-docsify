@@ -1,5 +1,9 @@
 # SheetMode
 
+```TypeScript
+declare enum SheetMode
+```
+
 半模态的显示层级模式。
 
 **起始版本：** 12

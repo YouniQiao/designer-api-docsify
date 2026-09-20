@@ -1,5 +1,9 @@
 # ICurve
 
+```TypeScript
+interface ICurve
+```
+
 曲线对象。
 
 **起始版本：** 9

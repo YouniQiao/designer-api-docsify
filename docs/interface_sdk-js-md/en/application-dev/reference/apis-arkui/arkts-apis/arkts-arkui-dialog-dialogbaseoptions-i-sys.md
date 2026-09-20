@@ -1,5 +1,9 @@
 # DialogBaseOptions
 
+```TypeScript
+declare interface DialogBaseOptions
+```
+
 Base options shared by all dialog types.
 
 **Since:** 26.0.1

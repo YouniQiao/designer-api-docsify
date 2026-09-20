@@ -1,5 +1,9 @@
 # AVCastController
 
+```TypeScript
+interface AVCastController
+```
+
 在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
 > **说明：** 
@@ -39,6 +43,8 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+<a id="getavplaybackstate-1"></a>
 
 ## getAVPlaybackState
 
@@ -89,6 +95,8 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+<a id="getcurrentitem-1"></a>
 
 ## getCurrentItem
 
@@ -249,6 +257,8 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+<a id="getvalidcommands-1"></a>
 
 ## getValidCommands
 
@@ -1377,6 +1387,8 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
+<a id="prepare-1"></a>
+
 ## prepare
 
 ```TypeScript
@@ -1469,6 +1481,8 @@ release(callback: AsyncCallback<void>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1522,6 +1536,8 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+<a id="sendcontrolcommand-1"></a>
 
 ## sendControlCommand
 
@@ -1622,6 +1638,8 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+<a id="start-1"></a>
 
 ## start
 

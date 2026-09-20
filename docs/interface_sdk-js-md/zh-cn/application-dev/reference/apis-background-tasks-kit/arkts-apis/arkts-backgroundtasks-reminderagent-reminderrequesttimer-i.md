@@ -1,5 +1,9 @@
 # ReminderRequestTimer
 
+```TypeScript
+interface ReminderRequestTimer extends ReminderRequest
+```
+
 倒计时实例对象，用于设置提醒的时间。
 
 **继承/实现关系：** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

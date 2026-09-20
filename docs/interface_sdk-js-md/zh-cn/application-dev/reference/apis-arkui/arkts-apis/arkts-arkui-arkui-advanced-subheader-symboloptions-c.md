@@ -1,5 +1,9 @@
 # SymbolOptions
 
+```TypeScript
+export declare class SymbolOptions
+```
+
 Declare type SymbolOptions
 
 **起始版本：** 12
@@ -24,7 +28,7 @@ effectStrategy?: SymbolEffectStrategy
 
 **说明：** 
 
-&#36;r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
+$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
 
 **类型：** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
@@ -116,7 +120,7 @@ renderingStrategy?: SymbolRenderingStrategy
 
 **说明：** 
 
-&#36;r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
+$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
 
 **类型：** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 

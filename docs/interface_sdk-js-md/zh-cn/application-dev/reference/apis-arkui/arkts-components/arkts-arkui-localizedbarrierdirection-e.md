@@ -1,5 +1,9 @@
 # LocalizedBarrierDirection
 
+```TypeScript
+declare enum LocalizedBarrierDirection
+```
+
 定义支持镜像模式的屏障线的方向。
 
 | 名称 | 值 | 说明 |  

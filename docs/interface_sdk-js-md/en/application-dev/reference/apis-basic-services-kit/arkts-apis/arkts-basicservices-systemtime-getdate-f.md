@@ -69,6 +69,8 @@ try {
 ```
 
 
+<a id="getdate-1"></a>
+
 ## getDate
 
 ```TypeScript

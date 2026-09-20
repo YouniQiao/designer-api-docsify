@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getpasswordpolicy-1"></a>
+
 ## getPasswordPolicy
 
 ```TypeScript

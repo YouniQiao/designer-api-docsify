@@ -172,6 +172,8 @@ try {
 ```
 
 
+<a id="stopadvertising-1"></a>
+
 ## stopAdvertising
 
 ```TypeScript
@@ -211,6 +213,8 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 
 See [stopAdvertising](#stopadvertising)
 
+
+<a id="stopadvertising-2"></a>
 
 ## stopAdvertising
 

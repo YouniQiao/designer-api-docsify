@@ -96,6 +96,8 @@ try {
 ```
 
 
+<a id="getformsinfo-1"></a>
+
 ## getFormsInfo
 
 ```TypeScript
@@ -129,6 +131,8 @@ Obtains the application's widget information on the device. This API uses an asy
 
 See [getFormsInfo](#getformsinfo)
 
+
+<a id="getformsinfo-2"></a>
 
 ## getFormsInfo
 

@@ -1,5 +1,9 @@
 # ArcDotIndicator
 
+```TypeScript
+export class ArcDotIndicator
+```
+
 提供弧形圆点指示器属性及功能。
 
 **起始版本：** 18

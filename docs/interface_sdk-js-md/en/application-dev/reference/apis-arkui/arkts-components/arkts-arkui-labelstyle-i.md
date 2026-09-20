@@ -1,5 +1,9 @@
 # LabelStyle
 
+```TypeScript
+declare interface LabelStyle
+```
+
 Represents a style object for the label text and font.
 
 **Since:** 10

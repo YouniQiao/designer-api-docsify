@@ -1,5 +1,9 @@
 # HttpResponseCache
 
+```TypeScript
+export interface HttpResponseCache
+```
+
 Defines an object that stores the response to an HTTP request. Before invoking APIs provided by **HttpResponseCache**, you must call [createHttpResponseCache()](arkts-network-http-createhttpresponsecache-f.md) to create an **HttpRequestTask** object.
 
 **Usage of Keywords in the Response Header**  
@@ -121,6 +125,8 @@ System capability: SystemCapability.Communication.NetStack
 ### Attributes
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -194,6 +200,8 @@ System capability: SystemCapability.Communication.NetStack
 
 Return value
 ```
+
+<a id="flush-1"></a>
 
 ## flush
 

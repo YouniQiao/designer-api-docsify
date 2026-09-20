@@ -69,6 +69,8 @@ sharing
 ```
 
 
+<a id="getsharingifaces-1"></a>
+
 ## getSharingIfaces
 
 ```TypeScript

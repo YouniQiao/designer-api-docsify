@@ -1,5 +1,9 @@
 # ImageFilter
 
+```TypeScript
+class ImageFilter
+```
+
 图像滤波器，用于对图像应用各种滤波效果，支持创建模糊、颜色混合、级联组合、偏移、基于着色器等多种图像滤波器。
 
 > **说明：** 

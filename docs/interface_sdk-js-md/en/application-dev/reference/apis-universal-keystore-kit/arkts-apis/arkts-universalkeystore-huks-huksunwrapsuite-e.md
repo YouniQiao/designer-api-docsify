@@ -1,5 +1,9 @@
 # HuksUnwrapSuite
 
+```TypeScript
+export enum HuksUnwrapSuite
+```
+
 Enumerates the algorithm suites for securely importing a key.
 
 **Since:** 9

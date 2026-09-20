@@ -1,5 +1,9 @@
 # WindowAnimationTarget（系统接口）
 
+```TypeScript
+interface WindowAnimationTarget
+```
+
 目标窗口，用来远程控制实现动画。
 
 **起始版本：** 9

@@ -1,5 +1,9 @@
 # SheetInfo
 
+```TypeScript
+interface SheetInfo
+```
+
 Defines the option content in the dialog box. You can configure the text, icon, and callback for each option.
 
 **Since:** 8

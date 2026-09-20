@@ -1,5 +1,9 @@
 # SymbolGlyph properties/events
 
+```TypeScript
+declare class SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
+```
+
 The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are supported. For text attributes, only the following attributes are supported.
 
 The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
@@ -65,6 +69,8 @@ Sets the color of the **SymbolGlyph** component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the **SymbolGlyph** component.<br> Default value: depending on the rendering strategy |
+
+<a id="fontcolor-1"></a>
 
 ## fontColor
 
@@ -149,6 +155,8 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Font weight of the **SymbolGlyph** component.<br>Default value: **FontWeight.Normal** |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 
@@ -295,6 +303,8 @@ Sets the symbol effect and effect state for the **SymbolGlyph** component.
 | --- | --- | --- | --- |
 | symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | Yes | Symbol effect of the **SymbolGlyph** component.<br>Default value: [SymbolEffect](#symboleffect) |
 | isActive | boolean | No | Whether the effect is active.<br>**true**: playing. **false**: not playing.<br> Default value: **false**. |
+
+<a id="symboleffect-1"></a>
 
 ## symbolEffect
 

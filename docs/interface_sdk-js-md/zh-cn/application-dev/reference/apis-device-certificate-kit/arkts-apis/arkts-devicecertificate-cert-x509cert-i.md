@@ -1,5 +1,9 @@
 # X509Cert
 
+```TypeScript
+interface X509Cert
+```
+
 提供用于X.509证书操作的API。
 
 **起始版本：** 9
@@ -423,6 +427,8 @@ cert.createX509Cert(encodingBlob).then(x509Cert => {
   console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 
@@ -943,6 +949,8 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
   }
 });
 ```
+
+<a id="getissuername-1"></a>
 
 ## getIssuerName
 
@@ -2628,6 +2636,8 @@ async function certToString() {
 }
 ```
 
+<a id="tostring-1"></a>
+
 ## toString
 
 ```TypeScript
@@ -2911,6 +2921,8 @@ cert.createX509Cert(encodingBlob).then(x509Cert => {
   console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="verify-1"></a>
 
 ## verify
 

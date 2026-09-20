@@ -1,6 +1,10 @@
 # PixelMap
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+```TypeScript
+interface PixelMap
+```
+
+The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -39,6 +43,8 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) | Failed to convert the color space. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
+
+<a id="applycolorspace-1"></a>
 
 ## applyColorSpace
 
@@ -579,6 +585,8 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 | --- | --- |
 | Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
 
+<a id="createalphapixelmap-1"></a>
+
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -795,6 +803,8 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 | region | [Region](arkts-image-image-region-i.md) | Yes | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="crop-1"></a>
+
 ## crop
 
 ```TypeScript
@@ -948,6 +958,8 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 | vertical | boolean | Yes | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="flip-1"></a>
+
 ## flip
 
 ```TypeScript
@@ -1100,6 +1112,8 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 | Type | Description |
 | --- | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise used to return the image information. |
+
+<a id="getimageinfo-1"></a>
 
 ## getImageInfo
 
@@ -1303,6 +1317,8 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 | rate | number | Yes | Opacity rate. The value range is (0,1]. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="opacity-1"></a>
+
 ## opacity
 
 ```TypeScript
@@ -1466,6 +1482,8 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="readpixels-1"></a>
+
 ## readPixels
 
 ```TypeScript
@@ -1624,6 +1642,8 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="readpixelstobuffer-1"></a>
+
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -1707,6 +1727,8 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1758,6 +1780,8 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 | --- | --- | --- | --- |
 | angle | number | Yes | Angle to rotate. Unit: degrees. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="rotate-1"></a>
 
 ## rotate
 
@@ -1844,6 +1868,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | y | number | Yes | Scale factor of the height. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="scale-1"></a>
+
 ## scale
 
 ```TypeScript
@@ -1874,6 +1900,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="scale-2"></a>
 
 ## scale
 
@@ -1943,6 +1971,8 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+
+<a id="scalesync-1"></a>
 
 ## scaleSync
 
@@ -2212,6 +2242,8 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 | y | number | Yes | Y coordinate to translate, in px. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="translate-1"></a>
+
 ## translate
 
 ```TypeScript
@@ -2411,6 +2443,8 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="writebuffertopixels-1"></a>
+
 ## writeBufferToPixels
 
 ```TypeScript
@@ -2494,6 +2528,8 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="writepixels-1"></a>
 
 ## writePixels
 

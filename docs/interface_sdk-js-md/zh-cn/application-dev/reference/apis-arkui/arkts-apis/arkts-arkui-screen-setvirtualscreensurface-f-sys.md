@@ -119,6 +119,8 @@ struct Index {
 ```
 
 
+<a id="setvirtualscreensurface-1"></a>
+
 ## setVirtualScreenSurface
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # LayoutInfo
 
+```TypeScript
+declare interface LayoutInfo
+```
+
 子组件布局位置信息
 
 @interface LayoutInfo

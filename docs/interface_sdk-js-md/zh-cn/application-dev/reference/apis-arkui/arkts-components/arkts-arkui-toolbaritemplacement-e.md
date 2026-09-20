@@ -1,5 +1,9 @@
 # ToolBarItemPlacement
 
+```TypeScript
+declare enum ToolBarItemPlacement
+```
+
 定义工具栏项在标题栏对应分栏的放置位置选项。
 
 **起始版本：** 20

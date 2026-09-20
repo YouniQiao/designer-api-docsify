@@ -1,5 +1,9 @@
 # HomePathInfo
 
+```TypeScript
+declare interface HomePathInfo
+```
+
 主页NavDestination的信息。
 
 **起始版本：** 20

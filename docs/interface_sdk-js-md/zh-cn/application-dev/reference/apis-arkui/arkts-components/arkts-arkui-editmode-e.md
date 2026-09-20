@@ -1,5 +1,9 @@
 # EditMode
 
+```TypeScript
+declare enum EditMode
+```
+
 ListItem元素编辑模式枚举。
 
 **起始版本：** 7

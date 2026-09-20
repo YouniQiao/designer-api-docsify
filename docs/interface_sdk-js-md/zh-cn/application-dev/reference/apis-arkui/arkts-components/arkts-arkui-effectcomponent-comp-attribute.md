@@ -1,5 +1,9 @@
 # EffectComponent属性/事件
 
+```TypeScript
+declare class EffectComponentAttribute extends CommonMethod<EffectComponentAttribute>
+```
+
 支持通用属性，目前仅支持对backgroundBlurStyle属性做绘制合并优化。
 
 不支持通用事件。

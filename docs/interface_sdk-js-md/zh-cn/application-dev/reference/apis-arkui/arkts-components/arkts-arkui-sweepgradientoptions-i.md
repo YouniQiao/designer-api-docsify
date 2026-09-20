@@ -1,5 +1,9 @@
 # SweepGradientOptions
 
+```TypeScript
+declare interface SweepGradientOptions
+```
+
 角度渐变参数。
 
 > **说明：** 

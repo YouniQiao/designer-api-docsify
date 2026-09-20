@@ -1,5 +1,9 @@
 # GridDirection
 
+```TypeScript
+declare enum GridDirection
+```
+
 Enumerates the main axis layout directions.
 
 **Since:** 8

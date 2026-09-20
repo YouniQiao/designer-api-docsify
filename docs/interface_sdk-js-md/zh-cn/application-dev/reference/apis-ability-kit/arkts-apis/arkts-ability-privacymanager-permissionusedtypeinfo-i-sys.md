@@ -1,5 +1,9 @@
 # PermissionUsedTypeInfo（系统接口）
 
+```TypeScript
+interface PermissionUsedTypeInfo
+```
+
 表示某次权限使用类型的详情。
 
 **起始版本：** 12

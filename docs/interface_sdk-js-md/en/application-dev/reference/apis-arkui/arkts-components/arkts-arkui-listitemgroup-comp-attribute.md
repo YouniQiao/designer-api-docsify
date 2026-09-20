@@ -1,5 +1,9 @@
 # ListItemGroup properties/events
 
+```TypeScript
+declare class ListItemGroupAttribute extends CommonMethod<ListItemGroupAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** ListItemGroupAttribute extends CommonMethod<ListItemGroupAttribute>

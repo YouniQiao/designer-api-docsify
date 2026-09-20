@@ -1,5 +1,9 @@
 # VerticalAlignParam
 
+```TypeScript
+declare interface VerticalAlignParam
+```
+
 定义相对容器的垂直对齐规则。
 
 @interface VerticalAlignParam

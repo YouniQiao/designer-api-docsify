@@ -1,5 +1,9 @@
 # AttributeModifier
 
+```TypeScript
+declare interface AttributeModifier<T>
+```
+
 Defines the attribute modifier.
 
 @interface AttributeModifier&lt;T&gt;

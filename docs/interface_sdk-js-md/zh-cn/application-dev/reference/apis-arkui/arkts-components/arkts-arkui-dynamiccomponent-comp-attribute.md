@@ -1,5 +1,9 @@
 # DynamicComponent属性/事件
 
+```TypeScript
+declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>
+```
+
 支持通用属性。
 
 支持以下事件：

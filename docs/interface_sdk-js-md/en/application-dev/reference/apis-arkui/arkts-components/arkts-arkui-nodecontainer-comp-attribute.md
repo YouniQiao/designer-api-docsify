@@ -1,5 +1,9 @@
 # NodeContainer properties/events
 
+```TypeScript
+declare class NodeContainerAttribute extends CommonMethod<NodeContainerAttribute>
+```
+
 The universal attributes are supported.
 
 The universal events are supported.

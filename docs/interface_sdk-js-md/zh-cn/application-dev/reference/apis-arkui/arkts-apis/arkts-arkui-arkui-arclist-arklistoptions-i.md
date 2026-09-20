@@ -1,5 +1,9 @@
 # ArkListOptions
 
+```TypeScript
+declare interface ArkListOptions
+```
+
 包含创建ArcList组件的基础参数。
 
 **起始版本：** 18

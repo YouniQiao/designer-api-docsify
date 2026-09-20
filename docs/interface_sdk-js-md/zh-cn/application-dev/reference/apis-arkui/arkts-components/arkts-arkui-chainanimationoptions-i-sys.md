@@ -1,5 +1,9 @@
 # ChainAnimationOptions（系统接口）
 
+```TypeScript
+declare interface ChainAnimationOptions
+```
+
 链式联动动效属性集合，用于设置List最大间距、最小间距、动效强度、传导系数、边缘效果、刚度和阻尼。当列表需要精细控制链式联动弹性效果时，可通过调整本对象中的参数实现不同动效手感。
 
 **起始版本：** 10

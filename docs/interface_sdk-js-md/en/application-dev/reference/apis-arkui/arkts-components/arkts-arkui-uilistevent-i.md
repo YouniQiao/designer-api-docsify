@@ -1,6 +1,10 @@
 # UIListEvent
 
-Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **List** node.
+```TypeScript
+declare interface UIListEvent extends UIScrollableCommonEvent
+```
+
+Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1) method in **frameNode**, which can be used to set scroll events for a **List** node.
 
 **Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 

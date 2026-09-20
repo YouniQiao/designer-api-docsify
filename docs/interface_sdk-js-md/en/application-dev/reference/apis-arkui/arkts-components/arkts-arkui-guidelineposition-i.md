@@ -1,5 +1,9 @@
 # GuideLinePosition
 
+```TypeScript
+declare interface GuideLinePosition
+```
+
 Defines the position of a guideline.
 
 **Since:** 12

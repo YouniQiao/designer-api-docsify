@@ -98,6 +98,8 @@ reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentMan
 ```
 
 
+<a id="getvalidreminders-1"></a>
+
 ## getValidReminders
 
 ```TypeScript

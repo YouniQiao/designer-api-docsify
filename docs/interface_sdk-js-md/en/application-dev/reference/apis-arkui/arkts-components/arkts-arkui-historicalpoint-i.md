@@ -1,5 +1,9 @@
 # HistoricalPoint
 
+```TypeScript
+declare interface HistoricalPoint
+```
+
 Provides historical touch point information.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # ListItemAlign
 
+```TypeScript
+declare enum ListItemAlign
+```
+
 设置子组件在List交叉轴方向的对齐方式。
 
 **起始版本：** 9

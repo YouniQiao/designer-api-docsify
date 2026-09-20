@@ -1,5 +1,9 @@
 # LaunchMode
 
+```TypeScript
+declare enum LaunchMode
+```
+
 Enumerates the operation modes for the routing stack.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # AnimationOptions
 
+```TypeScript
+declare interface AnimationOptions
+```
+
 动画播放参数。包括播放时延，迭代次数，单帧播放时间，是否自动播放。
 
 **起始版本：** 12

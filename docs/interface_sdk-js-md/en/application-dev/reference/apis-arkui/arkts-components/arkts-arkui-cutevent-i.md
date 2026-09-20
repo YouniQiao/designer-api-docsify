@@ -1,5 +1,9 @@
 # CutEvent
 
+```TypeScript
+declare interface CutEvent
+```
+
 Defines a custom cut event.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # WebNavigationType
 
+```TypeScript
+declare enum WebNavigationType
+```
+
 定义navigation类型。
 
 **起始版本：** 11

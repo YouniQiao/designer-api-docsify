@@ -80,6 +80,8 @@ radio.turnOffRadio(slotId).then(() => {
 ```
 
 
+<a id="turnoffradio-1"></a>
+
 ## turnOffRadio
 
 ```TypeScript
@@ -124,6 +126,8 @@ Turn off the radio service.
 
 参见 [turnOffRadio](#turnoffradio)
 
+
+<a id="turnoffradio-2"></a>
 
 ## turnOffRadio
 

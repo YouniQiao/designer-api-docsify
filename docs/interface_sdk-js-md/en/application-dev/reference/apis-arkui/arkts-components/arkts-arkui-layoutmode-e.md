@@ -1,5 +1,9 @@
 # LayoutMode
 
+```TypeScript
+declare enum LayoutMode
+```
+
 Enumerates the layout modes of the images and texts on the bottom tabs.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # ScrollSnapOptions
 
+```TypeScript
+declare interface ScrollSnapOptions
+```
+
 限位滚动模式对象。
 
 **起始版本：** 10

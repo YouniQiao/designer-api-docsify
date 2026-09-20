@@ -1,5 +1,9 @@
 # KeyframeAnimateParam
 
+```TypeScript
+declare interface KeyframeAnimateParam
+```
+
 动画选项设置。
 
 **起始版本：** 11

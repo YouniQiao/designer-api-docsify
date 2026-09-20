@@ -1,5 +1,9 @@
 # LinearGradient
 
+```TypeScript
+declare interface LinearGradient
+```
+
 Linear Gradient Interface
 
 @interface LinearGradient

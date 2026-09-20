@@ -1,5 +1,9 @@
 # TimePickerFormat
 
+```TypeScript
+declare enum TimePickerFormat
+```
+
 时间选择器的数据格式。
 
 **起始版本：** 11

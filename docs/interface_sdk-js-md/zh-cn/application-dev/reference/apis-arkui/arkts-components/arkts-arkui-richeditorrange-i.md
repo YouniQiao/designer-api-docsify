@@ -1,5 +1,9 @@
 # RichEditorRange
 
+```TypeScript
+declare interface RichEditorRange
+```
+
 定义RichEditor的范围。
 
 **起始版本：** 10

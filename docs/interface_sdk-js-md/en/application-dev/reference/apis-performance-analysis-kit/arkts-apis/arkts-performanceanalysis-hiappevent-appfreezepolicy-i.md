@@ -1,5 +1,9 @@
 # AppFreezePolicy
 
+```TypeScript
+interface AppFreezePolicy
+```
+
 Defines the application freeze event configuration policy.
 
 **Since:** 24

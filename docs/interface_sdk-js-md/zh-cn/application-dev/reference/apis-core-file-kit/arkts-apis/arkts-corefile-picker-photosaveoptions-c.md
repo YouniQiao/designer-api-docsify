@@ -1,5 +1,9 @@
 # PhotoSaveOptions
 
+```TypeScript
+class PhotoSaveOptions
+```
+
 图片或视频的保存选项。
 
 **起始版本：** 9

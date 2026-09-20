@@ -1,5 +1,9 @@
 # DragEvent
 
+```TypeScript
+declare interface DragEvent
+```
+
 Provides information about the drag event.
 
 **Since:** 7

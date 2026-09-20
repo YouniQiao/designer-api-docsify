@@ -1,5 +1,9 @@
 # DialogAlignment
 
+```TypeScript
+declare enum DialogAlignment
+```
+
 警告弹窗的对齐方式。
 
 **起始版本：** 7

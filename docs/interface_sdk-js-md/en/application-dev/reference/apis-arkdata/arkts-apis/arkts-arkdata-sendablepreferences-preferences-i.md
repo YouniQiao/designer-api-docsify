@@ -1,5 +1,9 @@
 # Preferences
 
+```TypeScript
+interface Preferences extends lang.ISendable
+```
+
 Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md).
 
 **Inheritance/Implementation:** Preferences extends lang.ISendable

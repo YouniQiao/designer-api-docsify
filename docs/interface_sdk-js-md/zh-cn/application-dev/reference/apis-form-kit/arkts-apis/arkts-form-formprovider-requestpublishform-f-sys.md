@@ -130,6 +130,8 @@ try {
 ```
 
 
+<a id="requestpublishform-1"></a>
+
 ## requestPublishForm
 
 ```TypeScript
@@ -169,6 +171,8 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 
 参见 [requestPublishForm](#requestpublishform)
 
+
+<a id="requestpublishform-2"></a>
 
 ## requestPublishForm
 

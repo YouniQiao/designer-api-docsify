@@ -58,6 +58,8 @@ sim.getSimState(0).then((data: sim.SimState) => {
 ```
 
 
+<a id="getsimstate-1"></a>
+
 ## getSimState
 
 ```TypeScript

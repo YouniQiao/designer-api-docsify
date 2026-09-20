@@ -118,6 +118,8 @@ cert.createX509Crl(encodingBlob).then(_x509Crl => {
 ```
 
 
+<a id="createx509crl-1"></a>
+
 ## createX509Crl
 
 ```TypeScript
@@ -129,7 +131,7 @@ Creates an **X509Crl** instance. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
-> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead.
+> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl-1) instead.
 
 **Since:** 9
 

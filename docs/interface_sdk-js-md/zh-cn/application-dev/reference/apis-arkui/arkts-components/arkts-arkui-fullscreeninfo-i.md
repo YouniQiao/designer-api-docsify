@@ -1,5 +1,9 @@
 # FullscreenInfo
 
+```TypeScript
+interface FullscreenInfo
+```
+
 用于描述当前视频是否进入全屏播放状态。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # ToolbarItem
 
+```TypeScript
+declare interface ToolbarItem
+```
+
 工具栏可配置参数。
 
 **起始版本：** 10

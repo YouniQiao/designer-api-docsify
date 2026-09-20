@@ -1,5 +1,9 @@
 # Driver
 
+```TypeScript
+declare class Driver
+```
+
 Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过create创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
@@ -905,6 +909,8 @@ async function demo() {
 }
 ```
 
+<a id="fling-1"></a>
+
 ## fling
 
 ```TypeScript
@@ -944,6 +950,8 @@ fling(direction: UiDirection, speed: number): Promise<void>
 **示例**
 
 参见 [fling](#fling)
+
+<a id="fling-2"></a>
 
 ## fling
 
@@ -1036,6 +1044,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplaydensity-1"></a>
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1125,6 +1135,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplayrotation-1"></a>
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1213,6 +1225,8 @@ async function demo() {
   let size = await driver.getDisplaySize(0);
 }
 ```
+
+<a id="getdisplaysize-1"></a>
 
 ## getDisplaySize
 
@@ -1507,6 +1521,8 @@ async function demoChinese() {
   // 以复制粘贴方式输入中文、特殊符号，指定文本追加到指定坐标所在文本段的末尾。
 }
 ```
+
+<a id="inputtext-1"></a>
 
 ## inputText
 
@@ -2097,6 +2113,8 @@ async function demo() {
 }
 ```
 
+<a id="mousedrag-1"></a>
+
 ## mouseDrag
 
 ```TypeScript
@@ -2259,6 +2277,8 @@ async function demo() {
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
 }
 ```
+
+<a id="mouselongclick-1"></a>
 
 ## mouseLongClick
 
@@ -2459,6 +2479,8 @@ async function demo() {
   await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
 }
 ```
+
+<a id="mousescroll-1"></a>
 
 ## mouseScroll
 
@@ -2746,6 +2768,8 @@ async function demo() {
 }
 ```
 
+<a id="pressback-1"></a>
+
 ## pressBack
 
 ```TypeScript
@@ -2853,6 +2877,8 @@ async function demo() {
 }
 ```
 
+<a id="presshome-1"></a>
+
 ## pressHome
 
 ```TypeScript
@@ -2948,6 +2974,8 @@ async function demo() {
   await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
 }
 ```
+
+<a id="screencap-1"></a>
 
 ## screenCap
 
@@ -3471,6 +3499,8 @@ async function demo() {
 }
 ```
 
+<a id="triggercombinekeys-1"></a>
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3571,6 +3601,8 @@ async function demo() {
   await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
 }
 ```
+
+<a id="triggerkey-1"></a>
 
 ## triggerKey
 

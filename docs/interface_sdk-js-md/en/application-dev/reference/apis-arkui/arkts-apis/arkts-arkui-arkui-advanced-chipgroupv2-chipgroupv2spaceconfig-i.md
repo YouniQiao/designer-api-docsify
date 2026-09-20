@@ -1,5 +1,9 @@
 # ChipGroupV2SpaceConfig
 
+```TypeScript
+export interface ChipGroupV2SpaceConfig
+```
+
 Defines the left and right padding of **ChipGroupV2** and the spacing configuration between **ChipV2** components.
 
 **Since:** 26.0.0

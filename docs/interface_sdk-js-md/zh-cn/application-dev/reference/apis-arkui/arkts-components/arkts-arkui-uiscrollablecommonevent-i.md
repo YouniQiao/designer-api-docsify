@@ -1,5 +1,9 @@
 # UIScrollableCommonEvent
 
+```TypeScript
+declare interface UIScrollableCommonEvent extends UICommonEvent
+```
+
 用于设置滚动事件回调。
 
 @extends UICommonEvent @interface UIScrollableCommonEvent

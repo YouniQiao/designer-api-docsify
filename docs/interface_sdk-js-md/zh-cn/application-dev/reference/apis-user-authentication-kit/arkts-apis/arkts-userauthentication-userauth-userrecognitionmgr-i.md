@@ -1,5 +1,9 @@
 # UserRecognitionMgr
 
+```TypeScript
+interface UserRecognitionMgr
+```
+
 提供用户识别结果查询和订阅接口，使用[getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md)获取**UserRecognitionMgr**实例。
 
 **起始版本：** 26.0.1

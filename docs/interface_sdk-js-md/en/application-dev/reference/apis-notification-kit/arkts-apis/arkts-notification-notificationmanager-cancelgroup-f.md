@@ -64,6 +64,8 @@ notificationManager.cancelGroup(groupName).then(() => {
 ```
 
 
+<a id="cancelgroup-1"></a>
+
 ## cancelGroup
 
 ```TypeScript

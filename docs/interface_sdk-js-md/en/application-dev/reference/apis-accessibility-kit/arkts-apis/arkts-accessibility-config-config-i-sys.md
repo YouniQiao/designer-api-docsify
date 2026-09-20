@@ -1,5 +1,9 @@
 # Config (System API)
 
+```TypeScript
+interface Config<T>
+```
+
 Implements configuration, acquisition, and listening for properties.
 
 **Since:** 9
@@ -66,6 +70,8 @@ config.highContrastText.get((err: BusinessError, data: boolean) => {
   console.info(`succeeded in getting highContrastText, data is ${data}`);
 });
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -245,6 +251,8 @@ config.highContrastText.set(value, (err: BusinessError) => {
   console.info(`succeeded in setting highContrastText, value is ${value}`);
 });
 ```
+
+<a id="set-1"></a>
 
 ## set
 

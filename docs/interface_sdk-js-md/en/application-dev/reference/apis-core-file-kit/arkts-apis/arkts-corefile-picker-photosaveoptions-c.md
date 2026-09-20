@@ -1,5 +1,9 @@
 # PhotoSaveOptions
 
+```TypeScript
+class PhotoSaveOptions
+```
+
 Defines the options for saving images or videos.
 
 **Since:** 9

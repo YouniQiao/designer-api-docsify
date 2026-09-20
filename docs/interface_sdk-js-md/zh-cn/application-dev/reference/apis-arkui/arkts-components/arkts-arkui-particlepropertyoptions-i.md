@@ -1,5 +1,9 @@
 # ParticlePropertyOptions
 
+```TypeScript
+interface ParticlePropertyOptions<TYPE, UPDATER extends ParticleUpdater>
+```
+
 设置粒子属性选项。
 
 **起始版本：** 10

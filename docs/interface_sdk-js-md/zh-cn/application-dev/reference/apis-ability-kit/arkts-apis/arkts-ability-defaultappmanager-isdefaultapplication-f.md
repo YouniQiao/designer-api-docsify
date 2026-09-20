@@ -60,6 +60,8 @@ defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER
 ```
 
 
+<a id="isdefaultapplication-1"></a>
+
 ## isDefaultApplication
 
 ```TypeScript

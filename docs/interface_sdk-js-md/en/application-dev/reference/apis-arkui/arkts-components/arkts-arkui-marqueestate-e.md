@@ -1,5 +1,9 @@
 # MarqueeState
 
+```TypeScript
+declare enum MarqueeState
+```
+
 Enumerates the return values of the marquee state callback.
 
 **Since:** 18

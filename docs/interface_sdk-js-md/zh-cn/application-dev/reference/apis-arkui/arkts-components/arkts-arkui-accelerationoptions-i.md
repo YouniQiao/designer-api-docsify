@@ -1,5 +1,12 @@
 # AccelerationOptions
 
+```TypeScript
+declare interface AccelerationOptions<
+  ACC_SPEED_UPDATER extends ParticleUpdater,
+  ACC_ANGLE_UPDATER extends ParticleUpdater
+>
+```
+
 粒子加速度配置。
 
 > **说明：** 

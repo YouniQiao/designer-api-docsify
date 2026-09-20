@@ -1,5 +1,9 @@
 # CursorController
 
+```TypeScript
+export class CursorController
+```
+
 Provides the capability to set cursor styles.
 
 > **NOTE:** 

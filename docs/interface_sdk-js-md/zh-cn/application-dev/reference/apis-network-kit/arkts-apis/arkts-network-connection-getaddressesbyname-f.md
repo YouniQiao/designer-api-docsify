@@ -61,6 +61,8 @@ connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
 ```
 
 
+<a id="getaddressesbyname-1"></a>
+
 ## getAddressesByName
 
 ```TypeScript

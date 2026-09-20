@@ -1,5 +1,9 @@
 # GridItemAlignment
 
+```TypeScript
+declare enum GridItemAlignment
+```
+
 Enumerates the alignment modes of grid items.
 
 > **NOTE:** 

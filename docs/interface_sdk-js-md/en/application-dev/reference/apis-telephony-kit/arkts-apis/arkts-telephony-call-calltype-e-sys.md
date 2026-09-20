@@ -1,5 +1,9 @@
 # CallType (System API)
 
+```TypeScript
+export enum CallType
+```
+
 Enumerates call types.
 
 **Since:** 7

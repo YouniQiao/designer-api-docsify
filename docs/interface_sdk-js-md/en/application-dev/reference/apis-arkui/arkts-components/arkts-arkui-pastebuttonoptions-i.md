@@ -1,5 +1,9 @@
 # PasteButtonOptions
 
+```TypeScript
+declare interface PasteButtonOptions
+```
+
 Defines options for the paste button, including icon, text and button type.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # AppResponse
 
+```TypeScript
+export interface AppResponse
+```
+
 Defines the application response information.
 
 **Since:** 3

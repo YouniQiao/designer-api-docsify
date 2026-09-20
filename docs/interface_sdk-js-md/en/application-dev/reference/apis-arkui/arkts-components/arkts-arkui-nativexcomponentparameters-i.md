@@ -1,5 +1,9 @@
 # NativeXComponentParameters
 
+```TypeScript
+declare interface NativeXComponentParameters
+```
+
 Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding FrameNode object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
 
 **Since:** 19

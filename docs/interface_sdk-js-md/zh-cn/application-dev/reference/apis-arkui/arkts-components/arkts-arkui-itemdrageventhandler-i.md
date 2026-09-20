@@ -1,5 +1,9 @@
 # ItemDragEventHandler
 
+```TypeScript
+declare interface ItemDragEventHandler
+```
+
 定义拖拽事件
 
 @interface ItemDragEventHandler

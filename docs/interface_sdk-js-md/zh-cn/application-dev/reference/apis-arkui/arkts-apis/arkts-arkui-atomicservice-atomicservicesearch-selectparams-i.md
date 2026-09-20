@@ -1,5 +1,9 @@
 # SelectParams
 
+```TypeScript
+export interface SelectParams
+```
+
 AtomicServiceSearch中“选择区”的可选属性。
 
 **起始版本：** 18
@@ -64,7 +68,7 @@ divider?: Optional<DividerOptions> | null
 font?: Font
 ```
 
-下拉按钮本身的文本样式。默认值：{size: &#36;r('sys.float.ohos_id_text_size_body1')}。
+下拉按钮本身的文本样式。默认值：{size: $r('sys.float.ohos_id_text_size_body1')}。
 
 **类型：** Font
 
@@ -80,7 +84,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-下拉按钮本身的文本颜色。默认值：{fontColor: &#36;r('sys.color.ohos_id_color_text_primary')}。
+下拉按钮本身的文本颜色。默认值：{fontColor: $r('sys.color.ohos_id_color_text_primary')}。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -176,7 +180,7 @@ optionBgColor?: ResourceColor
 optionFont?: Font
 ```
 
-下拉菜单项的文本样式。默认值：{size: &#36;r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单项的文本样式。默认值：{size: $r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** Font
 
@@ -192,7 +196,7 @@ optionFont?: Font
 optionFontColor?: ResourceColor
 ```
 
-下拉菜单项的文本颜色。默认值：&#36;r('sys.color.ohos_id_color_text_primary')。当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单项的文本颜色。默认值：$r('sys.color.ohos_id_color_text_primary')。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -272,7 +276,7 @@ selected?: number
 selectedOptionBgColor?: ResourceColor
 ```
 
-下拉菜单选中项的背景色。默认值：&#36;r('sys.color.ohos_id_color_component_activated')混合&#36;r('sys.color.ohos_id_alpha_highlight_bg')的透明度。当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的背景色。默认值：$r('sys.color.ohos_id_color_component_activated')混合$r('sys.color.ohos_id_alpha_highlight_bg')的透明度。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -288,7 +292,7 @@ selectedOptionBgColor?: ResourceColor
 selectedOptionFont?: Font
 ```
 
-下拉菜单选中项的文本样式。默认值：{size: &#36;r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的文本样式。默认值：{size: $r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** Font
 
@@ -304,7 +308,7 @@ selectedOptionFont?: Font
 selectedOptionFontColor?: ResourceColor
 ```
 
-下拉菜单选中项的文本颜色。默认值：&#36;r('sys.color.ohos_id_color_text_primary_activated')。当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的文本颜色。默认值：$r('sys.color.ohos_id_color_text_primary_activated')。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

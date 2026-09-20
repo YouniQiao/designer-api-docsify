@@ -56,6 +56,8 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 
+<a id="updatesession-1"></a>
+
 ## updateSession
 
 ```TypeScript
@@ -105,6 +107,8 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
+
+<a id="updatesession-2"></a>
 
 ## updateSession
 

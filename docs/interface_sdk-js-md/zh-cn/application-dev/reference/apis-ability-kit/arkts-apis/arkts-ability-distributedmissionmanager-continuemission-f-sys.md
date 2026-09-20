@@ -154,6 +154,8 @@ try {
 ```
 
 
+<a id="continuemission-1"></a>
+
 ## continueMission
 
 ```TypeScript
@@ -204,6 +206,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 参见 [continueMission](#continuemission)
 
 
+<a id="continuemission-2"></a>
+
 ## continueMission
 
 ```TypeScript
@@ -247,6 +251,8 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 参见 [continueMission](#continuemission)
 
+
+<a id="continuemission-3"></a>
 
 ## continueMission
 

@@ -1,5 +1,9 @@
 # BaseDialogOptions
 
+```TypeScript
+interface BaseDialogOptions
+```
+
 Defines the options of the dialog box.
 
 **Since:** 11

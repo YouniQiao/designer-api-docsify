@@ -93,6 +93,8 @@ call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
 ```
 
 
+<a id="dialcall-1"></a>
+
 ## dialCall
 
 ```TypeScript
@@ -140,6 +142,8 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 
 参见 [dialCall](#dialcall)
 
+
+<a id="dialcall-2"></a>
 
 ## dialCall
 

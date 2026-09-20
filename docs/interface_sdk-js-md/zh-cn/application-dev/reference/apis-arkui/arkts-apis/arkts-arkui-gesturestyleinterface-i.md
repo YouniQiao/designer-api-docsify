@@ -1,5 +1,9 @@
 # GestureStyleInterface
 
+```TypeScript
+declare interface GestureStyleInterface
+```
+
 定义事件手势接口。
 
 **起始版本：** 12

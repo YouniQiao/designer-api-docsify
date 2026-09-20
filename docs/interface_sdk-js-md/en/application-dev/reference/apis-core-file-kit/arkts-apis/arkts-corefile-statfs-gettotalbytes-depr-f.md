@@ -55,6 +55,8 @@ statfs.getTotalBytes(path, (err: BusinessError, totalBytes:Number) => {
 ```
 
 
+<a id="gettotalbytes-1"></a>
+
 ## getTotalBytes
 
 ```TypeScript

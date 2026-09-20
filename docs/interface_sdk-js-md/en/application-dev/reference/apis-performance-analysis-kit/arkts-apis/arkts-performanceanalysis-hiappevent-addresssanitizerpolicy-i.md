@@ -1,5 +1,9 @@
 # AddressSanitizerPolicy
 
+```TypeScript
+interface AddressSanitizerPolicy
+```
+
 Defines the address sanitizer event configuration policy.
 
 **Since:** 24

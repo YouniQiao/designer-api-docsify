@@ -1,5 +1,9 @@
 # HuksKeyDigest
 
+```TypeScript
+export enum HuksKeyDigest
+```
+
 Enumerates the digest algorithms.
 
 **Since:** 8

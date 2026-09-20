@@ -1,5 +1,9 @@
 # RemoteObject
 
+```TypeScript
+class RemoteObject extends IRemoteObject
+```
+
 Provides methods to implement **RemoteObject**. The service provider must inherit from this class.
 
 **Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
@@ -604,6 +608,8 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
+<a id="onremotemessagerequest-1"></a>
+
 ## onRemoteMessageRequest
 
 ```TypeScript
@@ -838,6 +844,8 @@ try {
 }
 ```
 
+<a id="sendmessagerequest-1"></a>
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -1029,6 +1037,8 @@ try {
 }
 ```
 
+<a id="sendrequest-1"></a>
+
 ## sendRequest
 
 ```TypeScript
@@ -1144,6 +1154,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
+
+<a id="sendrequest-2"></a>
 
 ## sendRequest
 

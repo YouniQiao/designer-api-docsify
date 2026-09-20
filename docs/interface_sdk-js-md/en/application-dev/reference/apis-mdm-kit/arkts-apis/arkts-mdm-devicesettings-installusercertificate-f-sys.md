@@ -109,6 +109,8 @@ context.resourceManager.getRawFileContent("test.cer").then((value) => {
 ```
 
 
+<a id="installusercertificate-1"></a>
+
 ## installUserCertificate
 
 ```TypeScript

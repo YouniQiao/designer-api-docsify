@@ -56,6 +56,8 @@ let result = huks.getKeyProperties(keyAlias, emptyOptions);
 ```
 
 
+<a id="getkeyproperties-1"></a>
+
 ## getKeyProperties
 
 ```TypeScript
@@ -68,7 +70,7 @@ Obtains key properties. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

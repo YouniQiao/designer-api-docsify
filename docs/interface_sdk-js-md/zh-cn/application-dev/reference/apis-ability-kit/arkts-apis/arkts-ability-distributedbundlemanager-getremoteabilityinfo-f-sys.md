@@ -257,6 +257,8 @@ try {
 ```
 
 
+<a id="getremoteabilityinfo-1"></a>
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -303,6 +305,8 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
 
+<a id="getremoteabilityinfo-2"></a>
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -343,6 +347,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
+
+<a id="getremoteabilityinfo-3"></a>
 
 ## getRemoteAbilityInfo
 
@@ -390,6 +396,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
 
+<a id="getremoteabilityinfo-4"></a>
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -431,6 +439,8 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
+
+<a id="getremoteabilityinfo-5"></a>
 
 ## getRemoteAbilityInfo
 
@@ -479,6 +489,8 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
 
+<a id="getremoteabilityinfo-6"></a>
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -520,6 +532,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 
 参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
 
+
+<a id="getremoteabilityinfo-7"></a>
 
 ## getRemoteAbilityInfo
 

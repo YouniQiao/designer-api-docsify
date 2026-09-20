@@ -1,5 +1,9 @@
 # BatteryResponse
 
+```TypeScript
+export interface BatteryResponse
+```
+
 包含充电状态及剩余电量的对象。
 
 **起始版本：** 3

@@ -1,5 +1,9 @@
 # TextPickerDialogOptions
 
+```TypeScript
+declare interface TextPickerDialogOptions extends TextPickerOptions
+```
+
 Defines the TextPickerDialogOptions for Text Picker Dialog.
 
 **Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
@@ -528,7 +532,7 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 Background style of selected items.
 
-Default Value: { color: &#36;r('sys.color.comp_background_tertiary'), borderRadius: &#36;r('sys.float.corner_radius_level12') }
+Default Value: { color: $r('sys.color.comp_background_tertiary'), borderRadius: $r('sys.float.corner_radius_level12') }
 
 **Type:** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 

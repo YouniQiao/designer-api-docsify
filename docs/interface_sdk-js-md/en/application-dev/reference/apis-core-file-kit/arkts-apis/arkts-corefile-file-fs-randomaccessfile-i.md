@@ -1,5 +1,9 @@
 # RandomAccessFile
 
+```TypeScript
+declare interface RandomAccessFile
+```
+
 Provides APIs for randomly reading and writing a stream. Before invoking any API of **RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously.
 
 **Since:** 10
@@ -237,6 +241,8 @@ randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: 
 });
 ```
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript
@@ -342,6 +348,8 @@ randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: 
   fileIo.closeSync(file);
 });
 ```
+
+<a id="read-2"></a>
 
 ## read
 
@@ -666,6 +674,8 @@ randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritt
 });
 ```
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript
@@ -775,6 +785,8 @@ randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritt
   fileIo.closeSync(file);
 });
 ```
+
+<a id="write-2"></a>
 
 ## write
 

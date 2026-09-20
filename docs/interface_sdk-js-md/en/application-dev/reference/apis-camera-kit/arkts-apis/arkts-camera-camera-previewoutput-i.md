@@ -1,5 +1,9 @@
 # PreviewOutput
 
+```TypeScript
+interface PreviewOutput extends CameraOutput
+```
+
 PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
@@ -486,6 +490,8 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -535,6 +541,8 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="stop-1"></a>
 
 ## stop
 

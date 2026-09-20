@@ -1,5 +1,9 @@
 # ToolEventCallback (System API)
 
+```TypeScript
+export interface ToolEventCallback
+```
+
 This interface is used to receive cli event when the cli tool process is running.
 
 @interface ToolEventCallback

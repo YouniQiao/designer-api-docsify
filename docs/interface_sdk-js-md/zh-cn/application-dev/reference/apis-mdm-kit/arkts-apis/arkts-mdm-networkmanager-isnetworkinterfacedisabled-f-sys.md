@@ -88,6 +88,8 @@ networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
 ```
 
 
+<a id="isnetworkinterfacedisabled-1"></a>
+
 ## isNetworkInterfaceDisabled
 
 ```TypeScript

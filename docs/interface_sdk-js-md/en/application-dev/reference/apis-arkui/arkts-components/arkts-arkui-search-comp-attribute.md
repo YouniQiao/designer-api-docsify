@@ -1,5 +1,9 @@
 # Search properties/events
 
+```TypeScript
+declare class SearchAttribute extends CommonMethod<SearchAttribute>
+```
+
 In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
 In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
@@ -907,6 +911,8 @@ Called when the search icon, search button, or soft keyboard search button is cl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | Callback&lt;string&gt; | Yes | Search submission callback, which returns the text content currently in the search box.<br>**Since:** 18 |
+
+<a id="onsubmit-1"></a>
 
 ## onSubmit
 

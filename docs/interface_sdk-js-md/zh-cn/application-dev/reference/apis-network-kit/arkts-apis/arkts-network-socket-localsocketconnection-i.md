@@ -1,5 +1,9 @@
 # LocalSocketConnection
 
+```TypeScript
+export interface LocalSocketConnection
+```
+
 LocalSocketConnection连接，即LocalSocket客户端与服务端的会话连接。在调用LocalSocketConnection的方法前，需要先获取LocalSocketConnection对象。
 
 > **说明：** 

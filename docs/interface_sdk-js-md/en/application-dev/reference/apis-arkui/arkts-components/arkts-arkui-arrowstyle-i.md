@@ -1,5 +1,9 @@
 # ArrowStyle
 
+```TypeScript
+declare interface ArrowStyle
+```
+
 Describes the left and right arrow attributes.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # TipsOptions
 
+```TypeScript
+declare interface TipsOptions
+```
+
 悬浮气泡自定义参数。
 
 @interface TipsOptions

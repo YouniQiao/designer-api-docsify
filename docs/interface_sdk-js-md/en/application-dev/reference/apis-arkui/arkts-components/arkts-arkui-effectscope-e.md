@@ -1,5 +1,9 @@
 # EffectScope
 
+```TypeScript
+declare enum EffectScope
+```
+
 The scope type of the symbol effect.
 
 **Since:** 12

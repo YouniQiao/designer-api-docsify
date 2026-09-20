@@ -86,6 +86,8 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
 ```
 
 
+<a id="getfreesizeofvolume-1"></a>
+
 ## getFreeSizeOfVolume
 
 ```TypeScript

@@ -114,6 +114,8 @@ appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountC
 ```
 
 
+<a id="killprocesswithaccount-1"></a>
+
 ## killProcessWithAccount
 
 ```TypeScript
@@ -164,6 +166,8 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 See [killProcessWithAccount](#killprocesswithaccount)
 
+
+<a id="killprocesswithaccount-2"></a>
 
 ## killProcessWithAccount
 

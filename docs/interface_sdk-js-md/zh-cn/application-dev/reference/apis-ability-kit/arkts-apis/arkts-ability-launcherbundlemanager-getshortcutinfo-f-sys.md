@@ -83,6 +83,8 @@ try {
 ```
 
 
+<a id="getshortcutinfo-1"></a>
+
 ## getShortcutInfo
 
 ```TypeScript

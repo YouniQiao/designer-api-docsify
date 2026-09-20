@@ -1,5 +1,9 @@
 # ShowDialogSuccessResponse
 
+```TypeScript
+export interface ShowDialogSuccessResponse
+```
+
 定义ShowDialog的响应。
 
 **起始版本：** 3

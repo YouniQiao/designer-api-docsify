@@ -1,5 +1,9 @@
 # CounterComponent
 
+```TypeScript
+declare struct CounterComponent
+```
+
 The **Counter** component is used for precise numerical value adjustment. It supports four styles: list, compact, inline numeric, and inline date, and is suitable for scenarios such as shopping quantity adjustment, parameter setting, and date selection. It provides flexible style configuration and event callback capabilities.
 
 > **NOTE:** 

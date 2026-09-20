@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="isapplicationenabled-1"></a>
+
 ## isApplicationEnabled
 
 ```TypeScript
@@ -137,6 +139,8 @@ Checks whether an application is enabled. This API uses an asynchronous callback
 
 See [isApplicationEnabled](#isapplicationenabled)
 
+
+<a id="isapplicationenabled-2"></a>
 
 ## isApplicationEnabled
 

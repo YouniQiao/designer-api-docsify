@@ -1,5 +1,9 @@
 # KeyType
 
+```TypeScript
+declare enum KeyType
+```
+
 定义按键操作的状态类型。
 
 **起始版本：** 7

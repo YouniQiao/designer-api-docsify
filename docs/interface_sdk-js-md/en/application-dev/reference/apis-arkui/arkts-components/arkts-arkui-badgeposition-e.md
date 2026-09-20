@@ -1,5 +1,9 @@
 # BadgePosition
 
+```TypeScript
+declare enum BadgePosition
+```
+
 Enumerates the display positions of a badge.
 
 **Since:** 7

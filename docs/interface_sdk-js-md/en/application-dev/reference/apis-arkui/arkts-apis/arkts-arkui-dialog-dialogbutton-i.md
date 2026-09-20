@@ -1,5 +1,9 @@
 # DialogButton
 
+```TypeScript
+declare interface DialogButton
+```
+
 Button configuration for fixed-style dialog.
 
 **Since:** 26.0.1

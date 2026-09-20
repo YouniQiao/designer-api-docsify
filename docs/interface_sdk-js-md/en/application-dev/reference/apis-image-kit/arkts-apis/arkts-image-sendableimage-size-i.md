@@ -1,5 +1,9 @@
 # Size
 
+```TypeScript
+interface Size extends lang.ISendable
+```
+
 Describes the size of an image. It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
 **Inheritance/Implementation:** Size extends lang.ISendable

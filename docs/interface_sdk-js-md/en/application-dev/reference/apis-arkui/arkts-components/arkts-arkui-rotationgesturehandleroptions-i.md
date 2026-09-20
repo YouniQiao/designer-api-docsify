@@ -1,5 +1,9 @@
 # RotationGestureHandlerOptions
 
+```TypeScript
+interface RotationGestureHandlerOptions extends BaseHandlerOptions
+```
+
 Provides the parameters of the rotation gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

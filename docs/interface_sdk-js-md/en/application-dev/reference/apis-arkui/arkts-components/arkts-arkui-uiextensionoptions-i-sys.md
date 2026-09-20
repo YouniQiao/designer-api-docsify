@@ -1,5 +1,9 @@
 # UIExtensionOptions (System API)
 
+```TypeScript
+declare interface UIExtensionOptions
+```
+
 Describes the optional construction parameters during **UIExtensionComponent** construction.
 
 **Since:** 11

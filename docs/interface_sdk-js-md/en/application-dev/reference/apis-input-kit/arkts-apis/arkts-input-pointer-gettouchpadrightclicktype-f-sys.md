@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="gettouchpadrightclicktype-1"></a>
+
 ## getTouchpadRightClickType
 
 ```TypeScript

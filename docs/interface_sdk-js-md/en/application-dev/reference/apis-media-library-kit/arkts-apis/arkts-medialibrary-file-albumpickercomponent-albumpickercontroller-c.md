@@ -1,5 +1,9 @@
 # AlbumPickerController
 
+```TypeScript
+export declare class AlbumPickerController
+```
+
 A controller that enables applications to send data to the **AlbumPickerComponent**.
 
 **Since:** 20

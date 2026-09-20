@@ -112,6 +112,8 @@ applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() =>
 ```
 
 
+<a id="adddisallowedrunningbundles-1"></a>
+
 ## addDisallowedRunningBundles
 
 ```TypeScript
@@ -158,6 +160,8 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 
 参见 [addDisallowedRunningBundles](#adddisallowedrunningbundles)
 
+
+<a id="adddisallowedrunningbundles-2"></a>
 
 ## addDisallowedRunningBundles
 

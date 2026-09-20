@@ -1,5 +1,9 @@
 # HuksTag
 
+```TypeScript
+export enum HuksTag
+```
+
 Enumerates the tags used to invoke parameters.
 
 **Since:** 8

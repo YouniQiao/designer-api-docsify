@@ -1,5 +1,9 @@
 # Scope
 
+```TypeScript
+class Scope
+```
+
 Scope 接口用于描述字段的有效范围。
 
 **起始版本：** 8
@@ -221,6 +225,8 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
+<a id="contains-1"></a>
+
 ## contains
 
 ```TypeScript
@@ -437,6 +443,8 @@ console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
 
+<a id="expand-1"></a>
+
 ## expand
 
 ```TypeScript
@@ -559,6 +567,8 @@ let result = range.expand(tempMiDF);
 console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
+
+<a id="expand-2"></a>
 
 ## expand
 
@@ -881,6 +891,8 @@ let result = range.intersect(tempMiDF, tempMidS);
 console.info("result = " + result);
 // 输出结果：result = [35, 39]
 ```
+
+<a id="intersect-1"></a>
 
 ## intersect
 

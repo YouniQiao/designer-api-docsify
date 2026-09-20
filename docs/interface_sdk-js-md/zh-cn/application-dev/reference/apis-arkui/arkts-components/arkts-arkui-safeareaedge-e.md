@@ -1,5 +1,9 @@
 # SafeAreaEdge
 
+```TypeScript
+declare enum SafeAreaEdge
+```
+
 扩展安全区域的边缘。
 
 **起始版本：** 10

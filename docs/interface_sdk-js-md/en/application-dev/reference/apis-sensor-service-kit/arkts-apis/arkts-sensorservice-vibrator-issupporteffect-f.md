@@ -112,6 +112,8 @@ try {
 ```
 
 
+<a id="issupporteffect-1"></a>
+
 ## isSupportEffect
 
 ```TypeScript

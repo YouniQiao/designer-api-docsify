@@ -1,5 +1,9 @@
 # OffscreenCanvas
 
+```TypeScript
+declare class OffscreenCanvas
+```
+
 OffscreenCanvas组件用于绘制自定义图形。
 
 使用Canvas组件或[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。
@@ -42,6 +46,8 @@ constructor(width: number, height: number)
 | --- | --- | --- | --- |
 | width | number | 是 | OffscreenCanvas组件的宽度。<br>异常值NaN和Infinity按无效值处理。<br>默认单位为vp。 |
 | height | number | 是 | OffscreenCanvas组件的高度。<br>异常值NaN和Infinity按无效值处理。<br>默认单位为vp。 |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

@@ -1,5 +1,9 @@
 # SearchButtonParams
 
+```TypeScript
+export interface SearchButtonParams
+```
+
 Sets the search button located next to the search text box.
 
 **Since:** 18

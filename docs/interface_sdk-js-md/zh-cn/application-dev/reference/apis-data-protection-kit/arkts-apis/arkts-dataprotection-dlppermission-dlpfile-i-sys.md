@@ -1,5 +1,9 @@
 # DLPFile（系统接口）
 
+```TypeScript
+export interface DLPFile
+```
+
 管理DLPFile的实例，表示一个DLP文件对象，需要通过[generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md)获取DLPFile的实例。DLPFile对象代表一个已打开的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](#closedlpfile)方法释放资源，避免文件句柄泄漏。DLPFile对象在跨进程传递时，需要进行授权。
 
 **起始版本：** 10
@@ -122,6 +126,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="adddlplinkfile-1"></a>
 
 ## addDLPLinkFile
 
@@ -269,6 +275,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="closedlpfile-1"></a>
 
 ## closeDLPFile
 
@@ -426,6 +434,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="deletedlplinkfile-1"></a>
 
 ## deleteDLPLinkFile
 
@@ -590,6 +600,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="recoverdlpfile-1"></a>
+
 ## recoverDLPFile
 
 ```TypeScript
@@ -750,6 +762,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="replacedlplinkfile-1"></a>
+
 ## replaceDLPLinkFile
 
 ```TypeScript
@@ -897,6 +911,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="resumefuselink-1"></a>
+
 ## resumeFuseLink
 
 ```TypeScript
@@ -1041,6 +1057,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="stopfuselink-1"></a>
 
 ## stopFuseLink
 

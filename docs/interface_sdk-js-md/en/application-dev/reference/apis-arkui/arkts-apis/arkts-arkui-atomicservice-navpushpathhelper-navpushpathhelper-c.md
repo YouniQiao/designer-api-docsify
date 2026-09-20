@@ -1,5 +1,9 @@
 # NavPushPathHelper
 
+```TypeScript
+export declare class NavPushPathHelper
+```
+
 On the initial launch, the atomic service only downloads and installs the main package and its dependencies. Therefore, if the NavDestination resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable Navigation to support dynamic loading of the HSP subpackage before the navigation occurs.
 
 **Since:** 12
@@ -69,6 +73,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
+
+<a id="pushdestination-1"></a>
 
 ## pushDestination
 
@@ -149,6 +155,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushdestinationbyname-1"></a>
+
 ## pushDestinationByName
 
 ```TypeScript
@@ -224,6 +232,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushpath-1"></a>
+
 ## pushPath
 
 ```TypeScript
@@ -295,6 +305,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushpathbyname-1"></a>
+
 ## pushPathByName
 
 ```TypeScript
@@ -365,6 +377,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | Error Code ID | Error Message |
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
+
+<a id="replacepath-1"></a>
 
 ## replacePath
 

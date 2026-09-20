@@ -92,6 +92,8 @@ setConfigPromise.then(() => {
 ```
 
 
+<a id="setifaceconfig-1"></a>
+
 ## setIfaceConfig
 
 ```TypeScript

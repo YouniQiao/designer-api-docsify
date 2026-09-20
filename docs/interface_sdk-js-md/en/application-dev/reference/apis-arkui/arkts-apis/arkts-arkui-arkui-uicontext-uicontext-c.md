@@ -1,5 +1,9 @@
 # UIContext
 
+```TypeScript
+export class UIContext
+```
+
 Implements a **UIContext** instance.
 
 > **NOTE:** 
@@ -56,7 +60,7 @@ InputEventSubTypeMask.LEFT_MOUSE_DOWN,
 (wrapper: RawInputEventWrapper) =&gt; {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent();
-console.log(`Mouse: (&#36;{mouseEvent.windowX}, &#36;{mouseEvent.windowY})`);
+console.log(`Mouse: (${mouseEvent.windowX}, ${mouseEvent.windowY})`);
 return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue
 }
 return { action: InputEventInterceptAction.BLOCK }; // Block event
@@ -68,7 +72,7 @@ InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN,
 (wrapper: RawInputEventWrapper) =&gt; {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent()!;
-console.log(`Mouse button: &#36;{mouseEvent.button}`);
+console.log(`Mouse button: ${mouseEvent.button}`);
 return { action: InputEventInterceptAction.BLOCK };
 }
 return { action: InputEventInterceptAction.CONTINUE };
@@ -308,6 +312,8 @@ Creates an **Animator** object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+
+<a id="createanimator-1"></a>
 
 ## createAnimator
 
@@ -2214,6 +2220,8 @@ textPickerDialog display.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) | Yes | Options. |
+
+<a id="showtextpickerdialog-1"></a>
 
 ## showTextPickerDialog
 

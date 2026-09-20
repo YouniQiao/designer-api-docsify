@@ -1,5 +1,9 @@
 # MouseController
 
+```TypeScript
+interface MouseController
+```
+
 Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:
 
 1. A mouse button can be pressed only when it is in the released state.

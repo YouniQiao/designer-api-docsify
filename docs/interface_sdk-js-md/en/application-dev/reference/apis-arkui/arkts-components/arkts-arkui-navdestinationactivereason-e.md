@@ -1,5 +1,9 @@
 # NavDestinationActiveReason
 
+```TypeScript
+declare enum NavDestinationActiveReason
+```
+
 Enumerates reasons for the activation state changes of the **NavDestination** component.
 
 **Since:** 17

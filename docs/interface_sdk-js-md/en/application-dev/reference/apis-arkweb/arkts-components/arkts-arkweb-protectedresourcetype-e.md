@@ -1,5 +1,9 @@
 # ProtectedResourceType
 
+```TypeScript
+declare enum ProtectedResourceType
+```
+
 Defines the types of protected resources that the Web component needs to access. It is used to control access permissions for sensitive resources such as MIDI, camera, microphone, and sensors, helping developers provide rich web functionality while protecting user privacy.
 
 **Since:** 9

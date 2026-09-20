@@ -1,5 +1,9 @@
 # TextArea properties/events
 
+```TypeScript
+declare class TextAreaAttribute extends CommonMethod<TextAreaAttribute>
+```
+
 In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
 In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
@@ -845,6 +849,8 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 | --- | --- | --- | --- |
 | value | LengthMetrics | Yes | Line spacing. Default value: **0** |
 
+<a id="linespacing-1"></a>
+
 ## lineSpacing
 
 ```TypeScript
@@ -961,6 +967,8 @@ Sets the maximum number of lines that can be displayed. When **textOverflow** is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Maximum number of lines that can be displayed with the inline style in the editing state.<br>Default value: **3**. In non-inline style, the default value is **UINT32_MAX**.<br>Value range: (0, UINT32 _MAX] |
+
+<a id="maxlines-1"></a>
 
 ## maxLines
 
@@ -1251,6 +1259,8 @@ Called when the Enter key on the soft keyboard is pressed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | (enterKey: EnterKeyType) =&gt; void | Yes | callback of the listened event. |
+
+<a id="onsubmit-1"></a>
 
 ## onSubmit
 

@@ -1,5 +1,9 @@
 # DialogSheet
 
+```TypeScript
+declare interface DialogSheet
+```
+
 Dialog sheet的配置项。
 
 **起始版本：** 26.0.1

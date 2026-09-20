@@ -1,5 +1,9 @@
 # GridRowDirection
 
+```TypeScript
+declare enum GridRowDirection
+```
+
 栅格元素排列方向。
 
 > **说明：** 

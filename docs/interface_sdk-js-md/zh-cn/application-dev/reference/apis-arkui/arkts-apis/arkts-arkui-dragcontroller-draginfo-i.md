@@ -1,5 +1,9 @@
 # DragInfo
 
+```TypeScript
+interface DragInfo
+```
+
 发起拖拽所需要的属性和拖拽时携带的信息。
 
 **起始版本：** 10
@@ -15,7 +19,7 @@ import { dragController } from '@kit.ArkUI';
 ## autoHideComponentUniqueIds
 
 ```TypeScript
-autoHideComponentUniqueIds?: number | number[]
+autoHideComponentUniqueIds?: number[]
 ```
 
 设置在主动拖拽过程中由系统自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。

@@ -1,5 +1,9 @@
 # TextMetrics
 
+```TypeScript
+declare interface TextMetrics
+```
+
 Size information of the text.
 
 **Since:** 8

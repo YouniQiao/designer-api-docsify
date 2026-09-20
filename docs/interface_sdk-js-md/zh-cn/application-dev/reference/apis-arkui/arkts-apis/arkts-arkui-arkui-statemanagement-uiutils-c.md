@@ -1,5 +1,9 @@
 # UIUtils
 
+```TypeScript
+export declare class UIUtils
+```
+
 UIUtils状态管理相关的工具方法，包括获取代理对象的原始对象、将非观察数据变为可观察数据、动态添加和删除状态变量监听、同步刷新状态变量修改、创建数据绑定等，适用于需要手动管理状态观察、监听和同步刷新的场景。
 
 **起始版本：** 12
@@ -15,7 +19,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 ## addMonitor
 
 ```TypeScript
-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
+static addMonitor(target: object, path: string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
 ```
 
 给状态管理V2的状态变量动态添加监听方法，详见[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
@@ -267,7 +271,7 @@ export struct School {
 ## clearMonitor
 
 ```TypeScript
-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
+static clearMonitor(target: object, path: string[], monitorCallback?: MonitorCallback) : void
 ```
 
 删除通过[addMonitor](#addmonitor)给状态管理V2的状态变量添加的监听方法，详见[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
@@ -810,6 +814,8 @@ struct CompV2 {
   }
 }
 ```
+
+<a id="makebinding-1"></a>
 
 ## makeBinding
 

@@ -1,5 +1,9 @@
 # BlankScreenDetectionEventInfo
 
+```TypeScript
+declare interface BlankScreenDetectionEventInfo
+```
+
 Provides the event information when a blank screen is detected, including the URL, reason, and details. It is suitable for scenarios where monitoring page blank screen issues is required, improving blank screen diagnosis accuracy and user experience.
 
 **Since:** 22

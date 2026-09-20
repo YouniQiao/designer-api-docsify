@@ -233,6 +233,8 @@ async function anonAttestKey(): Promise<void> {
 ```
 
 
+<a id="anonattestkeyitem-1"></a>
+
 ## anonAttestKeyItem
 
 ```TypeScript

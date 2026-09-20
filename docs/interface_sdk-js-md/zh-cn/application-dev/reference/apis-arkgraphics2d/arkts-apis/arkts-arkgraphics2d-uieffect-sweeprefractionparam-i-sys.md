@@ -1,5 +1,9 @@
 # SweepRefractionParam（系统接口）
 
+```TypeScript
+interface SweepRefractionParam
+```
+
 创建 SweepRefractionMask 的必选参数。
 
 **起始版本：** 26.0.1

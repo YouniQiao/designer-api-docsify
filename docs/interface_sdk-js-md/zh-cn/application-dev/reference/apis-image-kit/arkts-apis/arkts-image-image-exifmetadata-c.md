@@ -1,5 +1,9 @@
 # ExifMetadata
 
+```TypeScript
+class ExifMetadata implements Metadata
+```
+
 ExifMetadata implements Metadata
 
 Exif（Exchangeable image file format）元数据。

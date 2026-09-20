@@ -1,5 +1,9 @@
 # JsResult
 
+```TypeScript
+declare class JsResult
+```
+
 JsResult is a result handling object returned by the Web component when processing JavaScript dialog box events. It is used in scenarios where developers intercept and customize the handling of dialog boxes such as `window.alert`, `window.confirm`, and `window.prompt`. In event callbacks such as [onAlert](arkts-arkweb-web-comp-attribute.md#onalert), [onConfirm](arkts-arkweb-web-comp-attribute.md#onconfirm), or [onPrompt](arkts-arkweb-web-comp-attribute.md#onprompt), developers can use this object to feed back the user's operation results, such as confirmation, cancellation, or input content, to the Web component, thereby controlling the subsequent behavior of the dialog box.
 
 **Since:** 8

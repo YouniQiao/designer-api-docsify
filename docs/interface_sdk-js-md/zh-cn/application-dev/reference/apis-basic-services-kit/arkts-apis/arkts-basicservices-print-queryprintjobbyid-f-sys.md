@@ -66,6 +66,8 @@ print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
 ```
 
 
+<a id="queryprintjobbyid-1"></a>
+
 ## queryPrintJobById
 
 ```TypeScript

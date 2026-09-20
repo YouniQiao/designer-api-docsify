@@ -122,6 +122,8 @@ try {
 ```
 
 
+<a id="getrunningprocessinfobybundlename-1"></a>
+
 ## getRunningProcessInfoByBundleName
 
 ```TypeScript
@@ -156,6 +158,8 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: number, c
 
 参见 [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
+
+<a id="getrunningprocessinfobybundlename-2"></a>
 
 ## getRunningProcessInfoByBundleName
 
@@ -195,6 +199,8 @@ function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<Pr
 
 参见 [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
+
+<a id="getrunningprocessinfobybundlename-3"></a>
 
 ## getRunningProcessInfoByBundleName
 

@@ -1,5 +1,9 @@
 # RichEditorOptions
 
+```TypeScript
+declare interface RichEditorOptions
+```
+
 RichEditor初始化参数。
 
 **起始版本：** 10

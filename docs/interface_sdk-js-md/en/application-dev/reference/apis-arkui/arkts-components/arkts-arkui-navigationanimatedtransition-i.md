@@ -1,5 +1,9 @@
 # NavigationAnimatedTransition
 
+```TypeScript
+declare interface NavigationAnimatedTransition
+```
+
 Defines the custom transition animation protocol. You need to implement this protocol to define the redirection animation of the navigation route.
 
 **Since:** 11

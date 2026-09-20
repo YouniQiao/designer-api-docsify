@@ -1,5 +1,9 @@
 # Privilege
 
+```TypeScript
+enum Privilege
+```
+
 Enumerates the privileges that can be authorized. Before requesting authorization for these privileges, ensure that the current application and runtime environment meet the authorization policy requirements. For detailed definitions of each privilege (including authorization policies), see [Privilege Appendix](../../../reference/apis-basic-services-kit/appendix-osAccount-authorization-privileges.md).
 
 **Since:** 26.0.1

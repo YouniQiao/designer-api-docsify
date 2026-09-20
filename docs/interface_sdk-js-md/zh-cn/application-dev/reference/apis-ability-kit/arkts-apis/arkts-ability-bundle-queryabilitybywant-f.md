@@ -96,6 +96,8 @@ bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
 ```
 
 
+<a id="queryabilitybywant-1"></a>
+
 ## queryAbilityByWant
 
 ```TypeScript
@@ -126,6 +128,8 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 
 参见 [queryAbilityByWant](#queryabilitybywant)
 
+
+<a id="queryabilitybywant-2"></a>
 
 ## queryAbilityByWant
 

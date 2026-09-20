@@ -1,5 +1,9 @@
 # SwiperDisplayMode
 
+```TypeScript
+declare enum SwiperDisplayMode
+```
+
 Swiper在主轴上的尺寸大小模式枚举。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # TabBarOptions
 
+```TypeScript
+declare interface TabBarOptions
+```
+
 Defines the options for configuring images and text content on the tabs.
 
 > **NOTE:** 

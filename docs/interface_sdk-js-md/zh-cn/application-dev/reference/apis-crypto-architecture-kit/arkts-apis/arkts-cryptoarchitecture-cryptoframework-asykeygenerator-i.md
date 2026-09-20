@@ -1,5 +1,9 @@
 # AsyKeyGenerator
 
+```TypeScript
+interface AsyKeyGenerator
+```
+
 非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过[createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md)方法创建一个AsyKeyGenerator实例。
 
 **起始版本：** 9
@@ -95,6 +99,8 @@ keyGenPromise.then(keyPair => {
 });
 ```
 
+<a id="convertkey-1"></a>
+
 ## convertKey
 
 ```TypeScript
@@ -175,6 +181,8 @@ keyGenPromise.then(keyPair => {
   console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="convertkey-2"></a>
 
 ## convertKey
 
@@ -262,6 +270,8 @@ keyGenPromise.then(keyPair => {
   console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="convertkey-3"></a>
 
 ## convertKey
 
@@ -533,6 +543,8 @@ async function testConvertPemKeyByPromise() {
 }
 ```
 
+<a id="convertpemkey-1"></a>
+
 ## convertPemKey
 
 ```TypeScript
@@ -705,6 +717,8 @@ function testConvertPemKeyBySync() {
 }
 ```
 
+<a id="convertpemkeysync-1"></a>
+
 ## convertPemKeySync
 
 ```TypeScript
@@ -810,6 +824,8 @@ keyGenPromise.then(keyPair => {
   console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
 });
 ```
+
+<a id="generatekeypair-1"></a>
 
 ## generateKeyPair
 

@@ -1,5 +1,9 @@
 # PenKeyOperationOptions
 
+```TypeScript
+declare interface PenKeyOperationOptions
+```
+
 笔按键操作选项。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # SurfaceRect
 
+```TypeScript
+declare interface SurfaceRect
+```
+
 描述XComponent所持有的surface的矩形。
 
 > **说明：** 

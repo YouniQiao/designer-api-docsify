@@ -1,5 +1,9 @@
 # ShowDialogOptions
 
+```TypeScript
+interface ShowDialogOptions
+```
+
 对话框的选项。
 
 **起始版本：** 8

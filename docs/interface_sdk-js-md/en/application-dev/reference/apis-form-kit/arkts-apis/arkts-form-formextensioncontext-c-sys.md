@@ -1,5 +1,9 @@
 # FormExtensionContext
 
+```TypeScript
+declare class FormExtensionContext extends ExtensionContext
+```
+
 The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md). You can use the APIs of this module to start a FormExtensionAbility.
 
 > **NOTE:** 
@@ -204,6 +208,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="disconnectserviceextensionability-1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -333,6 +339,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<a id="startability-1"></a>
 
 ## startAbility
 

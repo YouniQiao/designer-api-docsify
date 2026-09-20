@@ -1,5 +1,9 @@
 # OnLoadInterceptEvent
 
+```TypeScript
+export declare interface OnLoadInterceptEvent
+```
+
 Represents the event triggered when resource loading is intercepted.
 
 **Since:** 12

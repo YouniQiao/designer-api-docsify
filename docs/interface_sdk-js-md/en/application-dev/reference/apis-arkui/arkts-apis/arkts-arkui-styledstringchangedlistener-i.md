@@ -1,5 +1,9 @@
 # StyledStringChangedListener
 
+```TypeScript
+declare interface StyledStringChangedListener
+```
+
 Defines the listener for changes of the styled string text content.
 
 **Since:** 12

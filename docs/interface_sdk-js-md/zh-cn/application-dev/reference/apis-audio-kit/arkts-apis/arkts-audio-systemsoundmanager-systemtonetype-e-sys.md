@@ -1,5 +1,9 @@
 # SystemToneType（系统接口）
 
+```TypeScript
+enum SystemToneType
+```
+
 枚举，系统铃声类型。
 
 @enum { int }

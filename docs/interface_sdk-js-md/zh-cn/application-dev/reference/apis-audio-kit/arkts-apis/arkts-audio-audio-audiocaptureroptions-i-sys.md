@@ -1,5 +1,9 @@
 # AudioCapturerOptions
 
+```TypeScript
+interface AudioCapturerOptions
+```
+
 音频采集器选项信息。
 
 **起始版本：** 8

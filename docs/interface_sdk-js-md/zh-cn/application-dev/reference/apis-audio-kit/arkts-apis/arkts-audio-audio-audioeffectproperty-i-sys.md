@@ -1,5 +1,9 @@
 # AudioEffectProperty（系统接口）
 
+```TypeScript
+interface AudioEffectProperty
+```
+
 音效属性。
 
 **起始版本：** 18

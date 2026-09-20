@@ -1,5 +1,9 @@
 # Role (System API)
 
+```TypeScript
+enum Role
+```
+
 Device role.
 
 **Since:** 26.0.1

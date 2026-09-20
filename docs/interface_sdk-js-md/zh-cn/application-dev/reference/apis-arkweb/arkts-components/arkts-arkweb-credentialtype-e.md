@@ -1,5 +1,9 @@
 # CredentialType
 
+```TypeScript
+declare enum CredentialType
+```
+
 凭证类型，用于定义身份认证中使用的凭证种类。
 
 **起始版本：** 22

@@ -144,6 +144,8 @@ try {
 ```
 
 
+<a id="movemissionstoforeground-1"></a>
+
 ## moveMissionsToForeground
 
 ```TypeScript
@@ -181,6 +183,8 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 See [moveMissionsToForeground](#movemissionstoforeground)
 
+
+<a id="movemissionstoforeground-2"></a>
 
 ## moveMissionsToForeground
 

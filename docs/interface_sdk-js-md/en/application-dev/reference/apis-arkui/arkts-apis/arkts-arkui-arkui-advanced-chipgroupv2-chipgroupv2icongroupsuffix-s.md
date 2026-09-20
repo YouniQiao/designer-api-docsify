@@ -1,5 +1,9 @@
 # ChipGroupV2IconGroupSuffix
 
+```TypeScript
+export declare struct ChipGroupV2IconGroupSuffix
+```
+
 Display custom content on the far right of the **ChipGroupV2** component. It supports configuring image icons, symbol icons, symbol icon configuration items, and icon background material styles. It is suitable for scenarios where an additional operation entry needs to be added at the end of a chip group.
 
 **Since:** 26.0.0

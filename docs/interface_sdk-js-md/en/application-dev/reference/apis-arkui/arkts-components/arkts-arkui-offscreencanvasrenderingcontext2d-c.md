@@ -1,5 +1,9 @@
 # OffscreenCanvasRenderingContext2D
 
+```TypeScript
+declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer
+```
+
 Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Offscreen drawing is a process where content to draw is first drawn into a buffer, then converted into an image, and finally drawn onto the canvas at once. Offscreen drawing uses the CPU for rendering, which is relatively slow. Therefore, avoid using offscreen drawing in scenarios that require high rendering speed.
 
 > **NOTE:** 
@@ -51,6 +55,8 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | width | number | Yes | Width of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
 | height | number | Yes | Height of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Used to configure the parameters of the **OffscreenCanvasRenderingContext2D** object. Pass this parameter when advanced configurations such as antialiasing need to be enabled. See the description of the **RenderingContextSettings** API.<br>The exception value **undefined** is handled as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null** |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

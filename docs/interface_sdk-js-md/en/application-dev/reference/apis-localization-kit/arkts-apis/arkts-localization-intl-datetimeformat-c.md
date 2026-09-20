@@ -1,5 +1,9 @@
 # DateTimeFormat
 
+```TypeScript
+export class DateTimeFormat
+```
+
 Performs date and time formatting.
 
 **Since:** 6
@@ -54,6 +58,8 @@ let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyl
 // Create a DateTimeFormat object with a locale ID array. The locale ID ban is invalid and therefore locale ID zh is used.
 formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

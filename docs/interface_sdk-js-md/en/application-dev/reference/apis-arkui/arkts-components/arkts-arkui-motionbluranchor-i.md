@@ -1,5 +1,9 @@
 # MotionBlurAnchor
 
+```TypeScript
+declare interface MotionBlurAnchor
+```
+
 Describes the coordinates of the motion blur anchor.
 
 **Since:** 12

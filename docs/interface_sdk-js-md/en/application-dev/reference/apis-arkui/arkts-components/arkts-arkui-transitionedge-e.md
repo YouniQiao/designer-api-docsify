@@ -1,5 +1,9 @@
 # TransitionEdge
 
+```TypeScript
+declare enum TransitionEdge
+```
+
 Enumerates the transition edge types.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # AudioHapticType
 
+```TypeScript
+enum AudioHapticType
+```
+
 枚举，音振类型。
 
 @enum { int }

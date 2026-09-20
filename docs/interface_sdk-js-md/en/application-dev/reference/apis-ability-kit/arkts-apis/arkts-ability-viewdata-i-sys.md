@@ -1,5 +1,9 @@
 # ViewData
 
+```TypeScript
+export default interface ViewData
+```
+
 The module defines the view data used for auto-fill.
 
 **Since:** 26.0.0

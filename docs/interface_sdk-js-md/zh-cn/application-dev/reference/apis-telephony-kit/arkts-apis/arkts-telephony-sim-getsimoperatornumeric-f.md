@@ -63,6 +63,8 @@ sim.getSimOperatorNumeric(0).then((data: string) => {
 ```
 
 
+<a id="getsimoperatornumeric-1"></a>
+
 ## getSimOperatorNumeric
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ToolSummary (System API)
 
+```TypeScript
+export interface ToolSummary
+```
+
 ToolInfo describes the basic summary information of a cli tool.
 
 **Since:** 26.0.0

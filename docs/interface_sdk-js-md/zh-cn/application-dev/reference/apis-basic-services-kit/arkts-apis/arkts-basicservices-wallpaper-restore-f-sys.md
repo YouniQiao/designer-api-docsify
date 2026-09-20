@@ -62,6 +62,8 @@ wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
 ```
 
 
+<a id="restore-1"></a>
+
 ## restore
 
 ```TypeScript

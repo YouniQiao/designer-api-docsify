@@ -1,5 +1,9 @@
 # SwipeRefresher
 
+```TypeScript
+export declare struct SwipeRefresher
+```
+
 The swipe refresher is a component used to obtain and load content, typically with a pull-down gesture.
 
 > **NOTE:** 

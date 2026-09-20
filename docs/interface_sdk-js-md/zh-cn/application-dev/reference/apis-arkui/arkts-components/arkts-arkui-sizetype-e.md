@@ -1,5 +1,9 @@
 # SizeType
 
+```TypeScript
+declare enum SizeType
+```
+
 设备宽度类型枚举，用于在栅格布局中区分不同宽度的设备类型，实现响应式布局。
 
 > **说明：** 

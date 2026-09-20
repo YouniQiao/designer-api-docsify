@@ -1,5 +1,9 @@
 # CommandPath
 
+```TypeScript
+export interface CommandPath
+```
+
 Describes the command for drawing a path.
 
 **Since:** 12

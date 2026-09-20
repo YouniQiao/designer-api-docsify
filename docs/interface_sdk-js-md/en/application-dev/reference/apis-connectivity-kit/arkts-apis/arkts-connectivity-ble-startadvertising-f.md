@@ -221,6 +221,8 @@ try {
 ```
 
 
+<a id="startadvertising-1"></a>
+
 ## startAdvertising
 
 ```TypeScript
@@ -272,6 +274,8 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 See [startAdvertising](#startadvertising)
 
+
+<a id="startadvertising-2"></a>
 
 ## startAdvertising
 

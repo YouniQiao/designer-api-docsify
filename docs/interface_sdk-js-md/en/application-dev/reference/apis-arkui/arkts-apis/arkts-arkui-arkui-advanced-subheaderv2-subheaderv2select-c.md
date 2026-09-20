@@ -1,5 +1,9 @@
 # SubHeaderV2Select
 
+```TypeScript
+export declare class SubHeaderV2Select
+```
+
 Defines the content and events for selection.
 
 **Since:** 18

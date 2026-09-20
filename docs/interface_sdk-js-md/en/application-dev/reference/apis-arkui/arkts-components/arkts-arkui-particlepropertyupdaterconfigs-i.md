@@ -1,5 +1,9 @@
 # ParticlePropertyUpdaterConfigs
 
+```TypeScript
+interface ParticlePropertyUpdaterConfigs<T>
+```
+
 Defines the particle property updater configs. @interface ParticlePropertyUpdaterConfigs
 
 **Since:** 10

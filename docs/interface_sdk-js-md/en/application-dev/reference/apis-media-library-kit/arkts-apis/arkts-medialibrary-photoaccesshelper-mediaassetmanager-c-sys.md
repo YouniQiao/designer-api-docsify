@@ -1,5 +1,9 @@
 # MediaAssetManager
 
+```TypeScript
+class MediaAssetManager
+```
+
 The MediaAssetManager class is used for manipulating the read and write operations of media assets.
 
 **Since:** 11

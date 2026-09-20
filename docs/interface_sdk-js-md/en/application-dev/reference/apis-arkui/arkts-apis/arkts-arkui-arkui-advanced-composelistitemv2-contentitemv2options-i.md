@@ -1,5 +1,9 @@
 # ContentItemV2Options
 
+```TypeScript
+export interface ContentItemV2Options
+```
+
 Declare interface ContentItemV2Options
 
 **Since:** 26.0.0

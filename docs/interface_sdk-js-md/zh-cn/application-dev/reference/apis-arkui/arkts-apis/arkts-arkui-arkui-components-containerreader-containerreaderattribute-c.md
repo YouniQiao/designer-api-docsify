@@ -1,5 +1,9 @@
 # ContainerReaderAttribute
 
+```TypeScript
+export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>
+```
+
 除支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)外，还支持以下属性：
 
 **继承/实现关系：** ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>

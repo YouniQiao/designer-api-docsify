@@ -1,5 +1,9 @@
 # AcceptableFileType
 
+```TypeScript
+declare interface AcceptableFileType
+```
+
 提供文件选择器推荐的文件类型信息，包括MIME类型和类型数组。
 
 **起始版本：** 23

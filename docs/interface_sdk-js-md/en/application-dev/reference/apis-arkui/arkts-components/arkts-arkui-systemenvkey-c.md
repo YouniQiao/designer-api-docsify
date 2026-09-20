@@ -1,5 +1,9 @@
 # SystemEnvKey
 
+```TypeScript
+declare class SystemEnvKey<T>
+```
+
 Defines the class of System Env Key.
 
 **Since:** 26.0.0

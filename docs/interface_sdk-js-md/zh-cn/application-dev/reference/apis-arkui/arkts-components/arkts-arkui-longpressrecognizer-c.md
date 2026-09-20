@@ -1,5 +1,9 @@
 # LongPressRecognizer
 
+```TypeScript
+declare class LongPressRecognizer extends GestureRecognizer
+```
+
 长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
 **继承/实现关系：** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

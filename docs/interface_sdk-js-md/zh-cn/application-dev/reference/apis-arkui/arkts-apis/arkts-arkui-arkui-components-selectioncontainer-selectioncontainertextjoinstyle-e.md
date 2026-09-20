@@ -1,5 +1,9 @@
 # SelectionContainerTextJoinStyle
 
+```TypeScript
+export declare enum SelectionContainerTextJoinStyle
+```
+
 文本聚合拼接方式。
 
 **起始版本：** 26.0.0

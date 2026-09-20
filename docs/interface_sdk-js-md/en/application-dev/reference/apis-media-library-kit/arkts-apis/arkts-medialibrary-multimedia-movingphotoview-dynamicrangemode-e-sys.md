@@ -1,5 +1,9 @@
 # DynamicRangeMode (System API)
 
+```TypeScript
+export declare enum DynamicRangeMode
+```
+
 Dynamic range mode of moving photo.
 
 @enum { int }

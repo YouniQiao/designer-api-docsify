@@ -97,6 +97,8 @@ adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="isadminenabled-1"></a>
+
 ## isAdminEnabled
 
 ```TypeScript
@@ -132,6 +134,8 @@ Checks whether a device administrator application of the specified user is enabl
 
 See [isAdminEnabled](#isadminenabled)
 
+
+<a id="isadminenabled-2"></a>
 
 ## isAdminEnabled
 

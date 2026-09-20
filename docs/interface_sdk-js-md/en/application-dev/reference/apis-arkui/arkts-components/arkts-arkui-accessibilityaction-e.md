@@ -1,5 +1,9 @@
 # AccessibilityAction
 
+```TypeScript
+declare enum AccessibilityAction
+```
+
 Enum for accessibility action type
 
 **Since:** 20

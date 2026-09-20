@@ -1,5 +1,9 @@
 # GutterOption
 
+```TypeScript
+declare interface GutterOption
+```
+
 栅格布局间距类型，用于描述栅格子组件不同方向的间距。
 
 **起始版本：** 9

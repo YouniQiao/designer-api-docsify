@@ -1,5 +1,9 @@
 # GestureGroupHandler
 
+```TypeScript
+declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>
+```
+
 手势组处理器对象类型。
 
 **继承/实现关系：** GestureGroupHandler extends GestureHandler<GestureGroupHandler>

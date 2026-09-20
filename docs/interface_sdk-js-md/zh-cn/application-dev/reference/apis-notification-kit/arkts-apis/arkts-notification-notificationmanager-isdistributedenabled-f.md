@@ -18,7 +18,7 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md)(deviceType: string)
+**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md#isdistributedenabled-2)(deviceType: string)
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -88,6 +88,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="isdistributedenabled-1"></a>
+
 ## isDistributedEnabled
 
 ```TypeScript
@@ -100,7 +102,7 @@ function isDistributedEnabled(): Promise<boolean>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md)(deviceType: string)
+**替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md#isdistributedenabled-2)(deviceType: string)
 
 **系统能力：** SystemCapability.Notification.Notification
 

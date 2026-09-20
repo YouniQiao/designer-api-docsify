@@ -1,5 +1,9 @@
 # RichEditorResponseType
 
+```TypeScript
+declare enum RichEditorResponseType
+```
+
 菜单的响应类型。
 
 **起始版本：** 11

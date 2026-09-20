@@ -57,6 +57,8 @@ formHost.enableFormsUpdate(formIds).then(() => {
 ```
 
 
+<a id="enableformsupdate-1"></a>
+
 ## enableFormsUpdate
 
 ```TypeScript

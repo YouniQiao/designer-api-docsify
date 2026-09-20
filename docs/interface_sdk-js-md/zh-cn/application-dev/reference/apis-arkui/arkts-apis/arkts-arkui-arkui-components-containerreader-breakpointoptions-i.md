@@ -1,5 +1,9 @@
 # BreakpointOptions
 
+```TypeScript
+export interface BreakpointOptions
+```
+
 定义断点配置选项，用于指定容器尺寸分析的阈值参数。
 
 **起始版本：** 26.0.0

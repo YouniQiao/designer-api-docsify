@@ -1,5 +1,9 @@
 # OnWindowNewEvent
 
+```TypeScript
+declare interface OnWindowNewEvent
+```
+
 Defines the callback triggered when the web page requests the user to create a window. Starting from API version 23, you can use [OnWindowNewExtEvent](arkts-arkweb-onwindownewextevent-i.md) to obtain more window information.
 
 **Since:** 12

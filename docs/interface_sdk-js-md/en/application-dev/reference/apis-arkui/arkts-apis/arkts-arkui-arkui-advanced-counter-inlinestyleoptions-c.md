@@ -1,5 +1,9 @@
 # InlineStyleOptions
 
+```TypeScript
+declare class InlineStyleOptions extends CommonOptions
+```
+
 Defines the inline numeric counter attributes and events.
 
 Inherits from [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md).

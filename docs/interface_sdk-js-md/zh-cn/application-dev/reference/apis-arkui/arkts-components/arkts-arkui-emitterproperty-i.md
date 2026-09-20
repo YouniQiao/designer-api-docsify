@@ -1,5 +1,9 @@
 # EmitterProperty
 
+```TypeScript
+interface EmitterProperty
+```
+
 设置发射器属性。
 
 **起始版本：** 12

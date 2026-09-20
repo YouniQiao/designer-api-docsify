@@ -1,5 +1,9 @@
 # DataReloadOperation
 
+```TypeScript
+interface DataReloadOperation
+```
+
 Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD** operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator** to perform a comparison of keys with their corresponding values.
 
 **Since:** 12

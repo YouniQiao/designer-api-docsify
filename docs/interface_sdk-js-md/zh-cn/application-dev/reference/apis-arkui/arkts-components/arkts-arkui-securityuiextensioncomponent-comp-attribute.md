@@ -1,5 +1,9 @@
 # SecurityUIExtensionComponent属性/事件
 
+```TypeScript
+declare class SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>
+```
+
 支持通用属性。
 
 支持以下事件：

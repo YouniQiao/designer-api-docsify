@@ -1,5 +1,9 @@
 # DomainAccountPolicy
 
+```TypeScript
+interface DomainAccountPolicy
+```
+
 Domain account policy.
 
 **Since:** 19

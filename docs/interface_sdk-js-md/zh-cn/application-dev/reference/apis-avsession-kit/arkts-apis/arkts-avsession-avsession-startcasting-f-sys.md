@@ -77,6 +77,8 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
 ```
 
 
+<a id="startcasting-1"></a>
+
 ## startCasting
 
 ```TypeScript

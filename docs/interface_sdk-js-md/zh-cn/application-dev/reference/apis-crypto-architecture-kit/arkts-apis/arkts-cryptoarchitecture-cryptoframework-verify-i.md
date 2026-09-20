@@ -1,5 +1,9 @@
 # Verify
 
+```TypeScript
+interface Verify
+```
+
 验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
 
 <br>Verify实例不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify实例并调用init初始化。
@@ -107,6 +111,8 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**适用版本：** 26.0.0+ |
+
+<a id="init-1"></a>
 
 ## init
 
@@ -396,6 +402,8 @@ function testSetVerifySpec() {
 }
 ```
 
+<a id="setverifyspec-1"></a>
+
 ## setVerifySpec
 
 ```TypeScript
@@ -438,6 +446,8 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 **示例**
 
 参见 [setVerifySpec](#setverifyspec)
+
+<a id="setverifyspec-2"></a>
 
 ## setVerifySpec
 
@@ -533,6 +543,8 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
+
+<a id="update-1"></a>
 
 ## update
 
@@ -674,6 +686,8 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
+<a id="verify-1"></a>
+
 ## verify
 
 ```TypeScript
@@ -707,6 +721,8 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+<a id="verify-2"></a>
 
 ## verify
 
@@ -746,6 +762,8 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
+
+<a id="verify-3"></a>
 
 ## verify
 

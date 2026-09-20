@@ -1,5 +1,9 @@
 # CommonMethod
 
+```TypeScript
+declare class CommonMethod<T>
+```
+
 CommonMethod.
 
 **起始版本：** 11
@@ -156,6 +160,8 @@ accessibilityDescription(value: string): T
 | --- | --- |
 | T | 返回当前对象。 |
 
+<a id="accessibilitydescription-1"></a>
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -245,6 +251,8 @@ accessibilityGroup(value: boolean): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前对象。 |
+
+<a id="accessibilitygroup-1"></a>
 
 ## accessibilityGroup
 
@@ -336,6 +344,8 @@ accessibilityNextFocusId(nextId: string): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前对象。 |
+
+<a id="accessibilitynextfocusid-1"></a>
 
 ## accessibilityNextFocusId
 
@@ -518,6 +528,8 @@ accessibilityText(value: string): T
 | --- | --- |
 | T | 返回当前对象。 |
 
+<a id="accessibilitytext-1"></a>
+
 ## accessibilityText
 
 ```TypeScript
@@ -666,6 +678,8 @@ align(value: Alignment): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="align-1"></a>
+
 ## align
 
 ```TypeScript
@@ -723,6 +737,8 @@ alignRules(value: AlignRuleOption): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="alignrules-1"></a>
 
 ## alignRules
 
@@ -785,7 +801,7 @@ alignSelf(value: ItemAlign): T
 ## allowDrop
 
 ```TypeScript
-allowDrop(value: Array<UniformDataType> | null | Array<string>): T
+allowDrop(value: Array<UniformDataType>  | null | Array<string>): T
 ```
 
 设置该组件上允许落入的数据类型。如果未设置allowDrop，组件将默认接受所有数据类型。
@@ -966,6 +982,8 @@ backdropBlur(value: number, options?: BlurOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="backdropblur-1"></a>
+
 ## backdropBlur
 
 ```TypeScript
@@ -996,6 +1014,8 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backdropblur-2"></a>
 
 ## backdropBlur
 
@@ -1100,6 +1120,8 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="backgroundblurstyle-1"></a>
+
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -1130,6 +1152,8 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backgroundblurstyle-2"></a>
 
 ## backgroundBlurStyle
 
@@ -1190,6 +1214,8 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backgroundbrightness-1"></a>
 
 ## backgroundBrightness
 
@@ -1252,6 +1278,8 @@ backgroundColor(value: ResourceColor): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="backgroundcolor-1"></a>
+
 ## backgroundColor
 
 ```TypeScript
@@ -1281,6 +1309,8 @@ backgroundColor(color: Optional<ResourceColor>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backgroundcolor-2"></a>
 
 ## backgroundColor
 
@@ -1351,6 +1381,8 @@ backgroundEffect(options: BackgroundEffectOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="backgroundeffect-1"></a>
+
 ## backgroundEffect
 
 ```TypeScript
@@ -1378,6 +1410,8 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backgroundeffect-2"></a>
 
 ## backgroundEffect
 
@@ -1474,6 +1508,8 @@ backgroundImage(src: ResourceStr | PixelMap, repeat?: ImageRepeat): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="backgroundimage-1"></a>
 
 ## backgroundImage
 
@@ -1622,7 +1658,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置全屏模态页面内容。builder中的根节点需唯一。&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
 | type | [ModalTransition](arkts-arkui-modaltransition-e.md) | 否 | 全屏模态页面的系统转场方式。<br>取值原则：DEFAULT-上下切换过渡，NONE-无动画过渡，ALPHA-透明渐变过渡。<br> 默认值：ModalTransition.DEFAULT，即上下切换过渡。<br>**说明：** <br> 与transition同时设置时，此属性不生效，仅transition生效。 |
 
@@ -1631,6 +1667,8 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="bindcontentcover-1"></a>
 
 ## bindContentCover
 
@@ -1656,7 +1694,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置全屏模态页面内容。 |
 | options | [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | 否 | 配置全屏模态页面的可选属性。不传入此参数时，各可选属性使用各自默认值。 |
 
@@ -1693,6 +1731,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | 类型 | 说明 |
 | --- | --- |
 | T |  |
+
+<a id="bindcontextmenu-1"></a>
 
 ## bindContextMenu
 
@@ -1814,6 +1854,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 | --- | --- |
 | T |  |
 
+<a id="bindcontextmenuwithresponse-1"></a>
+
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1870,6 +1912,8 @@ Menu control
 | 类型 | 说明 |
 | --- | --- |
 | T |  |
+
+<a id="bindmenu-1"></a>
 
 ## bindMenu
 
@@ -1952,7 +1996,7 @@ bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | 是否显示半模态页面。<br>true：显示半模态页面。<br>false：隐藏半模态页面。<br>从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
+| isShow | boolean | 是 | 是否显示半模态页面。<br>true：显示半模态页面。<br>false：隐藏半模态页面。<br>从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 配置半模态页面内容。 |
 | options | [SheetOptions](arkts-arkui-sheetoptions-i.md) | 否 | 配置半模态页面的可选属性。如果不传入该参数，则不配置半模态页面的额外属性，各项属性使用其各自默认值。 |
 
@@ -2022,6 +2066,8 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="blendmode-1"></a>
+
 ## blendMode
 
 ```TypeScript
@@ -2082,6 +2128,8 @@ blur(value: number, options?: BlurOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="blur-1"></a>
+
 ## blur
 
 ```TypeScript
@@ -2112,6 +2160,8 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="blur-2"></a>
 
 ## blur
 
@@ -2269,6 +2319,8 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="borderradius-1"></a>
+
 ## borderRadius
 
 ```TypeScript
@@ -2387,6 +2439,8 @@ brightness(value: number): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="brightness-1"></a>
 
 ## brightness
 
@@ -2507,6 +2561,8 @@ clickEffect(value: ClickEffect | null): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="clickeffect-1"></a>
+
 ## clickEffect
 
 ```TypeScript
@@ -2565,6 +2621,8 @@ clip(value: boolean): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="clip-1"></a>
+
 ## clip
 
 ```TypeScript
@@ -2594,6 +2652,8 @@ clip(clip: Optional<boolean>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="clip-2"></a>
 
 ## clip
 
@@ -2667,6 +2727,8 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="clipshape-1"></a>
+
 ## clipShape
 
 ```TypeScript
@@ -2732,6 +2794,8 @@ colorBlend(value: Color | string | Resource): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="colorblend-1"></a>
 
 ## colorBlend
 
@@ -2852,6 +2916,8 @@ contrast(value: number): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="contrast-1"></a>
 
 ## contrast
 
@@ -3087,6 +3153,8 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="dragpreview-1"></a>
 
 ## dragPreview
 
@@ -3484,6 +3552,8 @@ focusScopeId(id: string, isGroup?: boolean): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="focusscopeid-1"></a>
+
 ## focusScopeId
 
 ```TypeScript
@@ -3576,6 +3646,8 @@ foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="foregroundblurstyle-1"></a>
+
 ## foregroundBlurStyle
 
 ```TypeScript
@@ -3604,6 +3676,8 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="foregroundblurstyle-2"></a>
 
 ## foregroundBlurStyle
 
@@ -3668,6 +3742,8 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="foregroundcolor-1"></a>
 
 ## foregroundColor
 
@@ -3789,6 +3865,8 @@ freeze(value: boolean): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="freeze-1"></a>
+
 ## freeze
 
 ```TypeScript
@@ -3846,6 +3924,8 @@ geometryTransition(id: string): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="geometrytransition-1"></a>
 
 ## geometryTransition
 
@@ -3964,6 +4044,8 @@ grayscale(value: number): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="grayscale-1"></a>
 
 ## grayscale
 
@@ -4115,6 +4197,8 @@ height(value: Length): T
 | --- | --- |
 | T | 返回当前组件对象，用于链式调用。 |
 
+<a id="height-1"></a>
+
 ## height
 
 ```TypeScript
@@ -4228,6 +4312,8 @@ hueRotate(value: number | string): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="huerotate-1"></a>
 
 ## hueRotate
 
@@ -4381,6 +4467,8 @@ invert(value: number | InvertOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="invert-1"></a>
 
 ## invert
 
@@ -4558,6 +4646,8 @@ lightUpEffect(value: number): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="lightupeffect-1"></a>
+
 ## lightUpEffect
 
 ```TypeScript
@@ -4613,6 +4703,8 @@ linearGradient(value: LinearGradientOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="lineargradient-1"></a>
 
 ## linearGradient
 
@@ -4672,6 +4764,8 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="lineargradientblur-1"></a>
 
 ## linearGradientBlur
 
@@ -4788,6 +4882,8 @@ mask(value: ProgressMask): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="mask-1"></a>
+
 ## mask
 
 ```TypeScript
@@ -4815,6 +4911,8 @@ mask(mask: Optional<ProgressMask>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="mask-2"></a>
 
 ## mask
 
@@ -4885,6 +4983,8 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="maskshape-1"></a>
 
 ## maskShape
 
@@ -5023,6 +5123,8 @@ motionBlur(value: MotionBlurOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="motionblur-1"></a>
 
 ## motionBlur
 
@@ -5385,6 +5487,8 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="onareachange-1"></a>
+
 ## onAreaChange
 
 ```TypeScript
@@ -5573,6 +5677,8 @@ onClick(event: (event: ClickEvent) => void): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="onclick-1"></a>
 
 ## onClick
 
@@ -5909,6 +6015,8 @@ onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="ondrop-1"></a>
+
 ## onDrop
 
 ```TypeScript
@@ -6080,6 +6188,8 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="ongesturerecognizerjudgebegin-1"></a>
+
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -6192,6 +6302,8 @@ onKeyEvent(event: (event: KeyEvent) => void): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="onkeyevent-1"></a>
 
 ## onKeyEvent
 
@@ -6323,7 +6435,7 @@ Web组件使用该方法时，如果返回值为`true`，Web组件会判断组�
 
 XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。
 
-当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
+当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
 
 该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
 
@@ -6339,7 +6451,7 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) &#124; undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法建立输入法通信，否则点击键盘会失去响应。 |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) &#124; undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法建立输入法通信，否则点击键盘会失去响应。 |
 
 **返回值：**
 
@@ -6573,6 +6685,8 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 | --- | --- |
 | T | 返回当前组件。 |
 
+<a id="onvisibleareachange-1"></a>
+
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -6630,6 +6744,8 @@ opacity(value: number | Resource): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="opacity-1"></a>
 
 ## opacity
 
@@ -6691,6 +6807,8 @@ outline(value: OutlineOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="outline-1"></a>
+
 ## outline
 
 ```TypeScript
@@ -6750,6 +6868,8 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="outlinecolor-1"></a>
 
 ## outlineColor
 
@@ -6811,6 +6931,8 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="outlineradius-1"></a>
+
 ## outlineRadius
 
 ```TypeScript
@@ -6871,6 +6993,8 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="outlinestyle-1"></a>
+
 ## outlineStyle
 
 ```TypeScript
@@ -6930,6 +7054,8 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="outlinewidth-1"></a>
 
 ## outlineWidth
 
@@ -7126,6 +7252,8 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="pixelstretcheffect-1"></a>
+
 ## pixelStretchEffect
 
 ```TypeScript
@@ -7254,6 +7382,8 @@ radialGradient(value: RadialGradientOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="radialgradient-1"></a>
+
 ## radialGradient
 
 ```TypeScript
@@ -7313,6 +7443,8 @@ renderFit(fitMode: RenderFit): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="renderfit-1"></a>
 
 ## renderFit
 
@@ -7375,6 +7507,8 @@ renderGroup(value: boolean): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="rendergroup-1"></a>
 
 ## renderGroup
 
@@ -7588,6 +7722,8 @@ rotate(value: RotateOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="rotate-1"></a>
+
 ## rotate
 
 ```TypeScript
@@ -7617,6 +7753,8 @@ rotate(options: Optional<RotateOptions>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="rotate-2"></a>
 
 ## rotate
 
@@ -7710,6 +7848,8 @@ saturate(value: number): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="saturate-1"></a>
+
 ## saturate
 
 ```TypeScript
@@ -7767,6 +7907,8 @@ scale(value: ScaleOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="scale-1"></a>
 
 ## scale
 
@@ -7826,6 +7968,8 @@ sepia(value: number): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="sepia-1"></a>
+
 ## sepia
 
 ```TypeScript
@@ -7883,6 +8027,8 @@ shadow(value: ShadowOptions | ShadowStyle): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="shadow-1"></a>
 
 ## shadow
 
@@ -8093,6 +8239,8 @@ sphericalEffect(value: number): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="sphericaleffect-1"></a>
+
 ## sphericalEffect
 
 ```TypeScript
@@ -8180,6 +8328,8 @@ sweepGradient(value: SweepGradientOptions): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="sweepgradient-1"></a>
 
 ## sweepGradient
 
@@ -8415,6 +8565,8 @@ transform(value: object): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="transform-1"></a>
+
 ## transform
 
 ```TypeScript
@@ -8499,6 +8651,8 @@ transition(value: TransitionOptions | TransitionEffect): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="transition-1"></a>
+
 ## transition
 
 ```TypeScript
@@ -8562,6 +8716,8 @@ translate(value: TranslateOptions): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="translate-1"></a>
+
 ## translate
 
 ```TypeScript
@@ -8621,6 +8777,8 @@ useEffect(useEffect: boolean, effectType: EffectType): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+<a id="useeffect-1"></a>
+
 ## useEffect
 
 ```TypeScript
@@ -8649,6 +8807,8 @@ useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="useeffect-2"></a>
 
 ## useEffect
 
@@ -8707,6 +8867,8 @@ useShadowBatching(value: boolean): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="useshadowbatching-1"></a>
 
 ## useShadowBatching
 
@@ -8868,6 +9030,8 @@ width(value: Length): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件对象，用于链式调用。 |
+
+<a id="width-1"></a>
 
 ## width
 

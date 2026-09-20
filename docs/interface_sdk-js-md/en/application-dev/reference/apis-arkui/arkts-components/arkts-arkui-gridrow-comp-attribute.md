@@ -1,5 +1,9 @@
 # GridRow properties/events
 
+```TypeScript
+declare class GridRowAttribute extends CommonMethod<GridRowAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.

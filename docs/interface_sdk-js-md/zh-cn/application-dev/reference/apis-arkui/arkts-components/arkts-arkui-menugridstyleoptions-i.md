@@ -1,5 +1,9 @@
 # MenuGridStyleOptions
 
+```TypeScript
+declare interface MenuGridStyleOptions
+```
+
 菜单栅格样式选项。
 
 **起始版本：** 26.0.0

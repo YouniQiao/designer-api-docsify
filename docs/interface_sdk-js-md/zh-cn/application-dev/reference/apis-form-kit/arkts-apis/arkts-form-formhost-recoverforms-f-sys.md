@@ -82,6 +82,8 @@ try {
 ```
 
 
+<a id="recoverforms-1"></a>
+
 ## recoverForms
 
 ```TypeScript

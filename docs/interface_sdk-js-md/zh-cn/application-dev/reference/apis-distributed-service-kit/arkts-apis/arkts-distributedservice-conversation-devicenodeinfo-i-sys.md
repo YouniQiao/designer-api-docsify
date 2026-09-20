@@ -1,5 +1,9 @@
 # DeviceNodeInfo（系统接口）
 
+```TypeScript
+interface DeviceNodeInfo
+```
+
 设备节点信息，包括networkId、设备名称、设备类型标识符、近场状态和UDID。
 
 **起始版本：** 26.0.1

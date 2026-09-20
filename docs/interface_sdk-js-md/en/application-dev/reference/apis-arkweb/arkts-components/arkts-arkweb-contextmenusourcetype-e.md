@@ -1,5 +1,9 @@
 # ContextMenuSourceType
 
+```TypeScript
+declare enum ContextMenuSourceType
+```
+
 Enumerates the event source types that trigger the context menu.
 
 **Since:** 9

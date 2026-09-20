@@ -1,5 +1,9 @@
 # ActionButtonType
 
+```TypeScript
+export enum ActionButtonType
+```
+
 Enumerates the button types.
 
 **Since:** 7

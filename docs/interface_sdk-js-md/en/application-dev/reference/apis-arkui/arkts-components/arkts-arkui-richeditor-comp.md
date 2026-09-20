@@ -14,6 +14,8 @@ Not supported
 RichEditor(value: RichEditorOptions)
 ```
 
+Called when create RichEditor.
+
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.

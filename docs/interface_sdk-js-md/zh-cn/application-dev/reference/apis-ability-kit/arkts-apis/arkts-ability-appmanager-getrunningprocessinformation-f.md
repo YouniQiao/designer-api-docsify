@@ -68,6 +68,8 @@ appManager.getRunningProcessInformation((err, data) => {
 ```
 
 
+<a id="getrunningprocessinformation-1"></a>
+
 ## getRunningProcessInformation
 
 ```TypeScript

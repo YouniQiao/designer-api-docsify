@@ -1,5 +1,9 @@
 # FileSync
 
+```TypeScript
+class FileSync
+```
+
 Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit. Before using the APIs of this class, you need to create a **FileSync** instance.
 
 **Since:** 12
@@ -11,6 +15,8 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 ```TypeScript
 import { cloudSync } from '@kit.CoreFileKit';
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

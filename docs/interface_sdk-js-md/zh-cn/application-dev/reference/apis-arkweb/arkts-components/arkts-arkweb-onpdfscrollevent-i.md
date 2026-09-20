@@ -1,5 +1,9 @@
 # OnPdfScrollEvent
 
+```TypeScript
+declare interface OnPdfScrollEvent
+```
+
 定义PDF页面滚动到底时触发的回调函数。
 
 **起始版本：** 20

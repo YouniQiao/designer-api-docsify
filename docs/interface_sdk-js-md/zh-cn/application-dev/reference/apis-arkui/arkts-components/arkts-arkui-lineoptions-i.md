@@ -1,5 +1,9 @@
 # LineOptions
 
+```TypeScript
+interface LineOptions
+```
+
 用于描述Line组件绘制属性。
 
 > **说明：** 

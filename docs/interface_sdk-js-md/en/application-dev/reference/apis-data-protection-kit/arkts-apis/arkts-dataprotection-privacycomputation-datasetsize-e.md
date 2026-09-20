@@ -1,5 +1,9 @@
 # DataSetSize
 
+```TypeScript
+enum DataSetSize
+```
+
 Enumerates the data set sizes supported by the privacy protocol. The data set size defines the number of comparisons that a single result ciphertext can contain. The total number of result ciphertexts generated is determined by elements.size / dataSetSize. Choose an appropriate data set size based on the number of elements in privacySearch and the acceptable size of each result ciphertext.
 
 **Since:** 26.0.1

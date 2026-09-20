@@ -74,6 +74,8 @@ try {
 ```
 
 
+<a id="getrecoverableapplicationinfo-1"></a>
+
 ## getRecoverableApplicationInfo
 
 ```TypeScript

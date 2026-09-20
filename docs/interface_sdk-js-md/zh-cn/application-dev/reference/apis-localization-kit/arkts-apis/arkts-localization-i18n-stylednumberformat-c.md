@@ -1,5 +1,9 @@
 # StyledNumberFormat
 
+```TypeScript
+export class StyledNumberFormat
+```
+
 提供富文本数字格式化的能力。
 
 **起始版本：** 18
@@ -102,6 +106,8 @@ try {
   console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

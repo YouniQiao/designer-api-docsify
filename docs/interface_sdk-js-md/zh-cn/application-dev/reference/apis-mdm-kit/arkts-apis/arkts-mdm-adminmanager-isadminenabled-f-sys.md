@@ -97,6 +97,8 @@ adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="isadminenabled-1"></a>
+
 ## isAdminEnabled
 
 ```TypeScript
@@ -132,6 +134,8 @@ function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boo
 
 参见 [isAdminEnabled](#isadminenabled)
 
+
+<a id="isadminenabled-2"></a>
 
 ## isAdminEnabled
 

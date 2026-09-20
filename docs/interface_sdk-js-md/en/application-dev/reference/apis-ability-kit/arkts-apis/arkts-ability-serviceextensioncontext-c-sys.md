@@ -1,5 +1,9 @@
 # ServiceExtensionContext (System API)
 
+```TypeScript
+declare class ServiceExtensionContext extends ExtensionContext
+```
+
 The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext.
 
 You can use the APIs of this module to start, terminate, connect, and disconnect an ability.
@@ -306,6 +310,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="disconnectserviceextensionability-1"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -737,6 +743,8 @@ class ServiceExtension extends ServiceExtensionAbility {
 }
 ```
 
+<a id="requestmodaluiextension-1"></a>
+
 ## requestModalUIExtension
 
 ```TypeScript
@@ -1028,6 +1036,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -1086,6 +1096,8 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 **Examples**
 
 See [startAbility](#startability)
+
+<a id="startability-2"></a>
 
 ## startAbility
 
@@ -1290,6 +1302,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilityascaller-1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1351,6 +1365,8 @@ Starts an ability with the caller information and start options specified. The c
 **Examples**
 
 See [startAbilityAsCaller](#startabilityascaller)
+
+<a id="startabilityascaller-2"></a>
 
 ## startAbilityAsCaller
 
@@ -1756,6 +1772,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilitywithaccount-1"></a>
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1823,6 +1841,8 @@ Starts an ability with the account ID and start options specified. This API can 
 **Examples**
 
 See [startAbilityWithAccount](#startabilitywithaccount)
+
+<a id="startabilitywithaccount-2"></a>
 
 ## startAbilityWithAccount
 
@@ -2056,6 +2076,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startrecentability-1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2119,6 +2141,8 @@ You can use this API to carry start options.
 **Examples**
 
 See [startRecentAbility](#startrecentability)
+
+<a id="startrecentability-2"></a>
 
 ## startRecentAbility
 
@@ -2292,6 +2316,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startserviceextensionability-1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2462,6 +2488,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="startserviceextensionabilitywithaccount-1"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2796,6 +2824,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="stopserviceextensionability-1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2956,6 +2986,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="stopserviceextensionabilitywithaccount-1"></a>
+
 ## stopServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -3082,6 +3114,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="terminateself-1"></a>
 
 ## terminateSelf
 

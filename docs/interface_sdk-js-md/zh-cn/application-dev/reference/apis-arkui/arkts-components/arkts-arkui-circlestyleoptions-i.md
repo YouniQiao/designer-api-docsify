@@ -1,5 +1,9 @@
 # CircleStyleOptions
 
+```TypeScript
+declare interface CircleStyleOptions
+```
+
 圆环样式的参数说明。
 
 **起始版本：** 12

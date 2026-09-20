@@ -1,5 +1,9 @@
 # ArcAlphabetIndexerAttribute
 
+```TypeScript
+declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.

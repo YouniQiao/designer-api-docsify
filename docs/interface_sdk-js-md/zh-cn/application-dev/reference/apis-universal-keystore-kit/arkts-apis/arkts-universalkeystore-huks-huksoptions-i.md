@@ -1,5 +1,9 @@
 # HuksOptions
 
+```TypeScript
+export interface HuksOptions
+```
+
 调用接口使用的options。
 
 **起始版本：** 8

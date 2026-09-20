@@ -1,5 +1,9 @@
 # CancelButtonStyle
 
+```TypeScript
+declare enum CancelButtonStyle
+```
+
 清除按钮样式枚举。
 
 **起始版本：** 10

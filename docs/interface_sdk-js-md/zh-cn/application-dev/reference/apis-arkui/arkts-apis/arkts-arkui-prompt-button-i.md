@@ -1,5 +1,9 @@
 # Button
 
+```TypeScript
+interface Button
+```
+
 菜单中的菜单项按钮。
 
 **起始版本：** 8

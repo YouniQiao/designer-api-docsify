@@ -1,5 +1,9 @@
 # HttpRequestOptions
 
+```TypeScript
+export interface HttpRequestOptions
+```
+
 Defines the options for initiating an HTTP request.
 
 **Since:** 6
@@ -88,7 +92,7 @@ The preset CA certificate is available at **\/etc/ssl/certs/cacert.pem**.
 ## certificatePinning
 
 ```TypeScript
-certificatePinning?: CertificatePinning | CertificatePinning[]
+certificatePinning?: CertificatePinning[]
 ```
 
 Dynamic configuration of certificate pinning. One or more certificate PINs can be specified.

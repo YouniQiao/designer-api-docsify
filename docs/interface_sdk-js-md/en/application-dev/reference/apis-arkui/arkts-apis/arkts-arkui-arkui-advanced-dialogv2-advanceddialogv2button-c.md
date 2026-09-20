@@ -1,5 +1,9 @@
 # AdvancedDialogV2Button
 
+```TypeScript
+export declare class AdvancedDialogV2Button
+```
+
 Declare AdvancedDialogV2Button.
 
 @class AdvancedDialogV2Button

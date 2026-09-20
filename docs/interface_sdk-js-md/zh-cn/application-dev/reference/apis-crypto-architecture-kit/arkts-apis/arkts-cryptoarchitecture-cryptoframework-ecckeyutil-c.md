@@ -1,5 +1,9 @@
 # ECCKeyUtil
 
+```TypeScript
+class ECCKeyUtil
+```
+
 提供ECC密钥参数生成和基于指定椭圆曲线的点转换工具。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # SymbolItemOptions
 
+```TypeScript
+export interface SymbolItemOptions
+```
+
 Defines the suffix icon option type for **ChipGroup**.
 
 **Since:** 14

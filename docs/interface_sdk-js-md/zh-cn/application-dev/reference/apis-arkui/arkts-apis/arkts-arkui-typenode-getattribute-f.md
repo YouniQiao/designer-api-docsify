@@ -30,6 +30,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 | [TextAttribute](../arkts-components/arkts-arkui-text-comp-attribute.md) &#124; undefined | Text节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-1"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -59,6 +61,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 | --- | --- |
 | [ColumnAttribute](../arkts-components/arkts-arkui-column-comp-attribute.md) &#124; undefined | Column节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-2"></a>
 
 ## getAttribute
 
@@ -90,6 +94,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 | [RowAttribute](../arkts-components/arkts-arkui-row-comp-attribute.md) &#124; undefined | Row节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-3"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -119,6 +125,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 | --- | --- |
 | [StackAttribute](../arkts-components/arkts-arkui-stack-comp-attribute.md) &#124; undefined | Stack节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-4"></a>
 
 ## getAttribute
 
@@ -150,6 +158,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 | [FlexAttribute](../arkts-components/arkts-arkui-flex-comp-attribute.md) &#124; undefined | Flex节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-5"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -179,6 +189,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 | --- | --- |
 | [SwiperAttribute](../arkts-components/arkts-arkui-swiper-comp-attribute.md) &#124; undefined | Swiper节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-6"></a>
 
 ## getAttribute
 
@@ -210,6 +222,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 | [ProgressAttribute](../arkts-components/arkts-arkui-progress-comp-attribute.md) &#124; undefined | Progress节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-7"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -239,6 +253,8 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 | --- | --- |
 | [ScrollAttribute](../arkts-components/arkts-arkui-scroll-comp-attribute.md) &#124; undefined | Scroll节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-8"></a>
 
 ## getAttribute
 
@@ -270,6 +286,8 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 | [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-comp-attribute.md) &#124; undefined | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-9"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -299,6 +317,8 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 | --- | --- |
 | [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-comp-attribute.md) &#124; undefined | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-10"></a>
 
 ## getAttribute
 
@@ -330,6 +350,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 | [ImageAttribute](../arkts-components/arkts-arkui-image-comp-attribute.md) &#124; undefined | Image节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-11"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -359,6 +381,8 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 | --- | --- |
 | [ListAttribute](../arkts-components/arkts-arkui-list-comp-attribute.md) &#124; undefined | List节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-12"></a>
 
 ## getAttribute
 
@@ -390,6 +414,8 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 | [ListItemAttribute](../arkts-components/arkts-arkui-listitem-comp-attribute.md) &#124; undefined | ListItem节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-13"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -419,6 +445,8 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 | --- | --- |
 | [TextInputAttribute](../arkts-components/arkts-arkui-textinput-comp-attribute.md) &#124; undefined | TextInput节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-14"></a>
 
 ## getAttribute
 
@@ -450,6 +478,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 | [ButtonAttribute](../arkts-components/arkts-arkui-button-comp-attribute.md) &#124; undefined | Button节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-15"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -479,6 +509,8 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 | --- | --- |
 | [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-comp-attribute.md) &#124; undefined | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-16"></a>
 
 ## getAttribute
 
@@ -510,6 +542,8 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 | [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-comp-attribute.md) &#124; undefined | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-17"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -539,6 +573,8 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 | --- | --- |
 | [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-comp-attribute.md) &#124; undefined | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-18"></a>
 
 ## getAttribute
 
@@ -570,6 +606,8 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 | [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-comp-attribute.md) &#124; undefined | XComponent节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-19"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -599,6 +637,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 | --- | --- |
 | [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-comp-attribute.md) &#124; undefined | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-20"></a>
 
 ## getAttribute
 
@@ -630,6 +670,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 | [RadioAttribute](../arkts-components/arkts-arkui-radio-comp-attribute.md) &#124; undefined | Radio节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-21"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -659,6 +701,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 | --- | --- |
 | [SliderAttribute](../arkts-components/arkts-arkui-slider-comp-attribute.md) &#124; undefined | Slider节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-22"></a>
 
 ## getAttribute
 
@@ -690,6 +734,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 | [ToggleAttribute](../arkts-components/arkts-arkui-toggle-comp-attribute.md) &#124; undefined | Toggle节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-23"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -720,6 +766,8 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 | [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-comp-attribute.md) &#124; undefined | TextArea节点类型的属性，若获取失败，则返回undefined。 |
 
 
+<a id="getattribute-24"></a>
+
 ## getAttribute
 
 ```TypeScript
@@ -749,6 +797,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 | --- | --- |
 | [GridAttribute](../arkts-components/arkts-arkui-grid-comp-attribute.md) &#124; undefined | Grid节点类型的属性，若获取失败，则返回undefined。 |
 
+
+<a id="getattribute-25"></a>
 
 ## getAttribute
 

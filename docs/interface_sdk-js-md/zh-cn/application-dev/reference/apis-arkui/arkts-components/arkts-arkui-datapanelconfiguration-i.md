@@ -1,5 +1,9 @@
 # DataPanelConfiguration
 
+```TypeScript
+declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>
+```
+
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
 
 **继承/实现关系：** DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>

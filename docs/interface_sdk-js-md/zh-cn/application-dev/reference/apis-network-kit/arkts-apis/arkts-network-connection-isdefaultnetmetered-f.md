@@ -56,6 +56,8 @@ console.info("Succeeded to get data: " + JSON.stringify(data));
 ```
 
 
+<a id="isdefaultnetmetered-1"></a>
+
 ## isDefaultNetMetered
 
 ```TypeScript

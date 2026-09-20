@@ -1,5 +1,9 @@
 # BreakpointsReference
 
+```TypeScript
+declare enum BreakpointsReference
+```
+
 Breakpoint reference of the grid container component.
 
 **Since:** 9

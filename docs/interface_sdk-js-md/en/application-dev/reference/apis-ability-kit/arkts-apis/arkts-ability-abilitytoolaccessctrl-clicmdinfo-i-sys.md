@@ -1,5 +1,9 @@
 # CliCmdInfo (System API)
 
+```TypeScript
+interface CliCmdInfo
+```
+
 CLI command information.
 
 **Since:** 26.0.0

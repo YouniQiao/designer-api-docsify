@@ -1,5 +1,9 @@
 # ButtonType
 
+```TypeScript
+declare enum ButtonType
+```
+
 Enumerates the button types.
 
 > **NOTE:** 

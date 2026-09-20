@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper
+```
+
 提供访问照片和相册的功能。
 
 **起始版本：** 10
@@ -81,6 +85,8 @@ checkPhotoUrisReadPermission(uris: string[]): Promise<Map<string, MediaAssetPerm
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The length of the input parameter queue is greater than 500. <br>2. The input parameter is null or undefined. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<a id="createasset-4"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -124,6 +130,8 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="createasset-5"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -165,6 +173,8 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="createasset-6"></a>
 
 ## createAsset
 
@@ -329,6 +339,8 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="createdeleterequest-1"></a>
+
 ## createDeleteRequest
 
 ```TypeScript
@@ -491,6 +503,8 @@ getAlbums(
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getalbums-1"></a>
+
 ## getAlbums
 
 ```TypeScript
@@ -524,6 +538,8 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchR
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getalbums-2"></a>
 
 ## getAlbums
 
@@ -595,6 +611,8 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getassets-1"></a>
 
 ## getAssets
 
@@ -1107,6 +1125,8 @@ release(callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1203,6 +1223,8 @@ requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestRea
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
+
+<a id="setassetcompatiblecapability-1"></a>
 
 ## setAssetCompatibleCapability
 

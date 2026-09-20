@@ -1,5 +1,9 @@
 # ProtocolType
 
+```TypeScript
+enum ProtocolType
+```
+
 Enumerates the privacy protocol types. The protocol type determines the privacy-preserving computation method used for the search operation.
 
 **Since:** 26.0.1

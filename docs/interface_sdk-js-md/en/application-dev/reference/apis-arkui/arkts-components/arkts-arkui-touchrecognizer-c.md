@@ -1,5 +1,9 @@
 # TouchRecognizer
 
+```TypeScript
+declare class TouchRecognizer
+```
+
 Represents a touch gesture recognizer.
 
 **Since:** 20

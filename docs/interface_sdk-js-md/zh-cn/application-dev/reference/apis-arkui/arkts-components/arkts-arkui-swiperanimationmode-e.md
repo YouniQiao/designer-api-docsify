@@ -1,5 +1,9 @@
 # SwiperAnimationMode
 
+```TypeScript
+declare enum SwiperAnimationMode
+```
+
 Swiper组件翻页至指定页面的动效模式。
 
 **起始版本：** 15

@@ -1,5 +1,9 @@
 # RichEditorDeleteValue
 
+```TypeScript
+declare interface RichEditorDeleteValue
+```
+
 删除操作和被删除内容的信息。
 
 **起始版本：** 10

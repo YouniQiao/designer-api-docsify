@@ -1,5 +1,9 @@
 # UIExtensionComponent properties/events
 
+```TypeScript
+declare class UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>
+```
+
 The universal attributes are supported.
 
 Universal events, such as the click event, are not supported.

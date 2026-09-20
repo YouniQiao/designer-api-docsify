@@ -80,6 +80,8 @@ try {
 ```
 
 
+<a id="getalllauncherabilityinfo-1"></a>
+
 ## getAllLauncherAbilityInfo
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ToggleOptions
 
+```TypeScript
+declare interface ToggleOptions
+```
+
 Toggle组件的配置信息。
 
 > **说明：** 
@@ -22,7 +26,7 @@ true：打开；false：关闭。
 
 默认值：false
 
-该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 

@@ -70,6 +70,8 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 ```
 
 
+<a id="dial-1"></a>
+
 ## dial
 
 ```TypeScript
@@ -108,6 +110,8 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 See [dial](#dial)
 
+
+<a id="dial-2"></a>
 
 ## dial
 

@@ -1,5 +1,9 @@
 # RenderProcessNotRespondingData
 
+```TypeScript
+declare interface RenderProcessNotRespondingData
+```
+
 Provides detailed information about the unresponsive rendering process. It is suitable for scenarios where diagnosing rendering process exceptions is required, improving troubleshooting accuracy and efficiency.
 
 **Since:** 12

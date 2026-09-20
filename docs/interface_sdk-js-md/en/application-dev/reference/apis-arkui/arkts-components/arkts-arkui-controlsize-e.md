@@ -1,5 +1,9 @@
 # ControlSize
 
+```TypeScript
+declare enum ControlSize
+```
+
 Button size.
 
 **Since:** 11

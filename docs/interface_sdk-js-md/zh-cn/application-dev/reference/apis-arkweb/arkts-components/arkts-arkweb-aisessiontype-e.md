@@ -1,5 +1,9 @@
 # AISessionType
 
+```TypeScript
+declare enum AISessionType
+```
+
 支持的AI会话类型。
 
 **起始版本：** 26.0.0

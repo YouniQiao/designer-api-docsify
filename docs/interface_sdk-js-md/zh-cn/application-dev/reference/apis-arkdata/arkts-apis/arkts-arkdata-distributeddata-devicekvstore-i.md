@@ -1,5 +1,9 @@
 # DeviceKVStore
 
+```TypeScript
+interface DeviceKVStore extends KVStore
+```
+
 设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。在调用DeviceKVStore的方法前，需要先通过getKVStore构建一个DeviceKVStore实例。
 
 **继承/实现关系：** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
@@ -73,6 +77,8 @@ try {
     console.error('CloseResultSet e ' + e);
 }
 ```
+
+<a id="closeresultset-1"></a>
 
 ## closeResultSet
 
@@ -197,6 +203,8 @@ try {
     console.error('Get e ' + e);
 }
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -494,6 +502,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -728,6 +738,8 @@ try {
 }
 ```
 
+<a id="getentries-2"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -955,6 +967,8 @@ try {
     console.error('GetEntries e ' + e);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -1189,6 +1203,8 @@ try {
 }
 ```
 
+<a id="getentries-4"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1417,6 +1433,8 @@ try {
     console.error('GetEntries e ' + e);
 }
 ```
+
+<a id="getentries-5"></a>
 
 ## getEntries
 
@@ -1864,6 +1882,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2081,6 +2101,8 @@ try {
 }
 ```
 
+<a id="getresultset-2"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2291,6 +2313,8 @@ try {
     console.error('GetResultSet e ' + e);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -2508,6 +2532,8 @@ try {
 }
 ```
 
+<a id="getresultset-4"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2719,6 +2745,8 @@ try {
     console.error('GetResultSet e ' + e);
 }
 ```
+
+<a id="getresultset-5"></a>
 
 ## getResultSet
 
@@ -3084,6 +3112,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -3236,6 +3266,8 @@ try {
 }
 ```
 
+<a id="getresultsize-2"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -3383,6 +3415,8 @@ try {
     console.error('GetResultSize e ' + e);
 }
 ```
+
+<a id="getresultsize-3"></a>
 
 ## getResultSize
 
@@ -3560,6 +3594,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -3606,6 +3642,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 是 | 回调函数。 |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -3704,6 +3742,8 @@ try {
     console.error('RemoveDeviceData e ' + e);
 }
 ```
+
+<a id="removedevicedata-1"></a>
 
 ## removeDeviceData
 

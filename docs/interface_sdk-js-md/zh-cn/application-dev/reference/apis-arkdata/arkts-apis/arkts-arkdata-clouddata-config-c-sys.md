@@ -1,5 +1,9 @@
 # Config（系统接口）
 
+```TypeScript
+class Config
+```
+
 提供配置端云协同的方法，包括云同步打开、关闭、清除数据、数据变化通知。
 
 **起始版本：** 10
@@ -185,6 +189,8 @@ try {
 }
 ```
 
+<a id="changeappcloudswitch-1"></a>
+
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -227,6 +233,8 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 **示例**
 
 参见 [changeAppCloudSwitch](#changeappcloudswitch)
+
+<a id="changeappcloudswitch-2"></a>
 
 ## changeAppCloudSwitch
 
@@ -395,6 +403,8 @@ try {
 }
 ```
 
+<a id="clear-1"></a>
+
 ## clear
 
 ```TypeScript
@@ -436,6 +446,8 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 **示例**
 
 参见 [clear](#clear)
+
+<a id="clear-2"></a>
 
 ## clear
 
@@ -693,6 +705,8 @@ try {
 }
 ```
 
+<a id="disablecloud-1"></a>
+
 ## disableCloud
 
 ```TypeScript
@@ -808,6 +822,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="enablecloud-1"></a>
 
 ## enableCloud
 
@@ -990,6 +1006,8 @@ try {
 }
 ```
 
+<a id="notifydatachange-1"></a>
+
 ## notifyDataChange
 
 ```TypeScript
@@ -1025,6 +1043,8 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 **示例**
 
 参见 [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-2"></a>
 
 ## notifyDataChange
 
@@ -1062,6 +1082,8 @@ static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallb
 **示例**
 
 参见 [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-3"></a>
 
 ## notifyDataChange
 
@@ -1104,6 +1126,8 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 **示例**
 
 参见 [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-4"></a>
 
 ## notifyDataChange
 

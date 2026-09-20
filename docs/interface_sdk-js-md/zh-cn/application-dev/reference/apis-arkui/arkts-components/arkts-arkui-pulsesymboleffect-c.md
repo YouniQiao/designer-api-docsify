@@ -1,5 +1,9 @@
 # PulseSymbolEffect
 
+```TypeScript
+declare class PulseSymbolEffect extends SymbolEffect
+```
+
 PulseSymbolEffect继承自父类SymbolEffect，脉冲动效。
 
 **继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

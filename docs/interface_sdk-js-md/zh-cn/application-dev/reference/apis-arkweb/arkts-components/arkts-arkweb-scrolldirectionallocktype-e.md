@@ -1,5 +1,9 @@
 # ScrollDirectionalLockType
 
+```TypeScript
+declare enum ScrollDirectionalLockType
+```
+
 定义滑动方向锁定的场景类型。
 
 **起始版本：** 26.0.0

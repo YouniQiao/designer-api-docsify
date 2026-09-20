@@ -1,5 +1,9 @@
 # DepthColorRGB (System API)
 
+```TypeScript
+declare interface DepthColorRGB
+```
+
 RGB color in depth space.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # ParticleColorUpdaterOptions
 
+```TypeScript
+interface ParticleColorUpdaterOptions<UPDATER extends ParticleUpdater>
+```
+
 How the color property is updated.
 
 > **NOTE:** 

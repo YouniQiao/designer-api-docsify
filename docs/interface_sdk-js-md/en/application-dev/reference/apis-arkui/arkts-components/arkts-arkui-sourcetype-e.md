@@ -1,5 +1,9 @@
 # SourceType
 
+```TypeScript
+declare enum SourceType
+```
+
 Enumerates the input source device types.
 
 **Since:** 8

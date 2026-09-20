@@ -61,6 +61,8 @@ policy.getDeviceIdleTrustlist().then((data: number[]) => {
 ```
 
 
+<a id="getdeviceidletrustlist-1"></a>
+
 ## getDeviceIdleTrustlist
 
 ```TypeScript

@@ -63,6 +63,8 @@ call.isImsSwitchEnabled(0).then((data: boolean) => {
 ```
 
 
+<a id="isimsswitchenabled-1"></a>
+
 ## isImsSwitchEnabled
 
 ```TypeScript

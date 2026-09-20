@@ -1,5 +1,9 @@
 # RGBBias (System API)
 
+```TypeScript
+interface RGBBias
+```
+
 RGB bias values.
 
 **Since:** 26.0.1

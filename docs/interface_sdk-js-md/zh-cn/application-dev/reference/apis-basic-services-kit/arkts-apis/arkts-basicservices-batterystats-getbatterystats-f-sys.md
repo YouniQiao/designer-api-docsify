@@ -56,6 +56,8 @@ batteryStats.getBatteryStats((err: BusinessError, data: batteryStats.BatteryStat
 ```
 
 
+<a id="getbatterystats-1"></a>
+
 ## getBatteryStats
 
 ```TypeScript

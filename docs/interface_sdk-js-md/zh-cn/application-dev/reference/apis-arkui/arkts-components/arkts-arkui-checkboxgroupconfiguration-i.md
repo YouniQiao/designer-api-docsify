@@ -1,5 +1,9 @@
 # CheckBoxGroupConfiguration
 
+```TypeScript
+declare interface CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>
+```
+
 开发者必须自定义此类以实现ContentModifier接口，使用方法见[contentModifier](arkts-arkui-checkboxgroup-comp-attribute.md#contentmodifier)。
 
 **继承/实现关系：** CheckBoxGroupConfiguration extends CommonConfiguration<CheckBoxGroupConfiguration>

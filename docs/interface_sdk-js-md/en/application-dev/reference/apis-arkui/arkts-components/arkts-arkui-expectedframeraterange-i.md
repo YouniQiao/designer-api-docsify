@@ -1,5 +1,9 @@
 # ExpectedFrameRateRange
 
+```TypeScript
+declare interface ExpectedFrameRateRange
+```
+
 Sets the expected frame rate range for an animation.
 
 **Since:** 11

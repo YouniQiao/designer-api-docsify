@@ -1,5 +1,9 @@
 # FolderStackOptions
 
+```TypeScript
+interface FolderStackOptions
+```
+
 FolderStack悬停态配置项对象，用于描述悬停态状态下需要移到上半屏的子组件相关信息。
 
 > **说明：** 

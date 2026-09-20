@@ -65,6 +65,8 @@ identifier.getOAID((err: BusinessError, data: string) => {
 ```
 
 
+<a id="getoaid-1"></a>
+
 ## getOAID
 
 ```TypeScript

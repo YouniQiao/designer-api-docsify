@@ -69,6 +69,8 @@ cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
 ```
 
 
+<a id="disablecloud-1"></a>
+
 ## disableCloud
 
 ```TypeScript

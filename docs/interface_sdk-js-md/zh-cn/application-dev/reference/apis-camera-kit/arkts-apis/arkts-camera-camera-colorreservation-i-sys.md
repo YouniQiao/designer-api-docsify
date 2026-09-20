@@ -1,5 +1,9 @@
 # ColorReservation（系统接口）
 
+```TypeScript
+interface ColorReservation extends ColorReservationQuery
+```
+
 ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type.
 
 **继承/实现关系：** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md)

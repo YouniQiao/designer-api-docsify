@@ -1,5 +1,9 @@
 # PickerColorMode
 
+```TypeScript
+export declare enum PickerColorMode
+```
+
 枚举选择器颜色模式。
 
 **起始版本：** 26.0.1

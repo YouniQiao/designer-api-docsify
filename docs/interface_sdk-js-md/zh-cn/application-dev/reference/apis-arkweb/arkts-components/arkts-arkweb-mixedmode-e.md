@@ -1,5 +1,9 @@
 # MixedMode
 
+```TypeScript
+declare enum MixedMode
+```
+
 混合内容模式。
 
 **起始版本：** 8

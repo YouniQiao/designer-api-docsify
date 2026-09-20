@@ -6,6 +6,8 @@
 import { fileShare } from '@kit.CoreFileKit';
 ```
 
+<a id="revokepermission-1"></a>
+
 ## revokePermission
 
 ```TypeScript
@@ -134,6 +136,8 @@ async function revokeSpecificPermissionExample() {
 }
 ```
 
+
+<a id="revokepermission-2"></a>
 
 ## revokePermission
 

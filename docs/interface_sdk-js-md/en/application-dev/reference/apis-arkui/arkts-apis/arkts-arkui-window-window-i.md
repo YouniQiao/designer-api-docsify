@@ -1,5 +1,9 @@
 # Window
 
+```TypeScript
+interface Window
+```
+
 Represents a window instance, which is the basic unit managed by the window manager.
 
 In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
@@ -189,6 +193,8 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<a id="destroy-1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -237,6 +243,8 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+
+<a id="destroywindow-1"></a>
 
 ## destroyWindow
 
@@ -396,6 +404,8 @@ Global floating window, modal window, or system window:
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
 
+<a id="getavoidarea-1"></a>
+
 ## getAvoidArea
 
 ```TypeScript
@@ -459,6 +469,8 @@ Obtains the color space of this window. This API uses a promise to return the re
 | Type | Description |
 | --- | --- |
 | Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise used to return the current color space. |
+
+<a id="getcolorspace-1"></a>
 
 ## getColorSpace
 
@@ -648,6 +660,8 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes | Callback used to return the window properties. |
+
+<a id="getproperties-1"></a>
 
 ## getProperties
 
@@ -1515,6 +1529,8 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
 
+<a id="isshowing-1"></a>
+
 ## isShowing
 
 ```TypeScript
@@ -1558,6 +1574,8 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+
+<a id="issupportwidegamut-1"></a>
 
 ## isSupportWideGamut
 
@@ -1691,6 +1709,8 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="iswindowsupportwidegamut-1"></a>
+
 ## isWindowSupportWideGamut
 
 ```TypeScript
@@ -1778,6 +1798,8 @@ Loads the content of a page, with its path in the current project specified, to 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
+<a id="loadcontent-1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -1815,6 +1837,8 @@ Loads the content of a page, with its path in the current project specified, to 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
 
+<a id="loadcontent-2"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -1837,6 +1861,8 @@ Loads content from a page to this window. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. In the stage model, the path is configured in the **main_pages.json** file of the project. In the FA model, the path is configured in the **config.json** file of the project. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="loadcontent-3"></a>
 
 ## loadContent
 
@@ -1898,6 +1924,8 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="loadcontentbyname-1"></a>
+
 ## loadContentByName
 
 ```TypeScript
@@ -1928,6 +1956,8 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="loadcontentbyname-2"></a>
 
 ## loadContentByName
 
@@ -2001,6 +2031,8 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 12 - 19 |
+
+<a id="maximize-1"></a>
 
 ## maximize
 
@@ -2107,6 +2139,8 @@ This API can be called only by the main window, child window, or global floating
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="minimize-1"></a>
+
 ## minimize
 
 ```TypeScript
@@ -2172,6 +2206,8 @@ This operation is not supported in a window in full-screen mode.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="moveto-1"></a>
 
 ## moveTo
 
@@ -2247,6 +2283,8 @@ Moves this window. This API uses a promise to return the result. A value is retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The main windows in non-freeform window mode are not supported. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="movewindowto-1"></a>
 
 ## moveWindowTo
 
@@ -2333,6 +2371,8 @@ This API takes effect only when the window is in floating window mode (**window.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+
+<a id="movewindowtoasync-1"></a>
 
 ## moveWindowToAsync
 
@@ -2426,6 +2466,8 @@ This API takes effect only when the window is in floating window mode (**window.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+
+<a id="movewindowtoglobal-1"></a>
 
 ## moveWindowToGlobal
 
@@ -2546,6 +2588,8 @@ Unsubscribes from the window rotation change event.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="off-1"></a>
 
 ## off
 
@@ -3444,6 +3488,8 @@ This API can be registered only on the main thread. If a window registers multip
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -4371,6 +4417,8 @@ Registers a callback that is invoked when the window changes to the specified wi
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
 
+<a id="raisetoapptop-1"></a>
+
 ## raiseToAppTop
 
 ```TypeScript
@@ -4461,6 +4509,8 @@ Restores the main window from the full-screen, maximized, or split-screen mode t
 | [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. 3. The window does not support floating mode. |
 
+<a id="recover-1"></a>
+
 ## recover
 
 ```TypeScript
@@ -4526,6 +4576,8 @@ This API is valid only for the main window. After it is called, the persistently
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+
+<a id="resetaspectratio-1"></a>
 
 ## resetAspectRatio
 
@@ -4598,6 +4650,8 @@ This operation is not supported in a window in full-screen mode.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="resetsize-1"></a>
 
 ## resetSize
 
@@ -4687,6 +4741,8 @@ This API takes effect only when the window is in floating window mode (**window.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="resize-1"></a>
 
 ## resize
 
@@ -4889,6 +4945,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
+<a id="setaspectratio-1"></a>
+
 ## setAspectRatio
 
 ```TypeScript
@@ -4961,6 +5019,8 @@ Sets the background color for this window. This API uses a promise to return the
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="setbackgroundcolor-1"></a>
+
 ## setBackgroundColor
 
 ```TypeScript
@@ -5014,6 +5074,8 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="setbrightness-1"></a>
+
 ## setBrightness
 
 ```TypeScript
@@ -5066,6 +5128,8 @@ Sets a color space for this window. This API uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="setcolorspace-1"></a>
 
 ## setColorSpace
 
@@ -5222,6 +5286,8 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 | --- | --- | --- | --- |
 | dimBehindValue | number | Yes | Dimness of the window to set. The value range is [0.0, 1.0], and the value **1.0** means the dimmest. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setdimbehind-1"></a>
 
 ## setDimBehind
 
@@ -5387,6 +5453,8 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="setfocusable-1"></a>
+
 ## setFocusable
 
 ```TypeScript
@@ -5518,7 +5586,7 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5528,6 +5596,8 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 | --- | --- | --- | --- |
 | isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;). **true** to set full-screen mode, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setfullscreen-1"></a>
 
 ## setFullScreen
 
@@ -5552,7 +5622,7 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -5665,6 +5735,8 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="setkeepscreenon-1"></a>
+
 ## setKeepScreenOn
 
 ```TypeScript
@@ -5714,6 +5786,8 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 | --- | --- | --- | --- |
 | isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;.) **true** if immersive, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setlayoutfullscreen-1"></a>
 
 ## setLayoutFullScreen
 
@@ -5775,6 +5849,8 @@ Sets whether the area outside the child window is touchable. This API uses a pro
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+<a id="setoutsidetouchable-1"></a>
 
 ## setOutsideTouchable
 
@@ -5877,6 +5953,8 @@ Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can b
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Invalid parameter value range. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="setpreferredorientation-1"></a>
+
 ## setPreferredOrientation
 
 ```TypeScript
@@ -5973,6 +6051,8 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="setprivacymode-1"></a>
+
 ## setPrivacyMode
 
 ```TypeScript
@@ -5995,6 +6075,8 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setraisebyclickenabled-1"></a>
 
 ## setRaiseByClickEnabled
 
@@ -6184,6 +6266,8 @@ Sets whether to enable the main window or child window with decorations to resiz
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Invalid window type. Only main windows and child windows with decorations are supported. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="setresizebydragenabled-1"></a>
 
 ## setResizeByDragEnabled
 
@@ -6379,6 +6463,8 @@ If this API is called by a main window, an error is reported.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 
+<a id="setsubwindowmodal-1"></a>
+
 ## setSubWindowModal
 
 ```TypeScript
@@ -6561,6 +6647,8 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 | names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<a id="setsystembarenable-1"></a>
+
 ## setSystemBarEnable
 
 ```TypeScript
@@ -6617,6 +6705,8 @@ This API does not take effect when it is called by a child window. The configura
 | --- | --- | --- | --- |
 | systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setsystembarproperties-1"></a>
 
 ## setSystemBarProperties
 
@@ -6711,6 +6801,8 @@ Sets whether this window is touchable. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<a id="settouchable-1"></a>
+
 ## setTouchable
 
 ```TypeScript
@@ -6802,6 +6894,8 @@ Loads the content of a page, with its path in the current project specified, to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 9 |
+
+<a id="setuicontent-1"></a>
 
 ## setUIContent
 
@@ -6907,6 +7001,8 @@ When the window moves to the background, the setting becomes invalid, and bright
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="setwindowbrightness-1"></a>
+
 ## setWindowBrightness
 
 ```TypeScript
@@ -6974,6 +7070,8 @@ Sets a color space for this window. This API uses a promise to return the result
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+
+<a id="setwindowcolorspace-1"></a>
 
 ## setWindowColorSpace
 
@@ -7240,6 +7338,8 @@ Starting from API version 22, if a virtual screen is created by calling [createV
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The screen of the window is not allowed to be focused. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="setwindowfocusable-1"></a>
+
 ## setWindowFocusable
 
 ```TypeScript
@@ -7342,6 +7442,8 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="setwindowkeepscreenon-1"></a>
+
 ## setWindowKeepScreenOn
 
 ```TypeScript
@@ -7409,6 +7511,8 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="setwindowlayoutfullscreen-1"></a>
 
 ## setWindowLayoutFullScreen
 
@@ -7487,6 +7591,8 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](#getw
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+
+<a id="setwindowlimits-1"></a>
 
 ## setWindowLimits
 
@@ -7648,6 +7754,8 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY_WINDOW permission. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="setwindowprivacymode-1"></a>
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -7786,6 +7894,8 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="setwindowsystembarenable-1"></a>
+
 ## setWindowSystemBarEnable
 
 ```TypeScript
@@ -7857,6 +7967,8 @@ This API does not take effect when it is called by a child window.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="setwindowsystembarproperties-1"></a>
 
 ## setWindowSystemBarProperties
 
@@ -8062,6 +8174,8 @@ Sets whether this window is touchable. This API uses a promise to return the res
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<a id="setwindowtouchable-1"></a>
+
 ## setWindowTouchable
 
 ```TypeScript
@@ -8154,6 +8268,8 @@ Shows this window. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<a id="show-1"></a>
+
 ## show
 
 ```TypeScript
@@ -8211,6 +8327,8 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
+<a id="showwindow-1"></a>
+
 ## showWindow
 
 ```TypeScript
@@ -8245,6 +8363,8 @@ Shows this window. This API uses a promise to return the result. This API takes 
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+
+<a id="showwindow-2"></a>
 
 ## showWindow
 
@@ -8317,6 +8437,8 @@ Captures this window. This API uses an asynchronous callback to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
+
+<a id="snapshot-1"></a>
 
 ## snapshot
 
@@ -8432,6 +8554,8 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
+
+<a id="startmoving-1"></a>
 
 ## startMoving
 

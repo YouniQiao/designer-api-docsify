@@ -151,6 +151,8 @@ huks.importKeyItem(keyAlias, huksOptions)
 ```
 
 
+<a id="importkeyitem-1"></a>
+
 ## importKeyItem
 
 ```TypeScript

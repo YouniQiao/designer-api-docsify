@@ -1,5 +1,9 @@
 # LoadingProgressStyle
 
+```TypeScript
+declare enum LoadingProgressStyle
+```
+
 Enumerates style types of **LoadingProgress**. This API is not recommended for use.
 
 **Since:** 8

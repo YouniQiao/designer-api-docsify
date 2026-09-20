@@ -1,5 +1,9 @@
 # Context
 
+```TypeScript
+declare class Context extends BaseContext
+```
+
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
 **继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
@@ -316,6 +320,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="getgroupdir-1"></a>
 
 ## getGroupDir
 

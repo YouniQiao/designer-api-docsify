@@ -1,5 +1,9 @@
 # MaskFilter
 
+```TypeScript
+class MaskFilter
+```
+
 蒙版滤镜对象，用于对绘制内容施加模糊效果。
 
 > **说明：** 

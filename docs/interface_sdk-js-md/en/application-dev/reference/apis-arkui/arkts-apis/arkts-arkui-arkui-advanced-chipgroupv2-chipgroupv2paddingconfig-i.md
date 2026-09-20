@@ -1,5 +1,9 @@
 # ChipGroupV2PaddingConfig
 
+```TypeScript
+export interface ChipGroupV2PaddingConfig
+```
+
 Defines the top and bottom padding configuration of **ChipGroupV2**, which is used to control its overall height.
 
 **Since:** 26.0.0

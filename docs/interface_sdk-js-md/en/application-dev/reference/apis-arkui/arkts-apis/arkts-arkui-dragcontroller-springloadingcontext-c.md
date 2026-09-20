@@ -1,5 +1,9 @@
 # SpringLoadingContext
 
+```TypeScript
+class SpringLoadingContext
+```
+
 Defines callback context information passed to applications during hover detection. It enables access to drag states, dynamic UI effect updates, and drag data for operation handling decisions.
 
 **Since:** 20

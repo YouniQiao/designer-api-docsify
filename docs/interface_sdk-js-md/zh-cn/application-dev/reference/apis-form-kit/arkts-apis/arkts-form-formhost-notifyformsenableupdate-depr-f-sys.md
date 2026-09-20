@@ -62,6 +62,8 @@ formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
 ```
 
 
+<a id="notifyformsenableupdate-1"></a>
+
 ## notifyFormsEnableUpdate
 
 ```TypeScript

@@ -97,6 +97,8 @@ struct Index {
 ```
 
 
+<a id="setpointercolor-1"></a>
+
 ## setPointerColor
 
 ```TypeScript

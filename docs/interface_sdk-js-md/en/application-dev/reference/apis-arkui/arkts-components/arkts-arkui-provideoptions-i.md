@@ -1,5 +1,9 @@
 # ProvideOptions
 
+```TypeScript
+declare interface ProvideOptions
+```
+
 Defines the options of Provide PropertyDecorator.
 
 **Since:** 11

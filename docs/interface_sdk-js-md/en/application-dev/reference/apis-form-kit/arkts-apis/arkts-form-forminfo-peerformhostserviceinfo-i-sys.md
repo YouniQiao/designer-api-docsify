@@ -1,5 +1,9 @@
 # PeerFormHostServiceInfo (System API)
 
+```TypeScript
+interface PeerFormHostServiceInfo
+```
+
 PeerFormHostServiceInfo
 
 **Since:** 26.0.1

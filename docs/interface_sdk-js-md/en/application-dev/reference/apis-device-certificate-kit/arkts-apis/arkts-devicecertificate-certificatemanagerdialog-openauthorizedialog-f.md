@@ -97,6 +97,8 @@ try {
 ```
 
 
+<a id="openauthorizedialog-1"></a>
+
 ## openAuthorizeDialog
 
 ```TypeScript

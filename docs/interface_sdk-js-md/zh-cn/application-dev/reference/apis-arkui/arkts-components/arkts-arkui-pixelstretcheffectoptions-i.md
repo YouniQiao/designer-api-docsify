@@ -1,5 +1,9 @@
 # PixelStretchEffectOptions
 
+```TypeScript
+declare interface PixelStretchEffectOptions
+```
+
 像素扩展属性集合，用于描述像素扩展的信息。
 
 **起始版本：** 10

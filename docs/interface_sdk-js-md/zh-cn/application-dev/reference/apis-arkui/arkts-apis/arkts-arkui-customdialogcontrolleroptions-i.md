@@ -1,5 +1,9 @@
 # CustomDialogControllerOptions
 
+```TypeScript
+declare interface CustomDialogControllerOptions
+```
+
 自定义弹窗的样式。
 
 > **说明：** 

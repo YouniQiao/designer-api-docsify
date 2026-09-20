@@ -1,5 +1,9 @@
 # RichEditorUrlStyle
 
+```TypeScript
+declare interface RichEditorUrlStyle
+```
+
 Url信息。
 
 **起始版本：** 19

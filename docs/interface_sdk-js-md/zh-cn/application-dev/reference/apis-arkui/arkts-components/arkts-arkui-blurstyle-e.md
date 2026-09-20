@@ -1,5 +1,9 @@
 # BlurStyle
 
+```TypeScript
+declare enum BlurStyle
+```
+
 模糊样式类型。
 
 **起始版本：** 9

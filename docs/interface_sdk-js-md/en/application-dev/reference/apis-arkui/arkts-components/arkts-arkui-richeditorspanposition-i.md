@@ -1,5 +1,9 @@
 # RichEditorSpanPosition
 
+```TypeScript
+declare interface RichEditorSpanPosition
+```
+
 Defines span position information.
 
 **Since:** 10

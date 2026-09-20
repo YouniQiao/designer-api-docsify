@@ -1,5 +1,9 @@
 # AutoFillExtensionContext (System API)
 
+```TypeScript
+declare class AutoFillExtensionContext extends ExtensionContext
+```
+
 The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 **Inheritance/Implementation:** AutoFillExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)

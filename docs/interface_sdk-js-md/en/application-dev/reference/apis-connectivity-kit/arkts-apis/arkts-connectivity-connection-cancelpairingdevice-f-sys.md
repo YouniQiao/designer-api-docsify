@@ -55,6 +55,8 @@ try {
 ```
 
 
+<a id="cancelpairingdevice-1"></a>
+
 ## cancelPairingDevice
 
 ```TypeScript

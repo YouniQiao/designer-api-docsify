@@ -1,5 +1,9 @@
 # SetKeepScreenOnOptions
 
+```TypeScript
+export interface SetKeepScreenOnOptions
+```
+
 设置屏幕常亮的参数对象。
 
 **起始版本：** 3

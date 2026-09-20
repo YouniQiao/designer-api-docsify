@@ -1,5 +1,9 @@
 # CredentialChangeInfo（系统接口）
 
+```TypeScript
+interface CredentialChangeInfo
+```
+
 表示凭据变更信息。
 
 **起始版本：** 23

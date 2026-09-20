@@ -1,5 +1,9 @@
 # Radio属性/事件
 
+```TypeScript
+declare class RadioAttribute extends CommonMethod<RadioAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -18,7 +22,7 @@ checked(value: boolean)
 
 设置单选框的选中状态。
 
-从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -36,6 +40,8 @@ checked(value: boolean)
 | --- | --- | --- | --- |
 | value | boolean | 是 | 单选框的选中状态。<br>默认值：false<br>值为true时，单选框被选中。值为false时，单选框不被选中。 |
 
+<a id="checked-1"></a>
+
 ## checked
 
 ```TypeScript
@@ -44,7 +50,7 @@ checked(isChecked: Optional<boolean>)
 
 设置单选框的选中状态。与[checked](#checked)相比，isChecked参数新增了对undefined类型的支持。
 
-该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -83,6 +89,8 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 | 在Radio组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+
+<a id="contentmodifier-1"></a>
 
 ## contentModifier
 
@@ -127,6 +135,8 @@ onChange(callback: (isChecked: boolean) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | (isChecked: boolean) =&gt; void | 是 | 单选框选中状态改变时触发该回调。<br>值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。 |
+
+<a id="onchange-1"></a>
 
 ## onChange
 

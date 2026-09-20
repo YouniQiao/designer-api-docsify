@@ -1,5 +1,9 @@
 # PriKey
 
+```TypeScript
+interface PriKey extends Key
+```
+
 私钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。
 
 <br>私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
@@ -285,6 +289,8 @@ function testPriKeyPkcs1Encoded() {
   console.info('[sync]testPriKeyPkcs1Encoded priString output = ' + priString);
 }
 ```
+
+<a id="getencodedpem-1"></a>
 
 ## getEncodedPem
 

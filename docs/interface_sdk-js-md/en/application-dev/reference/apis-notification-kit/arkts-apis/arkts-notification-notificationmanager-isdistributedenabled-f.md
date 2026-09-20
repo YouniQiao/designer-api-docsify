@@ -86,6 +86,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="isdistributedenabled-1"></a>
+
 ## isDistributedEnabled
 
 ```TypeScript

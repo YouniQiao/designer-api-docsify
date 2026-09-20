@@ -1,5 +1,9 @@
 # PointParticleParameters
 
+```TypeScript
+interface PointParticleParameters
+```
+
 设置粒子半径。
 
 **起始版本：** 10

@@ -77,6 +77,8 @@ radio.isRadioOn(slotId).then((data: boolean) => {
 ```
 
 
+<a id="isradioon-1"></a>
+
 ## isRadioOn
 
 ```TypeScript
@@ -118,6 +120,8 @@ function isRadioOn(slotId?: number): Promise<boolean>
 
 参见 [isRadioOn](#isradioon)
 
+
+<a id="isradioon-2"></a>
 
 ## isRadioOn
 

@@ -1,5 +1,9 @@
 # GestureGroupGestureHandlerOptions
 
+```TypeScript
+interface GestureGroupGestureHandlerOptions
+```
+
 Provides the parameters of the gesture group handler.
 
 **Since:** 12

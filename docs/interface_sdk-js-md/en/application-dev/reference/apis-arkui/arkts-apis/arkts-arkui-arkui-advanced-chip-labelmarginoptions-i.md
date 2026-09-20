@@ -1,5 +1,9 @@
 # LabelMarginOptions
 
+```TypeScript
+export interface LabelMarginOptions
+```
+
 Defines the spacing between the text and the left and right icons.
 
 **Since:** 11

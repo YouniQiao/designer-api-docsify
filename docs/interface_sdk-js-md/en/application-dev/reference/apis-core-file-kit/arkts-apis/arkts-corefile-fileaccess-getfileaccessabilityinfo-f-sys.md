@@ -104,6 +104,8 @@ async function getFileAccessAbilityInfo() {
 ```
 
 
+<a id="getfileaccessabilityinfo-1"></a>
+
 ## getFileAccessAbilityInfo
 
 ```TypeScript

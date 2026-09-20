@@ -1,5 +1,9 @@
 # ViewportFit
 
+```TypeScript
+declare enum ViewportFit
+```
+
 Enumerates the viewport types available for **viewport-fit** in the web page **\&lt;meta&gt;** tag.
 
 **Since:** 12

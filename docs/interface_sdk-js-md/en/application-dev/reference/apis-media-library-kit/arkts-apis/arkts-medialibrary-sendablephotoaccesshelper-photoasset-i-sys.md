@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset extends lang.ISendable
+```
+
 Provides APIs for encapsulating file asset attributes.
 
 **Inheritance/Implementation:** PhotoAsset extends lang.ISendable

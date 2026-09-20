@@ -1,5 +1,9 @@
 # Image
 
+```TypeScript
+interface Image
+```
+
 The **Image** class is used to obtain image content.
 
 An Image instance is returned when [readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage) are called.
@@ -59,6 +63,8 @@ Obtains the component buffer from the Image instance based on the color componen
 | --- | --- | --- | --- |
 | componentType | [ComponentType](arkts-image-image-componenttype-e.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Component](arkts-image-image-component-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+
+<a id="getcomponent-1"></a>
 
 ## getComponent
 
@@ -140,6 +146,8 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="release-1"></a>
 
 ## release
 

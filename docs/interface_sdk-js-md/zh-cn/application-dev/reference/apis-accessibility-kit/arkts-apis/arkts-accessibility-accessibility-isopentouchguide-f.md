@@ -56,6 +56,8 @@ accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
 ```
 
 
+<a id="isopentouchguide-1"></a>
+
 ## isOpenTouchGuide
 
 ```TypeScript

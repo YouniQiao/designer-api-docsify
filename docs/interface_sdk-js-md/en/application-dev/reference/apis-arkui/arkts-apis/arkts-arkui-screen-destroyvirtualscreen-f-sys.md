@@ -68,6 +68,8 @@ screen.destroyVirtualScreen(screenId).then(() => {
 ```
 
 
+<a id="destroyvirtualscreen-1"></a>
+
 ## destroyVirtualScreen
 
 ```TypeScript

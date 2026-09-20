@@ -1,5 +1,9 @@
 # FormLinkOptions
 
+```TypeScript
+declare interface FormLinkOptions
+```
+
 Defines the FormLink options.
 
 **Since:** 10

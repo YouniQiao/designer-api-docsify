@@ -51,6 +51,8 @@ screenLock.unlockScreen().then(() => {
 ```
 
 
+<a id="unlockscreen-1"></a>
+
 ## unlockScreen
 
 ```TypeScript

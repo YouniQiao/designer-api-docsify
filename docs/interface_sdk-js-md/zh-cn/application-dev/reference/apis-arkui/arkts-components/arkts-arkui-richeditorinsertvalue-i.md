@@ -1,5 +1,9 @@
 # RichEditorInsertValue
 
+```TypeScript
+declare interface RichEditorInsertValue
+```
+
 插入文本的信息。
 
 **起始版本：** 10

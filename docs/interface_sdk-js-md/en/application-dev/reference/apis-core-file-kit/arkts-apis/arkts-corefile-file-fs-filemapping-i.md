@@ -1,5 +1,9 @@
 # FileMapping
 
+```TypeScript
+declare interface FileMapping
+```
+
 File mapping object. Before invoking the FileMapping method, you need to use the mmap() method (synchronous or asynchronous) to construct a FileMapping instance.
 
 **Since:** 26.0.0
@@ -246,6 +250,8 @@ mapping.msync(50, buffer.byteLength).then(() => {
 });
 ```
 
+<a id="msync-1"></a>
+
 ## msync
 
 ```TypeScript
@@ -349,6 +355,8 @@ mapping.unmapSync();
 fileIo.closeSync(file);
 ```
 
+<a id="msyncsync-1"></a>
+
 ## msyncSync
 
 ```TypeScript
@@ -449,6 +457,8 @@ console.info(`Succeeded in reading data, size is: ${bytesRead}`);
 mapping.unmapSync();
 fileIo.closeSync(file);
 ```
+
+<a id="read-1"></a>
 
 ## read
 
@@ -788,6 +798,8 @@ mapping.msyncSync();
 mapping.unmapSync();
 fileIo.closeSync(file);
 ```
+
+<a id="write-1"></a>
 
 ## write
 

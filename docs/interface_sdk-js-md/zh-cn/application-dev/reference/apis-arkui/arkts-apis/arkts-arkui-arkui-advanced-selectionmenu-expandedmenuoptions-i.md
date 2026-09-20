@@ -1,5 +1,9 @@
 # ExpandedMenuOptions
 
+```TypeScript
+export interface ExpandedMenuOptions extends MenuItemOptions
+```
+
 扩展下拉菜单。
 
 继承自[MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)。

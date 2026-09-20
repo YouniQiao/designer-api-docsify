@@ -1,5 +1,9 @@
 # VerifyPinEvent
 
+```TypeScript
+declare interface VerifyPinEvent
+```
+
 定义当需要用户进行PIN码认证时触发回调。
 
 **起始版本：** 22

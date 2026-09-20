@@ -1,5 +1,9 @@
 # EditorMenuOptions
 
+```TypeScript
+export interface EditorMenuOptions
+```
+
 编辑菜单选项。
 
 **起始版本：** 11

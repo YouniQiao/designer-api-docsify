@@ -1,5 +1,9 @@
 # SslErrorEvent
 
+```TypeScript
+declare interface SslErrorEvent
+```
+
 Callback details triggered when an SSL error occurs during resource loading by the user, including the URL, error type, and certificate chain. It is suitable for scenarios where detailed analysis of SSL errors is required, improving security issue diagnosis and troubleshooting efficiency.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # VideoControllerAsync
 
+```TypeScript
+declare class VideoControllerAsync
+```
+
 VideoControllerAsync是VideoController的异步版本，可以通过Promise获取部分播控命令的结果。不支持同时控制多个Video。
 
 > **说明：** 

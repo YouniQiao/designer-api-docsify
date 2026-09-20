@@ -1,5 +1,9 @@
 # CompletionHandler
 
+```TypeScript
+declare class CompletionHandler
+```
+
 CompletionHandler提供了[onRequestSuccess](#onrequestsuccess)和[onRequestFailure](#onrequestfailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。
 
 **起始版本：** 20

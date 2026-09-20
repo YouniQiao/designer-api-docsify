@@ -154,6 +154,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="granturipermission-2"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -207,6 +209,8 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 See [grantUriPermission](#granturipermission)
 
+
+<a id="granturipermission-4"></a>
 
 ## grantUriPermission
 

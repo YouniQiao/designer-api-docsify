@@ -1,5 +1,9 @@
 # ScrollDirectionalLockType
 
+```TypeScript
+declare enum ScrollDirectionalLockType
+```
+
 Defines the scenario types for scroll direction locking.
 
 **Since:** 26.0.0

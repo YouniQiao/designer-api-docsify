@@ -1,5 +1,9 @@
 # BarState
 
+```TypeScript
+declare enum BarState
+```
+
 Used to set the status of the scroll bar.
 
 **Since:** 7

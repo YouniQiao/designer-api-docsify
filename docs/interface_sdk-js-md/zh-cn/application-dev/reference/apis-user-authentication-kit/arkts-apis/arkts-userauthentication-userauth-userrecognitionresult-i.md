@@ -1,5 +1,9 @@
 # UserRecognitionResult
 
+```TypeScript
+interface UserRecognitionResult
+```
+
 用户识别结果。
 
 **起始版本：** 26.0.1

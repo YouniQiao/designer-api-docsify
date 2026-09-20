@@ -1,5 +1,9 @@
 # IndicatorIconInfo
 
+```TypeScript
+declare interface IndicatorIconInfo
+```
+
 Set the indicator item's icon for a specified index.
 
 **Since:** 26.0.0

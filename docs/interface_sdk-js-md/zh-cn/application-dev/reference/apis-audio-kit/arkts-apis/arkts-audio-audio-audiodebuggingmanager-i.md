@@ -1,5 +1,9 @@
 # AudioDebuggingManager
 
+```TypeScript
+interface AudioDebuggingManager
+```
+
 音频调试管理器，用于音频运行时调试，包括获取快照信息等功能，用于定位音频播放、录音、耳返、会话等场景中的异常问题。**起始版本：** 26.0.0
 
 > **说明：** 

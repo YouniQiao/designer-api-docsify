@@ -87,6 +87,8 @@ avSession.sendSystemControlCommand(avcommand).then(() => {
 ```
 
 
+<a id="sendsystemcontrolcommand-1"></a>
+
 ## sendSystemControlCommand
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ShowDialogSuccessResponse
 
+```TypeScript
+interface ShowDialogSuccessResponse
+```
+
 对话框的响应结果。
 
 **起始版本：** 9

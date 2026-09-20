@@ -1,5 +1,9 @@
 # GestureFocusMode
 
+```TypeScript
+declare enum GestureFocusMode
+```
+
 手势获焦的模式。
 
 **起始版本：** 20

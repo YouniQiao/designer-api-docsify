@@ -1,5 +1,9 @@
 # OnRenderExitedEvent
 
+```TypeScript
+declare interface OnRenderExitedEvent
+```
+
 定义渲染过程退出时触发。适用于需要监控渲染进程异常的场景，提升渲染稳定性和故障排查效率。
 
 **起始版本：** 12

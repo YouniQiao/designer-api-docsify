@@ -1,5 +1,9 @@
 # LightSource (System API)
 
+```TypeScript
+declare interface LightSource
+```
+
 Each component allows for one light source.
 
 **Since:** 11

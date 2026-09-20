@@ -1,5 +1,9 @@
 # OperateIcon
 
+```TypeScript
+export declare class OperateIcon
+```
+
 列表右侧图标元素的类型。
 
 **起始版本：** 10

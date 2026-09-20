@@ -1,5 +1,9 @@
 # HuksKeySize
 
+```TypeScript
+export enum HuksKeySize
+```
+
 表示密钥长度。
 
 **起始版本：** 8

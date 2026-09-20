@@ -1,5 +1,9 @@
 # CropOffset（系统接口）
 
+```TypeScript
+declare interface CropOffset
+```
+
 裁剪偏移量。
 
 **起始版本：** 26.0.0

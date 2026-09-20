@@ -1,5 +1,9 @@
 # ShareAlbumRiskStatus (System API)
 
+```TypeScript
+enum ShareAlbumRiskStatus
+```
+
 Enumerates the risk status of share album.
 
 **Since:** 26.0.1

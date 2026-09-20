@@ -1,5 +1,9 @@
 # LayoutSafeAreaEdge
 
+```TypeScript
+declare enum LayoutSafeAreaEdge
+```
+
 Define the edges for expanding the safe area in layout.
 
 @enum { number }

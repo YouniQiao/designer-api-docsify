@@ -1,5 +1,9 @@
 # GaugeIndicatorOptions
 
+```TypeScript
+declare interface GaugeIndicatorOptions
+```
+
 Provides gauge indicator options.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # WebResourceHandler
 
+```TypeScript
+class WebResourceHandler
+```
+
 WebResourceHandler是自定义scheme拦截场景中用于向Web组件返回拦截请求结果的处理器。当WebSchemeHandler决定拦截一个请求后，开发者通过WebResourceHandler向Web组件提供自定义的响应头（didReceiveResponse）、响应体数据（didReceiveResponseBody），并通知请求完成（didFinish）或失败（didFail）。其中didFail支持重载方法（API version 2 0+）以简化错误处理流程。该接口实现了应用层对网络请求的完全自定义响应。
 
 WebResourceHandler与[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md)、[WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md)配合使用：WebSchemeHandler的onRequestStart回调中接收WebResourceHandler实例，开发者构造WebSchemeHandlerResponse对象，通过WebResourceHandler的didReceiveResponse和didReceiveResponseBody传入响应头和响应体数据，最后调用didFinish或didFail结束请求。
@@ -41,6 +45,8 @@ didFail(code: WebNetErrorList): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
+<a id="didfail-1"></a>
+
 ## didFail
 
 ```TypeScript
@@ -66,6 +72,8 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 | --- | --- |
 | [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+<a id="didfail-2"></a>
 
 ## didFail
 

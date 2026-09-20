@@ -1,5 +1,9 @@
 # AVCastPicker
 
+```TypeScript
+declare struct AVCastPicker
+```
+
 A picker view to show available streaming device list.
 
 **Since:** 10

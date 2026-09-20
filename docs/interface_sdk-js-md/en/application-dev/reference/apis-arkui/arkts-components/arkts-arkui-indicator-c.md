@@ -1,5 +1,9 @@
 # Indicator
 
+```TypeScript
+declare class Indicator<T>
+```
+
 Sets the distance between the navigation indicator and the **Swiper** component. Note that due to its default interaction area height of 32 vp, the navigation indicator cannot be placed flush against the bottom edge. To implement the function of completely attaching to the bottom, you can use the IndicatorComponent component to adjust the position more flexibly.
 
 **Since:** 10
@@ -35,6 +39,8 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | Type | Description |
 | --- | --- |
 | T | Current navigation indicator. |
+
+<a id="bottom-1"></a>
 
 ## bottom
 

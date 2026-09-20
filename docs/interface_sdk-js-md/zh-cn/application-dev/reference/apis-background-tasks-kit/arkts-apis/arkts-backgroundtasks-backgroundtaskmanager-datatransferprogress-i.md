@@ -1,5 +1,9 @@
 # DataTransferProgress
 
+```TypeScript
+export interface DataTransferProgress
+```
+
 长时任务通知进度信息。
 
 **起始版本：** 26.0.1

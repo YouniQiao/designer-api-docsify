@@ -1,5 +1,9 @@
 # RepeatMode
 
+```TypeScript
+declare enum RepeatMode
+```
+
 用于设置被切割的图片在边框上的重复方式。
 
 @enum { number }

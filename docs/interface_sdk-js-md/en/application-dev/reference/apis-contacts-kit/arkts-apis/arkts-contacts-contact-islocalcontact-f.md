@@ -70,6 +70,8 @@ promise.then((data) => {
 ```
 
 
+<a id="islocalcontact-1"></a>
+
 ## isLocalContact
 
 ```TypeScript
@@ -103,6 +105,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 See [isLocalContact](#islocalcontact)
 
+
+<a id="islocalcontact-2"></a>
 
 ## isLocalContact
 
@@ -138,6 +142,8 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 See [isLocalContact](#islocalcontact)
 
+
+<a id="islocalcontact-3"></a>
 
 ## isLocalContact
 

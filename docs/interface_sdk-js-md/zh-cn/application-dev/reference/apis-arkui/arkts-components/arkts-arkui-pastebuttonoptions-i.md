@@ -1,5 +1,9 @@
 # PasteButtonOptions
 
+```TypeScript
+declare interface PasteButtonOptions
+```
+
 用于设置粘贴控件的图标、文本、按钮类型等属性。
 
 > **说明：** 

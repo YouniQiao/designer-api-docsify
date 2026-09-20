@@ -1,5 +1,9 @@
 # CustomDialogOptions
 
+```TypeScript
+interface CustomDialogOptions extends BaseDialogOptions
+```
+
 Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
 
 **Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)

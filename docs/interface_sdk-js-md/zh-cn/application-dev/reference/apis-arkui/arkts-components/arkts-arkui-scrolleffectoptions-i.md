@@ -1,5 +1,9 @@
 # ScrollEffectOptions
 
+```TypeScript
+declare interface ScrollEffectOptions
+```
+
 定义标题栏的滑动模糊效果选项。
 
 **起始版本：** 26.0.0

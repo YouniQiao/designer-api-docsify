@@ -1,5 +1,9 @@
 # SliderInteraction
 
+```TypeScript
+declare enum SliderInteraction
+```
+
 Interaction mode between the user and the slider.
 
 | Name | Value|Description |  

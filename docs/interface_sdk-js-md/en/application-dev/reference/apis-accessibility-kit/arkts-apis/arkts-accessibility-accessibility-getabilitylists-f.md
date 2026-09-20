@@ -23,7 +23,7 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
+**Substitutes:** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -67,6 +67,8 @@ accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, da
 });
 ```
 
+
+<a id="getabilitylists-1"></a>
 
 ## getAbilityLists
 

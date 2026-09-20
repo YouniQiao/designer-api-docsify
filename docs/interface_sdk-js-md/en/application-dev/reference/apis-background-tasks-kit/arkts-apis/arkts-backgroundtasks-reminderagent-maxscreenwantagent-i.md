@@ -1,5 +1,9 @@
 # MaxScreenWantAgent
 
+```TypeScript
+interface MaxScreenWantAgent
+```
+
 Provides the information about the target package and ability to start automatically when the reminder is displayed in full-screen mode. This API is reserved.
 
 **Since:** 7

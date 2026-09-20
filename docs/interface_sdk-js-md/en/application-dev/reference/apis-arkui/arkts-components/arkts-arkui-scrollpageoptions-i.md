@@ -1,5 +1,9 @@
 # ScrollPageOptions
 
+```TypeScript
+declare interface ScrollPageOptions
+```
+
 Provides parameters for page scrolling behavior.
 
 **Since:** 14

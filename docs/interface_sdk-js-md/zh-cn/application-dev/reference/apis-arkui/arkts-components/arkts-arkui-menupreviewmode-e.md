@@ -1,5 +1,9 @@
 # MenuPreviewMode
 
+```TypeScript
+declare enum MenuPreviewMode
+```
+
 菜单的预览样式。
 
 **起始版本：** 11

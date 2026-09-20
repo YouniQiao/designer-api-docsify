@@ -1,5 +1,9 @@
 # SearchPlayMusicInfo
 
+```TypeScript
+interface SearchPlayMusicInfo
+```
+
 The definition of SearchPlayMusicInfo.
 
 @interface SearchPlayMusicInfo

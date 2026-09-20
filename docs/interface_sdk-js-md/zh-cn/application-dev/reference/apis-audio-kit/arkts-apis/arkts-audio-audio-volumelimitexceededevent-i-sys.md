@@ -1,5 +1,9 @@
 # VolumeLimitExceededEvent（系统接口）
 
+```TypeScript
+interface VolumeLimitExceededEvent
+```
+
 描述表示音量超过阈值的通知事件。在收到通知后，应用必须发送确认结果。在继续调整音量之前，通过 [confirmVolumeLimitExceeded](arkts-audio-audio-audiovolumemanager-i-sys.md#confirmvolumelimitexceeded) 进行确认。
 
 **起始版本：** 26.0.0

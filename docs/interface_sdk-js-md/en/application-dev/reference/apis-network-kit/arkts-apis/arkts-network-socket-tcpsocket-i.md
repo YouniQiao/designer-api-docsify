@@ -1,5 +1,9 @@
 # TCPSocket
 
+```TypeScript
+export interface TCPSocket
+```
+
 Defines a TCP socket connection. Before calling TCPSocket APIs, you need to call [socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md) to create a **TCPSocket** object.
 
 **Since:** 7
@@ -86,6 +90,8 @@ tcp.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -222,6 +228,8 @@ tcp.close().then(() => {
   console.error('close fail');
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -366,6 +374,8 @@ tcp.connect(tcpconnectoptions).then(() => {
   console.error('connect fail');
 });
 ```
+
+<a id="connect-1"></a>
 
 ## connect
 
@@ -595,6 +605,8 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
+<a id="getremoteaddress-1"></a>
+
 ## getRemoteAddress
 
 ```TypeScript
@@ -751,6 +763,8 @@ tcp.getSocketFd().then((data: number) => {
   console.info("socketFd: " + data);
 })
 ```
+
+<a id="getsocketfd-1"></a>
 
 ## getSocketFd
 
@@ -909,6 +923,8 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -1029,25 +1045,6 @@ Unsubscribes from **connect** or **close** events of the **TCPSocket** object. T
 | type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
-## off('connect' | 'close')
-
-```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
-```
-
-Unsubscribes from **connect** or **close** events of the **TCPSocket** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
 ## off('error')
 
 ```TypeScript
@@ -1085,25 +1082,6 @@ Subscribes to **message** events of the **TCPSocket** object. This API uses an a
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
-
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-Subscribes to **connect** or **close** events of the **TCPSocket** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## on('connect' | 'close')
 
@@ -1231,6 +1209,8 @@ tcp.connect(tcpconnectoptions, () => {
   });
 })
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -1441,6 +1421,8 @@ tcp.connect(tcpconnectoptions, () => {
   });
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

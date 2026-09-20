@@ -1,5 +1,9 @@
 # EffectEdge
 
+```TypeScript
+declare enum EffectEdge
+```
+
 Enumerates the effective edge of the edge effect.
 
 **Since:** 18

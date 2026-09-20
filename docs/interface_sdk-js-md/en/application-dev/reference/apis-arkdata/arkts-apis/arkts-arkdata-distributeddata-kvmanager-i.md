@@ -1,5 +1,9 @@
 # KVManager
 
+```TypeScript
+interface KVManager
+```
+
 Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md) to create a **KVManager** object.
 
 **Since:** 7
@@ -95,6 +99,8 @@ try {
     console.error('closeKVStore e ' + e);
 }
 ```
+
+<a id="closekvstore-1"></a>
 
 ## closeKVStore
 
@@ -210,6 +216,8 @@ try {
 }
 ```
 
+<a id="deletekvstore-1"></a>
+
 ## deleteKVStore
 
 ```TypeScript
@@ -294,6 +302,8 @@ try {
     console.error('getAllKVStoreId e ' + e);
 }
 ```
+
+<a id="getallkvstoreid-1"></a>
 
 ## getAllKVStoreId
 
@@ -405,6 +415,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="getkvstore-1"></a>
 
 ## getKVStore
 

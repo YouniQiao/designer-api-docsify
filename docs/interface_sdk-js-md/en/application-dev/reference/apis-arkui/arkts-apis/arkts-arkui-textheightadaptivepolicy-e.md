@@ -1,5 +1,9 @@
 # TextHeightAdaptivePolicy
 
+```TypeScript
+declare enum TextHeightAdaptivePolicy
+```
+
 The mode of adjusting the text font size to adapt to the layout.
 
 **Since:** 10

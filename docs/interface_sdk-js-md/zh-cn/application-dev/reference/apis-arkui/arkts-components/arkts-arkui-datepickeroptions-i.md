@@ -1,5 +1,9 @@
 # DatePickerOptions
 
+```TypeScript
+declare interface DatePickerOptions
+```
+
 日期选择器组件的参数说明。
 
 > **说明：** 
@@ -100,7 +104,7 @@ selected?: Date
 > Date对象可配置的日期范围：[Date('1900-01-31'), Date('2100-12-31')]，selected参数的有效取值范围：必须在start和end参数设置的日
 > 期范围内。
 
-> 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** Date
 

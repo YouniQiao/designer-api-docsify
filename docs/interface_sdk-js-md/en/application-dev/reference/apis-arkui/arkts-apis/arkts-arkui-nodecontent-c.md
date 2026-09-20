@@ -1,5 +1,9 @@
 # NodeContent
 
+```TypeScript
+export class NodeContent extends Content
+```
+
 **NodeContent** is the ArkUI-provided manager for ContentSlot.
 
 > **NOTE:** 

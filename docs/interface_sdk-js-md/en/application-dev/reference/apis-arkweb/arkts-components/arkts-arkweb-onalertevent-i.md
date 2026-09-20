@@ -1,5 +1,9 @@
 # OnAlertEvent
 
+```TypeScript
+declare interface OnAlertEvent
+```
+
 Defines the callback used when a web page triggers **alert()**.
 
 **Since:** 12

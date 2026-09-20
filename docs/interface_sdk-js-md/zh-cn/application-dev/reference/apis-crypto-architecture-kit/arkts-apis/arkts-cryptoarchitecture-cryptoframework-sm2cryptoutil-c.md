@@ -1,5 +1,9 @@
 # SM2CryptoUtil
 
+```TypeScript
+class SM2CryptoUtil
+```
+
 用于SM2密码学运算的工具类。
 
 **起始版本：** 12

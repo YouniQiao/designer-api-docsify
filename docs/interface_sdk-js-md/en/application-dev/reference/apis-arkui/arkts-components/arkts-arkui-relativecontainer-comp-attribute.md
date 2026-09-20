@@ -1,5 +1,9 @@
 # RelativeContainer properties/events
 
+```TypeScript
+declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 
@@ -36,6 +40,8 @@ Sets the [barriers](../../../ui/arkts-layout-development-relative-layout.md#sett
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | Yes | Barrier in the **RelativeContainer** container, used to define the ID, direction, and dependent components of the barrier. Child components can use the barrier as an anchor for alignment and positioning. |
+
+<a id="barrier-1"></a>
 
 ## barrier
 

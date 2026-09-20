@@ -1,5 +1,9 @@
 # TransitionEdge
 
+```TypeScript
+declare enum TransitionEdge
+```
+
 转场边缘类型。
 
 **起始版本：** 10

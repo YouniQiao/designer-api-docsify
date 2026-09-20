@@ -1,5 +1,9 @@
 # TabsCacheMode
 
+```TypeScript
+declare enum TabsCacheMode
+```
+
 Enumerates the caching modes for child components.
 
 **Since:** 19

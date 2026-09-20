@@ -1,5 +1,9 @@
 # CustomLayoutAlgorithm
 
+```TypeScript
+export class CustomLayoutAlgorithm implements LayoutAlgorithm
+```
+
 A custom layout algorithm class, which allows you to implement custom measurement and layout logic. It is suitable for complex layout scenarios that require fine-grained control over child component sizes and positions, such as waterfall flow layout, irregular grid layout, and dynamic flow layout. By overriding **onMeasure** and **onLayout**, you can implement layout strategies that are not covered by the built-in layout algorithms.
 
 > **NOTE:** 

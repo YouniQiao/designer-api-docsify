@@ -66,6 +66,8 @@ call.switchCall(1).then(() => {
 ```
 
 
+<a id="switchcall-1"></a>
+
 ## switchCall
 
 ```TypeScript

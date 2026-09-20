@@ -1,5 +1,9 @@
 # RouteMapConfig
 
+```TypeScript
+declare interface RouteMapConfig
+```
+
 Defines the routing configuration.
 
 **Since:** 12

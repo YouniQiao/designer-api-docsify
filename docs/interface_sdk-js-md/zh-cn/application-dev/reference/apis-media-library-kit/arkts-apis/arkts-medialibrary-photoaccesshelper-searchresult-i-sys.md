@@ -1,5 +1,9 @@
 # SearchResult（系统接口）
 
+```TypeScript
+interface SearchResult
+```
+
 搜索查询的结果。
 
 **起始版本：** 26.0.1

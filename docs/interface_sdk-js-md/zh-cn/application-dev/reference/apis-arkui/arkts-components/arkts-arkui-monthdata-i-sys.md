@@ -1,5 +1,9 @@
 # MonthData（系统接口）
 
+```TypeScript
+interface MonthData
+```
+
 Date object.
 
 **起始版本：** 7

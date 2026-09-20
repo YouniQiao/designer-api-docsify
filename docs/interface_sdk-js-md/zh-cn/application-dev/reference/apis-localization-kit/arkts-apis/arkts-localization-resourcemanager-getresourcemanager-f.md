@@ -126,6 +126,8 @@ export default {
 ```
 
 
+<a id="getresourcemanager-1"></a>
+
 ## getResourceManager
 
 ```TypeScript
@@ -152,6 +154,8 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 参见 [getResourceManager](#getresourcemanager)
 
 
+<a id="getresourcemanager-2"></a>
+
 ## getResourceManager
 
 ```TypeScript
@@ -176,6 +180,8 @@ export function getResourceManager(): Promise<ResourceManager>
 
 参见 [getResourceManager](#getresourcemanager)
 
+
+<a id="getresourcemanager-3"></a>
 
 ## getResourceManager
 

@@ -1,5 +1,9 @@
 # Placement
 
+```TypeScript
+declare enum Placement
+```
+
 Placement enumeration description
 
 **Since:** 8

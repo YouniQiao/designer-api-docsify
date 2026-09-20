@@ -1,5 +1,9 @@
 # TouchObject
 
+```TypeScript
+declare interface TouchObject
+```
+
 触摸事件类型。
 
 **起始版本：** 7

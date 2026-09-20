@@ -1,5 +1,9 @@
 # OsAccountSubProfileManager (System API)
 
+```TypeScript
+interface OsAccountSubProfileManager
+```
+
 Defines an OS account sub-profile manager.
 
 **Since:** 26.0.0
@@ -163,6 +167,8 @@ try {
 Obtain the foreground sub-profile ID of OS account 100.
 ```
 
+<a id="getosaccountforegroundsubprofileid-1"></a>
+
 ## getOsAccountForegroundSubProfileId
 
 ```TypeScript
@@ -295,6 +301,8 @@ Obtains the sub-profile whose ID is 100001.
 Obtain the sub-profile whose ID is 100001 of OS account 100.
 ```
 
+<a id="getosaccountsubprofile-1"></a>
+
 ## getOsAccountSubProfile
 
 ```TypeScript
@@ -392,6 +400,8 @@ try {
 ```TypeScript
 Obtain the sub-profile IDs of OS account 100.
 ```
+
+<a id="getosaccountsubprofileids-1"></a>
 
 ## getOsAccountSubProfileIds
 

@@ -1,5 +1,9 @@
 # AnchoredColorMode
 
+```TypeScript
+declare enum AnchoredColorMode
+```
+
 @enum { number }
 
 **Since:** 26.0.0

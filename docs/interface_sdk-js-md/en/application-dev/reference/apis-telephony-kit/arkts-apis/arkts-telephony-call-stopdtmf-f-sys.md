@@ -66,6 +66,8 @@ call.stopDTMF(1).then(() => {
 ```
 
 
+<a id="stopdtmf-1"></a>
+
 ## stopDTMF
 
 ```TypeScript

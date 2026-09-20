@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="settimezone-1"></a>
+
 ## setTimezone
 
 ```TypeScript

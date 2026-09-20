@@ -119,6 +119,8 @@ try {
 ```
 
 
+<a id="getrotationmatrix-1"></a>
+
 ## getRotationMatrix
 
 ```TypeScript
@@ -155,6 +157,8 @@ function getRotationMatrix(rotationVector: Array<number>): Promise<Array<number>
 参见 [getRotationMatrix](#getrotationmatrix)
 
 
+<a id="getrotationmatrix-2"></a>
+
 ## getRotationMatrix
 
 ```TypeScript
@@ -186,6 +190,8 @@ function getRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, c
 
 参见 [getRotationMatrix](#getrotationmatrix)
 
+
+<a id="getrotationmatrix-3"></a>
 
 ## getRotationMatrix
 

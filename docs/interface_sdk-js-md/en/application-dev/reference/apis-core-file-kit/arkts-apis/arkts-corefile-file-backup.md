@@ -27,8 +27,8 @@ import { backup } from '@kit.CoreFileKit';
 | [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md) | Get Backup information from bundle. |
 | [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md) | Obtain the backupVersion. |
 | [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a Json file that describes local capabilities. |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md) | Obtain a json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-1) | Obtain a Json file that describes local capabilities. |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-2) | Obtain a json file that describes local capabilities. |
 | [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md) | Update send file fd rate. |
 | [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md) | Update backup or restore timeout. |
 <!--DelEnd-->

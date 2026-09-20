@@ -1,5 +1,9 @@
 # PermissionUsedType (System API)
 
+```TypeScript
+enum PermissionUsedType
+```
+
 Enumerates the means for using a sensitive permission.
 
 | Name | Value| Description |  

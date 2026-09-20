@@ -1,5 +1,9 @@
 # ChipSymbolGlyphOptions
 
+```TypeScript
+export interface ChipSymbolGlyphOptions
+```
+
 ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 
 > **说明：** 

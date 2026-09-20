@@ -1,5 +1,9 @@
 # FrameCallback
 
+```TypeScript
+export abstract class FrameCallback
+```
+
 Implements the API for setting the task that needs to be executed during the next frame rendering.
 
 > **NOTE:** 

@@ -49,6 +49,8 @@ Stage model:
 ```
 
 
+<a id="deleterdbstore-1"></a>
+
 ## deleteRdbStore
 
 ```TypeScript
@@ -87,6 +89,8 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 See [deleteRdbStore](#deleterdbstore)
 
+
+<a id="deleterdbstore-2"></a>
 
 ## deleteRdbStore
 
@@ -129,6 +133,8 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 See [deleteRdbStore](#deleterdbstore)
 
+
+<a id="deleterdbstore-3"></a>
 
 ## deleteRdbStore
 

@@ -1,5 +1,9 @@
 # DataDeleteOperation
 
+```TypeScript
+interface DataDeleteOperation
+```
+
 Represents an operation for deleting data.
 
 **Since:** 12

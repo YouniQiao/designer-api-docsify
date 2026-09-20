@@ -1,5 +1,9 @@
 # SelectionContainerInterface
 
+```TypeScript
+export interface SelectionContainerInterface
+```
+
 创建一个SelectionContainer组件。
 
 **起始版本：** 26.0.0

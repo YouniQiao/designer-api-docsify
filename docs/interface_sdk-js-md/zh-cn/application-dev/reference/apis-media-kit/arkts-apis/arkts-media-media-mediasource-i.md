@@ -1,5 +1,9 @@
 # MediaSource
 
+```TypeScript
+interface MediaSource
+```
+
 媒体数据信息。来源于[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md)。
 
 > **说明：** 

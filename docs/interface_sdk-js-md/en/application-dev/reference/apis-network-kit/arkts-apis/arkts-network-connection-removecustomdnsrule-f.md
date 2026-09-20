@@ -70,6 +70,8 @@ connection.removeCustomDnsRule("xxxx").then(() => {
 ```
 
 
+<a id="removecustomdnsrule-1"></a>
+
 ## removeCustomDnsRule
 
 ```TypeScript

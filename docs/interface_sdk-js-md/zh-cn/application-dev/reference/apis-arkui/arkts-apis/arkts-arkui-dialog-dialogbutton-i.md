@@ -1,5 +1,9 @@
 # DialogButton
 
+```TypeScript
+declare interface DialogButton
+```
+
 固定样式对话框的按钮配置。
 
 **起始版本：** 26.0.1

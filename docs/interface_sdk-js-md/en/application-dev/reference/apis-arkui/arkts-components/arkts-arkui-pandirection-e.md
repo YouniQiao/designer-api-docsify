@@ -1,5 +1,9 @@
 # PanDirection
 
+```TypeScript
+declare enum PanDirection
+```
+
 Enumerates the pan directions. Unlike **SwipeDirection**, **PanDirection** has no angular restrictions.
 
 **Since:** 7

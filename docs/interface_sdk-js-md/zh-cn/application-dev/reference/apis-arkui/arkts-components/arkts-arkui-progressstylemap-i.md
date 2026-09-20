@@ -1,5 +1,9 @@
 # ProgressStyleMap
 
+```TypeScript
+declare interface ProgressStyleMap
+```
+
 进度条类型和样式的映射表。
 
 **起始版本：** 10

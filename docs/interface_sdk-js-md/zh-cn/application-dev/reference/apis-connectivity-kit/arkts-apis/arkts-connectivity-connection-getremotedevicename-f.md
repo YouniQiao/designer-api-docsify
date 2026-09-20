@@ -70,6 +70,8 @@ try {
 ```
 
 
+<a id="getremotedevicename-1"></a>
+
 ## getRemoteDeviceName
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # NavigationTransitionProxy
 
+```TypeScript
+declare interface NavigationTransitionProxy
+```
+
 Implements a custom transition animation proxy.
 
 **Since:** 11

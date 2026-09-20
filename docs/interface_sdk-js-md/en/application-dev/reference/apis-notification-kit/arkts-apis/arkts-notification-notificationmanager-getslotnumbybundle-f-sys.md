@@ -77,6 +77,8 @@ notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
 ```
 
 
+<a id="getslotnumbybundle-1"></a>
+
 ## getSlotNumByBundle
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # MoreButtonOptions
 
+```TypeScript
+declare interface MoreButtonOptions
+```
+
 更多图标的菜单选项。设置后，可自定义更多按钮的背景模糊样式、背景效果等。
 
 **起始版本：** 19

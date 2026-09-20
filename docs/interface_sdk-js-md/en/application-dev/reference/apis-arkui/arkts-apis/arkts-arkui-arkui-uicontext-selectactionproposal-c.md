@@ -1,5 +1,9 @@
 # SelectActionProposal
 
+```TypeScript
+export class SelectActionProposal extends TargetedGestureProposal
+```
+
 Smart gesture selection action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)'s **selectedProposal** to an object of this type causes the target component to be selected.
 
 **Inheritance/Implementation:** SelectActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)

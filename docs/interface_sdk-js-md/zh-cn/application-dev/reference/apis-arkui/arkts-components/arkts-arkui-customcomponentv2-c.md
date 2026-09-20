@@ -1,5 +1,9 @@
 # CustomComponentV2
 
+```TypeScript
+declare class CustomComponentV2 extends BaseCustomComponent
+```
+
 自定义组件V2
 
 **继承/实现关系：** CustomComponentV2 extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)

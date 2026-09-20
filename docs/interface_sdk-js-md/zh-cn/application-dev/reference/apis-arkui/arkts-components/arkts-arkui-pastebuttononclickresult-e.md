@@ -1,5 +1,9 @@
 # PasteButtonOnClickResult
 
+```TypeScript
+declare enum PasteButtonOnClickResult
+```
+
 粘贴控件点击后的授权结果。
 
 **起始版本：** 10

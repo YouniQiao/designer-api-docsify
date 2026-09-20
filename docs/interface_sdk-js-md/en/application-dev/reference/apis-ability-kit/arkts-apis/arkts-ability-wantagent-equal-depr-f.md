@@ -132,6 +132,8 @@ wantAgent.getWantAgent({
 ```
 
 
+<a id="equal-1"></a>
+
 ## equal
 
 ```TypeScript

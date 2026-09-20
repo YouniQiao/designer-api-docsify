@@ -1,5 +1,9 @@
 # BarrierStyle
 
+```TypeScript
+declare interface BarrierStyle
+```
+
 barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。
 
 **起始版本：** 12

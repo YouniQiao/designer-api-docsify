@@ -1,5 +1,9 @@
 # ChipSize
 
+```TypeScript
+export declare enum ChipSize
+```
+
 Enumerates the size types that can be specified for the **Chip** component, such as normal and small.
 
 **Since:** 11

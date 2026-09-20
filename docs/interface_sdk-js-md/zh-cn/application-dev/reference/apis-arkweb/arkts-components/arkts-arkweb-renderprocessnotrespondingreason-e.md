@@ -1,5 +1,9 @@
 # RenderProcessNotRespondingReason
 
+```TypeScript
+declare enum RenderProcessNotRespondingReason
+```
+
 触发渲染进程无响应回调的原因。
 
 **起始版本：** 12

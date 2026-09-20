@@ -1,5 +1,9 @@
 # ChipV2Options
 
+```TypeScript
+export declare class ChipV2Options
+```
+
 Defines the style and specific style parameters of the **ChipV2** component.
 
 **Since:** 26.0.0
@@ -182,7 +186,7 @@ public activatedBackgroundColor?: ColorMetrics
 
 Background color of **ChipV2** when activated.
 
-Default value: **&#36;r('sys.color.chip_container_activated_color')**
+Default value: **$r('sys.color.chip_container_activated_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -264,7 +268,7 @@ public backgroundColor?: ColorMetrics
 
 Background color of **ChipV2**.
 
-Default value: **&#36;r('sys.color.chip_background_color')**
+Default value: **$r('sys.color.chip_background_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -318,9 +322,9 @@ Rounded corner radius of the **ChipV2** background. Percentage values are not su
 
 Default values:
 
-When **size** is **ChipV2Size.NORMAL**, the default **borderRadius** is **&#36;r('sys.float.chip_border_radius_normal')**.
+When **size** is **ChipV2Size.NORMAL**, the default **borderRadius** is **$r('sys.float.chip_border_radius_normal')**.
 
-When **size** is **ChipV2Size.SMALL**, the default **borderRadius** is **&#36;r('sys.float.chip_border_radius_small')**.
+When **size** is **ChipV2Size.SMALL**, the default **borderRadius** is **$r('sys.float.chip_border_radius_small')**.
 
 Unit: vp
 
@@ -350,8 +354,8 @@ Configuration of the close icon, including accessibility configuration. Set this
 
 Default values:
 
-- Default size: When **size** is **ChipV2Size.SMALL**, the default value is `&#36;r('sys.float.chip_small_font_size')`.  
-In other cases, the default value is `&#36;r('sys.float.chip_normal_font_size')`.  
+- Default size: When **size** is **ChipV2Size.SMALL**, the default value is `$r('sys.float.chip_small_font_size')`.  
+In other cases, the default value is `$r('sys.float.chip_normal_font_size')`.  
 - Default accessibility: No accessibility description.
 
 **fontSize** does not support percentage setting. If an invalid value is passed, the default value will be used.
@@ -438,10 +442,10 @@ The priority of this **fontSize** is lower than that of the **fontSize** attribu
 
 Default values:
 
-- When **size** is **ChipV2Size.SMALL**, the default text value is `&#36;r('sys.float.chip_small_font_size')`, and the  
-default icon value is `&#36;r('sys.float.chip_small_icon_size')`.  
-- In other cases, the default text value is `&#36;r('sys.float.chip_normal_font_size')`, and the default icon value is  
-`&#36;r('sys.float.chip_normal_icon_size')`.
+- When **size** is **ChipV2Size.SMALL**, the default text value is `$r('sys.float.chip_small_font_size')`, and the  
+default icon value is `$r('sys.float.chip_small_icon_size')`.  
+- In other cases, the default text value is `$r('sys.float.chip_normal_font_size')`, and the default icon value is  
+`$r('sys.float.chip_normal_icon_size')`.
 
 Unit: fp
 
@@ -614,9 +618,9 @@ Default value: no prefix icon is displayed.
 
 If the value is **undefined**, the default value is used.
 
-For the symbol icon, the default **fontColor** values are as follows: **normalFontColor**: `[&#36;r('sys.color.chip_usually_icon_color')]`, **activatedFontColor**: `[&#36;r('sys.color.chip_active_icon_color')]`. The default **fontSize** is 16.
+For the symbol icon, the default **fontColor** values are as follows: **normalFontColor**: `[$r('sys.color.chip_usually_icon_color')]`, **activatedFontColor**: `[$r('sys.color.chip_active_icon_color')]`. The default **fontSize** is 16.
 
-For the image icon, the default **fillColor** is `&#36;r('sys.color.chip_usually_icon_color')`, and the default **activatedFillColor** is `&#36;r('sys.color.chip_active_icon_color')`. The color parsing of **fillColor** and **activatedFillColor** is consistent with that of the **Image** component. The **fillColor** and **activatedFillColor** attributes take effect only when the image format is SVG; for non-SVG images, the default values are not applied.
+For the image icon, the default **fillColor** is `$r('sys.color.chip_usually_icon_color')`, and the default **activatedFillColor** is `$r('sys.color.chip_active_icon_color')`. The color parsing of **fillColor** and **activatedFillColor** is consistent with that of the **Image** component. The **fillColor** and **activatedFillColor** attributes take effect only when the image format is SVG; for non-SVG images, the default values are not applied.
 
 **Decorator:** @Trace
 
@@ -676,9 +680,9 @@ If the value is **undefined**, the default value is used.
 
 Note: When a value is passed in **suffixIcon**, the **allowClose** attribute does not take effect.
 
-For the symbol icon, the default **fontColor** values are as follows: **normalFontColor**: `[&#36;r('sys.color.chip_usually_icon_color')]`, **activatedFontColor**: `[&#36;r('sys.color.chip_active_icon_color')]`. The default **fontSize** is 16.
+For the symbol icon, the default **fontColor** values are as follows: **normalFontColor**: `[$r('sys.color.chip_usually_icon_color')]`, **activatedFontColor**: `[$r('sys.color.chip_active_icon_color')]`. The default **fontSize** is 16.
 
-For the image icon, the default **fillColor** is `&#36;r('sys.color.chip_usually_icon_color')`, and the default **activatedFillColor** is `&#36;r('sys.color.chip_active_icon_color')`. The color parsing of **fillColor** and **activatedFillColor** is consistent with that of the **Image** component. The **fillColor** and **activatedFillColor** attributes take effect only when the image format is SVG.
+For the image icon, the default **fillColor** is `$r('sys.color.chip_usually_icon_color')`, and the default **activatedFillColor** is `$r('sys.color.chip_active_icon_color')`. The color parsing of **fillColor** and **activatedFillColor** is consistent with that of the **Image** component. The **fillColor** and **activatedFillColor** attributes take effect only when the image format is SVG.
 
 **Decorator:** @Trace
 

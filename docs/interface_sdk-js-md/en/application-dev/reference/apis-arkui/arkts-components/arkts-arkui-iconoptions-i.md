@@ -1,5 +1,9 @@
 # IconOptions
 
+```TypeScript
+interface IconOptions
+```
+
 Defines the icon options.
 
 **Since:** 10

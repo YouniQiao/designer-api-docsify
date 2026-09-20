@@ -1,5 +1,9 @@
 # SideBarOptions
 
+```TypeScript
+export interface SideBarOptions
+```
+
 侧边栏的功能选项。
 
 **起始版本：** 18

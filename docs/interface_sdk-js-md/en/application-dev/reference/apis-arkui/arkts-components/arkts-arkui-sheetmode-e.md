@@ -1,5 +1,9 @@
 # SheetMode
 
+```TypeScript
+declare enum SheetMode
+```
+
 Define the display mode of the sheet.
 
 **Since:** 12

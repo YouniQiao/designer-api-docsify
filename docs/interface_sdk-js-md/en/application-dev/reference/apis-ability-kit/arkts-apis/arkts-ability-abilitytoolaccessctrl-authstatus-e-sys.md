@@ -1,5 +1,9 @@
 # AuthStatus (System API)
 
+```TypeScript
+enum AuthStatus
+```
+
 Authorization status.
 
 **Since:** 26.0.0

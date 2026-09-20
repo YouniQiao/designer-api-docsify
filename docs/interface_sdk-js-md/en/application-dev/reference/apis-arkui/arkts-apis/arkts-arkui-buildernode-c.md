@@ -1,5 +1,9 @@
 # BuilderNode
 
+```TypeScript
+export class BuilderNode<Args extends Object[]>
+```
+
 The **BuilderNode** module provides APIs for a BuilderNode – a custom node that can be used to mount built-in components. A BuilderNode can be used only as a leaf node. For details, see [BuilderNode Development](../../../ui/arkts-user-defined-arktsNode-builderNode.md). For best practices, see [Dynamic Component Creation: Dynamically Adding, Updating, and Deleting Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-ui-dynamic-operations#section153921947151012).
 
 Compared with **BuilderNode**, **ReactiveBuilderNode** can generate a component tree through the stateless UI method @Builder with multiple parameters.
@@ -129,6 +133,8 @@ struct Index {
   }
 }
 ```
+
+<a id="build-1"></a>
 
 ## build
 

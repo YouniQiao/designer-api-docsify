@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getsharedbundleinfo-1"></a>
+
 ## getSharedBundleInfo
 
 ```TypeScript

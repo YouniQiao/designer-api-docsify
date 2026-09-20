@@ -1,5 +1,9 @@
 # TerminationInfo
 
+```TypeScript
+declare interface TerminationInfo
+```
+
 Provides the result returned by the started **EmbeddedUIExtensionAbility**.
 
 **Since:** 12

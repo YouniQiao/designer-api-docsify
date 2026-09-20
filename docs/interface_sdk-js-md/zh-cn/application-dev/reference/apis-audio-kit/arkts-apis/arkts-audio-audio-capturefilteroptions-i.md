@@ -1,5 +1,9 @@
 # CaptureFilterOptions
 
+```TypeScript
+interface CaptureFilterOptions
+```
+
 待录制的播放音频流的筛选信息。
 
 > **说明：** 

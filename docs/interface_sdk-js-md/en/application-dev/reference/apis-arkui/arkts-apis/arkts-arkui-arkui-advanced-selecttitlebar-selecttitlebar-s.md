@@ -1,5 +1,9 @@
 # SelectTitleBar
 
+```TypeScript
+export declare struct SelectTitleBar
+```
+
 The **SelectTitleBar** component represents a drop-down menu title bar used for switching between pages of different levels (configured with the **Back** button).
 
 > **NOTE:** 

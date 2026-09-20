@@ -1,5 +1,9 @@
 # NavContentInfo
 
+```TypeScript
+declare interface NavContentInfo
+```
+
 跳转Destination信息。
 
 **起始版本：** 11

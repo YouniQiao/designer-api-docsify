@@ -1,5 +1,9 @@
 # ProgressButton
 
+```TypeScript
+export declare struct ProgressButton
+```
+
 文本下载按钮，可显示具体下载进度。
 
 > **说明：** 

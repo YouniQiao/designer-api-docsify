@@ -1,5 +1,9 @@
 # FocusAxisEvent
 
+```TypeScript
+declare interface FocusAxisEvent extends BaseEvent
+```
+
 Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Inheritance/Implementation:** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

@@ -1,5 +1,9 @@
 # AudioPlaybackCaptureConfig
 
+```TypeScript
+interface AudioPlaybackCaptureConfig
+```
+
 音频内录的配置信息。
 
 > **说明：** 

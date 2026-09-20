@@ -1,5 +1,9 @@
 # PickerBackgroundStyle
 
+```TypeScript
+declare interface PickerBackgroundStyle
+```
+
 选择器选中项的背景样式，包括选中项的背景颜色和边框圆角半径。
 
 **起始版本：** 20

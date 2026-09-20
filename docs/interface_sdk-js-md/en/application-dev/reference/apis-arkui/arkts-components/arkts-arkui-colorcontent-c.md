@@ -1,5 +1,9 @@
 # ColorContent
 
+```TypeScript
+declare class ColorContent
+```
+
 Defines the content for color filling.
 
 **Since:** 15

@@ -1,5 +1,9 @@
 # TabBarSymbol
 
+```TypeScript
+declare class TabBarSymbol
+```
+
 页签内symbol图标样式对象。
 
 **起始版本：** 12

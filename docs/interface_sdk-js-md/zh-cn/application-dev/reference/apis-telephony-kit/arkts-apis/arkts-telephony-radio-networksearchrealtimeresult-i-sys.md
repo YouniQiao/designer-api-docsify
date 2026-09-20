@@ -1,5 +1,9 @@
 # NetworkSearchRealTimeResult（系统接口）
 
+```TypeScript
+export interface NetworkSearchRealTimeResult
+```
+
 表示手动网络扫描的结果
 
 **起始版本：** 23

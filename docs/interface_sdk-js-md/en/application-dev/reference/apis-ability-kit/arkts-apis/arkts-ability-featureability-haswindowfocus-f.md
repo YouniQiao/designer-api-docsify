@@ -51,6 +51,8 @@ featureAbility.hasWindowFocus().then((data) => {
 ```
 
 
+<a id="haswindowfocus-1"></a>
+
 ## hasWindowFocus
 
 ```TypeScript

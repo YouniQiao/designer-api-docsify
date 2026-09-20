@@ -1,5 +1,9 @@
 # RowLayoutAlgorithm
 
+```TypeScript
+export class RowLayoutAlgorithm implements LayoutAlgorithm
+```
+
 A horizontal linear layout algorithm class, which is used to implement horizontal linear arrangement of child components. It is suitable for scenarios where child components need to be arranged horizontally, such as horizontal lists, toolbars, tab bars, and action button groups. It supports setting the spacing between child components, vertical alignment mode, horizontal alignment mode, and arrangement direction, which provides layout capabilities similar to the **Row** component.
 
 > **NOTE:** 

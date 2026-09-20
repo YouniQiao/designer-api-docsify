@@ -1,5 +1,9 @@
 # RemoteUserAuthResults（系统接口）
 
+```TypeScript
+interface RemoteUserAuthResults
+```
+
 远程用户授权结果。
 
 **起始版本：** 26.0.1

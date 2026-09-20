@@ -1,5 +1,9 @@
 # BaseGestureEvent
 
+```TypeScript
+interface BaseGestureEvent extends BaseEvent
+```
+
 Defines the basic gesture event type. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

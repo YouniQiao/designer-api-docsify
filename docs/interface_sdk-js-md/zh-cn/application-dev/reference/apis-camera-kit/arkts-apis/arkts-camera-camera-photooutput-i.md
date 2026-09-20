@@ -1,5 +1,9 @@
 # PhotoOutput
 
+```TypeScript
+interface PhotoOutput extends CameraOutput
+```
+
 拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
@@ -41,6 +45,8 @@ capture(callback: AsyncCallback<void>): void
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+<a id="capture-1"></a>
+
 ## capture
 
 ```TypeScript
@@ -67,6 +73,8 @@ capture(): Promise<void>
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="capture-2"></a>
 
 ## capture
 
@@ -96,6 +104,8 @@ capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="capture-3"></a>
 
 ## capture
 

@@ -1,5 +1,9 @@
 # KeyboardAvoidMode
 
+```TypeScript
+declare enum KeyboardAvoidMode
+```
+
 气泡避让键盘时，避让模式的枚举类型。
 
 **起始版本：** 12

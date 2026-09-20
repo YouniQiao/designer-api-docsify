@@ -94,6 +94,8 @@ notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data:
 ```
 
 
+<a id="isdistributedenabledbybundle-1"></a>
+
 ## isDistributedEnabledByBundle
 
 ```TypeScript
@@ -144,6 +146,8 @@ Checks whether distributed notification is enabled for a specified application. 
 
 See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 
+
+<a id="isdistributedenabledbybundle-2"></a>
 
 ## isDistributedEnabledByBundle
 

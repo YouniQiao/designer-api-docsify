@@ -98,6 +98,8 @@ struct Index {
 ```
 
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript

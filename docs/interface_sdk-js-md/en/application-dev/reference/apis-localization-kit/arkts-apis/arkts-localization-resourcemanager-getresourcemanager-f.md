@@ -126,6 +126,8 @@ export default {
 ```
 
 
+<a id="getresourcemanager-1"></a>
+
 ## getResourceManager
 
 ```TypeScript
@@ -152,6 +154,8 @@ Obtains the **ResourceManager** object of the specified application. This API us
 See [getResourceManager](#getresourcemanager)
 
 
+<a id="getresourcemanager-2"></a>
+
 ## getResourceManager
 
 ```TypeScript
@@ -176,6 +180,8 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 See [getResourceManager](#getresourcemanager)
 
+
+<a id="getresourcemanager-3"></a>
 
 ## getResourceManager
 

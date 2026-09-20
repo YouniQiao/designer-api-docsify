@@ -1,5 +1,9 @@
 # GestureFocusMode
 
+```TypeScript
+declare enum GestureFocusMode
+```
+
 Enumerates the focus modes.
 
 **Since:** 20

@@ -1,5 +1,9 @@
 # ContentItemV2
 
+```TypeScript
+export declare class ContentItemV2
+```
+
 列表左侧显示的图标、图标大小以及中间元素文字内容。
 
 **起始版本：** 26.0.0

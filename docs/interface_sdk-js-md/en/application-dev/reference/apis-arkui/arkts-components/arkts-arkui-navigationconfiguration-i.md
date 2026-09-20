@@ -1,5 +1,9 @@
 # NavigationConfiguration
 
+```TypeScript
+declare interface NavigationConfiguration
+```
+
 Navigation configuration options.
 
 **Since:** 26.0.0

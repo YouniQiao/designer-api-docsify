@@ -1,5 +1,9 @@
 # Lattice
 
+```TypeScript
+class Lattice
+```
+
 矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合[Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。
 
 > **说明：** 
@@ -56,6 +60,8 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="createimagelattice-2"></a>
 
 ## createImageLattice
 

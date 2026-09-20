@@ -1,5 +1,9 @@
 # ImageParticleParameters
 
+```TypeScript
+interface ImageParticleParameters
+```
+
 Defines the parameters for an image-like particle. @interface ImageParticleParameters
 
 **Since:** 10

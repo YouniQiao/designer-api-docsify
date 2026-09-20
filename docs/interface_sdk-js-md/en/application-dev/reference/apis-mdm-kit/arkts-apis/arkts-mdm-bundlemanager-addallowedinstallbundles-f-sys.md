@@ -111,6 +111,8 @@ bundleManager.addAllowedInstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="addallowedinstallbundles-1"></a>
+
 ## addAllowedInstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ Adds the applications that can be installed by the user specified by **userId**.
 
 See [addAllowedInstallBundles](#addallowedinstallbundles)
 
+
+<a id="addallowedinstallbundles-2"></a>
 
 ## addAllowedInstallBundles
 

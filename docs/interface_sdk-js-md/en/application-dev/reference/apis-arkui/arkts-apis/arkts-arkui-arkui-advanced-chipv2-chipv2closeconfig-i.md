@@ -1,5 +1,9 @@
 # ChipV2CloseConfig
 
+```TypeScript
+export interface ChipV2CloseConfig extends ChipV2AccessibilityConfig
+```
+
 Defines the functional attribute configuration for the close icon of the **ChipV2** component, including accessibility attribute.
 
 This API inherits from [ChipV2AccessibilityConfig](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityconfig-i.md).
@@ -26,9 +30,9 @@ Size of the default close icon of the **ChipV2** component. Percentage values ar
 
 Default values:
 
-When **size** is **ChipV2Size.SMALL**, the default value is `&#36;r('sys.float.chip_small_font_size')`.
+When **size** is **ChipV2Size.SMALL**, the default value is `$r('sys.float.chip_small_font_size')`.
 
-When **size** is not **ChipV2Size.SMALL**, the default value is `&#36;r('sys.float.chip_normal_font_size')`.
+When **size** is not **ChipV2Size.SMALL**, the default value is `$r('sys.float.chip_normal_font_size')`.
 
 Unit: fp
 

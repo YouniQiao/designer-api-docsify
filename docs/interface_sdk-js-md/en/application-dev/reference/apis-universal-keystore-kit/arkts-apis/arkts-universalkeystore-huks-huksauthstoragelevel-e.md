@@ -1,5 +1,9 @@
 # HuksAuthStorageLevel
 
+```TypeScript
+export enum HuksAuthStorageLevel
+```
+
 Enumerates the storage security levels of a key.
 
 > **NOTE:** 

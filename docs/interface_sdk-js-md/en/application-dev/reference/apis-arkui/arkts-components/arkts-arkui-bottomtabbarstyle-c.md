@@ -1,5 +1,9 @@
 # BottomTabBarStyle
 
+```TypeScript
+declare class BottomTabBarStyle
+```
+
 Implements the bottom and side tab style.
 
 **Since:** 9

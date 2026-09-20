@@ -1,5 +1,9 @@
 # NavigationCustomTitle
 
+```TypeScript
+declare interface NavigationCustomTitle
+```
+
 Navigation自定义标题。
 
 **起始版本：** 9

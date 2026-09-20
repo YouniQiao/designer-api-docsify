@@ -1,10 +1,16 @@
 # Scene
 
+```TypeScript
+export declare class Scene
+```
+
 Describes a scene.
 
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
+
+<a id="load-1"></a>
 
 ## load
 

@@ -1,5 +1,9 @@
 # DynamicLayoutAttribute
 
+```TypeScript
+export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>
+```
+
 支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
 支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。

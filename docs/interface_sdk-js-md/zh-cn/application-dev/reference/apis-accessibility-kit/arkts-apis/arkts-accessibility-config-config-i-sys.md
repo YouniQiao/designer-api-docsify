@@ -1,5 +1,9 @@
 # Config（系统接口）
 
+```TypeScript
+interface Config<T>
+```
+
 用于属性的设置、获取与监听。
 
 **起始版本：** 9
@@ -66,6 +70,8 @@ config.highContrastText.get((err: BusinessError, data: boolean) => {
   console.info(`succeeded in getting highContrastText, data is ${data}`);
 });
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -245,6 +251,8 @@ config.highContrastText.set(value, (err: BusinessError) => {
   console.info(`succeeded in setting highContrastText, value is ${value}`);
 });
 ```
+
+<a id="set-1"></a>
 
 ## set
 

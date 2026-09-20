@@ -1,5 +1,9 @@
 # CloseSwipeActionOptions
 
+```TypeScript
+declare interface CloseSwipeActionOptions
+```
+
 Implements the callbacks and events for the ListItem in the [expanded](arkts-arkui-swipeactionstate-e.md) state.
 
 **Since:** 11

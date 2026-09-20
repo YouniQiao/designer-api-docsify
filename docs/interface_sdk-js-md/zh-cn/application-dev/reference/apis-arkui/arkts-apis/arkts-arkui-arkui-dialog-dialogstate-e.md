@@ -1,5 +1,9 @@
 # DialogState
 
+```TypeScript
+export enum DialogState
+```
+
 Dialog状态的枚举。
 
 **起始版本：** 26.0.1

@@ -1,5 +1,9 @@
 # LazyWaterFlowLayoutAttribute
 
+```TypeScript
+export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>
+```
+
 Defines the lazy waterflow layout attribute.
 
 @extends CommonMethod&lt;T&gt;

@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper extends lang.ISendable
+```
+
 提供操作系统媒体资源能力的接口。
 
 **继承/实现关系：** PhotoAccessHelper extends lang.ISendable
@@ -13,6 +17,8 @@
 ```TypeScript
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
+
+<a id="createasset-2"></a>
 
 ## createAsset
 
@@ -105,6 +111,8 @@ getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 ```TypeScript
 phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
 ```
+
+<a id="getalbums-1"></a>
 
 ## getAlbums
 

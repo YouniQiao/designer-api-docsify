@@ -1,5 +1,9 @@
 # MediaAssetChangeRequest
 
+```TypeScript
+class MediaAssetChangeRequest implements MediaChangeRequest
+```
+
 Represents a media asset change request.
 
 **Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -13,6 +17,8 @@ Represents a media asset change request.
 ```TypeScript
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
+
+<a id="addresource-2"></a>
 
 ## addResource
 

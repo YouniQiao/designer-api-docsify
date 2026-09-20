@@ -1,5 +1,9 @@
 # DpiFollowStrategy (System API)
 
+```TypeScript
+declare enum DpiFollowStrategy
+```
+
 Enumeration of different types of DpiFollowStrategy.
 
 **Since:** 12

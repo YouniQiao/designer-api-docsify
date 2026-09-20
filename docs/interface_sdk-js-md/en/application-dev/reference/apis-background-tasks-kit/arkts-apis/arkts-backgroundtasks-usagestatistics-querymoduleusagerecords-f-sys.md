@@ -112,6 +112,8 @@ usageStatistics.queryModuleUsageRecords(1000, (err: BusinessError, res: Array<us
 ```
 
 
+<a id="querymoduleusagerecords-1"></a>
+
 ## queryModuleUsageRecords
 
 ```TypeScript
@@ -160,6 +162,8 @@ Queries recently module usage records with maxNum.
 See [queryModuleUsageRecords](#querymoduleusagerecords)
 
 
+<a id="querymoduleusagerecords-2"></a>
+
 ## queryModuleUsageRecords
 
 ```TypeScript
@@ -201,6 +205,8 @@ Queries recently module usage records.
 
 See [queryModuleUsageRecords](#querymoduleusagerecords)
 
+
+<a id="querymoduleusagerecords-3"></a>
 
 ## queryModuleUsageRecords
 

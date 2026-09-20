@@ -107,6 +107,8 @@ notificationSubscribe.subscribe(subscriber).then(() => {
 ```
 
 
+<a id="subscribe-1"></a>
+
 ## subscribe
 
 ```TypeScript
@@ -155,6 +157,8 @@ function subscribe(
 
 参见 [subscribe](#subscribe)
 
+
+<a id="subscribe-2"></a>
 
 ## subscribe
 

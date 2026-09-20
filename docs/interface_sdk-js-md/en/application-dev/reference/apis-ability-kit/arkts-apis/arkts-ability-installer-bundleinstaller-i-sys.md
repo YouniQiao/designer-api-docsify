@@ -1,5 +1,9 @@
 # BundleInstaller (System API)
 
+```TypeScript
+interface BundleInstaller
+```
+
 Bundle installer interface, include install uninstall recover.
 
 **Since:** 9
@@ -248,6 +252,8 @@ try {
 }
 ```
 
+<a id="destroyappclone-1"></a>
+
 ## destroyAppClone
 
 ```TypeScript
@@ -444,6 +450,8 @@ try {
 }
 ```
 
+<a id="install-1"></a>
+
 ## install
 
 ```TypeScript
@@ -512,6 +520,8 @@ Installs an application. This API uses an asynchronous callback to return the re
 **Examples**
 
 See [install](#install)
+
+<a id="install-2"></a>
 
 ## install
 
@@ -863,6 +873,8 @@ try {
 }
 ```
 
+<a id="recover-1"></a>
+
 ## recover
 
 ```TypeScript
@@ -900,6 +912,8 @@ Rolls back an application to the initial installation state. This API uses an as
 **Examples**
 
 See [recover](#recover)
+
+<a id="recover-2"></a>
 
 ## recover
 
@@ -1158,6 +1172,8 @@ try {
 }
 ```
 
+<a id="uninstall-1"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -1198,6 +1214,8 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 **Examples**
 
 See [uninstall](#uninstall)
+
+<a id="uninstall-2"></a>
 
 ## uninstall
 
@@ -1248,6 +1266,8 @@ Uninstalls an application. This API uses a promise to return the result.
 
 See [uninstall](#uninstall)
 
+<a id="uninstall-3"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -1285,6 +1305,8 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 **Examples**
 
 See [uninstall](#uninstall)
+
+<a id="uninstall-4"></a>
 
 ## uninstall
 
@@ -1665,6 +1687,8 @@ try {
 }
 ```
 
+<a id="updatebundleforself-1"></a>
+
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1716,6 +1740,8 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 **Examples**
 
 See [updateBundleForSelf](#updatebundleforself)
+
+<a id="updatebundleforself-2"></a>
 
 ## updateBundleForSelf
 

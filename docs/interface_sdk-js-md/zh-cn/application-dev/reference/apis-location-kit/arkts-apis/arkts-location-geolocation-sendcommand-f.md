@@ -55,6 +55,8 @@ geolocation.sendCommand(requestInfo).then((result) => {
 ```
 
 
+<a id="sendcommand-1"></a>
+
 ## sendCommand
 
 ```TypeScript

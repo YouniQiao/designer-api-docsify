@@ -1,5 +1,9 @@
 # CameraBufferCrop (System API)
 
+```TypeScript
+declare interface CameraBufferCrop
+```
+
 Camera buffer crop parameters.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # BaseDialogOptions
 
+```TypeScript
+interface BaseDialogOptions
+```
+
 弹窗的选项。
 
 **起始版本：** 11

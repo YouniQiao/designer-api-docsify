@@ -1,5 +1,9 @@
 # PopupOptions
 
+```TypeScript
+declare interface PopupOptions
+```
+
 基础气泡的信息。
 
 **起始版本：** 7

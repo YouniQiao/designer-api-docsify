@@ -1,5 +1,9 @@
 # Region
 
+```TypeScript
+class Region
+```
+
 Describes a region, which is used to describe the region where the shape can be drawn.
 
 > **NOTE:** 
@@ -32,6 +36,8 @@ Constructs a **Region** object.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+<a id="constructor-1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -49,6 +55,8 @@ Copies a **Region** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region to be copied. |
+
+<a id="constructor-2"></a>
 
 ## constructor
 

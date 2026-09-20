@@ -1,5 +1,12 @@
 # TransitionEffect
 
+```TypeScript
+declare class TransitionEffect<
+  Type extends keyof TransitionEffects = keyof TransitionEffects,
+  Effect extends TransitionEffects[Type] = TransitionEffects[Type]
+>
+```
+
 TransitionEffect以函数的形式指定转场效果。
 
 **起始版本：** 10

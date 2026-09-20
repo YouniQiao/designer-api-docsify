@@ -1,5 +1,9 @@
 # ScrollSnapAlign
 
+```TypeScript
+declare enum ScrollSnapAlign
+```
+
 设置列表项滚动结束对齐效果。
 
 **起始版本：** 10

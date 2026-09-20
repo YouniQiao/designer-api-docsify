@@ -1,5 +1,9 @@
 # ScrollSnapAnimationSpeed
 
+```TypeScript
+declare enum ScrollSnapAnimationSpeed
+```
+
 设置列表项滚动限位动画速度。
 
 **起始版本：** 22

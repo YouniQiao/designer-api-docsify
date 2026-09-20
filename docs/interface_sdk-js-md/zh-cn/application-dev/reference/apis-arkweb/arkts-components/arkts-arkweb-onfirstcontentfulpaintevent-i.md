@@ -1,5 +1,9 @@
 # OnFirstContentfulPaintEvent
 
+```TypeScript
+declare interface OnFirstContentfulPaintEvent
+```
+
 定义网页首次内容绘制的回调信息，包括加载时间和绘制时间。适用于需要监控页面渲染性能的场景，提升性能优化的准确性和用户体验。
 
 **起始版本：** 12

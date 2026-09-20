@@ -1,5 +1,9 @@
 # TabBarDisplayMode
 
+```TypeScript
+declare enum TabBarDisplayMode
+```
+
 Enumerates the actual display modes of the tab bar under different Tabs container sizes. This enum is used in [barDisplayModeBreakpoint](arkts-arkui-tabs-comp-attribute.md#bardisplaymodebreakpoint) to specify the display mode for different breakpoint sizes. It is only meaningful when **TabBarStyle** is set to **SIDEBAR_ADAPTABLE** or **SIDEBAR**.
 
 **Since:** 26.2.0

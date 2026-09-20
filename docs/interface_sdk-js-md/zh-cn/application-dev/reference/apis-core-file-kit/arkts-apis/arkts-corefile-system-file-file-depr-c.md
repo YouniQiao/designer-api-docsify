@@ -1,5 +1,9 @@
 # File
 
+```TypeScript
+export default class File
+```
+
 文件类。
 
 **起始版本：** 3

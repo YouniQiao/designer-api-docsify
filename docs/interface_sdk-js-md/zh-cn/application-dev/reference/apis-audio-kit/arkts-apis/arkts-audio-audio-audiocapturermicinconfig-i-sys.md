@@ -1,5 +1,9 @@
 # AudioCapturerMicInConfig（系统接口）
 
+```TypeScript
+interface AudioCapturerMicInConfig
+```
+
 音频采集器选项信息，可采集未经任何处理的麦克风输入（mic-in）音频数据。
 
 **起始版本：** 23

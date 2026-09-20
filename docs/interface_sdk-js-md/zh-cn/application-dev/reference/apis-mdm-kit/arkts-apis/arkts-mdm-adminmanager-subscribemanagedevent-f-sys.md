@@ -87,6 +87,8 @@ adminManager.subscribeManagedEvent(wantTemp, events).then(() => {
 ```
 
 
+<a id="subscribemanagedevent-1"></a>
+
 ## subscribeManagedEvent
 
 ```TypeScript

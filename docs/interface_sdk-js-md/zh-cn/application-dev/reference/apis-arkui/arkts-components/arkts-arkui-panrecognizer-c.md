@@ -1,5 +1,9 @@
 # PanRecognizer
 
+```TypeScript
+declare class PanRecognizer extends GestureRecognizer
+```
+
 手势识别器对象。
 
 **继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

@@ -65,6 +65,8 @@ sim.getSimTelephoneNumber(0).then((data: string) => {
 ```
 
 
+<a id="getsimtelephonenumber-1"></a>
+
 ## getSimTelephoneNumber
 
 ```TypeScript

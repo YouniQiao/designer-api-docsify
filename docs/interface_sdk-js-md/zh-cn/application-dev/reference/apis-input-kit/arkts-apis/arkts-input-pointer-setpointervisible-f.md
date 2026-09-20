@@ -91,6 +91,8 @@ struct Index {
 ```
 
 
+<a id="setpointervisible-1"></a>
+
 ## setPointerVisible
 
 ```TypeScript

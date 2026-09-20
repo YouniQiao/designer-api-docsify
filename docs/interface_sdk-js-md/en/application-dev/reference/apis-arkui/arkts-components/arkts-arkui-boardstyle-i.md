@@ -1,5 +1,9 @@
 # BoardStyle
 
+```TypeScript
+interface BoardStyle
+```
+
 Represents a board style object.
 
 **Since:** 10

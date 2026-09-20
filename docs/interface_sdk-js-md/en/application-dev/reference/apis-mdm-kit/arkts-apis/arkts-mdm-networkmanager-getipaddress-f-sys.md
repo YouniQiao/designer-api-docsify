@@ -88,6 +88,8 @@ networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
 ```
 
 
+<a id="getipaddress-1"></a>
+
 ## getIpAddress
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # Driver
 
+```TypeScript
+declare class Driver
+```
+
 The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**.
 
 **Since:** 9
@@ -905,6 +909,8 @@ async function demo() {
 }
 ```
 
+<a id="fling-1"></a>
+
 ## fling
 
 ```TypeScript
@@ -944,6 +950,8 @@ Simulates a fling operation with the specified direction and speed. This API use
 **Examples**
 
 See [fling](#fling)
+
+<a id="fling-2"></a>
 
 ## fling
 
@@ -1041,6 +1049,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplaydensity-1"></a>
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1135,6 +1145,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplayrotation-1"></a>
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1228,6 +1240,8 @@ async function demo() {
   let size = await driver.getDisplaySize(0);
 }
 ```
+
+<a id="getdisplaysize-1"></a>
 
 ## getDisplaySize
 
@@ -1522,6 +1536,8 @@ async function demoChinese() {
   // Copy and paste Chinese and a special character to the end of the specified text.
 }
 ```
+
+<a id="inputtext-1"></a>
 
 ## inputText
 
@@ -2112,6 +2128,8 @@ async function demo() {
 }
 ```
 
+<a id="mousedrag-1"></a>
+
 ## mouseDrag
 
 ```TypeScript
@@ -2274,6 +2292,8 @@ async function demo() {
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
 }
 ```
+
+<a id="mouselongclick-1"></a>
 
 ## mouseLongClick
 
@@ -2474,6 +2494,8 @@ async function demo() {
   await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
 }
 ```
+
+<a id="mousescroll-1"></a>
 
 ## mouseScroll
 
@@ -2766,6 +2788,8 @@ async function demo() {
 }
 ```
 
+<a id="pressback-1"></a>
+
 ## pressBack
 
 ```TypeScript
@@ -2873,6 +2897,8 @@ async function demo() {
 }
 ```
 
+<a id="presshome-1"></a>
+
 ## pressHome
 
 ```TypeScript
@@ -2968,6 +2994,8 @@ async function demo() {
   await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
 }
 ```
+
+<a id="screencap-1"></a>
 
 ## screenCap
 
@@ -3491,6 +3519,8 @@ async function demo() {
 }
 ```
 
+<a id="triggercombinekeys-1"></a>
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3591,6 +3621,8 @@ async function demo() {
   await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
 }
 ```
+
+<a id="triggerkey-1"></a>
 
 ## triggerKey
 

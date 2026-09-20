@@ -1,5 +1,9 @@
 # KeySource
 
+```TypeScript
+declare enum KeySource
+```
+
 Sets the device type that triggers the button event.
 
 **Since:** 7

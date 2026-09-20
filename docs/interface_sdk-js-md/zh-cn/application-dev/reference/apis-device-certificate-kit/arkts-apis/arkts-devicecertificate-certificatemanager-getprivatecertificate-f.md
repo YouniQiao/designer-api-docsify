@@ -83,6 +83,8 @@ try {
 ```
 
 
+<a id="getprivatecertificate-1"></a>
+
 ## getPrivateCertificate
 
 ```TypeScript

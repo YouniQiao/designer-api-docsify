@@ -117,6 +117,8 @@ adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_
 ```
 
 
+<a id="enableadmin-1"></a>
+
 ## enableAdmin
 
 ```TypeScript
@@ -160,6 +162,8 @@ Enables a device administrator application for a user (specified by **userId**).
 
 See [enableAdmin](#enableadmin)
 
+
+<a id="enableadmin-2"></a>
 
 ## enableAdmin
 

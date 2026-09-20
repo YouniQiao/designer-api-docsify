@@ -1,5 +1,9 @@
 # SearchPlayInfoType
 
+```TypeScript
+enum SearchPlayInfoType
+```
+
 Enumeration of SearchPlayInfoType.
 
 @enum { string }

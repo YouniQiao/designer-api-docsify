@@ -1,5 +1,9 @@
 # ScrollSnapOptions
 
+```TypeScript
+declare interface ScrollSnapOptions
+```
+
 Defines a scroll snapping mode object.
 
 **Since:** 10

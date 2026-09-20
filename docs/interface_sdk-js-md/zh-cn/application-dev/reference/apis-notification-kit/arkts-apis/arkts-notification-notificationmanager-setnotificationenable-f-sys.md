@@ -74,6 +74,8 @@ notificationManager.setNotificationEnable(bundle, false).then(() => {
 ```
 
 
+<a id="setnotificationenable-1"></a>
+
 ## setNotificationEnable
 
 ```TypeScript

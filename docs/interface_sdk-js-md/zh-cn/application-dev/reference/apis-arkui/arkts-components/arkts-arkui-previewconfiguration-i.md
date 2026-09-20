@@ -1,5 +1,9 @@
 # PreviewConfiguration
 
+```TypeScript
+declare interface PreviewConfiguration
+```
+
 配置自定义拖拽过程中的预览图样式。
 
 **起始版本：** 15

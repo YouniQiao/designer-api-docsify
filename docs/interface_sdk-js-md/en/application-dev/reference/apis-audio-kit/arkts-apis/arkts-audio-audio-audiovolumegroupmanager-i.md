@@ -1,5 +1,9 @@
 # AudioVolumeGroupManager
 
+```TypeScript
+interface AudioVolumeGroupManager
+```
+
 This interface implements volume management for an audio group.
 
 Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
@@ -105,6 +109,8 @@ Obtains the maximum volume level of a stream. This API uses an asynchronous call
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume level obtained; otherwise, **err** is an error object. |
 
+<a id="getmaxvolume-1"></a>
+
 ## getMaxVolume
 
 ```TypeScript
@@ -191,6 +197,8 @@ Obtains the minimum volume level of a stream. This API uses an asynchronous call
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume level obtained; otherwise, **err** is an error object. |
 
+<a id="getminvolume-1"></a>
+
 ## getMinVolume
 
 ```TypeScript
@@ -272,6 +280,8 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
 
+<a id="getringermode-1"></a>
+
 ## getRingerMode
 
 ```TypeScript
@@ -340,6 +350,8 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+
+<a id="getsystemvolumeindb-1"></a>
 
 ## getSystemVolumeInDb
 
@@ -439,6 +451,8 @@ Obtains the volume level of a stream. This API uses an asynchronous callback to 
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume level obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getminvolume) and [getMaxVolume](#getmaxvolume). |
 
+<a id="getvolume-1"></a>
+
 ## getVolume
 
 ```TypeScript
@@ -520,6 +534,8 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
 
+<a id="ismicrophonemute-1"></a>
+
 ## isMicrophoneMute
 
 ```TypeScript
@@ -578,6 +594,8 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise, **err** is an error object. |
+
+<a id="ismute-1"></a>
 
 ## isMute
 
@@ -787,6 +805,8 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+<a id="setmicrophonemute-1"></a>
 
 ## setMicrophoneMute
 

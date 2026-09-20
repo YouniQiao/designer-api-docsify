@@ -1,5 +1,9 @@
 # ChainStyle
 
+```TypeScript
+declare enum ChainStyle
+```
+
 Enumerates the chain styles in relative container.
 
 @enum { number }

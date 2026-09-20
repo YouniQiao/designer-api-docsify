@@ -1,5 +1,9 @@
 # OnResourceLoadEvent
 
+```TypeScript
+declare interface OnResourceLoadEvent
+```
+
 定义加载URL时触发的回调信息，包括资源URL。适用于需要监控资源加载行为的场景，提升资源管理的可见性和性能优化。
 
 **起始版本：** 12

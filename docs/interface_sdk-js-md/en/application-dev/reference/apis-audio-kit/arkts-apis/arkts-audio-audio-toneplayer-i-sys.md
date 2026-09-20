@@ -1,5 +1,9 @@
 # TonePlayer (System API)
 
+```TypeScript
+interface TonePlayer
+```
+
 Provides APIs for tone playing.
 
 **Since:** 9
@@ -57,6 +61,8 @@ tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_1).then(() => {
   console.error('promise call load fail');
 });
 ```
+
+<a id="load-1"></a>
 
 ## load
 
@@ -130,6 +136,8 @@ tonePlayer.release().then(() => {
   console.error('promise call release fail');
 });
 ```
+
+<a id="release-1"></a>
 
 ## release
 
@@ -217,6 +225,8 @@ tonePlayer.start().then(() => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -302,6 +312,8 @@ tonePlayer.stop().then(() => {
   console.error('promise call stop fail');
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

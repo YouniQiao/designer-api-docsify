@@ -6,6 +6,8 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
+<a id="off-4"></a>
+
 ## off
 
 ```TypeScript
@@ -36,6 +38,8 @@ Unsubscribes from data of the acceleration sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-5"></a>
 
 ## off
 
@@ -69,6 +73,8 @@ Unsubscribes from data of the acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-6"></a>
+
 ## off
 
 ```TypeScript
@@ -97,6 +103,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-7"></a>
 
 ## off
 
@@ -128,6 +136,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-8"></a>
+
 ## off
 
 ```TypeScript
@@ -153,6 +163,8 @@ Unsubscribes from data of the ambient light sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-9"></a>
 
 ## off
 
@@ -181,6 +193,8 @@ Unsubscribes from data of the ambient light sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-10"></a>
+
 ## off
 
 ```TypeScript
@@ -206,6 +220,8 @@ Unsubscribes from data of the ambient temperature sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-11"></a>
 
 ## off
 
@@ -234,6 +250,8 @@ Unsubscribes from data of the ambient temperature sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-12"></a>
+
 ## off
 
 ```TypeScript
@@ -259,6 +277,8 @@ Unsubscribes from data of the barometer sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-13"></a>
 
 ## off
 
@@ -287,6 +307,8 @@ Unsubscribes from data of the barometer sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-14"></a>
+
 ## off
 
 ```TypeScript
@@ -312,6 +334,8 @@ Unsubscribes from data of the gravity sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-15"></a>
 
 ## off
 
@@ -339,6 +363,8 @@ Unsubscribes from data of the gravity sensor.
 | --- | --- |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="off-16"></a>
 
 ## off
 
@@ -370,6 +396,8 @@ Unsubscribes from data of the gyroscope sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-17"></a>
 
 ## off
 
@@ -403,6 +431,8 @@ Unsubscribes from data of the gyroscope sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-18"></a>
+
 ## off
 
 ```TypeScript
@@ -431,6 +461,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-19"></a>
 
 ## off
 
@@ -462,6 +494,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-20"></a>
+
 ## off
 
 ```TypeScript
@@ -487,6 +521,8 @@ Unsubscribes from data of the Hall effect sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-21"></a>
 
 ## off
 
@@ -514,6 +550,8 @@ Unsubscribes from data of the Hall effect sensor.
 | --- | --- |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="off-22"></a>
 
 ## off
 
@@ -543,6 +581,8 @@ Unsubscribes from data of the heart rate sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-23"></a>
 
 ## off
 
@@ -574,6 +614,8 @@ Unsubscribes from data of the heart rate sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-24"></a>
+
 ## off
 
 ```TypeScript
@@ -599,6 +641,8 @@ Unsubscribes from data of the humidity sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-25"></a>
 
 ## off
 
@@ -626,6 +670,8 @@ Unsubscribes from data of the humidity sensor.
 | --- | --- |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="off-26"></a>
 
 ## off
 
@@ -655,6 +701,8 @@ Unsubscribes from data of the linear acceleration sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-27"></a>
 
 ## off
 
@@ -686,6 +734,8 @@ Unsubscribes from data of the linear acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-28"></a>
+
 ## off
 
 ```TypeScript
@@ -711,6 +761,8 @@ Unsubscribes from data of the magnetic field sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-29"></a>
 
 ## off
 
@@ -739,6 +791,8 @@ Unsubscribes from data of the magnetic field sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-30"></a>
+
 ## off
 
 ```TypeScript
@@ -764,6 +818,8 @@ Unsubscribes from data of the uncalibrated magnetic field sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-31"></a>
 
 ## off
 
@@ -792,6 +848,8 @@ Unsubscribes from data of the uncalibrated magnetic field sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-32"></a>
+
 ## off
 
 ```TypeScript
@@ -819,6 +877,8 @@ Unsubscribes from data of the orientation sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-33"></a>
 
 ## off
 
@@ -849,6 +909,8 @@ Unsubscribes from data of the orientation sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-34"></a>
+
 ## off
 
 ```TypeScript
@@ -877,6 +939,8 @@ Unsubscribes from data of the pedometer sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-35"></a>
 
 ## off
 
@@ -908,6 +972,8 @@ Unsubscribes from data of the pedometer sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-36"></a>
+
 ## off
 
 ```TypeScript
@@ -936,6 +1002,8 @@ Unsubscribes from data of the pedometer detection sensor.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-37"></a>
 
 ## off
 
@@ -967,6 +1035,8 @@ Unsubscribes from data of the pedometer detection sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-38"></a>
+
 ## off
 
 ```TypeScript
@@ -992,6 +1062,8 @@ Unsubscribes from data of the proximity sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-39"></a>
 
 ## off
 
@@ -1020,6 +1092,8 @@ Unsubscribes from data of the proximity sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-40"></a>
+
 ## off
 
 ```TypeScript
@@ -1045,6 +1119,8 @@ Unsubscribes from data of the rotation vector sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-41"></a>
 
 ## off
 
@@ -1073,6 +1149,8 @@ Unsubscribes from data of the rotation vector sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-42"></a>
+
 ## off
 
 ```TypeScript
@@ -1098,6 +1176,8 @@ Unsubscribes from valid motion sensor data.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-43"></a>
 
 ## off
 
@@ -1126,6 +1206,8 @@ Unsubscribes from valid motion sensor data.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-44"></a>
+
 ## off
 
 ```TypeScript
@@ -1151,6 +1233,8 @@ Unsubscribes from data of the wear detection sensor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+
+<a id="off-45"></a>
 
 ## off
 
@@ -1180,6 +1264,8 @@ Unsubscribes from the fused pressure sensor data.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-46"></a>
+
 ## off
 
 ```TypeScript
@@ -1207,6 +1293,8 @@ Unsubscribes from data of the wear detection sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-47"></a>
+
 ## off
 
 ```TypeScript
@@ -1232,6 +1320,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_ACCELEROMETER](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ACCELEROMETER**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-48"></a>
 
 ## off
 
@@ -1260,6 +1350,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-49"></a>
+
 ## off
 
 ```TypeScript
@@ -1283,6 +1375,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_AMBIENT_LIGHT**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-50"></a>
 
 ## off
 
@@ -1308,6 +1402,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-51"></a>
+
 ## off
 
 ```TypeScript
@@ -1332,6 +1428,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-52"></a>
+
 ## off
 
 ```TypeScript
@@ -1355,6 +1453,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_GRAVITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_GRAVITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-53"></a>
 
 ## off
 
@@ -1382,6 +1482,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-54"></a>
+
 ## off
 
 ```TypeScript
@@ -1408,6 +1510,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-55"></a>
+
 ## off
 
 ```TypeScript
@@ -1431,6 +1535,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_HALL](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_HALL**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-56"></a>
 
 ## off
 
@@ -1458,6 +1564,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-57"></a>
+
 ## off
 
 ```TypeScript
@@ -1481,6 +1589,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_HUMIDITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_HUMIDITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-58"></a>
 
 ## off
 
@@ -1508,6 +1618,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-59"></a>
+
 ## off
 
 ```TypeScript
@@ -1531,6 +1643,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-60"></a>
 
 ## off
 
@@ -1556,6 +1670,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-61"></a>
+
 ## off
 
 ```TypeScript
@@ -1579,6 +1695,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_ORIENTATION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ORIENTATION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-62"></a>
 
 ## off
 
@@ -1606,6 +1724,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-63"></a>
+
 ## off
 
 ```TypeScript
@@ -1632,6 +1752,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-64"></a>
+
 ## off
 
 ```TypeScript
@@ -1655,6 +1777,8 @@ Unsubscribes from sensor data changes.
 | type | [SensorType.SENSOR_TYPE_ID_PROXIMITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_PROXIMITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-65"></a>
 
 ## off
 
@@ -1680,6 +1804,8 @@ Unsubscribes from sensor data changes.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
+<a id="off-66"></a>
+
 ## off
 
 ```TypeScript
@@ -1703,6 +1829,8 @@ Unsubscribes from valid motion sensor data.
 | type | [SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_SIGNIFICANT_MOTION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
+
+<a id="off-67"></a>
 
 ## off
 

@@ -1,5 +1,9 @@
 # ContentItem
 
+```TypeScript
+export declare class ContentItem
+```
+
 Defines elements for the left and center areas of the **ComposeListItem** component.
 
 **Since:** 10

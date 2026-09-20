@@ -1,5 +1,9 @@
 # TextMarqueeOptions
 
+```TypeScript
+declare interface TextMarqueeOptions
+```
+
 Marquee初始化参数。
 
 **起始版本：** 18

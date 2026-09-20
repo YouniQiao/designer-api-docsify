@@ -1,5 +1,9 @@
 # BarMode
 
+```TypeScript
+declare enum BarMode
+```
+
 Enumerates layout modes of the tab bar.
 
 **Since:** 7

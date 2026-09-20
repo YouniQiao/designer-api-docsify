@@ -49,6 +49,8 @@ this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning wit
 ```
 
 
+<a id="back-1"></a>
+
 ## back
 
 ```TypeScript
@@ -65,7 +67,7 @@ Returns to the specified page, which deletes all pages between the current page 
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
+**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back-1)(index: number, params?: Object)
 
 **Model restriction:** This API can be used only in the stage model.
 

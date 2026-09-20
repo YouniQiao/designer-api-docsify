@@ -1,5 +1,9 @@
 # ShowToastOptions
 
+```TypeScript
+interface ShowToastOptions
+```
+
 文本提示框的选项。
 
 **起始版本：** 8

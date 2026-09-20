@@ -1,5 +1,9 @@
 # focusControl
 
+```TypeScript
+declare namespace focusControl
+```
+
 Implements focus control.
 
 **Since:** 9

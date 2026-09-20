@@ -1,5 +1,9 @@
 # ScrollEdgeOptions
 
+```TypeScript
+declare interface ScrollEdgeOptions
+```
+
 滚动到边缘位置的参数选项。
 
 **起始版本：** 12

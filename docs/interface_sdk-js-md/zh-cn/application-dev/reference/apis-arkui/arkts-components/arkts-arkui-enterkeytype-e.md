@@ -1,5 +1,9 @@
 # EnterKeyType
 
+```TypeScript
+declare enum EnterKeyType
+```
+
 输入法回车键类型。
 
 **起始版本：** 7

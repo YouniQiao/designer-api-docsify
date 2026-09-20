@@ -1,5 +1,9 @@
 # ChipGroupV2Item
 
+```TypeScript
+export declare class ChipGroupV2Item
+```
+
 Defines a single chip item in the **ChipGroupV2** component.
 
 > **NOTE:** 
@@ -145,7 +149,7 @@ Configuration of the close icon, including accessibility attribute configuration
 Default value:
 
 - **fontSize**: when **size** is **ChipV2Size.SMALL**, the default value is  
-`&#36;r('sys.float.chip_small_font_size')`; in other cases, the default value is `&#36;r('sys.float.chip_normal_font_size')`.  
+`$r('sys.float.chip_small_font_size')`; in other cases, the default value is `$r('sys.float.chip_normal_font_size')`.  
 - Accessibility: no accessibility description.
 
 When the value is **undefined**, the default value is used.

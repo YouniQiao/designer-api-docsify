@@ -1,5 +1,9 @@
 # PermissionUsedType（系统接口）
 
+```TypeScript
+enum PermissionUsedType
+```
+
 表示通过何种方式使用敏感权限的枚举。
 
 | 名称 | 值 | 说明 |  

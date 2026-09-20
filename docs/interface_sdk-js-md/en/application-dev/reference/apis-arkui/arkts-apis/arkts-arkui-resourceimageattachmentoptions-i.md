@@ -1,5 +1,9 @@
 # ResourceImageAttachmentOptions
 
+```TypeScript
+declare interface ResourceImageAttachmentOptions
+```
+
 Defines the settings for images of the ResourceStr type.
 
 **Since:** 15

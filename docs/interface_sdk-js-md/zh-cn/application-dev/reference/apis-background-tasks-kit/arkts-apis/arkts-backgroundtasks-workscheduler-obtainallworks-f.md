@@ -72,6 +72,8 @@ workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
 ```
 
 
+<a id="obtainallworks-1"></a>
+
 ## obtainAllWorks
 
 ```TypeScript
@@ -105,6 +107,8 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 参见 [obtainAllWorks](#obtainallworks)
 
+
+<a id="obtainallworks-2"></a>
 
 ## obtainAllWorks
 

@@ -1,5 +1,9 @@
 # ProgressStyle
 
+```TypeScript
+declare enum ProgressStyle
+```
+
 进度条样式。
 
 **起始版本：** 7

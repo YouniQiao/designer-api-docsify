@@ -1,5 +1,9 @@
 # MeasureResult
 
+```TypeScript
+declare interface MeasureResult extends SizeResult
+```
+
 Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-sizeresult-i.md).
 
 **Inheritance/Implementation:** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md)

@@ -1,5 +1,9 @@
 # AVCastPickerHelper
 
+```TypeScript
+class AVCastPickerHelper
+```
+
 A helper to enable a picker to select output devices
 
 **Since:** 14

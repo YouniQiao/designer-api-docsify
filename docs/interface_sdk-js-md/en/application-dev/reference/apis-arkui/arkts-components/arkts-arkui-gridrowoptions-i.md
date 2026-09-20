@@ -1,5 +1,9 @@
 # GridRowOptions
 
+```TypeScript
+declare interface GridRowOptions
+```
+
 Defines layout options of the **GridRow** container.
 
 **Since:** 9

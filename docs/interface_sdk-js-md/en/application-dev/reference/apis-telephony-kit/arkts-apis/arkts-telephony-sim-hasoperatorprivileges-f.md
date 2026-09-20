@@ -58,6 +58,8 @@ sim.hasOperatorPrivileges(0).then((data: boolean) => {
 ```
 
 
+<a id="hasoperatorprivileges-1"></a>
+
 ## hasOperatorPrivileges
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # SM2CryptoUtil
 
+```TypeScript
+class SM2CryptoUtil
+```
+
 Provides APIs for SM2 cryptographic operations.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # AudioRendererFilter (System API)
 
+```TypeScript
+interface AudioRendererFilter
+```
+
 Describes audio renderer filter.
 
 **Since:** 9

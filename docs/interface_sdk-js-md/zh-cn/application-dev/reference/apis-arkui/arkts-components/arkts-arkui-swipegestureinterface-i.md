@@ -1,5 +1,9 @@
 # SwipeGestureInterface
 
+```TypeScript
+interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
+```
+
 用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
 
 **继承/实现关系：** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
@@ -33,6 +37,8 @@
 | 类型 | 说明 |
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 

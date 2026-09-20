@@ -1,5 +1,9 @@
 # InteractionInfo（系统接口）
 
+```TypeScript
+interface InteractionInfo
+```
+
 定义当前意图执行完成后返回的交互信息，包括下一个要触发的意图和要显示的交互界面。
 
 **起始版本：** 26.0.1

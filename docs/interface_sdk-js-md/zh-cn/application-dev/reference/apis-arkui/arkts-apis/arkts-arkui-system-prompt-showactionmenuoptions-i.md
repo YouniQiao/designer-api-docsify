@@ -1,5 +1,9 @@
 # ShowActionMenuOptions
 
+```TypeScript
+export interface ShowActionMenuOptions
+```
+
 定义ShowActionMenu的选项。
 
 **起始版本：** 6

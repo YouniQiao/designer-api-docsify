@@ -1,5 +1,9 @@
 # TextPickerOptions
 
+```TypeScript
+declare interface TextPickerOptions
+```
+
 文本选择器的参数说明。
 
 **起始版本：** 8
@@ -38,7 +42,7 @@ columnWidths?: LengthMetrics[]
 ## range
 
 ```TypeScript
-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
+range: string[] | string[][]  | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
 选择器的数据选择列表。不可设置为空数组，若设置为空数组，则不显示；若动态变化为空数组，则保持当前正常值显示。
@@ -62,7 +66,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 ## selected
 
 ```TypeScript
-selected?: number | number[]
+selected?: number[]
 ```
 
 设置选中项在数据选择列表中的索引值，索引从0开始。
@@ -74,7 +78,7 @@ selected?: number | number[]
 > 1. 单列数据选择器使用number类型。
 > 2. 多列非联动数据选择器使用number[]类型，数组长度与列数一致。
 > 3. 多列联动数据选择器使用number[]类型，数组长度与层级数一致。
-> 4. 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 4. 从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 5. 未设置该属性或设置的值无效时，使用默认值。
 
 **类型：** number &#124; number[]
@@ -90,7 +94,7 @@ selected?: number | number[]
 ## value
 
 ```TypeScript
-value?: ResourceStr | ResourceStr[]
+value?: ResourceStr[]
 ```
 
 设置选中项的值，优先级低于selected。
@@ -99,7 +103,7 @@ value?: ResourceStr | ResourceStr[]
 
 > **说明：** 
 > 
-> 1. 从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+> 1. 从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 > 2. 从API version 20开始，支持Resource类型。
 > 3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
 > 4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)类型。

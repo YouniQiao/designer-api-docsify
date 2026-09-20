@@ -1,5 +1,9 @@
 # PreviewOutput
 
+```TypeScript
+interface PreviewOutput extends CameraOutput
+```
+
 预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 
 **继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
@@ -497,6 +501,8 @@ start(callback: AsyncCallback<void>): void
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -554,6 +560,8 @@ stop(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止输出预览流成功，err为undefined，否则为错误对象。 |
+
+<a id="stop-1"></a>
 
 ## stop
 

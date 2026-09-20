@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="getpointerspeed-1"></a>
+
 ## getPointerSpeed
 
 ```TypeScript

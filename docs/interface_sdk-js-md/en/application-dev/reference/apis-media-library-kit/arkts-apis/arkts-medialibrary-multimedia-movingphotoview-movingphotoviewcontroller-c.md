@@ -1,5 +1,9 @@
 # MovingPhotoViewController
 
+```TypeScript
+export class MovingPhotoViewController
+```
+
 Defines the MovingPhotoView controller.
 
 **Since:** 12

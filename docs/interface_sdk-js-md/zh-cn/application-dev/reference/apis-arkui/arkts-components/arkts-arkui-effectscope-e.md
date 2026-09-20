@@ -1,5 +1,9 @@
 # EffectScope
 
+```TypeScript
+declare enum EffectScope
+```
+
 EffectScope的枚举值。
 
 **起始版本：** 12

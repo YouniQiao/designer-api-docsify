@@ -1,5 +1,9 @@
 # AuthorizationManager
 
+```TypeScript
+interface AuthorizationManager
+```
+
 Defines the authorization manager, which is used to request and check the authorization.
 
 **Since:** 26.0.1

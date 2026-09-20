@@ -1,5 +1,9 @@
 # Web属性/事件
 
+```TypeScript
+declare class WebAttribute extends CommonMethod<WebAttribute>
+```
+
 定义了Web属性函数。
 
 **继承/实现关系：** WebAttribute extends CommonMethod<WebAttribute>
@@ -756,7 +760,7 @@ enableWebAVSession(enabled: boolean)
 fileAccess(fileAccess: boolean)
 ```
 
-设置是否开启应用中文件系统的访问。[&#36;rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#资源访问)中的文件不受该属性影响而被限制访问。API version 11及以前，当属性没有显式调用时，默认开启应用中文件系统的访问。API version 12及以后，当属性没有显式调用时，默认不开启应用中文件系统的访问。
+设置是否开启应用中文件系统的访问。[$rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#资源访问)中的文件不受该属性影响而被限制访问。API version 11及以前，当属性没有显式调用时，默认开启应用中文件系统的访问。API version 12及以后，当属性没有显式调用时，默认不开启应用中文件系统的访问。
 
 **起始版本：** 8
 
@@ -1509,7 +1513,7 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 
 > **说明：** 
 > 
-> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm)（继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或[ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。
+> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm-1)（继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel)（取消）或[ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore)（忽略）。
 > 
 > - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。
 > 
@@ -2328,7 +2332,7 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 
 > **说明：** 
 > 
-> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)接口并将includeSubframe设置为true。
+> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled-1)接口并将includeSubframe设置为true。
 > 
 > - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中分别设置对应的自定义错误页。
 > 
@@ -2593,6 +2597,8 @@ onRenderExited(callback: Callback<OnRenderExitedEvent>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRenderExitedEvent](arkts-arkweb-onrenderexitedevent-i.md)&gt; | 是 | 渲染过程退出时触发。<br>**适用版本：** 12 |
+
+<a id="onrenderexited-1"></a>
 
 ## onRenderExited
 
@@ -3009,7 +3015,7 @@ onTouchIconUrlReceived(callback: Callback<OnTouchIconUrlReceivedEvent>)
 ## onUrlLoadIntercept
 
 ```TypeScript
-onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest }) => boolean)
+onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest}) => boolean)
 ```
 
 当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。

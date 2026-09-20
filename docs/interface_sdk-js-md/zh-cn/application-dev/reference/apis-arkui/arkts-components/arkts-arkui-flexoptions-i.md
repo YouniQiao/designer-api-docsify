@@ -1,5 +1,9 @@
 # FlexOptions
 
+```TypeScript
+declare interface FlexOptions
+```
+
 设置Flex子组件的排列对齐方式。
 
 **起始版本：** 7

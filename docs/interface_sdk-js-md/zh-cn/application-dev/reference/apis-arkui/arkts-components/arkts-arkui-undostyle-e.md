@@ -1,5 +1,9 @@
 # UndoStyle
 
+```TypeScript
+declare enum UndoStyle
+```
+
 撤销还原是否保留原样式选项。
 
 **起始版本：** 20

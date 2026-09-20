@@ -1,5 +1,9 @@
 # ScrollAlign
 
+```TypeScript
+declare enum ScrollAlign
+```
+
 对齐方式枚举。
 
 **起始版本：** 10

@@ -71,6 +71,8 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 
+<a id="getpowermode-1"></a>
+
 ## getPowerMode
 
 ```TypeScript

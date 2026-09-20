@@ -1,5 +1,9 @@
 # UserExtCredentialInfo
 
+```TypeScript
+export interface UserExtCredentialInfo
+```
+
 Use extended credential information.
 
 **Since:** 26.0.1

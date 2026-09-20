@@ -79,6 +79,8 @@ continuationManager.register(
 ```
 
 
+<a id="register-1"></a>
+
 ## register
 
 ```TypeScript
@@ -108,6 +110,8 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 参见 [register](#register)
 
+
+<a id="register-2"></a>
 
 ## register
 

@@ -1,5 +1,9 @@
 # TodayStyle（系统接口）
 
+```TypeScript
+interface TodayStyle
+```
+
 Non current day style.
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # RadialGradientOptions
 
+```TypeScript
+declare interface RadialGradientOptions
+```
+
 Defines the radial gradient parameters.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # NativeEmbedMouseInfo
 
+```TypeScript
+declare interface NativeEmbedMouseInfo
+```
+
 提供鼠标/触摸板在同层标签上点击或长按的详细信息，包括标签ID和鼠标事件。适用于需要处理同层元素鼠标交互的场景，提升鼠标体验的定制性和灵活性。
 
 **起始版本：** 20

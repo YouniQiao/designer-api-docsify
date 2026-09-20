@@ -1,5 +1,9 @@
 # EnterpriseAdminExtensionAbility
 
+```TypeScript
+export default class EnterpriseAdminExtensionAbility
+```
+
 This module provides the [enterprise device management extension ability](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) and is the core component of the enterprise device administrator application.
 
 **Main functions**:
@@ -442,6 +446,8 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+<a id="onbundleadded-1"></a>
+
 ## onBundleAdded
 
 ```TypeScript
@@ -539,6 +545,8 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   }
 }
 ```
+
+<a id="onbundleremoved-1"></a>
 
 ## onBundleRemoved
 

@@ -1,5 +1,9 @@
 # RichEditorImageSpan
 
+```TypeScript
+declare interface RichEditorImageSpan
+```
+
 图片Span信息。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # AreaChangeOptions
 
+```TypeScript
+declare interface AreaChangeOptions
+```
+
 Defines the options for the AreaChangeEvent.
 
 @typedef AreaChangeOptions

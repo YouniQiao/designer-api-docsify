@@ -1,5 +1,9 @@
 # Album
 
+```TypeScript
+interface Album extends AbsAlbum
+```
+
 实体相册。
 
 **继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md)
@@ -60,6 +64,8 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="deleteassets-1"></a>
 
 ## deleteAssets
 
@@ -311,6 +317,8 @@ recoverAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="recoverassets-1"></a>
+
 ## recoverAssets
 
 ```TypeScript
@@ -401,6 +409,8 @@ setCoverUri(uri: string, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="setcoveruri-1"></a>
 
 ## setCoverUri
 

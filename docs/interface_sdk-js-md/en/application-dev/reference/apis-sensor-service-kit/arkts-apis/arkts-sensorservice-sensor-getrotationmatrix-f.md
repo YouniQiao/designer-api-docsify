@@ -119,6 +119,8 @@ try {
 ```
 
 
+<a id="getrotationmatrix-1"></a>
+
 ## getRotationMatrix
 
 ```TypeScript
@@ -155,6 +157,8 @@ Obtains the rotation matrix from a rotation vector. This API uses a promise to r
 See [getRotationMatrix](#getrotationmatrix)
 
 
+<a id="getrotationmatrix-2"></a>
+
 ## getRotationMatrix
 
 ```TypeScript
@@ -186,6 +190,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 See [getRotationMatrix](#getrotationmatrix)
 
+
+<a id="getrotationmatrix-3"></a>
 
 ## getRotationMatrix
 

@@ -1,5 +1,9 @@
 # UIGestureEvent
 
+```TypeScript
+declare interface UIGestureEvent
+```
+
 用于设置组件绑定的手势。
 
 **起始版本：** 12

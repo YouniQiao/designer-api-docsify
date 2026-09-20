@@ -80,6 +80,8 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 ```
 
 
+<a id="installdlpsandbox-1"></a>
+
 ## installDLPSandbox
 
 ```TypeScript

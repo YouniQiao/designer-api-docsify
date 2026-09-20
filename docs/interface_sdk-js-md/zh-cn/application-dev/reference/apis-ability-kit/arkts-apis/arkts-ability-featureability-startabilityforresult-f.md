@@ -102,6 +102,8 @@ featureAbility.startAbilityForResult(
 ```
 
 
+<a id="startabilityforresult-1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript

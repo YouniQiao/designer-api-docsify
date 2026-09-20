@@ -1,5 +1,9 @@
 # HoverModeAreaType
 
+```TypeScript
+declare enum HoverModeAreaType
+```
+
 Enumerates the type of area in hover mode.
 
 **Since:** 14

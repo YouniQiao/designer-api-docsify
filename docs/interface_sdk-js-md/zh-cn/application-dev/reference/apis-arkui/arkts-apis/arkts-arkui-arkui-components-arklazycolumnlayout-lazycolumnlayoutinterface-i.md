@@ -1,5 +1,9 @@
 # LazyColumnLayoutInterface
 
+```TypeScript
+export interface LazyColumnLayoutInterface
+```
+
 定义懒加载列布局组件。
 
 @interface LazyColumnLayoutInterface

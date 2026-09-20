@@ -94,6 +94,8 @@ promise.then((data) => {
 ```
 
 
+<a id="querygroups-1"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -127,6 +129,8 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 See [queryGroups](#querygroups)
 
 
+<a id="querygroups-2"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -156,6 +160,8 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 See [queryGroups](#querygroups)
 
+
+<a id="querygroups-3"></a>
 
 ## queryGroups
 
@@ -191,6 +197,8 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 See [queryGroups](#querygroups)
 
 
+<a id="querygroups-4"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -225,6 +233,8 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 See [queryGroups](#querygroups)
 
+
+<a id="querygroups-5"></a>
 
 ## queryGroups
 

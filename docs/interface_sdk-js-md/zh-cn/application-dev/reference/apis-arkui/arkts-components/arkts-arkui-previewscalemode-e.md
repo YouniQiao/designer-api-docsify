@@ -1,5 +1,9 @@
 # PreviewScaleMode
 
+```TypeScript
+declare enum PreviewScaleMode
+```
+
 预览图的缩放方式。
 
 **起始版本：** 20

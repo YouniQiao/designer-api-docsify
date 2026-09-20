@@ -1,5 +1,9 @@
 # BaseCustomComponent
 
+```TypeScript
+declare class BaseCustomComponent extends CommonAttribute
+```
+
 自定义组件基类，它是从类CustomComponent迁移过来的。
 
 **继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-comp-attribute.md)
@@ -397,6 +401,8 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 | 类型 | 说明 |
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
+
+<a id="querynavdestinationinfo-1"></a>
 
 ## queryNavDestinationInfo
 

@@ -1,5 +1,9 @@
 # Brush
 
+```TypeScript
+class Brush
+```
+
 画刷对象，用于设置图形的填充样式，包括颜色、抗锯齿、混合模式、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果及图像滤波器等，并支持获取颜色、透明度、抗锯齿等属性及重置画刷为初始状态。
 
 画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)方法绑定到画布后生效，绘制完成后通过[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md)。
@@ -31,6 +35,8 @@ constructor()
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -272,6 +278,8 @@ setColor(color: common2D.Color): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="setcolor-1"></a>
+
 ## setColor
 
 ```TypeScript
@@ -298,6 +306,8 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="setcolor-2"></a>
 
 ## setColor
 

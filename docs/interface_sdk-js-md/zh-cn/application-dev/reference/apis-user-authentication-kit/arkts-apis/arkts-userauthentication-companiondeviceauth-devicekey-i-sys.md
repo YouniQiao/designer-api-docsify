@@ -1,5 +1,9 @@
 # DeviceKey（系统接口）
 
+```TypeScript
+interface DeviceKey
+```
+
 设备标识。用于唯一标识一个设备及其用户，包含设备ID类型、设备ID和设备用户ID等信息。
 
 **起始版本：** 23

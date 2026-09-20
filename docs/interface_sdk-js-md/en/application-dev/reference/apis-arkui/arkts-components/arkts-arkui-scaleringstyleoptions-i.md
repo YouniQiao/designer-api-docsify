@@ -1,5 +1,9 @@
 # ScaleRingStyleOptions
 
+```TypeScript
+declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions
+```
+
 Options of the ring style with scales.
 
 Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).

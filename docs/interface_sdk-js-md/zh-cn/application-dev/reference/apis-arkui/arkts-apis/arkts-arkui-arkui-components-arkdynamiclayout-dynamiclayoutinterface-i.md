@@ -1,5 +1,9 @@
 # DynamicLayoutInterface
 
+```TypeScript
+export interface DynamicLayoutInterface
+```
+
 动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。使用DynamicLayout可以提升布局灵活性，简化界面适配和多视图切换的开发流程。适用于响应式布局（适配不同屏幕尺寸）、多视图模式切换（如列表/网格/瀑布流切换）、用户自定义布局等场景。
 
 ## 子组件

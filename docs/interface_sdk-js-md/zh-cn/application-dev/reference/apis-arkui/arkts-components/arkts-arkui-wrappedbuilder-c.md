@@ -1,5 +1,9 @@
 # WrappedBuilder
 
+```TypeScript
+declare class WrappedBuilder<Args extends Object[]>
+```
+
 `WrappedBuilder`是`@Builder`函数的包装类，用于封装全局`@Builder`函数及其参数，实现按引用传递和动态调用。
 
 **起始版本：** 11

@@ -67,6 +67,8 @@ data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
 ```
 
 
+<a id="iscellulardataroamingenabled-1"></a>
+
 ## isCellularDataRoamingEnabled
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # RenderMode
 
+```TypeScript
+declare enum RenderMode
+```
+
 定义Web组件的渲染方式，默认为异步渲染模式。
 
 建议使用异步渲染模式，异步渲染模式有更好的性能和更低的功耗。

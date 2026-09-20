@@ -1,5 +1,9 @@
 # Capability
 
+```TypeScript
+enum Capability
+```
+
 车辆感知功能。
 
 **起始版本：** 26.0.1

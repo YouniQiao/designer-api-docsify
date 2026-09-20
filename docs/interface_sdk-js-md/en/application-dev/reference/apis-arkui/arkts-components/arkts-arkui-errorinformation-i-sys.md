@@ -1,5 +1,9 @@
 # ErrorInformation (System API)
 
+```TypeScript
+interface ErrorInformation
+```
+
 Provides the widget error information.
 
 **Since:** 18

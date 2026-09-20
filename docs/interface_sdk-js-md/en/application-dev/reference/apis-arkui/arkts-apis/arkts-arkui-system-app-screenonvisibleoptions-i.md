@@ -1,5 +1,9 @@
 # ScreenOnVisibleOptions
 
+```TypeScript
+export interface ScreenOnVisibleOptions
+```
+
 Defines the options of the visible interface on the screen.
 
 **Since:** 3

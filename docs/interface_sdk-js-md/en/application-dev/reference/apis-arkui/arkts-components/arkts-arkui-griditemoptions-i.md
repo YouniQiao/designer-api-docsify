@@ -1,5 +1,9 @@
 # GridItemOptions
 
+```TypeScript
+declare interface GridItemOptions
+```
+
 Defines the style of a grid item.
 
 **Since:** 11

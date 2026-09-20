@@ -1,5 +1,9 @@
 # RichEditorBuilderSpanOptions
 
+```TypeScript
+declare interface RichEditorBuilderSpanOptions
+```
+
 Sets the offset position and style of the inserted builder.
 
 **Since:** 11

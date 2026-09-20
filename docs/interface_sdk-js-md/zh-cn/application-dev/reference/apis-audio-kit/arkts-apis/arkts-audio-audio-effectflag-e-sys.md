@@ -1,5 +1,9 @@
 # EffectFlag（系统接口）
 
+```TypeScript
+enum EffectFlag
+```
+
 枚举，音效分类。
 
 @enum { int }

@@ -1,5 +1,9 @@
 # SafeAreaType
 
+```TypeScript
+declare enum SafeAreaType
+```
+
 扩展安全区域的枚举类型。
 
 **起始版本：** 10

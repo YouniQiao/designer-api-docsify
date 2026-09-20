@@ -60,6 +60,8 @@ sim.getSimLabel(0).then((data: sim.SimLabel) => {
 ```
 
 
+<a id="getsimlabel-1"></a>
+
 ## getSimLabel
 
 ```TypeScript
@@ -82,7 +84,7 @@ Obtains the SIM card label. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Promise used to return &#36;{the SIM card label}. |
+| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | Promise used to return ${the SIM card label}. |
 
 **Error codes:**
 

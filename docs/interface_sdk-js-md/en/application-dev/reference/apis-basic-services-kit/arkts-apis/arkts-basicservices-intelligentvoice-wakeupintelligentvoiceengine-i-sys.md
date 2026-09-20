@@ -1,5 +1,9 @@
 # WakeupIntelligentVoiceEngine (System API)
 
+```TypeScript
+interface WakeupIntelligentVoiceEngine
+```
+
 Implements wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngine
 
 **Since:** 10
@@ -75,6 +79,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="getparameter-1"></a>
 
 ## getParameter
 
@@ -247,6 +253,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="getsupportedregions-1"></a>
 
 ## getSupportedRegions
 
@@ -491,6 +499,8 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -608,6 +618,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setparameter-1"></a>
 
 ## setParameter
 
@@ -734,6 +746,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setsensibility-1"></a>
 
 ## setSensibility
 
@@ -868,6 +882,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setwakeuphapinfo-1"></a>
 
 ## setWakeupHapInfo
 

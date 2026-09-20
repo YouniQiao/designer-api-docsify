@@ -1,5 +1,9 @@
 # VideoControllerAsync
 
+```TypeScript
+declare class VideoControllerAsync
+```
+
 **VideoControllerAsync** is the asynchronous version of **VideoController**. It can obtain the results of some playback control commands through a promise. It does not support controlling multiple **Video** components at the same time.
 
 > **NOTE:** 

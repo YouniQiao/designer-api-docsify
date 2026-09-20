@@ -208,6 +208,8 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 ```
 
 
+<a id="print-1"></a>
+
 ## print
 
 ```TypeScript
@@ -246,6 +248,8 @@ function print(files: Array<string>): Promise<PrintTask>
 参见 [print](#print)
 
 
+<a id="print-2"></a>
+
 ## print
 
 ```TypeScript
@@ -279,6 +283,8 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 
 参见 [print](#print)
 
+
+<a id="print-3"></a>
 
 ## print
 
@@ -318,6 +324,8 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 
 参见 [print](#print)
 
+
+<a id="print-4"></a>
 
 ## print
 

@@ -1,6 +1,10 @@
 # DownloadTask
 
-下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md)获取，callback形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md)获取。
+```TypeScript
+interface DownloadTask
+```
+
+下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1)获取，callback形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md)获取。
 
 **起始版本：** 6
 
@@ -90,6 +94,8 @@ try {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -250,6 +256,8 @@ try {
 }
 ```
 
+<a id="gettaskinfo-1"></a>
+
 ## getTaskInfo
 
 ```TypeScript
@@ -364,6 +372,8 @@ try {
 }
 ```
 
+<a id="gettaskmimetype-1"></a>
+
 ## getTaskMimeType
 
 ```TypeScript
@@ -448,56 +458,6 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-取消订阅下载任务相关的事件。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成。<br>- 取值为'pause'，表示下载任务暂停。<br>- 取值为'remove'，表示下载任务移除。 |
-| callback | () =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-取消订阅下载任务相关的事件。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成。<br>- 取值为'pause'，表示下载任务暂停。<br>- 取值为'remove'，表示下载任务移除。 |
-| callback | () =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
 ## off('fail')
 
 ```TypeScript
@@ -545,56 +505,6 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 | --- | --- | --- | --- |
 | type | 'progress' | 是 | 订阅的事件类型。<br>- 取值为'progress'，表示下载的进度信息，当任务进度有进展时触发该事件。 |
 | callback | (receivedSize: number, totalSize: number) =&gt; void | 是 | 下载任务进度的回调函数，返回已上传文件大小和上传文件大小总和，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时，totalSize为 -1。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-订阅下载任务相关的事件，使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | 是 | 订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。<br>- 取值为'pause'，表示下载任务暂停，任务暂停时触发该事件。<br>- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
-| callback | () =&gt; void | 是 | 下载任务相关的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-订阅下载任务相关的事件，使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.MiscServices.Download
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | 是 | 订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。<br>- 取值为'pause'，表示下载任务暂停，任务暂停时触发该事件。<br>- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
-| callback | () =&gt; void | 是 | 下载任务相关的回调函数。 |
 
 **错误码：**
 
@@ -707,6 +617,8 @@ downloadTask.pause((err: BusinessError) => {
 });
 ```
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -816,6 +728,8 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo) => {
 });
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -909,6 +823,8 @@ downloadTask.queryMimeType((err: BusinessError, data: string) => {
 });
 ```
 
+<a id="querymimetype-1"></a>
+
 ## queryMimeType
 
 ```TypeScript
@@ -1001,6 +917,8 @@ downloadTask.remove((err, result) => {
   console.info('Succeeded in removing the download task.');
 });
 ```
+
+<a id="remove-1"></a>
 
 ## remove
 
@@ -1136,6 +1054,8 @@ try {
 }
 ```
 
+<a id="restore-1"></a>
+
 ## restore
 
 ```TypeScript
@@ -1224,6 +1144,8 @@ downloadTask.resume((err: BusinessError) => {
   console.info('Succeeded in resuming the download task.');
 });
 ```
+
+<a id="resume-1"></a>
 
 ## resume
 
@@ -1358,6 +1280,8 @@ try {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<a id="suspend-1"></a>
 
 ## suspend
 

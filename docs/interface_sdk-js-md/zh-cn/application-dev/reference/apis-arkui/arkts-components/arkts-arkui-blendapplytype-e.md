@@ -1,5 +1,9 @@
 # BlendApplyType
 
+```TypeScript
+declare enum BlendApplyType
+```
+
 标识如何将指定的混合模式应用于视图的内容。
 
 **起始版本：** 11

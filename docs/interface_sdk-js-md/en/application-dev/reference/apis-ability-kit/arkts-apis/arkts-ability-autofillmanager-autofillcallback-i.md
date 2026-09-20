@@ -1,5 +1,9 @@
 # AutoFillCallback
 
+```TypeScript
+export interface AutoFillCallback
+```
+
 Auto fill callback.
 
 **Since:** 26.0.0

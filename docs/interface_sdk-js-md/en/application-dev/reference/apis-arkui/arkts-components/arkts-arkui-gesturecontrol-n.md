@@ -1,5 +1,9 @@
 # GestureControl
 
+```TypeScript
+declare namespace GestureControl
+```
+
 Enumerates gesture competition results.
 
 **Since:** 11

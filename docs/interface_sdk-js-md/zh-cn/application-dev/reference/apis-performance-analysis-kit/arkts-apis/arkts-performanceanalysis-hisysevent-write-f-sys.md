@@ -111,6 +111,8 @@ try {
 ```
 
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # PreloadOptions
 
+```TypeScript
+declare interface PreloadOptions
+```
+
 Indicates options for preloading a page.
 
 **Since:** 26.0.1

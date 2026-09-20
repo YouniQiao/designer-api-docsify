@@ -14,6 +14,8 @@
 RichEditor(value: RichEditorOptions)
 ```
 
+创建富文本组件时调用。
+
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。

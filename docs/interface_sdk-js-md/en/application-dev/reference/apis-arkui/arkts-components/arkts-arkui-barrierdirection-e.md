@@ -1,5 +1,9 @@
 # BarrierDirection
 
+```TypeScript
+declare enum BarrierDirection
+```
+
 Defines the direction of a barrier.
 
 **Since:** 12

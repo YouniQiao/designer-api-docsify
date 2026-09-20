@@ -1,5 +1,9 @@
 # OnRefreshAccessedHistoryEvent
 
+```TypeScript
+declare interface OnRefreshAccessedHistoryEvent
+```
+
 定义导航完成时触发的回调信息，包括URL和刷新状态。适用于需要监控页面导航历史的场景，提升导航行为跟踪的准确性和用户体验。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # MultiNavigation
 
+```TypeScript
+export declare struct MultiNavigation
+```
+
 MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管理能力，通过MultiNavPathStack统一管理主页、详情页、全屏页等不同类型页面的导航栈。支持左起右清栈等智能路由策略，适用于平板、折叠屏等大尺寸设备的复杂导航场景，能够优化页面跳转体验、提升用户操作效率。
 
 > **说明：** 

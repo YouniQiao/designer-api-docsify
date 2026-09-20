@@ -1,5 +1,9 @@
 # EdgeLightMode (System API)
 
+```TypeScript
+declare enum EdgeLightMode
+```
+
 Edge light animation mode enumeration.
 
 **Since:** 26.0.0

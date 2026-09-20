@@ -1,5 +1,9 @@
 # DistributionType
 
+```TypeScript
+declare enum DistributionType
+```
+
 初始颜色随机值分布类型。
 
 **起始版本：** 12

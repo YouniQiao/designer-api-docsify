@@ -1,5 +1,9 @@
 # ParticleEmitterShape
 
+```TypeScript
+declare enum ParticleEmitterShape
+```
+
 粒子发射器形状。
 
 **起始版本：** 10

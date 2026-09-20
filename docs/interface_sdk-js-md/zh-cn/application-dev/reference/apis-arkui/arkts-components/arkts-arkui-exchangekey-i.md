@@ -1,5 +1,9 @@
 # ExchangeKey
 
+```TypeScript
+interface ExchangeKey
+```
+
 定义交换数据的新键值。
 
 **起始版本：** 12

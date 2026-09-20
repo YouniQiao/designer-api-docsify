@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
@@ -121,6 +123,8 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 
 参见 [get](#get)
 
+
+<a id="get-2"></a>
 
 ## get
 

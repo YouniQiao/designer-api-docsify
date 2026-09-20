@@ -1,5 +1,9 @@
 # FingerInfo
 
+```TypeScript
+interface FingerInfo
+```
+
 手指信息类型。
 
 **起始版本：** 8

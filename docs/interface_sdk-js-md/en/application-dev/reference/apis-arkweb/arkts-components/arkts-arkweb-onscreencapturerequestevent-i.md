@@ -1,5 +1,9 @@
 # OnScreenCaptureRequestEvent
 
+```TypeScript
+declare interface OnScreenCaptureRequestEvent
+```
+
 Defines the callback information triggered when a screen capture request is received. It is suitable for scenarios where handling screen recording permissions is required, improving screen recording process controllability and security.
 
 **Since:** 12

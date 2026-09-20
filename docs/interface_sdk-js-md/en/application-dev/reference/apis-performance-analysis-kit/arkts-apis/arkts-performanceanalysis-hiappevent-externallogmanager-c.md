@@ -1,5 +1,9 @@
 # ExternalLogManager
 
+```TypeScript
+class ExternalLogManager
+```
+
 Defines an external log manager for external log management.
 
 **Since:** 26.0.1

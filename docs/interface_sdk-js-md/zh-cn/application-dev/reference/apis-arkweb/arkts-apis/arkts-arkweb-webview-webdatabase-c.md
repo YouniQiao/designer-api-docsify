@@ -1,5 +1,9 @@
 # WebDataBase
 
+```TypeScript
+class WebDataBase
+```
+
 Web组件数据库管理对象。
 
 **起始版本：** 9

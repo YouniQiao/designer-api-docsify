@@ -1,5 +1,9 @@
 # PbapClientProfile
 
+```TypeScript
+interface PbapClientProfile extends BaseProfile
+```
+
 管理PBAP客户端配置文件。
 
 **继承/实现关系：** PbapClientProfile extends [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)

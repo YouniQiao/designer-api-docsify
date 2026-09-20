@@ -1,5 +1,9 @@
 # MeasureText
 
+```TypeScript
+export default class MeasureText
+```
+
 定义测算文本相关接口。
 
 **起始版本：** 9

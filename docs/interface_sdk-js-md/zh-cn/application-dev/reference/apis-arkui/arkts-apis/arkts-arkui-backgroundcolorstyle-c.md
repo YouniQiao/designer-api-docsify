@@ -1,5 +1,9 @@
 # BackgroundColorStyle
 
+```TypeScript
+declare class BackgroundColorStyle
+```
+
 文本背景颜色对象说明。
 
 **起始版本：** 14

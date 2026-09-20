@@ -111,6 +111,8 @@ try {
 ```
 
 
+<a id="getapplicationinfo-1"></a>
+
 ## getApplicationInfo
 
 ```TypeScript
@@ -153,6 +155,8 @@ function getApplicationInfo(bundleName: string, appFlags: number, userId: number
 
 参见 [getApplicationInfo](#getapplicationinfo)
 
+
+<a id="getapplicationinfo-2"></a>
 
 ## getApplicationInfo
 

@@ -1,5 +1,9 @@
 # SlideRange
 
+```TypeScript
+declare interface SlideRange
+```
+
 Defines the callback type used in **SlideRange**.
 
 > **NOTE:** 

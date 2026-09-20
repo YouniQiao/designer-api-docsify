@@ -1,5 +1,9 @@
 # CounterComponent
 
+```TypeScript
+declare struct CounterComponent
+```
+
 Counter组件用于精确调节数值，支持列表型、紧凑型、数值内联型和日期内联型四种样式，适用于购物数量调节、参数设置、日期选择等场景，具有灵活的样式配置和事件回调能力。
 
 > **说明：** 
@@ -12,6 +16,7 @@ Counter组件用于精确调节数值，支持列表型、紧凑型、数值内�
 import { CounterType, CounterComponent, CounterOptions, DateData } from '@kit.ArkUI';
 ```
 
+  
 ## 子组件
 
 无

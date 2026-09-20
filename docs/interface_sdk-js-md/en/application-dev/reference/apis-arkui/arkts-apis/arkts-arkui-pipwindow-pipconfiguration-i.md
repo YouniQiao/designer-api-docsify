@@ -1,5 +1,9 @@
 # PiPConfiguration
 
+```TypeScript
+interface PiPConfiguration
+```
+
 Defines the parameters for creating a PiP controller.
 
 **Since:** 11
@@ -34,7 +38,7 @@ Original XComponent controller.
 contentHeight?: number
 ```
 
-Height of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is 1080. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the height of the XComponent.
+Height of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md#create-1), the default value is 1080. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the height of the XComponent.
 
 **Type:** number
 
@@ -50,7 +54,7 @@ Height of the original content, in px. It is used to determine the aspect ratio 
 contentWidth?: number
 ```
 
-Width of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is 1920. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the width of the XComponent.
+Width of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md#create-1), the default value is 1920. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the width of the XComponent.
 
 **Type:** number
 

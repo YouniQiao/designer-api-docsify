@@ -1,5 +1,9 @@
 # OnTouchIconUrlReceivedEvent
 
+```TypeScript
+declare interface OnTouchIconUrlReceivedEvent
+```
+
 定义接收到apple-touch-icon URL时触发的回调信息，包括URL和预合成状态。适用于需要获取网页图标的场景，提升图标管理的灵活性和用户体验。
 
 **起始版本：** 12

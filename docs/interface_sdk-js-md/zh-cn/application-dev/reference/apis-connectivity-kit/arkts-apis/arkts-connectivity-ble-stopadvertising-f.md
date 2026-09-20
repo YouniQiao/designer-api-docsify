@@ -176,6 +176,8 @@ try {
 ```
 
 
+<a id="stopadvertising-1"></a>
+
 ## stopAdvertising
 
 ```TypeScript
@@ -217,6 +219,8 @@ function stopAdvertising(advertisingId: number, callback: AsyncCallback<void>): 
 
 参见 [stopAdvertising](#stopadvertising)
 
+
+<a id="stopadvertising-2"></a>
 
 ## stopAdvertising
 

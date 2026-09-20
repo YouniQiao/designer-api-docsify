@@ -1,5 +1,9 @@
 # HyperSnapErrorCode
 
+```TypeScript
+export enum HyperSnapErrorCode
+```
+
 Enumerates the Hyper Snap error codes.
 
 **Since:** 26.0.1

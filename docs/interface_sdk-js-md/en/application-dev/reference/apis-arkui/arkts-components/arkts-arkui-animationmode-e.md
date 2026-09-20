@@ -1,5 +1,9 @@
 # AnimationMode
 
+```TypeScript
+declare enum AnimationMode
+```
+
 Enumerates the animation modes for switching between tabs.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # HuksReturnResult
 
+```TypeScript
+export interface HuksReturnResult
+```
+
 Represents the result returned.
 
 **Since:** 9

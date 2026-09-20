@@ -1,5 +1,9 @@
 # OutlineOptions
 
+```TypeScript
+declare interface OutlineOptions
+```
+
 Defines the outline options.
 
 **Since:** 11

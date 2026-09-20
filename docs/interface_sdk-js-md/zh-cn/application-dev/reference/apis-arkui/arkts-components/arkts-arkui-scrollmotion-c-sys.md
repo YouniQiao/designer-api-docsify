@@ -1,5 +1,9 @@
 # ScrollMotion（系统接口）
 
+```TypeScript
+declare class ScrollMotion
+```
+
 滚动动画模型。可以根据初始位置、初始速度、边界位置和弹簧属性构建滚动动画。
 
 **起始版本：** 7

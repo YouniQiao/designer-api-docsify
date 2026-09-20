@@ -1,5 +1,9 @@
 # TimeZoneCityItem（系统接口）
 
+```TypeScript
+export interface TimeZoneCityItem
+```
+
 时区城市的组合信息。
 
 **起始版本：** 10

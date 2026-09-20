@@ -1,5 +1,9 @@
 # DragPreviewMode
 
+```TypeScript
+declare enum DragPreviewMode
+```
+
 设置拖拽预览图的显示模式。
 
 **起始版本：** 11

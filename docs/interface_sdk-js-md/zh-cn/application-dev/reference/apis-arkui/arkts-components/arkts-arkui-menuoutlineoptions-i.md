@@ -1,5 +1,9 @@
 # MenuOutlineOptions
 
+```TypeScript
+declare interface MenuOutlineOptions
+```
+
 下拉菜单框的外描边参数对象。
 
 **起始版本：** 20

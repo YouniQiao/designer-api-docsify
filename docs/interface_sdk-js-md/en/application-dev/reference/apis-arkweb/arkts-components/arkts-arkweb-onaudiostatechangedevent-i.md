@@ -1,5 +1,9 @@
 # OnAudioStateChangedEvent
 
+```TypeScript
+declare interface OnAudioStateChangedEvent
+```
+
 Defines the callback information triggered when the audio playback status on the web page changes, including the playback status. It is suitable for scenarios where monitoring audio playback behavior is required, improving audio management visibility and user experience.
 
 **Since:** 12

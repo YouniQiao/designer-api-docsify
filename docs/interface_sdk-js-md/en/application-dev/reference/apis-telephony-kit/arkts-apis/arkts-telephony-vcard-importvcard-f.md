@@ -95,6 +95,8 @@ class EntryAbility extends UIAbility {
 ```
 
 
+<a id="importvcard-1"></a>
+
 ## importVCard
 
 ```TypeScript
@@ -138,6 +140,8 @@ Imports a VCard file (that is, **.vcf** file) to the contact database. This API 
 
 See [importVCard](#importvcard)
 
+
+<a id="importvcard-2"></a>
 
 ## importVCard
 

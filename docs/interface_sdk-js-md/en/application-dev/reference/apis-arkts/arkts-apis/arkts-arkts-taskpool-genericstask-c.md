@@ -1,5 +1,9 @@
 # GenericsTask
 
+```TypeScript
+class GenericsTask<A extends Array<Object>, R> extends Task
+```
+
 Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-task-c.md). During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
 **Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md)
@@ -78,6 +82,8 @@ let taskName: string = "taskName";
 let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
 let name: string = task.name;
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

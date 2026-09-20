@@ -1,5 +1,9 @@
 # RadioOptions
 
+```TypeScript
+declare interface RadioOptions
+```
+
 Radio button information.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # DetectedBlankScreenReason
 
+```TypeScript
+declare enum DetectedBlankScreenReason
+```
+
 Defines the specific reasons for the blank screen, which identify the underlying causes of page blank screen phenomena and help developers quickly locate the source of issues, improving the efficiency of troubleshooting page loading problems and user experience.
 
 **Since:** 22

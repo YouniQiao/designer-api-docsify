@@ -53,6 +53,8 @@ appManager.getAppMemorySize((error, data) => {
 ```
 
 
+<a id="getappmemorysize-1"></a>
+
 ## getAppMemorySize
 
 ```TypeScript

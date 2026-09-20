@@ -1,5 +1,9 @@
 # ReuseOptions
 
+```TypeScript
+declare interface ReuseOptions
+```
+
 Defining the reusable configuration parameters.
 
 **Since:** 18

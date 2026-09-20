@@ -1,5 +1,9 @@
 # DialogResult
 
+```TypeScript
+export interface DialogResult
+```
+
 Response result for dialog.
 
 **Since:** 26.0.1

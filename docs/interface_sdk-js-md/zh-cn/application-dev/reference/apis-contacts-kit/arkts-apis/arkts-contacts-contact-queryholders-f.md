@@ -61,6 +61,8 @@ promise.then((data) => {
 ```
 
 
+<a id="queryholders-1"></a>
+
 ## queryHolders
 
 ```TypeScript
@@ -94,6 +96,8 @@ function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>):
 参见 [queryHolders](#queryholders)
 
 
+<a id="queryholders-2"></a>
+
 ## queryHolders
 
 ```TypeScript
@@ -122,6 +126,8 @@ function queryHolders(): Promise<Array<Holder>>
 
 参见 [queryHolders](#queryholders)
 
+
+<a id="queryholders-3"></a>
 
 ## queryHolders
 

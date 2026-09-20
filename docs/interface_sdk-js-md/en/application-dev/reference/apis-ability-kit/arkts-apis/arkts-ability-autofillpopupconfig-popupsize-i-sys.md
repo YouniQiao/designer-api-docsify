@@ -1,5 +1,9 @@
 # PopupSize (System API)
 
+```TypeScript
+export interface PopupSize
+```
+
 Describes the width and height of the auto-fill pop-up.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # ResponseType
 
+```TypeScript
+declare enum ResponseType
+```
+
 How menu display is triggered.
 
 **Since:** 8

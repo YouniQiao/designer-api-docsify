@@ -1,5 +1,9 @@
 # RequestFullWindowOptions
 
+```TypeScript
+export interface RequestFullWindowOptions
+```
+
 定义RequestFullWindow接口的选项。
 
 **起始版本：** 3

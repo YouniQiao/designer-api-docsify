@@ -95,6 +95,8 @@ privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: priva
 ```
 
 
+<a id="getpermissionusedrecord-1"></a>
+
 ## getPermissionUsedRecord
 
 ```TypeScript

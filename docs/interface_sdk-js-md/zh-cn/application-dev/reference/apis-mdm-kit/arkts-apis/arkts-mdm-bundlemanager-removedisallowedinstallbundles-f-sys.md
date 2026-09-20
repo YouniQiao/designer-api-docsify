@@ -111,6 +111,8 @@ bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="removedisallowedinstallbundles-1"></a>
+
 ## removeDisallowedInstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, user
 
 参见 [removeDisallowedInstallBundles](#removedisallowedinstallbundles)
 
+
+<a id="removedisallowedinstallbundles-2"></a>
 
 ## removeDisallowedInstallBundles
 

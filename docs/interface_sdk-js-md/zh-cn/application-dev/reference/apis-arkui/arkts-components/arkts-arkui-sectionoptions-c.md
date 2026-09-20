@@ -1,5 +1,9 @@
 # SectionOptions
 
+```TypeScript
+declare class SectionOptions
+```
+
 FlowItem分组配置信息。
 
 **起始版本：** 12

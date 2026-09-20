@@ -1,5 +1,9 @@
 # ComponentUtils
 
+```TypeScript
+export class ComponentUtils
+```
+
 Provides API for obtaining the coordinates and size of the drawing area of a component.
 
 > **NOTE:** 

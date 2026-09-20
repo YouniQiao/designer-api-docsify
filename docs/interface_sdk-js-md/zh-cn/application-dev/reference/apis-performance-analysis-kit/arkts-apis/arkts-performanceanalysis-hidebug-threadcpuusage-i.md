@@ -1,5 +1,9 @@
 # ThreadCpuUsage
 
+```TypeScript
+interface ThreadCpuUsage
+```
+
 线程的CPU使用情况。
 
 **起始版本：** 12

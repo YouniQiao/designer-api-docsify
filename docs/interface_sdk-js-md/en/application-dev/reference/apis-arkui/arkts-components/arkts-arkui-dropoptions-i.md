@@ -1,5 +1,9 @@
 # DropOptions
 
+```TypeScript
+declare interface DropOptions
+```
+
 Sets parameters for the drop process.
 
 **Since:** 15

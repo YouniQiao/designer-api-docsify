@@ -1,5 +1,9 @@
 # ScaleRingStyleOptions
 
+```TypeScript
+declare interface ScaleRingStyleOptions extends CommonProgressStyleOptions
+```
+
 环形有刻度样式选项。
 
 继承自[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。

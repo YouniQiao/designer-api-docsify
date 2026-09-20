@@ -1,5 +1,9 @@
 # GridRowColumnOption
 
+```TypeScript
+declare interface GridRowColumnOption
+```
+
 栅格在不同宽度设备类型下的栅格列数配置。
 
 API version 20之前，仅配置部分断点下GridRow组件的栅格列数，取已配置的相邻较小断点（如md的相邻较小断点为sm）的栅格列数补全未配置的栅格列数。若未配置相邻较小断点的栅格列数，以默认栅格列数12补全未配置的栅格列数。

@@ -1,5 +1,9 @@
 # LazyForEach properties/events
 
+```TypeScript
+declare class LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>
+```
+
 The drag-and-drop sorting attribute is supported.
 
 **Inheritance/Implementation:** LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>

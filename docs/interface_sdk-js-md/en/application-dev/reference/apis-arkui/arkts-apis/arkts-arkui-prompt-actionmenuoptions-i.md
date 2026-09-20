@@ -1,5 +1,9 @@
 # ActionMenuOptions
 
+```TypeScript
+interface ActionMenuOptions
+```
+
 Defines the option of ShowActionMenu.
 
 @interface ActionMenuOptions

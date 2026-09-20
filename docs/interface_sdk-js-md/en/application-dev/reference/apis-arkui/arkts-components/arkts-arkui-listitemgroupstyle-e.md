@@ -1,5 +1,9 @@
 # ListItemGroupStyle
 
+```TypeScript
+declare enum ListItemGroupStyle
+```
+
 Enumerates the card styles of the **ListItemGroup** component.
 
 **Since:** 10

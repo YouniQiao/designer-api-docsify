@@ -1,5 +1,9 @@
 # Locale
 
+```TypeScript
+export class Locale
+```
+
 区域信息
 
 **起始版本：** 6
@@ -54,6 +58,8 @@ import { intl } from '@kit.LocalizationKit';
 let locale = new intl.Locale('zh-CN');
 let localeID = locale.toString(); // localeID = 'zh-CN'
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

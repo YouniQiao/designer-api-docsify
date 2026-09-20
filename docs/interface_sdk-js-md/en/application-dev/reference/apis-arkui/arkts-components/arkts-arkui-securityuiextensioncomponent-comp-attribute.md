@@ -1,5 +1,9 @@
 # SecurityUIExtensionComponent properties/events
 
+```TypeScript
+declare class SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>
+```
+
 The universal attributes are supported.
 
 The following events are supported:

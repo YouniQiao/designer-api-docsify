@@ -1,5 +1,9 @@
 # FrameCallback
 
+```TypeScript
+export abstract class FrameCallback
+```
+
 用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。
 
 > **说明：** 

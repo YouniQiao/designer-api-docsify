@@ -1,5 +1,9 @@
 # ColorStop
 
+```TypeScript
+declare interface ColorStop
+```
+
 颜色断点类型，用于描述渐变色颜色断点。
 
 **起始版本：** 10

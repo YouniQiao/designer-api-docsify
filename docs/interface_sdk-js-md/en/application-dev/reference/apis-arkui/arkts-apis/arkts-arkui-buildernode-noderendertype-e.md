@@ -1,5 +1,9 @@
 # NodeRenderType
 
+```TypeScript
+export declare enum NodeRenderType
+```
+
 Enumerates the node rendering types.
 
 > **NOTE:** 

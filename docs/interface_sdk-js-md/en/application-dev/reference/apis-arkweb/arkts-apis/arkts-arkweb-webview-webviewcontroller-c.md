@@ -1,5 +1,9 @@
 # WebviewController
 
+```TypeScript
+class WebviewController
+```
+
 WebviewController is the core controller for various behaviors of the **Web** component, providing extensive functions such as page loading and navigation control, JavaScript interaction, lifecycle management, scroll control, page zoom and content search, message port communication, and cache and certificate management. A WebviewController object can control only one **Web** component, and methods on WebviewController (except static methods) can be called only after the **Web** component is bound to WebviewController.
 
 **Since:** 9
@@ -536,6 +540,8 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid input parameter. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="createpdf-1"></a>
+
 ## createPdf
 
 ```TypeScript
@@ -659,6 +665,8 @@ Grants the cross-domain request and fetch request permissions for custom protoco
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes.<br>**Applicable version:** 12 and later |
+
+<a id="customizeschemes-1"></a>
 
 ## customizeSchemes
 
@@ -1088,6 +1096,8 @@ Obtains the certificate information of this website. When the **Web** component 
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
+
+<a id="getcertificate-1"></a>
 
 ## getCertificate
 
@@ -1816,6 +1826,8 @@ Checks whether this page contains images. This API uses a promise to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="hasimage-1"></a>
+
 ## hasImage
 
 ```TypeScript
@@ -2525,6 +2537,8 @@ Prefetches resources in the background for a page that is likely to be accessed 
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024.<br>**Applicable version:** 22 and later |
 
+<a id="prefetchpage-1"></a>
+
 ## prefetchPage
 
 ```TypeScript
@@ -2643,6 +2657,8 @@ Called when the **Web** component refreshes the web page.
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+<a id="refresh-1"></a>
 
 ## refresh
 
@@ -2949,6 +2965,8 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
+<a id="runjavascript-1"></a>
+
 ## runJavaScript
 
 ```TypeScript
@@ -3026,6 +3044,8 @@ Executes a JavaScript script asynchronously and returns the script execution res
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+<a id="runjavascriptext-1"></a>
 
 ## runJavaScriptExt
 
@@ -3579,6 +3599,8 @@ When this API is set to true, if an error occurs during page loading, the [onOve
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="seterrorpageenabled-1"></a>
+
 ## setErrorPageEnabled
 
 ```TypeScript
@@ -3990,6 +4012,8 @@ Sets a URL trust list for the Web. Only URLs in the trust list are allowed to be
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Parameter string is too long. 3.Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="seturltrustlist-1"></a>
+
 ## setUrlTrustList
 
 ```TypeScript
@@ -4126,6 +4150,8 @@ NOTE: Enabling web debugging allows users to check and modify the internal statu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+<a id="setwebdebuggingaccess-1"></a>
 
 ## setWebDebuggingAccess
 
@@ -4402,6 +4428,8 @@ Stores this web page. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 | [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
+
+<a id="storewebarchive-1"></a>
 
 ## storeWebArchive
 

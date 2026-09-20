@@ -1,5 +1,9 @@
 # DialogBaseController
 
+```TypeScript
+export class DialogBaseController
+```
+
 The class used to control dialog.
 
 **Since:** 26.0.1

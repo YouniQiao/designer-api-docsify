@@ -1,5 +1,9 @@
 # ShadowOptions
 
+```TypeScript
+declare interface ShadowOptions
+```
+
 Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis.
 
 **Since:** 7

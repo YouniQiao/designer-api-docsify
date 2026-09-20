@@ -1,5 +1,9 @@
 # LocalSocketServer
 
+```TypeScript
+export interface LocalSocketServer
+```
+
 Defines a local socket server connection. Before calling LocalSocketServer APIs, you need to call [socket.constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md) to create a **LocalSocketServer** object.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # HuksKeyDigest
 
+```TypeScript
+export enum HuksKeyDigest
+```
+
 表示摘要算法。
 
 **起始版本：** 8

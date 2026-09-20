@@ -1,5 +1,9 @@
 # DepthVector4（系统接口）
 
+```TypeScript
+declare interface DepthVector4
+```
+
 深度空间中的4D向量。用于为组件设置空间效果参数。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # TextInput properties/events
 
+```TypeScript
+declare class TextInputAttribute extends CommonMethod<TextInputAttribute>
+```
+
 In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
 In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
@@ -75,6 +79,8 @@ Sets the style of the cancel button on the right. Only icons of the image type a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Yes | Options of the cancel button on the right.<br>Default value:<br>{<br> style: CancelButtonStyle.INPUT<br>}<br>Default value on wearables: **28vp**<br>**Since:** 18 |
+
+<a id="cancelbutton-1"></a>
 
 ## cancelButton
 

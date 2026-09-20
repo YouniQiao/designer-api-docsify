@@ -1,5 +1,9 @@
 # SessionRestore（系统接口）
 
+```TypeScript
+class SessionRestore
+```
+
 恢复流程对象，用于支撑应用全量恢复流程。
 
 **起始版本：** 10
@@ -219,6 +223,8 @@ async function appendBundles() {
   }
 }
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 
@@ -1062,6 +1068,8 @@ async function getFileHandle() {
 }
 ```
 
+<a id="getfilehandle-1"></a>
+
 ## getFileHandle
 
 ```TypeScript
@@ -1660,6 +1668,8 @@ function createSessionRestore() {
 }
 g_session = createSessionRestore();
 ```
+
+<a id="publishfile-1"></a>
 
 ## publishFile
 

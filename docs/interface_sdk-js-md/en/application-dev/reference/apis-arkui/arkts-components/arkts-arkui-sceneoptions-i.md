@@ -1,5 +1,9 @@
 # SceneOptions
 
+```TypeScript
+declare interface SceneOptions
+```
+
 Scene options used by 3D scene control
 
 @interface SceneOptions

@@ -1,5 +1,9 @@
 # RichEditorStyledStringController
 
+```TypeScript
+declare class RichEditorStyledStringController extends RichEditorBaseController implements StyledStringController
+```
+
 Represents the controller of the **RichEditor** component built with the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
 ## Objects to Import

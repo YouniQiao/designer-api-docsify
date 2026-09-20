@@ -1,5 +1,9 @@
 # InputMethodAbility
 
+```TypeScript
+interface InputMethodAbility
+```
+
 In the following API examples, you must first use [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 9
@@ -96,6 +100,8 @@ class InputMethodExt extends InputMethodExtensionAbility {
     }
 }
 ```
+
+<a id="createpanel-1"></a>
 
 ## createPanel
 
@@ -227,6 +233,8 @@ if (inputPanel) {
 }
 ```
 
+<a id="destroypanel-1"></a>
+
 ## destroyPanel
 
 ```TypeScript
@@ -348,25 +356,6 @@ Disables listening for the window invocation setting event. This API uses an asy
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-## off('keyboardShow' | 'keyboardHide')
-
-```TypeScript
-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
-```
-
-Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | No | Callback used to return the result. |
 
 ## off('keyboardShow' | 'keyboardHide')
 
@@ -544,25 +533,6 @@ Enables listening for the window invocation setting event. This API uses an asyn
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
-
-## on('keyboardShow' | 'keyboardHide')
-
-```TypeScript
-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
-```
-
-Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 ## on('keyboardShow' | 'keyboardHide')
 

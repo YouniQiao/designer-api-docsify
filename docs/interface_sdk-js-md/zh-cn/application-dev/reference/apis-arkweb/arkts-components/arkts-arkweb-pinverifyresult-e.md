@@ -1,5 +1,9 @@
 # PinVerifyResult
 
+```TypeScript
+declare enum PinVerifyResult
+```
+
 PIN码认证结果，用于标识PIN码验证的执行状态。
 
 **起始版本：** 22

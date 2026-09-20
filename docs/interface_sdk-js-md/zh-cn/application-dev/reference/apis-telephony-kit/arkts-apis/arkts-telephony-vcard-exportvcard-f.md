@@ -108,6 +108,8 @@ class EntryAbility extends UIAbility {
 ```
 
 
+<a id="exportvcard-1"></a>
+
 ## exportVCard
 
 ```TypeScript
@@ -151,6 +153,8 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 参见 [exportVCard](#exportvcard)
 
+
+<a id="exportvcard-2"></a>
 
 ## exportVCard
 

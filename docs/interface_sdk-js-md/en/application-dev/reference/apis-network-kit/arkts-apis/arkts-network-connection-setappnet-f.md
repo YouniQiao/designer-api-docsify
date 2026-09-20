@@ -46,6 +46,8 @@ The following example binds the application to a Wi-Fi network. It uses the [on(
 ```
 
 
+<a id="setappnet-1"></a>
+
 ## setAppNet
 
 ```TypeScript

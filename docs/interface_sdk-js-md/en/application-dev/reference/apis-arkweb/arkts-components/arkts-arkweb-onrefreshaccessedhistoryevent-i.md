@@ -1,5 +1,9 @@
 # OnRefreshAccessedHistoryEvent
 
+```TypeScript
+declare interface OnRefreshAccessedHistoryEvent
+```
+
 Defines the callback information triggered when navigation is complete, including the URL and refresh status. It is suitable for scenarios where monitoring page navigation history is required, improving navigation behavior tracking accuracy and user experience.
 
 **Since:** 12

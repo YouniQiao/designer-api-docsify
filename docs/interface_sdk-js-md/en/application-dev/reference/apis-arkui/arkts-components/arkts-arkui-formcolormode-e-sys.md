@@ -1,5 +1,9 @@
 # FormColorMode (System API)
 
+```TypeScript
+enum FormColorMode
+```
+
 Enumerates the card color modes.
 
 **Since:** 23

@@ -69,6 +69,8 @@ sharing
 ```
 
 
+<a id="getsharableregexes-1"></a>
+
 ## getSharableRegexes
 
 ```TypeScript

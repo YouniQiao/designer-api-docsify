@@ -1,5 +1,9 @@
 # ContentType
 
+```TypeScript
+declare enum ContentType
+```
+
 Enumerates the content types for autofill.
 
 **Since:** 12

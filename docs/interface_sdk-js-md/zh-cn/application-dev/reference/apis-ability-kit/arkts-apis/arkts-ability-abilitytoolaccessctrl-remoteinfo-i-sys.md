@@ -1,5 +1,9 @@
 # RemoteInfo（系统接口）
 
+```TypeScript
+interface RemoteInfo
+```
+
 远端设备信息。
 
 **起始版本：** 26.0.1

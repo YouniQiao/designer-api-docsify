@@ -1,5 +1,9 @@
 # AsyKeyGeneratorBySpec
 
+```TypeScript
+interface AsyKeyGeneratorBySpec
+```
+
 指定密钥规格的非对称密钥生成器接口，定义根据指定密钥规格生成非对称密钥的方法。调用前，需通过[createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md)方法创建一个AsyKeyGeneratorBySpec实例。
 
 **起始版本：** 10
@@ -129,6 +133,8 @@ function testGenerateKeyPair() {
   });
 }
 ```
+
+<a id="generatekeypair-1"></a>
 
 ## generateKeyPair
 
@@ -442,6 +448,8 @@ function testGeneratePriKey() {
 }
 ```
 
+<a id="generateprikey-1"></a>
+
 ## generatePriKey
 
 ```TypeScript
@@ -671,6 +679,8 @@ function testGeneratePubKey() {
   });
 }
 ```
+
+<a id="generatepubkey-1"></a>
 
 ## generatePubKey
 

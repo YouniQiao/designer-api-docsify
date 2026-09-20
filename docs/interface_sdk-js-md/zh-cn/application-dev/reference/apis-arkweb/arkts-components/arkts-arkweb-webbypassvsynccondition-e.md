@@ -1,5 +1,9 @@
 # WebBypassVsyncCondition
 
+```TypeScript
+declare enum WebBypassVsyncCondition
+```
+
 跳过渲染vsync条件。
 
 **起始版本：** 20

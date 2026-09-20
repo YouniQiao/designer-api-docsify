@@ -1,5 +1,9 @@
 # GesturePriority
 
+```TypeScript
+declare enum GesturePriority
+```
+
 绑定手势的优先级。
 
 **起始版本：** 12

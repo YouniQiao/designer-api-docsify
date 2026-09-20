@@ -1,5 +1,9 @@
 # ContainerSpan properties/events
 
+```TypeScript
+declare class ContainerSpanAttribute
+```
+
 Only the following attributes are supported.
 
 The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.

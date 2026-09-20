@@ -1,5 +1,9 @@
 # MenuItemOptions
 
+```TypeScript
+declare interface MenuItemOptions
+```
+
 Menu中的菜单项信息。
 
 **起始版本：** 9

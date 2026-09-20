@@ -1,5 +1,9 @@
 # DynamicSyncScene
 
+```TypeScript
+export class DynamicSyncScene
+```
+
 Represents a dynamic synchronization scene.
 
 **Since:** 12

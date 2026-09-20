@@ -1,5 +1,9 @@
 # AccessibilityActionOptions
 
+```TypeScript
+declare interface AccessibilityActionOptions
+```
+
 设置组件的无障碍操作的可选参数，用于限制或修改屏幕朗读等辅助应用发起的操作行为。仅Slider组件支持使用。在其他组件使用该接口时，编译环节可正常通过，但接口功能不生效。
 
 **起始版本：** 23

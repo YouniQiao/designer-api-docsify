@@ -1317,7 +1317,8 @@
   - [UpgradeFlag(系统接口)](arkts-ability-freeinstall-upgradeflag-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.bundle.innerBundleManager](arkts-ability-bundle-innerbundlemanager.md)<!--DelEnd-->
-  - [innerBundleManager](arkts-ability-innerbundlemanager-n.md)
+  <!--Del-->
+  - [innerBundleManager(系统接口)](arkts-ability-innerbundlemanager-n.md)<!--DelEnd-->
     <!--Del-->
     - [getAllLauncherAbilityInfos(系统接口)](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md)<!--DelEnd-->
     <!--Del-->

@@ -1,5 +1,9 @@
 # VpnConnection (System API)
 
+```TypeScript
+export interface VpnConnection
+```
+
 Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling [vpn.createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md).
 
 **Since:** 10
@@ -53,6 +57,8 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -132,6 +138,8 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
+
+<a id="protect-1"></a>
 
 ## protect
 
@@ -220,6 +228,8 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
+
+<a id="setup-1"></a>
 
 ## setUp
 

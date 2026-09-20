@@ -1,5 +1,9 @@
 # CustomComponentV2
 
+```TypeScript
+declare class CustomComponentV2 extends BaseCustomComponent
+```
+
 Custom ComponentV2
 
 **Inheritance/Implementation:** CustomComponentV2 extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)

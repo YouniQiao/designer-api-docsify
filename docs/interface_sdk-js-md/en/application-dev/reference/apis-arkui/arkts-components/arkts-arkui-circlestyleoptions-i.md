@@ -1,5 +1,9 @@
 # CircleStyleOptions
 
+```TypeScript
+declare interface CircleStyleOptions
+```
+
 Describes the parameters of the ring style.
 
 **Since:** 12

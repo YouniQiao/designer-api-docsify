@@ -1,5 +1,9 @@
 # PermissionUsedRequest（系统接口）
 
+```TypeScript
+interface PermissionUsedRequest
+```
+
 表示使用记录的查询请求。
 
 **起始版本：** 9

@@ -65,6 +65,8 @@ call.isRinging().then((data: boolean) => {
 ```
 
 
+<a id="isringing-1"></a>
+
 ## isRinging
 
 ```TypeScript

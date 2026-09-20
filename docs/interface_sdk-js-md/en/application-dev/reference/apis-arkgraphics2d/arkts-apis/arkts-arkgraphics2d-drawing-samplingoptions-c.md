@@ -1,5 +1,9 @@
 # SamplingOptions
 
+```TypeScript
+class SamplingOptions
+```
+
 Implements sampling options.
 
 > **NOTE:** 
@@ -31,6 +35,8 @@ Creates a **SamplingOptions** object, where the default value of [FilterMode](ar
 **Since:** 12
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 

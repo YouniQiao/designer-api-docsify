@@ -1,5 +1,9 @@
 # OperateItemV2
 
+```TypeScript
+export declare class OperateItemV2
+```
+
 列表项右侧显示的元素类型。
 
 **起始版本：** 26.0.0

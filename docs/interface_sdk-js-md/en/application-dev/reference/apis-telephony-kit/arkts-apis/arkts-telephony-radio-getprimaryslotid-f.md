@@ -59,6 +59,8 @@ radio.getPrimarySlotId().then((data: number) => {
 ```
 
 
+<a id="getprimaryslotid-1"></a>
+
 ## getPrimarySlotId
 
 ```TypeScript

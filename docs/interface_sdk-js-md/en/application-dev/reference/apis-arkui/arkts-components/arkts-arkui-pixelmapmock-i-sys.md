@@ -1,5 +1,9 @@
 # PixelMapMock (System API)
 
+```TypeScript
+declare interface PixelMapMock
+```
+
 pixelmap object with release function.
 
 **Since:** 7

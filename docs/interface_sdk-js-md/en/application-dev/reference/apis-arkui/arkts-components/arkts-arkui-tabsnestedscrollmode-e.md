@@ -1,5 +1,9 @@
 # TabsNestedScrollMode
 
+```TypeScript
+declare enum TabsNestedScrollMode
+```
+
 Enumerates the nested scrolling modes of the **Tabs** component and its parent container.
 
 **Since:** 24

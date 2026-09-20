@@ -1,5 +1,9 @@
 # ScrollableBarModeOptions
 
+```TypeScript
+interface ScrollableBarModeOptions
+```
+
 Scrollable模式下的TabBar的布局样式对象。
 
 **起始版本：** 10

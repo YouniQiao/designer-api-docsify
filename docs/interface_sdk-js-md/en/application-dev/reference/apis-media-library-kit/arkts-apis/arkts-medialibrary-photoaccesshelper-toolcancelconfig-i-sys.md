@@ -1,5 +1,9 @@
 # ToolCancelConfig (System API)
 
+```TypeScript
+interface ToolCancelConfig
+```
+
 Configuration for canceling an analysis tool.
 
 **Since:** 26.0.1

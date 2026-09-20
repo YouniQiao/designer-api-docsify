@@ -1,5 +1,9 @@
 # CalendarPickerDialog
 
+```TypeScript
+declare class CalendarPickerDialog
+```
+
 A calendar picker dialog box is a dialog box that allows users to select a date from a calendar picker.
 
 **Since:** 10

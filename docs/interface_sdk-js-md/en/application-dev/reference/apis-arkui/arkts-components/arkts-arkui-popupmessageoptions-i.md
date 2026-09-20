@@ -1,5 +1,9 @@
 # PopupMessageOptions
 
+```TypeScript
+declare interface PopupMessageOptions
+```
+
 Describes the popup message text style.
 
 **Since:** 10

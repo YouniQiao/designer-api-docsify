@@ -1,5 +1,9 @@
 # DrawableDescriptorLoadedResult
 
+```TypeScript
+export interface DrawableDescriptorLoadedResult
+```
+
 Represents the result of loading an image resource or URI.
 
 **Since:** 21

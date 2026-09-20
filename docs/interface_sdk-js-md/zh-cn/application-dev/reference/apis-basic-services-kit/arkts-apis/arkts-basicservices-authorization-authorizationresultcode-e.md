@@ -1,5 +1,9 @@
 # AuthorizationResultCode
 
+```TypeScript
+enum AuthorizationResultCode
+```
+
 枚举授权结果码。
 
 **起始版本：** 26.0.1

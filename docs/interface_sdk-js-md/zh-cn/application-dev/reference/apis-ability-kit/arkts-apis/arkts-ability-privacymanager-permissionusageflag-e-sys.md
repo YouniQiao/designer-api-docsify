@@ -1,5 +1,9 @@
 # PermissionUsageFlag（系统接口）
 
+```TypeScript
+enum PermissionUsageFlag
+```
+
 表示使用记录的查询方式的枚举。
 
 **起始版本：** 9

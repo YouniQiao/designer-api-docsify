@@ -1,5 +1,9 @@
 # PinchGestureHandler
 
+```TypeScript
+declare class PinchGestureHandler extends GestureHandler<PinchGestureHandler>
+```
+
 Defines a type of gesture handler object for pinch gestures.
 
 **Inheritance/Implementation:** PinchGestureHandler extends GestureHandler<PinchGestureHandler>
@@ -57,6 +61,8 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 | Type | Description |
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

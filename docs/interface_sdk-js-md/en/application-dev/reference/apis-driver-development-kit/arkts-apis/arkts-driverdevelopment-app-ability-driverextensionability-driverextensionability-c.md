@@ -1,5 +1,9 @@
 # DriverExtensionAbility
 
+```TypeScript
+declare class DriverExtensionAbility
+```
+
 The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected.
 
 **Since:** 10

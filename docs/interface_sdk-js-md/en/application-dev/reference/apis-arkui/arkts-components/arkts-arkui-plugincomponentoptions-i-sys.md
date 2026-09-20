@@ -1,5 +1,9 @@
 # PluginComponentOptions (System API)
 
+```TypeScript
+declare interface PluginComponentOptions
+```
+
 Defines options for constructing a **PluginComponent**.
 
 > **NOTE:** 

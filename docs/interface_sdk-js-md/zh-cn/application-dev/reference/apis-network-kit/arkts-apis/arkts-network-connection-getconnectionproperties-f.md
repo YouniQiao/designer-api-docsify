@@ -75,6 +75,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 ```
 
 
+<a id="getconnectionproperties-1"></a>
+
 ## getConnectionProperties
 
 ```TypeScript

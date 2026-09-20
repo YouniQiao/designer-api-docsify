@@ -1,5 +1,9 @@
 # ConstraintSizeOptions
 
+```TypeScript
+declare interface ConstraintSizeOptions
+```
+
 约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。
 
 > **说明：** 

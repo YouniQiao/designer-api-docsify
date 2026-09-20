@@ -1,5 +1,9 @@
 # AVTranscoder
 
+```TypeScript
+interface AVTranscoder
+```
+
 视频转码管理类，用于视频转码。在调用AVTranscoder的方法前，需要先通过[createAVTranscoder()](arkts-media-media-createavtranscoder-f.md)构建一个AVTranscoder实例。
 
 视频转码demo可参考：[视频转码开发指导](../../../media/media/using-avtranscoder-for-transcodering.md)

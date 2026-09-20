@@ -1,5 +1,9 @@
 # OnScrollEvent
 
+```TypeScript
+declare interface OnScrollEvent
+```
+
 Defines the callback information triggered when the scrollbar scrolls to a specified position, including the horizontal and vertical offsets.
 
 **Since:** 12

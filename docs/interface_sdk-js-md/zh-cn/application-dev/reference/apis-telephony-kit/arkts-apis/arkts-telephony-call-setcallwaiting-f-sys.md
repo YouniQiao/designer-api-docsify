@@ -67,6 +67,8 @@ call.setCallWaiting(0, true).then(() => {
 ```
 
 
+<a id="setcallwaiting-1"></a>
+
 ## setCallWaiting
 
 ```TypeScript

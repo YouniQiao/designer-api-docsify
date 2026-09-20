@@ -1,5 +1,9 @@
 # CopyOptions
 
+```TypeScript
+declare enum CopyOptions
+```
+
 Copy options.
 
 **Since:** 9

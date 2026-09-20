@@ -1,5 +1,9 @@
 # MenuPolicy
 
+```TypeScript
+declare enum MenuPolicy
+```
+
 Enumerates menu display policies.
 
 **Since:** 12

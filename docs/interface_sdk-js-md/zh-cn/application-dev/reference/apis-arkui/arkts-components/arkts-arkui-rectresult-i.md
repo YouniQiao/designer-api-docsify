@@ -1,5 +1,9 @@
 # RectResult
 
+```TypeScript
+declare interface RectResult
+```
+
 位置和尺寸类型，用于描述组件的位置和宽高。
 
 **起始版本：** 10

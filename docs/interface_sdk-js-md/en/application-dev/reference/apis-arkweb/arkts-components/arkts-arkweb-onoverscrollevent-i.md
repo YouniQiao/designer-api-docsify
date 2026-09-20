@@ -1,5 +1,9 @@
 # OnOverScrollEvent
 
+```TypeScript
+declare interface OnOverScrollEvent
+```
+
 Defines the callback information triggered when the web page is overscrolled, including the horizontal and vertical offsets.
 
 **Since:** 12

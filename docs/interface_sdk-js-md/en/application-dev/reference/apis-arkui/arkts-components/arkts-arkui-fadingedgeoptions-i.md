@@ -1,5 +1,9 @@
 # FadingEdgeOptions
 
+```TypeScript
+declare interface FadingEdgeOptions
+```
+
 Defines the fadingEdge options.
 
 **Since:** 14

@@ -1,5 +1,9 @@
 # StyledNumberFormat
 
+```TypeScript
+export class StyledNumberFormat
+```
+
 Provide a number formatting interface which could format number to StyleString.
 
 **Since:** 18
@@ -102,6 +106,8 @@ try {
   console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

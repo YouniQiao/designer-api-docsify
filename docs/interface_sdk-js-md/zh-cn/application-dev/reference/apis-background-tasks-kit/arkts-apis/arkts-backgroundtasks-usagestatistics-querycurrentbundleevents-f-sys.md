@@ -92,6 +92,8 @@ usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usa
 ```
 
 
+<a id="querycurrentbundleevents-1"></a>
+
 ## queryCurrentBundleEvents
 
 ```TypeScript
@@ -137,6 +139,8 @@ function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<Bun
 
 参见 [queryCurrentBundleEvents](#querycurrentbundleevents)
 
+
+<a id="querycurrentbundleevents-2"></a>
 
 ## queryCurrentBundleEvents
 

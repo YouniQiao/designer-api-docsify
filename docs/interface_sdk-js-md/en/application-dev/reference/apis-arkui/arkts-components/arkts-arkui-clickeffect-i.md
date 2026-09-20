@@ -1,5 +1,9 @@
 # ClickEffect
 
+```TypeScript
+declare interface ClickEffect
+```
+
 Defines the click effect.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # ArrowPosition
 
+```TypeScript
+declare enum ArrowPosition
+```
+
 箭头的位置。
 
 **起始版本：** 10

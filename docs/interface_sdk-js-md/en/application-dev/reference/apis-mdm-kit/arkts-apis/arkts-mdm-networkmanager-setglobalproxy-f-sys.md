@@ -106,6 +106,8 @@ networkManager.setGlobalProxy(wantTemp, httpProxy).then(() => {
 ```
 
 
+<a id="setglobalproxy-1"></a>
+
 ## setGlobalProxy
 
 ```TypeScript

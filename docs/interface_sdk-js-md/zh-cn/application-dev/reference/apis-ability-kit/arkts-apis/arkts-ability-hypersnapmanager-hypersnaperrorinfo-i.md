@@ -1,5 +1,9 @@
 # HyperSnapErrorInfo
 
+```TypeScript
+export interface HyperSnapErrorInfo
+```
+
 描述Hyper Snap的错误信息。
 
 **起始版本：** 26.0.1

@@ -1,5 +1,9 @@
 # RouteType
 
+```TypeScript
+declare enum RouteType
+```
+
 页面转场类型。
 
 **起始版本：** 7

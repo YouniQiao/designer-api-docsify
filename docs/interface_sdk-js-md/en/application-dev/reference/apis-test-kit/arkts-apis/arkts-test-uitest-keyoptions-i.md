@@ -1,5 +1,9 @@
 # KeyOptions
 
+```TypeScript
+declare interface KeyOptions
+```
+
 Represents the options for key operations.
 
 **Since:** 26.0.0

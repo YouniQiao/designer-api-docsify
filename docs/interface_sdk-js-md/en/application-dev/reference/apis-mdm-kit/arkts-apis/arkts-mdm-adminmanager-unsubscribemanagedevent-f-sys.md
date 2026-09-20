@@ -87,6 +87,8 @@ adminManager.unsubscribeManagedEvent(wantTemp, events).then(() => {
 ```
 
 
+<a id="unsubscribemanagedevent-1"></a>
+
 ## unsubscribeManagedEvent
 
 ```TypeScript

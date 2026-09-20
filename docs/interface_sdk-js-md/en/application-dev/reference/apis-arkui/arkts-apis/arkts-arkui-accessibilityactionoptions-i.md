@@ -1,5 +1,9 @@
 # AccessibilityActionOptions
 
+```TypeScript
+declare interface AccessibilityActionOptions
+```
+
 Defines optional parameters for accessibility operations of a component, which is used to restrict or modify the operations initiated by accessibility apps such as the screen reader. This API is supported only by the Slider component. If this API is used on other components, compilation succeeds but the API does not take effect.
 
 **Since:** 23

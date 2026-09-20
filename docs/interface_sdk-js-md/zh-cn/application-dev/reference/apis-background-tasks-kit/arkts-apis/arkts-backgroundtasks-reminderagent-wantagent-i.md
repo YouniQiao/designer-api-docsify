@@ -1,5 +1,9 @@
 # WantAgent
 
+```TypeScript
+interface WantAgent
+```
+
 点击提醒通知后跳转的目标ability信息。
 
 **起始版本：** 7

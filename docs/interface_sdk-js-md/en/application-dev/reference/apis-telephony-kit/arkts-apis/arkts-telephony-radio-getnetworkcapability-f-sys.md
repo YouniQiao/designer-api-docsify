@@ -72,6 +72,8 @@ radio.getNetworkCapability(slotId, type).then((data: radio.NetworkCapabilityStat
 ```
 
 
+<a id="getnetworkcapability-1"></a>
+
 ## getNetworkCapability
 
 ```TypeScript

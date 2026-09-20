@@ -1,5 +1,9 @@
 # NavigationTransitionProxy
 
+```TypeScript
+declare interface NavigationTransitionProxy
+```
+
 自定义转场动画代理对象。
 
 **起始版本：** 11

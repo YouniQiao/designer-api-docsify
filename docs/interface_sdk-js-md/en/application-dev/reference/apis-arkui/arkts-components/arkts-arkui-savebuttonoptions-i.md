@@ -1,5 +1,9 @@
 # SaveButtonOptions
 
+```TypeScript
+declare interface SaveButtonOptions
+```
+
 Defines options for the save button, including icon, text, and button type.
 
 > **NOTE:** 

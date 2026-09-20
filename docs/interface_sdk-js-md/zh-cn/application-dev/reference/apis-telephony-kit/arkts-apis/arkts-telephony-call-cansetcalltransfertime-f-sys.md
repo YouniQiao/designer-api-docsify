@@ -68,6 +68,8 @@ call.canSetCallTransferTime(slotId).then((data: boolean) => {
 ```
 
 
+<a id="cansetcalltransfertime-1"></a>
+
 ## canSetCallTransferTime
 
 ```TypeScript

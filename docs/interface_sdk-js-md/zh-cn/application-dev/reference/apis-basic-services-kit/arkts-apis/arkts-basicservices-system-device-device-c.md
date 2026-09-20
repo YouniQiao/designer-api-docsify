@@ -1,5 +1,9 @@
 # Device
 
+```TypeScript
+export default class Device
+```
+
 getInfo interface
 
 **起始版本：** 3

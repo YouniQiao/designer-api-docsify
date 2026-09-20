@@ -1,5 +1,9 @@
 # GridRowDirection
 
+```TypeScript
+declare enum GridRowDirection
+```
+
 Grid element arrangement direction.
 
 > **NOTE:** 

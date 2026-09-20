@@ -1,5 +1,9 @@
 # OperationType (System API)
 
+```TypeScript
+enum OperationType
+```
+
 Operation type.
 
 **Since:** 26.0.0

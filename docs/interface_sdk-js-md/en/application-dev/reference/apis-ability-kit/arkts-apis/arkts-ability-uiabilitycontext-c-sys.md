@@ -1,5 +1,9 @@
 # UIAbilityContext
 
+```TypeScript
+declare class UIAbilityContext extends Context
+```
+
 UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
 **Inheritance/Implementation:** UIAbilityContext extends [Context](arkts-ability-context-c.md)
@@ -313,6 +317,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="disconnectability-1"></a>
+
 ## disconnectAbility
 
 ```TypeScript
@@ -473,6 +479,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="requestmodaluiextension-1"></a>
 
 ## requestModalUIExtension
 
@@ -715,6 +723,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissionicon-1"></a>
+
 ## setMissionIcon
 
 ```TypeScript
@@ -893,6 +903,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityascaller-1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -954,6 +966,8 @@ Starts a UIAbility with the caller information and start options specified. The 
 **Examples**
 
 See [startAbilityAsCaller](#startabilityascaller)
+
+<a id="startabilityascaller-2"></a>
 
 ## startAbilityAsCaller
 
@@ -1304,6 +1318,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresultwithaccount-1"></a>
+
 ## startAbilityForResultWithAccount
 
 ```TypeScript
@@ -1378,6 +1394,8 @@ Starts a UIAbility with the account ID and start options specified and returns t
 **Examples**
 
 See [startAbilityForResultWithAccount](#startabilityforresultwithaccount)
+
+<a id="startabilityforresultwithaccount-2"></a>
 
 ## startAbilityForResultWithAccount
 
@@ -1626,6 +1644,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilitywithaccount-1"></a>
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1695,6 +1715,8 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 **Examples**
 
 See [startAbilityWithAccount](#startabilitywithaccount)
+
+<a id="startabilitywithaccount-2"></a>
 
 ## startAbilityWithAccount
 
@@ -1937,6 +1959,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startrecentability-1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2005,6 +2029,8 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 **Examples**
 
 See [startRecentAbility](#startrecentability)
+
+<a id="startrecentability-2"></a>
 
 ## startRecentAbility
 
@@ -2189,6 +2215,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startserviceextensionability-1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2362,6 +2390,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startserviceextensionabilitywithaccount-1"></a>
+
 ## startServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -2531,6 +2561,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="stopserviceextensionability-1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2692,6 +2724,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="stopserviceextensionabilitywithaccount-1"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 

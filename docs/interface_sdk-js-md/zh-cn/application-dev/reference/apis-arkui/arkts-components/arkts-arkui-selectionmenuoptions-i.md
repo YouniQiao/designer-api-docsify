@@ -1,5 +1,9 @@
 # SelectionMenuOptions
 
+```TypeScript
+declare interface SelectionMenuOptions
+```
+
 菜单的选项。
 
 **起始版本：** 10

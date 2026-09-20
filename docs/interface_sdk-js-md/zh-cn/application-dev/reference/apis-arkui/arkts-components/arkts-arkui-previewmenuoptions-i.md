@@ -1,5 +1,9 @@
 # PreviewMenuOptions
 
+```TypeScript
+declare interface PreviewMenuOptions
+```
+
 预览菜单的选项。
 
 **起始版本：** 18

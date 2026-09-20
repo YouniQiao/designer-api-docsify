@@ -1,5 +1,9 @@
 # GuideLineStyle
 
+```TypeScript
+declare interface GuideLineStyle
+```
+
 Defines the style of a guideline, which used to define the ID, direction, and position of a guideline, helping child components to be positioned and aligned in the **RelativeContainer**.
 
 **Since:** 12

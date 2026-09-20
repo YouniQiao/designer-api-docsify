@@ -1,5 +1,9 @@
 # SessionBackup (System API)
 
+```TypeScript
+class SessionBackup
+```
+
 Control class for backup procedure.
 
 **Since:** 10
@@ -221,6 +225,8 @@ async function appendBundles() {
   }
 }
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 

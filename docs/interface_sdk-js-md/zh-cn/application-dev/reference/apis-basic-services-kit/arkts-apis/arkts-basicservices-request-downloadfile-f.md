@@ -85,6 +85,8 @@ try {
 ```
 
 
+<a id="downloadfile-1"></a>
+
 ## downloadFile
 
 ```TypeScript

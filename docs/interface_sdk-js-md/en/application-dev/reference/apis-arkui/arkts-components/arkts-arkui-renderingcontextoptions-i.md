@@ -1,5 +1,9 @@
 # RenderingContextOptions
 
+```TypeScript
+declare interface RenderingContextOptions
+```
+
 Defines the specific configuration parameters for the rendering context.
 
 **Since:** 23

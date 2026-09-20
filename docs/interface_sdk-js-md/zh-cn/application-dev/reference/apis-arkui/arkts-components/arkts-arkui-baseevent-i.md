@@ -1,5 +1,9 @@
 # BaseEvent
 
+```TypeScript
+declare interface BaseEvent
+```
+
 基础事件类型。
 
 **起始版本：** 8

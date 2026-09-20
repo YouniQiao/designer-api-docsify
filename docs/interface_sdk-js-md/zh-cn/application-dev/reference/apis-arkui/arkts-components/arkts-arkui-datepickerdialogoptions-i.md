@@ -1,5 +1,9 @@
 # DatePickerDialogOptions
 
+```TypeScript
+declare interface DatePickerDialogOptions extends DatePickerOptions
+```
+
 日期选择器弹窗选项。
 
 继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。
@@ -573,8 +577,8 @@ lunarSwitchStyle?: LunarSwitchStyle
 
 > 默认值：
 > <br>{
-> <br>selectedColor: `&#36;r('sys.color.ohos_id_color_text_primary_actived')`,
-> <br>unselectedColor: `&#36;r('sys.color.ohos_id_color_switch_outline_off')`,
+> <br>selectedColor: `$r('sys.color.ohos_id_color_text_primary_actived')`,
+> <br>unselectedColor: `$r('sys.color.ohos_id_color_switch_outline_off')`,
 > <br>strokeColor: Color.White
 > <br>}
 

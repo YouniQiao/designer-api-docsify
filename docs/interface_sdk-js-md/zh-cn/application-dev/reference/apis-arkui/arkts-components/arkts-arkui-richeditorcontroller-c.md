@@ -1,5 +1,9 @@
 # RichEditorController
 
+```TypeScript
+declare class RichEditorController extends RichEditorBaseController
+```
+
 RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
 > **说明：** 

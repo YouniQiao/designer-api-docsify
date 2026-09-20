@@ -1,5 +1,9 @@
 # RotationGestureHandlerOptions
 
+```TypeScript
+interface RotationGestureHandlerOptions extends BaseHandlerOptions
+```
+
 旋转手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
 **继承/实现关系：** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

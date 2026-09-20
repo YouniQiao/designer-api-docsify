@@ -1,5 +1,9 @@
 # IUserAuthCallback (System API)
 
+```TypeScript
+interface IUserAuthCallback
+```
+
 Provides callbacks for user authentication.
 
 **Since:** 8

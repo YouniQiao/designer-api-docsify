@@ -82,6 +82,8 @@ print.addPrinters([printerInfo]).then(() => {
 ```
 
 
+<a id="addprinters-1"></a>
+
 ## addPrinters
 
 ```TypeScript

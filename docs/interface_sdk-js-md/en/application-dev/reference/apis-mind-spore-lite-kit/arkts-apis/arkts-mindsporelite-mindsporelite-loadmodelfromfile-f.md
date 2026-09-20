@@ -93,6 +93,8 @@ mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLi
 ```
 
 
+<a id="loadmodelfromfile-1"></a>
+
 ## loadModelFromFile
 
 ```TypeScript
@@ -128,6 +130,8 @@ Create a Model instance from file path.
 
 See [loadModelFromFile](#loadmodelfromfile)
 
+
+<a id="loadmodelfromfile-2"></a>
 
 ## loadModelFromFile
 

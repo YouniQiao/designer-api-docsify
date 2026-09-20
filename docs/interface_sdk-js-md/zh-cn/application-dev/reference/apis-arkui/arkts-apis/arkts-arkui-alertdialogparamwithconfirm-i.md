@@ -1,5 +1,9 @@
 # AlertDialogParamWithConfirm
 
+```TypeScript
+declare interface AlertDialogParamWithConfirm extends AlertDialogParam
+```
+
 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
 
 confirm参数优先级：fontColor、backgroundColor &gt; style &gt; defaultFocus

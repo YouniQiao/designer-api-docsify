@@ -65,6 +65,8 @@ sms.createMessage(pdu, specification).then((data: sms.ShortMessage) => {
 ```
 
 
+<a id="createmessage-1"></a>
+
 ## createMessage
 
 ```TypeScript

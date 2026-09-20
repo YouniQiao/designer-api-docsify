@@ -1,5 +1,9 @@
 # ContinueState
 
+```TypeScript
+export enum ContinueState
+```
+
 Enumerates the mission continuation states of the application. It is used in the [setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate) API of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md).
 
 **Since:** 10

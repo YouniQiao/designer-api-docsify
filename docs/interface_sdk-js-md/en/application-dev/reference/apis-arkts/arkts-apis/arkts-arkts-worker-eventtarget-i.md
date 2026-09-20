@@ -1,5 +1,9 @@
 # EventTarget
 
+```TypeScript
+export interface EventTarget
+```
+
 Specific event features.
 
 **Since:** 7

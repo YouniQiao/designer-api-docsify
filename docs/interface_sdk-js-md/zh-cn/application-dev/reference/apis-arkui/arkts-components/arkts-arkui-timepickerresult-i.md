@@ -1,5 +1,9 @@
 # TimePickerResult
 
+```TypeScript
+declare interface TimePickerResult
+```
+
 返回选中的时间结果，hour取值0-23，与展示制式无关。
 
 **起始版本：** 8

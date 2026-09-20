@@ -100,6 +100,8 @@ try {
 ```
 
 
+<a id="querydata-1"></a>
+
 ## queryData
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # BlurOnKeyboardHideMode
 
+```TypeScript
+declare enum BlurOnKeyboardHideMode
+```
+
 Enumerates whether the **Web** component loses focus when the soft keyboard is hidden.
 
 **Since:** 14

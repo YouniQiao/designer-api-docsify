@@ -1,5 +1,9 @@
 # SourceTool
 
+```TypeScript
+declare enum SourceTool
+```
+
 定义输入源对应的工具类型。
 
 **起始版本：** 9

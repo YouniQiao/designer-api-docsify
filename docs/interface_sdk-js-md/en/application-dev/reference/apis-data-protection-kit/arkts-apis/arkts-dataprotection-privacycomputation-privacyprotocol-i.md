@@ -1,5 +1,9 @@
 # PrivacyProtocol
 
+```TypeScript
+interface PrivacyProtocol
+```
+
 Defines the privacy protocol configuration, including the data set size and protocol type used for privacy-preserving computation.
 
 **Since:** 26.0.1

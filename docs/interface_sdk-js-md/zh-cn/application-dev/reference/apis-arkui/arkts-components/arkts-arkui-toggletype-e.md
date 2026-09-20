@@ -1,5 +1,9 @@
 # ToggleType
 
+```TypeScript
+declare enum ToggleType
+```
+
 Toggle的样式。
 
 > **说明：** 

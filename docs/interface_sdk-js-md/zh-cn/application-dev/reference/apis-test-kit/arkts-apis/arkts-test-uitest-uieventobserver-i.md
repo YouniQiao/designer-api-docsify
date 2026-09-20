@@ -1,5 +1,9 @@
 # UIEventObserver
 
+```TypeScript
+declare interface UIEventObserver
+```
+
 UI事件监听器。
 
 **起始版本：** 10

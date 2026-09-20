@@ -1,5 +1,9 @@
 # ComponentObserver
 
+```TypeScript
+interface ComponentObserver
+```
+
 The ComponentObserver is used to listen for layout, draw and drawChildren events.
 
 **Since:** 10

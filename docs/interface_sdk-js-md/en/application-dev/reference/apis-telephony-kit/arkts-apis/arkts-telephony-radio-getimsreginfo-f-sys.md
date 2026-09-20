@@ -71,6 +71,8 @@ radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
 ```
 
 
+<a id="getimsreginfo-1"></a>
+
 ## getImsRegInfo
 
 ```TypeScript

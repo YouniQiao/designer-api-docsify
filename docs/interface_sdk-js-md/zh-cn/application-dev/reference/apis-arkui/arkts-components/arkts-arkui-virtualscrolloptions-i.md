@@ -1,5 +1,9 @@
 # VirtualScrollOptions
 
+```TypeScript
+interface VirtualScrollOptions
+```
+
 配置懒加载模式下期望加载的数据项总数、复用能力、数据精准懒加载能力。从API版本26.0.0开始，支持配置内存优化策略。
 
 **起始版本：** 12

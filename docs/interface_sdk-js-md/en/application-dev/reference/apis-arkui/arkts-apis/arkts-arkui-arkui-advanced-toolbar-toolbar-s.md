@@ -1,5 +1,9 @@
 # ToolBar
 
+```TypeScript
+export declare struct ToolBar
+```
+
 The **Toolbar** component is designed to present a set of action options related to the current screen, displayed at the bottom of the screen. It can display up to five child components. If there are six or more child components, the first four are shown directly, and the additional ones are grouped under a **More** item on the rightmost side of the toolbar.
 
 > **NOTE:** 

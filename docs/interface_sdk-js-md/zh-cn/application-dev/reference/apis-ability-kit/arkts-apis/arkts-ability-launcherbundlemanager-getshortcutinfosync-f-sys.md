@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="getshortcutinfosync-1"></a>
+
 ## getShortcutInfoSync
 
 ```TypeScript

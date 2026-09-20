@@ -1,5 +1,9 @@
 # FullScreenEnterEvent
 
+```TypeScript
+declare interface FullScreenEnterEvent
+```
+
 提供 Web 组件进入全屏的回调信息，包括视频尺寸和退出句柄。适用于需要处理全屏视频的场景，提升视频播放的沉浸式体验和可控性。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # SheetTitleBarBackgroundBlurOptions (System API)
 
+```TypeScript
+declare interface SheetTitleBarBackgroundBlurOptions
+```
+
 Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values.
 
 **Since:** 26.0.1

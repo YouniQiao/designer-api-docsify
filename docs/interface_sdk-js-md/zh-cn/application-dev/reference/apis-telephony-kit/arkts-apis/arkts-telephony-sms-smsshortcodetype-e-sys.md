@@ -1,5 +1,9 @@
 # SmsShortCodeType（系统接口）
 
+```TypeScript
+export enum SmsShortCodeType
+```
+
 短信短码类型
 
 **起始版本：** 23

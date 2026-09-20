@@ -58,6 +58,8 @@ avSession.stopCasting(myToken).then(() => {
 ```
 
 
+<a id="stopcasting-1"></a>
+
 ## stopCasting
 
 ```TypeScript

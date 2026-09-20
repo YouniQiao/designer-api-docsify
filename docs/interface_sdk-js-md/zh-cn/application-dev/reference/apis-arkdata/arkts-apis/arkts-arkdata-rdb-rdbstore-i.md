@@ -1,5 +1,9 @@
 # RdbStore
 
+```TypeScript
+interface RdbStore
+```
+
 提供管理关系数据库（RDB）方法的接口。
 
 在使用以下相关接口前，请使用[executeSql](#executesql)接口初始化数据库表结构和相关数据。
@@ -137,6 +141,8 @@ promise.then((insertNum: number) => {
   console.error("batchInsert failed, status = " + status);
 })
 ```
+
+<a id="batchinsert-1"></a>
 
 ## batchInsert
 
@@ -309,6 +315,8 @@ promise.then((rows: number) => {
 })
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -387,6 +395,8 @@ promise.then(() => {
   console.error("ExecuteSql failed, err: " + err)
 })
 ```
+
+<a id="executesql-1"></a>
 
 ## executeSql
 
@@ -499,6 +509,8 @@ promise.then((rowId: BusinessError) => {
   console.error("Insert failed");
 })
 ```
+
+<a id="insert-1"></a>
 
 ## insert
 
@@ -613,6 +625,8 @@ promise.then((tableName: String) => {
   console.error('ObtainDistributedTableName failed, err: ' + err)
 })
 ```
+
+<a id="obtaindistributedtablename-1"></a>
 
 ## obtainDistributedTableName
 
@@ -754,6 +768,8 @@ promise.then((resultSet: void) => {
 })
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -833,6 +849,8 @@ promise.then((resultSet: void) => {
   console.error("Query failed, err: " + err)
 })
 ```
+
+<a id="querysql-1"></a>
 
 ## querySql
 
@@ -963,6 +981,8 @@ promise.then(() => {
 })
 ```
 
+<a id="setdistributedtables-1"></a>
+
 ## setDistributedTables
 
 ```TypeScript
@@ -1086,6 +1106,8 @@ promise.then((result: void) =>{
 })
 ```
 
+<a id="sync-1"></a>
+
 ## sync
 
 ```TypeScript
@@ -1203,6 +1225,8 @@ promise.then(async (rows: number) => {
   console.error("Update failed, err: " + err)
 })
 ```
+
+<a id="update-1"></a>
 
 ## update
 

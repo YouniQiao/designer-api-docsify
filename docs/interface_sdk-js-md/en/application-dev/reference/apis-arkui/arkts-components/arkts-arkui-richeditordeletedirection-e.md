@@ -1,5 +1,9 @@
 # RichEditorDeleteDirection
 
+```TypeScript
+declare enum RichEditorDeleteDirection
+```
+
 Defines the deletion direction.
 
 **Since:** 10

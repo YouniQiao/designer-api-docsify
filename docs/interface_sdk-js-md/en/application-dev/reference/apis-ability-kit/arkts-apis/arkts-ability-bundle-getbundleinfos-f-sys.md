@@ -81,6 +81,8 @@ bundle.getBundleInfos(bundleFlag, userId, (err, data) => {
 ```
 
 
+<a id="getbundleinfos-1"></a>
+
 ## getBundleInfos
 
 ```TypeScript
@@ -112,6 +114,8 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 See [getBundleInfos](#getbundleinfos)
 
+
+<a id="getbundleinfos-2"></a>
 
 ## getBundleInfos
 

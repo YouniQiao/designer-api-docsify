@@ -1,5 +1,9 @@
 # PluginErrorData（系统接口）
 
+```TypeScript
+declare interface PluginErrorData
+```
+
 发生错误时提供的数据。
 
 > **说明：** 

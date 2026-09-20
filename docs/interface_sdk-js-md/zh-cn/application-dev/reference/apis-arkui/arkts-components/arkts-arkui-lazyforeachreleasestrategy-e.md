@@ -1,5 +1,9 @@
 # LazyForEachReleaseStrategy
 
+```TypeScript
+declare enum LazyForEachReleaseStrategy
+```
+
 选择LazyForEach的资源释放策略。
 
 **起始版本：** 26.0.0

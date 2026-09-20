@@ -1,5 +1,9 @@
 # MediaAnalysisAlbumChangeRequest（系统接口）
 
+```TypeScript
+class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest
+```
+
 智慧相册变更请求。
 
 **继承/实现关系：** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)
@@ -67,6 +71,8 @@ async function example(context: Context) {
     new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
 }
 ```
+
+<a id="createanalysisalbumrequest-1"></a>
 
 ## createAnalysisAlbumRequest
 

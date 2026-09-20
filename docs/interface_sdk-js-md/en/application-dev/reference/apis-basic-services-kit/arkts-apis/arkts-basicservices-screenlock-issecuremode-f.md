@@ -51,6 +51,8 @@ screenLock.isSecureMode().then((data: Boolean) => {
 ```
 
 
+<a id="issecuremode-1"></a>
+
 ## isSecureMode
 
 ```TypeScript

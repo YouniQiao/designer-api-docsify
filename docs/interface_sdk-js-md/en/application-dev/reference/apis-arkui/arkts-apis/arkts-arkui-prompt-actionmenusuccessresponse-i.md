@@ -1,5 +1,9 @@
 # ActionMenuSuccessResponse
 
+```TypeScript
+interface ActionMenuSuccessResponse
+```
+
 Defines the response of ShowActionMenu.
 
 @interface ActionMenuSuccessResponse

@@ -1,5 +1,9 @@
 # UIScrollEvent
 
+```TypeScript
+declare interface UIScrollEvent extends UIScrollableCommonEvent
+```
+
 Defines a UIScrollableCommonEvent which is used to set different common event to target component.
 
 **Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)

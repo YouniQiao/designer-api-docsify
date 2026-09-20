@@ -1,5 +1,9 @@
 # CanvasParams
 
+```TypeScript
+declare interface CanvasParams
+```
+
 Defines the parameters of the **Canvas** component.
 
 **Since:** 23

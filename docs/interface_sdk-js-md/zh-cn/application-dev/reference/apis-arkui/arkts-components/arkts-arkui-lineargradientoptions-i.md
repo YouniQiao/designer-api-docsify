@@ -1,5 +1,9 @@
 # LinearGradientOptions
 
+```TypeScript
+declare interface LinearGradientOptions
+```
+
 线性渐变的参数。
 
 > **说明：** 

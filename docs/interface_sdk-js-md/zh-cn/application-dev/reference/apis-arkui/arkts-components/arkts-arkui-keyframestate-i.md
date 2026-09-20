@@ -1,5 +1,9 @@
 # KeyframeState
 
+```TypeScript
+declare interface KeyframeState
+```
+
 关键帧状态设置。
 
 **起始版本：** 11

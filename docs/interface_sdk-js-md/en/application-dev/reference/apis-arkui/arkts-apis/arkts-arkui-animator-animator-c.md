@@ -1,5 +1,9 @@
 # Animator
 
+```TypeScript
+export default class Animator
+```
+
 Creates an **Animator** object.
 
 **Since:** 6
@@ -61,6 +65,8 @@ See ArkTS-based Declarative Development Paradigm.
 > 
 > For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
 ```
+
+<a id="create-1"></a>
 
 ## create
 

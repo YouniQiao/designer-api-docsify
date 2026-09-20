@@ -1,5 +1,9 @@
 # ColumnSplitDividerStyle
 
+```TypeScript
+interface ColumnSplitDividerStyle
+```
+
 Sets the distance between the child component and the upper and lower dividers.
 
 > **NOTE:** 

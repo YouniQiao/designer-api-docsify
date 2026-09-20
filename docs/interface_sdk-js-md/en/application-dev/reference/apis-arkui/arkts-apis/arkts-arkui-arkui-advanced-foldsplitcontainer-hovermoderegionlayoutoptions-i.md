@@ -1,5 +1,9 @@
 # HoverModeRegionLayoutOptions
 
+```TypeScript
+export interface HoverModeRegionLayoutOptions
+```
+
 Defines layout information for the hover state.
 
 > **NOTE:** 

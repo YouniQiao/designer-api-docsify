@@ -94,6 +94,8 @@ try {
 ```
 
 
+<a id="adddisallowedbluetoothprotocols-1"></a>
+
 ## addDisallowedBluetoothProtocols
 
 ```TypeScript

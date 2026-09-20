@@ -93,6 +93,8 @@ try {
 ```
 
 
+<a id="releaseform-1"></a>
+
 ## releaseForm
 
 ```TypeScript
@@ -134,6 +136,8 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 
 参见 [releaseForm](#releaseform)
 
+
+<a id="releaseform-2"></a>
 
 ## releaseForm
 

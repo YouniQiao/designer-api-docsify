@@ -1,5 +1,9 @@
 # MediaAssetChangeRequest
 
+```TypeScript
+class MediaAssetChangeRequest implements MediaChangeRequest
+```
+
 Represents a media asset change request.
 
 **Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
@@ -56,6 +60,8 @@ Adds resources from the application sandbox based on the file URI. For details a
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="addresource-1"></a>
 
 ## addResource
 
@@ -123,6 +129,8 @@ Constructor used to initialize an asset change request.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
+
+<a id="createassetrequest-2"></a>
 
 ## createAssetRequest
 
@@ -277,6 +285,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<a id="deleteassets-1"></a>
+
 ## deleteAssets
 
 ```TypeScript
@@ -417,6 +427,8 @@ Saves the photo taken by the camera.
 | --- | --- |
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
+
+<a id="savecameraphoto-1"></a>
 
 ## saveCameraPhoto
 

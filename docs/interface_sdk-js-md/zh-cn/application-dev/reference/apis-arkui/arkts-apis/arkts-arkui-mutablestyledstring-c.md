@@ -1,5 +1,9 @@
 # MutableStyledString
 
+```TypeScript
+declare class MutableStyledString extends StyledString
+```
+
 继承于[StyledString](arkts-arkui-styledstring-c.md)类。
 
 > **以下接口异常入参处理统一说明：**

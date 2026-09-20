@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getuserrestricted-1"></a>
+
 ## getUserRestricted
 
 ```TypeScript

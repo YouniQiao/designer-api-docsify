@@ -1,5 +1,9 @@
 # DeviceKVStore
 
+```TypeScript
+interface DeviceKVStore extends SingleKVStore
+```
+
 Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used. Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object.
 
 **Inheritance/Implementation:** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
@@ -17,7 +21,7 @@ import { distributedKVStore } from '@kit.ArkData';
 ## get
 
 ```TypeScript
-get(key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 Obtains the value of the specified key for this device. This API uses an asynchronous callback to return the result.
@@ -150,10 +154,12 @@ try {
 }
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
-get(key: string): Promise<boolean | string | number | number | Uint8Array>
+get(key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 Obtains the value of the specified key for this device. This API uses a promise to return the result.
@@ -291,10 +297,12 @@ try {
 }
 ```
 
+<a id="get-2"></a>
+
 ## get
 
 ```TypeScript
-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
@@ -436,10 +444,12 @@ try {
 }
 ```
 
+<a id="get-3"></a>
+
 ## get
 
 ```TypeScript
-get(deviceId: string, key: string): Promise<boolean | string | number | number | Uint8Array>
+get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
@@ -943,6 +953,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1304,6 +1316,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-2"></a>
 
 ## getEntries
 
@@ -1670,6 +1684,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -2042,6 +2058,8 @@ try {
 }
 ```
 
+<a id="getentries-4"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -2398,6 +2416,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-5"></a>
 
 ## getEntries
 
@@ -2760,6 +2780,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-6"></a>
 
 ## getEntries
 
@@ -3126,6 +3148,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-7"></a>
 
 ## getEntries
 
@@ -3858,6 +3882,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -4222,6 +4248,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-2"></a>
 
 ## getResultSet
 
@@ -4591,6 +4619,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -4966,6 +4996,8 @@ try {
 }
 ```
 
+<a id="getresultset-4"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -5334,6 +5366,8 @@ try {
 }
 ```
 
+<a id="getresultset-5"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -5698,6 +5732,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-6"></a>
 
 ## getResultSet
 
@@ -6067,6 +6103,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-7"></a>
 
 ## getResultSet
 
@@ -6622,6 +6660,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -6806,6 +6846,8 @@ try {
   console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultsize-2"></a>
 
 ## getResultSize
 
@@ -6995,6 +7037,8 @@ try {
   console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultsize-3"></a>
 
 ## getResultSize
 

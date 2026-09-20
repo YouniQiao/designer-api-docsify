@@ -1,5 +1,9 @@
 # HuksKeyGenerateType
 
+```TypeScript
+export enum HuksKeyGenerateType
+```
+
 Enumerates the key generation types.
 
 **Since:** 8

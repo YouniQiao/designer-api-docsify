@@ -115,6 +115,8 @@ concurrentFunc();
 ```
 
 
+<a id="cancel-1"></a>
+
 ## cancel
 
 ```TypeScript
@@ -145,6 +147,8 @@ Cancels a task group in the task pool. If a task group is canceled before all th
 
 See [cancel](#cancel)
 
+
+<a id="cancel-2"></a>
 
 ## cancel
 

@@ -1,5 +1,9 @@
 # EnterpriseAdminExtensionAbility
 
+```TypeScript
+export default class EnterpriseAdminExtensionAbility
+```
+
 本模块提供[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)，是企业设备管理应用的核心组件。
 
 **主要功能**：
@@ -439,6 +443,8 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+<a id="onbundleadded-1"></a>
+
 ## onBundleAdded
 
 ```TypeScript
@@ -536,6 +542,8 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   }
 }
 ```
+
+<a id="onbundleremoved-1"></a>
 
 ## onBundleRemoved
 

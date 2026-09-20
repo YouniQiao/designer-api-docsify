@@ -1,5 +1,9 @@
 # IDataSource
 
+```TypeScript
+declare interface IDataSource
+```
+
 LazyForEach的数据源，开发者需要实现该接口以提供数据访问和数据变化通知能力，包括获取数据总数、按索引获取数据、注册和注销数据变化监听器等。
 
 **起始版本：** 7

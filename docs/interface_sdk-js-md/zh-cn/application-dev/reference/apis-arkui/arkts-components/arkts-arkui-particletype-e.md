@@ -1,5 +1,9 @@
 # ParticleType
 
+```TypeScript
+declare enum ParticleType
+```
+
 粒子类型。
 
 **起始版本：** 10

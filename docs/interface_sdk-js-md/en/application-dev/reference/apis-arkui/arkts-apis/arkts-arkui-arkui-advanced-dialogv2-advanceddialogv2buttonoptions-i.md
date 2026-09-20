@@ -1,5 +1,9 @@
 # AdvancedDialogV2ButtonOptions
 
+```TypeScript
+export declare interface AdvancedDialogV2ButtonOptions
+```
+
 Declare the options of AdvancedDialogV2Button
 
 @interface AdvancedDialogV2ButtonOptions

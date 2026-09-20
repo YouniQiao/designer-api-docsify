@@ -1,5 +1,9 @@
 # ToolBarItem properties/events
 
+```TypeScript
+declare class ToolBarItemAttribute
+```
+
 The universal attributes are not supported.
 
 **Since:** 20

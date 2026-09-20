@@ -1,5 +1,9 @@
 # UserAuthInstance
 
+```TypeScript
+interface UserAuthInstance
+```
+
 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。
 
 使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)方法获取UserAuthInstance对象。

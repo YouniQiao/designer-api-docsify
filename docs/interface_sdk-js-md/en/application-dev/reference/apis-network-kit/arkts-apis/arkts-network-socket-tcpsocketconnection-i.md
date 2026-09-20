@@ -1,5 +1,9 @@
 # TCPSocketConnection
 
+```TypeScript
+export interface TCPSocketConnection
+```
+
 Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object.
 
 > **NOTE:** 
@@ -77,6 +81,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -267,6 +273,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="getremoteaddress-1"></a>
 
 ## getRemoteAddress
 
@@ -608,6 +616,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

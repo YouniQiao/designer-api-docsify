@@ -1,5 +1,9 @@
 # ParagraphStyle
 
+```TypeScript
+declare class ParagraphStyle
+```
+
 文本段落样式对象说明。
 
 除首个段落外，后续段落按'\n'划分。

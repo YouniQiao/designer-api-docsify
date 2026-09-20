@@ -1,5 +1,9 @@
 # SecurityUIExtensionProxy (System API)
 
+```TypeScript
+declare interface SecurityUIExtensionProxy
+```
+
 Implements a **SecurityUIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started ability through the connection established between the two parties.
 
 **Since:** 26.0.0

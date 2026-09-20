@@ -1,5 +1,9 @@
 # Shape properties/events
 
+```TypeScript
+declare class ShapeAttribute extends CommonMethod<ShapeAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** ShapeAttribute extends CommonMethod<ShapeAttribute>

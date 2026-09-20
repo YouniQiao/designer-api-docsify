@@ -1,5 +1,9 @@
 # RichEditorController
 
+```TypeScript
+declare class RichEditorController extends RichEditorBaseController
+```
+
 Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
 > **NOTE:** 

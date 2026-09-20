@@ -1,4 +1,4 @@
-# @system.device
+# @system.device(Device Information)
 
 ## Modules to Import
 

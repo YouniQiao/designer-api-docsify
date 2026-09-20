@@ -1,5 +1,9 @@
 # HuksKeyPadding
 
+```TypeScript
+export enum HuksKeyPadding
+```
+
 Enumerates the padding algorithms.
 
 **Since:** 8

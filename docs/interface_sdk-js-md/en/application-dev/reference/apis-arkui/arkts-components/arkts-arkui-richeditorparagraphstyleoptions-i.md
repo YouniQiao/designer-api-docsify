@@ -1,5 +1,9 @@
 # RichEditorParagraphStyleOptions
 
+```TypeScript
+declare interface RichEditorParagraphStyleOptions extends RichEditorRange
+```
+
 Defines the paragraph style options.
 
 Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).

@@ -116,6 +116,8 @@ struct Index {
 ```
 
 
+<a id="getpointerstyle-1"></a>
+
 ## getPointerStyle
 
 ```TypeScript

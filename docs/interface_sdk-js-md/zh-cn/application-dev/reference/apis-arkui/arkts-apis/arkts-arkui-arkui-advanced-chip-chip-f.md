@@ -24,6 +24,7 @@ Chip组件用于标签展示和交互场景，支持自定义样式、图标、�
 import { Chip, ChipOptions, ChipSize } from '@kit.ArkUI';
 ```
 
+  
 ## 子组件
 
 无

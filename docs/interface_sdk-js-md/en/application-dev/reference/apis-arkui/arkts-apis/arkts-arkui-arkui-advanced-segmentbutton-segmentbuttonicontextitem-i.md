@@ -1,5 +1,9 @@
 # SegmentButtonIconTextItem
 
+```TypeScript
+interface SegmentButtonIconTextItem
+```
+
 Icon and text button information.
 
 > **NOTE:** 

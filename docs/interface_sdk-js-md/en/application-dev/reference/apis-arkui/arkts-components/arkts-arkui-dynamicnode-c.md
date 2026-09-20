@@ -1,5 +1,9 @@
 # DynamicNode
 
+```TypeScript
+declare class DynamicNode<T>
+```
+
 Define DynamicNode.
 
 **Since:** 12
@@ -33,6 +37,8 @@ Invoked when data is moved during drag and drop sorting. This callback is only a
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="onmove-1"></a>
 
 ## onMove
 

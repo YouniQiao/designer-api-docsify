@@ -71,6 +71,8 @@ notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<n
 ```
 
 
+<a id="getallnotificationenabledbundles-1"></a>
+
 ## getAllNotificationEnabledBundles
 
 ```TypeScript

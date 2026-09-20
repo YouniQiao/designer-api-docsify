@@ -1,5 +1,9 @@
 # CustomContentDialog
 
+```TypeScript
+export declare struct CustomContentDialog
+```
+
 自定义内容区弹出框，同时支持定义操作区按钮样式。
 
 > **说明：** 

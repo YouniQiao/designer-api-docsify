@@ -1,5 +1,9 @@
 # CliToolEvent (System API)
 
+```TypeScript
+export interface CliToolEvent
+```
+
 The event data of cli execute.
 
 **Since:** 26.0.0

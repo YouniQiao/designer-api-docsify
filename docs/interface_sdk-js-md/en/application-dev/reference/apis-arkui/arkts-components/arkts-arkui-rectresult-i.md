@@ -1,5 +1,9 @@
 # RectResult
 
+```TypeScript
+declare interface RectResult
+```
+
 Describes the position, width, and height of a component.
 
 **Since:** 10

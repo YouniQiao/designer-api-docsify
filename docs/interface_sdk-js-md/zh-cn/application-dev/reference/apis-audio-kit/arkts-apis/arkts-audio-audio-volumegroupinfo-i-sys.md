@@ -1,5 +1,9 @@
 # VolumeGroupInfo（系统接口）
 
+```TypeScript
+interface VolumeGroupInfo
+```
+
 音量组信息。
 
 @typedef VolumeGroupInfo

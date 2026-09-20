@@ -1,5 +1,9 @@
 # TimePickerFormat
 
+```TypeScript
+declare enum TimePickerFormat
+```
+
 Enumerates time display formats of the time picker.
 
 **Since:** 11

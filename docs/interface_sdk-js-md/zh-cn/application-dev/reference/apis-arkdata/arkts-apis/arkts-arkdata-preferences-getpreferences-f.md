@@ -48,6 +48,8 @@ Stage模型示例：
 ```
 
 
+<a id="getpreferences-1"></a>
+
 ## getPreferences
 
 ```TypeScript
@@ -86,6 +88,8 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 参见 [getPreferences](#getpreferences)
 
+
+<a id="getpreferences-2"></a>
 
 ## getPreferences
 
@@ -127,6 +131,8 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 参见 [getPreferences](#getpreferences)
 
+
+<a id="getpreferences-3"></a>
 
 ## getPreferences
 

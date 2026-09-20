@@ -1,5 +1,9 @@
 # StabilizationQuery
 
+```TypeScript
+interface StabilizationQuery
+```
+
 提供了查询设备在录像模式下是否支持对应的视频防抖模式的能力。
 
 > **说明：** 

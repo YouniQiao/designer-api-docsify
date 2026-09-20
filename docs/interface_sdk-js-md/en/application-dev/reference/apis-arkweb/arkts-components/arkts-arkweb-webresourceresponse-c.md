@@ -1,5 +1,9 @@
 # WebResourceResponse
 
+```TypeScript
+declare class WebResourceResponse
+```
+
 WebResourceResponse is a class in the Web component that represents HTTP responses and allows custom web page resource responses. In events such as onHttpErrorReceive, it provides the app with information including the status code, status code description, response header, response data, encoding, and MIME type of the server response. In resource request interception scenarios, it allows the app to customize the status code, status code description, response header, response data, encoding, MIME type, and data readiness state of the response, so that the app takes over the return content of specific resources. For sample code, see [onHttpErrorReceive event](arkts-arkweb-web-comp-attribute.md#onhttperrorreceive).
 
 **Since:** 8
@@ -86,7 +90,7 @@ Obtains the data in the resource response.
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-Obtains resource response data, supporting multiple data types. Compared with getResponseData, this method supports returning various types such as number (file handle), ArrayBuffer (binary data), and Resource (&#36;rawfile resource). It is recommended to use this method when flexible data type support is needed.
+Obtains resource response data, supporting multiple data types. Compared with getResponseData, this method supports returning various types such as number (file handle), ArrayBuffer (binary data), and Resource ($rawfile resource). It is recommended to use this method when flexible data type support is needed.
 
 **Since:** 13
 
@@ -96,7 +100,7 @@ Obtains resource response data, supporting multiple data types. Compared with ge
 
 | Type | Description |
 | --- | --- |
-| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **&#36;rawfile** resource when the type is resource; or **undefined** if no data is available. |
+| string &#124; number &#124; ArrayBuffer &#124; Resource &#124; undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **$rawfile** resource when the type is resource; or **undefined** if no data is available. |
 
 ## getResponseEncoding
 
@@ -218,7 +222,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates &#36;rawfile resource or HSP resource. ArrayBuffer type indicates binary data. |
+| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates $rawfile resource or HSP resource. ArrayBuffer type indicates binary data. |
 
 ## setResponseCode
 
@@ -262,7 +266,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates &#36;rawfile resource. ArrayBuffer type indicates binary data.<br>**Since:** 11 |
+| data | string &#124; number &#124; Resource &#124; ArrayBuffer | Yes | The response data. string type indicates strings in HTML format. number type indicates file handle. Resource type indicates $rawfile resource. ArrayBuffer type indicates binary data.<br>**Since:** 11 |
 
 ## setResponseEncoding
 

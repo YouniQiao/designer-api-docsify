@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="getdevicealtitude-1"></a>
+
 ## getDeviceAltitude
 
 ```TypeScript

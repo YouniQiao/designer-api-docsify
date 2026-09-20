@@ -1,5 +1,9 @@
 # DynamicSyncScene
 
+```TypeScript
+export class DynamicSyncScene
+```
+
 提供组件自定义场景下相关帧率的配置。
 
 > **说明：** 

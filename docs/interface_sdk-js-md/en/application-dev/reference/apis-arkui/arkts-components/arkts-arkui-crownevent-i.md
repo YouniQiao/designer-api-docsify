@@ -1,5 +1,9 @@
 # CrownEvent
 
+```TypeScript
+declare interface CrownEvent
+```
+
 Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity, rotation angle, crown action, and event propagation disabling.
 
 **Since:** 18

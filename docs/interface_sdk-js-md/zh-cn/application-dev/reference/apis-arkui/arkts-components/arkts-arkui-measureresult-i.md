@@ -1,5 +1,9 @@
 # MeasureResult
 
+```TypeScript
+declare interface MeasureResult extends SizeResult
+```
+
 Sub component MeasureResult info.
 
 **继承/实现关系：** MeasureResult extends [SizeResult](arkts-arkui-sizeresult-i.md)

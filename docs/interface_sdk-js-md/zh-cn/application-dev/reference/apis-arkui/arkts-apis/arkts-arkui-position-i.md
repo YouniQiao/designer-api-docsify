@@ -1,5 +1,9 @@
 # Position
 
+```TypeScript
+declare interface Position
+```
+
 位置类型，用于表示一个坐标点。
 
 **起始版本：** 7

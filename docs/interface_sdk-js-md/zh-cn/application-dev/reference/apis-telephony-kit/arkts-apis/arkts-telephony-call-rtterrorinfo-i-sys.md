@@ -1,5 +1,9 @@
 # RttErrorInfo（系统接口）
 
+```TypeScript
+export interface RttErrorInfo
+```
+
 rtt通话错误报告
 
 **起始版本：** 22

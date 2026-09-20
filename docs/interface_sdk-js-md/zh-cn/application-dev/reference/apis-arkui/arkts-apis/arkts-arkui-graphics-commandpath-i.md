@@ -1,5 +1,9 @@
 # CommandPath
 
+```TypeScript
+export interface CommandPath
+```
+
 用于设置路径绘制的指令。
 
 **起始版本：** 12

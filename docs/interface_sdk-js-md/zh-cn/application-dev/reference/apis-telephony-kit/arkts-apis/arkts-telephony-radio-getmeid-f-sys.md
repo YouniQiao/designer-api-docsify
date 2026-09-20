@@ -80,6 +80,8 @@ radio.getMEID(slotId).then((data: string) => {
 ```
 
 
+<a id="getmeid-1"></a>
+
 ## getMEID
 
 ```TypeScript
@@ -124,6 +126,8 @@ Obtains the MEID of a specified card slot of the device.
 
 参见 [getMEID](#getmeid)
 
+
+<a id="getmeid-2"></a>
 
 ## getMEID
 

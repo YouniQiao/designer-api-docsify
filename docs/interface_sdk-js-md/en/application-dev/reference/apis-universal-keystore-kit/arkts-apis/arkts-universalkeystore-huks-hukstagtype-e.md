@@ -1,5 +1,9 @@
 # HuksTagType
 
+```TypeScript
+export enum HuksTagType
+```
+
 Enumerates the tag data types.
 
 **Since:** 8

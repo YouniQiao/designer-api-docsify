@@ -1,5 +1,9 @@
 # MediaAssetManager
 
+```TypeScript
+class MediaAssetManager
+```
+
 媒体资产管理类，管理媒体资源读取。
 
 > **说明：** 

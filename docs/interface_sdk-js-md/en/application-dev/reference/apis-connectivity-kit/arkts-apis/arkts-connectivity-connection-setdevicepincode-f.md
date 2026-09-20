@@ -71,6 +71,8 @@ try {
 ```
 
 
+<a id="setdevicepincode-1"></a>
+
 ## setDevicePinCode
 
 ```TypeScript

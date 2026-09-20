@@ -1,5 +1,9 @@
 # RdbStore
 
+```TypeScript
+interface RdbStore
+```
+
 提供管理关系数据库（RDB）方法的接口。
 
 在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)方法获取RdbStore实例，并使用该实例调用对应接口方法。
@@ -74,6 +78,8 @@ attach不能并发调用，否则可能出现未响应情况并报错14800015，
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+
+<a id="attach-1"></a>
 
 ## attach
 
@@ -183,6 +189,8 @@ backup(destName: string, callback: AsyncCallback<void>): void
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="backup-1"></a>
+
 ## backup
 
 ```TypeScript
@@ -291,6 +299,8 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="batchinsert-1"></a>
 
 ## batchInsert
 
@@ -814,6 +824,8 @@ cleanDirtyData(table: string, cursor: number, callback: AsyncCallback<void>): vo
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="cleandirtydata-1"></a>
+
 ## cleanDirtyData
 
 ```TypeScript
@@ -857,6 +869,8 @@ cleanDirtyData(table: string, callback: AsyncCallback<void>): void
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="cleandirtydata-2"></a>
 
 ## cleanDirtyData
 
@@ -961,6 +975,8 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCa
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="cloudsync-1"></a>
+
 ## cloudSync
 
 ```TypeScript
@@ -993,6 +1009,8 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The progress must be a callback type. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="cloudsync-2"></a>
 
 ## cloudSync
 
@@ -1027,6 +1045,8 @@ cloudSync(
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="cloudsync-3"></a>
 
 ## cloudSync
 
@@ -1168,6 +1188,8 @@ commit(): void
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="commit-1"></a>
+
 ## commit
 
 ```TypeScript
@@ -1306,6 +1328,8 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -1635,6 +1659,8 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+<a id="execute-1"></a>
+
 ## execute
 
 ```TypeScript
@@ -1744,6 +1770,8 @@ executeSql(sql: string, callback: AsyncCallback<void>): void
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="executesql-1"></a>
+
 ## executeSql
 
 ```TypeScript
@@ -1793,6 +1821,8 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="executesql-2"></a>
 
 ## executeSql
 
@@ -1958,6 +1988,8 @@ getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Pro
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="getmodifytime-1"></a>
+
 ## getModifyTime
 
 ```TypeScript
@@ -2062,6 +2094,8 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="insert-1"></a>
+
 ## insert
 
 ```TypeScript
@@ -2115,6 +2149,8 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callba
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="insert-2"></a>
 
 ## insert
 
@@ -2173,6 +2209,8 @@ insert(table: string, values: ValuesBucket): Promise<number>
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="insert-3"></a>
 
 ## insert
 
@@ -2291,6 +2329,8 @@ insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): 
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+<a id="insertsync-1"></a>
 
 ## insertSync
 
@@ -2443,6 +2483,8 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="obtaindistributedtablename-1"></a>
+
 ## obtainDistributedTableName
 
 ```TypeScript
@@ -2513,6 +2555,8 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -2546,6 +2590,8 @@ off(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="off-2"></a>
+
 ## off
 
 ```TypeScript
@@ -2576,6 +2622,8 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="off-3"></a>
+
 ## off
 
 ```TypeScript
@@ -2602,6 +2650,8 @@ off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be valid. 3. The event must be a not empty string. 4. The progress must be function. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="off-4"></a>
 
 ## off
 
@@ -2631,6 +2681,8 @@ off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
+<a id="off-5"></a>
+
 ## off
 
 ```TypeScript
@@ -2656,6 +2708,8 @@ off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+
+<a id="off-6"></a>
 
 ## off
 
@@ -2711,6 +2765,8 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -2739,6 +2795,8 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="on-2"></a>
 
 ## on
 
@@ -2770,6 +2828,8 @@ on(event: string, interProcess: boolean, observer: Callback<void>): void
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="on-3"></a>
+
 ## on
 
 ```TypeScript
@@ -2796,6 +2856,8 @@ on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed; <br>4. The event must be a not empty string; 5. The progress must be function. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="on-4"></a>
 
 ## on
 
@@ -2825,6 +2887,8 @@ on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
+<a id="on-5"></a>
+
 ## on
 
 ```TypeScript
@@ -2850,6 +2914,8 @@ on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+
+<a id="on-6"></a>
 
 ## on
 
@@ -2905,6 +2971,8 @@ query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -2933,6 +3001,8 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+
+<a id="query-2"></a>
 
 ## query
 
@@ -3002,6 +3072,8 @@ queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+
+<a id="querybystep-1"></a>
 
 ## queryByStep
 
@@ -3117,6 +3189,8 @@ querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
 
+<a id="querysql-1"></a>
+
 ## querySql
 
 ```TypeScript
@@ -3149,6 +3223,8 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+
+<a id="querysql-2"></a>
 
 ## querySql
 
@@ -3540,6 +3616,8 @@ remoteQuery(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="remotequery-1"></a>
+
 ## remoteQuery
 
 ```TypeScript
@@ -3626,6 +3704,8 @@ restore(srcName: string, callback: AsyncCallback<void>): void
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="restore-1"></a>
 
 ## restore
 
@@ -3795,6 +3875,8 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="setdistributedtables-1"></a>
+
 ## setDistributedTables
 
 ```TypeScript
@@ -3830,6 +3912,8 @@ setDistributedTables(tables: Array<string>): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="setdistributedtables-2"></a>
+
 ## setDistributedTables
 
 ```TypeScript
@@ -3861,6 +3945,8 @@ setDistributedTables(tables: Array<string>, type: DistributedType, callback: Asy
 | [14800051](../errorcode-data-rdb.md#14800051-分布式表类型不匹配) | The type of the distributed table does not match. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="setdistributedtables-3"></a>
 
 ## setDistributedTables
 
@@ -3899,6 +3985,8 @@ setDistributedTables(
 | [14800051](../errorcode-data-rdb.md#14800051-分布式表类型不匹配) | The type of the distributed table does not match. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="setdistributedtables-4"></a>
 
 ## setDistributedTables
 
@@ -4032,6 +4120,8 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="sync-1"></a>
 
 ## sync
 
@@ -4214,6 +4304,8 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="update-1"></a>
+
 ## update
 
 ```TypeScript
@@ -4273,6 +4365,8 @@ update(
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<a id="update-2"></a>
+
 ## update
 
 ```TypeScript
@@ -4330,6 +4424,8 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+
+<a id="update-3"></a>
 
 ## update
 

@@ -60,6 +60,8 @@ sms.getImsShortMessageFormat().then((data: string) => {
 ```
 
 
+<a id="getimsshortmessageformat-1"></a>
+
 ## getImsShortMessageFormat
 
 ```TypeScript

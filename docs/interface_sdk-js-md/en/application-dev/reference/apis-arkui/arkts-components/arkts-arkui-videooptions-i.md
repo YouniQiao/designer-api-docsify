@@ -1,5 +1,9 @@
 # VideoOptions
 
+```TypeScript
+declare interface VideoOptions
+```
+
 Defines the options of the **Video** component.
 
 **Since:** 7
@@ -125,8 +129,8 @@ relative path is used to reference a local image, cross-package or cross-module 
 
 The Resource format can access resource files across packages or modules.
 
-- Resources in the rawfile directory are supported, that is, images referenced through **&#36;rawfile**.  
-- Images in system resources or app resources referenced through **&#36;r** are supported.
+- Resources in the rawfile directory are supported, that is, images referenced through **$rawfile**.  
+- Images in system resources or app resources referenced through **$r** are supported.
 
 Default value: empty string
 
@@ -152,7 +156,7 @@ Data source of the video, which supports local videos and network videos.
 
 The Resource format can access resource files across packages or modules and is commonly used to access local videos.
 
-- Only resources in the rawfile directory are supported, that is, video files referenced through &#36;rawfile.
+- Only resources in the rawfile directory are supported, that is, video files referenced through $rawfile.
 
 The string format can be used to load network videos and local videos, and is commonly used to load network videos.
 

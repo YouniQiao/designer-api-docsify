@@ -70,6 +70,8 @@ promise.then((data) => {
 ```
 
 
+<a id="ismycard-1"></a>
+
 ## isMyCard
 
 ```TypeScript
@@ -103,6 +105,8 @@ Checks whether a contact is included in my card. This API uses an asynchronous c
 
 See [isMyCard](#ismycard)
 
+
+<a id="ismycard-2"></a>
 
 ## isMyCard
 
@@ -138,6 +142,8 @@ Checks whether a contact is included in my card. This API uses a promise to retu
 
 See [isMyCard](#ismycard)
 
+
+<a id="ismycard-3"></a>
 
 ## isMyCard
 

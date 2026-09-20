@@ -1,5 +1,9 @@
 # AlertDialogParam
 
+```TypeScript
+declare interface AlertDialogParam
+```
+
 Enumerates the alert dialog box styles.
 
 **Since:** 7

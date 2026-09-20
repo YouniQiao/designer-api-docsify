@@ -1,5 +1,9 @@
 # PickerIndicatorType
 
+```TypeScript
+declare enum PickerIndicatorType
+```
+
 设置选中项指示器的类型。
 
 **起始版本：** 22

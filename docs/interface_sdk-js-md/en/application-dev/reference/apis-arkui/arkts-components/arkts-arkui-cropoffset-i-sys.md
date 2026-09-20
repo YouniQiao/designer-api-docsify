@@ -1,5 +1,9 @@
 # CropOffset (System API)
 
+```TypeScript
+declare interface CropOffset
+```
+
 2D offset for crop frame.
 
 **Since:** 26.0.0

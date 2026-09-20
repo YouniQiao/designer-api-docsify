@@ -1,5 +1,9 @@
 # AudioRoutingManager
 
+```TypeScript
+interface AudioRoutingManager
+```
+
 This interface implements audio routing management.
 
 Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
@@ -579,6 +583,8 @@ async function getRoutingManager(){
 }
 ```
 
+<a id="selectinputdevice-1"></a>
+
 ## selectInputDevice
 
 ```TypeScript
@@ -763,6 +769,8 @@ async function selectOutputDevice(){
 }
 ```
 
+<a id="selectoutputdevice-1"></a>
+
 ## selectOutputDevice
 
 ```TypeScript
@@ -926,6 +934,8 @@ audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, output
 });
 ```
 
+<a id="selectoutputdevicebyfilter-1"></a>
+
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -956,6 +966,8 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 **Examples**
 
 See [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
+
+<a id="selectoutputdevicebyfilter-2"></a>
 
 ## selectOutputDeviceByFilter
 
@@ -1082,6 +1094,8 @@ async function unexcludeOutputDevices(){
   });
 }
 ```
+
+<a id="unexcludeoutputdevices-1"></a>
 
 ## unexcludeOutputDevices
 

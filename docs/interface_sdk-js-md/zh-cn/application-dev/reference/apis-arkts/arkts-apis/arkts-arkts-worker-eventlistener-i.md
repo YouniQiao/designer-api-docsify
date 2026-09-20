@@ -1,5 +1,9 @@
 # EventListener
 
+```TypeScript
+export interface EventListener
+```
+
 事件监听类用于处理事件。
 
 **起始版本：** 7

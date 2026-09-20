@@ -1,5 +1,9 @@
 # X500DistinguishedName
 
+```TypeScript
+interface X500DistinguishedName
+```
+
 提供X.500可分辨名称操作的API。
 
 **起始版本：** 12
@@ -186,6 +190,8 @@ async function getName() {
 }
 ```
 
+<a id="getname-1"></a>
+
 ## getName
 
 ```TypeScript
@@ -225,6 +231,8 @@ getName(encodingType: EncodingType): string
 
 参见 [getName](#getname)
 
+<a id="getname-2"></a>
+
 ## getName
 
 ```TypeScript
@@ -263,6 +271,8 @@ getName(type: string): Array<string>
 **示例**
 
 参见 [getName](#getname)
+
+<a id="getname-3"></a>
 
 ## getName
 

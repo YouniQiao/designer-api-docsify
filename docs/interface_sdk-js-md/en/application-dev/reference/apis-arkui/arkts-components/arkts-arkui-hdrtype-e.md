@@ -1,5 +1,9 @@
 # HdrType
 
+```TypeScript
+declare enum HdrType
+```
+
 Sets the HDR type of the XComponent.
 
 **Since:** 24

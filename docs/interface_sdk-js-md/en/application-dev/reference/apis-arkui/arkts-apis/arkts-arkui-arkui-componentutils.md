@@ -1,4 +1,4 @@
-# @ohos.arkui.componentUtils
+# @ohos.arkui.componentUtils(ComponentUtils)
 
 The **componentUtils** module provides API for obtaining the coordinates and size of the drawing area of a component.
 

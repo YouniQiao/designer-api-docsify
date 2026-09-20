@@ -68,6 +68,8 @@ sim.setShowNumber(0, number).then(() => {
 ```
 
 
+<a id="setshownumber-1"></a>
+
 ## setShowNumber
 
 ```TypeScript

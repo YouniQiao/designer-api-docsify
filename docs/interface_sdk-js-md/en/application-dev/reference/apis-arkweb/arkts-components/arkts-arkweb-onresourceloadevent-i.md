@@ -1,5 +1,9 @@
 # OnResourceLoadEvent
 
+```TypeScript
+declare interface OnResourceLoadEvent
+```
+
 Defines the callback information triggered when a URL is loaded, including the resource URL. It is suitable for scenarios where monitoring resource loading behavior is required, improving resource management visibility and performance optimization.
 
 **Since:** 12

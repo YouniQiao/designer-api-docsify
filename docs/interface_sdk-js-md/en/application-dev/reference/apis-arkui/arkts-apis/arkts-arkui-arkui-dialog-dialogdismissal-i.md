@@ -1,5 +1,9 @@
 # DialogDismissal
 
+```TypeScript
+export interface DialogDismissal
+```
+
 Provides information about the action to dismiss the dialog box.
 
 **Since:** 26.0.1

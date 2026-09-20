@@ -1,5 +1,9 @@
 # SelectionMenuOptionsExt
 
+```TypeScript
+declare interface SelectionMenuOptionsExt
+```
+
 Represents the selection menu option extension.
 
 **Since:** 13

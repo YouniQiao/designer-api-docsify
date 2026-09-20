@@ -1,5 +1,9 @@
 # LinearGradientStyle
 
+```TypeScript
+declare class LinearGradientStyle extends ShaderStyle
+```
+
 显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
 **继承/实现关系：** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)

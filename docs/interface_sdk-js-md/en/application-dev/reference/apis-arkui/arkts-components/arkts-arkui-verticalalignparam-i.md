@@ -1,5 +1,9 @@
 # VerticalAlignParam
 
+```TypeScript
+declare interface VerticalAlignParam
+```
+
 Defines the vertical align rule of relative container.
 
 @interface VerticalAlignParam

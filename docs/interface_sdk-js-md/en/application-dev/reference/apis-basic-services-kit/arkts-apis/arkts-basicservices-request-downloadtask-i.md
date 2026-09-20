@@ -1,6 +1,10 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md).
+```TypeScript
+interface DownloadTask
+```
+
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md).
 
 **Since:** 6
 
@@ -91,6 +95,8 @@ try {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -253,6 +259,8 @@ try {
 }
 ```
 
+<a id="gettaskinfo-1"></a>
+
 ## getTaskInfo
 
 ```TypeScript
@@ -369,6 +377,8 @@ try {
 }
 ```
 
+<a id="gettaskmimetype-1"></a>
+
 ## getTaskMimeType
 
 ```TypeScript
@@ -422,56 +432,6 @@ Unsubscribes from download progress events.
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.<br>- **'progress'**: download progress. |
 | callback | (receivedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
-
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-Unsubscribes from download events.
-
-**Since:** 7
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
-
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-Unsubscribes from download events.
-
-**Since:** 7
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -584,56 +544,6 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-Subscribes to download events. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
-
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-Subscribes to download events. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'pause' &#124; 'remove' | Yes | Event type.<br>- **'complete'**: download task completion.<br>- **'pause'**: download task pause.<br>- **'remove'**: download task removal. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
-
 ## on('fail')
 
 ```TypeScript
@@ -708,6 +618,8 @@ downloadTask.pause((err: BusinessError) => {
   console.info('Succeeded in pausing the download task.');
 });
 ```
+
+<a id="pause-1"></a>
 
 ## pause
 
@@ -809,6 +721,8 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
 });
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -893,6 +807,8 @@ downloadTask.queryMimeType((err: BusinessError, data: string)=>{
 });
 ```
 
+<a id="querymimetype-1"></a>
+
 ## queryMimeType
 
 ```TypeScript
@@ -976,6 +892,8 @@ downloadTask.remove((err, result)=>{
   console.info('Succeeded in removing the download task.');
 });
 ```
+
+<a id="remove-1"></a>
 
 ## remove
 
@@ -1108,6 +1026,8 @@ try {
 }
 ```
 
+<a id="restore-1"></a>
+
 ## restore
 
 ```TypeScript
@@ -1192,6 +1112,8 @@ downloadTask.resume((err: BusinessError) => {
   console.info('Succeeded in resuming the download task.');
 });
 ```
+
+<a id="resume-1"></a>
 
 ## resume
 
@@ -1323,6 +1245,8 @@ try {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<a id="suspend-1"></a>
 
 ## suspend
 

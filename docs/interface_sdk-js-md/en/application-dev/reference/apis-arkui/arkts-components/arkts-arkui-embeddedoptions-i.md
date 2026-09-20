@@ -1,5 +1,9 @@
 # EmbeddedOptions
 
+```TypeScript
+declare interface EmbeddedOptions
+```
+
 This interface is used to set the options for EmbeddedComponentAttribute during construction
 
 **Since:** 26.0.0

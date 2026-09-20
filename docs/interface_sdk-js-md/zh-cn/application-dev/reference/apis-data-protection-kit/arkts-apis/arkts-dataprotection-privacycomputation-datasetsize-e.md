@@ -1,5 +1,9 @@
 # DataSetSize
 
+```TypeScript
+enum DataSetSize
+```
+
 枚举隐私协议支持的数据集大小。数据集大小定义单个结果密文可以包含的比较次数。的总数生成的结果密文由element.size/dataSetSize决定。选择一个根据隐私搜索中元素的数量和可接受的每个结果密文的大小。
 
 **起始版本：** 26.0.1

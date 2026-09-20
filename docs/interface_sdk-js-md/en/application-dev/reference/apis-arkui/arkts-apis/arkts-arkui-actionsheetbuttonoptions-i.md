@@ -1,5 +1,9 @@
 # ActionSheetButtonOptions
 
+```TypeScript
+interface ActionSheetButtonOptions
+```
+
 Provides button style configuration for the dialog box.
 
 > **NOTE:** 

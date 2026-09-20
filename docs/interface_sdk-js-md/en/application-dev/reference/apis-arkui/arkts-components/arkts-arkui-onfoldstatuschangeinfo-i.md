@@ -1,5 +1,9 @@
 # OnFoldStatusChangeInfo
 
+```TypeScript
+interface OnFoldStatusChangeInfo
+```
+
 Defines the information about the fold status change, which takes effect only in landscape mode.
 
 > **NOTE:** 

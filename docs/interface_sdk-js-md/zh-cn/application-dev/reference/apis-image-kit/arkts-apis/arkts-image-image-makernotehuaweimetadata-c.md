@@ -1,5 +1,9 @@
 # MakerNoteHuaweiMetadata
 
+```TypeScript
+class MakerNoteHuaweiMetadata implements Metadata
+```
+
 MakerNoteHuaweiMetadata implements Metadata
 
 来自Huawei相机的照片元数据。

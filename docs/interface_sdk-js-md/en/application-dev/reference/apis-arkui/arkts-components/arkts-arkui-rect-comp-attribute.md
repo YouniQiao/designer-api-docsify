@@ -1,5 +1,9 @@
 # Rect properties/events
 
+```TypeScript
+declare class RectAttribute extends CommonShapeMethod<RectAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** RectAttribute extends CommonShapeMethod<RectAttribute>

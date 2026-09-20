@@ -45,6 +45,8 @@ settings.canShowFloating().then((status:boolean) => {
 ```
 
 
+<a id="canshowfloating-1"></a>
+
 ## canShowFloating
 
 ```TypeScript

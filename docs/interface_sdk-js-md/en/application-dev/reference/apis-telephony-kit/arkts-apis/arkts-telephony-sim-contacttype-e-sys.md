@@ -1,5 +1,9 @@
 # ContactType (System API)
 
+```TypeScript
+export enum ContactType
+```
+
 Indicates the contact types.
 
 **Since:** 8

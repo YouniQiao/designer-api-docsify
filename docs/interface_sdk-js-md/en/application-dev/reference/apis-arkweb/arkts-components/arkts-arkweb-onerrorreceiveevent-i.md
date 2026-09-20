@@ -1,5 +1,9 @@
 # OnErrorReceiveEvent
 
+```TypeScript
+declare interface OnErrorReceiveEvent
+```
+
 Defines the callback information triggered when an error occurs during web page loading, including the request and error details. It is suitable for scenarios where monitoring and handling web page loading errors are required, improving error handling timeliness and user experience.
 
 **Since:** 12

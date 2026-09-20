@@ -1,5 +1,9 @@
 # PlainArray
 
+```TypeScript
+declare class PlainArray<T>
+```
+
 PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value. PlainArray is based on generics and uses a lightweight structure.
 
 **Since:** 8

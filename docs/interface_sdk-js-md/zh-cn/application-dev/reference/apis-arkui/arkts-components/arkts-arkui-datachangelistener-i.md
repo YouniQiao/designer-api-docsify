@@ -1,5 +1,9 @@
 # DataChangeListener
 
+```TypeScript
+declare interface DataChangeListener
+```
+
 数据变化监听器，用于在数据源发生变化时通知LazyForEach组件进行相应的渲染更新，支持数据添加、删除、改变、移动、交换、重载等多种数据变化类型的监听。
 
 > **说明：** 
@@ -236,6 +240,8 @@ onDataReloaded(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="ondatareloaded-1"></a>
 
 ## onDataReloaded
 

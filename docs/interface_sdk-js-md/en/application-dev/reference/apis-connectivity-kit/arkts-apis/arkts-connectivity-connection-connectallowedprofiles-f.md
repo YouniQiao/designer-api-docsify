@@ -74,6 +74,8 @@ try {
 ```
 
 
+<a id="connectallowedprofiles-1"></a>
+
 ## connectAllowedProfiles
 
 ```TypeScript

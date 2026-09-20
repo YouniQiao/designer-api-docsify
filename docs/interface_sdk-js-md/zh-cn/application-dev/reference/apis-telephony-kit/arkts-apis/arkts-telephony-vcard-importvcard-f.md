@@ -95,6 +95,8 @@ class EntryAbility extends UIAbility {
 ```
 
 
+<a id="importvcard-1"></a>
+
 ## importVCard
 
 ```TypeScript
@@ -138,6 +140,8 @@ function importVCard(context: Context, filePath: string, accountId?: number): Pr
 
 参见 [importVCard](#importvcard)
 
+
+<a id="importvcard-2"></a>
 
 ## importVCard
 

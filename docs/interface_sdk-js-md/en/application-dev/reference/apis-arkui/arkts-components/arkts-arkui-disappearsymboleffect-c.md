@@ -1,5 +1,9 @@
 # DisappearSymbolEffect
 
+```TypeScript
+declare class DisappearSymbolEffect extends SymbolEffect
+```
+
 Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

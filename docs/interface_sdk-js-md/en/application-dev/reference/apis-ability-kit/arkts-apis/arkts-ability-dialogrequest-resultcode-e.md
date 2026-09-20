@@ -1,5 +1,9 @@
 # ResultCode
 
+```TypeScript
+export enum ResultCode
+```
+
 Enumerates the result codes of the request for the modal dialog box.
 
 **Since:** 9

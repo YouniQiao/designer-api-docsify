@@ -1,5 +1,9 @@
 # DomainAccountManager
 
+```TypeScript
+class DomainAccountManager
+```
+
 域账号管理类。
 
 **起始版本：** 18
@@ -55,7 +59,7 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 | [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -108,6 +112,8 @@ try {
 }
 ```
 
+<a id="auth-1"></a>
+
 ## auth
 
 ```TypeScript
@@ -155,7 +161,7 @@ static auth(
 | [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -249,7 +255,7 @@ static authWithPopup(callback: IUserAuthCallback): void
 | [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**适用版本：** 11+ |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable.<br>**适用版本：** 11+ |
 
 **示例**
 
@@ -284,6 +290,8 @@ try {
   console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="authwithpopup-1"></a>
 
 ## authWithPopup
 
@@ -328,7 +336,7 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 | [12300112](../errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| 12300211 | Server unreachable.<br>**适用版本：** 11+ |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable.<br>**适用版本：** 11+ |
 
 **示例**
 
@@ -399,7 +407,7 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -445,6 +453,8 @@ try {
 }
 ```
 
+<a id="getaccesstoken-2"></a>
+
 ## getAccessToken
 
 ```TypeScript
@@ -485,7 +495,7 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -568,7 +578,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -614,6 +624,8 @@ try {
 }
 ```
 
+<a id="getaccountinfo-1"></a>
+
 ## getAccountInfo
 
 ```TypeScript
@@ -656,7 +668,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -739,7 +751,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -783,6 +795,8 @@ try {
 }
 ```
 
+<a id="hasaccount-1"></a>
+
 ## hasAccount
 
 ```TypeScript
@@ -825,7 +839,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 | [12300014](../errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
 | [12300111](../errorcode-account.md#12300111-认证超时) | The operation time out. |
 | [12300114](../errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| 12300211 | Server unreachable. |
+| [12300211](../errorcode-account.md#12300211-服务器不可达) | Server unreachable. |
 
 **示例**
 
@@ -1074,6 +1088,8 @@ try {
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="updateaccounttoken-1"></a>
 
 ## updateAccountToken
 

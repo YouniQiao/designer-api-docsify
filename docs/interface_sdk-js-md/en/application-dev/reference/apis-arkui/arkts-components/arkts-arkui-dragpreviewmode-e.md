@@ -1,5 +1,9 @@
 # DragPreviewMode
 
+```TypeScript
+declare enum DragPreviewMode
+```
+
 Sets the display mode of the drag preview.
 
 **Since:** 11

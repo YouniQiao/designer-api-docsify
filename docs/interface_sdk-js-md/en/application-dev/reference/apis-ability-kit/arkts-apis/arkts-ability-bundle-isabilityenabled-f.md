@@ -63,6 +63,8 @@ bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
 ```
 
 
+<a id="isabilityenabled-1"></a>
+
 ## isAbilityEnabled
 
 ```TypeScript

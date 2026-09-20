@@ -1,5 +1,9 @@
 # SpringProp（系统接口）
 
+```TypeScript
+declare class SpringProp
+```
+
 自定义弹簧特性。
 
 **起始版本：** 7

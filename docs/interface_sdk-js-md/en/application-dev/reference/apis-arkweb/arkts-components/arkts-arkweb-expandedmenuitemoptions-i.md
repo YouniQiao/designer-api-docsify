@@ -1,5 +1,9 @@
 # ExpandedMenuItemOptions
 
+```TypeScript
+declare interface ExpandedMenuItemOptions
+```
+
 Custom menu extension item.
 
 > **NOTE:** 

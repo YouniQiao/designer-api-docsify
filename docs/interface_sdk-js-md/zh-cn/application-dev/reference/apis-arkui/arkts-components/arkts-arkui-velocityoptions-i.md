@@ -1,5 +1,9 @@
 # VelocityOptions
 
+```TypeScript
+declare interface VelocityOptions
+```
+
 粒子速度配置。
 
 > **说明：** 

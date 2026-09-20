@@ -1,5 +1,9 @@
 # OnTitleReceiveEvent
 
+```TypeScript
+declare interface OnTitleReceiveEvent
+```
+
 Defines the callback information triggered when the document title of the web page is changed, including the title content and source. It is suitable for scenarios where monitoring page title changes is required, improving page information real-time performance and user experience.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # ControlCenterQuery
 
+```TypeScript
+interface ControlCenterQuery
+```
+
 ControlCenterQuery is used to check whether the camera controller is supported.
 
 **Since:** 20

@@ -1,5 +1,9 @@
 # OnScrollEvent
 
+```TypeScript
+declare interface OnScrollEvent
+```
+
 定义滚动条滑动到指定位置时触发的回调信息，包括水平和垂直偏移量。
 
 **起始版本：** 12

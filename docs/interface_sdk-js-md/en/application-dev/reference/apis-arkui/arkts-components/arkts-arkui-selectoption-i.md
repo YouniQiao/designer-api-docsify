@@ -1,5 +1,9 @@
 # SelectOption
 
+```TypeScript
+declare interface SelectOption
+```
+
 Provides information about the drop-down menu options.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # WeekStyle (System API)
 
+```TypeScript
+interface WeekStyle
+```
+
 Week Style.
 
 **Since:** 7

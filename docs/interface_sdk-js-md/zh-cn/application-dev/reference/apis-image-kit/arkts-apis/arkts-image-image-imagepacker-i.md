@@ -1,5 +1,9 @@
 # ImagePacker
 
+```TypeScript
+interface ImagePacker
+```
+
 ImagePacker类，用于图片压缩和编码。
 
 在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md)构建一个ImagePacker实例。
@@ -119,6 +123,8 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
+<a id="packing-1"></a>
+
 ## packing
 
 ```TypeScript
@@ -154,6 +160,8 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
+<a id="packing-2"></a>
+
 ## packing
 
 ```TypeScript
@@ -187,6 +195,8 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 | source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
+
+<a id="packing-3"></a>
 
 ## packing
 
@@ -226,6 +236,8 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+
+<a id="packing-4"></a>
 
 ## packing
 
@@ -299,6 +311,8 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 | [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+
+<a id="packtodata-1"></a>
 
 ## packToData
 
@@ -412,6 +426,8 @@ packToFile(source: ImageSource, fd: number, options: PackingOption, callback: As
 | [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
+<a id="packtofile-1"></a>
+
 ## packToFile
 
 ```TypeScript
@@ -452,6 +468,8 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 | [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
+<a id="packtofile-2"></a>
+
 ## packToFile
 
 ```TypeScript
@@ -490,6 +508,8 @@ packToFile(source: PixelMap, fd: number, options: PackingOption, callback: Async
 | [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+
+<a id="packtofile-3"></a>
 
 ## packToFile
 
@@ -534,6 +554,8 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 | [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+
+<a id="packtofile-4"></a>
 
 ## packToFile
 
@@ -622,6 +644,8 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放图片编码实例成功，err为undefined，否则为错误对象。 |
+
+<a id="release-1"></a>
 
 ## release
 

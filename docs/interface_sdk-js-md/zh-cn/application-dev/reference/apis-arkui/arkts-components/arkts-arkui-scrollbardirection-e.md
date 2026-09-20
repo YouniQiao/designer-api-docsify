@@ -1,5 +1,9 @@
 # ScrollBarDirection
 
+```TypeScript
+declare enum ScrollBarDirection
+```
+
 滚动条方向枚举。
 
 **起始版本：** 8

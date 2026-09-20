@@ -1,5 +1,9 @@
 # KeyboardController
 
+```TypeScript
+interface KeyboardController
+```
+
 You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart) to obtain a **KeyboardController** instance, and then use this instance to call the following APIs.
 
 **Since:** 8
@@ -60,6 +64,8 @@ keyboardController.exitCurrentInputType().then(() => {
   console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
 });
 ```
+
+<a id="exitcurrentinputtype-1"></a>
 
 ## exitCurrentInputType
 
@@ -137,6 +143,8 @@ keyboardController.hide().then(() => {
   console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
 });
 ```
+
+<a id="hide-1"></a>
 
 ## hide
 
@@ -231,6 +239,8 @@ keyboardController.hideKeyboard().then(() => {
   console.info(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="hidekeyboard-1"></a>
 
 ## hideKeyboard
 

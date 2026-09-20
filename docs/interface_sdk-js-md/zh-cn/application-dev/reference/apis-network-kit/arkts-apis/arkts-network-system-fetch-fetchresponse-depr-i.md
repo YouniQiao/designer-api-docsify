@@ -1,5 +1,9 @@
 # FetchResponse
 
+```TypeScript
+export interface FetchResponse
+```
+
 **表2** responseType与success中data关系
 
 | responseType | data | 说明 |  

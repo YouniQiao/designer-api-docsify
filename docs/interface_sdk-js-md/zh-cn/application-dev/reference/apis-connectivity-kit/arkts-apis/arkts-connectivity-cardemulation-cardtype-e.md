@@ -1,5 +1,9 @@
 # CardType
 
+```TypeScript
+enum CardType
+```
+
 定义卡模拟应用所使用的业务类型，是支付类型，还是其他类型。
 
 **起始版本：** 9

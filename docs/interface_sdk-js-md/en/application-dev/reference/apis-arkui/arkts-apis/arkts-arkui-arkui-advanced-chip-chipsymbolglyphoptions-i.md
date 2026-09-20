@@ -1,5 +1,9 @@
 # ChipSymbolGlyphOptions
 
+```TypeScript
+export interface ChipSymbolGlyphOptions
+```
+
 Defines the prefix and suffix icon options.
 
 > **NOTE:** 

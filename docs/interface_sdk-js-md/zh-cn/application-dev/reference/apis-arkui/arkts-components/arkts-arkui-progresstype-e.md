@@ -1,5 +1,9 @@
 # ProgressType
 
+```TypeScript
+declare enum ProgressType
+```
+
 进度条类型。
 
 **起始版本：** 8

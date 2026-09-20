@@ -1,5 +1,9 @@
 # PosterOptions
 
+```TypeScript
+declare interface PosterOptions
+```
+
 用于描述当前视频是否配置首帧送显。
 
 **起始版本：** 18

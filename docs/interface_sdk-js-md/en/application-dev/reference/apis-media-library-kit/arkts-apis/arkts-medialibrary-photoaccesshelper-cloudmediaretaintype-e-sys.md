@@ -1,5 +1,9 @@
 # CloudMediaRetainType (System API)
 
+```TypeScript
+enum CloudMediaRetainType
+```
+
 Enumerates the modes used for deleting cloud media assets.
 
 **Since:** 14

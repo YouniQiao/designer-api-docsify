@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="getkeyboardrepeatrate-1"></a>
+
 ## getKeyboardRepeatRate
 
 ```TypeScript

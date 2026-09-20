@@ -1,5 +1,9 @@
 # SpatialAudioSourceType（系统接口）
 
+```TypeScript
+enum SpatialAudioSourceType
+```
+
 枚举空间音频源类型。
 
 **起始版本：** 24

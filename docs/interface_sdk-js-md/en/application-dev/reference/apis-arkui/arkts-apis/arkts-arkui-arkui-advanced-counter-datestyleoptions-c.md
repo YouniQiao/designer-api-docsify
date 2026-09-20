@@ -1,5 +1,9 @@
 # DateStyleOptions
 
+```TypeScript
+declare class DateStyleOptions extends CommonOptions
+```
+
 Defines the attributes and events of the inline date counter.
 
 Inherits from [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md).

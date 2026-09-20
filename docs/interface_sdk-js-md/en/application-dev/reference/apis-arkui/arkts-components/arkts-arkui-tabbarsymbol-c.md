@@ -1,5 +1,9 @@
 # TabBarSymbol
 
+```TypeScript
+declare class TabBarSymbol
+```
+
 Represents a tab bar symbol style object.
 
 **Since:** 12

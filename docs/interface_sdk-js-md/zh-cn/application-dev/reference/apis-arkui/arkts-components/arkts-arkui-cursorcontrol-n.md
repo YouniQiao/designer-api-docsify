@@ -1,5 +1,9 @@
 # cursorControl
 
+```TypeScript
+declare namespace cursorControl
+```
+
 控制鼠标光标的显示样式。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # ContainerSpan属性/事件
 
+```TypeScript
+declare class ContainerSpanAttribute
+```
+
 仅支持以下属性：
 
 不支持[通用事件](arkts-arkui-commonmethod-c.md)。

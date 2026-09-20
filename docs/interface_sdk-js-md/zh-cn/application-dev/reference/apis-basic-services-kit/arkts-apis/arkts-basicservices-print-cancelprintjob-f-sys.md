@@ -66,6 +66,8 @@ print.cancelPrintJob(jobId).then(() => {
 ```
 
 
+<a id="cancelprintjob-1"></a>
+
 ## cancelPrintJob
 
 ```TypeScript

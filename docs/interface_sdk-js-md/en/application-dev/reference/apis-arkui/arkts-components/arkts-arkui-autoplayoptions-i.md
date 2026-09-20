@@ -1,5 +1,9 @@
 # AutoPlayOptions
 
+```TypeScript
+declare interface AutoPlayOptions
+```
+
 Defines the properties for controlling the automatic playback behavior.
 
 **Since:** 18

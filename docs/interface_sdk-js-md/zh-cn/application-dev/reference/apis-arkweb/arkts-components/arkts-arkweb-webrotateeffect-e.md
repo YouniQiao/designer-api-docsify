@@ -1,5 +1,9 @@
 # WebRotateEffect
 
+```TypeScript
+declare enum WebRotateEffect
+```
+
 组件旋转时，宽高动画过程中组件内容如何填充以适应新尺寸的方式。
 
 **起始版本：** 22

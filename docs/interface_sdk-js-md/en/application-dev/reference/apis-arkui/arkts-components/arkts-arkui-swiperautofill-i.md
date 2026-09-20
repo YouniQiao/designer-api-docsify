@@ -1,5 +1,9 @@
 # SwiperAutoFill
 
+```TypeScript
+declare interface SwiperAutoFill
+```
+
 Describes the auto-fill attribute.
 
 **Since:** 10

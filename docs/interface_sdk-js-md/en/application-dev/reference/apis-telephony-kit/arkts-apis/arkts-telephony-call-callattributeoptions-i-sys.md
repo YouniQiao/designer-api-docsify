@@ -1,5 +1,9 @@
 # CallAttributeOptions (System API)
 
+```TypeScript
+export interface CallAttributeOptions
+```
+
 Defines the call attribute options.
 
 **Since:** 7

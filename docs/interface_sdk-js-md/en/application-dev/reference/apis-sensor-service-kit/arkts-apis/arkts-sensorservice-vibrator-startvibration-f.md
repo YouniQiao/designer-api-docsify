@@ -54,6 +54,8 @@ Trigger vibration based on a specified duration.
 ```
 
 
+<a id="startvibration-1"></a>
+
 ## startVibration
 
 ```TypeScript

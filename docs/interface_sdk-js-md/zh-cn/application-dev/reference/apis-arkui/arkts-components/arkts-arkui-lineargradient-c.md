@@ -1,5 +1,9 @@
 # LinearGradient
 
+```TypeScript
+declare class LinearGradient
+```
+
 线性渐变颜色类。
 
 **起始版本：** 10

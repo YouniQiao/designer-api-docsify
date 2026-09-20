@@ -1,5 +1,9 @@
 # DeviceManager
 
+```TypeScript
+interface DeviceManager
+```
+
 Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
 **Since:** 10
@@ -137,6 +141,8 @@ dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.D
     console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
 });
 ```
+
+<a id="getavailabledevicelist-1"></a>
 
 ## getAvailableDeviceList
 

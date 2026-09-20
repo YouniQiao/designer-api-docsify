@@ -1,5 +1,9 @@
 # SceneComponent
 
+```TypeScript
+export interface SceneComponent
+```
+
 Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties.
 
 @interface SceneComponent
@@ -25,8 +29,8 @@ Name of the scene component, which is customizable.
 ## property
 
 ```TypeScript
-readonly property: Record<string, string | number | Vec2 | Vec3 | Vec4 | SceneResource | boolean | number[] |
-  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>
+readonly property: Record<string, string | number | Vec2 | Vec3 | Vec4 | SceneResource | boolean[] |
+  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[]  | null | undefined>
 ```
 
 A set of component properties stored in key-value pairs. It supports multiple basic and complex types to describe various properties of the scene component. The unit and value range depend on the specific scene component.

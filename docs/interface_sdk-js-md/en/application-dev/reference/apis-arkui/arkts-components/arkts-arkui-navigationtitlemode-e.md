@@ -1,5 +1,9 @@
 # NavigationTitleMode
 
+```TypeScript
+declare enum NavigationTitleMode
+```
+
 Enumerates the display modes of the title bar.
 
 **Since:** 8

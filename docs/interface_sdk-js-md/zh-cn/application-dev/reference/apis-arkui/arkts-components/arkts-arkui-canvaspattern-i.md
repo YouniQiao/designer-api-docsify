@@ -1,5 +1,9 @@
 # CanvasPattern
 
+```TypeScript
+declare interface CanvasPattern
+```
+
 一个Object对象，使用[createPattern](arkts-arkui-canvasrenderer-c.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。
 
 **起始版本：** 8

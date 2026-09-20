@@ -1,5 +1,9 @@
 # AppIntentEntity
 
+```TypeScript
+abstract class AppIntentEntity<T> implements IntentEntity
+```
+
 Define AppIntentEntity.
 
 **Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)

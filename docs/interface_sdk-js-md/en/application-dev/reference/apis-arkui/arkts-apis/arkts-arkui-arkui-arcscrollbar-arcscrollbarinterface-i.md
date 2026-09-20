@@ -1,5 +1,9 @@
 # ArcScrollBarInterface
 
+```TypeScript
+export interface ArcScrollBarInterface
+```
+
 The **ArcScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow.
 
 > **NOTE:** 

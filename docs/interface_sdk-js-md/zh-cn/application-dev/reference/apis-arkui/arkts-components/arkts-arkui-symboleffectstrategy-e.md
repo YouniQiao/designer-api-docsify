@@ -1,5 +1,9 @@
 # SymbolEffectStrategy
 
+```TypeScript
+declare enum SymbolEffectStrategy
+```
+
 动效类型的枚举值。设置动效后，动效启动即生效，无需触发。
 
 **起始版本：** 11

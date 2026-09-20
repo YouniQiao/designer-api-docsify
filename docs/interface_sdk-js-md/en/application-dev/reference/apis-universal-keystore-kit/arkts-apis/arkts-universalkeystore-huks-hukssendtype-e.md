@@ -1,5 +1,9 @@
 # HuksSendType
 
+```TypeScript
+export enum HuksSendType
+```
+
 Enumerates the tag transfer modes.
 
 **Since:** 8

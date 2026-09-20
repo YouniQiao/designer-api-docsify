@@ -1,5 +1,9 @@
 # HuksKeyFlag
 
+```TypeScript
+export enum HuksKeyFlag
+```
+
 Enumerates the key generation modes.
 
 **Since:** 8

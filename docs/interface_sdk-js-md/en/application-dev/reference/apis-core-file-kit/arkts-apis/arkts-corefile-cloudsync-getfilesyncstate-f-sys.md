@@ -90,6 +90,8 @@ try {
 ```
 
 
+<a id="getfilesyncstate-1"></a>
+
 ## getFileSyncState
 
 ```TypeScript
@@ -128,6 +130,8 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 
 See [getFileSyncState](#getfilesyncstate)
 
+
+<a id="getfilesyncstate-2"></a>
 
 ## getFileSyncState
 

@@ -1,5 +1,9 @@
 # LazyForEachMemOptStrategy
 
+```TypeScript
+declare enum LazyForEachMemOptStrategy
+```
+
 LazyForEach内存优化策略枚举。
 
 **起始版本：** 26.0.0

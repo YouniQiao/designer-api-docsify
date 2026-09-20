@@ -120,6 +120,8 @@ dlpPermission.openDLPFile(file, appId, async (err, res) => { // 打开DLP文件�
 ```
 
 
+<a id="opendlpfile-1"></a>
+
 ## openDLPFile
 
 ```TypeScript

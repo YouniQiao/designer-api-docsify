@@ -1,5 +1,9 @@
 # App
 
+```TypeScript
+export default class App
+```
+
 Defines static functions of App class
 
 **Since:** 3

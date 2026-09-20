@@ -100,6 +100,8 @@ notificationManager.cancel(bundle, id).then(() => {
 ```
 
 
+<a id="cancel-1"></a>
+
 ## cancel
 
 ```TypeScript
@@ -145,6 +147,8 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 参见 [cancel](#cancel)
 
 
+<a id="cancel-2"></a>
+
 ## cancel
 
 ```TypeScript
@@ -165,7 +169,7 @@ function cancel(id: number, label?: string): Promise<void>
 
 [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
 
-[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup-1) 取消当前应用指定组下的通知。
 
 **参数：**
 

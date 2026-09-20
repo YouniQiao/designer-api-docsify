@@ -1,5 +1,9 @@
 # CameraOutput
 
+```TypeScript
+interface CameraOutput
+```
+
 会话中[Session](arkts-camera-camera-session-i.md)使用的输出信息，output的基类。
 
 **起始版本：** 10
@@ -37,6 +41,8 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="release-1"></a>
 
 ## release
 

@@ -1,5 +1,9 @@
 # FrameNode
 
+```TypeScript
+export class FrameNode
+```
+
 **FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 > **NOTE:** 
@@ -862,6 +866,8 @@ See Example of Node Operations.
 See Example of Node Operations in the LazyForEach Scenario.
 ```
 
+<a id="getchild-1"></a>
+
 ## getChild
 
 ```TypeScript
@@ -1145,6 +1151,8 @@ struct Index {
   }
 }
 ```
+
+<a id="getchildrencount-1"></a>
 
 ## getChildrenCount
 

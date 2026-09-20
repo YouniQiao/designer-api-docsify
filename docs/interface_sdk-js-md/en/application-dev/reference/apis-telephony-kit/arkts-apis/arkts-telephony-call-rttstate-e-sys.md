@@ -1,5 +1,9 @@
 # RttState (System API)
 
+```TypeScript
+export enum RttState
+```
+
 Indicates the state of the rtt.
 
 **Since:** 22

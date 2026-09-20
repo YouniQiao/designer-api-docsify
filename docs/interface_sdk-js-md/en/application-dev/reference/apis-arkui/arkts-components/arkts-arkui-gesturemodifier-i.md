@@ -1,5 +1,9 @@
 # GestureModifier
 
+```TypeScript
+declare interface GestureModifier
+```
+
 You need a custom class to implement the **GestureModifier** API.
 
 **Since:** 12

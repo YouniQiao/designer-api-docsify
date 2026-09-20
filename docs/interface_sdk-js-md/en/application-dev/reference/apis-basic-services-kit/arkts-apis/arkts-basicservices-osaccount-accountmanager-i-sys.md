@@ -1,5 +1,9 @@
 # AccountManager
 
+```TypeScript
+interface AccountManager
+```
+
 Provides APIs for managing OS accounts.
 
 **Since:** 7
@@ -59,6 +63,8 @@ Activate OS account 100.
 Activate the OS account 100 on the logical screen 0.
 ```
 
+<a id="activateosaccount-1"></a>
+
 ## activateOsAccount
 
 ```TypeScript
@@ -104,6 +110,8 @@ Activates an OS account. This API uses a promise to return the result.
 **Examples**
 
 See [activateOsAccount](#activateosaccount)
+
+<a id="activateosaccount-2"></a>
 
 ## activateOsAccount
 
@@ -302,6 +310,8 @@ try {
 }
 ```
 
+<a id="createosaccount-1"></a>
+
 ## createOsAccount
 
 ```TypeScript
@@ -440,6 +450,8 @@ try {
   console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="createosaccountfordomain-1"></a>
 
 ## createOsAccountForDomain
 
@@ -606,6 +618,8 @@ try {
   console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getbundleidforuid-1"></a>
 
 ## getBundleIdForUid
 
@@ -796,6 +810,8 @@ try {
 }
 ```
 
+<a id="getforegroundosaccountlocalid-1"></a>
+
 ## getForegroundOsAccountLocalId
 
 ```TypeScript
@@ -941,6 +957,8 @@ try {
 }
 ```
 
+<a id="getosaccountconstraintsourcetypes-1"></a>
+
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1025,6 +1043,8 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 Obtain the profile photo of OS account 100.
 ```
 
+<a id="getosaccountprofilephoto-1"></a>
+
 ## getOsAccountProfilePhoto
 
 ```TypeScript
@@ -1067,6 +1087,8 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 **Examples**
 
 See [getOsAccountProfilePhoto](#getosaccountprofilephoto)
+
+<a id="getosaccounttype-2"></a>
 
 ## getOsAccountType
 
@@ -1226,6 +1248,8 @@ try {
 }
 ```
 
+<a id="ismainosaccount-1"></a>
+
 ## isMainOsAccount
 
 ```TypeScript
@@ -1304,6 +1328,8 @@ Checks whether an OS account is activated. This API uses a promise to return the
 Check whether OS account 100 is activated.
 ```
 
+<a id="isosaccountconstraintenabled-1"></a>
+
 ## isOsAccountConstraintEnabled
 
 ```TypeScript
@@ -1352,6 +1378,8 @@ Check whether the current OS account is forbidden to use Wi-Fi.
 ```TypeScript
 Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
+
+<a id="isosaccountunlocked-1"></a>
 
 ## isOsAccountUnlocked
 
@@ -1502,44 +1530,6 @@ try {
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<number>): void
-```
-
-Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' &#124; 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-
-**Examples**
-
-See off
 
 ## off('switching')
 
@@ -1757,44 +1747,6 @@ try {
 }
 ```
 
-## on('activate' | 'activating')
-
-```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<number>): void
-```
-
-Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' &#124; 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-
-**Examples**
-
-See on
-
 ## on('switching')
 
 ```TypeScript
@@ -1986,6 +1938,8 @@ try {
 }
 ```
 
+<a id="queryallcreatedosaccounts-1"></a>
+
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2129,6 +2083,8 @@ try {
 }
 ```
 
+<a id="querymaxosaccountnumber-1"></a>
+
 ## queryMaxOsAccountNumber
 
 ```TypeScript
@@ -2247,6 +2203,8 @@ Queries information about the OS account of the given ID. This API uses an async
 ```TypeScript
 Query information about OS account 100.
 ```
+
+<a id="queryosaccountbyid-1"></a>
 
 ## queryOsAccountById
 
@@ -2395,6 +2353,8 @@ try {
 }
 ```
 
+<a id="removeosaccount-1"></a>
+
 ## removeOsAccount
 
 ```TypeScript
@@ -2439,6 +2399,8 @@ Removes an OS account. This API uses a promise to return the result.
 **Examples**
 
 See [removeOsAccount](#removeosaccount)
+
+<a id="removeosaccount-2"></a>
 
 ## removeOsAccount
 
@@ -2533,6 +2495,8 @@ Disable Wi-Fi for OS account 100.
 Remove the constraint on the use of Wi-Fi for OS account 100.
 ```
 
+<a id="setosaccountconstraints-1"></a>
+
 ## setOsAccountConstraints
 
 ```TypeScript
@@ -2621,6 +2585,8 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 Set the name of OS account 100 to demoName.
 ```
 
+<a id="setosaccountname-1"></a>
+
 ## setOsAccountName
 
 ```TypeScript
@@ -2707,6 +2673,8 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 ```TypeScript
 Set a profile photo for OS account 100.
 ```
+
+<a id="setosaccountprofilephoto-1"></a>
 
 ## setOsAccountProfilePhoto
 

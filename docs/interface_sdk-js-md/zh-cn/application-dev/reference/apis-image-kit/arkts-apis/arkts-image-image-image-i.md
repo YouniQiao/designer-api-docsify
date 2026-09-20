@@ -1,5 +1,9 @@
 # Image
 
+```TypeScript
+interface Image
+```
+
 Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
 
 调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。
@@ -64,6 +68,8 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 | --- | --- | --- | --- |
 | componentType | [ComponentType](arkts-image-image-componenttype-e.md) | 是 | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Component](arkts-image-image-component-i.md)&gt; | 是 | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+
+<a id="getcomponent-1"></a>
 
 ## getComponent
 
@@ -145,6 +151,8 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+
+<a id="release-1"></a>
 
 ## release
 

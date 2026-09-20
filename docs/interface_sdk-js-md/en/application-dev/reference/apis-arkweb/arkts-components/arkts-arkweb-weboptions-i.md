@@ -1,5 +1,9 @@
 # WebOptions
 
+```TypeScript
+declare interface WebOptions
+```
+
 Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic-components-web.md#api), including the web page resource URL, controller, rendering mode, and more.
 
 **Since:** 8
@@ -96,7 +100,7 @@ Default value: **""**.
 src: string | Resource
 ```
 
-Web page resource address. If a local resource file is accessed, use the resource protocol or &#36;rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.
+Web page resource address. If a local resource file is accessed, use the resource protocol or $rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.
 
 src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 

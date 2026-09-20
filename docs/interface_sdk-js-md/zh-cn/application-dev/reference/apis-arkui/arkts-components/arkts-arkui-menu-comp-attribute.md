@@ -1,5 +1,9 @@
 # Menu属性/事件
 
+```TypeScript
+declare class MenuAttribute extends CommonMethod<MenuAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 **继承/实现关系：** MenuAttribute extends CommonMethod<MenuAttribute>
@@ -188,4 +192,4 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | Menu子菜单展开符号。<br>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。<br>2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br>默认值：`&#36;r('sys.symbol.chevron_down').fontSize('24vp')` <br>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。<br>默认值：`&#36;r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |
+| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | Menu子菜单展开符号。<br>1、子菜单的展开样式为SubMenuExpandingMode.SIDE_EXPAND时，不显示展开符号。<br>2、子菜单的展开样式为SubMenuExpandingMode.EMBEDDED_EXPAND时，展开时展开符号会顺时针旋转180°。<br>默认值：`$r('sys.symbol.chevron_down').fontSize('24vp')` <br>3、子菜单的展开样式为SubMenuExpandingMode.STACK_EXPAND时，展开时展开符号会顺时针旋转90°。<br>默认值：`$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')` |

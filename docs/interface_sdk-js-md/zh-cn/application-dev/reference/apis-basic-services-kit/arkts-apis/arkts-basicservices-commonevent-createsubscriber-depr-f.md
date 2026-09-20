@@ -79,6 +79,8 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
 ```
 
 
+<a id="createsubscriber-1"></a>
+
 ## createSubscriber
 
 ```TypeScript
@@ -91,7 +93,7 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 **废弃版本：** 9
 
-**替代接口：** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md)(subscribeInfo: CommonEventSubscribeInfo)
+**替代接口：** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber-1)(subscribeInfo: CommonEventSubscribeInfo)
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

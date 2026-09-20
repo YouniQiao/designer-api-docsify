@@ -35,6 +35,8 @@ Subscribes to events related to the screen state.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -63,6 +65,8 @@ Subscribes to events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+
+<a id="on-2"></a>
 
 ## on
 

@@ -1,5 +1,9 @@
 # RouteType
 
+```TypeScript
+declare enum RouteType
+```
+
 Sets the type of page transition.
 
 **Since:** 7

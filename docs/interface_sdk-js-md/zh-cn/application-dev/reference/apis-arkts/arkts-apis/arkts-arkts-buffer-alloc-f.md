@@ -9,7 +9,7 @@ import { buffer } from '@kit.ArkTS';
 ## alloc
 
 ```TypeScript
-function alloc(size: number, fill?: string | Buffer | number | number | number, encoding?: BufferEncoding): Buffer
+function alloc(size: number, fill?: string | Buffer | number, encoding?: BufferEncoding): Buffer
 ```
 
 创建指定字节长度的Buffer对象，并使用指定值进行初始化填充（默认填充0）。

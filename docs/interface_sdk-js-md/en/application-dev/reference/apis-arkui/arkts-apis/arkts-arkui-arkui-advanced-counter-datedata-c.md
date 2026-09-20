@@ -1,5 +1,9 @@
 # DateData
 
+```TypeScript
+declare class DateData
+```
+
 Defines date attributes and methods, including year, month, and day.
 
 **Since:** 11

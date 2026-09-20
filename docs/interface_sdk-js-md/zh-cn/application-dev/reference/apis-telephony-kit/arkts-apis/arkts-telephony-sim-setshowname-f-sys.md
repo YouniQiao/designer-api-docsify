@@ -68,6 +68,8 @@ sim.setShowName(0, name).then(() => {
 ```
 
 
+<a id="setshowname-1"></a>
+
 ## setShowName
 
 ```TypeScript

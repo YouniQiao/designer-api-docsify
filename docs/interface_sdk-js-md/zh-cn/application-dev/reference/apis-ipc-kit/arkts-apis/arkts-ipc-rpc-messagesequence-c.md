@@ -1,5 +1,9 @@
 # MessageSequence
 
+```TypeScript
+class MessageSequence
+```
+
 在RPC或IPC过程中，发送方可以使用MessageSequence提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageSequence提供的读方法从该对象中读取特定格式的数据。数据格式包括：基础类型及数组、IPC对象、接口描述符和自定义序列化对象。读取顺序必须与写入顺序一致，否则会导致数据解析错误。
 
 **起始版本：** 9
@@ -698,6 +702,8 @@ try {
 }
 ```
 
+<a id="readbooleanarray-1"></a>
+
 ## readBooleanArray
 
 ```TypeScript
@@ -874,6 +880,8 @@ try {
 }
 ```
 
+<a id="readbytearray-1"></a>
+
 ## readByteArray
 
 ```TypeScript
@@ -1043,6 +1051,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="readchararray-1"></a>
 
 ## readCharArray
 
@@ -1215,6 +1225,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="readdoublearray-1"></a>
 
 ## readDoubleArray
 
@@ -1471,6 +1483,8 @@ try {
 }
 ```
 
+<a id="readfloatarray-1"></a>
+
 ## readFloatArray
 
 ```TypeScript
@@ -1645,6 +1659,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="readintarray-1"></a>
 
 ## readIntArray
 
@@ -1861,6 +1877,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="readlongarray-1"></a>
 
 ## readLongArray
 
@@ -2327,6 +2345,8 @@ try {
 }
 ```
 
+<a id="readremoteobjectarray-1"></a>
+
 ## readRemoteObjectArray
 
 ```TypeScript
@@ -2519,6 +2539,8 @@ try {
 }
 ```
 
+<a id="readshortarray-1"></a>
+
 ## readShortArray
 
 ```TypeScript
@@ -2693,6 +2715,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="readstringarray-1"></a>
 
 ## readStringArray
 

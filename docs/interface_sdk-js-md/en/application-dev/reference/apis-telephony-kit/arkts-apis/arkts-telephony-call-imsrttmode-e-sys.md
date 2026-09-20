@@ -1,5 +1,9 @@
 # ImsRttMode (System API)
 
+```TypeScript
+export enum ImsRttMode
+```
+
 Indicates the mode of the ims rtt.
 
 **Since:** 22

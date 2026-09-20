@@ -1,5 +1,9 @@
 # CapsuleSegmentButtonConstructionOptions
 
+```TypeScript
+interface CapsuleSegmentButtonConstructionOptions extends CommonSegmentButtonOptions
+```
+
 Represents configuration options for creating a **SegmentButton** component consisting of capsule-style segment buttons.
 
 Inherits from [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md).

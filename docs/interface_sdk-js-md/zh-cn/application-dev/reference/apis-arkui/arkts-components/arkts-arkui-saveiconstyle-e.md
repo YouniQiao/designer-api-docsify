@@ -1,5 +1,9 @@
 # SaveIconStyle
 
+```TypeScript
+declare enum SaveIconStyle
+```
+
 保存控件的图标风格。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # SliderStyle
 
+```TypeScript
+declare enum SliderStyle
+```
+
 Enumerates the display styles of the slider thumb relative to the track. For details, see [How Are the Slider Thumb and Track of the Slider Component Aligned?](../../../ui/arkts-select-component-faq.md#how-are-the-slider-thumb-and-track-of-the-slider-component-aligned).
 
 > **NOTE:** 

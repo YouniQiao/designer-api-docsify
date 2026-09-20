@@ -158,6 +158,8 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err:
 ```
 
 
+<a id="startusingpermission-1"></a>
+
 ## startUsingPermission
 
 ```TypeScript
@@ -213,6 +215,8 @@ function startUsingPermission(
 
 参见 [startUsingPermission](#startusingpermission)
 
+
+<a id="startusingpermission-2"></a>
 
 ## startUsingPermission
 
@@ -274,6 +278,8 @@ function startUsingPermission(
 
 参见 [startUsingPermission](#startusingpermission)
 
+
+<a id="startusingpermission-3"></a>
 
 ## startUsingPermission
 

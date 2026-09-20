@@ -61,6 +61,8 @@ cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.
 ```
 
 
+<a id="changeconfirmation-1"></a>
+
 ## changeConfirmation
 
 ```TypeScript

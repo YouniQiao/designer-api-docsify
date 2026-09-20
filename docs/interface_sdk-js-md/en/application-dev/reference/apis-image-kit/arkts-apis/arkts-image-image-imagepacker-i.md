@@ -1,5 +1,9 @@
 # ImagePacker
 
+```TypeScript
+interface ImagePacker
+```
+
 The **ImagePacker** class provides APIs to compress and encode images.
 
 Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
@@ -113,6 +117,8 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
+<a id="packing-1"></a>
+
 ## packing
 
 ```TypeScript
@@ -143,6 +149,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+
+<a id="packing-2"></a>
 
 ## packing
 
@@ -175,6 +183,8 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+
+<a id="packing-3"></a>
 
 ## packing
 
@@ -212,6 +222,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+
+<a id="packing-4"></a>
 
 ## packing
 
@@ -285,6 +297,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+
+<a id="packtodata-1"></a>
 
 ## packToData
 
@@ -400,6 +414,8 @@ Encodes the image source into a file based on the specified encoding parameters.
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
+<a id="packtofile-1"></a>
+
 ## packToFile
 
 ```TypeScript
@@ -439,6 +455,8 @@ Encodes the image source into a file based on the specified encoding parameters.
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+
+<a id="packtofile-2"></a>
 
 ## packToFile
 
@@ -480,6 +498,8 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+
+<a id="packtofile-3"></a>
 
 ## packToFile
 
@@ -526,6 +546,8 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 | [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
 | [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
 | [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+
+<a id="packtofile-4"></a>
 
 ## packToFile
 
@@ -614,6 +636,8 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="release-1"></a>
 
 ## release
 

@@ -1,5 +1,9 @@
 # MenuItem properties/events
 
+```TypeScript
+declare class MenuItemAttribute extends CommonMethod<MenuItemAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** MenuItemAttribute extends CommonMethod<MenuItemAttribute>
@@ -124,7 +128,7 @@ selected(value: boolean)
 
 Sets whether the menu item is selected.
 
-Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 

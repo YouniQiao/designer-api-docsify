@@ -1,5 +1,9 @@
 # ComposeTitleBarV2MenuItem
 
+```TypeScript
+export declare class ComposeTitleBarV2MenuItem
+```
+
 菜单项类，用于定义标题栏左侧头像或右侧菜单项。
 
 **起始版本：** 26.0.0

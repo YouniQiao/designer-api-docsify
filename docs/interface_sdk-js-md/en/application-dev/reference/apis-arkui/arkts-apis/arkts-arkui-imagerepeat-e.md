@@ -1,5 +1,9 @@
 # ImageRepeat
 
+```TypeScript
+declare enum ImageRepeat
+```
+
 ImageRepeat enumeration description
 
 **Since:** 7

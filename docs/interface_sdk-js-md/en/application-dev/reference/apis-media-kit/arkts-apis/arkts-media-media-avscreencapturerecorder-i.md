@@ -1,5 +1,9 @@
 # AVScreenCaptureRecorder
 
+```TypeScript
+interface AVScreenCaptureRecorder
+```
+
 AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use [createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md) to create an AVScreenCaptureRecorder instance.
 
 **Since:** 12

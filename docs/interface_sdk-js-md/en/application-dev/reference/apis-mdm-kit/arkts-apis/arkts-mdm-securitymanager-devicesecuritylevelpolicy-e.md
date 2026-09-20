@@ -1,5 +1,9 @@
 # DeviceSecurityLevelPolicy
 
+```TypeScript
+export enum DeviceSecurityLevelPolicy
+```
+
 The device security level policy
 
 **Since:** 26.0.1

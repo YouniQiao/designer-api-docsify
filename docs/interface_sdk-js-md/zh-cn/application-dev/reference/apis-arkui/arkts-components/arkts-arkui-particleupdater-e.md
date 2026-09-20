@@ -1,5 +1,9 @@
 # ParticleUpdater
 
+```TypeScript
+declare enum ParticleUpdater
+```
+
 粒子变化类型。
 
 **起始版本：** 10

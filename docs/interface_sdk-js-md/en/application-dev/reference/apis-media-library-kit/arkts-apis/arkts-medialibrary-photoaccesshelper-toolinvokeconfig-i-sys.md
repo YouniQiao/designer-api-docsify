@@ -1,5 +1,9 @@
 # ToolInvokeConfig (System API)
 
+```TypeScript
+interface ToolInvokeConfig
+```
+
 Configuration for invoking an analysis tool.
 
 **Since:** 26.0.1

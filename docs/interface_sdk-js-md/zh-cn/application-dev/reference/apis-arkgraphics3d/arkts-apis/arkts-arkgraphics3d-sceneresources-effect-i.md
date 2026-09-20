@@ -1,5 +1,9 @@
 # Effect
 
+```TypeScript
+export interface Effect extends SceneResource
+```
+
 特效类型，继承自SceneResource。由createEffect接口获得。
 
 @extends SceneResource @interface Effect

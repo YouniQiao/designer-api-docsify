@@ -1,5 +1,9 @@
 # RenderExitReason
 
+```TypeScript
+declare enum RenderExitReason
+```
+
 Enumerates the reasons why the rendering process exits.
 
 **Since:** 9

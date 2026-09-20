@@ -1,5 +1,9 @@
 # ScrollableCommonMethod
 
+```TypeScript
+declare class ScrollableCommonMethod<T> extends CommonMethod<T>
+```
+
 CommonScrollableMethod
 
 @extends CommonMethod&lt;T&gt;
@@ -784,6 +788,8 @@ Sets the scrollbar color.
 | --- | --- |
 | T |  |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -895,6 +901,8 @@ Sets the scrollbar width.
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

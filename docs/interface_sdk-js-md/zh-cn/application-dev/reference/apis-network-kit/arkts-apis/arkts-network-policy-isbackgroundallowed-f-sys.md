@@ -64,6 +64,8 @@ policy
 ```
 
 
+<a id="isbackgroundallowed-1"></a>
+
 ## isBackgroundAllowed
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # CalendarRequestedData (System API)
 
+```TypeScript
+declare interface CalendarRequestedData
+```
+
 Defines the struct of CalendarRequestedData.
 
 **Since:** 7

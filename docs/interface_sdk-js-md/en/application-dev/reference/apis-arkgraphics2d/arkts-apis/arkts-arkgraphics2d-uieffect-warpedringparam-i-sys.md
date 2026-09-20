@@ -1,5 +1,9 @@
 # WarpedRingParam (System API)
 
+```TypeScript
+interface WarpedRingParam
+```
+
 WarpedRingParam specifies the ring's radius, width, variation, rotation, 3D orientation and noise evolution.
 
 **Since:** 26.0.1

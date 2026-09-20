@@ -88,6 +88,8 @@ call.answerCall(0, 1).then(() => {
 ```
 
 
+<a id="answercall-1"></a>
+
 ## answerCall
 
 ```TypeScript
@@ -132,6 +134,8 @@ Answers a call. This API uses a promise to return the result.
 
 See [answerCall](#answercall)
 
+
+<a id="answercall-3"></a>
 
 ## answerCall
 
@@ -178,6 +182,8 @@ Answers a call. This API uses a promise to return the result.
 
 See [answerCall](#answercall)
 
+
+<a id="answercall-4"></a>
 
 ## answerCall
 

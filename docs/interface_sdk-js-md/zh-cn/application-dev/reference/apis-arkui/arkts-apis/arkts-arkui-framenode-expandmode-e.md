@@ -1,5 +1,9 @@
 # ExpandMode
 
+```TypeScript
+export enum ExpandMode
+```
+
 子节点展开模式枚举。
 
 **起始版本：** 15

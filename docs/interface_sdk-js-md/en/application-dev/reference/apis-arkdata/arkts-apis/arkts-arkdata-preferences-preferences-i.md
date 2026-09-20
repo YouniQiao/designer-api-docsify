@@ -1,5 +1,9 @@
 # Preferences
 
+```TypeScript
+interface Preferences
+```
+
 Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md).
 
 **Since:** 9
@@ -63,6 +67,8 @@ promise.then(() => {
   console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -166,6 +172,8 @@ deleteStartupPromise.then(() => {
   console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
 })
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -289,6 +297,8 @@ flushResult.then(() => {
 })
 ```
 
+<a id="flush-1"></a>
+
 ## flush
 
 ```TypeScript
@@ -399,6 +409,8 @@ data.then((data: preferences.ValueType) => {
 })
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
@@ -506,6 +518,8 @@ allData.then((value: Object) => {
   console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="getall-1"></a>
 
 ## getAll
 
@@ -679,6 +693,8 @@ isStartupSet.then((val: boolean) => {
   console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="has-1"></a>
 
 ## has
 
@@ -985,6 +1001,8 @@ putStartupPref.then(() => {
   console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="put-1"></a>
 
 ## put
 

@@ -72,6 +72,8 @@ adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
 ```
 
 
+<a id="disablesuperadmin-1"></a>
+
 ## disableSuperAdmin
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # GradientDirection
 
+```TypeScript
+declare enum GradientDirection
+```
+
 GradientDirection enumeration description
 
 **Since:** 7

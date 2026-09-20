@@ -1,5 +1,9 @@
 # DragPreviewOptions
 
+```TypeScript
+declare interface DragPreviewOptions
+```
+
 Preview image processing mode and badge count during dragging.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # InputMethodController
 
+```TypeScript
+interface InputMethodController
+```
+
 In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 6
@@ -23,7 +27,7 @@ Attaches a self-drawing component to the input method. This API uses an asynchro
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
 > <br>
-> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 10
 
@@ -96,6 +100,8 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 });
 ```
 
+<a id="attach-1"></a>
+
 ## attach
 
 ```TypeScript
@@ -107,7 +113,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
 > <br>
-> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 10
 
@@ -138,6 +144,8 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 See [attach](#attach)
 
+<a id="attach-2"></a>
+
 ## attach
 
 ```TypeScript
@@ -149,7 +157,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
 > <br>
-> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
+> If the window where the self-drawing component is located is set to be non-focusable via [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), the system cannot guarantee proper interaction between the self-drawing input component and the input method. If you want to draw an input box in a non-focusable window, refer to [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
 
 **Since:** 15
 
@@ -293,6 +301,8 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 });
 ```
 
+<a id="changeselection-1"></a>
+
 ## changeSelection
 
 ```TypeScript
@@ -380,6 +390,8 @@ inputMethod.getController().detach().then(() => {
   console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="detach-1"></a>
 
 ## detach
 
@@ -517,6 +529,8 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 });
 ```
 
+<a id="hidesoftkeyboard-1"></a>
+
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -606,6 +620,8 @@ inputMethod.getController().hideTextInput().then(() => {
   console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="hidetextinput-1"></a>
 
 ## hideTextInput
 
@@ -1295,7 +1311,7 @@ Registers or unregisters MessageHandler. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage-1) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1434,6 +1450,8 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 });
 ```
 
+<a id="setcallingwindow-1"></a>
+
 ## setCallingWindow
 
 ```TypeScript
@@ -1540,6 +1558,8 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
 });
 ```
 
+<a id="showsoftkeyboard-1"></a>
+
 ## showSoftKeyboard
 
 ```TypeScript
@@ -1640,6 +1660,8 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 });
 ```
 
+<a id="showtextinput-1"></a>
+
 ## showTextInput
 
 ```TypeScript
@@ -1672,6 +1694,8 @@ Enters the text editing mode. This API uses a promise to return the result. <br>
 **Examples**
 
 See [showTextInput](#showtextinput)
+
+<a id="showtextinput-2"></a>
 
 ## showTextInput
 
@@ -1769,6 +1793,8 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 });
 ```
 
+<a id="stopinput-1"></a>
+
 ## stopInput
 
 ```TypeScript
@@ -1858,6 +1884,8 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 });
 ```
 
+<a id="stopinputsession-1"></a>
+
 ## stopInputSession
 
 ```TypeScript
@@ -1943,6 +1971,8 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
   console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="updateattribute-1"></a>
 
 ## updateAttribute
 
@@ -2044,6 +2074,8 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
   console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="updatecursor-1"></a>
 
 ## updateCursor
 

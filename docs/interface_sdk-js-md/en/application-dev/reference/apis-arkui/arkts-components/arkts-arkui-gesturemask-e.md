@@ -1,5 +1,9 @@
 # GestureMask
 
+```TypeScript
+declare enum GestureMask
+```
+
 Enumerates masking modes of child component gestures.
 
 **Since:** 7

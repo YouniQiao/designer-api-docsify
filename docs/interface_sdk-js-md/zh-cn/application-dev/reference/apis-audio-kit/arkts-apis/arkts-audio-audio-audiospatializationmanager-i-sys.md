@@ -1,5 +1,9 @@
 # AudioSpatializationManager
 
+```TypeScript
+interface AudioSpatializationManager
+```
+
 空间音频管理。在使用AudioSpatializationManager的接口前，需要使用[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
 
 @typedef AudioSpatializationManager
@@ -282,6 +286,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isheadtrackingenabled-1"></a>
 
 ## isHeadTrackingEnabled
 
@@ -567,6 +573,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isspatializationenabled-1"></a>
 
 ## isSpatializationEnabled
 
@@ -1375,6 +1383,8 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 });
 ```
 
+<a id="setheadtrackingenabled-1"></a>
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1424,6 +1434,8 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 **示例**
 
 参见 [setHeadTrackingEnabled](#setheadtrackingenabled)
+
+<a id="setheadtrackingenabled-2"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1606,6 +1618,8 @@ audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).t
 });
 ```
 
+<a id="setspatializationenabled-1"></a>
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1655,6 +1669,8 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 **示例**
 
 参见 [setSpatializationEnabled](#setspatializationenabled)
+
+<a id="setspatializationenabled-2"></a>
 
 ## setSpatializationEnabled
 

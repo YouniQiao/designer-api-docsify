@@ -1,5 +1,9 @@
 # LazyDynamicLayoutAttribute
 
+```TypeScript
+export declare class LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
+```
+
 定义LazyDynamicLayout组件。
 
 @extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;

@@ -1,5 +1,9 @@
 # GestureGroupHandler
 
+```TypeScript
+declare class GestureGroupHandler extends GestureHandler<GestureGroupHandler>
+```
+
 Defines a gesture group handler object.
 
 **Inheritance/Implementation:** GestureGroupHandler extends GestureHandler<GestureGroupHandler>

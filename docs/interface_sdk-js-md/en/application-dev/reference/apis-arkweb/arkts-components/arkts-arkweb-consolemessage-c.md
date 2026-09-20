@@ -1,5 +1,9 @@
 # ConsoleMessage
 
+```TypeScript
+declare class ConsoleMessage
+```
+
 ConsoleMessage is an object that encapsulates JavaScript console output information in the **Web** component. When a web page outputs logs through methods such as `console.log()`, `console.warn()`, and `console.error()`, this object is provided to the app through the `onConsole` event callback for monitoring and inspecting web page debug output. For sample code, see [onConsole event](arkts-arkweb-web-comp-attribute.md#onconsole).
 
 **Since:** 8
@@ -30,6 +34,8 @@ Constructs a **ConsoleMessage** object.
 | sourceId | string | Yes | Path and name of the web page source file. |
 | lineNumber | number | Yes | Line number of **ConsoleMessage**. |
 | messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | Log level of **ConsoleMessage**. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

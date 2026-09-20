@@ -1,5 +1,9 @@
 # QueryPolicy
 
+```TypeScript
+export enum QueryPolicy
+```
+
 The policy of query enterprise device management policy.
 
 **Since:** 26.0.1

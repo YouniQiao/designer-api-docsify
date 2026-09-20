@@ -1,5 +1,9 @@
 # VisibleAreaEventOptions
 
+```TypeScript
+declare interface VisibleAreaEventOptions
+```
+
 关于区域变化相关的参数。
 
 **起始版本：** 12

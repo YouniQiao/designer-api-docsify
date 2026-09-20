@@ -1,5 +1,9 @@
 # PasteIconStyle
 
+```TypeScript
+declare enum PasteIconStyle
+```
+
 Enumerates icon styles of the **PasteButton** component.
 
 **Since:** 10

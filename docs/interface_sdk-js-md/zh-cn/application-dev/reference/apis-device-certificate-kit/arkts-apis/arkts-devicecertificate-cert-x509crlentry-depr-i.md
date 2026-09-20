@@ -1,5 +1,9 @@
 # X509CrlEntry
 
+```TypeScript
+interface X509CrlEntry
+```
+
 证书吊销条目。
 
 > **说明：** 
@@ -243,6 +247,8 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
   }
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 

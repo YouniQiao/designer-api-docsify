@@ -70,6 +70,8 @@ call.joinConference(1, callNumberList).then(() => {
 ```
 
 
+<a id="joinconference-1"></a>
+
 ## joinConference
 
 ```TypeScript

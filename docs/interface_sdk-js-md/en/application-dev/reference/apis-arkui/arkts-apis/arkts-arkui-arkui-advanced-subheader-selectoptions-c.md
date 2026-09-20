@@ -1,5 +1,9 @@
 # SelectOptions
 
+```TypeScript
+export declare class SelectOptions
+```
+
 Declare type SelectOption
 
 **Since:** 10

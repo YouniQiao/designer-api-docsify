@@ -1,5 +1,9 @@
 # Server
 
+```TypeScript
+interface Server
+```
+
 Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks.
 
 **Since:** 20

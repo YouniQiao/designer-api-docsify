@@ -1,5 +1,9 @@
 # XComponentController
 
+```TypeScript
+declare class XComponentController
+```
+
 XComponent组件的控制器，可以将此对象绑定至XComponent组件，然后通过控制器来调用组件方法。
 
 **起始版本：** 8

@@ -52,6 +52,8 @@ geolocation.flushCachedGnssLocations().then((result) => {
 ```
 
 
+<a id="flushcachedgnsslocations-1"></a>
+
 ## flushCachedGnssLocations
 
 ```TypeScript

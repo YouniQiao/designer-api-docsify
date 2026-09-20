@@ -1,5 +1,9 @@
 # SliderStyle
 
+```TypeScript
+declare enum SliderStyle
+```
+
 滑动条滑块在滑轨上显示的样式，样式说明请参考[Slider组件滑块与滑轨是如何对齐的](../../../ui/arkts-select-component-faq.md#slider组件滑块与滑轨是如何对齐的)。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # PersistentStorage
 
+```TypeScript
+declare class PersistentStorage
+```
+
 For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
 
 > **NOTE:** 

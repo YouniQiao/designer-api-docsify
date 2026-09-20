@@ -1,5 +1,9 @@
 # PinchGestureHandlerOptions
 
+```TypeScript
+interface PinchGestureHandlerOptions extends BaseHandlerOptions
+```
+
 Provides the parameters of the pinch gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

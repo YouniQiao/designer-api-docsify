@@ -1,5 +1,9 @@
 # CommonMethod
 
+```TypeScript
+declare class CommonMethod<T>
+```
+
 CommonMethod.
 
 **Since:** 11
@@ -156,6 +160,8 @@ Sets the accessibility description. <br>This attribute provides additional conte
 | --- | --- |
 | T |  |
 
+<a id="accessibilitydescription-1"></a>
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -247,6 +253,8 @@ Sets whether to enable accessibility grouping.
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="accessibilitygroup-1"></a>
 
 ## accessibilityGroup
 
@@ -343,6 +351,8 @@ Sets the next component to receive focus during screen reader navigation.
 | --- | --- |
 | T |  |
 
+<a id="accessibilitynextfocusid-1"></a>
+
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -373,37 +383,6 @@ Sets the next component to receive focus during screen reader navigation, with o
 | Type | Description |
 | --- | --- |
 | T |  |
-
-## accessibilityNextFocusId
-
-```TypeScript
-accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T
-```
-
-Enable or disable specific smart gesture shortcuts, and set response priorities for them.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| nextId | string | Yes |  |
-| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) &#124; undefined | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | return component instance who call the method. |
 
 ## accessibilityRole
 
@@ -555,6 +534,8 @@ Sets the accessibility text. When a component does not contain a text attribute,
 | --- | --- |
 | T |  |
 
+<a id="accessibilitytext-1"></a>
+
 ## accessibilityText
 
 ```TypeScript
@@ -705,6 +686,8 @@ Sets the alignment mode for child components within the component's drawing area
 | --- | --- |
 | T | Current component. |
 
+<a id="align-1"></a>
+
 ## align
 
 ```TypeScript
@@ -762,6 +745,8 @@ Sets the alignment rule for child components within the relative container. This
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="alignrules-1"></a>
 
 ## alignRules
 
@@ -824,7 +809,7 @@ The alignment mode of the child component along the cross axis (the direction pe
 ## allowDrop
 
 ```TypeScript
-allowDrop(value: Array<UniformDataType> | null | Array<string>): T
+allowDrop(value: Array<UniformDataType>  | null | Array<string>): T
 ```
 
 Sets the types of data that can be dropped to the component. If **allowDrop** is not set, the component accepts all data types by default.
@@ -997,6 +982,8 @@ Applies a background blur effect to the component. You can customize the blur ra
 | --- | --- |
 | T | Current component. |
 
+<a id="backdropblur-1"></a>
+
 ## backdropBlur
 
 ```TypeScript
@@ -1027,6 +1014,8 @@ Applies a background blur effect to the component. You can customize the blur ra
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="backdropblur-2"></a>
 
 ## backdropBlur
 
@@ -1120,6 +1109,8 @@ Defines the background material blur style. It encapsulates various blur radius,
 | --- | --- |
 | T | Current component. |
 
+<a id="backgroundblurstyle-1"></a>
+
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -1150,6 +1141,8 @@ Defines the background material blur style. It encapsulates various blur radius,
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="backgroundblurstyle-2"></a>
 
 ## backgroundBlurStyle
 
@@ -1211,6 +1204,8 @@ Sets the background brightness of the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="backgroundbrightness-1"></a>
+
 ## backgroundBrightness
 
 ```TypeScript
@@ -1267,6 +1262,8 @@ Background color
 | --- | --- |
 | T |  |
 
+<a id="backgroundcolor-1"></a>
+
 ## backgroundColor
 
 ```TypeScript
@@ -1296,6 +1293,8 @@ Background color
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="backgroundcolor-2"></a>
 
 ## backgroundColor
 
@@ -1355,6 +1354,8 @@ Sets the background effect of the component, including the blur radius, brightne
 | --- | --- |
 | T | Current component. |
 
+<a id="backgroundeffect-1"></a>
+
 ## backgroundEffect
 
 ```TypeScript
@@ -1382,6 +1383,8 @@ Sets the background effect of the component, including the blur radius, brightne
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="backgroundeffect-2"></a>
 
 ## backgroundEffect
 
@@ -1479,6 +1482,8 @@ Background image src: Image address url
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="backgroundimage-1"></a>
 
 ## backgroundImage
 
@@ -1619,7 +1624,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>- **false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>- **false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. The root node in **builder** must be unique. |
 | type | [ModalTransition](arkts-arkui-modaltransition-e.md) | No | System transition mode of the modal.<br> Default value: **ModalTransition.DEFAULT**.<br>**NOTE:** <br> This property has no effect when it is set together with **transition**. |
 
@@ -1628,6 +1633,8 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="bindcontentcover-1"></a>
 
 ## bindContentCover
 
@@ -1649,7 +1656,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>- **false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>- **false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. |
 | options | [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | No | Optional attributes of the modal. |
 
@@ -1686,6 +1693,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="bindcontextmenu-1"></a>
 
 ## bindContextMenu
 
@@ -1807,6 +1816,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | T |  |
 
+<a id="bindcontextmenuwithresponse-1"></a>
+
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1863,6 +1874,8 @@ Menu control
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="bindmenu-1"></a>
 
 ## bindMenu
 
@@ -1945,7 +1958,7 @@ Binds a sheet to the component, which is displayed when the component is touched
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | Whether to display the sheet.<br>**true**: Display the sheet.<br>**false**: Hide the sheet.<br>Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
+| isShow | boolean | Yes | Whether to display the sheet.<br>**true**: Display the sheet.<br>**false**: Hide the sheet.<br>Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the sheet. |
 | options | [SheetOptions](arkts-arkui-sheetoptions-i.md) | No | Optional attributes of the sheet. |
 
@@ -2015,6 +2028,8 @@ Defines how the component's content (including the content of it child component
 | --- | --- |
 | T | Current component. |
 
+<a id="blendmode-1"></a>
+
 ## blendMode
 
 ```TypeScript
@@ -2075,6 +2090,8 @@ Applies a foreground blur effect to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="blur-1"></a>
+
 ## blur
 
 ```TypeScript
@@ -2105,6 +2122,8 @@ Applies a foreground blur effect to the component. Compared to [blur](#blur), th
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="blur-2"></a>
 
 ## blur
 
@@ -2256,6 +2275,8 @@ Sets the border radius.
 | --- | --- |
 | T | Current component. |
 
+<a id="borderradius-1"></a>
+
 ## borderRadius
 
 ```TypeScript
@@ -2371,6 +2392,8 @@ Applies a brightness effect to the component. If this API is not used, there wil
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="brightness-1"></a>
 
 ## brightness
 
@@ -2491,6 +2514,8 @@ Sets the click feedback effect of the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="clickeffect-1"></a>
+
 ## clickEffect
 
 ```TypeScript
@@ -2549,6 +2574,8 @@ Sets whether to clip the areas of child components that extend beyond this compo
 | --- | --- |
 | T | Current component. |
 
+<a id="clip-1"></a>
+
 ## clip
 
 ```TypeScript
@@ -2578,6 +2605,8 @@ Sets whether to clip the areas of child components that extend beyond this compo
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="clip-2"></a>
 
 ## clip
 
@@ -2652,6 +2681,8 @@ Clips this component according to the specified shape (which may include positio
 | --- | --- |
 | T | Current component. |
 
+<a id="clipshape-1"></a>
+
 ## clipShape
 
 ```TypeScript
@@ -2720,6 +2751,8 @@ Applies a color blend effect to the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="colorblend-1"></a>
 
 ## colorBlend
 
@@ -2857,6 +2890,8 @@ Applies a contrast effect to the component. If this API is not used, there will 
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="contrast-1"></a>
 
 ## contrast
 
@@ -3093,6 +3128,8 @@ Sets the preview image displayed during component drag operations.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="dragpreview-1"></a>
 
 ## dragPreview
 
@@ -3497,6 +3534,8 @@ Set container as a focus group with a specific identifier.
 | --- | --- |
 | T |  |
 
+<a id="focusscopeid-1"></a>
+
 ## focusScopeId
 
 ```TypeScript
@@ -3589,6 +3628,8 @@ Applies a foreground blur style to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="foregroundblurstyle-1"></a>
+
 ## foregroundBlurStyle
 
 ```TypeScript
@@ -3617,6 +3658,8 @@ Applies a foreground blur style to the component. Compared to [foregroundBlurSty
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="foregroundblurstyle-2"></a>
 
 ## foregroundBlurStyle
 
@@ -3675,6 +3718,8 @@ Sets the foreground color of the component. Components without explicit foregrou
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="foregroundcolor-1"></a>
 
 ## foregroundColor
 
@@ -3796,6 +3841,8 @@ Sets whether to freeze the component. When frozen, the component and its childre
 | --- | --- |
 | T | Current component. |
 
+<a id="freeze-1"></a>
+
 ## freeze
 
 ```TypeScript
@@ -3853,6 +3900,8 @@ Implements an implicit shared element transition.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="geometrytransition-1"></a>
 
 ## geometryTransition
 
@@ -3975,6 +4024,8 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="grayscale-1"></a>
 
 ## grayscale
 
@@ -4138,6 +4189,8 @@ Sets the height of the component itself. By default, the height required for the
 | --- | --- |
 | T | Current component. |
 
+<a id="height-1"></a>
+
 ## height
 
 ```TypeScript
@@ -4251,6 +4304,8 @@ Rotates the hue of the component. If this API is not used, there will be no chan
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="huerotate-1"></a>
 
 ## hueRotate
 
@@ -4404,6 +4459,8 @@ Inverts an image.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="invert-1"></a>
 
 ## invert
 
@@ -4581,6 +4638,8 @@ Applies a light up effect to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="lightupeffect-1"></a>
+
 ## lightUpEffect
 
 ```TypeScript
@@ -4636,6 +4695,8 @@ Creates a linear gradient.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="lineargradient-1"></a>
 
 ## linearGradient
 
@@ -4695,6 +4756,8 @@ Applies a linear gradient foreground blur effect to the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="lineargradientblur-1"></a>
 
 ## linearGradientBlur
 
@@ -4809,6 +4872,8 @@ Adds a mask to the component to indicate the progress.
 | --- | --- |
 | T | Current component. |
 
+<a id="mask-1"></a>
+
 ## mask
 
 ```TypeScript
@@ -4836,6 +4901,8 @@ Adds a mask to the component to indicate the progress. Compared with [mask&lt;su
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="mask-2"></a>
 
 ## mask
 
@@ -4898,6 +4965,8 @@ Adds a mask of the specified shape to the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="maskshape-1"></a>
 
 ## maskShape
 
@@ -5026,6 +5095,8 @@ Applies a motion blur effect to the component being scaled or moved.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="motionblur-1"></a>
 
 ## motionBlur
 
@@ -5393,6 +5464,8 @@ This event is not triggered for render attribute changes caused by re-rendering,
 | --- | --- |
 | T | Current component. |
 
+<a id="onareachange-1"></a>
+
 ## onAreaChange
 
 ```TypeScript
@@ -5584,6 +5657,8 @@ When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unk
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="onclick-1"></a>
 
 ## onClick
 
@@ -5920,6 +5995,8 @@ A component bound with this event can serve as a drop target. This callback is t
 | --- | --- |
 | T | Current component. |
 
+<a id="ondrop-1"></a>
+
 ## onDrop
 
 ```TypeScript
@@ -6093,6 +6170,8 @@ Binds a custom gesture recognizer judgment callback to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="ongesturerecognizerjudgebegin-1"></a>
+
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -6205,6 +6284,8 @@ Triggered when a key event occurs.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="onkeyevent-1"></a>
 
 ## onKeyEvent
 
@@ -6340,7 +6421,7 @@ Called when component is focused, the return value indicates whether keyboard is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
 
 **Return value:**
 
@@ -6573,6 +6654,8 @@ Called when the visible area of the component changes. For details about the dev
 | --- | --- |
 | T | Current component. |
 
+<a id="onvisibleareachange-1"></a>
+
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -6630,6 +6713,8 @@ Sets the opacity of the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="opacity-1"></a>
 
 ## opacity
 
@@ -6691,6 +6776,8 @@ Sets the outline attributes in one declaration.
 | --- | --- |
 | T | Current component. |
 
+<a id="outline-1"></a>
+
 ## outline
 
 ```TypeScript
@@ -6750,6 +6837,8 @@ Sets the outline color. If this API is not used, the default color black will be
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="outlinecolor-1"></a>
 
 ## outlineColor
 
@@ -6811,6 +6900,8 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 | --- | --- |
 | T | Current component. |
 
+<a id="outlineradius-1"></a>
+
 ## outlineRadius
 
 ```TypeScript
@@ -6871,6 +6962,8 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 | --- | --- |
 | T | Current component. |
 
+<a id="outlinestyle-1"></a>
+
 ## outlineStyle
 
 ```TypeScript
@@ -6930,6 +7023,8 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="outlinewidth-1"></a>
 
 ## outlineWidth
 
@@ -7131,6 +7226,8 @@ Applies a pixel stretch effect to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="pixelstretcheffect-1"></a>
+
 ## pixelStretchEffect
 
 ```TypeScript
@@ -7263,6 +7360,8 @@ Anonymous Object Rectification.
 | --- | --- |
 | T |  |
 
+<a id="radialgradient-1"></a>
+
 ## radialGradient
 
 ```TypeScript
@@ -7322,6 +7421,8 @@ Sets how the final state of the component's content is rendered during its width
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="renderfit-1"></a>
 
 ## renderFit
 
@@ -7384,6 +7485,8 @@ If this attribute is not set, no render group is formed by default.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="rendergroup-1"></a>
 
 ## renderGroup
 
@@ -7581,6 +7684,8 @@ Rotates the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="rotate-1"></a>
+
 ## rotate
 
 ```TypeScript
@@ -7610,6 +7715,8 @@ Rotates the component. Compared with [rotate](#rotate), this API supports the **
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="rotate-2"></a>
 
 ## rotate
 
@@ -7718,6 +7825,8 @@ Applies a saturation effect to the component. If this API is not used, there wil
 | --- | --- |
 | T | Current component. |
 
+<a id="saturate-1"></a>
+
 ## saturate
 
 ```TypeScript
@@ -7775,6 +7884,8 @@ Scales the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="scale-1"></a>
 
 ## scale
 
@@ -7834,6 +7945,8 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 | --- | --- |
 | T | Current component. |
 
+<a id="sepia-1"></a>
+
 ## sepia
 
 ```TypeScript
@@ -7891,6 +8004,8 @@ Applies a shadow effect to the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="shadow-1"></a>
 
 ## shadow
 
@@ -8093,6 +8208,8 @@ Applies a spherical effect to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="sphericaleffect-1"></a>
+
 ## sphericalEffect
 
 ```TypeScript
@@ -8182,6 +8299,8 @@ Anonymous Object Rectification.
 | Type | Description |
 | --- | --- |
 | T |  |
+
+<a id="sweepgradient-1"></a>
 
 ## sweepGradient
 
@@ -8403,6 +8522,8 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 | --- | --- |
 | T | Current component. |
 
+<a id="transform-1"></a>
+
 ## transform
 
 ```TypeScript
@@ -8487,6 +8608,8 @@ Sets the transition effects used when a component is inserted or removed.
 | --- | --- |
 | T | Current component. |
 
+<a id="transition-1"></a>
+
 ## transition
 
 ```TypeScript
@@ -8550,6 +8673,8 @@ Translates the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="translate-1"></a>
+
 ## translate
 
 ```TypeScript
@@ -8609,6 +8734,8 @@ Sets whether the component should apply the effects template defined by the pare
 | --- | --- |
 | T | return the component attribute. |
 
+<a id="useeffect-1"></a>
+
 ## useEffect
 
 ```TypeScript
@@ -8637,6 +8764,8 @@ Sets whether the component should apply the effects template defined by the pare
 | Type | Description |
 | --- | --- |
 | T | return the component attribute. |
+
+<a id="useeffect-2"></a>
 
 ## useEffect
 
@@ -8695,6 +8824,8 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="useshadowbatching-1"></a>
 
 ## useShadowBatching
 
@@ -8855,6 +8986,8 @@ Sets the width of the component itself. By default, the width required for the c
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="width-1"></a>
 
 ## width
 

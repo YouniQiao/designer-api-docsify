@@ -88,6 +88,8 @@ networkManager.getMac(wantTemp, 'eth0').then((result) => {
 ```
 
 
+<a id="getmac-1"></a>
+
 ## getMac
 
 ```TypeScript

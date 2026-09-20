@@ -1,5 +1,9 @@
 # AutoPlayOptions
 
+```TypeScript
+declare interface AutoPlayOptions
+```
+
 自动播放属性。
 
 **起始版本：** 18

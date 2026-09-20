@@ -1,5 +1,9 @@
 # SplitLayout
 
+```TypeScript
+export declare struct SplitLayout
+```
+
 The **SplitLayout** component provides common page layout styles, mainly used to display combined layouts of images, titles, and content containers. It is suitable for split display scenarios that require adaptation to different screen sizes (such as detail pages, settings pages, etc.). It supports adaptation to different screen widths (three layouts: ≤ 600 vp, &gt; 600 vp and ≤ 840 vp, &gt; 840 vp), addressing the need to display different layout styles on devices of different sizes, improving page adaptability and user experience.
 
 > **NOTE:** 

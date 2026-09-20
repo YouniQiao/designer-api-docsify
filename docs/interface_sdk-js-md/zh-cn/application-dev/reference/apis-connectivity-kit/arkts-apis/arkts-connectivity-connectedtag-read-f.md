@@ -60,6 +60,8 @@ connectedTag.read((err, data)=> {
 ```
 
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript

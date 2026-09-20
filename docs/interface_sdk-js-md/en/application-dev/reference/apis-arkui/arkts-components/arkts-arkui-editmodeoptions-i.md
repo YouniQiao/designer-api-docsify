@@ -1,5 +1,9 @@
 # EditModeOptions
 
+```TypeScript
+declare interface EditModeOptions
+```
+
 Define edit mode options.
 
 **Since:** 23

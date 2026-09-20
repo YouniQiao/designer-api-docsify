@@ -1,5 +1,9 @@
 # Rating properties/events
 
+```TypeScript
+declare class RatingAttribute extends CommonMethod<RatingAttribute>
+```
+
 **Inheritance/Implementation:** RatingAttribute extends CommonMethod<RatingAttribute>
 
 **Since:** 7
@@ -27,6 +31,8 @@ Creates a content modifier.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+
+<a id="contentmodifier-1"></a>
 
 ## contentModifier
 
@@ -71,6 +77,8 @@ Triggered when the rating value changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | (value: number) =&gt; void | Yes |  |
+
+<a id="onchange-1"></a>
 
 ## onChange
 
@@ -117,6 +125,8 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Total number of stars.<br>Default value: **5** |
+
+<a id="stars-1"></a>
 
 ## stars
 
@@ -167,6 +177,8 @@ By default, the image is loaded in asynchronous mode. Synchronous loading is not
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | Yes | Star style.<br>**NOTE:** <br>If an incorrect image path is provided for **backgroundUri**, **foregroundUri**, or **secondaryUri**, the previously displayed image will be retained. If the first provided path is incorrect, no image will be displayed.<br>When **backgroundUri** or **foregroundUri** is set to **undefined** or an empty string, the **Rating** component falls back to the default star image.<br>If **secondaryUri** is not set, or is set to **undefined** or an empty string, **backgroundUri** will be used as a fallback. The behavior in this case is the same as when only **foregroundUri** and **backgroundUri** are configured.<br>**Since:** 18 |
+
+<a id="starstyle-1"></a>
 
 ## starStyle
 
@@ -219,6 +231,8 @@ Sets the step for rating. Values less than 0.1 are treated as the default value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Step for rating.<br>Default value: **0.5**<br>Value range: [0.1, stars] |
+
+<a id="stepsize-1"></a>
 
 ## stepSize
 

@@ -1,5 +1,9 @@
 # CheckboxGroupOptions
 
+```TypeScript
+declare interface CheckboxGroupOptions
+```
+
 Information about the check box group.
 
 **Since:** 8

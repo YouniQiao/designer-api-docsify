@@ -1,5 +1,9 @@
 # NetworkSearchRealTimeResult (System API)
 
+```TypeScript
+export interface NetworkSearchRealTimeResult
+```
+
 Indicates the results of manual network scan
 
 **Since:** 23

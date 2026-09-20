@@ -1,7 +1,7 @@
 # QueryParamObject
 
 ```TypeScript
-export type QueryParamObject = Record<string, QueryParamValue | QueryParamValue[]>
+export type QueryParamObject = Record<string, QueryParamValue[]>
 ```
 
 用于构造URL查询参数的键值对象类型。

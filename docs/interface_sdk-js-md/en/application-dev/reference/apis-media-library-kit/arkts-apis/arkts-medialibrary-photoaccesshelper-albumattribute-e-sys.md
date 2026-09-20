@@ -1,5 +1,9 @@
 # AlbumAttribute (System API)
 
+```TypeScript
+enum AlbumAttribute
+```
+
 Album operation attribute.
 
 **Since:** 26.0.0

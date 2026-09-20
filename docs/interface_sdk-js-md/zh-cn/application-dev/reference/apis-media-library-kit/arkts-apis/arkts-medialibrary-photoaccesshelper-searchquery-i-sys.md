@@ -1,5 +1,9 @@
 # SearchQuery（系统接口）
 
+```TypeScript
+interface SearchQuery
+```
+
 搜索资产的查询配置。
 
 **起始版本：** 26.0.1

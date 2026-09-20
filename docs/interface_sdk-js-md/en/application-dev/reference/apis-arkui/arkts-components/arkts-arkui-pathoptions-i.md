@@ -1,5 +1,9 @@
 # PathOptions
 
+```TypeScript
+declare interface PathOptions
+```
+
 Describes the options of the path.
 
 > **NOTE:** 

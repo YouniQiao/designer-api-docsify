@@ -1,5 +1,9 @@
 # ModalityType
 
+```TypeScript
+enum ModalityType
+```
+
 子窗口模态类型枚举。
 
 **起始版本：** 14

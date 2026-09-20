@@ -1,5 +1,9 @@
 # FullscreenInfo
 
+```TypeScript
+interface FullscreenInfo
+```
+
 Describes whether the video is in full-screen playback mode.
 
 > **NOTE:** 

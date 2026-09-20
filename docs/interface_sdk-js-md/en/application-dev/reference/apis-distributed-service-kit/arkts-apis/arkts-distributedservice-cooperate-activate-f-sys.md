@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="activate-1"></a>
+
 ## activate
 
 ```TypeScript

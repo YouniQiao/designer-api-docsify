@@ -1,5 +1,9 @@
 # SwipeEdgeEffect
 
+```TypeScript
+declare enum SwipeEdgeEffect
+```
+
 Enumerates the edge effects.
 
 **Since:** 9

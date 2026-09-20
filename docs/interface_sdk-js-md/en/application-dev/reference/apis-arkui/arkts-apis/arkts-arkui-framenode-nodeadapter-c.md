@@ -1,5 +1,9 @@
 # NodeAdapter
 
+```TypeScript
+declare class NodeAdapter
+```
+
 Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality.
 
 > **NOTE:** 

@@ -61,6 +61,8 @@ reminderAgent.publishReminder(timer).then((reminderId: number) => {
 ```
 
 
+<a id="publishreminder-1"></a>
+
 ## publishReminder
 
 ```TypeScript

@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="deleteform-1"></a>
+
 ## deleteForm
 
 ```TypeScript

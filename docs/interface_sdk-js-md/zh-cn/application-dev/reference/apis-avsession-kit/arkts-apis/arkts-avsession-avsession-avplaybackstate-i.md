@@ -1,5 +1,9 @@
 # AVPlaybackState
 
+```TypeScript
+interface AVPlaybackState
+```
+
 媒体播放状态的相关属性。
 
 **起始版本：** 10

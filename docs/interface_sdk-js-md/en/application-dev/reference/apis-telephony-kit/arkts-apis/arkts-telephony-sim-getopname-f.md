@@ -67,6 +67,8 @@ sim.getOpName(0).then((data: string) => {
 ```
 
 
+<a id="getopname-1"></a>
+
 ## getOpName
 
 ```TypeScript

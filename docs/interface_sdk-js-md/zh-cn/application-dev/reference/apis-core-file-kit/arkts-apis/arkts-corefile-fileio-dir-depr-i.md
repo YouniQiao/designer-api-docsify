@@ -1,5 +1,9 @@
 # Dir
 
+```TypeScript
+declare interface Dir
+```
+
 管理目录，在调用Dir的方法前，需要先通过opendir方法（同步或异步）来构建一个Dir实例。
 
 **起始版本：** 6
@@ -52,6 +56,8 @@ dir.close((err: BusinessError) => {
   console.info("close dir successfully");
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -155,6 +161,8 @@ dir.read((err: BusinessError, dirent: fileio.Dirent) => {
   }
 });
 ```
+
+<a id="read-1"></a>
 
 ## read
 

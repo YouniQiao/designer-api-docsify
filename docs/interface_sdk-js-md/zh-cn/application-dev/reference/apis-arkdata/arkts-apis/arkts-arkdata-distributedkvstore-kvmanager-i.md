@@ -1,5 +1,9 @@
 # KVManager
 
+```TypeScript
+interface KVManager
+```
+
 分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md)构建一个KVManager实例。
 
 **起始版本：** 9
@@ -120,6 +124,8 @@ try {
   console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="closekvstore-1"></a>
 
 ## closeKVStore
 
@@ -270,6 +276,8 @@ try {
 }
 ```
 
+<a id="deletekvstore-1"></a>
+
 ## deleteKVStore
 
 ```TypeScript
@@ -374,6 +382,8 @@ try {
   console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getallkvstoreid-1"></a>
 
 ## getAllKVStoreId
 
@@ -506,6 +516,8 @@ try {
 }
 ```
 
+<a id="getkvstore-1"></a>
+
 ## getKVStore
 
 ```TypeScript
@@ -581,7 +593,7 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-订阅服务终止事件。如果服务终止，需要重新调用[on('dataChange')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on)和[on('syncComplete')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on)注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用[off('distributedDataServiceDie')](#off)取消订阅。
+订阅服务终止事件。如果服务终止，需要重新调用[on('dataChange')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on)和[on('syncComplete')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on-1)注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用[off('distributedDataServiceDie')](#off)取消订阅。
 
 **起始版本：** 9
 

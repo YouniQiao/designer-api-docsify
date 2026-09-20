@@ -1,5 +1,9 @@
 # IIdmCallback (System API)
 
+```TypeScript
+interface IIdmCallback
+```
+
 Provides callbacks for IDM.
 
 **Since:** 8

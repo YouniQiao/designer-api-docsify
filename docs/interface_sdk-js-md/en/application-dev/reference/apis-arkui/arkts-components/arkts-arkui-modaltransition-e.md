@@ -1,5 +1,9 @@
 # ModalTransition
 
+```TypeScript
+declare enum ModalTransition
+```
+
 Defines modal transition type.
 
 **Since:** 10

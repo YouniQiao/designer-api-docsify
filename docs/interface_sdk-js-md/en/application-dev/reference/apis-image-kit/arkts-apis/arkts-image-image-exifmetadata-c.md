@@ -1,5 +1,9 @@
 # ExifMetadata
 
+```TypeScript
+class ExifMetadata implements Metadata
+```
+
 ExifMetadata implements Metadata
 
 Exchangeable Image File Format (Exif) metadata.

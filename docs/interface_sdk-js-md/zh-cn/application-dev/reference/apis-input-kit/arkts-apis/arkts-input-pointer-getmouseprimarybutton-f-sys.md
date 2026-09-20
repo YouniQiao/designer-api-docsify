@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="getmouseprimarybutton-1"></a>
+
 ## getMousePrimaryButton
 
 ```TypeScript

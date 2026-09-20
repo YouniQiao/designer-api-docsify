@@ -1,5 +1,9 @@
 # CallingInfo
 
+```TypeScript
+class CallingInfo
+```
+
 Defines the IPC context, including the PID and UID, local and remote device IDs, and whether the API is invoked on the same device.
 
 **Since:** 23

@@ -1,5 +1,9 @@
 # VolumeEvent
 
+```TypeScript
+interface VolumeEvent
+```
+
 音量改变时，应用接收的事件。
 
 **起始版本：** 9

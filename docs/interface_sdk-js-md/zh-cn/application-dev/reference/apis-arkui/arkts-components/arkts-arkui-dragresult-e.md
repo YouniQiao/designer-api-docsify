@@ -1,5 +1,9 @@
 # DragResult
 
+```TypeScript
+declare enum DragResult
+```
+
 定义拖拽操作的结果及组件的落入选定状态。
 
 **起始版本：** 10

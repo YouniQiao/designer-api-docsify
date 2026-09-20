@@ -1,5 +1,9 @@
 # ChainStyle
 
+```TypeScript
+declare enum ChainStyle
+```
+
 定义链的风格，支持attributeModifier动态设置属性方法。
 
 @enum { number }

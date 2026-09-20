@@ -1,5 +1,9 @@
 # SliderBlockStyle
 
+```TypeScript
+declare interface SliderBlockStyle
+```
+
 Slider组件滑块形状参数。
 
 **起始版本：** 10

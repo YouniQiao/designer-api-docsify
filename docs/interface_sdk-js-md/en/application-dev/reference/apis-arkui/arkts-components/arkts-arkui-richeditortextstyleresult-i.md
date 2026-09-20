@@ -1,5 +1,9 @@
 # RichEditorTextStyleResult
 
+```TypeScript
+declare interface RichEditorTextStyleResult
+```
+
 Provides the text span style information returned by the backend.
 
 While **fontWeight** in **RichEditorTextStyle** sets the font weight,

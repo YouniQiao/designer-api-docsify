@@ -1,5 +1,9 @@
 # PreviewParams
 
+```TypeScript
+interface PreviewParams
+```
+
 Implements a configuration object for @Preview parameters. Defines preview device attributes such as device type and screen state.
 
 > **NOTE:** 

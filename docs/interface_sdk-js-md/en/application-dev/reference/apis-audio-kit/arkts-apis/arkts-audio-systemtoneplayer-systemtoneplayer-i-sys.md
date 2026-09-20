@@ -1,5 +1,9 @@
 # SystemTonePlayer (System API)
 
+```TypeScript
+export declare interface SystemTonePlayer
+```
+
 The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related information. Before calling any API in SystemTonePlayer, you must use [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getsystemtoneplayer) to create a SystemTonePlayer instance.
 
 **Since:** 11

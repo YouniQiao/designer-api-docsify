@@ -1,5 +1,9 @@
 # DismissReason
 
+```TypeScript
+declare enum DismissReason
+```
+
 关闭原因类型。
 
 @enum { number }

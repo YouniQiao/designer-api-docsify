@@ -86,6 +86,8 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: Busin
 ```
 
 
+<a id="stop-1"></a>
+
 ## stop
 
 ```TypeScript
@@ -97,14 +99,14 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.VIBRATE
 

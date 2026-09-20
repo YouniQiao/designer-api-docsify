@@ -1,5 +1,9 @@
 # OperateIconV2
 
+```TypeScript
+export declare class OperateIconV2
+```
+
 Declare type OperateIconV2
 
 **Since:** 26.0.0

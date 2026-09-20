@@ -72,6 +72,8 @@ connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
 ```
 
 
+<a id="addcustomdnsrule-1"></a>
+
 ## addCustomDnsRule
 
 ```TypeScript

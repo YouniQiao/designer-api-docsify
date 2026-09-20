@@ -64,6 +64,8 @@ call.removeMissedIncomingCallNotification().then(() => {
 ```
 
 
+<a id="removemissedincomingcallnotification-1"></a>
+
 ## removeMissedIncomingCallNotification
 
 ```TypeScript

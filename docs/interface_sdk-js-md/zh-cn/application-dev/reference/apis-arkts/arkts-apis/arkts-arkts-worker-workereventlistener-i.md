@@ -1,5 +1,9 @@
 # WorkerEventListener
 
+```TypeScript
+export interface WorkerEventListener
+```
+
 事件监听类。
 
 **起始版本：** 9

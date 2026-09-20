@@ -1,5 +1,9 @@
 # SubmitEvent
 
+```TypeScript
+declare interface SubmitEvent
+```
+
 Defines the user submission event.
 
 **Since:** 11

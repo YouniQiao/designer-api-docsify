@@ -1,5 +1,9 @@
 # AddPermissionUsedRecordOptions (System API)
 
+```TypeScript
+interface AddPermissionUsedRecordOptions
+```
+
 Represents the options for adding a permission usage record.
 
 **Since:** 12

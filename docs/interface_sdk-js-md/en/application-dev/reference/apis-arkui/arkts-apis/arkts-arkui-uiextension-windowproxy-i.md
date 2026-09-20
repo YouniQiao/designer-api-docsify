@@ -1,5 +1,9 @@
 # WindowProxy
 
+```TypeScript
+interface WindowProxy
+```
+
 The proxy of the UIExtension window.
 
 **Since:** 12
@@ -141,6 +145,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
   }
 }
 ```
+
+<a id="createsubwindowwithoptions-1"></a>
 
 ## createSubWindowWithOptions
 

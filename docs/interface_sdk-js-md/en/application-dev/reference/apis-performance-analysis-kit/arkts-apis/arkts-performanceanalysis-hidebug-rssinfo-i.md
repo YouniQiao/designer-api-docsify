@@ -1,5 +1,9 @@
 # RssInfo
 
+```TypeScript
+interface RssInfo
+```
+
 Describes the physical memory information about an application process.
 
 **Since:** 24

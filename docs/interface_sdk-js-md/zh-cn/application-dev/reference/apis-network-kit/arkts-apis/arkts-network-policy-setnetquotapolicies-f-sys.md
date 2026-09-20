@@ -100,6 +100,8 @@ policy
 ```
 
 
+<a id="setnetquotapolicies-1"></a>
+
 ## setNetQuotaPolicies
 
 ```TypeScript

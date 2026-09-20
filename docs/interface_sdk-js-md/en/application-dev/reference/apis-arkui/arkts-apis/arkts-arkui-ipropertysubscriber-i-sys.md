@@ -1,5 +1,9 @@
 # IPropertySubscriber (System API)
 
+```TypeScript
+interface IPropertySubscriber
+```
+
 Provides an interface for attribute subscribers.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # TLSSocketConnection
 
+```TypeScript
+export interface TLSSocketConnection
+```
+
 TLSSocketConnection连接，即TLSSocket客户端与服务端的连接。在调用TLSSocketConnection的方法前，需要先获取TLSSocketConnection对象。
 
 > **说明：** 
@@ -124,6 +128,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -340,6 +346,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="getciphersuite-1"></a>
 
 ## getCipherSuite
 
@@ -625,6 +633,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
+<a id="getremoteaddress-1"></a>
+
 ## getRemoteAddress
 
 ```TypeScript
@@ -842,6 +852,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
+<a id="getremotecertificate-1"></a>
+
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1058,6 +1070,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="getsignaturealgorithms-1"></a>
 
 ## getSignatureAlgorithms
 
@@ -1499,6 +1513,8 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

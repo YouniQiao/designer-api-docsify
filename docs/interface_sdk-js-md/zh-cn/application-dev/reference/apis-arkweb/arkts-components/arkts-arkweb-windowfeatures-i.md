@@ -1,5 +1,9 @@
 # WindowFeatures
 
+```TypeScript
+declare interface WindowFeatures
+```
+
 提供网页请求创建的新窗口特征信息，包括大小和位置。适用于需要精确控制新窗口属性的场景，提升窗口布局的准确性和用户体验。
 
 **起始版本：** 23

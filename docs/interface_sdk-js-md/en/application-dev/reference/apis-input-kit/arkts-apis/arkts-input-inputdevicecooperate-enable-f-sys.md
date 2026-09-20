@@ -91,6 +91,8 @@ struct Index {
 ```
 
 
+<a id="enable-1"></a>
+
 ## enable
 
 ```TypeScript

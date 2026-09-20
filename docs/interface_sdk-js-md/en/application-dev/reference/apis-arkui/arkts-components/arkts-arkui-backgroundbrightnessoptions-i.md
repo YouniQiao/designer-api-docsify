@@ -1,5 +1,9 @@
 # BackgroundBrightnessOptions
 
+```TypeScript
+declare interface BackgroundBrightnessOptions
+```
+
 Provides background brightness options.
 
 > **NOTE:** 

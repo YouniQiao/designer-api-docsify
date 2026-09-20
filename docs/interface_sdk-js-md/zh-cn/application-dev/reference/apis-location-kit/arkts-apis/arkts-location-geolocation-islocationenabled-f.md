@@ -52,6 +52,8 @@ geolocation.isLocationEnabled().then((result) => {
 ```
 
 
+<a id="islocationenabled-1"></a>
+
 ## isLocationEnabled
 
 ```TypeScript

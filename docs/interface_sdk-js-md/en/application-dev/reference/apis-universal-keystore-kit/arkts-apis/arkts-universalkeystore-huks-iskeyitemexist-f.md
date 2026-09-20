@@ -139,6 +139,8 @@ huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
 ```
 
 
+<a id="iskeyitemexist-1"></a>
+
 ## isKeyItemExist
 
 ```TypeScript

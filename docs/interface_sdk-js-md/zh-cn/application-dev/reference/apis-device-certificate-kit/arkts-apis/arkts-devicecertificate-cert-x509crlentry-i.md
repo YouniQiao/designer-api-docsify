@@ -1,5 +1,9 @@
 # X509CRLEntry
 
+```TypeScript
+interface X509CRLEntry
+```
+
 证书吊销条目。
 
 **起始版本：** 11
@@ -141,6 +145,8 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
   }
 });
 ```
+
+<a id="getcertissuer-1"></a>
 
 ## getCertIssuer
 
@@ -478,6 +484,8 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
   }
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 

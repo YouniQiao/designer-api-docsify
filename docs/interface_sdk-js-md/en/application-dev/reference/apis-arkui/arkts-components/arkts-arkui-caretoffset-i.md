@@ -1,5 +1,9 @@
 # CaretOffset
 
+```TypeScript
+declare interface CaretOffset
+```
+
 Describes the position of the caret relative to the text box.
 
 **Since:** 11

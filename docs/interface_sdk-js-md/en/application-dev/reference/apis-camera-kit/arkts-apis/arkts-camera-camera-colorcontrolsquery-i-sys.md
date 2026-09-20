@@ -1,5 +1,9 @@
 # ColorControlsQuery (System API)
 
+```TypeScript
+interface ColorControlsQuery
+```
+
 Color controls query object.
 
 **Since:** 26.0.1

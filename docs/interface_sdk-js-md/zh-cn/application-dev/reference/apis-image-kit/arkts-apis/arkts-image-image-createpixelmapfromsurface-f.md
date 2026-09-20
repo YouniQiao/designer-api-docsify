@@ -67,6 +67,8 @@ function createPixelMapFromSurface(surfaceId: string) {
 ```
 
 
+<a id="createpixelmapfromsurface-1"></a>
+
 ## createPixelMapFromSurface
 
 ```TypeScript

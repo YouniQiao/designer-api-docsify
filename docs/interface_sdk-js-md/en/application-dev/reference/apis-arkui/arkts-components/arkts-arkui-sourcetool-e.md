@@ -1,5 +1,9 @@
 # SourceTool
 
+```TypeScript
+declare enum SourceTool
+```
+
 Enumerates the input source tool types.
 
 **Since:** 9

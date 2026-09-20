@@ -1,5 +1,9 @@
 # ShowDialogSuccessResponse
 
+```TypeScript
+export interface ShowDialogSuccessResponse
+```
+
 Defines the response of ShowDialog.
 
 @interface ShowDialogSuccessResponse

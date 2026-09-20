@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="gethoverscrollstate-1"></a>
+
 ## getHoverScrollState
 
 ```TypeScript

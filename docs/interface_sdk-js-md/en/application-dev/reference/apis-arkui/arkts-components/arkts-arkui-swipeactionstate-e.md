@@ -1,5 +1,9 @@
 # SwipeActionState
 
+```TypeScript
+declare enum SwipeActionState
+```
+
 Enumerates swipe states of list items.
 
 **Since:** 11

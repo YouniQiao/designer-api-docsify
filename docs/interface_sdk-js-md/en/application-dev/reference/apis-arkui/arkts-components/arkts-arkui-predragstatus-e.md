@@ -1,5 +1,9 @@
 # PreDragStatus
 
+```TypeScript
+declare enum PreDragStatus
+```
+
 Defines the states before the drag gesture is triggered.
 
 **Since:** 12

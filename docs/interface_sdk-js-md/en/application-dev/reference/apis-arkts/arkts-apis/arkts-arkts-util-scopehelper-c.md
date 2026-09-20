@@ -1,5 +1,9 @@
 # ScopeHelper
 
+```TypeScript
+class ScopeHelper
+```
+
 Provides APIs to define the valid range of a field. The constructor of this class creates comparable objects with lower and upper limits.
 
 **Since:** 9
@@ -209,6 +213,8 @@ let result = range.contains(rangeSec);
 console.info("result = " + result);
 // Output: result = false
 ```
+
+<a id="contains-1"></a>
 
 ## contains
 
@@ -422,6 +428,8 @@ console.info("result = " + result);
 // Output: result = [30, 40]
 ```
 
+<a id="expand-1"></a>
+
 ## expand
 
 ```TypeScript
@@ -542,6 +550,8 @@ let result = range.expand(tempMiDF);
 console.info("result = " + result);
 // Output: result = [30, 40]
 ```
+
+<a id="expand-2"></a>
 
 ## expand
 
@@ -856,6 +866,8 @@ let result = range.intersect(tempMiDF, tempMidS);
 console.info("result = " + result);
 // Output: result = [35, 39]
 ```
+
+<a id="intersect-1"></a>
 
 ## intersect
 

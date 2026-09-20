@@ -1,5 +1,9 @@
 # LocalizedAlignRuleOptions
 
+```TypeScript
+declare interface LocalizedAlignRuleOptions
+```
+
 Defines the Localized align rule options of relative container.
 
 @interface LocalizedAlignRuleOptions

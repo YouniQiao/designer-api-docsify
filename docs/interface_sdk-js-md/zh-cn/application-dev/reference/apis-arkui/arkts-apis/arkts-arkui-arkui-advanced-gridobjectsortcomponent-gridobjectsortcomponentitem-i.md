@@ -1,5 +1,9 @@
 # GridObjectSortComponentItem
 
+```TypeScript
+export interface GridObjectSortComponentItem
+```
+
 网格对象排序组件的组件数据配置信息。
 
 **起始版本：** 11

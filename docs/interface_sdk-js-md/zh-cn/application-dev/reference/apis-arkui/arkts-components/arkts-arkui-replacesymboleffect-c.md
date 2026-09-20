@@ -1,5 +1,9 @@
 # ReplaceSymbolEffect
 
+```TypeScript
+declare class ReplaceSymbolEffect extends SymbolEffect
+```
+
 ReplaceSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
@@ -31,6 +35,8 @@ AppearSymbolEffect的构造函数，出现动效。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。<br>默认值：EffectScope.LAYER |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

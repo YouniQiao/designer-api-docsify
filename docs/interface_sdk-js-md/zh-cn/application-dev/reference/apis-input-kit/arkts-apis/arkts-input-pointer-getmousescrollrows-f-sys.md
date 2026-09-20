@@ -92,6 +92,8 @@ struct Index {
 ```
 
 
+<a id="getmousescrollrows-1"></a>
+
 ## getMouseScrollRows
 
 ```TypeScript

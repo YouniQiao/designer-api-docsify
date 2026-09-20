@@ -1,5 +1,9 @@
 # WebSocket
 
+```TypeScript
+export interface WebSocket
+```
+
 在调用WebSocket的方法前，需要先通过[webSocket.createWebSocket](arkts-network-websocket-createwebsocket-f.md)创建一个WebSocket。
 
 **起始版本：** 6
@@ -94,6 +98,8 @@ promise.then((value: boolean) => {
 });
 ```
 
+<a id="close-1"></a>
+
 ## close
 
 ```TypeScript
@@ -176,6 +182,8 @@ promise.then((value: boolean) => {
     console.error("close fail, error:" + JSON.stringify(err))
 });
 ```
+
+<a id="close-2"></a>
 
 ## close
 
@@ -378,6 +386,8 @@ promise.then((value: boolean) => {
 });
 ```
 
+<a id="connect-1"></a>
+
 ## connect
 
 ```TypeScript
@@ -426,6 +436,8 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 **示例**
 
 参见 [connect](#connect)
+
+<a id="connect-2"></a>
 
 ## connect
 
@@ -892,6 +904,8 @@ ws.on('open', (err: BusinessError, value: Object) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

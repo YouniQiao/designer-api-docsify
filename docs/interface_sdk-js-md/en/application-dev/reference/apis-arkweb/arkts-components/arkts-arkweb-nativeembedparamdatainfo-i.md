@@ -1,5 +1,9 @@
 # NativeEmbedParamDataInfo
 
+```TypeScript
+declare interface NativeEmbedParamDataInfo
+```
+
 Provides detailed information about the same-layer tag when the **param** element embedded in the **object** tag changes, including the tag ID and parameter items. It is suitable for scenarios where monitoring param element changes is required, improving same-layer element management flexibility and accuracy.
 
 **Since:** 21

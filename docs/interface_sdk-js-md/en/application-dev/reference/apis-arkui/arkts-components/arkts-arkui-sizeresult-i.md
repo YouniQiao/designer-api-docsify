@@ -1,5 +1,9 @@
 # SizeResult
 
+```TypeScript
+declare interface SizeResult
+```
+
 Provides the component size information.
 
 > **NOTE:** 

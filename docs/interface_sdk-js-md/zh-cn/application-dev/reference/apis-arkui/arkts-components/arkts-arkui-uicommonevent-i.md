@@ -1,5 +1,9 @@
 # UICommonEvent
 
+```TypeScript
+declare interface UICommonEvent
+```
+
 用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。
 
 **起始版本：** 12

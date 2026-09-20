@@ -1,5 +1,9 @@
 # ColorFilter
 
+```TypeScript
+declare class ColorFilter
+```
+
 Defines a color filter with a 4 x 5 matrix.
 
 **Since:** 9

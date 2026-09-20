@@ -1,5 +1,9 @@
 # MakeCallOptions
 
+```TypeScript
+export interface MakeCallOptions
+```
+
 Provides an option for determining whether a call is a video call.
 
 **Since:** 24

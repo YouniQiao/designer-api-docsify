@@ -51,6 +51,8 @@ featureAbility.getWant().then((data) => {
 ```
 
 
+<a id="getwant-1"></a>
+
 ## getWant
 
 ```TypeScript

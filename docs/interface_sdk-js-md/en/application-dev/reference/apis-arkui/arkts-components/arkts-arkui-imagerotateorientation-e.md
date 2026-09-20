@@ -1,5 +1,9 @@
 # ImageRotateOrientation
 
+```TypeScript
+declare enum ImageRotateOrientation
+```
+
 Describes the desired display orientation for image content.
 
 **Since:** 14

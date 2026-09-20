@@ -1,5 +1,9 @@
 # DatePickerDialog
 
+```TypeScript
+declare class DatePickerDialog
+```
+
 Defines DatePickerDialog which uses show method to show DatePicker dialog.
 
 **Since:** 8

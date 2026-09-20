@@ -1,5 +1,9 @@
 # X509CertChain
 
+```TypeScript
+interface X509CertChain
+```
+
 X.509证书链对象。
 
 **起始版本：** 11
@@ -654,6 +658,8 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
   }
 });
 ```
+
+<a id="validate-1"></a>
 
 ## validate
 

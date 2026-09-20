@@ -1,5 +1,9 @@
 # ToolBarItemOptions
 
+```TypeScript
+interface ToolBarItemOptions
+```
+
 Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20

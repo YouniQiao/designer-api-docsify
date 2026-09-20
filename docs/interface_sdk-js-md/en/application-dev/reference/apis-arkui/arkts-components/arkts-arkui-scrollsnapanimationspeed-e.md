@@ -1,5 +1,9 @@
 # ScrollSnapAnimationSpeed
 
+```TypeScript
+declare enum ScrollSnapAnimationSpeed
+```
+
 Enumerates the speeds of the snap animation for list scrolling.
 
 **Since:** 22

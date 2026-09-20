@@ -1,5 +1,9 @@
 # PlaybackInfo
 
+```TypeScript
+interface PlaybackInfo
+```
+
 Describes the current progress of video playback.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # TextDecoder
 
+```TypeScript
+class TextDecoder
+```
+
 Provides APIs to decode byte arrays into strings. It supports multiple formats, including UTF-8, UTF-16LE, UTF-16BE, ISO-8859, and Windows-1251.
 
 **Since:** 7
@@ -38,6 +42,8 @@ console.info('retStr = ' + retStr);
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

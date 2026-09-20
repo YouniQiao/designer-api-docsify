@@ -1,5 +1,9 @@
 # TextTimerConfiguration
 
+```TypeScript
+declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>
+```
+
 ContentModifier接口使用的TextTimer配置。
 
 开发者需要自定义class实现ContentModifier接口。

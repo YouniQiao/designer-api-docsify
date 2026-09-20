@@ -1,5 +1,9 @@
 # SystemSoundType
 
+```TypeScript
+enum SystemSoundType
+```
+
 枚举，表示系统音效类型。
 
 @enum { int }

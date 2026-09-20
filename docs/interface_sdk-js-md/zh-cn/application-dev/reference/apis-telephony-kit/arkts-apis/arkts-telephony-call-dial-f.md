@@ -71,6 +71,8 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 ```
 
 
+<a id="dial-1"></a>
+
 ## dial
 
 ```TypeScript
@@ -110,6 +112,8 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 
 参见 [dial](#dial)
 
+
+<a id="dial-2"></a>
 
 ## dial
 

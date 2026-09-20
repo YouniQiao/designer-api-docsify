@@ -136,6 +136,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
+<a id="getdefaultapplication-1"></a>
+
 ## getDefaultApplication
 
 ```TypeScript
@@ -174,6 +176,8 @@ function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>
 
 参见 [getDefaultApplication](#getdefaultapplication)
 
+
+<a id="getdefaultapplication-2"></a>
 
 ## getDefaultApplication
 

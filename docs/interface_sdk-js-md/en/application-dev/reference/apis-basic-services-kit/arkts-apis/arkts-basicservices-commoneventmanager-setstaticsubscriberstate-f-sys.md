@@ -74,6 +74,8 @@ commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
 ```
 
 
+<a id="setstaticsubscriberstate-1"></a>
+
 ## setStaticSubscriberState
 
 ```TypeScript
@@ -115,6 +117,8 @@ Enables or disables static subscription for an app. This API uses a promise to r
 
 See [setStaticSubscriberState](#setstaticsubscriberstate)
 
+
+<a id="setstaticsubscriberstate-2"></a>
 
 ## setStaticSubscriberState
 

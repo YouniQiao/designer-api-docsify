@@ -1,5 +1,9 @@
 # UIGestureEvent
 
+```TypeScript
+declare interface UIGestureEvent
+```
+
 Provides APIs for configuring gestures bound to a component.
 
 **Since:** 12

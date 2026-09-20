@@ -1,5 +1,9 @@
 # RadialGradientStyle
 
+```TypeScript
+declare class RadialGradientStyle extends ShaderStyle
+```
+
 Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
 **Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)

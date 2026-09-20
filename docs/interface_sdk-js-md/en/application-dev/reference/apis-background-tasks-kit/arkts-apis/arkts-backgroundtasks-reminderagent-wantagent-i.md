@@ -1,5 +1,9 @@
 # WantAgent
 
+```TypeScript
+interface WantAgent
+```
+
 Sets the package and ability that are redirected to when the reminder notification is clicked.
 
 **Since:** 7

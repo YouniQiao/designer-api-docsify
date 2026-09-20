@@ -1,5 +1,9 @@
 # RefreshStatus
 
+```TypeScript
+declare enum RefreshStatus
+```
+
 RefreshStatus刷新状态枚举。
 
 **起始版本：** 8

@@ -1,5 +1,9 @@
 # SymbolEffect
 
+```TypeScript
+declare class SymbolEffect
+```
+
 Defines the **SymbolEffect** class.
 
 **Since:** 12

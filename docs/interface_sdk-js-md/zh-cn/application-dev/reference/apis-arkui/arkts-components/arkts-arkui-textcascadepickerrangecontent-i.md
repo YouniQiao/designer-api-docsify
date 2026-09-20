@@ -1,5 +1,9 @@
 # TextCascadePickerRangeContent
 
+```TypeScript
+declare interface TextCascadePickerRangeContent
+```
+
 多列联动数据选择器的数据选项内容。
 
 **起始版本：** 10

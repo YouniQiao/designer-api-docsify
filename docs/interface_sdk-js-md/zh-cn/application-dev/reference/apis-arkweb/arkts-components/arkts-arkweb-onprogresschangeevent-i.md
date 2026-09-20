@@ -1,5 +1,9 @@
 # OnProgressChangeEvent
 
+```TypeScript
+declare interface OnProgressChangeEvent
+```
+
 定义网页加载进度变化时触发的回调信息，包括新的进度值。适用于需要监控页面加载进度的场景，提升加载过程的可见性和用户体验。
 
 **起始版本：** 12

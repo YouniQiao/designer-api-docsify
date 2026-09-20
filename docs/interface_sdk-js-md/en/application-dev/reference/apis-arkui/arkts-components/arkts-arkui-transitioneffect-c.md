@@ -1,5 +1,12 @@
 # TransitionEffect
 
+```TypeScript
+declare class TransitionEffect<
+  Type extends keyof TransitionEffects = keyof TransitionEffects,
+  Effect extends TransitionEffects[Type] = TransitionEffects[Type]
+>
+```
+
 Defines the transition effect by using the provided APIs, as listed below.
 
 **Since:** 10

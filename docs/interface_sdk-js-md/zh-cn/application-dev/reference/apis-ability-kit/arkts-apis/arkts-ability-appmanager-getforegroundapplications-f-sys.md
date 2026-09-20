@@ -72,6 +72,8 @@ appManager.getForegroundApplications().then((data) => {
 ```
 
 
+<a id="getforegroundapplications-1"></a>
+
 ## getForegroundApplications
 
 ```TypeScript

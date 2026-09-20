@@ -1,5 +1,9 @@
 # SimpleAnimatorOptions
 
+```TypeScript
+export declare class SimpleAnimatorOptions
+```
+
 Defines a simple animation parameter object. Unlike **AnimatorOptions**, this object comes with some default values for certain animation parameters, so you do not have to set them manually.
 
 **Since:** 18

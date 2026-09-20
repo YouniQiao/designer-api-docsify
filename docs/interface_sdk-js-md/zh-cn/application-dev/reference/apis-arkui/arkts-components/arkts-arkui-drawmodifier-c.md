@@ -1,5 +1,9 @@
 # DrawModifier
 
+```TypeScript
+declare class DrawModifier
+```
+
 Defined the draw modifier of node. Provides draw callbacks for the associated Node.
 
 **起始版本：** 12

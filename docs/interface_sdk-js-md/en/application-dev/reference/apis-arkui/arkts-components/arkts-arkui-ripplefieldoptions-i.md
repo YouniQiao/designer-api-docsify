@@ -1,5 +1,9 @@
 # RippleFieldOptions
 
+```TypeScript
+declare interface RippleFieldOptions
+```
+
 Defines ripple field options.
 
 @interface RippleFieldOptions

@@ -1,5 +1,9 @@
 # PermissionStateChangeInfo
 
+```TypeScript
+interface PermissionStateChangeInfo
+```
+
 Represents the permission state change details.
 
 **Since:** 18

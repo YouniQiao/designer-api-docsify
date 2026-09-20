@@ -1,5 +1,9 @@
 # SubMenuExpandingMode
 
+```TypeScript
+declare enum SubMenuExpandingMode
+```
+
 Menu子菜单展开样式枚举。
 
 **起始版本：** 12

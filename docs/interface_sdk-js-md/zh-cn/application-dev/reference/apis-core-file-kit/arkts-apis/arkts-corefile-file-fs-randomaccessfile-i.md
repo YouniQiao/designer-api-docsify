@@ -1,5 +1,9 @@
 # RandomAccessFile
 
+```TypeScript
+declare interface RandomAccessFile
+```
+
 随机读写文件流，提供基于偏移指针的随机读写能力。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。
 
 **起始版本：** 10
@@ -237,6 +241,8 @@ randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: 
 });
 ```
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript
@@ -342,6 +348,8 @@ randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: 
   fileIo.closeSync(file);
 });
 ```
+
+<a id="read-2"></a>
 
 ## read
 
@@ -666,6 +674,8 @@ randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritt
 });
 ```
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript
@@ -775,6 +785,8 @@ randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritt
   fileIo.closeSync(file);
 });
 ```
+
+<a id="write-2"></a>
 
 ## write
 

@@ -1,5 +1,9 @@
 # ArcListItemInterface
 
+```TypeScript
+export interface ArcListItemInterface
+```
+
 用于展示弧形列表的子组件，必须配合ArcList使用。
 
 > **说明：** 

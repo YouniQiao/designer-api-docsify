@@ -1,5 +1,9 @@
 # ButtonIconOptions
 
+```TypeScript
+declare interface ButtonIconOptions
+```
+
 设置侧边栏控制按钮的图标。
 
 > **说明：** 

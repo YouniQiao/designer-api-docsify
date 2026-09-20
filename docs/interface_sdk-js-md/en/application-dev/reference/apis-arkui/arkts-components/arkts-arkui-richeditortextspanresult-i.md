@@ -1,5 +1,9 @@
 # RichEditorTextSpanResult
 
+```TypeScript
+declare interface RichEditorTextSpanResult
+```
+
 Defines text span information.
 
 **Since:** 10

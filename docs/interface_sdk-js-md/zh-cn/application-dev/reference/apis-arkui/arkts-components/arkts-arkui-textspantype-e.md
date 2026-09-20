@@ -1,5 +1,9 @@
 # TextSpanType
 
+```TypeScript
+declare enum TextSpanType
+```
+
 Span类型信息。
 
 > **说明：** 

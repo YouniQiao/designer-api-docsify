@@ -1,5 +1,9 @@
 # Sign
 
+```TypeScript
+interface Sign
+```
+
 Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
@@ -111,6 +115,8 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
+
+<a id="init-1"></a>
 
 ## init
 
@@ -246,6 +252,8 @@ function testSetSignSpec() {
 }
 ```
 
+<a id="setsignspec-1"></a>
+
 ## setSignSpec
 
 ```TypeScript
@@ -286,6 +294,8 @@ Sets the specified parameter for the Sign instance.
 **Examples**
 
 See [setSignSpec](#setsignspec)
+
+<a id="setsignspec-2"></a>
 
 ## setSignSpec
 
@@ -360,6 +370,8 @@ Signs the data, including data added via the update interface. This API uses an 
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
+<a id="sign-1"></a>
+
 ## sign
 
 ```TypeScript
@@ -392,6 +404,8 @@ Signs data. This API uses an asynchronous callback to return the result.
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
+
+<a id="sign-2"></a>
 
 ## sign
 
@@ -430,6 +444,8 @@ Signs the data, including data added via the update interface. This API uses a p
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
+
+<a id="sign-3"></a>
 
 ## sign
 
@@ -565,6 +581,8 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
+
+<a id="update-1"></a>
 
 ## update
 

@@ -1,5 +1,9 @@
 # RichEditorSymbolSpanOptions
 
+```TypeScript
+declare interface RichEditorSymbolSpanOptions
+```
+
 设置SymbolSpan组件的偏移位置和样式。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # SymbolRenderingStrategy
 
+```TypeScript
+declare enum SymbolRenderingStrategy
+```
+
 渲染模式的枚举值。
 
 **起始版本：** 11

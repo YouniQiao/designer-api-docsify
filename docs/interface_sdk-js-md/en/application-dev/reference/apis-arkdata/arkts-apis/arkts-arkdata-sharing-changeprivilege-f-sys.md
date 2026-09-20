@@ -95,6 +95,8 @@ cloudData.sharing.changePrivilege('sharing_resource_test', participants, (err: B
 ```
 
 
+<a id="changeprivilege-1"></a>
+
 ## changePrivilege
 
 ```TypeScript

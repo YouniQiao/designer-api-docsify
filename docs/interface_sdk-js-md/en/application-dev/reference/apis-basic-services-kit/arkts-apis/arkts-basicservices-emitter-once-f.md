@@ -78,6 +78,8 @@ emitter.once('eventId', callback);
 ```
 
 
+<a id="once-1"></a>
+
 ## once
 
 ```TypeScript
@@ -149,6 +151,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter.once('eventId', callback);
 ```
 
+
+<a id="once-2"></a>
 
 ## once
 

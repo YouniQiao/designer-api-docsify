@@ -1,5 +1,9 @@
 # Effect
 
+```TypeScript
+export interface Effect extends SceneResource
+```
+
 Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.
 
 @extends SceneResource @interface Effect

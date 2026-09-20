@@ -70,6 +70,8 @@ adminManager.isSuperAdmin(bundleName).then((result) => {
 ```
 
 
+<a id="issuperadmin-1"></a>
+
 ## isSuperAdmin
 
 ```TypeScript

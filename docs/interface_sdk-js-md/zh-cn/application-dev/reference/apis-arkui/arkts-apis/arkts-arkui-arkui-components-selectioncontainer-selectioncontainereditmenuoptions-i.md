@@ -1,5 +1,9 @@
 # SelectionContainerEditMenuOptions
 
+```TypeScript
+export interface SelectionContainerEditMenuOptions
+```
+
 SelectionContainer自定义编辑菜单选项。
 
 **起始版本：** 26.0.0

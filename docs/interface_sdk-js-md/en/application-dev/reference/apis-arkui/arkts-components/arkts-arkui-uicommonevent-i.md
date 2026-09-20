@@ -1,5 +1,9 @@
 # UICommonEvent
 
+```TypeScript
+declare interface UICommonEvent
+```
+
 Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback.
 
 **Since:** 12

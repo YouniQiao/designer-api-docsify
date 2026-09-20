@@ -1,5 +1,9 @@
 # SheetDismiss
 
+```TypeScript
+declare interface SheetDismiss
+```
+
 控制半模态的关闭。
 
 **起始版本：** 11

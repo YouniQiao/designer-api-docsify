@@ -1,5 +1,9 @@
 # PhotoViewPicker
 
+```TypeScript
+class PhotoViewPicker
+```
+
 Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
 
 **Since:** 9
@@ -65,6 +69,8 @@ struct Index {
 ```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -215,6 +221,8 @@ async function example06(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -304,6 +312,8 @@ async function example06(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="save-2"></a>
 
 ## save
 
@@ -493,6 +503,8 @@ async function example03(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="select-1"></a>
+
 ## select
 
 ```TypeScript
@@ -505,7 +517,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-1)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -587,6 +599,8 @@ async function example03(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="select-2"></a>
+
 ## select
 
 ```TypeScript
@@ -599,7 +613,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

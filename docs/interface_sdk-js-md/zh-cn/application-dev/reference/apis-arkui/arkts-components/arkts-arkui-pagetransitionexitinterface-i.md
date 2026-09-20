@@ -1,5 +1,9 @@
 # PageTransitionExitInterface
 
+```TypeScript
+interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>
+```
+
 当前页面的自定义退场动效。
 
 @extends CommonTransition&lt;PageTransitionExitInterface&gt; @interface PageTransitionExitInterface

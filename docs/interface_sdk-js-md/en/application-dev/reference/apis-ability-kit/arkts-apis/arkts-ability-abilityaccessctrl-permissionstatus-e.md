@@ -1,5 +1,9 @@
 # PermissionStatus
 
+```TypeScript
+export enum PermissionStatus
+```
+
 Enumerates the permission states.
 
 **Since:** 20

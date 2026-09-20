@@ -1,5 +1,9 @@
 # EnvironmentCallback
 
+```TypeScript
+export default class EnvironmentCallback
+```
+
 EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 
 **起始版本：** 9

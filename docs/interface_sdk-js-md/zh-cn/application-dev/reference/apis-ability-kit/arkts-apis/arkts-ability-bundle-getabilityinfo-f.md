@@ -65,6 +65,8 @@ bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
 ```
 
 
+<a id="getabilityinfo-1"></a>
+
 ## getAbilityInfo
 
 ```TypeScript

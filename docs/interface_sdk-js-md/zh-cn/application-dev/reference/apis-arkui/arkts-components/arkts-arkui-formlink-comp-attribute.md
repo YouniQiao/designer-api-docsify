@@ -1,5 +1,9 @@
 # FormLink属性/事件
 
+```TypeScript
+declare class FormLinkAttribute extends CommonMethod<FormLinkAttribute>
+```
+
 支持通用属性。
 
 不支持通用事件。

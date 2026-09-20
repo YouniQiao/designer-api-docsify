@@ -1,5 +1,9 @@
 # OnProgressChangeEvent
 
+```TypeScript
+declare interface OnProgressChangeEvent
+```
+
 Defines the callback information triggered when the web page loading progress changes, including the new progress value. It is suitable for scenarios where monitoring page loading progress is required, improving loading process visibility and user experience.
 
 **Since:** 12

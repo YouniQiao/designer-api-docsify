@@ -1,5 +1,9 @@
 # TaskInfo
 
+```TypeScript
+export interface TaskInfo
+```
+
 任务信息
 
 **起始版本：** 26.0.1

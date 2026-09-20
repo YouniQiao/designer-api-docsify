@@ -1,5 +1,9 @@
 # RenderProcessNotRespondingReason
 
+```TypeScript
+declare enum RenderProcessNotRespondingReason
+```
+
 Enumerates the reasons why the rendering process does not respond.
 
 **Since:** 12

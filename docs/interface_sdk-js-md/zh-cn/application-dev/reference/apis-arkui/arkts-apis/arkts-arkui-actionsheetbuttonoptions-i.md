@@ -1,5 +1,9 @@
 # ActionSheetButtonOptions
 
+```TypeScript
+interface ActionSheetButtonOptions
+```
+
 弹窗中按钮的样式。
 
 > **说明：** 

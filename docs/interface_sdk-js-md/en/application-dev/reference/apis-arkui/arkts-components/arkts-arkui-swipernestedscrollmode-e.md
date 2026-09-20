@@ -1,5 +1,9 @@
 # SwiperNestedScrollMode
 
+```TypeScript
+declare enum SwiperNestedScrollMode
+```
+
 Enumerates the nested scrolling modes of the **Swiper** component and its parent container.
 
 **Since:** 11

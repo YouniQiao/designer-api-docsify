@@ -111,6 +111,8 @@ bundleManager.removeAllowedInstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="removeallowedinstallbundles-1"></a>
+
 ## removeAllowedInstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ Removes the applications that can be installed by the user specified by **userId
 
 See [removeAllowedInstallBundles](#removeallowedinstallbundles)
 
+
+<a id="removeallowedinstallbundles-2"></a>
 
 ## removeAllowedInstallBundles
 

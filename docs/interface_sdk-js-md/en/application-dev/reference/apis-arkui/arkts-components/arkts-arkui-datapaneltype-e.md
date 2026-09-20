@@ -1,5 +1,9 @@
 # DataPanelType
 
+```TypeScript
+declare enum DataPanelType
+```
+
 Enumerates data panel types.
 
 **Since:** 8

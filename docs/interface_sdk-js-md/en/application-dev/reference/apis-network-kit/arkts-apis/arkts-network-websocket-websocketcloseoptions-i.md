@@ -1,5 +1,9 @@
 # WebSocketCloseOptions
 
+```TypeScript
+export interface WebSocketCloseOptions
+```
+
 Defines the optional parameters carried in the request for closing a WebSocket connection.
 
 **Since:** 6

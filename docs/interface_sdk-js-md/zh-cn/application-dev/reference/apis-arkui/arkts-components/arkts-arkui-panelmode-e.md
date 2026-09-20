@@ -1,5 +1,9 @@
 # PanelMode
 
+```TypeScript
+declare enum PanelMode
+```
+
 设置可滑动面板的初始状态
 
 > **说明：** 

@@ -85,6 +85,8 @@ networkManager.getAllNetworkInterfaces(wantTemp).then((result) => {
 ```
 
 
+<a id="getallnetworkinterfaces-1"></a>
+
 ## getAllNetworkInterfaces
 
 ```TypeScript

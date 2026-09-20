@@ -1,5 +1,9 @@
 # PasswordIcon
 
+```TypeScript
+interface PasswordIcon
+```
+
 PasswordIcon object.
 
 **Since:** 10

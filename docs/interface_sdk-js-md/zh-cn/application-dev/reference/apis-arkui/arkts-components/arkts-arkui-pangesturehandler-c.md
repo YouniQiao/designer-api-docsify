@@ -1,5 +1,9 @@
 # PanGestureHandler
 
+```TypeScript
+declare class PanGestureHandler extends GestureHandler<PanGestureHandler>
+```
+
 滑动手势处理器对象类型。
 
 **继承/实现关系：** PanGestureHandler extends GestureHandler<PanGestureHandler>
@@ -57,6 +61,8 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 | 类型 | 说明 |
 | --- | --- |
 | [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

@@ -1,5 +1,9 @@
 # ImageSource
 
+```TypeScript
+interface ImageSource
+```
+
 ImageSource类，用于获取图片相关信息。
 
 在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md)构建一个ImageSource实例。
@@ -161,6 +165,8 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 | --- | --- |
 | Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回PixelMap。 |
 
+<a id="createpixelmap-2"></a>
+
 ## createPixelMap
 
 ```TypeScript
@@ -192,6 +198,8 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，当创建PixelMap对象成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
+
+<a id="createpixelmap-4"></a>
 
 ## createPixelMap
 
@@ -280,6 +288,8 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
 
+<a id="createpixelmaplist-1"></a>
+
 ## createPixelMapList
 
 ```TypeScript
@@ -327,6 +337,8 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+
+<a id="createpixelmaplist-2"></a>
 
 ## createPixelMapList
 
@@ -634,6 +646,8 @@ getDelayTimeList(): Promise<Array<number>>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
 
+<a id="getdelaytimelist-1"></a>
+
 ## getDelayTimeList
 
 ```TypeScript
@@ -724,6 +738,8 @@ getFrameCount(): Promise<number>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 
+<a id="getframecount-1"></a>
+
 ## getFrameCount
 
 ```TypeScript
@@ -779,6 +795,8 @@ getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 | index | number | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
+<a id="getimageinfo-2"></a>
+
 ## getImageInfo
 
 ```TypeScript
@@ -800,6 +818,8 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
+
+<a id="getimageinfo-4"></a>
 
 ## getImageInfo
 
@@ -938,6 +958,8 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 | [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
 
+<a id="getimageproperty-1"></a>
+
 ## getImageProperty
 
 ```TypeScript
@@ -975,6 +997,8 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
+<a id="getimageproperty-2"></a>
+
 ## getImageProperty
 
 ```TypeScript
@@ -1005,6 +1029,8 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | key | string | 是 | 图片属性名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取图片属性值成功，err为undefined，data为获取到的图片属性值；否则为错误对象。 |
+
+<a id="getimageproperty-3"></a>
 
 ## getImageProperty
 
@@ -1204,6 +1230,8 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
 
+<a id="modifyimageproperty-1"></a>
+
 ## modifyImageProperty
 
 ```TypeScript
@@ -1242,6 +1270,8 @@ modifyImageProperty(key: string, value: string): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+<a id="modifyimageproperty-2"></a>
 
 ## modifyImageProperty
 
@@ -1433,6 +1463,8 @@ release(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当资源释放成功，err为undefined，否则为错误对象。 |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1481,6 +1513,8 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+<a id="updatedata-1"></a>
 
 ## updateData
 

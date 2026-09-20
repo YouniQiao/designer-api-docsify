@@ -1,5 +1,9 @@
 # FrequencyInfo (System API)
 
+```TypeScript
+export interface FrequencyInfo
+```
+
 Execution frequency information.
 
 **Since:** 26.0.1

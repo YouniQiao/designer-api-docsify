@@ -68,6 +68,8 @@ ethernet.isIfaceActive("eth0").then((data: number) => {
 ```
 
 
+<a id="isifaceactive-1"></a>
+
 ## isIfaceActive
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # AssessmentInterruptInfo
 
+```TypeScript
+interface AssessmentInterruptInfo
+```
+
 Assessment interrupt information.
 
 **Since:** 26.0.1

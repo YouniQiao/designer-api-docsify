@@ -1,5 +1,9 @@
 # BlendMode
 
+```TypeScript
+declare enum BlendMode
+```
+
 Blend mode.
 
 > **NOTE:** 

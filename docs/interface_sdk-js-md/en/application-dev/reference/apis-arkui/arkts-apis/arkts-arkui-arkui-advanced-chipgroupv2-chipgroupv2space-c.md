@@ -1,5 +1,9 @@
 # ChipGroupV2Space
 
+```TypeScript
+export declare class ChipGroupV2Space
+```
+
 Defines the left and right padding of **ChipGroupV2** and the spacing between **ChipV2** components.
 
 **Since:** 26.0.0

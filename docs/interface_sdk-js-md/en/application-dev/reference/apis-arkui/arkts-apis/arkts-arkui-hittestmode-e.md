@@ -1,5 +1,9 @@
 # HitTestMode
 
+```TypeScript
+declare enum HitTestMode
+```
+
 Sets the response logic and node blocking rules for the hit test.
 
 > **NOTE:** 

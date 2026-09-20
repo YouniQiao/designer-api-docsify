@@ -107,6 +107,8 @@ async function CreateImageSource() {
 ```
 
 
+<a id="createimagesource-1"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -139,6 +141,8 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 See [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-2"></a>
 
 ## createImageSource
 

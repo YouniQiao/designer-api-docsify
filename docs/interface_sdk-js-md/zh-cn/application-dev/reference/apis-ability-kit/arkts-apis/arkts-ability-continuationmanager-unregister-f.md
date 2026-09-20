@@ -60,6 +60,8 @@ continuationManager.unregister(token)
 ```
 
 
+<a id="unregister-1"></a>
+
 ## unregister
 
 ```TypeScript

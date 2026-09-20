@@ -1,5 +1,9 @@
 # PermissionUsedRequest (System API)
 
+```TypeScript
+interface PermissionUsedRequest
+```
+
 Represents the request for querying permission usage records.
 
 **Since:** 9

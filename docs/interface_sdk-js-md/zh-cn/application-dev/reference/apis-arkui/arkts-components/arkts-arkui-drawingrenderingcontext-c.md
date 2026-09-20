@@ -1,5 +1,9 @@
 # DrawingRenderingContext
 
+```TypeScript
+declare class DrawingRenderingContext
+```
+
 DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进行绘制，绘制对象可以是形状、文本、图片等。
 
 **起始版本：** 12

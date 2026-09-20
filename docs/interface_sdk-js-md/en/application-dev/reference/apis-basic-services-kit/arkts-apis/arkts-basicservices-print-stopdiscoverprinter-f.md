@@ -62,6 +62,8 @@ print.stopDiscoverPrinter().then(() => {
 ```
 
 
+<a id="stopdiscoverprinter-1"></a>
+
 ## stopDiscoverPrinter
 
 ```TypeScript

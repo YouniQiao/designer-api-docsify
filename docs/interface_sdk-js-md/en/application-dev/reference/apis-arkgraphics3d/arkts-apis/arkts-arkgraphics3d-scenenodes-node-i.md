@@ -1,5 +1,9 @@
 # Node
 
+```TypeScript
+export interface Node extends SceneResource
+```
+
 The 3D scene consists of nodes in a tree hierarchy, where each node implements a Node interface. This class inherits from SceneResource.
 
 @extends SceneResource @interface Node

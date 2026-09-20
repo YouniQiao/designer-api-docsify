@@ -1,5 +1,9 @@
 # WindowStage
 
+```TypeScript
+interface WindowStage
+```
+
 窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。
 
 下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage的实例调用对应方法。
@@ -51,6 +55,8 @@ createSubWindow(name: string): Promise<Window>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+
+<a id="createsubwindow-1"></a>
 
 ## createSubWindow
 
@@ -158,6 +164,8 @@ getMainWindow(): Promise<Window>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
+<a id="getmainwindow-1"></a>
+
 ## getMainWindow
 
 ```TypeScript
@@ -246,6 +254,8 @@ getSubWindow(): Promise<Array<Window>>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**适用版本：** 10+ |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+
+<a id="getsubwindow-1"></a>
 
 ## getSubWindow
 
@@ -342,6 +352,8 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
 
+<a id="loadcontent-1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -380,6 +392,8 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 9 |
+
+<a id="loadcontent-2"></a>
 
 ## loadContent
 
@@ -447,6 +461,8 @@ Loads content by named router
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
+<a id="loadcontentbyname-1"></a>
+
 ## loadContentByName
 
 ```TypeScript
@@ -480,6 +496,8 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+
+<a id="loadcontentbyname-2"></a>
 
 ## loadContentByName
 
@@ -552,6 +570,8 @@ off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): v
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -580,6 +600,8 @@ off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifec
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
+
+<a id="off-2"></a>
 
 ## off
 
@@ -643,6 +665,8 @@ on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): voi
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -671,6 +695,8 @@ on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecyc
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
+
+<a id="on-2"></a>
 
 ## on
 
@@ -834,6 +860,8 @@ setCustomDensity(density: number): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal. |
 
+<a id="setcustomdensity-1"></a>
+
 ## setCustomDensity
 
 ```TypeScript
@@ -937,6 +965,8 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="setsupportedwindowmodes-1"></a>
 
 ## setSupportedWindowModes
 
@@ -1060,6 +1090,8 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="setwindowrectautosave-1"></a>
 
 ## setWindowRectAutoSave
 

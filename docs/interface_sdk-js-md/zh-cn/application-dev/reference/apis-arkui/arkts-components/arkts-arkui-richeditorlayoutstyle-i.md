@@ -1,5 +1,9 @@
 # RichEditorLayoutStyle
 
+```TypeScript
+interface RichEditorLayoutStyle
+```
+
 图片布局信息。
 
 **起始版本：** 11

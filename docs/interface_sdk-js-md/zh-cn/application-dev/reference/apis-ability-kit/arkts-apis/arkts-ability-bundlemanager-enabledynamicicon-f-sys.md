@@ -91,6 +91,8 @@ try {
 ```
 
 
+<a id="enabledynamicicon-1"></a>
+
 ## enableDynamicIcon
 
 ```TypeScript

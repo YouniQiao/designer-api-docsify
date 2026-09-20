@@ -1,5 +1,9 @@
 # ProgressOptions
 
+```TypeScript
+declare interface ProgressOptions<Type extends keyof ProgressStyleMap>
+```
+
 进度条选项。
 
 **起始版本：** 7

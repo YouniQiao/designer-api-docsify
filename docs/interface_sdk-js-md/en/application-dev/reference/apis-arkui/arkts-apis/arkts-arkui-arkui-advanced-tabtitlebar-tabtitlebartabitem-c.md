@@ -1,5 +1,9 @@
 # TabTitleBarTabItem
 
+```TypeScript
+export declare class TabTitleBarTabItem
+```
+
 Declaration of the tab item.
 
 **Since:** 10

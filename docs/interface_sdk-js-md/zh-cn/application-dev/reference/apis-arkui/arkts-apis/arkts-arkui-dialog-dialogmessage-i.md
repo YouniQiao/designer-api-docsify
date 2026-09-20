@@ -1,5 +1,9 @@
 # DialogMessage
 
+```TypeScript
+declare interface DialogMessage extends DialogTextStyleOptions
+```
+
 对话框的消息选项。
 
 **继承/实现关系：** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)

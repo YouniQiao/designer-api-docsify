@@ -1,5 +1,9 @@
 # PageTransitionOptions
 
+```TypeScript
+declare interface PageTransitionOptions
+```
+
 退场/入场动效的参数。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # PanelHeight
 
+```TypeScript
+declare enum PanelHeight
+```
+
 设置可滑动面板的高度。
 
 > **说明：** 

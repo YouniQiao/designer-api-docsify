@@ -1,5 +1,9 @@
 # TextBlob
 
+```TypeScript
+class TextBlob
+```
+
 Defines a block consisting of one or more characters with the same font.
 
 > **NOTE:** 

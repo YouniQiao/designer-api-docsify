@@ -1,5 +1,9 @@
 # EditableTitleBarMenuItemV2Options
 
+```TypeScript
+export declare interface EditableTitleBarMenuItemV2Options
+```
+
 菜单项配置选项接口。
 
 **起始版本：** 26.0.0

@@ -72,6 +72,8 @@ sim.unlockPuk(0, newPin, puk).then((data: sim.LockStatusResponse) => {
 ```
 
 
+<a id="unlockpuk-1"></a>
+
 ## unlockPuk
 
 ```TypeScript

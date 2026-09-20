@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="getapplicationquickfixinfo-1"></a>
+
 ## getApplicationQuickFixInfo
 
 ```TypeScript

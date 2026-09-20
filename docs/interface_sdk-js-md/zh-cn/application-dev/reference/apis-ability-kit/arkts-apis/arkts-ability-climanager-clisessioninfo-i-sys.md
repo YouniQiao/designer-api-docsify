@@ -1,5 +1,9 @@
 # CliSessionInfo（系统接口）
 
+```TypeScript
+interface CliSessionInfo
+```
+
 执行CLI工具时，系统会为调用方和CLI工具建立一个会话，此字段描述会话信息的格式。
 
 **起始版本：** 26.0.0

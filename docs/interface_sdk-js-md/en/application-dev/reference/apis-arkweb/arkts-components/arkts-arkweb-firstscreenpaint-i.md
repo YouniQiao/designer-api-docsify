@@ -1,5 +1,9 @@
 # FirstScreenPaint
 
+```TypeScript
+declare interface FirstScreenPaint
+```
+
 Provides the event information when the first screen paint is detected, including the URL and paint time. It is suitable for scenarios where monitoring page first screen rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 23

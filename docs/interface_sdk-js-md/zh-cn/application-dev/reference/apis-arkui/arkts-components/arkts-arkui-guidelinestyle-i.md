@@ -1,5 +1,9 @@
 # GuideLineStyle
 
+```TypeScript
+declare interface GuideLineStyle
+```
+
 guideLine参数，用于定义一条guideLine的id、方向和位置，辅助子组件在RelativeContainer中进行定位和对齐。
 
 **起始版本：** 12

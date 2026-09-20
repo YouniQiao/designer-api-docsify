@@ -1,5 +1,9 @@
 # UserRecognitionStatus
 
+```TypeScript
+enum UserRecognitionStatus
+```
+
 Enumerates the user recognition status.
 
 **Since:** 26.0.1

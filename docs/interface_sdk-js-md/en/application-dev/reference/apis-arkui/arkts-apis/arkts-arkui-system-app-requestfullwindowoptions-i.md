@@ -1,5 +1,9 @@
 # RequestFullWindowOptions
 
+```TypeScript
+export interface RequestFullWindowOptions
+```
+
 Defines the option of RequestFullWindow interface.
 
 **Since:** 3

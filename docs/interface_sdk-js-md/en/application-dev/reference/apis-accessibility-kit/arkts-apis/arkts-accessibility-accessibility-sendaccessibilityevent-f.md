@@ -103,6 +103,8 @@ Example of resource-supported auto-broadcasting18+:
 ```
 
 
+<a id="sendaccessibilityevent-1"></a>
+
 ## sendAccessibilityEvent
 
 ```TypeScript

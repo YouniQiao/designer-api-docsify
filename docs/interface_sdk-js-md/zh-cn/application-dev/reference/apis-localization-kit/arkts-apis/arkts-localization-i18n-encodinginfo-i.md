@@ -1,5 +1,9 @@
 # EncodingInfo
 
+```TypeScript
+export interface EncodingInfo
+```
+
 编码信息。
 
 **起始版本：** 26.0.0

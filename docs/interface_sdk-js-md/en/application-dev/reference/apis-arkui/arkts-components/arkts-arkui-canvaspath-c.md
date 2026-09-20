@@ -1,5 +1,9 @@
 # CanvasPath
 
+```TypeScript
+declare class CanvasPath
+```
+
 Path object, which provides basic methods for drawing paths. For details about the path-related APIs, see the description in **CanvasRenderingContext2D**.
 
 **Since:** 8

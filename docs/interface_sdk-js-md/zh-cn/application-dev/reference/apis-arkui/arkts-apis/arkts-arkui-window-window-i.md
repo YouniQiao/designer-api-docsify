@@ -1,5 +1,9 @@
 # Window
 
+```TypeScript
+interface Window
+```
+
 当前窗口实例，窗口管理器管理的基本单元。
 
 下列API示例中都需先使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)、[createWindow()](arkts-arkui-window-createwindow-f.md)、[findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
@@ -194,6 +198,8 @@ destroy(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+<a id="destroy-1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -246,6 +252,8 @@ destroyWindow(callback: AsyncCallback<void>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+
+<a id="destroywindow-1"></a>
 
 ## destroyWindow
 
@@ -408,6 +416,8 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回窗口内容避让区域。 |
 
+<a id="getavoidarea-1"></a>
+
 ## getAvoidArea
 
 ```TypeScript
@@ -478,6 +488,8 @@ getColorSpace(): Promise<ColorSpace>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise对象。返回当前色域模式。 |
+
+<a id="getcolorspace-1"></a>
 
 ## getColorSpace
 
@@ -675,6 +687,8 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 | 回调函数。返回当前窗口属性。 |
+
+<a id="getproperties-1"></a>
 
 ## getProperties
 
@@ -1514,6 +1528,8 @@ isShowing(callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
 
+<a id="isshowing-1"></a>
+
 ## isShowing
 
 ```TypeScript
@@ -1566,6 +1582,8 @@ isSupportWideGamut(): Promise<boolean>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
+
+<a id="issupportwidegamut-1"></a>
 
 ## isSupportWideGamut
 
@@ -1704,6 +1722,8 @@ isWindowSupportWideGamut(): Promise<boolean>
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="iswindowsupportwidegamut-1"></a>
+
 ## isWindowSupportWideGamut
 
 ```TypeScript
@@ -1795,6 +1815,8 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
 
+<a id="loadcontent-1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -1836,6 +1858,8 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
 
+<a id="loadcontent-2"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -1867,6 +1891,8 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | path | string | 是 | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+<a id="loadcontent-3"></a>
 
 ## loadContent
 
@@ -1940,6 +1966,8 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="loadcontentbyname-1"></a>
+
 ## loadContentByName
 
 ```TypeScript
@@ -1974,6 +2002,8 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="loadcontentbyname-2"></a>
 
 ## loadContentByName
 
@@ -2051,6 +2081,8 @@ maximize(presentation?: MaximizePresentation): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) | This window stage is abnormal.<br>**适用版本：** 12 - 19 |
+
+<a id="maximize-1"></a>
 
 ## maximize
 
@@ -2155,6 +2187,8 @@ minimize(callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="minimize-1"></a>
+
 ## minimize
 
 ```TypeScript
@@ -2222,6 +2256,8 @@ moveTo(x: number, y: number): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+<a id="moveto-1"></a>
 
 ## moveTo
 
@@ -2300,6 +2336,8 @@ moveWindowTo(x: number, y: number): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="movewindowto-1"></a>
 
 ## moveWindowTo
 
@@ -2392,6 +2430,8 @@ moveWindowToAsync(x: number, y: number): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+
+<a id="movewindowtoasync-1"></a>
 
 ## moveWindowToAsync
 
@@ -2487,6 +2527,8 @@ moveWindowToGlobal(x: number, y: number): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+
+<a id="movewindowtoglobal-1"></a>
 
 ## moveWindowToGlobal
 
@@ -2607,6 +2649,8 @@ off(type: 'rotationChange',
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="off-1"></a>
 
 ## off
 
@@ -3454,6 +3498,8 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -4322,6 +4368,8 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="raisetoapptop-1"></a>
+
 ## raiseToAppTop
 
 ```TypeScript
@@ -4412,6 +4460,8 @@ recover(): Promise<void>
 | [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. 3. The window does not support floating mode. |
 
+<a id="recover-1"></a>
+
 ## recover
 
 ```TypeScript
@@ -4476,6 +4526,8 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+
+<a id="resetaspectratio-1"></a>
 
 ## resetAspectRatio
 
@@ -4552,6 +4604,8 @@ resetSize(width: number, height: number): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+<a id="resetsize-1"></a>
 
 ## resetSize
 
@@ -4646,6 +4700,8 @@ resize(width: number, height: number): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="resize-1"></a>
 
 ## resize
 
@@ -4848,6 +4904,8 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
+<a id="setaspectratio-1"></a>
+
 ## setAspectRatio
 
 ```TypeScript
@@ -4923,6 +4981,8 @@ setBackgroundColor(color: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<a id="setbackgroundcolor-1"></a>
+
 ## setBackgroundColor
 
 ```TypeScript
@@ -4985,6 +5045,8 @@ setBrightness(brightness: number): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+<a id="setbrightness-1"></a>
 
 ## setBrightness
 
@@ -5049,6 +5111,8 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+<a id="setcolorspace-1"></a>
 
 ## setColorSpace
 
@@ -5210,6 +5274,8 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为[0.0, 1.0]，取1.0时表示最暗。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+<a id="setdimbehind-1"></a>
 
 ## setDimBehind
 
@@ -5382,6 +5448,8 @@ setFocusable(isFocusable: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<a id="setfocusable-1"></a>
+
 ## setFocusable
 
 ```TypeScript
@@ -5533,6 +5601,8 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 | isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+<a id="setfullscreen-1"></a>
+
 ## setFullScreen
 
 ```TypeScript
@@ -5674,6 +5744,8 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<a id="setkeepscreenon-1"></a>
+
 ## setKeepScreenOn
 
 ```TypeScript
@@ -5734,6 +5806,8 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+<a id="setlayoutfullscreen-1"></a>
 
 ## setLayoutFullScreen
 
@@ -5803,6 +5877,8 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+<a id="setoutsidetouchable-1"></a>
 
 ## setOutsideTouchable
 
@@ -5904,6 +5980,8 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: Failed to convert parameter to Orientation. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="setpreferredorientation-1"></a>
+
 ## setPreferredOrientation
 
 ```TypeScript
@@ -6001,6 +6079,8 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<a id="setprivacymode-1"></a>
+
 ## setPrivacyMode
 
 ```TypeScript
@@ -6029,6 +6109,8 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+<a id="setraisebyclickenabled-1"></a>
 
 ## setRaiseByClickEnabled
 
@@ -6218,6 +6300,8 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="setresizebydragenabled-1"></a>
 
 ## setResizeByDragEnabled
 
@@ -6411,6 +6495,8 @@ setSubWindowModal(isModal: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 20+ |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
+<a id="setsubwindowmodal-1"></a>
+
 ## setSubWindowModal
 
 ```TypeScript
@@ -6563,6 +6649,8 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 | names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+<a id="setsystembarenable-1"></a>
+
 ## setSystemBarEnable
 
 ```TypeScript
@@ -6631,6 +6719,8 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 | --- | --- | --- | --- |
 | systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+<a id="setsystembarproperties-1"></a>
 
 ## setSystemBarProperties
 
@@ -6736,6 +6826,8 @@ setTouchable(isTouchable: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<a id="settouchable-1"></a>
+
 ## setTouchable
 
 ```TypeScript
@@ -6833,6 +6925,8 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally.<br>**适用版本：** 9 |
+
+<a id="setuicontent-1"></a>
 
 ## setUIContent
 
@@ -6942,6 +7036,8 @@ setWindowBrightness(brightness: number): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="setwindowbrightness-1"></a>
+
 ## setWindowBrightness
 
 ```TypeScript
@@ -7013,6 +7109,8 @@ setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+
+<a id="setwindowcolorspace-1"></a>
 
 ## setWindowColorSpace
 
@@ -7279,6 +7377,8 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="setwindowfocusable-1"></a>
+
 ## setWindowFocusable
 
 ```TypeScript
@@ -7381,6 +7481,8 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="setwindowkeepscreenon-1"></a>
+
 ## setWindowKeepScreenOn
 
 ```TypeScript
@@ -7453,6 +7555,8 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="setwindowlayoutfullscreen-1"></a>
 
 ## setWindowLayoutFullScreen
 
@@ -7537,6 +7641,8 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+
+<a id="setwindowlimits-1"></a>
 
 ## setWindowLimits
 
@@ -7704,6 +7810,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY_WINDOW permission. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
+<a id="setwindowprivacymode-1"></a>
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -7848,6 +7956,8 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="setwindowsystembarenable-1"></a>
+
 ## setWindowSystemBarEnable
 
 ```TypeScript
@@ -7925,6 +8035,8 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+<a id="setwindowsystembarproperties-1"></a>
 
 ## setWindowSystemBarProperties
 
@@ -8132,6 +8244,8 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<a id="setwindowtouchable-1"></a>
+
 ## setWindowTouchable
 
 ```TypeScript
@@ -8231,6 +8345,8 @@ show(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+<a id="show-1"></a>
+
 ## show
 
 ```TypeScript
@@ -8289,6 +8405,8 @@ showWindow(callback: AsyncCallback<void>): void
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 
+<a id="showwindow-1"></a>
+
 ## showWindow
 
 ```TypeScript
@@ -8320,6 +8438,8 @@ showWindow(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+
+<a id="showwindow-2"></a>
 
 ## showWindow
 
@@ -8389,6 +8509,8 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
+
+<a id="snapshot-1"></a>
 
 ## snapshot
 
@@ -8506,6 +8628,8 @@ startMoving(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
+
+<a id="startmoving-1"></a>
 
 ## startMoving
 

@@ -55,6 +55,8 @@ geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
 ```
 
 
+<a id="getaddressesfromlocation-1"></a>
+
 ## getAddressesFromLocation
 
 ```TypeScript

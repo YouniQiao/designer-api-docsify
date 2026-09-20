@@ -1,5 +1,9 @@
 # OnHttpErrorReceiveEvent
 
+```TypeScript
+export declare interface OnHttpErrorReceiveEvent
+```
+
 定义网页加载资源遇到HTTP错误时触发该回调。
 
 **起始版本：** 12

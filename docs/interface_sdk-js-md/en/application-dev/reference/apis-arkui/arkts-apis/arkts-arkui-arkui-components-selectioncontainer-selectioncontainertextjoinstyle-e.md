@@ -1,5 +1,9 @@
 # SelectionContainerTextJoinStyle
 
+```TypeScript
+export declare enum SelectionContainerTextJoinStyle
+```
+
 Defines text join style for SelectionContainer.
 
 **Since:** 26.0.0

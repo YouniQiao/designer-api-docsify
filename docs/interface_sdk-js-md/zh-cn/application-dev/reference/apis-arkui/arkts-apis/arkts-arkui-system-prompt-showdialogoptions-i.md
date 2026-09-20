@@ -1,5 +1,9 @@
 # ShowDialogOptions
 
+```TypeScript
+export interface ShowDialogOptions
+```
+
 定义显示对话框的选项。
 
 **起始版本：** 3

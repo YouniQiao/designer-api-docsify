@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="startcontinuationdevicemanager-1"></a>
+
 ## startContinuationDeviceManager
 
 ```TypeScript
@@ -149,6 +151,8 @@ Starts the device selection module to show the list of available devices on the 
 
 See [startContinuationDeviceManager](#startcontinuationdevicemanager)
 
+
+<a id="startcontinuationdevicemanager-2"></a>
 
 ## startContinuationDeviceManager
 

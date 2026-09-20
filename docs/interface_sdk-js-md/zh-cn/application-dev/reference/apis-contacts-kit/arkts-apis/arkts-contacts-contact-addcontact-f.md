@@ -81,6 +81,8 @@ promise.then((data) => {
 ```
 
 
+<a id="addcontact-1"></a>
+
 ## addContact
 
 ```TypeScript
@@ -117,6 +119,8 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 参见 [addContact](#addcontact)
 
 
+<a id="addcontact-2"></a>
+
 ## addContact
 
 ```TypeScript
@@ -151,6 +155,8 @@ function addContact(contact: Contact): Promise<number>
 
 参见 [addContact](#addcontact)
 
+
+<a id="addcontact-3"></a>
 
 ## addContact
 

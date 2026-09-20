@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="getallappprivatecertificates-1"></a>
+
 ## getAllAppPrivateCertificates
 
 ```TypeScript

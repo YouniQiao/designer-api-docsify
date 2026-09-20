@@ -1,5 +1,9 @@
 # PermissionStateChangeInfo
 
+```TypeScript
+interface PermissionStateChangeInfo
+```
+
 表示某次权限授权状态变化的详情。
 
 **起始版本：** 18

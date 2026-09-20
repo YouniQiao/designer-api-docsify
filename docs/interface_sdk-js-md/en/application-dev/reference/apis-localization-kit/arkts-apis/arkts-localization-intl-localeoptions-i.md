@@ -1,5 +1,9 @@
 # LocaleOptions
 
+```TypeScript
+export interface LocaleOptions
+```
+
 Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
 
 > **NOTE:** 

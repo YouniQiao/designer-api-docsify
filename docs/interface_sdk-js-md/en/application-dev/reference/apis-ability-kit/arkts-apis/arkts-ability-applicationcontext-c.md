@@ -1,5 +1,9 @@
 # ApplicationContext
 
+```TypeScript
+declare class ApplicationContext extends Context
+```
+
 ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE:** 
@@ -80,6 +84,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<a id="clearupapplicationdata-1"></a>
 
 ## clearUpApplicationData
 
@@ -497,6 +503,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="getrunningprocessinformation-1"></a>
+
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -722,6 +730,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="killallprocesses-1"></a>
+
 ## killAllProcesses
 
 ```TypeScript
@@ -765,6 +775,8 @@ Kills all processes of this application. The application will not execute the no
 **Examples**
 
 See [killAllProcesses](#killallprocesses)
+
+<a id="killallprocesses-2"></a>
 
 ## killAllProcesses
 

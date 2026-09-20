@@ -1,5 +1,9 @@
 # ScrollBar properties/events
 
+```TypeScript
+declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>

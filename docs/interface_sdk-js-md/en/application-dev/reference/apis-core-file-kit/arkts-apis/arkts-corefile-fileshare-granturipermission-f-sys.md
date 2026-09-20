@@ -115,6 +115,8 @@ async function grantUriPermissionExample() {
 ```
 
 
+<a id="granturipermission-1"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -158,6 +160,8 @@ Provides grant uri permission for app
 
 See [grantUriPermission](#granturipermission)
 
+
+<a id="granturipermission-2"></a>
 
 ## grantUriPermission
 

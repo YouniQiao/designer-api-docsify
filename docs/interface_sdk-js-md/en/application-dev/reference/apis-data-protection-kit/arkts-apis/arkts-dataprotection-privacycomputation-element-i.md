@@ -1,5 +1,9 @@
 # Element
 
+```TypeScript
+interface Element
+```
+
 Defines a dataset element used in privacy search. Each element contains a key for matching, an optional hash algorithm, and an optional value for PIR protocol retrieval.
 
 **Since:** 26.0.1

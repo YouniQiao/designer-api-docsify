@@ -79,6 +79,8 @@ promise.then(() => {
 ```
 
 
+<a id="updatesimmessage-1"></a>
+
 ## updateSimMessage
 
 ```TypeScript

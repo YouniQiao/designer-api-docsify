@@ -1,5 +1,9 @@
 # HoverModeAreaType
 
+```TypeScript
+declare enum HoverModeAreaType
+```
+
 悬停态显示区域类型。
 
 **起始版本：** 14

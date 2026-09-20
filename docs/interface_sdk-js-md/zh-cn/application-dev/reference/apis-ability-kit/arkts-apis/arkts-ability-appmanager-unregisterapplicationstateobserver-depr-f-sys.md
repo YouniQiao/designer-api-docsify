@@ -66,6 +66,8 @@ appManager.unregisterApplicationStateObserver(observerId)
 ```
 
 
+<a id="unregisterapplicationstateobserver-1"></a>
+
 ## unregisterApplicationStateObserver
 
 ```TypeScript

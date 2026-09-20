@@ -60,6 +60,8 @@ promise.then((data: number) => {
 ```
 
 
+<a id="getdefaultvoicesimid-1"></a>
+
 ## getDefaultVoiceSimId
 
 ```TypeScript

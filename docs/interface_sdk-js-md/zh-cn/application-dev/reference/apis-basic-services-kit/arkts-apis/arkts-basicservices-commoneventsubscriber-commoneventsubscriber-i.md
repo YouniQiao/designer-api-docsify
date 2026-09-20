@@ -1,5 +1,9 @@
 # CommonEventSubscriber
 
+```TypeScript
+export interface CommonEventSubscriber
+```
+
 表示公共事件的订阅者。CommonEventSubscriber提供了对有序公共事件的处理能力，包括获取和设置事件传递的Code和Data数据、查询当前公共事件是否为有序或粘性公共事件、中止或清理有序公共事件的中止状态、结束对当前有序公共事件的处理，以及获取订阅者的订阅信息等，适用于订阅者需要对接收到的公共事件进行数据处理和流程控制的场景。
 
 **起始版本：** 7
@@ -61,6 +65,8 @@ subscriber.finishCommonEvent().then(() => {
   console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="abortcommonevent-1"></a>
 
 ## abortCommonEvent
 
@@ -163,6 +169,8 @@ subscriber.finishCommonEvent().then(() => {
 });
 ```
 
+<a id="clearabortcommonevent-1"></a>
+
 ## clearAbortCommonEvent
 
 ```TypeScript
@@ -252,6 +260,8 @@ subscriber.finishCommonEvent().then(() => {
 });
 ```
 
+<a id="finishcommonevent-1"></a>
+
 ## finishCommonEvent
 
 ```TypeScript
@@ -317,6 +327,8 @@ subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
   console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getabortcommonevent-1"></a>
 
 ## getAbortCommonEvent
 
@@ -410,6 +422,8 @@ subscriber.getCode().then((code: number) => {
   console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getcode-1"></a>
 
 ## getCode
 
@@ -509,6 +523,8 @@ subscriber.getData().then((data: string) => {
 });
 ```
 
+<a id="getdata-1"></a>
+
 ## getData
 
 ```TypeScript
@@ -606,6 +622,8 @@ subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEven
 });
 ```
 
+<a id="getsubscribeinfo-2"></a>
+
 ## getSubscribeInfo
 
 ```TypeScript
@@ -701,6 +719,8 @@ subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
 });
 ```
 
+<a id="isorderedcommonevent-1"></a>
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -791,6 +811,8 @@ subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
   console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="isstickycommonevent-1"></a>
 
 ## isStickyCommonEvent
 
@@ -886,6 +908,8 @@ subscriber.setCode(1).then(() => {
 });
 ```
 
+<a id="setcode-1"></a>
+
 ## setCode
 
 ```TypeScript
@@ -969,6 +993,8 @@ subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
   console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setcodeanddata-1"></a>
 
 ## setCodeAndData
 
@@ -1128,6 +1154,8 @@ subscriber.setData('publish_data_changed').then(() => {
   console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setdata-1"></a>
 
 ## setData
 

@@ -1,5 +1,9 @@
 # FrequencyInfo（系统接口）
 
+```TypeScript
+export interface FrequencyInfo
+```
+
 执行频率的具体信息，用于设置应用所在活跃分组的执行频率。
 
 **起始版本：** 26.0.1

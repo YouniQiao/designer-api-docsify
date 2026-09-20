@@ -1,5 +1,9 @@
 # DialogBaseController
 
+```TypeScript
+export class DialogBaseController
+```
+
 用于控制对话框的类。
 
 **起始版本：** 26.0.1

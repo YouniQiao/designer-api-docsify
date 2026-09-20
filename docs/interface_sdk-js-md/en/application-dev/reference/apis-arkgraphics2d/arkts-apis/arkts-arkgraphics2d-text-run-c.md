@@ -1,5 +1,9 @@
 # Run
 
+```TypeScript
+class Run
+```
+
 Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class.
 
 Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
@@ -153,6 +157,8 @@ struct Index {
 }
 ```
 
+<a id="getglyphs-1"></a>
+
 ## getGlyphs
 
 ```TypeScript
@@ -296,6 +302,8 @@ struct Index {
   }
 }
 ```
+
+<a id="getpositions-1"></a>
 
 ## getPositions
 

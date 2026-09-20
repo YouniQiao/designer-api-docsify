@@ -1,5 +1,9 @@
 # NativeEmbedMouseInfo
 
+```TypeScript
+declare interface NativeEmbedMouseInfo
+```
+
 Provides detailed information about clicking or touching and holding a same-layer tag using the mouse or touchpad, including the tag ID and mouse event. It is suitable for scenarios where handling same-layer element mouse interaction is required, improving mouse experience customization and flexibility.
 
 **Since:** 20

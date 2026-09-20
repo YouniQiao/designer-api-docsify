@@ -1,5 +1,9 @@
 # Line properties/events
 
+```TypeScript
+declare class LineAttribute extends CommonShapeMethod<LineAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [common attributes for drawing components](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** LineAttribute extends CommonShapeMethod<LineAttribute>

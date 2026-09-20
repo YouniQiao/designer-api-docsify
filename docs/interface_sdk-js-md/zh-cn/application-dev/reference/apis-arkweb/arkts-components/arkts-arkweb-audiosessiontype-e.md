@@ -1,5 +1,9 @@
 # AudioSessionType
 
+```TypeScript
+declare enum AudioSessionType
+```
+
 应用中 Web 音频类型，用于控制 Web 音频的音频流类型和行为，帮助开发者根据应用场景优化音频体验，如支持网页游戏声音与系统音乐同时播放。
 
 **起始版本：** 20

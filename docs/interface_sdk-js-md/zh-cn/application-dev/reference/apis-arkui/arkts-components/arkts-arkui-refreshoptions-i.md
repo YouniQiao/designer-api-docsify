@@ -1,5 +1,9 @@
 # RefreshOptions
 
+```TypeScript
+interface RefreshOptions
+```
+
 用于设置Refresh组件参数。
 
 > **补充说明：**
@@ -90,7 +94,7 @@ promptText?: ResourceStr
 refreshing: boolean
 ```
 
-组件当前是否处于刷新中状态。true表示处于刷新中状态，false表示未处于刷新中状态。<br>默认值：false<br>该参数支持&#36;&#36;双向绑定变量。
+组件当前是否处于刷新中状态。true表示处于刷新中状态，false表示未处于刷新中状态。<br>默认值：false<br>该参数支持$$双向绑定变量。
 
 **类型：** boolean
 

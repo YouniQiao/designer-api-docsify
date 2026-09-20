@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="createmac-1"></a>
+
 ## createMac
 
 ```TypeScript

@@ -64,6 +64,8 @@ workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
 ```
 
 
+<a id="getworkstatus-1"></a>
+
 ## getWorkStatus
 
 ```TypeScript

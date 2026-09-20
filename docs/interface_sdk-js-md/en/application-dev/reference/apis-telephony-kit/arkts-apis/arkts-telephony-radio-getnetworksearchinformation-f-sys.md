@@ -66,6 +66,8 @@ radio.getNetworkSearchInformation(0).then((data: radio.NetworkSearchResult) => {
 ```
 
 
+<a id="getnetworksearchinformation-1"></a>
+
 ## getNetworkSearchInformation
 
 ```TypeScript

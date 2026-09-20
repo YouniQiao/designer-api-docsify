@@ -1,5 +1,9 @@
 # SeekMode
 
+```TypeScript
+declare enum SeekMode
+```
+
 视频跳转模式选项。
 
 | 名称 |值| 说明 |  

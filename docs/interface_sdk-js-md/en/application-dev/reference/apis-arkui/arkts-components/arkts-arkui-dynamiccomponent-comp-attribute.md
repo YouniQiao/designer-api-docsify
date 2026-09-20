@@ -1,5 +1,9 @@
 # DynamicComponent properties/events
 
+```TypeScript
+declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>
+```
+
 The universal attributes are supported.
 
 The following events are supported:

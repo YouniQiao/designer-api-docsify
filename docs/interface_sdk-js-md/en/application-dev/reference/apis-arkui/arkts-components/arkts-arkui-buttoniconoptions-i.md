@@ -1,5 +1,9 @@
 # ButtonIconOptions
 
+```TypeScript
+declare interface ButtonIconOptions
+```
+
 Describes the icons of the sidebar control button.
 
 > **NOTE:** 

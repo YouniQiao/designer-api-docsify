@@ -1,5 +1,9 @@
 # BadgeStyle
 
+```TypeScript
+declare interface BadgeStyle
+```
+
 Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
 
 > **NOTE:** 

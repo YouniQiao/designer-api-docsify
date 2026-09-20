@@ -1,5 +1,9 @@
 # PrivateAlbum (System API)
 
+```TypeScript
+interface PrivateAlbum extends AbsAlbum
+```
+
 Provides APIs for managing the system albums.
 
 This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-sys.md) instead.
@@ -56,6 +60,8 @@ This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfi
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -131,6 +137,8 @@ This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userf
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="recover-1"></a>
 
 ## recover
 

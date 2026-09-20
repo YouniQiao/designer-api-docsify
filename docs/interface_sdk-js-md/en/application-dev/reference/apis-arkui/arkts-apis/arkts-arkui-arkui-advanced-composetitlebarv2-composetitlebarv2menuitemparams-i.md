@@ -1,5 +1,9 @@
 # ComposeTitleBarV2MenuItemParams
 
+```TypeScript
+export interface ComposeTitleBarV2MenuItemParams
+```
+
 Options for creating a menu item instance.
 
 **Since:** 26.0.0

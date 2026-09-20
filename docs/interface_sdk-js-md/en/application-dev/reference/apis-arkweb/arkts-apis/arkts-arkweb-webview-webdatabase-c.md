@@ -1,5 +1,9 @@
 # WebDataBase
 
+```TypeScript
+class WebDataBase
+```
+
 Implements a **WebDataBase** object.
 
 > **NOTE:** 

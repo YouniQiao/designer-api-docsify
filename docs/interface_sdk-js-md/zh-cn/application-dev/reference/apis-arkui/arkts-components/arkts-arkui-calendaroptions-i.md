@@ -1,5 +1,9 @@
 # CalendarOptions
 
+```TypeScript
+declare interface CalendarOptions
+```
+
 日历选择器组件的参数说明。
 
 ## start和end设置规则

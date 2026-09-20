@@ -1,5 +1,9 @@
 # EmitterProperty
 
+```TypeScript
+interface EmitterProperty
+```
+
 Defines the emitter property.
 
 @interface EmitterProperty

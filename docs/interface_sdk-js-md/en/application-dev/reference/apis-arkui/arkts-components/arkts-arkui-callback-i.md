@@ -1,5 +1,9 @@
 # Callback
 
+```TypeScript
+declare interface Callback<T, V = void>
+```
+
 Defines the basic callback.
 
 **Since:** 12

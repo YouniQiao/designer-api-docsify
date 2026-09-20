@@ -1,5 +1,9 @@
 # SideBarOptions
 
+```TypeScript
+export interface SideBarOptions
+```
+
 Defines sidebar options.
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # OnBeforeUnloadEvent
 
+```TypeScript
+declare interface OnBeforeUnloadEvent
+```
+
 定义刷新或关闭场景下，在即将离开当前页面时触发此回调。适用于表单编辑等场景，允许开发者拦截离开动作并弹窗确认，从而避免用户未提交的数据意外丢失。
 
 **起始版本：** 12

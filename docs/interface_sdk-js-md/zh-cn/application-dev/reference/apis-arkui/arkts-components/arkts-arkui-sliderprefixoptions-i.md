@@ -1,5 +1,9 @@
 # SliderPrefixOptions
 
+```TypeScript
+interface SliderPrefixOptions extends SliderCustomContentOptions
+```
+
 Slider前缀组件无障碍信息参数。
 
 **继承/实现关系：** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)

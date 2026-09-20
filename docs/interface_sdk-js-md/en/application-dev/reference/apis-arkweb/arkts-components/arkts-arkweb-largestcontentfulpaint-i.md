@@ -1,5 +1,9 @@
 # LargestContentfulPaint
 
+```TypeScript
+declare interface LargestContentfulPaint
+```
+
 Provides detailed information about the largest contentful paint on the web page, including the navigation time and various paint times. It is suitable for scenarios where monitoring page rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 12

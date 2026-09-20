@@ -1,5 +1,9 @@
 # SelectDialog
 
+```TypeScript
+export declare struct SelectDialog
+```
+
 Declare CustomDialog SelectDialog
 
 **Since:** 18

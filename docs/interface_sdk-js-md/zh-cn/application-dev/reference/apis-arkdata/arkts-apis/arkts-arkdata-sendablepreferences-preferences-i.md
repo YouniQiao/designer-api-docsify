@@ -1,5 +1,9 @@
 # Preferences
 
+```TypeScript
+interface Preferences extends lang.ISendable
+```
+
 Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，提供获取和修改存储数据的接口。
 
 下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)获取到Preferences实例，再通过此实例调用对应接口。

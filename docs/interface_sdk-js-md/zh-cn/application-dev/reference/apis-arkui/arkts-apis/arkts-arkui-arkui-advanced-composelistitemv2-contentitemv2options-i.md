@@ -1,5 +1,9 @@
 # ContentItemV2Options
 
+```TypeScript
+export interface ContentItemV2Options
+```
+
 ContentItemV2构造函数的参数选项。
 
 **起始版本：** 26.0.0

@@ -111,6 +111,8 @@ bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="adddisallowedinstallbundles-1"></a>
+
 ## addDisallowedInstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ Adds the applications that cannot be installed by the user specified by **userId
 
 See [addDisallowedInstallBundles](#adddisallowedinstallbundles)
 
+
+<a id="adddisallowedinstallbundles-2"></a>
 
 ## addDisallowedInstallBundles
 

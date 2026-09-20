@@ -1,5 +1,9 @@
 # DeviceManager
 
+```TypeScript
+interface DeviceManager
+```
+
 设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **起始版本：** 10
@@ -148,6 +152,8 @@ try {
   console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getavailabledevicelist-1"></a>
 
 ## getAvailableDeviceList
 

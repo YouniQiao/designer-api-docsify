@@ -1,5 +1,9 @@
 # DataChangeOperation
 
+```TypeScript
+interface DataChangeOperation
+```
+
 Represents an operation for changing data.
 
 **Since:** 12

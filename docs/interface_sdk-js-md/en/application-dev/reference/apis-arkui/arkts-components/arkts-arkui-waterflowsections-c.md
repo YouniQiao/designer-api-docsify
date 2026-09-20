@@ -1,5 +1,9 @@
 # WaterFlowSections
 
+```TypeScript
+declare class WaterFlowSections
+```
+
 Describes the water flow item sections.
 
 > **NOTE:** 

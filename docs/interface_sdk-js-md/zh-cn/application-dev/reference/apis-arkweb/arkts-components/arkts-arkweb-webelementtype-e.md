@@ -1,5 +1,9 @@
 # WebElementType
 
+```TypeScript
+declare enum WebElementType
+```
+
 网页元素信息。
 
 **起始版本：** 13

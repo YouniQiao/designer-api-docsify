@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="clearallmissions-1"></a>
+
 ## clearAllMissions
 
 ```TypeScript

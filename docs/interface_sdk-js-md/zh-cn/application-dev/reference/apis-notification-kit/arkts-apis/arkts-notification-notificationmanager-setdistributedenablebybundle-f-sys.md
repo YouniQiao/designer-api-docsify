@@ -82,6 +82,8 @@ notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
 ```
 
 
+<a id="setdistributedenablebybundle-1"></a>
+
 ## setDistributedEnableByBundle
 
 ```TypeScript

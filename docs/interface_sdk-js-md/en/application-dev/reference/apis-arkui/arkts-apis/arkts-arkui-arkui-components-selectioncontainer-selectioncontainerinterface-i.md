@@ -1,5 +1,9 @@
 # SelectionContainerInterface
 
+```TypeScript
+export interface SelectionContainerInterface
+```
+
 Provides a SelectionContainer component interface.
 
 **Since:** 26.0.0

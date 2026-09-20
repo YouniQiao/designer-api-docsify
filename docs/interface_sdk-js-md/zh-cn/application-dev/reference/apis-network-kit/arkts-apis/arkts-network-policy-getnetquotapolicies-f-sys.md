@@ -64,6 +64,8 @@ policy
 ```
 
 
+<a id="getnetquotapolicies-1"></a>
+
 ## getNetQuotaPolicies
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # Worker
 
+```TypeScript
+class Worker implements EventTarget
+```
+
 Worker类包含所有Worker功能。
 
 **继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
@@ -285,6 +289,8 @@ workerInstance.postMessage("hello world");
 let buffer = new ArrayBuffer(8);
 workerInstance.postMessage(buffer, [buffer]);
 ```
+
+<a id="postmessage-1"></a>
 
 ## postMessage
 

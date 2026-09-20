@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
@@ -111,6 +113,8 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 See [get](#get)
 
+
+<a id="get-2"></a>
 
 ## get
 

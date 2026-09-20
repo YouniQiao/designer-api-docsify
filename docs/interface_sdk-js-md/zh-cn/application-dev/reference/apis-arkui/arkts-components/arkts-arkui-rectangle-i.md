@@ -1,5 +1,9 @@
 # Rectangle
 
+```TypeScript
+declare interface Rectangle
+```
+
 矩形区域类型。
 
 > **说明：** 

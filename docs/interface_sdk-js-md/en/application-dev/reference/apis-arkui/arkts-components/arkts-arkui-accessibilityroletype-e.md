@@ -1,5 +1,9 @@
 # AccessibilityRoleType
 
+```TypeScript
+declare enum AccessibilityRoleType
+```
+
 Enumerates the component role types used by screen readers. @enum { number }
 
 **Since:** 18

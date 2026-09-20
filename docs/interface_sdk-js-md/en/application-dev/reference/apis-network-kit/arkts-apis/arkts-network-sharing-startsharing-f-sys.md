@@ -73,6 +73,8 @@ sharing
 ```
 
 
+<a id="startsharing-1"></a>
+
 ## startSharing
 
 ```TypeScript

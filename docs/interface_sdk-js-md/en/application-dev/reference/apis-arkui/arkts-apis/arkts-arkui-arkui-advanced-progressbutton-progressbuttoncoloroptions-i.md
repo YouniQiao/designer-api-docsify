@@ -1,5 +1,9 @@
 # ProgressButtonColorOptions
 
+```TypeScript
+export declare interface ProgressButtonColorOptions
+```
+
 Defines the color options for the download button.
 
 **Since:** 18
@@ -20,7 +24,7 @@ backgroundColor?: ResourceColor
 
 Background color of the button.
 
-Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')**
+Default value: **$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

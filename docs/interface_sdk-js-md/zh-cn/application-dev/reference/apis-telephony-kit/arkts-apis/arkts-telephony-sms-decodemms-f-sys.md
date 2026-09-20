@@ -77,6 +77,8 @@ promiseArr.then((data: sms.MmsInformation) => {
 ```
 
 
+<a id="decodemms-1"></a>
+
 ## decodeMms
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # XComponentController
 
+```TypeScript
+declare class XComponentController
+```
+
 Defines the controller of the **XComponent**. You can bind the controller to the **XComponent** to call the component APIs through the controller.
 
 **Since:** 8

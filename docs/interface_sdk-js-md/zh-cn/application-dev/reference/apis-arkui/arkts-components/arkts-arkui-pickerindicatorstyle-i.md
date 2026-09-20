@@ -1,5 +1,9 @@
 # PickerIndicatorStyle
 
+```TypeScript
+declare interface PickerIndicatorStyle
+```
+
 选中项指示器样式的参数说明。
 
 **起始版本：** 22

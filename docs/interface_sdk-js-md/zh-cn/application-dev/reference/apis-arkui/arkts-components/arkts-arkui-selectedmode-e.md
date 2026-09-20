@@ -1,5 +1,9 @@
 # SelectedMode
 
+```TypeScript
+declare enum SelectedMode
+```
+
 选中子页签的显示模式枚举。
 
 **起始版本：** 10

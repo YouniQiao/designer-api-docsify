@@ -1,5 +1,9 @@
 # TextContentControllerOptions
 
+```TypeScript
+declare interface TextContentControllerOptions
+```
+
 用于设置输入框插入字符时的配置选项。
 
 **起始版本：** 15

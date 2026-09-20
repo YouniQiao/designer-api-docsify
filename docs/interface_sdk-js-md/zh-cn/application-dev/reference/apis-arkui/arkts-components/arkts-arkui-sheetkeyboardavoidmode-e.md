@@ -1,5 +1,9 @@
 # SheetKeyboardAvoidMode
 
+```TypeScript
+declare enum SheetKeyboardAvoidMode
+```
+
 半模态激活输入法时对软键盘的避让方式。
 
 > **说明：** 

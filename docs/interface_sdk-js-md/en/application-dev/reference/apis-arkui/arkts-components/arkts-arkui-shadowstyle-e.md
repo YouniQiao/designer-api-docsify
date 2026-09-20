@@ -1,5 +1,9 @@
 # ShadowStyle
 
+```TypeScript
+declare enum ShadowStyle
+```
+
 enum Shadow style
 
 **Since:** 10

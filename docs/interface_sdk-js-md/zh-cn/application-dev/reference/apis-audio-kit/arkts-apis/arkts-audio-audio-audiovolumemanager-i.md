@@ -1,5 +1,9 @@
 # AudioVolumeManager
 
+```TypeScript
+interface AudioVolumeManager
+```
+
 音量管理。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 9
@@ -146,6 +150,8 @@ getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupM
 | --- | --- | --- | --- |
 | groupId | number | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器实例；否则为错误对象。 |
+
+<a id="getvolumegroupmanager-1"></a>
 
 ## getVolumeGroupManager
 

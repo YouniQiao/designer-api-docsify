@@ -71,6 +71,8 @@ try {
 ```
 
 
+<a id="setgesturenavigationenabled-1"></a>
+
 ## setGestureNavigationEnabled
 
 ```TypeScript

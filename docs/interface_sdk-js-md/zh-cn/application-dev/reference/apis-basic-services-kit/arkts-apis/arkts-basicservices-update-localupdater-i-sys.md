@@ -1,5 +1,9 @@
 # LocalUpdater（系统接口）
 
+```TypeScript
+export interface LocalUpdater
+```
+
 提供校验本地升级包签名和完整性、安装本地升级包、监听本地升级事件等本地固件更新功能的工具类。
 
 使用场景：离线环境系统升级、网络不稳定场景升级、自主可控升级流程。
@@ -118,6 +122,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<a id="applynewversion-1"></a>
 
 ## applyNewVersion
 
@@ -403,6 +409,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<a id="verifyupgradepackage-1"></a>
 
 ## verifyUpgradePackage
 

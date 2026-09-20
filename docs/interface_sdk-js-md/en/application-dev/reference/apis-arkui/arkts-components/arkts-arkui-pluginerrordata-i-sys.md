@@ -1,5 +1,9 @@
 # PluginErrorData (System API)
 
+```TypeScript
+declare interface PluginErrorData
+```
+
 Data provided when the error occurs.
 
 > **NOTE:** 

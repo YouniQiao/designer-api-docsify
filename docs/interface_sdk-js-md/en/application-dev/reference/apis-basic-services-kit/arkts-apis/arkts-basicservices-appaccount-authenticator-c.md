@@ -1,5 +1,9 @@
 # Authenticator
 
+```TypeScript
+class Authenticator
+```
+
 Defines an authenticator.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # Button
 
+```TypeScript
+interface Button
+```
+
 Describes the menu item button in the action menu.
 
 **Since:** 9

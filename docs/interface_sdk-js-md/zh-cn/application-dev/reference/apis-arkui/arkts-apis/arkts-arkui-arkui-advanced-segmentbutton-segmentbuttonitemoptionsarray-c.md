@@ -1,5 +1,9 @@
 # SegmentButtonItemOptionsArray
 
+```TypeScript
+declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>
+```
+
 用于保存按钮信息的数组。
 
 > **说明：** 

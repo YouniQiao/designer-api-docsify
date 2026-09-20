@@ -74,6 +74,8 @@ config.disableAbility(name, (err: BusinessError) => {
 ```
 
 
+<a id="disableability-1"></a>
+
 ## disableAbility
 
 ```TypeScript

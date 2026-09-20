@@ -1,5 +1,9 @@
 # BadgeParam
 
+```TypeScript
+declare interface BadgeParam
+```
+
 Provides basic parameters for creating a badge.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # ColorFilter
 
+```TypeScript
+declare class ColorFilter
+```
+
 创建具有4*5矩阵的颜色过滤器。
 
 **起始版本：** 9

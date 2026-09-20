@@ -1,5 +1,9 @@
 # SubHeader
 
+```TypeScript
+export declare struct SubHeader
+```
+
 The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
 
 > **NOTE:** 
@@ -52,11 +56,11 @@ Default value:
 
 `{start: LengthMetrics.resource(`
 
-`&#36;r('sys.float.margin_left'))`,
+`$r('sys.float.margin_left'))`,
 
 `end: LengthMetrics.resource(`
 
-`&#36;r('sys.float.margin_right'))}`
+`$r('sys.float.margin_right'))}`
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 

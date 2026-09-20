@@ -1,5 +1,9 @@
 # LeakWatcherConfig
 
+```TypeScript
+export interface LeakWatcherConfig
+```
+
 LeakWatcherConfig对象类型，对象中包含多个用于内存泄漏监测的可配置属性。
 
 **起始版本：** 24

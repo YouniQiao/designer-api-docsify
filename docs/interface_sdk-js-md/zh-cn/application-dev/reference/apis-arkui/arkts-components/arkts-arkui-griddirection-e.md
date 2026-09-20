@@ -1,5 +1,9 @@
 # GridDirection
 
+```TypeScript
+declare enum GridDirection
+```
+
 主轴布局方向枚举。
 
 **起始版本：** 8

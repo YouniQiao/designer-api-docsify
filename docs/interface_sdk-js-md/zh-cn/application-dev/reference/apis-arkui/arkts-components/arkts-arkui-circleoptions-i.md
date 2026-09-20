@@ -1,5 +1,9 @@
 # CircleOptions
 
+```TypeScript
+declare interface CircleOptions
+```
+
 用于描述Circle组件绘制属性。
 
 **起始版本：** 7

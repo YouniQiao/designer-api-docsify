@@ -2,7 +2,7 @@
 
 ```TypeScript
 export type ResponseHeaders = {
-    [k: string]: string | string[] | undefined;
+    [k: string]: string[] | undefined;
   }
 ```
 

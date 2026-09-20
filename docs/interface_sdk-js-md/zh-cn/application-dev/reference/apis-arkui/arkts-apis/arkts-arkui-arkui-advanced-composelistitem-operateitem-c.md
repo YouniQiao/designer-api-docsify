@@ -1,5 +1,9 @@
 # OperateItem
 
+```TypeScript
+export declare class OperateItem
+```
+
 列表右侧显示的元素类型。
 
 同时配置多个属性时，按button、symbolStyle、image、icon与text组合、arrow、text、radio、checkbox、switch、icon的优先级选择右侧显示内容。icon可与text或subIcon组合，arrow可与text组合；其他情况下仅显示优先级最高的内容。

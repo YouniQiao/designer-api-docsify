@@ -1,5 +1,9 @@
 # XComponent properties/events
 
+```TypeScript
+declare class XComponentAttribute extends CommonMethod<XComponentAttribute>
+```
+
 In addition to universal attributes, the following attributes are supported.
 
 Since API version 12, the universal events are supported when **type** is set to **SURFACE** or **TEXTURE**.
@@ -79,6 +83,8 @@ Sets the brightness of HDR video playback for the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | number | Yes | Brightness of HDR video playback.<br>Value range: 0.0 to 1.0. Values less than 0.0 are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.<br>Default value: **1.0**. |
+
+<a id="hdrbrightness-1"></a>
 
 ## hdrBrightness
 

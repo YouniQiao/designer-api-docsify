@@ -80,6 +80,8 @@ try {
 ```
 
 
+<a id="getsinglesensor-1"></a>
+
 ## getSingleSensor
 
 ```TypeScript

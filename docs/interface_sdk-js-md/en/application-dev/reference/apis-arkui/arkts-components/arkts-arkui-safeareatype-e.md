@@ -1,5 +1,9 @@
 # SafeAreaType
 
+```TypeScript
+declare enum SafeAreaType
+```
+
 Enumerates the types for expanding layout safe areas.
 
 **Since:** 10

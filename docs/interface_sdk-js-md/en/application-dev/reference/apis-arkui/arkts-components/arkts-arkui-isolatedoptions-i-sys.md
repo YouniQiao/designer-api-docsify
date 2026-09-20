@@ -1,5 +1,9 @@
 # IsolatedOptions (System API)
 
+```TypeScript
+declare interface IsolatedOptions
+```
+
 Describes the optional construction parameters during **IsolatedComponent** construction.
 
 **Since:** 12

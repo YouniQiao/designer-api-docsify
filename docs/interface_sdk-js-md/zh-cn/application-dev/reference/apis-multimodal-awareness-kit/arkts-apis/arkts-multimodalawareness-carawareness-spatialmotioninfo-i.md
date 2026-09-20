@@ -1,5 +1,9 @@
 # SpatialMotionInfo
 
+```TypeScript
+export interface SpatialMotionInfo
+```
+
 空间运动响应信息的接口。
 
 **起始版本：** 26.0.1

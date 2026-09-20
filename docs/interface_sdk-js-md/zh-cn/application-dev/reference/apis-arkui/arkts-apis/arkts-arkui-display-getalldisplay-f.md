@@ -55,6 +55,8 @@ promise.then((data: Array<display.Display>) => {
 ```
 
 
+<a id="getalldisplay-1"></a>
+
 ## getAllDisplay
 
 ```TypeScript

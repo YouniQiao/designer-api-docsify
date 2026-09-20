@@ -115,6 +115,8 @@ try {
 ```
 
 
+<a id="installprivatecertificate-1"></a>
+
 ## installPrivateCertificate
 
 ```TypeScript
@@ -157,6 +159,8 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 
 参见 [installPrivateCertificate](#installprivatecertificate)
 
+
+<a id="installprivatecertificate-2"></a>
 
 ## installPrivateCertificate
 

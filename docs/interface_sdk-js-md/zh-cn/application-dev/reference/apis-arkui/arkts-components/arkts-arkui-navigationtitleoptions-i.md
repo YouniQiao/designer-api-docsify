@@ -1,5 +1,9 @@
 # NavigationTitleOptions
 
+```TypeScript
+declare interface NavigationTitleOptions
+```
+
 标题栏选项。
 
 **起始版本：** 11
@@ -176,7 +180,7 @@ paddingEnd?: LengthMetrics
 
 默认值：
 
-LengthMetrics.resource(`&#36;r('sys.float.margin_right')`)
+LengthMetrics.resource(`$r('sys.float.margin_right')`)
 
 **类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -205,7 +209,7 @@ paddingStart?: LengthMetrics
 
 默认值：
 
-LengthMetrics.resource(`&#36;r('sys.float.margin_left')`)。
+LengthMetrics.resource(`$r('sys.float.margin_left')`)。
 
 **类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

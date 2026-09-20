@@ -1,5 +1,9 @@
 # Animator
 
+```TypeScript
+export default class Animator
+```
+
 定义Animator类。
 
 **起始版本：** 6
@@ -61,6 +65,8 @@ static create(options: AnimatorOptions): AnimatorResult
 > 
 > 推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的createAnimator接口明确UI上下文。
 ```
+
+<a id="create-1"></a>
 
 ## create
 

@@ -1,5 +1,9 @@
 # AnalysisToolResult (System API)
 
+```TypeScript
+interface AnalysisToolResult
+```
+
 Result of an analysis tool execution.
 
 **Since:** 26.0.1

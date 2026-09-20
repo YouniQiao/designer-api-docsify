@@ -109,6 +109,8 @@ try {
 ```
 
 
+<a id="getoverlaymoduleinfobybundlename-1"></a>
+
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -151,6 +153,8 @@ No permission is required when the specified application is the caller itself.
 
 See [getOverlayModuleInfoByBundleName](#getoverlaymoduleinfobybundlename)
 
+
+<a id="getoverlaymoduleinfobybundlename-2"></a>
 
 ## getOverlayModuleInfoByBundleName
 

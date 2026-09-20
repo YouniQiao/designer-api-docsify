@@ -1,5 +1,9 @@
 # FetchResult
 
+```TypeScript
+interface FetchResult<T> extends lang.ISendable
+```
+
 Provides APIs to manage the file retrieval result.
 
 **Inheritance/Implementation:** FetchResult extends lang.ISendable

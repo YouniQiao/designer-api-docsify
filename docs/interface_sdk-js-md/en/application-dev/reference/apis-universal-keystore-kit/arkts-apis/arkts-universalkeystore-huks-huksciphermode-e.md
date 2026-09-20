@@ -1,5 +1,9 @@
 # HuksCipherMode
 
+```TypeScript
+export enum HuksCipherMode
+```
+
 Enumerates the cipher modes.
 
 **Since:** 8

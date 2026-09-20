@@ -108,6 +108,8 @@ class EntryAbility extends UIAbility {
 ```
 
 
+<a id="exportvcard-1"></a>
+
 ## exportVCard
 
 ```TypeScript
@@ -151,6 +153,8 @@ Exports contacts as a vcard file (VCF). This API uses a promise to return the re
 
 See [exportVCard](#exportvcard)
 
+
+<a id="exportvcard-2"></a>
 
 ## exportVCard
 

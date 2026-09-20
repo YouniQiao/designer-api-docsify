@@ -1,5 +1,9 @@
 # Component
 
+```TypeScript
+declare class Component
+```
+
 UiTest框架在API9中，Component类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类对象可通过[findComponent](arkts-test-uitest-driver-c.md#findcomponent)、[findComponents](arkts-test-uitest-driver-c.md#findcomponents)、[waitForComponent](arkts-test-uitest-driver-c.md#waitforcomponent)等接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
 
 **起始版本：** 9
@@ -646,6 +650,8 @@ async function mode_demo() {
 }
 ```
 
+<a id="inputtext-1"></a>
+
 ## inputText
 
 ```TypeScript
@@ -1281,6 +1287,8 @@ async function demo() {
   let button = await scrollBar.scrollSearch(ON.text('next page'));
 }
 ```
+
+<a id="scrollsearch-1"></a>
 
 ## scrollSearch
 

@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="deletedisposedstatus-1"></a>
+
 ## deleteDisposedStatus
 
 ```TypeScript

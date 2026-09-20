@@ -179,6 +179,8 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
+<a id="setdefaultapplication-1"></a>
+
 ## setDefaultApplication
 
 ```TypeScript
@@ -219,6 +221,8 @@ Sets the default application based on a system-defined application type, a file 
 
 See [setDefaultApplication](#setdefaultapplication)
 
+
+<a id="setdefaultapplication-2"></a>
 
 ## setDefaultApplication
 

@@ -1,5 +1,9 @@
 # PlaybackSpeed
 
+```TypeScript
+declare enum PlaybackSpeed
+```
+
 Enumerates video playback speed options.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # CalendarPicker属性/事件
 
+```TypeScript
+declare class CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件，还支持以下事件：
@@ -32,6 +36,8 @@ edgeAlign(alignType: CalendarAlign, offset?: Offset)
 | --- | --- | --- | --- |
 | alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 | 对齐方式的类型。<br>默认值：CalendarAlign.END |
 | offset | Offset | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br>默认值：{dx: 0, dy: 0} <br>单位：vp |
+
+<a id="edgealign-1"></a>
 
 ## edgeAlign
 
@@ -100,6 +106,8 @@ onChange(callback: Callback<Date>)
 | --- | --- | --- | --- |
 | callback | Callback&lt;Date&gt; | 是 | 日期选择时触发的回调函数。回调参数为Date类型的选中日期值，开发者可在回调函数中获取用户选中的日期并进行相应处理。<br>**适用版本：** 18 |
 
+<a id="onchange-1"></a>
+
 ## onChange
 
 ```TypeScript
@@ -147,6 +155,8 @@ textStyle(value: PickerTextStyle)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 设置入口区的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+
+<a id="textstyle-1"></a>
 
 ## textStyle
 

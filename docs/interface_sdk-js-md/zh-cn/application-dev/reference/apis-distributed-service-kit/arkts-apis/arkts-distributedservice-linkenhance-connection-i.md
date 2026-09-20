@@ -1,5 +1,9 @@
 # Connection
 
+```TypeScript
+interface Connection
+```
+
 连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。
 
 **起始版本：** 20

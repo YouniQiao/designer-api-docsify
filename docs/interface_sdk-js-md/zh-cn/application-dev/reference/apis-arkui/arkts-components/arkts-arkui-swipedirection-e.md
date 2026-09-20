@@ -1,5 +1,9 @@
 # SwipeDirection
 
+```TypeScript
+declare enum SwipeDirection
+```
+
 定义滑动手势的触发方向。
 
 **起始版本：** 8

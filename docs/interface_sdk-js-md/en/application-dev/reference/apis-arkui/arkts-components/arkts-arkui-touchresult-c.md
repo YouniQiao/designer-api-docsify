@@ -1,5 +1,9 @@
 # TouchResult
 
+```TypeScript
+declare class TouchResult
+```
+
 Defines the custom event dispatch result. You can influence event dispatch by returning specific results.
 
 **Since:** 11

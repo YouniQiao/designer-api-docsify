@@ -1,5 +1,9 @@
 # ButtonStyleMode
 
+```TypeScript
+declare enum ButtonStyleMode
+```
+
 按钮的重要程度。
 
 **起始版本：** 11

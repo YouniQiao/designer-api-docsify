@@ -1,5 +1,9 @@
 # BaseEvent
 
+```TypeScript
+declare interface BaseEvent
+```
+
 Basic event type.
 
 **Since:** 8

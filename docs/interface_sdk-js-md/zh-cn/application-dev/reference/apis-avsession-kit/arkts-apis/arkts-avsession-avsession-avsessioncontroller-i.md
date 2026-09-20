@@ -1,5 +1,9 @@
 # AVSessionController
 
+```TypeScript
+interface AVSessionController
+```
+
 AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
 > **说明：** 
@@ -42,6 +46,8 @@ destroy(callback: AsyncCallback<void>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -96,6 +102,8 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+<a id="getavcallstate-1"></a>
+
 ## getAVCallState
 
 ```TypeScript
@@ -147,6 +155,8 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="getavmetadata-1"></a>
 
 ## getAVMetadata
 
@@ -230,6 +240,8 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+<a id="getavplaybackstate-1"></a>
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -311,6 +323,8 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="getavqueueitems-1"></a>
 
 ## getAVQueueItems
 
@@ -394,6 +408,8 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+<a id="getavqueuetitle-1"></a>
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -475,6 +491,8 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="getcallmetadata-1"></a>
 
 ## getCallMetadata
 
@@ -561,6 +579,8 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+<a id="getextras-2"></a>
+
 ## getExtras
 
 ```TypeScript
@@ -641,7 +661,7 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability-1)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
@@ -650,6 +670,8 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="getlaunchability-1"></a>
 
 ## getLaunchAbility
 
@@ -669,7 +691,7 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability-1)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
@@ -732,6 +754,8 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="getoutputdevice-1"></a>
 
 ## getOutputDevice
 
@@ -902,6 +926,8 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
+<a id="getvalidcommands-1"></a>
+
 ## getValidCommands
 
 ```TypeScript
@@ -983,6 +1009,8 @@ isActive(callback: AsyncCallback<boolean>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="isactive-1"></a>
 
 ## isActive
 
@@ -2249,6 +2277,8 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 
+<a id="sendavkeyevent-1"></a>
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -2317,6 +2347,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+<a id="sendcommoncommand-2"></a>
 
 ## sendCommonCommand
 
@@ -2393,6 +2425,8 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+
+<a id="sendcontrolcommand-1"></a>
 
 ## sendControlCommand
 
@@ -2571,6 +2605,8 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+<a id="skiptoqueueitem-1"></a>
 
 ## skipToQueueItem
 

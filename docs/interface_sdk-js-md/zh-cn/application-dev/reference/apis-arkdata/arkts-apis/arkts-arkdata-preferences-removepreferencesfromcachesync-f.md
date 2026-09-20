@@ -51,6 +51,8 @@ Stage模型示例：
 ```
 
 
+<a id="removepreferencesfromcachesync-1"></a>
+
 ## removePreferencesFromCacheSync
 
 ```TypeScript

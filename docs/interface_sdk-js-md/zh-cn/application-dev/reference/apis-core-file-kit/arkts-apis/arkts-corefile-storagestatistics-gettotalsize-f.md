@@ -62,6 +62,8 @@ storageStatistics.getTotalSize((error: BusinessError, totalSize: number) => {
 ```
 
 
+<a id="gettotalsize-1"></a>
+
 ## getTotalSize
 
 ```TypeScript

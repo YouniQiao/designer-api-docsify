@@ -1,5 +1,9 @@
 # SheetTitleOptions
 
+```TypeScript
+declare interface SheetTitleOptions
+```
+
 Component sheet title options
 
 **Since:** 11

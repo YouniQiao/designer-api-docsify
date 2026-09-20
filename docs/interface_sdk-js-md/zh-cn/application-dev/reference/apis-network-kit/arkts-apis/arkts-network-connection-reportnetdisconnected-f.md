@@ -69,6 +69,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 ```
 
 
+<a id="reportnetdisconnected-1"></a>
+
 ## reportNetDisconnected
 
 ```TypeScript

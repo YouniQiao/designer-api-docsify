@@ -1,5 +1,9 @@
 # TextContentControllerBase
 
+```TypeScript
+declare abstract class TextContentControllerBase
+```
+
 Represents the base controller for **TextInput**, **TextArea**, and **Search** components.
 
 **Since:** 10

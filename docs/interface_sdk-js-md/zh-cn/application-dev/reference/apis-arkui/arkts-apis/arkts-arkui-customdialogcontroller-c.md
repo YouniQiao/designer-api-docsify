@@ -1,5 +1,9 @@
 # CustomDialogController
 
+```TypeScript
+declare class CustomDialogController
+```
+
 自定义弹窗的控制器。
 
 ## 导入对象
@@ -7,6 +11,8 @@
 ```ts
 dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
 ```
+
+
 
 > **说明：** 
 > 
@@ -94,7 +100,7 @@ open()
 > **说明：** 
 > 
 > 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)
 > 。
 
 **起始版本：** 7

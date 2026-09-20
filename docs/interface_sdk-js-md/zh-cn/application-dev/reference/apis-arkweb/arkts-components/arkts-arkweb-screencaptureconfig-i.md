@@ -1,5 +1,9 @@
 # ScreenCaptureConfig
 
+```TypeScript
+declare interface ScreenCaptureConfig
+```
+
 提供 Web 屏幕捕获的配置选项，包括捕获模式。适用于需要自定义网页录屏行为的场景，提升录屏功能的灵活性和用户体验。
 
 **起始版本：** 10

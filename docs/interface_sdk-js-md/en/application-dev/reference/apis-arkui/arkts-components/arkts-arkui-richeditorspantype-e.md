@@ -1,5 +1,9 @@
 # RichEditorSpanType
 
+```TypeScript
+declare enum RichEditorSpanType
+```
+
 Enumerates span types.
 
 **Since:** 10

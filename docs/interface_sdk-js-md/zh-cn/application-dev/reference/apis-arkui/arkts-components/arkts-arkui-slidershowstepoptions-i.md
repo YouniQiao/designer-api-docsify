@@ -1,5 +1,9 @@
 # SliderShowStepOptions
 
+```TypeScript
+declare interface SliderShowStepOptions
+```
+
 Slider刻度点的无障碍文本信息映射集。
 
 **起始版本：** 20

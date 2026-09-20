@@ -1,5 +1,9 @@
 # RemoteControlParams（系统接口）
 
+```TypeScript
+interface RemoteControlParams
+```
+
 远程控制交互参数
 
 **起始版本：** 26.0.1

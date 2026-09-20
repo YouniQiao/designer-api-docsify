@@ -1,5 +1,9 @@
 # NodeParam
 
+```TypeScript
+export interface NodeParam
+```
+
 Declare NodeParam
 
 **起始版本：** 10

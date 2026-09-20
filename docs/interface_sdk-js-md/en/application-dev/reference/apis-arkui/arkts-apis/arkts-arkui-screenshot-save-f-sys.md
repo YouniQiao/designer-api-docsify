@@ -120,6 +120,8 @@ try {
 ```
 
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -157,6 +159,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 
 See [save](#save)
 
+
+<a id="save-2"></a>
 
 ## save
 

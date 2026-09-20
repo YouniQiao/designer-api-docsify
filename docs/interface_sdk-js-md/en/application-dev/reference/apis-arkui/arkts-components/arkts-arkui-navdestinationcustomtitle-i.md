@@ -1,5 +1,9 @@
 # NavDestinationCustomTitle
 
+```TypeScript
+declare interface NavDestinationCustomTitle
+```
+
 Defines a custom title for the **NavDestination** component.
 
 **Since:** 9

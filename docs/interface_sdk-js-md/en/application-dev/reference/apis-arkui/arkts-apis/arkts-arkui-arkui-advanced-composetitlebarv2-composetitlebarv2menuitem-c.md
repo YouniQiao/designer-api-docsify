@@ -1,5 +1,9 @@
 # ComposeTitleBarV2MenuItem
 
+```TypeScript
+export declare class ComposeTitleBarV2MenuItem
+```
+
 Declaration of the menu item on the right side.
 
 **Since:** 26.0.0

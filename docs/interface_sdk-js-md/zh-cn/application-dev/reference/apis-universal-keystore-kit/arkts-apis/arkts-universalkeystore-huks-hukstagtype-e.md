@@ -1,5 +1,9 @@
 # HuksTagType
 
+```TypeScript
+export enum HuksTagType
+```
+
 表示Tag的数据类型。
 
 **起始版本：** 8

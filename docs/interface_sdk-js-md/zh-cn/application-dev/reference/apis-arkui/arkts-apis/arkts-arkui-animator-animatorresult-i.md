@@ -1,5 +1,9 @@
 # AnimatorResult
 
+```TypeScript
+export interface AnimatorResult
+```
+
 定义AnimatorResult接口，提供动画播放状态回调及动画控制方法。
 
 **起始版本：** 6
@@ -321,6 +325,8 @@ struct AnimatorTest {
 ```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
+
+<a id="reset-1"></a>
 
 ## reset
 

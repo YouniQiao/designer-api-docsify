@@ -1,5 +1,9 @@
 # HuksKeyAlg
 
+```TypeScript
+export enum HuksKeyAlg
+```
+
 Enumerates the key algorithms.
 
 **Since:** 8

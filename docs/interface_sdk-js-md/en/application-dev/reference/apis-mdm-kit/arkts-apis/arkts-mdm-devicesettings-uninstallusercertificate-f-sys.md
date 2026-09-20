@@ -89,6 +89,8 @@ deviceSettings.uninstallUserCertificate(wantTemp, aliasStr).then(() => {
 ```
 
 
+<a id="uninstallusercertificate-1"></a>
+
 ## uninstallUserCertificate
 
 ```TypeScript

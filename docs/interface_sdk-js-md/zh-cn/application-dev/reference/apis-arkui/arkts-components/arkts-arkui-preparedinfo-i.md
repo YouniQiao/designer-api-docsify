@@ -1,5 +1,9 @@
 # PreparedInfo
 
+```TypeScript
+interface PreparedInfo
+```
+
 用于描述当前视频的时长。
 
 > **说明：** 

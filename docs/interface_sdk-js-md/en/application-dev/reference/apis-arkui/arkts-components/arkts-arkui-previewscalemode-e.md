@@ -1,5 +1,9 @@
 # PreviewScaleMode
 
+```TypeScript
+declare enum PreviewScaleMode
+```
+
 Enumerates the scale modes of the preview image.
 
 **Since:** 20

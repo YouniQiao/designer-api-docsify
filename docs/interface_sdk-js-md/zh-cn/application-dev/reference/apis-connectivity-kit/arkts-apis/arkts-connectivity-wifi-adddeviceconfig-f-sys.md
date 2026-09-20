@@ -103,6 +103,8 @@ try {
 ```
 
 
+<a id="adddeviceconfig-1"></a>
+
 ## addDeviceConfig
 
 ```TypeScript

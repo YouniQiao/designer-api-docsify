@@ -1,5 +1,9 @@
 # AudioCapturer
 
+```TypeScript
+interface AudioCapturer
+```
+
 This interface provides APIs for audio capture.
 
 Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) to create an AudioCapturer instance.

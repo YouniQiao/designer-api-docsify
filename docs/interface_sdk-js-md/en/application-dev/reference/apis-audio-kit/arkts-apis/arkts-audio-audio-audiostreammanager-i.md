@@ -1,5 +1,9 @@
 # AudioStreamManager
 
+```TypeScript
+interface AudioStreamManager
+```
+
 This interface implements audio stream management.
 
 Before calling any API in AudioStreamManager, you must use [getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager) to obtain an AudioStreamManager instance.
@@ -43,6 +47,8 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+
+<a id="getaudioeffectinfoarray-1"></a>
 
 ## getAudioEffectInfoArray
 
@@ -129,6 +135,8 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
 
+<a id="getcurrentaudiocapturerinfoarray-1"></a>
+
 ## getCurrentAudioCapturerInfoArray
 
 ```TypeScript
@@ -197,6 +205,8 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
+
+<a id="getcurrentaudiorendererinfoarray-1"></a>
 
 ## getCurrentAudioRendererInfoArray
 
@@ -296,6 +306,8 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+
+<a id="isactive-1"></a>
 
 ## isActive
 

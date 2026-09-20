@@ -1,5 +1,9 @@
 # SharedPhotoAsset（系统接口）
 
+```TypeScript
+interface SharedPhotoAsset extends lang.ISendable
+```
+
 Defines the shared photo asset
 
 **继承/实现关系：** SharedPhotoAsset extends lang.ISendable

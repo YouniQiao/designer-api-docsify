@@ -144,6 +144,8 @@ try {
 ```
 
 
+<a id="movemissionstoforeground-1"></a>
+
 ## moveMissionsToForeground
 
 ```TypeScript
@@ -181,6 +183,8 @@ function moveMissionsToForeground(missionIds: Array<number>, topMission: number,
 
 参见 [moveMissionsToForeground](#movemissionstoforeground)
 
+
+<a id="movemissionstoforeground-2"></a>
 
 ## moveMissionsToForeground
 

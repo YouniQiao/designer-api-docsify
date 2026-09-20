@@ -82,6 +82,8 @@ try {
 ```
 
 
+<a id="minimizeall-1"></a>
+
 ## minimizeAll
 
 ```TypeScript

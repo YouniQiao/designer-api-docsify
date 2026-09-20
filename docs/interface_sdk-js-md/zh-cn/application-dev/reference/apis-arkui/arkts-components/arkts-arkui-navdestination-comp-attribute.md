@@ -1,5 +1,9 @@
 # NavDestination属性/事件
 
+```TypeScript
+declare class NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
+```
+
 支持通用属性。
 
 除支持通用事件外，还支持如下事件：
@@ -37,6 +41,8 @@ backButtonIcon(value: ResourceStr | PixelMap | SymbolGlyphModifier)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 标题栏返回键图标。<br>**适用版本：** 11 |
+
+<a id="backbuttonicon-1"></a>
 
 ## backButtonIcon
 
@@ -288,6 +294,8 @@ hideTitleBar(value: boolean)
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否隐藏标题栏。<br>默认值：false<br>true：隐藏标题栏。<br>false：显示标题栏。 |
 
+<a id="hidetitlebar-1"></a>
+
 ## hideTitleBar
 
 ```TypeScript
@@ -392,6 +400,8 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 页面右上角菜单。 |
+
+<a id="menus-1"></a>
 
 ## menus
 

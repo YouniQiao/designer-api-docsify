@@ -1,5 +1,9 @@
 # EffectLayer (System API)
 
+```TypeScript
+declare enum EffectLayer
+```
+
 Rendering layer of the EffectComponent.
 
 **Since:** 20

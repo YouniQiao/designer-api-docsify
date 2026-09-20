@@ -1,5 +1,9 @@
 # TextClockConfiguration
 
+```TypeScript
+declare interface TextClockConfiguration extends CommonConfiguration<TextClockConfiguration>
+```
+
 You need a custom class to implement the **ContentModifier** API.
 
 **Inheritance/Implementation:** TextClockConfiguration extends CommonConfiguration<TextClockConfiguration>

@@ -1,5 +1,9 @@
 # InterfaceConflictInfo
 
+```TypeScript
+interface InterfaceConflictInfo
+```
+
 Describes the conflict information when the USB interface that has been exclusively claimed is claimed by another process in non-exclusive mode by calling [usbManager.claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md).
 
 > **NOTE:** 

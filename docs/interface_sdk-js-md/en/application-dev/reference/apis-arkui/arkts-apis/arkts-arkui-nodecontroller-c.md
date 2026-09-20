@@ -1,5 +1,9 @@
 # NodeController
 
+```TypeScript
+export abstract class NodeController
+```
+
 The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component.
 
 > **NOTE:** 

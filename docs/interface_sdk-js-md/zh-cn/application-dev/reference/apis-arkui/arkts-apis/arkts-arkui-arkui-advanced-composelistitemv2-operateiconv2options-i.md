@@ -1,5 +1,9 @@
 # OperateIconV2Options
 
+```TypeScript
+export interface OperateIconV2Options
+```
+
 OperateIconV2构造函数的参数选项。
 
 **起始版本：** 26.0.0

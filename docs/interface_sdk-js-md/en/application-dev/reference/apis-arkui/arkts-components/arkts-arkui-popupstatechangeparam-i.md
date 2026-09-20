@@ -1,5 +1,9 @@
 # PopupStateChangeParam
 
+```TypeScript
+declare interface PopupStateChangeParam
+```
+
 Display state of the popup.
 
 **Since:** 18

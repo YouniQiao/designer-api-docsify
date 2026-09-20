@@ -1,5 +1,9 @@
 # ChipV2SymbolIcon
 
+```TypeScript
+export abstract class ChipV2SymbolIcon extends ChipV2Icon
+```
+
 Defines the symbol icon class.
 
 This API inherits from [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md).

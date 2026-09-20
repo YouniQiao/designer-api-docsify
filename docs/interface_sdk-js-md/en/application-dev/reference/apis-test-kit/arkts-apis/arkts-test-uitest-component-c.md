@@ -1,5 +1,9 @@
 # Component
 
+```TypeScript
+declare class Component
+```
+
 Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 9
@@ -646,6 +650,8 @@ async function mode_demo() {
 }
 ```
 
+<a id="inputtext-1"></a>
+
 ## inputText
 
 ```TypeScript
@@ -1281,6 +1287,8 @@ async function demo() {
   let button = await scrollBar.scrollSearch(ON.text('next page'));
 }
 ```
+
+<a id="scrollsearch-1"></a>
 
 ## scrollSearch
 

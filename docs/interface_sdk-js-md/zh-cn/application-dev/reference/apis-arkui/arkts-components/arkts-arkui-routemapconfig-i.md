@@ -1,5 +1,9 @@
 # RouteMapConfig
 
+```TypeScript
+declare interface RouteMapConfig
+```
+
 路由配置信息。
 
 **起始版本：** 12

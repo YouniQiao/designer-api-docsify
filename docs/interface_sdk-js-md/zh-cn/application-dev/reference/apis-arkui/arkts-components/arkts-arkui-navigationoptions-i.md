@@ -1,5 +1,9 @@
 # NavigationOptions
 
+```TypeScript
+declare interface NavigationOptions
+```
+
 路由栈操作选项。
 
 **起始版本：** 12

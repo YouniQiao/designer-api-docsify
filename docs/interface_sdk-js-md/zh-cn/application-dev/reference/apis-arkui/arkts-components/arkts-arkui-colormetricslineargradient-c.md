@@ -1,5 +1,9 @@
 # ColorMetricsLinearGradient
 
+```TypeScript
+declare class ColorMetricsLinearGradient
+```
+
 滑轨轨道的线性渐变背景颜色。
 
 **起始版本：** 23

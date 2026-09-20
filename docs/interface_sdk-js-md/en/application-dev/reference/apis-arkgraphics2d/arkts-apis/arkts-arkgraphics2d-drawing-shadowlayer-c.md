@@ -1,5 +1,9 @@
 # ShadowLayer
 
+```TypeScript
+class ShadowLayer
+```
+
 Implements a shadow layer.
 
 > **NOTE:** 
@@ -52,6 +56,8 @@ Creates a **ShadowLayer** object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="create-2"></a>
 
 ## create
 

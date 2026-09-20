@@ -1,5 +1,9 @@
 # TextInputOptions
 
+```TypeScript
+declare interface TextInputOptions
+```
+
 TextInput初始化参数。
 
 **起始版本：** 7
@@ -50,7 +54,7 @@ text?: ResourceStr
 
 避免组件刷新时TextInput中的文本内容异常。
 
-从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 

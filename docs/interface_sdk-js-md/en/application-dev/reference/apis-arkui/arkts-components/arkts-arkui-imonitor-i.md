@@ -1,5 +1,9 @@
 # IMonitor
 
+```TypeScript
+declare interface IMonitor
+```
+
 Define IMonitor interface
 
 **Since:** 12

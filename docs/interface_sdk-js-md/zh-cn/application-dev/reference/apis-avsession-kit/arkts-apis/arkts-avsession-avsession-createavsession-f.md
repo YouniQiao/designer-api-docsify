@@ -106,6 +106,8 @@ struct Index {
 ```
 
 
+<a id="createavsession-1"></a>
+
 ## createAVSession
 
 ```TypeScript

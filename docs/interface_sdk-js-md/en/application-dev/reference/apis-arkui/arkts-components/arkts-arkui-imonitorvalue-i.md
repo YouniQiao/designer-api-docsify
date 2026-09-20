@@ -1,5 +1,9 @@
 # IMonitorValue
 
+```TypeScript
+declare interface IMonitorValue<T>
+```
+
 Define IMonitorValue interface
 
 **Since:** 12

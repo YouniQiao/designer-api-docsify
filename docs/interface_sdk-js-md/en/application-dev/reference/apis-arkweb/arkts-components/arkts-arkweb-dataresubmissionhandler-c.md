@@ -1,5 +1,9 @@
 # DataResubmissionHandler
 
+```TypeScript
+declare class DataResubmissionHandler
+```
+
 Implements the **DataResubmissionHandler** object for resubmitting or canceling the web form data.
 
 **Since:** 9

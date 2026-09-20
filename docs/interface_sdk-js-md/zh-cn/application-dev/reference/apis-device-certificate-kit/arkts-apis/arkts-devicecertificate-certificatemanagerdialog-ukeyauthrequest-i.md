@@ -1,5 +1,9 @@
 # UkeyAuthRequest
 
+```TypeScript
+export interface UkeyAuthRequest
+```
+
 USB Key PIN码认证请求。
 
 **起始版本：** 22

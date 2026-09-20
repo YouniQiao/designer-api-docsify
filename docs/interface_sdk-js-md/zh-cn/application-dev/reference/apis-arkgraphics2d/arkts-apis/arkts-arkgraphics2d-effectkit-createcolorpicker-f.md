@@ -155,6 +155,8 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 ```
 
 
+<a id="createcolorpicker-1"></a>
+
 ## createColorPicker
 
 ```TypeScript
@@ -195,6 +197,8 @@ function createColorPicker(source: image.PixelMap, region: Array<number>): Promi
 参见 [createColorPicker](#createcolorpicker)
 
 
+<a id="createcolorpicker-2"></a>
+
 ## createColorPicker
 
 ```TypeScript
@@ -228,6 +232,8 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 参见 [createColorPicker](#createcolorpicker)
 
+
+<a id="createcolorpicker-3"></a>
 
 ## createColorPicker
 

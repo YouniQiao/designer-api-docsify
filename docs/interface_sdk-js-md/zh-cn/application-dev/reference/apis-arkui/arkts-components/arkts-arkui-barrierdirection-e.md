@@ -1,5 +1,9 @@
 # BarrierDirection
 
+```TypeScript
+declare enum BarrierDirection
+```
+
 定义屏障线的方向。
 
 **起始版本：** 12

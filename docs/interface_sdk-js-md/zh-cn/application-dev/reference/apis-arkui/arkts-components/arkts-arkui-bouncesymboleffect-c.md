@@ -1,5 +1,9 @@
 # BounceSymbolEffect
 
+```TypeScript
+declare class BounceSymbolEffect extends SymbolEffect
+```
+
 BounceSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

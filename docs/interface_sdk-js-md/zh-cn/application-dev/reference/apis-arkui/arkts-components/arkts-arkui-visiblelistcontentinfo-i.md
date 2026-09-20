@@ -1,5 +1,9 @@
 # VisibleListContentInfo
 
+```TypeScript
+declare interface VisibleListContentInfo
+```
+
 用于表示List可见内容区子组件的详细信息。
 
 **起始版本：** 12

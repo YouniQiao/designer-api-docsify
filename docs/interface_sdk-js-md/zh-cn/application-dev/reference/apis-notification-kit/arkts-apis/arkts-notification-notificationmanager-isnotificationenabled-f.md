@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="isnotificationenabled-2"></a>
+
 ## isNotificationEnabled
 
 ```TypeScript
@@ -130,6 +132,8 @@ notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
 });
 ```
 
+
+<a id="isnotificationenabled-3"></a>
 
 ## isNotificationEnabled
 

@@ -1,5 +1,9 @@
 # LayoutInfo
 
+```TypeScript
+declare interface LayoutInfo
+```
+
 Provides the child component layout information.
 
 @interface LayoutInfo

@@ -1,5 +1,9 @@
 # PermissionUsedTypeInfo (System API)
 
+```TypeScript
+interface PermissionUsedTypeInfo
+```
+
 Represents detailed information about the use of a permission.
 
 **Since:** 12

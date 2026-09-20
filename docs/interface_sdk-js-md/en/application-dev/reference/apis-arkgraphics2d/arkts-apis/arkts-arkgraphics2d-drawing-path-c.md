@@ -1,5 +1,9 @@
 # Path
 
+```TypeScript
+class Path
+```
+
 A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
 > **NOTE:** 
@@ -355,6 +359,8 @@ Constructs a path.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 

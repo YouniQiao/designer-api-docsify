@@ -1,5 +1,9 @@
 # AdaptiveColor
 
+```TypeScript
+declare enum AdaptiveColor
+```
+
 Enumerates the adaptive color modes used for the background blur effect.
 
 **Since:** 10

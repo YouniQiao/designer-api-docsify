@@ -1,5 +1,9 @@
 # TicketInfo (System API)
 
+```TypeScript
+interface TicketInfo
+```
+
 Ticket information.
 
 **Since:** 26.0.0

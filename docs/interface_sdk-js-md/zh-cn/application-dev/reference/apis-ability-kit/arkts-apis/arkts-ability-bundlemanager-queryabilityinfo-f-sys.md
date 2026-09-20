@@ -178,6 +178,8 @@ try {
 ```
 
 
+<a id="queryabilityinfo-1"></a>
+
 ## queryAbilityInfo
 
 ```TypeScript
@@ -222,6 +224,8 @@ function queryAbilityInfo(want: Want, abilityFlags: number, userId: number, call
 
 参见 [queryAbilityInfo](#queryabilityinfo)
 
+
+<a id="queryabilityinfo-2"></a>
 
 ## queryAbilityInfo
 
@@ -272,6 +276,8 @@ function queryAbilityInfo(want: Want, abilityFlags: number, userId?: number): Pr
 
 参见 [queryAbilityInfo](#queryabilityinfo)
 
+
+<a id="queryabilityinfo-3"></a>
 
 ## queryAbilityInfo
 

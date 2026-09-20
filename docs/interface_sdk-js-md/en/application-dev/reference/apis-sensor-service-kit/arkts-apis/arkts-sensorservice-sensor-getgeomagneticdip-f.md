@@ -57,6 +57,8 @@ promise.then((data: number) => {
 ```
 
 
+<a id="getgeomagneticdip-1"></a>
+
 ## getGeomagneticDip
 
 ```TypeScript

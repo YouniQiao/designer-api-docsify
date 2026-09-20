@@ -1,5 +1,9 @@
 # ForEach属性/事件
 
+```TypeScript
+declare class ForEachAttribute extends DynamicNode<ForEachAttribute>
+```
+
 支持拖拽排序属性。
 
 **继承/实现关系：** ForEachAttribute extends DynamicNode<ForEachAttribute>

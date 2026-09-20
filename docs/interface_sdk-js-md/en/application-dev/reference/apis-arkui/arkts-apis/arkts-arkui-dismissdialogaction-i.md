@@ -1,5 +1,9 @@
 # DismissDialogAction
 
+```TypeScript
+declare interface DismissDialogAction
+```
+
 Provides information about the action to dismiss the dialog box.
 
 **Since:** 12

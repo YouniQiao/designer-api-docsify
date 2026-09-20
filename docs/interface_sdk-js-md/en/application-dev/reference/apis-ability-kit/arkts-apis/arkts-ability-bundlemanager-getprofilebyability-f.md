@@ -17,7 +17,7 @@ Obtains the JSON string array of the current application's configuration file ba
 > NOTE
 > 
 > If the profile uses the resource reference format, the return value retains this format (for example,
-> **&#36;string:res_id**). You can obtain the referenced resources through related APIs of the
+> **$string:res_id**). You can obtain the referenced resources through related APIs of the
 > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md).
 
 **Since:** 9
@@ -114,6 +114,8 @@ try {
 ```
 
 
+<a id="getprofilebyability-1"></a>
+
 ## getProfileByAbility
 
 ```TypeScript
@@ -125,7 +127,7 @@ Obtains the JSON string array of the current application's configuration file ba
 > NOTE
 > 
 > If the profile uses the resource reference format, the return value retains this format (for example,
-> **&#36;string:res_id**). You can obtain the referenced resources through related APIs of the
+> **$string:res_id**). You can obtain the referenced resources through related APIs of the
 > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md).
 
 **Since:** 9

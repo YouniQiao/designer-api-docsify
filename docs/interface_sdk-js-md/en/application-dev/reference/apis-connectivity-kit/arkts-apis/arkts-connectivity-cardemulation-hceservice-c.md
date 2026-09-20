@@ -1,5 +1,9 @@
 # HceService
 
+```TypeScript
+export class HceService
+```
+
 Provides APIs for implementing HCE, including receiving Application Protocol Data Units (APDUs) from the peer card reader and sending a response. Before using HCE-related APIs, check whether the device supports HCE.
 
 **Since:** 8
@@ -558,6 +562,8 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

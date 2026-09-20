@@ -1,5 +1,9 @@
 # FinishCallbackType
 
+```TypeScript
+declare enum FinishCallbackType
+```
+
 动画中定义onFinish回调的类型。
 
 **起始版本：** 11

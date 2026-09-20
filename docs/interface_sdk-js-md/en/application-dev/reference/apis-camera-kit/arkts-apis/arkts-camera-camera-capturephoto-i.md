@@ -1,5 +1,9 @@
 # CapturePhoto
 
+```TypeScript
+interface CapturePhoto
+```
+
 **CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
 
 **Since:** 23

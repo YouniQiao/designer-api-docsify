@@ -1,5 +1,9 @@
 # NavigationMode
 
+```TypeScript
+declare enum NavigationMode
+```
+
 导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。
 
 > **说明：** 

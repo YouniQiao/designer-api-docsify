@@ -1,5 +1,9 @@
 # DistributedAccountAbility
 
+```TypeScript
+interface DistributedAccountAbility
+```
+
 提供查询和更新分布式账号登录状态方法（使用前需要先获取分布式账号的单实例对象）。
 
 **起始版本：** 7
@@ -85,6 +89,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getosaccountdistributedinfobylocalid-1"></a>
 
 ## getOsAccountDistributedInfoByLocalId
 
@@ -207,6 +213,8 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setosaccountdistributedinfobylocalid-1"></a>
 
 ## setOsAccountDistributedInfoByLocalId
 

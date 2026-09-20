@@ -1,5 +1,9 @@
 # RelativeTimeFormat
 
+```TypeScript
+export class RelativeTimeFormat
+```
+
 提供相对时间格式化的能力。
 
 **起始版本：** 8
@@ -53,6 +57,8 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
   style: 'long'
 });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

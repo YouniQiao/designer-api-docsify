@@ -1,5 +1,9 @@
 # ResourceImageAttachmentOptions
 
+```TypeScript
+declare interface ResourceImageAttachmentOptions
+```
+
 ResourceStr类型图片设置项。
 
 **起始版本：** 15

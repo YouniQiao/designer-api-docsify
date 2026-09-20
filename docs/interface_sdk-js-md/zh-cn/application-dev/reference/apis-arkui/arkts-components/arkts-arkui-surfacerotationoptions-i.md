@@ -1,5 +1,9 @@
 # SurfaceRotationOptions
 
+```TypeScript
+declare interface SurfaceRotationOptions
+```
+
 定义屏幕旋转时是否锁定当前XComponent所持有的surface的方向。
 
 **起始版本：** 12

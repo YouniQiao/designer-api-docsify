@@ -1,5 +1,9 @@
 # AdvancedDialogV2ButtonOptions
 
+```TypeScript
+export declare interface AdvancedDialogV2ButtonOptions
+```
+
 用于初始化AdvancedDialogV2Button对象。
 
 **起始版本：** 18

@@ -1,5 +1,9 @@
 # SideBarContainer properties/events
 
+```TypeScript
+declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -96,6 +100,8 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 | --- | --- | --- | --- |
 | value | number | Yes | Maximum width of the sidebar.<br>Default value: **280vp**<br>Unit: vp<br>Value range: [0, +∞). |
 
+<a id="maxsidebarwidth-1"></a>
+
 ## maxSideBarWidth
 
 ```TypeScript
@@ -176,6 +182,8 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 | --- | --- | --- | --- |
 | value | number | Yes | Minimum width of the sidebar.<br>Unit: vp. Value range: [0, +∞). Default value: In API version 9 and earlier versions, the default value is **200vp**. |
 
+<a id="minsidebarwidth-1"></a>
+
 ## minSideBarWidth
 
 ```TypeScript
@@ -252,7 +260,7 @@ showSideBar(value: boolean)
 
 Specifies whether to display the sidebar.
 
-Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
@@ -329,6 +337,8 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**. |
+
+<a id="sidebarwidth-1"></a>
 
 ## sideBarWidth
 

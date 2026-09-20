@@ -1,5 +1,9 @@
 # InvertOptions
 
+```TypeScript
+declare interface InvertOptions
+```
+
 Describes the options for inverting the foreground color.
 
 **Since:** 11

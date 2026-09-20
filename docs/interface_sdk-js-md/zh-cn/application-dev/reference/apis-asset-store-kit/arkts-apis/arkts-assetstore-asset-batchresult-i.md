@@ -1,5 +1,9 @@
 # BatchResult
 
+```TypeScript
+interface BatchResult
+```
+
 [batchAdd](arkts-assetstore-asset-batchadd-f.md)和[batchUpdate](arkts-assetstore-asset-batchupdate-f.md)批量操作的结果。
 
 **起始版本：** 26.0.0

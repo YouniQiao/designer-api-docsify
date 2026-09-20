@@ -1,5 +1,9 @@
 # DistributedExtensionAbility
 
+```TypeScript
+declare class DistributedExtensionAbility
+```
+
 The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection.
 
 **Since:** 20

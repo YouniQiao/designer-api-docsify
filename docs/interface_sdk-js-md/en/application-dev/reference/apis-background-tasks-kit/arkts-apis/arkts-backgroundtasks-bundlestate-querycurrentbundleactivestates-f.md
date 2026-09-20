@@ -67,6 +67,8 @@ bundleState.queryCurrentBundleActiveStates(0, 20000000000000).then((res: Array<b
 ```
 
 
+<a id="querycurrentbundleactivestates-1"></a>
+
 ## queryCurrentBundleActiveStates
 
 ```TypeScript

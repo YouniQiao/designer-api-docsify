@@ -1,5 +1,9 @@
 # DividerOptions
 
+```TypeScript
+declare interface DividerOptions
+```
+
 分割线的信息。
 
 **起始版本：** 12

@@ -1,6 +1,10 @@
 # UploadTask
 
-上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md)获取，callback形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md)获取。
+```TypeScript
+interface UploadTask
+```
+
+上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1)获取，callback形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md)获取。
 
 **起始版本：** 6
 
@@ -61,6 +65,8 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
   console.info('Succeeded in deleting the upload task.');
 });
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -187,31 +193,6 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
-## off('complete' | 'fail')
-
-```TypeScript
-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
-```
-
-取消订阅上传任务的完成或失败事件。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示上传任务完成。<br>- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | the parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
 ## on('progress')
 
 ```TypeScript
@@ -259,31 +240,6 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 | --- | --- | --- | --- |
 | type | 'headerReceive' | 是 | 订阅的事件类型。<br>- 取值为'headerReceive'，HTTP请求接收到响应时触发该事件。 |
 | callback | (header: object) =&gt; void | 是 | HTTP Response事件的回调函数，返回响应请求内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
-
-## on('complete' | 'fail')
-
-```TypeScript
-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
-```
-
-订阅上传任务完成或失败事件，使用callback异步回调。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.MiscServices.Upload
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'complete' &#124; 'fail' | 是 | 订阅的事件类型，支持的事件包括：`'complete'`&#124;`'fail'`。<br>- `'complete'`：表示上传任务完成，任务完成时触发该事件。 <br>- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **错误码：**
 
@@ -372,6 +328,8 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
   }
 });
 ```
+
+<a id="remove-1"></a>
 
 ## remove
 

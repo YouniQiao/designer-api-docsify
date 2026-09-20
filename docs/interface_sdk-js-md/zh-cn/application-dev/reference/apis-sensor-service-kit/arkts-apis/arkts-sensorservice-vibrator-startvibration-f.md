@@ -54,6 +54,8 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, call
 ```
 
 
+<a id="startvibration-1"></a>
+
 ## startVibration
 
 ```TypeScript

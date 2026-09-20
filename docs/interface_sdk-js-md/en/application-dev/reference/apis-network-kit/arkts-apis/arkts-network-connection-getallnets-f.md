@@ -61,6 +61,8 @@ connection.getAllNets().then((data: connection.NetHandle[]) => {
 ```
 
 
+<a id="getallnets-1"></a>
+
 ## getAllNets
 
 ```TypeScript

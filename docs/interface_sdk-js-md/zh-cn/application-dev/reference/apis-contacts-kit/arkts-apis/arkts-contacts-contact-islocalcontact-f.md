@@ -64,6 +64,8 @@ promise.then((data) => {
 ```
 
 
+<a id="islocalcontact-1"></a>
+
 ## isLocalContact
 
 ```TypeScript
@@ -97,6 +99,8 @@ function isLocalContact(context: Context, id: number, callback: AsyncCallback<bo
 
 参见 [isLocalContact](#islocalcontact)
 
+
+<a id="islocalcontact-2"></a>
 
 ## isLocalContact
 
@@ -132,6 +136,8 @@ function isLocalContact(id: number): Promise<boolean>
 
 参见 [isLocalContact](#islocalcontact)
 
+
+<a id="islocalcontact-3"></a>
 
 ## isLocalContact
 

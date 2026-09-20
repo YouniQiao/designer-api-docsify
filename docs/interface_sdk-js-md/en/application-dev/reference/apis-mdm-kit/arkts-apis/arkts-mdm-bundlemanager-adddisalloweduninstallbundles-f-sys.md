@@ -111,6 +111,8 @@ bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="adddisalloweduninstallbundles-1"></a>
+
 ## addDisallowedUninstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ Adds the applications that cannot be uninstalled by the user specified by **user
 
 See [addDisallowedUninstallBundles](#adddisalloweduninstallbundles)
 
+
+<a id="adddisalloweduninstallbundles-2"></a>
 
 ## addDisallowedUninstallBundles
 

@@ -1,5 +1,9 @@
 # TabTitleBarMenuItem
 
+```TypeScript
+export declare class TabTitleBarMenuItem
+```
+
 Declaration of the menu item on the right side.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # String
 
+```TypeScript
+interface String
+```
+
 ## Modules to Import
 
 ```TypeScript
@@ -80,7 +84,7 @@ Returns the last occurrence of a substring in the string.
 ## localeCompare
 
 ```TypeScript
-localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number
+localeCompare(that: string, locales?: string[], options?: Intl.CollatorOptions): number
 ```
 
 Determines whether two strings are equivalent in the current or specified locale.
@@ -121,6 +125,8 @@ Replaces text in a string, using a regular expression or search string.
 | --- | --- | --- | --- |
 | searchValue | string &#124; RegExp | Yes |  |
 | replaceValue | string | Yes |  |
+
+<a id="replace-1"></a>
 
 ## replace
 
@@ -216,7 +222,7 @@ Returns the substring at the specified location within a String object.
 ## toLocaleLowerCase
 
 ```TypeScript
-toLocaleLowerCase(locales?: string | string[]): string
+toLocaleLowerCase(locales?: string[]): string
 ```
 
 Converts all alphabetic characters to lowercase, taking into account the host environment's current locale.
@@ -230,7 +236,7 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 ## toLocaleUpperCase
 
 ```TypeScript
-toLocaleUpperCase(locales?: string | string[]): string
+toLocaleUpperCase(locales?: string[]): string
 ```
 
 Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale.

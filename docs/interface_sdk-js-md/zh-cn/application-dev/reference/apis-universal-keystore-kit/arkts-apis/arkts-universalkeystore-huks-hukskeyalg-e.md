@@ -1,5 +1,9 @@
 # HuksKeyAlg
 
+```TypeScript
+export enum HuksKeyAlg
+```
+
 表示密钥使用的算法。
 
 **起始版本：** 8

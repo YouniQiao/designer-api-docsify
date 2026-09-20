@@ -1,5 +1,9 @@
 # RouteInfo
 
+```TypeScript
+declare interface RouteInfo
+```
+
 路由信息。
 
 **起始版本：** 10

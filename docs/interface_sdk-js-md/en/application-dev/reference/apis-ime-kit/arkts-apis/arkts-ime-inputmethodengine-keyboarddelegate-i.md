@@ -1,5 +1,9 @@
 # KeyboardDelegate
 
+```TypeScript
+interface KeyboardDelegate
+```
+
 In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
@@ -11,25 +15,6 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
-
-## off('keyDown' | 'keyUp')
-
-```TypeScript
-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
-```
-
-Disables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' &#124; 'keyUp' | Yes | Event type.<br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## off('keyDown' | 'keyUp')
 
@@ -147,25 +132,6 @@ Disables listening for the edit box attribute change event. This API uses an asy
 | --- | --- | --- | --- |
 | type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
 | callback | (attr: EditorAttribute) =&gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
-
-## on('keyDown' | 'keyUp')
-
-```TypeScript
-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
-```
-
-Enables listening for a physical keyboard event. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'keyDown' &#124; 'keyUp' | Yes | Event type.<br>- The value **'keyDown'** indicates the keydown event. <br>- The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 ## on('keyDown' | 'keyUp')
 

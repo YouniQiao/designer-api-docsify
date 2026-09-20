@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="cleanbundlecachefiles-1"></a>
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -148,6 +150,8 @@ No permission is required when the caller clears its own cache.
 
 See [cleanBundleCacheFiles](#cleanbundlecachefiles)
 
+
+<a id="cleanbundlecachefiles-2"></a>
 
 ## cleanBundleCacheFiles
 

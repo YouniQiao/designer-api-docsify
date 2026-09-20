@@ -1,5 +1,9 @@
 # MultiAppMode（系统接口）
 
+```TypeScript
+export enum MultiAppMode
+```
+
 定义应用是否支持多开模式。
 
 **起始版本：** 12

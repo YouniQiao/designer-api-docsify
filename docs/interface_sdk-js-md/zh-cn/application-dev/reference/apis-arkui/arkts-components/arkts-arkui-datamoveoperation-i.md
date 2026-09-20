@@ -1,5 +1,9 @@
 # DataMoveOperation
 
+```TypeScript
+interface DataMoveOperation
+```
+
 移动数据操作。
 
 **起始版本：** 12

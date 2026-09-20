@@ -1,5 +1,9 @@
 # FocusChangeReason
 
+```TypeScript
+enum FocusChangeReason
+```
+
 Enumerates the reasons for the window focus state change.
 
 **Since:** 26.0.1

@@ -92,6 +92,8 @@ try {
 ```
 
 
+<a id="removeautostartapps-1"></a>
+
 ## removeAutoStartApps
 
 ```TypeScript

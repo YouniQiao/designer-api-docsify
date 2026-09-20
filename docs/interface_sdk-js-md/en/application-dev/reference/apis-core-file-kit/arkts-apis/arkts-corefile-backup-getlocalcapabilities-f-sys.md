@@ -107,6 +107,8 @@ async function getLocalCapabilities() {
 ```
 
 
+<a id="getlocalcapabilities-1"></a>
+
 ## getLocalCapabilities
 
 ```TypeScript
@@ -207,6 +209,8 @@ async function getLocalCapabilities() {
 }
 ```
 
+
+<a id="getlocalcapabilities-2"></a>
 
 ## getLocalCapabilities
 

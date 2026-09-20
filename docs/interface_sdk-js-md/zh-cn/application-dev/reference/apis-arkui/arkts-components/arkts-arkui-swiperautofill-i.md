@@ -1,5 +1,9 @@
 # SwiperAutoFill
 
+```TypeScript
+declare interface SwiperAutoFill
+```
+
 自适应属性。
 
 **起始版本：** 10

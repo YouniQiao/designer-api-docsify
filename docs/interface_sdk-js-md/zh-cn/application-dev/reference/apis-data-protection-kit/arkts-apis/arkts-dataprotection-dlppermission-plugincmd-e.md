@@ -1,5 +1,9 @@
 # PluginCmd
 
+```TypeScript
+export enum PluginCmd
+```
+
 可以执行的插件命令枚举。
 
 **起始版本：** 26.0.1

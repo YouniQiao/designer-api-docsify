@@ -1,5 +1,9 @@
 # XComponentOptions
 
+```TypeScript
+declare interface XComponentOptions
+```
+
 Defines the options of the **XComponent**.
 
 **Since:** 12

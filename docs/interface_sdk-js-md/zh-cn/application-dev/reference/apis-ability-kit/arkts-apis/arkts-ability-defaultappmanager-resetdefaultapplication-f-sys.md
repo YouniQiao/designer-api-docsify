@@ -138,6 +138,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 ```
 
 
+<a id="resetdefaultapplication-1"></a>
+
 ## resetDefaultApplication
 
 ```TypeScript
@@ -175,6 +177,8 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 
 参见 [resetDefaultApplication](#resetdefaultapplication)
 
+
+<a id="resetdefaultapplication-2"></a>
 
 ## resetDefaultApplication
 

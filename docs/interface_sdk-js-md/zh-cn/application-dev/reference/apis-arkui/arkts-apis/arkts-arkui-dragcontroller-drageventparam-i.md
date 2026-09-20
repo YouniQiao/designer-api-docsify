@@ -1,5 +1,9 @@
 # DragEventParam
 
+```TypeScript
+interface DragEventParam
+```
+
 拖拽结束返回结果的回调。
 
 **起始版本：** 12

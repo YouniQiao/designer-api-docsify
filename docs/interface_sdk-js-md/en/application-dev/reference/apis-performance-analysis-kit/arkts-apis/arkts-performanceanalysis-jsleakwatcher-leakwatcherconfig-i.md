@@ -1,5 +1,9 @@
 # LeakWatcherConfig
 
+```TypeScript
+export interface LeakWatcherConfig
+```
+
 Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring.
 
 **Since:** 24

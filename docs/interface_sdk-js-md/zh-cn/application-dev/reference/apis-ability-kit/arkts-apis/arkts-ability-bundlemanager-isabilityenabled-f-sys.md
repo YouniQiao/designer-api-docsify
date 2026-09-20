@@ -144,6 +144,8 @@ try {
 ```
 
 
+<a id="isabilityenabled-1"></a>
+
 ## isAbilityEnabled
 
 ```TypeScript
@@ -178,6 +180,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 参见 [isAbilityEnabled](#isabilityenabled)
 
+
+<a id="isabilityenabled-2"></a>
 
 ## isAbilityEnabled
 

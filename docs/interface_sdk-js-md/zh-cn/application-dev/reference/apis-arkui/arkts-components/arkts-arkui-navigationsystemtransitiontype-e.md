@@ -1,5 +1,9 @@
 # NavigationSystemTransitionType
 
+```TypeScript
+declare enum NavigationSystemTransitionType
+```
+
 系统转场动画类型。
 
 > **说明：** 

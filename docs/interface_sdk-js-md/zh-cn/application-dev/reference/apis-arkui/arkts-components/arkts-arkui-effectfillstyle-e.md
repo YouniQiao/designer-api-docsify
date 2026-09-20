@@ -1,5 +1,9 @@
 # EffectFillStyle
 
+```TypeScript
+declare enum EffectFillStyle
+```
+
 EffectFillStyle的枚举值。
 
 **起始版本：** 12

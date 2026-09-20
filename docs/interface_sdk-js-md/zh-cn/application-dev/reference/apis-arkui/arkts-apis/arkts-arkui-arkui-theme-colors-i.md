@@ -1,5 +1,9 @@
 # Colors
 
+```TypeScript
+export declare interface Colors
+```
+
 主题颜色资源。
 
 **起始版本：** 12

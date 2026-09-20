@@ -97,6 +97,8 @@ try {
 ```
 
 
+<a id="insertdata-1"></a>
+
 ## insertData
 
 ```TypeScript

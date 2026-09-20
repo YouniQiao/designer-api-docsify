@@ -1,5 +1,9 @@
 # BundleInstaller（系统接口）
 
+```TypeScript
+interface BundleInstaller
+```
+
 Bundle installer interface, include install uninstall recover.
 
 **起始版本：** 9
@@ -248,6 +252,8 @@ try {
 }
 ```
 
+<a id="destroyappclone-1"></a>
+
 ## destroyAppClone
 
 ```TypeScript
@@ -443,6 +449,8 @@ try {
 }
 ```
 
+<a id="install-1"></a>
+
 ## install
 
 ```TypeScript
@@ -510,6 +518,8 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 **示例**
 
 参见 [install](#install)
+
+<a id="install-2"></a>
 
 ## install
 
@@ -859,6 +869,8 @@ try {
 }
 ```
 
+<a id="recover-1"></a>
+
 ## recover
 
 ```TypeScript
@@ -896,6 +908,8 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 **示例**
 
 参见 [recover](#recover)
+
+<a id="recover-2"></a>
 
 ## recover
 
@@ -1154,6 +1168,8 @@ try {
 }
 ```
 
+<a id="uninstall-1"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -1194,6 +1210,8 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 **示例**
 
 参见 [uninstall](#uninstall)
+
+<a id="uninstall-2"></a>
 
 ## uninstall
 
@@ -1244,6 +1262,8 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 
 参见 [uninstall](#uninstall)
 
+<a id="uninstall-3"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -1281,6 +1301,8 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 **示例**
 
 参见 [uninstall](#uninstall)
+
+<a id="uninstall-4"></a>
 
 ## uninstall
 
@@ -1661,6 +1683,8 @@ try {
 }
 ```
 
+<a id="updatebundleforself-1"></a>
+
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1712,6 +1736,8 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 **示例**
 
 参见 [updateBundleForSelf](#updatebundleforself)
+
+<a id="updatebundleforself-2"></a>
 
 ## updateBundleForSelf
 

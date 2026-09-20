@@ -1,5 +1,9 @@
 # ResourceFlag (System API)
 
+```TypeScript
+enum ResourceFlag
+```
+
 Enumerates the resource information flags, which indicate the type of resource information to obtain.
 
 **Since:** 11

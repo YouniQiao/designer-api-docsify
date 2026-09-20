@@ -1,5 +1,9 @@
 # ImsRttMode（系统接口）
 
+```TypeScript
+export enum ImsRttMode
+```
+
 rtt通话模式
 
 **起始版本：** 22

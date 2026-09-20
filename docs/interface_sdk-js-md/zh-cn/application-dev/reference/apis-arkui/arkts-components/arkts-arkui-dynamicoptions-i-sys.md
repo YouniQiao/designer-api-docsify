@@ -1,5 +1,9 @@
 # DynamicOptions（系统接口）
 
+```TypeScript
+declare interface DynamicOptions
+```
+
 用于在DynamicComponent构造时传递参数。
 
 **起始版本：** 26.0.0

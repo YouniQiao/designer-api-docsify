@@ -1,5 +1,9 @@
 # CommonProgressStyleOptions
 
+```TypeScript
+declare interface CommonProgressStyleOptions
+```
+
 进度条通用样式选项。
 
 **起始版本：** 10

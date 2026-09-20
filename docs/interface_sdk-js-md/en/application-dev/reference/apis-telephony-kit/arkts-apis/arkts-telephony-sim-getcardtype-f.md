@@ -59,6 +59,8 @@ sim.getCardType(0).then((data: sim.CardType) => {
 ```
 
 
+<a id="getcardtype-1"></a>
+
 ## getCardType
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # RichEditorImageSpanOptions
 
+```TypeScript
+declare interface RichEditorImageSpanOptions
+```
+
 设置图片的偏移位置和图片样式信息。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # Stream
 
+```TypeScript
+declare interface Stream
+```
+
 文件流，在调用Stream的方法前，需要先通过createStream()方法（同步或异步）来构建一个Stream实例。
 
 **起始版本：** 6
@@ -58,6 +62,8 @@ ss.close((err: BusinessError) => {
   // do something
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -170,6 +176,8 @@ ss.flush((err: BusinessError) => {
   // do something
 });
 ```
+
+<a id="flush-1"></a>
 
 ## flush
 
@@ -307,6 +315,8 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
 });
 ```
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript
@@ -379,6 +389,8 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
   }
 });
 ```
+
+<a id="read-2"></a>
 
 ## read
 
@@ -598,6 +610,8 @@ ss.write("hello, world", option, (err: BusinessError, bytesWritten: number) => {
 });
 ```
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript
@@ -665,6 +679,8 @@ ss.write("hello, world", option, (err: BusinessError, bytesWritten: number) => {
   }
 });
 ```
+
+<a id="write-2"></a>
 
 ## write
 

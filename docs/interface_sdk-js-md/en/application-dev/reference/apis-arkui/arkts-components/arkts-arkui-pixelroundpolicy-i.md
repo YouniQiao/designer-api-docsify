@@ -1,5 +1,9 @@
 # PixelRoundPolicy
 
+```TypeScript
+declare interface PixelRoundPolicy
+```
+
 Rounding strategy for the boundary of the current component.
 
 @interface PixelRoundPolicy

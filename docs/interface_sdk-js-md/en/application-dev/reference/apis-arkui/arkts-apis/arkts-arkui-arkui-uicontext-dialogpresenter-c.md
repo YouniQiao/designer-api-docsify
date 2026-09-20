@@ -1,5 +1,9 @@
 # DialogPresenter
 
+```TypeScript
+export class DialogPresenter
+```
+
 Provides unified dialog APIs.
 
 **Since:** 26.0.1
@@ -84,6 +88,8 @@ Presents a fixed-style dialog box.
 | --- | --- |
 | [103306](../errorcode-promptAction.md#103306-node-mount-failure-causes-dialog-box-to-fail-to-open) | The dialog cannot be opened due to node mount failure. |
 | [103308](../errorcode-promptAction.md#103308-dialog-box-cannot-be-opened-due-to-subwindow-creation-failure) | The dialog cannot be opened due to subwindow create failure. |
+
+<a id="present-1"></a>
 
 ## present
 

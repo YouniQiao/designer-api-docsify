@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="setkeyboardrepeatdelay-1"></a>
+
 ## setKeyboardRepeatDelay
 
 ```TypeScript

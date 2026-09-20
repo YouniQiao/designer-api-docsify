@@ -70,6 +70,8 @@ statistics.getUidRxBytes(uid).then((stats: number) => {
 ```
 
 
+<a id="getuidrxbytes-1"></a>
+
 ## getUidRxBytes
 
 ```TypeScript

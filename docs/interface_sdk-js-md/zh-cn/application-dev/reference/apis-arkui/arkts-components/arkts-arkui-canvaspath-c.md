@@ -1,5 +1,9 @@
 # CanvasPath
 
+```TypeScript
+declare class CanvasPath
+```
+
 路径对象，提供基本的路径绘制方法。路径相关API的详细说明请参见CanvasRenderingContext2D中的描述。
 
 **起始版本：** 8

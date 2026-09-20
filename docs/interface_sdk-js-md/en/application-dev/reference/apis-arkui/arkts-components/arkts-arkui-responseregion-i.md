@@ -1,5 +1,9 @@
 # ResponseRegion
 
+```TypeScript
+declare interface ResponseRegion
+```
+
 Defines a touch target consisting of an input tool type, touch position, and size.
 
 > **NOTE:** 

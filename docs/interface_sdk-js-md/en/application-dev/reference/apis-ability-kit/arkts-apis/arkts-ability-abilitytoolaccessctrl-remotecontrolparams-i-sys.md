@@ -1,5 +1,9 @@
 # RemoteControlParams (System API)
 
+```TypeScript
+interface RemoteControlParams
+```
+
 Interaction params for remote control
 
 **Since:** 26.0.1

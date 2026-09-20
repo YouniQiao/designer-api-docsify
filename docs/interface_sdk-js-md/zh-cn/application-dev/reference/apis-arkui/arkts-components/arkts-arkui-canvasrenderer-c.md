@@ -1,5 +1,9 @@
 # CanvasRenderer
 
+```TypeScript
+declare class CanvasRenderer extends CanvasPath
+```
+
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
 > **说明：** 
@@ -78,6 +82,8 @@ clip(fillRule?: CanvasFillRule): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要剪切对象的规则。<br>可选参数为："nonzero"，"evenodd"。<br>异常值undefined或null按默认值处理。<br>默认值："nonzero" |
+
+<a id="clip-1"></a>
 
 ## clip
 
@@ -162,6 +168,8 @@ createImageData(sw: number, sh: number): ImageData
 | 类型 | 说明 |
 | --- | --- |
 | [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
+
+<a id="createimagedata-1"></a>
 
 ## createImageData
 
@@ -308,6 +316,8 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void
 | dx | number | 是 | 绘制区域左上角在x轴的位置。<br>异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。<br>默认单位：vp |
 | dy | number | 是 | 绘制区域左上角在y轴的位置。<br>异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。<br>默认单位：vp |
 
+<a id="drawimage-1"></a>
+
 ## drawImage
 
 ```TypeScript
@@ -333,6 +343,8 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh:
 | dy | number | 是 | 绘制区域左上角在y轴的位置。<br>异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。<br>默认单位：vp |
 | dw | number | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时，将图像宽度拉伸或压缩为绘制区域的宽度。<br>负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。<br>默认单位：vp |
 | dh | number | 是 | 绘制区域的高度。当绘制区域的高度和裁剪图像的高度不一致时，将图像高度拉伸或压缩为绘制区域的高度。<br>负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。<br>默认单位：vp |
+
+<a id="drawimage-2"></a>
 
 ## drawImage
 
@@ -395,6 +407,8 @@ fill(fillRule?: CanvasFillRule): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要填充对象的规则。<br>可选参数为："nonzero"，"evenodd"。<br>异常值undefined或null按默认值处理。<br>默认值："nonzero" |
+
+<a id="fill-1"></a>
 
 ## fill
 
@@ -624,6 +638,8 @@ putImageData(imageData: ImageData, dx: number | string, dy: number | string): vo
 | imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 含有像素数据的ImageData对象，用于放到画布上。<br>异常值undefined和null按无效值处理，不进行绘制。 |
 | dx | number &#124; string | 是 | 画布上矩形区域的x轴偏移量。<br>异常值undefined、null、NaN和Infinity按0处理。<br>默认单位：vp |
 | dy | number &#124; string | 是 | 画布上矩形区域的y轴偏移量。<br>异常值undefined、null、NaN和Infinity按0处理。<br>默认单位：vp |
+
+<a id="putimagedata-1"></a>
 
 ## putImageData
 
@@ -881,6 +897,8 @@ setTransform方法使用的参数和transform()方法相同，但setTransform()�
 | e | number | 是 | translateX：指定水平移动值，支持设置负数。<br>API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。<br>默认单位：vp |
 | f | number | 是 | translateY：指定垂直移动值，支持设置负数。<br>API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制；设置null或undefined时，当前接口不生效。API version 18及以后，设置NaN、Infinity、null或undefined时当前接口不生效，其他传入有效参数的绘制方法正常绘制。<br>默认单位：vp |
 
+<a id="settransform-1"></a>
+
 ## setTransform
 
 ```TypeScript
@@ -918,6 +936,8 @@ stroke(): void
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="stroke-1"></a>
 
 ## stroke
 

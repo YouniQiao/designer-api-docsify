@@ -1,5 +1,9 @@
 # PluginComponentOptions（系统接口）
 
+```TypeScript
+declare interface PluginComponentOptions
+```
+
 定义用于构造插件组件的选项。
 
 > **说明：** 

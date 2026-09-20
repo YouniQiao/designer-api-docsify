@@ -1,5 +1,9 @@
 # OnDownloadStartEvent
 
+```TypeScript
+declare interface OnDownloadStartEvent
+```
+
 Defines the callback information for notifying the host app that a file download has started, including the URL, user agent, and file details. It is suitable for scenarios where monitoring and managing file downloads are required, improving download process controllability and user experience.
 
 **Since:** 12

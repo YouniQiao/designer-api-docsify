@@ -1,5 +1,9 @@
 # Cipher
 
+```TypeScript
+interface Cipher
+```
+
 加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。按序调用Cipher实例中的[init()](#init-3)、[update()](#update)、[doFinal()](#dofinal-1)方法完成加解密操作。
 
 <br>完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
@@ -66,6 +70,8 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 ```
 
+<a id="dofinal-1"></a>
+
 ## doFinal
 
 ```TypeScript
@@ -124,6 +130,8 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 ```
 
+<a id="dofinal-3"></a>
+
 ## doFinal
 
 ```TypeScript
@@ -172,6 +180,8 @@ doFinal(data: DataBlob): Promise<DataBlob>
 ```TypeScript
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 ```
+
+<a id="dofinal-4"></a>
 
 ## doFinal
 
@@ -379,6 +389,8 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
 
+<a id="init-1"></a>
+
 ## init
 
 ```TypeScript
@@ -415,6 +427,8 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
+
+<a id="init-2"></a>
 
 ## init
 
@@ -458,6 +472,8 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
+
+<a id="init-3"></a>
 
 ## init
 
@@ -629,6 +645,8 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The data is too long.<br>**适用版本：** 22+ |
+
+<a id="update-2"></a>
 
 ## update
 

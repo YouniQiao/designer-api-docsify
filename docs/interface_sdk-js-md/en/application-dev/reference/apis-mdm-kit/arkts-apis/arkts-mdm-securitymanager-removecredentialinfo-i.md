@@ -1,5 +1,9 @@
 # RemoveCredentialInfo
 
+```TypeScript
+export interface RemoveCredentialInfo
+```
+
 Remove credential information.
 
 **Since:** 26.0.1

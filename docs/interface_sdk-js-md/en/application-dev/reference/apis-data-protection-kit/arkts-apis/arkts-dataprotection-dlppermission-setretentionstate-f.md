@@ -75,6 +75,8 @@ dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the applicati
 ```
 
 
+<a id="setretentionstate-1"></a>
+
 ## setRetentionState
 
 ```TypeScript

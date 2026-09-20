@@ -79,6 +79,8 @@ continuationManager.register(
 ```
 
 
+<a id="register-1"></a>
+
 ## register
 
 ```TypeScript
@@ -108,6 +110,8 @@ Registers the continuation management service and obtains a token. This API uses
 
 See [register](#register)
 
+
+<a id="register-2"></a>
 
 ## register
 

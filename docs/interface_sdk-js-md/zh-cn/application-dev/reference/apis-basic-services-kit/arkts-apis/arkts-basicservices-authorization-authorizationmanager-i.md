@@ -1,5 +1,9 @@
 # AuthorizationManager
 
+```TypeScript
+interface AuthorizationManager
+```
+
 定义授权管理器，用于请求和检查授权。
 
 **起始版本：** 26.0.1

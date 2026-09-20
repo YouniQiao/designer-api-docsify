@@ -1,5 +1,9 @@
 # ScriptItem
 
+```TypeScript
+declare interface ScriptItem
+```
+
 通过[javaScriptOnDocumentStart](arkts-arkweb-web-comp-attribute.md#javascriptondocumentstart)属性注入到Web组件的ScriptItem对象。
 
 @interface ScriptItem [since 11 - 11]

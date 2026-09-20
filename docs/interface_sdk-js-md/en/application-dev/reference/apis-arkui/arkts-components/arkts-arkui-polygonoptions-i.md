@@ -1,5 +1,9 @@
 # PolygonOptions
 
+```TypeScript
+declare interface PolygonOptions
+```
+
 Describes the options of the polygon.
 
 > **NOTE:** 

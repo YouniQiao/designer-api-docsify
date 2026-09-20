@@ -1,5 +1,9 @@
 # PhotoOutput
 
+```TypeScript
+interface PhotoOutput extends CameraOutput
+```
+
 PhotoOutput implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
@@ -41,6 +45,8 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+<a id="capture-1"></a>
+
 ## capture
 
 ```TypeScript
@@ -67,6 +73,8 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 | --- | --- |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="capture-2"></a>
 
 ## capture
 
@@ -96,6 +104,8 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="capture-3"></a>
 
 ## capture
 

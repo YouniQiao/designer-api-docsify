@@ -1,5 +1,9 @@
 # MacroQuery
 
+```TypeScript
+interface MacroQuery
+```
+
 提供查询设备是否支持相机微距拍摄的方法。
 
 **起始版本：** 19

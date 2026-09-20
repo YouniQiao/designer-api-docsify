@@ -1,5 +1,9 @@
 # MetadataOutput
 
+```TypeScript
+interface MetadataOutput extends CameraOutput
+```
+
 MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
@@ -248,6 +252,8 @@ Starts to output metadata. This API uses an asynchronous callback to return the 
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -294,6 +300,8 @@ Stops outputting metadata. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the metadata output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="stop-1"></a>
 
 ## stop
 

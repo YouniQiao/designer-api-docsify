@@ -1,5 +1,9 @@
 # PopupMaskType
 
+```TypeScript
+declare interface PopupMaskType
+```
+
 Sets the color of the mask.
 
 **Since:** 18

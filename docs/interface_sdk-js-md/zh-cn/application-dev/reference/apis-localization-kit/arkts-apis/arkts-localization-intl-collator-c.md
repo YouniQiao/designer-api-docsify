@@ -1,5 +1,9 @@
 # Collator
 
+```TypeScript
+export class Collator
+```
+
 提供字符串排序的能力。
 
 **起始版本：** 8
@@ -79,6 +83,8 @@ import { intl } from '@kit.LocalizationKit';
 // 使用zh-CN区域ID创建Collator对象，localeMatcher设置为lookup，usage设置为sort
 let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

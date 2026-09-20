@@ -66,6 +66,8 @@ notificationManager.getActiveNotificationCount().then((data: number) => {
 ```
 
 
+<a id="getactivenotificationcount-1"></a>
+
 ## getActiveNotificationCount
 
 ```TypeScript
@@ -82,7 +84,7 @@ This API is used to query the number of active notifications published by the cu
 
 **See also:**
 
-[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) sets the notification badge number.
 
 **Return value:**
 

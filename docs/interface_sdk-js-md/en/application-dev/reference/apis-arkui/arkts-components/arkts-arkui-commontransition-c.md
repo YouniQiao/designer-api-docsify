@@ -1,5 +1,9 @@
 # CommonTransition
 
+```TypeScript
+declare class CommonTransition<T>
+```
+
 Defines a common transition animation for page transitions.
 
 **Since:** 7

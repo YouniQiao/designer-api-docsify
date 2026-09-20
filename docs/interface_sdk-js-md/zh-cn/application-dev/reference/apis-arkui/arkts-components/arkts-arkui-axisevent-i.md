@@ -1,5 +1,9 @@
 # AxisEvent
 
+```TypeScript
+declare interface AxisEvent extends BaseEvent
+```
+
 轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

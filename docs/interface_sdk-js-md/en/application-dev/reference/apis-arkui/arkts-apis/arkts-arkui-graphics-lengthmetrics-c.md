@@ -1,5 +1,9 @@
 # LengthMetrics
 
+```TypeScript
+declare class LengthMetrics
+```
+
 Defines the length attribute. When the length unit is PERCENT, the value **1** indicates 100%.
 
 **Since:** 12

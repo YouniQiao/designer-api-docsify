@@ -1,5 +1,9 @@
 # OnWindowNewExtEvent
 
+```TypeScript
+declare interface OnWindowNewExtEvent
+```
+
 Defines the callback information triggered when the web page requests to create a window, including the window feature information and window opening method. It is suitable for scenarios where fine-grained control of new window behavior is required, improving window management customization and user experience.
 
 **Since:** 23

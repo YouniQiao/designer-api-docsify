@@ -55,6 +55,8 @@ bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
 ```
 
 
+<a id="queryappusageprioritygroup-1"></a>
+
 ## queryAppUsagePriorityGroup
 
 ```TypeScript

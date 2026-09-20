@@ -1,5 +1,9 @@
 # ListItemSwipeActionManager
 
+```TypeScript
+declare class ListItemSwipeActionManager
+```
+
 ListItem划出菜单的管理器。
 
 **起始版本：** 21

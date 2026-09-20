@@ -1,5 +1,9 @@
 # FadingEdgeOptions
 
+```TypeScript
+declare interface FadingEdgeOptions
+```
+
 fadingEdge属性边缘渐隐参数对象。
 
 @typedef FadingEdgeOptions

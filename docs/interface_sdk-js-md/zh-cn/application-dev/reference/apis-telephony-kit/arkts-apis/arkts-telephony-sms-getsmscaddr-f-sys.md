@@ -66,6 +66,8 @@ sms.getSmscAddr(slotId).then((data: string) => {
 ```
 
 
+<a id="getsmscaddr-1"></a>
+
 ## getSmscAddr
 
 ```TypeScript

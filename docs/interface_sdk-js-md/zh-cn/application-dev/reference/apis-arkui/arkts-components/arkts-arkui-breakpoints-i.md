@@ -1,5 +1,9 @@
 # BreakPoints
 
+```TypeScript
+declare interface BreakPoints
+```
+
 设置栅格容器组件的断点。更多断点的说明参考[栅格容器断点](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)。
 
 <!--code_no_check-->

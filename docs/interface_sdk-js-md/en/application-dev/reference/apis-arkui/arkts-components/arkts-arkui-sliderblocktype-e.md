@@ -1,5 +1,9 @@
 # SliderBlockType
 
+```TypeScript
+declare enum SliderBlockType
+```
+
 Enumerates the types of the slider in the block direction.
 
 | Name | Value| Description |  

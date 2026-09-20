@@ -1,5 +1,9 @@
 # AccessibilityElement
 
+```TypeScript
+export declare interface AccessibilityElement
+```
+
 无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。
 
 调用AccessibilityElement的方法前，先通过[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow)获取AccessibilityElement实例。
@@ -53,6 +57,8 @@ rootElement.actionNames((err: BusinessError, data: string[]) => {
   console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="actionnames-1"></a>
 
 ## actionNames
 
@@ -125,6 +131,8 @@ rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) =>
   console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="attributenames-1"></a>
 
 ## attributeNames
 
@@ -212,6 +220,8 @@ rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => 
   console.info(`succeeded in getting attribute value, ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="attributevalue-1"></a>
 
 ## attributeValue
 
@@ -507,6 +517,8 @@ rootElement.performAction(actionName, parameters, (err: BusinessError) => {
 });
 ```
 
+<a id="performaction-1"></a>
+
 ## performAction
 
 ```TypeScript
@@ -544,6 +556,8 @@ performAction(actionName: string, parameters?: object): Promise<void>
 **示例**
 
 参见 [performAction](#performaction)
+
+<a id="performaction-2"></a>
 
 ## performAction
 

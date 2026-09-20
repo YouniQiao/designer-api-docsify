@@ -1,5 +1,9 @@
 # SingleKVStore
 
+```TypeScript
+interface SingleKVStore
+```
+
 SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
 
 在调用SingleKVStore的方法前，需要先通过getKVStore构建一个SingleKVStore实例。
@@ -77,6 +81,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="backup-1"></a>
 
 ## backup
 
@@ -251,6 +257,8 @@ try {
 }
 ```
 
+<a id="closeresultset-1"></a>
+
 ## closeResultSet
 
 ```TypeScript
@@ -346,6 +354,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="commit-1"></a>
 
 ## commit
 
@@ -461,6 +471,8 @@ try {
 }
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -562,6 +574,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="deletebackup-1"></a>
 
 ## deleteBackup
 
@@ -762,6 +776,8 @@ try {
 }
 ```
 
+<a id="deletebatch-1"></a>
+
 ## deleteBatch
 
 ```TypeScript
@@ -862,6 +878,8 @@ try {
 }
 ```
 
+<a id="enablesync-1"></a>
+
 ## enableSync
 
 ```TypeScript
@@ -901,7 +919,7 @@ enableSync(enabled: boolean): Promise<void>
 ## get
 
 ```TypeScript
-get(key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 获取指定键的值，使用callback异步回调。
@@ -984,10 +1002,12 @@ try {
 }
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
-get(key: string): Promise<boolean | string | number | number | Uint8Array>
+get(key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 获取指定键的值，使用Promise异步回调。
@@ -1267,6 +1287,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1464,6 +1486,8 @@ try {
 }
 ```
 
+<a id="getentries-2"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1655,6 +1679,8 @@ try {
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -2050,6 +2076,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2252,6 +2280,8 @@ try {
 }
 ```
 
+<a id="getresultset-2"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2448,6 +2478,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -2757,6 +2789,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -2928,6 +2962,8 @@ try {
 }
 ```
 
+<a id="getsecuritylevel-1"></a>
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -2984,6 +3020,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -3037,6 +3075,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -3065,7 +3105,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ## put
 
 ```TypeScript
-put(key: string, value: Uint8Array | string | number | number | boolean, callback: AsyncCallback<void>): void
+put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void
 ```
 
 添加指定类型键值对到数据库，使用callback异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
@@ -3131,10 +3171,12 @@ try {
 }
 ```
 
+<a id="put-1"></a>
+
 ## put
 
 ```TypeScript
-put(key: string, value: Uint8Array | string | number | number | boolean): Promise<void>
+put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 ```
 
 添加指定类型键值对到数据库，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
@@ -3279,6 +3321,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="putbatch-1"></a>
 
 ## putBatch
 
@@ -3472,6 +3516,8 @@ try {
 }
 ```
 
+<a id="removedevicedata-1"></a>
+
 ## removeDeviceData
 
 ```TypeScript
@@ -3582,6 +3628,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="restore-1"></a>
 
 ## restore
 
@@ -3734,6 +3782,8 @@ try {
 }
 ```
 
+<a id="rollback-1"></a>
+
 ## rollback
 
 ```TypeScript
@@ -3832,6 +3882,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="setsyncparam-1"></a>
 
 ## setSyncParam
 
@@ -3940,6 +3992,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="setsyncrange-1"></a>
 
 ## setSyncRange
 
@@ -4072,6 +4126,8 @@ try {
   console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="starttransaction-1"></a>
 
 ## startTransaction
 
@@ -4252,6 +4308,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="sync-1"></a>
 
 ## sync
 

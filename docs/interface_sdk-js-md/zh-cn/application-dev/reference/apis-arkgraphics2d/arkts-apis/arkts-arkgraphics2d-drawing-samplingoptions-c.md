@@ -1,5 +1,9 @@
 # SamplingOptions
 
+```TypeScript
+class SamplingOptions
+```
+
 采样选项对象，用于配置图像采样时的过滤模式，控制图像缩放或变换过程中的像素采样方式。典型使用场景为在Canvas上绘制图像（如drawImage）时，以不同过滤模式决定图像的采样质量与渲染效果。
 
 > **说明：** 
@@ -31,6 +35,8 @@ constructor()
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 

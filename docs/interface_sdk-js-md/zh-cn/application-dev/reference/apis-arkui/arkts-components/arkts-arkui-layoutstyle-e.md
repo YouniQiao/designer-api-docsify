@@ -1,6 +1,10 @@
 # LayoutStyle
 
-[Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode)模式下不滚动时的页签排布方式枚举。
+```TypeScript
+declare enum LayoutStyle
+```
+
+[Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode-2)模式下不滚动时的页签排布方式枚举。
 
 **起始版本：** 10
 

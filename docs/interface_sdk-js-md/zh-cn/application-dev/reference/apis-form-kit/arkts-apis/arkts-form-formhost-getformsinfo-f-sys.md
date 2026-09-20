@@ -109,6 +109,8 @@ try {
 ```
 
 
+<a id="getformsinfo-1"></a>
+
 ## getFormsInfo
 
 ```TypeScript
@@ -153,6 +155,8 @@ function getFormsInfo(
 
 参见 [getFormsInfo](#getformsinfo)
 
+
+<a id="getformsinfo-2"></a>
 
 ## getFormsInfo
 
@@ -199,6 +203,8 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 
 参见 [getFormsInfo](#getformsinfo)
 
+
+<a id="getformsinfo-3"></a>
 
 ## getFormsInfo
 

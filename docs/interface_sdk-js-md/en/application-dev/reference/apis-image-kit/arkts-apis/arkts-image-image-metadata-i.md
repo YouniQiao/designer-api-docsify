@@ -1,5 +1,9 @@
 # Metadata
 
+```TypeScript
+interface Metadata
+```
+
 The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md).
 
 **Since:** 13

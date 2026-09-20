@@ -1,5 +1,9 @@
 # RadioOptions
 
+```TypeScript
+declare interface RadioOptions
+```
+
 单选框的信息。
 
 **起始版本：** 8

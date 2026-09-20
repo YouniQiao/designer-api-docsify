@@ -67,6 +67,8 @@ quickFixManager.revokeQuickFix(bundleName).then(() => {
 ```
 
 
+<a id="revokequickfix-1"></a>
+
 ## revokeQuickFix
 
 ```TypeScript

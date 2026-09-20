@@ -1,5 +1,9 @@
 # Rating属性/事件
 
+```TypeScript
+declare class RatingAttribute extends CommonMethod<RatingAttribute>
+```
+
 **继承/实现关系：** RatingAttribute extends CommonMethod<RatingAttribute>
 
 **起始版本：** 7
@@ -27,6 +31,8 @@ contentModifier(modifier: ContentModifier<RatingConfiguration>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | 是 | 在Rating组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+
+<a id="contentmodifier-1"></a>
 
 ## contentModifier
 
@@ -71,6 +77,8 @@ onChange(callback: (value: number) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | (value: number) =&gt; void | 是 |  |
+
+<a id="onchange-1"></a>
 
 ## onChange
 
@@ -117,6 +125,8 @@ stars(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 设置评分总数。<br>默认值：5 |
+
+<a id="stars-1"></a>
 
 ## stars
 
@@ -167,6 +177,8 @@ starStyle(options: StarStyleOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | 是 | 评分的样式。<br>**说明：** <br>当backgroundUri、foregroundUri或secondaryUri设置的图片路径错误时，图片将保持上次的图片显示结果。如果首次设置错误，则不显示图片。<br>当backgroundUri或foregroundUri设置为undefined或空字符串时，Rating组件将加载系统默认星型图源。<br>当secondaryUri未设置或设置为undefined或空字符串时，将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。<br>**适用版本：** 18 |
+
+<a id="starstyle-1"></a>
 
 ## starStyle
 
@@ -219,6 +231,8 @@ stepSize(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 操作评级的步长。<br>默认值：0.5<br>取值范围：[0.1, stars] |
+
+<a id="stepsize-1"></a>
 
 ## stepSize
 

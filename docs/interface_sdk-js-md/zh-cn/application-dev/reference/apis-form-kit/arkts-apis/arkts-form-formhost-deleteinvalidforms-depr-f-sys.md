@@ -59,6 +59,8 @@ formHost.deleteInvalidForms(formIds).then((data: number) => {
 ```
 
 
+<a id="deleteinvalidforms-1"></a>
+
 ## deleteInvalidForms
 
 ```TypeScript

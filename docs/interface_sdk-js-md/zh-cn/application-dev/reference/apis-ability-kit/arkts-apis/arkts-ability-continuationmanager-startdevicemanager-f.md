@@ -81,6 +81,8 @@ continuationManager.startDeviceManager(
 ```
 
 
+<a id="startdevicemanager-1"></a>
+
 ## startDeviceManager
 
 ```TypeScript
@@ -111,6 +113,8 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 
 参见 [startDeviceManager](#startdevicemanager)
 
+
+<a id="startdevicemanager-2"></a>
 
 ## startDeviceManager
 

@@ -1,5 +1,9 @@
 # IncrementalBackupSession（系统接口）
 
+```TypeScript
+class IncrementalBackupSession
+```
+
 增量备份流程对象，用于支撑应用增量备份流程。
 
 **起始版本：** 12
@@ -214,6 +218,8 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray, infos).then((
   console.error(`appendBundles failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 

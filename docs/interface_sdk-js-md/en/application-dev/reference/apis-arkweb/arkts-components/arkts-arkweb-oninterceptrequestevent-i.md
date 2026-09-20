@@ -1,5 +1,9 @@
 # OnInterceptRequestEvent
 
+```TypeScript
+declare interface OnInterceptRequestEvent
+```
+
 Defines the callback information triggered before the **Web** component loads a URL, including the request details. It is suitable for scenarios where intercepting or modifying network requests is required, improving request control flexibility and security.
 
 **Since:** 12

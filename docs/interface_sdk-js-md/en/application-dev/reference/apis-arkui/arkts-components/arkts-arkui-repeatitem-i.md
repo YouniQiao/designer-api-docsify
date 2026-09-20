@@ -1,5 +1,9 @@
 # RepeatItem
 
+```TypeScript
+interface RepeatItem<T>
+```
+
 Construct a new type for each item.
 
 **Since:** 12

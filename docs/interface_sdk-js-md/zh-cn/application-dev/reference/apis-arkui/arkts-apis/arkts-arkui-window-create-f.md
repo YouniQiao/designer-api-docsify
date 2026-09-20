@@ -99,6 +99,8 @@ promise.then((data) => {
 ```
 
 
+<a id="create-1"></a>
+
 ## create
 
 ```TypeScript
@@ -111,13 +113,13 @@ function create(id: string, type: WindowType): Promise<Window>
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1)(config: Configuration)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -141,6 +143,8 @@ function create(id: string, type: WindowType): Promise<Window>
 参见 [create](#create)
 
 
+<a id="create-2"></a>
+
 ## create
 
 ```TypeScript
@@ -151,13 +155,13 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1)(config: Configuration)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -179,6 +183,8 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 参见 [create](#create)
 
+
+<a id="create-3"></a>
 
 ## create
 

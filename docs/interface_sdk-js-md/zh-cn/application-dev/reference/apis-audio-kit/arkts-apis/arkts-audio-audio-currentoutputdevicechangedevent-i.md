@@ -1,5 +1,9 @@
 # CurrentOutputDeviceChangedEvent
 
+```TypeScript
+interface CurrentOutputDeviceChangedEvent
+```
+
 应用接收到输出设备的变更事件。
 
 **起始版本：** 20

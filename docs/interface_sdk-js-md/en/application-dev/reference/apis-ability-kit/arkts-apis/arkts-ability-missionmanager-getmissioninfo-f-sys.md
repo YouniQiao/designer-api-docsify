@@ -98,6 +98,8 @@ try {
 ```
 
 
+<a id="getmissioninfo-1"></a>
+
 ## getMissionInfo
 
 ```TypeScript

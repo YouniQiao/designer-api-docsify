@@ -1,5 +1,9 @@
 # RemoteAuthPackage（系统接口）
 
+```TypeScript
+interface RemoteAuthPackage
+```
+
 远程授权包。
 
 **起始版本：** 26.0.1

@@ -1,5 +1,9 @@
 # LocalizedBarrierStyle
 
+```TypeScript
+declare interface LocalizedBarrierStyle
+```
+
 Defines the style of a localized barrier, which is used to define the ID, direction, and dependent components of a barrier that supports mirror mode. Child components can reference the barrier by its ID as an anchor for alignment and positioning.
 
 **Since:** 12

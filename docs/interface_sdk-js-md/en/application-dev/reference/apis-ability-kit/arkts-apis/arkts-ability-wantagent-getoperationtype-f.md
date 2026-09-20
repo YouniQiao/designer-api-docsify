@@ -169,6 +169,8 @@ try {
 ```
 
 
+<a id="getoperationtype-1"></a>
+
 ## getOperationType
 
 ```TypeScript

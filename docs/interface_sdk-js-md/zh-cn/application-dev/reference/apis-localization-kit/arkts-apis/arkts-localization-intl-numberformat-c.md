@@ -1,5 +1,9 @@
 # NumberFormat
 
+```TypeScript
+export class NumberFormat
+```
+
 提供标准的数字格式化的能力。
 
 **起始版本：** 6
@@ -41,6 +45,8 @@ import { intl } from '@kit.LocalizationKit';
 // 使用en-GB区域ID创建NumberFormat对象，style设置为decimal，notation设置为scientific
 let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

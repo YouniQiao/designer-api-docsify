@@ -92,6 +92,8 @@ try {
 ```
 
 
+<a id="movemissiontofront-1"></a>
+
 ## moveMissionToFront
 
 ```TypeScript
@@ -124,6 +126,8 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 
 参见 [moveMissionToFront](#movemissiontofront)
 
+
+<a id="movemissiontofront-2"></a>
 
 ## moveMissionToFront
 

@@ -1,5 +1,9 @@
 # ConsoleMessageSource
 
+```TypeScript
+declare enum ConsoleMessageSource
+```
+
 Enumerates the log sources of the console messages.
 
 **Since:** 23

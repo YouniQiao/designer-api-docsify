@@ -1,5 +1,9 @@
 # SheetOptions
 
+```TypeScript
+declare interface SheetOptions extends BindOptions
+```
+
 Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md).
 
 **Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)

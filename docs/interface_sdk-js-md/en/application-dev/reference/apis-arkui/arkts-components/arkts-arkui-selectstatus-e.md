@@ -1,5 +1,9 @@
 # SelectStatus
 
+```TypeScript
+declare enum SelectStatus
+```
+
 Enumerates the selection states of check boxes in the check box group.
 
 **Since:** 8

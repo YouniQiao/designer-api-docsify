@@ -58,6 +58,8 @@ bundle.isApplicationEnabled(bundleName, (err, data) => {
 ```
 
 
+<a id="isapplicationenabled-1"></a>
+
 ## isApplicationEnabled
 
 ```TypeScript

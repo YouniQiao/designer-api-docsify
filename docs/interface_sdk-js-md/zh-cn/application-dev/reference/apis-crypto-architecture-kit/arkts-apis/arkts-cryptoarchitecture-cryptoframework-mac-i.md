@@ -1,5 +1,9 @@
 # Mac
 
+```TypeScript
+interface Mac
+```
+
 消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过[createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md)方法创建一个Mac实例。
 
 **起始版本：** 9
@@ -52,6 +56,8 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 ```TypeScript
 此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 ```
+
+<a id="dofinal-1"></a>
 
 ## doFinal
 
@@ -227,6 +233,8 @@ init(key: SymKey, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
+<a id="init-1"></a>
+
 ## init
 
 ```TypeScript
@@ -328,6 +336,8 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+<a id="update-1"></a>
 
 ## update
 

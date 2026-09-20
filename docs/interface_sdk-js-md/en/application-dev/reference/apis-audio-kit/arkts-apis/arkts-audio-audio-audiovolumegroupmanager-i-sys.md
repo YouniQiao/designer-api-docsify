@@ -1,5 +1,9 @@
 # AudioVolumeGroupManager
 
+```TypeScript
+interface AudioVolumeGroupManager
+```
+
 This interface implements volume management for an audio group.
 
 Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
@@ -74,6 +78,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
   console.error('Fail to adjust the system volume by step.');
 });
 ```
+
+<a id="adjustsystemvolumebystep-1"></a>
 
 ## adjustSystemVolumeByStep
 
@@ -173,6 +179,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).the
   console.error('Fail to adjust the volume by step.');
 });
 ```
+
+<a id="adjustvolumebystep-1"></a>
 
 ## adjustVolumeByStep
 
@@ -335,6 +343,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
 });
 ```
+
+<a id="mute-1"></a>
 
 ## mute
 
@@ -519,6 +529,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).th
 });
 ```
 
+<a id="setringermode-1"></a>
+
 ## setRingerMode
 
 ```TypeScript
@@ -610,6 +622,8 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
   console.info('Promise returned to indicate a successful volume setting.');
 });
 ```
+
+<a id="setvolume-1"></a>
 
 ## setVolume
 

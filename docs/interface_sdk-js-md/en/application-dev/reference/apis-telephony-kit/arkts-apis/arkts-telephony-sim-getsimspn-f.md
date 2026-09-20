@@ -59,6 +59,8 @@ sim.getSimSpn(0).then((data: string) => {
 ```
 
 
+<a id="getsimspn-1"></a>
+
 ## getSimSpn
 
 ```TypeScript

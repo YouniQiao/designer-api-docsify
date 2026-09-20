@@ -104,6 +104,8 @@ bundleManager.getAllowedInstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getallowedinstallbundles-1"></a>
+
 ## getAllowedInstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ Obtains the applications that can be installed by the user specified by **userId
 
 See [getAllowedInstallBundles](#getallowedinstallbundles)
 
+
+<a id="getallowedinstallbundles-2"></a>
 
 ## getAllowedInstallBundles
 

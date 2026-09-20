@@ -1,5 +1,9 @@
 # AVSessionController
 
+```TypeScript
+interface AVSessionController
+```
+
 Session controller,used to control media playback and get media information
 
 @interface AVSessionController [since 10 - 11]
@@ -38,6 +42,8 @@ Destroy the server controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -92,6 +98,8 @@ Get the call status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+<a id="getavcallstate-1"></a>
+
 ## getAVCallState
 
 ```TypeScript
@@ -143,6 +151,8 @@ Get the metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="getavmetadata-1"></a>
 
 ## getAVMetadata
 
@@ -226,6 +236,8 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+<a id="getavplaybackstate-1"></a>
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -307,6 +319,8 @@ Get the playlist of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="getavqueueitems-1"></a>
 
 ## getAVQueueItems
 
@@ -390,6 +404,8 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+<a id="getavqueuetitle-1"></a>
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -471,6 +487,8 @@ Get the call metadata of the current session
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="getcallmetadata-1"></a>
 
 ## getCallMetadata
 
@@ -556,6 +574,8 @@ Get custom media packets provided by the corresponding session
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+<a id="getextras-2"></a>
 
 ## getExtras
 
@@ -647,6 +667,8 @@ Get the [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+<a id="getlaunchability-1"></a>
+
 ## getLaunchAbility
 
 ```TypeScript
@@ -726,6 +748,8 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="getoutputdevice-1"></a>
 
 ## getOutputDevice
 
@@ -892,6 +916,8 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
+<a id="getvalidcommands-1"></a>
+
 ## getValidCommands
 
 ```TypeScript
@@ -973,6 +999,8 @@ Check if the current session is active
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="isactive-1"></a>
 
 ## isActive
 
@@ -2207,6 +2235,8 @@ Send media key event to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 
+<a id="sendavkeyevent-1"></a>
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -2275,6 +2305,8 @@ Send common commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+<a id="sendcommoncommand-2"></a>
 
 ## sendCommonCommand
 
@@ -2345,6 +2377,8 @@ Send control commands to this session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
+
+<a id="sendcontrolcommand-1"></a>
 
 ## sendControlCommand
 
@@ -2517,6 +2551,8 @@ Set the item in the playlist to be played
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+
+<a id="skiptoqueueitem-1"></a>
 
 ## skipToQueueItem
 

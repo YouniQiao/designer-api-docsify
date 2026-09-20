@@ -1,5 +1,9 @@
 # Text properties/events
 
+```TypeScript
+declare class TextAttribute extends CommonMethod<TextAttribute>
+```
+
 In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
 In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
@@ -476,6 +480,8 @@ Sets the text style, covering the font size, font width, font family, and font s
 | --- | --- | --- | --- |
 | value | Font | Yes | Text style. |
 
+<a id="font-1"></a>
+
 ## font
 
 ```TypeScript
@@ -694,6 +700,8 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>Default value: **FontWeight.Normal**<br>Default value on wearable devices: **FontWeight.Regular**<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 
@@ -953,6 +961,8 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | LengthMetrics | Yes | Line spacing. Default value: **0** |
+
+<a id="linespacing-1"></a>
 
 ## lineSpacing
 

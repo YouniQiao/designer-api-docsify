@@ -1,5 +1,9 @@
 # WebKeyboardAppearanceMode
 
+```TypeScript
+declare enum WebKeyboardAppearanceMode
+```
+
 WebView中输入法沉浸模式，用于控制软键盘的显示风格，帮助开发者根据应用主题和用户偏好提供一致性的视觉体验，支持默认外观、系统跟随、浅色和深色沉浸式风格。
 
 **起始版本：** 26.0.0

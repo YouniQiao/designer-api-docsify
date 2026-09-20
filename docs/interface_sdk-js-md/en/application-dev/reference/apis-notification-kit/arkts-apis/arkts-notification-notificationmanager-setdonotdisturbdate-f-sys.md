@@ -124,6 +124,8 @@ notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
 ```
 
 
+<a id="setdonotdisturbdate-1"></a>
+
 ## setDoNotDisturbDate
 
 ```TypeScript
@@ -172,6 +174,8 @@ This API can be properly called on devices other than wearables and TVs. If it i
 See [setDoNotDisturbDate](#setdonotdisturbdate)
 
 
+<a id="setdonotdisturbdate-2"></a>
+
 ## setDoNotDisturbDate
 
 ```TypeScript
@@ -216,6 +220,8 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 See [setDoNotDisturbDate](#setdonotdisturbdate)
 
+
+<a id="setdonotdisturbdate-3"></a>
 
 ## setDoNotDisturbDate
 

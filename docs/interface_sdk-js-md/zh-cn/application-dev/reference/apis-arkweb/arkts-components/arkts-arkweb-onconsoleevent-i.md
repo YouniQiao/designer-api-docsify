@@ -1,5 +1,9 @@
 # OnConsoleEvent
 
+```TypeScript
+declare interface OnConsoleEvent
+```
+
 定义通知宿主应用JavaScript console消息。
 
 **起始版本：** 12

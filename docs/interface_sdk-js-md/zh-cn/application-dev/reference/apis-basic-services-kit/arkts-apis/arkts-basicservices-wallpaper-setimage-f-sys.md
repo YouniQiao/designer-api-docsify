@@ -107,6 +107,8 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 ```
 
 
+<a id="setimage-1"></a>
+
 ## setImage
 
 ```TypeScript

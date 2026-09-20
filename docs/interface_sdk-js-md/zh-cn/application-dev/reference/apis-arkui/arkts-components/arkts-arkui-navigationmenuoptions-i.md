@@ -1,5 +1,9 @@
 # NavigationMenuOptions
 
+```TypeScript
+declare interface NavigationMenuOptions
+```
+
 页面右上角菜单选项。
 
 **起始版本：** 19

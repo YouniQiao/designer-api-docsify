@@ -1,5 +1,9 @@
 # ComponentUtils
 
+```TypeScript
+export class ComponentUtils
+```
+
 提供获取组件绘制区域坐标、大小、平移、缩放、旋转及仿射矩阵等属性信息的能力，适用于需要查询组件绘制区域信息的场景，帮助开发者获取组件布局结果。
 
 > **说明：** 

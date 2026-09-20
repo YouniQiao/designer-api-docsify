@@ -1,5 +1,9 @@
 # MenuGridStyleOptions
 
+```TypeScript
+declare interface MenuGridStyleOptions
+```
+
 Defines the grid style of menu.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # TimePicker属性/事件
 
+```TypeScript
+declare class TimePickerAttribute extends CommonMethod<TimePickerAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -31,6 +35,8 @@ dateTimeOptions(value: DateTimeOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | 是 | 设置时分秒是否显示前导0。<br>默认值：<br>hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；12小时制默认为"numeric"，即没有前导0。<br>minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。<br>second: 默认为"2-digit"，设置second是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。<br> 当hour、minute、second的值设置为undefined时，显示效果与其默认值规则一致。 |
+
+<a id="datetimeoptions-1"></a>
 
 ## dateTimeOptions
 
@@ -97,6 +103,8 @@ disappearTextStyle(value: PickerTextStyle)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号和字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
+
+<a id="disappeartextstyle-1"></a>
 
 ## disappearTextStyle
 
@@ -170,6 +178,8 @@ enableHapticFeedback(enable: boolean)
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 设置是否开启触控反馈。<br>- true：开启触控反馈。<br>- false：不开启触控反馈。<br>默认值：true <br>设置为true后，若系统硬件不支持振动功能，则不会产生振动反馈。 |
 
+<a id="enablehapticfeedback-1"></a>
+
 ## enableHapticFeedback
 
 ```TypeScript
@@ -215,6 +225,8 @@ loop(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否启用循环模式。<br>- true：启用循环模式。<br>- false：不启用循环模式。<br>默认值：true <br>**说明：** 设置了start或end且为非默认值的场景下，loop不生效。 |
+
+<a id="loop-1"></a>
 
 ## loop
 
@@ -263,6 +275,8 @@ onChange(callback: (value: TimePickerResult) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | (value: TimePickerResult) =&gt; void | 是 | Time in 24-hour format. |
+
+<a id="onchange-1"></a>
 
 ## onChange
 
@@ -338,6 +352,8 @@ selectedTextStyle(value: PickerTextStyle)
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
 
+<a id="selectedtextstyle-1"></a>
+
 ## selectedTextStyle
 
 ```TypeScript
@@ -382,6 +398,8 @@ textStyle(value: PickerTextStyle)
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
+<a id="textstyle-1"></a>
+
 ## textStyle
 
 ```TypeScript
@@ -423,6 +441,8 @@ useMilitaryTime(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 时间是否以24小时制展示。<br>- true：时间以24小时制展示。<br>- false：时间以12小时制展示。 |
+
+<a id="usemilitarytime-1"></a>
 
 ## useMilitaryTime
 

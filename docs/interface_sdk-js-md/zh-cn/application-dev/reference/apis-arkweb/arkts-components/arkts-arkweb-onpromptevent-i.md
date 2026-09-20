@@ -1,5 +1,9 @@
 # OnPromptEvent
 
+```TypeScript
+declare interface OnPromptEvent
+```
+
 定义网页触发 `prompt()` 弹窗时的回调函数。
 
 **起始版本：** 12

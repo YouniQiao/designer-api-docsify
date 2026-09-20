@@ -1,5 +1,9 @@
 # QueryPolicy
 
+```TypeScript
+export enum QueryPolicy
+```
+
 查询企业设备管理策略
 
 **起始版本：** 26.0.1

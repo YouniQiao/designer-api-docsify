@@ -1,5 +1,9 @@
 # Button属性/事件
 
+```TypeScript
+declare class ButtonAttribute extends CommonMethod<ButtonAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 支持通用事件。
@@ -108,7 +112,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。<br>默认值：&#36;r('sys.color.font_on_primary')，显示为白色字体。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。<br>默认值：$r('sys.color.font_on_primary')，显示为白色字体。 |
 
 ## fontFamily
 
@@ -152,7 +156,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。<br>默认值：当controlSize为ControlSize.NORMAL时，默认值为`&#36;r('sys.float.Body_L')`。<br>当controlSize为ControlSize.SMALL时，默认值为`&#36;r('sys.float.Body_S')`。<br>**说明：** 设置string类型时，不支持百分比。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。<br>默认值：当controlSize为ControlSize.NORMAL时，默认值为`$r('sys.float.Body_L')`。<br>当controlSize为ControlSize.SMALL时，默认值为`$r('sys.float.Body_S')`。<br>**说明：** 设置string类型时，不支持百分比。 |
 
 ## fontStyle
 

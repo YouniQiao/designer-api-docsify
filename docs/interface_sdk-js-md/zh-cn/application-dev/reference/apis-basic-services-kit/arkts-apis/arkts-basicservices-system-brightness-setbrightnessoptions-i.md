@@ -1,5 +1,9 @@
 # SetBrightnessOptions
 
+```TypeScript
+export interface SetBrightnessOptions
+```
+
 设置屏幕亮度的参数对象。
 
 **起始版本：** 3

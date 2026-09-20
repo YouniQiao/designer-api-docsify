@@ -1,5 +1,9 @@
 # RoundRect
 
+```TypeScript
+class RoundRect
+```
+
 Rounded rectangle.
 
 > **NOTE:** 
@@ -37,6 +41,8 @@ Copies a rounded rectangle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle to be copied. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

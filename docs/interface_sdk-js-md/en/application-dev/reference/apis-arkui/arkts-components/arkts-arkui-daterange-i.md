@@ -1,5 +1,9 @@
 # DateRange
 
+```TypeScript
+declare interface DateRange
+```
+
 Defines a range of dates.
 
 **Since:** 19

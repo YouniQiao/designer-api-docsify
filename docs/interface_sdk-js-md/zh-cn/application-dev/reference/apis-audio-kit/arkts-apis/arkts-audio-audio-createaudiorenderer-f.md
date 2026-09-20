@@ -91,6 +91,8 @@ audio.createAudioRenderer(audioRendererOptions).then((data) => {
 ```
 
 
+<a id="createaudiorenderer-2"></a>
+
 ## createAudioRenderer
 
 ```TypeScript

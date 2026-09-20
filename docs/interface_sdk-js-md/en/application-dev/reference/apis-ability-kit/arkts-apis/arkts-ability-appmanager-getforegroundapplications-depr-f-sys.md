@@ -59,6 +59,8 @@ appManager.getForegroundApplications()
 ```
 
 
+<a id="getforegroundapplications-1"></a>
+
 ## getForegroundApplications
 
 ```TypeScript

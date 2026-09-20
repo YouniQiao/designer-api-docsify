@@ -1,5 +1,9 @@
 # Text属性/事件
 
+```TypeScript
+declare class TextAttribute extends CommonMethod<TextAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
@@ -493,6 +497,8 @@ font(value: Font)
 | --- | --- | --- | --- |
 | value | Font | 是 | 文本样式。 |
 
+<a id="font-1"></a>
+
 ## font
 
 ```TypeScript
@@ -708,6 +714,8 @@ fontWeight(value: number | FontWeight | ResourceStr)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。<br>从API version 20开始，支持Resource类型。<br>**适用版本：** 20 |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 
@@ -974,6 +982,8 @@ lineSpacing(value: LengthMetrics)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | LengthMetrics | 是 | 文本的行间距。<br>取值范围：[0, +∞)。设置值小于0时，取默认值0。 |
+
+<a id="linespacing-1"></a>
 
 ## lineSpacing
 

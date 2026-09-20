@@ -1,5 +1,9 @@
 # DataLoadInfo
 
+```TypeScript
+interface DataLoadInfo
+```
+
 用于描述被加载数据的类型与数量。
 
 - 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。  

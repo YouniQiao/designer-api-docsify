@@ -1,5 +1,9 @@
 # EventResult
 
+```TypeScript
+declare class EventResult
+```
+
 EventResult是ArkWeb Kit中用于通知Web组件同层事件消费结果的类。在同层嵌入场景下，应用与Web组件共同暴露在事件响应链中。EventResult允许应用向Web组件声明自身是否消费了触摸或鼠标事件，从而决定Web组件是否继续处理该事件。当应用设置消费结果为true时，表示应用已消费该事件，Web组件将不再消费；当设置为false时，表示应用不消费该事件，事件将由Web组件消费。EventResult用于设置触摸事件（[TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md)）和鼠标事件（[MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md)，仅限左中右按键）的消费结果，通过MouseButton定义鼠标按键的类型，适用于应用与Web组件同层交互的事件协调场景。
 
 触摸事件示例代码参考[onNativeEmbedGestureEvent](arkts-arkweb-web-comp-attribute.md#onnativeembedgestureevent)。
@@ -43,6 +47,8 @@ setGestureEventResult(result: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | boolean | 是 | 是否消费该手势事件。<br>true表示消费该手势事件，false表示不消费该手势事件。<br>传入null或undefined时为true。 |
+
+<a id="setgestureeventresult-1"></a>
 
 ## setGestureEventResult
 

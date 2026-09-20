@@ -1,5 +1,9 @@
 # TextPickerTextStyle
 
+```TypeScript
+declare interface TextPickerTextStyle extends PickerTextStyle
+```
+
 Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-pickertextstyle-i.md).
 
 **Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)

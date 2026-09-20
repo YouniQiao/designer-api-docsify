@@ -1,5 +1,9 @@
 # PlayMode
 
+```TypeScript
+declare enum PlayMode
+```
+
 Animation playback mode.
 
 **Since:** 7

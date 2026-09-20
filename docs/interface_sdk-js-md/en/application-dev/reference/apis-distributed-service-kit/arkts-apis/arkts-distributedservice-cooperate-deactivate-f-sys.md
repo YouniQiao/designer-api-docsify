@@ -71,6 +71,8 @@ try {
 ```
 
 
+<a id="deactivate-1"></a>
+
 ## deactivate
 
 ```TypeScript
@@ -83,7 +85,7 @@ Stops screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md)(isUnchained: boolean)
+**Substitutes:** [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate-1)(isUnchained: boolean)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

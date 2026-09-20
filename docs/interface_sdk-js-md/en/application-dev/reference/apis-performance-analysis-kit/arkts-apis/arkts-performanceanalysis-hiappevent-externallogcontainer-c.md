@@ -1,5 +1,9 @@
 # ExternalLogContainer
 
+```TypeScript
+class ExternalLogContainer
+```
+
 An external log container including all external log files.
 
 **Since:** 26.0.1

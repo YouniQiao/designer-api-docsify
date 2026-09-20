@@ -1,5 +1,9 @@
 # FetchResult
 
+```TypeScript
+interface FetchResult<T>
+```
+
 文件检索结果集。
 
 **起始版本：** 10
@@ -88,6 +92,8 @@ getAllObjects(callback: AsyncCallback<Array<T>>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getallobjects-1"></a>
+
 ## getAllObjects
 
 ```TypeScript
@@ -168,6 +174,8 @@ getFirstObject(callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getfirstobject-1"></a>
 
 ## getFirstObject
 
@@ -251,6 +259,8 @@ getLastObject(callback: AsyncCallback<T>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getlastobject-1"></a>
+
 ## getLastObject
 
 ```TypeScript
@@ -306,6 +316,8 @@ getNextObject(callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getnextobject-1"></a>
 
 ## getNextObject
 
@@ -363,6 +375,8 @@ getObjectByPosition(index: number, callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getobjectbyposition-1"></a>
 
 ## getObjectByPosition
 

@@ -1,5 +1,9 @@
 # ActionSheetOptions
 
+```TypeScript
+interface ActionSheetOptions
+```
+
 列表选择弹窗的样式。
 
 **起始版本：** 8

@@ -1,5 +1,9 @@
 # Region
 
+```TypeScript
+class Region
+```
+
 区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。
 
 > **说明：** 
@@ -32,6 +36,8 @@ constructor()
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+<a id="constructor-1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -49,6 +55,8 @@ constructor(region: Region)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 是 | 用于拷贝的区域。 |
+
+<a id="constructor-2"></a>
 
 ## constructor
 

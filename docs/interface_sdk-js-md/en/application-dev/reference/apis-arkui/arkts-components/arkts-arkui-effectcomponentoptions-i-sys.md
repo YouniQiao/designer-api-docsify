@@ -1,5 +1,9 @@
 # EffectComponentOptions (System API)
 
+```TypeScript
+declare interface EffectComponentOptions
+```
+
 Sets the construction parameters of the current EffectComponent, including the rendering layer of the EffectComponent.
 
 **Since:** 20

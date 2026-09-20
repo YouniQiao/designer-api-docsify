@@ -1,5 +1,9 @@
 # MediaQuery
 
+```TypeScript
+export class MediaQuery
+```
+
 class MediaQuery
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # RadialGradientStyle
 
+```TypeScript
+declare class RadialGradientStyle extends ShaderStyle
+```
+
 显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
 
 **继承/实现关系：** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)

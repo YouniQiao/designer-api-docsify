@@ -1,5 +1,9 @@
 # HuksKeyStorageType
 
+```TypeScript
+export enum HuksKeyStorageType
+```
+
 Enumerates the key storage modes.
 
 **Since:** 8

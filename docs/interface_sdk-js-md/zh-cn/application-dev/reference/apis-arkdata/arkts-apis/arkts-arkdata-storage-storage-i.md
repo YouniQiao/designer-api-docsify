@@ -1,5 +1,9 @@
 # Storage
 
+```TypeScript
+interface Storage
+```
+
 提供获取和修改存储数据的接口。
 
 下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
@@ -57,6 +61,8 @@ promiseclear.then(() => {
     console.info("Failed to clear the storage with err: " + err);
 })
 ```
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -143,6 +149,8 @@ promisedel.then(() => {
     console.info("Failed to delete startup key failed err: " + err);
 })
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -241,6 +249,8 @@ promiseflush.then(() => {
 })
 ```
 
+<a id="flush-1"></a>
+
 ## flush
 
 ```TypeScript
@@ -327,6 +337,8 @@ promiseget.then((value) => {
     console.info("Failed to get the value of startup with err: " + err);
 })
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -444,6 +456,8 @@ promisehas.then((isExist) => {
     console.info("Failed to check the key of startup with err: " + err);
 })
 ```
+
+<a id="has-1"></a>
 
 ## has
 
@@ -594,6 +608,8 @@ promiseput.then(() => {
     console.info("Failed to put the value of startup with err: " + err);
 })
 ```
+
+<a id="put-1"></a>
 
 ## put
 

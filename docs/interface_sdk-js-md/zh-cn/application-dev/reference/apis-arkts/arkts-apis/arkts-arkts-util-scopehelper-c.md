@@ -1,5 +1,9 @@
 # ScopeHelper
 
+```TypeScript
+class ScopeHelper
+```
+
 提供定义字段有效范围的 API。此类的构造函数创建具有上下限的可比较对象。
 
 **起始版本：** 9
@@ -209,6 +213,8 @@ let result = range.contains(rangeSec);
 console.info("result = " + result);
 // 输出结果：result = false
 ```
+
+<a id="contains-1"></a>
 
 ## contains
 
@@ -422,6 +428,8 @@ console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
 
+<a id="expand-1"></a>
+
 ## expand
 
 ```TypeScript
@@ -542,6 +550,8 @@ let result = range.expand(tempMiDF);
 console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
+
+<a id="expand-2"></a>
 
 ## expand
 
@@ -856,6 +866,8 @@ let result = range.intersect(tempMiDF, tempMidS);
 console.info("result = " + result);
 // 输出结果：result = [35, 39]
 ```
+
+<a id="intersect-1"></a>
 
 ## intersect
 

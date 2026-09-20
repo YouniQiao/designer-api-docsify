@@ -1,5 +1,9 @@
 # FontScope
 
+```TypeScript
+enum FontScope
+```
+
 Enumerates the font scopes.
 
 **Since:** 26.0.1

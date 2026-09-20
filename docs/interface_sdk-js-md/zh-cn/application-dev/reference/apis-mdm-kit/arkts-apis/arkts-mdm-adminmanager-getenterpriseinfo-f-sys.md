@@ -77,6 +77,8 @@ adminManager.getEnterpriseInfo(wantTemp).then((result) => {
 ```
 
 
+<a id="getenterpriseinfo-1"></a>
+
 ## getEnterpriseInfo
 
 ```TypeScript

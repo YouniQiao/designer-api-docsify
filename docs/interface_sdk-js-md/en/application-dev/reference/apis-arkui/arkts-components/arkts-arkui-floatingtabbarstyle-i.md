@@ -1,5 +1,9 @@
 # FloatingTabBarStyle
 
+```TypeScript
+interface FloatingTabBarStyle
+```
+
 Provides an interface for the options for the floating bar mode.
 
 **Since:** 26.0.0

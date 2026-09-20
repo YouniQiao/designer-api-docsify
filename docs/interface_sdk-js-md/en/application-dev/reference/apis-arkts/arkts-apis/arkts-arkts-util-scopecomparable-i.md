@@ -1,5 +1,9 @@
 # ScopeComparable
 
+```TypeScript
+interface ScopeComparable
+```
+
 The values of the **ScopeComparable** type are used to implement the **compareTo** method. Therefore, ensure that the input parameters are comparable.
 
 **Since:** 7

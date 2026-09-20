@@ -1,5 +1,9 @@
 # NavDestinationCommonTitle
 
+```TypeScript
+declare interface NavDestinationCommonTitle
+```
+
 Defines a general title for the **NavDestination** component.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # RadioIndicatorType
 
+```TypeScript
+declare enum RadioIndicatorType
+```
+
 Radio button style.
 
 **Since:** 12

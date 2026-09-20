@@ -1,5 +1,9 @@
 # AudioRendererInfo
 
+```TypeScript
+interface AudioRendererInfo
+```
+
 音频渲染器信息。
 
 **起始版本：** 8

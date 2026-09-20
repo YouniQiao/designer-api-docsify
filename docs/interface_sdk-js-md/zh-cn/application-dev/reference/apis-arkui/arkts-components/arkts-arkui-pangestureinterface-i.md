@@ -1,5 +1,9 @@
 # PanGestureInterface
 
+```TypeScript
+interface PanGestureInterface extends GestureInterface<PanGestureInterface>
+```
+
 滑动手势事件，当滑动的最小距离达到设定的最小值时触发滑动手势事件。
 
 **继承/实现关系：** PanGestureInterface extends GestureInterface<PanGestureInterface>
@@ -33,6 +37,8 @@
 | 类型 | 说明 |
 | --- | --- |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -87,6 +93,8 @@ onActionCancel(event: () => void): PanGestureInterface
 | 类型 | 说明 |
 | --- | --- |
 | [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

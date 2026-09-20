@@ -1,5 +1,9 @@
 # AVRecorder
 
+```TypeScript
+interface AVRecorder
+```
+
 AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance.
 
 For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
@@ -85,6 +89,8 @@ The return value is the maximum amplitude within the duration from the time the 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="getaudiocapturermaxamplitude-1"></a>
+
 ## getAudioCapturerMaxAmplitude
 
 ```TypeScript
@@ -139,6 +145,8 @@ Obtains available encoders. This API uses an asynchronous callback to return the
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="getavailableencoder-1"></a>
+
 ## getAvailableEncoder
 
 ```TypeScript
@@ -191,6 +199,8 @@ This API can be called only after [prepare()](#prepare) is called.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="getavrecorderconfig-2"></a>
 
 ## getAVRecorderConfig
 
@@ -247,6 +257,8 @@ This API can be called only after the [prepare()](#prepare) API is called. If th
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="getcurrentaudiocapturerinfo-2"></a>
 
 ## getCurrentAudioCapturerInfo
 
@@ -307,6 +319,8 @@ This API can be called only after the [prepare()](#prepare) API is called.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="getinputsurface-2"></a>
 
 ## getInputSurface
 
@@ -569,6 +583,8 @@ This API can be called only after the [start()](#start) API is called. You can c
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -628,6 +644,8 @@ Sets audio and video recording parameters. This API uses an asynchronous callbac
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="prepare-1"></a>
 
 ## prepare
 
@@ -692,6 +710,8 @@ After the resources are released, you can no longer perform any operation on the
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -747,6 +767,8 @@ For audio-only recording, you can call [prepare()](#prepare) again for re -recor
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="reset-1"></a>
+
 ## reset
 
 ```TypeScript
@@ -801,6 +823,8 @@ This API can be called only after the [pause()](#pause) API is called.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="resume-1"></a>
 
 ## resume
 
@@ -920,6 +944,8 @@ For audio-only recording, this API can be called only after the [prepare()](#pre
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -979,6 +1005,8 @@ For audio-only recording, you can call [prepare()](#prepare) again for re -recor
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
+
+<a id="stop-1"></a>
 
 ## stop
 

@@ -1,5 +1,9 @@
 # TargetElement
 
+```TypeScript
+interface TargetElement
+```
+
 Defines the target element for privacy computation, including the raw element data and an optional hash algorithm.
 
 **Since:** 26.0.1

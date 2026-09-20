@@ -1,5 +1,9 @@
 # PersistenceV2
 
+```TypeScript
+export declare class PersistenceV2 extends AppStorageV2
+```
+
 继承自[AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)，PersistenceV2提供UI状态的持久化存储能力，支持将应用状态数据持久化到磁盘，在应用重启后恢复数据，适用于需要保留UI状态数据的场景。具体UI使用说明，详见[PersistenceV2(持久化存储UI状态)](../../../ui/state-management/arkts-new-persistencev2.md)。
 
 **继承/实现关系：** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
@@ -71,6 +75,8 @@ static globalConnect<T extends object>(
 ```TypeScript
 如下展示globalConnect持久化Map类型的示例代码：
 ```
+
+<a id="globalconnect-1"></a>
 
 ## globalConnect
 

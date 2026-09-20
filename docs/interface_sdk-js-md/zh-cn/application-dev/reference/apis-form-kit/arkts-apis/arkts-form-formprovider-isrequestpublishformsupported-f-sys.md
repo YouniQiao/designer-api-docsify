@@ -110,6 +110,8 @@ try {
 ```
 
 
+<a id="isrequestpublishformsupported-1"></a>
+
 ## isRequestPublishFormSupported
 
 ```TypeScript

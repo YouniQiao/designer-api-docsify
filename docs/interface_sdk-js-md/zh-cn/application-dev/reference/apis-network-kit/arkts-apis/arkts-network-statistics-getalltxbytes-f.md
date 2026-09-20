@@ -59,6 +59,8 @@ statistics.getAllTxBytes().then((stats: number) => {
 ```
 
 
+<a id="getalltxbytes-1"></a>
+
 ## getAllTxBytes
 
 ```TypeScript

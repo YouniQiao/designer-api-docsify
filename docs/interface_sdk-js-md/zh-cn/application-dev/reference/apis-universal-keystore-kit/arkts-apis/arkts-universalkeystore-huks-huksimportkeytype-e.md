@@ -1,5 +1,9 @@
 # HuksImportKeyType
 
+```TypeScript
+export enum HuksImportKeyType
+```
+
 表示导入密钥的密钥类型，默认为导入公钥，导入对称密钥时不需要该字段。
 
 **起始版本：** 9

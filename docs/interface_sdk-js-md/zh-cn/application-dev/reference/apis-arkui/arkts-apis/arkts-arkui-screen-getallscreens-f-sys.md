@@ -104,6 +104,8 @@ promise.then((data: Array<screen.Screen>) => {
 ```
 
 
+<a id="getallscreens-1"></a>
+
 ## getAllScreens
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # UserRecognitionResult
 
+```TypeScript
+interface UserRecognitionResult
+```
+
 Defines the user recognition result.
 
 **Since:** 26.0.1

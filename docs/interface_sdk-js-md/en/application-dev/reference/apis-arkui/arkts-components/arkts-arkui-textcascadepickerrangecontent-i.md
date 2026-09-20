@@ -1,5 +1,9 @@
 # TextCascadePickerRangeContent
 
+```TypeScript
+declare interface TextCascadePickerRangeContent
+```
+
 Defines the content for multi-column picker options.
 
 **Since:** 10

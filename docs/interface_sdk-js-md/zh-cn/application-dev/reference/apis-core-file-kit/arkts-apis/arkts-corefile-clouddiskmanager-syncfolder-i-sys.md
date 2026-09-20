@@ -1,5 +1,9 @@
 # SyncFolder（系统接口）
 
+```TypeScript
+interface SyncFolder
+```
+
 表示同步根信息。
 
 **起始版本：** 21

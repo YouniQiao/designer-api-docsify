@@ -1,5 +1,9 @@
 # ChipGroupItemOptions
 
+```TypeScript
+export interface ChipGroupItemOptions
+```
+
 Defines the specific attributes of individual chips.
 
 > **NOTE:** 

@@ -124,6 +124,8 @@ try {
 ```
 
 
+<a id="finish-1"></a>
+
 ## finish
 
 ```TypeScript
@@ -158,6 +160,8 @@ function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallba
 
 参见 [finish](#finish)
 
+
+<a id="finish-2"></a>
 
 ## finish
 

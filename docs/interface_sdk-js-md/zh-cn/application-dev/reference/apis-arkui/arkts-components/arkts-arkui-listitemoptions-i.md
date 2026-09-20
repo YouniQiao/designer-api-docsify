@@ -1,5 +1,9 @@
 # ListItemOptions
 
+```TypeScript
+declare interface ListItemOptions
+```
+
 ListItem组件参数。
 
 **起始版本：** 10

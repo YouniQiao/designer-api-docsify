@@ -1,5 +1,9 @@
 # NavigationOperation
 
+```TypeScript
+declare enum NavigationOperation
+```
+
 Enumerates the page redirection types.
 
 **Since:** 11

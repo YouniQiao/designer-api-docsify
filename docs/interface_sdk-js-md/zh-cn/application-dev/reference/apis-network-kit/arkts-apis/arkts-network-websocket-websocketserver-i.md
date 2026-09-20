@@ -1,5 +1,9 @@
 # WebSocketServer
 
+```TypeScript
+export interface WebSocketServer
+```
+
 在调用WebSocketServer方法前，需要先通过[webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)创建一个WebSocketServer。
 
 **起始版本：** 19

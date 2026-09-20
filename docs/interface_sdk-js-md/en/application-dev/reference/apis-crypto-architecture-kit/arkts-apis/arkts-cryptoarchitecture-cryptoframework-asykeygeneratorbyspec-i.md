@@ -1,5 +1,9 @@
 # AsyKeyGeneratorBySpec
 
+```TypeScript
+interface AsyKeyGeneratorBySpec
+```
+
 Asymmetric key generator interface with specified key specifications, defining methods for generating asymmetric keys based on specified key specifications. Before use, you must create an **AsyKeyGeneratorBySpec** instance by using [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md).
 
 **Since:** 10
@@ -129,6 +133,8 @@ function testGenerateKeyPair() {
   });
 }
 ```
+
+<a id="generatekeypair-1"></a>
 
 ## generateKeyPair
 
@@ -442,6 +448,8 @@ function testGeneratePriKey() {
 }
 ```
 
+<a id="generateprikey-1"></a>
+
 ## generatePriKey
 
 ```TypeScript
@@ -671,6 +679,8 @@ function testGeneratePubKey() {
   });
 }
 ```
+
+<a id="generatepubkey-1"></a>
 
 ## generatePubKey
 

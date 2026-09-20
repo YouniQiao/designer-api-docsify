@@ -70,6 +70,8 @@ try {
 ```
 
 
+<a id="deactivatecooperate-1"></a>
+
 ## deactivateCooperate
 
 ```TypeScript

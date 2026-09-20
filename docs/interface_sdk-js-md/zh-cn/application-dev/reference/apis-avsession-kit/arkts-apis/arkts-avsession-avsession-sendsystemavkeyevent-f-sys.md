@@ -64,6 +64,8 @@ avSession.sendSystemAVKeyEvent(event).then(() => {
 ```
 
 
+<a id="sendsystemavkeyevent-1"></a>
+
 ## sendSystemAVKeyEvent
 
 ```TypeScript

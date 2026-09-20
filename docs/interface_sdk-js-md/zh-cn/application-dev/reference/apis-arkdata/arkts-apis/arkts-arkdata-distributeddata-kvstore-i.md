@@ -1,5 +1,9 @@
 # KVStore
 
+```TypeScript
+interface KVStore
+```
+
 KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过getKVStore构建一个KVStore实例。
 
 **起始版本：** 7
@@ -66,6 +70,8 @@ try {
     console.error('Commit e ' + e);
 }
 ```
+
+<a id="commit-1"></a>
 
 ## commit
 
@@ -161,6 +167,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -281,6 +289,8 @@ try {
 }
 ```
 
+<a id="deletebatch-1"></a>
+
 ## deleteBatch
 
 ```TypeScript
@@ -366,6 +376,8 @@ try {
 }
 ```
 
+<a id="enablesync-1"></a>
+
 ## enableSync
 
 ```TypeScript
@@ -421,6 +433,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -467,6 +481,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 是 | 回调函数。 |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -548,6 +564,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="put-1"></a>
 
 ## put
 
@@ -668,6 +686,8 @@ try {
 }
 ```
 
+<a id="putbatch-1"></a>
+
 ## putBatch
 
 ```TypeScript
@@ -752,6 +772,8 @@ try {
 }
 ```
 
+<a id="rollback-1"></a>
+
 ## rollback
 
 ```TypeScript
@@ -831,6 +853,8 @@ try {
     console.error('SetSyncRange e ' + e);
 }
 ```
+
+<a id="setsyncrange-1"></a>
 
 ## setSyncRange
 
@@ -941,6 +965,8 @@ try {
     console.error('startTransaction e ' + e);
 }
 ```
+
+<a id="starttransaction-1"></a>
 
 ## startTransaction
 

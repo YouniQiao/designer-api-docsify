@@ -61,6 +61,8 @@ policy.setBackgroundAllowed(true).then(() => {
 ```
 
 
+<a id="setbackgroundallowed-1"></a>
+
 ## setBackgroundAllowed
 
 ```TypeScript

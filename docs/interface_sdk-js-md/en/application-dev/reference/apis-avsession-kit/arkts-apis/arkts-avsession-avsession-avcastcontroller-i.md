@@ -1,5 +1,9 @@
 # AVCastController
 
+```TypeScript
+interface AVCastController
+```
+
 AVCastController definition used to implement a remote control when a cast is connected
 
 **Since:** 10
@@ -35,6 +39,8 @@ Get the playback status of the current player
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+
+<a id="getavplaybackstate-1"></a>
 
 ## getAVPlaybackState
 
@@ -85,6 +91,8 @@ Get the current playing item
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+
+<a id="getcurrentitem-1"></a>
 
 ## getCurrentItem
 
@@ -245,6 +253,8 @@ Get commands supported by the current cast controller
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+
+<a id="getvalidcommands-1"></a>
 
 ## getValidCommands
 
@@ -1339,6 +1349,8 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<a id="prepare-1"></a>
+
 ## prepare
 
 ```TypeScript
@@ -1431,6 +1443,8 @@ Destroy the controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -1484,6 +1498,8 @@ Send control commands to remote player
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+<a id="sendcontrolcommand-1"></a>
 
 ## sendControlCommand
 
@@ -1578,6 +1594,8 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+<a id="start-1"></a>
 
 ## start
 

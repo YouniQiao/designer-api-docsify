@@ -1,5 +1,9 @@
 # OnPromptEvent
 
+```TypeScript
+declare interface OnPromptEvent
+```
+
 Defines the callback used when a web page triggers **prompt()**.
 
 **Since:** 12

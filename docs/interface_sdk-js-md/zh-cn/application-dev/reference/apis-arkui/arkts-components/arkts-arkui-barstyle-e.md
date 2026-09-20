@@ -1,5 +1,9 @@
 # BarStyle
 
+```TypeScript
+declare enum BarStyle
+```
+
 标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。
 
 **起始版本：** 12

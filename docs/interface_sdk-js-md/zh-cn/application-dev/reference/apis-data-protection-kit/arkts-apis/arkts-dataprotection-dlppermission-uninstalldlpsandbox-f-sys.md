@@ -86,6 +86,8 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 ```
 
 
+<a id="uninstalldlpsandbox-1"></a>
+
 ## uninstallDLPSandbox
 
 ```TypeScript

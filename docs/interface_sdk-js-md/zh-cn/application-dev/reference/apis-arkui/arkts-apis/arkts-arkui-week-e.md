@@ -1,5 +1,9 @@
 # Week
 
+```TypeScript
+declare enum Week
+```
+
 定义星期枚举值。
 
 @enum { number }

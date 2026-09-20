@@ -1,5 +1,9 @@
 # DepthCameraParams (System API)
 
+```TypeScript
+declare interface DepthCameraParams
+```
+
 Camera parameters struct.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # SubmitEvent
 
+```TypeScript
+declare interface SubmitEvent
+```
+
 定义用户提交事件。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # OverlayOffset
 
+```TypeScript
+declare interface OverlayOffset
+```
+
 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。
 
 > **说明：** 

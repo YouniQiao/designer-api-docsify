@@ -1,5 +1,9 @@
 # ButtonRole
 
+```TypeScript
+declare enum ButtonRole
+```
+
 Role of the button.
 
 **Since:** 12

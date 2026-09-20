@@ -1,5 +1,9 @@
 # RemoteGrantStatus (System API)
 
+```TypeScript
+enum RemoteGrantStatus
+```
+
 Remote grant status.
 
 **Since:** 26.0.1

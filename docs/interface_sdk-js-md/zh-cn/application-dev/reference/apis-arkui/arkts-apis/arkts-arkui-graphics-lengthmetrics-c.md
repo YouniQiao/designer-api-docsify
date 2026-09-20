@@ -1,5 +1,9 @@
 # LengthMetrics
 
+```TypeScript
+declare class LengthMetrics
+```
+
 用于设置长度属性，当长度单位为PERCENT时，值为1表示100%。
 
 **起始版本：** 12

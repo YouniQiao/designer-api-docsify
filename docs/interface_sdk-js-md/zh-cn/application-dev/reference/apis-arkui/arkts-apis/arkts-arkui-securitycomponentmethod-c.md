@@ -1,5 +1,9 @@
 # SecurityComponentMethod
 
+```TypeScript
+declare class SecurityComponentMethod<T>
+```
+
 安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  
 - 为PasteButton、SaveButton等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  
 - 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  
@@ -190,6 +194,8 @@ alignRules(alignRule: AlignRuleOption): T
 | --- | --- |
 | T | 安全控件的属性。 |
 
+<a id="alignrules-1"></a>
+
 ## alignRules
 
 ```TypeScript
@@ -238,7 +244,7 @@ backgroundColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件的背景颜色。<br>默认值：&#36;r('sys.color.icon_emphasize')。<br>安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性，防止因控件过度透明导致用户在不知情的情况下触发授权。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件的背景颜色。<br>默认值：$r('sys.color.icon_emphasize')。<br>安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性，防止因控件过度透明导致用户在不知情的情况下触发授权。 |
 
 **返回值：**
 
@@ -303,6 +309,8 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 | 类型 | 说明 |
 | --- | --- |
 | T | 安全控件的属性。 |
+
+<a id="borderradius-1"></a>
 
 ## borderRadius
 
@@ -553,7 +561,7 @@ fontColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上文字的颜色。<br>默认值：&#36;r('sys.color.font_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上文字的颜色。<br>默认值：$r('sys.color.font_on_primary')。 |
 
 **返回值：**
 
@@ -609,7 +617,7 @@ fontSize(value: Dimension): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件上文字的尺寸。<br>未显式指定单位时，单位为fp。<br>默认值：&#36;r('sys.float.ohos_id_text_size_button1')。<br>该参数不支持百分比字符串。<br>设置异常值时该属性不生效。<br>**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | 是 | 安全控件上文字的尺寸。<br>未显式指定单位时，单位为fp。<br>默认值：$r('sys.float.ohos_id_text_size_button1')。<br>该参数不支持百分比字符串。<br>设置异常值时该属性不生效。<br>**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
 
 **返回值：**
 
@@ -759,7 +767,7 @@ iconColor(value: ResourceColor): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上图标的颜色。<br>默认值：&#36;r('sys.color.icon_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 安全控件上图标的颜色。<br>默认值：$r('sys.color.icon_on_primary')。 |
 
 **返回值：**
 

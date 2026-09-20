@@ -1,5 +1,9 @@
 # SubHeaderV2SelectOptions
 
+```TypeScript
+export interface SubHeaderV2SelectOptions
+```
+
 用于构建SubHeaderV2Select对象。
 
 **起始版本：** 18

@@ -80,6 +80,8 @@ try {
 ```
 
 
+<a id="setoverlayenabled-1"></a>
+
 ## setOverlayEnabled
 
 ```TypeScript

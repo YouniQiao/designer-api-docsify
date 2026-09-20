@@ -300,6 +300,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="startbackgroundrunning-1"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
@@ -350,6 +352,8 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 参见 [startBackgroundRunning](#startbackgroundrunning)
 
 
+<a id="startbackgroundrunning-2"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
@@ -398,6 +402,8 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 
 参见 [startBackgroundRunning](#startbackgroundrunning)
 
+
+<a id="startbackgroundrunning-3"></a>
 
 ## startBackgroundRunning
 

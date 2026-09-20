@@ -1,5 +1,9 @@
 # NavRouteMode
 
+```TypeScript
+declare enum NavRouteMode
+```
+
 路由模式。
 
 **起始版本：** 10

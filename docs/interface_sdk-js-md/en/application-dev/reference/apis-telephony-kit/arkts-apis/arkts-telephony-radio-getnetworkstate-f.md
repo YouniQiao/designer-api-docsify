@@ -79,6 +79,8 @@ radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
 ```
 
 
+<a id="getnetworkstate-1"></a>
+
 ## getNetworkState
 
 ```TypeScript
@@ -122,6 +124,8 @@ Obtains the network status of the SIM card in the specified slot. This API uses 
 
 See [getNetworkState](#getnetworkstate)
 
+
+<a id="getnetworkstate-2"></a>
 
 ## getNetworkState
 

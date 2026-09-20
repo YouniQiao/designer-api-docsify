@@ -1,5 +1,9 @@
 # ChildrenMainSize
 
+```TypeScript
+declare class ChildrenMainSize
+```
+
 Indicates children main size.
 
 **Since:** 12

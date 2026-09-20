@@ -1,5 +1,9 @@
 # PromptOptionsV2Config
 
+```TypeScript
+export interface PromptOptionsV2Config
+```
+
 Configuration information interface for PromptOptionsV2. Used to construct PromptOptionsV2 object.
 
 **Since:** 26.0.0

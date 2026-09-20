@@ -1,5 +1,9 @@
 # UserRecognitionStatus
 
+```TypeScript
+enum UserRecognitionStatus
+```
+
 枚举用户识别状态。
 
 **起始版本：** 26.0.1

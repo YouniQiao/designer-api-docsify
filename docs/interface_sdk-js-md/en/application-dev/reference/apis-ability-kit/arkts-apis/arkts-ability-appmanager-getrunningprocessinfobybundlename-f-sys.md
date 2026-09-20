@@ -122,6 +122,8 @@ try {
 ```
 
 
+<a id="getrunningprocessinfobybundlename-1"></a>
+
 ## getRunningProcessInfoByBundleName
 
 ```TypeScript
@@ -156,6 +158,8 @@ Obtains information about the running processes by bundle name and user ID. This
 
 See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
+
+<a id="getrunningprocessinfobybundlename-2"></a>
 
 ## getRunningProcessInfoByBundleName
 
@@ -195,6 +199,8 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
+
+<a id="getrunningprocessinfobybundlename-3"></a>
 
 ## getRunningProcessInfoByBundleName
 

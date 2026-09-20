@@ -1,5 +1,9 @@
 # PreparedInfo
 
+```TypeScript
+interface PreparedInfo
+```
+
 Describes the duration of the video.
 
 > **NOTE:** 

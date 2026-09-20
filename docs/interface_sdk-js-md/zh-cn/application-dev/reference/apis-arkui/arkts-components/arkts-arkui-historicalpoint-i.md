@@ -1,5 +1,9 @@
 # HistoricalPoint
 
+```TypeScript
+declare interface HistoricalPoint
+```
+
 历史点信息。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # FileSelectorMode
 
+```TypeScript
+declare enum FileSelectorMode
+```
+
 Defines the file selector mode, which controls how the file selector is opened and behaves, helping developers implement file operation scenarios such as file upload.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # AddCredentialInfo
 
+```TypeScript
+export interface AddCredentialInfo
+```
+
 Add credential information.
 
 **Since:** 26.0.1

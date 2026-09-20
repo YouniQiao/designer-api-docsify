@@ -1,5 +1,9 @@
 # RemoteInfo (System API)
 
+```TypeScript
+interface RemoteInfo
+```
+
 Remote device information.
 
 **Since:** 26.0.1

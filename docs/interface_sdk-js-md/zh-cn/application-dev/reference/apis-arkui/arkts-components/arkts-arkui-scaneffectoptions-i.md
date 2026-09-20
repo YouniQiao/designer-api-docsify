@@ -1,5 +1,9 @@
 # ScanEffectOptions
 
+```TypeScript
+declare interface ScanEffectOptions
+```
+
 扫光效果选项。
 
 **起始版本：** 10

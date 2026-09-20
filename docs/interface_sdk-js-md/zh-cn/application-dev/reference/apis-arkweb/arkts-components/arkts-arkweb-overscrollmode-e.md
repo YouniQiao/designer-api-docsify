@@ -1,5 +1,9 @@
 # OverScrollMode
 
+```TypeScript
+declare enum OverScrollMode
+```
+
 设置Web的过滚动模式为关闭或开启。
 
 **起始版本：** 11

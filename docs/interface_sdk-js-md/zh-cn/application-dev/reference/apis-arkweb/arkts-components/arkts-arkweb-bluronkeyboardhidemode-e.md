@@ -1,5 +1,9 @@
 # BlurOnKeyboardHideMode
 
+```TypeScript
+declare enum BlurOnKeyboardHideMode
+```
+
 设置手动收起软键盘时Web元素是否失焦。
 
 **起始版本：** 14

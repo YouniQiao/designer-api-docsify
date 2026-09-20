@@ -1,5 +1,9 @@
 # CacheMode
 
+```TypeScript
+declare enum CacheMode
+```
+
 缓存模式。
 
 **起始版本：** 8

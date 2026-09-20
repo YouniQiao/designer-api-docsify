@@ -1,5 +1,9 @@
 # AppStateFilter (System API)
 
+```TypeScript
+export interface AppStateFilter
+```
+
 Describes the filter for application lifecycle change events. It can be used as a parameter of [on](arkts-ability-appmanager-on-f-sys.md#onapplicationstate) to filter application lifecycle change events you want to listen for.
 
 **Since:** 21

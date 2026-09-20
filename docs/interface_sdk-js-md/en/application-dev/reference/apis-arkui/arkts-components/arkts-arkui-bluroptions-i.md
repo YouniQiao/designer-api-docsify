@@ -1,5 +1,9 @@
 # BlurOptions
 
+```TypeScript
+declare interface BlurOptions
+```
+
 Grayscale blur parameters.
 
 **Since:** 11

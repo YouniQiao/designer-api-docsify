@@ -111,6 +111,8 @@ try {
 ```
 
 
+<a id="killprocessesbybundlename-2"></a>
+
 ## killProcessesByBundleName
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # CanvasRenderingContext2D
 
+```TypeScript
+declare class CanvasRenderingContext2D extends CanvasRenderer
+```
+
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
 > **说明：** 
@@ -45,6 +49,8 @@ constructor(settings?: RenderingContextSettings)
 ```TypeScript
 以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

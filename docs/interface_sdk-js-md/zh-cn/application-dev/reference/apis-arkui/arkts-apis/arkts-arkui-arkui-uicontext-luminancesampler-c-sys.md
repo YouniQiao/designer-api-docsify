@@ -1,5 +1,9 @@
 # LuminanceSampler（系统接口）
 
+```TypeScript
+export class LuminanceSampler
+```
+
 设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
 
 > **说明：** 

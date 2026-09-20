@@ -1,5 +1,9 @@
 # BuilderSpanInfo
 
+```TypeScript
+declare interface BuilderSpanInfo
+```
+
 定义**RichEditor**中BuilderSpan的身份与位置信息。
 
 > **说明：** 

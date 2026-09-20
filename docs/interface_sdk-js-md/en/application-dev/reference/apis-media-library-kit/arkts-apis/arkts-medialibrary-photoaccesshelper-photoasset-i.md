@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset
+```
+
 PhotoAsset provides APIs for encapsulating file asset attributes.
 
 **Since:** 10
@@ -77,6 +81,8 @@ Closes the current file. This API uses an asynchronous callback to return the re
 | 13900020 | Invalid argument. |
 | 14000011 | System inner fail |
 
+<a id="close-1"></a>
+
 ## close
 
 ```TypeScript
@@ -145,6 +151,8 @@ Commits the modification on the file metadata to the database. This API uses an 
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
+
+<a id="commitmodify-1"></a>
 
 ## commitModify
 
@@ -247,6 +255,8 @@ The returned FD must be closed when it is not required.
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes:<br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<a id="getreadonlyfd-1"></a>
+
 ## getReadOnlyFd
 
 ```TypeScript
@@ -313,6 +323,8 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getthumbnail-1"></a>
+
 ## getThumbnail
 
 ```TypeScript
@@ -344,6 +356,8 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getthumbnail-2"></a>
 
 ## getThumbnail
 

@@ -1,5 +1,9 @@
 # PublishFormCrossDeviceResult (System API)
 
+```TypeScript
+interface PublishFormCrossDeviceResult
+```
+
 PublishFormCrossDeviceResult
 
 **Since:** 26.0.1

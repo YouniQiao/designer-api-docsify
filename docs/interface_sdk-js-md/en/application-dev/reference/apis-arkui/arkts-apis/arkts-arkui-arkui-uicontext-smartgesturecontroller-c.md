@@ -1,5 +1,9 @@
 # SmartGestureController
 
+```TypeScript
+export class SmartGestureController
+```
+
 Provides the capability to enable smart gestures, monitor them, control the selection state, and dynamically determine smart gesture behavior.
 
 > **NOTE:** 

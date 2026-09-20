@@ -1,5 +1,9 @@
 # ScaleOptions
 
+```TypeScript
+declare interface ScaleOptions
+```
+
 Defines the options of scale.
 
 **Since:** 7

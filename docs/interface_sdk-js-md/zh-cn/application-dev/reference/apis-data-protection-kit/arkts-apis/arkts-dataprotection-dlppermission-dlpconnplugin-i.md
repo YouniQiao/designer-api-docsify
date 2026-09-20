@@ -1,5 +1,9 @@
 # DlpConnPlugin
 
+```TypeScript
+export interface DlpConnPlugin
+```
+
 被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。
 
 > **说明：** 

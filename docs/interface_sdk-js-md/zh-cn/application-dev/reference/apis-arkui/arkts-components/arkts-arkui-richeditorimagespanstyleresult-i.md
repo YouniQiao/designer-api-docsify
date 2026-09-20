@@ -1,5 +1,9 @@
 # RichEditorImageSpanStyleResult
 
+```TypeScript
+declare interface RichEditorImageSpanStyleResult
+```
+
 后端返回的图片样式信息。
 
 **起始版本：** 10

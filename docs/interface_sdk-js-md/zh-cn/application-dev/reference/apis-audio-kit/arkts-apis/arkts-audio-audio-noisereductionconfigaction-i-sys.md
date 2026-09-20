@@ -1,5 +1,9 @@
 # NoiseReductionConfigAction（系统接口）
 
+```TypeScript
+interface NoiseReductionConfigAction
+```
+
 降噪配置操作。
 
 **起始版本：** 26.0.0

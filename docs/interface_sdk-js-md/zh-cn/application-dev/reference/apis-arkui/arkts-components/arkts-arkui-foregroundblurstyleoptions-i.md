@@ -1,5 +1,9 @@
 # ForegroundBlurStyleOptions
 
+```TypeScript
+declare interface ForegroundBlurStyleOptions extends BlurStyleOptions
+```
+
 继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)，内容模糊样式选项。
 
 **继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)

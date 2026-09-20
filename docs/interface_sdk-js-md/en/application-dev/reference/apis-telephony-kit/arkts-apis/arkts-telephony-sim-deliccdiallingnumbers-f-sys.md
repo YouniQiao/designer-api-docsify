@@ -78,6 +78,8 @@ sim.delIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInf
 ```
 
 
+<a id="deliccdiallingnumbers-1"></a>
+
 ## delIccDiallingNumbers
 
 ```TypeScript

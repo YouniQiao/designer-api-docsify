@@ -1,5 +1,9 @@
 # IndicatorStyle
 
+```TypeScript
+interface IndicatorStyle
+```
+
 下划线风格对象。
 
 **起始版本：** 10

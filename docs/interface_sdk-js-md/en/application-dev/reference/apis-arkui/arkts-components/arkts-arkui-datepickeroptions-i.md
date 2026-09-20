@@ -1,5 +1,9 @@
 # DatePickerOptions
 
+```TypeScript
+declare interface DatePickerOptions
+```
+
 Describes the parameters of the date picker.
 
 > **NOTE:** 
@@ -75,7 +79,7 @@ Default value: current system date.
 
 Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
-Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 

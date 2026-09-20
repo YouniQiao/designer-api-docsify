@@ -1,5 +1,9 @@
 # CachedCountOptions
 
+```TypeScript
+declare interface CachedCountOptions
+```
+
 Describes the configuration options for child components to be preloaded.
 
 **Since:** 24
@@ -12,7 +16,7 @@ Describes the configuration options for child components to be preloaded.
 independent?: boolean
 ```
 
-Whether to calculate [cachedCount](arkts-arkui-swiper-comp-attribute.md#cachedcount) by group.
+Whether to calculate [cachedCount](arkts-arkui-swiper-comp-attribute.md#cachedcount-2) by group.
 
 **true**: **cachedCount** is calculated based on the actual number of child components, not by group.
 

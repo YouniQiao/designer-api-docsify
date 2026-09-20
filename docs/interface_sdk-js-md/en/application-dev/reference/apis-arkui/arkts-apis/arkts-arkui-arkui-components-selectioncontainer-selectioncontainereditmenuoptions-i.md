@@ -1,5 +1,9 @@
 # SelectionContainerEditMenuOptions
 
+```TypeScript
+export interface SelectionContainerEditMenuOptions
+```
+
 Defines custom edit menu options for SelectionContainer.
 
 **Since:** 26.0.0

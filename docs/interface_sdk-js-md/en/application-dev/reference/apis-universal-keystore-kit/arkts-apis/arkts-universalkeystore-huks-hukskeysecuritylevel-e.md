@@ -1,5 +1,9 @@
 # HuksKeySecurityLevel
 
+```TypeScript
+export enum HuksKeySecurityLevel
+```
+
 Enumerates the key security levels.
 
 **Since:** 26.0.0

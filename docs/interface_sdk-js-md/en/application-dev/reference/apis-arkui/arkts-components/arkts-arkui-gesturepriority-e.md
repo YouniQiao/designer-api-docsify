@@ -1,5 +1,9 @@
 # GesturePriority
 
+```TypeScript
+declare enum GesturePriority
+```
+
 Enumerates gesture priority levels.
 
 **Since:** 12

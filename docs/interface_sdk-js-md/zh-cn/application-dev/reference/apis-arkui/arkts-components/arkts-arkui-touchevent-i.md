@@ -1,5 +1,9 @@
 # TouchEvent
 
+```TypeScript
+declare interface TouchEvent extends BaseEvent
+```
+
 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。
 
 **继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

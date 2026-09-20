@@ -1,5 +1,9 @@
 # DatePickerMode
 
+```TypeScript
+declare enum DatePickerMode
+```
+
 设置日期展示模式。
 
 **起始版本：** 18

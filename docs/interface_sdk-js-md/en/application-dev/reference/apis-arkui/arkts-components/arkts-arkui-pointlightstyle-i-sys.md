@@ -1,5 +1,9 @@
 # PointLightStyle (System API)
 
+```TypeScript
+declare interface PointLightStyle
+```
+
 You apply a point light style by setting the light source that emits illumination and the components to be illuminated.
 
 **Since:** 11

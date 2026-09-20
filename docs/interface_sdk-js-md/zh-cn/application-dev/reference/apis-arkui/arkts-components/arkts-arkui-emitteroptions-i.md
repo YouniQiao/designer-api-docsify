@@ -1,5 +1,9 @@
 # EmitterOptions
 
+```TypeScript
+interface EmitterOptions<PARTICLE extends ParticleType>
+```
+
 粒子发射器的配置。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # MulticastSocket
 
+```TypeScript
+export interface MulticastSocket extends UDPSocket
+```
+
 Defines a **MulticastSocket** connection. Before calling MulticastSocket APIs, you need to call [socket.constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md) to create a **MulticastSocket** object.
 
 **Inheritance/Implementation:** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md)
@@ -85,6 +89,8 @@ multicast.addMembership(addr).then(() => {
   console.error('addMembership fail');
 });
 ```
+
+<a id="addmembership-1"></a>
 
 ## addMembership
 
@@ -203,6 +209,8 @@ multicast.dropMembership(addr).then(() => {
 });
 ```
 
+<a id="dropmembership-1"></a>
+
 ## dropMembership
 
 ```TypeScript
@@ -311,6 +319,8 @@ multicast.getLoopbackMode().then((value: Boolean) => {
 });
 ```
 
+<a id="getloopbackmode-1"></a>
+
 ## getLoopbackMode
 
 ```TypeScript
@@ -414,6 +424,8 @@ multicast.getMulticastTTL().then((value: Number) => {
   console.error('set ttl failed');
 });
 ```
+
+<a id="getmulticastttl-1"></a>
 
 ## getMulticastTTL
 
@@ -580,6 +592,8 @@ multicast.setLoopbackMode(false).then(() => {
 });
 ```
 
+<a id="setloopbackmode-1"></a>
+
 ## setLoopbackMode
 
 ```TypeScript
@@ -692,6 +706,8 @@ multicast.setMulticastTTL(8).then(() => {
   console.error('set ttl failed');
 });
 ```
+
+<a id="setmulticastttl-1"></a>
 
 ## setMulticastTTL
 

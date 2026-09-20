@@ -64,6 +64,8 @@ promise.then((data: number) => {
 ```
 
 
+<a id="getaltitude-1"></a>
+
 ## getAltitude
 
 ```TypeScript

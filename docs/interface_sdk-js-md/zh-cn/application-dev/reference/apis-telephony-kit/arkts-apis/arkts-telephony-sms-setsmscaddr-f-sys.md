@@ -69,6 +69,8 @@ sms.setSmscAddr(slotId, smscAddr).then(() => {
 ```
 
 
+<a id="setsmscaddr-1"></a>
+
 ## setSmscAddr
 
 ```TypeScript

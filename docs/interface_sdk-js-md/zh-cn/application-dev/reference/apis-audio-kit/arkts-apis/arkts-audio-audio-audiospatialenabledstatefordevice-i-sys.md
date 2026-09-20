@@ -1,5 +1,9 @@
 # AudioSpatialEnabledStateForDevice（系统接口）
 
+```TypeScript
+interface AudioSpatialEnabledStateForDevice
+```
+
 监听设备空间音频开关状态。
 
 @interface AudioSpatialEnabledStateForDevice

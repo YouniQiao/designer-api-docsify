@@ -1,5 +1,9 @@
 # CustomComponent
 
+```TypeScript
+declare class CustomComponent extends BaseCustomComponent
+```
+
 自定义组件
 
 @extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]

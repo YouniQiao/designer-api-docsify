@@ -1,5 +1,9 @@
 # Scroller
 
+```TypeScript
+declare class Scroller
+```
+
 可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到ArcList、ArcScrollBar、List、Scroll、ScrollBar、Grid、WaterFlow上。
 
 > **说明：** 
@@ -357,6 +361,8 @@ scrollPage(value: ScrollPageOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | 是 | 设置翻页模式。包含next（是否向下翻页）和animation（是否开启翻页动画）字段，用于指定翻页行为。<br>**适用版本：** 14 |
+
+<a id="scrollpage-1"></a>
 
 ## scrollPage
 

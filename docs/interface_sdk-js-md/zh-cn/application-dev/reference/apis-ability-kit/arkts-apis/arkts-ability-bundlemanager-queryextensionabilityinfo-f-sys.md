@@ -154,6 +154,8 @@ try {
 ```
 
 
+<a id="queryextensionabilityinfo-1"></a>
+
 ## queryExtensionAbilityInfo
 
 ```TypeScript
@@ -198,6 +200,8 @@ function queryExtensionAbilityInfo(want: Want, extensionAbilityType: ExtensionAb
 
 参见 [queryExtensionAbilityInfo](#queryextensionabilityinfo)
 
+
+<a id="queryextensionabilityinfo-2"></a>
 
 ## queryExtensionAbilityInfo
 

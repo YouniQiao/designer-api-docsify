@@ -1,5 +1,9 @@
 # LazyWaterFlowLayoutAttribute
 
+```TypeScript
+export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>
+```
+
 定义懒加载瀑布流布局属性。
 
 @extends CommonMethod&lt;T&gt;

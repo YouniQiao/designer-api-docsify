@@ -1,5 +1,9 @@
 # ImageAttachment
 
+```TypeScript
+declare class ImageAttachment
+```
+
 图片对象说明。
 
 **起始版本：** 12
@@ -27,6 +31,8 @@ constructor(value: ImageAttachmentInterface)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

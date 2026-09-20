@@ -1,5 +1,9 @@
 # SpringMotion (System API)
 
+```TypeScript
+declare class SpringMotion
+```
+
 Spring animation model. You can build a spring animation based on the start point, end point, initial speed, and spring attributes.
 
 **Since:** 7

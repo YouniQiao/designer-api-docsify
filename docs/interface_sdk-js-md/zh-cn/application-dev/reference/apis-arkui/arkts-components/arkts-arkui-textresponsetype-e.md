@@ -1,5 +1,9 @@
 # TextResponseType
 
+```TypeScript
+declare enum TextResponseType
+```
+
 选择菜单的响应类型。
 
 > **说明：** 

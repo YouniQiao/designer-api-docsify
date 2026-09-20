@@ -1,5 +1,9 @@
 # InputMethodController
 
+```TypeScript
+interface InputMethodController
+```
+
 下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。<br> <br>InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作：<br> <br>- 绑定管理：通过[attach](#attach)建立与输入法的绑定，通过[detach](#detach)解除绑定。attach和detach必须配对使用。<br>- 键盘控制：通过[showTextInput](#showtextinput)拉起软键盘进入编辑状态，通过[hideTextInput](#hidetextinput)隐藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。<br>- 编辑框状态同步：通过[updateCursor](#updatecursor)、[changeSelection](#changeselection)、[updateAttribute](#updateattribute)等接口向输入法同步光标、选区、属性等编辑框状态信息。<br>- 事件订阅：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。<br> <br>典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>  
 > **说明：** <br>
 > <br>
@@ -27,7 +31,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<vo
 > 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
 > <br>
 > 当自绘控件所在窗口通过<br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1) <br>
 > 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
@@ -102,6 +106,8 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 });
 ```
 
+<a id="attach-1"></a>
+
 ## attach
 
 ```TypeScript
@@ -114,7 +120,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 > 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
 > <br>
 > 当自绘控件所在窗口通过<br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1) <br>
 > 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
@@ -147,6 +153,8 @@ attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 
 参见 [attach](#attach)
 
+<a id="attach-2"></a>
+
 ## attach
 
 ```TypeScript
@@ -159,7 +167,7 @@ attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: Req
 > 需要先调用此接口，完成自绘控件与输入法的绑定，才能使用以下功能：显示/隐藏键盘、更新光标信息、更改编辑框选中范围、保存配置信息、监听处理由输入法应用发送的信息或命令等。<br>
 > <br>
 > 当自绘控件所在窗口通过<br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable) <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1) <br>
 > 设置为不可获焦窗口时，系统将无法保证自绘输入控件与输入法正常交互。若开发者希望在不可获焦窗口中绘制输入框，建议参考<br>
 > [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。
 
@@ -308,6 +316,8 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 });
 ```
 
+<a id="changeselection-1"></a>
+
 ## changeSelection
 
 ```TypeScript
@@ -398,6 +408,8 @@ inputMethod.getController().detach().then(() => {
   console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="detach-1"></a>
 
 ## detach
 
@@ -535,6 +547,8 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 });
 ```
 
+<a id="hidesoftkeyboard-1"></a>
+
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -626,6 +640,8 @@ inputMethod.getController().hideTextInput().then(() => {
   console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="hidetextinput-1"></a>
 
 ## hideTextInput
 
@@ -1327,7 +1343,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | 否 | 该对象通过[onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage-1)接收来自输入法应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethod-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -1468,6 +1484,8 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 });
 ```
 
+<a id="setcallingwindow-1"></a>
+
 ## setCallingWindow
 
 ```TypeScript
@@ -1574,6 +1592,8 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
 });
 ```
 
+<a id="showsoftkeyboard-1"></a>
+
 ## showSoftKeyboard
 
 ```TypeScript
@@ -1674,6 +1694,8 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 });
 ```
 
+<a id="showtextinput-1"></a>
+
 ## showTextInput
 
 ```TypeScript
@@ -1706,6 +1728,8 @@ showTextInput(): Promise<void>
 **示例**
 
 参见 [showTextInput](#showtextinput)
+
+<a id="showtextinput-2"></a>
 
 ## showTextInput
 
@@ -1803,6 +1827,8 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 });
 ```
 
+<a id="stopinput-1"></a>
+
 ## stopInput
 
 ```TypeScript
@@ -1892,6 +1918,8 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 });
 ```
 
+<a id="stopinputsession-1"></a>
+
 ## stopInputSession
 
 ```TypeScript
@@ -1977,6 +2005,8 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
   console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="updateattribute-1"></a>
 
 ## updateAttribute
 
@@ -2084,6 +2114,8 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
   console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="updatecursor-1"></a>
 
 ## updateCursor
 

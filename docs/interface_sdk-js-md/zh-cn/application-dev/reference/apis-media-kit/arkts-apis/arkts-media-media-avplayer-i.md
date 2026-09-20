@@ -1,5 +1,9 @@
 # AVPlayer
 
+```TypeScript
+interface AVPlayer
+```
+
 播放管理类，用于管理和播放媒体资源。支持音视频播放、播放控制（播放、暂停、停止、跳转、倍速等）、状态管理和事件监听。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个AVPlayer实例。
 
 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。[on('stateChange')](#onstatechange)：监听播放状态机AVPlayerState切换。[on('error')](#onerror)：监听错误事件。
@@ -565,6 +569,8 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+
+<a id="gettrackdescription-1"></a>
 
 ## getTrackDescription
 
@@ -1805,6 +1811,8 @@ pause(callback: AsyncCallback<void>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -1856,6 +1864,8 @@ play(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+
+<a id="play-1"></a>
 
 ## play
 
@@ -1909,6 +1919,8 @@ prepare(callback: AsyncCallback<void>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by callback. |
+
+<a id="prepare-1"></a>
 
 ## prepare
 
@@ -1964,6 +1976,8 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+
+<a id="release-1"></a>
 
 ## release
 
@@ -2055,6 +2069,8 @@ reset(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+
+<a id="reset-1"></a>
 
 ## reset
 
@@ -2594,6 +2610,8 @@ stop(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+
+<a id="stop-1"></a>
 
 ## stop
 

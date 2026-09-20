@@ -1,5 +1,9 @@
 # HostDeviceType
 
+```TypeScript
+enum HostDeviceType
+```
+
 Enumerates the remote camera types.
 
 **Since:** 15

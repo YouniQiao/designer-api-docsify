@@ -65,6 +65,8 @@ sharing
 ```
 
 
+<a id="issharing-1"></a>
+
 ## isSharing
 
 ```TypeScript

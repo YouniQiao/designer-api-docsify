@@ -1,5 +1,9 @@
 # ComputedBarAttribute
 
+```TypeScript
+declare interface ComputedBarAttribute
+```
+
 滚动条位置和长度对象。
 
 **起始版本：** 10

@@ -67,6 +67,8 @@ sim.getSimIccId(0).then((data:string) => {
 ```
 
 
+<a id="getsimiccid-1"></a>
+
 ## getSimIccId
 
 ```TypeScript

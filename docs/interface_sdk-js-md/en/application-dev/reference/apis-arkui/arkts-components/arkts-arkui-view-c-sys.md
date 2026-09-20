@@ -1,5 +1,9 @@
 # View (System API)
 
+```TypeScript
+declare class View
+```
+
 View
 
 **Since:** 7

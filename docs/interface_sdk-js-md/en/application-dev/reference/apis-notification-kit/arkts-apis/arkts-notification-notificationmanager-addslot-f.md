@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="addslot-2"></a>
+
 ## addSlot
 
 ```TypeScript
@@ -104,6 +106,8 @@ notificationManager.addSlot(notificationSlot).then(() => {
 ```
 
 
+<a id="addslot-3"></a>
+
 ## addSlot
 
 ```TypeScript
@@ -122,7 +126,7 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 [getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of a specified type for this application.
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot-1) removes a notification slot of a specified type for this application.
 
 [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notificationslots for this application.
 

@@ -80,6 +80,8 @@ radio.getCellInformation(slotId).then((data: Array<radio.CellInformation>) => {
 ```
 
 
+<a id="getcellinformation-1"></a>
+
 ## getCellInformation
 
 ```TypeScript
@@ -124,6 +126,8 @@ Get the current cell information.
 
 参见 [getCellInformation](#getcellinformation)
 
+
+<a id="getcellinformation-2"></a>
 
 ## getCellInformation
 

@@ -1,5 +1,9 @@
 # ChipGroupV2Padding
 
+```TypeScript
+export declare class ChipGroupV2Padding
+```
+
 Defines the top and bottom padding of **ChipGroupV2**, which is used to control its overall height.
 
 **Since:** 26.0.0

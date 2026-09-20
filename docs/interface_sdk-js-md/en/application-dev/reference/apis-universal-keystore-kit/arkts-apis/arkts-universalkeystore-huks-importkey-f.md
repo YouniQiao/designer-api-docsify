@@ -125,6 +125,8 @@ let result = huks.importKey(keyAlias, huksOptions);
 ```
 
 
+<a id="importkey-1"></a>
+
 ## importKey
 
 ```TypeScript
@@ -137,7 +139,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [importKeyItem](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

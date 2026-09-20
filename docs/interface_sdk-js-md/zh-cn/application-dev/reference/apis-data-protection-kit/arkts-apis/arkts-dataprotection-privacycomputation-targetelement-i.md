@@ -1,5 +1,9 @@
 # TargetElement
 
+```TypeScript
+interface TargetElement
+```
+
 定义隐私计算的目标元素，包括原始元素数据和可选的哈希算法。
 
 **起始版本：** 26.0.1

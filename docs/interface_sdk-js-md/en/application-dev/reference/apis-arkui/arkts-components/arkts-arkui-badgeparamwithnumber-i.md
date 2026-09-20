@@ -1,5 +1,9 @@
 # BadgeParamWithNumber
 
+```TypeScript
+declare interface BadgeParamWithNumber extends BadgeParam
+```
+
 Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**.
 
 **Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md)

@@ -1,5 +1,9 @@
 # EdgeEffectOptions
 
+```TypeScript
+declare interface EdgeEffectOptions
+```
+
 edgeEffect属性参数对象。
 
 @interface EdgeEffectOptions

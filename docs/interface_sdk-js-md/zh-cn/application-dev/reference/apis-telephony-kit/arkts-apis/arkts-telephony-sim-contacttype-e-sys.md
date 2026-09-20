@@ -1,5 +1,9 @@
 # ContactType（系统接口）
 
+```TypeScript
+export enum ContactType
+```
+
 Indicates the contact types.
 
 **起始版本：** 8

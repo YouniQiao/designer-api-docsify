@@ -1,5 +1,9 @@
 # EmbeddedDpiFollowStrategy
 
+```TypeScript
+declare enum EmbeddedDpiFollowStrategy
+```
+
 Enumeration of different types of EmbeddedDpiFollowStrategy.
 
 **Since:** 26.0.0

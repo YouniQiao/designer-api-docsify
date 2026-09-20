@@ -1,5 +1,9 @@
 # RichEditorDeleteValue
 
+```TypeScript
+declare interface RichEditorDeleteValue
+```
+
 Defines information about the deletion operation and the content to be deleted.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # DynamicNode
 
+```TypeScript
+declare class DynamicNode<T>
+```
+
 Define DynamicNode.
 
 **起始版本：** 12
@@ -33,6 +37,8 @@ onMove(handler: Optional<OnMoveHandler>): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+<a id="onmove-1"></a>
 
 ## onMove
 

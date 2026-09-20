@@ -1,5 +1,9 @@
 # TextMarqueeOptions
 
+```TypeScript
+declare interface TextMarqueeOptions
+```
+
 Describes the initialization options of the **Marquee** component.
 
 **Since:** 18

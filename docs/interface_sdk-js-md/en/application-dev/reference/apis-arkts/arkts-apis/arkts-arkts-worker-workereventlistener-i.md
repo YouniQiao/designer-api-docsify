@@ -1,5 +1,9 @@
 # WorkerEventListener
 
+```TypeScript
+export interface WorkerEventListener
+```
+
 Implements event listening.
 
 **Since:** 9

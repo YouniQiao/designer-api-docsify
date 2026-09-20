@@ -1,5 +1,9 @@
 # CloudAsset（系统接口）
 
+```TypeScript
+export interface CloudAsset extends relationalStore.Asset
+```
+
 云资产的信息。
 
 **继承/实现关系：** CloudAsset extends relationalStore.Asset

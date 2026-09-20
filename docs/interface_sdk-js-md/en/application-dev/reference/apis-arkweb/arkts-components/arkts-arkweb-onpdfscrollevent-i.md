@@ -1,5 +1,9 @@
 # OnPdfScrollEvent
 
+```TypeScript
+declare interface OnPdfScrollEvent
+```
+
 Defines the callback function triggered when the PDF page is scrolled to the bottom.
 
 **Since:** 20

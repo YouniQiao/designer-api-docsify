@@ -1,5 +1,9 @@
 # WebSchemeHandler
 
+```TypeScript
+class WebSchemeHandler
+```
+
 WebSchemeHandler is an interceptor class used to intercept network requests for a specified scheme (protocol), supporting scenarios such as custom protocol handling, local resource substitution, and specific request interception. Developers implement the onRequestStart callback to decide whether to intercept a request, and intercepted requests can have custom response content returned through WebResourceHandler. The WebSchemeHandler instance is registered to a specified scheme through the [setWebSchemeHandler](arkts-arkweb-webview-webviewcontroller-c.md#setwebschemehandler) method of WebviewController, thereby intercepting and processing all requests for that scheme.
 
 WebSchemeHandler works in conjunction with [WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandlerrequest-c.md), [WebResourceHandler](arkts-arkweb-webview-webresourcehandler-c.md), and [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md): the onRequestStart callback receives a WebSchemeHandlerRequest (information about the intercepted request) and a WebResourceHandler (the handler used to return a custom response), and returns a boolean value indicating whether to intercept. onRequestStop is triggered when the request ends (only for intercepted requests) and is used for resource cleanup.

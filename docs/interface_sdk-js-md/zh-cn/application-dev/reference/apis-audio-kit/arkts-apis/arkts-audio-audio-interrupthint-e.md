@@ -1,5 +1,9 @@
 # InterruptHint
 
+```TypeScript
+enum InterruptHint
+```
+
 表示中断提示的枚举。当用户监听到音频中断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示根据焦点策略，对音频流执行的具体操作（如暂停、调整音量等）。可以结合InterruptEvent中的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)信息，判断该操作是否已由系统强制执行。详情请参阅音频焦点介绍文档。
 
 **起始版本：** 7

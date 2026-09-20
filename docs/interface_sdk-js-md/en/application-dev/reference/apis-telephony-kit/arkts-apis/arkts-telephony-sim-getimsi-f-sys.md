@@ -65,6 +65,8 @@ sim.getIMSI(0).then((data: string) => {
 ```
 
 
+<a id="getimsi-1"></a>
+
 ## getIMSI
 
 ```TypeScript

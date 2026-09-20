@@ -1,5 +1,9 @@
 # AppAccountManager
 
+```TypeScript
+interface AppAccountManager
+```
+
 Defines the application account manager, which is used to manage account information of applications.
 
 **Since:** 7
@@ -69,6 +73,8 @@ appAccountManager.addAccount('LiSi', 'token101').then(()=> {
 });
 ```
 
+<a id="addaccount-1"></a>
+
 ## addAccount
 
 ```TypeScript
@@ -102,6 +108,8 @@ Adds an application account name and additional information. This API uses an as
 **Examples**
 
 See [addAccount](#addaccount)
+
+<a id="addaccount-2"></a>
 
 ## addAccount
 
@@ -344,6 +352,8 @@ struct Index {
 }
 ```
 
+<a id="auth-1"></a>
+
 ## auth
 
 ```TypeScript
@@ -538,6 +548,8 @@ try {
 }
 ```
 
+<a id="checkaccountlabels-1"></a>
+
 ## checkAccountLabels
 
 ```TypeScript
@@ -678,6 +690,8 @@ try {
 }
 ```
 
+<a id="checkappaccess-1"></a>
+
 ## checkAppAccess
 
 ```TypeScript
@@ -770,6 +784,8 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => 
   console.error(`checkAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="checkappaccountsyncenable-1"></a>
 
 ## checkAppAccountSyncEnable
 
@@ -877,6 +893,8 @@ try {
 }
 ```
 
+<a id="checkauthtokenvisibility-1"></a>
+
 ## checkAuthTokenVisibility
 
 ```TypeScript
@@ -982,6 +1000,8 @@ try {
 }
 ```
 
+<a id="checkdatasyncenabled-1"></a>
+
 ## checkDataSyncEnabled
 
 ```TypeScript
@@ -1083,6 +1103,8 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
   console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="checkoauthtokenvisibility-1"></a>
 
 ## checkOAuthTokenVisibility
 
@@ -1214,6 +1236,8 @@ try {
 }
 ```
 
+<a id="createaccount-1"></a>
+
 ## createAccount
 
 ```TypeScript
@@ -1247,6 +1271,8 @@ Creates an application account with custom data. This API uses an asynchronous c
 **Examples**
 
 See [createAccount](#createaccount)
+
+<a id="createaccount-2"></a>
 
 ## createAccount
 
@@ -1410,6 +1436,8 @@ struct Index {
 }
 ```
 
+<a id="createaccountimplicitly-1"></a>
+
 ## createAccountImplicitly
 
 ```TypeScript
@@ -1494,6 +1522,8 @@ appAccountManager.deleteAccount('ZhaoLiu').then(() => {
   console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deleteaccount-1"></a>
 
 ## deleteAccount
 
@@ -1600,6 +1630,8 @@ try {
 }
 ```
 
+<a id="deleteauthtoken-1"></a>
+
 ## deleteAuthToken
 
 ```TypeScript
@@ -1705,6 +1737,8 @@ try {
 }
 ```
 
+<a id="deletecredential-1"></a>
+
 ## deleteCredential
 
 ```TypeScript
@@ -1801,6 +1835,8 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 });
 ```
 
+<a id="deleteoauthtoken-1"></a>
+
 ## deleteOAuthToken
 
 ```TypeScript
@@ -1891,6 +1927,8 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
   console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="disableappaccess-1"></a>
 
 ## disableAppAccess
 
@@ -1985,6 +2023,8 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 });
 ```
 
+<a id="enableappaccess-1"></a>
+
 ## enableAppAccess
 
 ```TypeScript
@@ -2078,6 +2118,8 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 });
 ```
 
+<a id="getaccountcredential-1"></a>
+
 ## getAccountCredential
 
 ```TypeScript
@@ -2169,6 +2211,8 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
   console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getaccountextrainfo-1"></a>
 
 ## getAccountExtraInfo
 
@@ -2270,6 +2314,8 @@ try {
 }
 ```
 
+<a id="getaccountsbyowner-1"></a>
+
 ## getAccountsByOwner
 
 ```TypeScript
@@ -2359,6 +2405,8 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
   console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getallaccessibleaccounts-1"></a>
 
 ## getAllAccessibleAccounts
 
@@ -2476,6 +2524,8 @@ appAccountManager.getAllAccounts(selfBundle).then((data: appAccount.AppAccountIn
 });
 ```
 
+<a id="getallaccounts-1"></a>
+
 ## getAllAccounts
 
 ```TypeScript
@@ -2503,6 +2553,8 @@ Obtains information about all accessible application accounts. This API uses a p
 **Examples**
 
 See [getAllAccounts](#getallaccounts)
+
+<a id="getallaccounts-2"></a>
 
 ## getAllAccounts
 
@@ -2538,6 +2590,8 @@ Obtains the application accounts that can be accessed by the invoker based on th
 **Examples**
 
 See [getAllAccounts](#getallaccounts)
+
+<a id="getallaccounts-3"></a>
 
 ## getAllAccounts
 
@@ -2643,6 +2697,8 @@ try {
 }
 ```
 
+<a id="getallauthtokens-1"></a>
+
 ## getAllAuthTokens
 
 ```TypeScript
@@ -2737,6 +2793,8 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 });
 ```
 
+<a id="getalloauthtokens-1"></a>
+
 ## getAllOAuthTokens
 
 ```TypeScript
@@ -2828,6 +2886,8 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => {
   console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getassociateddata-1"></a>
 
 ## getAssociatedData
 
@@ -2961,6 +3021,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getauthcallback-1"></a>
+
 ## getAuthCallback
 
 ```TypeScript
@@ -3075,6 +3137,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getauthenticatorcallback-1"></a>
+
 ## getAuthenticatorCallback
 
 ```TypeScript
@@ -3166,6 +3230,8 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
   console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getauthenticatorinfo-1"></a>
 
 ## getAuthenticatorInfo
 
@@ -3267,6 +3333,8 @@ try {
   console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getauthlist-1"></a>
 
 ## getAuthList
 
@@ -3373,6 +3441,8 @@ try {
 }
 ```
 
+<a id="getauthtoken-1"></a>
+
 ## getAuthToken
 
 ```TypeScript
@@ -3477,6 +3547,8 @@ try {
 }
 ```
 
+<a id="getcredential-1"></a>
+
 ## getCredential
 
 ```TypeScript
@@ -3579,6 +3651,8 @@ try {
   console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getcustomdata-1"></a>
 
 ## getCustomData
 
@@ -3722,6 +3796,8 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 });
 ```
 
+<a id="getoauthlist-1"></a>
+
 ## getOAuthList
 
 ```TypeScript
@@ -3815,6 +3891,8 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
   console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getoauthtoken-1"></a>
 
 ## getOAuthToken
 
@@ -4034,6 +4112,8 @@ try {
 }
 ```
 
+<a id="queryauthenticatorinfo-1"></a>
+
 ## queryAuthenticatorInfo
 
 ```TypeScript
@@ -4132,6 +4212,8 @@ try {
   console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="removeaccount-1"></a>
 
 ## removeAccount
 
@@ -4241,6 +4323,8 @@ try {
 }
 ```
 
+<a id="selectaccountsbyoptions-1"></a>
+
 ## selectAccountsByOptions
 
 ```TypeScript
@@ -4333,6 +4417,8 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
   console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setaccountcredential-1"></a>
 
 ## setAccountCredential
 
@@ -4427,6 +4513,8 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => {
   console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setaccountextrainfo-1"></a>
 
 ## setAccountExtraInfo
 
@@ -4532,6 +4620,8 @@ try {
 }
 ```
 
+<a id="setappaccess-1"></a>
+
 ## setAppAccess
 
 ```TypeScript
@@ -4628,6 +4718,8 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 });
 ```
 
+<a id="setappaccountsyncenable-1"></a>
+
 ## setAppAccountSyncEnable
 
 ```TypeScript
@@ -4723,6 +4815,8 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => {
   console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setassociateddata-1"></a>
 
 ## setAssociatedData
 
@@ -4839,6 +4933,8 @@ try {
 }
 ```
 
+<a id="setauthenticatorproperties-1"></a>
+
 ## setAuthenticatorProperties
 
 ```TypeScript
@@ -4938,6 +5034,8 @@ try {
   console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setauthtoken-1"></a>
 
 ## setAuthToken
 
@@ -5053,6 +5151,8 @@ try {
 }
 ```
 
+<a id="setauthtokenvisibility-1"></a>
+
 ## setAuthTokenVisibility
 
 ```TypeScript
@@ -5160,6 +5260,8 @@ try {
 }
 ```
 
+<a id="setcredential-1"></a>
+
 ## setCredential
 
 ```TypeScript
@@ -5264,6 +5366,8 @@ try {
 }
 ```
 
+<a id="setcustomdata-1"></a>
+
 ## setCustomData
 
 ```TypeScript
@@ -5366,6 +5470,8 @@ try {
 }
 ```
 
+<a id="setdatasyncenabled-1"></a>
+
 ## setDataSyncEnabled
 
 ```TypeScript
@@ -5461,6 +5567,8 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
   console.error(`setOAuthToken err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setoauthtoken-1"></a>
 
 ## setOAuthToken
 
@@ -5564,6 +5672,8 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
   console.error(`setOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="setoauthtokenvisibility-1"></a>
 
 ## setOAuthTokenVisibility
 
@@ -5683,6 +5793,8 @@ try {
   console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="verifycredential-1"></a>
 
 ## verifyCredential
 

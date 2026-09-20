@@ -1,5 +1,9 @@
 # HuksAuthStorageLevel
 
+```TypeScript
+export enum HuksAuthStorageLevel
+```
+
 表示生成或导入密钥时，指定该密钥的存储安全等级。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # Screen（系统接口）
 
+```TypeScript
+interface Screen
+```
+
 [物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。
 
 下列API示例中都需先使用[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md)、[createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md)中的任一方法获取到Screen实例，再通过此实例调用对应方法。
@@ -123,6 +127,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setdensitydpi-1"></a>
 
 ## setDensityDpi
 
@@ -296,6 +302,8 @@ screensPromise.then((data: Array<screen.Screen>) => {
 });
 ```
 
+<a id="setorientation-1"></a>
+
 ## setOrientation
 
 ```TypeScript
@@ -333,6 +341,8 @@ setOrientation(orientation: Orientation): Promise<void>
 **示例**
 
 参见 [setOrientation](#setorientation)
+
+<a id="setorientation-2"></a>
 
 ## setOrientation
 
@@ -483,6 +493,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setscreenactivemode-1"></a>
 
 ## setScreenActiveMode
 

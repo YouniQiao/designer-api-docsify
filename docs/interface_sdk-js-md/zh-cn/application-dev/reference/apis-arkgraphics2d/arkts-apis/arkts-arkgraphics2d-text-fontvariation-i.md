@@ -1,5 +1,9 @@
 # FontVariation
 
+```TypeScript
+interface FontVariation
+```
+
 可变字体属性。
 
 **起始版本：** 12

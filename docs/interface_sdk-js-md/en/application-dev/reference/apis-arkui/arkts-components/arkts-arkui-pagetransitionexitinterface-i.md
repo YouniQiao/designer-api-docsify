@@ -1,5 +1,9 @@
 # PageTransitionExitInterface
 
+```TypeScript
+interface PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>
+```
+
 Provide an interface to set transition style when a page exits.
 
 @extends CommonTransition&lt;PageTransitionExitInterface&gt; @interface PageTransitionExitInterface

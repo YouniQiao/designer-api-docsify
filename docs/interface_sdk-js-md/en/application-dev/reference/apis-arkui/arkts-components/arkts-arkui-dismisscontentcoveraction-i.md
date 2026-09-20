@@ -1,5 +1,9 @@
 # DismissContentCoverAction
 
+```TypeScript
+declare interface DismissContentCoverAction
+```
+
 Component content cover dismiss
 
 **Since:** 12

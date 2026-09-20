@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper extends lang.ISendable
+```
+
 Helper functions to access photos and albums.
 
 **Inheritance/Implementation:** PhotoAccessHelper extends lang.ISendable
@@ -13,6 +17,8 @@ Helper functions to access photos and albums.
 ```TypeScript
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
+
+<a id="createasset-2"></a>
 
 ## createAsset
 
@@ -105,6 +111,8 @@ Before the operation, ensure that the albums to obtain exist.
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 ```
+
+<a id="getalbums-1"></a>
 
 ## getAlbums
 

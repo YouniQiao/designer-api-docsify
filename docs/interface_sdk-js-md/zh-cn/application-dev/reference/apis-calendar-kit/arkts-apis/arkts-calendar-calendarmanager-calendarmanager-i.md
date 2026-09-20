@@ -1,5 +1,9 @@
 # CalendarManager
 
+```TypeScript
+export interface CalendarManager
+```
+
 下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
 
 **起始版本：** 10
@@ -91,6 +95,8 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<a id="createcalendar-1"></a>
 
 ## createCalendar
 
@@ -225,6 +231,8 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 })
 ```
+
+<a id="deletecalendar-1"></a>
 
 ## deleteCalendar
 
@@ -374,6 +382,8 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
 });
 ```
 
+<a id="getallcalendars-1"></a>
+
 ## getAllCalendars
 
 ```TypeScript
@@ -503,6 +513,8 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 });
 ```
 
+<a id="getcalendar-1"></a>
+
 ## getCalendar
 
 ```TypeScript
@@ -539,6 +551,8 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 **示例**
 
 参见 [getCalendar](#getcalendar)
+
+<a id="getcalendar-2"></a>
 
 ## getCalendar
 

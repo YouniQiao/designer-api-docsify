@@ -1,5 +1,9 @@
 # OpenLinkOptions
 
+```TypeScript
+export default interface OpenLinkOptions
+```
+
 **OpenLinkOptions** can be used as an input parameter of [openLink()](arkts-ability-uiabilitycontext-c.md#openlink) to indicate whether to enable only App Linking and pass in optional parameters in the form of key-value pairs.
 
 **Since:** 12

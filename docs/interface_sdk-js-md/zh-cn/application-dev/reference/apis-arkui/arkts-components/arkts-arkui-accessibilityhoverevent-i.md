@@ -1,5 +1,9 @@
 # AccessibilityHoverEvent
 
+```TypeScript
+declare interface AccessibilityHoverEvent extends BaseEvent
+```
+
 The accessibility hover action triggers this method invocation.
 
 @extends BaseEvent @typedef AccessibilityHoverEvent

@@ -1,5 +1,9 @@
 # RichEditorChangeValue
 
+```TypeScript
+declare interface RichEditorChangeValue
+```
+
 Defines image and text change information.
 
 **Since:** 12

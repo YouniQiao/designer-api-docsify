@@ -66,6 +66,8 @@ console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
+<a id="ismediakeysystemsupported-1"></a>
+
 ## isMediaKeySystemSupported
 
 ```TypeScript
@@ -105,6 +107,8 @@ function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 
 参见 [isMediaKeySystemSupported](#ismediakeysystemsupported)
 
+
+<a id="ismediakeysystemsupported-2"></a>
 
 ## isMediaKeySystemSupported
 

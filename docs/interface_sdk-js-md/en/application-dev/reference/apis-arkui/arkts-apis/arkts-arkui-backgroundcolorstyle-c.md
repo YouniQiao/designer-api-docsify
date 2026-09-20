@@ -1,5 +1,9 @@
 # BackgroundColorStyle
 
+```TypeScript
+declare class BackgroundColorStyle
+```
+
 Describes the text background color style.
 
 **Since:** 14

@@ -1,5 +1,9 @@
 # SyncStateType (System API)
 
+```TypeScript
+enum SyncStateType
+```
+
 Phone book sync state type.
 
 **Since:** 26.0.1

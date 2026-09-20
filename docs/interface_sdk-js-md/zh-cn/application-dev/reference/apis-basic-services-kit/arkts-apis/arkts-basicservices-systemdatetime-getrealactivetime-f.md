@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getrealactivetime-1"></a>
+
 ## getRealActiveTime
 
 ```TypeScript
@@ -119,6 +121,8 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 参见 [getRealActiveTime](#getrealactivetime)
 
+
+<a id="getrealactivetime-2"></a>
 
 ## getRealActiveTime
 

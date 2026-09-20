@@ -97,6 +97,8 @@ try {
 ```
 
 
+<a id="destroytimer-1"></a>
+
 ## destroyTimer
 
 ```TypeScript

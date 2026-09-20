@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="getquaternion-1"></a>
+
 ## getQuaternion
 
 ```TypeScript

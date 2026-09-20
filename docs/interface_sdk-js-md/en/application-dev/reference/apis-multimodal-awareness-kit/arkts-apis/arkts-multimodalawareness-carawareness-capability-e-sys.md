@@ -1,5 +1,9 @@
 # Capability
 
+```TypeScript
+enum Capability
+```
+
 CarAwareness Capability.
 
 **Since:** 26.0.1

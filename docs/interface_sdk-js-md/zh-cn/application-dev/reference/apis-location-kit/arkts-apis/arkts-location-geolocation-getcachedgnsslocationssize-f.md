@@ -52,6 +52,8 @@ geolocation.getCachedGnssLocationsSize().then((result) => {
 ```
 
 
+<a id="getcachedgnsslocationssize-1"></a>
+
 ## getCachedGnssLocationsSize
 
 ```TypeScript

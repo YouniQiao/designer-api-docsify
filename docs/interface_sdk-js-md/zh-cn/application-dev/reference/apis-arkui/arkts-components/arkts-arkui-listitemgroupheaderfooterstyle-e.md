@@ -1,5 +1,9 @@
 # ListItemGroupHeaderFooterStyle
 
+```TypeScript
+declare enum ListItemGroupHeaderFooterStyle
+```
+
 ListItemGroup头部和尾部样式枚举。
 
 **起始版本：** 26.0.0

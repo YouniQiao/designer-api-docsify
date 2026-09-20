@@ -66,6 +66,8 @@ try {
 ```
 
 
+<a id="inputdialerspecialcode-1"></a>
+
 ## inputDialerSpecialCode
 
 ```TypeScript

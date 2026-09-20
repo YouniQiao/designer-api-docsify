@@ -1,5 +1,9 @@
 # AccessibilitySamePageMode
 
+```TypeScript
+declare enum AccessibilitySamePageMode
+```
+
 当前跨进程嵌入式显示的组件和宿主应用的同page模式。@enum { number }
 
 **起始版本：** 18

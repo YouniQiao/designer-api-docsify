@@ -1,5 +1,9 @@
 # AtManager
 
+```TypeScript
+interface AtManager
+```
+
 Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md).
 
 **Since:** 8
@@ -548,6 +552,8 @@ For details about how to obtain the context in the example, see [Obtaining the C
 For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 ```
 
+<a id="requestpermissionsfromuser-1"></a>
+
 ## requestPermissionsFromUser
 
 ```TypeScript
@@ -644,6 +650,8 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
   console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="verifyaccesstoken-1"></a>
 
 ## verifyAccessToken
 

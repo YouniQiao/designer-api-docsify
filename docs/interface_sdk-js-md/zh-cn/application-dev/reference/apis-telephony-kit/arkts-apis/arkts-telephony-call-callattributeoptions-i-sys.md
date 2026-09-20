@@ -1,5 +1,9 @@
 # CallAttributeOptions（系统接口）
 
+```TypeScript
+export interface CallAttributeOptions
+```
+
 调用属性选项。
 
 **起始版本：** 7

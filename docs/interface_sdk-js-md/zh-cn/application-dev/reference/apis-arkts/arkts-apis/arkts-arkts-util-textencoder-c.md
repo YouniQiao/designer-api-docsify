@@ -1,5 +1,9 @@
 # TextEncoder
 
+```TypeScript
+class TextEncoder
+```
+
 提供将字符串编码为字节数组的 API。支持多种编码格式。使用 **TextEncoder** 进行编码时，每个字符所占用的字节数因编码格式而异。必须显式指定编码格式以获取所需的编码结果。
 
 **起始版本：** 7
@@ -35,6 +39,8 @@ let textEncoder = new util.TextEncoder();
 ```TypeScript
 let textEncoder = new util.TextEncoder("utf-8");
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -178,6 +184,8 @@ let result = textEncoder.encodeInto('abcd', uint8);
 console.info("uint8 = " + uint8);
 // 输出结果: uint8 = 97,98,99,100
 ```
+
+<a id="encodeinto-1"></a>
 
 ## encodeInto
 

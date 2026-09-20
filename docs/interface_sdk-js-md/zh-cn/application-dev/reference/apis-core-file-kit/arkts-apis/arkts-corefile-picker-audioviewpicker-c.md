@@ -1,5 +1,9 @@
 # AudioViewPicker
 
+```TypeScript
+class AudioViewPicker
+```
+
 音频选择器对象，用来支撑选择和保存音频类文件等用户场景。在使用前，需要先创建AudioViewPicker实例。
 
 **起始版本：** 9
@@ -57,6 +61,8 @@ struct Index {
 ```TypeScript
 let audioPicker = new picker.AudioViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -203,6 +209,8 @@ async function example18(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -288,6 +296,8 @@ async function example18(context: common.UIAbilityContext) { // 需确保 contex
   }
 }
 ```
+
+<a id="save-2"></a>
 
 ## save
 
@@ -465,6 +475,8 @@ async function example15(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+<a id="select-1"></a>
+
 ## select
 
 ```TypeScript
@@ -548,6 +560,8 @@ async function example15(context: common.UIAbilityContext) { // 需确保 contex
   }
 }
 ```
+
+<a id="select-2"></a>
 
 ## select
 

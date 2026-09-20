@@ -86,6 +86,8 @@ accountManager.disallowAddLocalAccount(wantTemp, true).then(() => {
 ```
 
 
+<a id="disallowaddlocalaccount-1"></a>
+
 ## disallowAddLocalAccount
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # MouseAction
 
+```TypeScript
+declare enum MouseAction
+```
+
 定义鼠标操作的动作类型。
 
 **起始版本：** 8

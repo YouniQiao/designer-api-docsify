@@ -1,5 +1,9 @@
 # NavContentInfo
 
+```TypeScript
+declare interface NavContentInfo
+```
+
 Provides the destination information.
 
 **Since:** 11

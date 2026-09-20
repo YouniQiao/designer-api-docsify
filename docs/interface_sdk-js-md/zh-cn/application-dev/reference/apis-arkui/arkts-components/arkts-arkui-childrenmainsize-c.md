@@ -1,5 +1,9 @@
 # ChildrenMainSize
 
+```TypeScript
+declare class ChildrenMainSize
+```
+
 维护List组件或ListItemGroup组件的子组件在主轴方向的大小信息，仅支持一对一绑定到List组件或ListItemGroup组件。
 
 > **说明：** 

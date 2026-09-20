@@ -1,5 +1,9 @@
 # OnPermissionRequestEvent
 
+```TypeScript
+declare interface OnPermissionRequestEvent
+```
+
 Defines the callback information triggered when a permission request is received, including the request details. It is suitable for scenarios where handling permission grants is required, improving permission management flexibility and security.
 
 **Since:** 12

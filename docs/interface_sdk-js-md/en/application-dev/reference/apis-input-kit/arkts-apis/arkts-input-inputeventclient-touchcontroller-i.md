@@ -1,5 +1,9 @@
 # TouchController
 
+```TypeScript
+interface TouchController
+```
+
 Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:
 
 1. All touch points must share the same **displayId**.

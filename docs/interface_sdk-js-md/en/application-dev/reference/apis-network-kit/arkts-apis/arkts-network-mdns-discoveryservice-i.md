@@ -1,5 +1,9 @@
 # DiscoveryService
 
+```TypeScript
+export interface DiscoveryService
+```
+
 Defines a **DiscoveryService** object for discovering MDNS services of the specified type.
 
 **Since:** 10

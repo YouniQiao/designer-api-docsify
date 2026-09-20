@@ -1,5 +1,9 @@
 # TabsBreakpointType
 
+```TypeScript
+declare interface TabsBreakpointType<T>
+```
+
 Defines the value type for different Tabs container sizes.
 
 **Since:** 26.2.0

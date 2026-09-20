@@ -1,5 +1,9 @@
 # LazyForEach属性/事件
 
+```TypeScript
+declare class LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>
+```
+
 支持拖拽排序属性。
 
 **继承/实现关系：** LazyForEachAttribute extends DynamicNode<LazyForEachAttribute>

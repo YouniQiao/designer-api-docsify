@@ -1,5 +1,9 @@
 # ProgressOptions
 
+```TypeScript
+declare interface ProgressOptions<Type extends keyof ProgressStyleMap>
+```
+
 Defines progress bar options.
 
 **Since:** 7

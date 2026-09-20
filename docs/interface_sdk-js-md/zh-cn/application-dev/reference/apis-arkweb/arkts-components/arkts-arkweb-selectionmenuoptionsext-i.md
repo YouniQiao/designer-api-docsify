@@ -1,5 +1,9 @@
 # SelectionMenuOptionsExt
 
+```TypeScript
+declare interface SelectionMenuOptionsExt
+```
+
 自定义菜单扩展项。
 
 **起始版本：** 13

@@ -1,5 +1,9 @@
 # FoldSplitContainer
 
+```TypeScript
+export declare struct FoldSplitContainer
+```
+
 The **FoldSplitContainer** component implements split-screen layout, providing region control for two-panel and three -panel layouts on foldable screens in the expanded state (device fully unfolded), hover state (device half-folded), and folded state (device fully folded). It is suitable for responsive layout adaptation scenarios in foldable screen apps, helping developers implement intelligent split-panel layouts across multiple screen states and improving user experience. For details about fold status, see [display.FoldStatus](arkts-arkui-display-foldstatus-e.md).
 
 > **NOTE:** 

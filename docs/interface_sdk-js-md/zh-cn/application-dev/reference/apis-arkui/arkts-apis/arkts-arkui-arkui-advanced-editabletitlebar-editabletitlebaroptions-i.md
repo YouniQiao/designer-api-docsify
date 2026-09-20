@@ -1,5 +1,9 @@
 # EditableTitleBarOptions
 
+```TypeScript
+export declare interface EditableTitleBarOptions
+```
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

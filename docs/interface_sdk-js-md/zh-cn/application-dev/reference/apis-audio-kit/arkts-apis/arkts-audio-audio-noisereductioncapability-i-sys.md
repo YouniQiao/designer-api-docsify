@@ -1,5 +1,9 @@
 # NoiseReductionCapability（系统接口）
 
+```TypeScript
+interface NoiseReductionCapability
+```
+
 支持降噪能力的外部音频设备信息。
 
 **起始版本：** 26.0.0

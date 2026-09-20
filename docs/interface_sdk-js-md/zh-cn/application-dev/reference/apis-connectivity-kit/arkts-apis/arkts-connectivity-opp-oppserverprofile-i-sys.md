@@ -1,5 +1,9 @@
 # OppServerProfile
 
+```TypeScript
+interface OppServerProfile
+```
+
 Profile类，使用opp方法之前需要创建该类的实例进行操作，通过[createOppServerProfile()](arkts-connectivity-opp-createoppserverprofile-f-sys.md)方法构造此实例。
 
 **起始版本：** 16

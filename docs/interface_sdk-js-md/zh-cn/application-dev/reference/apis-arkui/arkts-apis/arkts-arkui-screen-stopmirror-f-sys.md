@@ -67,6 +67,8 @@ screen.stopMirror(mirrorScreenIds).then(() => {
 ```
 
 
+<a id="stopmirror-1"></a>
+
 ## stopMirror
 
 ```TypeScript

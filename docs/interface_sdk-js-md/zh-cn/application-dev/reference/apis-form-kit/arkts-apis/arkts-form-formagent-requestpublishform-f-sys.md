@@ -98,6 +98,8 @@ try {
 ```
 
 
+<a id="requestpublishform-1"></a>
+
 ## requestPublishForm
 
 ```TypeScript

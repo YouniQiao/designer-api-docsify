@@ -1,5 +1,9 @@
 # Size
 
+```TypeScript
+declare interface Size
+```
+
 DrawingRenderingContext的尺寸信息。
 
 **起始版本：** 12

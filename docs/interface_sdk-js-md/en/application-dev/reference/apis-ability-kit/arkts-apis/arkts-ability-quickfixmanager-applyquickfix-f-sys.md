@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="applyquickfix-1"></a>
+
 ## applyQuickFix
 
 ```TypeScript

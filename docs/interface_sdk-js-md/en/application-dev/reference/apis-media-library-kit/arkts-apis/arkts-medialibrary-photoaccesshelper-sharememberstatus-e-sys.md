@@ -1,5 +1,9 @@
 # ShareMemberStatus (System API)
 
+```TypeScript
+enum ShareMemberStatus
+```
+
 Enumerates the member status of share album.
 
 **Since:** 26.0.1

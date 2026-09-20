@@ -1,5 +1,9 @@
 # EnvironmentCallback
 
+```TypeScript
+export default class EnvironmentCallback
+```
+
 The EnvironmentCallback module provides capabilities to listen for system environment changes.
 
 **Since:** 9

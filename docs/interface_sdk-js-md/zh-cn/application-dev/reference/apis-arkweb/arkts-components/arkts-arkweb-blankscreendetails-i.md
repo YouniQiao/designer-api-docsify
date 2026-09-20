@@ -1,5 +1,9 @@
 # BlankScreenDetails
 
+```TypeScript
+declare interface BlankScreenDetails
+```
+
 提供检测到白屏时的结果细节，包括有内容节点数量。适用于需要分析白屏原因的场景，提升白屏诊断的详细性和准确性。
 
 **起始版本：** 22

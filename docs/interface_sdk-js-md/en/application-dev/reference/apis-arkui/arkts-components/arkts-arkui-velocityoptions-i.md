@@ -1,5 +1,9 @@
 # VelocityOptions
 
+```TypeScript
+declare interface VelocityOptions
+```
+
 Defines velocity options.
 
 *  

@@ -1,5 +1,9 @@
 # PlaceholderStyle
 
+```TypeScript
+declare interface PlaceholderStyle
+```
+
 设置提示文本的字体样式。
 
 **起始版本：** 12

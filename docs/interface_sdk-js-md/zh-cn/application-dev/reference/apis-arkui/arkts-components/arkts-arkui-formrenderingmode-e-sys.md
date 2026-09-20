@@ -1,5 +1,9 @@
 # FormRenderingMode（系统接口）
 
+```TypeScript
+declare enum FormRenderingMode
+```
+
 卡片渲染模式枚举
 
 **起始版本：** 11

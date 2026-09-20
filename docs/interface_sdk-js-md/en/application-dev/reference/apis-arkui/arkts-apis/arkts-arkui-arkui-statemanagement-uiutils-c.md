@@ -1,5 +1,9 @@
 # UIUtils
 
+```TypeScript
+export declare class UIUtils
+```
+
 Provides APIs for handling data transformations related to state management.
 
 **Since:** 12
@@ -15,7 +19,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 ## addMonitor
 
 ```TypeScript
-static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
+static addMonitor(target: object, path: string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
 ```
 
 Dynamically adds a listener to the state variable of state management V2. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
@@ -267,7 +271,7 @@ export struct School {
 ## clearMonitor
 
 ```TypeScript
-static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
+static clearMonitor(target: object, path: string[], monitorCallback?: MonitorCallback) : void
 ```
 
 Deletes the listener added to the state variable of the state management V2 by calling the [addMonitor](#addmonitor) API. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
@@ -810,6 +814,8 @@ struct CompV2 {
   }
 }
 ```
+
+<a id="makebinding-1"></a>
 
 ## makeBinding
 

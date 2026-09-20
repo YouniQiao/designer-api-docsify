@@ -66,6 +66,8 @@ promise.then((data: Array<number>) => {
 ```
 
 
+<a id="getanglemodify-1"></a>
+
 ## getAngleModify
 
 ```TypeScript

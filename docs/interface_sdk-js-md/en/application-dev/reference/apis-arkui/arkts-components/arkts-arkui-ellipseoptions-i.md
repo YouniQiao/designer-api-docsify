@@ -1,5 +1,9 @@
 # EllipseOptions
 
+```TypeScript
+interface EllipseOptions
+```
+
 Describes the options of the ellipse.
 
 > **NOTE:** 

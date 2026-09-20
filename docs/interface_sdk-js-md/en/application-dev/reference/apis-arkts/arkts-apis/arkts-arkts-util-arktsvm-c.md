@@ -1,5 +1,9 @@
 # ArkTSVM
 
+```TypeScript
+class ArkTSVM
+```
+
 A class that provides VM maintenance and test capabilities for developers.
 
 **Since:** 23

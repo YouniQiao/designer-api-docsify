@@ -66,6 +66,8 @@ print.queryPrinterCapability(printerId).then(() => {
 ```
 
 
+<a id="queryprintercapability-1"></a>
+
 ## queryPrinterCapability
 
 ```TypeScript

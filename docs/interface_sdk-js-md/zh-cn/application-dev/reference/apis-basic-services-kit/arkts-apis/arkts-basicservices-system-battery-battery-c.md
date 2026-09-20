@@ -1,5 +1,9 @@
 # Battery
 
+```TypeScript
+export default class Battery
+```
+
 该模块提供充电状态及剩余电量的查询功能。
 
 **起始版本：** 3

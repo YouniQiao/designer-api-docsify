@@ -1,5 +1,9 @@
 # OperateIcon
 
+```TypeScript
+export declare class OperateIcon
+```
+
 Defines the type of the icon element on the right of the **ComposeListItem** component.
 
 **Since:** 10

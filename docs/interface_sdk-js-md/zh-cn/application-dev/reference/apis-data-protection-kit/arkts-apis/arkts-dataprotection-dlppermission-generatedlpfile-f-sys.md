@@ -124,6 +124,8 @@ dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // 生成D
 ```
 
 
+<a id="generatedlpfile-1"></a>
+
 ## generateDLPFile
 
 ```TypeScript

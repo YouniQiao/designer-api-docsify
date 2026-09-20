@@ -1,5 +1,9 @@
 # InputCounterOptions
 
+```TypeScript
+declare interface InputCounterOptions
+```
+
 Provides configuration options for the character counter.
 
 **Since:** 11

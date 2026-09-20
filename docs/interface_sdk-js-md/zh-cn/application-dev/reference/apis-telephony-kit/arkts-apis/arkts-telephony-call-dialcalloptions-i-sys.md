@@ -1,5 +1,9 @@
 # DialCallOptions（系统接口）
 
+```TypeScript
+export interface DialCallOptions
+```
+
 拨打电话的可选参数。
 
 **起始版本：** 9

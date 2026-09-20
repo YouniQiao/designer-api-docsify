@@ -1,5 +1,9 @@
 # ToolBarItem属性/事件
 
+```TypeScript
+declare class ToolBarItemAttribute
+```
+
 不支持通用属性。
 
 **起始版本：** 20

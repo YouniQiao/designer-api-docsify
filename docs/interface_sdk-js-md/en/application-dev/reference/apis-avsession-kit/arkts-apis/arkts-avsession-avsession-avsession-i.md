@@ -1,5 +1,9 @@
 # AVSession
 
+```TypeScript
+interface AVSession
+```
+
 AVSession object.
 
 **Since:** 10
@@ -36,6 +40,8 @@ Activate the session, indicating that the session can accept control commands
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="activate-1"></a>
 
 ## activate
 
@@ -89,6 +95,8 @@ Deactivate the session, indicating that the session not ready to accept control 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<a id="deactivate-1"></a>
+
 ## deactivate
 
 ```TypeScript
@@ -140,6 +148,8 @@ Destroy this session, the server will clean up the session resources
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -195,6 +205,8 @@ Dispatch the session event of this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="dispatchsessionevent-2"></a>
 
 ## dispatchSessionEvent
 
@@ -317,6 +329,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<a id="getavcastcontroller-2"></a>
+
 ## getAVCastController
 
 ```TypeScript
@@ -368,6 +382,8 @@ Get the current session's own controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="getcontroller-1"></a>
 
 ## getController
 
@@ -449,6 +465,8 @@ Get output device information
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="getoutputdevice-1"></a>
 
 ## getOutputDevice
 
@@ -2289,6 +2307,8 @@ Set the call state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<a id="setavcallstate-1"></a>
+
 ## setAVCallState
 
 ```TypeScript
@@ -2347,6 +2367,8 @@ Set the metadata of this session. In addition to the required properties, users 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="setavmetadata-1"></a>
 
 ## setAVMetadata
 
@@ -2409,6 +2431,8 @@ Set the playback state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<a id="setavplaybackstate-1"></a>
+
 ## setAVPlaybackState
 
 ```TypeScript
@@ -2470,6 +2494,8 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<a id="setavqueueitems-1"></a>
+
 ## setAVQueueItems
 
 ```TypeScript
@@ -2530,6 +2556,8 @@ Set the name of the playlist presented by this session.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="setavqueuetitle-1"></a>
 
 ## setAVQueueTitle
 
@@ -2624,6 +2652,8 @@ Set the metadata related with current call.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="setcallmetadata-1"></a>
 
 ## setCallMetadata
 
@@ -2754,6 +2784,8 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<a id="setextras-2"></a>
+
 ## setExtras
 
 ```TypeScript
@@ -2814,6 +2846,8 @@ Set the ability to start the session corresponding to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+<a id="setlaunchability-1"></a>
 
 ## setLaunchAbility
 
@@ -2975,6 +3009,8 @@ Stop current cast and disconnect device connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+
+<a id="stopcasting-1"></a>
 
 ## stopCasting
 

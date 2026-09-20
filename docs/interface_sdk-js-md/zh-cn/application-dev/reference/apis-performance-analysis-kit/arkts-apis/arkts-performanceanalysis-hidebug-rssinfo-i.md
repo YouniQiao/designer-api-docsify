@@ -1,5 +1,9 @@
 # RssInfo
 
+```TypeScript
+interface RssInfo
+```
+
 描述应用进程的物理内存信息。
 
 **起始版本：** 24

@@ -1,5 +1,9 @@
 # AudioInterrupt
 
+```TypeScript
+interface AudioInterrupt
+```
+
 音频监听事件传入的参数。
 
 > **说明：** 

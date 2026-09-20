@@ -27,8 +27,8 @@ import { drm } from '@kit.DrmKit';
 | [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md) | 获取设备支持的插件信息列表。 |
 | [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md) | 获取DRM解决方案支持的DRM内容保护系统唯一标识。 |
 | [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) | 判断设备是否支持指定的DRM解决方案、媒体类型及内容保护级别。 |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) | 判断设备是否支持指定的DRM解决方案及媒体类型。 |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) | 判断设备是否支持指定的DRM解决方案。 |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) | 判断设备是否支持指定的DRM解决方案及媒体类型。 |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) | 判断设备是否支持指定的DRM解决方案。 |
 
 ### 接口
 

@@ -1,5 +1,9 @@
 # PasteEvent
 
+```TypeScript
+declare interface PasteEvent
+```
+
 定义用户粘贴事件。
 
 **起始版本：** 11

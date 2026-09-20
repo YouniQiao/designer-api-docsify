@@ -1,5 +1,9 @@
 # PanelMode
 
+```TypeScript
+declare enum PanelMode
+```
+
 Sets the initial state of the slidable panel.
 
 **Since:** 7

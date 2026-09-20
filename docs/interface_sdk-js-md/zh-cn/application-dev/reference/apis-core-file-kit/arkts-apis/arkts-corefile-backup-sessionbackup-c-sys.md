@@ -1,5 +1,9 @@
 # SessionBackup（系统接口）
 
+```TypeScript
+class SessionBackup
+```
+
 备份流程对象，用于支撑应用全量备份流程。
 
 **起始版本：** 10
@@ -221,6 +225,8 @@ async function appendBundles() {
   }
 }
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 

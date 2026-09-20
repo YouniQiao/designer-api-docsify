@@ -1,5 +1,9 @@
 # DisturbanceFieldOptions
 
+```TypeScript
+declare interface DisturbanceFieldOptions
+```
+
 设置粒子扰动场参数。
 
 **起始版本：** 12

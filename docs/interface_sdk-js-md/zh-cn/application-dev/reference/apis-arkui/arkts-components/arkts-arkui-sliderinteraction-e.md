@@ -1,5 +1,9 @@
 # SliderInteraction
 
+```TypeScript
+declare enum SliderInteraction
+```
+
 用户与滑动条组件交互方式。
 
 | 名称 | 值 |说明 |  

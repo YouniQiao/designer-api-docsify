@@ -1,5 +1,9 @@
 # PinchGestureHandler
 
+```TypeScript
+declare class PinchGestureHandler extends GestureHandler<PinchGestureHandler>
+```
+
 捏合手势处理器对象类型。
 
 **继承/实现关系：** PinchGestureHandler extends GestureHandler<PinchGestureHandler>
@@ -57,6 +61,8 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 | 类型 | 说明 |
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

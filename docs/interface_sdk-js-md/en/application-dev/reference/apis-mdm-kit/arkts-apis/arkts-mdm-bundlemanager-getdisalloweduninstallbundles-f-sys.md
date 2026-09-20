@@ -104,6 +104,8 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisalloweduninstallbundles-1"></a>
+
 ## getDisallowedUninstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ Obtains the applications that cannot be uninstalled by the user specified by **u
 
 See [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
 
+
+<a id="getdisalloweduninstallbundles-2"></a>
 
 ## getDisallowedUninstallBundles
 

@@ -1,5 +1,9 @@
 # WindowModeFollowStrategy（系统接口）
 
+```TypeScript
+declare enum WindowModeFollowStrategy
+```
+
 窗口Mode跟随策略，用于设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。
 
 **起始版本：** 18

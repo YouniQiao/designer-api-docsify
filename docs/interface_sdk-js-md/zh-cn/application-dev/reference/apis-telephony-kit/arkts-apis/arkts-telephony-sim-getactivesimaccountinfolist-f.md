@@ -68,6 +68,8 @@ sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
 ```
 
 
+<a id="getactivesimaccountinfolist-1"></a>
+
 ## getActiveSimAccountInfoList
 
 ```TypeScript

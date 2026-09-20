@@ -1,5 +1,9 @@
 # TextBackgroundStyle
 
+```TypeScript
+declare interface TextBackgroundStyle
+```
+
 Define the background style of span.
 
 **Since:** 11

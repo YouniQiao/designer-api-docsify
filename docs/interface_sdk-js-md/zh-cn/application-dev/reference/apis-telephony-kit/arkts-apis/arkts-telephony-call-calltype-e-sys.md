@@ -1,5 +1,9 @@
 # CallType（系统接口）
 
+```TypeScript
+export enum CallType
+```
+
 通话类型。
 
 **起始版本：** 7

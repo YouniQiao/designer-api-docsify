@@ -1,5 +1,9 @@
 # GetDeviceOptions
 
+```TypeScript
+export interface GetDeviceOptions
+```
+
 **Since:** 3
 
 **Deprecated since:** 6

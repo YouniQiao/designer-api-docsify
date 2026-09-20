@@ -1,5 +1,9 @@
 # App
 
+```TypeScript
+export default class App
+```
+
 定义App类的静态函数
 
 **起始版本：** 3

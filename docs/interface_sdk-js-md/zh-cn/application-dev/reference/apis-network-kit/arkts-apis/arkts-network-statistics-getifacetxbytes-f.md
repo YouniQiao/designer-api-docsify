@@ -63,6 +63,8 @@ statistics.getIfaceTxBytes("wlan0").then((stats: number) => {
 ```
 
 
+<a id="getifacetxbytes-1"></a>
+
 ## getIfaceTxBytes
 
 ```TypeScript

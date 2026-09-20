@@ -1,5 +1,9 @@
 # IReusePool
 
+```TypeScript
+export declare interface IReusePool
+```
+
 The **IReusePool** API provides the features related to the global reuse pool of a custom component.
 
 **Since:** 26.0.0
@@ -16,7 +20,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 
 ```TypeScript
 getReusableInfo(constructor: ReusableComponentConstructor,
-    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined
+    reuseId?: string): IReusableInfo[]  | IReusableInfo | undefined
 ```
 
 Obtains the information about the recycling instance of a given reusable component type in this reuse pool.

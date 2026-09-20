@@ -1,5 +1,9 @@
 # NestedScrollInfo
 
+```TypeScript
+declare interface NestedScrollInfo
+```
+
 Provides the information about the nested scrollable containers.
 
 **Since:** 14

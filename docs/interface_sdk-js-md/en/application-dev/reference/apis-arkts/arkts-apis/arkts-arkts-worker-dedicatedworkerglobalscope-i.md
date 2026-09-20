@@ -1,5 +1,9 @@
 # DedicatedWorkerGlobalScope
 
+```TypeScript
+export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope
+```
+
 Specifies the worker thread running environment, which is isolated from the host thread environment
 
 **Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
@@ -171,6 +175,8 @@ parentPort.onmessage = (e: MessageEvents) => {
 }
 ```
 
+<a id="postmessage-1"></a>
+
 ## postMessage
 
 ```TypeScript
@@ -241,6 +247,8 @@ parentPort.onmessage = (e: MessageEvents) => {
   parentPort.postMessage("receive data from main thread");
 }
 ```
+
+<a id="postmessage-2"></a>
 
 ## postMessage
 

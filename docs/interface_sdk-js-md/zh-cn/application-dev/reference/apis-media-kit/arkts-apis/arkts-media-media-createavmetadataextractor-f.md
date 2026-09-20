@@ -63,6 +63,8 @@ media.createAVMetadataExtractor().then((extractor: media.AVMetadataExtractor) =>
 ```
 
 
+<a id="createavmetadataextractor-2"></a>
+
 ## createAVMetadataExtractor
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # RingStyleOptions
 
+```TypeScript
+declare interface RingStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions
+```
+
 环形无刻度样式选项。
 
 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。

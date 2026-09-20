@@ -1,5 +1,9 @@
 # ButtonStyle
 
+```TypeScript
+declare interface ButtonStyle
+```
+
 Describes the style of the sidebar control button.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # Dir
 
+```TypeScript
+declare interface Dir
+```
+
 Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance.
 
 **Since:** 6
@@ -52,6 +56,8 @@ dir.close((err: BusinessError) => {
   console.info("close dir successfully");
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -155,6 +161,8 @@ dir.read((err: BusinessError, dirent: fileio.Dirent) => {
   }
 });
 ```
+
+<a id="read-1"></a>
 
 ## read
 

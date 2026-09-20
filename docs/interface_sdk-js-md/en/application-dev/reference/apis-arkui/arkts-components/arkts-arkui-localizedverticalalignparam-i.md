@@ -1,5 +1,9 @@
 # LocalizedVerticalAlignParam
 
+```TypeScript
+declare interface LocalizedVerticalAlignParam
+```
+
 Defines the localized vertical align param of relative container.
 
 @interface LocalizedVerticalAlignParam

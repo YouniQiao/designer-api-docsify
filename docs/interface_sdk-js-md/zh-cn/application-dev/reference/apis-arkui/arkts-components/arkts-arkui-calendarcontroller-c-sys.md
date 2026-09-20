@@ -1,5 +1,9 @@
 # CalendarController（系统接口）
 
+```TypeScript
+declare class CalendarController
+```
+
 Calendar controller.
 
 **起始版本：** 7

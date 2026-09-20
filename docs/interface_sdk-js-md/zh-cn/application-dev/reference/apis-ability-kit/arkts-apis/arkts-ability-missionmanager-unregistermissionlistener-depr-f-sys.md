@@ -110,6 +110,8 @@ missionManager.unregisterMissionListener(listenerId)
 ```
 
 
+<a id="unregistermissionlistener-1"></a>
+
 ## unregisterMissionListener
 
 ```TypeScript

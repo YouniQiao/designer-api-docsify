@@ -1,5 +1,9 @@
 # GridLayoutAlgorithmOptions
 
+```TypeScript
+interface GridLayoutAlgorithmOptions
+```
+
 Sets the column count template, column spacing, and row spacing of the grid layout algorithm.
 
 **Since:** 24

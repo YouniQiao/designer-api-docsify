@@ -1,5 +1,9 @@
 # PermissionUsedRecord（系统接口）
 
+```TypeScript
+interface PermissionUsedRecord
+```
+
 某个权限的访问记录。
 
 **起始版本：** 9

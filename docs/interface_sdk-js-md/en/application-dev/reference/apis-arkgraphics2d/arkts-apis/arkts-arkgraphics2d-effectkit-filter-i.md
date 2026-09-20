@@ -1,5 +1,9 @@
 # Filter
 
+```TypeScript
+interface Filter
+```
+
 An image effect class used to add a specified effect to the effect chain through chained calls. It is suitable for scenarios such as image filter processing, visual effect enhancement, and image beautification. Before calling the methods of Filter, you need to create a Filter instance via createEffect. After adding effects, you need to call getEffectPixelMap to obtain the processed image.
 
 **Since:** 9
@@ -173,6 +177,8 @@ struct Index {
   }
 }
 ```
+
+<a id="blur-1"></a>
 
 ## blur
 
@@ -380,6 +386,8 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   });
 });
 ```
+
+<a id="geteffectpixelmap-1"></a>
 
 ## getEffectPixelMap
 

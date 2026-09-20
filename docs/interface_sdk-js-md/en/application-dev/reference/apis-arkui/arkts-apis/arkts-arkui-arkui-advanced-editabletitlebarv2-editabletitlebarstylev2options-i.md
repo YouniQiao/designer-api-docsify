@@ -1,5 +1,9 @@
 # EditableTitleBarStyleV2Options
 
+```TypeScript
+export declare interface EditableTitleBarStyleV2Options
+```
+
 Indicates the style options of the title bar.
 
 **Since:** 26.0.0

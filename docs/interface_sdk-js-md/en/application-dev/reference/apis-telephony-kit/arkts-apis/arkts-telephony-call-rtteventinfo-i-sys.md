@@ -1,5 +1,9 @@
 # RttEventInfo (System API)
 
+```TypeScript
+export interface RttEventInfo
+```
+
 Indicates the info of the rtt event.
 
 **Since:** 22

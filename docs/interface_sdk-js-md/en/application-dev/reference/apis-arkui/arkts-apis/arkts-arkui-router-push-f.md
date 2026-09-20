@@ -18,7 +18,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)(options: router.RouterOptions)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

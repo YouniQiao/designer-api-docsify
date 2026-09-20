@@ -1,5 +1,9 @@
 # SizeType
 
+```TypeScript
+declare enum SizeType
+```
+
 Enumerates device width types, used to distinguish device types of different widths in the grid layout to implement responsive layout.
 
 **Since:** 7

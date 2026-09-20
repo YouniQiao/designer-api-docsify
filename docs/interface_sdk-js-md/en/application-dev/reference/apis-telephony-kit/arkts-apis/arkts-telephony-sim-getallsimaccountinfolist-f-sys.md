@@ -67,6 +67,8 @@ async getAllSimAccountInfoList(): Promise<ResponseData<sim.IccAccountInfo[] | nu
 ```
 
 
+<a id="getallsimaccountinfolist-1"></a>
+
 ## getAllSimAccountInfoList
 
 ```TypeScript

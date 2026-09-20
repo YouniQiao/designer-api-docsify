@@ -1,5 +1,9 @@
 # ThreadCpuUsage
 
+```TypeScript
+interface ThreadCpuUsage
+```
+
 Describes the CPU usage of a thread.
 
 **Since:** 12

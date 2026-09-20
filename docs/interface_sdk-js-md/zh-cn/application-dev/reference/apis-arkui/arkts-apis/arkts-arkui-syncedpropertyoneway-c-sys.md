@@ -1,5 +1,10 @@
 # SyncedPropertyOneWay（系统接口）
 
+```TypeScript
+declare class SyncedPropertyOneWay<T> extends SubscribedAbstractProperty<T>
+  implements ISinglePropertyChangeSubscriber<T>
+```
+
 继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。
 
 **继承/实现关系：** SyncedPropertyOneWay extends SubscribedAbstractProperty<T> implements ISinglePropertyChangeSubscriber<T>

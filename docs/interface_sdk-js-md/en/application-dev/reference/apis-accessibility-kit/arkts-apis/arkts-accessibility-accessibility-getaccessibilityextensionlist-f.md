@@ -56,6 +56,8 @@ Query all enabled accessibility applications with voice feedback.
 ```
 
 
+<a id="getaccessibilityextensionlist-1"></a>
+
 ## getAccessibilityExtensionList
 
 ```TypeScript

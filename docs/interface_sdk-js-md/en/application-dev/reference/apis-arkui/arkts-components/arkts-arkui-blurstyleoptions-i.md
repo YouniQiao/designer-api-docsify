@@ -1,5 +1,9 @@
 # BlurStyleOptions
 
+```TypeScript
+declare interface BlurStyleOptions
+```
+
 Defines the options of blurStyle
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # DataPanelOptions
 
+```TypeScript
+declare interface DataPanelOptions
+```
+
 数据面板选项。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # MediaSourceLoadingRequest
 
+```TypeScript
+interface MediaSourceLoadingRequest
+```
+
 The MediaSourceLoadingRequest class defines a loading request object. Applications use this object to obtain the location of the requested resource and to interact with the player for data exchange.
 
 **Since:** 18

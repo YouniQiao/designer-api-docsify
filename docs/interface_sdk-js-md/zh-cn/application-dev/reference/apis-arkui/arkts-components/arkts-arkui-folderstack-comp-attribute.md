@@ -1,5 +1,9 @@
 # FolderStack属性/事件
 
+```TypeScript
+declare class FolderStackAttribute extends CommonMethod<FolderStackAttribute>
+```
+
 In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
 
 **继承/实现关系：** FolderStackAttribute extends CommonMethod<FolderStackAttribute>

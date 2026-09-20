@@ -1,5 +1,9 @@
 # AlertDialog
 
+```TypeScript
+declare class AlertDialog
+```
+
 **起始版本：** 7
 
 **废弃版本：** 26.0.0

@@ -1,5 +1,9 @@
 # EffectType
 
+```TypeScript
+declare enum EffectType
+```
+
 效果模板类型的枚举值。效果模板为预设的视觉效果参数配置，包含模糊半径、饱和度、亮度和颜色等参数。
 
 **效果模板：**

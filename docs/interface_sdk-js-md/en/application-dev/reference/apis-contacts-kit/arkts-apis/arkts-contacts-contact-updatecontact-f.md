@@ -121,6 +121,8 @@ contact.selectContacts().then((data) => {
 ```
 
 
+<a id="updatecontact-1"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -155,6 +157,8 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 See [updateContact](#updatecontact)
 
 
+<a id="updatecontact-2"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -185,6 +189,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 See [updateContact](#updatecontact)
 
+
+<a id="updatecontact-3"></a>
 
 ## updateContact
 
@@ -221,6 +227,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 See [updateContact](#updatecontact)
 
 
+<a id="updatecontact-4"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -256,6 +264,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 See [updateContact](#updatecontact)
 
+
+<a id="updatecontact-5"></a>
 
 ## updateContact
 

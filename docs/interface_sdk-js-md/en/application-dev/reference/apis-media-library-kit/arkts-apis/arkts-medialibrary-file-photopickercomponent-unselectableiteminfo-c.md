@@ -1,5 +1,9 @@
 # UnselectableItemInfo
 
+```TypeScript
+export declare class UnselectableItemInfo
+```
+
 UnselectableItemInfo
 
 **Since:** 26.0.1

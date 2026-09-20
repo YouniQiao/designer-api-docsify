@@ -1,5 +1,9 @@
 # MeasureUtils
 
+```TypeScript
+export class MeasureUtils
+```
+
 MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本自适应布局、多行文本截断、动态UI适配等场景。通过该类可精确计算文本尺寸，帮助开发者在布局前预判文本显示效果，避免文本溢出或布局错乱等问题。
 
 > **说明：** 

@@ -120,6 +120,8 @@ concurrentFunc();
 ```
 
 
+<a id="cancel-1"></a>
+
 ## cancel
 
 ```TypeScript
@@ -150,6 +152,8 @@ function cancel(group: TaskGroup): void
 
 参见 [cancel](#cancel)
 
+
+<a id="cancel-2"></a>
 
 ## cancel
 

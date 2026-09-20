@@ -75,6 +75,8 @@ try {
 ```
 
 
+<a id="getautounlockafterreboot-1"></a>
+
 ## getAutoUnlockAfterReboot
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # UsedRecordDetail（系统接口）
 
+```TypeScript
+interface UsedRecordDetail
+```
+
 单次访问记录详情。
 
 **起始版本：** 9

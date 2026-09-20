@@ -1,5 +1,9 @@
 # WeekStyle（系统接口）
 
+```TypeScript
+interface WeekStyle
+```
+
 Week Style.
 
 **起始版本：** 7

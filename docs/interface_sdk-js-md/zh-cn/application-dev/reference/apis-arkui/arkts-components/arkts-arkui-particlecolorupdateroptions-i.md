@@ -1,5 +1,9 @@
 # ParticleColorUpdaterOptions
 
+```TypeScript
+interface ParticleColorUpdaterOptions<UPDATER extends ParticleUpdater>
+```
+
 颜色属性变化配置。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # PixelMapFormat (System API)
 
+```TypeScript
+export declare enum PixelMapFormat
+```
+
 Enumerates pixel map formats.
 
 @enum { int }

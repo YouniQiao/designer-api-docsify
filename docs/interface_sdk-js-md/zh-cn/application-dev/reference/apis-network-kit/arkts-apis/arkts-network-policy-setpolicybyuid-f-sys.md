@@ -65,6 +65,8 @@ policy
 ```
 
 
+<a id="setpolicybyuid-1"></a>
+
 ## setPolicyByUid
 
 ```TypeScript

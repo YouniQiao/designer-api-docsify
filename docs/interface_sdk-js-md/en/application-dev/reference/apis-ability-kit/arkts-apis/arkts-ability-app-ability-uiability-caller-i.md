@@ -1,5 +1,9 @@
 # Caller
 
+```TypeScript
+export interface Caller
+```
+
 A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
 **Since:** 9

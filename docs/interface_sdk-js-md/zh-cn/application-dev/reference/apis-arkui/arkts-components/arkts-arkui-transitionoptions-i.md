@@ -1,5 +1,9 @@
 # TransitionOptions
 
+```TypeScript
+declare interface TransitionOptions
+```
+
 TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 > **说明：** 

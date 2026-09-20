@@ -1,5 +1,9 @@
 # TimePickerOptions
 
+```TypeScript
+declare interface TimePickerOptions
+```
+
 Describes the parameters of the time picker.
 
 Property modifications made to **TimePickerOptions** during the **TimePicker** scrolling process may not take effect.
@@ -75,7 +79,7 @@ Time of the selected item.
 
 Default value: current system time
 
-Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 

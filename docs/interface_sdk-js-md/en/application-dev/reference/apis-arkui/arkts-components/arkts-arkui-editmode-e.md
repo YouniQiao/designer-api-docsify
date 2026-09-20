@@ -1,5 +1,9 @@
 # EditMode
 
+```TypeScript
+declare enum EditMode
+```
+
 Enumerates the edit modes of list items.
 
 **Since:** 7

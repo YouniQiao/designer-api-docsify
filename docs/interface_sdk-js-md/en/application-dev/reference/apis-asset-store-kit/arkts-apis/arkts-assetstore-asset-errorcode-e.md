@@ -1,5 +1,9 @@
 # ErrorCode
 
+```TypeScript
+enum ErrorCode
+```
+
 Enumerates the error codes.
 
 **Since:** 11

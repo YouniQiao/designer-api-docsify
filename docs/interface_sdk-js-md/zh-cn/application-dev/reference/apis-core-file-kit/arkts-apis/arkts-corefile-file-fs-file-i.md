@@ -1,5 +1,9 @@
 # File
 
+```TypeScript
+declare interface File
+```
+
 由open接口打开的File对象，持有文件描述符fd，提供文件锁和获取父目录等能力。
 
 **起始版本：** 9
@@ -128,6 +132,8 @@ file.lock(true, (err: BusinessError) => {
 });
 ```
 
+<a id="lock-1"></a>
+
 ## lock
 
 ```TypeScript
@@ -160,6 +166,8 @@ lock(callback: AsyncCallback<void>): void
 **示例**
 
 参见 [lock](#lock)
+
+<a id="lock-2"></a>
 
 ## lock
 

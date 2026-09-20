@@ -1,5 +1,9 @@
 # ColorManagementQuery
 
+```TypeScript
+interface ColorManagementQuery
+```
+
 色彩管理类，用于查询色彩空间参数。
 
 **起始版本：** 12

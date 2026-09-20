@@ -1,5 +1,9 @@
 # ProgressStyleOptions
 
+```TypeScript
+declare interface ProgressStyleOptions extends CommonProgressStyleOptions
+```
+
 进度条样式选项。
 
 继承自[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。

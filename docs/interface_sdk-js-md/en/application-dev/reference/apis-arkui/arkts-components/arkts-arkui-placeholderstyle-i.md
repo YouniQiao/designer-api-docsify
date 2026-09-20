@@ -1,5 +1,9 @@
 # PlaceholderStyle
 
+```TypeScript
+declare interface PlaceholderStyle
+```
+
 Sets the style of the placeholder text.
 
 **Since:** 12

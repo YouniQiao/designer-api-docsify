@@ -1,5 +1,9 @@
 # SecurityUIExtensionOptions（系统接口）
 
+```TypeScript
+declare interface SecurityUIExtensionOptions
+```
+
 用于构造SecurityUIExtensionComponent时传递参数。
 
 **起始版本：** 26.0.0

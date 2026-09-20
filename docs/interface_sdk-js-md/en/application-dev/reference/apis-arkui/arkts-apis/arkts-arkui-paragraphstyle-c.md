@@ -1,5 +1,9 @@
 # ParagraphStyle
 
+```TypeScript
+declare class ParagraphStyle
+```
+
 Describes the text paragraph style.
 
 Except the first paragraph, all paragraphs are formed using the escape character '\n'.

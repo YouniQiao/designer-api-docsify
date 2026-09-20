@@ -56,6 +56,8 @@ let result = huks.isKeyExist(keyAlias, emptyOptions);
 ```
 
 
+<a id="iskeyexist-1"></a>
+
 ## isKeyExist
 
 ```TypeScript
@@ -68,7 +70,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

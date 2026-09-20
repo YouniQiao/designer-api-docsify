@@ -1,5 +1,9 @@
 # RichEditorUpdateImageSpanStyleOptions
 
+```TypeScript
+declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions
+```
+
 Defines the image span style options.
 
 Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md).

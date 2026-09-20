@@ -1,5 +1,9 @@
 # NavigationAnimatedTransition
 
+```TypeScript
+declare interface NavigationAnimatedTransition
+```
+
 自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。
 
 **起始版本：** 11

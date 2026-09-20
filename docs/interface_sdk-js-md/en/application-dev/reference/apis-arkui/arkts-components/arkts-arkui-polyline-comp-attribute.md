@@ -1,5 +1,9 @@
 # Polyline properties/events
 
+```TypeScript
+declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** PolylineAttribute extends CommonShapeMethod<PolylineAttribute>

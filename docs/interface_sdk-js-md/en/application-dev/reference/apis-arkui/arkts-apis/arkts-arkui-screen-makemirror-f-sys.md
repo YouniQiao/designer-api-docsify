@@ -70,6 +70,8 @@ screen.makeMirror(mainScreenId, mirrorScreenIds).then((data: number) => {
 ```
 
 
+<a id="makemirror-1"></a>
+
 ## makeMirror
 
 ```TypeScript

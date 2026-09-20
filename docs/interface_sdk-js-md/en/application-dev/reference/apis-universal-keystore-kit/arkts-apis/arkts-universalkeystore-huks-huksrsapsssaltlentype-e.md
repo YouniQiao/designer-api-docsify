@@ -1,5 +1,9 @@
 # HuksRsaPssSaltLenType
 
+```TypeScript
+export enum HuksRsaPssSaltLenType
+```
+
 Enumerates the **salt_len** types to set when PSS padding is used in RSA signing or signature verification.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # LinearStyleOptions
 
+```TypeScript
+declare interface LinearStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions
+```
+
 Linear style options.
 
 Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).

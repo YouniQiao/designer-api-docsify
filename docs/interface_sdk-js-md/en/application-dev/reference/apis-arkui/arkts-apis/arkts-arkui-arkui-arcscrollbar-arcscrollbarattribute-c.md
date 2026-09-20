@@ -1,5 +1,9 @@
 # ArcScrollBarAttribute
 
+```TypeScript
+export declare class ArcScrollBarAttribute extends CommonMethod<ArcScrollBarAttribute>
+```
+
 Defines the arc scroll bar attribute functions.
 
 **Inheritance/Implementation:** ArcScrollBarAttribute extends CommonMethod<ArcScrollBarAttribute>

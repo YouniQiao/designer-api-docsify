@@ -1,5 +1,9 @@
 # ToolInvokeConfig（系统接口）
 
+```TypeScript
+interface ToolInvokeConfig
+```
+
 调用分析工具的配置。
 
 **起始版本：** 26.0.1

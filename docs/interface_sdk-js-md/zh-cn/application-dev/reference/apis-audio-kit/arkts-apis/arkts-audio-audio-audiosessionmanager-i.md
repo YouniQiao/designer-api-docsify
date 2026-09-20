@@ -1,5 +1,9 @@
 # AudioSessionManager
 
+```TypeScript
+interface AudioSessionManager
+```
+
 音频会话管理。在使用AudioSessionManager的接口之前，需先通过[getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager)获取AudioSessionManager实例。
 
 > **说明：** 

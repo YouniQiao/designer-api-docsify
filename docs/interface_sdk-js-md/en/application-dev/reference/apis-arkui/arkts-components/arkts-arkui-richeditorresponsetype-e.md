@@ -1,5 +1,9 @@
 # RichEditorResponseType
 
+```TypeScript
+declare enum RichEditorResponseType
+```
+
 Enumerates the response types of the menu.
 
 **Since:** 11

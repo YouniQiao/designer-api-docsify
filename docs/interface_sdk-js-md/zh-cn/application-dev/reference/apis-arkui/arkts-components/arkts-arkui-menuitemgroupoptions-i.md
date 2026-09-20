@@ -1,5 +1,9 @@
 # MenuItemGroupOptions
 
+```TypeScript
+declare interface MenuItemGroupOptions
+```
+
 MenuItem分组的标题和尾部信息。
 
 **起始版本：** 9

@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="getallapplicationinfo-1"></a>
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -140,6 +142,8 @@ function getAllApplicationInfo(appFlags: number,
 
 参见 [getAllApplicationInfo](#getallapplicationinfo)
 
+
+<a id="getallapplicationinfo-2"></a>
 
 ## getAllApplicationInfo
 

@@ -1,5 +1,9 @@
 # CommonOptions
 
+```TypeScript
+export declare class CommonOptions
+```
+
 CommonOptions定义日期时间选择器的通用选项。
 
 > **说明：** 

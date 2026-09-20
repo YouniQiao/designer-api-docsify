@@ -1,5 +1,9 @@
 # AudioViewPicker
 
+```TypeScript
+class AudioViewPicker
+```
+
 Provides APIs for selecting and saving audio clips. Before using the APIs of **AudioViewPicker**, you need to create an **AudioViewPicker** instance.
 
 **Since:** 9
@@ -57,6 +61,8 @@ struct Index {
 ```TypeScript
 let audioPicker = new picker.AudioViewPicker(); // Construction without parameter is not recommended. There is a possibility that the AudioViewPicker instance fails to start.
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -203,6 +209,8 @@ async function example18(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -288,6 +296,8 @@ async function example18(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="save-2"></a>
 
 ## save
 
@@ -465,6 +475,8 @@ async function example15(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="select-1"></a>
+
 ## select
 
 ```TypeScript
@@ -548,6 +560,8 @@ async function example15(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="select-2"></a>
 
 ## select
 

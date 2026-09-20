@@ -1,5 +1,9 @@
 # CalendarSelectedDate（系统接口）
 
+```TypeScript
+declare interface CalendarSelectedDate
+```
+
 Defines the struct of CalendarSelectedDate.
 
 **起始版本：** 7

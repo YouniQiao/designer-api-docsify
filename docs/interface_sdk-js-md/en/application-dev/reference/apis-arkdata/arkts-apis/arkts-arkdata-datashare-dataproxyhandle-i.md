@@ -1,5 +1,9 @@
 # DataProxyHandle
 
+```TypeScript
+interface DataProxyHandle
+```
+
 Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md).
 
 **Since:** 20

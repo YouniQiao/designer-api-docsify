@@ -1,5 +1,9 @@
 # PreviewMenuOptions
 
+```TypeScript
+declare interface PreviewMenuOptions
+```
+
 Defines the options of the preview menu.
 
 **Since:** 18

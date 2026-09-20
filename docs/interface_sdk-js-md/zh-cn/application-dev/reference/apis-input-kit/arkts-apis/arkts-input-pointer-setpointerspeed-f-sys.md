@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="setpointerspeed-1"></a>
+
 ## setPointerSpeed
 
 ```TypeScript

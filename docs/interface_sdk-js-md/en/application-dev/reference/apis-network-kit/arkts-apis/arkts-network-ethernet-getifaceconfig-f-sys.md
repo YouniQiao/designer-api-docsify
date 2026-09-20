@@ -78,6 +78,8 @@ ethernet.getIfaceConfig("eth0").then((data: ethernet.InterfaceConfiguration) => 
 ```
 
 
+<a id="getifaceconfig-1"></a>
+
 ## getIfaceConfig
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # FileSelectorMode
 
+```TypeScript
+declare enum FileSelectorMode
+```
+
 文件选择器的模式，用于控制文件选择器的打开方式和行为，帮助开发者实现文件上传等文件操作场景。
 
 **起始版本：** 9

@@ -65,6 +65,8 @@ sim.activateSim(0).then(() => {
 ```
 
 
+<a id="activatesim-1"></a>
+
 ## activateSim
 
 ```TypeScript

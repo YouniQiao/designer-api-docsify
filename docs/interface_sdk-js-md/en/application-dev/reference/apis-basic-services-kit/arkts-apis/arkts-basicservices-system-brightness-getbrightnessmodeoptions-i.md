@@ -1,5 +1,9 @@
 # GetBrightnessModeOptions
 
+```TypeScript
+export interface GetBrightnessModeOptions
+```
+
 Options for obtaining the screen brightness mode.
 
 **Since:** 3

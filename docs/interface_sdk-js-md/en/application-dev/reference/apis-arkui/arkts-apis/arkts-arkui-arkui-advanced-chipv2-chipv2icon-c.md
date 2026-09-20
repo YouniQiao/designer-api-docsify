@@ -1,5 +1,9 @@
 # ChipV2Icon
 
+```TypeScript
+export abstract class ChipV2Icon
+```
+
 Defines the base class of icons.
 
 **Since:** 26.0.0

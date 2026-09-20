@@ -1,5 +1,9 @@
 # NetConnection
 
+```TypeScript
+export interface NetConnection
+```
+
 Represents the network connection object type.
 
 > **NOTE:** 

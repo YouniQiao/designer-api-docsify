@@ -124,6 +124,8 @@ try {
 ```
 
 
+<a id="finish-1"></a>
+
 ## finish
 
 ```TypeScript
@@ -158,6 +160,8 @@ Finishes the signature verification operation. This is the last step in the sign
 
 See [finish](#finish)
 
+
+<a id="finish-2"></a>
 
 ## finish
 

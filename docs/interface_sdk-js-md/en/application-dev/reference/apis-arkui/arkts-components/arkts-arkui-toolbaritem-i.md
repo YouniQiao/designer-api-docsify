@@ -1,5 +1,9 @@
 # ToolbarItem
 
+```TypeScript
+declare interface ToolbarItem
+```
+
 Provides customizable parameters of the toolbar.
 
 **Since:** 10

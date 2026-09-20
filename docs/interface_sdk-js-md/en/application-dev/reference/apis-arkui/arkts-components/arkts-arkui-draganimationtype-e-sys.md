@@ -1,5 +1,9 @@
 # DragAnimationType (System API)
 
+```TypeScript
+declare enum DragAnimationType
+```
+
 Enumerates drag animation types.
 
 **Since:** 26.0.0

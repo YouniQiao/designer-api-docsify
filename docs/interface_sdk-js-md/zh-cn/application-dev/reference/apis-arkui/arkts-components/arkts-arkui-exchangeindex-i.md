@@ -1,5 +1,9 @@
 # ExchangeIndex
 
+```TypeScript
+interface ExchangeIndex
+```
+
 定义交换数据的位置。
 
 **起始版本：** 12

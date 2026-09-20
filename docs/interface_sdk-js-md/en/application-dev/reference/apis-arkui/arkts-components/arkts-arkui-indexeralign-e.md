@@ -1,5 +1,9 @@
 # IndexerAlign
 
+```TypeScript
+declare enum IndexerAlign
+```
+
 Enumerates the alignment styles of the indexer pop-up window.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper
+```
+
 Helper functions to access photos and albums.
 
 **Since:** 10
@@ -482,6 +486,8 @@ The album name must meet the following requirements:
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="createalbum-1"></a>
+
 ## createAlbum
 
 ```TypeScript
@@ -588,6 +594,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="createasset-1"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -642,6 +650,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="createasset-2"></a>
 
 ## createAsset
 
@@ -698,6 +708,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="createasset-3"></a>
 
 ## createAsset
 
@@ -991,6 +1003,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="deletealbums-1"></a>
+
 ## deleteAlbums
 
 ```TypeScript
@@ -1082,6 +1096,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="deleteassets-1"></a>
 
 ## deleteAssets
 
@@ -1518,6 +1534,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="gethiddenalbums-1"></a>
+
 ## getHiddenAlbums
 
 ```TypeScript
@@ -1553,6 +1571,8 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 **Examples**
 
 See [getHiddenAlbums](#gethiddenalbums)
+
+<a id="gethiddenalbums-2"></a>
 
 ## getHiddenAlbums
 
@@ -1802,6 +1822,8 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="getphotoindex-1"></a>
 
 ## getPhotoIndex
 
@@ -2961,6 +2983,8 @@ Removes the Gallery widget information bound to a single image from the database
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="removeforminfo-1"></a>
+
 ## removeFormInfo
 
 ```TypeScript
@@ -3097,6 +3121,8 @@ Saves the Gallery widget information bound to a single image to the database. Th
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="saveforminfo-1"></a>
+
 ## saveFormInfo
 
 ```TypeScript
@@ -3214,6 +3240,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<a id="setassetcompatiblecapability-1"></a>
 
 ## setAssetCompatibleCapability
 
@@ -3524,6 +3552,8 @@ Generates a thumbnail based on the specified rule.
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="startthumbnailcreationtask-1"></a>
 
 ## startThumbnailCreationTask
 

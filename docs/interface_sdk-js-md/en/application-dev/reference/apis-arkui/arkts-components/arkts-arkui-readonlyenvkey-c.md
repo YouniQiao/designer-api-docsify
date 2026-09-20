@@ -1,5 +1,9 @@
 # ReadonlyEnvKey
 
+```TypeScript
+declare class ReadonlyEnvKey
+```
+
 Defines the readonly system environment key.
 
 **Since:** 26.0.0

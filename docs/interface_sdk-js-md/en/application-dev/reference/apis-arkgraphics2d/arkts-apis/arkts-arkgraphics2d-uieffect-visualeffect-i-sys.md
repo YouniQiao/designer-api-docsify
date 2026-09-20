@@ -1,5 +1,9 @@
 # VisualEffect
 
+```TypeScript
+interface VisualEffect
+```
+
 VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
 **Since:** 12

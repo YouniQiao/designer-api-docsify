@@ -24,7 +24,7 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 [publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
 
-[cancel](arkts-notification-notificationmanager-cancel-f.md) 取消已发布的通知。
+[cancel](arkts-notification-notificationmanager-cancel-f.md#cancel-1) 取消已发布的通知。
 
 **参数：**
 
@@ -68,6 +68,8 @@ notificationManager.cancelAll().then(() => {
 ```
 
 
+<a id="cancelall-1"></a>
+
 ## cancelAll
 
 ```TypeScript
@@ -84,9 +86,9 @@ function cancelAll(): Promise<void>
 
 **参见：**
 
-[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md#publish-1) 发布通知。
 
-[cancel](arkts-notification-notificationmanager-cancel-f.md) 根据指定的通知ID取消已发布的通知。
+[cancel](arkts-notification-notificationmanager-cancel-f.md#cancel-2) 根据指定的通知ID取消已发布的通知。
 
 **返回值：**
 

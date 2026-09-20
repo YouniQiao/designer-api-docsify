@@ -1,5 +1,9 @@
 # TextContentControllerBase
 
+```TypeScript
+declare abstract class TextContentControllerBase
+```
+
 TextInput、TextArea、Search的基础控制器。
 
 **起始版本：** 10

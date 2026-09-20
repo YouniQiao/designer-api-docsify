@@ -1,5 +1,9 @@
 # ImageAlt
 
+```TypeScript
+declare interface ImageAlt
+```
+
 设置图片占位图。
 
 **起始版本：** 22

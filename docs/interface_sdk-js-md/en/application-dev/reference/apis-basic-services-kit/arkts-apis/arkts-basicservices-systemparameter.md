@@ -1,4 +1,4 @@
-# @ohos.systemparameter
+# @ohos.systemparameter(System Parameter)
 
 The **SystemParameter** module provides system services with easy access to key-value pairs. You can use the APIs provided by this module to describe the service status and change the service behavior. The basic operation primitives are **get** and **set**. You can obtain the values of system parameters through getters and modify the values through setters.
 
@@ -36,10 +36,10 @@ import { systemParameter } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses a promise to return the result. |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-1) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get-2) | Obtains a value of the specified key. This API uses a promise to return the result. |
 | [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) | Obtains a value of the specified key. |
 | [set](arkts-basicservices-systemparameter-set-f-sys.md) | Sets a value for the specified key. This API uses an asynchronous callback to return the result. |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | Sets a value for the specified key. This API uses a promise to return the result. |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md#set-1) | Sets a value for the specified key. This API uses a promise to return the result. |
 | [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) | Sets a value for the specified key. |
 <!--DelEnd-->

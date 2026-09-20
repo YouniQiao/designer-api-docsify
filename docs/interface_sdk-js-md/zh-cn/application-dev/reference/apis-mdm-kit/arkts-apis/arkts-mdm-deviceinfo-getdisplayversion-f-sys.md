@@ -85,6 +85,8 @@ deviceInfo.getDisplayVersion(wantTemp).then((result) => {
 ```
 
 
+<a id="getdisplayversion-1"></a>
+
 ## getDisplayVersion
 
 ```TypeScript

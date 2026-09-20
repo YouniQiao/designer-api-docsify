@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="setuserrestrictionforaccount-1"></a>
+
 ## setUserRestrictionForAccount
 
 ```TypeScript

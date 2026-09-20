@@ -1,5 +1,9 @@
 # FocusController
 
+```TypeScript
+export class FocusController
+```
+
 提供控制焦点的能力，如清除、移动和激活焦点等功能，适用于需要管理页面或组件焦点状态、控制焦点流转的场景，可帮助开发者优化键盘等输入方式下的焦点交互体验。
 
 > **说明：** 

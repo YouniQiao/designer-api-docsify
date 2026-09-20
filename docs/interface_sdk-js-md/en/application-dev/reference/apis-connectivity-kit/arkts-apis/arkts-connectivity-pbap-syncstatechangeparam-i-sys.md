@@ -1,5 +1,9 @@
 # SyncStateChangeParam (System API)
 
+```TypeScript
+interface SyncStateChangeParam
+```
+
 Information about the phone book sync state change.
 
 **Since:** 26.0.1

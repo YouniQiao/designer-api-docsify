@@ -1,5 +1,9 @@
 # UIPickerComponent属性/事件
 
+```TypeScript
+declare class UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：

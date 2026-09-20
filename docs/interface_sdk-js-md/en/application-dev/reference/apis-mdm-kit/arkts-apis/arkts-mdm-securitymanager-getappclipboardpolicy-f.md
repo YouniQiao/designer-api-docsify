@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="getappclipboardpolicy-1"></a>
+
 ## getAppClipboardPolicy
 
 ```TypeScript
@@ -129,6 +131,8 @@ Obtains the device clipboard policy. Enterprises can use this API to query the c
 See [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
+<a id="getappclipboardpolicy-2"></a>
+
 ## getAppClipboardPolicy
 
 ```TypeScript
@@ -171,6 +175,8 @@ Obtains the device clipboard policy of a specified application for a specified u
 
 See [getAppClipboardPolicy](#getappclipboardpolicy)
 
+
+<a id="getappclipboardpolicy-3"></a>
 
 ## getAppClipboardPolicy
 

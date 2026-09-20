@@ -1,5 +1,9 @@
 # AuthorizationResult
 
+```TypeScript
+interface AuthorizationResult
+```
+
 定义授权结果。目前，所有[特权](arkts-basicservices-authorization-privilege-e.md) 的授权有效期均与调用进程的生命周期相绑定（随进程销毁而失效）。
 
 **起始版本：** 26.0.1

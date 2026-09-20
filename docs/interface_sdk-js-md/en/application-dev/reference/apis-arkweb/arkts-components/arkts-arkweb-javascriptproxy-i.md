@@ -1,5 +1,9 @@
 # JavaScriptProxy
 
+```TypeScript
+declare interface JavaScriptProxy
+```
+
 Defines the JavaScript object to be injected, including the object name, method list, and permission configuration. It is suitable for scenarios where JavaScript-to-native interaction is required, improving cross-language call flexibility and security.
 
 **Since:** 12

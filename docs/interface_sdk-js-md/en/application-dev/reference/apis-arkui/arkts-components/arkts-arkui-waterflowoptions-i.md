@@ -1,5 +1,9 @@
 # WaterFlowOptions
 
+```TypeScript
+declare interface WaterFlowOptions
+```
+
 Provides parameters of the **WaterFlow** component.
 
 **Since:** 9

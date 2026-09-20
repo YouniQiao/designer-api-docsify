@@ -1,5 +1,9 @@
 # Buffer
 
+```TypeScript
+class Buffer
+```
+
 Buffer对象是处理二进制数据的缓冲区。
 
 **起始版本：** 9
@@ -210,7 +214,7 @@ console.info(buf1.equals(buf3).toString());
 
 ```TypeScript
 fill(
-      value: string | Buffer | Uint8Array | number | number | number,
+      value: string | Buffer | Uint8Array | number,
       offset?: number,
       end?: number,
       encoding?: BufferEncoding
@@ -259,7 +263,7 @@ console.info(b.toString());
 ## includes
 
 ```TypeScript
-includes(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
+includes(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
 检查Buffer对象是否包含value值。
@@ -299,7 +303,7 @@ console.info(buf.includes('be').toString());
 ## indexOf
 
 ```TypeScript
-indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+indexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
 返回当前对象中首次出现value的索引，如果不包含value，则返回-1。
@@ -379,7 +383,7 @@ for (const key of keys) {
 ## lastIndexOf
 
 ```TypeScript
-lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+lastIndexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
 返回this实例中最后一次出现value的索引，如果对象不包含value，则返回-1。

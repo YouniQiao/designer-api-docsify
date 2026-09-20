@@ -65,6 +65,8 @@ call.muteRinger().then(() => {
 ```
 
 
+<a id="muteringer-1"></a>
+
 ## muteRinger
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # InputMethodSetting
 
+```TypeScript
+interface InputMethodSetting
+```
+
 In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
@@ -57,6 +61,8 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
   console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="displayoptionalinputmethod-1"></a>
 
 ## displayOptionalInputMethod
 
@@ -132,6 +138,8 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
   console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="getallinputmethods-1"></a>
 
 ## getAllInputMethods
 
@@ -260,6 +268,8 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
   console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="getinputmethods-1"></a>
 
 ## getInputMethods
 
@@ -448,6 +458,8 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 })
 ```
 
+<a id="listcurrentinputmethodsubtype-1"></a>
+
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -522,6 +534,8 @@ inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMe
   console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="listinputmethod-1"></a>
 
 ## listInputMethod
 
@@ -621,6 +635,8 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
   console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="listinputmethodsubtype-1"></a>
 
 ## listInputMethodSubtype
 
@@ -761,6 +777,8 @@ inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
   console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
+
+<a id="showoptionalinputmethods-1"></a>
 
 ## showOptionalInputMethods
 

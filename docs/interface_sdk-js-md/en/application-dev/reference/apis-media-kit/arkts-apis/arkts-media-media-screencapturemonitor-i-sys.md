@@ -1,5 +1,9 @@
 # ScreenCaptureMonitor (System API)
 
+```TypeScript
+interface ScreenCaptureMonitor
+```
+
 A class that provides APIs to query and monitor the system screen recorder status. Before calling any API, you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
 
 **Since:** 18

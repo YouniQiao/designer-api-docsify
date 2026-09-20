@@ -1,5 +1,9 @@
 # ScaleOptions
 
+```TypeScript
+declare interface ScaleOptions
+```
+
 定义缩放选项。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # SliderCustomContentOptions
 
+```TypeScript
+interface SliderCustomContentOptions
+```
+
 Provides accessibility configuration of the slider prefix and suffix.
 
 **Since:** 20

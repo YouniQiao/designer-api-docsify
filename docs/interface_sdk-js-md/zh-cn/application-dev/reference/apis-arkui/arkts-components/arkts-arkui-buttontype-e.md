@@ -1,5 +1,9 @@
 # ButtonType
 
+```TypeScript
+declare enum ButtonType
+```
+
 按钮的类型。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # RenderingContextOptions
 
+```TypeScript
+declare interface RenderingContextOptions
+```
+
 定义渲染上下文的具体配置参数。
 
 **起始版本：** 23

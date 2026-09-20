@@ -1,5 +1,9 @@
 # AlertDialog
 
+```TypeScript
+export declare struct AlertDialog
+```
+
 Declare CustomDialog AlertDialog
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # RichEditorOptions
 
+```TypeScript
+declare interface RichEditorOptions
+```
+
 Defines the options for initializing the **RichEditor** component.
 
 **Since:** 10

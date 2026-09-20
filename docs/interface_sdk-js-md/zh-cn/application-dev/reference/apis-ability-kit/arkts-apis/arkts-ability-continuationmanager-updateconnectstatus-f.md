@@ -70,6 +70,8 @@ continuationManager.updateConnectStatus(token, deviceId, continuationManager.Dev
 ```
 
 
+<a id="updateconnectstatus-1"></a>
+
 ## updateConnectStatus
 
 ```TypeScript

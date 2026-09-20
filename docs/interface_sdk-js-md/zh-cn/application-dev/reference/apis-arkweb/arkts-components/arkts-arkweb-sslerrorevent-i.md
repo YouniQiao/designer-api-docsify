@@ -1,5 +1,9 @@
 # SslErrorEvent
 
+```TypeScript
+declare interface SslErrorEvent
+```
+
 用户加载资源时发生SSL错误时触发的回调详情，包括URL、错误类型和证书链。适用于需要详细分析SSL错误的场景，提升安全问题的诊断和排查效率。
 
 **起始版本：** 12

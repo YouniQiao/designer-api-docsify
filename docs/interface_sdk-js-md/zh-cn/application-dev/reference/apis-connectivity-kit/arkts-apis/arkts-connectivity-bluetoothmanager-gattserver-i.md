@@ -1,5 +1,9 @@
 # GattServer
 
+```TypeScript
+interface GattServer
+```
+
 server端类，使用server端方法之前需要创建该类的实例进行操作，通过createGattServer()方法构造此实例。
 
 从API version 9开始支持，从API version 10开始废弃。

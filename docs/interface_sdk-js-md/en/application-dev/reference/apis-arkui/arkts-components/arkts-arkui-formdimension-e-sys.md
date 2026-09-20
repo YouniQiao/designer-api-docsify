@@ -1,5 +1,9 @@
 # FormDimension (System API)
 
+```TypeScript
+declare enum FormDimension
+```
+
 Enumerates widget sizes.
 
 **Since:** 7

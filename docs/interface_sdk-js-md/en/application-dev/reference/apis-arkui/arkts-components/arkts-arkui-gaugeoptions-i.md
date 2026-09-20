@@ -1,5 +1,9 @@
 # GaugeOptions
 
+```TypeScript
+interface GaugeOptions
+```
+
 Provides gauge options.
 
 **Since:** 18

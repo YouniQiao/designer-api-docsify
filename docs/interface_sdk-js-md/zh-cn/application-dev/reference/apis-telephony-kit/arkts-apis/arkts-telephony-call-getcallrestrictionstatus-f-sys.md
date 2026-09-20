@@ -67,6 +67,8 @@ call.getCallRestrictionStatus(0, 1).then((data: call.RestrictionStatus) => {
 ```
 
 
+<a id="getcallrestrictionstatus-1"></a>
+
 ## getCallRestrictionStatus
 
 ```TypeScript

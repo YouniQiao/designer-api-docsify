@@ -1,5 +1,9 @@
 # RadioStyle
 
+```TypeScript
+declare interface RadioStyle
+```
+
 Radio button color.
 
 **Since:** 10
@@ -14,7 +18,7 @@ checkedBackgroundColor?: ResourceColor
 
 Color of the background when the radio button is selected.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary_activated')**
+Default value: **$r('sys.color.ohos_id_color_text_primary_activated')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +40,7 @@ indicatorColor?: ResourceColor
 
 Color of the indicator when the radio button is selected. Since API version 12, this parameter takes effect only when **indicatorType** is set to **RadioIndicatorType.TICK** or **RadioIndicatorType.DOT**.
 
-Default value: **&#36;r('sys.color.ohos_id_color_foreground_contrary')**
+Default value: **$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +62,7 @@ uncheckedBorderColor?: ResourceColor
 
 Color of the border when the radio button is deselected.
 
-Default value: **&#36;r('sys.color.ohos_id_color_switch_outline_off')**
+Default value: **$r('sys.color.ohos_id_color_switch_outline_off')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

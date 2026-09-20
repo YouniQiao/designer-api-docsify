@@ -1,5 +1,9 @@
 # DismissSheetAction
 
+```TypeScript
+declare interface DismissSheetAction
+```
+
 Component sheet dismiss
 
 @interface DismissSheetAction

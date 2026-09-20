@@ -1,5 +1,9 @@
 # ScrollOptions
 
+```TypeScript
+declare interface ScrollOptions
+```
+
 滚动到指定位置的参数选项。
 
 > **说明：** 

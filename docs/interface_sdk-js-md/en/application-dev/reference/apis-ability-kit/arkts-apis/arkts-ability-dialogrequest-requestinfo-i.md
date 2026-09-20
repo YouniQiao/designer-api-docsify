@@ -1,5 +1,9 @@
 # RequestInfo
 
+```TypeScript
+export interface RequestInfo
+```
+
 Defines the request information, which is used as an input parameter for binding the modal dialog box.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # RemoteUserAuthItem (System API)
 
+```TypeScript
+interface RemoteUserAuthItem
+```
+
 Remote user authorization item.
 
 **Since:** 26.0.1

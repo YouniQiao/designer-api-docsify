@@ -1,5 +1,9 @@
 # DepthDataOutput (System API)
 
+```TypeScript
+interface DepthDataOutput extends CameraOutput
+```
+
 Implements depth data output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** DepthDataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)

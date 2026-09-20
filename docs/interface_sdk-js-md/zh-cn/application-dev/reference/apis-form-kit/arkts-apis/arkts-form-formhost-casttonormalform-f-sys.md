@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="casttonormalform-1"></a>
+
 ## castToNormalForm
 
 ```TypeScript

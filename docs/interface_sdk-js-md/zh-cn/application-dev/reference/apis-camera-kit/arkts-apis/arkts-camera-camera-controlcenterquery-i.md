@@ -1,5 +1,9 @@
 # ControlCenterQuery
 
+```TypeScript
+interface ControlCenterQuery
+```
+
 控制中心类，用于查询是否支持相机控制器。
 
 **起始版本：** 20

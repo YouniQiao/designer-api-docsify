@@ -1,5 +1,9 @@
 # HitTestType
 
+```TypeScript
+declare enum HitTestType
+```
+
 Enumerates the test result types of the click event.
 
 > **NOTE:** 

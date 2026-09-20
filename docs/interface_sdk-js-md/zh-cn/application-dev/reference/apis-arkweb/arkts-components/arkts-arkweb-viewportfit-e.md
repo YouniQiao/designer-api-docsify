@@ -1,5 +1,9 @@
 # ViewportFit
 
+```TypeScript
+declare enum ViewportFit
+```
+
 网页meta中viewport-fit配置的视口类型。
 
 **起始版本：** 12

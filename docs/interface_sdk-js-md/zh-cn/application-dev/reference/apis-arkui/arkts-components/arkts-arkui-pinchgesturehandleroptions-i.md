@@ -1,5 +1,9 @@
 # PinchGestureHandlerOptions
 
+```TypeScript
+interface PinchGestureHandlerOptions extends BaseHandlerOptions
+```
+
 捏合手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
 **继承/实现关系：** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

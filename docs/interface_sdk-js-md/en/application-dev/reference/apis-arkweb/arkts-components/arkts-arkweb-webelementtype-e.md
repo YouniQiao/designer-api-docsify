@@ -1,5 +1,9 @@
 # WebElementType
 
+```TypeScript
+declare enum WebElementType
+```
+
 Enumerates the web element types.
 
 **Since:** 13

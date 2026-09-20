@@ -1,5 +1,9 @@
 # TipsOptions
 
+```TypeScript
+declare interface TipsOptions
+```
+
 Defines the parameters of the tooltip.
 
 **Since:** 19

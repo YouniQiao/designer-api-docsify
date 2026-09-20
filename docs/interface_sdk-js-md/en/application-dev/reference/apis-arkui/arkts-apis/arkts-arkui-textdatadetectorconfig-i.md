@@ -1,5 +1,9 @@
 # TextDataDetectorConfig
 
+```TypeScript
+declare interface TextDataDetectorConfig
+```
+
 This configuration is only available for the Text and RichEditor components.
 
 **Since:** 11

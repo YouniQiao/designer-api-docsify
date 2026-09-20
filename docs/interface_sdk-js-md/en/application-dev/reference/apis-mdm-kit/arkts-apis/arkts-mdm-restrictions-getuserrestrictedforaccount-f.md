@@ -92,6 +92,8 @@ try {
 ```
 
 
+<a id="getuserrestrictedforaccount-1"></a>
+
 ## getUserRestrictedForAccount
 
 ```TypeScript

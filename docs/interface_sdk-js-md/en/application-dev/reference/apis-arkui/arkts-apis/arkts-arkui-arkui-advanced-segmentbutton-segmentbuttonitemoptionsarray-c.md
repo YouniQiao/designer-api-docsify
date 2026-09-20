@@ -1,5 +1,9 @@
 # SegmentButtonItemOptionsArray
 
+```TypeScript
+declare class SegmentButtonItemOptionsArray extends Array<SegmentButtonItemOptions>
+```
+
 Represents an array for storing button information.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # IndicatorStyle
 
+```TypeScript
+interface IndicatorStyle
+```
+
 Represents an indicator style object.
 
 **Since:** 10

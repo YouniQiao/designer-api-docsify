@@ -94,6 +94,8 @@ try {
 ```
 
 
+<a id="starttimer-1"></a>
+
 ## startTimer
 
 ```TypeScript

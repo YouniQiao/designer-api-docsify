@@ -1,5 +1,9 @@
 # PluginComponent属性/事件
 
+```TypeScript
+declare class PluginComponentAttribute extends CommonMethod<PluginComponentAttribute>
+```
+
 定义插件组件的属性方法。
 
 组件的宽高必须显式设置为非零有效值。

@@ -1,5 +1,9 @@
 # HuksSessionHandle
 
+```TypeScript
+export interface HuksSessionHandle
+```
+
 HUKS handle结构体。
 
 **起始版本：** 9

@@ -1,5 +1,9 @@
 # ColorContent
 
+```TypeScript
+declare class ColorContent
+```
+
 指定颜色填充内容。
 
 **起始版本：** 15

@@ -1,5 +1,9 @@
 # HierarchicalSymbolEffect
 
+```TypeScript
+declare class HierarchicalSymbolEffect extends SymbolEffect
+```
+
 HierarchicalSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

@@ -1,5 +1,9 @@
 # UIPickerComponent properties/events
 
+```TypeScript
+declare class UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.

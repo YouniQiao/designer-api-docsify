@@ -1,5 +1,9 @@
 # WebCookieManager
 
+```TypeScript
+class WebCookieManager
+```
+
 WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的全局管理能力。开发者通过该类可以实现cookie的获取、设置、保存、清除以及权限控制等操作。该类的所有方法均为静态方法，应用中的所有Web组件共享一个WebCookieManager实例。cookie的格式遵循[RFC6265](https://www.rfc-editor.org/info/rfc6265/)标准。
 
 使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
@@ -43,6 +47,8 @@ static clearAllCookies(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+
+<a id="clearallcookies-1"></a>
 
 ## clearAllCookies
 
@@ -115,6 +121,8 @@ static clearSessionCookie(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+
+<a id="clearsessioncookie-1"></a>
 
 ## clearSessionCookie
 
@@ -207,6 +215,8 @@ static configCookie(url: string, value: string): Promise<void>
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
+<a id="configcookie-1"></a>
+
 ## configCookie
 
 ```TypeScript
@@ -255,6 +265,8 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
+
+<a id="configcookie-2"></a>
 
 ## configCookie
 
@@ -347,6 +359,8 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
+
+<a id="configcookiesync-1"></a>
 
 ## configCookieSync
 
@@ -506,6 +520,8 @@ static fetchCookie(url: string): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
+<a id="fetchcookie-1"></a>
+
 ## fetchCookie
 
 ```TypeScript
@@ -537,6 +553,8 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookie-2"></a>
 
 ## fetchCookie
 
@@ -573,6 +591,8 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookie-3"></a>
 
 ## fetchCookie
 
@@ -643,6 +663,8 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookiesync-1"></a>
 
 ## fetchCookieSync
 
@@ -842,6 +864,8 @@ static saveCookieAsync(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+<a id="savecookieasync-1"></a>
 
 ## saveCookieAsync
 

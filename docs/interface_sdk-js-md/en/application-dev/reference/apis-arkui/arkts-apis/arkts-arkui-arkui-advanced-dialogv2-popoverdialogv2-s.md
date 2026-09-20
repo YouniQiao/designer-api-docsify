@@ -1,5 +1,9 @@
 # PopoverDialogV2
 
+```TypeScript
+export declare struct PopoverDialogV2
+```
+
 Declare struct PopoverDialogV2
 
 @struct { PopoverDialogV2 }

@@ -89,6 +89,8 @@ struct Index {
 ```
 
 
+<a id="getdevicelist-1"></a>
+
 ## getDeviceList
 
 ```TypeScript

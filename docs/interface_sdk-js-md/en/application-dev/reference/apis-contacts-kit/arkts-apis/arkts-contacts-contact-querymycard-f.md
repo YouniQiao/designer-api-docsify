@@ -87,6 +87,8 @@ promise.then((data) => {
 ```
 
 
+<a id="querymycard-1"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -120,6 +122,8 @@ Queries my card. This API uses an asynchronous callback to return the result.
 See [queryMyCard](#querymycard)
 
 
+<a id="querymycard-2"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -149,6 +153,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 See [queryMyCard](#querymycard)
 
+
+<a id="querymycard-3"></a>
 
 ## queryMyCard
 
@@ -184,6 +190,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 See [queryMyCard](#querymycard)
 
 
+<a id="querymycard-4"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -218,6 +226,8 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 See [queryMyCard](#querymycard)
 
+
+<a id="querymycard-5"></a>
 
 ## queryMyCard
 

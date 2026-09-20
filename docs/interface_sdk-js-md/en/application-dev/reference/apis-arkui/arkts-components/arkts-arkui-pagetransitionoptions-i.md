@@ -1,5 +1,9 @@
 # PageTransitionOptions
 
+```TypeScript
+declare interface PageTransitionOptions
+```
+
 Parameters of the exit or entrance animation.
 
 @interface PageTransitionOptions

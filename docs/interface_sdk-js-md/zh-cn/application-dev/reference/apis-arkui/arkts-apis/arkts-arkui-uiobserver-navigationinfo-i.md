@@ -1,5 +1,9 @@
 # NavigationInfo
 
+```TypeScript
+export interface NavigationInfo
+```
+
 Navigation组件信息。
 
 **起始版本：** 12

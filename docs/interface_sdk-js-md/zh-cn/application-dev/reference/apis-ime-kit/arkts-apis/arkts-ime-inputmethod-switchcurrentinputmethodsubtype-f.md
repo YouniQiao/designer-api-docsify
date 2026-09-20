@@ -95,6 +95,8 @@ inputMethod.switchCurrentInputMethodSubtype({
 ```
 
 
+<a id="switchcurrentinputmethodsubtype-1"></a>
+
 ## switchCurrentInputMethodSubtype
 
 ```TypeScript

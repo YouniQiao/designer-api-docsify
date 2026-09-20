@@ -1,5 +1,9 @@
 # SslError
 
+```TypeScript
+declare enum SslError
+```
+
 onSslErrorEventReceive接口返回的SSL错误的具体原因。
 
 **起始版本：** 9

@@ -1,5 +1,9 @@
 # TextTimerConfiguration
 
+```TypeScript
+declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>
+```
+
 Defines the **TextTimer** configuration used by the **ContentModifier** API.
 
 You need a custom class to implement the **ContentModifier** API.

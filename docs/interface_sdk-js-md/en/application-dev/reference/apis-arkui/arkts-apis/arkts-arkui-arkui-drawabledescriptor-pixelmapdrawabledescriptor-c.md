@@ -1,5 +1,9 @@
 # PixelMapDrawableDescriptor
 
+```TypeScript
+export class PixelMapDrawableDescriptor extends DrawableDescriptor
+```
+
 Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
 
 **Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
@@ -41,6 +45,8 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 ```TypeScript
 The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

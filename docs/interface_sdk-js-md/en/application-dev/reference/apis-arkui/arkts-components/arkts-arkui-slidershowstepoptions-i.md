@@ -1,5 +1,9 @@
 # SliderShowStepOptions
 
+```TypeScript
+declare interface SliderShowStepOptions
+```
+
 Provides accessibility text mapping for the slider step markers.
 
 **Since:** 20

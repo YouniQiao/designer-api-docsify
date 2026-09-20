@@ -120,6 +120,8 @@ function vibratorDemo() {
 ```
 
 
+<a id="stopvibration-1"></a>
+
 ## stopVibration
 
 ```TypeScript
@@ -152,6 +154,8 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 See [stopVibration](#stopvibration)
 
+
+<a id="stopvibration-2"></a>
 
 ## stopVibration
 
@@ -186,6 +190,8 @@ Stops vibration in all modes. This API uses an asynchronous callback to return t
 See [stopVibration](#stopvibration)
 
 
+<a id="stopvibration-3"></a>
+
 ## stopVibration
 
 ```TypeScript
@@ -218,6 +224,8 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 See [stopVibration](#stopvibration)
 
+
+<a id="stopvibration-4"></a>
 
 ## stopVibration
 

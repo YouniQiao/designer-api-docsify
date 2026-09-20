@@ -1,5 +1,9 @@
 # Stack properties/events
 
+```TypeScript
+declare class StackAttribute extends CommonMethod<StackAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 The [universal events](arkts-arkui-commonmethod-c.md) are supported.

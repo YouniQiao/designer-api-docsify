@@ -1,5 +1,9 @@
 # ItemDragInfo
 
+```TypeScript
+declare interface ItemDragInfo
+```
+
 ItemDragInfo object description
 
 @interface ItemDragInfo

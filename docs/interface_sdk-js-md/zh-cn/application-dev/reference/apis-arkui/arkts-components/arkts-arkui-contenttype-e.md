@@ -1,5 +1,9 @@
 # ContentType
 
+```TypeScript
+declare enum ContentType
+```
+
 自动填充类型。
 
 **起始版本：** 12

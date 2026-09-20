@@ -1,5 +1,9 @@
 # OperationOption
 
+```TypeScript
+export declare class OperationOption
+```
+
 Declare type OperationOption
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # UsedRecordDetail (System API)
 
+```TypeScript
+interface UsedRecordDetail
+```
+
 Represents the details of a single access record.
 
 **Since:** 9

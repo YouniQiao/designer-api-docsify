@@ -89,6 +89,8 @@ try {
 ```
 
 
+<a id="getorientation-1"></a>
+
 ## getOrientation
 
 ```TypeScript

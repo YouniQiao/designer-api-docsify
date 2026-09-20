@@ -1,5 +1,9 @@
 # AnimateParam
 
+```TypeScript
+declare interface AnimateParam
+```
+
 动画效果相关参数。
 
 > **PlayMode说明：**

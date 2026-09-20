@@ -1,5 +1,9 @@
 # TabsCacheMode
 
+```TypeScript
+declare enum TabsCacheMode
+```
+
 子组件的缓存模式。
 
 **起始版本：** 19

@@ -78,6 +78,8 @@ cloudSyncManager.clean(accountId, appActions, (err: BusinessError) => {
 ```
 
 
+<a id="clean-1"></a>
+
 ## clean
 
 ```TypeScript

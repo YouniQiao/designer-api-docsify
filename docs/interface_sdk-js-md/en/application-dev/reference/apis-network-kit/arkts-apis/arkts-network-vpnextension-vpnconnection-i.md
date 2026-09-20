@@ -1,5 +1,9 @@
 # VpnConnection
 
+```TypeScript
+export interface VpnConnection
+```
+
 Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling **vpnExt.createVpnConnection**.
 
 **Since:** 11
@@ -197,6 +201,8 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
   }
 }
 ```
+
+<a id="destroy-1"></a>
 
 ## destroy
 

@@ -1,5 +1,9 @@
 # BlurStyle
 
+```TypeScript
+declare enum BlurStyle
+```
+
 Enumerates blur styles.
 
 **Since:** 9

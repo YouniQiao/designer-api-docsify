@@ -1,5 +1,9 @@
 # GridItemAlignment
 
+```TypeScript
+declare enum GridItemAlignment
+```
+
 GridItem的对齐方式枚举。
 
 > **说明：** 

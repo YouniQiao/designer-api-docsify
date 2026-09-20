@@ -1,5 +1,9 @@
 # CustomContentDialogV2
 
+```TypeScript
+export declare struct CustomContentDialogV2
+```
+
 Declare custom content dialog
 
 @struct { CustomContentDialogV2 }

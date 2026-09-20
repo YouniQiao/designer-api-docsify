@@ -1,5 +1,9 @@
 # UIAbilityContext
 
+```TypeScript
+declare class UIAbilityContext extends Context
+```
+
 UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)所对应的context，继承自Context，提供UIAbility的相关配置信息以及操作UIAbility和ServiceExtensionAbility的方法，如启动UIAbility，停止当前UIAbilityContext所属的UIAbility，启动、停止、连接、断开连接ServiceExtensionAbility等。
 
 **继承/实现关系：** UIAbilityContext extends [Context](arkts-ability-context-c.md)
@@ -515,6 +519,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="disconnectserviceextensionability-1"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -1238,6 +1244,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="requestdialogservice-1"></a>
+
 ## requestDialogService
 
 ```TypeScript
@@ -1516,6 +1524,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setabilityinstanceinfo-1"></a>
+
 ## setAbilityInstanceInfo
 
 ```TypeScript
@@ -1688,6 +1698,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissioncontinuestate-1"></a>
+
 ## setMissionContinueState
 
 ```TypeScript
@@ -1794,6 +1806,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="setmissionlabel-1"></a>
 
 ## setMissionLabel
 
@@ -2298,6 +2312,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -2365,6 +2381,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 **示例**
 
 参见 [startAbility](#startability)
+
+<a id="startability-2"></a>
 
 ## startAbility
 
@@ -2619,6 +2637,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilitybytype-2"></a>
+
 ## startAbilityByType
 
 ```TypeScript
@@ -2836,6 +2856,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresult-1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -2904,6 +2926,8 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 **示例**
 
 参见 [startAbilityForResult](#startabilityforresult)
+
+<a id="startabilityforresult-2"></a>
 
 ## startAbilityForResult
 
@@ -3382,6 +3406,8 @@ terminateSelf(callback: AsyncCallback<void>): void
 （可选）如果需要在停止UIAbility时，清理任务中心的相关任务（即不保留最近任务列表中的快照），需要在[module.json5](../../../quick-start/module-configuration-file.md)配置文件中将removeMissionAfterTerminate字段取值配置为true。
 ```
 
+<a id="terminateself-1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -3541,6 +3567,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="terminateselfwithresult-1"></a>
 
 ## terminateSelfWithResult
 

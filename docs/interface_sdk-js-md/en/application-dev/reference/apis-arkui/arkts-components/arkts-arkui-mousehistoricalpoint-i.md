@@ -1,5 +1,9 @@
 # MouseHistoricalPoint
 
+```TypeScript
+declare interface MouseHistoricalPoint
+```
+
 Mouse event historical point information.
 
 Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and the last is the most recent event. The number of historical points depends on the system event queue configuration and hardware performance. Historical points are mainly used for the following scenarios:

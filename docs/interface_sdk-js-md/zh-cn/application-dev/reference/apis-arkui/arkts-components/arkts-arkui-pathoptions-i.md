@@ -1,5 +1,9 @@
 # PathOptions
 
+```TypeScript
+declare interface PathOptions
+```
+
 用于描述Path组件绘制属性。
 
 > **说明：** 

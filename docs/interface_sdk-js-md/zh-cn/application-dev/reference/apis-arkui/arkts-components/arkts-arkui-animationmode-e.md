@@ -1,5 +1,9 @@
 # AnimationMode
 
+```TypeScript
+declare enum AnimationMode
+```
+
 点击[TabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar)页签时切换TabContent的动画形式枚举。
 
 **起始版本：** 12

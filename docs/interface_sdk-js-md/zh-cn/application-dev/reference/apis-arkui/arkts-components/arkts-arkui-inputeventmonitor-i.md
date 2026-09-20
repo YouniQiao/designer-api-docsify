@@ -1,5 +1,9 @@
 # InputEventMonitor
 
+```TypeScript
+declare interface InputEventMonitor
+```
+
 输入事件监听器标识对象。
 
 此对象由系统创建并返回，作为监听器的唯一标识。

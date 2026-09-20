@@ -1,5 +1,9 @@
 # SubCommandInfo (System API)
 
+```TypeScript
+export interface SubCommandInfo
+```
+
 Subcommand information
 
 **Since:** 26.0.0

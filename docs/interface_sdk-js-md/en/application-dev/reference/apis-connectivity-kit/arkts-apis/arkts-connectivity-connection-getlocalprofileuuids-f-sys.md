@@ -69,6 +69,8 @@ try {
 ```
 
 
+<a id="getlocalprofileuuids-1"></a>
+
 ## getLocalProfileUuids
 
 ```TypeScript

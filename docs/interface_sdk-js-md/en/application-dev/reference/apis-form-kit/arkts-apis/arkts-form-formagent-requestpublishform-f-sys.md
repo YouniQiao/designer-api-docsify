@@ -44,6 +44,8 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
 
 
+<a id="requestpublishform-1"></a>
+
 ## requestPublishForm
 
 ```TypeScript

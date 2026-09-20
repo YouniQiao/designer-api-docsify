@@ -1,5 +1,9 @@
 # EnrollIntelligentVoiceEngine (System API)
 
+```TypeScript
+interface EnrollIntelligentVoiceEngine
+```
+
 Implements enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngine
 
 **Since:** 10
@@ -71,6 +75,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="commit-1"></a>
 
 ## commit
 
@@ -169,6 +175,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="enrollforresult-1"></a>
 
 ## enrollForResult
 
@@ -326,6 +334,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="getparameter-1"></a>
+
 ## getParameter
 
 ```TypeScript
@@ -454,6 +464,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="getsupportedregions-1"></a>
 
 ## getSupportedRegions
 
@@ -586,6 +598,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="init-1"></a>
+
 ## init
 
 ```TypeScript
@@ -684,6 +698,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="release-1"></a>
 
 ## release
 
@@ -802,6 +818,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setparameter-1"></a>
 
 ## setParameter
 
@@ -928,6 +946,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setsensibility-1"></a>
 
 ## setSensibility
 
@@ -1062,6 +1082,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="setwakeuphapinfo-1"></a>
+
 ## setWakeupHapInfo
 
 ```TypeScript
@@ -1191,6 +1213,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

@@ -1,5 +1,9 @@
 # WindowPositionParams
 
+```TypeScript
+interface WindowPositionParams
+```
+
 Describes the position of a main window to adjust its z-order.
 
 **Since:** 26.0.1

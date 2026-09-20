@@ -1,5 +1,9 @@
 # LabelStyle
 
+```TypeScript
+declare interface LabelStyle
+```
+
 label文本和字体的样式对象。
 
 **起始版本：** 10

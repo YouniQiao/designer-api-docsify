@@ -1,5 +1,9 @@
 # Size
 
+```TypeScript
+declare interface Size
+```
+
 Provides size information of the **DrawingRenderingContext** object.
 
 **Since:** 12

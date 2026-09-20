@@ -68,6 +68,8 @@ screen.stopExpand(expandScreenIds).then(() => {
 ```
 
 
+<a id="stopexpand-1"></a>
+
 ## stopExpand
 
 ```TypeScript

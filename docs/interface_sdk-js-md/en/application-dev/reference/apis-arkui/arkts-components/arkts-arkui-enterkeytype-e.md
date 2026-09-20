@@ -1,5 +1,9 @@
 # EnterKeyType
 
+```TypeScript
+declare enum EnterKeyType
+```
+
 Type of the Enter key.
 
 **Since:** 7

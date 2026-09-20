@@ -97,6 +97,8 @@ try {
 ```
 
 
+<a id="compressfile-1"></a>
+
 ## compressFile
 
 ```TypeScript

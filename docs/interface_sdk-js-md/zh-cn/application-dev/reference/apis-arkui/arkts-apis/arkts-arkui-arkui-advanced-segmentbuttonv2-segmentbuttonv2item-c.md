@@ -1,5 +1,9 @@
 # SegmentButtonV2Item
 
+```TypeScript
+export declare class SegmentButtonV2Item
+```
+
 **起始版本：** 18
 
 **装饰器类型：** @ObservedV2

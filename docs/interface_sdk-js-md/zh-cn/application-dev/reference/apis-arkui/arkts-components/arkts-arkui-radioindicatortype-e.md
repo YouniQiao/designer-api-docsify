@@ -1,5 +1,9 @@
 # RadioIndicatorType
 
+```TypeScript
+declare enum RadioIndicatorType
+```
+
 单选框的样式。
 
 **起始版本：** 12

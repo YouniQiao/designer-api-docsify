@@ -1,5 +1,9 @@
 # UserAuthResult (System API)
 
+```TypeScript
+interface UserAuthResult
+```
+
 User authorization result.
 
 **Since:** 26.0.0

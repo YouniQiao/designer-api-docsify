@@ -1,5 +1,9 @@
 # X509Crl
 
+```TypeScript
+interface X509Crl
+```
+
 提供用于X.509证书吊销列表操作的API。
 
 > **说明：** 
@@ -142,6 +146,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 
@@ -716,6 +722,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
   console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getrevokedcerts-1"></a>
 
 ## getRevokedCerts
 
@@ -1893,6 +1901,8 @@ cert.createX509Crl(encodingBlob).then(x509Crl => {
 });
 ```
 
+<a id="verify-1"></a>
+
 ## verify
 
 ```TypeScript
@@ -1904,7 +1914,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
-> [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify)替代。
+> [X509CRL.verify()](arkts-devicecertificate-cert-x509crl-i.md#verify-1)替代。
 
 **起始版本：** 9
 

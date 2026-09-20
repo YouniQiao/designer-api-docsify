@@ -1,5 +1,9 @@
 # AudioDeviceCallbackInfo（系统接口）
 
+```TypeScript
+export interface AudioDeviceCallbackInfo
+```
+
 音频设备信息。
 
 **起始版本：** 10

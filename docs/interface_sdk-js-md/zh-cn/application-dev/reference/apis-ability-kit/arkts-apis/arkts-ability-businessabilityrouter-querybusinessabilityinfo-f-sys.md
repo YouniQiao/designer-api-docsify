@@ -82,6 +82,8 @@ try {
 ```
 
 
+<a id="querybusinessabilityinfo-1"></a>
+
 ## queryBusinessAbilityInfo
 
 ```TypeScript

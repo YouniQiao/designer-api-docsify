@@ -1,5 +1,9 @@
 # MarqueeState
 
+```TypeScript
+declare enum MarqueeState
+```
+
 Marquee状态回调的返回值。
 
 **起始版本：** 18

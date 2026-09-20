@@ -1,5 +1,9 @@
 # CalendarRequestedData（系统接口）
 
+```TypeScript
+declare interface CalendarRequestedData
+```
+
 Defines the struct of CalendarRequestedData.
 
 **起始版本：** 7

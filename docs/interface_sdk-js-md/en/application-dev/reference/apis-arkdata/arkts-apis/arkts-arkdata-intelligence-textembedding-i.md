@@ -1,5 +1,9 @@
 # TextEmbedding
 
+```TypeScript
+interface TextEmbedding
+```
+
 Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
 
 @interface TextEmbedding
@@ -85,6 +89,8 @@ textEmbedding.loadModel()
     console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
+
+<a id="getembedding-1"></a>
 
 ## getEmbedding
 

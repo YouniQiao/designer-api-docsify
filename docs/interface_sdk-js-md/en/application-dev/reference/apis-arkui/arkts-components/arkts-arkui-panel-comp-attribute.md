@@ -1,5 +1,9 @@
 # Panel properties/events
 
+```TypeScript
+declare class PanelAttribute extends CommonMethod<PanelAttribute>
+```
+
 Pane Attribute.
 
 **Inheritance/Implementation:** PanelAttribute extends CommonMethod<PanelAttribute>

@@ -159,6 +159,8 @@ try {
 ```
 
 
+<a id="getbundleinfo-1"></a>
+
 ## getBundleInfo
 
 ```TypeScript
@@ -198,6 +200,8 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, 
 
 参见 [getBundleInfo](#getbundleinfo)
 
+
+<a id="getbundleinfo-2"></a>
 
 ## getBundleInfo
 

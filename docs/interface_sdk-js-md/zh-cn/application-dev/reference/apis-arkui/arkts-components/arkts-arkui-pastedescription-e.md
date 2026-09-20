@@ -1,5 +1,9 @@
 # PasteDescription
 
+```TypeScript
+declare enum PasteDescription
+```
+
 粘贴控件的文本描述。
 
 **起始版本：** 10

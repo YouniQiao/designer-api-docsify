@@ -1,5 +1,9 @@
 # ChipV2LabelMarginConfig
 
+```TypeScript
+export interface ChipV2LabelMarginConfig
+```
+
 Defines the margin configuration between the text and the left and right icons.
 
 **Since:** 26.0.0

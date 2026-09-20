@@ -120,6 +120,8 @@ try {
 ```
 
 
+<a id="decompressfile-1"></a>
+
 ## decompressFile
 
 ```TypeScript
@@ -163,6 +165,8 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 See [decompressFile](#decompressfile)
 
+
+<a id="decompressfile-2"></a>
 
 ## decompressFile
 

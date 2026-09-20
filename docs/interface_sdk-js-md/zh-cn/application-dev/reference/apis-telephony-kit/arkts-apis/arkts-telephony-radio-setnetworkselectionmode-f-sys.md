@@ -90,6 +90,8 @@ radio.setNetworkSelectionMode(networkSelectionModeOptions).then(() => {
 ```
 
 
+<a id="setnetworkselectionmode-1"></a>
+
 ## setNetworkSelectionMode
 
 ```TypeScript

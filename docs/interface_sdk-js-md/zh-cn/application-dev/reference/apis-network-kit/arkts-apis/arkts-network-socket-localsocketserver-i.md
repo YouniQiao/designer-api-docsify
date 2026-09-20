@@ -1,5 +1,9 @@
 # LocalSocketServer
 
+```TypeScript
+export interface LocalSocketServer
+```
+
 LocalSocketServer类。在调用LocalSocketServer的方法前，需要先通过[socket.constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md)创建LocalSocketServer对象。
 
 **起始版本：** 11

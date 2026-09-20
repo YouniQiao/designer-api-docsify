@@ -1,5 +1,9 @@
 # SVGResourceLimitLevel (System API)
 
+```TypeScript
+enum SVGResourceLimitLevel
+```
+
 Enumerates SVG resource limit levels.
 
 Higher level allows using less resources during parsing and rendering an SVG image. System-defined default resource limits are always enforced regardless of the specified level.

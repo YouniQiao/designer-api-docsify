@@ -1,5 +1,9 @@
 # ButtonOptions
 
+```TypeScript
+declare interface ButtonOptions
+```
+
 按钮的样式。
 
 **起始版本：** 7

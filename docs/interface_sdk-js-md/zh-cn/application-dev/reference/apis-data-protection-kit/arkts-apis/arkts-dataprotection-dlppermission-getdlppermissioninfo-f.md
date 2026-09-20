@@ -70,6 +70,8 @@ dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
 ```
 
 
+<a id="getdlppermissioninfo-1"></a>
+
 ## getDLPPermissionInfo
 
 ```TypeScript

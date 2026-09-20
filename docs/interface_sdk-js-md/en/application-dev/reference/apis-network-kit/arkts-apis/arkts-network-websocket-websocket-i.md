@@ -1,5 +1,9 @@
 # WebSocket
 
+```TypeScript
+export interface WebSocket
+```
+
 Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call [webSocket.createWebSocket](arkts-network-websocket-createwebsocket-f.md) to create a **WebSocket** object.
 
 **Since:** 6
@@ -94,6 +98,8 @@ promise.then((value: boolean) => {
 });
 ```
 
+<a id="close-1"></a>
+
 ## close
 
 ```TypeScript
@@ -176,6 +182,8 @@ promise.then((value: boolean) => {
     console.error("close fail, error:" + JSON.stringify(err))
 });
 ```
+
+<a id="close-2"></a>
 
 ## close
 
@@ -382,6 +390,8 @@ promise.then((value: boolean) => {
 });
 ```
 
+<a id="connect-1"></a>
+
 ## connect
 
 ```TypeScript
@@ -434,6 +444,8 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 **Examples**
 
 See [connect](#connect)
+
+<a id="connect-2"></a>
 
 ## connect
 
@@ -906,6 +918,8 @@ ws.on('open', (err: BusinessError, value: Object) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

@@ -1,5 +1,9 @@
 # UnifiedData
 
+```TypeScript
+class UnifiedData
+```
+
 表示UDMF统一数据对象，提供封装一组数据记录的方法。
 
 **起始版本：** 10
@@ -106,6 +110,8 @@ let plainText : uniformDataStruct.PlainText = {
 let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
 let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

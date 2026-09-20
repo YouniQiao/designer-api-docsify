@@ -1,5 +1,9 @@
 # FlexOptions
 
+```TypeScript
+declare interface FlexOptions
+```
+
 Describes the layout and alignment of child components within the **Flex** component.
 
 **Since:** 7

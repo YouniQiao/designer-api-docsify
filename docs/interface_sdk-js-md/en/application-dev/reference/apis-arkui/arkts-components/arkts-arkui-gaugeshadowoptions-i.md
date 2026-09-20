@@ -1,5 +1,9 @@
 # GaugeShadowOptions
 
+```TypeScript
+declare interface GaugeShadowOptions extends MultiShadowOptions
+```
+
 Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**.
 
 **Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)

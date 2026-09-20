@@ -1,5 +1,9 @@
 # NodeParamV2
 
+```TypeScript
+export interface NodeParamV2
+```
+
 Declare NodeParamV2
 
 **Since:** 26.0.0

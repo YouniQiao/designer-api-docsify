@@ -54,6 +54,8 @@ avSession.getHistoricalAVQueueInfos(3, 5, (avQueueInfos: avSession.AVQueueInfo[]
 ```
 
 
+<a id="gethistoricalavqueueinfos-1"></a>
+
 ## getHistoricalAVQueueInfos
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # LayoutAlgorithm
 
+```TypeScript
+export interface LayoutAlgorithm
+```
+
 Basic layout algorithm of the DynamicLayout container.
 
 > **NOTE:** 

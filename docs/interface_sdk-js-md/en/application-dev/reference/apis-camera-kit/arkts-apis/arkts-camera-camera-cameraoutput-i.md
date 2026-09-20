@@ -1,5 +1,9 @@
 # CameraOutput
 
+```TypeScript
+interface CameraOutput
+```
+
 CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md). It is the base class of **output**.
 
 **Since:** 10
@@ -37,6 +41,8 @@ Releases output resources. This API uses an asynchronous callback to return the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="release-1"></a>
 
 ## release
 

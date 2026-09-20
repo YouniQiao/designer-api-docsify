@@ -1,5 +1,9 @@
 # TouchTestStrategy
 
+```TypeScript
+declare enum TouchTestStrategy
+```
+
 Event dispatch strategy.
 
 **Since:** 11

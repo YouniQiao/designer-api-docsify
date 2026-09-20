@@ -1,5 +1,9 @@
 # OnScaleChangeEvent
 
+```TypeScript
+declare interface OnScaleChangeEvent
+```
+
 定义当前页面显示比例的变化时触发。
 
 **起始版本：** 12

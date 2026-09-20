@@ -116,6 +116,8 @@ emitter.emit('eventId', options, eventData);
 ```
 
 
+<a id="emit-1"></a>
+
 ## emit
 
 ```TypeScript
@@ -225,6 +227,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter.emit('eventId', options, eventData);
 ```
 
+
+<a id="emit-4"></a>
 
 ## emit
 
@@ -336,6 +340,8 @@ emitter.emit('eventId', options, eventData);
 ```
 
 
+<a id="emit-6"></a>
+
 ## emit
 
 ```TypeScript
@@ -446,6 +452,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter.emit('eventId', options, eventData);
 ```
 
+
+<a id="emit-9"></a>
 
 ## emit
 

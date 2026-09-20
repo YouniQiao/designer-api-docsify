@@ -1,5 +1,9 @@
 # MotionBlurOptions
 
+```TypeScript
+declare interface MotionBlurOptions
+```
+
 Defines motion blur options.
 
 **Since:** 12

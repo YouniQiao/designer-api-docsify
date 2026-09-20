@@ -1,5 +1,9 @@
 # Layoutable
 
+```TypeScript
+declare interface Layoutable
+```
+
 Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation.
 
 **Since:** 10

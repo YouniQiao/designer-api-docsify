@@ -1,5 +1,9 @@
 # GridItemStyle
 
+```TypeScript
+declare enum GridItemStyle
+```
+
 Enumerates styles of grid items.
 
 > **NOTE:** 

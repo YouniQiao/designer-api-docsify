@@ -1,5 +1,9 @@
 # DynamicRangeMode
 
+```TypeScript
+declare enum DynamicRangeMode
+```
+
 期望展示的图像动态范围。
 
 **起始版本：** 12

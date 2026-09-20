@@ -1,5 +1,9 @@
 # EventTarget
 
+```TypeScript
+declare interface EventTarget
+```
+
 Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseevent-i.md).
 
 Represents the display area of the element object that triggers the event.

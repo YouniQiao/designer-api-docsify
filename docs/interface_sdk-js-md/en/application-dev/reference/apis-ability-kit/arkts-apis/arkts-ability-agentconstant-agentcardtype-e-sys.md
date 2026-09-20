@@ -1,5 +1,9 @@
 # AgentCardType
 
+```TypeScript
+export enum AgentCardType
+```
+
 The type of an AgentCard.
 
 **Since:** 26.0.0

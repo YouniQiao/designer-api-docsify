@@ -1,5 +1,9 @@
 # ConnectType（系统接口）
 
+```TypeScript
+enum ConnectType
+```
+
 枚举，设备连接类型。
 
 @enum { int }

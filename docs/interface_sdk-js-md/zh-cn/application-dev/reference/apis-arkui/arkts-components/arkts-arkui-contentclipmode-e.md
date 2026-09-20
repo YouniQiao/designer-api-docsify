@@ -1,5 +1,9 @@
 # ContentClipMode
 
+```TypeScript
+declare enum ContentClipMode
+```
+
 表示滚动容器的内容裁剪模式。
 
 @enum { number }

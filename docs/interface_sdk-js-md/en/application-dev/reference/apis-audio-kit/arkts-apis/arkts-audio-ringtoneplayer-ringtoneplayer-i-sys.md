@@ -1,5 +1,9 @@
 # RingtonePlayer (System API)
 
+```TypeScript
+export interface RingtonePlayer
+```
+
 Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer) to obtain a RingtonePlayer instance.
 
 **Since:** 10
@@ -64,6 +68,8 @@ systemRingtonePlayer.configure(ringtoneOptions).then(() => {
   console.error(`Failed to configure ringtone options. ${err}`);
 });
 ```
+
+<a id="configure-1"></a>
 
 ## configure
 
@@ -147,6 +153,8 @@ systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo
 });
 ```
 
+<a id="getaudiorendererinfo-1"></a>
+
 ## getAudioRendererInfo
 
 ```TypeScript
@@ -214,6 +222,8 @@ systemRingtonePlayer.getTitle().then((value: string) => {
   console.error(`Failed to get the system ringtone title ${err}`);
 });
 ```
+
+<a id="gettitle-1"></a>
 
 ## getTitle
 
@@ -338,6 +348,8 @@ systemRingtonePlayer.release().then(() => {
 });
 ```
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -406,6 +418,8 @@ systemRingtonePlayer.start().then(() => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -473,6 +487,8 @@ systemRingtonePlayer.stop().then(() => {
   console.error(`Failed to stop playing ringtone. ${err}`);
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

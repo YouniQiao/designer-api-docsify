@@ -1,5 +1,9 @@
 # SceneResourceFactory
 
+```TypeScript
+export interface SceneResourceFactory extends RenderResourceFactory
+```
+
 用于创建3D场景中资源的接口，例如相机、光源等，继承自RenderResourceFactory。
 
 @extends RenderResourceFactory @interface SceneResourceFactory
@@ -79,6 +83,8 @@ function createCameraPromise(): Promise<Camera> {
   });
 }
 ```
+
+<a id="createcamera-1"></a>
 
 ## createCamera
 

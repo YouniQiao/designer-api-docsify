@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="notifyformsenableupdate-1"></a>
+
 ## notifyFormsEnableUpdate
 
 ```TypeScript

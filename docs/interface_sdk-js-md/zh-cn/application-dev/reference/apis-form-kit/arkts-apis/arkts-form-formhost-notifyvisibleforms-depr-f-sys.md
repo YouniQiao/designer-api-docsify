@@ -57,6 +57,8 @@ formHost.notifyVisibleForms(formIds).then(() => {
 ```
 
 
+<a id="notifyvisibleforms-1"></a>
+
 ## notifyVisibleForms
 
 ```TypeScript

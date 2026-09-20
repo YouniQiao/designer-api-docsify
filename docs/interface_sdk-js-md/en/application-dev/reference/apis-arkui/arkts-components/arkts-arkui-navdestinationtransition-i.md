@@ -1,5 +1,9 @@
 # NavDestinationTransition
 
+```TypeScript
+declare interface NavDestinationTransition
+```
+
 Defines a custom transition animation for the **NavDestination** component.
 
 **Since:** 15

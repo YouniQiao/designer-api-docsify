@@ -1,5 +1,9 @@
 # ServiceExtensionAbility (System API)
 
+```TypeScript
+declare class ServiceExtensionAbility
+```
+
 The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
 **Since:** 9

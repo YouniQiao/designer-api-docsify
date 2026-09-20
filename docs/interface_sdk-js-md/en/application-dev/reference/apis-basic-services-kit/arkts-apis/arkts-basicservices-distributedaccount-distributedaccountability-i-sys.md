@@ -1,5 +1,9 @@
 # DistributedAccountAbility
 
+```TypeScript
+interface DistributedAccountAbility
+```
+
 Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
 **Since:** 7
@@ -85,6 +89,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getosaccountdistributedinfobylocalid-1"></a>
 
 ## getOsAccountDistributedInfoByLocalId
 
@@ -207,6 +213,8 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setosaccountdistributedinfobylocalid-1"></a>
 
 ## setOsAccountDistributedInfoByLocalId
 

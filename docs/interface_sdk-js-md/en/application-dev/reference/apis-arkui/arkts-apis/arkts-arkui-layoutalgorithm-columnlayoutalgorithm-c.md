@@ -1,5 +1,9 @@
 # ColumnLayoutAlgorithm
 
+```TypeScript
+export class ColumnLayoutAlgorithm implements LayoutAlgorithm
+```
+
 A vertical linear layout algorithm class, which is used to implement vertical linear arrangement of child components. It is suitable for scenarios where child components need to be arranged vertically, such as vertical lists, vertically stacked form items, and vertical menus. It supports setting the spacing between child components, horizontal alignment mode, vertical alignment mode, and arrangement direction, which provides layout capabilities similar to the **Column** component.
 
 > **NOTE:** 

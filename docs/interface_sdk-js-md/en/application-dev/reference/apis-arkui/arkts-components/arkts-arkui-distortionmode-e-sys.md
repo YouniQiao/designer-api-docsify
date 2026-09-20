@@ -1,5 +1,9 @@
 # DistortionMode (System API)
 
+```TypeScript
+declare enum DistortionMode
+```
+
 Enum for distortion animation mode.
 
 **Since:** 26.0.0

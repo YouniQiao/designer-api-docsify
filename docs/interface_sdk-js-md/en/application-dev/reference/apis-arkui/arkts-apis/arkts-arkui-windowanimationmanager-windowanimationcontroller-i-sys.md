@@ -1,5 +1,9 @@
 # WindowAnimationController (System API)
 
+```TypeScript
+export interface WindowAnimationController
+```
+
 Window animation controller.
 
 @interface WindowAnimationController

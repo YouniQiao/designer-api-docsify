@@ -1,5 +1,9 @@
 # SheetInfo
 
+```TypeScript
+interface SheetInfo
+```
+
 弹窗中的选项内容，每一项支持设置文本、图标以及选中的回调。
 
 **起始版本：** 8

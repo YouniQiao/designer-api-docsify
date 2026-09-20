@@ -1,5 +1,9 @@
 # ForegroundEffectOptions
 
+```TypeScript
+declare interface ForegroundEffectOptions
+```
+
 前景效果参数，用于配置组件前景的模糊半径，控制前景内容的模糊程度。
 
 **起始版本：** 12

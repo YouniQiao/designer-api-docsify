@@ -1,5 +1,9 @@
 # IIdmCallback（系统接口）
 
+```TypeScript
+interface IIdmCallback
+```
+
 表示身份管理回调类。
 
 **起始版本：** 8

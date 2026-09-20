@@ -1,5 +1,9 @@
 # DataMoveOperation
 
+```TypeScript
+interface DataMoveOperation
+```
+
 Represents an operation for moving data.
 
 **Since:** 12

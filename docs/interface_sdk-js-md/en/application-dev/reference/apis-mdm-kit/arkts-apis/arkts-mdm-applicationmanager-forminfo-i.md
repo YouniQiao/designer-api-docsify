@@ -1,5 +1,9 @@
 # FormInfo
 
+```TypeScript
+interface FormInfo
+```
+
 Information about a form.
 
 **Since:** 26.0.1

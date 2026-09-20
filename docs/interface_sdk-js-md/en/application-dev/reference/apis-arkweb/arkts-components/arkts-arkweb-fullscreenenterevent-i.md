@@ -1,5 +1,9 @@
 # FullScreenEnterEvent
 
+```TypeScript
+declare interface FullScreenEnterEvent
+```
+
 Provides the callback information for the **Web** component to enter the full-screen mode, including the video size and exit handler. It is suitable for scenarios where handling full-screen video is required, improving video playback immersive experience and controllability.
 
 **Since:** 12

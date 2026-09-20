@@ -1,5 +1,9 @@
 # Authenticator
 
+```TypeScript
+interface Authenticator
+```
+
 Provides APIs for managing the **Authenticator** object.
 
 **Since:** 6
@@ -69,6 +73,8 @@ try {
   console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
+
+<a id="execute-1"></a>
 
 ## execute
 

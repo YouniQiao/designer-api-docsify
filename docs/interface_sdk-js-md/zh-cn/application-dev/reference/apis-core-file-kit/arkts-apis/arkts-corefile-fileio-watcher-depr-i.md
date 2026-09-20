@@ -1,5 +1,9 @@
 # Watcher
 
+```TypeScript
+declare interface Watcher
+```
+
 Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或异步）来停止文件监听。
 
 **起始版本：** 7
@@ -58,6 +62,8 @@ watcher.stop(() => {
   console.info("close watcher succeed");
 })
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

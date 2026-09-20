@@ -1,5 +1,9 @@
 # TagSession
 
+```TypeScript
+export interface TagSession
+```
+
 The **tagSession** module provides common APIs for establishing connections and transferring data.
 
 > **NOTE:** 
@@ -525,6 +529,8 @@ function tagSessionDemo() {
 }
 ```
 
+<a id="senddata-1"></a>
+
 ## sendData
 
 ```TypeScript
@@ -759,6 +765,8 @@ function tagSessionDemo() {
     }
 }
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

@@ -1,5 +1,9 @@
 # ComponentObserver
 
+```TypeScript
+interface ComponentObserver
+```
+
 组件布局和组件绘制送显完成回调的句柄，通过该句柄可调用以下方法。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # PolygonOptions
 
+```TypeScript
+declare interface PolygonOptions
+```
+
 用于描述Polygon组件绘制属性。
 
 > **说明：** 

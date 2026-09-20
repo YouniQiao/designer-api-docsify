@@ -1,5 +1,9 @@
 # CustomSpanMeasureInfo
 
+```TypeScript
+declare interface CustomSpanMeasureInfo
+```
+
 Defines the CustomSpanMeasureInfo interface.
 
 **Since:** 12

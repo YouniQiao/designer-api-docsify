@@ -1,5 +1,9 @@
 # RichEditorSymbolSpanStyleResult
 
+```TypeScript
+declare interface RichEditorSymbolSpanStyleResult
+```
+
 Provides the symbol span style information returned by the backend.
 
 **Since:** 11

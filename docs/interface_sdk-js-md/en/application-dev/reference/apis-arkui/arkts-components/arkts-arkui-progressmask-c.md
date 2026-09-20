@@ -1,5 +1,9 @@
 # ProgressMask
 
+```TypeScript
+declare class ProgressMask
+```
+
 Sets the progress, maximum value, and color for a mask.
 
 **Since:** 10

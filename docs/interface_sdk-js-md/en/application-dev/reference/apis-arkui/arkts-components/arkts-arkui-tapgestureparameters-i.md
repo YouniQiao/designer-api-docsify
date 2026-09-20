@@ -1,5 +1,9 @@
 # TapGestureParameters
 
+```TypeScript
+declare interface TapGestureParameters extends BaseHandlerOptions
+```
+
 Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 > **NOTE:** 

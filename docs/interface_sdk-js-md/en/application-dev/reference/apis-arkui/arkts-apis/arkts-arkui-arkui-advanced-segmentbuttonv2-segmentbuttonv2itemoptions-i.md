@@ -1,5 +1,9 @@
 # SegmentButtonV2ItemOptions
 
+```TypeScript
+export interface SegmentButtonV2ItemOptions
+```
+
 Defines segmented button item options.
 
 > **Description**

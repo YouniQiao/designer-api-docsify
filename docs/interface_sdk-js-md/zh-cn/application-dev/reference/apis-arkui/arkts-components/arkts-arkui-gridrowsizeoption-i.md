@@ -1,5 +1,9 @@
 # GridRowSizeOption
 
+```TypeScript
+declare interface GridRowSizeOption
+```
+
 栅格在不同宽度设备类型下的gutter大小配置。
 
 **起始版本：** 9

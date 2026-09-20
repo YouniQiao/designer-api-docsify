@@ -1,5 +1,9 @@
 # CollaborativeRecordingConfiguration（系统接口）
 
+```TypeScript
+interface CollaborativeRecordingConfiguration
+```
+
 描述协作录制的配置。
 
 **起始版本：** 26.0.0

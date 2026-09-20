@@ -1,5 +1,9 @@
 # LazyVWaterFlowLayoutInterface
 
+```TypeScript
+export interface LazyVWaterFlowLayoutInterface
+```
+
 定义懒加载垂直瀑布流布局组件。
 
 @interface LazyVWaterFlowLayoutInterface

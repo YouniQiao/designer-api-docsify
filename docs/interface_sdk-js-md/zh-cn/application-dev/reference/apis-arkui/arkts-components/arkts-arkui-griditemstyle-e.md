@@ -1,5 +1,9 @@
 # GridItemStyle
 
+```TypeScript
+declare enum GridItemStyle
+```
+
 GridItem样式枚举，用于定义GridItem的交互态样式。
 
 > **说明：** 

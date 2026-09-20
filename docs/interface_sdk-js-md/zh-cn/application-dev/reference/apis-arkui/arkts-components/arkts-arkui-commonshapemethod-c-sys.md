@@ -1,5 +1,9 @@
 # CommonShapeMethod
 
+```TypeScript
+declare class CommonShapeMethod<T> extends CommonMethod<T>
+```
+
 CommonShapeMethod
 
 @extends CommonMethod&lt;T&gt;

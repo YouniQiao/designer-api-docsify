@@ -1,5 +1,9 @@
 # RunningAppClone (System API)
 
+```TypeScript
+export interface RunningAppClone
+```
+
 The RunningAppClone module defines the information of an application clone in the running state.
 
 **Since:** 12

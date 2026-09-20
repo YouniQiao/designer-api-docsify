@@ -1,5 +1,9 @@
 # SliderChangeMode
 
+```TypeScript
+declare enum SliderChangeMode
+```
+
 Enumerates the slider states.
 
 **Since:** 7

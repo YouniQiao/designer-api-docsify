@@ -1,5 +1,9 @@
 # NavigationCommonTitle
 
+```TypeScript
+declare interface NavigationCommonTitle
+```
+
 Defines a general title for the **Navigation** component.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # ShadowType
 
+```TypeScript
+declare enum ShadowType
+```
+
 Define the type of shadow
 
 **Since:** 10

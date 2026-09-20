@@ -80,6 +80,8 @@ radio.sendUpdateCellLocationRequest(slotId).then(() => {
 ```
 
 
+<a id="sendupdatecelllocationrequest-1"></a>
+
 ## sendUpdateCellLocationRequest
 
 ```TypeScript
@@ -124,6 +126,8 @@ Actively requests to update location information.
 
 See [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)
 
+
+<a id="sendupdatecelllocationrequest-2"></a>
 
 ## sendUpdateCellLocationRequest
 

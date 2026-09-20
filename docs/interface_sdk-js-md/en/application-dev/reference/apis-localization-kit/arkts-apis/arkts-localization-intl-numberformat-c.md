@@ -1,5 +1,9 @@
 # NumberFormat
 
+```TypeScript
+export class NumberFormat
+```
+
 Provides the API for formatting number strings.
 
 **Since:** 6
@@ -41,6 +45,8 @@ import { intl } from '@kit.LocalizationKit';
 // Create a NumberFormat object with locale ID being en-GB, style being decimal, and notation being scientific.
 let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

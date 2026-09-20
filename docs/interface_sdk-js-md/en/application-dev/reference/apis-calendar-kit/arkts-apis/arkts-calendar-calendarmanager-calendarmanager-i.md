@@ -1,5 +1,9 @@
 # CalendarManager
 
+```TypeScript
+export interface CalendarManager
+```
+
 Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md) to obtain a **CalendarManager** object first.
 
 **Since:** 10
@@ -93,6 +97,8 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<a id="createcalendar-1"></a>
 
 ## createCalendar
 
@@ -231,6 +237,8 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
   console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
 })
 ```
+
+<a id="deletecalendar-1"></a>
 
 ## deleteCalendar
 
@@ -386,6 +394,8 @@ calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
 });
 ```
 
+<a id="getallcalendars-1"></a>
+
 ## getAllCalendars
 
 ```TypeScript
@@ -519,6 +529,8 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 });
 ```
 
+<a id="getcalendar-1"></a>
+
 ## getCalendar
 
 ```TypeScript
@@ -557,6 +569,8 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 **Examples**
 
 See [getCalendar](#getcalendar)
+
+<a id="getcalendar-2"></a>
 
 ## getCalendar
 

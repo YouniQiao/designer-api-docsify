@@ -1,5 +1,9 @@
 # NdefTag
 
+```TypeScript
+export interface NdefTag extends TagSession
+```
+
 提供对已格式化为NDEF的NFC标签的数据和操作的访问，继承自TagSession。
 
 TagSession是所有NFC Tag技术类型的基类，提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
@@ -278,6 +282,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="readndef-1"></a>
+
 ## readNdef
 
 ```TypeScript
@@ -401,6 +407,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="setreadonly-1"></a>
 
 ## setReadOnly
 
@@ -539,6 +547,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writendef-1"></a>
 
 ## writeNdef
 

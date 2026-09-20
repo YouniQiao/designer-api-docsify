@@ -1,5 +1,9 @@
 # OutputType
 
+```TypeScript
+enum OutputType
+```
+
 Enumerates output type of hilog.
 
 @enum { int }

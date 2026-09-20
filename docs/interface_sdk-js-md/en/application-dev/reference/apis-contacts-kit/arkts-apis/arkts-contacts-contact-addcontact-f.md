@@ -87,6 +87,8 @@ promise.then((data) => {
 ```
 
 
+<a id="addcontact-1"></a>
+
 ## addContact
 
 ```TypeScript
@@ -123,6 +125,8 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 See [addContact](#addcontact)
 
 
+<a id="addcontact-2"></a>
+
 ## addContact
 
 ```TypeScript
@@ -157,6 +161,8 @@ Adds a contact. This API uses a promise to return the result.
 
 See [addContact](#addcontact)
 
+
+<a id="addcontact-3"></a>
 
 ## addContact
 

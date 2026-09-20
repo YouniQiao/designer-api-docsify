@@ -94,6 +94,8 @@ hiAppEvent.write({
 ```
 
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript

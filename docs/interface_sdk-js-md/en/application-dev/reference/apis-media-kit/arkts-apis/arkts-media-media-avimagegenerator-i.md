@@ -1,6 +1,10 @@
 # AVImageGenerator
 
-AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md) to create an AVImageGenerator instance.
+```TypeScript
+interface AVImageGenerator
+```
+
+AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-2) to create an AVImageGenerator instance.
 
 For details about the demo for obtaining video thumbnails, see [Obtaining Video Thumbnails](../../../media/media/avimagegenerator.md).
 
@@ -42,6 +46,8 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+
+<a id="fetchframebytime-2"></a>
 
 ## fetchFrameByTime
 
@@ -133,6 +139,8 @@ Releases this AVImageGenerator instance. This API uses an asynchronous callback 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+
+<a id="release-1"></a>
 
 ## release
 

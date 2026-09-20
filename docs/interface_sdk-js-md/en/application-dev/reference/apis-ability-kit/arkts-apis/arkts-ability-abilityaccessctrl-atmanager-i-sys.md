@@ -1,5 +1,9 @@
 # AtManager
 
+```TypeScript
+interface AtManager
+```
+
 Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md).
 
 **Since:** 8
@@ -128,6 +132,8 @@ atManager.getPermissionRequestToggleStatus(permission).then((res: abilityAccessC
   console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="getpermissionrequesttogglestatus-1"></a>
 
 ## getPermissionRequestToggleStatus
 
@@ -409,6 +415,8 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
   }
 });
 ```
+
+<a id="grantusergrantedpermission-1"></a>
 
 ## grantUserGrantedPermission
 
@@ -996,6 +1004,8 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+<a id="revokeusergrantedpermission-1"></a>
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1100,6 +1110,8 @@ atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.Permiss
   console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setpermissionrequesttogglestatus-1"></a>
 
 ## setPermissionRequestToggleStatus
 

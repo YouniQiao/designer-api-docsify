@@ -1,5 +1,9 @@
 # PointParticleParameters
 
+```TypeScript
+interface PointParticleParameters
+```
+
 Defines the parameters for a point-like particle. @interface PointParticleParameters
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # MotionBlurOptions
 
+```TypeScript
+declare interface MotionBlurOptions
+```
+
 运动模糊选项。
 
 **起始版本：** 12

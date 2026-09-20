@@ -1,5 +1,9 @@
 # LongPressGestureInterface
 
+```TypeScript
+interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
+```
+
 **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
 > **NOTE:** 
@@ -44,6 +48,8 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 | Type | Description |
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -130,6 +136,8 @@ Registers the callback for long press gesture cancellation. This callback is tri
 | Type | Description |
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

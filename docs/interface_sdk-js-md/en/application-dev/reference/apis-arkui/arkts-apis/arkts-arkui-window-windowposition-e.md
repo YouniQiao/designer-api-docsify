@@ -1,5 +1,9 @@
 # WindowPosition
 
+```TypeScript
+enum WindowPosition
+```
+
 Enumerates the target z-order to which the z-order of a main window can be adjusted.
 
 **Since:** 26.0.1

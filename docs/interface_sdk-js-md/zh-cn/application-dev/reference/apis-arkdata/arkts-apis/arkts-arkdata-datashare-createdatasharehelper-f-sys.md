@@ -123,6 +123,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="createdatasharehelper-1"></a>
+
 ## createDataShareHelper
 
 ```TypeScript
@@ -168,6 +170,8 @@ function createDataShareHelper(
 
 参见 [createDataShareHelper](#createdatasharehelper)
 
+
+<a id="createdatasharehelper-2"></a>
 
 ## createDataShareHelper
 

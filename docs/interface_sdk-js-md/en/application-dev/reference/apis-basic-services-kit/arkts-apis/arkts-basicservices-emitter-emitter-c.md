@@ -1,5 +1,9 @@
 # Emitter
 
+```TypeScript
+export class Emitter
+```
+
 This module provides the capabilities of sending and processing inter- or intra-thread events in a process of the same **Emitter** instance. You can use the following APIs to subscribe to an event in persistent or one-shot manner, cancel the subscription, or emit an event to the event queue. This module is applicable when inter-thread communication and event management are required based on independent instances. Different **Emitter** instances are isolated from each other.
 
 **Since:** 22
@@ -132,6 +136,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter1.emit('eventId', options, eventData);
 ```
 
+<a id="emit-1"></a>
+
 ## emit
 
 ```TypeScript
@@ -231,6 +237,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 
 emitter1.emit('eventId', options, eventData);
 ```
+
+<a id="emit-2"></a>
 
 ## emit
 
@@ -332,6 +340,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 
 emitter1.emit('eventId', options, eventData);
 ```
+
+<a id="emit-3"></a>
 
 ## emit
 
@@ -535,6 +545,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off('eventId', callback);
 ```
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -603,6 +615,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 
 emitter1.off('eventId', callback);
 ```
+
+<a id="off-2"></a>
 
 ## off
 
@@ -734,6 +748,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on('eventId', callback);
 ```
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -855,6 +871,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 
 emitter1.once('eventId', callback);
 ```
+
+<a id="once-1"></a>
 
 ## once
 

@@ -1,5 +1,9 @@
 # MicStateChangeEvent
 
+```TypeScript
+interface MicStateChangeEvent
+```
+
 麦克风状态变化时，应用接收到的事件。
 
 @typedef MicStateChangeEvent

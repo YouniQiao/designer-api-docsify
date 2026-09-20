@@ -1,5 +1,9 @@
 # AnimatedDrawableDescriptor
 
+```TypeScript
+export class AnimatedDrawableDescriptor extends DrawableDescriptor
+```
+
 使用Image组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
 **继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
@@ -68,6 +72,8 @@ struct Example {
   }
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

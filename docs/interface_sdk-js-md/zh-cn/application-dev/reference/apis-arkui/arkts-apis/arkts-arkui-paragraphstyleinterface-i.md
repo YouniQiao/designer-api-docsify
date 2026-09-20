@@ -1,5 +1,9 @@
 # ParagraphStyleInterface
 
+```TypeScript
+declare interface ParagraphStyleInterface
+```
+
 文本段落样式。
 
 **起始版本：** 12

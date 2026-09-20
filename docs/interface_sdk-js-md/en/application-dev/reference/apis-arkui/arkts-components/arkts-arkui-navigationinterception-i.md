@@ -1,5 +1,9 @@
 # NavigationInterception
 
+```TypeScript
+declare interface NavigationInterception
+```
+
 Describes the object to be intercepted during navigation redirection.
 
 **Since:** 12

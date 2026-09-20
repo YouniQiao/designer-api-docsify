@@ -58,6 +58,8 @@ formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
 ```
 
 
+<a id="getallformsinfo-1"></a>
+
 ## getAllFormsInfo
 
 ```TypeScript

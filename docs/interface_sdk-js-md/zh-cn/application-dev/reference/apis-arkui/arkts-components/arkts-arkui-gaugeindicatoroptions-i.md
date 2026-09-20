@@ -1,5 +1,9 @@
 # GaugeIndicatorOptions
 
+```TypeScript
+declare interface GaugeIndicatorOptions
+```
+
 数据量规图表指针选项。
 
 **起始版本：** 11

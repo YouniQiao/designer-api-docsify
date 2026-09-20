@@ -187,6 +187,8 @@ try {
 ```
 
 
+<a id="disableadvertising-1"></a>
+
 ## disableAdvertising
 
 ```TypeScript

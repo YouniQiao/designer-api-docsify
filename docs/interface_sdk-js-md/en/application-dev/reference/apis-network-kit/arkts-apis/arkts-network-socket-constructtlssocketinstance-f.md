@@ -59,6 +59,8 @@ tcp.connect(tcpconnectoptions, (err: BusinessError) => {
 ```
 
 
+<a id="constructtlssocketinstance-1"></a>
+
 ## constructTLSSocketInstance
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # GridObjectSortComponent
 
+```TypeScript
+export declare struct GridObjectSortComponent
+```
+
 网格对象排序组件，用于网格对象的编辑、拖动排序、新增和删除。
 
 > **说明：** 

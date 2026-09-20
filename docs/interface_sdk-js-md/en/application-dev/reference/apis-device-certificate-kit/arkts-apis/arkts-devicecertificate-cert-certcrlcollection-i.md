@@ -1,5 +1,9 @@
 # CertCRLCollection
 
+```TypeScript
+interface CertCRLCollection
+```
+
 Provides APIs for locating certificates or CRLs in a **CertCRLCollection** object.
 
 **Since:** 11
@@ -173,6 +177,8 @@ async function selectCerts() {
   });
 }
 ```
+
+<a id="selectcerts-1"></a>
 
 ## selectCerts
 
@@ -436,6 +442,8 @@ async function selectCRLs() {
   });
 }
 ```
+
+<a id="selectcrls-1"></a>
 
 ## selectCRLs
 

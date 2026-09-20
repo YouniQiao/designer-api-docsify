@@ -1,5 +1,9 @@
 # SharedPhotoAsset (System API)
 
+```TypeScript
+interface SharedPhotoAsset extends lang.ISendable
+```
+
 Defines the shared photo asset
 
 **Inheritance/Implementation:** SharedPhotoAsset extends lang.ISendable

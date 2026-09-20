@@ -1,5 +1,9 @@
 # AnalysisToolType（系统接口）
 
+```TypeScript
+export enum AnalysisToolType
+```
+
 枚举智慧分析工具类型。
 
 **起始版本：** 26.0.1

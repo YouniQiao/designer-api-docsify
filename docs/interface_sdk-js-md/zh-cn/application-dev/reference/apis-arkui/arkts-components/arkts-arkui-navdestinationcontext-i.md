@@ -1,5 +1,9 @@
 # NavDestinationContext
 
+```TypeScript
+declare interface NavDestinationContext
+```
+
 NavDestination上下文信息。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # KeyEvent
 
+```TypeScript
+declare interface KeyEvent
+```
+
 KeyEvent object description.
 
 **Since:** 7

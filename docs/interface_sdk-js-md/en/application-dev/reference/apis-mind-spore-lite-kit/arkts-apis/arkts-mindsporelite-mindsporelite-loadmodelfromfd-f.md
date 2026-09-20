@@ -100,6 +100,8 @@ mindSporeLite.loadModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.M
 ```
 
 
+<a id="loadmodelfromfd-1"></a>
+
 ## loadModelFromFd
 
 ```TypeScript
@@ -133,6 +135,8 @@ Create a Model instance from file description
 
 See [loadModelFromFd](#loadmodelfromfd)
 
+
+<a id="loadmodelfromfd-2"></a>
 
 ## loadModelFromFd
 

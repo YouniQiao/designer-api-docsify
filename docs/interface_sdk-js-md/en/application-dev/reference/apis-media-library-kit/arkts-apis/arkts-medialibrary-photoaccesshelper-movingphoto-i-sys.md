@@ -1,5 +1,9 @@
 # MovingPhoto
 
+```TypeScript
+interface MovingPhoto
+```
+
 MovingPhoto provides APIs for managing a moving photo instance.
 
 **Since:** 12

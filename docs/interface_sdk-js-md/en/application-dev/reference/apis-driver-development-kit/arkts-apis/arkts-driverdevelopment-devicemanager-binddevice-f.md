@@ -89,6 +89,8 @@ try {
 ```
 
 
+<a id="binddevice-1"></a>
+
 ## bindDevice
 
 ```TypeScript

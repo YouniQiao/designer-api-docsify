@@ -89,6 +89,8 @@ adminManager.setEnterpriseInfo(wantTemp, enterpriseInfo).catch((err: BusinessErr
 ```
 
 
+<a id="setenterpriseinfo-1"></a>
+
 ## setEnterpriseInfo
 
 ```TypeScript

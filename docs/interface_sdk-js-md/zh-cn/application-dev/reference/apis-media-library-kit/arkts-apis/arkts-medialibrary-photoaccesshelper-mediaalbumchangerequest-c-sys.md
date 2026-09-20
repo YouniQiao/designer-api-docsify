@@ -1,5 +1,9 @@
 # MediaAlbumChangeRequest
 
+```TypeScript
+class MediaAlbumChangeRequest implements MediaChangeRequest
+```
+
 MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
 
 相册变更请求。

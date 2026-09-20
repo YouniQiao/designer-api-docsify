@@ -1,5 +1,9 @@
 # OffsetResult
 
+```TypeScript
+declare interface OffsetResult
+```
+
 滑动偏移量对象。
 
 **起始版本：** 11

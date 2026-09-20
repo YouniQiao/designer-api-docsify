@@ -1,5 +1,9 @@
 # SymbolEffect
 
+```TypeScript
+declare class SymbolEffect
+```
+
 定义SymbolEffect类。
 
 **起始版本：** 12

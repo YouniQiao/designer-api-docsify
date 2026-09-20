@@ -1,5 +1,9 @@
 # GestureRecognizerState
 
+```TypeScript
+declare enum GestureRecognizerState
+```
+
 Enumerates the gesture recognizer states.
 
 **Since:** 12

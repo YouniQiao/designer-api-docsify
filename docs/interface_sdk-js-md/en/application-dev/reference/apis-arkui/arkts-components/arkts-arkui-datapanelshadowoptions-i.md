@@ -1,5 +1,9 @@
 # DataPanelShadowOptions
 
+```TypeScript
+declare interface DataPanelShadowOptions extends MultiShadowOptions
+```
+
 Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**.
 
 **Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)

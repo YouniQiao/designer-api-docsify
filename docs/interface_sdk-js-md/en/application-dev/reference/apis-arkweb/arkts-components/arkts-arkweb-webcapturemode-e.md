@@ -1,5 +1,9 @@
 # WebCaptureMode
 
+```TypeScript
+declare enum WebCaptureMode
+```
+
 Enumerates the web screen capture modes.
 
 **Since:** 10

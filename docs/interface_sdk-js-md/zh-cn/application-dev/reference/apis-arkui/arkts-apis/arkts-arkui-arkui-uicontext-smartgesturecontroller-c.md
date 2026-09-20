@@ -1,5 +1,9 @@
 # SmartGestureController
 
+```TypeScript
+export class SmartGestureController
+```
+
 提供智慧手势使能、监听、选中态控制，以及动态决策智慧手势行为的能力。
 
 > **说明：** 

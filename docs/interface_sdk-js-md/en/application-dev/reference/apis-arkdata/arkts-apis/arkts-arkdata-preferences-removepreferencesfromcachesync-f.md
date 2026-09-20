@@ -45,6 +45,8 @@ Stage model:
 ```
 
 
+<a id="removepreferencesfromcachesync-1"></a>
+
 ## removePreferencesFromCacheSync
 
 ```TypeScript

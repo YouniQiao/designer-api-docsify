@@ -1,5 +1,9 @@
 # DepthVector4 (System API)
 
+```TypeScript
+declare interface DepthVector4
+```
+
 4D vector in depth space.
 
 **Since:** 26.0.0

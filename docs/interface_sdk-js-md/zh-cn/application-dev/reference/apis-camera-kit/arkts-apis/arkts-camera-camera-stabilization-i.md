@@ -1,5 +1,9 @@
 # Stabilization
 
+```TypeScript
+interface Stabilization extends StabilizationQuery
+```
+
 Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)。
 
 提供设备在录像模式下设置视频防抖的操作。

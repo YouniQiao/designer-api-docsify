@@ -1,7 +1,7 @@
 # TextPickerScrollStopCallback
 
 ```TypeScript
-declare type TextPickerScrollStopCallback = (value: string | string[], index: number | number[]) => void
+declare type TextPickerScrollStopCallback = (value: string[], index: number[]) => void
 ```
 
 定义触发onScrollStop事件的回调类型。

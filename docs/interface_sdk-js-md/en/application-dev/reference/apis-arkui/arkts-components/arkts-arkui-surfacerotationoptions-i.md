@@ -1,5 +1,9 @@
 # SurfaceRotationOptions
 
+```TypeScript
+declare interface SurfaceRotationOptions
+```
+
 Defines whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates.
 
 **Since:** 12

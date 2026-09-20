@@ -1,5 +1,9 @@
 # BottomTabBarStyle
 
+```TypeScript
+declare class BottomTabBarStyle
+```
+
 底部页签和侧边页签样式。
 
 **起始版本：** 9

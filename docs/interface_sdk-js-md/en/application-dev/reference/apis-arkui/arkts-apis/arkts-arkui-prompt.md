@@ -23,9 +23,9 @@ import { prompt } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | Displays the menu. |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md) | Displays the menu. |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu-1) | Displays the menu. |
 | [showDialog](arkts-arkui-prompt-showdialog-f.md) | Displays the dialog box. |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md) | Displays the dialog box. |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog-1) | Displays the dialog box. |
 | [showToast](arkts-arkui-prompt-showtoast-f.md) | Displays the notification text. |
 
 ### Interfaces

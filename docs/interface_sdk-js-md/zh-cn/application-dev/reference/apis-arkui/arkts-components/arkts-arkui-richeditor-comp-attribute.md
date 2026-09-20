@@ -1,5 +1,9 @@
 # RichEditor属性/事件
 
+```TypeScript
+declare class RichEditorAttribute extends CommonMethod<RichEditorAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持[OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md)、[StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md)、[StyledStringChangeValue](../arkts-apis/arkts-arkui-styledstringchangevalue-i.md)和以下事件：
@@ -722,7 +726,7 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | 是 | The triggered function after content changed. |
+| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | 是 | 图文变化后触发的回调，用于获取变化前后的内容范围。 |
 
 ## onDidIMEInput
 
@@ -974,7 +978,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | 是 | The triggered function before text content is about to change. |
+| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | 是 | [RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md)为图文变化信息；boolean表示当前图文是否允许被更改，true：允许图文被更改；false：不允许图文被更改。 |
 
 ## orphanCharOptimization
 

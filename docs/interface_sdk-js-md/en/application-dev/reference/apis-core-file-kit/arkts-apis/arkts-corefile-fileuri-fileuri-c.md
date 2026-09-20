@@ -1,5 +1,9 @@
 # FileUri
 
+```TypeScript
+class FileUri extends uri.URI
+```
+
 FileUri represents the uri of the file.
 
 @extends uri.URI

@@ -50,6 +50,8 @@ settings.enableAirplaneMode(isEnabled).then(() => {
 ```
 
 
+<a id="enableairplanemode-1"></a>
+
 ## enableAirplaneMode
 
 ```TypeScript

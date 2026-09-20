@@ -1,5 +1,9 @@
 # MenuItemGroupOptions
 
+```TypeScript
+declare interface MenuItemGroupOptions
+```
+
 Describes the header and footer of the menu item group.
 
 **Since:** 9

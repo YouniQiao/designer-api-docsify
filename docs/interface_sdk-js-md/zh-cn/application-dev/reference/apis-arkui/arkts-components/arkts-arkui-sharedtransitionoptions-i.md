@@ -1,5 +1,9 @@
 # sharedTransitionOptions
 
+```TypeScript
+declare interface sharedTransitionOptions
+```
+
 共享元素转场动效参数。
 
 > **说明：** 

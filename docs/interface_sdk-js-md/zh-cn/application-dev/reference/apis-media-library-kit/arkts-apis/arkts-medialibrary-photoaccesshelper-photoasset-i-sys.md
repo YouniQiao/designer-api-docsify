@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset
+```
+
 提供封装文件属性的方法。
 
 **起始版本：** 10
@@ -93,6 +97,8 @@ commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>):
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="commiteditedasset-1"></a>
 
 ## commitEditedAsset
 
@@ -386,6 +392,8 @@ getExif(callback: AsyncCallback<string>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="getexif-1"></a>
+
 ## getExif
 
 ```TypeScript
@@ -609,6 +617,8 @@ isEdited(callback: AsyncCallback<boolean>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="isedited-1"></a>
+
 ## isEdited
 
 ```TypeScript
@@ -692,6 +702,8 @@ open(mode: string, callback: AsyncCallback<number>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="open-1"></a>
 
 ## open
 
@@ -784,6 +796,8 @@ requestEditData(callback: AsyncCallback<string>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="requesteditdata-1"></a>
+
 ## requestEditData
 
 ```TypeScript
@@ -866,6 +880,8 @@ requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="requestphoto-2"></a>
+
 ## requestPhoto
 
 ```TypeScript
@@ -945,6 +961,8 @@ requestSource(callback: AsyncCallback<number>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="requestsource-1"></a>
+
 ## requestSource
 
 ```TypeScript
@@ -1020,6 +1038,8 @@ revertToOriginal(callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="reverttooriginal-1"></a>
 
 ## revertToOriginal
 
@@ -1102,6 +1122,8 @@ setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="setfavorite-1"></a>
 
 ## setFavorite
 
@@ -1195,6 +1217,8 @@ setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="sethidden-1"></a>
 
 ## setHidden
 
@@ -1290,6 +1314,8 @@ setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="setpending-1"></a>
+
 ## setPending
 
 ```TypeScript
@@ -1379,6 +1405,8 @@ setUserComment(userComment: string, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="setusercomment-1"></a>
 
 ## setUserComment
 

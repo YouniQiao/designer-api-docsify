@@ -1,5 +1,9 @@
 # DatePickerDialogOptions
 
+```TypeScript
+declare interface DatePickerDialogOptions extends DatePickerOptions
+```
+
 Defines the configuration options of the date picker dialog box.
 
 Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).

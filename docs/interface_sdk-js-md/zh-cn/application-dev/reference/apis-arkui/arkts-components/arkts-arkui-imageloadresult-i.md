@@ -1,5 +1,9 @@
 # ImageLoadResult
 
+```TypeScript
+declare interface ImageLoadResult
+```
+
 图片数据加载成功和解码成功触发回调时返回的对象。
 
 **起始版本：** 12

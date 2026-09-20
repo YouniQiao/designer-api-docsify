@@ -1,5 +1,9 @@
 # EditableTitleBarStyleV2
 
+```TypeScript
+export declare class EditableTitleBarStyleV2
+```
+
 Declaration of the title bar style configuration.
 
 **Since:** 26.0.0

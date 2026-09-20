@@ -1,5 +1,9 @@
 # ButtonStyle
 
+```TypeScript
+declare interface ButtonStyle
+```
+
 设置侧边栏控制按钮的样式。
 
 **起始版本：** 8

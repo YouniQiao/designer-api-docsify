@@ -73,6 +73,8 @@ bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED
 ```
 
 
+<a id="querybundlestateinfobyinterval-1"></a>
+
 ## queryBundleStateInfoByInterval
 
 ```TypeScript

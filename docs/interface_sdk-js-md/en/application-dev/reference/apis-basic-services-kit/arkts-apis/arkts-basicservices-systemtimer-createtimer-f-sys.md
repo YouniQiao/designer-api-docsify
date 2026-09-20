@@ -83,6 +83,8 @@ try {
 ```
 
 
+<a id="createtimer-1"></a>
+
 ## createTimer
 
 ```TypeScript

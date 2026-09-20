@@ -1,5 +1,9 @@
 # ColorManagement
 
+```TypeScript
+interface ColorManagement extends ColorManagementQuery
+```
+
 ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md)。
 
 色彩管理类，用于设置色彩空间参数。

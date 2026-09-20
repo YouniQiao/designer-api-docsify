@@ -1,5 +1,9 @@
 # AuthorizationResult
 
+```TypeScript
+interface AuthorizationResult
+```
+
 Defines the authorization result. Currently, the authorization validity period of all [Privileges](arkts-basicservices-authorization-privilege-e.md) follows the lifecycle of the caller process.
 
 **Since:** 26.0.1

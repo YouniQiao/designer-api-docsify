@@ -1,5 +1,9 @@
 # BatchErrInfo
 
+```TypeScript
+interface BatchErrInfo
+```
+
 Result object containing error information with a specific index, error code, and message for a single asset.
 
 **Since:** 26.0.0

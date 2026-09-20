@@ -1,5 +1,9 @@
 # OutlineOptions
 
+```TypeScript
+declare interface OutlineOptions
+```
+
 外描边选项设置。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # DisturbanceFieldShape
 
+```TypeScript
+declare enum DisturbanceFieldShape
+```
+
 Defines particle disturbance shape.
 
 @enum { number }

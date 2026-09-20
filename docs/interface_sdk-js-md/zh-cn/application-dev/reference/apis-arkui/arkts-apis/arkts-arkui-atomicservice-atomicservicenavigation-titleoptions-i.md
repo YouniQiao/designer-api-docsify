@@ -1,5 +1,9 @@
 # TitleOptions
 
+```TypeScript
+export interface TitleOptions
+```
+
 标题栏选项。
 
 **起始版本：** 12

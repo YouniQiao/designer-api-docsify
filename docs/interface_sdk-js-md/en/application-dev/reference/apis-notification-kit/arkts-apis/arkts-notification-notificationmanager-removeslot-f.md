@@ -73,6 +73,8 @@ notificationManager.removeSlot(slotType).then(() => {
 ```
 
 
+<a id="removeslot-1"></a>
+
 ## removeSlot
 
 ```TypeScript
@@ -91,7 +93,7 @@ After deletion, the corresponding notification slot and its configuration will b
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of a specified type.
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a specified type.
+[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot-2) obtains a notification slot of a specified type.
 
 [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification slots for this application.
 

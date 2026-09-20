@@ -1,5 +1,9 @@
 # EmitterParticleOptions
 
+```TypeScript
+interface EmitterParticleOptions<PARTICLE extends ParticleType>
+```
+
 Defines parameters of particles used by emitters.
 
 > **NOTE:** 

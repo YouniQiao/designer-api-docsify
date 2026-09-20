@@ -84,6 +84,8 @@ notificationManager.addSlots(notificationSlotArray).then(() => {
 ```
 
 
+<a id="addslots-1"></a>
+
 ## addSlots
 
 ```TypeScript

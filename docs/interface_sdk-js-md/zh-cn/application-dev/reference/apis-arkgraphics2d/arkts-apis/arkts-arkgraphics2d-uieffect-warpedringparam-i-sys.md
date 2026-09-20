@@ -1,5 +1,9 @@
 # WarpedRingParam（系统接口）
 
+```TypeScript
+interface WarpedRingParam
+```
+
 WarpedRingParam 用于指定光环的半径、宽度、变化量、旋转、3D 朝向和噪声演化。
 
 **起始版本：** 26.0.1

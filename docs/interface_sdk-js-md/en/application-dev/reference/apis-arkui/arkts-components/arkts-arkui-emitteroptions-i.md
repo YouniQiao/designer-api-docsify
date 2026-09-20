@@ -1,5 +1,9 @@
 # EmitterOptions
 
+```TypeScript
+interface EmitterOptions<PARTICLE extends ParticleType>
+```
+
 Particle emitter configuration.
 
 @interface EmitterOptions

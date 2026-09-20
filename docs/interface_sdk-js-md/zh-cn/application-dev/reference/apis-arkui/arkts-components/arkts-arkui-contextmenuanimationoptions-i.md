@@ -1,5 +1,9 @@
 # ContextMenuAnimationOptions
 
+```TypeScript
+interface ContextMenuAnimationOptions
+```
+
 长按预览时显示的样式信息。
 
 **起始版本：** 11
@@ -18,7 +22,7 @@ hoverScale?: AnimationRange<number>
 
 倍率设置参数小于等于0时，不生效。
 
-[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)场景下，不生效。
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)场景下，不生效。
 
 设置transition接口时，不生效。
 

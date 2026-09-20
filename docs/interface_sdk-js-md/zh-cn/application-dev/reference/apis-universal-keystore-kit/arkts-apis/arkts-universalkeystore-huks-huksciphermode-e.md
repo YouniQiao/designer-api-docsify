@@ -1,5 +1,9 @@
 # HuksCipherMode
 
+```TypeScript
+export enum HuksCipherMode
+```
+
 表示加密模式。
 
 **起始版本：** 8

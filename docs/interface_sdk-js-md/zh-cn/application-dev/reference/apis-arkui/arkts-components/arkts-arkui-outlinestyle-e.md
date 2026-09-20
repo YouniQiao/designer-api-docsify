@@ -1,5 +1,9 @@
 # OutlineStyle
 
+```TypeScript
+declare enum OutlineStyle
+```
+
 外描边样式。
 
 **起始版本：** 11

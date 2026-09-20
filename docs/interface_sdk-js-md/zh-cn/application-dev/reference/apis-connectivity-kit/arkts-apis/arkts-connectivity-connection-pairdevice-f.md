@@ -93,6 +93,8 @@ try {
 ```
 
 
+<a id="pairdevice-1"></a>
+
 ## pairDevice
 
 ```TypeScript
@@ -140,6 +142,8 @@ function pairDevice(deviceId: string): Promise<void>
 
 参见 [pairDevice](#pairdevice)
 
+
+<a id="pairdevice-2"></a>
 
 ## pairDevice
 

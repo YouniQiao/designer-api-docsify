@@ -1,5 +1,9 @@
 # UIPickerComponentOptions
 
+```TypeScript
+declare interface UIPickerComponentOptions
+```
+
 Describes the parameters of the **UIPickerComponent** container.
 
 **Since:** 22

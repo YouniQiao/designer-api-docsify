@@ -1,5 +1,9 @@
 # CalendarDialogOptions
 
+```TypeScript
+declare interface CalendarDialogOptions extends CalendarOptions
+```
+
 Defines the configuration options of the calendar picker dialog box.
 
 Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).

@@ -1,5 +1,9 @@
 # SecurityComponentMethod
 
+```TypeScript
+declare class SecurityComponentMethod<T>
+```
+
 The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
 This module is mainly used in the following scenarios:  

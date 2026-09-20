@@ -1,5 +1,9 @@
 # DeviceModeDistributionPolicy (System API)
 
+```TypeScript
+export enum DeviceModeDistributionPolicy
+```
+
 Define the enumeration of device mode distribution policies, which is used to specify how an application is distributed on a device.
 
 **Since:** 26.0.1

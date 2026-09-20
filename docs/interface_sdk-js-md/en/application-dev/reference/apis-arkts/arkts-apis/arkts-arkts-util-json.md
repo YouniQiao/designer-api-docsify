@@ -22,7 +22,7 @@ import { JSON } from '@kit.ArkTS';
 | [parse](arkts-arkts-json-parse-f.md) | Parses a JSON string into an ArkTS object or null. |
 | [remove](arkts-arkts-json-remove-f.md) | Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets). |
 | [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
-| [stringify](arkts-arkts-json-stringify-f.md) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| [stringify](arkts-arkts-json-stringify-f.md#stringify-1) | Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported, but non-linear containers are not. |
 
 ### Interfaces
 

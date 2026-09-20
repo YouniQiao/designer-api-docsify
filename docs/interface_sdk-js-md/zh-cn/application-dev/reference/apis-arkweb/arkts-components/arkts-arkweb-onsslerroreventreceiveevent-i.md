@@ -1,5 +1,9 @@
 # OnSslErrorEventReceiveEvent
 
+```TypeScript
+declare interface OnSslErrorEventReceiveEvent
+```
+
 定义网页收到SSL错误时触发的回调信息，包括错误码和证书链。适用于需要处理SSL错误的场景，提升安全异常的监控和处理能力。
 
 **起始版本：** 12

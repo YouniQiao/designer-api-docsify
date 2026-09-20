@@ -1,5 +1,9 @@
 # ColorMetricsStop
 
+```TypeScript
+declare interface ColorMetricsStop
+```
+
 线性渐变颜色断点类型，用于描述渐进色颜色断点。
 
 **起始版本：** 23

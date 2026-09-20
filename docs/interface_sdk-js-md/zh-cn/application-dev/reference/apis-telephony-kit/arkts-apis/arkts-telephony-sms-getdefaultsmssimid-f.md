@@ -64,6 +64,8 @@ promise.then((data: number) => {
 ```
 
 
+<a id="getdefaultsmssimid-1"></a>
+
 ## getDefaultSmsSimId
 
 ```TypeScript

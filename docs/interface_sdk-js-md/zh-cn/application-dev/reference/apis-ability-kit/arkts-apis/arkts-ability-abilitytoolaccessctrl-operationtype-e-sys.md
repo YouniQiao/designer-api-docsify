@@ -1,5 +1,9 @@
 # OperationType（系统接口）
 
+```TypeScript
+enum OperationType
+```
+
 操作类型。
 
 **起始版本：** 26.0.0

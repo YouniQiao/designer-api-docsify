@@ -70,6 +70,8 @@ notificationManager.setBadgeNumber(badgeNumber, setBadgeNumberCallback);
 ```
 
 
+<a id="setbadgenumber-1"></a>
+
 ## setBadgeNumber
 
 ```TypeScript

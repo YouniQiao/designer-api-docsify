@@ -1,5 +1,10 @@
 # MacroVideoSession (System API)
 
+```TypeScript
+interface MacroVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect,
+      ManualFocus, ColorManagement
+```
+
 Implements a macro video session, which sets the parameters of the macro video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md).
 
 @extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus [since 12 - 17] @extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus, ColorManagement [since 18]

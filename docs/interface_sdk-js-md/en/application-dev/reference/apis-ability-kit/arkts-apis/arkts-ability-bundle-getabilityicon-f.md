@@ -67,6 +67,8 @@ bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
 ```
 
 
+<a id="getabilityicon-1"></a>
+
 ## getAbilityIcon
 
 ```TypeScript

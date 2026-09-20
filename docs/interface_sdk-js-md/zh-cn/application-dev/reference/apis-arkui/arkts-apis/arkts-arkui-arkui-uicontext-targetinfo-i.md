@@ -1,5 +1,9 @@
 # TargetInfo
 
+```TypeScript
+export interface TargetInfo
+```
+
 指定组件绑定的目标节点。
 
 **起始版本：** 18

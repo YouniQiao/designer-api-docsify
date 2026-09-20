@@ -1,5 +1,9 @@
 # WebMediaOptions
 
+```TypeScript
+declare interface WebMediaOptions
+```
+
 用于配置 Web 组件的媒体策略，包括音频续播有效期、音频独占模式等。适用于需要优化音频播放体验和多实例音频管理的场景，提升媒体播放的稳定性和用户体验。
 
 **起始版本：** 10

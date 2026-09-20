@@ -1,5 +1,9 @@
 # NavigationMenuItem
 
+```TypeScript
+declare interface NavigationMenuItem
+```
+
 导航菜单项，包括菜单图标和菜单信息。
 
 **起始版本：** 8

@@ -1,5 +1,9 @@
 # PickerDialogButtonStyle
 
+```TypeScript
+declare interface PickerDialogButtonStyle
+```
+
 Provide an interface for the button style of picker
 
 **Since:** 12

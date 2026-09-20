@@ -1,5 +1,9 @@
 # LayoutAlgorithm
 
+```TypeScript
+export interface LayoutAlgorithm
+```
+
 动态布局容器DynamicLayout的布局算法基础类型。
 
 > **说明：** 

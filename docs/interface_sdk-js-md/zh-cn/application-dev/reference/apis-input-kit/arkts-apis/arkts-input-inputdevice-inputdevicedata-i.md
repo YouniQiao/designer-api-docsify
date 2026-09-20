@@ -1,5 +1,9 @@
 # InputDeviceData
 
+```TypeScript
+interface InputDeviceData
+```
+
 描述输入设备的信息。
 
 **起始版本：** 8

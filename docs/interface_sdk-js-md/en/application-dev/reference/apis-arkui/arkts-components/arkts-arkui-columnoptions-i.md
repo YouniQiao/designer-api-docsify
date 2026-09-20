@@ -1,5 +1,9 @@
 # ColumnOptions
 
+```TypeScript
+interface ColumnOptions
+```
+
 Sets the spacing between child components of the **Column** component.
 
 > **NOTE:** 

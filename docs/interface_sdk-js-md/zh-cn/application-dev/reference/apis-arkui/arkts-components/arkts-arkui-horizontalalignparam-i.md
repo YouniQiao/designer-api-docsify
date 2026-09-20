@@ -1,5 +1,9 @@
 # HorizontalAlignParam
 
+```TypeScript
+declare interface HorizontalAlignParam
+```
+
 定义相对容器的水平对齐规则。
 
 @interface HorizontalAlignParam

@@ -1,5 +1,9 @@
 # ReminderRequestCalendar
 
+```TypeScript
+interface ReminderRequestCalendar extends ReminderRequest
+```
+
 日历实例对象，用于设置提醒的时间。
 
 **继承/实现关系：** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

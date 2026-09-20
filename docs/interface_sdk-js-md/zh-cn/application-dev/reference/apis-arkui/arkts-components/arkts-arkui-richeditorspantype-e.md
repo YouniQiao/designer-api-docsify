@@ -1,5 +1,9 @@
 # RichEditorSpanType
 
+```TypeScript
+declare enum RichEditorSpanType
+```
+
 Span类型信息。
 
 **起始版本：** 10

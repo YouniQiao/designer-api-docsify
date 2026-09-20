@@ -1,5 +1,9 @@
 # ResizableOptions
 
+```TypeScript
+declare interface ResizableOptions
+```
+
 图像拉伸时可调整大小的图像选项。
 
 **图1** 设置EdgeWidths效果图![edgewidths](../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)

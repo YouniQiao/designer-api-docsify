@@ -1,5 +1,9 @@
 # ICurve
 
+```TypeScript
+interface ICurve
+```
+
 Interface for curve object.
 
 **Since:** 9

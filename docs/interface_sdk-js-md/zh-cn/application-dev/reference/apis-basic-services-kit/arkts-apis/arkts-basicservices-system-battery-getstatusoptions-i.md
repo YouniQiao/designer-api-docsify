@@ -1,5 +1,9 @@
 # GetStatusOptions
 
+```TypeScript
+export interface GetStatusOptions
+```
+
 包含接口调用选项的对象，包括成功、失败和完成回调函数。
 
 **起始版本：** 3

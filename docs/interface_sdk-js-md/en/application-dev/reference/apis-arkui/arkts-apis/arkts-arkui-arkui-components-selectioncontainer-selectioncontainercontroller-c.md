@@ -1,5 +1,9 @@
 # SelectionContainerController
 
+```TypeScript
+export declare class SelectionContainerController
+```
+
 Defines the controller of the SelectionContainer component.
 
 **Since:** 26.0.0

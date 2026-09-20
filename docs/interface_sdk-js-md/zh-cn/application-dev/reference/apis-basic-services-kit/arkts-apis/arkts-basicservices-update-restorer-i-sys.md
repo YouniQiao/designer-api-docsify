@@ -1,5 +1,9 @@
 # Restorer（系统接口）
 
+```TypeScript
+export interface Restorer
+```
+
 提供清除用户数据分区、深度清除用户数据和操作系统分区、同步清除文件密钥等恢复出厂设置功能的工具类。
 
 > **恢复出厂设置流程**：
@@ -191,6 +195,8 @@ try {
   console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
+
+<a id="factoryreset-1"></a>
 
 ## factoryReset
 

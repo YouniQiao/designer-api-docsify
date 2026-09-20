@@ -1,5 +1,9 @@
 # RichEditorSelection
 
+```TypeScript
+declare interface RichEditorSelection
+```
+
 Defines information about the selected content.
 
 **Since:** 10

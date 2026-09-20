@@ -1,5 +1,9 @@
 # DepthComponent属性/事件
 
+```TypeScript
+declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 **继承/实现关系：** DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>

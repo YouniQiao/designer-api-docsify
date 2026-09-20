@@ -1,5 +1,9 @@
 # ContextMenuSourceType
 
+```TypeScript
+declare enum ContextMenuSourceType
+```
+
 触发上下文菜单的事件来源。
 
 **起始版本：** 9

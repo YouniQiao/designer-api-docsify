@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="settouchpadscrolldirection-1"></a>
+
 ## setTouchpadScrollDirection
 
 ```TypeScript

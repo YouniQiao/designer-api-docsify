@@ -1,5 +1,9 @@
 # PictureDrawableDescriptor
 
+```TypeScript
+export class PictureDrawableDescriptor extends DrawableDescriptor
+```
+
 支持通过传入Picture对象创建PictureDrawableDescriptor对象。继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
 **继承/实现关系：** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)

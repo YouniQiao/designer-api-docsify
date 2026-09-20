@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getapplicationinfosync-1"></a>
+
 ## getApplicationInfoSync
 
 ```TypeScript

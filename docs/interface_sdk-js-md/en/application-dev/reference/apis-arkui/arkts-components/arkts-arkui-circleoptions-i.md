@@ -1,5 +1,9 @@
 # CircleOptions
 
+```TypeScript
+declare interface CircleOptions
+```
+
 Describes the drawing attributes of the **Circle** component.
 
 **Since:** 7

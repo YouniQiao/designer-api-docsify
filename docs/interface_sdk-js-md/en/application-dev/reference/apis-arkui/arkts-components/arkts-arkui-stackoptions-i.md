@@ -1,5 +1,9 @@
 # StackOptions
 
+```TypeScript
+declare interface StackOptions
+```
+
 Sets the alignment method of the child component in the stack container.
 
 > **NOTE:** 

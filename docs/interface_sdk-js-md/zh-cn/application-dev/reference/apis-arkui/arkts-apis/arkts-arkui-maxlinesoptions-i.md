@@ -1,5 +1,9 @@
 # MaxLinesOptions
 
+```TypeScript
+declare interface MaxLinesOptions
+```
+
 配置TextArea组件，文本超长时的显示效果。
 
 **起始版本：** 20

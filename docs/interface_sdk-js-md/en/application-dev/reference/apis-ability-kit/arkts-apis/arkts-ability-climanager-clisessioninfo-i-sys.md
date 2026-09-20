@@ -1,5 +1,9 @@
 # CliSessionInfo (System API)
 
+```TypeScript
+interface CliSessionInfo
+```
+
 Session information of a tool execution.
 
 **Since:** 26.0.0

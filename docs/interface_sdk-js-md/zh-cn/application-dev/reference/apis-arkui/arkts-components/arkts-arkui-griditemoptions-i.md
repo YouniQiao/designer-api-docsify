@@ -1,5 +1,9 @@
 # GridItemOptions
 
+```TypeScript
+declare interface GridItemOptions
+```
+
 GridItem样式对象，用于配置GridItem的样式选项。
 
 **起始版本：** 11

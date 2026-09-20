@@ -74,6 +74,8 @@ try {
 ```
 
 
+<a id="setdarkmode-1"></a>
+
 ## setDarkMode
 
 ```TypeScript

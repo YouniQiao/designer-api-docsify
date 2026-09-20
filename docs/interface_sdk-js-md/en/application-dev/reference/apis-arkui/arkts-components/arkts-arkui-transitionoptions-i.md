@@ -1,5 +1,9 @@
 # TransitionOptions
 
+```TypeScript
+declare interface TransitionOptions
+```
+
 Defines the transition effect by setting parameters in the struct.
 
 > **NOTE:** 

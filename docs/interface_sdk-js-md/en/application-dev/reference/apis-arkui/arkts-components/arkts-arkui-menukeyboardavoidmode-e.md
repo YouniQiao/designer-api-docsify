@@ -1,5 +1,9 @@
 # MenuKeyboardAvoidMode
 
+```TypeScript
+declare enum MenuKeyboardAvoidMode
+```
+
 Enumerates the modes in which the menu avoids the soft keyboard.
 
 **Since:** 23

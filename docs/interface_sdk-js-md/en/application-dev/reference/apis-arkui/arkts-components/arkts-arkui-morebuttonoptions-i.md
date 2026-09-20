@@ -1,5 +1,9 @@
 # MoreButtonOptions
 
+```TypeScript
+declare interface MoreButtonOptions
+```
+
 Defines the options for the more button menu.
 
 **Since:** 19

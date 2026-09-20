@@ -1,5 +1,9 @@
 # PanGestureHandler
 
+```TypeScript
+declare class PanGestureHandler extends GestureHandler<PanGestureHandler>
+```
+
 Defines a pan gesture handler object.
 
 **Inheritance/Implementation:** PanGestureHandler extends GestureHandler<PanGestureHandler>
@@ -57,6 +61,8 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 | Type | Description |
 | --- | --- |
 | [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

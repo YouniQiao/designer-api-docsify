@@ -66,6 +66,8 @@ sim.setDefaultVoiceSlotId(0).then(() => {
 ```
 
 
+<a id="setdefaultvoiceslotid-1"></a>
+
 ## setDefaultVoiceSlotId
 
 ```TypeScript

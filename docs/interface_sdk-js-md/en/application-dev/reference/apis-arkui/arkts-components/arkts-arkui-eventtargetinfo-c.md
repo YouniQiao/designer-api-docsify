@@ -1,5 +1,9 @@
 # EventTargetInfo
 
+```TypeScript
+declare class EventTargetInfo
+```
+
 Provides the information about the component corresponding to the gesture recognizer.
 
 **Since:** 12

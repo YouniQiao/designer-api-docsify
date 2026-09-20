@@ -1,5 +1,9 @@
 # DocumentViewPicker
 
+```TypeScript
+class DocumentViewPicker
+```
+
 Provides APIs for selecting and saving documents in different formats. Before using the APIs of **DocumentViewPicker**, you need to create a **DocumentViewPicker** instance.
 
 **Since:** 9
@@ -87,6 +91,8 @@ struct Index {
 }
 ```
 
+<a id="constructor-1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -167,6 +173,8 @@ struct Index {
   }
 }
 ```
+
+<a id="constructor-2"></a>
 
 ## constructor
 
@@ -365,6 +373,8 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -452,6 +462,8 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="save-2"></a>
 
 ## save
 
@@ -631,6 +643,8 @@ async function example09(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+<a id="select-1"></a>
+
 ## select
 
 ```TypeScript
@@ -716,6 +730,8 @@ async function example09(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="select-2"></a>
 
 ## select
 

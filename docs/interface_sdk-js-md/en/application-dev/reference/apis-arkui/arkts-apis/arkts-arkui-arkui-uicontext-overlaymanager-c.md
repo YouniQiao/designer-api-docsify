@@ -1,5 +1,9 @@
 # OverlayManager
 
+```TypeScript
+export class OverlayManager
+```
+
 Provides the capability to draw overlays.
 
 > **NOTE:** 

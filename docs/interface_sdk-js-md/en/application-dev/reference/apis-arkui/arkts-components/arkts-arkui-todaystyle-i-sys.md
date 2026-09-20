@@ -1,5 +1,9 @@
 # TodayStyle (System API)
 
+```TypeScript
+interface TodayStyle
+```
+
 Non current day style.
 
 **Since:** 7

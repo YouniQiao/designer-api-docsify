@@ -56,6 +56,8 @@ accessibility.isOpenAccessibility((err: BusinessError, data: boolean) => {
 ```
 
 
+<a id="isopenaccessibility-1"></a>
+
 ## isOpenAccessibility
 
 ```TypeScript

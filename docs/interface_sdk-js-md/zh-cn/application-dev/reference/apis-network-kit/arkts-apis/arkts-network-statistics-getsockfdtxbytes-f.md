@@ -67,6 +67,8 @@ statistics.getSockfdTxBytes(sockfd).then((stats: number) => {
 ```
 
 
+<a id="getsockfdtxbytes-1"></a>
+
 ## getSockfdTxBytes
 
 ```TypeScript

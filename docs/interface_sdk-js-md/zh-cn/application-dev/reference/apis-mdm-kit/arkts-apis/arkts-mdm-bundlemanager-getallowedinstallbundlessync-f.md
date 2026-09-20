@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="getallowedinstallbundlessync-1"></a>
+
 ## getAllowedInstallBundlesSync
 
 ```TypeScript

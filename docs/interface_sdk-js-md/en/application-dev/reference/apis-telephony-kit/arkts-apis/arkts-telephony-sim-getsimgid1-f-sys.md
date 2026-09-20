@@ -65,6 +65,8 @@ sim.getSimGid1(0).then((data: string) => {
 ```
 
 
+<a id="getsimgid1-1"></a>
+
 ## getSimGid1
 
 ```TypeScript

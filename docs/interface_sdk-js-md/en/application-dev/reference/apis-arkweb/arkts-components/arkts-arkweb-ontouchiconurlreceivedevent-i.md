@@ -1,5 +1,9 @@
 # OnTouchIconUrlReceivedEvent
 
+```TypeScript
+declare interface OnTouchIconUrlReceivedEvent
+```
+
 Defines the callback information triggered when an apple-touch-icon URL is received, including the URL and precomposed status. It is suitable for scenarios where obtaining web page icons is required, improving icon management flexibility and user experience.
 
 **Since:** 12

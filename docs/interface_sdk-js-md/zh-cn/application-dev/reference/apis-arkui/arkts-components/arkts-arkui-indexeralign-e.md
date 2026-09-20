@@ -1,5 +1,9 @@
 # IndexerAlign
 
+```TypeScript
+declare enum IndexerAlign
+```
+
 索引条提示弹窗的对齐样式枚举。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # SwiperController
 
+```TypeScript
+declare class SwiperController
+```
+
 Implements the controller for the **Swiper** component. Bind this object to a **Swiper** component to control page turning and other functionalities.
 
 **Since:** 7
@@ -30,6 +34,8 @@ Goes to a specified page.
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
 | useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.<br>Default value: **false** |
+
+<a id="changeindex-1"></a>
 
 ## changeIndex
 

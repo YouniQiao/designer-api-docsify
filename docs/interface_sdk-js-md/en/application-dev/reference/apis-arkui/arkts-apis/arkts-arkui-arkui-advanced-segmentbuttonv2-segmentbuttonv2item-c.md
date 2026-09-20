@@ -1,5 +1,9 @@
 # SegmentButtonV2Item
 
+```TypeScript
+export declare class SegmentButtonV2Item
+```
+
 **Since:** 18
 
 **Decorator:** @ObservedV2

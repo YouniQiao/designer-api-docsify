@@ -69,6 +69,8 @@ try {
 ```
 
 
+<a id="gettimezone-1"></a>
+
 ## getTimezone
 
 ```TypeScript

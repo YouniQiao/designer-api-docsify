@@ -1,5 +1,9 @@
 # MotionPathOptions
 
+```TypeScript
+declare interface MotionPathOptions
+```
+
 Defines motion path configuration options of the component.
 
 **Since:** 7

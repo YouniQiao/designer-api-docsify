@@ -1,5 +1,9 @@
 # ArrayList
 
+```TypeScript
+declare class ArrayList<T>
+```
+
 ArrayList是一种线性数据结构，底层基于数组实现，解决了固定大小数组无法动态扩容的限制。ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
 
 **起始版本：** 8

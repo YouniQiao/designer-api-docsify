@@ -1,5 +1,9 @@
 # OffsetResult
 
+```TypeScript
+declare interface OffsetResult
+```
+
 Represents the offset values resulting from a scroll operation.
 
 **Since:** 11

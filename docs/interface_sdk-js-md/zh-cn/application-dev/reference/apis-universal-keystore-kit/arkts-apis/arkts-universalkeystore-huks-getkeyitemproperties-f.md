@@ -95,6 +95,8 @@ huks.getKeyItemProperties(keyAlias, emptyOptions)
 ```
 
 
+<a id="getkeyitemproperties-1"></a>
+
 ## getKeyItemProperties
 
 ```TypeScript

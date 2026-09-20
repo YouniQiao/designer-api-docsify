@@ -1,5 +1,9 @@
 # DLPFile (System API)
 
+```TypeScript
+export interface DLPFile
+```
+
 Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the [closeDLPFile](#closedlpfile) API to release resources to prevent file handle leaks. Authorization is required when the **DLPFile** object is transferred across processes.
 
 **Since:** 10
@@ -122,6 +126,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="adddlplinkfile-1"></a>
 
 ## addDLPLinkFile
 
@@ -269,6 +275,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="closedlpfile-1"></a>
 
 ## closeDLPFile
 
@@ -426,6 +434,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="deletedlplinkfile-1"></a>
 
 ## deleteDLPLinkFile
 
@@ -590,6 +600,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="recoverdlpfile-1"></a>
+
 ## recoverDLPFile
 
 ```TypeScript
@@ -750,6 +762,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="replacedlplinkfile-1"></a>
+
 ## replaceDLPLinkFile
 
 ```TypeScript
@@ -897,6 +911,8 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+<a id="resumefuselink-1"></a>
+
 ## resumeFuseLink
 
 ```TypeScript
@@ -1041,6 +1057,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<a id="stopfuselink-1"></a>
 
 ## stopFuseLink
 

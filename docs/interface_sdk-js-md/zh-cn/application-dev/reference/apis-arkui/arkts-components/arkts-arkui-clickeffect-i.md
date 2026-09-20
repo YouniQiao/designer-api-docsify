@@ -1,5 +1,9 @@
 # ClickEffect
 
+```TypeScript
+declare interface ClickEffect
+```
+
 定义点击回弹效果。
 
 **起始版本：** 10

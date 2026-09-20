@@ -65,6 +65,8 @@ sim.getVoiceMailIdentifier(0).then((data: string) => {
 ```
 
 
+<a id="getvoicemailidentifier-1"></a>
+
 ## getVoiceMailIdentifier
 
 ```TypeScript

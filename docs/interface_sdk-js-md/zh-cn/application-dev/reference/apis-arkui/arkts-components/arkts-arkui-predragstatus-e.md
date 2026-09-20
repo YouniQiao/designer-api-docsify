@@ -1,5 +1,9 @@
 # PreDragStatus
 
+```TypeScript
+declare enum PreDragStatus
+```
+
 定义拖拽手势触发前的各阶段状态。
 
 **起始版本：** 12

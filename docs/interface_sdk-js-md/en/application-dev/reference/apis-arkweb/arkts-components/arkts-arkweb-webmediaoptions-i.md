@@ -1,5 +1,9 @@
 # WebMediaOptions
 
+```TypeScript
+declare interface WebMediaOptions
+```
+
 Configures the media policy of the **Web** component, including the audio playback continuation validity period, audio exclusive mode, and more. It is suitable for scenarios where audio playback experience optimization and multi- instance audio management are required, improving media playback stability and user experience.
 
 **Since:** 10

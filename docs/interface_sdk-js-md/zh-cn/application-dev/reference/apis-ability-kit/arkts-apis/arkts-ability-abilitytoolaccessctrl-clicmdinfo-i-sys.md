@@ -1,5 +1,9 @@
 # CliCmdInfo（系统接口）
 
+```TypeScript
+interface CliCmdInfo
+```
+
 CLI命令信息。
 
 **起始版本：** 26.0.0

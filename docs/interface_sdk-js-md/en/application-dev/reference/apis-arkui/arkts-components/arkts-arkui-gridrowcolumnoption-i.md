@@ -1,5 +1,9 @@
 # GridRowColumnOption
 
+```TypeScript
+declare interface GridRowColumnOption
+```
+
 Describes the grid column number configuration for different device width types.
 
 Before API Version 20, if only partial breakpoints are set for **GridRow**'s grid column count, unconfigured breakpoints inherit the column count from the nearest smaller configured breakpoint (for instance, **sm** is the nearest smaller breakpoint of **md**). If no such smaller breakpoint is configured, the default grid column count 12 is used as a fallback.

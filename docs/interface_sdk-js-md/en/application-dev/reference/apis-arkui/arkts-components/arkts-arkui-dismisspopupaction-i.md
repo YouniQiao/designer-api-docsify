@@ -1,5 +1,9 @@
 # DismissPopupAction
 
+```TypeScript
+declare interface DismissPopupAction
+```
+
 Provides information about the dismissal of the popup.
 
 **Since:** 12

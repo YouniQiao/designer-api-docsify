@@ -78,6 +78,8 @@ call.hangUpCall(1).then(() => {
 ```
 
 
+<a id="hangupcall-1"></a>
+
 ## hangUpCall
 
 ```TypeScript

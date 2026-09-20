@@ -88,6 +88,8 @@ function createPixelMapUsingAllocatorSync() {
 ```
 
 
+<a id="createpixelmapusingallocatorsync-1"></a>
+
 ## createPixelMapUsingAllocatorSync
 
 ```TypeScript

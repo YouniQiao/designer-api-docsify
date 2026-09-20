@@ -1,5 +1,9 @@
 # SheetSize
 
+```TypeScript
+declare enum SheetSize
+```
+
 指定半模态的高度。
 
 **起始版本：** 10

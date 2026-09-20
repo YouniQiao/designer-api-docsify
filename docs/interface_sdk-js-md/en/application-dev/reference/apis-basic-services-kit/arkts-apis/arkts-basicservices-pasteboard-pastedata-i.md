@@ -1,5 +1,9 @@
 # PasteData
 
+```TypeScript
+interface PasteData
+```
+
 Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)** to create a **PasteData** object.
 
 **Since:** 6
@@ -81,6 +85,8 @@ let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_
 let dataXml = new ArrayBuffer(256);
 pasteData.addRecord('app/xml', dataXml);
 ```
+
+<a id="addrecord-1"></a>
 
 ## addRecord
 

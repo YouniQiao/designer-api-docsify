@@ -1,5 +1,9 @@
 # CounterV2Type
 
+```TypeScript
+declare enum CounterV2Type
+```
+
 Specifies the **CounterV2** type.
 
 **Since:** 26.0.0

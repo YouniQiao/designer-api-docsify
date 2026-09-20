@@ -187,6 +187,8 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (
 ```
 
 
+<a id="allocresourceandshare-1"></a>
+
 ## allocResourceAndShare
 
 ```TypeScript
@@ -227,6 +229,8 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 See [allocResourceAndShare](#allocresourceandshare)
 
+
+<a id="allocresourceandshare-2"></a>
 
 ## allocResourceAndShare
 

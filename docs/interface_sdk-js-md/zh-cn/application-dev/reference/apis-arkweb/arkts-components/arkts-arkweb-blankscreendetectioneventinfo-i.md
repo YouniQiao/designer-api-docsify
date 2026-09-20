@@ -1,5 +1,9 @@
 # BlankScreenDetectionEventInfo
 
+```TypeScript
+declare interface BlankScreenDetectionEventInfo
+```
+
 提供检测到白屏时的事件信息，包括URL、原因和细节。适用于需要监控页面白屏问题的场景，提升白屏诊断的准确性和用户体验。
 
 **起始版本：** 22

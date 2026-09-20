@@ -226,6 +226,8 @@ function huksAbort() {
 ```
 
 
+<a id="abort-1"></a>
+
 ## abort
 
 ```TypeScript
@@ -238,7 +240,7 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md)(handle: number, options: HuksOptions)
+**Substitutes:** [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession-1)(handle: number, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

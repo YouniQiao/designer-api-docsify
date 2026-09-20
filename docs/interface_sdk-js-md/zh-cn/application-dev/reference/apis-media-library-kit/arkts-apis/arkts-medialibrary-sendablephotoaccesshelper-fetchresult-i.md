@@ -1,5 +1,9 @@
 # FetchResult
 
+```TypeScript
+interface FetchResult<T> extends lang.ISendable
+```
+
 文件检索结果集。
 
 **继承/实现关系：** FetchResult extends lang.ISendable

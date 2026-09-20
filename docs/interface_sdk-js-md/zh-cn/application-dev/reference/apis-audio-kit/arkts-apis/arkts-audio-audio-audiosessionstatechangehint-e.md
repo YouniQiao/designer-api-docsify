@@ -1,5 +1,9 @@
 # AudioSessionStateChangeHint
 
+```TypeScript
+enum AudioSessionStateChangeHint
+```
+
 枚举用于音频会话状态变更提示。当用户监听到音频会话状态变化事件（即收到[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)事件）时，获取相关信息。此类型表示根据焦点策略对音频会话执行的操作，包括暂停、调整音量等。详情请参阅音频会话管理文档。
 
 **起始版本：** 20

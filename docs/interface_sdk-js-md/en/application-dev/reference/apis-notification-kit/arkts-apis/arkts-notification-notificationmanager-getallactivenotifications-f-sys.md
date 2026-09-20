@@ -66,6 +66,8 @@ notificationManager.getAllActiveNotifications().then((data: Array<notificationMa
 ```
 
 
+<a id="getallactivenotifications-1"></a>
+
 ## getAllActiveNotifications
 
 ```TypeScript

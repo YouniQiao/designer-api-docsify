@@ -1,5 +1,9 @@
 # CameraCaptureState
 
+```TypeScript
+declare enum CameraCaptureState
+```
+
 定义摄像头使用状态的值，用于标识摄像头的当前工作状态，帮助开发者实时监控摄像头资源使用情况，优化资源管理和用户隐私保护。
 
 **起始版本：** 23

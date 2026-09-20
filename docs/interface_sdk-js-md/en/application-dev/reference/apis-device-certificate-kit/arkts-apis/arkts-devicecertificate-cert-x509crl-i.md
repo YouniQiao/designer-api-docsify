@@ -1,5 +1,9 @@
 # X509CRL
 
+```TypeScript
+interface X509CRL
+```
+
 Provides APIs for X.509 CRL operations.
 
 **Since:** 11
@@ -127,6 +131,8 @@ cert.createX509CRL(encodingBlob).then(x509CRL => {
   console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 
@@ -525,6 +531,8 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
   }
 });
 ```
+
+<a id="getissuername-1"></a>
 
 ## getIssuerName
 
@@ -1073,6 +1081,8 @@ cert.createX509CRL(encodingBlob).then(x509CRL => {
   console.error(`createX509CRL failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="getrevokedcerts-1"></a>
 
 ## getRevokedCerts
 
@@ -2219,6 +2229,8 @@ async function crlToString() {
 }
 ```
 
+<a id="tostring-1"></a>
+
 ## toString
 
 ```TypeScript
@@ -2614,6 +2626,8 @@ cert.createX509CRL(encodingBlob).then(x509CRL => {
   console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="verify-1"></a>
 
 ## verify
 

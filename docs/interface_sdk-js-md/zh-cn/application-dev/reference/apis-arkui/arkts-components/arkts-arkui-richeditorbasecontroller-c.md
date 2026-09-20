@@ -1,5 +1,9 @@
 # RichEditorBaseController
 
+```TypeScript
+declare class RichEditorBaseController implements TextEditControllerEx
+```
+
 RichEditor组件控制器基类。
 
 **继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md)

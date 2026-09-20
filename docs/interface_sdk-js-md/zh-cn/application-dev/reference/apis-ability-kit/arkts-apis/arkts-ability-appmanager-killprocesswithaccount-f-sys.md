@@ -113,6 +113,8 @@ appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountC
 ```
 
 
+<a id="killprocesswithaccount-1"></a>
+
 ## killProcessWithAccount
 
 ```TypeScript
@@ -162,6 +164,8 @@ function killProcessWithAccount(bundleName: string, accountId: number, clearPage
 
 参见 [killProcessWithAccount](#killprocesswithaccount)
 
+
+<a id="killprocesswithaccount-2"></a>
 
 ## killProcessWithAccount
 

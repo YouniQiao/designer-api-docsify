@@ -1,5 +1,9 @@
 # BreakpointOptions
 
+```TypeScript
+export interface BreakpointOptions
+```
+
 Defines the breakpoint configuration options, which are used to specify threshold parameters for container size analysis.
 
 **Since:** 26.0.0

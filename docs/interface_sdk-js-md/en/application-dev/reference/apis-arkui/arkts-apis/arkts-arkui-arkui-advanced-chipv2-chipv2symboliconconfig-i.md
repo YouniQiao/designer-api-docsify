@@ -1,5 +1,9 @@
 # ChipV2SymbolIconConfig
 
+```TypeScript
+export declare interface ChipV2SymbolIconConfig
+```
+
 Defines the attribute configuration of the symbol icon.
 
 **Since:** 26.0.0

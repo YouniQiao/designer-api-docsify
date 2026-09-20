@@ -66,6 +66,8 @@ backgroundTaskManager.getRemainingDelayTime(id).then((res: number) => {
 ```
 
 
+<a id="getremainingdelaytime-1"></a>
+
 ## getRemainingDelayTime
 
 ```TypeScript

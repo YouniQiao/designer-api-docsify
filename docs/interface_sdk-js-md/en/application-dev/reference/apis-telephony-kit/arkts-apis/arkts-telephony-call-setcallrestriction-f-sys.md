@@ -77,6 +77,8 @@ call.setCallRestriction(0, callRestrictionInfo).then(() => {
 ```
 
 
+<a id="setcallrestriction-1"></a>
+
 ## setCallRestriction
 
 ```TypeScript

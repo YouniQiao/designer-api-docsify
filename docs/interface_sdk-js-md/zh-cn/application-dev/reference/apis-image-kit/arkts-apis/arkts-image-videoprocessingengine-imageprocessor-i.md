@@ -1,5 +1,9 @@
 # ImageProcessor
 
+```TypeScript
+interface ImageProcessor
+```
+
 提供ImageProcessor类型，包括图像处理功能。@typedef ImageProcessor
 
 **起始版本：** 18
@@ -74,6 +78,8 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
     imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
 }
 ```
+
+<a id="enhancedetail-1"></a>
 
 ## enhanceDetail
 
@@ -178,6 +184,8 @@ function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
     sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
 }
 ```
+
+<a id="enhancedetailsync-1"></a>
 
 ## enhanceDetailSync
 

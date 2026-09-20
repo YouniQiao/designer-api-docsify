@@ -1,5 +1,9 @@
 # EventTarget
 
+```TypeScript
+declare interface EventTarget
+```
+
 [BaseEvent](arkts-arkui-baseevent-i.md)中参数target的类型。
 
 触发事件的元素对象的显示区域。

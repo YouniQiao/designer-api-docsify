@@ -1,5 +1,9 @@
 # ActionMenuOptions
 
+```TypeScript
+interface ActionMenuOptions
+```
+
 操作菜单的选项。
 
 **起始版本：** 9

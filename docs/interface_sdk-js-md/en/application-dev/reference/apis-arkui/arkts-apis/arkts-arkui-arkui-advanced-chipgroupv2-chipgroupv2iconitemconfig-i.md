@@ -1,5 +1,9 @@
 # ChipGroupV2IconItemConfig
 
+```TypeScript
+export interface ChipGroupV2IconItemConfig
+```
+
 Defines the configuration of the suffix icon item, which is used to set the style, interaction, and accessibility attributes of the suffix icon.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # MenuOutlineOptions
 
+```TypeScript
+declare interface MenuOutlineOptions
+```
+
 Defines the outline of the drop-down menu.
 
 **Since:** 20

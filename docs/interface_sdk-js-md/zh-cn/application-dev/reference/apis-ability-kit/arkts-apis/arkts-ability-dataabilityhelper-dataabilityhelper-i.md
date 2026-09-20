@@ -1,5 +1,9 @@
 # DataAbilityHelper
 
+```TypeScript
+export interface DataAbilityHelper
+```
+
 可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md)接口获取DataAbilityHelper对象。
 
 **起始版本：** 7
@@ -65,6 +69,8 @@ DAHelper.batchInsert('dataability:///com.example.DataAbility', cars).then((data)
     console.info(`batchInsert data: ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="batchinsert-1"></a>
 
 ## batchInsert
 
@@ -155,6 +161,8 @@ dataAbilityHelper.call('dataability:///com.example.jsapidemo.UserDataAbility',
     console.error(`call failed, error: ${error}`);
 });
 ```
+
+<a id="call-1"></a>
 
 ## call
 
@@ -261,6 +269,8 @@ DAHelper.delete('dataability:///com.example.DataAbility', (error, data) => {
 });
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -291,6 +301,8 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 **示例**
 
 参见 [delete](#delete)
+
+<a id="delete-2"></a>
 
 ## delete
 
@@ -367,6 +379,8 @@ DAHelper.denormalizeUri('dataability:///com.example.DataAbility').then((data) =>
     console.info(`denormalizeUri data: ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="denormalizeuri-1"></a>
 
 ## denormalizeUri
 
@@ -461,6 +475,8 @@ dataAbilityHelper.executeBatch('dataability:///com.example.jsapidemo.UserDataAbi
 });
 ```
 
+<a id="executebatch-1"></a>
+
 ## executeBatch
 
 ```TypeScript
@@ -544,6 +560,8 @@ DAHelper.getFileTypes('dataability:///com.example.DataAbility', 'image/*').then(
 });
 ```
 
+<a id="getfiletypes-1"></a>
+
 ## getFileTypes
 
 ```TypeScript
@@ -625,6 +643,8 @@ DAHelper.getType('dataability:///com.example.DataAbility').then((data) => {
     console.info(`getType data: ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="gettype-1"></a>
 
 ## getType
 
@@ -722,6 +742,8 @@ DAHelper.insert('dataability:///com.example.DataAbility', valueBucket).then((dat
 });
 ```
 
+<a id="insert-1"></a>
+
 ## insert
 
 ```TypeScript
@@ -804,6 +826,8 @@ DAHelper.normalizeUri('dataability:///com.example.DataAbility').then((data) => {
 });
 ```
 
+<a id="normalizeuri-1"></a>
+
 ## normalizeUri
 
 ```TypeScript
@@ -884,6 +908,8 @@ DAHelper.notifyChange('dataability:///com.example.DataAbility').then(() => {
     console.info('================>notifyChangeCallback================>');
 });
 ```
+
+<a id="notifychange-1"></a>
 
 ## notifyChange
 
@@ -1012,6 +1038,8 @@ DAHelper.openFile('dataability:///com.example.DataAbility', mode).then((data) =>
     console.info(`openFile data: ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="openfile-1"></a>
 
 ## openFile
 
@@ -1159,6 +1187,8 @@ DAHelper.query('dataability:///com.example.DataAbility', cars, da).then((data) =
 });
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -1183,6 +1213,8 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 **示例**
 
 参见 [query](#query)
+
+<a id="query-2"></a>
 
 ## query
 
@@ -1210,6 +1242,8 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 
 参见 [query](#query)
 
+<a id="query-3"></a>
+
 ## query
 
 ```TypeScript
@@ -1235,6 +1269,8 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 **示例**
 
 参见 [query](#query)
+
+<a id="query-4"></a>
 
 ## query
 
@@ -1367,6 +1403,8 @@ DAHelper.update('dataability:///com.example.DataAbility', va, (error, data) => {
 });
 ```
 
+<a id="update-1"></a>
+
 ## update
 
 ```TypeScript
@@ -1398,6 +1436,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 **示例**
 
 参见 [update](#update)
+
+<a id="update-2"></a>
 
 ## update
 

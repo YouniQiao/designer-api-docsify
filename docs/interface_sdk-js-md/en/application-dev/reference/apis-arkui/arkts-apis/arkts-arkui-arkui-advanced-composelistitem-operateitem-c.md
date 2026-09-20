@@ -1,5 +1,9 @@
 # OperateItem
 
+```TypeScript
+export declare class OperateItem
+```
+
 Defines the type of the element on the right of the **ComposeListItem** component.
 
 **Since:** 10

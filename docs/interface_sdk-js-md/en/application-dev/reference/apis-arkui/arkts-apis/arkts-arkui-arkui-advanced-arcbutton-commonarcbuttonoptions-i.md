@@ -1,5 +1,9 @@
 # CommonArcButtonOptions
 
+```TypeScript
+interface CommonArcButtonOptions
+```
+
 Defines the default or custom style parameters for the **ArcButton** component.
 
 **Since:** 18

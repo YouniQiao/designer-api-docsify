@@ -81,6 +81,8 @@ try {
 ```
 
 
+<a id="getatteststatus-1"></a>
+
 ## getAttestStatus
 
 ```TypeScript

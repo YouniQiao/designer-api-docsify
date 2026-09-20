@@ -66,6 +66,8 @@ console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
+<a id="ismediakeysystemsupported-1"></a>
+
 ## isMediaKeySystemSupported
 
 ```TypeScript
@@ -105,6 +107,8 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 See [isMediaKeySystemSupported](#ismediakeysystemsupported)
 
+
+<a id="ismediakeysystemsupported-2"></a>
 
 ## isMediaKeySystemSupported
 

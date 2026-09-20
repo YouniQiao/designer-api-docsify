@@ -127,6 +127,8 @@ wantAgent.getWantAgent({
 ```
 
 
+<a id="getuid-1"></a>
+
 ## getUid
 
 ```TypeScript

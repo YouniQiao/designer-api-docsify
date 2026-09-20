@@ -1,5 +1,9 @@
 # ReuseOptions
 
+```TypeScript
+declare interface ReuseOptions
+```
+
 复用选项，用于配置复用标识ID，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。
 
 **起始版本：** 18

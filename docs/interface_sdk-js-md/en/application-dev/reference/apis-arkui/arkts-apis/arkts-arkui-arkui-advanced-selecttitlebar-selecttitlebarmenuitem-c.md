@@ -1,5 +1,9 @@
 # SelectTitleBarMenuItem
 
+```TypeScript
+export declare class SelectTitleBarMenuItem
+```
+
 Declaration of the menu item on the right side.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # StickyStyle
 
+```TypeScript
+declare enum StickyStyle
+```
+
 Enumerates the sticky styles.
 
 **Since:** 9

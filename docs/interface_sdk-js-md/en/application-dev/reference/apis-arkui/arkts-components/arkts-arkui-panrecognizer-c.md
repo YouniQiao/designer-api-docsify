@@ -1,5 +1,9 @@
 # PanRecognizer
 
+```TypeScript
+declare class PanRecognizer extends GestureRecognizer
+```
+
 Gesture recognizer object.
 
 **Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

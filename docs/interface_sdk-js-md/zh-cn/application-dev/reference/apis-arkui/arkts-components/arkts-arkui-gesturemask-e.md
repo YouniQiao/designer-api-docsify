@@ -1,5 +1,9 @@
 # GestureMask
 
+```TypeScript
+declare enum GestureMask
+```
+
 定义是否屏蔽子组件手势。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # GeneratorDialogOptions (System API)
 
+```TypeScript
+interface GeneratorDialogOptions
+```
+
 Parameters used to open the ImageGeneratorDialog.
 
 @interface GeneratorDialogOptions

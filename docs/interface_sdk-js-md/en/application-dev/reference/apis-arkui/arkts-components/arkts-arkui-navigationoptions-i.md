@@ -1,5 +1,9 @@
 # NavigationOptions
 
+```TypeScript
+declare interface NavigationOptions
+```
+
 Defines the routing stack operation options.
 
 **Since:** 12

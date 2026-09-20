@@ -1,5 +1,9 @@
 # TabsController
 
+```TypeScript
+declare class TabsController
+```
+
 Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple **Tabs** components.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # PublishFormErrorCode (System API)
 
+```TypeScript
+enum PublishFormErrorCode
+```
+
 Enumerates the result codes that may be used for the operation of adding a widget to the home screen.
 
 **Since:** 12

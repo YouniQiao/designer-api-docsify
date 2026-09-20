@@ -1,5 +1,9 @@
 # IndicatorComponent属性/事件
 
+```TypeScript
+declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>
+```
+
 除支持通用属性外，还支持以下属性。
 
 @extends CommonMethod&lt;IndicatorComponentAttribute&gt;

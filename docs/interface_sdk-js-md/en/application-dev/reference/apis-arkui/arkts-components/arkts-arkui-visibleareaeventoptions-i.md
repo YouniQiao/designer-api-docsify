@@ -1,5 +1,9 @@
 # VisibleAreaEventOptions
 
+```TypeScript
+declare interface VisibleAreaEventOptions
+```
+
 Describes visible area change configuration options.
 
 **Since:** 12

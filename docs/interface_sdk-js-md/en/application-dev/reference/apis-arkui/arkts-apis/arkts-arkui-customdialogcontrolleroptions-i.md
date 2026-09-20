@@ -1,5 +1,9 @@
 # CustomDialogControllerOptions
 
+```TypeScript
+declare interface CustomDialogControllerOptions
+```
+
 Defines the style of the custom dialog box.
 
 > **NOTE:** 

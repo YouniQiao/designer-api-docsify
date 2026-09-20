@@ -1,5 +1,9 @@
 # OnTitleReceiveEvent
 
+```TypeScript
+declare interface OnTitleReceiveEvent
+```
+
 定义网页标题更改时触发的回调信息，包括标题内容和来源。适用于需要监控页面标题变化的场景，提升页面信息的实时性和用户体验。
 
 **起始版本：** 12

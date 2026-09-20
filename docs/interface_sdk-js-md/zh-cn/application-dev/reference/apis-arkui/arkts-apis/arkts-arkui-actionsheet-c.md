@@ -1,5 +1,9 @@
 # ActionSheet
 
+```TypeScript
+declare class ActionSheet
+```
+
 **起始版本：** 8
 
 **废弃版本：** 26.0.0

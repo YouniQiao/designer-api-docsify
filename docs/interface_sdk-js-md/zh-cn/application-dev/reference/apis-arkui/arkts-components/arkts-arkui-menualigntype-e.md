@@ -1,5 +1,9 @@
 # MenuAlignType
 
+```TypeScript
+declare enum MenuAlignType
+```
+
 下拉菜单的对齐方式。
 
 **起始版本：** 10

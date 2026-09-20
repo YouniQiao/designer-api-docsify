@@ -105,6 +105,8 @@ try {
 ```
 
 
+<a id="removeuntrustedconfig-1"></a>
+
 ## removeUntrustedConfig
 
 ```TypeScript

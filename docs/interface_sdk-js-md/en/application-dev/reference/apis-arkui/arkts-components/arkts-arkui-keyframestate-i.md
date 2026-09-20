@@ -1,5 +1,9 @@
 # KeyframeState
 
+```TypeScript
+declare interface KeyframeState
+```
+
 Provides keyframe configuration options.
 
 **Since:** 11

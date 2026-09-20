@@ -1,5 +1,9 @@
 # ScaleSymbolEffect
 
+```TypeScript
+declare class ScaleSymbolEffect extends SymbolEffect
+```
+
 Defines ScaleSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

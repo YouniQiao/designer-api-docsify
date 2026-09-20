@@ -6,6 +6,8 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
+<a id="on-2"></a>
+
 ## on
 
 ```TypeScript
@@ -40,6 +42,8 @@ Subscribes to data of the acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-3"></a>
+
 ## on
 
 ```TypeScript
@@ -72,6 +76,8 @@ Subscribes to data of the uncalibrated acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-4"></a>
+
 ## on
 
 ```TypeScript
@@ -99,6 +105,8 @@ Subscribes to data of the ambient light sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-5"></a>
 
 ## on
 
@@ -129,6 +137,8 @@ Subscribes to data of the ambient temperature sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-6"></a>
+
 ## on
 
 ```TypeScript
@@ -156,6 +166,8 @@ Subscribes to data of the barometer sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-7"></a>
 
 ## on
 
@@ -185,6 +197,8 @@ Subscribes to data of the gravity sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-8"></a>
 
 ## on
 
@@ -220,6 +234,8 @@ Subscribes to data of the gyroscope sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-9"></a>
+
 ## on
 
 ```TypeScript
@@ -252,6 +268,8 @@ Subscribes to data of the uncalibrated gyroscope sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-10"></a>
+
 ## on
 
 ```TypeScript
@@ -279,6 +297,8 @@ Subscribes to data of the Hall effect sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-11"></a>
 
 ## on
 
@@ -312,6 +332,8 @@ Subscribes to data of the heart rate sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-12"></a>
+
 ## on
 
 ```TypeScript
@@ -340,6 +362,8 @@ Subscribes to data of the humidity sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-13"></a>
 
 ## on
 
@@ -373,6 +397,8 @@ Subscribes to data of the linear acceleration sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-14"></a>
+
 ## on
 
 ```TypeScript
@@ -402,6 +428,8 @@ Subscribes to data of the magnetic field sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-15"></a>
+
 ## on
 
 ```TypeScript
@@ -430,6 +458,8 @@ Subscribes to data of the uncalibrated magnetic field sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-16"></a>
 
 ## on
 
@@ -468,6 +498,8 @@ Subscribes to data of the orientation sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-17"></a>
+
 ## on
 
 ```TypeScript
@@ -498,6 +530,8 @@ Subscribes to data of the pedometer sensor. The step counter sensor's data repor
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-18"></a>
 
 ## on
 
@@ -531,6 +565,8 @@ Subscribes to data of the pedometer detection sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-19"></a>
+
 ## on
 
 ```TypeScript
@@ -558,6 +594,8 @@ Subscribes to data of the proximity sensor.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-20"></a>
 
 ## on
 
@@ -588,6 +626,8 @@ Subscribes to data of the rotation vector sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-21"></a>
+
 ## on
 
 ```TypeScript
@@ -616,6 +656,8 @@ Subscribes to the significant motion sensor data.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+
+<a id="on-22"></a>
 
 ## on
 
@@ -646,6 +688,8 @@ Subscribes to data of the wear detection sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-23"></a>
+
 ## on
 
 ```TypeScript
@@ -675,6 +719,8 @@ Subscribes to the fused pressure sensor data.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="on-24"></a>
+
 ## on
 
 ```TypeScript
@@ -702,6 +748,8 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)&gt; | Yes | Callback used to return the acceleration sensor data. The reported data type in the callback is **AccelerometerResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-25"></a>
 
 ## on
 
@@ -731,6 +779,8 @@ Subscribes to data changes of the uncalibrated acceleration sensor. If this API 
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-26"></a>
+
 ## on
 
 ```TypeScript
@@ -756,6 +806,8 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)&gt; | Yes | Callback used to return the ambient light sensor data. The reported data type in the callback is **LightResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-27"></a>
 
 ## on
 
@@ -783,6 +835,8 @@ Subscribes to data changes of the ambient temperature sensor. If this API is cal
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-28"></a>
+
 ## on
 
 ```TypeScript
@@ -809,6 +863,8 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-29"></a>
+
 ## on
 
 ```TypeScript
@@ -834,6 +890,8 @@ Subscribes to data changes of the gravity sensor. If this API is called multiple
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | Callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-30"></a>
 
 ## on
 
@@ -863,6 +921,8 @@ Subscribes to data changes of the gyroscope sensor. If this API is called multip
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-31"></a>
+
 ## on
 
 ```TypeScript
@@ -891,6 +951,8 @@ Subscribes to data changes of the uncalibrated gyroscope sensor. If this API is 
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-32"></a>
+
 ## on
 
 ```TypeScript
@@ -916,6 +978,8 @@ Subscribes to data changes of the Hall effect sensor. If this API is called mult
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes | Callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. The default value is 200,000,000 ns. This parameter is used to set the data reporting frequency when Hall effect events are frequently triggered. |
 
+
+<a id="on-33"></a>
 
 ## on
 
@@ -945,6 +1009,8 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-34"></a>
+
 ## on
 
 ```TypeScript
@@ -970,6 +1036,8 @@ Subscribes to data changes of the humidity sensor. If this API is called multipl
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes | Callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-35"></a>
 
 ## on
 
@@ -999,6 +1067,8 @@ Subscribes to data changes of the linear acceleration sensor. If this API is cal
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-36"></a>
+
 ## on
 
 ```TypeScript
@@ -1024,6 +1094,8 @@ Subscribes to data changes of the magnetic field sensor. If this API is called m
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | Yes | Callback used to return the magnetic field sensor data. The reported data type in the callback is **MagneticFieldResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-37"></a>
 
 ## on
 
@@ -1051,6 +1123,8 @@ Subscribes to data changes of the uncalibrated magnetic field sensor. If this AP
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-38"></a>
+
 ## on
 
 ```TypeScript
@@ -1076,6 +1150,8 @@ Subscribes to data changes of the orientation sensor. If this API is called mult
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes | Callback used to return the orientation sensor data. The reported data type in the callback is **OrientationResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-39"></a>
 
 ## on
 
@@ -1105,6 +1181,8 @@ Subscribes to data changes of the pedometer sensor. If this API is called multip
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-40"></a>
+
 ## on
 
 ```TypeScript
@@ -1133,6 +1211,8 @@ Subscribes to data changes of the pedometer detection sensor. If this API is cal
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-41"></a>
+
 ## on
 
 ```TypeScript
@@ -1158,6 +1238,8 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)&gt; | Yes | Callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. The default value is 200,000,000 ns. This parameter is used to set the data reporting frequency when proximity sensor events are frequently triggered. |
 
+
+<a id="on-42"></a>
 
 ## on
 
@@ -1185,6 +1267,8 @@ Subscribes to data changes of the rotation vector sensor. If this API is called 
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 
+<a id="on-43"></a>
+
 ## on
 
 ```TypeScript
@@ -1210,6 +1294,8 @@ Subscribes to data changes of the significant motion sensor. If this API is call
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes | Callback used to return the significant motion sensor data. The reported data type in the callback is **SignificantMotionResponse**. |
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
+
+<a id="on-44"></a>
 
 ## on
 

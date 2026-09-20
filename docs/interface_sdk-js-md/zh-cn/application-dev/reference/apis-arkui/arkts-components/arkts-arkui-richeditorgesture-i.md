@@ -1,5 +1,9 @@
 # RichEditorGesture
 
+```TypeScript
+declare interface RichEditorGesture
+```
+
 用户手势事件。
 
 **起始版本：** 11

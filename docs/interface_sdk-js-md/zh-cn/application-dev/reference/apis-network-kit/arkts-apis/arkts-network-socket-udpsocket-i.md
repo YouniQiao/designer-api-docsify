@@ -1,5 +1,9 @@
 # UDPSocket
 
+```TypeScript
+export interface UDPSocket
+```
+
 UDPSocket连接。在调用UDPSocket的方法前，需要先通过[socket.constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md)创建UDPSocket对象。
 
 **起始版本：** 7
@@ -75,6 +79,8 @@ udp.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -198,6 +204,8 @@ udp.close().then(() => {
   console.error('close fail');
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -445,6 +453,8 @@ udp.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -563,25 +573,6 @@ off(type: 'listening' | 'close', callback?: Callback<void>): void
 | type | 'listening' &#124; 'close' | 是 | 取消订阅事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
-## off('listening' | 'close')
-
-```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
-```
-
-取消订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' &#124; 'close' | 是 | 取消订阅事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
 ## off('error')
 
 ```TypeScript
@@ -619,25 +610,6 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回订阅某类事件后UDPSocket连接成功的状态信息。<br>**适用版本：** 11 |
-
-## on('listening' | 'close')
-
-```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
-```
-
-订阅UDPSocket连接的数据包消息事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'listening' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'listening'：数据包消息事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。UDPSocket连接的某类数据包消息事件或关闭事件发生变化后触发回调函数。 |
 
 ## on('listening' | 'close')
 
@@ -783,6 +755,8 @@ udp.send(sendOptions).then(() => {
   console.error('send fail');
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -993,6 +967,8 @@ udp.bind(bindAddr, (err: BusinessError) => {
   });
 })
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

@@ -1,5 +1,9 @@
 # ShowToastOptions
 
+```TypeScript
+export interface ShowToastOptions
+```
+
 定义ShowToast的选项。
 
 **起始版本：** 3

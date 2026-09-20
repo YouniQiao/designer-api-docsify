@@ -1,5 +1,9 @@
 # MifareUltralightTag
 
+```TypeScript
+export interface MifareUltralightTag extends TagSession
+```
+
 Provides APIs to access MIFARE Ultralight properties and perform I/O operations on a tag. This class inherits from **TagSession**.
 
 **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
@@ -141,6 +145,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="readmultiplepages-1"></a>
+
 ## readMultiplePages
 
 ```TypeScript
@@ -276,6 +282,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesinglepage-1"></a>
 
 ## writeSinglePage
 

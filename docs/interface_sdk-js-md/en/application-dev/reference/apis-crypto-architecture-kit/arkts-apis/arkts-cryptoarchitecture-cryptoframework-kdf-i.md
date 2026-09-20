@@ -1,5 +1,9 @@
 # Kdf
 
+```TypeScript
+interface Kdf
+```
+
 Key derivation function (KDF) interface, defining methods for deriving keys based on key derivation parameters. Before use, you must create a **Kdf** instance by using [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md).
 
 **Since:** 11
@@ -55,6 +59,8 @@ PBKDF2
 ```TypeScript
 HKDF
 ```
+
+<a id="generatesecret-1"></a>
 
 ## generateSecret
 

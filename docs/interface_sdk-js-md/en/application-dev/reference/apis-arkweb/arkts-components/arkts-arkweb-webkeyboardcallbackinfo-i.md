@@ -1,5 +1,9 @@
 # WebKeyboardCallbackInfo
 
+```TypeScript
+declare interface WebKeyboardCallbackInfo
+```
+
 Input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including WebKeyboardController and the attributes of the editable element. It is suitable for scenarios where custom keyboard interaction is required, improving input experience customization and flexibility.
 
 **Since:** 12

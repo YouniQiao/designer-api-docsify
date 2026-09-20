@@ -1,5 +1,9 @@
 # PointLightStyle（系统接口）
 
+```TypeScript
+declare interface PointLightStyle
+```
+
 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。
 
 **起始版本：** 11

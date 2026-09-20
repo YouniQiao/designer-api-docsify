@@ -1,5 +1,9 @@
 # ProgressInfo
 
+```TypeScript
+export interface ProgressInfo
+```
+
 通知进度信息。
 
 **起始版本：** 26.0.1

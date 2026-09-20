@@ -1,5 +1,9 @@
 # AbilityComponent属性/事件
 
+```TypeScript
+declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>
+```
+
 定义AbilityComponent的属性函数。
 
 @extends CommonMethod&lt;AbilityComponentAttribute&gt;

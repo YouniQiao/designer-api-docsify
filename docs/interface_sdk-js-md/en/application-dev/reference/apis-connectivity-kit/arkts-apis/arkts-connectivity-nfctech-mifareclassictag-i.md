@@ -1,5 +1,9 @@
 # MifareClassicTag
 
+```TypeScript
+export interface MifareClassicTag extends TagSession
+```
+
 Provides APIs to access MIFARE Classic properties and perform I/O operations on a tag. This class inherits from [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
 
 **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
@@ -114,6 +118,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="authenticatesector-1"></a>
 
 ## authenticateSector
 
@@ -253,6 +259,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="decrementblock-1"></a>
 
 ## decrementBlock
 
@@ -630,6 +638,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="incrementblock-1"></a>
+
 ## incrementBlock
 
 ```TypeScript
@@ -795,6 +805,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="readsingleblock-1"></a>
+
 ## readSingleBlock
 
 ```TypeScript
@@ -928,6 +940,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="restorefromblock-1"></a>
+
 ## restoreFromBlock
 
 ```TypeScript
@@ -1060,6 +1074,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="transfertoblock-1"></a>
 
 ## transferToBlock
 
@@ -1198,6 +1214,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesingleblock-1"></a>
 
 ## writeSingleBlock
 

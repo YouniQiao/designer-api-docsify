@@ -66,6 +66,8 @@ try {
 ```
 
 
+<a id="disableweardetection-1"></a>
+
 ## disableWearDetection
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # PixelMapDrawableDescriptor
 
+```TypeScript
+export class PixelMapDrawableDescriptor extends DrawableDescriptor
+```
+
 支持通过传入PixelMap创建PixelMapDrawableDescriptor对象。继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
 **继承/实现关系：** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
@@ -41,6 +45,8 @@ PixelMapDrawableDescriptor的构造函数。
 ```TypeScript
 通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

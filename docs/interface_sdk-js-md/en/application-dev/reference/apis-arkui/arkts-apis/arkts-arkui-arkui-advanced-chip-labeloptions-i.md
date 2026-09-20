@@ -1,5 +1,9 @@
 # LabelOptions
 
+```TypeScript
+export interface LabelOptions
+```
+
 Defines text configuration options.
 
 > **NOTE:** 
@@ -29,7 +33,7 @@ activatedFontColor?: ResourceColor
 
 Text color when the **Chip** is activated.
 
-Default value: &#36;r('sys.color.ohos_id_color_text_primary_contrary')
+Default value: $r('sys.color.ohos_id_color_text_primary_contrary')
 
 When the value is **undefined**, the default value is used.
 
@@ -51,7 +55,7 @@ fontColor?: ResourceColor
 
 Text color.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
+Default value: **$r('sys.color.ohos_id_color_text_primary')**
 
 When the value is **undefined**, the default value is used.
 
@@ -97,7 +101,7 @@ Font size. Percentage is not supported. If a percentage is passed, the default v
 
 If a negative value is passed, the default value is used.
 
-Default value: **&#36;r('sys.float.ohos_id_text_size_button2')**
+Default value: **$r('sys.float.ohos_id_text_size_button2')**
 
 Unit: fp
 
@@ -153,11 +157,11 @@ Default values:
 
 When **size** is **ChipSize.SMALL**:
 
-`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')) }`
+`{ start: LengthMetrics.resource($r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_small_text_margin')) }`
 
 When **size** is **ChipSize.NORMAL**:
 
-`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')) }`
+`{ start: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')) }`
 
 When the value is **undefined**, the default value is used.
 

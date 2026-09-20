@@ -1,5 +1,9 @@
 # ActiveChangeResponse（系统接口）
 
+```TypeScript
+interface ActiveChangeResponse
+```
+
 表示某次权限使用状态变化的详情。
 
 **起始版本：** 9

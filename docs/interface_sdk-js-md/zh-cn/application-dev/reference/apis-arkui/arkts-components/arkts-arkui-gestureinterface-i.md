@@ -1,5 +1,9 @@
 # GestureInterface
 
+```TypeScript
+interface GestureInterface<T>
+```
+
 定义Gesture接口。
 
 **起始版本：** 11

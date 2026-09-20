@@ -74,6 +74,8 @@ usageStatistics.queryDeviceEventStats(0, 20000000000000, (err: BusinessError, re
 ```
 
 
+<a id="querydeviceeventstats-1"></a>
+
 ## queryDeviceEventStats
 
 ```TypeScript

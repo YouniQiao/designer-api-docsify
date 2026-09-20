@@ -1,5 +1,9 @@
 # ArcAlphabetIndexerInitInfo
 
+```TypeScript
+declare interface ArcAlphabetIndexerInitInfo
+```
+
 定义弧形字母索引条的初始化参数。
 
 **起始版本：** 18

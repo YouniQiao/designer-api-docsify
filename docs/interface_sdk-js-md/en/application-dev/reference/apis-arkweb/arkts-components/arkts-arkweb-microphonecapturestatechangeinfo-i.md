@@ -1,5 +1,9 @@
 # MicrophoneCaptureStateChangeInfo
 
+```TypeScript
+declare interface MicrophoneCaptureStateChangeInfo
+```
+
 Provides the state change information of the microphone when the callback is triggered, including the state before the change and the state after the change. It is suitable for scenarios where monitoring microphone state changes is required, improving microphone management visibility and user experience.
 
 **Since:** 23

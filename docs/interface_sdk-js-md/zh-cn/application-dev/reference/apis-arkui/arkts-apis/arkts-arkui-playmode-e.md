@@ -1,5 +1,9 @@
 # PlayMode
 
+```TypeScript
+declare enum PlayMode
+```
+
 动画播放模式。
 
 **起始版本：** 7

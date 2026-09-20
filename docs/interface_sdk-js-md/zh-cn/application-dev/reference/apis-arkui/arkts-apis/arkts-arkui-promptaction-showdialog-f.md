@@ -105,6 +105,8 @@ showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccess
 ```
 
 
+<a id="showdialog-1"></a>
+
 ## showDialog
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # WritableSystemEnvKey
 
+```TypeScript
+declare class WritableSystemEnvKey<T> extends SystemEnvKey<T>
+```
+
 定义可写的系统环境变量Key，继承自[SystemEnvKey\&lt;T\&gt;](arkts-arkui-systemenvkey-c.md)。
 
 **继承/实现关系：** WritableSystemEnvKey extends SystemEnvKey<T>

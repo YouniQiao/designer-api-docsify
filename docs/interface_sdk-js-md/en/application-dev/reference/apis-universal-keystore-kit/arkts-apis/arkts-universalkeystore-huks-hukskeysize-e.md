@@ -1,5 +1,9 @@
 # HuksKeySize
 
+```TypeScript
+export enum HuksKeySize
+```
+
 Enumerates the key sizes.
 
 **Since:** 8

@@ -86,6 +86,8 @@ usageStatistics.registerAppGroupCallBack(onBundleGroupChanged, (err: BusinessErr
 ```
 
 
+<a id="registerappgroupcallback-1"></a>
+
 ## registerAppGroupCallBack
 
 ```TypeScript

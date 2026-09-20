@@ -1,5 +1,9 @@
 # RichEditorSymbolSpanStyleResult
 
+```TypeScript
+declare interface RichEditorSymbolSpanStyleResult
+```
+
 后端返回的SymbolSpan样式信息。
 
 **起始版本：** 11

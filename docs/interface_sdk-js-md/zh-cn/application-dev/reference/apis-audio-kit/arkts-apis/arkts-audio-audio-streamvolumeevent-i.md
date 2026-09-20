@@ -1,5 +1,9 @@
 # StreamVolumeEvent
 
+```TypeScript
+interface StreamVolumeEvent
+```
+
 音频流音量变化时，应用接收到的事件。
 
 @typedef StreamVolumeEvent

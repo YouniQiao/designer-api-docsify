@@ -1,5 +1,9 @@
 # PdfLoadResult
 
+```TypeScript
+declare enum PdfLoadResult
+```
+
 Defines the PDF page loading results, which identify various states and error types during PDF file loading and help developers diagnose errors and provide user prompts when PDF display fails.
 
 **Since:** 20

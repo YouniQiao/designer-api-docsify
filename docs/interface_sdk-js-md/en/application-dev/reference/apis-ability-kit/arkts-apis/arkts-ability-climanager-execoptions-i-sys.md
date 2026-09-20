@@ -1,5 +1,9 @@
 # ExecOptions (System API)
 
+```TypeScript
+interface ExecOptions
+```
+
 Tool execution options.
 
 **Since:** 26.0.0

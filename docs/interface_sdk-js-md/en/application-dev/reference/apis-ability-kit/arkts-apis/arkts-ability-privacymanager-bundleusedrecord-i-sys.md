@@ -1,5 +1,9 @@
 # BundleUsedRecord (System API)
 
+```TypeScript
+interface BundleUsedRecord
+```
+
 Represents the access records of an application or device.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # CalendarOptions
 
+```TypeScript
+declare interface CalendarOptions
+```
+
 Describes the parameters of the calendar picker.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # RunningMultiAppInfo (System API)
 
+```TypeScript
+export interface RunningMultiAppInfo
+```
+
 The RunningMultiAppInfo module defines the information of an application in multi-app mode in the running state.
 
 **Since:** 12

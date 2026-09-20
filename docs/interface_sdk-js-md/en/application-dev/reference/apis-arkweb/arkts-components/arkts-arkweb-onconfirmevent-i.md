@@ -1,5 +1,9 @@
 # OnConfirmEvent
 
+```TypeScript
+declare interface OnConfirmEvent
+```
+
 Defines the callback used when a web page triggers **confirm()**.
 
 **Since:** 12

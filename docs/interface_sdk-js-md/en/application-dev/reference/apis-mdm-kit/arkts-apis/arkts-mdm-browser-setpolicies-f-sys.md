@@ -91,6 +91,8 @@ browser.setPolicies(wantTemp, appId, policies).then(() => {
 ```
 
 
+<a id="setpolicies-1"></a>
+
 ## setPolicies
 
 ```TypeScript

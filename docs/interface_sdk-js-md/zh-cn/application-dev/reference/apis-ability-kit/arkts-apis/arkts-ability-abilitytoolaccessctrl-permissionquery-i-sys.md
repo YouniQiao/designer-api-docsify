@@ -1,5 +1,9 @@
 # PermissionQuery（系统接口）
 
+```TypeScript
+interface PermissionQuery
+```
+
 权限查询信息。
 
 **起始版本：** 26.0.0

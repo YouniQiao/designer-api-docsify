@@ -1,5 +1,9 @@
 # WebStorage
 
+```TypeScript
+class WebStorage
+```
+
 通过WebStorage可管理Web SQL数据库接口和HTML5 Web存储接口，每个应用中的所有Web组件共享一个WebStorage。
 
 **起始版本：** 9
@@ -108,6 +112,8 @@ static getOriginQuota(origin: string): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
 
+<a id="getoriginquota-1"></a>
+
 ## getOriginQuota
 
 ```TypeScript
@@ -170,6 +176,8 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100012](../errorcode-webview.md#17100012-无可获取的webstorage源) | Invalid web storage origin. |
+
+<a id="getorigins-1"></a>
 
 ## getOrigins
 
@@ -238,6 +246,8 @@ static getOriginUsage(origin: string): Promise<number>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) | Invalid origin. |
+
+<a id="getoriginusage-1"></a>
 
 ## getOriginUsage
 

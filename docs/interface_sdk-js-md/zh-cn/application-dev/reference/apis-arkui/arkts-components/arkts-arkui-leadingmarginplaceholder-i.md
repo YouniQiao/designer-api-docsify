@@ -1,5 +1,9 @@
 # LeadingMarginPlaceholder
 
+```TypeScript
+declare interface LeadingMarginPlaceholder
+```
+
 前导边距占位符，用于表示文本段落左侧与组件边缘之间的距离。
 
 **起始版本：** 11

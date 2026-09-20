@@ -1,5 +1,9 @@
 # CameraSharedStatusInfo (System API)
 
+```TypeScript
+interface CameraSharedStatusInfo
+```
+
 Camera shared status info.
 
 **Since:** 26.0.1

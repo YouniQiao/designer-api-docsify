@@ -63,6 +63,8 @@ policy.setDeviceIdleTrustlist([11111, 22222], true).then(() => {
 ```
 
 
+<a id="setdeviceidletrustlist-1"></a>
+
 ## setDeviceIdleTrustlist
 
 ```TypeScript

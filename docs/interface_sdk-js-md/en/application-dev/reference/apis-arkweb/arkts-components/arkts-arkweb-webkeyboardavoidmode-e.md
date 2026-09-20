@@ -1,5 +1,9 @@
 # WebKeyboardAvoidMode
 
+```TypeScript
+declare enum WebKeyboardAvoidMode
+```
+
 Enumerates the soft keyboard avoidance modes.
 
 **Since:** 12

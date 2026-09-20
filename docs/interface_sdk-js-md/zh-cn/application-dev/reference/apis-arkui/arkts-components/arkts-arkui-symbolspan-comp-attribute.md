@@ -1,5 +1,9 @@
 # SymbolSpan属性/事件
 
+```TypeScript
+declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
+```
+
 不支持[通用属性](arkts-arkui-commonmethod-c.md)，支持以下属性。
 
 不支持[通用事件](arkts-arkui-commonmethod-c.md)。
@@ -149,6 +153,8 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | 是 | SymbolSpan组件字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 

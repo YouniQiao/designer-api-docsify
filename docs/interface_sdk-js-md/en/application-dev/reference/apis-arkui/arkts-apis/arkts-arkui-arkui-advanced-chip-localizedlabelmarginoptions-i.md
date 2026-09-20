@@ -1,5 +1,9 @@
 # LocalizedLabelMarginOptions
 
+```TypeScript
+export interface LocalizedLabelMarginOptions
+```
+
 Defines the spacing between the localized text and the left and right icons.
 
 **Since:** 12
@@ -24,11 +28,11 @@ Default values:
 
 When **size** is **ChipSize.SMALL**, the default value of **end** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`
 
 When **size** is **ChipSize.NORMAL**, the default value of **end** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource($r('sys.float.chip_normal_text_margin'))`
 
 If the value is **undefined**, the default value is used.
 
@@ -54,11 +58,11 @@ Default values:
 
 When **size** is **ChipSize.SMALL**, the default value of **start** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`
+`LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`
 
 When **size** is **ChipSize.NORMAL**, the default value of **start** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`
+`LengthMetrics.resource($r('sys.float.chip_normal_text_margin'))`
 
 If the value is **undefined**, the default value is used.
 

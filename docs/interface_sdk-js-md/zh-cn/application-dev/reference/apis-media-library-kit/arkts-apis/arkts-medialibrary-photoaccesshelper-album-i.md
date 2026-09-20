@@ -1,5 +1,9 @@
 # Album
 
+```TypeScript
+interface Album extends AbsAlbum
+```
+
 实体相册。
 
 **继承/实现关系：** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md)
@@ -47,6 +51,8 @@ addAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="addassets-1"></a>
 
 ## addAssets
 
@@ -116,6 +122,8 @@ commitModify(callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="commitmodify-1"></a>
+
 ## commitModify
 
 ```TypeScript
@@ -178,6 +186,8 @@ removeAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="removeassets-1"></a>
 
 ## removeAssets
 

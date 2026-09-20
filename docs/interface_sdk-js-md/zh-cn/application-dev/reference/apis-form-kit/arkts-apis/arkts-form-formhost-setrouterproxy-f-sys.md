@@ -157,6 +157,8 @@ struct CardExample {
 ```
 
 
+<a id="setrouterproxy-1"></a>
+
 ## setRouterProxy
 
 ```TypeScript

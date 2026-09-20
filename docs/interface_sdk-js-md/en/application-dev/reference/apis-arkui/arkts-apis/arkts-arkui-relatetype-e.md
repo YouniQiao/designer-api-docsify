@@ -1,5 +1,9 @@
 # RelateType
 
+```TypeScript
+declare enum RelateType
+```
+
 RelateType enumeration description
 
 **Since:** 7

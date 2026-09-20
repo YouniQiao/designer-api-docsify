@@ -1,5 +1,9 @@
 # OnAlertEvent
 
+```TypeScript
+declare interface OnAlertEvent
+```
+
 定义网页触发 `alert()` 告警时的回调函数。
 
 **起始版本：** 12

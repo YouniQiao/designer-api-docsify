@@ -1,5 +1,9 @@
 # ImageContent
 
+```TypeScript
+declare enum ImageContent
+```
+
 指定图像内容。
 
 **起始版本：** 12

@@ -72,6 +72,8 @@ formProvider.updateForm(formId, obj).then(() => {
 ```
 
 
+<a id="updateform-1"></a>
+
 ## updateForm
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # UIAbility
 
+```TypeScript
+declare class UIAbility extends Ability
+```
+
 表示包含UI界面的应用组件，提供组件创建、销毁、前后台切换等生命周期回调，同时也具备后台通信能力。
 
 **继承/实现关系：** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md)
@@ -132,8 +136,7 @@ export default class MyAbility extends UIAbility {
 ## onContinue
 
 ```TypeScript
-onContinue(wantParam: Record<string, Object>):
-    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>
+onContinue(wantParam: Record<string, Object>):AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>
 ```
 
 当UIAbility准备跨端迁移时触发，可以保存待迁移的业务数据。

@@ -1,5 +1,9 @@
 # Brush
 
+```TypeScript
+class Brush
+```
+
 Defines a brush, which is used to describe the style and color to fill in a shape.
 
 > **NOTE:** 
@@ -29,6 +33,8 @@ A constructor used to create a **Brush** object.
 **Since:** 12
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -270,6 +276,8 @@ Sets a color for this brush.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="setcolor-1"></a>
+
 ## setColor
 
 ```TypeScript
@@ -296,6 +304,8 @@ Sets a color for this brush. This API provides better performance than [setColor
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="setcolor-2"></a>
 
 ## setColor
 

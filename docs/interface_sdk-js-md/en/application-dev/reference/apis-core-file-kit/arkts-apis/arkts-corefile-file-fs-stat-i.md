@@ -1,5 +1,9 @@
 # Stat
 
+```TypeScript
+declare interface Stat
+```
+
 Represents detailed file information. Before calling any API of the **Stat()** class, use [stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat) to create a **Stat** instance.
 
 **Since:** 9

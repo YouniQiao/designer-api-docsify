@@ -1,5 +1,9 @@
 # FeatureForDevice
 
+```TypeScript
+enum FeatureForDevice
+```
+
 Enumerates device features.
 
 **Since:** 24

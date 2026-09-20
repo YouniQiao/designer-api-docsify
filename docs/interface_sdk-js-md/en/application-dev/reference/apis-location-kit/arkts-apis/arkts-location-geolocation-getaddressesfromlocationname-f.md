@@ -55,6 +55,8 @@ geolocation.getAddressesFromLocationName(geocodeRequest).then((result) => {
 ```
 
 
+<a id="getaddressesfromlocationname-1"></a>
+
 ## getAddressesFromLocationName
 
 ```TypeScript

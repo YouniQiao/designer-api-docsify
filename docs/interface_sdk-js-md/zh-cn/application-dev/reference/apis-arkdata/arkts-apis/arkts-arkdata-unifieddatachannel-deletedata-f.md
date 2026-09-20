@@ -100,6 +100,8 @@ try {
 ```
 
 
+<a id="deletedata-1"></a>
+
 ## deleteData
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # SliderBlockType
 
+```TypeScript
+declare enum SliderBlockType
+```
+
 Slider组件滑块形状枚举。
 
 | 名称 | 值 | 说明 |  

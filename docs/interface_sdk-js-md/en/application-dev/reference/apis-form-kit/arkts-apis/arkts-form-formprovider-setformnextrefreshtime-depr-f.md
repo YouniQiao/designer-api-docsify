@@ -56,6 +56,8 @@ formProvider.setFormNextRefreshTime(formId, 5).then(() => {
 ```
 
 
+<a id="setformnextrefreshtime-1"></a>
+
 ## setFormNextRefreshTime
 
 ```TypeScript

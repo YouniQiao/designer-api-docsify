@@ -1,5 +1,9 @@
 # Blank properties/events
 
+```TypeScript
+declare class BlankAttribute extends CommonMethod<BlankAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 The [universal events](arkts-arkui-commonmethod-c.md) are supported.

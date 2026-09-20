@@ -1,5 +1,9 @@
 # AvoidanceMode
 
+```TypeScript
+declare enum AvoidanceMode
+```
+
 下拉菜单避让模式的枚举选项。
 
 **起始版本：** 19

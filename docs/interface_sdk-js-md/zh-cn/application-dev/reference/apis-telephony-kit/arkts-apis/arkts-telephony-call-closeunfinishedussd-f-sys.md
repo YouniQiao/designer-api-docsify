@@ -68,6 +68,8 @@ call.closeUnfinishedUssd(slotId).then(() => {
 ```
 
 
+<a id="closeunfinishedussd-1"></a>
+
 ## closeUnfinishedUssd
 
 ```TypeScript

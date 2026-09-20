@@ -103,6 +103,8 @@ try {
 ```
 
 
+<a id="adduntrustedconfig-1"></a>
+
 ## addUntrustedConfig
 
 ```TypeScript

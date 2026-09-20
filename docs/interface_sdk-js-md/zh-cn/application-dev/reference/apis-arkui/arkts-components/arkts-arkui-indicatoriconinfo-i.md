@@ -1,5 +1,9 @@
 # IndicatorIconInfo
 
+```TypeScript
+declare interface IndicatorIconInfo
+```
+
 为指定的导航点索引设置的图标。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # GrantStatus
 
+```TypeScript
+export enum GrantStatus
+```
+
 表示授权状态的枚举。
 
 **起始版本：** 8

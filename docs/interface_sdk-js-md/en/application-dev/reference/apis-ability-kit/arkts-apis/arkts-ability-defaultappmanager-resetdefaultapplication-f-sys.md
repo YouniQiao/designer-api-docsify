@@ -138,6 +138,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 ```
 
 
+<a id="resetdefaultapplication-1"></a>
+
 ## resetDefaultApplication
 
 ```TypeScript
@@ -175,6 +177,8 @@ Resets the default application based on a system-defined application type, a fil
 
 See [resetDefaultApplication](#resetdefaultapplication)
 
+
+<a id="resetdefaultapplication-2"></a>
 
 ## resetDefaultApplication
 

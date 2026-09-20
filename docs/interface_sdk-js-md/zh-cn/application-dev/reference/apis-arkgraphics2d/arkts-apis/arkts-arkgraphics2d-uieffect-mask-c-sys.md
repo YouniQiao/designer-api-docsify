@@ -1,5 +1,9 @@
 # Mask（系统接口）
 
+```TypeScript
+class Mask
+```
+
 Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的Mask提供不同的灰度分布模式，如波环遮罩、径向渐变、像素图遮罩等。
 
 **起始版本：** 20
@@ -300,6 +304,8 @@ struct Index {
   }
 }
 ```
+
+<a id="createpixelmapmask-1"></a>
 
 ## createPixelMapMask
 

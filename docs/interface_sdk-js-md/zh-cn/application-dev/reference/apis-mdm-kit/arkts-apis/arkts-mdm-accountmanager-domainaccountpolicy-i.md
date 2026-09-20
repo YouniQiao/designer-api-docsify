@@ -1,5 +1,9 @@
 # DomainAccountPolicy
 
+```TypeScript
+interface DomainAccountPolicy
+```
+
 域账号策略。
 
 **起始版本：** 19

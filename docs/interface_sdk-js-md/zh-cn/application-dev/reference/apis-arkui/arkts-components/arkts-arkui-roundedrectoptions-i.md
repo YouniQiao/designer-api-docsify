@@ -1,5 +1,9 @@
 # RoundedRectOptions
 
+```TypeScript
+declare interface RoundedRectOptions
+```
+
 用于描述圆角矩形绘制组件的绘制属性。
 
 > **说明：** 

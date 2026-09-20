@@ -82,6 +82,8 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) =>
 ```
 
 
+<a id="vibrate-1"></a>
+
 ## vibrate
 
 ```TypeScript
@@ -94,7 +96,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -117,6 +119,8 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 See [vibrate](#vibrate)
 
 
+<a id="vibrate-2"></a>
+
 ## vibrate
 
 ```TypeScript
@@ -129,7 +133,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)(effect: VibrateEffect, attribute: VibrateAttribute)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -151,6 +155,8 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 See [vibrate](#vibrate)
 
+
+<a id="vibrate-3"></a>
 
 ## vibrate
 

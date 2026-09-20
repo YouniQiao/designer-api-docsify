@@ -51,6 +51,8 @@ Stage model:
 ```
 
 
+<a id="removelocalservice-1"></a>
+
 ## removeLocalService
 
 ```TypeScript

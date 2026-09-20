@@ -1,5 +1,9 @@
 # HuksImportKeyType
 
+```TypeScript
+export enum HuksImportKeyType
+```
+
 Enumerates the types of keys to import. By default, a public key is imported. This field is not required when a symmetric key is imported.
 
 **Since:** 9

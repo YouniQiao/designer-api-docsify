@@ -1,5 +1,9 @@
 # MovingPhoto
 
+```TypeScript
+interface MovingPhoto
+```
+
 动态照片对象。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # MaxLinesOptions
 
+```TypeScript
+declare interface MaxLinesOptions
+```
+
 Configures the display effect of the **TextArea** component when the text exceeds the maximum number of lines.
 
 **Since:** 20

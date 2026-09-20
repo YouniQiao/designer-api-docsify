@@ -134,6 +134,8 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: 
 ```
 
 
+<a id="stopusingpermission-1"></a>
+
 ## stopUsingPermission
 
 ```TypeScript
@@ -177,6 +179,8 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 See [stopUsingPermission](#stopusingpermission)
 
+
+<a id="stopusingpermission-2"></a>
 
 ## stopUsingPermission
 
@@ -234,6 +238,8 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 See [stopUsingPermission](#stopusingpermission)
 
+
+<a id="stopusingpermission-3"></a>
 
 ## stopUsingPermission
 

@@ -1,5 +1,9 @@
 # IsolatedComponent properties/events
 
+```TypeScript
+declare class IsolatedComponentAttribute extends CommonMethod<IsolatedComponentAttribute>
+```
+
 Only the width, height, and backgroundColor universal attributes are supported.
 
 The universal events are not supported.

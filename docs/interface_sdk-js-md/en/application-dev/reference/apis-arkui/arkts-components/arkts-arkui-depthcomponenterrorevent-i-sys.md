@@ -1,5 +1,9 @@
 # DepthComponentErrorEvent (System API)
 
+```TypeScript
+declare interface DepthComponentErrorEvent
+```
+
 Information about the background resource loading error.
 
 **Since:** 26.0.0

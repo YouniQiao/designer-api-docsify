@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="preparecooperate-1"></a>
+
 ## prepareCooperate
 
 ```TypeScript

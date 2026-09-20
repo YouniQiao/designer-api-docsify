@@ -1,5 +1,9 @@
 # Readable
 
+```TypeScript
+export class Readable
+```
+
 Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket.
 
 **Since:** 12
@@ -38,6 +42,8 @@ let option : stream.ReadableOptions = {
 };
 let readableStream = new stream.Readable(option);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

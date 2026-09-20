@@ -1,5 +1,9 @@
 # WifiP2pServiceInfo
 
+```TypeScript
+interface WifiP2pServiceInfo
+```
+
 Represents the P2P service information.
 
 **Since:** 26.0.1

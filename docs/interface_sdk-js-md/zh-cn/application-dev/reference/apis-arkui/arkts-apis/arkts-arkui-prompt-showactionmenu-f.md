@@ -78,6 +78,8 @@ prompt.showActionMenu({
 ```
 
 
+<a id="showactionmenu-1"></a>
+
 ## showActionMenu
 
 ```TypeScript

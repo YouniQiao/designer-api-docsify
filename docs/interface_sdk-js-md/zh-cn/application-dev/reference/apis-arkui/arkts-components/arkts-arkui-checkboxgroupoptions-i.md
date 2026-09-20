@@ -1,5 +1,9 @@
 # CheckboxGroupOptions
 
+```TypeScript
+declare interface CheckboxGroupOptions
+```
+
 多选框群组的信息。
 
 **起始版本：** 8

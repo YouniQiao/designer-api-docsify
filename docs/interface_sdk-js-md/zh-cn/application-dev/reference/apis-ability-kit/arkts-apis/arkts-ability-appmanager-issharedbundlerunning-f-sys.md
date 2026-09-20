@@ -76,6 +76,8 @@ appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
 ```
 
 
+<a id="issharedbundlerunning-1"></a>
+
 ## isSharedBundleRunning
 
 ```TypeScript

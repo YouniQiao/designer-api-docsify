@@ -1,5 +1,9 @@
 # TLSSocket
 
+```TypeScript
+export interface TLSSocket
+```
+
 Defines a TLS socket connection. Before calling TLSSocket APIs, you need to call [socket.constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md) to create a **TLSSocket** object.
 
 **Since:** 9
@@ -82,6 +86,8 @@ tls.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -214,6 +220,8 @@ tls.close().then(() => {
   console.error("failed" + err);
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -457,6 +465,8 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
   console.error("connect failed " + JSON.stringify(err));
 });
 ```
+
+<a id="connect-1"></a>
 
 ## connect
 
@@ -707,6 +717,8 @@ tls.getCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
+<a id="getcertificate-1"></a>
+
 ## getCertificate
 
 ```TypeScript
@@ -818,6 +830,8 @@ tls.getCipherSuite().then((data: Array<string>) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getciphersuite-1"></a>
 
 ## getCipherSuite
 
@@ -972,6 +986,8 @@ tls.getProtocol().then((data: string) => {
 });
 ```
 
+<a id="getprotocol-1"></a>
+
 ## getProtocol
 
 ```TypeScript
@@ -1078,6 +1094,8 @@ tls.getRemoteAddress().then(() => {
   console.error('getRemoteAddress fail');
 });
 ```
+
+<a id="getremoteaddress-1"></a>
 
 ## getRemoteAddress
 
@@ -1191,6 +1209,8 @@ tls.getRemoteCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
+<a id="getremotecertificate-1"></a>
+
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1302,6 +1322,8 @@ tls.getSignatureAlgorithms().then((data: Array<string>) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getsignaturealgorithms-1"></a>
 
 ## getSignatureAlgorithms
 
@@ -1477,6 +1499,8 @@ tls.getState().then(() => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -1602,31 +1626,6 @@ Unsubscribes from **connect** or **close** events of the **TLSSocket** object. T
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
-## off('connect' | 'close')
-
-```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
-```
-
-Unsubscribes from **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-
 ## off('error')
 
 ```TypeScript
@@ -1674,35 +1673,6 @@ Subscribes to **message** events of the **TLSSocket** object. This API uses an a
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-Subscribes to **connect** or **close** events of the **TLSSocket** object. This API uses an asynchronous callback to return the result.
-
-> **NOTE:** 
-> 
-> This API can be called only after **bind** is successfully called.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1825,6 +1795,8 @@ tls.send("xxxx").then(() => {
   console.error("failed" + err);
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -1999,6 +1971,8 @@ tls.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

@@ -183,6 +183,8 @@ try {
 ```
 
 
+<a id="enableadvertising-1"></a>
+
 ## enableAdvertising
 
 ```TypeScript

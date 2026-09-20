@@ -1,5 +1,9 @@
 # PasteIconStyle
 
+```TypeScript
+declare enum PasteIconStyle
+```
+
 粘贴控件的图标风格。
 
 **起始版本：** 10

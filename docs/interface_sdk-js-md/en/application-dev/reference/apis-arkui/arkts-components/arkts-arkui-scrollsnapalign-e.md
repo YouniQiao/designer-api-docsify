@@ -1,5 +1,9 @@
 # ScrollSnapAlign
 
+```TypeScript
+declare enum ScrollSnapAlign
+```
+
 Enumerates the alignment modes of list items when scrolling ends.
 
 **Since:** 10

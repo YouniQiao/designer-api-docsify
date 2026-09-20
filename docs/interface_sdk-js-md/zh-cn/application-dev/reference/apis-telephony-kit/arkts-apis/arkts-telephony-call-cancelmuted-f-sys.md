@@ -62,6 +62,8 @@ call.cancelMuted().then(() => {
 ```
 
 
+<a id="cancelmuted-1"></a>
+
 ## cancelMuted
 
 ```TypeScript

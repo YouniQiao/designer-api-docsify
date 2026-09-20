@@ -1,5 +1,9 @@
 # ListItemSwipeActionManager
 
+```TypeScript
+declare class ListItemSwipeActionManager
+```
+
 Implements the swipe action menu manager for list items.
 
 **Since:** 21

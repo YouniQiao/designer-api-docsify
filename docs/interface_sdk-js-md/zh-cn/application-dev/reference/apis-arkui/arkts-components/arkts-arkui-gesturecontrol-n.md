@@ -1,5 +1,9 @@
 # GestureControl
 
+```TypeScript
+declare namespace GestureControl
+```
+
 定义手势竞争结果。
 
 **起始版本：** 11

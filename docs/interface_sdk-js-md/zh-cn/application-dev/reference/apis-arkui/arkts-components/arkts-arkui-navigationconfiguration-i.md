@@ -1,5 +1,9 @@
 # NavigationConfiguration
 
+```TypeScript
+declare interface NavigationConfiguration
+```
+
 导航配置选项。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # SegmentButtonItemOptions
 
+```TypeScript
+declare class SegmentButtonItemOptions
+```
+
 Button options in a segment button.
 
 **Since:** 11

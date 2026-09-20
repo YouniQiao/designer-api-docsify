@@ -1,5 +1,9 @@
 # LayoutSafeAreaType
 
+```TypeScript
+declare enum LayoutSafeAreaType
+```
+
 扩展布局安全区域的枚举类型。
 
 **起始版本：** 12

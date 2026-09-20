@@ -1,5 +1,9 @@
 # cursorControl
 
+```TypeScript
+declare namespace cursorControl
+```
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.

@@ -1,5 +1,9 @@
 # Config (System API)
 
+```TypeScript
+class Config
+```
+
 Provides APIs for setting device-cloud synergy, including enabling and disabling device-cloud synergy, clearing data, and notifying data changes.
 
 **Since:** 10
@@ -185,6 +189,8 @@ try {
 }
 ```
 
+<a id="changeappcloudswitch-1"></a>
+
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -227,6 +233,8 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 **Examples**
 
 See [changeAppCloudSwitch](#changeappcloudswitch)
+
+<a id="changeappcloudswitch-2"></a>
 
 ## changeAppCloudSwitch
 
@@ -395,6 +403,8 @@ try {
 }
 ```
 
+<a id="clear-1"></a>
+
 ## clear
 
 ```TypeScript
@@ -436,6 +446,8 @@ Clears the cloud data locally. This API uses a promise to return the result.
 **Examples**
 
 See [clear](#clear)
+
+<a id="clear-2"></a>
 
 ## clear
 
@@ -693,6 +705,8 @@ try {
 }
 ```
 
+<a id="disablecloud-1"></a>
+
 ## disableCloud
 
 ```TypeScript
@@ -808,6 +822,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="enablecloud-1"></a>
 
 ## enableCloud
 
@@ -990,6 +1006,8 @@ try {
 }
 ```
 
+<a id="notifydatachange-1"></a>
+
 ## notifyDataChange
 
 ```TypeScript
@@ -1025,6 +1043,8 @@ Notifies the data changes in the cloud with the specified information, such as t
 **Examples**
 
 See [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-2"></a>
 
 ## notifyDataChange
 
@@ -1062,6 +1082,8 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 **Examples**
 
 See [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-3"></a>
 
 ## notifyDataChange
 
@@ -1104,6 +1126,8 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 **Examples**
 
 See [notifyDataChange](#notifydatachange)
+
+<a id="notifydatachange-4"></a>
 
 ## notifyDataChange
 

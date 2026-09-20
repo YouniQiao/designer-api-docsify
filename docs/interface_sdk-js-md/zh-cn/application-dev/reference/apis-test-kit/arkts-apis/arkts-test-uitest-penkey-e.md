@@ -1,5 +1,9 @@
 # PenKey
 
+```TypeScript
+declare enum PenKey
+```
+
 笔按键类型枚举。
 
 **起始版本：** 26.0.0

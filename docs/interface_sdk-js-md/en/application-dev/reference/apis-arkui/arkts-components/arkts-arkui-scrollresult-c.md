@@ -1,5 +1,9 @@
 # ScrollResult
 
+```TypeScript
+declare class ScrollResult
+```
+
 The actual offset by which the scrollable scrolls.
 
 **Since:** 12

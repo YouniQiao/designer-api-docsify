@@ -1,5 +1,9 @@
 # AppProvisionInfo (System API)
 
+```TypeScript
+export interface AppProvisionInfo
+```
+
 The module provides information in the [HarmonyAppProvision configuration file](../../../security/app-provision-structure.md).
 
 **Since:** 10

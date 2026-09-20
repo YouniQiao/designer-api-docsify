@@ -9,7 +9,7 @@ import { buffer } from '@kit.ArkTS';
 ## alloc
 
 ```TypeScript
-function alloc(size: number, fill?: string | Buffer | number | number | number, encoding?: BufferEncoding): Buffer
+function alloc(size: number, fill?: string | Buffer | number, encoding?: BufferEncoding): Buffer
 ```
 
 Creates and initializes a **Buffer** object of the specified length.

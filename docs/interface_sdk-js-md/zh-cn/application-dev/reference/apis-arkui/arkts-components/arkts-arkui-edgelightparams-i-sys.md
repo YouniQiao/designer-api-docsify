@@ -1,5 +1,9 @@
 # EdgeLightParams（系统接口）
 
+```TypeScript
+declare interface EdgeLightParams
+```
+
 定义边缘流光效果参数。
 
 **起始版本：** 26.0.0

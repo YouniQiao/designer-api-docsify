@@ -81,6 +81,8 @@ console.info(buf2.toString());
 ```
 
 
+<a id="from-1"></a>
+
 ## from
 
 ```TypeScript
@@ -121,6 +123,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 See [from](#from)
 
 
+<a id="from-2"></a>
+
 ## from
 
 ```TypeScript
@@ -157,6 +161,8 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 See [from](#from)
 
+
+<a id="from-3"></a>
 
 ## from
 

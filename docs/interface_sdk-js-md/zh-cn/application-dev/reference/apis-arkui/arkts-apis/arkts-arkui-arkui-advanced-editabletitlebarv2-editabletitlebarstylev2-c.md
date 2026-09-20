@@ -1,5 +1,9 @@
 # EditableTitleBarStyleV2
 
+```TypeScript
+export declare class EditableTitleBarStyleV2
+```
+
 标题栏样式配置类，使用@ObservedV2装饰器，支持状态观察。
 
 **起始版本：** 26.0.0
@@ -92,9 +96,9 @@ public contentMargin?: LocalizedMargin
 
 {
 
-start: LengthMetrics.resource(&#36;r('sys.float.margin_left')),
+start: LengthMetrics.resource($r('sys.float.margin_left')),
 
-end: LengthMetrics.resource(&#36;r('sys.float.margin_right'))
+end: LengthMetrics.resource($r('sys.float.margin_right'))
 
 }。
 

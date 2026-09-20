@@ -1,5 +1,9 @@
 # ChildProcessInformation
 
+```TypeScript
+export interface ChildProcessInformation
+```
+
 模块定义子进程信息。这些信息可以通过[getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md)的子进程管理器和[getUIAbilityChildProcessInfos](arkts-ability-applicationcontext-c.md#getuiabilitychildprocessinfos)的ApplicationContext。
 
 **起始版本：** 26.0.1

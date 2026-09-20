@@ -57,6 +57,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 ```
 
 
+<a id="executedrag-1"></a>
+
 ## executeDrag
 
 ```TypeScript

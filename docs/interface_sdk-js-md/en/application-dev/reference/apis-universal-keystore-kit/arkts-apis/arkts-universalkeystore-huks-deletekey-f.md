@@ -61,6 +61,8 @@ let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
 ```
 
 
+<a id="deletekey-1"></a>
+
 ## deleteKey
 
 ```TypeScript
@@ -73,7 +75,7 @@ Deletes a key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

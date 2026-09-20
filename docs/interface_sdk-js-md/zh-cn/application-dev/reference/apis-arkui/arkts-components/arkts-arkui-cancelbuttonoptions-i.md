@@ -1,5 +1,9 @@
 # CancelButtonOptions
 
+```TypeScript
+interface CancelButtonOptions
+```
+
 定义清除按钮选项。
 
 **起始版本：** 12

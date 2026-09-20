@@ -1,5 +1,9 @@
 # LocalizedBarrierDirection
 
+```TypeScript
+declare enum LocalizedBarrierDirection
+```
+
 Enumerates the directions of barriers with mirror mode support.
 
 | Name| Value | Description |  

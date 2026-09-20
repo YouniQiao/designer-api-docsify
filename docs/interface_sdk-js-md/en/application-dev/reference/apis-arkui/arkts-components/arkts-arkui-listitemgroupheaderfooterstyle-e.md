@@ -1,5 +1,9 @@
 # ListItemGroupHeaderFooterStyle
 
+```TypeScript
+declare enum ListItemGroupHeaderFooterStyle
+```
+
 Enumerates the header and footer styles of **ListItemGroup**.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # OnConsoleEvent
 
+```TypeScript
+declare interface OnConsoleEvent
+```
+
 Represents the callback invoked to notify the host application of a JavaScript console message.
 
 **Since:** 12

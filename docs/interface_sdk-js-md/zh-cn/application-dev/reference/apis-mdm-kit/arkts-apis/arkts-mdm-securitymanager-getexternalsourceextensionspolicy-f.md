@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="getexternalsourceextensionspolicy-1"></a>
+
 ## getExternalSourceExtensionsPolicy
 
 ```TypeScript

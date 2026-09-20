@@ -88,6 +88,8 @@ call.answerCall(0, 1).then(() => {
 ```
 
 
+<a id="answercall-1"></a>
+
 ## answerCall
 
 ```TypeScript
@@ -132,6 +134,8 @@ function answerCall(callId?: number): Promise<void>
 
 参见 [answerCall](#answercall)
 
+
+<a id="answercall-3"></a>
 
 ## answerCall
 
@@ -178,6 +182,8 @@ function answerCall(videoState: VideoStateType, callId: number): Promise<void>
 
 参见 [answerCall](#answercall)
 
+
+<a id="answercall-4"></a>
 
 ## answerCall
 

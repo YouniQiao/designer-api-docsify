@@ -1,5 +1,9 @@
 # ChainEdgeEffect（系统接口）
 
+```TypeScript
+declare enum ChainEdgeEffect
+```
+
 设置链式动效的边缘效果，用于决定列表滚动到边缘后继续拖动时列表项间距的变化方式。
 
 **起始版本：** 10

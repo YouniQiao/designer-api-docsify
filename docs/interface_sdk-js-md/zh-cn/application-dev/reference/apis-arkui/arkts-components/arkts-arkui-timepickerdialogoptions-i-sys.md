@@ -1,5 +1,9 @@
 # TimePickerDialogOptions
 
+```TypeScript
+declare interface TimePickerDialogOptions extends TimePickerOptions
+```
+
 时间选择器弹窗选项。
 
 继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。

@@ -71,6 +71,8 @@ function createPixelMapFromSurfaceSync(surfaceId: string) {
 ```
 
 
+<a id="createpixelmapfromsurfacesync-1"></a>
+
 ## createPixelMapFromSurfaceSync
 
 ```TypeScript

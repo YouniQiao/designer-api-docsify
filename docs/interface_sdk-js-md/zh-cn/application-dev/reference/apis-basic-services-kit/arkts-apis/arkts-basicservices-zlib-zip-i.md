@@ -1,5 +1,9 @@
 # Zip
 
+```TypeScript
+interface Zip
+```
+
 压缩解压缩对象实例，支持以zlib、deflate、gzip格式对数据进行压缩与解压。
 
 **起始版本：** 12

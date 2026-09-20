@@ -72,6 +72,8 @@ try {
 ```
 
 
+<a id="getallformsinfo-1"></a>
+
 ## getAllFormsInfo
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # TextClockConfiguration
 
+```TypeScript
+declare interface TextClockConfiguration extends CommonConfiguration<TextClockConfiguration>
+```
+
 开发者需要自定义class实现ContentModifier接口。
 
 **继承/实现关系：** TextClockConfiguration extends CommonConfiguration<TextClockConfiguration>

@@ -62,6 +62,8 @@ notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
 ```
 
 
+<a id="issupporttemplate-1"></a>
+
 ## isSupportTemplate
 
 ```TypeScript

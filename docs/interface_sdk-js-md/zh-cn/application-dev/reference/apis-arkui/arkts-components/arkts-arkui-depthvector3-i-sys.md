@@ -1,5 +1,9 @@
 # DepthVector3（系统接口）
 
+```TypeScript
+declare interface DepthVector3
+```
+
 深度空间中的三维向量。用于为组件设置空间效果参数。
 
 > **说明：** 

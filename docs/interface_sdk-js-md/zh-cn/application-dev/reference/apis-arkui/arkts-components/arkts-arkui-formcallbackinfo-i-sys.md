@@ -1,5 +1,9 @@
 # FormCallbackInfo（系统接口）
 
+```TypeScript
+interface FormCallbackInfo
+```
+
 卡片查询或者卸载时获取formId的参数。
 
 **起始版本：** 12

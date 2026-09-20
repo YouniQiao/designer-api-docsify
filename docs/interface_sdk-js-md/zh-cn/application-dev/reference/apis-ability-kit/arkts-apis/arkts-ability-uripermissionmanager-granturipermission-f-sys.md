@@ -154,6 +154,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="granturipermission-2"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -207,6 +209,8 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 参见 [grantUriPermission](#granturipermission)
 
+
+<a id="granturipermission-4"></a>
 
 ## grantUriPermission
 

@@ -1,5 +1,9 @@
 # FormDimension（系统接口）
 
+```TypeScript
+declare enum FormDimension
+```
+
 卡片尺寸枚举
 
 **起始版本：** 7

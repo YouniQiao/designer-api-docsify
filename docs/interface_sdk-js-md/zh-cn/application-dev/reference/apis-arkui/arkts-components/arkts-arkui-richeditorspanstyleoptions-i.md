@@ -1,5 +1,9 @@
 # RichEditorSpanStyleOptions
 
+```TypeScript
+declare interface RichEditorSpanStyleOptions extends RichEditorRange
+```
+
 文本样式选项。
 
 继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。

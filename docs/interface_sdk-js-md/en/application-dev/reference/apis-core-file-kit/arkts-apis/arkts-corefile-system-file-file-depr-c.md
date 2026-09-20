@@ -1,5 +1,9 @@
 # File
 
+```TypeScript
+export default class File
+```
+
 File
 
 **Since:** 3

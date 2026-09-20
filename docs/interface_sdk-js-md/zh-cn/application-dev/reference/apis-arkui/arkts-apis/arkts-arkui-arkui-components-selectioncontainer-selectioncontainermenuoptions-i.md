@@ -1,5 +1,9 @@
 # SelectionContainerMenuOptions
 
+```TypeScript
+export interface SelectionContainerMenuOptions
+```
+
 配置选择菜单中的选项。
 
 **起始版本：** 26.0.0

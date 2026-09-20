@@ -1,5 +1,9 @@
 # SpringBackAction
 
+```TypeScript
+declare interface SpringBackAction
+```
+
 控制半模态关闭前的回弹。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # MediaKeySystem
 
+```TypeScript
+interface MediaKeySystem
+```
+
 MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md) to create a MediaKeySystem instance.
 
 **Since:** 11
@@ -74,6 +78,8 @@ Creates a MediaKeySession instance with the specified content protection level.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+
+<a id="createmediakeysession-2"></a>
 
 ## createMediaKeySession
 

@@ -1,5 +1,9 @@
 # AlphabetIndexerOptions
 
+```TypeScript
+interface AlphabetIndexerOptions
+```
+
 用于设置索引条参数。
 
 > **说明：** 

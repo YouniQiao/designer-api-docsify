@@ -94,6 +94,8 @@ promise.then((data) => {
 ```
 
 
+<a id="create-1"></a>
+
 ## create
 
 ```TypeScript
@@ -108,7 +110,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1)(config: Configuration)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -132,6 +134,8 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 See [create](#create)
 
 
+<a id="create-2"></a>
+
 ## create
 
 ```TypeScript
@@ -144,7 +148,7 @@ Creates a system window. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md)(config: Configuration)
+**Substitutes:** [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1)(config: Configuration)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -166,6 +170,8 @@ Creates a system window. This API uses a promise to return the result.
 
 See [create](#create)
 
+
+<a id="create-3"></a>
 
 ## create
 

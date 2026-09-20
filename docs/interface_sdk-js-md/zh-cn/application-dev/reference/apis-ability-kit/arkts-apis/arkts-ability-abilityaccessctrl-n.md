@@ -1,5 +1,9 @@
 # abilityAccessCtrl(程序访问控制管理)
 
+```TypeScript
+declare namespace abilityAccessCtrl
+```
+
 **起始版本：** 8
 
 **系统能力：** SystemCapability.Security.AccessToken

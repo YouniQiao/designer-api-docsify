@@ -1,5 +1,9 @@
 # AdaptiveColor
 
+```TypeScript
+declare enum AdaptiveColor
+```
+
 取色模式。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # UnderlineColor
 
+```TypeScript
+declare interface UnderlineColor
+```
+
 定义下划线颜色宽度属性。
 
 **起始版本：** 12

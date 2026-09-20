@@ -79,6 +79,8 @@ radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
 ```
 
 
+<a id="getnetworkstate-1"></a>
+
 ## getNetworkState
 
 ```TypeScript
@@ -120,6 +122,8 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 
 参见 [getNetworkState](#getnetworkstate)
 
+
+<a id="getnetworkstate-2"></a>
 
 ## getNetworkState
 

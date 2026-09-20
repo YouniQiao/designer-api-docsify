@@ -1,5 +1,9 @@
 # WebLayoutMode
 
+```TypeScript
+declare enum WebLayoutMode
+```
+
 Web布局模式的配置，用于控制Web内容的页面布局方式，帮助开发者根据屏幕尺寸和显示需求优化网页的适配性和用户体验。
 
 **起始版本：** 11

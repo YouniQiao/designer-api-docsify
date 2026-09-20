@@ -1,5 +1,9 @@
 # HuksSendType
 
+```TypeScript
+export enum HuksSendType
+```
+
 表示发送TAG的方式。
 
 **起始版本：** 8

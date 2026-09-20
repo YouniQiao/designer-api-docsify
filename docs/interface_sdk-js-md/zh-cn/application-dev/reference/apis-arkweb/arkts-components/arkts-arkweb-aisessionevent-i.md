@@ -1,5 +1,9 @@
 # AISessionEvent
 
+```TypeScript
+declare interface AISessionEvent
+```
+
 自定义AI会话配置对象，用于定义AI会话的生命周期回调，包括创建、执行和销毁。
 
 **起始版本：** 26.0.0

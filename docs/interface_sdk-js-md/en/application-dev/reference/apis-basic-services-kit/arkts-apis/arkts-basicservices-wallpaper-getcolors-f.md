@@ -52,6 +52,8 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Array<
 ```
 
 
+<a id="getcolors-1"></a>
+
 ## getColors
 
 ```TypeScript

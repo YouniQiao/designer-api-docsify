@@ -63,6 +63,8 @@ promise.then((data: Array<number>) => {
 ```
 
 
+<a id="getdirection-1"></a>
+
 ## getDirection
 
 ```TypeScript

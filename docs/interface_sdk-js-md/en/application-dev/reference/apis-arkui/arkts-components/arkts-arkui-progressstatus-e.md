@@ -1,5 +1,9 @@
 # ProgressStatus
 
+```TypeScript
+declare enum ProgressStatus
+```
+
 Current state of the progress indicator.
 
 **Since:** 10

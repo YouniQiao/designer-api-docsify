@@ -1,5 +1,9 @@
 # BlurSnapshotOptions（系统接口）
 
+```TypeScript
+declare interface BlurSnapshotOptions
+```
+
 模糊快照优化选项。设置该对象后，将开启模糊优化。
 
 **起始版本：** 26.0.0

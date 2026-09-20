@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="registercontinuation-1"></a>
+
 ## registerContinuation
 
 ```TypeScript
@@ -144,6 +146,8 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 
 参见 [registerContinuation](#registercontinuation)
 
+
+<a id="registercontinuation-2"></a>
 
 ## registerContinuation
 

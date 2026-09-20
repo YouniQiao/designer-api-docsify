@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getcurrenttime-1"></a>
+
 ## getCurrentTime
 
 ```TypeScript
@@ -119,6 +121,8 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 See [getCurrentTime](#getcurrenttime)
 
+
+<a id="getcurrenttime-2"></a>
 
 ## getCurrentTime
 

@@ -1,5 +1,9 @@
 # AudioVolumeManager
 
+```TypeScript
+interface AudioVolumeManager
+```
+
 音量管理。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 9
@@ -526,6 +530,8 @@ async function getVolumeGroupInfos(){
   console.info('Promise returned to indicate that the volumeGroup list is obtained.'+JSON.stringify(volumegroupinfos))
 }
 ```
+
+<a id="getvolumegroupinfos-1"></a>
 
 ## getVolumeGroupInfos
 

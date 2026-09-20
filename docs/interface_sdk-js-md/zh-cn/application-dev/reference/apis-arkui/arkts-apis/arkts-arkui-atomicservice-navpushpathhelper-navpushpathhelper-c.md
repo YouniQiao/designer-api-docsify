@@ -1,5 +1,9 @@
 # NavPushPathHelper
 
+```TypeScript
+export declare class NavPushPathHelper
+```
+
 当跳转的目标NavDestination在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用NavPushPathHelper先下载安装相应hsp分包，再将指定的NavDestination页面信息入栈或替换当前栈顶页面，从而使Navigation支持动态加载hsp分包后再跳转。
 
 > **说明：** 
@@ -73,6 +77,8 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+
+<a id="pushdestination-1"></a>
 
 ## pushDestination
 
@@ -153,6 +159,8 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
+<a id="pushdestinationbyname-1"></a>
+
 ## pushDestinationByName
 
 ```TypeScript
@@ -228,6 +236,8 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 | --- | --- |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
+<a id="pushpath-1"></a>
+
 ## pushPath
 
 ```TypeScript
@@ -299,6 +309,8 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 | --- | --- |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
+<a id="pushpathbyname-1"></a>
+
 ## pushPathByName
 
 ```TypeScript
@@ -369,6 +381,8 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+
+<a id="replacepath-1"></a>
 
 ## replacePath
 

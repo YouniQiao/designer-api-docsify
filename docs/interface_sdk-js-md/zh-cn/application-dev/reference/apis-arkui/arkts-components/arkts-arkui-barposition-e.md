@@ -1,5 +1,9 @@
 # BarPosition
 
+```TypeScript
+declare enum BarPosition
+```
+
 Tabs页签位置枚举。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # DatePickerResult
 
+```TypeScript
+declare interface DatePickerResult
+```
+
 Defines the time format returned by the date picker.
 
 **Since:** 8

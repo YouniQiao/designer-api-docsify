@@ -1,5 +1,9 @@
 # VpnConnection
 
+```TypeScript
+export interface VpnConnection
+```
+
 VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.createVpnConnection创建VPN连接对象。
 
 **起始版本：** 11
@@ -266,6 +270,8 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
   }
 }
 ```
+
+<a id="destroy-1"></a>
 
 ## destroy
 

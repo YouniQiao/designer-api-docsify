@@ -1,5 +1,9 @@
 # ToneHapticsFeature（系统接口）
 
+```TypeScript
+enum ToneHapticsFeature
+```
+
 枚举，系统振动风格定义。
 
 | 名称 | 值 | 说明 |  

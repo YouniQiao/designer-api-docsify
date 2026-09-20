@@ -91,6 +91,8 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 ```
 
 
+<a id="createaudiocapturer-2"></a>
+
 ## createAudioCapturer
 
 ```TypeScript

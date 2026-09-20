@@ -1,5 +1,9 @@
 # GridRowSizeOption
 
+```TypeScript
+declare interface GridRowSizeOption
+```
+
 Describes the gutter sizes for different device width types.
 
 **Since:** 9

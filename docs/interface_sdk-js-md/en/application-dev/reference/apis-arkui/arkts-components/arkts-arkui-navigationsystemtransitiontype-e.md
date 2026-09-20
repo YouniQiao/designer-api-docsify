@@ -1,5 +1,9 @@
 # NavigationSystemTransitionType
 
+```TypeScript
+declare enum NavigationSystemTransitionType
+```
+
 Type of the system transition animation.
 
 > **NOTE:** 

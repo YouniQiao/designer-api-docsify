@@ -1,5 +1,9 @@
 # ImageRotateOrientation
 
+```TypeScript
+declare enum ImageRotateOrientation
+```
+
 期望的图像内容显示方向。
 
 **起始版本：** 14

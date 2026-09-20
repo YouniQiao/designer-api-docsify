@@ -1,5 +1,9 @@
 # OperationInfo（系统接口）
 
+```TypeScript
+interface OperationInfo
+```
+
 操作信息。
 
 **起始版本：** 26.0.0

@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="publish-2"></a>
+
 ## publish
 
 ```TypeScript
@@ -162,6 +164,8 @@ notificationManager.publish(notificationRequest, userId).then(() => {
 });
 ```
 
+
+<a id="publish-3"></a>
 
 ## publish
 

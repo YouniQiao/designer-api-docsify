@@ -1,5 +1,9 @@
 # SmsShortCodeType (System API)
 
+```TypeScript
+export enum SmsShortCodeType
+```
+
 Enumerates SMS short code types.
 
 **Since:** 23

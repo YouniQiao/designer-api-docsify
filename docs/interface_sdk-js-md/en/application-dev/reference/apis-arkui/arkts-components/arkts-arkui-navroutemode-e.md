@@ -1,5 +1,9 @@
 # NavRouteMode
 
+```TypeScript
+declare enum NavRouteMode
+```
+
 Defines the routing policy.
 
 > **NOTE:** 

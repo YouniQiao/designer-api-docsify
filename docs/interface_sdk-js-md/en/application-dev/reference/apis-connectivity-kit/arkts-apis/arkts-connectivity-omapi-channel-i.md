@@ -1,5 +1,9 @@
 # Channel
 
+```TypeScript
+export interface Channel
+```
+
 A **Channel** instance indicates a channel set up by a **Session** instance. The channel can be a basic channel or a logical channel. You can use [Session.openBasicChannel](arkts-connectivity-omapi-session-i.md#openbasicchannel) or [Session.openLogicalChannel](arkts-connectivity-omapi-session-i.md#openlogicalchannel) to obtain a channel instance.
 
 **Since:** 10
@@ -288,6 +292,8 @@ try {
     hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
 }
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

@@ -1,5 +1,9 @@
 # DistortionComponentOptions (System API)
 
+```TypeScript
+declare interface DistortionComponentOptions
+```
+
 Defines the DistortionComponent constructor options.
 
 **Since:** 26.0.0

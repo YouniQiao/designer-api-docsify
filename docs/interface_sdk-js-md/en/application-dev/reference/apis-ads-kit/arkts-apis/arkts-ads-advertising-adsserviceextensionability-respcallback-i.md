@@ -1,5 +1,9 @@
 # RespCallback
 
+```TypeScript
+export interface RespCallback
+```
+
 Ad request callback.
 
 **Since:** 11

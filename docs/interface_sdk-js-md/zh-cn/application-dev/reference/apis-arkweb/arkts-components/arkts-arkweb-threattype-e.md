@@ -1,5 +1,9 @@
 # ThreatType
 
+```TypeScript
+declare enum ThreatType
+```
+
 定义网站风险类型。
 
 **起始版本：** 11

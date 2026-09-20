@@ -1,5 +1,9 @@
 # DataTransferProgress
 
+```TypeScript
+export interface DataTransferProgress
+```
+
 Information about continuousTask notification progress.
 
 **Since:** 26.0.1

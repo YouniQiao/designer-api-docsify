@@ -1,5 +1,9 @@
 # ListDividerOptions
 
+```TypeScript
+declare interface ListDividerOptions
+```
+
 用于设置List或ListItemGroup组件的分割线样式。
 
 > **说明：** 

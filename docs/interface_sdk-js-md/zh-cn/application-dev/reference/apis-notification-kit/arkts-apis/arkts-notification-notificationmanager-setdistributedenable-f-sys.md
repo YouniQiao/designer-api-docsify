@@ -74,6 +74,8 @@ notificationManager.setDistributedEnable(enable).then(() => {
 ```
 
 
+<a id="setdistributedenable-1"></a>
+
 ## setDistributedEnable
 
 ```TypeScript

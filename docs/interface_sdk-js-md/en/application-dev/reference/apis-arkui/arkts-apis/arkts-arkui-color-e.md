@@ -1,5 +1,9 @@
 # Color
 
+```TypeScript
+declare enum Color
+```
+
 common enum of color
 
 **Since:** 7

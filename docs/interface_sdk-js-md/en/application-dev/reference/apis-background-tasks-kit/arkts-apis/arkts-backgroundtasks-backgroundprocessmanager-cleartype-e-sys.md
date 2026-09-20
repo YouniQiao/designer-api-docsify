@@ -1,5 +1,9 @@
 # ClearType (System API)
 
+```TypeScript
+export enum ClearType
+```
+
 The type of clearing background apps.
 
 **Since:** 26.0.1

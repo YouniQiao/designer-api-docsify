@@ -1,5 +1,9 @@
 # ScrollAlign
 
+```TypeScript
+declare enum ScrollAlign
+```
+
 Enumerates alignment modes.
 
 **Since:** 10

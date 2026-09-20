@@ -1,5 +1,9 @@
 # ShareAlbumMemberInfo (System API)
 
+```TypeScript
+export class ShareAlbumMemberInfo
+```
+
 Member information of shared album
 
 **Since:** 26.0.1

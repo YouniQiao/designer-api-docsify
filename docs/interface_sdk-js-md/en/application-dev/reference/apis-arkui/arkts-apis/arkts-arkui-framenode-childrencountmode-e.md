@@ -1,5 +1,9 @@
 # ChildrenCountMode
 
+```TypeScript
+export enum ChildrenCountMode
+```
+
 Enumerates the modes of counting child nodes.
 
 **Since:** 26.0.0

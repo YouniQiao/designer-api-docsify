@@ -1,5 +1,9 @@
 # PanelHeight
 
+```TypeScript
+declare enum PanelHeight
+```
+
 Enum for custom content display area.
 
 **Since:** 10

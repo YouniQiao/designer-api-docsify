@@ -1,5 +1,9 @@
 # RichEditor properties/events
 
+```TypeScript
+declare class RichEditorAttribute extends CommonMethod<RichEditorAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md), [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md), [StyledStringChangeValue](../arkts-apis/arkts-arkui-styledstringchangevalue-i.md), and the following events are supported.
@@ -722,7 +726,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | Yes | The triggered function after content changed. |
+| callback | [OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md) | Yes | Callback triggered after text and image changes, used to obtain the content range before and after the change. |
 
 ## onDidIMEInput
 
@@ -974,7 +978,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes | The triggered function before text content is about to change. |
+| callback | Callback&lt;[RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md), boolean&gt; | Yes | [RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md) indicates the image and text change information. The **boolean** value indicates whether the image and text can be modified. **true**: The image and text can be modified. **false**: The image and text cannot be modified. |
 
 ## orphanCharOptimization
 

@@ -1,5 +1,9 @@
 # TextShadowStyle
 
+```TypeScript
+declare class TextShadowStyle
+```
+
 Describes the text shadow style.
 
 **Since:** 12

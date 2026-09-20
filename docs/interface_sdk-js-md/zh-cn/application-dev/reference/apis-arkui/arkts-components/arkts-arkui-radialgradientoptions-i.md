@@ -1,5 +1,9 @@
 # RadialGradientOptions
 
+```TypeScript
+declare interface RadialGradientOptions
+```
+
 径向渐变参数。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # ReusableMemOptStrategy
 
+```TypeScript
+declare enum ReusableMemOptStrategy
+```
+
 可复用自定义组件内存优化策略枚举。
 
 @enum { number }

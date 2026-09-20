@@ -1,5 +1,9 @@
 # FormCallbackInfo (System API)
 
+```TypeScript
+interface FormCallbackInfo
+```
+
 Represents the parameters for obtaining a widget ID (**formId**) when querying or uninstalling a widget.
 
 **Since:** 12

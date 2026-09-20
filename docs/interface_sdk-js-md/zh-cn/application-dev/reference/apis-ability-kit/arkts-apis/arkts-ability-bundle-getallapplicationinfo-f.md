@@ -78,6 +78,8 @@ bundle.getAllApplicationInfo(bundleFlags, (err, data) => {
 ```
 
 
+<a id="getallapplicationinfo-1"></a>
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -105,6 +107,8 @@ function getAllApplicationInfo(bundleFlags: number, callback: AsyncCallback<Arra
 
 参见 [getAllApplicationInfo](#getallapplicationinfo)
 
+
+<a id="getallapplicationinfo-2"></a>
 
 ## getAllApplicationInfo
 

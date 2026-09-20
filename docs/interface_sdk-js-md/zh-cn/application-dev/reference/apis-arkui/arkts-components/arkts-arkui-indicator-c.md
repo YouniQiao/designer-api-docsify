@@ -1,5 +1,9 @@
 # Indicator
 
+```TypeScript
+declare class Indicator<T>
+```
+
 设置导航点与Swiper组件的距离。由于导航点有默认交互区域，交互区域高度为32vp，所以无法让显示部分完全贴底。若想实现完全贴底，可以使用[IndicatorComponent](../../../reference/apis-arkui/arkui-ts/ts-swiper-components-indicator.md#indicatorcomponent)组件，更灵活地调整位置。
 
 **起始版本：** 10
@@ -35,6 +39,8 @@ bottom(value: Length): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前导航点指示器，用于支持链式调用配置其他导航点属性。 |
+
+<a id="bottom-1"></a>
 
 ## bottom
 

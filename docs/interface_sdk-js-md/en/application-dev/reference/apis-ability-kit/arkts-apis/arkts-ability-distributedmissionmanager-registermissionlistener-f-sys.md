@@ -113,6 +113,8 @@ try {
 ```
 
 
+<a id="registermissionlistener-1"></a>
+
 ## registerMissionListener
 
 ```TypeScript

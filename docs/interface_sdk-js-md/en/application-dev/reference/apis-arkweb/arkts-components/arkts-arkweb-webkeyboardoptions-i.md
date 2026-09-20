@@ -1,5 +1,9 @@
 # WebKeyboardOptions
 
+```TypeScript
+declare interface WebKeyboardOptions
+```
+
 Return value of the callback that intercepts the soft keyboard started from editable elements on the web page, including the keyboard type and custom keyboard. It is suitable for scenarios where controlling soft keyboard behavior is required.
 
 **Since:** 12

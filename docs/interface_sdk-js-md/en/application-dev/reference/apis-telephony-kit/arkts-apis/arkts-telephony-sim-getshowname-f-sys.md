@@ -65,6 +65,8 @@ sim.getShowName(0).then((data: string) => {
 ```
 
 
+<a id="getshowname-1"></a>
+
 ## getShowName
 
 ```TypeScript

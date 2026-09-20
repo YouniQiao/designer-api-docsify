@@ -1,5 +1,9 @@
 # RichEditorBuilderSpan
 
+```TypeScript
+declare interface RichEditorBuilderSpan
+```
+
 Defines the BuilderSpan object of **RichEditor**, providing identity recognition and lifecycle awareness capabilities.
 
 > **NOTE:** 

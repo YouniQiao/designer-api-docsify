@@ -1,5 +1,9 @@
 # UserFileManager (System API)
 
+```TypeScript
+interface UserFileManager
+```
+
 Defines the UserFileManager class and provides functions to access the data in user file storage.
 
 **Since:** 9
@@ -60,6 +64,8 @@ The album name must meet the following requirements:
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="createalbum-1"></a>
 
 ## createAlbum
 
@@ -145,6 +151,8 @@ Creates an audio asset. This API uses an asynchronous callback to return the res
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="createaudioasset-1"></a>
+
 ## createAudioAsset
 
 ```TypeScript
@@ -226,6 +234,8 @@ Creates an image or video asset with the specified file name and URI. This API u
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="createphotoasset-1"></a>
+
 ## createPhotoAsset
 
 ```TypeScript
@@ -263,6 +273,8 @@ Creates an image or video asset with the specified file name. This API uses an a
 **Examples**
 
 See [createPhotoAsset](#createphotoasset)
+
+<a id="createphotoasset-2"></a>
 
 ## createPhotoAsset
 
@@ -307,6 +319,8 @@ Creates an image or video asset with the specified file name and album URI. This
 
 See [createPhotoAsset](#createphotoasset)
 
+<a id="createphotoasset-3"></a>
+
 ## createPhotoAsset
 
 ```TypeScript
@@ -349,6 +363,8 @@ Creates an image or video asset with the specified file name and options. This A
 **Examples**
 
 See [createPhotoAsset](#createphotoasset)
+
+<a id="createphotoasset-4"></a>
 
 ## createPhotoAsset
 
@@ -428,6 +444,8 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -505,6 +523,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="deletealbums-1"></a>
+
 ## deleteAlbums
 
 ```TypeScript
@@ -568,6 +588,8 @@ Obtains information about online peer devices. This API uses an asynchronous cal
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="getactivepeers-1"></a>
 
 ## getActivePeers
 
@@ -645,6 +667,8 @@ Before the operation, ensure that the albums to obtain exist.
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="getalbums-1"></a>
+
 ## getAlbums
 
 ```TypeScript
@@ -686,6 +710,8 @@ Before the operation, ensure that the albums to obtain exist.
 **Examples**
 
 See [getAlbums](#getalbums)
+
+<a id="getalbums-2"></a>
 
 ## getAlbums
 
@@ -763,6 +789,8 @@ Obtains information about all peer devices. This API uses an asynchronous callba
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="getallpeers-1"></a>
+
 ## getAllPeers
 
 ```TypeScript
@@ -825,6 +853,8 @@ Obtains audio assets. This API uses an asynchronous callback to return the resul
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="getaudioassets-1"></a>
 
 ## getAudioAssets
 
@@ -908,6 +938,8 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="getphotoalbums-1"></a>
 
 ## getPhotoAlbums
 
@@ -994,6 +1026,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="getphotoassets-1"></a>
+
 ## getPhotoAssets
 
 ```TypeScript
@@ -1078,6 +1112,8 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="getphotoindex-1"></a>
 
 ## getPhotoIndex
 
@@ -1164,6 +1200,8 @@ This API will be deprecated. Use [getAlbums](#getalbums) instead.
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="getprivatealbum-1"></a>
+
 ## getPrivateAlbum
 
 ```TypeScript
@@ -1241,6 +1279,8 @@ This API will be deprecated. Use [off](#off-1) instead.
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -1309,6 +1349,8 @@ This API will be deprecated. Use [on](#on-1) instead.
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -1376,6 +1418,8 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md).
 ```
+
+<a id="release-1"></a>
 
 ## release
 

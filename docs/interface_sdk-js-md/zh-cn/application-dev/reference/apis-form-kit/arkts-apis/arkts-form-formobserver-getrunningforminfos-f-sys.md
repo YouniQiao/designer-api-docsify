@@ -110,6 +110,8 @@ try {
 ```
 
 
+<a id="getrunningforminfos-1"></a>
+
 ## getRunningFormInfos
 
 ```TypeScript
@@ -153,6 +155,8 @@ function getRunningFormInfos(
 参见 [getRunningFormInfos](#getrunningforminfos)
 
 
+<a id="getrunningforminfos-2"></a>
+
 ## getRunningFormInfos
 
 ```TypeScript
@@ -195,6 +199,8 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 
 参见 [getRunningFormInfos](#getrunningforminfos)
 
+
+<a id="getrunningforminfos-3"></a>
 
 ## getRunningFormInfos
 

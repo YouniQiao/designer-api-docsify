@@ -1,5 +1,9 @@
 # NativeEmbedInfo
 
+```TypeScript
+declare interface NativeEmbedInfo
+```
+
 提供同层标签的详细信息，包括ID、类型、尺寸和位置等。适用于需要获取同层元素属性的场景，提升同层渲染的定制性和用户体验。
 
 @interface NativeEmbedInfo [since 11 - 11]

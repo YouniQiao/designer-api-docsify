@@ -1,5 +1,9 @@
 # DlpConnManager
 
+```TypeScript
+export class DlpConnManager
+```
+
 Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA.
 
 > **NOTE:** 

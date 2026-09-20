@@ -1,5 +1,9 @@
 # ProgressStatus
 
+```TypeScript
+declare enum ProgressStatus
+```
+
 进度条的当前状态。
 
 **起始版本：** 10

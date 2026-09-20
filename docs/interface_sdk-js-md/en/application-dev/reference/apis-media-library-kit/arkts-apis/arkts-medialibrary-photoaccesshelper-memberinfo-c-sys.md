@@ -1,5 +1,9 @@
 # MemberInfo (System API)
 
+```TypeScript
+export class MemberInfo
+```
+
 Member information
 
 **Since:** 26.0.1

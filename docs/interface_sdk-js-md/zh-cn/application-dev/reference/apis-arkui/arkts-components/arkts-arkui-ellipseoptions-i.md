@@ -1,5 +1,9 @@
 # EllipseOptions
 
+```TypeScript
+interface EllipseOptions
+```
+
 用于描述Ellipse组件绘制属性。
 
 > **说明：** 

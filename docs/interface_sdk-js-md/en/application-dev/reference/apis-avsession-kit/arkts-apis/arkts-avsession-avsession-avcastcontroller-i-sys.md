@@ -1,5 +1,9 @@
 # AVCastController
 
+```TypeScript
+interface AVCastController
+```
+
 AVCastController definition used to implement a remote control when a cast is connected
 
 **Since:** 10
@@ -78,6 +82,8 @@ media.createAVRecorder().then((avRecorder) => {
   });
 })
 ```
+
+<a id="setdisplaysurface-1"></a>
 
 ## setDisplaySurface
 

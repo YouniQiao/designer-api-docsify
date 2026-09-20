@@ -1,5 +1,9 @@
 # IChipV2OptionsConfig
 
+```TypeScript
+export interface IChipV2OptionsConfig
+```
+
 IChipV2OptionsConfig定义ChipV2选项的配置接口。
 
 **起始版本：** 26.0.0
@@ -142,7 +146,7 @@ activatedBackgroundColor?: ColorMetrics
 
 ChipV2激活时的背景颜色。
 
-默认值：&#36;r('sys.color.chip_container_activated_color')
+默认值：$r('sys.color.chip_container_activated_color')
 
 值为undefined时，按默认值处理。
 
@@ -212,7 +216,7 @@ backgroundColor?: ColorMetrics
 
 ChipV2背景颜色。
 
-默认值：&#36;r('sys.color.chip_background_color')
+默认值：$r('sys.color.chip_background_color')
 
 值为undefined时，按默认值处理。
 
@@ -258,9 +262,9 @@ ChipV2背景圆角半径大小，不支持百分比。传入百分比时按默�
 
 默认值：
 
-size为ChipV2Size.NORMAL时，borderRadius默认值为：`&#36;r('sys.float.chip_border_radius_normal')`。
+size为ChipV2Size.NORMAL时，borderRadius默认值为：`$r('sys.float.chip_border_radius_normal')`。
 
-size为ChipV2Size.SMALL时，borderRadius默认值为：`&#36;r('sys.float.chip_border_radius_small')`
+size为ChipV2Size.SMALL时，borderRadius默认值为：`$r('sys.float.chip_border_radius_small')`
 
 单位：vp
 
@@ -286,8 +290,8 @@ closeIcon?: ChipV2CloseIcon
 
 默认值：
 
-- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`&#36;r('sys.float.chip_small_font_size')`；其他情况默认值为  
-`&#36;r('sys.float.chip_normal_font_size')`。  
+- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为  
+`$r('sys.float.chip_normal_font_size')`。  
 - 无障碍默认值：无无障碍描述。
 
 值为undefined时，按默认值处理。
@@ -360,8 +364,8 @@ fontSize?: LengthMetrics
 
 默认值：
 
-- size为ChipV2Size.SMALL时，文本默认值：`&#36;r('sys.float.chip_small_font_size')`；图标默认值：`&#36;r('sys.float.chip_small_icon_size')`。  
-- 其他情况下，文本默认值：`&#36;r('sys.float.chip_normal_font_size')`；图标默认值：`&#36;r('sys.float.chip_normal_icon_size')`
+- size为ChipV2Size.SMALL时，文本默认值：`$r('sys.float.chip_small_font_size')`；图标默认值：`$r('sys.float.chip_small_icon_size')`。  
+- 其他情况下，文本默认值：`$r('sys.float.chip_normal_font_size')`；图标默认值：`$r('sys.float.chip_normal_icon_size')`
 
 单位：fp
 

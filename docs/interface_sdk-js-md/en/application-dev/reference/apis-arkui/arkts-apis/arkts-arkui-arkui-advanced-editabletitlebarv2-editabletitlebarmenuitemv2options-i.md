@@ -1,5 +1,9 @@
 # EditableTitleBarMenuItemV2Options
 
+```TypeScript
+export declare interface EditableTitleBarMenuItemV2Options
+```
+
 Indicates the options of the menu item.
 
 **Since:** 26.0.0

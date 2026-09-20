@@ -103,6 +103,8 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
 ```
 
 
+<a id="addpermissionusedrecord-1"></a>
+
 ## addPermissionUsedRecord
 
 ```TypeScript

@@ -46,6 +46,8 @@ Stage model:
 ```
 
 
+<a id="getpreferences-1"></a>
+
 ## getPreferences
 
 ```TypeScript
@@ -82,6 +84,8 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 See [getPreferences](#getpreferences)
 
+
+<a id="getpreferences-2"></a>
 
 ## getPreferences
 
@@ -121,6 +125,8 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 
 See [getPreferences](#getpreferences)
 
+
+<a id="getpreferences-3"></a>
 
 ## getPreferences
 

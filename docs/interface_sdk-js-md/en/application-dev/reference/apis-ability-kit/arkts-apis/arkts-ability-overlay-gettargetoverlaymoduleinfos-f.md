@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="gettargetoverlaymoduleinfos-1"></a>
+
 ## getTargetOverlayModuleInfos
 
 ```TypeScript

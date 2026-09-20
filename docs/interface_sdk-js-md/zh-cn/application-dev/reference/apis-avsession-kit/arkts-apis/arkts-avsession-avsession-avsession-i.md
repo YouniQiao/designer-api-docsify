@@ -1,5 +1,9 @@
 # AVSession
 
+```TypeScript
+interface AVSession
+```
+
 调用[avSession.createAVSession](arkts-avsession-avsession-createavsession-f.md)后，返回会话的实例，可以获得会话ID，完成设置元数据，播放状态信息等操作。
 
 > **说明：** 
@@ -40,6 +44,8 @@ activate(callback: AsyncCallback<void>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="activate-1"></a>
 
 ## activate
 
@@ -95,6 +101,8 @@ deactivate(callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
+<a id="deactivate-1"></a>
+
 ## deactivate
 
 ```TypeScript
@@ -146,6 +154,8 @@ destroy(callback: AsyncCallback<void>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -201,6 +211,8 @@ dispatchSessionEvent(event: string, args: {[key: string]: Object}, callback: Asy
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="dispatchsessionevent-2"></a>
 
 ## dispatchSessionEvent
 
@@ -323,6 +335,8 @@ getAVCastController(callback: AsyncCallback<AVCastController>): void
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
+<a id="getavcastcontroller-2"></a>
+
 ## getAVCastController
 
 ```TypeScript
@@ -374,6 +388,8 @@ getController(callback: AsyncCallback<AVSessionController>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="getcontroller-1"></a>
 
 ## getController
 
@@ -455,6 +471,8 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="getoutputdevice-1"></a>
 
 ## getOutputDevice
 
@@ -2369,6 +2387,8 @@ setAVCallState(state: AVCallState, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
+<a id="setavcallstate-1"></a>
+
 ## setAVCallState
 
 ```TypeScript
@@ -2427,6 +2447,8 @@ setAVMetadata(data: AVMetadata, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="setavmetadata-1"></a>
 
 ## setAVMetadata
 
@@ -2489,6 +2511,8 @@ setAVPlaybackState(state: AVPlaybackState, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
+<a id="setavplaybackstate-1"></a>
+
 ## setAVPlaybackState
 
 ```TypeScript
@@ -2550,6 +2574,8 @@ setAVQueueItems(items: Array<AVQueueItem>, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
+<a id="setavqueueitems-1"></a>
+
 ## setAVQueueItems
 
 ```TypeScript
@@ -2610,6 +2636,8 @@ setAVQueueTitle(title: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="setavqueuetitle-1"></a>
 
 ## setAVQueueTitle
 
@@ -2705,6 +2733,8 @@ setCallMetadata(data: CallMetadata, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="setcallmetadata-1"></a>
 
 ## setCallMetadata
 
@@ -2835,6 +2865,8 @@ setExtras(extras: {[key: string]: Object}, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
+<a id="setextras-2"></a>
+
 ## setExtras
 
 ```TypeScript
@@ -2897,6 +2929,8 @@ setLaunchAbility(ability: WantAgent, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+<a id="setlaunchability-1"></a>
 
 ## setLaunchAbility
 
@@ -3062,6 +3096,8 @@ stopCasting(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+<a id="stopcasting-1"></a>
 
 ## stopCasting
 

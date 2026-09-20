@@ -1,5 +1,9 @@
 # SheetOptions
 
+```TypeScript
+declare interface SheetOptions extends BindOptions
+```
+
 继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
 
 半模态页面内容选项。

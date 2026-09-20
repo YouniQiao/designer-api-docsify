@@ -1,5 +1,9 @@
 # MissionListener (System API)
 
+```TypeScript
+export interface MissionListener
+```
+
 The module defines the listeners used to observe the mission status. The listeners can be registered by using [on](arkts-ability-missionmanager-on-f-sys.md).
 
 **Since:** 8

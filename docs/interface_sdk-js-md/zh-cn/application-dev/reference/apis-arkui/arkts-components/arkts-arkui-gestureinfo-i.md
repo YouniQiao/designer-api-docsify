@@ -1,5 +1,9 @@
 # GestureInfo
 
+```TypeScript
+declare interface GestureInfo
+```
+
 手势信息类型。
 
 **起始版本：** 11

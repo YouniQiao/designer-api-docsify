@@ -1,5 +1,9 @@
 # AVSessionErrorCode
 
+```TypeScript
+enum AVSessionErrorCode
+```
+
 Enumerates ErrorCode types, returns in BusinessError.code.
 
 **Since:** 10

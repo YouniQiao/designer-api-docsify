@@ -1,5 +1,9 @@
 # RationalNumber
 
+```TypeScript
+class RationalNumber
+```
+
 提供比较有理数、获取分子和分母的 API。例如，可以使用 **toString()** API 将有理数转换为字符串。
 
 **起始版本：** 8
@@ -118,6 +122,8 @@ let rationalNumber = new util.RationalNumber();
 ```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

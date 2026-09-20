@@ -1,5 +1,9 @@
 # BlankScreenDetectionMethod
 
+```TypeScript
+declare enum BlankScreenDetectionMethod
+```
+
 Defines the detection strategy methods used for blank screen detection, which specify the specific algorithms and points for page content detection and help developers strike a balance between detection accuracy and performance overhead, enabling timely identification of page rendering anomalies.
 
 **Since:** 22

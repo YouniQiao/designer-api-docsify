@@ -1,5 +1,9 @@
 # HuksUnwrapSuite
 
+```TypeScript
+export enum HuksUnwrapSuite
+```
+
 表示安全导入密钥的算法套件。
 
 **起始版本：** 9

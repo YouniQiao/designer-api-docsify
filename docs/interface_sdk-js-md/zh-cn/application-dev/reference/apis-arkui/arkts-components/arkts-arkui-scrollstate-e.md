@@ -1,5 +1,9 @@
 # ScrollState
 
+```TypeScript
+declare enum ScrollState
+```
+
 滑动状态枚举。
 
 **起始版本：** 7

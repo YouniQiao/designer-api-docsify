@@ -1,5 +1,9 @@
 # RepeatMode
 
+```TypeScript
+declare enum RepeatMode
+```
+
 Defines the Border Image Repeat Mode.
 
 @enum { number }

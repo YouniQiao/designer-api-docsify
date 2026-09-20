@@ -66,6 +66,8 @@ print.disconnectPrinter(printerId).then(() => {
 ```
 
 
+<a id="disconnectprinter-1"></a>
+
 ## disconnectPrinter
 
 ```TypeScript

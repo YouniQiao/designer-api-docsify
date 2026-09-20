@@ -1,5 +1,9 @@
 # RichEditorBaseController
 
+```TypeScript
+declare class RichEditorBaseController implements TextEditControllerEx
+```
+
 Represents the base class of the **RichEditor** component controller.
 
 **Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md)

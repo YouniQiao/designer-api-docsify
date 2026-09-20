@@ -1,5 +1,9 @@
 # AudioRenderer
 
+```TypeScript
+interface AudioRenderer
+```
+
 This interface provides APIs for audio rendering.
 
 Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
@@ -35,6 +39,8 @@ Drains the playback buffer. This API uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="drain-1"></a>
 
 ## drain
 
@@ -96,6 +102,8 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio effect mode obtained; otherwise, **err** is an error object. |
 
+<a id="getaudioeffectmode-1"></a>
+
 ## getAudioEffectMode
 
 ```TypeScript
@@ -131,6 +139,8 @@ Obtains the stream ID of this audio renderer. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
+
+<a id="getaudiostreamid-1"></a>
 
 ## getAudioStreamId
 
@@ -185,6 +195,8 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
+
+<a id="getaudiotime-1"></a>
 
 ## getAudioTime
 
@@ -300,6 +312,8 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
+<a id="getbuffersize-1"></a>
+
 ## getBufferSize
 
 ```TypeScript
@@ -353,6 +367,8 @@ Obtains the output device information of the audio stream. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the output device information obtained; otherwise, **err** is an error object. |
+
+<a id="getcurrentoutputdevices-1"></a>
 
 ## getCurrentOutputDevices
 
@@ -468,6 +484,8 @@ Obtains the maximum volume of the audio stream. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum volume obtained; otherwise, **err** is an error object.<br>The volume range is [0.0, 1.0]. |
 
+<a id="getmaxstreamvolume-1"></a>
+
 ## getMaxStreamVolume
 
 ```TypeScript
@@ -522,6 +540,8 @@ Obtains the minimum volume of the audio stream. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum volume obtained; otherwise, **err** is an error object.<br>The volume range is [0.0, 1.0]. |
 
+<a id="getminstreamvolume-1"></a>
+
 ## getMinStreamVolume
 
 ```TypeScript
@@ -575,6 +595,8 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
+
+<a id="getrendererinfo-1"></a>
 
 ## getRendererInfo
 
@@ -633,6 +655,8 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an error object. |
+
+<a id="getrenderrate-1"></a>
 
 ## getRenderRate
 
@@ -732,6 +756,8 @@ Obtains the stream information of this audio renderer. This API uses an asynchro
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
 
+<a id="getstreaminfo-1"></a>
+
 ## getStreamInfo
 
 ```TypeScript
@@ -785,6 +811,8 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of underloaded audio frames obtained; otherwise, **err** is an error object. |
+
+<a id="getunderflowcount-1"></a>
 
 ## getUnderflowCount
 
@@ -1197,6 +1225,8 @@ Pauses this audio renderer. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -1232,6 +1262,8 @@ Releases the renderer. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="release-1"></a>
 
 ## release
 
@@ -1276,6 +1308,8 @@ Sets an audio effect mode. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+
+<a id="setaudioeffectmode-1"></a>
 
 ## setAudioEffectMode
 
@@ -1419,6 +1453,8 @@ Sets the audio interruption mode for the application. This API uses an asynchron
 | mode | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | Yes | Audio interruption mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="setinterruptmode-1"></a>
+
 ## setInterruptMode
 
 ```TypeScript
@@ -1522,6 +1558,8 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 | rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="setrenderrate-1"></a>
+
 ## setRenderRate
 
 ```TypeScript
@@ -1614,6 +1652,8 @@ Sets the volume for the audio stream. This API uses an asynchronous callback to 
 | volume | number | Yes | Volume to set, which is in the range [0.0, 1.0]. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="setvolume-1"></a>
+
 ## setVolume
 
 ```TypeScript
@@ -1682,6 +1722,8 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -1717,6 +1759,8 @@ Stops this audio renderer. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="stop-1"></a>
 
 ## stop
 
@@ -1758,6 +1802,8 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Data to be written to the buffer. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of bytes written; otherwise, **err** is an error object. |
+
+<a id="write-1"></a>
 
 ## write
 

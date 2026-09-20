@@ -1,5 +1,9 @@
 # PromptAction
 
+```TypeScript
+export class PromptAction
+```
+
 创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。
 
 > **说明：** 
@@ -58,6 +62,8 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
+
+<a id="closecustomdialog-1"></a>
 
 ## closeCustomDialog
 
@@ -272,6 +278,8 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
+
+<a id="opencustomdialog-1"></a>
 
 ## openCustomDialog
 
@@ -552,6 +560,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
+<a id="showactionmenu-1"></a>
+
 ## showActionMenu
 
 ```TypeScript
@@ -581,6 +591,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+<a id="showactionmenu-2"></a>
 
 ## showActionMenu
 
@@ -646,6 +658,8 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+<a id="showdialog-1"></a>
 
 ## showDialog
 

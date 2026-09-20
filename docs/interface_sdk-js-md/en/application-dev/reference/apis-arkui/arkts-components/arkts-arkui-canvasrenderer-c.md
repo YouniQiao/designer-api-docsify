@@ -1,5 +1,9 @@
 # CanvasRenderer
 
+```TypeScript
+declare class CanvasRenderer extends CanvasPath
+```
+
 After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
 
 > **NOTE:** 
@@ -80,6 +84,8 @@ Sets the current path as the clipping path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
+
+<a id="clip-1"></a>
 
 ## clip
 
@@ -166,6 +172,8 @@ Creates a new **ImageData** object with the specified width and height based on 
 | Type | Description |
 | --- | --- |
 | [ImageData](arkts-arkui-imagedata-c.md) | New **ImageData** object. |
+
+<a id="createimagedata-1"></a>
 
 ## createImageData
 
@@ -312,6 +320,8 @@ Draws an image.
 | dx | number | Yes | X-coordinate of the upper left corner of the drawing area.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 | dy | number | Yes | Y-coordinate of the upper left corner of the drawing area.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 
+<a id="drawimage-1"></a>
+
 ## drawImage
 
 ```TypeScript
@@ -337,6 +347,8 @@ Draws the image by stretching or compressing it.
 | dy | number | Yes | Y-axis position of the upper left corner of the drawing area.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 | dw | number | Yes | Width of the drawing area. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 | dh | number | Yes | Height of the drawing area. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+
+<a id="drawimage-2"></a>
 
 ## drawImage
 
@@ -399,6 +411,8 @@ Fills the current path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero"** |
+
+<a id="fill-1"></a>
 
 ## fill
 
@@ -628,6 +642,8 @@ Fills a new rectangular area with **ImageData** data.
 | imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | **ImageData** object that contains pixel values.<br> **undefined** and **null** are treated as invalid values and no drawing is performed. |
 | dx | number &#124; string | Yes | Offset of the fill area on the x-axis.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 | dy | number &#124; string | Yes | Offset of the fill area on the y-axis.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+
+<a id="putimagedata-1"></a>
 
 ## putImageData
 
@@ -896,6 +912,8 @@ The **setTransform** method uses the same parameters as the **transform()** meth
 | e | number | Yes | **translateX**: horizontal translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** values cause the current API to have no effect, and other drawing APIs with valid parameters continue to render correctly.<br>Default unit: vp |
 | f | number | Yes | **translateY**: vertical translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** values cause the current API to have no effect, and other drawing APIs with valid parameters continue to render correctly.<br>Default unit: vp |
 
+<a id="settransform-1"></a>
+
 ## setTransform
 
 ```TypeScript
@@ -933,6 +951,8 @@ Performs a stroke operation based on the current path.
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="stroke-1"></a>
 
 ## stroke
 

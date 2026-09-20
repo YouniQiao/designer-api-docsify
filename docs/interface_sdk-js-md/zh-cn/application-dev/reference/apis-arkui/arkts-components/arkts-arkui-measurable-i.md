@@ -1,5 +1,9 @@
 # Measurable
 
+```TypeScript
+declare interface Measurable
+```
+
 子组件位置信息。
 
 **起始版本：** 10

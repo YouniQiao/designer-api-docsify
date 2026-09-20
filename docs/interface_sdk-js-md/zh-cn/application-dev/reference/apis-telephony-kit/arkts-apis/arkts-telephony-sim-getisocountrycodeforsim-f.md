@@ -63,6 +63,8 @@ sim.getISOCountryCodeForSim(0).then((data: string) => {
 ```
 
 
+<a id="getisocountrycodeforsim-1"></a>
+
 ## getISOCountryCodeForSim
 
 ```TypeScript

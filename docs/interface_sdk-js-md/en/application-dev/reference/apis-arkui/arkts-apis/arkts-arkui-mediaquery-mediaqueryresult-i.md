@@ -1,5 +1,9 @@
 # MediaQueryResult
 
+```TypeScript
+interface MediaQueryResult
+```
+
 Represents the media query result.
 
 **Since:** 7

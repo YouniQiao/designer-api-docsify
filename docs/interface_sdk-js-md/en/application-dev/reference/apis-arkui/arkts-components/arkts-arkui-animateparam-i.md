@@ -1,5 +1,9 @@
 # AnimateParam
 
+```TypeScript
+declare interface AnimateParam
+```
+
 Defines parameters related to animation effects.
 
 **Since:** 7

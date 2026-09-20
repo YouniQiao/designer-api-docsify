@@ -1,5 +1,9 @@
 # ListItemGroupStyle
 
+```TypeScript
+declare enum ListItemGroupStyle
+```
+
 ListItemGroup组件卡片样式枚举。
 
 **起始版本：** 10

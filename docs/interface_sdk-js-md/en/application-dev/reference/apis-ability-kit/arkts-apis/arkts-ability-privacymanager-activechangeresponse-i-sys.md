@@ -1,5 +1,9 @@
 # ActiveChangeResponse (System API)
 
+```TypeScript
+interface ActiveChangeResponse
+```
+
 Defines the detailed permission usage information.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # SideBarContainer属性/事件
 
+```TypeScript
+declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -96,6 +100,8 @@ maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时
 | --- | --- | --- | --- |
 | value | number | 是 | 侧边栏最大宽度。<br>默认值：280vp<br>单位：vp<br>取值范围：[0, +∞)<br>异常值时取默认值。<br>值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
 
+<a id="maxsidebarwidth-1"></a>
+
 ## maxSideBarWidth
 
 ```TypeScript
@@ -175,6 +181,8 @@ minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时
 | --- | --- | --- | --- |
 | value | number | 是 | 侧边栏最小宽度。<br>。<br>单位为：vp。取值范围：[0, +∞)。默认值：API version 9及以下版本默认值为200vp，API version 10及以上版本的默认值为240vp。 |
 
+<a id="minsidebarwidth-1"></a>
+
 ## minSideBarWidth
 
 ```TypeScript
@@ -253,7 +261,7 @@ showSideBar(value: boolean)
 
 当showSideBar属性未设置时，依据组件大小进行自动显示：小于minSideBarWidth + minContentWidth时默认不显示侧边栏，大于等于时默认显示侧边栏。
 
-从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 
@@ -346,6 +354,8 @@ sideBarWidth(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 侧边栏的宽度。<br>默认值：240vp<br>单位：vp<br>取值范围：[0, +∞)<br>异常值时取默认值。<br>**说明：** <br>API version 10以下版本的默认值为200vp，API version 10及以上版本的默认值为240vp。 |
+
+<a id="sidebarwidth-1"></a>
 
 ## sideBarWidth
 

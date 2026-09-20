@@ -1,5 +1,9 @@
 # SelectDialog
 
+```TypeScript
+export declare struct SelectDialog
+```
+
 选择类弹出框，弹框中以列表或网格的形式提供可选的内容。
 
 **起始版本：** 10

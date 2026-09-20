@@ -1,5 +1,9 @@
 # WaterFlowLayoutMode
 
+```TypeScript
+declare enum WaterFlowLayoutMode
+```
+
 瀑布流组件布局模式枚举。
 
 **说明：** 

@@ -1,5 +1,9 @@
 # Channel
 
+```TypeScript
+export interface Channel
+```
+
 Channel的实例表示在某个Session实例上创建通道，可能为基础通道或逻辑通道。通过[Session.openBasicChannel](arkts-connectivity-omapi-session-i.md#openbasicchannel)或[Session.openLogicalChannel](arkts-connectivity-omapi-session-i.md#openlogicalchannel)获取Channel实例。
 
 **起始版本：** 10
@@ -288,6 +292,8 @@ try {
     hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
 }
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

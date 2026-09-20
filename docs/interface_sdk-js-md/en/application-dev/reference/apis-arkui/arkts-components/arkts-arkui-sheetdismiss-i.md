@@ -1,5 +1,9 @@
 # SheetDismiss
 
+```TypeScript
+declare interface SheetDismiss
+```
+
 Component sheet dismiss
 
 **Since:** 11

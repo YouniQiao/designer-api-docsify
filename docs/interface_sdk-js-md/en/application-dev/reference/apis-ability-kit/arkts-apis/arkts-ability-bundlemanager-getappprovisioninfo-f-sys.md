@@ -117,6 +117,8 @@ try {
 ```
 
 
+<a id="getappprovisioninfo-1"></a>
+
 ## getAppProvisionInfo
 
 ```TypeScript
@@ -157,6 +159,8 @@ No permission is required for obtaining the caller's own information.
 
 See [getAppProvisionInfo](#getappprovisioninfo)
 
+
+<a id="getappprovisioninfo-2"></a>
 
 ## getAppProvisionInfo
 

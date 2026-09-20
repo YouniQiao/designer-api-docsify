@@ -1,5 +1,9 @@
 # TextInputController
 
+```TypeScript
+declare class TextInputController extends TextContentControllerBase
+```
+
 TextInput组件的控制器继承自[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)，涉及的接口有[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect)、[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount)、getCaretOffset、addText、[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext)、getSelection、[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext)、setStyledPlaceholder、deleteBackward、scrollToVisible<!--Del-->以及系统接口getText<!--DelEnd-->。
 
 ## 导入对象

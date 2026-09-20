@@ -1,5 +1,9 @@
 # DriverExtensionAbility
 
+```TypeScript
+declare class DriverExtensionAbility
+```
+
 DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建、销毁、连接、断开等生命周期回调。
 
 **起始版本：** 10

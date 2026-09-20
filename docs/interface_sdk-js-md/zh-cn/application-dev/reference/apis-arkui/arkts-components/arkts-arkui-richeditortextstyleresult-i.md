@@ -1,5 +1,9 @@
 # RichEditorTextStyleResult
 
+```TypeScript
+declare interface RichEditorTextStyleResult
+```
+
 后端返回的文本样式信息。
 
 在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。

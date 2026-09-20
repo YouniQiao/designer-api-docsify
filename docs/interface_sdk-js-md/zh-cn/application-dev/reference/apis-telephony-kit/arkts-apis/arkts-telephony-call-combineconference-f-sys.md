@@ -64,6 +64,8 @@ call.combineConference(1).then(() => {
 ```
 
 
+<a id="combineconference-1"></a>
+
 ## combineConference
 
 ```TypeScript

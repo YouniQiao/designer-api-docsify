@@ -1,5 +1,9 @@
 # Divider属性/事件
 
+```TypeScript
+declare class DividerAttribute extends CommonMethod<DividerAttribute>
+```
+
 支持[通用属性](arkts-arkui-commonmethod-c.md)。
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。

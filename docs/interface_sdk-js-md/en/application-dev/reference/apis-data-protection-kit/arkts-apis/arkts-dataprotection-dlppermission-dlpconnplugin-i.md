@@ -1,5 +1,9 @@
 # DlpConnPlugin
 
+```TypeScript
+export interface DlpConnPlugin
+```
+
 Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
 
 > **NOTE:** 

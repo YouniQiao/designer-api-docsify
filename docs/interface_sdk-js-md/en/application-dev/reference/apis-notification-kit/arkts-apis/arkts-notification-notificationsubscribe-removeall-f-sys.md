@@ -110,6 +110,8 @@ notificationSubscribe.removeAll(userId).then(() => {
 ```
 
 
+<a id="removeall-1"></a>
+
 ## removeAll
 
 ```TypeScript
@@ -147,6 +149,8 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 See [removeAll](#removeall)
 
+
+<a id="removeall-2"></a>
 
 ## removeAll
 
@@ -187,6 +191,8 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 See [removeAll](#removeall)
 
+
+<a id="removeall-3"></a>
 
 ## removeAll
 
@@ -232,6 +238,8 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 See [removeAll](#removeall)
 
+
+<a id="removeall-4"></a>
 
 ## removeAll
 

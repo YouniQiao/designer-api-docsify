@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="cleanbundlecachefiles-1"></a>
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -148,6 +150,8 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 参见 [cleanBundleCacheFiles](#cleanbundlecachefiles)
 
+
+<a id="cleanbundlecachefiles-2"></a>
 
 ## cleanBundleCacheFiles
 

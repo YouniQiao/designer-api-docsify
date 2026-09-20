@@ -1,5 +1,9 @@
 # NestedScrollOptions
 
+```TypeScript
+declare interface NestedScrollOptions
+```
+
 nestedScroll属性参数对象。
 
 @interface NestedScrollOptions

@@ -1,5 +1,9 @@
 # TextSpanType
 
+```TypeScript
+declare enum TextSpanType
+```
+
 Provides the span type information.
 
 > **NOTE:** 

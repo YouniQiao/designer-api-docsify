@@ -1,5 +1,9 @@
 # CounterV2InlineStyleOptions
 
+```TypeScript
+declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions
+```
+
 Defines the attributes and events of the inline number **CounterV2**.
 
 > **NOTE:** 

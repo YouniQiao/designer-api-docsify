@@ -1,5 +1,9 @@
 # RichEditorParagraphResult
 
+```TypeScript
+declare interface RichEditorParagraphResult
+```
+
 Describes the returned paragraph information.
 
 **Since:** 11

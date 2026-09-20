@@ -1,5 +1,9 @@
 # GestureStyleInterface
 
+```TypeScript
+declare interface GestureStyleInterface
+```
+
 Defines the Gesture Events.
 
 **Since:** 12

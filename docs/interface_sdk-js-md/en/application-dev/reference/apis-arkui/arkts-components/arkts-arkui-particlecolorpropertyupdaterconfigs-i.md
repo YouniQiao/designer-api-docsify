@@ -1,5 +1,9 @@
 # ParticleColorPropertyUpdaterConfigs
 
+```TypeScript
+interface ParticleColorPropertyUpdaterConfigs
+```
+
 Defines the particle color property updater configs. @interface ParticleColorPropertyUpdaterConfigs
 
 **Since:** 10

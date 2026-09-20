@@ -1,5 +1,9 @@
 # AVPlaybackState
 
+```TypeScript
+interface AVPlaybackState
+```
+
 Used to indicate the playback state of the current media. If the playback state of the media changes, it needs to be updated synchronously
 
 **Since:** 10

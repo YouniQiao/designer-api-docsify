@@ -1,5 +1,9 @@
 # Rectangle
 
+```TypeScript
+declare interface Rectangle
+```
+
 The data type used to describe a rectangular area.
 
 > **NOTE:** 

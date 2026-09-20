@@ -1,5 +1,9 @@
 # ReplaceSymbolEffect
 
+```TypeScript
+declare class ReplaceSymbolEffect extends SymbolEffect
+```
+
 Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
@@ -31,6 +35,8 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

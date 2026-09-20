@@ -1,5 +1,9 @@
 # On
 
+```TypeScript
+declare class On
+```
+
 Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components.
 
 The APIs provided by the **On** class exhibit the following features:
@@ -515,6 +519,8 @@ import { MatchPattern, On, ON } from '@kit.TestKit';
 let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
 ```
 
+<a id="id-1"></a>
+
 ## id
 
 ```TypeScript
@@ -977,6 +983,8 @@ import { On, ON, MatchPattern } from '@kit.TestKit';
 
 let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
 ```
+
+<a id="type-1"></a>
 
 ## type
 

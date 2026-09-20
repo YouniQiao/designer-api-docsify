@@ -1,5 +1,9 @@
 # Router
 
+```TypeScript
+export class Router
+```
+
 Provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page.
 
 > **NOTE:** 
@@ -42,6 +46,8 @@ Returns to the previous page or a specified page.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | No | Description of the target page. The **url** parameter specifies the URL of the page to return to. If the page with the specified URL does not exist in the navigation stack, no action is performed. If the navigation stack contains the corresponding URL, the application returns to the page with. the largest index.<br>If no URL is set, the application returns to the previous page, and the page is not rebuilt. The page in the page stack is not reclaimed. It will be reclaimed after being popped up. |
+
+<a id="back-1"></a>
 
 ## back
 
@@ -280,6 +286,8 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
+<a id="pushnamedroute-1"></a>
+
 ## pushNamedRoute
 
 ```TypeScript
@@ -317,6 +325,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
+<a id="pushnamedroute-2"></a>
+
 ## pushNamedRoute
 
 ```TypeScript
@@ -349,6 +359,8 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+
+<a id="pushnamedroute-3"></a>
 
 ## pushNamedRoute
 
@@ -420,6 +432,8 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 
+<a id="pushurl-1"></a>
+
 ## pushUrl
 
 ```TypeScript
@@ -457,6 +471,8 @@ Navigates to a specified page in the application. This API uses a promise to ret
 | [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 
+<a id="pushurl-2"></a>
+
 ## pushUrl
 
 ```TypeScript
@@ -489,6 +505,8 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+
+<a id="pushurl-3"></a>
 
 ## pushUrl
 
@@ -559,6 +577,8 @@ Replaces the current page with another one using the named route and destroys th
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
+<a id="replacenamedroute-1"></a>
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -595,6 +615,8 @@ Replaces the current page with another one using the named route and destroys th
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
+<a id="replacenamedroute-2"></a>
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -626,6 +648,8 @@ Replaces the current page with another one using the named route and destroys th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+
+<a id="replacenamedroute-3"></a>
 
 ## replaceNamedRoute
 
@@ -695,6 +719,8 @@ Replaces the current page with another one in the application and destroys the c
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+<a id="replaceurl-1"></a>
+
 ## replaceUrl
 
 ```TypeScript
@@ -731,6 +757,8 @@ Replaces the current page with another one in the application and destroys the c
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+<a id="replaceurl-2"></a>
+
 ## replaceUrl
 
 ```TypeScript
@@ -762,6 +790,8 @@ Replaces the current page with another one in the application and destroys the c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+
+<a id="replaceurl-3"></a>
 
 ## replaceUrl
 

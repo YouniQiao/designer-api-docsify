@@ -1,5 +1,9 @@
 # RelativeContainer属性/事件
 
+```TypeScript
+declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持如下属性：
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。
@@ -31,6 +35,8 @@ barrier(value: Array<BarrierStyle>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | 是 | RelativeContainer容器内的屏障，用于定义屏障的id、方向和依赖组件，子组件可以以屏障为锚点进行对齐定位。 |
+
+<a id="barrier-1"></a>
 
 ## barrier
 

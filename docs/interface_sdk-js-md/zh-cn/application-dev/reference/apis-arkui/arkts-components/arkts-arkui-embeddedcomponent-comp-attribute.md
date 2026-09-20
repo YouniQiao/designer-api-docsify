@@ -1,5 +1,9 @@
 # EmbeddedComponent属性/事件
 
+```TypeScript
+declare class EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
+```
+
 支持通用属性。
 
 与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。

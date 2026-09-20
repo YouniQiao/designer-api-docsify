@@ -1,5 +1,9 @@
 # ProtocolType
 
+```TypeScript
+enum ProtocolType
+```
+
 枚举隐私协议类型。协议类型决定隐私保护用于搜索操作的计算方法。
 
 **起始版本：** 26.0.1

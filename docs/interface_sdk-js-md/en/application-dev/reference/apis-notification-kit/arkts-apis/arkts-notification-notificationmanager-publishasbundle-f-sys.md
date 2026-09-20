@@ -148,6 +148,8 @@ notificationManager.publishAsBundle(representativeBundle, request).then(() => {
 ```
 
 
+<a id="publishasbundle-1"></a>
+
 ## publishAsBundle
 
 ```TypeScript
@@ -209,6 +211,8 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 
 See [publishAsBundle](#publishasbundle)
 
+
+<a id="publishasbundle-2"></a>
 
 ## publishAsBundle
 

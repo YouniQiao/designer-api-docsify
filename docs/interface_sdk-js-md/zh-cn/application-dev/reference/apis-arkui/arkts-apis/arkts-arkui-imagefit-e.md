@@ -1,5 +1,9 @@
 # ImageFit
 
+```TypeScript
+declare enum ImageFit
+```
+
 Image display mode.
 
 @enum { number }

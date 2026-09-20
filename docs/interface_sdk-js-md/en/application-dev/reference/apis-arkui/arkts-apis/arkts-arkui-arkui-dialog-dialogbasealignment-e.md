@@ -1,5 +1,9 @@
 # DialogBaseAlignment
 
+```TypeScript
+export enum DialogBaseAlignment
+```
+
 The alignment of dialog.
 
 **Since:** 26.0.1

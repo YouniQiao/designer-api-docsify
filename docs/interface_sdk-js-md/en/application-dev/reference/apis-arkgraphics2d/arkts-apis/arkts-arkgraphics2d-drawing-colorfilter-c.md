@@ -1,5 +1,9 @@
 # ColorFilter
 
+```TypeScript
+class ColorFilter
+```
+
 Defines a color filter.
 
 > **NOTE:** 
@@ -48,6 +52,8 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="createblendmodecolorfilter-2"></a>
 
 ## createBlendModeColorFilter
 

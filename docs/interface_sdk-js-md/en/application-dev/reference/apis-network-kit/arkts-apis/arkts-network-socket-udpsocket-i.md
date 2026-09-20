@@ -1,5 +1,9 @@
 # UDPSocket
 
+```TypeScript
+export interface UDPSocket
+```
+
 Defines a UDP socket connection. Before calling UDPSocket APIs, you need to call [socket.constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md) to create a **UDPSocket** object.
 
 **Since:** 7
@@ -75,6 +79,8 @@ udp.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -198,6 +204,8 @@ udp.close().then(() => {
   console.error('close fail');
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -445,6 +453,8 @@ udp.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -563,25 +573,6 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 | type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
-## off('listening' | 'close')
-
-```TypeScript
-off(type: 'listening' | 'close', callback?: Callback<void>): void
-```
-
-Unsubscribes from **listening** events or **close** events of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
 ## off('error')
 
 ```TypeScript
@@ -619,25 +610,6 @@ Subscribes to **message** events of the **UDPSocket** object. This API uses an a
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
-
-## on('listening' | 'close')
-
-```TypeScript
-on(type: 'listening' | 'close', callback: Callback<void>): void
-```
-
-Subscribes to **listening** events or **close** events of the **UDPSocket** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'listening' &#124; 'close' | Yes | Event type.<br> <br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## on('listening' | 'close')
 
@@ -783,6 +755,8 @@ udp.send(sendOptions).then(() => {
   console.error('send fail');
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -993,6 +967,8 @@ udp.bind(bindAddr, (err: BusinessError) => {
   });
 })
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

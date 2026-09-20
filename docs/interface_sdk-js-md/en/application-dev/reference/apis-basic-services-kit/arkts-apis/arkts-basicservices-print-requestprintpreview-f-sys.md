@@ -94,6 +94,8 @@ print.requestPrintPreview(jobInfo).then((num: number) => {
 ```
 
 
+<a id="requestprintpreview-1"></a>
+
 ## requestPrintPreview
 
 ```TypeScript

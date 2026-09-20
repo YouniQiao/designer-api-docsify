@@ -1,5 +1,9 @@
 # NavDestinationActiveReason
 
+```TypeScript
+declare enum NavDestinationActiveReason
+```
+
 NavDestination激活态或者非激活态变化的原因。
 
 **起始版本：** 17

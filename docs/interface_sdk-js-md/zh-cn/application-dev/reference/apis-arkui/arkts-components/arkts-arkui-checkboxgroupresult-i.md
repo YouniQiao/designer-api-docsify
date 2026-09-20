@@ -1,5 +1,9 @@
 # CheckboxGroupResult
 
+```TypeScript
+declare interface CheckboxGroupResult
+```
+
 多选框群组的名称和状态。
 
 **起始版本：** 8

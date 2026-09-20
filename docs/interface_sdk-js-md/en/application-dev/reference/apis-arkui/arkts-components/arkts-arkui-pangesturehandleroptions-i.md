@@ -1,5 +1,9 @@
 # PanGestureHandlerOptions
 
+```TypeScript
+interface PanGestureHandlerOptions extends BaseHandlerOptions
+```
+
 Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)

@@ -111,6 +111,8 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100).then(()
 ```
 
 
+<a id="removedisallowedrunningbundles-1"></a>
+
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ Removes an application from the applications that are not allowed to run under t
 
 See [removeDisallowedRunningBundles](#removedisallowedrunningbundles)
 
+
+<a id="removedisallowedrunningbundles-2"></a>
 
 ## removeDisallowedRunningBundles
 

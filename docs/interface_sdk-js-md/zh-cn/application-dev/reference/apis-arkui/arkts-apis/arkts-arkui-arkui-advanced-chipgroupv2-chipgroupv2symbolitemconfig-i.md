@@ -1,5 +1,9 @@
 # ChipGroupV2SymbolItemConfig
 
+```TypeScript
+export interface ChipGroupV2SymbolItemConfig
+```
+
 ChipGroupV2SymbolItemConfig定义了尾部Symbol图标的配置类型。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # EntryOptions
 
+```TypeScript
+declare interface EntryOptions
+```
+
 Defines the options of Entry ClassDecorator.
 
 **Since:** 10

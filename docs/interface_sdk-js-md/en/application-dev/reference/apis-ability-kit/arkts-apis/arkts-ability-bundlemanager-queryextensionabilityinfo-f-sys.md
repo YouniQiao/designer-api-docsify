@@ -154,6 +154,8 @@ try {
 ```
 
 
+<a id="queryextensionabilityinfo-1"></a>
+
 ## queryExtensionAbilityInfo
 
 ```TypeScript
@@ -198,6 +200,8 @@ No permission is required for obtaining the caller's own information.
 
 See [queryExtensionAbilityInfo](#queryextensionabilityinfo)
 
+
+<a id="queryextensionabilityinfo-2"></a>
 
 ## queryExtensionAbilityInfo
 

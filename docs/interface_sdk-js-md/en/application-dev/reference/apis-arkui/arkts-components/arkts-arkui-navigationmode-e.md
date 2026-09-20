@@ -1,5 +1,9 @@
 # NavigationMode
 
+```TypeScript
+declare enum NavigationMode
+```
+
 Display mode of the navigation page. When **Navigation** is displayed in split-column mode, a divider is displayed between the navigation page and the content area.
 
 > **NOTE:** 

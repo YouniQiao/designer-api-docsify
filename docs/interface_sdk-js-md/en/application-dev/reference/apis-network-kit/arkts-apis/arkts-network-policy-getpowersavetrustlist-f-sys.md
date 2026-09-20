@@ -64,6 +64,8 @@ policy
 ```
 
 
+<a id="getpowersavetrustlist-1"></a>
+
 ## getPowerSaveTrustlist
 
 ```TypeScript

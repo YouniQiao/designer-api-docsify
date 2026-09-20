@@ -123,6 +123,8 @@ import { contact } from '@kit.ContactsKit';
 ```
 
 
+<a id="querycontacts-1"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -156,6 +158,8 @@ function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>
 参见 [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-2"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -185,6 +189,8 @@ function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>):
 
 参见 [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-3"></a>
 
 ## queryContacts
 
@@ -220,6 +226,8 @@ function queryContacts(context: Context, holder: Holder, callback: AsyncCallback
 参见 [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-4"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -249,6 +257,8 @@ function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<C
 
 参见 [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-5"></a>
 
 ## queryContacts
 
@@ -284,6 +294,8 @@ function queryContacts(context: Context, attrs: ContactAttributes, callback: Asy
 参见 [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-6"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -314,6 +326,8 @@ function queryContacts(holder: Holder, attrs: ContactAttributes, callback: Async
 
 参见 [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-7"></a>
 
 ## queryContacts
 
@@ -350,6 +364,8 @@ function queryContacts(context: Context, holder: Holder, attrs: ContactAttribute
 参见 [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-8"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -385,6 +401,8 @@ function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Arra
 
 参见 [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-9"></a>
 
 ## queryContacts
 

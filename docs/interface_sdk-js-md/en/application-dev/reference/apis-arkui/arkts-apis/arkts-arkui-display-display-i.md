@@ -1,5 +1,9 @@
 # Display
 
+```TypeScript
+interface Display
+```
+
 Implements a Display instance, with attributes and APIs defined.
 
 Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
@@ -120,6 +124,8 @@ promise.then((data: display.CutoutInfo) => {
   console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="getcutoutinfo-1"></a>
 
 ## getCutoutInfo
 

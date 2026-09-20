@@ -98,6 +98,8 @@ try {
 ```
 
 
+<a id="getbundlestats-1"></a>
+
 ## getBundleStats
 
 ```TypeScript
@@ -142,6 +144,8 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 
 See [getBundleStats](#getbundlestats)
 
+
+<a id="getbundlestats-2"></a>
 
 ## getBundleStats
 

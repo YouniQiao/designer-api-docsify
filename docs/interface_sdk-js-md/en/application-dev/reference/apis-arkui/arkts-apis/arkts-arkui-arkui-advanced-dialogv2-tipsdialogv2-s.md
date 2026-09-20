@@ -1,5 +1,9 @@
 # TipsDialogV2
 
+```TypeScript
+export declare struct TipsDialogV2
+```
+
 Declare CustomDialog TipsDialogV2
 
 @struct { TipsDialogV2 }

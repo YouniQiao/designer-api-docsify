@@ -1,5 +1,9 @@
 # CustomComponentLifecycleObserver
 
+```TypeScript
+export declare interface CustomComponentLifecycleObserver
+```
+
 Observes lifecycle status changes of a custom component, and triggers the lifecycle callback in the listener when detecting lifecycle status changes.
 
 **Since:** 23

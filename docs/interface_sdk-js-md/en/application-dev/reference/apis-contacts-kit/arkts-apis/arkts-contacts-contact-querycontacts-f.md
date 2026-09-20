@@ -147,6 +147,8 @@ import { contact } from '@kit.ContactsKit';
 ```
 
 
+<a id="querycontacts-1"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -180,6 +182,8 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 See [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-2"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -209,6 +213,8 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 
 See [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-3"></a>
 
 ## queryContacts
 
@@ -244,6 +250,8 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 See [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-4"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -273,6 +281,8 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 
 See [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-5"></a>
 
 ## queryContacts
 
@@ -308,6 +318,8 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 See [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-6"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -338,6 +350,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 See [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-7"></a>
 
 ## queryContacts
 
@@ -374,6 +388,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 See [queryContacts](#querycontacts)
 
 
+<a id="querycontacts-8"></a>
+
 ## queryContacts
 
 ```TypeScript
@@ -409,6 +425,8 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 See [queryContacts](#querycontacts)
 
+
+<a id="querycontacts-9"></a>
 
 ## queryContacts
 

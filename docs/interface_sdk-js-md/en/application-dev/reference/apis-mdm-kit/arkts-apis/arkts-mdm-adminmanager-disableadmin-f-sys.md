@@ -97,6 +97,8 @@ adminManager.disableAdmin(wantTemp, 100, (err) => {
 ```
 
 
+<a id="disableadmin-1"></a>
+
 ## disableAdmin
 
 ```TypeScript

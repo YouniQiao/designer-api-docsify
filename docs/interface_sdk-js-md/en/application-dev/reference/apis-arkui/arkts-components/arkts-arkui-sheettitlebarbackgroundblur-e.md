@@ -1,5 +1,9 @@
 # SheetTitleBarBackgroundBlur
 
+```TypeScript
+declare enum SheetTitleBarBackgroundBlur
+```
+
 Enum of title bar background blur styles.
 
 **Since:** 26.0.1

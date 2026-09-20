@@ -66,6 +66,8 @@ sim.sendTerminalResponseCmd(0, "ls").then(() => {
 ```
 
 
+<a id="sendterminalresponsecmd-1"></a>
+
 ## sendTerminalResponseCmd
 
 ```TypeScript

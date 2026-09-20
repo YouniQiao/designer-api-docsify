@@ -1,5 +1,9 @@
 # Prompt
 
+```TypeScript
+export default class Prompt
+```
+
 Defines the prompt interface.
 
 **Since:** 11

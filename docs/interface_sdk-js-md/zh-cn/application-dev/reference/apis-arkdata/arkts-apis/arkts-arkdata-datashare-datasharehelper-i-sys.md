@@ -1,5 +1,9 @@
 # DataShareHelper（系统接口）
 
+```TypeScript
+interface DataShareHelper
+```
+
 DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)构建一个实例。
 
 **起始版本：** 9
@@ -152,6 +156,8 @@ try {
   console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="batchinsert-1"></a>
 
 ## batchInsert
 
@@ -406,6 +412,8 @@ try {
 }
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -606,6 +614,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="denormalizeuri-1"></a>
+
 ## denormalizeUri
 
 ```TypeScript
@@ -696,6 +706,8 @@ if (dataShareHelper != undefined) {
   let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="getpublisheddata-1"></a>
 
 ## getPublishedData
 
@@ -836,6 +848,8 @@ try {
 }
 ```
 
+<a id="insert-1"></a>
+
 ## insert
 
 ```TypeScript
@@ -937,6 +951,8 @@ if (dataShareHelper != undefined) {
   });
 }
 ```
+
+<a id="normalizeuri-1"></a>
 
 ## normalizeUri
 
@@ -1043,6 +1059,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="notifychange-1"></a>
+
 ## notifyChange
 
 ```TypeScript
@@ -1082,6 +1100,8 @@ notifyChange(uri: string): Promise<void>
 **示例**
 
 参见 [notifyChange](#notifychange)
+
+<a id="notifychange-2"></a>
 
 ## notifyChange
 
@@ -1155,13 +1175,15 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#on)相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#on-1)相对应。
 
 **起始版本：** 12
 
@@ -1311,6 +1333,8 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -1521,6 +1545,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="publish-1"></a>
+
 ## publish
 
 ```TypeScript
@@ -1603,6 +1629,8 @@ if (dataShareHelper != undefined) {
   let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="publish-2"></a>
 
 ## publish
 
@@ -1777,6 +1805,8 @@ try {
 }
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -1930,6 +1960,8 @@ try {
   console.error(`Failed to update. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="update-1"></a>
 
 ## update
 

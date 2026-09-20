@@ -1,5 +1,9 @@
 # OnWindowNewExtEvent
 
+```TypeScript
+declare interface OnWindowNewExtEvent
+```
+
 定义网页请求创建窗口时触发的回调信息，包括窗口特征信息和窗口打开方式。适用于需要精细控制新窗口行为的场景，提升窗口管理的定制性和用户体验。
 
 **起始版本：** 23

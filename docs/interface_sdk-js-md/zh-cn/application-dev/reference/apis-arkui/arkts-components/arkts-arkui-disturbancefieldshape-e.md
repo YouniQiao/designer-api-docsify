@@ -1,5 +1,9 @@
 # DisturbanceFieldShape
 
+```TypeScript
+declare enum DisturbanceFieldShape
+```
+
 扰动场形状。
 
 **起始版本：** 12

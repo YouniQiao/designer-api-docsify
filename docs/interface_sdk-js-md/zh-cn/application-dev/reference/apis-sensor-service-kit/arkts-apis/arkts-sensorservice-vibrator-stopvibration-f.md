@@ -120,6 +120,8 @@ function vibratorDemo() {
 ```
 
 
+<a id="stopvibration-1"></a>
+
 ## stopVibration
 
 ```TypeScript
@@ -152,6 +154,8 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 
 参见 [stopVibration](#stopvibration)
 
+
+<a id="stopvibration-2"></a>
 
 ## stopVibration
 
@@ -186,6 +190,8 @@ function stopVibration(callback: AsyncCallback<void>): void
 参见 [stopVibration](#stopvibration)
 
 
+<a id="stopvibration-3"></a>
+
 ## stopVibration
 
 ```TypeScript
@@ -218,6 +224,8 @@ function stopVibration(): Promise<void>
 
 参见 [stopVibration](#stopvibration)
 
+
+<a id="stopvibration-4"></a>
 
 ## stopVibration
 

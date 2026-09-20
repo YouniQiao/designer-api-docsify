@@ -1,5 +1,9 @@
 # DragItemInfo
 
+```TypeScript
+declare interface DragItemInfo
+```
+
 定义拖拽过程中拖拽项的相关信息。
 
 **起始版本：** 8

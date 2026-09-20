@@ -1,5 +1,9 @@
 # FullScreenExitHandler
 
+```TypeScript
+declare class FullScreenExitHandler
+```
+
 Implements the **FullScreenExitHandler** object to notify you that the **Web** component exits full screen mode. For details about the sample code, see [onFullScreenEnter](arkts-arkweb-web-comp-attribute.md#onfullscreenenter).
 
 **Since:** 9

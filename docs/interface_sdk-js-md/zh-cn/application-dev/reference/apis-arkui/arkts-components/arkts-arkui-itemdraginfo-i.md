@@ -1,5 +1,9 @@
 # ItemDragInfo
 
+```TypeScript
+declare interface ItemDragInfo
+```
+
 拖拽点信息对象。
 
 @interface ItemDragInfo

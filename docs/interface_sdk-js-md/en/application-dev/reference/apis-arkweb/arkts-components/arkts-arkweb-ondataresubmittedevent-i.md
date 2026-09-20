@@ -1,5 +1,9 @@
 # OnDataResubmittedEvent
 
+```TypeScript
+declare interface OnDataResubmittedEvent
+```
+
 Defines the callback information triggered when the web form data can be resubmitted, including the submission handler. It is suitable for scenarios where handling form retry submission is required, improving form interaction reliability and user experience.
 
 **Since:** 12

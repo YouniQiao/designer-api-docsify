@@ -1,5 +1,9 @@
 # ContainerReaderInfo
 
+```TypeScript
+export interface ContainerReaderInfo
+```
+
 Defines the configuration options for the **ContainerReader** component, used to specify parameters for reading container size and obtaining breakpoint values. The component size and breakpoint values cannot be changed through this parameter.
 
 **Since:** 26.0.0

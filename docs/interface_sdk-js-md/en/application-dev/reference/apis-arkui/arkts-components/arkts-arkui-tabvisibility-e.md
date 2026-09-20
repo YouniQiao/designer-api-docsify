@@ -1,5 +1,9 @@
 # TabVisibility
 
+```TypeScript
+declare enum TabVisibility
+```
+
 Enumerates the visibility of the tab.
 
 **Since:** 26.2.0

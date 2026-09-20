@@ -1,5 +1,9 @@
 # ListItemGroupArea
 
+```TypeScript
+declare enum ListItemGroupArea
+```
+
 Enumerates the areas of **ListItemGroup**.
 
 **Since:** 12

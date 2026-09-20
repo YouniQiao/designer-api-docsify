@@ -1,5 +1,9 @@
 # PermissionRequestToggleStatus (System API)
 
+```TypeScript
+export enum PermissionRequestToggleStatus
+```
+
 Enumerates the permission toggle states.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # RefuelingInfo
 
+```TypeScript
+export interface RefuelingInfo
+```
+
 Interface for refueling response info.
 
 **Since:** 26.0.1

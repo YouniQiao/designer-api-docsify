@@ -1,5 +1,9 @@
 # DialogState
 
+```TypeScript
+export enum DialogState
+```
+
 Enum for dialog state.
 
 **Since:** 26.0.1

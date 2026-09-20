@@ -62,6 +62,8 @@ radio.getOperatorName(slotId).then((data: string) => {
 ```
 
 
+<a id="getoperatorname-1"></a>
+
 ## getOperatorName
 
 ```TypeScript

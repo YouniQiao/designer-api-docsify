@@ -1,5 +1,9 @@
 # RichEditorImageSpanResult
 
+```TypeScript
+declare interface RichEditorImageSpanResult
+```
+
 后端返回的图片信息。
 
 **起始版本：** 10

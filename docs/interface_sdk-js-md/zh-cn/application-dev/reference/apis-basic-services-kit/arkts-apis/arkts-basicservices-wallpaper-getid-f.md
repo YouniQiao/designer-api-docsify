@@ -55,6 +55,8 @@ wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) =>
 ```
 
 
+<a id="getid-1"></a>
+
 ## getId
 
 ```TypeScript

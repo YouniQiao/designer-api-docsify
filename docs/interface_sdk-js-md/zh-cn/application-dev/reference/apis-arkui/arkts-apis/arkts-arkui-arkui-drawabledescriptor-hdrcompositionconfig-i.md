@@ -1,5 +1,9 @@
 # HdrCompositionConfig
 
+```TypeScript
+declare interface HdrCompositionConfig
+```
+
 HDR合成配置选项。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # DynamicOptions (System API)
 
+```TypeScript
+declare interface DynamicOptions
+```
+
 Defines the parameters to be passed during **DynamicComponent** construction.
 
 **Since:** 26.0.0

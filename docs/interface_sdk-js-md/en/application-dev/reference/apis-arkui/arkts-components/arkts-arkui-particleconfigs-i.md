@@ -1,5 +1,9 @@
 # ParticleConfigs
 
+```TypeScript
+interface ParticleConfigs
+```
+
 Defines the particle configs.
 
 @interface ParticleConfigs

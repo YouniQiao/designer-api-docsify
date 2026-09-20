@@ -1,5 +1,9 @@
 # SubHeaderV2OperationItem
 
+```TypeScript
+export declare class SubHeaderV2OperationItem
+```
+
 操作区的设置项。
 
 **起始版本：** 18

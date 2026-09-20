@@ -1,5 +1,9 @@
 # MultiShadowOptions
 
+```TypeScript
+declare interface MultiShadowOptions
+```
+
 投影样式参数。
 
 **起始版本：** 10

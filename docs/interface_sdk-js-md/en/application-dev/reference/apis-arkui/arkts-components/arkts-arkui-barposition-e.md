@@ -1,5 +1,9 @@
 # BarPosition
 
+```TypeScript
+declare enum BarPosition
+```
+
 Enumerates the positions of the **Tabs** component.
 
 **Since:** 7

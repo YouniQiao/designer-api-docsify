@@ -1,5 +1,9 @@
 # FocusController
 
+```TypeScript
+export class FocusController
+```
+
 Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
 
 > **NOTE:** 

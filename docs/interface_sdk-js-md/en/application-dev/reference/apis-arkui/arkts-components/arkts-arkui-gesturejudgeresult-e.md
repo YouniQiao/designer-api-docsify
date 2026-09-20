@@ -1,5 +1,9 @@
 # GestureJudgeResult
 
+```TypeScript
+declare enum GestureJudgeResult
+```
+
 Enumerates gesture competition results.
 
 **Since:** 11

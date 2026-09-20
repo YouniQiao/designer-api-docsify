@@ -1,5 +1,9 @@
 # LayoutPolicy
 
+```TypeScript
+declare class LayoutPolicy
+```
+
 用于组件宽度和高度的布局策略。提供matchParent、wrapContent、fixAtIdealSize三种布局策略选项，分别用于组件自适应父组件布局、根据内容自适应但不超过父组件尺寸、根据内容自适应且可超过父组件尺寸的场景。
 
 > **说明：** 

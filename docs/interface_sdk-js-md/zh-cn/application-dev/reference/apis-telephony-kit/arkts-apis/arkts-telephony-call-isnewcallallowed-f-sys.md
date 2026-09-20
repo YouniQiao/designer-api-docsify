@@ -62,6 +62,8 @@ call.isNewCallAllowed().then((data: boolean) => {
 ```
 
 
+<a id="isnewcallallowed-1"></a>
+
 ## isNewCallAllowed
 
 ```TypeScript

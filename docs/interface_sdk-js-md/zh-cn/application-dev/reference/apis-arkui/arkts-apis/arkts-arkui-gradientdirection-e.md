@@ -1,5 +1,9 @@
 # GradientDirection
 
+```TypeScript
+declare enum GradientDirection
+```
+
 线性渐变的方向。
 
 **起始版本：** 7

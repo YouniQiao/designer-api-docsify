@@ -1,5 +1,9 @@
 # OnSearchResultReceiveEvent
 
+```TypeScript
+declare interface OnSearchResultReceiveEvent
+```
+
 Defines the callback information for the search result on the web page, including the match ordinal and total count. It is suitable for scenarios where monitoring in-page search behavior is required, improving search interaction visibility and user experience.
 
 **Since:** 12

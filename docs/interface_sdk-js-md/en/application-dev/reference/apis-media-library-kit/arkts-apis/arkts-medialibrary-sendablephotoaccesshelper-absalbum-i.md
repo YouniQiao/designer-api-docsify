@@ -1,5 +1,9 @@
 # AbsAlbum
 
+```TypeScript
+interface AbsAlbum extends lang.ISendable
+```
+
 Defines the abstract interface of albums.
 
 **Inheritance/Implementation:** AbsAlbum extends lang.ISendable

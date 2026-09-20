@@ -1,5 +1,9 @@
 # ChipV2LocalizedLabelMarginConfig
 
+```TypeScript
+export interface ChipV2LocalizedLabelMarginConfig
+```
+
 Defines the margin configuration between the localized text and the left and right icons.
 
 **Since:** 26.0.0
@@ -24,11 +28,11 @@ Default values:
 
 When **size** is **ChipV2Size.SMALL**, the default value of **end** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`.
+`LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`.
 
 When **size** is **ChipV2Size.NORMAL**, the default value of **end** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`.
+`LengthMetrics.resource($r('sys.float.chip_normal_text_margin'))`.
 
 Unit: vp
 
@@ -60,11 +64,11 @@ Default values:
 
 When **size** is **ChipV2Size.SMALL**, the default value of **start** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin'))`.
+`LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`.
 
 When **size** is **ChipV2Size.NORMAL**, the default value of **start** is:
 
-`LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin'))`.
+`LengthMetrics.resource($r('sys.float.chip_normal_text_margin'))`.
 
 Unit: vp
 

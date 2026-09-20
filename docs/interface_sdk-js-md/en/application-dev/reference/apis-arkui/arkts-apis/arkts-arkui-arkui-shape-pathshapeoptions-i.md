@@ -1,5 +1,9 @@
 # PathShapeOptions
 
+```TypeScript
+interface PathShapeOptions
+```
+
 Represents the parameter of the constructor used to create a **PathShape** object.
 
 **Since:** 12

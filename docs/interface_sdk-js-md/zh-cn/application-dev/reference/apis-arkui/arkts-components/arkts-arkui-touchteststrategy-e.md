@@ -1,5 +1,9 @@
 # TouchTestStrategy
 
+```TypeScript
+declare enum TouchTestStrategy
+```
+
 事件派发策略。
 
 **起始版本：** 11

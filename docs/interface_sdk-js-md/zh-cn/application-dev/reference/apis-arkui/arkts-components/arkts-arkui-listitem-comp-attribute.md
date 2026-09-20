@@ -1,5 +1,9 @@
 # ListItem属性/事件
 
+```TypeScript
+declare class ListItemAttribute extends CommonMethod<ListItemAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 **继承/实现关系：** ListItemAttribute extends CommonMethod<ListItemAttribute>
@@ -80,7 +84,7 @@ selectable(value: boolean)
 selected(value: boolean)
 ```
 
-设置当前ListItem选中状态。该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。该属性需要在设置多态样式前使用才能生效选中态样式。
+设置当前ListItem选中状态。该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。该属性需要在设置多态样式前使用才能生效选中态样式。
 
 **起始版本：** 10
 

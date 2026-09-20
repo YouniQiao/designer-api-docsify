@@ -1,5 +1,9 @@
 # HuksKeyGenerateType
 
+```TypeScript
+export enum HuksKeyGenerateType
+```
+
 表示生成密钥的类型。
 
 **起始版本：** 8

@@ -1,5 +1,9 @@
 # PatternLockController
 
+```TypeScript
+declare class PatternLockController
+```
+
 PatternLock组件的控制器，用于重置组件状态和设置图案密码状态。
 
 ## 导入对象

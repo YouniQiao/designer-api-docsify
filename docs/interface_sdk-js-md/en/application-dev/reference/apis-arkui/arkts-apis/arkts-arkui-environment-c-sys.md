@@ -1,5 +1,9 @@
 # Environment
 
+```TypeScript
+declare class Environment
+```
+
 For details about how to use environment parameters, see [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
 
 ## Built-in Environment Variables

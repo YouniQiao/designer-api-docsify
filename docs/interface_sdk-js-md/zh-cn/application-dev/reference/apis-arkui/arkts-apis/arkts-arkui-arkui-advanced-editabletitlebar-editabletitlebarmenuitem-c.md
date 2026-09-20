@@ -1,5 +1,9 @@
 # EditableTitleBarMenuItem
 
+```TypeScript
+export declare class EditableTitleBarMenuItem
+```
+
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

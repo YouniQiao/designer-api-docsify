@@ -67,6 +67,8 @@ call.separateConference(1).then(() => {
 ```
 
 
+<a id="separateconference-1"></a>
+
 ## separateConference
 
 ```TypeScript

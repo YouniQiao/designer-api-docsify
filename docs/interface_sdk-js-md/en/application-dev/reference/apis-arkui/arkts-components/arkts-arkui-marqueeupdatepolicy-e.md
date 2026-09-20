@@ -1,5 +1,9 @@
 # MarqueeUpdatePolicy
 
+```TypeScript
+declare enum MarqueeUpdatePolicy
+```
+
 Sets the scrolling policy of the marquee after its attributes are updated.
 
 **Since:** 23

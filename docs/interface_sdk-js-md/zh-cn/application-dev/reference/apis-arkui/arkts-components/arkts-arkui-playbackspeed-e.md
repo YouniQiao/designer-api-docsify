@@ -1,5 +1,9 @@
 # PlaybackSpeed
 
+```TypeScript
+declare enum PlaybackSpeed
+```
+
 视频播放倍速选项。
 
 **起始版本：** 8

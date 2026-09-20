@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper
+```
+
 提供访问照片和相册的功能。
 
 **起始版本：** 10
@@ -549,6 +553,8 @@ createAlbum(name: string, callback: AsyncCallback<Album>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="createalbum-1"></a>
+
 ## createAlbum
 
 ```TypeScript
@@ -655,6 +661,8 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="createasset-1"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -709,6 +717,8 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="createasset-2"></a>
 
 ## createAsset
 
@@ -765,6 +775,8 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="createasset-3"></a>
 
 ## createAsset
 
@@ -1057,6 +1069,8 @@ deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="deletealbums-1"></a>
+
 ## deleteAlbums
 
 ```TypeScript
@@ -1148,6 +1162,8 @@ deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="deleteassets-1"></a>
 
 ## deleteAssets
 
@@ -1587,6 +1603,8 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="gethiddenalbums-1"></a>
+
 ## getHiddenAlbums
 
 ```TypeScript
@@ -1622,6 +1640,8 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 **示例**
 
 参见 [getHiddenAlbums](#gethiddenalbums)
+
+<a id="gethiddenalbums-2"></a>
 
 ## getHiddenAlbums
 
@@ -1871,6 +1891,8 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callbac
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="getphotoindex-1"></a>
 
 ## getPhotoIndex
 
@@ -3091,6 +3113,8 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
+<a id="removeforminfo-1"></a>
+
 ## removeFormInfo
 
 ```TypeScript
@@ -3226,6 +3250,8 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="saveforminfo-1"></a>
 
 ## saveFormInfo
 
@@ -3654,6 +3680,8 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="startthumbnailcreationtask-1"></a>
 
 ## startThumbnailCreationTask
 

@@ -1,5 +1,9 @@
 # StopCode
 
+```TypeScript
+export enum StopCode
+```
+
 Enumerates the stop code, which is used to ON_STOP function.
 
 **Since:** 26.0.1

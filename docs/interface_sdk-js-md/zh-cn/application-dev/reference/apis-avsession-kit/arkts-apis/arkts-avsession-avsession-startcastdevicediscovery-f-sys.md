@@ -56,6 +56,8 @@ avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
 ```
 
 
+<a id="startcastdevicediscovery-1"></a>
+
 ## startCastDeviceDiscovery
 
 ```TypeScript
@@ -88,6 +90,8 @@ function startCastDeviceDiscovery(filter: number, callback: AsyncCallback<void>)
 
 参见 [startCastDeviceDiscovery](#startcastdevicediscovery)
 
+
+<a id="startcastdevicediscovery-2"></a>
 
 ## startCastDeviceDiscovery
 

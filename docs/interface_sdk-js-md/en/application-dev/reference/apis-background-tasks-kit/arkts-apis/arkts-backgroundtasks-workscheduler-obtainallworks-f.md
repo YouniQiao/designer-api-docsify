@@ -72,6 +72,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 ```
 
 
+<a id="obtainallworks-1"></a>
+
 ## obtainAllWorks
 
 ```TypeScript
@@ -105,6 +107,8 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 See [obtainAllWorks](#obtainallworks)
 
+
+<a id="obtainallworks-2"></a>
 
 ## obtainAllWorks
 

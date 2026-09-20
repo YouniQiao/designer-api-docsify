@@ -67,6 +67,8 @@ print.connectPrinter(printerId).then(() => {
 ```
 
 
+<a id="connectprinter-1"></a>
+
 ## connectPrinter
 
 ```TypeScript

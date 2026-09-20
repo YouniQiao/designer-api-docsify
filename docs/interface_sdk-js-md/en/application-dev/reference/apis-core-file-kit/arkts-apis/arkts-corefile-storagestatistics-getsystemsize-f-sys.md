@@ -62,6 +62,8 @@ storageStatistics.getSystemSize((error: BusinessError, number: number) => {
 ```
 
 
+<a id="getsystemsize-1"></a>
+
 ## getSystemSize
 
 ```TypeScript

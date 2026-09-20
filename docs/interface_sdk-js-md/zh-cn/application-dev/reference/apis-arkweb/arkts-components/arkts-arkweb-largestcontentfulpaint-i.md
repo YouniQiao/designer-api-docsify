@@ -1,5 +1,9 @@
 # LargestContentfulPaint
 
+```TypeScript
+declare interface LargestContentfulPaint
+```
+
 提供网页绘制页面最大内容的详细信息，包括导航时间和各类绘制时间。适用于需要监控页面渲染性能的场景，提升性能优化的准确性和用户体验。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # AudioVolumeManager
 
+```TypeScript
+interface AudioVolumeManager
+```
+
 This interface implements audio volume management.
 
 Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
@@ -152,6 +156,8 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | groupId | number | Yes | Volume group ID. The default value is **DEFAULT_VOLUME_GROUP_ID**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise, **err** is an error object. |
+
+<a id="getvolumegroupmanager-1"></a>
 
 ## getVolumeGroupManager
 

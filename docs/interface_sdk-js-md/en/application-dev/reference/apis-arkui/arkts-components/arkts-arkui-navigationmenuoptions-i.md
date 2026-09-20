@@ -1,5 +1,9 @@
 # NavigationMenuOptions
 
+```TypeScript
+declare interface NavigationMenuOptions
+```
+
 Defines options for menu items in the upper right corner of the page.
 
 **Since:** 19

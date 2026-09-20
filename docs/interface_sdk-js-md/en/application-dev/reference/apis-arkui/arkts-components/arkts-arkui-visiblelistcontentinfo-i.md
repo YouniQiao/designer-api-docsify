@@ -1,5 +1,9 @@
 # VisibleListContentInfo
 
+```TypeScript
+declare interface VisibleListContentInfo
+```
+
 Describes the details of the child components in the visible area of a list.
 
 **Since:** 12

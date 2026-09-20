@@ -1,5 +1,9 @@
 # BleScanner
 
+```TypeScript
+interface BleScanner
+```
+
 Manages the ble scanner. Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md) to create an BleScanner instance.
 
 **Since:** 15

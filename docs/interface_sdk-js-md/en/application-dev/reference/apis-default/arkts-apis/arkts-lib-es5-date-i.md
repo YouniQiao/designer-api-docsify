@@ -1,5 +1,9 @@
 # Date
 
+```TypeScript
+interface Date
+```
+
 ## Modules to Import
 
 ```TypeScript
@@ -410,7 +414,7 @@ Used by the JSON.stringify method to enable the transformation of an object's da
 ## toLocaleDateString
 
 ```TypeScript
-toLocaleDateString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+toLocaleDateString(locales?: string[], options?: Intl.DateTimeFormatOptions): string
 ```
 
 Converts a date to a string by using the current or specified locale.
@@ -425,7 +429,7 @@ Converts a date to a string by using the current or specified locale.
 ## toLocaleString
 
 ```TypeScript
-toLocaleString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+toLocaleString(locales?: string[], options?: Intl.DateTimeFormatOptions): string
 ```
 
 Converts a date and time to a string by using the current or specified locale.
@@ -440,7 +444,7 @@ Converts a date and time to a string by using the current or specified locale.
 ## toLocaleTimeString
 
 ```TypeScript
-toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+toLocaleTimeString(locales?: string[], options?: Intl.DateTimeFormatOptions): string
 ```
 
 Converts a time to a string by using the current or specified locale.

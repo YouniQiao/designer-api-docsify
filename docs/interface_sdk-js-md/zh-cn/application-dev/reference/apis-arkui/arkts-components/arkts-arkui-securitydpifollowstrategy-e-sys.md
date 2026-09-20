@@ -1,5 +1,9 @@
 # SecurityDpiFollowStrategy（系统接口）
 
+```TypeScript
+declare enum SecurityDpiFollowStrategy
+```
+
 定义SecurityUIExtensionComponent内容分辨率跟随策略的枚举。
 
 **起始版本：** 26.0.0

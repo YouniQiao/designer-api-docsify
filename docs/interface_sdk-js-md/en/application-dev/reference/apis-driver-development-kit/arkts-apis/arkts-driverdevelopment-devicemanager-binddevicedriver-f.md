@@ -83,6 +83,8 @@ try {
 ```
 
 
+<a id="binddevicedriver-1"></a>
+
 ## bindDeviceDriver
 
 ```TypeScript

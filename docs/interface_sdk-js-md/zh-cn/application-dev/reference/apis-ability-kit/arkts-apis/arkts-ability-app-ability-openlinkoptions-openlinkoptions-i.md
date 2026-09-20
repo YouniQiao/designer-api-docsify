@@ -1,5 +1,9 @@
 # OpenLinkOptions
 
+```TypeScript
+export default interface OpenLinkOptions
+```
+
 OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openlink)的入参，用于标识是否仅打开AppLinking和传递键值对可选参数。
 
 **起始版本：** 12

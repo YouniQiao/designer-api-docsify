@@ -1,5 +1,9 @@
 # LocalSocket
 
+```TypeScript
+export interface LocalSocket
+```
+
 Defines a **LocalSocket** object. Before calling LocalSocket APIs, you need to call [socket.constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md) to create a **LocalSocket** object.
 
 **Since:** 11

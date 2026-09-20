@@ -1,5 +1,9 @@
 # SizeOptions
 
+```TypeScript
+declare interface SizeOptions
+```
+
 宽高尺寸类型，用于描述组件布局时的宽高尺寸大小。
 
 **起始版本：** 7

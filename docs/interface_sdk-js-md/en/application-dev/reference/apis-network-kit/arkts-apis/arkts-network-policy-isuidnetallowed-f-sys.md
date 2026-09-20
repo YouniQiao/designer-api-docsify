@@ -88,6 +88,8 @@ policy
 ```
 
 
+<a id="isuidnetallowed-1"></a>
+
 ## isUidNetAllowed
 
 ```TypeScript
@@ -133,6 +135,8 @@ Checks whether the application specified by a given UID is allowed to access a m
 See [isUidNetAllowed](#isuidnetallowed)
 
 
+<a id="isuidnetallowed-2"></a>
+
 ## isUidNetAllowed
 
 ```TypeScript
@@ -172,6 +176,8 @@ Obtains whether the network of the specified iface can be accessed by the corres
 
 See [isUidNetAllowed](#isuidnetallowed)
 
+
+<a id="isuidnetallowed-3"></a>
 
 ## isUidNetAllowed
 

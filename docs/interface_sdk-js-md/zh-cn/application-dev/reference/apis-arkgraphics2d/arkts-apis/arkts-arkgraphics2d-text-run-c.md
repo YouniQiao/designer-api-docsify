@@ -1,5 +1,9 @@
 # Run
 
+```TypeScript
+class Run
+```
+
 文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取。
 
 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调用对应方法。
@@ -153,6 +157,8 @@ struct Index {
 }
 ```
 
+<a id="getglyphs-1"></a>
+
 ## getGlyphs
 
 ```TypeScript
@@ -296,6 +302,8 @@ struct Index {
   }
 }
 ```
+
+<a id="getpositions-1"></a>
 
 ## getPositions
 

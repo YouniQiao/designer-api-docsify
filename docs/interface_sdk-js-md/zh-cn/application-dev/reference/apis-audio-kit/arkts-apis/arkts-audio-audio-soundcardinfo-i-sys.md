@@ -1,5 +1,9 @@
 # SoundCardInfo（系统接口）
 
+```TypeScript
+interface SoundCardInfo
+```
+
 描述声卡信息。
 
 **起始版本：** 26.0.0

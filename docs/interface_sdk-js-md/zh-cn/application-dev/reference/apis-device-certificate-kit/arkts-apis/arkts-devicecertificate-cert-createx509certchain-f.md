@@ -270,6 +270,8 @@ createX509CertChain();
 ```
 
 
+<a id="createx509certchain-1"></a>
+
 ## createX509CertChain
 
 ```TypeScript
@@ -303,6 +305,8 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 参见 [createX509CertChain](#createx509certchain)
 
+
+<a id="createx509certchain-2"></a>
 
 ## createX509CertChain
 

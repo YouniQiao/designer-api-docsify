@@ -63,6 +63,8 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', 
 ```
 
 
+<a id="queryparticipantsbyinvitation-1"></a>
+
 ## queryParticipantsByInvitation
 
 ```TypeScript

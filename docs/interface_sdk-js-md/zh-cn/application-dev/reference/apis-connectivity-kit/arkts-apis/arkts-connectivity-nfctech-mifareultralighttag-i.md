@@ -1,5 +1,9 @@
 # MifareUltralightTag
 
+```TypeScript
+export interface MifareUltralightTag extends TagSession
+```
+
 MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。
 
 TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
@@ -141,6 +145,8 @@ function nfcTechDemo() {
 }
 ```
 
+<a id="readmultiplepages-1"></a>
+
 ## readMultiplePages
 
 ```TypeScript
@@ -276,6 +282,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesinglepage-1"></a>
 
 ## writeSinglePage
 

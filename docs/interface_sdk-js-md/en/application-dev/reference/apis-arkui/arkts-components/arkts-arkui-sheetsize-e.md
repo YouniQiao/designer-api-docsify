@@ -1,5 +1,9 @@
 # SheetSize
 
+```TypeScript
+declare enum SheetSize
+```
+
 Defines sheet size type.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # SlideRange
 
+```TypeScript
+declare interface SlideRange
+```
+
 定义有效滑动区间。
 
 > **说明：** 

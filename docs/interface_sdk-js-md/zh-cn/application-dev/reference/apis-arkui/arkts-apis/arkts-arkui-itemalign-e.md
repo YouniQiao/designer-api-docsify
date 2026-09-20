@@ -1,5 +1,9 @@
 # ItemAlign
 
+```TypeScript
+declare enum ItemAlign
+```
+
 ItemAlign enumeration description
 
 @enum { number }

@@ -1,5 +1,9 @@
 # DataChangeListener
 
+```TypeScript
+declare interface DataChangeListener
+```
+
 Listener for data changes.
 
 > **NOTE:** 
@@ -227,6 +231,8 @@ Invoked when all data is reloaded. For data items whose key remains unchanged, t
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="ondatareloaded-1"></a>
 
 ## onDataReloaded
 

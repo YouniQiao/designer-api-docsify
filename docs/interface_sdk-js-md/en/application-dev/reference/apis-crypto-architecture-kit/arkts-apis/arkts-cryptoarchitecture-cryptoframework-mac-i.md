@@ -1,5 +1,9 @@
 # Mac
 
+```TypeScript
+interface Mac
+```
+
 Message authentication code (MAC) interface, defining methods for calculating MACs based on symmetric keys. Before use, you must create a **Mac** instance by using [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md).
 
 **Since:** 9
@@ -48,6 +52,8 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 ```TypeScript
 For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
 ```
+
+<a id="dofinal-1"></a>
 
 ## doFinal
 
@@ -219,6 +225,8 @@ Initializes the MAC computation using a symmetric key. This API uses an asynchro
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
+<a id="init-1"></a>
+
 ## init
 
 ```TypeScript
@@ -322,6 +330,8 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+<a id="update-1"></a>
 
 ## update
 

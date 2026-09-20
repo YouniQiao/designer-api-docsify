@@ -1,5 +1,9 @@
 # DataAddOperation
 
+```TypeScript
+interface DataAddOperation
+```
+
 Represents an operation for adding data.
 
 **Since:** 12

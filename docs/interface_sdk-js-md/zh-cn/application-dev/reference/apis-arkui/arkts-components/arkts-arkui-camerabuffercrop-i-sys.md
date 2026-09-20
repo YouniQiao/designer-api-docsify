@@ -1,5 +1,9 @@
 # CameraBufferCrop（系统接口）
 
+```TypeScript
+declare interface CameraBufferCrop
+```
+
 相机移轴裁剪参数。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # OnGeolocationShowEvent
 
+```TypeScript
+declare interface OnGeolocationShowEvent
+```
+
 定义收到地理位置获取请求时触发的回调信息，包括源信息和地理对象。适用于需要处理地理位置权限的场景。
 
 **起始版本：** 12

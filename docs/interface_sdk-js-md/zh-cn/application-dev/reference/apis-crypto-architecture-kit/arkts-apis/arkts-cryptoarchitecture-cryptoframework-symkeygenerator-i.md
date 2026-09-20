@@ -1,5 +1,9 @@
 # SymKeyGenerator
 
+```TypeScript
+interface SymKeyGenerator
+```
+
 对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md)方法创建一个SymKeyGenerator实例。
 
 **起始版本：** 9
@@ -99,6 +103,8 @@ function testConvertKey() {
     });
 }
 ```
+
+<a id="convertkey-1"></a>
 
 ## convertKey
 
@@ -307,6 +313,8 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
       console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
     });
 ```
+
+<a id="generatesymkey-1"></a>
 
 ## generateSymKey
 

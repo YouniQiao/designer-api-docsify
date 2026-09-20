@@ -1,5 +1,9 @@
 # abilityAccessCtrl(Application Access Control)
 
+```TypeScript
+declare namespace abilityAccessCtrl
+```
+
 **Since:** 8
 
 **System capability:** SystemCapability.Security.AccessToken

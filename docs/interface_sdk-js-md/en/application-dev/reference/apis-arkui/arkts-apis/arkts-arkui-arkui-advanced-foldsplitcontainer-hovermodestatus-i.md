@@ -1,5 +1,9 @@
 # HoverModeStatus
 
+```TypeScript
+export interface HoverModeStatus
+```
+
 Provides device or application information covering fold status, hover mode, application rotation, and window status type.
 
 **Since:** 12

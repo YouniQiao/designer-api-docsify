@@ -1,5 +1,9 @@
 # WebKeyboardAvoidMode
 
+```TypeScript
+declare enum WebKeyboardAvoidMode
+```
+
 软键盘避让的模式。
 
 **起始版本：** 12

@@ -93,6 +93,8 @@ try {
 ```
 
 
+<a id="removedisallowedbluetoothprotocols-1"></a>
+
 ## removeDisallowedBluetoothProtocols
 
 ```TypeScript

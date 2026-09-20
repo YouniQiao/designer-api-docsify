@@ -1,5 +1,9 @@
 # DistributedObject
 
+```TypeScript
+interface DistributedObject
+```
+
 Provides APIs for managing a distributed data object. Before using any API of this class, use createDistributedObject() to create a DistributedObject object.
 
 **Since:** 8
@@ -44,7 +48,7 @@ Unsubscribes from data changes of this distributed data object.
 ```TypeScript
 off(
       type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -54,7 +58,7 @@ Unsubscribes from the status change of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**Substitutes:** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -93,7 +97,7 @@ Subscribes to data changes of this distributed data object.
 ```TypeScript
 on(
       type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -103,7 +107,7 @@ Subscribes to status changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**Substitutes:** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

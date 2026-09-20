@@ -1,5 +1,9 @@
 # ToolBarSymbolGlyphOptions
 
+```TypeScript
+export interface ToolBarSymbolGlyphOptions
+```
+
 ToolBarSymbolGlyphOptions定义图标的属性。
 
 **起始版本：** 13
@@ -20,7 +24,7 @@ activated?: SymbolGlyphModifier
 
 工具栏symbol图标激活态样式。
 
-默认值：fontColor：&#36;r('sys.color.icon_emphasize')，fontSize：24vp。
+默认值：fontColor：$r('sys.color.icon_emphasize')，fontSize：24vp。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -40,7 +44,7 @@ normal?: SymbolGlyphModifier
 
 工具栏symbol图标普通态样式。
 
-默认值：fontColor：&#36;r('sys.color.icon_primary')，fontSize：24vp。
+默认值：fontColor：$r('sys.color.icon_primary')，fontSize：24vp。
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

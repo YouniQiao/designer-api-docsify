@@ -1,5 +1,9 @@
 # SheetType
 
+```TypeScript
+declare enum SheetType
+```
+
 半模态弹窗的样式。
 
 **起始版本：** 11

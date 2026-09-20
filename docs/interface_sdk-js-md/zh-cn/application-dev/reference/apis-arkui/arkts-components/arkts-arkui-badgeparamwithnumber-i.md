@@ -1,5 +1,9 @@
 # BadgeParamWithNumber
 
+```TypeScript
+declare interface BadgeParamWithNumber extends BadgeParam
+```
+
 BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
 
 **继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md)

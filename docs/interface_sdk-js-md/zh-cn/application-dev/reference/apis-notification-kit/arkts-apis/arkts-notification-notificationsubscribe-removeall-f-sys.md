@@ -110,6 +110,8 @@ notificationSubscribe.removeAll(userId).then(() => {
 ```
 
 
+<a id="removeall-1"></a>
+
 ## removeAll
 
 ```TypeScript
@@ -147,6 +149,8 @@ function removeAll(callback: AsyncCallback<void>): void
 
 参见 [removeAll](#removeall)
 
+
+<a id="removeall-2"></a>
 
 ## removeAll
 
@@ -187,6 +191,8 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 参见 [removeAll](#removeall)
 
+
+<a id="removeall-3"></a>
 
 ## removeAll
 
@@ -232,6 +238,8 @@ function removeAll(userId: number): Promise<void>
 
 参见 [removeAll](#removeall)
 
+
+<a id="removeall-4"></a>
 
 ## removeAll
 

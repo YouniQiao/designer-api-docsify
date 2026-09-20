@@ -1,5 +1,9 @@
 # FlowItem properties/events
 
+```TypeScript
+declare class FlowItemAttribute extends CommonMethod<FlowItemAttribute>
+```
+
 Defines the water flow item attribute.
 
 **Inheritance/Implementation:** FlowItemAttribute extends CommonMethod<FlowItemAttribute>

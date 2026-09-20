@@ -1,5 +1,9 @@
 # OnSslErrorEventReceiveEvent
 
+```TypeScript
+declare interface OnSslErrorEventReceiveEvent
+```
+
 Defines the callback information triggered when the web page receives an SSL error, including the error code and certificate chain. It is suitable for scenarios where handling SSL errors is required, improving security exception monitoring and handling capabilities.
 
 **Since:** 12

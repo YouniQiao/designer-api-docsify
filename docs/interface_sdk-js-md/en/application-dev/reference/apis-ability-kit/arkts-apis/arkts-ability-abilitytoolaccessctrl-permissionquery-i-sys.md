@@ -1,5 +1,9 @@
 # PermissionQuery (System API)
 
+```TypeScript
+interface PermissionQuery
+```
+
 Permission query information.
 
 **Since:** 26.0.0

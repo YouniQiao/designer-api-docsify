@@ -1,5 +1,9 @@
 # X500DistinguishedName
 
+```TypeScript
+interface X500DistinguishedName
+```
+
 Provides APIs for X.500 distinguished name operations.
 
 **Since:** 12
@@ -186,6 +190,8 @@ async function getName() {
 }
 ```
 
+<a id="getname-1"></a>
+
 ## getName
 
 ```TypeScript
@@ -225,6 +231,8 @@ Obtains RDN strings based on the specified encoding format.
 
 See [getName](#getname)
 
+<a id="getname-2"></a>
+
 ## getName
 
 ```TypeScript
@@ -263,6 +271,8 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 **Examples**
 
 See [getName](#getname)
+
+<a id="getname-3"></a>
 
 ## getName
 

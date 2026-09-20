@@ -148,6 +148,8 @@ try {
 ```
 
 
+<a id="setabilityenabled-1"></a>
+
 ## setAbilityEnabled
 
 ```TypeScript
@@ -186,6 +188,8 @@ Enables or disables an ability. This API uses an asynchronous callback to return
 
 See [setAbilityEnabled](#setabilityenabled)
 
+
+<a id="setabilityenabled-2"></a>
 
 ## setAbilityEnabled
 

@@ -1,5 +1,9 @@
 # Session
 
+```TypeScript
+export interface Session
+```
+
 Session的实例表示在某个SE Reader实例上创建连接会话。通过[Reader.openSession](arkts-connectivity-omapi-reader-i.md#opensession)获取Session实例。
 
 **起始版本：** 10
@@ -372,6 +376,8 @@ function secureElementDemo() {
 }
 ```
 
+<a id="openbasicchannel-1"></a>
+
 ## openBasicChannel
 
 ```TypeScript
@@ -405,6 +411,8 @@ openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 **示例**
 
 参见 [openBasicChannel](#openbasicchannel)
+
+<a id="openbasicchannel-2"></a>
 
 ## openBasicChannel
 
@@ -445,6 +453,8 @@ openBasicChannel(aid: number[], p2: number): Promise<Channel>
 **示例**
 
 参见 [openBasicChannel](#openbasicchannel)
+
+<a id="openbasicchannel-3"></a>
 
 ## openBasicChannel
 
@@ -632,6 +642,8 @@ function secureElementDemo() {
 }
 ```
 
+<a id="openlogicalchannel-1"></a>
+
 ## openLogicalChannel
 
 ```TypeScript
@@ -665,6 +677,8 @@ openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 **示例**
 
 参见 [openLogicalChannel](#openlogicalchannel)
+
+<a id="openlogicalchannel-2"></a>
 
 ## openLogicalChannel
 
@@ -705,6 +719,8 @@ openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 **示例**
 
 参见 [openLogicalChannel](#openlogicalchannel)
+
+<a id="openlogicalchannel-3"></a>
 
 ## openLogicalChannel
 

@@ -1,5 +1,9 @@
 # PermissionQueryResult（系统接口）
 
+```TypeScript
+interface PermissionQueryResult
+```
+
 权限查询结果。
 
 **起始版本：** 26.0.0

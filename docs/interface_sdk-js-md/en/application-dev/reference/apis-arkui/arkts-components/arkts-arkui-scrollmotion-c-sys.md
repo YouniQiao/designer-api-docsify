@@ -1,5 +1,9 @@
 # ScrollMotion (System API)
 
+```TypeScript
+declare class ScrollMotion
+```
+
 Rolling animation model: You can build rolling animation based on the initial position, initial speed, boundary position, and spring attributes.
 
 **Since:** 7

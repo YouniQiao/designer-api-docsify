@@ -1,5 +1,9 @@
 # AdLoader
 
+```TypeScript
+export class AdLoader
+```
+
 提供加载广告的功能。
 
 **起始版本：** 11

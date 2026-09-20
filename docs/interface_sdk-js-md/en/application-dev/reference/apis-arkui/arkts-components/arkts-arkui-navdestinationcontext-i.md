@@ -1,5 +1,9 @@
 # NavDestinationContext
 
+```TypeScript
+declare interface NavDestinationContext
+```
+
 Defines the context information for the **NavDestination** component.
 
 **Since:** 11

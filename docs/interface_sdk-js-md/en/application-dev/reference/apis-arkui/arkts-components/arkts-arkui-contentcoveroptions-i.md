@@ -1,5 +1,9 @@
 # ContentCoverOptions
 
+```TypeScript
+declare interface ContentCoverOptions extends BindOptions
+```
+
 Inherited from [BindOptions](arkts-arkui-bindoptions-i.md).
 
 Provides content options of the modal.

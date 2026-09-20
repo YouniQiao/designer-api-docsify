@@ -1,5 +1,9 @@
 # TranslateOptions
 
+```TypeScript
+declare interface TranslateOptions
+```
+
 Defines the options of translate.
 
 **Since:** 7

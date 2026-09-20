@@ -1,5 +1,9 @@
 # Direction
 
+```TypeScript
+declare enum Direction
+```
+
 Sets the horizontal layout of elements.
 
 @enum { number }

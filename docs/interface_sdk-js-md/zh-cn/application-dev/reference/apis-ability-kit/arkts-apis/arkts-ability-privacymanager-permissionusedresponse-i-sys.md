@@ -1,5 +1,9 @@
 # PermissionUsedResponse（系统接口）
 
+```TypeScript
+interface PermissionUsedResponse
+```
+
 表示所有应用或设备的访问记录。
 
 **起始版本：** 9

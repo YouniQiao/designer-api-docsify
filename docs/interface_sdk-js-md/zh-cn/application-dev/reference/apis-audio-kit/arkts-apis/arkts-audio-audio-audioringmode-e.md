@@ -1,5 +1,9 @@
 # AudioRingMode
 
+```TypeScript
+enum AudioRingMode
+```
+
 表示铃声模式的枚举。
 
 **起始版本：** 7

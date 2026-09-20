@@ -1,5 +1,9 @@
 # FileMapping
 
+```TypeScript
+declare interface FileMapping
+```
+
 文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-file-fs-mmap-f.md)或方法[mmapSync()](arkts-corefile-file-fs-mmapsync-f.md)构建一个FileMapping实例。
 
 **起始版本：** 26.0.0
@@ -248,6 +252,8 @@ mapping.msync(50, buffer.byteLength).then(() => {
 });
 ```
 
+<a id="msync-1"></a>
+
 ## msync
 
 ```TypeScript
@@ -351,6 +357,8 @@ mapping.unmapSync();
 fileIo.closeSync(file);
 ```
 
+<a id="msyncsync-1"></a>
+
 ## msyncSync
 
 ```TypeScript
@@ -451,6 +459,8 @@ console.info(`Succeeded in reading data, size is: ${bytesRead}`);
 mapping.unmapSync();
 fileIo.closeSync(file);
 ```
+
+<a id="read-1"></a>
 
 ## read
 
@@ -790,6 +800,8 @@ mapping.msyncSync();
 mapping.unmapSync();
 fileIo.closeSync(file);
 ```
+
+<a id="write-1"></a>
 
 ## write
 

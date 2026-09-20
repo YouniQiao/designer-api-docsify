@@ -69,6 +69,8 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 ```
 
 
+<a id="sendevent-1"></a>
+
 ## sendEvent
 
 ```TypeScript
@@ -81,7 +83,7 @@ Sends an accessibility event. The event will be distributed to registered access
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)(event: EventInfo)
+**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1)(event: EventInfo)
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

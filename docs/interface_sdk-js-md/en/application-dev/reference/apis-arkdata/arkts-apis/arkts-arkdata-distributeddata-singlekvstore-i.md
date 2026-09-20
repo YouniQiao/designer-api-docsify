@@ -1,5 +1,9 @@
 # SingleKVStore
 
+```TypeScript
+interface SingleKVStore extends KVStore
+```
+
 Provides APIs to query and synchronize data in a single KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md).
 
 Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance.
@@ -73,6 +77,8 @@ try {
     console.error('CloseResultSet e ' + e);
 }
 ```
+
+<a id="closeresultset-1"></a>
 
 ## closeResultSet
 
@@ -198,6 +204,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -425,6 +433,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -586,6 +596,8 @@ try {
 }
 ```
 
+<a id="getentries-2"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -741,6 +753,8 @@ try {
     console.error('GetEntries e ' + e);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -1060,6 +1074,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -1222,6 +1238,8 @@ try {
 }
 ```
 
+<a id="getresultset-2"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -1378,6 +1396,8 @@ try {
     console.error('GetResultSet e ' + e);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -1626,6 +1646,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -1764,6 +1786,8 @@ try {
 }
 ```
 
+<a id="getsecuritylevel-1"></a>
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -1813,6 +1837,8 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -1859,6 +1885,8 @@ Subscribes to data changes of the specified type.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -1957,6 +1985,8 @@ try {
     console.error('RemoveDeviceData e ' + e);
 }
 ```
+
+<a id="removedevicedata-1"></a>
 
 ## removeDeviceData
 
@@ -2088,6 +2118,8 @@ try {
     console.error('SetSyncParam e ' + e);
 }
 ```
+
+<a id="setsyncparam-1"></a>
 
 ## setSyncParam
 

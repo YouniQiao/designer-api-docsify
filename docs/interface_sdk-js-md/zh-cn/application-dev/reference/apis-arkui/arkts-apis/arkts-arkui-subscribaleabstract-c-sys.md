@@ -1,5 +1,9 @@
 # SubscribaleAbstract（系统接口）
 
+```TypeScript
+declare abstract class SubscribaleAbstract
+```
+
 可订阅抽象类，用于管理所持有的属性集合，提供属性的添加、删除和变更通知能力。
 
 **起始版本：** 7

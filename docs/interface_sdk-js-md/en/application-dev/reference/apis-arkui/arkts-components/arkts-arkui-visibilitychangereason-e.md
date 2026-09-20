@@ -1,5 +1,9 @@
 # VisibilityChangeReason
 
+```TypeScript
+declare enum VisibilityChangeReason
+```
+
 Enumerates reasons for **NavDestination** visibility changes.
 
 **Since:** 21

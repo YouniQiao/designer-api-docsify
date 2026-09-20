@@ -1,5 +1,9 @@
 # IntelligentTrackingPreventionDetails
 
+```TypeScript
+declare interface IntelligentTrackingPreventionDetails
+```
+
 Provides detailed information about intelligent tracking prevention, including the website domain and tracker domain. It is suitable for scenarios where monitoring ad blocking behavior is required, improving privacy protection transparency and controllability.
 
 **Since:** 12

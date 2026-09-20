@@ -1,5 +1,9 @@
 # MeasureUtils
 
+```TypeScript
+export class MeasureUtils
+```
+
 Provides APIs for measuring text metrics, such as text height and width.
 
 > **NOTE:** 

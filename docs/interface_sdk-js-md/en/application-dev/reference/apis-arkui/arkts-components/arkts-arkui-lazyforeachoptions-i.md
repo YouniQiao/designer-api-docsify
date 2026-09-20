@@ -1,5 +1,9 @@
 # LazyForEachOptions
 
+```TypeScript
+declare interface LazyForEachOptions
+```
+
 Defines the options for LazyForEach.
 
 **Since:** 26.0.0

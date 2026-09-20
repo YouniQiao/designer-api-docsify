@@ -1,5 +1,9 @@
 # TagSession
 
+```TypeScript
+export interface TagSession
+```
+
 本模块是对NFC TagSession的使用说明。
 
 > **注意：**
@@ -488,6 +492,8 @@ function tagSessionDemo() {
 }
 ```
 
+<a id="senddata-1"></a>
+
 ## sendData
 
 ```TypeScript
@@ -712,6 +718,8 @@ function tagSessionDemo() {
     }
 }
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

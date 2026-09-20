@@ -79,6 +79,8 @@ dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
 ```
 
 
+<a id="getretentionsandboxlist-1"></a>
+
 ## getRetentionSandboxList
 
 ```TypeScript
@@ -114,6 +116,8 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 
 参见 [getRetentionSandboxList](#getretentionsandboxlist)
 
+
+<a id="getretentionsandboxlist-2"></a>
 
 ## getRetentionSandboxList
 

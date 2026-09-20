@@ -104,6 +104,8 @@ notificationManager.setNotificationEnableSlot(
 ```
 
 
+<a id="setnotificationenableslot-1"></a>
+
 ## setNotificationEnableSlot
 
 ```TypeScript
@@ -154,6 +156,8 @@ function setNotificationEnableSlot(
 
 参见 [setNotificationEnableSlot](#setnotificationenableslot)
 
+
+<a id="setnotificationenableslot-2"></a>
 
 ## setNotificationEnableSlot
 

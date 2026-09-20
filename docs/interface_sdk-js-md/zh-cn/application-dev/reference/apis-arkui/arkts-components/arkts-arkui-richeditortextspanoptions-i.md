@@ -1,5 +1,9 @@
 # RichEditorTextSpanOptions
 
+```TypeScript
+declare interface RichEditorTextSpanOptions
+```
+
 添加文本的偏移位置和文本样式信息。
 
 **起始版本：** 10

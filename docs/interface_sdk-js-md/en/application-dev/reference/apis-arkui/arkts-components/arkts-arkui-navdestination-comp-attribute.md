@@ -1,5 +1,9 @@
 # NavDestination properties/events
 
+```TypeScript
+declare class NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
+```
+
 The universal attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -39,6 +43,8 @@ Sets the icon of the back button on the title bar.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
+
+<a id="backbuttonicon-1"></a>
 
 ## backButtonIcon
 
@@ -291,6 +297,8 @@ Specifies whether to hide the title bar.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the title bar.<br>Default value: **false**.<br>**true**: Hide the title bar.<br>**false**: Show the title bar. |
 
+<a id="hidetitlebar-1"></a>
+
 ## hideTitleBar
 
 ```TypeScript
@@ -400,6 +408,8 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
+
+<a id="menus-1"></a>
 
 ## menus
 

@@ -1,5 +1,9 @@
 # HceService
 
+```TypeScript
+export class HceService
+```
+
 提供HCE卡模拟的实现，主要包括接收对端读卡设备的APDU数据，并响应APDU数据到对端读卡设备。使用HCE相关接口前，必须先判断设备是否支持HCE卡模拟能力。
 
 **起始版本：** 8
@@ -543,6 +547,8 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
+
+<a id="transmit-1"></a>
 
 ## transmit
 

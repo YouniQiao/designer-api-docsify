@@ -1,5 +1,9 @@
 # FormExtensionContext
 
+```TypeScript
+declare class FormExtensionContext extends ExtensionContext
+```
+
 FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
@@ -202,6 +206,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="disconnectserviceextensionability-1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -331,6 +337,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<a id="startability-1"></a>
 
 ## startAbility
 

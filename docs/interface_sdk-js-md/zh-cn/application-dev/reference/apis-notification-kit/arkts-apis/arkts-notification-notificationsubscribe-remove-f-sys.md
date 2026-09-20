@@ -147,6 +147,8 @@ notificationSubscribe.remove(hashCodes, reason).then(() => {
 ```
 
 
+<a id="remove-1"></a>
+
 ## remove
 
 ```TypeScript
@@ -195,6 +197,8 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 参见 [remove](#remove)
 
 
+<a id="remove-2"></a>
+
 ## remove
 
 ```TypeScript
@@ -236,6 +240,8 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 参见 [remove](#remove)
 
 
+<a id="remove-3"></a>
+
 ## remove
 
 ```TypeScript
@@ -275,6 +281,8 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 
 参见 [remove](#remove)
 
+
+<a id="remove-4"></a>
 
 ## remove
 
@@ -321,6 +329,8 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 参见 [remove](#remove)
 
+
+<a id="remove-5"></a>
 
 ## remove
 

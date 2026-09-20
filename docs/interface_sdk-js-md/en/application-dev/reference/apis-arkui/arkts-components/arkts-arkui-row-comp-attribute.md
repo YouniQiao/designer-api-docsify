@@ -1,5 +1,9 @@
 # Row properties/events
 
+```TypeScript
+declare class RowAttribute extends CommonMethod<RowAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 The [universal events](arkts-arkui-commonmethod-c.md) are supported.

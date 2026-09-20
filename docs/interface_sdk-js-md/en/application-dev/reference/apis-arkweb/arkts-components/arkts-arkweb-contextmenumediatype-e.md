@@ -1,5 +1,9 @@
 # ContextMenuMediaType
 
+```TypeScript
+declare enum ContextMenuMediaType
+```
+
 Enumerates the media types that trigger the context menu.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # SymbolGlyph属性/事件
 
+```TypeScript
+declare class SymbolGlyphAttribute extends CommonMethod<SymbolGlyphAttribute>
+```
+
 支持[通用属性](arkts-arkui-commonmethod-c.md)，不支持文本通用属性，仅支持以下特有属性。
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。
@@ -69,6 +73,8 @@ fontColor(value: Array<ResourceColor>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | SymbolGlyph组件字体颜色。<br> 当value为undefined时，使用图标的默认颜色，默认颜色跟随主题。<br>不同渲染策略下颜色设置效果不同，详见[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)枚举说明。 |
+
+<a id="fontcolor-1"></a>
 
 ## fontColor
 
@@ -157,6 +163,8 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | 是 | SymbolGlyph组件字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 
@@ -307,6 +315,8 @@ symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)
 | --- | --- | --- | --- |
 | symbolEffect | [SymbolEffect](arkts-arkui-symboleffect-c.md) | 是 | SymbolGlyph组件动效策略。 |
 | isActive | boolean | 否 | SymbolGlyph组件动效播放状态。<br>true表示播放，false表示不播放。 |
+
+<a id="symboleffect-1"></a>
 
 ## symbolEffect
 

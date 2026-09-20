@@ -1,5 +1,9 @@
 # ArcListInterface
 
+```TypeScript
+export interface ArcListInterface
+```
+
 弧形列表由沿弧形排列的一系列列表项组成，适用于圆形屏幕设备。适合连续、多行呈现同类数据，例如图片和文本。
 
 > **说明：** 

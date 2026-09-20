@@ -1,5 +1,9 @@
 # ArcListInterface
 
+```TypeScript
+export interface ArcListInterface
+```
+
 The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text, in a continuous, multi-row format.
 
 **Since:** 18

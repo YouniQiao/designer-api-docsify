@@ -32,6 +32,8 @@ export function bindController(node: FrameNode, controller: TextController, node
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 
+<a id="bindcontroller-1"></a>
+
 ## bindController
 
 ```TypeScript
@@ -63,6 +65,8 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
+
+<a id="bindcontroller-2"></a>
 
 ## bindController
 
@@ -96,6 +100,8 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**适用版本：** 15 - 24 |
 
 
+<a id="bindcontroller-3"></a>
+
 ## bindController
 
 ```TypeScript
@@ -127,6 +133,8 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
 
+
+<a id="bindcontroller-4"></a>
 
 ## bindController
 
@@ -160,6 +168,8 @@ export function bindController(node: FrameNode, controller: TextInputController,
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 
+<a id="bindcontroller-5"></a>
+
 ## bindController
 
 ```TypeScript
@@ -192,6 +202,8 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
 
 
+<a id="bindcontroller-6"></a>
+
 ## bindController
 
 ```TypeScript
@@ -223,6 +235,8 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
+
+<a id="bindcontroller-7"></a>
 
 ## bindController
 

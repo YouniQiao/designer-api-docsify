@@ -1,5 +1,9 @@
 # DistortionMode（系统接口）
 
+```TypeScript
+declare enum DistortionMode
+```
+
 非线性形变动画模式的枚举。
 
 **起始版本：** 26.0.0

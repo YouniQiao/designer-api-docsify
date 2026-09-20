@@ -79,6 +79,8 @@ emitter.on('eventId', callback);
 ```
 
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -151,6 +153,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter.on('eventId', callback);
 ```
 
+
+<a id="on-2"></a>
 
 ## on
 

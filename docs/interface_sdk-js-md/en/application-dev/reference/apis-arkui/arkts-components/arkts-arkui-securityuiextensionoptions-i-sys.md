@@ -1,5 +1,9 @@
 # SecurityUIExtensionOptions (System API)
 
+```TypeScript
+declare interface SecurityUIExtensionOptions
+```
+
 Defines the options to be passed when constructing **SecurityUIExtensionComponent**.
 
 **Since:** 26.0.0

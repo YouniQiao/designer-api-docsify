@@ -1,5 +1,9 @@
 # AISessionResultType
 
+```TypeScript
+declare enum AISessionResultType
+```
+
 Defines the result status of AI session operations.
 
 **Since:** 26.0.0

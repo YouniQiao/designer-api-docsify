@@ -63,6 +63,8 @@ promise.then((data: sensor.GeomagneticResponse) => {
 ```
 
 
+<a id="getgeomagneticfield-1"></a>
+
 ## getGeomagneticField
 
 ```TypeScript

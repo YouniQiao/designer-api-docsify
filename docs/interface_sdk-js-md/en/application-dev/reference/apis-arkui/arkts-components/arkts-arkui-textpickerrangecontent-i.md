@@ -1,5 +1,9 @@
 # TextPickerRangeContent
 
+```TypeScript
+declare interface TextPickerRangeContent
+```
+
 Defines the content for single-column picker options.
 
 **Since:** 10

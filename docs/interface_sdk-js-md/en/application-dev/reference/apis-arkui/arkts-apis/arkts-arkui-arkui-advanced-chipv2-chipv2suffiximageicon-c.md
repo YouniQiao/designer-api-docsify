@@ -1,5 +1,9 @@
 # ChipV2SuffixImageIcon
 
+```TypeScript
+export declare class ChipV2SuffixImageIcon extends ChipV2ImageIcon
+```
+
 Defines the suffix icon class.
 
 This API inherits from [ChipV2ImageIcon](arkts-arkui-arkui-advanced-chipv2-chipv2imageicon-c.md).

@@ -1,5 +1,9 @@
 # BundleStatsOptions (System API)
 
+```TypeScript
+export interface BundleStatsOptions
+```
+
 Options for obtaining the bundle statistics.
 
 **Since:** 26.0.1

@@ -1,5 +1,9 @@
 # StateStyles
 
+```TypeScript
+declare interface StateStyles
+```
+
 State-specific styles for the component.
 
 **Since:** 8

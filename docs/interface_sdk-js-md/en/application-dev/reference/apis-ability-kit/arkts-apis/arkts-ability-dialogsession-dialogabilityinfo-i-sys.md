@@ -1,5 +1,9 @@
 # DialogAbilityInfo (System API)
 
+```TypeScript
+export interface DialogAbilityInfo
+```
+
 Provides DialogAbility information, including the bundle name, module name, and ability name.
 
 **Since:** 11

@@ -86,6 +86,8 @@ huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
 ```
 
 
+<a id="haskeyitem-1"></a>
+
 ## hasKeyItem
 
 ```TypeScript

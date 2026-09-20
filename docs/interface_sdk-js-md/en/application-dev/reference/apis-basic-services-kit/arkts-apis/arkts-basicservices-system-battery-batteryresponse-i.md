@@ -1,5 +1,9 @@
 # BatteryResponse
 
+```TypeScript
+export interface BatteryResponse
+```
+
 Defines a response that returns the charging status and remaining power of the device.
 
 **Since:** 3

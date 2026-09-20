@@ -1,5 +1,9 @@
 # ShowDialogOptions
 
+```TypeScript
+interface ShowDialogOptions
+```
+
 Describes the options for showing the dialog box.
 
 **Since:** 9

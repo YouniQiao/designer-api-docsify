@@ -1,5 +1,9 @@
 # CaptionsManager
 
+```TypeScript
+interface CaptionsManager
+```
+
 Manages captions configuration. Before calling any method of **CaptionsManager**, call [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md) to obtain a **CaptionsManager** instance.
 
 **Since:** 8

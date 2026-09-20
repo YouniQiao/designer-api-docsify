@@ -1,5 +1,9 @@
 # RingtonePlayer（系统接口）
 
+```TypeScript
+export interface RingtonePlayer
+```
+
 系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer)创建实例。
 
 @typedef RingtonePlayer
@@ -66,6 +70,8 @@ systemRingtonePlayer.configure(ringtoneOptions).then(() => {
   console.error(`Failed to configure ringtone options. ${err}`);
 });
 ```
+
+<a id="configure-1"></a>
 
 ## configure
 
@@ -149,6 +155,8 @@ systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo
 });
 ```
 
+<a id="getaudiorendererinfo-1"></a>
+
 ## getAudioRendererInfo
 
 ```TypeScript
@@ -216,6 +224,8 @@ systemRingtonePlayer.getTitle().then((value: string) => {
   console.error(`Failed to get the system ringtone title ${err}`);
 });
 ```
+
+<a id="gettitle-1"></a>
 
 ## getTitle
 
@@ -340,6 +350,8 @@ systemRingtonePlayer.release().then(() => {
 });
 ```
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -408,6 +420,8 @@ systemRingtonePlayer.start().then(() => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -475,6 +489,8 @@ systemRingtonePlayer.stop().then(() => {
   console.error(`Failed to stop playing ringtone. ${err}`);
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

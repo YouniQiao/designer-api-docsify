@@ -1,5 +1,9 @@
 # FocusMovement
 
+```TypeScript
+declare interface FocusMovement
+```
+
 Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies.
 
 > **NOTE:** 

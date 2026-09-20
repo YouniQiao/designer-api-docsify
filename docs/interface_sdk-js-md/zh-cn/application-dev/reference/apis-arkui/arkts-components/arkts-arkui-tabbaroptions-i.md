@@ -1,5 +1,9 @@
 # TabBarOptions
 
+```TypeScript
+declare interface TabBarOptions
+```
+
 设置页签内的图片和文字内容。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # DepthComponentCompleteEvent（系统接口）
 
+```TypeScript
+declare interface DepthComponentCompleteEvent
+```
+
 背景资源加载成功的事件信息。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # SwipeRefresher
 
+```TypeScript
+export declare struct SwipeRefresher
+```
+
 内容加载指获取内容并加载出来，常用于衔接展示下拉加载的内容。
 
 > **说明：** 
@@ -12,6 +16,7 @@
 import { SwipeRefresher } from '@kit.ArkUI';
 ```
 
+  
 ## 子组件
 
 无

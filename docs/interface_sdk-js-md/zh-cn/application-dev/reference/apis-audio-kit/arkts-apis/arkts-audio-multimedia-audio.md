@@ -25,10 +25,10 @@ import { audio } from '@kit.AudioKit';
 | 名称 | 说明 |
 | --- | --- |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) | 获取音频采集器。使用callback异步回调。 |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) | 获取音频采集器。使用Promise异步回调。 |
+| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-2) | 获取音频采集器。使用Promise异步回调。 |
 | [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) | 创建音频返听器。使用Promise异步回调。在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。 |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) | 获取音频渲染器。使用callback异步回调。 |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) | 获取音频渲染器。使用Promise异步回调。 |
+| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer-2) | 获取音频渲染器。使用Promise异步回调。 |
 | [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) | 获取音频管理器。 |
 
 <!--Del-->
@@ -40,7 +40,7 @@ import { audio } from '@kit.AudioKit';
 | [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md) | 创建一个全局音频返听实例，该实例提供低延迟的入耳监听功能。硬件音频返听只能在支持的平台中创建，应用程序应首先使用[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported) 进行检查。系统中只能存在一个拥有全局返听功能的主实例，其他实例均为控制器。控制器可以通过向主实例发送命令来管理全局返听，并监听其状态变化。 |
 | [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md) | 获取音频采集器。使用Promise异步回调。 |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) | 创建DTMF播放器。使用callback异步回调。 |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) | 创建DTMF播放器。使用Promise异步回调。 |
+| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer-2) | 创建DTMF播放器。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 接口

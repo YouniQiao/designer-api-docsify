@@ -71,6 +71,8 @@ commonEvent.publish("event", options, publishCallBack);
 ```
 
 
+<a id="publish-1"></a>
+
 ## publish
 
 ```TypeScript
@@ -83,7 +85,7 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [publish](arkts-basicservices-commoneventmanager-publish-f.md)(event: string, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish-1)(event: string, options: CommonEventPublishData, callback: AsyncCallback&lt;void&gt;)
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 

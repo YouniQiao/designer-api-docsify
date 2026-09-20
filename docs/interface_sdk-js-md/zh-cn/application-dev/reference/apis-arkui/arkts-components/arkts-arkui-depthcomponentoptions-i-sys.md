@@ -1,5 +1,9 @@
 # DepthComponentOptions（系统接口）
 
+```TypeScript
+declare interface DepthComponentOptions
+```
+
 景深组件配置项。
 
 **起始版本：** 26.0.0

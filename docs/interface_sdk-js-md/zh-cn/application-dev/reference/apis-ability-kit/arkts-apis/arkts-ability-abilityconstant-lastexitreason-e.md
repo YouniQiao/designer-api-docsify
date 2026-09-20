@@ -1,5 +1,9 @@
 # LastExitReason
 
+```TypeScript
+export enum LastExitReason
+```
+
 Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
 
 **起始版本：** 9

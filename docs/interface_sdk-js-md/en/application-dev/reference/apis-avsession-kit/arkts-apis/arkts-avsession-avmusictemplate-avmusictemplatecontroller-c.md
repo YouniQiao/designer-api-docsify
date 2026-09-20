@@ -1,5 +1,9 @@
 # AVMusicTemplateController
 
+```TypeScript
+class AVMusicTemplateController
+```
+
 The definition of the AVMusicTemplateController.
 
 **Since:** 23

@@ -1,5 +1,9 @@
 # PhotoOutput
 
+```TypeScript
+interface PhotoOutput extends CameraOutput
+```
+
 PhotoOutput implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)

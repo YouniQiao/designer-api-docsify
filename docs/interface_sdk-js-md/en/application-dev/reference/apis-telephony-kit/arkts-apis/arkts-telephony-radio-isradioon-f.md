@@ -79,6 +79,8 @@ radio.isRadioOn(slotId).then((data: boolean) => {
 ```
 
 
+<a id="isradioon-1"></a>
+
 ## isRadioOn
 
 ```TypeScript
@@ -122,6 +124,8 @@ Checks whether the radio service is enabled on the SIM card in the specified slo
 
 See [isRadioOn](#isradioon)
 
+
+<a id="isradioon-2"></a>
 
 ## isRadioOn
 

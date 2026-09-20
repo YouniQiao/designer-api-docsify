@@ -71,6 +71,8 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: Busines
 ```
 
 
+<a id="changeappcloudswitch-1"></a>
+
 ## changeAppCloudSwitch
 
 ```TypeScript

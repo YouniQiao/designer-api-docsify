@@ -85,6 +85,8 @@ networkManager.getGlobalProxy(wantTemp).then(() => {
 ```
 
 
+<a id="getglobalproxy-1"></a>
+
 ## getGlobalProxy
 
 ```TypeScript

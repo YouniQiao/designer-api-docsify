@@ -58,6 +58,8 @@ bundle.getNameForUid(uid, (err, data) => {
 ```
 
 
+<a id="getnameforuid-1"></a>
+
 ## getNameForUid
 
 ```TypeScript

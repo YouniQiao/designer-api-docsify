@@ -124,6 +124,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="getlastwindow-1"></a>
+
 ## getLastWindow
 
 ```TypeScript

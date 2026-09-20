@@ -1,5 +1,9 @@
 # WorkStateStyle (System API)
 
+```TypeScript
+interface WorkStateStyle
+```
+
 Work state style.
 
 **Since:** 7

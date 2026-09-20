@@ -1,5 +1,9 @@
 # MicrophoneCaptureState
 
+```TypeScript
+declare enum MicrophoneCaptureState
+```
+
 Defines the microphone capture states, which identify the current working status of the microphone and help developers monitor microphone resource usage in real time, optimizing resource management and user privacy protection.
 
 **Since:** 23

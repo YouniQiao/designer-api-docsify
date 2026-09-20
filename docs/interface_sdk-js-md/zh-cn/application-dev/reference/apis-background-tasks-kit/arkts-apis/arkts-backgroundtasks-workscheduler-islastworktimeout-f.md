@@ -76,6 +76,8 @@ workScheduler.isLastWorkTimeOut(500)
 ```
 
 
+<a id="islastworktimeout-1"></a>
+
 ## isLastWorkTimeOut
 
 ```TypeScript
@@ -111,6 +113,8 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 
 参见 [isLastWorkTimeOut](#islastworktimeout)
 
+
+<a id="islastworktimeout-2"></a>
 
 ## isLastWorkTimeOut
 

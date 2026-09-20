@@ -1,5 +1,9 @@
 # ParticleAnnulusRegion
 
+```TypeScript
+declare interface ParticleAnnulusRegion
+```
+
 Configures the annular emitter area.
 
 > **NOTE:** 

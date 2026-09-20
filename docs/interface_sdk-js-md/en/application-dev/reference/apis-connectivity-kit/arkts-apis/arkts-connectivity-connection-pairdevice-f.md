@@ -91,6 +91,8 @@ try {
 ```
 
 
+<a id="pairdevice-1"></a>
+
 ## pairDevice
 
 ```TypeScript
@@ -136,6 +138,8 @@ Starts pairing with a remote Bluetooth device.
 
 See [pairDevice](#pairdevice)
 
+
+<a id="pairdevice-2"></a>
 
 ## pairDevice
 

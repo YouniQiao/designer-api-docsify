@@ -1,5 +1,9 @@
 # TabBarIconStyle
 
+```TypeScript
+declare interface TabBarIconStyle
+```
+
 Label图标样式对象。
 
 **起始版本：** 12

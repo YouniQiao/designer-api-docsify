@@ -1,5 +1,9 @@
 # AudioRendererFilter（系统接口）
 
+```TypeScript
+interface AudioRendererFilter
+```
+
 音频渲染器过滤条件。
 
 **起始版本：** 9

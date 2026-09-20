@@ -1,5 +1,9 @@
 # ResponseType
 
+```TypeScript
+declare enum ResponseType
+```
+
 ResponseType for contextMenu
 
 @enum { number }

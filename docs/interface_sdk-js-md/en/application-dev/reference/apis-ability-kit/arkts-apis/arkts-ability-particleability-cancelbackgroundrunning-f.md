@@ -59,6 +59,8 @@ particleAbility.cancelBackgroundRunning().then(() => {
 ```
 
 
+<a id="cancelbackgroundrunning-1"></a>
+
 ## cancelBackgroundRunning
 
 ```TypeScript

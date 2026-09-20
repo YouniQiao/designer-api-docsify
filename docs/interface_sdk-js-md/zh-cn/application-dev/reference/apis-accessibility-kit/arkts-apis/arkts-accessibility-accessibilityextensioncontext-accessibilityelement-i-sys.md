@@ -1,5 +1,9 @@
 # AccessibilityElement
 
+```TypeScript
+export declare interface AccessibilityElement
+```
+
 无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。
 
 调用AccessibilityElement的方法前，先通过[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow)获取AccessibilityElement实例。
@@ -393,6 +397,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementbyfocusdirection-1"></a>
+
 ## findElementByFocusDirection
 
 ```TypeScript
@@ -696,6 +702,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementsbycondition-1"></a>
+
 ## findElementsByCondition
 
 ```TypeScript
@@ -832,6 +840,8 @@ rootElement.getCursorPosition((err: BusinessError, data: number) => {
   console.info(`succeeded in getting cursor position, ${data}`);
 });
 ```
+
+<a id="getcursorposition-1"></a>
 
 ## getCursorPosition
 

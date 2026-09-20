@@ -1,5 +1,9 @@
 # WebLayoutMode
 
+```TypeScript
+declare enum WebLayoutMode
+```
+
 Configures the web layout mode, which controls the page layout of web content and helps developers optimize web page adaptability and user experience based on screen size and display requirements.
 
 **Since:** 11

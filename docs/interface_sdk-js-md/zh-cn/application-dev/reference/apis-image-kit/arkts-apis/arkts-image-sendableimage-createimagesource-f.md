@@ -107,6 +107,8 @@ async function CreateImageSource() {
 ```
 
 
+<a id="createimagesource-1"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -139,6 +141,8 @@ function createImageSource(fd: number): ImageSource
 
 参见 [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-2"></a>
 
 ## createImageSource
 

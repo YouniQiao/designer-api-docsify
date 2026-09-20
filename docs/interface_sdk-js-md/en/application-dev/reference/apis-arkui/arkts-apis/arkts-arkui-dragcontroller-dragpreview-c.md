@@ -1,5 +1,9 @@
 # DragPreview
 
+```TypeScript
+export class DragPreview
+```
+
 Implements a **DragPreview** object. This API does not work in the **OnDrop** and **OnDragEnd** callbacks.
 
 **Since:** 11

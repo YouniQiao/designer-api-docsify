@@ -1,5 +1,9 @@
 # MediaAlbumChangeRequest
 
+```TypeScript
+class MediaAlbumChangeRequest implements MediaChangeRequest
+```
+
 Provides APIs for managing the media album change request.
 
 **Inheritance/Implementation:** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)

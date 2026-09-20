@@ -1,5 +1,9 @@
 # TabTitleBar
 
+```TypeScript
+export declare struct TabTitleBar
+```
+
 The **TabTitleBar** component is a tab title bar used to switch between tabs pages. It is applicable only to level-1 pages.
 
 > **NOTE:** 

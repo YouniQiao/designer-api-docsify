@@ -1,5 +1,9 @@
 # TipsDialog
 
+```TypeScript
+export declare struct TipsDialog
+```
+
 提示弹出框，用于提醒用户关注特定事项或进行确认操作。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # AudioTimestampInfo
 
+```TypeScript
+interface AudioTimestampInfo
+```
+
 音频流时间戳和当前数据帧位置信息。
 
 @typedef AudioTimestampInfo

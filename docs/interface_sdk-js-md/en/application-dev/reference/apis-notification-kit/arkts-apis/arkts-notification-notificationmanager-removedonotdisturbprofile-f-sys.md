@@ -83,6 +83,8 @@ notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
 ```
 
 
+<a id="removedonotdisturbprofile-1"></a>
+
 ## removeDoNotDisturbProfile
 
 ```TypeScript

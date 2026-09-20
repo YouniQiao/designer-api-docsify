@@ -1,5 +1,9 @@
 # BlurStyleActivePolicy
 
+```TypeScript
+declare enum BlurStyleActivePolicy
+```
+
 Enumerates the policies for activating the blur style.
 
 @enum { number }

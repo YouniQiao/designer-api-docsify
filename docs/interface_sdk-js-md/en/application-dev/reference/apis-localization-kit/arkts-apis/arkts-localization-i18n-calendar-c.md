@@ -1,5 +1,9 @@
 # Calendar
 
+```TypeScript
+export class Calendar
+```
+
 Provides calendar management capabilities, such as calendar name retrieval and date calculation.
 
 **Since:** 7
@@ -463,6 +467,8 @@ import { i18n } from '@kit.LocalizationKit';
 let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
 calendar.setTime(10540800000);
 ```
+
+<a id="settime-1"></a>
 
 ## setTime
 

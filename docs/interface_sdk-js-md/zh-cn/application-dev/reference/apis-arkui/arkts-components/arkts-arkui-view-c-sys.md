@@ -1,5 +1,9 @@
 # View（系统接口）
 
+```TypeScript
+declare class View
+```
+
 自定义组件
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # ShowToastOptions
 
+```TypeScript
+interface ShowToastOptions
+```
+
 **Since:** 9
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

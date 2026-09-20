@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="activatecooperate-1"></a>
+
 ## activateCooperate
 
 ```TypeScript

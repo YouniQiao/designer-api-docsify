@@ -78,6 +78,8 @@ usageStatistics.setAppGroup(bundleName, newGroup, (err: BusinessError) => {
 ```
 
 
+<a id="setappgroup-1"></a>
+
 ## setAppGroup
 
 ```TypeScript

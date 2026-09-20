@@ -1,5 +1,9 @@
 # DeviceManager
 
+```TypeScript
+interface DeviceManager
+```
+
 设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **起始版本：** 7
@@ -139,6 +143,8 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
+<a id="getdeviceinfo-1"></a>
+
 ## getDeviceInfo
 
 ```TypeScript
@@ -220,6 +226,8 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 ```TypeScript
 示例中的初始化请参见deviceManager.createDeviceManager。
 ```
+
+<a id="getlocaldeviceinfo-1"></a>
 
 ## getLocalDeviceInfo
 
@@ -336,6 +344,8 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
+<a id="gettrusteddevicelist-1"></a>
+
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -411,6 +421,8 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 ```TypeScript
 示例中的初始化请参见deviceManager.createDeviceManager。
 ```
+
+<a id="gettrusteddevicelistsync-1"></a>
 
 ## getTrustedDeviceListSync
 
@@ -1155,6 +1167,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 ```TypeScript
 示例中的初始化请参见deviceManager.createDeviceManager。
 ```
+
+<a id="startdevicediscovery-1"></a>
 
 ## startDeviceDiscovery
 

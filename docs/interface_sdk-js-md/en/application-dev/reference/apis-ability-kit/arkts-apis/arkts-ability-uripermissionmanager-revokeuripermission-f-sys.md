@@ -126,6 +126,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="revokeuripermission-2"></a>
+
 ## revokeUriPermission
 
 ```TypeScript
@@ -178,6 +180,8 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 See [revokeUriPermission](#revokeuripermission)
 
+
+<a id="revokeuripermission-4"></a>
 
 ## revokeUriPermission
 

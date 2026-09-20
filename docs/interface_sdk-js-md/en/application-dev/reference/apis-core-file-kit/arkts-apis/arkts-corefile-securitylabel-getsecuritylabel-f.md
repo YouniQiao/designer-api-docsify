@@ -68,6 +68,8 @@ securityLabel.getSecurityLabel(filePath, (err: BusinessError, type: string) => {
 ```
 
 
+<a id="getsecuritylabel-1"></a>
+
 ## getSecurityLabel
 
 ```TypeScript

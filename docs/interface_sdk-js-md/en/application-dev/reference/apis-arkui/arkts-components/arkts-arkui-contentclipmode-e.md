@@ -1,5 +1,9 @@
 # ContentClipMode
 
+```TypeScript
+declare enum ContentClipMode
+```
+
 Enum of scrollable containers' content clip mode.
 
 **Since:** 14

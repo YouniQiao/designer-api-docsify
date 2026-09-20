@@ -1,5 +1,9 @@
 # SwipeActionState
 
+```TypeScript
+declare enum SwipeActionState
+```
+
 列表项滑动状态枚举。
 
 **起始版本：** 11

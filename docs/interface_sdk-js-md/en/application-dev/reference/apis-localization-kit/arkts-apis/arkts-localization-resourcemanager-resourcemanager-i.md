@@ -1,5 +1,9 @@
 # ResourceManager
 
+```TypeScript
+export interface ResourceManager
+```
+
 Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.
 
 > **NOTE:** 
@@ -8,7 +12,7 @@ Provides the capability of accessing application resources and system resources.
 > 
 > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
 > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
-> `&#36;r(*resource-address*).id`, for example, `&#36;r('app.string.test').id`.
+> `$r(*resource-address*).id`, for example, `$r('app.string.test').id`.
 > 
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
@@ -162,6 +166,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="closerawfd-1"></a>
+
 ## closeRawFd
 
 ```TypeScript
@@ -301,6 +307,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="closerawfiledescriptor-1"></a>
+
 ## closeRawFileDescriptor
 
 ```TypeScript
@@ -423,6 +431,8 @@ try {
   console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getboolean-1"></a>
 
 ## getBoolean
 
@@ -639,6 +649,8 @@ this.context.resourceManager.getColor(resource)
   });
 ```
 
+<a id="getcolor-1"></a>
+
 ## getColor
 
 ```TypeScript
@@ -677,6 +689,8 @@ Obtains the color value corresponding to the specified resource ID. This API use
 **Examples**
 
 See [getColor](#getcolor)
+
+<a id="getcolor-2"></a>
 
 ## getColor
 
@@ -717,6 +731,8 @@ Obtains the color value corresponding to the specified resource object. This API
 **Examples**
 
 See [getColor](#getcolor)
+
+<a id="getcolor-3"></a>
 
 ## getColor
 
@@ -844,6 +860,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getcolorbyname-1"></a>
 
 ## getColorByName
 
@@ -1042,6 +1060,8 @@ try {
 }
 ```
 
+<a id="getcolorsync-1"></a>
+
 ## getColorSync
 
 ```TypeScript
@@ -1152,6 +1172,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getconfiguration-1"></a>
 
 ## getConfiguration
 
@@ -1281,6 +1303,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getdevicecapability-1"></a>
+
 ## getDeviceCapability
 
 ```TypeScript
@@ -1369,7 +1393,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1457,7 +1481,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1542,6 +1566,8 @@ try {
 }
 ```
 
+<a id="getdoublepluralstringvaluesync-2"></a>
+
 ## getDoublePluralStringValueSync
 
 ```TypeScript
@@ -1572,7 +1598,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1698,6 +1724,8 @@ try {
   console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getdrawabledescriptor-1"></a>
 
 ## getDrawableDescriptor
 
@@ -1844,7 +1872,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1932,7 +1960,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2017,6 +2045,8 @@ try {
 }
 ```
 
+<a id="getintpluralstringvaluesync-2"></a>
+
 ## getIntPluralStringValueSync
 
 ```TypeScript
@@ -2047,7 +2077,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2185,6 +2215,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getmedia-1"></a>
+
 ## getMedia
 
 ```TypeScript
@@ -2265,6 +2297,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getmediabase64-1"></a>
 
 ## getMediaBase64
 
@@ -2421,6 +2455,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabase64byname-1"></a>
+
 ## getMediaBase64ByName
 
 ```TypeScript
@@ -2454,6 +2490,8 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 **Examples**
 
 See [getMediaBase64ByName](#getmediabase64byname)
+
+<a id="getmediabase64byname-2"></a>
 
 ## getMediaBase64ByName
 
@@ -2492,6 +2530,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaBase64ByName](#getmediabase64byname)
+
+<a id="getmediabase64byname-3"></a>
 
 ## getMediaBase64ByName
 
@@ -2719,6 +2759,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabyname-1"></a>
+
 ## getMediaByName
 
 ```TypeScript
@@ -2752,6 +2794,8 @@ Obtains the media file content for the specified screen density based on the spe
 **Examples**
 
 See [getMediaByName](#getmediabyname)
+
+<a id="getmediabyname-2"></a>
 
 ## getMediaByName
 
@@ -2790,6 +2834,8 @@ Obtains the content of the media file corresponding to the specified resource na
 **Examples**
 
 See [getMediaByName](#getmediabyname)
+
+<a id="getmediabyname-3"></a>
 
 ## getMediaByName
 
@@ -3116,6 +3162,8 @@ try {
 }
 ```
 
+<a id="getmediacontent-1"></a>
+
 ## getMediaContent
 
 ```TypeScript
@@ -3155,6 +3203,8 @@ Obtains the media file content for the specified screen density based on the spe
 **Examples**
 
 See [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-2"></a>
 
 ## getMediaContent
 
@@ -3199,6 +3249,8 @@ Obtains the content of the media file corresponding to the specified resource ob
 **Examples**
 
 See [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-3"></a>
 
 ## getMediaContent
 
@@ -3245,6 +3297,8 @@ Obtains the media file content for the specified screen density based on the spe
 
 See [getMediaContent](#getmediacontent)
 
+<a id="getmediacontent-4"></a>
+
 ## getMediaContent
 
 ```TypeScript
@@ -3277,6 +3331,8 @@ Obtains the content of the media file corresponding to the specified resource ID
 **Examples**
 
 See [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-5"></a>
 
 ## getMediaContent
 
@@ -3311,6 +3367,8 @@ Obtains the media file content for the specified screen density based on the spe
 **Examples**
 
 See [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-6"></a>
 
 ## getMediaContent
 
@@ -3349,6 +3407,8 @@ Obtains the content of the media file corresponding to the specified resource ID
 **Examples**
 
 See [getMediaContent](#getmediacontent)
+
+<a id="getmediacontent-7"></a>
 
 ## getMediaContent
 
@@ -3610,6 +3670,8 @@ try {
 }
 ```
 
+<a id="getmediacontentbase64-1"></a>
+
 ## getMediaContentBase64
 
 ```TypeScript
@@ -3649,6 +3711,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-2"></a>
 
 ## getMediaContentBase64
 
@@ -3693,6 +3757,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-3"></a>
 
 ## getMediaContentBase64
 
@@ -3739,6 +3805,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 See [getMediaContentBase64](#getmediacontentbase64)
 
+<a id="getmediacontentbase64-4"></a>
+
 ## getMediaContentBase64
 
 ```TypeScript
@@ -3771,6 +3839,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-5"></a>
 
 ## getMediaContentBase64
 
@@ -3805,6 +3875,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-6"></a>
 
 ## getMediaContentBase64
 
@@ -3843,6 +3915,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 **Examples**
 
 See [getMediaContentBase64](#getmediacontentbase64)
+
+<a id="getmediacontentbase64-7"></a>
 
 ## getMediaContentBase64
 
@@ -3972,6 +4046,8 @@ try {
   console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getmediacontentbase64sync-1"></a>
 
 ## getMediaContentBase64Sync
 
@@ -4107,6 +4183,8 @@ try {
   console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getmediacontentsync-1"></a>
 
 ## getMediaContentSync
 
@@ -4268,6 +4346,8 @@ try {
   console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getnumber-1"></a>
 
 ## getNumber
 
@@ -4568,6 +4648,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getpluralstring-1"></a>
+
 ## getPluralString
 
 ```TypeScript
@@ -4698,6 +4780,8 @@ this.context.resourceManager.getPluralStringByName("test", 1)
     console.error(`promise getPluralStringByName failed, error code: ${error.code}, message: ${error.message}.`);
   });
 ```
+
+<a id="getpluralstringbyname-1"></a>
 
 ## getPluralStringByName
 
@@ -4971,6 +5055,8 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
   });
 ```
 
+<a id="getpluralstringvalue-1"></a>
+
 ## getPluralStringValue
 
 ```TypeScript
@@ -5022,6 +5108,8 @@ Obtains the plural string based on the specified resource information and the sp
 
 See [getPluralStringValue](#getpluralstringvalue)
 
+<a id="getpluralstringvalue-2"></a>
+
 ## getPluralStringValue
 
 ```TypeScript
@@ -5065,6 +5153,8 @@ Obtains the plural string based on the specified resource ID and the specified r
 **Examples**
 
 See [getPluralStringValue](#getpluralstringvalue)
+
+<a id="getpluralstringvalue-3"></a>
 
 ## getPluralStringValue
 
@@ -5221,6 +5311,8 @@ try {
 }
 ```
 
+<a id="getpluralstringvaluesync-1"></a>
+
 ## getPluralStringValueSync
 
 ```TypeScript
@@ -5361,6 +5453,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfd-1"></a>
 
 ## getRawFd
 
@@ -5521,6 +5615,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getrawfile-1"></a>
+
 ## getRawFile
 
 ```TypeScript
@@ -5632,6 +5728,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfilecontent-1"></a>
 
 ## getRawFileContent
 
@@ -5784,6 +5882,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getrawfiledescriptor-1"></a>
+
 ## getRawFileDescriptor
 
 ```TypeScript
@@ -5892,6 +5992,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfilelist-1"></a>
 
 ## getRawFileList
 
@@ -6113,6 +6215,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getstring-1"></a>
+
 ## getString
 
 ```TypeScript
@@ -6193,6 +6297,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getstringarray-1"></a>
 
 ## getStringArray
 
@@ -6312,6 +6418,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringarraybyname-1"></a>
 
 ## getStringArrayByName
 
@@ -6556,6 +6664,8 @@ this.context.resourceManager.getStringArrayValue(resource)
   });
 ```
 
+<a id="getstringarrayvalue-1"></a>
+
 ## getStringArrayValue
 
 ```TypeScript
@@ -6601,6 +6711,8 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 See [getStringArrayValue](#getstringarrayvalue)
 
+<a id="getstringarrayvalue-2"></a>
+
 ## getStringArrayValue
 
 ```TypeScript
@@ -6634,6 +6746,8 @@ Obtains the string array corresponding to the specified resource ID. This API us
 **Examples**
 
 See [getStringArrayValue](#getstringarrayvalue)
+
+<a id="getstringarrayvalue-3"></a>
 
 ## getStringArrayValue
 
@@ -6767,6 +6881,8 @@ try {
 }
 ```
 
+<a id="getstringarrayvaluesync-1"></a>
+
 ## getStringArrayValueSync
 
 ```TypeScript
@@ -6891,6 +7007,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringbyname-1"></a>
 
 ## getStringByName
 
@@ -7032,6 +7150,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getstringbynamesync-1"></a>
+
 ## getStringByNameSync
 
 ```TypeScript
@@ -7051,7 +7171,7 @@ Obtains the string corresponding to the specified resource name, and replaces th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7214,6 +7334,8 @@ try {
 }
 ```
 
+<a id="getstringsync-1"></a>
+
 ## getStringSync
 
 ```TypeScript
@@ -7233,7 +7355,7 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7254,6 +7376,8 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 **Examples**
 
 See [getStringSync](#getstringsync)
+
+<a id="getstringsync-3"></a>
 
 ## getStringSync
 
@@ -7300,6 +7424,8 @@ Obtains a string based on the specified resource object. This API returns the re
 
 See [getStringSync](#getstringsync)
 
+<a id="getstringsync-4"></a>
+
 ## getStringSync
 
 ```TypeScript
@@ -7325,7 +7451,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | Yes | Resource object. |
-| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number&#36;d`, `%number&#36;f`, and `%number&#36;s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number&#36;d`, `number` indicates the parameter index, starting from `1`. For example, `%1&#36;d` uses `args[0]` for formatting, `%2&#36;d` uses `args[1]`, and so on. |
+| args | Array&lt;string &#124; number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`. <br>**NOTE:** <br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. <br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses `args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7433,6 +7559,8 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 });
 ```
 
+<a id="getstringvalue-1"></a>
+
 ## getStringValue
 
 ```TypeScript
@@ -7478,6 +7606,8 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 See [getStringValue](#getstringvalue)
 
+<a id="getstringvalue-2"></a>
+
 ## getStringValue
 
 ```TypeScript
@@ -7511,6 +7641,8 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 **Examples**
 
 See [getStringValue](#getstringvalue)
+
+<a id="getstringvalue-3"></a>
 
 ## getStringValue
 
@@ -7627,6 +7759,8 @@ try {
   console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getsymbol-1"></a>
 
 ## getSymbol
 

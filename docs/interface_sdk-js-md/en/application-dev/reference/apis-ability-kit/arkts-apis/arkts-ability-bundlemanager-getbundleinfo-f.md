@@ -159,6 +159,8 @@ try {
 ```
 
 
+<a id="getbundleinfo-1"></a>
+
 ## getBundleInfo
 
 ```TypeScript
@@ -198,6 +200,8 @@ No permission is required for obtaining the caller's own information.
 
 See [getBundleInfo](#getbundleinfo)
 
+
+<a id="getbundleinfo-2"></a>
 
 ## getBundleInfo
 

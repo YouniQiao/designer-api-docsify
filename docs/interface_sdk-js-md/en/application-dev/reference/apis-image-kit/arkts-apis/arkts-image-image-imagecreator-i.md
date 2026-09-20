@@ -1,5 +1,9 @@
 # ImageCreator
 
+```TypeScript
+interface ImageCreator
+```
+
 The ImageCreator class provides APIs for applications to request an image data area and compile image data.
 
 Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md) to create an ImageCreator instance. ImageCreator does not support multiple threads.
@@ -33,6 +37,8 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
+
+<a id="dequeueimage-1"></a>
 
 ## dequeueImage
 
@@ -109,6 +115,8 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 | image | [Image](arkts-image-image-image-i.md) | Yes | Drawn image. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
+<a id="queueimage-1"></a>
+
 ## queueImage
 
 ```TypeScript
@@ -154,6 +162,8 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="release-1"></a>
 
 ## release
 

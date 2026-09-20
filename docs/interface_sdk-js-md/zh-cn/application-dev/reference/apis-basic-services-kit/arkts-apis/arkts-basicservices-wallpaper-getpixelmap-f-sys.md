@@ -61,6 +61,8 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: imag
 ```
 
 
+<a id="getpixelmap-1"></a>
+
 ## getPixelMap
 
 ```TypeScript

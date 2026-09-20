@@ -1,5 +1,9 @@
 # CommonProgressStyleOptions
 
+```TypeScript
+declare interface CommonProgressStyleOptions
+```
+
 Provides common style configuration options for the progress indicator.
 
 **Since:** 10

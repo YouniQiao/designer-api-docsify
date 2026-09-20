@@ -54,6 +54,8 @@ wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) 
 ```
 
 
+<a id="getfile-1"></a>
+
 ## getFile
 
 ```TypeScript

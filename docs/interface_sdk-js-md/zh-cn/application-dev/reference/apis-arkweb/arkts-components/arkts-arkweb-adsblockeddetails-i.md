@@ -1,5 +1,9 @@
 # AdsBlockedDetails
 
+```TypeScript
+declare interface AdsBlockedDetails
+```
+
 发生广告拦截时，广告资源信息。
 
 **起始版本：** 12

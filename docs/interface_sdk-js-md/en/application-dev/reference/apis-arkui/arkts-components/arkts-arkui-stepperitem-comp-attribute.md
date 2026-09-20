@@ -1,5 +1,9 @@
 # StepperItem properties/events
 
+```TypeScript
+declare class StepperItemAttribute extends CommonMethod<StepperItemAttribute>
+```
+
 Defines StepperItem Component instance.
 
 **Inheritance/Implementation:** StepperItemAttribute extends CommonMethod<StepperItemAttribute>

@@ -1,5 +1,9 @@
 # ShadowLayer
 
+```TypeScript
+class ShadowLayer
+```
+
 阴影层对象，通过设置模糊半径、偏移量和颜色，可为图形、文本等绘制内容添加阴影渲染效果。
 
 > **说明：** 
@@ -52,6 +56,8 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="create-2"></a>
 
 ## create
 

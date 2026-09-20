@@ -46,6 +46,8 @@ Stage model:
 ```
 
 
+<a id="removepreferencesfromcache-1"></a>
+
 ## removePreferencesFromCache
 
 ```TypeScript
@@ -82,6 +84,8 @@ Removes a **Preferences** instance from the cache. This API uses an asynchronous
 
 See [removePreferencesFromCache](#removepreferencesfromcache)
 
+
+<a id="removepreferencesfromcache-2"></a>
 
 ## removePreferencesFromCache
 
@@ -121,6 +125,8 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 See [removePreferencesFromCache](#removepreferencesfromcache)
 
+
+<a id="removepreferencesfromcache-3"></a>
 
 ## removePreferencesFromCache
 

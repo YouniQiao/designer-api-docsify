@@ -1,5 +1,9 @@
 # Slider属性/事件
 
+```TypeScript
+declare class SliderAttribute extends CommonMethod<SliderAttribute>
+```
+
 支持除触摸热区以外的通用属性。
 
 除支持通用事件外，还支持以下事件：
@@ -92,7 +96,9 @@ blockColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑块的颜色。 <br>默认值：`&#36;r('sys.color.ohos_id_color_foreground_contrary')` |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑块的颜色。 <br>默认值：`$r('sys.color.ohos_id_color_foreground_contrary')` |
+
+<a id="blockcolor-1"></a>
 
 ## blockColor
 
@@ -122,7 +128,7 @@ blockColor(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑块的颜色。 <br>默认值：`&#36;r('sys.color.ohos_id_color_foreground_contrary')` |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑块的颜色。 <br>默认值：`$r('sys.color.ohos_id_color_foreground_contrary')` |
 
 ## blockSize
 
@@ -411,7 +417,9 @@ selectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑轨的已滑动部分颜色。 <br>默认值：`&#36;r('sys.color.ohos_id_color_emphasize')` |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 滑轨的已滑动部分颜色。 <br>默认值：`$r('sys.color.ohos_id_color_emphasize')` |
+
+<a id="selectedcolor-1"></a>
 
 ## selectedColor
 
@@ -435,7 +443,7 @@ selectedColor(selectedColor: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑轨的已滑动部分颜色。<br>默认值：`&#36;r('sys.color.ohos_id_color_emphasize')` <br>**说明：** <br>设置渐变色时，若颜色断点颜色值为非法值或者渐变色断点为空时，渐变色不起效果。 |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑轨的已滑动部分颜色。<br>默认值：`$r('sys.color.ohos_id_color_emphasize')` <br>**说明：** <br>设置渐变色时，若颜色断点颜色值为非法值或者渐变色断点为空时，渐变色不起效果。 |
 
 ## showSteps
 
@@ -458,6 +466,8 @@ showSteps(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否显示步长刻度值。<br>true：显示刻度值；false：不显示刻度值。<br>默认值：false |
+
+<a id="showsteps-1"></a>
 
 ## showSteps
 
@@ -579,7 +589,7 @@ stepColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 刻度颜色。<br>默认值：<br>`&#36;r('sys.color.ohos_id_color_foreground')`混合<br> `&#36;r('sys.color.ohos_id_alpha_normal_bg')`透明度的颜色 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 刻度颜色。<br>默认值：<br>`$r('sys.color.ohos_id_color_foreground')`混合<br> `$r('sys.color.ohos_id_alpha_normal_bg')`透明度的颜色 |
 
 ## stepSize
 
@@ -670,7 +680,7 @@ trackColor(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑轨的背景颜色。<br>默认值：`&#36;r('sys.color.ohos_id_color_component_normal')` <br>**说明：** <br>1. 设置渐变色时，如果颜色断点颜色值为非法值或渐变色断点为空，渐变色将不起效果。<br>2. 该接口中的LinearGradient类型不支持在原子化服务中使用。<br>**适用版本：** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; LinearGradient | 是 | 滑轨的背景颜色。<br>默认值：`$r('sys.color.ohos_id_color_component_normal')` <br>**说明：** <br>1. 设置渐变色时，如果颜色断点颜色值为非法值或渐变色断点为空，渐变色将不起效果。<br>2. 该接口中的LinearGradient类型不支持在原子化服务中使用。<br>**适用版本：** 12 |
 
 ## trackColorMetrics
 
@@ -692,7 +702,7 @@ trackColorMetrics(color: ColorMetricsLinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | 是 | 滑轨轨道的线性渐变背景颜色。<br>设置渐变色时，如果color的值为undefined，渐变色设置无效，轨道背景颜色默认取值为：`&#36;r('sys.color.ohos_id_color_component_normal')`。 |
+| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | 是 | 滑轨轨道的线性渐变背景颜色。<br>设置渐变色时，如果color的值为undefined，渐变色设置无效，轨道背景颜色默认取值为：`$r('sys.color.ohos_id_color_component_normal')`。 |
 
 ## trackThickness
 

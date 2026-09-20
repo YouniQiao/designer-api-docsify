@@ -86,6 +86,8 @@ usageStatistics.queryBundleStatsInfoByInterval(0, 0, 20000000000000).then((res: 
 ```
 
 
+<a id="querybundlestatsinfobyinterval-1"></a>
+
 ## queryBundleStatsInfoByInterval
 
 ```TypeScript

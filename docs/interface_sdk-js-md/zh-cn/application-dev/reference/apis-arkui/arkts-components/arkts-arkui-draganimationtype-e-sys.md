@@ -1,5 +1,9 @@
 # DragAnimationType（系统接口）
 
+```TypeScript
+declare enum DragAnimationType
+```
+
 拖拽动画类型。
 
 **起始版本：** 26.0.0

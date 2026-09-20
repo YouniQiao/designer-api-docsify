@@ -85,6 +85,8 @@ deviceSettings.getScreenOffTime(wantTemp).then((result) => {
 ```
 
 
+<a id="getscreenofftime-1"></a>
+
 ## getScreenOffTime
 
 ```TypeScript

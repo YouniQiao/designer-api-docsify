@@ -1,5 +1,9 @@
 # BackgroundBrightnessOptions
 
+```TypeScript
+declare interface BackgroundBrightnessOptions
+```
+
 背景亮度选项。
 
 > **说明：** 

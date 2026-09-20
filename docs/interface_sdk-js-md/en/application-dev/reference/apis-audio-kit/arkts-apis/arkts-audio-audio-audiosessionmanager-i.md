@@ -1,5 +1,9 @@
 # AudioSessionManager
 
+```TypeScript
+interface AudioSessionManager
+```
+
 This interface implements audio session management.
 
 Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.

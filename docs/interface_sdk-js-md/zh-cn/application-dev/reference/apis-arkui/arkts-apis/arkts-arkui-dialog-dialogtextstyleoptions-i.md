@@ -1,5 +1,9 @@
 # DialogTextStyleOptions
 
+```TypeScript
+declare interface DialogTextStyleOptions
+```
+
 在Dialog定义文本样式属性。
 
 **起始版本：** 26.0.1

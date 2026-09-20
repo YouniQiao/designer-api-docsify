@@ -1,5 +1,9 @@
 # AlphabetIndexer properties/events
 
+```TypeScript
+declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
+```
+
 When the width attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
 The default value of the padding attribute is 4 vp.
@@ -505,7 +509,7 @@ selected(index: number)
 
 Sets the index of the selected item.
 
-Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 

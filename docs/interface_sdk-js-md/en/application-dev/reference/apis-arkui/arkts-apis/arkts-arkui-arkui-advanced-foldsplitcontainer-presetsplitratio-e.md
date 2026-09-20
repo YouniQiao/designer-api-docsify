@@ -1,5 +1,9 @@
 # PresetSplitRatio
 
+```TypeScript
+export declare enum PresetSplitRatio
+```
+
 Enumerates the split ratios.
 
 **Since:** 12

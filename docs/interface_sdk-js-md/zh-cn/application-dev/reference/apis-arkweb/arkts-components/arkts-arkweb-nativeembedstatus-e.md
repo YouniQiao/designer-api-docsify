@@ -1,5 +1,9 @@
 # NativeEmbedStatus
 
+```TypeScript
+declare enum NativeEmbedStatus
+```
+
 定义同层标签生命周期，当加载页面中有同层标签会触发CREATE，同层标签移动或者放大会触发UPDATE，退出页面会触发DESTROY。
 
 **起始版本：** 11

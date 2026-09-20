@@ -1,5 +1,9 @@
 # ScrollbarLayoutPolicy
 
+```TypeScript
+declare enum ScrollbarLayoutPolicy
+```
+
 定义滚动条布局模式控制参数的枚举类型。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # AssessmentConfig
 
+```TypeScript
+interface AssessmentConfig
+```
+
 Assessment scenario configuration information.
 
 **Since:** 26.0.1

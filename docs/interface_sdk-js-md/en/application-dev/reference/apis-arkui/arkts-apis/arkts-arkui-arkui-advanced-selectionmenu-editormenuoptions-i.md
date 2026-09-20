@@ -1,5 +1,9 @@
 # EditorMenuOptions
 
+```TypeScript
+export interface EditorMenuOptions
+```
+
 Describes the edit menu options.
 
 **Since:** 11

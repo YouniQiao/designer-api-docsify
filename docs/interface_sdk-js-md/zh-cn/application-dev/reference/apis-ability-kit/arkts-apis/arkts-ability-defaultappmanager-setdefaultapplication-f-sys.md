@@ -179,6 +179,8 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
+<a id="setdefaultapplication-1"></a>
+
 ## setDefaultApplication
 
 ```TypeScript
@@ -219,6 +221,8 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 
 参见 [setDefaultApplication](#setdefaultapplication)
 
+
+<a id="setdefaultapplication-2"></a>
 
 ## setDefaultApplication
 

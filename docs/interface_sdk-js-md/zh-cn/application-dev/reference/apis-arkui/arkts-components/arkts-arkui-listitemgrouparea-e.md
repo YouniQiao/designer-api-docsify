@@ -1,5 +1,9 @@
 # ListItemGroupArea
 
+```TypeScript
+declare enum ListItemGroupArea
+```
+
 枚举了ListItemGroup各个区域。
 
 **起始版本：** 12

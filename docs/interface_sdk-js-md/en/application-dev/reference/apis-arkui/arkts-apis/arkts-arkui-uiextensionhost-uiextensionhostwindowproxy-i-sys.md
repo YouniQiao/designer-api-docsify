@@ -1,5 +1,9 @@
 # UIExtensionHostWindowProxy (System API)
 
+```TypeScript
+interface UIExtensionHostWindowProxy
+```
+
 Transition Controller
 
 **Since:** 11
@@ -143,6 +147,8 @@ export default class EntryAbility extends UIExtensionAbility {
   }
 }
 ```
+
+<a id="createsubwindowwithoptions-1"></a>
 
 ## createSubWindowWithOptions
 

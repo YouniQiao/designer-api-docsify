@@ -71,6 +71,8 @@ print.startDiscoverPrinter(extensionList).then(() => {
 ```
 
 
+<a id="startdiscoverprinter-1"></a>
+
 ## startDiscoverPrinter
 
 ```TypeScript

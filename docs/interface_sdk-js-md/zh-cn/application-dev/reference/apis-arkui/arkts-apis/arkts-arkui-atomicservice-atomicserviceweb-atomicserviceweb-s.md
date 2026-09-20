@@ -1,5 +1,9 @@
 # AtomicServiceWeb
 
+```TypeScript
+export declare struct AtomicServiceWeb
+```
+
 为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。
 
 > **说明：** 
@@ -258,7 +262,7 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 src: ResourceStr
 ```
 
-网页资源地址，访问网络资源需要在AGC（AppGallery Connect）配置业务域名，访问本地资源仅支持包内文件（&#36;rawfile）。不支持通过状态变量（例如@State）动态更新地址。加载的网页中支持通过JS SDK提供的接口调用系统能力，具体以JS SDK为准。
+网页资源地址，访问网络资源需要在AGC（AppGallery Connect）配置业务域名，访问本地资源仅支持包内文件（$rawfile）。不支持通过状态变量（例如@State）动态更新地址。加载的网页中支持通过JS SDK提供的接口调用系统能力，具体以JS SDK为准。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

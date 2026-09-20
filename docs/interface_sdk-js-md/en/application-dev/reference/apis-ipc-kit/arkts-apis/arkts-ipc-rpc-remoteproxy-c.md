@@ -1,5 +1,9 @@
 # RemoteProxy
 
+```TypeScript
+class RemoteProxy extends IRemoteObject
+```
+
 Provides APIs to implement **IRemoteObject**.
 
 **Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
@@ -368,6 +372,8 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendMessageRequest() of the proxy object is called to send a message.
 ```
 
+<a id="sendmessagerequest-1"></a>
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -457,6 +463,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendRequest() of the proxy object is called to send a message.
 ```
 
+<a id="sendrequest-1"></a>
+
 ## sendRequest
 
 ```TypeScript
@@ -504,6 +512,8 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 ```TypeScript
 The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendRequest() of the proxy object is called to send a message.
 ```
+
+<a id="sendrequest-2"></a>
 
 ## sendRequest
 

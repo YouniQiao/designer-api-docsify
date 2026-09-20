@@ -1,5 +1,9 @@
 # AnchoredColorMode
 
+```TypeScript
+declare enum AnchoredColorMode
+```
+
 配置组件主题跟随的颜色模式。
 
 **起始版本：** 26.0.0

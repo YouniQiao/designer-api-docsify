@@ -1,5 +1,9 @@
 # Authenticator
 
+```TypeScript
+interface Authenticator
+```
+
 认证器对象。
 
 **起始版本：** 6
@@ -69,6 +73,8 @@ try {
   console.error(`Failed to auth. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
+
+<a id="execute-1"></a>
 
 ## execute
 

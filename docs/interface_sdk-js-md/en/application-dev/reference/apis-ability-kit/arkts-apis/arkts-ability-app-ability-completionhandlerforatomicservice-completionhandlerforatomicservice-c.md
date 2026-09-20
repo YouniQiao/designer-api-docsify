@@ -1,5 +1,9 @@
 # CompletionHandlerForAtomicService
 
+```TypeScript
+declare class CompletionHandlerForAtomicService
+```
+
 CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess) and [onAtomicServiceRequestFailure](#onatomicservicerequestfailure), to handle the results of successful and failed atomic service launch requests, respectively.
 
 **Since:** 20

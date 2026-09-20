@@ -1,5 +1,9 @@
 # SliderSuffixOptions
 
+```TypeScript
+interface SliderSuffixOptions extends SliderCustomContentOptions
+```
+
 Provides accessibility configuration of the slider suffix.
 
 **Inheritance/Implementation:** SliderSuffixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)

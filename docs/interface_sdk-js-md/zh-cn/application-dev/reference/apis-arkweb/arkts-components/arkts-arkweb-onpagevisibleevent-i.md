@@ -1,5 +1,9 @@
 # OnPageVisibleEvent
 
+```TypeScript
+declare interface OnPageVisibleEvent
+```
+
 定义旧页面不再呈现，新页面即将可见时触发的回调函数。
 
 **起始版本：** 12

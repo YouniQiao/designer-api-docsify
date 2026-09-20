@@ -1,5 +1,9 @@
 # IDataSource
 
+```TypeScript
+declare interface IDataSource
+```
+
 Data source of **LazyForEach**.
 
 **Since:** 7

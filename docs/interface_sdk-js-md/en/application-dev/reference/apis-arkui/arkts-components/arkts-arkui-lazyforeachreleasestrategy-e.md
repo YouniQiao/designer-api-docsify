@@ -1,5 +1,9 @@
 # LazyForEachReleaseStrategy
 
+```TypeScript
+declare enum LazyForEachReleaseStrategy
+```
+
 Enumerates the release strategies for LazyForEach discarded nodes.
 
 **Since:** 26.0.0

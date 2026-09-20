@@ -149,6 +149,8 @@ async function CreateImageSource(context : Context) {
 ```
 
 
+<a id="createimagesource-2"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -226,6 +228,8 @@ The SVG tags are supported since API version 10. The used version is (SVG) 1.1, 
 See [createImageSource](#createimagesource)
 
 
+<a id="createimagesource-4"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -258,6 +262,8 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 See [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-6"></a>
 
 ## createImageSource
 
@@ -295,6 +301,8 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 See [createImageSource](#createimagesource)
 
 
+<a id="createimagesource-8"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -327,6 +335,8 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 See [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-10"></a>
 
 ## createImageSource
 
@@ -361,6 +371,8 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 See [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-12"></a>
 
 ## createImageSource
 

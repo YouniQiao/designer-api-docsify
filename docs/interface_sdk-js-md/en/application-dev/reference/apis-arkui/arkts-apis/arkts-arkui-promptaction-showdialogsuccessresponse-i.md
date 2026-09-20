@@ -1,5 +1,9 @@
 # ShowDialogSuccessResponse
 
+```TypeScript
+interface ShowDialogSuccessResponse
+```
+
 Describes the dialog box response result.
 
 **Since:** 9

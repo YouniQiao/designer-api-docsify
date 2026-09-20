@@ -70,6 +70,8 @@ print.notifyPrintServiceEvent(event, jobId).then(() => {
 ```
 
 
+<a id="notifyprintserviceevent-1"></a>
+
 ## notifyPrintServiceEvent
 
 ```TypeScript

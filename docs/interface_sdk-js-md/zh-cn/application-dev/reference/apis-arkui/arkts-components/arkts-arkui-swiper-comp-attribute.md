@@ -1,5 +1,9 @@
 # Swiper属性/事件
 
+```TypeScript
+declare class SwiperAttribute extends CommonMethod<SwiperAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -37,6 +41,8 @@ autoPlay(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 子组件是否自动播放。<br>true：自动播放；false：不自动播放。<br>传入非法值时，按false处理。 |
+
+<a id="autoplay-1"></a>
 
 ## autoPlay
 
@@ -94,6 +100,8 @@ cachedCount(value: number)
 | --- | --- | --- | --- |
 | value | number | 是 | 预加载子组件个数。<br>默认值：1<br>取值范围：[0, +∞)，设置小于0的值时，按照默认值处理。 |
 
+<a id="cachedcount-1"></a>
+
 ## cachedCount
 
 ```TypeScript
@@ -122,6 +130,8 @@ cachedCount(count: number, isShown: boolean)
 | --- | --- | --- | --- |
 | count | number | 是 | 预加载子组件个数。<br>默认值：1<br>取值范围：[0, +∞)，设置小于0的值时，按照默认值处理。 |
 | isShown | boolean | 是 | 预加载范围内的节点是否进行绘制，不下渲染树。<br>true：预加载范围内的节点进行绘制；false：预加载范围内的节点不进行绘制。<br>传入非法值时，按false处理。 |
+
+<a id="cachedcount-2"></a>
 
 ## cachedCount
 
@@ -314,6 +324,8 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 | value | number &#124; string &#124; [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | 是 | 视窗内显示的子元素个数。<br> 默认值：1<br>取值范围：(0, +∞)，设置小于等于0的值时，按照默认值处理。<br>**适用版本：** 8 - 9 |
 | swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount value的值；如果为false，则为默认翻页行为，即按照子元素进行翻页。<br> 默认值：false<br>**适用版本：** 11 |
 
+<a id="displaycount-1"></a>
+
 ## displayCount
 
 ```TypeScript
@@ -425,7 +437,7 @@ index(value: number)
 
 设置当前在容器中显示的子组件的索引值。
 
-从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 7
 
@@ -462,6 +474,8 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [DotIndicator](arkts-arkui-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-digitindicator-c.md) &#124; boolean | 是 | 导航点指示器样式。<br> - DotIndicator：圆点指示器样式，适用于展示简洁的位置提示。<br> - DigitIndicator：数字指示器样式，适用于需要明确显示当前位置的场景。<br> - boolean：是否启用导航点指示器。设置为true启用，false不启用。<br>默认值：true<br>默认类型：DotIndicator<br>**适用版本：** 7 - 9 |
+
+<a id="indicator-1"></a>
 
 ## indicator
 

@@ -1,5 +1,9 @@
 # BackgroundImageOptions
 
+```TypeScript
+interface BackgroundImageOptions
+```
+
 Define the options for background image.
 
 @interface BackgroundImageOptions

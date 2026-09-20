@@ -1,5 +1,9 @@
 # ExpectedFrameRateRange
 
+```TypeScript
+declare interface ExpectedFrameRateRange
+```
+
 设置动画期望的帧率。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # PopupBorderLinearGradient
 
+```TypeScript
+declare interface PopupBorderLinearGradient
+```
+
 弹出边框线性渐变色。
 
 @interface PopupBorderLinearGradient

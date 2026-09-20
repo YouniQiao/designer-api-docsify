@@ -59,6 +59,8 @@ appManager.getProcessRunningInfos((error, data) => {
 ```
 
 
+<a id="getprocessrunninginfos-1"></a>
+
 ## getProcessRunningInfos
 
 ```TypeScript

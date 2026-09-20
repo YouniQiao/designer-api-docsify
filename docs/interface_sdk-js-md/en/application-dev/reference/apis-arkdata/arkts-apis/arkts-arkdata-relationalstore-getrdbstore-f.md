@@ -68,6 +68,8 @@ Stage model:
 ```
 
 
+<a id="getrdbstore-1"></a>
+
 ## getRdbStore
 
 ```TypeScript

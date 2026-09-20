@@ -1,5 +1,9 @@
 # types
 
+```TypeScript
+class types
+```
+
 提供检查不同内置对象类型的 API，例如 ArrayBuffer、Map 和 Set，以避免类型错误导致的异常。
 
 **起始版本：** 8

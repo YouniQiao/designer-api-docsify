@@ -1,5 +1,9 @@
 # ParticleColorPropertyOptions
 
+```TypeScript
+interface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater>
+```
+
 Defines the particle color property updater configs which can support generics. @interface ParticleColorPropertyOptions
 
 **Since:** 10

@@ -82,6 +82,8 @@ try {
 ```
 
 
+<a id="setformsrecyclable-1"></a>
+
 ## setFormsRecyclable
 
 ```TypeScript

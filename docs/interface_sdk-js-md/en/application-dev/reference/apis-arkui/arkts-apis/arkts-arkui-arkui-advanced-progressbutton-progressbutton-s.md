@@ -1,5 +1,9 @@
 # ProgressButton
 
+```TypeScript
+export declare struct ProgressButton
+```
+
 The **ProgressButton** component is a text-based download button with a progress indicator that shows the download progress.
 
 > **NOTE:** 

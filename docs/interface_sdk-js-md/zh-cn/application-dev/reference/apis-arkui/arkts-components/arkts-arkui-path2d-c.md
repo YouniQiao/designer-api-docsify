@@ -1,5 +1,9 @@
 # Path2D
 
+```TypeScript
+declare class Path2D extends CanvasPath
+```
+
 路径对象，支持通过对象的接口进行路径的描述和组合，并通过Canvas的stroke接口或者fill接口进行绘制。Path2D支持复用路径、组合多个路径、基于SVG路径字符串创建路径等功能，适用于需要多次绘制相同路径、动态组合复杂图形或基于SVG路径数据绘制图形的场景。
 
 > **说明：** 
@@ -57,6 +61,8 @@ constructor()
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="constructor-1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -81,6 +87,8 @@ constructor(unit: LengthMetricsUnit)
 | --- | --- | --- | --- |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
 
+<a id="constructor-2"></a>
+
 ## constructor
 
 ```TypeScript
@@ -102,6 +110,8 @@ constructor(path: Path2D)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要复制的路径对象，新创建的Path2D对象将包含与原路径相同的路径数据。异常值null和undefined时创建空路径对象。 |
+
+<a id="constructor-3"></a>
 
 ## constructor
 
@@ -128,6 +138,8 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要复制的Path2D路径对象，用于基于现有路径创建新的Path2D对象。传入的路径对象不会被修改，新创建的对象将包含该路径的完整副本。 |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
 
+<a id="constructor-4"></a>
+
 ## constructor
 
 ```TypeScript
@@ -149,6 +161,8 @@ constructor(d: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | d | string | 是 | 符合SVG路径描述规范的路径字符串，格式参考SVG路径描述规范，异常值按无效值处理。 |
+
+<a id="constructor-5"></a>
 
 ## constructor
 

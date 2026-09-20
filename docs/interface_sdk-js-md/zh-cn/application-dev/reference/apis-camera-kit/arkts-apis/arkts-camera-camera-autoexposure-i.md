@@ -1,5 +1,9 @@
 # AutoExposure
 
+```TypeScript
+interface AutoExposure extends AutoExposureQuery
+```
+
 AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。
 
 自动曝光类，对设备自动曝光（AE）操作。

@@ -1,5 +1,9 @@
 # SelectionContainerOptions
 
+```TypeScript
+export interface SelectionContainerOptions
+```
+
 组件初始化配置项。
 
 **起始版本：** 26.0.0

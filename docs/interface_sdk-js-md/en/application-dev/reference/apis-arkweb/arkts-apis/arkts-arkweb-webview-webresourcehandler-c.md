@@ -1,5 +1,9 @@
 # WebResourceHandler
 
+```TypeScript
+class WebResourceHandler
+```
+
 WebResourceHandler is a handler used to return the result of an intercepted request to the **Web** component in custom scheme interception scenarios. After **WebSchemeHandler** decides to intercept a request, the developer uses **WebResourceHandler** to provide a custom response header (**didReceiveResponse**) and response body data (**didReceiveResponseBody**) to the **Web** component, and notifies the request of completion (**didFinish**) or failure (**didFail**). **didFail** supports an overloaded method (API version 20 and later) to simplify the error handling process. This API enables the app layer to fully customize the response to network requests.
 
 **WebResourceHandler** works with [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md) and [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md): the **onRequestStart** callback of **WebSchemeHandler** receives a **WebResourceHandler** instance, the developer constructs a **WebSchemeHandlerResponse** object, passes the response header and response body data through **didReceiveResponse** and **didReceiveResponseBody** of **WebResourceHandler**, and finally calls **didFinish** or **didFail** to end the request.
@@ -41,6 +45,8 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
+<a id="didfail-1"></a>
+
 ## didFail
 
 ```TypeScript
@@ -66,6 +72,8 @@ Notifies the ArkWeb kernel that the intercepted request will fail. If **complete
 | --- | --- |
 | [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+
+<a id="didfail-2"></a>
 
 ## didFail
 

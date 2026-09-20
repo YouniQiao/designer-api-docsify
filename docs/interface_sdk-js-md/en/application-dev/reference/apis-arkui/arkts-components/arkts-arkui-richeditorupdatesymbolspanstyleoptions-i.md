@@ -1,5 +1,9 @@
 # RichEditorUpdateSymbolSpanStyleOptions
 
+```TypeScript
+declare interface RichEditorUpdateSymbolSpanStyleOptions extends RichEditorSpanStyleOptions
+```
+
 Defines the symbol span style options.
 
 Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md).

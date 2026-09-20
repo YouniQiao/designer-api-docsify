@@ -1,5 +1,9 @@
 # TextPickerOptions
 
+```TypeScript
+declare interface TextPickerOptions
+```
+
 Defines the configuration options of the text picker.
 
 **Since:** 8
@@ -38,7 +42,7 @@ or **Null[]**.
 ## range
 
 ```TypeScript
-range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
+range: string[] | string[][]  | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
 Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
@@ -64,7 +68,7 @@ or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 ## selected
 
 ```TypeScript
-selected?: number | number[]
+selected?: number[]
 ```
 
 Index of the selected item in the data list. The index is zero-based.
@@ -76,7 +80,7 @@ Default value: **0**
 1. Single-column pickers: number
 2. Multi-column pickers: number[]
 3. Since API version 10, this parameter supports two-way binding through
-[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+[$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number &#124; number[]
 
@@ -91,7 +95,7 @@ Default value: **0**
 ## value
 
 ```TypeScript
-value?: ResourceStr | ResourceStr[]
+value?: ResourceStr[]
 ```
 
 Value of the selected item. The priority of this parameter is lower than that of **selected**.
@@ -101,7 +105,7 @@ Default value: value of the first item in the data list.
 **NOTE:** 
 
 1. Since API version 10, this parameter supports two-way binding through
-[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+[$$](../../../ui/state-management/arkts-two-way-sync.md).
 2. The Resource type is supported since API version 20.
 3. This parameter works only when the picker contains text only.
 It does not work when the picker contains images or mixed content.

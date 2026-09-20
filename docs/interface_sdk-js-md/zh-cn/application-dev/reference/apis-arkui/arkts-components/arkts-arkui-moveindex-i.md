@@ -1,5 +1,9 @@
 # MoveIndex
 
+```TypeScript
+interface MoveIndex
+```
+
 定义移动数据的位置。
 
 **起始版本：** 12

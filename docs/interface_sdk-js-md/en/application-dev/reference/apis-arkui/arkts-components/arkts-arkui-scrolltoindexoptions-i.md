@@ -1,5 +1,9 @@
 # ScrollToIndexOptions
 
+```TypeScript
+declare interface ScrollToIndexOptions
+```
+
 Provides parameters for scrolling to a specific index.
 
 **Since:** 12

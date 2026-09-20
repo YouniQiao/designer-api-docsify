@@ -1,5 +1,9 @@
 # RichEditorBuilderSpan
 
+```TypeScript
+declare interface RichEditorBuilderSpan
+```
+
 定义**RichEditor**的BuilderSpan对象，提供身份识别与生命周期感知能力。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # Tabs属性/事件
 
+```TypeScript
+declare class TabsAttribute extends CommonMethod<TabsAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -107,6 +111,8 @@ barBackgroundBlurStyle(value: BlurStyle)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | TabBar的背景模糊材质。<br>默认值：BlurStyle.NONE |
+
+<a id="barbackgroundblurstyle-1"></a>
 
 ## barBackgroundBlurStyle
 
@@ -241,6 +247,8 @@ API version 14之前的版本，若设置barHeight为固定值后，TabBar无法
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的高度值。<br>默认值：<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为false时，默认值为56vp。<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为true时，默认值为Tabs的高度。<br>设置[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)样式且vertical属性为false时，默认值为56vp。<br>设置SubTabBarStyle样式且vertical属性为true时，默认值为Tabs的高度。<br>设置[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)样式且vertical属性为true时，默认值为Tabs的高度。<br>设置BottomTabBarStyle样式且vertical属性为false时，默认值为56vp，从API version 12开始，默认值变更为48vp。<br>**适用版本：** 8 |
 
+<a id="barheight-1"></a>
+
 ## barHeight
 
 ```TypeScript
@@ -286,6 +294,8 @@ barMode(value: BarMode.Fixed)
 | --- | --- | --- | --- |
 | value | [BarMode.Fixed](arkts-arkui-barmode-e.md) | 是 | 所有TabBar会平均分配barWidth宽度（纵向时平均分配barHeight高度）。 |
 
+<a id="barmode-1"></a>
+
 ## barMode
 
 ```TypeScript
@@ -308,6 +318,8 @@ barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions)
 | --- | --- | --- | --- |
 | value | [BarMode.Scrollable](arkts-arkui-barmode-e.md) | 是 | 所有TabBar都使用实际布局宽度，超过总宽度（横向Tabs的barWidth，纵向Tabs的barHeight）后可滑动。 |
 | options | [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | 是 | Scrollable模式下的TabBar的布局样式。<br>**说明：** <br>仅水平模式下有效。 |
+
+<a id="barmode-2"></a>
 
 ## barMode
 

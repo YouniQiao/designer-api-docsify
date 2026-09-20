@@ -1,5 +1,9 @@
 # BrightnessModeResponse
 
+```TypeScript
+export interface BrightnessModeResponse
+```
+
 包含屏幕亮度模式的对象。
 
 **起始版本：** 3

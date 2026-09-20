@@ -1,5 +1,9 @@
 # AppStorage
 
+```TypeScript
+declare class AppStorage
+```
+
 AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见[AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。
 
 > **说明：** 

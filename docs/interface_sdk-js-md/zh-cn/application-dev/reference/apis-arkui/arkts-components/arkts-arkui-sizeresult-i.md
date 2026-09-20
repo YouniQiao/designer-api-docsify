@@ -1,5 +1,9 @@
 # SizeResult
 
+```TypeScript
+declare interface SizeResult
+```
+
 组件尺寸信息。
 
 > **说明：** 

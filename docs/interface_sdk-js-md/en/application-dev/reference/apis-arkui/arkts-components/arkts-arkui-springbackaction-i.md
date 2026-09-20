@@ -1,5 +1,9 @@
 # SpringBackAction
 
+```TypeScript
+declare interface SpringBackAction
+```
+
 Defines sheet spring back action
 
 @interface SpringBackAction

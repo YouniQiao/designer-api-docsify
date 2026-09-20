@@ -212,6 +212,8 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 ```
 
 
+<a id="print-1"></a>
+
 ## print
 
 ```TypeScript
@@ -254,6 +256,8 @@ Prints files. This API uses a promise to return the result. To start the system 
 See [print](#print)
 
 
+<a id="print-2"></a>
+
 ## print
 
 ```TypeScript
@@ -287,6 +291,8 @@ Prints files. This API uses an asynchronous callback to return the result.
 
 See [print](#print)
 
+
+<a id="print-3"></a>
 
 ## print
 
@@ -326,6 +332,8 @@ Prints files. This API uses a promise to return the result.
 
 See [print](#print)
 
+
+<a id="print-4"></a>
 
 ## print
 

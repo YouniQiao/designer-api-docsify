@@ -1,5 +1,9 @@
 # ChipGroupV2Items
 
+```TypeScript
+export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>
+```
+
 Defines the array class of the **ChipGroupV2** item, which inherits from Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;.
 
 **Inheritance/Implementation:** ChipGroupV2Items extends Array<ChipGroupV2Item>

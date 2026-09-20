@@ -1,5 +1,9 @@
 # ListItem properties/events
 
+```TypeScript
+declare class ListItemAttribute extends CommonMethod<ListItemAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** ListItemAttribute extends CommonMethod<ListItemAttribute>
@@ -78,7 +82,7 @@ Sets whether the list item is selectable for multiselect. This attribute takes e
 selected(value: boolean)
 ```
 
-Sets whether the list item is selected. This attribute supports two-way binding through &#36;&#36;. This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
+Sets whether the list item is selected. This attribute supports two-way binding through $$. This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 
 **Since:** 10
 

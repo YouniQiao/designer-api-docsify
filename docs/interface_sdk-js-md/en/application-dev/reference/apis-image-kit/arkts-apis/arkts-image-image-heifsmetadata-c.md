@@ -1,5 +1,9 @@
 # HeifsMetadata
 
+```TypeScript
+class HeifsMetadata implements Metadata
+```
+
 HeifsMetadata implements Metadata
 
 HEIF image sequence metadata.

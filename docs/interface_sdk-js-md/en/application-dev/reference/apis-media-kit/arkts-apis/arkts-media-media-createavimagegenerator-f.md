@@ -63,6 +63,8 @@ media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
 ```
 
 
+<a id="createavimagegenerator-2"></a>
+
 ## createAVImageGenerator
 
 ```TypeScript

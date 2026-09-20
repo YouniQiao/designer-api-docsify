@@ -1,5 +1,9 @@
 # AppFreezePolicy
 
+```TypeScript
+interface AppFreezePolicy
+```
+
 提供应用冻屏事件配置策略的定义。
 
 **起始版本：** 24

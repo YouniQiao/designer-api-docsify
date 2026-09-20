@@ -1,5 +1,9 @@
 # ContentItemV2
 
+```TypeScript
+export declare class ContentItemV2
+```
+
 Declare ContentItemV2
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # SearchResult
 
+```TypeScript
+interface SearchResult
+```
+
 Defines the final search result after decryption, indicating whether a match was found and the optional attached value associated with the matched element.
 
 **Since:** 26.0.1

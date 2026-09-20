@@ -61,6 +61,8 @@ promise.then(() => {
 ```
 
 
+<a id="toggleshownstateforallappwindows-1"></a>
+
 ## toggleShownStateForAllAppWindows
 
 ```TypeScript

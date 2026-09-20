@@ -1,5 +1,9 @@
 # PathEffect
 
+```TypeScript
+class PathEffect
+```
+
 Implements a path effect.
 
 > **NOTE:** 

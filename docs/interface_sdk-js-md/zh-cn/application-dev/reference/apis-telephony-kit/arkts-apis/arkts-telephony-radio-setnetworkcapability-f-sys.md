@@ -75,6 +75,8 @@ radio.setNetworkCapability(slotId, type, state).then(() => {
 ```
 
 
+<a id="setnetworkcapability-1"></a>
+
 ## setNetworkCapability
 
 ```TypeScript

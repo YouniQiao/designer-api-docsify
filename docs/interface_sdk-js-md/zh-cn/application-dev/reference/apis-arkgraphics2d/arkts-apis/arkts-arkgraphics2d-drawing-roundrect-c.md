@@ -1,5 +1,9 @@
 # RoundRect
 
+```TypeScript
+class RoundRect
+```
+
 圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。
 
 > **说明：** 
@@ -37,6 +41,8 @@ constructor(roundRect: RoundRect)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 用于拷贝的圆角矩形。 |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

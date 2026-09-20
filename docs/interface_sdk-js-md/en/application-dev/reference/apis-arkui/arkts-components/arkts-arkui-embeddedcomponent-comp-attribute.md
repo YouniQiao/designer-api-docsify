@@ -1,5 +1,9 @@
 # EmbeddedComponent properties/events
 
+```TypeScript
+declare class EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
+```
+
 The universal attributes are supported.
 
 Event information related to screen coordinates is converted based on the position, width, and height of the **EmbeddedComponent**, before being transferred to the EmbeddedUIExtensionAbility for processing.

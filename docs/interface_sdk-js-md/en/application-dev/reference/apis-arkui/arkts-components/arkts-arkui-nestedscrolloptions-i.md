@@ -1,5 +1,9 @@
 # NestedScrollOptions
 
+```TypeScript
+declare interface NestedScrollOptions
+```
+
 Define nested scroll options
 
 @interface NestedScrollOptions

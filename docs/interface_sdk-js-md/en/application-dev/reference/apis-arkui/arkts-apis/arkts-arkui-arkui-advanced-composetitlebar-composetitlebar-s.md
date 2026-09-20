@@ -1,5 +1,9 @@
 # ComposeTitleBar
 
+```TypeScript
+export declare struct ComposeTitleBar
+```
+
 **ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
 
 > **NOTE:** 

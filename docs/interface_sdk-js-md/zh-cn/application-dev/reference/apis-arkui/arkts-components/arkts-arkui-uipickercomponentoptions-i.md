@@ -1,5 +1,9 @@
 # UIPickerComponentOptions
 
+```TypeScript
+declare interface UIPickerComponentOptions
+```
+
 UIPickerComponent容器的参数说明。
 
 **起始版本：** 22

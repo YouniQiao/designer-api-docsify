@@ -1,5 +1,9 @@
 # AdComponent
 
+```TypeScript
+declare struct AdComponent
+```
+
 This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles.
 
 > **NOTE:** 

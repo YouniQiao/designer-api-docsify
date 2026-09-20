@@ -1,5 +1,9 @@
 # RichEditorStyledStringOptions
 
+```TypeScript
+declare interface RichEditorStyledStringOptions
+```
+
 RichEditor初始化参数。
 
 **起始版本：** 12

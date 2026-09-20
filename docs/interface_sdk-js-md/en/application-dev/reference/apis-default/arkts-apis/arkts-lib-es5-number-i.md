@@ -1,5 +1,9 @@
 # Number
 
+```TypeScript
+interface Number
+```
+
 ## Modules to Import
 
 ```TypeScript
@@ -36,7 +40,7 @@ Returns a string representing a number in fixed-point notation.
 ## toLocaleString
 
 ```TypeScript
-toLocaleString(locales?: string | string[], options?: Intl.NumberFormatOptions): string
+toLocaleString(locales?: string[], options?: Intl.NumberFormatOptions): string
 ```
 
 Converts a number to a string by using the current or specified locale.

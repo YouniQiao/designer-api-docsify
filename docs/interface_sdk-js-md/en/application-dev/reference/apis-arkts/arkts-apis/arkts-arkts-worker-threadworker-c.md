@@ -1,5 +1,9 @@
 # ThreadWorker
 
+```TypeScript
+class ThreadWorker implements WorkerEventTarget
+```
+
 Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget.
 
 **Inheritance/Implementation:** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
@@ -539,6 +543,8 @@ workerInstance.postMessage(buffer, [buffer]);
 // When the options parameter is not provided, it defaults to undefined, and the buffer is sent to the Worker thread by copying the data.
 workerInstance.postMessage(buffer);
 ```
+
+<a id="postmessage-1"></a>
 
 ## postMessage
 

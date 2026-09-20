@@ -1,5 +1,9 @@
 # Screen (System API)
 
+```TypeScript
+interface Screen
+```
+
 Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
 
 Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
@@ -123,6 +127,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setdensitydpi-1"></a>
 
 ## setDensityDpi
 
@@ -296,6 +302,8 @@ screensPromise.then((data: Array<screen.Screen>) => {
 });
 ```
 
+<a id="setorientation-1"></a>
+
 ## setOrientation
 
 ```TypeScript
@@ -333,6 +341,8 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 **Examples**
 
 See [setOrientation](#setorientation)
+
+<a id="setorientation-2"></a>
 
 ## setOrientation
 
@@ -483,6 +493,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setscreenactivemode-1"></a>
 
 ## setScreenActiveMode
 

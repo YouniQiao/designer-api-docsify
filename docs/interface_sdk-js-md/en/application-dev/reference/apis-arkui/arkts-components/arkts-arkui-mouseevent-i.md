@@ -1,5 +1,9 @@
 # MouseEvent
 
+```TypeScript
+declare interface MouseEvent extends BaseEvent
+```
+
 Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

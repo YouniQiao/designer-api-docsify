@@ -1,5 +1,9 @@
 # FloatingTabBarStyle
 
+```TypeScript
+interface FloatingTabBarStyle
+```
+
 提供浮动条模式选项的接口。
 
 **起始版本：** 26.0.0

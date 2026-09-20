@@ -49,6 +49,8 @@ avSession.setDiscoverable(true).then(() => {
 ```
 
 
+<a id="setdiscoverable-1"></a>
+
 ## setDiscoverable
 
 ```TypeScript

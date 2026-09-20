@@ -95,6 +95,8 @@ usageStatistics.queryBundleEvents(0, 20000000000000).then((res: Array<usageStati
 ```
 
 
+<a id="querybundleevents-1"></a>
+
 ## queryBundleEvents
 
 ```TypeScript
@@ -143,6 +145,8 @@ Queries state data of all bundles within a specified period identified by the st
 
 See [queryBundleEvents](#querybundleevents)
 
+
+<a id="querybundleevents-2"></a>
 
 ## queryBundleEvents
 

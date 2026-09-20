@@ -1,5 +1,9 @@
 # FocusAxisEvent
 
+```TypeScript
+declare interface FocusAxisEvent extends BaseEvent
+```
+
 焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

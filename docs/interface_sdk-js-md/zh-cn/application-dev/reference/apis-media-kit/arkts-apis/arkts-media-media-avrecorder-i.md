@@ -1,5 +1,9 @@
 # AVRecorder
 
+```TypeScript
+interface AVRecorder
+```
+
 AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](#prepare-1) → [getInputSurface](#getinputsurface)（纯视频/音视频录制时） → [start](#start) → [pause](#pause)/[resume](#resume) → [stop](#stop) → [release](#release)。
 
 音视频录制示例可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、[视频录制开发指导](../../../media/media/video-recording.md)。
@@ -83,6 +87,8 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="getaudiocapturermaxamplitude-1"></a>
+
 ## getAudioCapturerMaxAmplitude
 
 ```TypeScript
@@ -132,6 +138,8 @@ getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="getavailableencoder-1"></a>
 
 ## getAvailableEncoder
 
@@ -185,6 +193,8 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="getavrecorderconfig-2"></a>
 
 ## getAVRecorderConfig
 
@@ -240,6 +250,8 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="getcurrentaudiocapturerinfo-2"></a>
+
 ## getCurrentAudioCapturerInfo
 
 ```TypeScript
@@ -291,6 +303,8 @@ getInputSurface(callback: AsyncCallback<string>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="getinputsurface-2"></a>
 
 ## getInputSurface
 
@@ -539,6 +553,8 @@ pause(callback: AsyncCallback<void>): void
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -596,6 +612,8 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="prepare-1"></a>
 
 ## prepare
 
@@ -658,6 +676,8 @@ release(callback: AsyncCallback<void>): void
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -709,6 +729,8 @@ reset(callback: AsyncCallback<void>): void
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="reset-1"></a>
+
 ## reset
 
 ```TypeScript
@@ -759,6 +781,8 @@ resume(callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="resume-1"></a>
 
 ## resume
 
@@ -872,6 +896,8 @@ start(callback: AsyncCallback<void>): void
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -925,6 +951,8 @@ stop(callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
+
+<a id="stop-1"></a>
 
 ## stop
 

@@ -1,5 +1,9 @@
 # ContentModifier
 
+```TypeScript
+declare interface ContentModifier<T>
+```
+
 Defines the content modifier.
 
 @interface ContentModifier

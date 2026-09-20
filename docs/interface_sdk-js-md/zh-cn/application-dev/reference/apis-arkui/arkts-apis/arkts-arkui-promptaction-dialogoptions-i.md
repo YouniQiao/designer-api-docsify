@@ -1,5 +1,9 @@
 # DialogOptions
 
+```TypeScript
+interface DialogOptions extends BaseDialogOptions
+```
+
 自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)，用于配置自定义弹窗的显示参数和行为。
 
 **继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)

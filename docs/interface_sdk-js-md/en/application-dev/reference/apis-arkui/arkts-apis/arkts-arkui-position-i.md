@@ -1,5 +1,9 @@
 # Position
 
+```TypeScript
+declare interface Position
+```
+
 Defines the coordinates of a point.
 
 **Since:** 7

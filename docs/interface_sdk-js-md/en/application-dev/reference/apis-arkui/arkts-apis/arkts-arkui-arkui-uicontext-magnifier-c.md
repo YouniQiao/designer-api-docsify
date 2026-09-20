@@ -1,5 +1,9 @@
 # Magnifier
 
+```TypeScript
+export class Magnifier
+```
+
 Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details.
 
 > **NOTE:** 

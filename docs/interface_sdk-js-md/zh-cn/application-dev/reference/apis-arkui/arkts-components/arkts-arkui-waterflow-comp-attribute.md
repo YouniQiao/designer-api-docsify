@@ -1,5 +1,9 @@
 # WaterFlow属性/事件
 
+```TypeScript
+declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还支持以下属性：
 
 除支持[通用事件](arkts-arkui-commonmethod-c.md)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
@@ -33,6 +37,8 @@ cachedCount(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 预加载的FlowItem的数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
+
+<a id="cachedcount-1"></a>
 
 ## cachedCount
 
@@ -104,6 +110,8 @@ columnsTemplate(value: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string | 是 | 当前瀑布流组件布局列的数量。<br>默认值：'1fr' |
+
+<a id="columnstemplate-1"></a>
 
 ## columnsTemplate
 

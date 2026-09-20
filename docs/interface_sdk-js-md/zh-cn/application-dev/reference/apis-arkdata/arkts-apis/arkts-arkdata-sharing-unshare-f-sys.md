@@ -93,6 +93,8 @@ cloudData.sharing.unshare('sharing_resource_test', participants, (err: BusinessE
 ```
 
 
+<a id="unshare-1"></a>
+
 ## unshare
 
 ```TypeScript

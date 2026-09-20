@@ -1,5 +1,9 @@
 # PickerIndicatorType
 
+```TypeScript
+declare enum PickerIndicatorType
+```
+
 Enumerates the types of the selected item indicator.
 
 **Since:** 22

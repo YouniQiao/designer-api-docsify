@@ -66,6 +66,8 @@ call.getCallWaitingStatus(0).then((data: call.CallWaitingStatus) => {
 ```
 
 
+<a id="getcallwaitingstatus-1"></a>
+
 ## getCallWaitingStatus
 
 ```TypeScript

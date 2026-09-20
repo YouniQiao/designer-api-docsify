@@ -1,5 +1,9 @@
 # ThreatType
 
+```TypeScript
+declare enum ThreatType
+```
+
 Enumerates the website threat types.
 
 **Since:** 11

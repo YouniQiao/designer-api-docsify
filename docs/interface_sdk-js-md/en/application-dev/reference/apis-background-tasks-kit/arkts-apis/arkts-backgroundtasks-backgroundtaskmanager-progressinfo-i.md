@@ -1,5 +1,9 @@
 # ProgressInfo
 
+```TypeScript
+export interface ProgressInfo
+```
+
 Notify progress data.
 
 **Since:** 26.0.1

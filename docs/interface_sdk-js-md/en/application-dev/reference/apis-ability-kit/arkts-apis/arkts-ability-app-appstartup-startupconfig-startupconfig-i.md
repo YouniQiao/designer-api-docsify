@@ -1,5 +1,9 @@
 # StartupConfig
 
+```TypeScript
+export default interface StartupConfig
+```
+
 The module defines the configuration of [AppStartup](../../../application-models/app-startup.md).
 
 **Since:** 12

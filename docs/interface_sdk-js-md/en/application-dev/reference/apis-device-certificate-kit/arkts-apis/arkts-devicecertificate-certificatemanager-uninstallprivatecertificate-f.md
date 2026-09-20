@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="uninstallprivatecertificate-1"></a>
+
 ## uninstallPrivateCertificate
 
 ```TypeScript

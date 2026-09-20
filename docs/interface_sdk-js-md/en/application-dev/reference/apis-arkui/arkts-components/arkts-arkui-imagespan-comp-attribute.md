@@ -1,5 +1,9 @@
 # ImageSpan properties/events
 
+```TypeScript
+declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
+```
+
 The attributes inherit from [BaseSpan](arkts-arkui-basespan-c.md). Among the universal attributes, size, background, and border are supported.
 
 Among all the universal events, only the click event is supported. The following events are also supported.

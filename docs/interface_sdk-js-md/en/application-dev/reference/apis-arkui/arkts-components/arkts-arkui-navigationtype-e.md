@@ -1,5 +1,9 @@
 # NavigationType
 
+```TypeScript
+declare enum NavigationType
+```
+
 Navigation type.
 
 **Since:** 7

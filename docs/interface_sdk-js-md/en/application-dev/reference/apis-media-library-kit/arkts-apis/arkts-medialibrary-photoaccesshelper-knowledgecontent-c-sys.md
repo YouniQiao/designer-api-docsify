@@ -1,5 +1,9 @@
 # KnowledgeContent (System API)
 
+```TypeScript
+class KnowledgeContent
+```
+
 Knowledge Content class, used for geting related entity.
 
 **Since:** 23

@@ -67,6 +67,8 @@ sim.getLockState(0, 1).then((data: sim.LockState) => {
 ```
 
 
+<a id="getlockstate-1"></a>
+
 ## getLockState
 
 ```TypeScript

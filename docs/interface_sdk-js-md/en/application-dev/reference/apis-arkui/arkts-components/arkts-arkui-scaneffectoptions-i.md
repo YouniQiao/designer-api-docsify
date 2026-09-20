@@ -1,5 +1,9 @@
 # ScanEffectOptions
 
+```TypeScript
+declare interface ScanEffectOptions
+```
+
 Defines the scan effect options.
 
 **Since:** 10

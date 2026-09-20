@@ -1,5 +1,9 @@
 # HapticFeedbackMode
 
+```TypeScript
+declare enum HapticFeedbackMode
+```
+
 Enumerates the haptic feedback modes used when the menu is displayed.
 
 **Since:** 18

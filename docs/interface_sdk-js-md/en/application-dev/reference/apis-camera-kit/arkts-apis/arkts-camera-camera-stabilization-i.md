@@ -1,5 +1,9 @@
 # Stabilization
 
+```TypeScript
+interface Stabilization extends StabilizationQuery
+```
+
 **Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).
 
 It provides APIs to set video stabilization.

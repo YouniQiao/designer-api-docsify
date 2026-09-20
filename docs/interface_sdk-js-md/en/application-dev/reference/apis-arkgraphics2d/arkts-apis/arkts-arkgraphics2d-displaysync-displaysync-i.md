@@ -1,5 +1,9 @@
 # DisplaySync
 
+```TypeScript
+interface DisplaySync
+```
+
 An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md) to create a **DisplaySync** instance.
 
 **Since:** 11

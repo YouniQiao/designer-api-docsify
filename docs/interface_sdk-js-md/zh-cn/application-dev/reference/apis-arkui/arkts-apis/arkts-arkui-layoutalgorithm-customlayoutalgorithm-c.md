@@ -1,5 +1,9 @@
 # CustomLayoutAlgorithm
 
+```TypeScript
+export class CustomLayoutAlgorithm implements LayoutAlgorithm
+```
+
 自定义布局算法类。
 
 > **说明：** 

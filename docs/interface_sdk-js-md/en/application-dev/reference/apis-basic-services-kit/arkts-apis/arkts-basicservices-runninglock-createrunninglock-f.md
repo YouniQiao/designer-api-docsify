@@ -55,6 +55,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 ```
 
 
+<a id="createrunninglock-1"></a>
+
 ## createRunningLock
 
 ```TypeScript

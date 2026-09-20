@@ -75,6 +75,8 @@ dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
 ```
 
 
+<a id="setretentionstate-1"></a>
+
 ## setRetentionState
 
 ```TypeScript

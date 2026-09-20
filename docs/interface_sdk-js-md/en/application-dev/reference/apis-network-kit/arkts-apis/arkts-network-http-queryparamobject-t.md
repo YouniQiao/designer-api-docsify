@@ -1,7 +1,7 @@
 # QueryParamObject
 
 ```TypeScript
-export type QueryParamObject = Record<string, QueryParamValue | QueryParamValue[]>
+export type QueryParamObject = Record<string, QueryParamValue[]>
 ```
 
 Defines the key-value object type used to construct URL query parameters.

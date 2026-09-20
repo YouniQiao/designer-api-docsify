@@ -1,5 +1,9 @@
 # WebCookieManager
 
+```TypeScript
+class WebCookieManager
+```
+
 WebCookieManager is the cookie manager for Web components, providing global management capabilities for cookies in Web components. With this class, developers can obtain, set, save, and clear cookies, as well as control cookie permissions. All methods of this class are static, and all Web components in an app share a single WebCookieManager instance. The cookie format complies with the [RFC6265](https://www.rfc-editor.org/info/rfc6265/) standard.
 
 When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained.
@@ -43,6 +47,8 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+
+<a id="clearallcookies-1"></a>
 
 ## clearAllCookies
 
@@ -115,6 +121,8 @@ Clears all session cookies. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+
+<a id="clearsessioncookie-1"></a>
 
 ## clearSessionCookie
 
@@ -207,6 +215,8 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
+<a id="configcookie-1"></a>
+
 ## configCookie
 
 ```TypeScript
@@ -255,6 +265,8 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
+
+<a id="configcookie-2"></a>
 
 ## configCookie
 
@@ -347,6 +359,8 @@ Sets a cookie for the specified URL.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
+
+<a id="configcookiesync-1"></a>
 
 ## configCookieSync
 
@@ -506,6 +520,8 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
+<a id="fetchcookie-1"></a>
+
 ## fetchCookie
 
 ```TypeScript
@@ -537,6 +553,8 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookie-2"></a>
 
 ## fetchCookie
 
@@ -571,6 +589,8 @@ Obtains the cookies corresponding to a specified URL. The parameter incognito sp
 | Error Code ID | Error Message |
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookie-3"></a>
 
 ## fetchCookie
 
@@ -641,6 +661,8 @@ Obtains the cookie value of the specified URL.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
+
+<a id="fetchcookiesync-1"></a>
 
 ## fetchCookieSync
 
@@ -840,6 +862,8 @@ Saves all cookies that can be obtained through fetchCookie and need to be persis
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+
+<a id="savecookieasync-1"></a>
 
 ## saveCookieAsync
 

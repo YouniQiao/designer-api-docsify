@@ -57,6 +57,8 @@ formHost.disableFormsUpdate(formIds).then(() => {
 ```
 
 
+<a id="disableformsupdate-1"></a>
+
 ## disableFormsUpdate
 
 ```TypeScript

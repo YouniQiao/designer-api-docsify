@@ -1,5 +1,9 @@
 # RichEditorTextSpanResult
 
+```TypeScript
+declare interface RichEditorTextSpanResult
+```
+
 文本Span信息。
 
 **起始版本：** 10

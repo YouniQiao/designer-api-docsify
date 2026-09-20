@@ -1,5 +1,9 @@
 # TextBackgroundStyle
 
+```TypeScript
+declare interface TextBackgroundStyle
+```
+
 定义Span的背景样式。
 
 **起始版本：** 11

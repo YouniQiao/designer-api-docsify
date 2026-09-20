@@ -126,6 +126,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="revokeuripermission-2"></a>
+
 ## revokeUriPermission
 
 ```TypeScript
@@ -178,6 +180,8 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 参见 [revokeUriPermission](#revokeuripermission)
 
+
+<a id="revokeuripermission-4"></a>
 
 ## revokeUriPermission
 

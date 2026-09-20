@@ -298,6 +298,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="startbackgroundrunning-1"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
@@ -348,6 +350,8 @@ Requests a continuous task of a specific type. This API uses a promise to return
 See [startBackgroundRunning](#startbackgroundrunning)
 
 
+<a id="startbackgroundrunning-2"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
@@ -396,6 +400,8 @@ Requests continuous tasks of multiple types. This API uses a promise to return t
 
 See [startBackgroundRunning](#startbackgroundrunning)
 
+
+<a id="startbackgroundrunning-3"></a>
 
 ## startBackgroundRunning
 

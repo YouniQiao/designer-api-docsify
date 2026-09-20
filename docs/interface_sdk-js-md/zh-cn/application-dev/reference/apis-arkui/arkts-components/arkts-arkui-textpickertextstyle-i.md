@@ -1,5 +1,9 @@
 # TextPickerTextStyle
 
+```TypeScript
+declare interface TextPickerTextStyle extends PickerTextStyle
+```
+
 文本样式选项，继承自[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)。
 
 **继承/实现关系：** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)

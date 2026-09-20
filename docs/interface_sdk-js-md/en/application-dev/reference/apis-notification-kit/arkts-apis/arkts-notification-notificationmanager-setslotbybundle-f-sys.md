@@ -85,6 +85,8 @@ notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
 ```
 
 
+<a id="setslotbybundle-1"></a>
+
 ## setSlotByBundle
 
 ```TypeScript

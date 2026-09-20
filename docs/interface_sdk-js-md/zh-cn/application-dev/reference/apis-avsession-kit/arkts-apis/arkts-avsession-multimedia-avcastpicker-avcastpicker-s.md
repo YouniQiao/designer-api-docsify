@@ -1,5 +1,9 @@
 # AVCastPicker
 
+```TypeScript
+declare struct AVCastPicker
+```
+
 本模块提供创建投播组件AVCastPicker的功能，提供设备发现连接的统一入口。
 
 > **说明：** 

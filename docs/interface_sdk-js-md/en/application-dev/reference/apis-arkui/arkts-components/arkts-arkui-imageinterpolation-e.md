@@ -1,5 +1,9 @@
 # ImageInterpolation
 
+```TypeScript
+declare enum ImageInterpolation
+```
+
 Interpolation effect of the image.
 
 **Since:** 7

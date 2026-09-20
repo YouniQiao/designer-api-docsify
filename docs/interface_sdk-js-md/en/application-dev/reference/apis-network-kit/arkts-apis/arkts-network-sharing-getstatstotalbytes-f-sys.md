@@ -65,6 +65,8 @@ sharing
 ```
 
 
+<a id="getstatstotalbytes-1"></a>
+
 ## getStatsTotalBytes
 
 ```TypeScript

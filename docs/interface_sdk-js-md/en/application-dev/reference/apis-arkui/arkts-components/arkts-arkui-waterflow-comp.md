@@ -58,7 +58,7 @@ Creates a **WaterFlow** component.
 
 | Name | Description |
 | --- | --- |
-| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node. |
+| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-2) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node. |
 | [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | Provides parameters of the **WaterFlow** component. |
 
 ### Types

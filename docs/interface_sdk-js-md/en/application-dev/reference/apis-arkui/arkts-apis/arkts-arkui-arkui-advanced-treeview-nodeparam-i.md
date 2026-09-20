@@ -1,5 +1,9 @@
 # NodeParam
 
+```TypeScript
+export interface NodeParam
+```
+
 Declare NodeParam
 
 **Since:** 10

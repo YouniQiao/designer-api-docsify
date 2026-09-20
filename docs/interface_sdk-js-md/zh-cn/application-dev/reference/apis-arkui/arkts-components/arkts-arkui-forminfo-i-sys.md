@@ -1,5 +1,9 @@
 # FormInfo（系统接口）
 
+```TypeScript
+declare interface FormInfo
+```
+
 卡片信息。
 
 **起始版本：** 12

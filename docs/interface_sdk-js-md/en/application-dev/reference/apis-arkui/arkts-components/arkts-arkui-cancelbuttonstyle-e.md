@@ -1,5 +1,9 @@
 # CancelButtonStyle
 
+```TypeScript
+declare enum CancelButtonStyle
+```
+
 Enum for the style of cancel button.
 
 **Since:** 10

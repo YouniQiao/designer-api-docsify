@@ -1,5 +1,9 @@
 # FontVariation
 
+```TypeScript
+interface FontVariation
+```
+
 Describes a font variation.
 
 **Since:** 12

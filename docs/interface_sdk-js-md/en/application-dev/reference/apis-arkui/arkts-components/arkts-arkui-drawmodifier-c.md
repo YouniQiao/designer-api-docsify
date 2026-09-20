@@ -1,5 +1,9 @@
 # DrawModifier
 
+```TypeScript
+declare class DrawModifier
+```
+
 Defined the draw modifier of node. Provides draw callbacks for the associated Node. Each DrawModifier instance can be set for only one component. Repeated setting is not allowed.
 
 **Since:** 12

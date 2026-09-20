@@ -1,5 +1,9 @@
 # ScrollBarOptions
 
+```TypeScript
+declare interface ScrollBarOptions
+```
+
 Parameters of the **ScrollBar** component.
 
 > **NOTE:** 

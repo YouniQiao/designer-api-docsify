@@ -1,5 +1,9 @@
 # UndoStyle
 
+```TypeScript
+declare enum UndoStyle
+```
+
 Enumerates the options for whether to retain the original style upon undo operations.
 
 **Since:** 20

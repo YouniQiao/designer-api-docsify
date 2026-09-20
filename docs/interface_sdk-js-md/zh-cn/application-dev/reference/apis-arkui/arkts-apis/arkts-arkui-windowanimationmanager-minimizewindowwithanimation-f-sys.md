@@ -144,6 +144,8 @@ promise.then((data: windowAnimationManager.WindowAnimationFinishedCallback) => {
 ```
 
 
+<a id="minimizewindowwithanimation-1"></a>
+
 ## minimizeWindowWithAnimation
 
 ```TypeScript

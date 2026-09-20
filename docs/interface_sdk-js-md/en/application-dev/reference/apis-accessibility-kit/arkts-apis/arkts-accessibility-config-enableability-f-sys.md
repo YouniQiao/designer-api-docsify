@@ -80,6 +80,8 @@ config.enableAbility(name, capability, (err: BusinessError) => {
 ```
 
 
+<a id="enableability-1"></a>
+
 ## enableAbility
 
 ```TypeScript

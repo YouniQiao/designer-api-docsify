@@ -1,5 +1,9 @@
 # OnLoadInterceptEvent
 
+```TypeScript
+export declare interface OnLoadInterceptEvent
+```
+
 定义Web组件加载url之前触发的加载拦截事件。
 
 **起始版本：** 12

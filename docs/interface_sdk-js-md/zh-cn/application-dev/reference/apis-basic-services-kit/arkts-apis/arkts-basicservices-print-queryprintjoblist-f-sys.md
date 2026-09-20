@@ -62,6 +62,8 @@ print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
 ```
 
 
+<a id="queryprintjoblist-1"></a>
+
 ## queryPrintJobList
 
 ```TypeScript

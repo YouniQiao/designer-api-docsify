@@ -1,5 +1,9 @@
 # DialogAlignment
 
+```TypeScript
+declare enum DialogAlignment
+```
+
 Enumerates the alignment modes of the alert dialog boxes.
 
 **Since:** 7

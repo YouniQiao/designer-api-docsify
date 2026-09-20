@@ -1,5 +1,9 @@
 # IconOptions
 
+```TypeScript
+interface IconOptions
+```
+
 定义图标选项。
 
 **起始版本：** 10

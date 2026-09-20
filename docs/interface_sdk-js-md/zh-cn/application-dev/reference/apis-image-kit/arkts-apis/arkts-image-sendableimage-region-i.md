@@ -1,5 +1,9 @@
 # Region
 
+```TypeScript
+interface Region extends lang.ISendable
+```
+
 表示区域信息。
 
 继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。

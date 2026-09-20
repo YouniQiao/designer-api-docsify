@@ -129,6 +129,8 @@ notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
 ```
 
 
+<a id="isnotificationenabled-1"></a>
+
 ## isNotificationEnabled
 
 ```TypeScript
@@ -174,6 +176,8 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 参见 [isNotificationEnabled](#isnotificationenabled)
 
 
+<a id="isnotificationenabled-4"></a>
+
 ## isNotificationEnabled
 
 ```TypeScript
@@ -213,6 +217,8 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 参见 [isNotificationEnabled](#isnotificationenabled)
 
+
+<a id="isnotificationenabled-5"></a>
 
 ## isNotificationEnabled
 

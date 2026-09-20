@@ -18,7 +18,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
+**Substitutes:** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl-1)(options: router.RouterOptions)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

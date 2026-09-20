@@ -112,6 +112,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="gettopwindow-1"></a>
+
 ## getTopWindow
 
 ```TypeScript
@@ -122,13 +124,13 @@ function getTopWindow(): Promise<Window>
 
 > **说明：** 
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext)
+**替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)(ctx: BaseContext)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -145,6 +147,8 @@ function getTopWindow(): Promise<Window>
 参见 [getTopWindow](#gettopwindow)
 
 
+<a id="gettopwindow-2"></a>
+
 ## getTopWindow
 
 ```TypeScript
@@ -155,13 +159,13 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext)
+**替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)(ctx: BaseContext)
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -181,6 +185,8 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 
 参见 [getTopWindow](#gettopwindow)
 
+
+<a id="gettopwindow-3"></a>
 
 ## getTopWindow
 

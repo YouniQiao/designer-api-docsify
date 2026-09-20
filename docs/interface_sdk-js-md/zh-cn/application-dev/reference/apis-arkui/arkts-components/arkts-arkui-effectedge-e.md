@@ -1,5 +1,9 @@
 # EffectEdge
 
+```TypeScript
+declare enum EffectEdge
+```
+
 表示当前边缘效果要生效的边缘。
 
 @enum { number }

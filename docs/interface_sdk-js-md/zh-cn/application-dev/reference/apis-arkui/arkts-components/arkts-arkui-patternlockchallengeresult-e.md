@@ -1,5 +1,9 @@
 # PatternLockChallengeResult
 
+```TypeScript
+declare enum PatternLockChallengeResult
+```
+
 图案密码状态。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # ParticleAnnulusRegion
 
+```TypeScript
+declare interface ParticleAnnulusRegion
+```
+
 用于设置环形发射器区域的配置信息。
 
 > **说明：** 

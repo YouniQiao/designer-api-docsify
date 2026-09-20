@@ -136,6 +136,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
+<a id="getdefaultapplication-1"></a>
+
 ## getDefaultApplication
 
 ```TypeScript
@@ -174,6 +176,8 @@ Obtains the default application based on a system-defined application type, a fi
 
 See [getDefaultApplication](#getdefaultapplication)
 
+
+<a id="getdefaultapplication-2"></a>
 
 ## getDefaultApplication
 

@@ -1,5 +1,9 @@
 # RowSplit properties/events
 
+```TypeScript
+declare class RowSplitAttribute extends CommonMethod<RowSplitAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 

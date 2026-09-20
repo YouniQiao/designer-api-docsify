@@ -65,6 +65,8 @@ policy
 ```
 
 
+<a id="setdeviceidletrustlist-1"></a>
+
 ## setDeviceIdleTrustlist
 
 ```TypeScript

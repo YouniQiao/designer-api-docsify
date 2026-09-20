@@ -1,5 +1,9 @@
 # SecurityComponentMethod
 
+```TypeScript
+declare class SecurityComponentMethod<T>
+```
+
 The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
 This module is mainly used in the following scenarios:  
@@ -199,6 +203,8 @@ Sets the alignment rules for child components within a relative container. This 
 | --- | --- |
 | T | Attribute of the security component. |
 
+<a id="alignrules-1"></a>
+
 ## alignRules
 
 ```TypeScript
@@ -247,7 +253,7 @@ Sets the background color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component.<br>Default value: &#36;r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component.<br>Default value: $r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
 
 **Return value:**
 
@@ -312,6 +318,8 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 | Type | Description |
 | --- | --- |
 | T | Attribute of the security component. |
+
+<a id="borderradius-1"></a>
 
 ## borderRadius
 
@@ -562,7 +570,7 @@ Sets the font color of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component.<br>Default value: &#36;r('sys.color.font_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component.<br>Default value: $r('sys.color.font_on_primary'). |
 
 **Return value:**
 
@@ -618,7 +626,7 @@ Sets the font size of the text for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component.<br>When the unit is not explicitly specified, the unit is fp. <br>Default value: &#36;r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component.<br>When the unit is not explicitly specified, the unit is fp. <br>Default value: $r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
 
 **Return value:**
 
@@ -760,7 +768,7 @@ Sets the icon color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component.<br>Default value: &#36;r('sys.color.icon_on_primary'). |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component.<br>Default value: $r('sys.color.icon_on_primary'). |
 
 **Return value:**
 

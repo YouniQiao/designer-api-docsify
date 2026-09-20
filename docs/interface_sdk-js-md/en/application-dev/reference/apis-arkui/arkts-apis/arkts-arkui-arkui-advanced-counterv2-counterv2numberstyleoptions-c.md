@@ -1,5 +1,9 @@
 # CounterV2NumberStyleOptions
 
+```TypeScript
+declare class CounterV2NumberStyleOptions extends CounterV2InlineStyleOptions
+```
+
 Defines the attributes and events of the list and compact **CounterV2**.
 
 **Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)

@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="getallapplicationinfo-1"></a>
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -140,6 +142,8 @@ Obtains all the application information in the system based on the given applica
 
 See [getAllApplicationInfo](#getallapplicationinfo)
 
+
+<a id="getallapplicationinfo-2"></a>
 
 ## getAllApplicationInfo
 

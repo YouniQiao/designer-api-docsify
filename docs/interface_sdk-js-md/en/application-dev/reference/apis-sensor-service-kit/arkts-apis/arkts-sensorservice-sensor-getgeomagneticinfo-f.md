@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="getgeomagneticinfo-1"></a>
+
 ## getGeomagneticInfo
 
 ```TypeScript

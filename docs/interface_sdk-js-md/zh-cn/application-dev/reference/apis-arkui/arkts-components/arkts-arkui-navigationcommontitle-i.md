@@ -1,5 +1,9 @@
 # NavigationCommonTitle
 
+```TypeScript
+declare interface NavigationCommonTitle
+```
+
 Navigation通用标题。
 
 **起始版本：** 9

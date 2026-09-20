@@ -1,5 +1,9 @@
 # Scroll properties/events
 
+```TypeScript
+declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
+```
+
 Defines the scroll attribute functions.
 
 **Inheritance/Implementation:** ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
@@ -517,6 +521,8 @@ Sets the scrollbar color.
 | --- | --- | --- | --- |
 | color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -558,6 +564,8 @@ Sets the scrollbar width.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; string | Yes | Scrollbar width.<br>Default value: &lt;em&gt;4&lt;/em&gt; <br>Unit: vp <br>Values less than 0 are treated as the default value. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

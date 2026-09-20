@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getrealtime-1"></a>
+
 ## getRealTime
 
 ```TypeScript
@@ -119,6 +121,8 @@ function getRealTime(callback: AsyncCallback<number>): void
 
 参见 [getRealTime](#getrealtime)
 
+
+<a id="getrealtime-2"></a>
 
 ## getRealTime
 

@@ -1,5 +1,9 @@
 # UIEventObserver
 
+```TypeScript
+declare interface UIEventObserver
+```
+
 Defines a UI event listener, which is used to listen for various events on the UI, including the display of the **Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using [createUIEventObserver](arkts-test-uitest-driver-c.md#createuieventobserver).
 
 **Since:** 10

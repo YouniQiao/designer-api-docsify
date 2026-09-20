@@ -89,6 +89,8 @@ networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true).then(() => {
 ```
 
 
+<a id="setnetworkinterfacedisabled-1"></a>
+
 ## setNetworkInterfaceDisabled
 
 ```TypeScript

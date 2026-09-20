@@ -1,5 +1,9 @@
 # ScrollEffectType
 
+```TypeScript
+declare enum ScrollEffectType
+```
+
 滑动模糊效果类型。
 
 **起始版本：** 26.0.0

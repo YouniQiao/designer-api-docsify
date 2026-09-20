@@ -84,6 +84,8 @@ notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() =
 ```
 
 
+<a id="subscribenotification-1"></a>
+
 ## subscribeNotification
 
 ```TypeScript

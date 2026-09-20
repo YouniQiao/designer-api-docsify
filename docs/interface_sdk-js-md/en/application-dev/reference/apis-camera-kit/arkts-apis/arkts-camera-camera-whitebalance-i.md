@@ -1,5 +1,9 @@
 # WhiteBalance
 
+```TypeScript
+interface WhiteBalance extends WhiteBalanceQuery
+```
+
 **WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md).
 
 It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.

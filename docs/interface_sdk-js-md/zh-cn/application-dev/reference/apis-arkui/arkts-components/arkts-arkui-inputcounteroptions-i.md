@@ -1,5 +1,9 @@
 # InputCounterOptions
 
+```TypeScript
+declare interface InputCounterOptions
+```
+
 计数器的配置项。
 
 **起始版本：** 11

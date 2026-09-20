@@ -94,6 +94,8 @@ notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data:
 ```
 
 
+<a id="isdistributedenabledbybundle-1"></a>
+
 ## isDistributedEnabledByBundle
 
 ```TypeScript
@@ -144,6 +146,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 参见 [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 
+
+<a id="isdistributedenabledbybundle-2"></a>
 
 ## isDistributedEnabledByBundle
 

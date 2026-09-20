@@ -1,5 +1,9 @@
 # CustomDialogController
 
+```TypeScript
+declare class CustomDialogController
+```
+
 Defines the controller of the custom dialog box.
 
 ## Objects to Import
@@ -7,6 +11,8 @@ Defines the controller of the custom dialog box.
 ```ts
 dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
 ```
+
+
 
 > **NOTE:** 
 > 
@@ -99,7 +105,7 @@ Opens the content of the custom dialog box. This API can be called multiple time
 > 
 > **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method
 > windows. For details, see the constraints in
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)
 > of the input method framework documentation.
 
 **Since:** 7

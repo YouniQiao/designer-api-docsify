@@ -1,5 +1,9 @@
 # X509CRLEntry
 
+```TypeScript
+interface X509CRLEntry
+```
+
 Provides APIs for operating on a revoked certificate entry in a CRL.
 
 **Since:** 11
@@ -141,6 +145,8 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
   }
 });
 ```
+
+<a id="getcertissuer-1"></a>
 
 ## getCertIssuer
 
@@ -478,6 +484,8 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
   }
 });
 ```
+
+<a id="getencoded-1"></a>
 
 ## getEncoded
 

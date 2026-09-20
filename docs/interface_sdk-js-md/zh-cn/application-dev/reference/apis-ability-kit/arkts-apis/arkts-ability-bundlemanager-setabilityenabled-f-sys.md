@@ -148,6 +148,8 @@ try {
 ```
 
 
+<a id="setabilityenabled-1"></a>
+
 ## setAbilityEnabled
 
 ```TypeScript
@@ -186,6 +188,8 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 参见 [setAbilityEnabled](#setabilityenabled)
 
+
+<a id="setabilityenabled-2"></a>
 
 ## setAbilityEnabled
 

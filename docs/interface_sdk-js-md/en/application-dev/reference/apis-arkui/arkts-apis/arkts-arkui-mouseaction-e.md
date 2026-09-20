@@ -1,5 +1,9 @@
 # MouseAction
 
+```TypeScript
+declare enum MouseAction
+```
+
 Sets the action type of a mouse operation.
 
 **Since:** 8

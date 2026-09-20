@@ -1,5 +1,9 @@
 # OperateItemV2Options
 
+```TypeScript
+export interface OperateItemV2Options
+```
+
 Declare interface OperateItemV2Options
 
 **Since:** 26.0.0

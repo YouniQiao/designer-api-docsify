@@ -1,5 +1,9 @@
 # BlurStyleActivePolicy
 
+```TypeScript
+declare enum BlurStyleActivePolicy
+```
+
 定义背景模糊激活策略。
 
 **起始版本：** 14

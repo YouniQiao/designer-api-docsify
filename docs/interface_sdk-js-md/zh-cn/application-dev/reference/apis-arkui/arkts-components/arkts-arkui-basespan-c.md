@@ -1,5 +1,9 @@
 # BaseSpan
 
+```TypeScript
+declare class BaseSpan<T> extends CommonMethod<T>
+```
+
 定义BaseSpan基础类，包含Span的通用属性。
 
 **继承/实现关系：** BaseSpan extends CommonMethod<T>

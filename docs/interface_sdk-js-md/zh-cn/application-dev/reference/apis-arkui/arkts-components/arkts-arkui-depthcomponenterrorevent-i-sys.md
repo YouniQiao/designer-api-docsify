@@ -1,5 +1,9 @@
 # DepthComponentErrorEvent（系统接口）
 
+```TypeScript
+declare interface DepthComponentErrorEvent
+```
+
 背景资源加载失败的事件信息。
 
 **起始版本：** 26.0.0

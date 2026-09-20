@@ -1,5 +1,9 @@
 # Panel
 
+```TypeScript
+interface Panel
+```
+
 Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。<br> <br>核心功能概述：<br> <br>- 页面加载：通过[setUiContent](#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。<br>- 显示与隐藏：通过[show](#show)显示面板，通过[hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。<br>- 尺寸与位置调整：通过[resize](#resize)调整面板尺寸，通过[moveTo](#moveto)移动面板位置，通过[startMoving](#startmoving)拖拽移动面板，通过[adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。<br>- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过[setPrivacyMode](#setprivacymode)设置隐私模式，通过[setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。<br>- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。<br> <br>面板生命周期：<br> <br>1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。<br>2. 调用[setUiContent](#setuicontent)加载键盘页面内容。<br>3. 调用[show](#show)显示面板，用户可交互。<br>4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。<br>5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。<br> <br>下列API均需使用[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
 
 **起始版本：** 10
@@ -109,6 +113,8 @@ let panelRect: inputMethodEngine.EnhancedPanelRect = {
 };
 panel.adjustPanelRect(panelFlag, panelRect);
 ```
+
+<a id="adjustpanelrect-1"></a>
 
 ## adjustPanelRect
 
@@ -350,6 +356,8 @@ panel.hide().then(() => {
 });
 ```
 
+<a id="hide-1"></a>
+
 ## hide
 
 ```TypeScript
@@ -443,6 +451,8 @@ panel.moveTo(300, 300).then(() => {
   console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="moveto-1"></a>
 
 ## moveTo
 
@@ -675,6 +685,8 @@ panel.resize(500, 1000).then(() => {
   console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="resize-1"></a>
 
 ## resize
 
@@ -990,6 +1002,8 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 });
 ```
 
+<a id="setuicontent-1"></a>
+
 ## setUiContent
 
 ```TypeScript
@@ -1024,6 +1038,8 @@ setUiContent(path: string): Promise<void>
 
 参见 [setUiContent](#setuicontent)
 
+<a id="setuicontent-2"></a>
+
 ## setUiContent
 
 ```TypeScript
@@ -1053,6 +1069,8 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 **示例**
 
 参见 [setUiContent](#setuicontent)
+
+<a id="setuicontent-3"></a>
 
 ## setUiContent
 
@@ -1130,6 +1148,8 @@ panel.show().then(() => {
   console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="show-1"></a>
 
 ## show
 
@@ -1280,6 +1300,8 @@ let panelRect: inputMethodEngine.EnhancedPanelRect = {
 panel.updatePanelRect(panelFlag, panelRect);
 ```
 
+<a id="updatepanelrect-1"></a>
+
 ## updatePanelRect
 
 ```TypeScript
@@ -1426,6 +1448,8 @@ let panelRect: inputMethodEngine.EnhancedPanelRect = {
 };
 panel.updatePanelRectSync(panelFlag, panelRect);
 ```
+
+<a id="updatepanelrectsync-1"></a>
 
 ## updatePanelRectSync
 

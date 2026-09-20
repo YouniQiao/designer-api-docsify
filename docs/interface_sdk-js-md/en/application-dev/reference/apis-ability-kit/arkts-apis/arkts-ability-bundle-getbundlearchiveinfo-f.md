@@ -61,6 +61,8 @@ bundle.getBundleArchiveInfo(hapFilePath, bundleFlags, (err, data) => {
 ```
 
 
+<a id="getbundlearchiveinfo-1"></a>
+
 ## getBundleArchiveInfo
 
 ```TypeScript

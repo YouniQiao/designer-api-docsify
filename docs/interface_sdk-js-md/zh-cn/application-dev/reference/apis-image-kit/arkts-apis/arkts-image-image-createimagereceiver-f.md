@@ -66,6 +66,8 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 ```
 
 
+<a id="createimagereceiver-1"></a>
+
 ## createImageReceiver
 
 ```TypeScript
@@ -104,6 +106,8 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: number):
 
 参见 [createImageReceiver](#createimagereceiver)
 
+
+<a id="createimagereceiver-3"></a>
 
 ## createImageReceiver
 

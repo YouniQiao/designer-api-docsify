@@ -49,6 +49,8 @@ Stage模型示例：
 ```
 
 
+<a id="deleterdbstore-1"></a>
+
 ## deleteRdbStore
 
 ```TypeScript
@@ -87,6 +89,8 @@ function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCa
 
 参见 [deleteRdbStore](#deleterdbstore)
 
+
+<a id="deleterdbstore-2"></a>
 
 ## deleteRdbStore
 
@@ -129,6 +133,8 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 参见 [deleteRdbStore](#deleterdbstore)
 
+
+<a id="deleterdbstore-3"></a>
 
 ## deleteRdbStore
 

@@ -118,6 +118,8 @@ try {
 ```
 
 
+<a id="decompressfile-1"></a>
+
 ## decompressFile
 
 ```TypeScript
@@ -159,6 +161,8 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 
 参见 [decompressFile](#decompressfile)
 
+
+<a id="decompressfile-2"></a>
 
 ## decompressFile
 

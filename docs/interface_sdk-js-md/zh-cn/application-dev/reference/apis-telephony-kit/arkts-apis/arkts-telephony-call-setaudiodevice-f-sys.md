@@ -72,6 +72,8 @@ call.setAudioDevice(audioDevice).then(() => {
 ```
 
 
+<a id="setaudiodevice-1"></a>
+
 ## setAudioDevice
 
 ```TypeScript

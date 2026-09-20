@@ -1,5 +1,9 @@
 # HorizontalAlign
 
+```TypeScript
+declare enum HorizontalAlign
+```
+
 HorizontalAlign enumeration description.
 
 @enum { number }

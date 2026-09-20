@@ -105,6 +105,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 ```
 
 
+<a id="createvirtualscreen-1"></a>
+
 ## createVirtualScreen
 
 ```TypeScript

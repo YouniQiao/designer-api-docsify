@@ -1,5 +1,9 @@
 # OnShowFileSelectorEvent
 
+```TypeScript
+declare interface OnShowFileSelectorEvent
+```
+
 Defines the callback information for the file selector result, including the result and parameter details.
 
 **Since:** 12

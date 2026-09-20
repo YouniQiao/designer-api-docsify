@@ -1,5 +1,9 @@
 # ComposeListItem
 
+```TypeScript
+export declare struct ComposeListItem
+```
+
 The **ComposeListItem** component is a container that presents a series of items arranged in a column with the same width. You can use it to present data of the same type in a multiple and coherent row style, for example, images or text.
 
 > **NOTE:** 

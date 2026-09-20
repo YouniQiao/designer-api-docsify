@@ -63,6 +63,8 @@ data.getCellularDataFlowType().then((contextData: data.DataFlowType) => {
 ```
 
 
+<a id="getcellulardataflowtype-1"></a>
+
 ## getCellularDataFlowType
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # NavigationMenuItem
 
+```TypeScript
+declare interface NavigationMenuItem
+```
+
 Defines the navigation menu item, including the menu icon and menu information.
 
 **Since:** 8

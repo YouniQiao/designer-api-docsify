@@ -1,5 +1,9 @@
 # SelectionContainerMenuOptions
 
+```TypeScript
+export interface SelectionContainerMenuOptions
+```
+
 Defines selection menu options for SelectionContainer.
 
 **Since:** 26.0.0

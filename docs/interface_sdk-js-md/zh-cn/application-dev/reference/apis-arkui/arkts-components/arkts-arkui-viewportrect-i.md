@@ -1,5 +1,9 @@
 # ViewportRect
 
+```TypeScript
+declare interface ViewportRect
+```
+
 用于描述Viewport的绘制属性。
 
 > **说明：** 

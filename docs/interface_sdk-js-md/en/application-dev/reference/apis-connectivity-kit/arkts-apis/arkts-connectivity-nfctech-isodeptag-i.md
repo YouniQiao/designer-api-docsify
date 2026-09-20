@@ -1,5 +1,9 @@
 # IsoDepTag
 
+```TypeScript
+export interface IsoDepTag extends TagSession
+```
+
 Provides APIs to access ISO-DEP (ISO 14443-4) properties and I/O operations on a tag. This class inherits from **TagSession**.
 
 **TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
@@ -160,6 +164,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="isextendedapdusupported-1"></a>
 
 ## isExtendedApduSupported
 

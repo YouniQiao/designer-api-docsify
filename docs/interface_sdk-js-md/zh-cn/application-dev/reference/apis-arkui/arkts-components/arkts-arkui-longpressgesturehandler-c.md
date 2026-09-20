@@ -1,5 +1,9 @@
 # LongPressGestureHandler
 
+```TypeScript
+declare class LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
+```
+
 长按手势处理器对象类型。
 
 **继承/实现关系：** LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
@@ -85,6 +89,8 @@ onActionCancel(event: Callback<void>): LongPressGestureHandler
 | 类型 | 说明 |
 | --- | --- |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 返回当前长按手势处理器对象。 |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

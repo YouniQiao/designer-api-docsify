@@ -1,5 +1,9 @@
 # FetchResponse
 
+```TypeScript
+export interface FetchResponse
+```
+
 **Table 2** Mapping between responseType and data in success callback
 
 | responseType | data | Description|  

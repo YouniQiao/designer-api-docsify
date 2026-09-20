@@ -127,6 +127,8 @@ struct Index {
 ```
 
 
+<a id="setcustomcursor-1"></a>
+
 ## setCustomCursor
 
 ```TypeScript

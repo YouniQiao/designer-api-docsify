@@ -78,6 +78,8 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
 ```
 
 
+<a id="castaudio-1"></a>
+
 ## castAudio
 
 ```TypeScript

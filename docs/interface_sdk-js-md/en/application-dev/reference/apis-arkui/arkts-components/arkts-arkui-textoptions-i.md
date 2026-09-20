@@ -1,5 +1,9 @@
 # TextOptions
 
+```TypeScript
+declare interface TextOptions
+```
+
 Describes the initialization options of the **Text** component.
 
 **Since:** 11

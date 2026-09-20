@@ -1,5 +1,9 @@
 # PopupOptions
 
+```TypeScript
+declare interface PopupOptions
+```
+
 Provides the configuration options for the popup.
 
 **Since:** 7

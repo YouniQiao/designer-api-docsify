@@ -1,5 +1,9 @@
 # TextDecoder
 
+```TypeScript
+class TextDecoder
+```
+
 提供将字节数组解码为字符串的 API。支持多种格式，包括 UTF-8、UTF-16LE、UTF-16BE、ISO-8859 和 Windows-1251。
 
 **起始版本：** 7
@@ -38,6 +42,8 @@ console.info('retStr = ' + retStr);
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

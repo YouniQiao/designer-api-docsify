@@ -1,5 +1,9 @@
 # Macro
 
+```TypeScript
+interface Macro extends MacroQuery
+```
+
 **Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i.md).
 
 It provides the API to enable macro photography.

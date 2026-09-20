@@ -1,5 +1,9 @@
 # CalendarPicker properties/events
 
+```TypeScript
+declare class CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -32,6 +36,8 @@ Sets how the picker is aligned with the entry component.
 | --- | --- | --- | --- |
 | alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. |
 | offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
+
+<a id="edgealign-1"></a>
 
 ## edgeAlign
 
@@ -100,6 +106,8 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 | --- | --- | --- | --- |
 | callback | Callback&lt;Date&gt; | Yes | Selected date value.<br>**Since:** 18 |
 
+<a id="onchange-1"></a>
+
 ## onChange
 
 ```TypeScript
@@ -147,6 +155,8 @@ Sets the font color, font size, and font weight in the entry area.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+
+<a id="textstyle-1"></a>
 
 ## textStyle
 

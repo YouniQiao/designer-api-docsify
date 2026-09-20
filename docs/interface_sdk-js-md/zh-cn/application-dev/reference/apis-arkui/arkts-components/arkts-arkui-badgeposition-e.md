@@ -1,5 +1,9 @@
 # BadgePosition
 
+```TypeScript
+declare enum BadgePosition
+```
+
 标记显示位置。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # PrivacySearchResult
 
+```TypeScript
+interface PrivacySearchResult
+```
+
 Defines the result of a privacy search operation, containing the result ciphertexts and optional value ciphertexts.
 
 **Since:** 26.0.1

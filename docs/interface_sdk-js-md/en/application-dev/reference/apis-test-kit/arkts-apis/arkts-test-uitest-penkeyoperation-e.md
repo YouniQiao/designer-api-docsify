@@ -1,5 +1,9 @@
 # PenKeyOperation
 
+```TypeScript
+declare enum PenKeyOperation
+```
+
 Pen key operation type enum.
 
 **Since:** 26.0.0

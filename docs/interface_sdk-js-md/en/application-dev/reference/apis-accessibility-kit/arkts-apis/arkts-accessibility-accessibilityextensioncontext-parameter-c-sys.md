@@ -1,5 +1,9 @@
 # Parameter (System API)
 
+```TypeScript
+export declare class Parameter
+```
+
 Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (actions that can be performed by an accessibility node element).
 
 **Since:** 20

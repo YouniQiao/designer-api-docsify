@@ -1,5 +1,9 @@
 # CreateAppCloneParam（系统接口）
 
+```TypeScript
+export interface CreateAppCloneParam
+```
+
 创建分身应用可指定的参数信息。
 
 **起始版本：** 12

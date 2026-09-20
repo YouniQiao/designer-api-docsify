@@ -1,5 +1,9 @@
 # DrawableDescriptorLoadedResult
 
+```TypeScript
+export interface DrawableDescriptorLoadedResult
+```
+
 传入的图片资源或地址的加载结果。
 
 **起始版本：** 21

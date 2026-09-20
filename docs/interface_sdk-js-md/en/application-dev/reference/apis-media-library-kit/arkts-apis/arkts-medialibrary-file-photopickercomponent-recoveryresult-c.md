@@ -1,5 +1,9 @@
 # RecoveryResult
 
+```TypeScript
+export declare class RecoveryResult
+```
+
 RecoveryResult
 
 **Since:** 26.0.1

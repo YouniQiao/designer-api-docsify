@@ -104,6 +104,8 @@ bundleManager.getDisallowedInstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisallowedinstallbundles-1"></a>
+
 ## getDisallowedInstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ function getDisallowedInstallBundles(admin: Want, userId: number, callback: Asyn
 
 参见 [getDisallowedInstallBundles](#getdisallowedinstallbundles)
 
+
+<a id="getdisallowedinstallbundles-2"></a>
 
 ## getDisallowedInstallBundles
 

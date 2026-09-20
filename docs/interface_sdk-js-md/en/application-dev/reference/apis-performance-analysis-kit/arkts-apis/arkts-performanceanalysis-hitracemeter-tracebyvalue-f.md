@@ -49,6 +49,8 @@ hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
 ```
 
 
+<a id="tracebyvalue-1"></a>
+
 ## traceByValue
 
 ```TypeScript

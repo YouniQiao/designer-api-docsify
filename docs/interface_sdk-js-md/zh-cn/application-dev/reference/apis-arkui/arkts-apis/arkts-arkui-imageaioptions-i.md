@@ -1,5 +1,9 @@
 # ImageAIOptions
 
+```TypeScript
+declare interface ImageAIOptions
+```
+
 图像AI分析选项。
 
 > **说明：** 

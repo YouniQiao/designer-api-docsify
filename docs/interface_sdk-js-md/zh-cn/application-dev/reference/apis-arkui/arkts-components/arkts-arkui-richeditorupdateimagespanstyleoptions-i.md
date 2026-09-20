@@ -1,5 +1,9 @@
 # RichEditorUpdateImageSpanStyleOptions
 
+```TypeScript
+declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions
+```
+
 图片的样式选项。
 
 继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。

@@ -1,5 +1,9 @@
 # ComputedBarAttribute
 
+```TypeScript
+declare interface ComputedBarAttribute
+```
+
 Provides information about the position and length of the scrollbar.
 
 **Since:** 10

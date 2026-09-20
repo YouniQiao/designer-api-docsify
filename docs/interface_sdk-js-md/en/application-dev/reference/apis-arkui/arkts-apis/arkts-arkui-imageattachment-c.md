@@ -1,5 +1,9 @@
 # ImageAttachment
 
+```TypeScript
+declare class ImageAttachment
+```
+
 Describes the image attachment.
 
 **Since:** 12
@@ -27,6 +31,8 @@ A constructor used to create an image object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | Image attachment options. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

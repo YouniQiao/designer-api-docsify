@@ -1,5 +1,9 @@
 # OnScaleChangeEvent
 
+```TypeScript
+declare interface OnScaleChangeEvent
+```
+
 Represents the callback invoked when the display scale of this page changes.
 
 **Since:** 12

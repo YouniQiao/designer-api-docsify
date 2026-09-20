@@ -1,5 +1,9 @@
 # ListItemGroupOptions
 
+```TypeScript
+declare interface ListItemGroupOptions
+```
+
 Describes the **ListItemGroup** component parameter.
 
 **Since:** 9

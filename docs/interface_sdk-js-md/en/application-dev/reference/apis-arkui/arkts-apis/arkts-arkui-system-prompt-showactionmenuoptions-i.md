@@ -1,5 +1,9 @@
 # ShowActionMenuOptions
 
+```TypeScript
+export interface ShowActionMenuOptions
+```
+
 Defines the option of ShowActionMenu.
 
 @interface ShowActionMenuOptions

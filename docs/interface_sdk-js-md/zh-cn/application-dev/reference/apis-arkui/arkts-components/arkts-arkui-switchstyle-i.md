@@ -1,5 +1,9 @@
 # SwitchStyle
 
+```TypeScript
+declare interface SwitchStyle
+```
+
 Switch类型的样式。
 
 **起始版本：** 12
@@ -14,7 +18,7 @@ pointColor?: ResourceColor
 
 设置Switch类型的圆形滑块颜色。
 
-默认值：&#36;r('sys.color.ohos_id_color_foreground_contrary')
+默认值：$r('sys.color.ohos_id_color_foreground_contrary')
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

@@ -80,6 +80,8 @@ try {
 ```
 
 
+<a id="operatedevice-1"></a>
+
 ## operateDevice
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # AreaChangeOptions
 
+```TypeScript
+declare interface AreaChangeOptions
+```
+
 区域变化相关的参数。
 
 **起始版本：** 26.0.0

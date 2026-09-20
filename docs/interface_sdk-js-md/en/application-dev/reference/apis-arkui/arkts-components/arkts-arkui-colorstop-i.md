@@ -1,5 +1,9 @@
 # ColorStop
 
+```TypeScript
+declare interface ColorStop
+```
+
 Describes the gradient color stop.
 
 **Since:** 10

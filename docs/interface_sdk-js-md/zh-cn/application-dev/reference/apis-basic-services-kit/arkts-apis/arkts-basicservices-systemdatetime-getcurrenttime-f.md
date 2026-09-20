@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getcurrenttime-1"></a>
+
 ## getCurrentTime
 
 ```TypeScript
@@ -119,6 +121,8 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 
 参见 [getCurrentTime](#getcurrenttime)
 
+
+<a id="getcurrenttime-2"></a>
 
 ## getCurrentTime
 

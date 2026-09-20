@@ -1,5 +1,9 @@
 # Parameter（系统接口）
 
+```TypeScript
+export declare class Parameter
+```
+
 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。
 
 **起始版本：** 20

@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="paircredibledevice-1"></a>
+
 ## pairCredibleDevice
 
 ```TypeScript

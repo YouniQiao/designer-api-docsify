@@ -1,5 +1,9 @@
 # NavPathStack
 
+```TypeScript
+declare class NavPathStack
+```
+
 Navigation导航控制器，以栈的数据结构管理Navigation中所有的子页面，并提供栈操作的方法用于控制Navigation中子页面的切换。
 
 从API version 12开始，NavPathStack允许被继承，派生类对象可以替代基类NavPathStack对象使用。使用示例参见[示例10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例10定义导航控制器派生类)。
@@ -331,6 +335,8 @@ pop(animated?: boolean): NavPathInfo | undefined
 | --- | --- |
 | [NavPathInfo](arkts-arkui-navpathinfo-c.md) &#124; undefined | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
+<a id="pop-1"></a>
+
 ## pop
 
 ```TypeScript
@@ -403,6 +409,8 @@ popToIndex(index: number, animated?: boolean): void
 | index | number | 是 | NavDestination页面的位置索引。索引值从0开始。 |
 | animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
 
+<a id="poptoindex-1"></a>
+
 ## popToIndex
 
 ```TypeScript
@@ -455,6 +463,8 @@ popToName(name: string, animated?: boolean): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的索引，否则返回-1。 |
+
+<a id="poptoname-1"></a>
 
 ## popToName
 
@@ -523,6 +533,8 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+
+<a id="pushdestination-1"></a>
 
 ## pushDestination
 
@@ -601,6 +613,8 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
+<a id="pushdestinationbyname-1"></a>
+
 ## pushDestinationByName
 
 ```TypeScript
@@ -664,6 +678,8 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>传入参数非法时，按true处理。<br>**适用版本：** 11 |
 
+<a id="pushpath-1"></a>
+
 ## pushPath
 
 ```TypeScript
@@ -710,6 +726,8 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 | name | string | 是 | NavDestination页面名称。 |
 | param | unknown | 是 | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
 | animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true<br>**适用版本：** 11 |
+
+<a id="pushpathbyname-1"></a>
 
 ## pushPathByName
 
@@ -880,6 +898,8 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br>true：支持转场动画；false：不支持转场动画。<br>默认值：true |
+
+<a id="replacepath-1"></a>
 
 ## replacePath
 

@@ -1,5 +1,9 @@
 # SliderCustomContentOptions
 
+```TypeScript
+interface SliderCustomContentOptions
+```
+
 Slider前后缀组件无障碍信息参数。
 
 **起始版本：** 20

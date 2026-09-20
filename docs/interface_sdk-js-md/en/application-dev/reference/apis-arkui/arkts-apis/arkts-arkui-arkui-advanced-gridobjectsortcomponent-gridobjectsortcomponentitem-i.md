@@ -1,5 +1,9 @@
 # GridObjectSortComponentItem
 
+```TypeScript
+export interface GridObjectSortComponentItem
+```
+
 Provides data item configuration for the **GridObjectSortComponent** component.
 
 **Since:** 11

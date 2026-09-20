@@ -1,7 +1,7 @@
 # OnTextPickerChangeCallback
 
 ```TypeScript
-declare type OnTextPickerChangeCallback = (selectItem: string | string[], index: number | number[]) => void
+declare type OnTextPickerChangeCallback = (selectItem: string[], index: number[]) => void
 ```
 
 定义触发onChange事件的回调类型。

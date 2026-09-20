@@ -1,5 +1,9 @@
 # MotionPathOptions
 
+```TypeScript
+declare interface MotionPathOptions
+```
+
 路径动画的运动路径参数选项。
 
 **起始版本：** 7

@@ -96,6 +96,8 @@ cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
 ```
 
 
+<a id="notifydatachange-1"></a>
+
 ## notifyDataChange
 
 ```TypeScript
@@ -130,6 +132,8 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 
 参见 [notifyDataChange](#notifydatachange)
 
+
+<a id="notifydatachange-2"></a>
 
 ## notifyDataChange
 
@@ -173,6 +177,8 @@ function notifyDataChange(userId: number, extraData: ExtraData): Promise<void>
 
 参见 [notifyDataChange](#notifydatachange)
 
+
+<a id="notifydatachange-3"></a>
 
 ## notifyDataChange
 

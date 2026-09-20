@@ -84,6 +84,8 @@ screen.makeExpand(expandOptionArray).then((data: number) => {
 ```
 
 
+<a id="makeexpand-1"></a>
+
 ## makeExpand
 
 ```TypeScript

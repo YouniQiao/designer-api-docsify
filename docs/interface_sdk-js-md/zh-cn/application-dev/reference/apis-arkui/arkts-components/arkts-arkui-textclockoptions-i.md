@@ -1,5 +1,9 @@
 # TextClockOptions
 
+```TypeScript
+declare interface TextClockOptions
+```
+
 用于构建TextClock组件的选项。
 
 > **说明：** 

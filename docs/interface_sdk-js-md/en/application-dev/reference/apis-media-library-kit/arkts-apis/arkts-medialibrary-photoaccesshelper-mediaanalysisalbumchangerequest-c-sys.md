@@ -1,5 +1,9 @@
 # MediaAnalysisAlbumChangeRequest (System API)
 
+```TypeScript
+class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest
+```
+
 Provides APIs for managing the analysis album change request.
 
 **Inheritance/Implementation:** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)
@@ -67,6 +71,8 @@ async function example(context: Context) {
     new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
 }
 ```
+
+<a id="createanalysisalbumrequest-1"></a>
 
 ## createAnalysisAlbumRequest
 

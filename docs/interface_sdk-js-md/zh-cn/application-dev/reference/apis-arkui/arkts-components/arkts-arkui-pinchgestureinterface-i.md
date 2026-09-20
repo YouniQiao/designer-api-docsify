@@ -1,5 +1,9 @@
 # PinchGestureInterface
 
+```TypeScript
+interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
+```
+
 用于触发捏合手势，最少需要2指，最多5指，最小识别距离为5vp。在支持鼠标和键盘输入的设备上，通过“Ctrl+鼠标滚轮”也可以触发捏合手势。
 
 > **说明：** 
@@ -37,6 +41,8 @@
 | 类型 | 说明 |
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -91,6 +97,8 @@ Pinch手势识别成功，接收到触摸取消事件触发的回调，不返回
 | 类型 | 说明 |
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

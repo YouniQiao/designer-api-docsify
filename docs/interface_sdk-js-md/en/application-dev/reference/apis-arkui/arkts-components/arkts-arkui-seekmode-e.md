@@ -1,5 +1,9 @@
 # SeekMode
 
+```TypeScript
+declare enum SeekMode
+```
+
 Enumerates video seek modes.
 
 | Name | Value | Description |  

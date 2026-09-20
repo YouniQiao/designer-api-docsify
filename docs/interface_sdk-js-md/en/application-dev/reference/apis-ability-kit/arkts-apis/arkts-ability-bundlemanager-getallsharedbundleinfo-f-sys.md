@@ -74,6 +74,8 @@ try {
 ```
 
 
+<a id="getallsharedbundleinfo-1"></a>
+
 ## getAllSharedBundleInfo
 
 ```TypeScript

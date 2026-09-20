@@ -1,5 +1,9 @@
 # SystemAdaptiveOptions
 
+```TypeScript
+declare interface SystemAdaptiveOptions
+```
+
 Provides parameters for system adaptive adjustments. By default, the system performs adaptive adjustments based on chip performance.
 
 **Since:** 19

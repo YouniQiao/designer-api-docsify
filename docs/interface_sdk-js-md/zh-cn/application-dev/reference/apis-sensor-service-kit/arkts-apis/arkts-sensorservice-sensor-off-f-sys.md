@@ -35,6 +35,8 @@ function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API.<br>**适用版本：** 11+ |
 
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -65,6 +67,8 @@ function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?:
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
+<a id="off-2"></a>
+
 ## off
 
 ```TypeScript
@@ -93,6 +97,8 @@ function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API.<br>**适用版本：** 11+ |
 
+
+<a id="off-3"></a>
 
 ## off
 

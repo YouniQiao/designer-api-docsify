@@ -1,5 +1,9 @@
 # XCallType（系统接口）
 
+```TypeScript
+export enum XCallType
+```
+
 表示XCall的类型。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # TimePickerOptions
 
+```TypeScript
+declare interface TimePickerOptions
+```
+
 时间选择器组件的参数说明。
 
 在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
@@ -81,7 +85,7 @@ selected?: Date
 
 默认值：当前系统时间
 
-从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** Date
 

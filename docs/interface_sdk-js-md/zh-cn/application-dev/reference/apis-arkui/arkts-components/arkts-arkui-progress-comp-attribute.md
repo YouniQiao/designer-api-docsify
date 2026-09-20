@@ -1,5 +1,10 @@
 # Progress属性/事件
 
+```TypeScript
+declare class ProgressAttribute<Type extends keyof ProgressStyleMap = keyof ProgressStyleMap,
+  Style extends ProgressStyleMap[Type] = ProgressStyleMap[Type]> extends CommonMethod<ProgressAttribute<Type>>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。

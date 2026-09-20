@@ -1,5 +1,9 @@
 # SystemPasteboard
 
+```TypeScript
+interface SystemPasteboard
+```
+
 系统剪贴板对象。在调用SystemPasteboard的接口前，需要先通过[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md)获取系统剪贴板。
 
 **起始版本：** 6
@@ -63,6 +67,8 @@ systemPasteboard.clear().then((data) => {
     console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -141,6 +147,8 @@ systemPasteboard.clearData().then((data: void) => {
     console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
+
+<a id="cleardata-1"></a>
 
 ## clearData
 
@@ -350,6 +358,8 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
+
+<a id="getdata-1"></a>
 
 ## getData
 
@@ -676,6 +686,8 @@ systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
 });
 ```
 
+<a id="getpastedata-1"></a>
+
 ## getPasteData
 
 ```TypeScript
@@ -850,6 +862,8 @@ systemPasteboard.hasData().then((data: boolean) => {
 });
 ```
 
+<a id="hasdata-1"></a>
+
 ## hasData
 
 ```TypeScript
@@ -1010,6 +1024,8 @@ systemPasteboard.hasPasteData().then((data: boolean) => {
     console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
+
+<a id="haspastedata-1"></a>
 
 ## hasPasteData
 
@@ -1363,6 +1379,8 @@ systemPasteboard.setData(pasteData).then((data: void) => {
 });
 ```
 
+<a id="setdata-1"></a>
+
 ## setData
 
 ```TypeScript
@@ -1495,6 +1513,8 @@ systemPasteboard.setPasteData(pasteData).then((data: void) => {
     console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
+
+<a id="setpastedata-1"></a>
 
 ## setPasteData
 

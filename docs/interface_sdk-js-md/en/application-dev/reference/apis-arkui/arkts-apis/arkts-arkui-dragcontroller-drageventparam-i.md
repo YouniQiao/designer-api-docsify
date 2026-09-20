@@ -1,5 +1,9 @@
 # DragEventParam
 
+```TypeScript
+interface DragEventParam
+```
+
 Callback used to return the result.
 
 **Since:** 12

@@ -82,6 +82,8 @@ radio.getUniqueDeviceId(slotId).then((data: string) => {
 ```
 
 
+<a id="getuniquedeviceid-1"></a>
+
 ## getUniqueDeviceId
 
 ```TypeScript
@@ -128,6 +130,8 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 See [getUniqueDeviceId](#getuniquedeviceid)
 
+
+<a id="getuniquedeviceid-2"></a>
 
 ## getUniqueDeviceId
 

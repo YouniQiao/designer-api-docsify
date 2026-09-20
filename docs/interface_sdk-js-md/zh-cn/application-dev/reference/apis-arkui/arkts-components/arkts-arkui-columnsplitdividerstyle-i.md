@@ -1,5 +1,9 @@
 # ColumnSplitDividerStyle
 
+```TypeScript
+interface ColumnSplitDividerStyle
+```
+
 设置子组件与上下分割线的距离。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # SubHeaderV2Title
 
+```TypeScript
+export declare class SubHeaderV2Title
+```
+
 标题设置项。
 
 **起始版本：** 18

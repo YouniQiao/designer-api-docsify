@@ -105,6 +105,8 @@ window.createWindow(config).then((windowClass) => {
 ```
 
 
+<a id="startdlpmanagerforresult-1"></a>
+
 ## startDLPManagerForResult
 
 ```TypeScript

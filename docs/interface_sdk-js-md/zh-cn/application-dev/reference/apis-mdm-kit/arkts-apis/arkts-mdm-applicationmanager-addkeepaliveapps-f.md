@@ -92,6 +92,8 @@ try {
 ```
 
 
+<a id="addkeepaliveapps-1"></a>
+
 ## addKeepAliveApps
 
 ```TypeScript

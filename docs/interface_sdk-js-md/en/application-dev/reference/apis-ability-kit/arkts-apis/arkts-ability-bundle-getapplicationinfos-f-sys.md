@@ -81,6 +81,8 @@ bundle.getApplicationInfos(bundleFlags, (err, data) => {
 ```
 
 
+<a id="getapplicationinfos-1"></a>
+
 ## getApplicationInfos
 
 ```TypeScript
@@ -112,6 +114,8 @@ Obtains information about installed apps for the user to which the caller belong
 
 See [getApplicationInfos](#getapplicationinfos)
 
+
+<a id="getapplicationinfos-2"></a>
 
 ## getApplicationInfos
 

@@ -1,5 +1,9 @@
 # AudioSamplingRate
 
+```TypeScript
+enum AudioSamplingRate
+```
+
 表示音频采样率的枚举（具体设备支持的采样率规格会存在差异）。
 
 **起始版本：** 8

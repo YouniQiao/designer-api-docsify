@@ -49,6 +49,8 @@ call.hasCall().then(() => {
 ```
 
 
+<a id="hascall-1"></a>
+
 ## hasCall
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # LinearGradientBlurOptions
 
+```TypeScript
+declare interface LinearGradientBlurOptions
+```
+
 Linear Gradient Blur Interface
 
 **Since:** 12

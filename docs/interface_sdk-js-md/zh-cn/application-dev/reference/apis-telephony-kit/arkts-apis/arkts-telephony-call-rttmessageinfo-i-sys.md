@@ -1,5 +1,9 @@
 # RttMessageInfo（系统接口）
 
+```TypeScript
+export interface RttMessageInfo
+```
+
 rtt通话消息
 
 **起始版本：** 22

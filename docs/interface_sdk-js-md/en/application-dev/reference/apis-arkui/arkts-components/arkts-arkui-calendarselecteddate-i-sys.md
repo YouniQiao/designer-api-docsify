@@ -1,5 +1,9 @@
 # CalendarSelectedDate (System API)
 
+```TypeScript
+declare interface CalendarSelectedDate
+```
+
 Defines the struct of CalendarSelectedDate.
 
 **Since:** 7

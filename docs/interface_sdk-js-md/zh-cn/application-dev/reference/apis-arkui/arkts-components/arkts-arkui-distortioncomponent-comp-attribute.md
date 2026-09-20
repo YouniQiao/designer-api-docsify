@@ -1,5 +1,9 @@
 # DistortionComponent属性/事件
 
+```TypeScript
+declare class DistortionComponentAttribute extends CommonMethod<DistortionComponentAttribute>
+```
+
 Defines the DistortionComponent attribute functions
 
 **继承/实现关系：** DistortionComponentAttribute extends CommonMethod<DistortionComponentAttribute>

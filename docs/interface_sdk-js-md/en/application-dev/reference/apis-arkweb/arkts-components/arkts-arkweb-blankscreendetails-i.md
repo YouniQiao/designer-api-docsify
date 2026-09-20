@@ -1,5 +1,9 @@
 # BlankScreenDetails
 
+```TypeScript
+declare interface BlankScreenDetails
+```
+
 Provides the result details when a blank screen is detected, including the number of nodes with content. It is suitable for scenarios where analyzing blank screen causes is required, improving blank screen diagnosis detail and accuracy.
 
 **Since:** 22

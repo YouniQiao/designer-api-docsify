@@ -1,5 +1,9 @@
 # Week
 
+```TypeScript
+declare enum Week
+```
+
 Week Enum value
 
 **Since:** 7

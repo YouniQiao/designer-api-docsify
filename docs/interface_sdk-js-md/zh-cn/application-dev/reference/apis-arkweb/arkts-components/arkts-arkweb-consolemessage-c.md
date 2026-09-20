@@ -1,5 +1,9 @@
 # ConsoleMessage
 
+```TypeScript
+declare class ConsoleMessage
+```
+
 ConsoleMessage是Web组件中封装JavaScript控制台输出信息的对象。当网页通过`console.log()`、`console.warn()`、`console.error()`等方法输出日志时，该对象通过`onConsole`事件回调提供给应用，用于监控和检查网页调试输出。示例代码参考[onConsole事件](arkts-arkweb-web-comp-attribute.md#onconsole)。
 
 **起始版本：** 8
@@ -30,6 +34,8 @@ ConsoleMessage的构造函数。
 | sourceId | string | 是 | 网页源文件的路径和文件名。 |
 | lineNumber | number | 是 | ConsoleMessage的行号。 |
 | messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

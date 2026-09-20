@@ -1,5 +1,9 @@
 # SlideEffect
 
+```TypeScript
+declare enum SlideEffect
+```
+
 页面转场时的滑入滑出效果。
 
 **起始版本：** 7

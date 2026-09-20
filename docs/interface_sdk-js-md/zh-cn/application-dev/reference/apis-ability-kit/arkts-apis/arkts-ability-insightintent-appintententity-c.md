@@ -1,5 +1,9 @@
 # AppIntentEntity
 
+```TypeScript
+abstract class AppIntentEntity<T> implements IntentEntity
+```
+
 定义AppIntentEntity。
 
 **继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)

@@ -1,5 +1,9 @@
 # CheckboxOptions
 
+```TypeScript
+declare interface CheckboxOptions
+```
+
 多选框的信息。
 
 **起始版本：** 8

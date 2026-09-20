@@ -77,6 +77,8 @@ sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInf
 ```
 
 
+<a id="addiccdiallingnumbers-1"></a>
+
 ## addIccDiallingNumbers
 
 ```TypeScript

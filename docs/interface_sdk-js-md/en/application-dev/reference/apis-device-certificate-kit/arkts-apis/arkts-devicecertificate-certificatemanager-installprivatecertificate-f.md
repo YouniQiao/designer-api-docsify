@@ -115,6 +115,8 @@ try {
 ```
 
 
+<a id="installprivatecertificate-1"></a>
+
 ## installPrivateCertificate
 
 ```TypeScript
@@ -157,6 +159,8 @@ Installs a private credential. This API uses a promise to return the result.
 
 See [installPrivateCertificate](#installprivatecertificate)
 
+
+<a id="installprivatecertificate-2"></a>
 
 ## installPrivateCertificate
 

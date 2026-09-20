@@ -105,6 +105,8 @@ This example demonstrates how to use the onDidAppear, onDidDisappear, onWillAppe
 ```
 
 
+<a id="showdialog-1"></a>
+
 ## showDialog
 
 ```TypeScript

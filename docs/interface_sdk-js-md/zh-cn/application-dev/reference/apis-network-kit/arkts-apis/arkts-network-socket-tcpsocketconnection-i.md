@@ -1,5 +1,9 @@
 # TCPSocketConnection
 
+```TypeScript
+export interface TCPSocketConnection
+```
+
 TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。
 
 > **说明：** 
@@ -76,6 +80,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -266,6 +272,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="getremoteaddress-1"></a>
 
 ## getRemoteAddress
 
@@ -607,6 +615,8 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
   });
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 

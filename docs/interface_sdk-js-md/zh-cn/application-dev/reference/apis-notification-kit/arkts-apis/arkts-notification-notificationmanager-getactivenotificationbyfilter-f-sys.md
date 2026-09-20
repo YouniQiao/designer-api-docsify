@@ -89,6 +89,8 @@ notificationManager.getActiveNotificationByFilter(filter).then((data: notificati
 ```
 
 
+<a id="getactivenotificationbyfilter-2"></a>
+
 ## getActiveNotificationByFilter
 
 ```TypeScript

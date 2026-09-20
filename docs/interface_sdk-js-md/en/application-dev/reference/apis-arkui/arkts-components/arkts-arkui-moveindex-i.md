@@ -1,5 +1,9 @@
 # MoveIndex
 
+```TypeScript
+interface MoveIndex
+```
+
 Defines position of moved data.
 
 **Since:** 12

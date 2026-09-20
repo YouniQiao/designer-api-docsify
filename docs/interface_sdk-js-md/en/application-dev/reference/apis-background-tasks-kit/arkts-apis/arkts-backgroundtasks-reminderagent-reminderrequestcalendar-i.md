@@ -1,5 +1,9 @@
 # ReminderRequestCalendar
 
+```TypeScript
+interface ReminderRequestCalendar extends ReminderRequest
+```
+
 Defines a reminder for a calendar event.
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="unregistercontinuation-1"></a>
+
 ## unregisterContinuation
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # EdgeEffectOptions
 
+```TypeScript
+declare interface EdgeEffectOptions
+```
+
 Define EdgeEffect Options.
 
 @interface EdgeEffectOptions

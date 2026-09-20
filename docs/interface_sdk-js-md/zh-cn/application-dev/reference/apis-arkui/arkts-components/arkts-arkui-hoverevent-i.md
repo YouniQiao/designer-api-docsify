@@ -1,5 +1,9 @@
 # HoverEvent
 
+```TypeScript
+declare interface HoverEvent extends BaseEvent
+```
+
 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

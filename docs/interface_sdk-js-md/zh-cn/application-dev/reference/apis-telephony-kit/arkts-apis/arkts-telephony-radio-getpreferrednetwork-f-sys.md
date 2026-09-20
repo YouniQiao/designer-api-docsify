@@ -68,6 +68,8 @@ radio.getPreferredNetwork(slotId).then((data: radio.PreferredNetworkMode) => {
 ```
 
 
+<a id="getpreferrednetwork-1"></a>
+
 ## getPreferredNetwork
 
 ```TypeScript

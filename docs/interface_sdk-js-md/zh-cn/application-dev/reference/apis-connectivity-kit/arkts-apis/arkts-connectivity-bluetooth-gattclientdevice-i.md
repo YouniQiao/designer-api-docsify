@@ -1,5 +1,9 @@
 # GattClientDevice
 
+```TypeScript
+interface GattClientDevice
+```
+
 client端类，使用client端方法之前需要创建该类的实例进行操作，通过createGattClientDevice(deviceId: string)方法构造此实例。
 
 **起始版本：** 7
@@ -161,6 +165,8 @@ gattClient.getDeviceName().then((data) => {
 })
 ```
 
+<a id="getdevicename-1"></a>
+
 ## getDeviceName
 
 ```TypeScript
@@ -237,6 +243,8 @@ gattClient.getRssiValue().then((data : number) => {
     console.info('rssi' + JSON.stringify(data));
 })
 ```
+
+<a id="getrssivalue-1"></a>
 
 ## getRssiValue
 
@@ -323,6 +331,8 @@ device.getServices().then((result : Array<bluetooth.GattService>) => {
     console.info("getServices successfully:" + JSON.stringify(result));
 });
 ```
+
+<a id="getservices-1"></a>
 
 ## getServices
 
@@ -542,6 +552,8 @@ characteristicValue: bufferCCC, descriptors:descriptors};
 device.readCharacteristicValue(characteristic);
 ```
 
+<a id="readcharacteristicvalue-1"></a>
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -637,6 +649,8 @@ let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-800
   descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
 device.readDescriptorValue(descriptor);
 ```
+
+<a id="readdescriptorvalue-1"></a>
 
 ## readDescriptorValue
 

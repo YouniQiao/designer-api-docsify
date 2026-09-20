@@ -1,5 +1,9 @@
 # FloatingBallController
 
+```TypeScript
+interface FloatingBallController
+```
+
 Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.
 
 Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance.

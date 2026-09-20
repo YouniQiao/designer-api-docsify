@@ -1,5 +1,9 @@
 # AcceptableFileType
 
+```TypeScript
+declare interface AcceptableFileType
+```
+
 Provides the file type information recommended by the file selector, including the MIME type and type array.
 
 **Since:** 23

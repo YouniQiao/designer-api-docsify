@@ -1,5 +1,9 @@
 # Panel
 
+```TypeScript
+interface Panel
+```
+
 You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance.
 
 **Since:** 10
@@ -104,6 +108,8 @@ let panelRect: inputMethodEngine.EnhancedPanelRect = {
 };
 panel.adjustPanelRect(panelFlag, panelRect);
 ```
+
+<a id="adjustpanelrect-1"></a>
 
 ## adjustPanelRect
 
@@ -332,6 +338,8 @@ panel.hide().then(() => {
 });
 ```
 
+<a id="hide-1"></a>
+
 ## hide
 
 ```TypeScript
@@ -423,6 +431,8 @@ panel.moveTo(300, 300).then(() => {
   console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="moveto-1"></a>
 
 ## moveTo
 
@@ -651,6 +661,8 @@ panel.resize(500, 1000).then(() => {
   console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="resize-1"></a>
 
 ## resize
 
@@ -961,6 +973,8 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 });
 ```
 
+<a id="setuicontent-1"></a>
+
 ## setUiContent
 
 ```TypeScript
@@ -995,6 +1009,8 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 See [setUiContent](#setuicontent)
 
+<a id="setuicontent-2"></a>
+
 ## setUiContent
 
 ```TypeScript
@@ -1024,6 +1040,8 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 **Examples**
 
 See [setUiContent](#setuicontent)
+
+<a id="setuicontent-3"></a>
 
 ## setUiContent
 
@@ -1101,6 +1119,8 @@ panel.show().then(() => {
   console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="show-1"></a>
 
 ## show
 
@@ -1189,6 +1209,8 @@ Update the panel rectangle. This API uses a promise to return the result. <br>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
+<a id="updatepanelrect-1"></a>
+
 ## updatePanelRect
 
 ```TypeScript
@@ -1259,6 +1281,8 @@ Update the panel rectangle. <br>
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+
+<a id="updatepanelrectsync-1"></a>
 
 ## updatePanelRectSync
 

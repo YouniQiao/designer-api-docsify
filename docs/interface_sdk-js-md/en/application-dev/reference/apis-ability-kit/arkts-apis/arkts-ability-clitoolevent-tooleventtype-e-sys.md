@@ -1,5 +1,9 @@
 # ToolEventType (System API)
 
+```TypeScript
+export enum ToolEventType
+```
+
 Enum for cli tool event types.
 
 **Since:** 26.0.0

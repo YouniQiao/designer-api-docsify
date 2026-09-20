@@ -1,5 +1,9 @@
 # SubscribaleAbstract (System API)
 
+```TypeScript
+declare abstract class SubscribaleAbstract
+```
+
 Defines the Subscribale base class.
 
 **Since:** 7

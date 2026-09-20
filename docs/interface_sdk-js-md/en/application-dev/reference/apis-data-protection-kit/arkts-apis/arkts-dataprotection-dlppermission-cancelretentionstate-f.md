@@ -68,6 +68,8 @@ dlpPermission.cancelRetentionState([uri], (err, res) => {
 ```
 
 
+<a id="cancelretentionstate-1"></a>
+
 ## cancelRetentionState
 
 ```TypeScript

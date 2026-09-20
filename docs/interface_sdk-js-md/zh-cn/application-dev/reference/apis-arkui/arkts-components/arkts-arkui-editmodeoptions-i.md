@@ -1,5 +1,9 @@
 # EditModeOptions
 
+```TypeScript
+declare interface EditModeOptions
+```
+
 List/Grid组件编辑模式选项属性参数对象。
 
 @interface EditModeOptions

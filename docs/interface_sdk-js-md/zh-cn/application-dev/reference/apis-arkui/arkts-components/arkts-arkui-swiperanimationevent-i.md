@@ -1,5 +1,9 @@
 # SwiperAnimationEvent
 
+```TypeScript
+declare interface SwiperAnimationEvent
+```
+
 Swiper组件动画相关信息集合。
 
 **起始版本：** 10

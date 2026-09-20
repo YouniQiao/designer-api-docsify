@@ -1,5 +1,9 @@
 # MultiNavPathStack
 
+```TypeScript
+export declare class MultiNavPathStack extends NavPathStack
+```
+
 Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues.
 
 **Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
@@ -308,6 +312,8 @@ Pops the top element out of the navigation stack.
 | --- | --- |
 | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) &#124; undefined | Information about the navigation destination page at the top of the stack. |
 
+<a id="pop-1"></a>
+
 ## pop
 
 ```TypeScript
@@ -365,6 +371,8 @@ Returns the navigation stack to the page specified by **index**.
 | index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
+<a id="poptoindex-1"></a>
+
 ## popToIndex
 
 ```TypeScript
@@ -417,6 +425,8 @@ Pops pages until the first navigation destination page that matches **name** fro
 | Type | Description |
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
+
+<a id="poptoname-1"></a>
 
 ## popToName
 
@@ -472,6 +482,8 @@ Pushes the specified navigation destination page to the navigation stack.
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
+<a id="pushpath-1"></a>
+
 ## pushPath
 
 ```TypeScript
@@ -520,6 +532,8 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
+
+<a id="pushpathbyname-1"></a>
 
 ## pushPathByName
 
@@ -626,6 +640,8 @@ Replaces the current top page on the stack with the specified navigation destina
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br> **true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
+
+<a id="replacepath-1"></a>
 
 ## replacePath
 

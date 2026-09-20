@@ -1,5 +1,9 @@
 # FirstScreenPaint
 
+```TypeScript
+declare interface FirstScreenPaint
+```
+
 提供首屏渲染事件的信息，包括URL和绘制时间。适用于需要监控页面首屏渲染性能的场景，提升性能优化的准确性和用户体验。
 
 **起始版本：** 23

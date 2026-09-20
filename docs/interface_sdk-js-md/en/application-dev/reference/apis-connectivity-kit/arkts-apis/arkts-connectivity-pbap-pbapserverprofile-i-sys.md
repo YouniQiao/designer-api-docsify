@@ -1,5 +1,9 @@
 # PbapServerProfile
 
+```TypeScript
+interface PbapServerProfile extends BaseProfile
+```
+
 Manager PBAP server profile.
 
 **Inheritance/Implementation:** PbapServerProfile extends [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
@@ -123,6 +127,8 @@ try {
 }
 ```
 
+<a id="getphonebookaccessauthorization-1"></a>
+
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -229,6 +235,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="getsharetype-1"></a>
 
 ## getShareType
 
@@ -342,6 +350,8 @@ try {
 }
 ```
 
+<a id="setphonebookaccessauthorization-1"></a>
+
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -450,6 +460,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="setsharetype-1"></a>
 
 ## setShareType
 

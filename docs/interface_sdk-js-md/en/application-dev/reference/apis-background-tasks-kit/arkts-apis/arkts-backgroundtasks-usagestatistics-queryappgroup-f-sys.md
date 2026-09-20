@@ -100,6 +100,8 @@ usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
 ```
 
 
+<a id="queryappgroup-1"></a>
+
 ## queryAppGroup
 
 ```TypeScript
@@ -143,6 +145,8 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 See [queryAppGroup](#queryappgroup)
 
+
+<a id="queryappgroup-2"></a>
 
 ## queryAppGroup
 
@@ -189,6 +193,8 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 See [queryAppGroup](#queryappgroup)
 
+
+<a id="queryappgroup-3"></a>
 
 ## queryAppGroup
 

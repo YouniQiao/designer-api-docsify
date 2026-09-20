@@ -1,5 +1,9 @@
 # BindOptions
 
+```TypeScript
+declare interface BindOptions
+```
+
 Overlay module options
 
 **Since:** 10

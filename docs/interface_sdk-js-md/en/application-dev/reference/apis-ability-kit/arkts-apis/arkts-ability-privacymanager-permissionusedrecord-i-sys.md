@@ -1,5 +1,9 @@
 # PermissionUsedRecord (System API)
 
+```TypeScript
+interface PermissionUsedRecord
+```
+
 Represents the access records of a permission.
 
 **Since:** 9

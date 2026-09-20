@@ -1,5 +1,9 @@
 # SideBarContainerType
 
+```TypeScript
+declare enum SideBarContainerType
+```
+
 Enumerates the types of sidebar containers.
 
 **Since:** 8

@@ -84,6 +84,8 @@ commonEventManager.createSubscriber(subscribeInfo).then((commonEventSubscriber: 
 ```
 
 
+<a id="createsubscriber-1"></a>
+
 ## createSubscriber
 
 ```TypeScript

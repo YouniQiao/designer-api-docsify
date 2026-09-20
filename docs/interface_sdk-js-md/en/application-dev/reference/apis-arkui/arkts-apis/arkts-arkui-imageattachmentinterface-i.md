@@ -1,5 +1,9 @@
 # ImageAttachmentInterface
 
+```TypeScript
+declare interface ImageAttachmentInterface
+```
+
 Defines the ImageAttachmentInterface.
 
 **Since:** 12

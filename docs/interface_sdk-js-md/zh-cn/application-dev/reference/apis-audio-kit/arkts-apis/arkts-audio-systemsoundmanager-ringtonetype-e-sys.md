@@ -1,5 +1,9 @@
 # RingtoneType（系统接口）
 
+```TypeScript
+enum RingtoneType
+```
+
 枚举，铃声类型。
 
 **起始版本：** 10

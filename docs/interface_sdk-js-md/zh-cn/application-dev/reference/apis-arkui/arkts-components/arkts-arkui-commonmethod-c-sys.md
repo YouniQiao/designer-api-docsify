@@ -1,5 +1,9 @@
 # CommonMethod
 
+```TypeScript
+declare class CommonMethod<T>
+```
+
 CommonMethod.
 
 **起始版本：** 11
@@ -93,7 +97,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)属性使用，单独使用无效果。
+设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup-1)属性使用，单独使用无效果。
 
 从节点组剔除后，当前组件和子组件不再影响祖先组件的离屏画布，不会引起节点组的缓存失效，从而达到复用节点组缓存的目的。如果当前组件的显示区域只占节点组绘制内容显示区域的一部分，且当前组件及子组件的显示效果频繁更新，设置excludeFromRenderGroup属性有助于绘制性能优化。
 
@@ -195,6 +199,8 @@ useUnionEffect(value: boolean | undefined): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
+
+<a id="useunioneffect-1"></a>
 
 ## useUnionEffect
 

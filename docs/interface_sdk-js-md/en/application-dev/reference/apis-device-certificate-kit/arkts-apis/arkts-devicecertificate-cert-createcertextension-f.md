@@ -100,6 +100,8 @@ cert.createCertExtension(encodingBlob).then(_certExt => {
 ```
 
 
+<a id="createcertextension-1"></a>
+
 ## createCertExtension
 
 ```TypeScript

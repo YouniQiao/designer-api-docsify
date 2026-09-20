@@ -1,5 +1,9 @@
 # ConfirmDialog
 
+```TypeScript
+export declare struct ConfirmDialog
+```
+
 Declare CustomDialog ConfirmDialog
 
 **Since:** 18

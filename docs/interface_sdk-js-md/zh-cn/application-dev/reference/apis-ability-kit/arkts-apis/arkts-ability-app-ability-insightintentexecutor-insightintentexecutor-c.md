@@ -1,5 +1,9 @@
 # InsightIntentExecutor
 
+```TypeScript
+declare class InsightIntentExecutor
+```
+
 本模块提供意图执行基类，开发者通过本模块对接端侧[意图框架](../../../application-models/insight-intent-overview.md)，[通过配置文件开发意图][configuration files](../../../application-models/insight-intent-config-development.md)实现意图的业务逻辑。
 
 除了可以通过配置文件开发意图，还可以通过装饰器开发意图。对于API version 20及以后的版本，推荐使用[通过装饰器开发意图](../../../application-models/insight-intent-decorator-development.md)。
@@ -17,8 +21,7 @@ import { InsightIntentExecutor } from '@kit.AbilityKit';
 ## onExecuteInServiceExtensionAbility
 
 ```TypeScript
-onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 当意图执行依赖ServiceExtensionAbility组件启动时，会在ServiceExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
@@ -57,8 +60,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 ## onExecuteInUIAbilityBackgroundMode
 
 ```TypeScript
-onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 当意图执行依赖[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件后台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
@@ -101,8 +103,7 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 ## onExecuteInUIAbilityForegroundMode
 
 ```TypeScript
-onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, pageLoader: window.WindowStage):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 当意图执行依赖[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件前台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
@@ -146,8 +147,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 ## onExecuteInUIExtensionAbility
 
 ```TypeScript
-onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):
-    insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
+onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageLoader: UIExtensionContentSession):insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
 当意图执行依赖[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)启动时，会在UIExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。

@@ -1,5 +1,9 @@
 # DataAddOperation
 
+```TypeScript
+interface DataAddOperation
+```
+
 添加数据操作。
 
 **起始版本：** 12

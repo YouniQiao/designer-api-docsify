@@ -1,5 +1,9 @@
 # MenuGridPosition
 
+```TypeScript
+declare enum MenuGridPosition
+```
+
 The position of grid in menu.
 
 **Since:** 26.0.0

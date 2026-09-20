@@ -1,5 +1,9 @@
 # NavigationType
 
+```TypeScript
+declare enum NavigationType
+```
+
 路由的跳转方式。
 
 **起始版本：** 7

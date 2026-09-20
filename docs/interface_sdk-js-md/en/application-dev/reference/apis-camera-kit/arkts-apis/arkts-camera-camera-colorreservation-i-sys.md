@@ -1,5 +1,9 @@
 # ColorReservation (System API)
 
+```TypeScript
+interface ColorReservation extends ColorReservationQuery
+```
+
 ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type.
 
 **Inheritance/Implementation:** ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md)

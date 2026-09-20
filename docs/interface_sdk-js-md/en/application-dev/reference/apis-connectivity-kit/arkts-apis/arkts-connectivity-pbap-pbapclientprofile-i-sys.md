@@ -1,5 +1,9 @@
 # PbapClientProfile
 
+```TypeScript
+interface PbapClientProfile extends BaseProfile
+```
+
 Manage the PBAP client profile.
 
 **Inheritance/Implementation:** PbapClientProfile extends [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)

@@ -1,5 +1,9 @@
 # ReadonlyEnvKey
 
+```TypeScript
+declare class ReadonlyEnvKey
+```
+
 定义只读系统环境键。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # OnScreenCaptureRequestEvent
 
+```TypeScript
+declare interface OnScreenCaptureRequestEvent
+```
+
 定义收到屏幕捕获请求时触发的回调信息。适用于需要处理屏幕录制权限的场景，提升录屏流程的可控性和安全性。
 
 **起始版本：** 12

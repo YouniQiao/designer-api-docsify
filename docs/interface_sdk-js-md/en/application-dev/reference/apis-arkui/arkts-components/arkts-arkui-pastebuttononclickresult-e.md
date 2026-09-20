@@ -1,5 +1,9 @@
 # PasteButtonOnClickResult
 
+```TypeScript
+declare enum PasteButtonOnClickResult
+```
+
 Enumerates the authorization results after the **PasteButton** component is tapped.
 
 **Since:** 10

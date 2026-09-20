@@ -1,5 +1,9 @@
 # RttEventInfo（系统接口）
 
+```TypeScript
+export interface RttEventInfo
+```
+
 rtt通话事件
 
 **起始版本：** 22

@@ -66,6 +66,8 @@ call.disableImsSwitch(0).then(() => {
 ```
 
 
+<a id="disableimsswitch-1"></a>
+
 ## disableImsSwitch
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # MenuItemGroup properties/events
 
+```TypeScript
+declare class MenuItemGroupAttribute extends CommonMethod<MenuItemGroupAttribute>
+```
+
 **Inheritance/Implementation:** MenuItemGroupAttribute extends CommonMethod<MenuItemGroupAttribute>
 
 **Since:** 9

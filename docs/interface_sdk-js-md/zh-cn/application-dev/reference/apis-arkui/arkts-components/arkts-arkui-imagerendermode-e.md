@@ -1,5 +1,9 @@
 # ImageRenderMode
 
+```TypeScript
+declare enum ImageRenderMode
+```
+
 图片的渲染模式。
 
 **起始版本：** 7

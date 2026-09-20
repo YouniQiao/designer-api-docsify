@@ -1,5 +1,9 @@
 # ExternalLogWrapper
 
+```TypeScript
+class ExternalLogWrapper
+```
+
 The wrapper of external log, providing various information.
 
 **Since:** 26.0.1

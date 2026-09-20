@@ -1,5 +1,9 @@
 # DialogBaseAlignment
 
+```TypeScript
+export enum DialogBaseAlignment
+```
+
 对话框的对齐方式。
 
 **起始版本：** 26.0.1

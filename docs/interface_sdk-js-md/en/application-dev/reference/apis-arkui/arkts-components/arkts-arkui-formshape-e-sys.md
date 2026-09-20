@@ -1,5 +1,9 @@
 # FormShape (System API)
 
+```TypeScript
+declare enum FormShape
+```
+
 Defines the FormShape enum.
 
 **Since:** 12

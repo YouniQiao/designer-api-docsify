@@ -112,6 +112,8 @@ struct Index {
 ```
 
 
+<a id="getavcastcontroller-2"></a>
+
 ## getAVCastController
 
 ```TypeScript

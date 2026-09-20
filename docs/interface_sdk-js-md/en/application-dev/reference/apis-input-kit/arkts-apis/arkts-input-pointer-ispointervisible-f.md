@@ -89,6 +89,8 @@ struct Index {
 ```
 
 
+<a id="ispointervisible-1"></a>
+
 ## isPointerVisible
 
 ```TypeScript

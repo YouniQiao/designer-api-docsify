@@ -1,5 +1,9 @@
 # ToneHapticsType (System API)
 
+```TypeScript
+enum ToneHapticsType
+```
+
 Enum for haptics in tone scenario.
 
 **Since:** 14

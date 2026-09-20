@@ -1,5 +1,9 @@
 # DeviceKVStore
 
+```TypeScript
+interface DeviceKVStore extends SingleKVStore
+```
+
 设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。
 
 设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。
@@ -23,7 +27,7 @@ import { distributedKVStore } from '@kit.ArkData';
 ## get
 
 ```TypeScript
-get(key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 获取本设备指定键的值，使用callback异步回调。
@@ -156,10 +160,12 @@ try {
 }
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
-get(key: string): Promise<boolean | string | number | number | Uint8Array>
+get(key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 获取本设备指定键的值，使用Promise异步回调。
@@ -297,10 +303,12 @@ try {
 }
 ```
 
+<a id="get-2"></a>
+
 ## get
 
 ```TypeScript
-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 获取与指定设备ID和Key匹配的值，使用callback异步回调。
@@ -443,10 +451,12 @@ try {
 }
 ```
 
+<a id="get-3"></a>
+
 ## get
 
 ```TypeScript
-get(deviceId: string, key: string): Promise<boolean | string | number | number | Uint8Array>
+get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 获取与指定设备ID和Key匹配的值，使用Promise异步回调。
@@ -951,6 +961,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1312,6 +1324,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-2"></a>
 
 ## getEntries
 
@@ -1679,6 +1693,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -2052,6 +2068,8 @@ try {
 }
 ```
 
+<a id="getentries-4"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -2408,6 +2426,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-5"></a>
 
 ## getEntries
 
@@ -2770,6 +2790,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-6"></a>
 
 ## getEntries
 
@@ -3137,6 +3159,8 @@ try {
   console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-7"></a>
 
 ## getEntries
 
@@ -3870,6 +3894,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -4234,6 +4260,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-2"></a>
 
 ## getResultSet
 
@@ -4604,6 +4632,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -4980,6 +5010,8 @@ try {
 }
 ```
 
+<a id="getresultset-4"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -5339,6 +5371,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-5"></a>
 
 ## getResultSet
 
@@ -5704,6 +5738,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-6"></a>
 
 ## getResultSet
 
@@ -6074,6 +6110,8 @@ try {
   console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-7"></a>
 
 ## getResultSet
 
@@ -6630,6 +6668,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -6814,6 +6854,8 @@ try {
   console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultsize-2"></a>
 
 ## getResultSize
 
@@ -7004,6 +7046,8 @@ try {
   console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultsize-3"></a>
 
 ## getResultSize
 

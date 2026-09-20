@@ -1,5 +1,9 @@
 # DialogButtonOrientation
 
+```TypeScript
+export enum DialogButtonOrientation
+```
+
 对话框中按钮的排列。
 
 **起始版本：** 26.0.1

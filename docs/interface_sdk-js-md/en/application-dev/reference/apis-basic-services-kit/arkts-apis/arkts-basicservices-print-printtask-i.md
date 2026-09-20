@@ -1,5 +1,9 @@
 # PrintTask
 
+```TypeScript
+interface PrintTask
+```
+
 Implements event listeners for print jobs.
 
 **Since:** 10

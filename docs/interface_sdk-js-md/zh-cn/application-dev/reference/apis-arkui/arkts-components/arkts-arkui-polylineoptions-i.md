@@ -1,5 +1,9 @@
 # PolylineOptions
 
+```TypeScript
+declare interface PolylineOptions
+```
+
 用于描述Polyline组件绘制属性。
 
 > **说明：** 

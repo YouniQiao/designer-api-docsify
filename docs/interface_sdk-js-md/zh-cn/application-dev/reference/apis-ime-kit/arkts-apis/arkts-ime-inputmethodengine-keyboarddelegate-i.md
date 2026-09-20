@@ -1,5 +1,9 @@
 # KeyboardDelegate
 
+```TypeScript
+interface KeyboardDelegate
+```
+
 KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取该实例。<br>核心功能概述：<br> <br>- 物理键盘按键事件：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回false表示不消费。<br>- 光标与选区变化事件：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。<br>- 文本变化事件：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。<br>- 编辑框属性变化事件：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。<br> <br>使用场景：<br> <br>- 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。<br>- 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。<br> <br>下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取到KeyboardDelegate实例后，通过实例调用。
 
 **起始版本：** 8
@@ -11,25 +15,6 @@ KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听�
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
-
-## off('keyDown' | 'keyUp')
-
-```TypeScript
-off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
-```
-
-取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。
-
-**起始版本：** 8
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyDown' &#124; 'keyUp' | 是 | 设置监听类型。<br>- 'keyDown'表示键盘按下。<br>- 'keyUp'表示键盘抬起。 |
-| callback | (event: KeyEvent) =&gt; boolean | 否 | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## off('keyDown' | 'keyUp')
 
@@ -147,25 +132,6 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 | --- | --- | --- | --- |
 | type | 'editorAttributeChanged' | 是 | 编辑框属性变化事件，固定取值为'editorAttributeChanged'。 |
 | callback | (attr: EditorAttribute) =&gt; void | 否 | 所要取消订阅的回调处理函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
-
-## on('keyDown' | 'keyUp')
-
-```TypeScript
-on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
-```
-
-订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。<br> <br>使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。<br> <br>使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传递。
-
-**起始版本：** 8
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'keyDown' &#124; 'keyUp' | 是 | 设置监听类型。<br>- 'keyDown'表示键盘按下。<br>- 'keyUp'表示键盘抬起。 |
-| callback | (event: KeyEvent) =&gt; boolean | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## on('keyDown' | 'keyUp')
 

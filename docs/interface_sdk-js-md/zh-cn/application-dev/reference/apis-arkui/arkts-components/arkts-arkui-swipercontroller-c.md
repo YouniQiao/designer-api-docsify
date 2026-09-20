@@ -1,5 +1,9 @@
 # SwiperController
 
+```TypeScript
+declare class SwiperController
+```
+
 Swiper容器组件的控制器，可以将此对象绑定至Swiper组件，实现控制Swiper翻页等功能。
 
 **起始版本：** 7
@@ -30,6 +34,8 @@ changeIndex(index: number, useAnimation?: boolean)
 | --- | --- | --- | --- |
 | index | number | 是 | 指定页面在Swiper中的索引值。<br>**说明：** <br>设置的值小于0或大于最大页面索引时，取0。 |
 | useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。<br>默认值：false。 |
+
+<a id="changeindex-1"></a>
 
 ## changeIndex
 

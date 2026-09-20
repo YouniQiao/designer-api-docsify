@@ -51,6 +51,9 @@ Defines the visual effect types for the native module.
 | [ArkUI_RenderFit](#arkui_renderfit) | ArkUI_RenderFit | Enumerates the sizing and positioning behaviors of animated content in its final state. |
 | [ArkUI_AnimationFillMode](#arkui_animationfillmode) | ArkUI_AnimationFillMode | Defines the status before and after execution of the animation in the current playback direction. |
 | [ArkUI_AnimationDirection](#arkui_animationdirection) | ArkUI_AnimationDirection | Enumerates the animation playback modes. |
+| [OH_ArkUI_AnimationPropertyType](#oh_arkui_animationpropertytype) | OH_ArkUI_AnimationPropertyType | Enumerates the animatable property types for property animations and keyframe animations. |
+| [OH_ArkUI_AnimationGroupState](#oh_arkui_animationgroupstate) | OH_ArkUI_AnimationGroupState | Enumerates the playback states of an animation group. |
+| [OH_ArkUI_AnimationFinishMode](#oh_arkui_animationfinishmode) | OH_ArkUI_AnimationFinishMode | Enumerates the finish modes of an animation group. |
 
 ### Function
 
@@ -564,6 +567,81 @@ Enumerates the animation playback modes.
 | ARKUI_ANIMATION_DIRECTION_REVERSE | The animation plays in reverse loop mode. |
 | ARKUI_ANIMATION_DIRECTION_ALTERNATE | The animation plays in alternating loop mode. When the animation is played for an odd number of times, the playback is in forward direction. When the animation is played for an even number of times, the playback is in reverse direction. |
 | ARKUI_ANIMATION_DIRECTION_ALTERNATE_REVERSE | The animation plays in reverse alternating loop mode. When the animation is played for an odd number of times, the playback is in reverse direction. When the animation is played for an even number of times, the playback is in forward direction. |
+
+### OH_ArkUI_AnimationPropertyType
+
+```c
+enum OH_ArkUI_AnimationPropertyType
+```
+
+**Description**
+
+Enumerates the animatable property types for property animations and keyframe animations.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION = 0 | Translation in both x and y directions. The value parameter requires two f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) elements: [x, y], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_X = 1 | Translation in the x direction. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [x], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Y = 2 | Translation in the y direction. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [y], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Z = 3 | Translation in the z direction. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [z], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE = 4 | Scale in both x and y directions. The value parameter requires two f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) elements: [x, y].<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE_X = 5 | Scale in the x direction. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [x].<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE_Y = 6 | Scale in the y direction. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [y].<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION = 7 | Rotation angle for all axes. The value parameter requires three f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) elements: [angleX, angleY, angleZ], in degrees.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_X = 8 | Rotation angle around the x-axis. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [angle], in degrees.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Y = 9 | Rotation angle around the y-axis. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [angle], in degrees.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Z = 10 | Rotation angle around the z-axis. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [angle], in degrees.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_OPACITY = 11 | Opacity of the component. The value parameter requires one f32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [opacity]. Value range: [0, 1].<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS = 12 | Bounds (position and size). The value parameter requires four i32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) elements: [x, y, width, height], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_X = 13 | Position x within bounds. The value parameter requires one i32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [x], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_Y = 14 | Position y within bounds. The value parameter requires one i32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [y], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_WIDTH = 15 | Width of the bounds. The value parameter requires one i32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [width], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_HEIGHT = 16 | Height of the bounds. The value parameter requires one i32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [height], in px.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BACKGROUND_COLOR = 17 | Background color of the component. The value parameter requires one u32 [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) element: [color].<br>**Since**: 26.0.1 |
+
+### OH_ArkUI_AnimationGroupState
+
+```c
+enum OH_ArkUI_AnimationGroupState
+```
+
+**Description**
+
+Enumerates the playback states of an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING = 0 | The animation group is running.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED = 1 | The animation group is paused.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_GROUP_STATE_INACTIVE = 2 | The animation group is inactive, for example, when the animation has finished or when the group is in an invalid state.<br>**Since**: 26.0.1 |
+
+### OH_ArkUI_AnimationFinishMode
+
+```c
+enum OH_ArkUI_AnimationFinishMode
+```
+
+**Description**
+
+Enumerates the finish modes of an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_ANIMATION_FINISH_TO_START = 0 | Finishes the animation group and jumps to the start state.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_FINISH_TO_CURRENT = 1 | Finishes the animation group and stays at the current value.<br>**Since**: 26.0.1 |
+| OH_ARKUI_ANIMATION_FINISH_TO_END = 2 | Finishes the animation group and jumps to the end state.<br>**Since**: 26.0.1 |
 
 
 ## Function description

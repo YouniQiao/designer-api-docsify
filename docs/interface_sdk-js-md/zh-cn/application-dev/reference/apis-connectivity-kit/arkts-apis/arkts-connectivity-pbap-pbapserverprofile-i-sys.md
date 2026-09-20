@@ -1,5 +1,9 @@
 # PbapServerProfile
 
+```TypeScript
+interface PbapServerProfile extends BaseProfile
+```
+
 使用PbapServerProfile方法之前需要创建该类的实例进行操作，通过createPbapServerProfile()方法构造此实例。
 
 **继承/实现关系：** PbapServerProfile extends [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
@@ -123,6 +127,8 @@ try {
 }
 ```
 
+<a id="getphonebookaccessauthorization-1"></a>
+
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -229,6 +235,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="getsharetype-1"></a>
 
 ## getShareType
 
@@ -342,6 +350,8 @@ try {
 }
 ```
 
+<a id="setphonebookaccessauthorization-1"></a>
+
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -450,6 +460,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="setsharetype-1"></a>
 
 ## setShareType
 

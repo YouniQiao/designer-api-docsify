@@ -95,6 +95,8 @@ struct Index {
 ```
 
 
+<a id="setkeydownduration-1"></a>
+
 ## setKeyDownDuration
 
 ```TypeScript

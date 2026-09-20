@@ -1,5 +1,9 @@
 # ImageProcessor
 
+```TypeScript
+interface ImageProcessor
+```
+
 Provides the ImageProcessor type, including the processing function. @typedef ImageProcessor
 
 **Since:** 18
@@ -74,6 +78,8 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
     imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
 }
 ```
+
+<a id="enhancedetail-1"></a>
 
 ## enhanceDetail
 
@@ -178,6 +184,8 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
     sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
 }
 ```
+
+<a id="enhancedetailsync-1"></a>
 
 ## enhanceDetailSync
 

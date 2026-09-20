@@ -62,6 +62,8 @@ reminderAgentManager.cancelReminder(reminderId).then(() => {
 ```
 
 
+<a id="cancelreminder-1"></a>
+
 ## cancelReminder
 
 ```TypeScript

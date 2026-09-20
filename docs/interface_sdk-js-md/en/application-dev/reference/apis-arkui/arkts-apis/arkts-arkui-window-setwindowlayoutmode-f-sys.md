@@ -72,6 +72,8 @@ try {
 ```
 
 
+<a id="setwindowlayoutmode-1"></a>
+
 ## setWindowLayoutMode
 
 ```TypeScript

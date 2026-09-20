@@ -1,5 +1,9 @@
 # CredentialChangeType (System API)
 
+```TypeScript
+enum CredentialChangeType
+```
+
 Enumerates the credential change types.
 
 **Since:** 23

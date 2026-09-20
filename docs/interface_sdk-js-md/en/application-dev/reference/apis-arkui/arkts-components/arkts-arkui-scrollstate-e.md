@@ -1,5 +1,9 @@
 # ScrollState
 
+```TypeScript
+declare enum ScrollState
+```
+
 Enumerates the scrolling states.
 
 **Since:** 7

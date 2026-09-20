@@ -1,5 +1,9 @@
 # PopoverDialogV2Options
 
+```TypeScript
+export declare interface PopoverDialogV2Options extends CustomPopupOptions
+```
+
 跟手弹出框参数，用于设置弹出框内容、位置属性等。
 
 继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。

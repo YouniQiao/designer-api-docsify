@@ -1,5 +1,9 @@
 # ToneHapticsMode（系统接口）
 
+```TypeScript
+enum ToneHapticsMode
+```
+
 枚举，系统铃音场景的振动模式。
 
 | 名称 | 值 | 说明 |  

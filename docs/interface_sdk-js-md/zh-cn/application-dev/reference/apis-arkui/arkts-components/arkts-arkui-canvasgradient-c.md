@@ -1,5 +1,9 @@
 # CanvasGradient
 
+```TypeScript
+declare class CanvasGradient
+```
+
 OffscreenCanvas支持以下属性：
 
 **起始版本：** 8
@@ -50,6 +54,8 @@ addColorStop(offset: number, color: string): void
 
 从API版本26.0.0开始，[addColorStop](#addcolorstop)接口新增支持通过ColorMetrics类型入参进行HDR提亮。
 ```
+
+<a id="addcolorstop-1"></a>
 
 ## addColorStop
 

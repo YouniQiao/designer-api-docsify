@@ -1,5 +1,9 @@
 # Divider properties/events
 
+```TypeScript
+declare class DividerAttribute extends CommonMethod<DividerAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 The [universal events](arkts-arkui-commonmethod-c.md) are supported.

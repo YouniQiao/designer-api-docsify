@@ -1,5 +1,9 @@
 # CloudFileCache
 
+```TypeScript
+class CloudFileCache
+```
+
 云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。
 
 **起始版本：** 11
@@ -62,6 +66,8 @@ try {
   console.error(`clean cache failed with error message: ${error.message}, error code: ${error.code}`);
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

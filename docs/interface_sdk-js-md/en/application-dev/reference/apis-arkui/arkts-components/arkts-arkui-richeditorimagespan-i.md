@@ -1,5 +1,9 @@
 # RichEditorImageSpan
 
+```TypeScript
+declare interface RichEditorImageSpan
+```
+
 Image span information.
 
 **Since:** 10

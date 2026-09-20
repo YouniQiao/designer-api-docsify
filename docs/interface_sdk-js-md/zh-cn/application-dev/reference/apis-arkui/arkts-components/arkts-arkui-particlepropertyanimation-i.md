@@ -1,5 +1,9 @@
 # ParticlePropertyAnimation
 
+```TypeScript
+interface ParticlePropertyAnimation<T>
+```
+
 设置粒子属性生命周期。
 
 **起始版本：** 10

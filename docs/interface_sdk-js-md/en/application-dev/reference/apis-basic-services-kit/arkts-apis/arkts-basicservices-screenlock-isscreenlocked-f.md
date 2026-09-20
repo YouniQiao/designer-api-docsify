@@ -51,6 +51,8 @@ screenLock.isScreenLocked().then((data: Boolean) => {
 ```
 
 
+<a id="isscreenlocked-1"></a>
+
 ## isScreenLocked
 
 ```TypeScript

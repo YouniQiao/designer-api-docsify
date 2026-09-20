@@ -1,5 +1,9 @@
 # CounterOptions
 
+```TypeScript
+declare class CounterOptions
+```
+
 Defines the type and style of the **Counter** component.
 
 **Since:** 11

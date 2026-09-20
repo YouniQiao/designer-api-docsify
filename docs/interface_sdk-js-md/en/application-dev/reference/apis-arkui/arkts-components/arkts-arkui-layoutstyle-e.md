@@ -1,5 +1,9 @@
 # LayoutStyle
 
+```TypeScript
+declare enum LayoutStyle
+```
+
 Enumerates the tab layout styles of the tab bar when not scrolling in scrollable mode.
 
 **Since:** 10

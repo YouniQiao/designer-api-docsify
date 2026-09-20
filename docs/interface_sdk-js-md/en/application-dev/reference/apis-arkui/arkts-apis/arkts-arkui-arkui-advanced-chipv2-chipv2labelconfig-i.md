@@ -1,5 +1,9 @@
 # ChipV2LabelConfig
 
+```TypeScript
+export interface ChipV2LabelConfig
+```
+
 Defines the text attribute configuration.
 
 **Since:** 26.0.0
@@ -20,7 +24,7 @@ activatedFontColor?: ColorMetrics
 
 Font color when **ChipV2** is activated.
 
-Default value: **&#36;r('sys.color.chip_activated_fontcolor')**
+Default value: **$r('sys.color.chip_activated_fontcolor')**
 
 When the value is **undefined**, the default value is used.
 
@@ -44,7 +48,7 @@ fontColor?: ColorMetrics
 
 Font color.
 
-Default value: **&#36;r('sys.color.chip_font_color')**
+Default value: **$r('sys.color.chip_font_color')**
 
 When the value is **undefined**, the default value is used.
 
@@ -92,9 +96,9 @@ Font size. Percentage values are not supported. When a percentage value is passe
 
 Default values:
 
-When **size** is **ChipV2Size.SMALL**, the default value is **&#36;r('sys.float.chip_small_font_size')**.
+When **size** is **ChipV2Size.SMALL**, the default value is **$r('sys.float.chip_small_font_size')**.
 
-In other cases, the default value is **&#36;r('sys.float.chip_normal_font_size')**
+In other cases, the default value is **$r('sys.float.chip_normal_font_size')**
 
 Unit: fp
 
@@ -148,11 +152,11 @@ Default values:
 
 When **size** is **ChipV2Size.SMALL**, default value:
 
-`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_small_text_margin')) }`.
+`{ start: LengthMetrics.resource($r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_small_text_margin')) }`.
 
 When **size** is **ChipV2Size.NORMAL**, default value:
 
-`{ start: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(&#36;r('sys.float.chip_normal_text_margin')) }`.
+`{ start: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')) }`.
 
 When the value is **undefined**, the default value is used.
 

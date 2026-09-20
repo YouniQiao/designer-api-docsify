@@ -1,5 +1,9 @@
 # SegmentButtonV2ItemOptions
 
+```TypeScript
+export interface SegmentButtonV2ItemOptions
+```
+
 配置分段按钮选项参数。
 
 > **说明：** 

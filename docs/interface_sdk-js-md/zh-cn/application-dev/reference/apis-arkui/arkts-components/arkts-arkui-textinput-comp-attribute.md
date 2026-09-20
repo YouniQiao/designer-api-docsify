@@ -1,5 +1,9 @@
 # TextInput属性/事件
 
+```TypeScript
+declare class TextInputAttribute extends CommonMethod<TextInputAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
@@ -75,6 +79,8 @@ cancelButton(options: CancelButtonOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | 是 | 右侧清除按钮样式选项。<br>**适用版本：** 18 |
+
+<a id="cancelbutton-1"></a>
 
 ## cancelButton
 

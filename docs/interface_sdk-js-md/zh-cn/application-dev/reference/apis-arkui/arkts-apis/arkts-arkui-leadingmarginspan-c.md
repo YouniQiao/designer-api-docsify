@@ -1,5 +1,9 @@
 # LeadingMarginSpan
 
+```TypeScript
+declare abstract class LeadingMarginSpan
+```
+
 文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。
 
 **起始版本：** 22

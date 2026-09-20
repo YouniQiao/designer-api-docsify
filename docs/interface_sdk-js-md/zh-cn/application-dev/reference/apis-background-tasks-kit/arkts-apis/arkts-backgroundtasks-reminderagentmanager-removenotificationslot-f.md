@@ -61,6 +61,8 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
 ```
 
 
+<a id="removenotificationslot-1"></a>
+
 ## removeNotificationSlot
 
 ```TypeScript

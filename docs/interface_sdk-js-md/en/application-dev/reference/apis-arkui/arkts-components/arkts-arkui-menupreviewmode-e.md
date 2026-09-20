@@ -1,5 +1,9 @@
 # MenuPreviewMode
 
+```TypeScript
+declare enum MenuPreviewMode
+```
+
 Defines the preview style of a menu.
 
 **Since:** 11

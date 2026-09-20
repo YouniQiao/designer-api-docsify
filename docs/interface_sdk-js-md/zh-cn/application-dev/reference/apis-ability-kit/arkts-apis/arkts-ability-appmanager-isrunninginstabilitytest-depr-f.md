@@ -57,6 +57,8 @@ appManager.isRunningInStabilityTest().then((flag) => {
 ```
 
 
+<a id="isrunninginstabilitytest-1"></a>
+
 ## isRunningInStabilityTest
 
 ```TypeScript

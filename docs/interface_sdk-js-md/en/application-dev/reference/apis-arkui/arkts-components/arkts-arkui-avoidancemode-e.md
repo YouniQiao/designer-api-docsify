@@ -1,5 +1,9 @@
 # AvoidanceMode
 
+```TypeScript
+declare enum AvoidanceMode
+```
+
 Enumerates the drop-down menu avoidance modes.
 
 **Since:** 19

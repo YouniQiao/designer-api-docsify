@@ -1,5 +1,9 @@
 # Button
 
+```TypeScript
+export interface Button
+```
+
 Defines the prompt info of button.
 
 @interface Button

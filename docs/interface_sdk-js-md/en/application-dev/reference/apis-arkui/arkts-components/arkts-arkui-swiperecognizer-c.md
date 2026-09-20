@@ -1,5 +1,9 @@
 # SwipeRecognizer
 
+```TypeScript
+declare class SwipeRecognizer extends GestureRecognizer
+```
+
 Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

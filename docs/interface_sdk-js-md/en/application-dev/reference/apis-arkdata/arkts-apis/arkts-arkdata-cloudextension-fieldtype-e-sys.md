@@ -1,5 +1,9 @@
 # FieldType (System API)
 
+```TypeScript
+export enum FieldType
+```
+
 Enumerates the types of the fields in a database table. Use the enum name rather than the enum value.
 
 **Since:** 11

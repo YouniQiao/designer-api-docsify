@@ -73,6 +73,8 @@ notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationM
 ```
 
 
+<a id="getdonotdisturbprofile-1"></a>
+
 ## getDoNotDisturbProfile
 
 ```TypeScript

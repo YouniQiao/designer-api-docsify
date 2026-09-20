@@ -1,5 +1,9 @@
 # FormInfo (System API)
 
+```TypeScript
+declare interface FormInfo
+```
+
 Provides the widget information.
 
 **Since:** 12

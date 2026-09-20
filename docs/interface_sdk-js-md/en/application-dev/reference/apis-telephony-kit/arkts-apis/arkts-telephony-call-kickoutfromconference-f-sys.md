@@ -66,6 +66,8 @@ call.kickOutFromConference(1).then(() => {
 ```
 
 
+<a id="kickoutfromconference-1"></a>
+
 ## kickOutFromConference
 
 ```TypeScript

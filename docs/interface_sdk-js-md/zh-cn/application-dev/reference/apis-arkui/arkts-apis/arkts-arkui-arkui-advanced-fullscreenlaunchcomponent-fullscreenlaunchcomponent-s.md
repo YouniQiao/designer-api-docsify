@@ -1,5 +1,9 @@
 # FullScreenLaunchComponent
 
+```TypeScript
+export declare struct FullScreenLaunchComponent
+```
+
 全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
 
 > **说明：** 

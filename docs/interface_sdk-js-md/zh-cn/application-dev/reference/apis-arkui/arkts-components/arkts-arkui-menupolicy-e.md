@@ -1,5 +1,9 @@
 # MenuPolicy
 
+```TypeScript
+declare enum MenuPolicy
+```
+
 菜单弹出的策略。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # LunarSwitchStyle
 
+```TypeScript
+declare interface LunarSwitchStyle
+```
+
 Defines the style of the lunar calendar switch in the **DatePickerDialog** component.
 
 **Since:** 14
@@ -14,7 +18,7 @@ selectedColor?: ResourceColor
 
 Background color of the switch when it is on.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary_actived')**
+Default value: **$r('sys.color.ohos_id_color_text_primary_actived')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +62,7 @@ unselectedColor?: ResourceColor
 
 Border color of the switch when it is off.
 
-Default value: **&#36;r('sys.color.ohos_id_color_switch_outline_off')**
+Default value: **$r('sys.color.ohos_id_color_switch_outline_off')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

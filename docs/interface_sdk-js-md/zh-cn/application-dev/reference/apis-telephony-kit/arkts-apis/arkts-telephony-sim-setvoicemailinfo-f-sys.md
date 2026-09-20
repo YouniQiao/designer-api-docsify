@@ -68,6 +68,8 @@ sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com").then(() => {
 ```
 
 
+<a id="setvoicemailinfo-1"></a>
+
 ## setVoiceMailInfo
 
 ```TypeScript

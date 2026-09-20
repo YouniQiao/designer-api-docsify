@@ -1,5 +1,9 @@
 # RichEditorSymbolSpanOptions
 
+```TypeScript
+declare interface RichEditorSymbolSpanOptions
+```
+
 Sets the offset and style of the **SymbolSpan** component.
 
 **Since:** 11

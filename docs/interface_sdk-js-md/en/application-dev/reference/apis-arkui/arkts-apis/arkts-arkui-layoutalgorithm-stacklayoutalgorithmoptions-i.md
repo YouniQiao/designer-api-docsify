@@ -1,5 +1,9 @@
 # StackLayoutAlgorithmOptions
 
+```TypeScript
+interface StackLayoutAlgorithmOptions
+```
+
 Sets the alignment method of the stack layout algorithm.
 
 **Since:** 24

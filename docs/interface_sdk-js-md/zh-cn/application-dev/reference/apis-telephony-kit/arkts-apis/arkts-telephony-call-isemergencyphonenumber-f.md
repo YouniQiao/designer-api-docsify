@@ -75,6 +75,8 @@ call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
 ```
 
 
+<a id="isemergencyphonenumber-1"></a>
+
 ## isEmergencyPhoneNumber
 
 ```TypeScript
@@ -114,6 +116,8 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 
 参见 [isEmergencyPhoneNumber](#isemergencyphonenumber)
 
+
+<a id="isemergencyphonenumber-2"></a>
 
 ## isEmergencyPhoneNumber
 

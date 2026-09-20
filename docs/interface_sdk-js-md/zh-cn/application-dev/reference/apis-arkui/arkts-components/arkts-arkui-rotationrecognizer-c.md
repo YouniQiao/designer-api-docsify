@@ -1,5 +1,9 @@
 # RotationRecognizer
 
+```TypeScript
+declare class RotationRecognizer extends GestureRecognizer
+```
+
 旋转手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
 **继承/实现关系：** RotationRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

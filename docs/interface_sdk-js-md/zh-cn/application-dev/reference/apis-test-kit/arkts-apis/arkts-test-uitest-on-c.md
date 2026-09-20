@@ -1,5 +1,9 @@
 # On
 
+```TypeScript
+declare class On
+```
+
 UiTest框架从API version 9开始，通过On类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。
 
 On提供的API能力具有以下几个特点：
@@ -515,6 +519,8 @@ import { MatchPattern, On, ON } from '@kit.TestKit';
 let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
 ```
 
+<a id="id-1"></a>
+
 ## id
 
 ```TypeScript
@@ -975,6 +981,8 @@ import { On, ON, MatchPattern } from '@kit.TestKit';
 
 let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
 ```
+
+<a id="type-1"></a>
 
 ## type
 

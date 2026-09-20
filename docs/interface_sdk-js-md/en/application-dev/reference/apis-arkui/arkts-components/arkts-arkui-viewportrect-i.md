@@ -1,5 +1,9 @@
 # ViewportRect
 
+```TypeScript
+declare interface ViewportRect
+```
+
 Describes the options of the viewport.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # BaseHandlerOptions
 
+```TypeScript
+interface BaseHandlerOptions
+```
+
 Provides the parameters of the basic gesture handler.
 
 **Since:** 15

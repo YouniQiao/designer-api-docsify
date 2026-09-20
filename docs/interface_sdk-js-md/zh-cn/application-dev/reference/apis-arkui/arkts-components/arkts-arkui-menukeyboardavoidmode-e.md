@@ -1,5 +1,9 @@
 # MenuKeyboardAvoidMode
 
+```TypeScript
+declare enum MenuKeyboardAvoidMode
+```
+
 菜单避让软键盘的模式。
 
 **起始版本：** 23

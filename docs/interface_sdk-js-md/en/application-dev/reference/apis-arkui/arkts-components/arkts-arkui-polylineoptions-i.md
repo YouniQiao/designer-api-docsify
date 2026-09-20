@@ -1,5 +1,9 @@
 # PolylineOptions
 
+```TypeScript
+declare interface PolylineOptions
+```
+
 Describes the options of the polyline.
 
 > **NOTE:** 

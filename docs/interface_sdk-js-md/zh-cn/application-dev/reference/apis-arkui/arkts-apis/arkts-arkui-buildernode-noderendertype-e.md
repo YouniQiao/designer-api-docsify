@@ -1,5 +1,9 @@
 # NodeRenderType
 
+```TypeScript
+export declare enum NodeRenderType
+```
+
 节点渲染类型枚举。
 
 > **说明：** 

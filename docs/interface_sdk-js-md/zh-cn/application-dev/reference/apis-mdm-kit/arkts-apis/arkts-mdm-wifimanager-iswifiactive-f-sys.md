@@ -85,6 +85,8 @@ wifiManager.isWifiActive(wantTemp).then((result) => {
 ```
 
 
+<a id="iswifiactive-1"></a>
+
 ## isWifiActive
 
 ```TypeScript

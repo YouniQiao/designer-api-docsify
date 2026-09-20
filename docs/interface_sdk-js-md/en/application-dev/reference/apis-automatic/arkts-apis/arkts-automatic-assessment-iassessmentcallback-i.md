@@ -1,5 +1,9 @@
 # IAssessmentCallback
 
+```TypeScript
+interface IAssessmentCallback
+```
+
 Assessment callback interface.
 
 **Since:** 26.0.1

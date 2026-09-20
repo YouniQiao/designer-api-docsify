@@ -1,5 +1,9 @@
 # ImageSourceSize
 
+```TypeScript
+interface ImageSourceSize
+```
+
 Defines source size of image.
 
 **Since:** 18

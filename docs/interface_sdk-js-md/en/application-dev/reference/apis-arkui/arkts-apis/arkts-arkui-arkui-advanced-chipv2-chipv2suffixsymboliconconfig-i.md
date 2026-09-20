@@ -1,5 +1,9 @@
 # ChipV2SuffixSymbolIconConfig
 
+```TypeScript
+export interface ChipV2SuffixSymbolIconConfig extends ChipV2SymbolIconConfig
+```
+
 Defines the attribute configuration of the suffix symbol icon.
 
 This API inherits from [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md).

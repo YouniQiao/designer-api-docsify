@@ -78,6 +78,8 @@ cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError) => {
 ```
 
 
+<a id="enablecloud-1"></a>
+
 ## enableCloud
 
 ```TypeScript

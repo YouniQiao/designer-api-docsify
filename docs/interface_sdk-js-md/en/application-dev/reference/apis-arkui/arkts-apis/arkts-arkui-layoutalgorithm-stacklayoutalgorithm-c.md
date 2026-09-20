@@ -1,5 +1,9 @@
 # StackLayoutAlgorithm
 
+```TypeScript
+export class StackLayoutAlgorithm implements LayoutAlgorithm
+```
+
 A stack layout algorithm class, which is used to implement stacked arrangement of child components. It is suitable for scenarios where child components need to be displayed in a stacking manner, such as stacked layers, floating buttons, content areas with backgrounds, and card stack effects. It supports setting the alignment mode of child components within the stack container, which provides layout capabilities similar to the **Stack** component.
 
 > **NOTE:** 

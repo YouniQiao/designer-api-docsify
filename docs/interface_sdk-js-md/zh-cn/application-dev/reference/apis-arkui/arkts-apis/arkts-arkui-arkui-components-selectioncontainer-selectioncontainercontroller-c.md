@@ -1,5 +1,9 @@
 # SelectionContainerController
 
+```TypeScript
+export declare class SelectionContainerController
+```
+
 SelectionContainer组件的控制器。
 
 **起始版本：** 26.0.0

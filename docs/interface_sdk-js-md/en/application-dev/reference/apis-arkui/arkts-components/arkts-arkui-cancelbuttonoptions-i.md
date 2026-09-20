@@ -1,5 +1,9 @@
 # CancelButtonOptions
 
+```TypeScript
+interface CancelButtonOptions
+```
+
 Defines the CancelButton options.
 
 **Since:** 12

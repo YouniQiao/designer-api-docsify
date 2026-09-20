@@ -1,5 +1,9 @@
 # I18NUtil
 
+```TypeScript
+export class I18NUtil
+```
+
 Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization.
 
 **Since:** 9
@@ -344,6 +348,8 @@ try {
   console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="getunicodewrappedfilepath-1"></a>
 
 ## getUnicodeWrappedFilePath
 

@@ -1,5 +1,9 @@
 # TextShadowStyle
 
+```TypeScript
+declare class TextShadowStyle
+```
+
 文本阴影对象说明。
 
 **起始版本：** 12

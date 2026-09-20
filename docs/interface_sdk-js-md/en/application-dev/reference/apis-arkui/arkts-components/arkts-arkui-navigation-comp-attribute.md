@@ -1,5 +1,9 @@
 # Navigation properties/events
 
+```TypeScript
+declare class NavigationAttribute extends CommonMethod<NavigationAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** NavigationAttribute extends CommonMethod<NavigationAttribute>
@@ -33,6 +37,8 @@ Sets the icon of the back button in the title bar.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
+
+<a id="backbuttonicon-1"></a>
 
 ## backButtonIcon
 
@@ -286,6 +292,8 @@ Specifies whether to hide the title bar.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the title bar.<br>**true**: yes<br>**false**: no<br>If the input parameter is invalid, the value **false** is used. |
 
+<a id="hidetitlebar-1"></a>
+
 ## hideTitleBar
 
 ```TypeScript
@@ -328,6 +336,8 @@ Specifies whether to hide the toolbar.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the toolbar.<br>**true**: Hide the toolbar. <br>**false**: Display the toolbar.<br>If the input parameter is invalid, the value **false** is used. |
+
+<a id="hidetoolbar-1"></a>
 
 ## hideToolBar
 
@@ -411,6 +421,8 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
+
+<a id="menus-1"></a>
 
 ## menus
 

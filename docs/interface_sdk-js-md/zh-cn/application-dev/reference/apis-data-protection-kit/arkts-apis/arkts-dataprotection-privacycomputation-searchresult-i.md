@@ -1,5 +1,9 @@
 # SearchResult
 
+```TypeScript
+interface SearchResult
+```
+
 定义解密后的最终搜索结果，指示是否找到匹配项以及与匹配元素关联的可选附加值。
 
 **起始版本：** 26.0.1

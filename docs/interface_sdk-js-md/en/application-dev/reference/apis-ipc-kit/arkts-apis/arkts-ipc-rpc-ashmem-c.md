@@ -1,5 +1,9 @@
 # Ashmem
 
+```TypeScript
+class Ashmem
+```
+
 Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
 
 **Since:** 8
@@ -108,6 +112,8 @@ try {
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
+
+<a id="create-1"></a>
 
 ## create
 

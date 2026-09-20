@@ -1,5 +1,9 @@
 # DataOperationType
 
+```TypeScript
+declare enum DataOperationType
+```
+
 Enumerates the data operation types.
 
 **Since:** 12

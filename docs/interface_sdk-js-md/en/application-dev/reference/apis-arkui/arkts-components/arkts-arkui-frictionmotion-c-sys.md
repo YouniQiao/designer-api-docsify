@@ -1,5 +1,9 @@
 # FrictionMotion (System API)
 
+```TypeScript
+declare class FrictionMotion
+```
+
 Friction animation model. You can build friction animation by friction force, initial position, and initial velocity.
 
 **Since:** 7

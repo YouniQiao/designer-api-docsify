@@ -64,6 +64,8 @@ promise.then((data: boolean) => {
 ```
 
 
+<a id="isimssmssupported-1"></a>
+
 ## isImsSmsSupported
 
 ```TypeScript

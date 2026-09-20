@@ -1,5 +1,9 @@
 # OffsetOptions
 
+```TypeScript
+declare interface OffsetOptions
+```
+
 Provides parameters for setting the initial scrolling offset.
 
 **Since:** 12

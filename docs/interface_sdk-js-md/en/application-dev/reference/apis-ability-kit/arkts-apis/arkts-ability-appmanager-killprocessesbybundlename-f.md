@@ -6,6 +6,8 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
+<a id="killprocessesbybundlename-1"></a>
+
 ## killProcessesByBundleName
 
 ```TypeScript

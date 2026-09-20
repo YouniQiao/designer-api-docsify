@@ -88,6 +88,8 @@ function createUnpremultipliedPixelMap() {
 ```
 
 
+<a id="createunpremultipliedpixelmap-1"></a>
+
 ## createUnpremultipliedPixelMap
 
 ```TypeScript

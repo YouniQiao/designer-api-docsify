@@ -1,5 +1,9 @@
 # UserAgentMetadata
 
+```TypeScript
+class UserAgentMetadata
+```
+
 UserAgentMetadata is a class in the ArkWeb framework used to configure the complete metadata for User-Agent Client Hints. User-Agent Client Hints is a modern HTTP request header mechanism that reports client information to the server through a set of Sec-CH-UA series headers, replacing the traditional User-Agent string to achieve more secure and more granular browser identity identification. Through UserAgentMetadata, apps can customize all client information fields reported by the Web component to the server.
 
 **Since:** 24

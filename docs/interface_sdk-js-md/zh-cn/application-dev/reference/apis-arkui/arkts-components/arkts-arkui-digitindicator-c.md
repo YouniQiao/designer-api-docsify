@@ -1,5 +1,9 @@
 # DigitIndicator
 
+```TypeScript
+declare class DigitIndicator extends Indicator<DigitIndicator>
+```
+
 构造数字指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
 
 > **说明：** 

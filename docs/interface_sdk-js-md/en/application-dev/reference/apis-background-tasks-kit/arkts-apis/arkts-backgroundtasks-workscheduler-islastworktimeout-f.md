@@ -76,6 +76,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 ```
 
 
+<a id="islastworktimeout-1"></a>
+
 ## isLastWorkTimeOut
 
 ```TypeScript
@@ -111,6 +113,8 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 See [isLastWorkTimeOut](#islastworktimeout)
 
+
+<a id="islastworktimeout-2"></a>
 
 ## isLastWorkTimeOut
 

@@ -1,5 +1,9 @@
 # AuthStatus（系统接口）
 
+```TypeScript
+enum AuthStatus
+```
+
 授权状态。
 
 **起始版本：** 26.0.0

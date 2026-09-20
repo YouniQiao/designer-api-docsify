@@ -1,5 +1,9 @@
 # NavigationTitleOptions
 
+```TypeScript
+declare interface NavigationTitleOptions
+```
+
 Defines the title bar options.
 
 **Since:** 11
@@ -181,7 +185,7 @@ the [title value](arkts-arkui-navigation-comp-attribute.md#title) type is **Reso
 
 Default value:
 
-LengthMetrics.resource(`&#36;r('sys.float.margin_right')`)
+LengthMetrics.resource(`$r('sys.float.margin_right')`)
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -210,7 +214,7 @@ Only supported in one of the following scenarios:
 
 Default value:
 
-LengthMetrics.resource(**&#36;r('sys.float.margin_left')**)
+LengthMetrics.resource(**$r('sys.float.margin_left')**)
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

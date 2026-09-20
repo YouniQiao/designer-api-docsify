@@ -112,6 +112,8 @@ switchInputMethodWithSubtype();
 ```
 
 
+<a id="switchinputmethod-1"></a>
+
 ## switchInputMethod
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # RichEditorImageSpanOptions
 
+```TypeScript
+declare interface RichEditorImageSpanOptions
+```
+
 Sets the offset and style of an image span.
 
 **Since:** 10

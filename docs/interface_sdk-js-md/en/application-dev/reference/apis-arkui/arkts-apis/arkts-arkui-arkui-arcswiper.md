@@ -44,8 +44,8 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 
 | Name | Description |
 | --- | --- |
-| [ArcSwiper](arkts-arkui-ohosarkuiarcswiper-p.md) | Defines the ArcSwiper Component that can provide the ability for sub components to swipe and display. |
-| [ArcSwiperInstance](arkts-arkui-ohosarkuiarcswiper-p.md) | Defines ArcSwiper Component instance. |
+| [ArcSwiper](arkts-arkui-arkui-arcswiper-p.md) | Defines the ArcSwiper Component that can provide the ability for sub components to swipe and display. |
+| [ArcSwiperInstance](arkts-arkui-arkui-arcswiper-p.md) | Defines ArcSwiper Component instance. |
 
 ## Examples
 

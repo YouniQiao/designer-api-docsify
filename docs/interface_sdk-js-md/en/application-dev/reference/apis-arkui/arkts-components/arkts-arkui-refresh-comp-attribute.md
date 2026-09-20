@@ -1,5 +1,9 @@
 # Refresh properties/events
 
+```TypeScript
+declare class RefreshAttribute extends CommonMethod<RefreshAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -31,6 +35,8 @@ Sets the maximum pull-down distance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum pull-down distance. The minimum value for the maximum pull-down distance is 0. Values less than 0 are treated as **0**. If this value is less than the refresh offset (**refreshOffset**), the refresh action will not be triggered when the pull-down gesture is released.<br>If set to **undefined** or **null**, this parameter is considered not set.<br>Default value: **undefined**.<br>Unit: vp |
+
+<a id="maxpulldowndistance-1"></a>
 
 ## maxPullDownDistance
 
@@ -209,6 +215,8 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Pull-down offset, in vp.<br>Default value: 96 vp when [promptText](arkts-arkui-refreshoptions-i.md) is set and 64 vp when [promptText](arkts-arkui-refreshoptions-i.md) is not set.<br>If the value specified is 0 or less than 0, the default value is used. |
+
+<a id="refreshoffset-1"></a>
 
 ## refreshOffset
 

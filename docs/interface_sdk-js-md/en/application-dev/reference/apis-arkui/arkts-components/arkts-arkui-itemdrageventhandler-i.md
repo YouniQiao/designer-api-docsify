@@ -1,5 +1,9 @@
 # ItemDragEventHandler
 
+```TypeScript
+declare interface ItemDragEventHandler
+```
+
 Define item drag event handler.
 
 **Since:** 20

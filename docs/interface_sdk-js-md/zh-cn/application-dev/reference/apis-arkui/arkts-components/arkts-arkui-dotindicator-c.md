@@ -1,5 +1,9 @@
 # DotIndicator
 
+```TypeScript
+declare class DotIndicator extends Indicator<DotIndicator>
+```
+
 构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
 
 **继承/实现关系：** DotIndicator extends Indicator<DotIndicator>

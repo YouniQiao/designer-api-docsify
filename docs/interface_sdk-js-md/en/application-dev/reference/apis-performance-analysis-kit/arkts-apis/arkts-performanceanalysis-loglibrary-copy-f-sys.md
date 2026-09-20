@@ -90,6 +90,8 @@ try {
 ```
 
 
+<a id="copy-1"></a>
+
 ## copy
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # AudioVolumeGroupManager
 
+```TypeScript
+interface AudioVolumeGroupManager
+```
+
 管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
 
 **起始版本：** 9
@@ -104,6 +108,8 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
 
+<a id="getmaxvolume-1"></a>
+
 ## getMaxVolume
 
 ```TypeScript
@@ -205,6 +211,8 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
 
+<a id="getminvolume-1"></a>
+
 ## getMinVolume
 
 ```TypeScript
@@ -296,6 +304,8 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
 
+<a id="getringermode-1"></a>
+
 ## getRingerMode
 
 ```TypeScript
@@ -370,6 +380,8 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
+
+<a id="getsystemvolumeindb-1"></a>
 
 ## getSystemVolumeInDb
 
@@ -486,6 +498,8 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
 
+<a id="getvolume-1"></a>
+
 ## getVolume
 
 ```TypeScript
@@ -577,6 +591,8 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
+<a id="ismicrophonemute-1"></a>
+
 ## isMicrophoneMute
 
 ```TypeScript
@@ -640,6 +656,8 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+
+<a id="ismute-1"></a>
 
 ## isMute
 
@@ -861,6 +879,8 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | mute | boolean | 是 | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
+
+<a id="setmicrophonemute-1"></a>
 
 ## setMicrophoneMute
 

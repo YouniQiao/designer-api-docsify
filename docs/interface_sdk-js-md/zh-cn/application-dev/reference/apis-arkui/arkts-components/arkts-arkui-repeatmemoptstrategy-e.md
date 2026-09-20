@@ -1,5 +1,9 @@
 # RepeatMemOptStrategy
 
+```TypeScript
+declare enum RepeatMemOptStrategy
+```
+
 Repeat内存优化策略枚举。
 
 **起始版本：** 26.0.0

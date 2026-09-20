@@ -54,6 +54,8 @@ try {
 ```
 
 
+<a id="querysystemcapabilities-1"></a>
+
 ## querySystemCapabilities
 
 ```TypeScript

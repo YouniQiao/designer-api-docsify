@@ -67,6 +67,8 @@ avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDe
 ```
 
 
+<a id="gethistoricalsessiondescriptors-1"></a>
+
 ## getHistoricalSessionDescriptors
 
 ```TypeScript

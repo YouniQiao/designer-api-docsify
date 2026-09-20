@@ -1,5 +1,9 @@
 # VelocityFieldOptions
 
+```TypeScript
+declare interface VelocityFieldOptions
+```
+
 Parameter used to describe the velocity field of particles.
 
 @interface VelocityFieldOptions

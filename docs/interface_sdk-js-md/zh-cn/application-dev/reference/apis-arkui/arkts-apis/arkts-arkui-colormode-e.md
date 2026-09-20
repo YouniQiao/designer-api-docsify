@@ -1,5 +1,9 @@
 # ColorMode
 
+```TypeScript
+declare enum ColorMode
+```
+
 系统当前深浅色模式。
 
 **起始版本：** 7

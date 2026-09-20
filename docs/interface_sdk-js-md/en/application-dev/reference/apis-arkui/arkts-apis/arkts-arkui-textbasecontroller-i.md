@@ -1,5 +1,9 @@
 # TextBaseController
 
+```TypeScript
+declare interface TextBaseController
+```
+
 Defines a text selection controller.
 
 **Since:** 12

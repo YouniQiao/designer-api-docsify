@@ -1,5 +1,9 @@
 # Readable
 
+```TypeScript
+class Readable
+```
+
 可从中读取数据的流。可读流用于从源（如文件或网络套接字）读取数据。
 
 **起始版本：** 12
@@ -38,6 +42,8 @@ let option : stream.ReadableOptions = {
 };
 let readableStream = new stream.Readable(option);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

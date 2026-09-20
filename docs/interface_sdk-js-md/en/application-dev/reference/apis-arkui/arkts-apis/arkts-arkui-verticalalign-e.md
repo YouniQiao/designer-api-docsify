@@ -1,5 +1,9 @@
 # VerticalAlign
 
+```TypeScript
+declare enum VerticalAlign
+```
+
 VerticalAlign enumeration description
 
 **Since:** 7

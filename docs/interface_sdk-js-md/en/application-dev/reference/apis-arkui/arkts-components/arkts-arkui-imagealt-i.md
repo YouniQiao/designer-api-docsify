@@ -1,5 +1,9 @@
 # ImageAlt
 
+```TypeScript
+declare interface ImageAlt
+```
+
 Sets the placeholder image.
 
 **Since:** 22

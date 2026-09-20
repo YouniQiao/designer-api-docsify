@@ -1,5 +1,9 @@
 # ListItemSwipeActionDirection
 
+```TypeScript
+declare enum ListItemSwipeActionDirection
+```
+
 ListItem划出菜单的展开方向。
 
 **起始版本：** 21

@@ -1,5 +1,9 @@
 # WebKeyboardOptions
 
+```TypeScript
+declare interface WebKeyboardOptions
+```
+
 拦截网页可编辑元素拉起软键盘的回调返回值，包括键盘类型和自定义键盘。适用于需要控制软键盘行为的场景。
 
 **起始版本：** 12

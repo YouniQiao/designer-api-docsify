@@ -1,5 +1,9 @@
 # MessageParcel
 
+```TypeScript
+class MessageParcel
+```
+
 Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()** method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a **MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
 **Since:** 7
@@ -576,6 +580,8 @@ try {
 }
 ```
 
+<a id="readbooleanarray-1"></a>
+
 ## readBooleanArray
 
 ```TypeScript
@@ -725,6 +731,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readbytearray-1"></a>
 
 ## readByteArray
 
@@ -876,6 +884,8 @@ try {
 }
 ```
 
+<a id="readchararray-1"></a>
+
 ## readCharArray
 
 ```TypeScript
@@ -1024,6 +1034,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readdoublearray-1"></a>
 
 ## readDoubleArray
 
@@ -1243,6 +1255,8 @@ try {
 }
 ```
 
+<a id="readfloatarray-1"></a>
+
 ## readFloatArray
 
 ```TypeScript
@@ -1391,6 +1405,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readintarray-1"></a>
 
 ## readIntArray
 
@@ -1578,6 +1594,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readlongarray-1"></a>
 
 ## readLongArray
 
@@ -1809,6 +1827,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readremoteobjectarray-1"></a>
 
 ## readRemoteObjectArray
 
@@ -2112,6 +2132,8 @@ try {
 }
 ```
 
+<a id="readshortarray-1"></a>
+
 ## readShortArray
 
 ```TypeScript
@@ -2260,6 +2282,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
+
+<a id="readstringarray-1"></a>
 
 ## readStringArray
 

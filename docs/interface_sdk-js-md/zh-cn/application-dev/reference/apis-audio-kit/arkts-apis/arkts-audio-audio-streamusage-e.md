@@ -1,5 +1,9 @@
 # StreamUsage
 
+```TypeScript
+enum StreamUsage
+```
+
 枚举，音频流使用类型。
 
 **起始版本：** 7

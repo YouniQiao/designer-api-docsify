@@ -125,6 +125,8 @@ function createFileAccessHelper02(context: common.UIAbilityContext) {
 ```
 
 
+<a id="createfileaccesshelper-1"></a>
+
 ## createFileAccessHelper
 
 ```TypeScript

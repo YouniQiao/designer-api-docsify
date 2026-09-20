@@ -1,5 +1,9 @@
 # WindowStatusType
 
+```TypeScript
+enum WindowStatusType
+```
+
 窗口模式枚举。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # AsyncRunner
 
+```TypeScript
+export class AsyncRunner
+```
+
 表示异步队列。可以指定任务执行的并发度和排队策略。
 
 **起始版本：** 18
@@ -42,6 +46,8 @@ let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
 ```TypeScript
 let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

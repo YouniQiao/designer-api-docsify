@@ -58,6 +58,8 @@ runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SC
 ```
 
 
+<a id="create-1"></a>
+
 ## create
 
 ```TypeScript

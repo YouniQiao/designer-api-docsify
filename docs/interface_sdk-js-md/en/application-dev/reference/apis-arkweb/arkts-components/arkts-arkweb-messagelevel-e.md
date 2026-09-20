@@ -1,5 +1,9 @@
 # MessageLevel
 
+```TypeScript
+declare enum MessageLevel
+```
+
 Enumerates the information levels of the console messages.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # MenuAlignType
 
+```TypeScript
+declare enum MenuAlignType
+```
+
 Enumerates drop-down menu alignment modes.
 
 **Since:** 10

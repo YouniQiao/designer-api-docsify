@@ -1,5 +1,9 @@
 # AVSessionController
 
+```TypeScript
+interface AVSessionController
+```
+
 Session controller,used to control media playback and get media information
 
 @interface AVSessionController [since 10 - 11]

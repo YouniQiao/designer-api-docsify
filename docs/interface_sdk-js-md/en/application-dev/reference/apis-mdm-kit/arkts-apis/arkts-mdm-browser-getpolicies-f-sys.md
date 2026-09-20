@@ -84,6 +84,8 @@ browser.getPolicies(wantTemp, appId).then((result) => {
 ```
 
 
+<a id="getpolicies-1"></a>
+
 ## getPolicies
 
 ```TypeScript

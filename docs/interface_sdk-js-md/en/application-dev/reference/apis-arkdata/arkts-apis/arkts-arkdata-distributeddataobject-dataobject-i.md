@@ -1,5 +1,9 @@
 # DataObject
 
+```TypeScript
+interface DataObject
+```
+
 Provides APIs for managing a distributed data object. Before using any API of this class, use create() to create a DataObject object.
 
 **Since:** 9
@@ -147,6 +151,8 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="bindassetstore-1"></a>
+
 ## bindAssetStore
 
 ```TypeScript
@@ -213,7 +219,7 @@ Unsubscribes from data changes of this distributed data object.
 ```TypeScript
 off(
       type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -323,7 +329,7 @@ Subscribes to data changes of this distributed data object.
 ```TypeScript
 on(
       type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -474,6 +480,8 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
 });
 ```
 
+<a id="revokesave-1"></a>
+
 ## revokeSave
 
 ```TypeScript
@@ -555,6 +563,8 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
     console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="save-1"></a>
 
 ## save
 
@@ -811,6 +821,8 @@ g_object.setSessionId().then(() => {
 });
 ```
 
+<a id="setsessionid-1"></a>
+
 ## setSessionId
 
 ```TypeScript
@@ -879,6 +891,8 @@ g_object.setSessionId().then(() => {
     console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<a id="setsessionid-2"></a>
 
 ## setSessionId
 

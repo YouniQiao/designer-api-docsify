@@ -1,5 +1,9 @@
 # Task
 
+```TypeScript
+class Task
+```
+
 Enumerates tasks, which can be executed for multiple times, placed in a task group, serial queue, or asynchronous queue for execution, or added with dependencies for execution.
 
 **Since:** 9
@@ -123,6 +127,8 @@ let taskName: string = "taskName";
 let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
 let name: string = task.name;
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

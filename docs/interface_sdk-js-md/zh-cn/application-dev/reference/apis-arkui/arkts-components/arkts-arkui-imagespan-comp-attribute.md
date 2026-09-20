@@ -1,5 +1,9 @@
 # ImageSpan属性/事件
 
+```TypeScript
+declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
+```
+
 属性继承自[BaseSpan](arkts-arkui-basespan-c.md)，通用属性方法支持尺寸设置、背景设置、边框设置。
 
 通用事件仅支持点击控制事件。还支持以下事件：

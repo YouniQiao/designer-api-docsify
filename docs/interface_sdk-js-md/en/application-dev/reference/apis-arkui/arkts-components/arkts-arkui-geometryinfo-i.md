@@ -1,5 +1,9 @@
 # GeometryInfo
 
+```TypeScript
+declare interface GeometryInfo extends SizeResult
+```
+
 Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components.
 
 **Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)

@@ -1,5 +1,9 @@
 # X509CertChain
 
+```TypeScript
+interface X509CertChain
+```
+
 Provides APIs for managing the X.509 certificate chain.
 
 **Since:** 11
@@ -654,6 +658,8 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
   }
 });
 ```
+
+<a id="validate-1"></a>
 
 ## validate
 

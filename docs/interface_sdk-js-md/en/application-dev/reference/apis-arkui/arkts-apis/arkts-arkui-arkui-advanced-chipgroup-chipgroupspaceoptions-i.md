@@ -1,5 +1,9 @@
 # ChipGroupSpaceOptions
 
+```TypeScript
+export interface ChipGroupSpaceOptions
+```
+
 Defines the left and right padding of the chip group, and the spacing between chips.
 
 **Since:** 12

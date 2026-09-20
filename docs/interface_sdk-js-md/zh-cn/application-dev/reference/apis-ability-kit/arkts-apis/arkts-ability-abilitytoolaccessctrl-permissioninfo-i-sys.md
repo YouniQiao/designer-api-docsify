@@ -1,5 +1,9 @@
 # PermissionInfo（系统接口）
 
+```TypeScript
+interface PermissionInfo
+```
+
 权限信息。
 
 **起始版本：** 26.0.0

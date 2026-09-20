@@ -217,6 +217,8 @@ try {
 ```
 
 
+<a id="startadvertising-1"></a>
+
 ## startAdvertising
 
 ```TypeScript
@@ -261,6 +263,8 @@ function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncC
 
 参见 [startAdvertising](#startadvertising)
 
+
+<a id="startadvertising-2"></a>
 
 ## startAdvertising
 

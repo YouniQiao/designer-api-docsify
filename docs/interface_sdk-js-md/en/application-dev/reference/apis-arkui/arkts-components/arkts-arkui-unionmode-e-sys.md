@@ -1,5 +1,9 @@
 # UnionMode (System API)
 
+```TypeScript
+declare enum UnionMode
+```
+
 Enumerates the union modes.
 
 **Since:** 26.0.0

@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper extends lang.ISendable
+```
+
 提供操作系统媒体资源能力的接口。
 
 **继承/实现关系：** PhotoAccessHelper extends lang.ISendable
@@ -72,6 +76,8 @@ phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper�
 ```TypeScript
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
 ```
+
+<a id="createasset-1"></a>
 
 ## createAsset
 

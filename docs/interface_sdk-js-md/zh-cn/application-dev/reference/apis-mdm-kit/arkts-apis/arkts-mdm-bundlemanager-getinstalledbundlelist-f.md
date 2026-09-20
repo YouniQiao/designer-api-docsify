@@ -86,6 +86,8 @@ bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).the
 ```
 
 
+<a id="getinstalledbundlelist-1"></a>
+
 ## getInstalledBundleList
 
 ```TypeScript

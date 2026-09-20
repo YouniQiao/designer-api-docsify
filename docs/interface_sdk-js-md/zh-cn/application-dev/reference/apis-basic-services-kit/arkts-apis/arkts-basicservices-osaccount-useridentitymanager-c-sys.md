@@ -1,5 +1,9 @@
 # UserIdentityManager（系统接口）
 
+```TypeScript
+class UserIdentityManager
+```
+
 获取用户身份管理类。
 
 **起始版本：** 8
@@ -421,6 +425,8 @@ try {
 }
 ```
 
+<a id="getauthinfo-1"></a>
+
 ## getAuthInfo
 
 ```TypeScript
@@ -457,6 +463,8 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 **示例**
 
 参见 [getAuthInfo](#getauthinfo)
+
+<a id="getauthinfo-2"></a>
 
 ## getAuthInfo
 
@@ -499,6 +507,8 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 **示例**
 
 参见 [getAuthInfo](#getauthinfo)
+
+<a id="getauthinfo-3"></a>
 
 ## getAuthInfo
 
@@ -795,6 +805,8 @@ try {
   console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="opensession-1"></a>
 
 ## openSession
 

@@ -1,5 +1,9 @@
 # Canvas属性/事件
 
+```TypeScript
+declare class CanvasAttribute extends CommonMethod<CanvasAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性：
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。
@@ -71,6 +75,8 @@ Canvas组件初始化完成或者发生大小变化时的事件回调，支持at
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Canvas组件初始化完成或者发生大小变化时的回调事件。 |
+
+<a id="onready-1"></a>
 
 ## onReady
 

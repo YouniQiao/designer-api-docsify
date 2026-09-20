@@ -1,5 +1,9 @@
 # GestureType
 
+```TypeScript
+enum GestureType
+```
+
 Enumerates gesture recognizer types.
 
 **Since:** 11

@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="getdisallowedrunningbundlessync-1"></a>
+
 ## getDisallowedRunningBundlesSync
 
 ```TypeScript

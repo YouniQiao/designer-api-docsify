@@ -26,7 +26,7 @@ import { advertising } from '@kit.AdsKit';
 | [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md) | 获取广告请求体，使用Promise异步回调（该接口仅对部分系统预置应用开放）。 |
 | [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md) | 解析并处理广告响应体（该接口仅对部分系统预置应用开放）。 |
 | [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | 注入广告JavaScript对象到Web组件中（该接口仅对部分系统预置应用开放）。 |
-| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | 注入广告JavaScript对象到Web组件中（该接口仅对部分系统预置应用开放）。 |
+| [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md#registerwebadinterface-1) | 注入广告JavaScript对象到Web组件中（该接口仅对部分系统预置应用开放）。 |
 | [showAd](arkts-ads-advertising-showad-f.md) | 展示全屏广告。 |
 
 ### 类

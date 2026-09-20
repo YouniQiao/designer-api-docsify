@@ -1,5 +1,9 @@
 # InputType
 
+```TypeScript
+declare enum InputType
+```
+
 单行文本输入框类型。
 
 **起始版本：** 7

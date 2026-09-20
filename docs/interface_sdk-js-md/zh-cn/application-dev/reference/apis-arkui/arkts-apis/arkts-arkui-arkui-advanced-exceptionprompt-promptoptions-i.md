@@ -1,5 +1,9 @@
 # PromptOptions
 
+```TypeScript
+export interface PromptOptions
+```
+
 PromptOptions定义options的类型。
 
 **起始版本：** 11

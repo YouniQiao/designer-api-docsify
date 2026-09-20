@@ -1,5 +1,9 @@
 # Button properties/events
 
+```TypeScript
+declare class ButtonAttribute extends CommonMethod<ButtonAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 The universal events are supported.
@@ -108,7 +112,7 @@ Sets the font color for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.<br>Default value: **&#36;r('sys.color.font_on_primary')**, which means white |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.<br>Default value: **$r('sys.color.font_on_primary')**, which means white |
 
 ## fontFamily
 
@@ -152,7 +156,7 @@ Sets the font size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.<br>Default value:<br>**&#36;r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**<br>**&#36;r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**<br>Note: For the string type, percentage values are not supported. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.<br>Default value:<br>**$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**<br>**$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**<br>Note: For the string type, percentage values are not supported. |
 
 ## fontStyle
 

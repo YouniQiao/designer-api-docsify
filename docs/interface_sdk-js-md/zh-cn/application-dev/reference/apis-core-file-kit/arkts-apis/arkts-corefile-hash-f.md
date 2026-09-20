@@ -70,6 +70,8 @@ hash.hash(filePath, "sha256", (err: BusinessError, str: string) => {
 ```
 
 
+<a id="hash-1"></a>
+
 ## hash
 
 ```TypeScript

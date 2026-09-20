@@ -1,5 +1,9 @@
 # IMonitorValue
 
+```TypeScript
+declare interface IMonitorValue<T>
+```
+
 @Monitor监听状态变量变化的具体信息，通过IMonitor的value接口获取。T为状态变量类型。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # MessageOption
 
+```TypeScript
+class MessageOption
+```
+
 Defines the options used to construct the **MessageOption** object.
 
 **Since:** 7
@@ -54,6 +58,8 @@ class TestRemoteObject extends rpc.MessageOption {
   }
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

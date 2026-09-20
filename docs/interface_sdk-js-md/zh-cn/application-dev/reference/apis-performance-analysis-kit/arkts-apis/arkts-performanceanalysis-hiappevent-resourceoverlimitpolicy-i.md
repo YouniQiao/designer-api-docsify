@@ -1,5 +1,9 @@
 # ResourceOverlimitPolicy
 
+```TypeScript
+interface ResourceOverlimitPolicy
+```
+
 提供资源泄漏事件配置策略的定义。
 
 **起始版本：** 24

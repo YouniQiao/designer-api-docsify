@@ -1,5 +1,9 @@
 # InteractionModalUIExtension (System API)
 
+```TypeScript
+interface InteractionModalUIExtension extends InteractionUI
+```
+
 Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
 
 **Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)

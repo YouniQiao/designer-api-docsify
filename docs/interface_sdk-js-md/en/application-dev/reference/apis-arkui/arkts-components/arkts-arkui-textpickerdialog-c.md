@@ -1,5 +1,9 @@
 # TextPickerDialog
 
+```TypeScript
+declare class TextPickerDialog
+```
+
 A text picker dialog box is a dialog box that allows users to select text from the given range.
 
 **Since:** 8

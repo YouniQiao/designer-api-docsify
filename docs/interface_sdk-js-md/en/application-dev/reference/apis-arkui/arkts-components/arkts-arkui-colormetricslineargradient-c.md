@@ -1,5 +1,9 @@
 # ColorMetricsLinearGradient
 
+```TypeScript
+declare class ColorMetricsLinearGradient
+```
+
 Sets the linear gradient background color of the track.
 
 **Since:** 23

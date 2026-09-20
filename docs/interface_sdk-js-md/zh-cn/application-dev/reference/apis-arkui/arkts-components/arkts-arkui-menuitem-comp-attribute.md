@@ -1,5 +1,9 @@
 # MenuItem属性/事件
 
+```TypeScript
+declare class MenuItemAttribute extends CommonMethod<MenuItemAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 **继承/实现关系：** MenuItemAttribute extends CommonMethod<MenuItemAttribute>
@@ -124,7 +128,7 @@ selected(value: boolean)
 
 设置菜单项是否选中。
 
-从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 

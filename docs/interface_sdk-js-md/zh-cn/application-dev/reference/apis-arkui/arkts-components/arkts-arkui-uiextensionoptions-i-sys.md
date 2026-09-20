@@ -1,5 +1,9 @@
 # UIExtensionOptions（系统接口）
 
+```TypeScript
+declare interface UIExtensionOptions
+```
+
 用于在UIExtensionComponent进行构造时传递可选的构造参数。
 
 **起始版本：** 11

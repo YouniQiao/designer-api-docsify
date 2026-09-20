@@ -1,5 +1,9 @@
 # UnderlineColor
 
+```TypeScript
+declare interface UnderlineColor
+```
+
 Defines the underline color width property.
 
 **Since:** 12

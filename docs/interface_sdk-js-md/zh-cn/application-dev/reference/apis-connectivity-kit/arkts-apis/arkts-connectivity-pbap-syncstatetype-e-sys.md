@@ -1,5 +1,9 @@
 # SyncStateType（系统接口）
 
+```TypeScript
+enum SyncStateType
+```
+
 电话本同步状态类型。
 
 **起始版本：** 26.0.1

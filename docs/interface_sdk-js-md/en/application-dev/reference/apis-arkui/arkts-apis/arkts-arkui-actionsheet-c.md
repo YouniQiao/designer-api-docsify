@@ -1,5 +1,9 @@
 # ActionSheet
 
+```TypeScript
+declare class ActionSheet
+```
+
 **Since:** 8
 
 **Deprecated since:** 26.0.0

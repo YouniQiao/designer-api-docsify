@@ -158,6 +158,8 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err:
 ```
 
 
+<a id="startusingpermission-1"></a>
+
 ## startUsingPermission
 
 ```TypeScript
@@ -213,6 +215,8 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 See [startUsingPermission](#startusingpermission)
 
+
+<a id="startusingpermission-2"></a>
 
 ## startUsingPermission
 
@@ -274,6 +278,8 @@ When a pid is passed in, the pid must be the same as the pid passed into [stopUs
 
 See [startUsingPermission](#startusingpermission)
 
+
+<a id="startusingpermission-3"></a>
 
 ## startUsingPermission
 

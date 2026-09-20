@@ -1,5 +1,9 @@
 # CounterV2CommonOptions
 
+```TypeScript
+declare class CounterV2CommonOptions
+```
+
 Defines the common attributes and events of the **CounterV2** component.
 
 **Since:** 26.0.0

@@ -67,6 +67,8 @@ sim.queryIccDiallingNumbers(0, 1).then((data:  Array<sim.DiallingNumbersInfo>) =
 ```
 
 
+<a id="queryiccdiallingnumbers-1"></a>
+
 ## queryIccDiallingNumbers
 
 ```TypeScript

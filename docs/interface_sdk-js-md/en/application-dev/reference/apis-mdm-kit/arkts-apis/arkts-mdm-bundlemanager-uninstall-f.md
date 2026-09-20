@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
+<a id="uninstall-4"></a>
+
 ## uninstall
 
 ```TypeScript

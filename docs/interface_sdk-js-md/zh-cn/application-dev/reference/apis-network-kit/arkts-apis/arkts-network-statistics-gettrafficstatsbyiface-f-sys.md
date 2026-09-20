@@ -101,6 +101,8 @@ if (iFaceInfo) {
 ```
 
 
+<a id="gettrafficstatsbyiface-1"></a>
+
 ## getTrafficStatsByIface
 
 ```TypeScript

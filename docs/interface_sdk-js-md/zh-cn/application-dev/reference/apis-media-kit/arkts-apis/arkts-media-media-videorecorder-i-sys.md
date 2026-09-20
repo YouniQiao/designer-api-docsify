@@ -1,5 +1,9 @@
 # VideoRecorder（系统接口）
 
+```TypeScript
+interface VideoRecorder
+```
+
 
 > **说明：** 
 > AVRecorder&lt;sup&gt;9+&lt;/sup&gt;发布后，VideoRecorder停止维护，建议使用[AVRecorder](arkts-media-media-avrecorder-i.md)替代。
@@ -76,6 +80,8 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
   console.error('getInputSurface failed and catch error is ' + err.message);
 });
 ```
+
+<a id="getinputsurface-2"></a>
 
 ## getInputSurface
 
@@ -222,6 +228,8 @@ videoRecorder.pause().then(() => {
   console.error('pause videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="pause-1"></a>
 
 ## pause
 
@@ -384,6 +392,8 @@ videoRecorder.prepare(videoConfig).then(() => {
   console.error('prepare failed and catch error is ' + err.message);
 });
 ```
+
+<a id="prepare-1"></a>
 
 ## prepare
 
@@ -548,6 +558,8 @@ videoRecorder.release().then(() => {
 });
 ```
 
+<a id="release-1"></a>
+
 ## release
 
 ```TypeScript
@@ -656,6 +668,8 @@ videoRecorder.reset().then(() => {
   console.error('reset videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="reset-1"></a>
 
 ## reset
 
@@ -768,6 +782,8 @@ videoRecorder.resume().then(() => {
 });
 ```
 
+<a id="resume-1"></a>
+
 ## resume
 
 ```TypeScript
@@ -879,6 +895,8 @@ videoRecorder.start().then(() => {
   console.error('start videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="start-1"></a>
 
 ## start
 
@@ -993,6 +1011,8 @@ videoRecorder.stop().then(() => {
   console.error('stop videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

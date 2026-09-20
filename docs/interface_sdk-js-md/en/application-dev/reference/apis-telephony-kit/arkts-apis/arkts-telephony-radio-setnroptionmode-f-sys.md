@@ -71,6 +71,8 @@ radio.setNROptionMode(slotId, mode).then(() => {
 ```
 
 
+<a id="setnroptionmode-1"></a>
+
 ## setNROptionMode
 
 ```TypeScript

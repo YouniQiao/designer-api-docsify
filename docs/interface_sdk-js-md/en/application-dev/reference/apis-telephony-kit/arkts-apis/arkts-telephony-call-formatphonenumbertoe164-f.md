@@ -63,6 +63,8 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
 ```
 
 
+<a id="formatphonenumbertoe164-1"></a>
+
 ## formatPhoneNumberToE164
 
 ```TypeScript

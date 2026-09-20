@@ -98,6 +98,8 @@ notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.
 ```
 
 
+<a id="getdonotdisturbdate-1"></a>
+
 ## getDoNotDisturbDate
 
 ```TypeScript
@@ -136,6 +138,8 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 参见 [getDoNotDisturbDate](#getdonotdisturbdate)
 
+
+<a id="getdonotdisturbdate-2"></a>
 
 ## getDoNotDisturbDate
 
@@ -178,6 +182,8 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 参见 [getDoNotDisturbDate](#getdonotdisturbdate)
 
+
+<a id="getdonotdisturbdate-3"></a>
 
 ## getDoNotDisturbDate
 

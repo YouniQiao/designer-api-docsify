@@ -1,5 +1,9 @@
 # DepthLightParams (System API)
 
+```TypeScript
+declare interface DepthLightParams
+```
+
 Lighting parameters struct.
 
 **Since:** 26.0.0

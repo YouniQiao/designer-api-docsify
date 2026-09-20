@@ -118,6 +118,8 @@ async function CreatePictureTest(context: Context) {
 ```
 
 
+<a id="createpicturebyhdrandsdrpixelmap-1"></a>
+
 ## createPictureByHdrAndSdrPixelMap
 
 ```TypeScript

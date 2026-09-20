@@ -1,5 +1,9 @@
 # XCallType (System API)
 
+```TypeScript
+export enum XCallType
+```
+
 Enumerates X-Call types.
 
 **Since:** 26.0.0

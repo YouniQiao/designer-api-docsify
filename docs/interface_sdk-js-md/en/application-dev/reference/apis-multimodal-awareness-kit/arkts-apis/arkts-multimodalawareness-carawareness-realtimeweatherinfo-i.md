@@ -1,5 +1,9 @@
 # RealTimeWeatherInfo
 
+```TypeScript
+export interface RealTimeWeatherInfo
+```
+
 Interface for realtime weather response info.
 
 **Since:** 26.0.1

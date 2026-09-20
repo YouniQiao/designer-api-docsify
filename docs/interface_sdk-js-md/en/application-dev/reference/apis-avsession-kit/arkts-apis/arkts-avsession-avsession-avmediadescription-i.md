@@ -1,5 +1,9 @@
 # AVMediaDescription
 
+```TypeScript
+interface AVMediaDescription
+```
+
 The description of the media for an item in the playlist of the session
 
 **Since:** 10

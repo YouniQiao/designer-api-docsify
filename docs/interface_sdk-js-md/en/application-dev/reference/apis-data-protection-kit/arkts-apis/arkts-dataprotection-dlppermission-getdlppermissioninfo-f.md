@@ -70,6 +70,8 @@ dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the applicati
 ```
 
 
+<a id="getdlppermissioninfo-1"></a>
+
 ## getDLPPermissionInfo
 
 ```TypeScript

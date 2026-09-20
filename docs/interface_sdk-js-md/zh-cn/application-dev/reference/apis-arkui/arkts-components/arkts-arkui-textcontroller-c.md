@@ -1,5 +1,9 @@
 # TextController
 
+```TypeScript
+declare class TextController
+```
+
 Text组件的控制器。
 
 ## 导入对象

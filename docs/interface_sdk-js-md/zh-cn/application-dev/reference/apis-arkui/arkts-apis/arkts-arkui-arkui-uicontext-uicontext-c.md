@@ -1,5 +1,9 @@
 # UIContext
 
+```TypeScript
+export class UIContext
+```
+
 UIContext实例对象。
 
 > **说明：** 
@@ -274,6 +278,8 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+
+<a id="createanimator-1"></a>
 
 ## createAnimator
 
@@ -2199,6 +2205,8 @@ textPickerDialog display.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) | 是 | Options. |
+
+<a id="showtextpickerdialog-1"></a>
 
 ## showTextPickerDialog
 

@@ -1,5 +1,9 @@
 # SwiperAnimationEvent
 
+```TypeScript
+declare interface SwiperAnimationEvent
+```
+
 Describes the animation information of the **Swiper** component.
 
 **Since:** 10

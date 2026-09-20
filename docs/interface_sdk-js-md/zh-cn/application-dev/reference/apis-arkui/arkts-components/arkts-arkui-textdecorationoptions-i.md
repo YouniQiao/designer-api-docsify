@@ -1,5 +1,9 @@
 # TextDecorationOptions
 
+```TypeScript
+declare interface TextDecorationOptions
+```
+
 文本装饰线的配置项。
 
 **起始版本：** 12

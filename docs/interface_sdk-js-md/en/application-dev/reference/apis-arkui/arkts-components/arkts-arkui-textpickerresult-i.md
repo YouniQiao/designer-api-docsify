@@ -1,5 +1,9 @@
 # TextPickerResult
 
+```TypeScript
+declare interface TextPickerResult
+```
+
 Defines the struct of TextPickerResult.
 
 **Since:** 8
@@ -9,7 +13,7 @@ Defines the struct of TextPickerResult.
 ## index
 
 ```TypeScript
-index: number | number[]
+index: number[]
 ```
 
 The subscript of the current selection.
@@ -25,7 +29,7 @@ The subscript of the current selection.
 ## value
 
 ```TypeScript
-value: string | string[]
+value: string[]
 ```
 
 The currently selected value. Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".

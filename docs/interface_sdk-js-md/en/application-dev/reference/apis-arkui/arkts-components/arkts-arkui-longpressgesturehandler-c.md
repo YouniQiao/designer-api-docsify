@@ -1,5 +1,9 @@
 # LongPressGestureHandler
 
+```TypeScript
+declare class LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
+```
+
 Defines a long press gesture handler object.
 
 **Inheritance/Implementation:** LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
@@ -85,6 +89,8 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 | Type | Description |
 | --- | --- |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

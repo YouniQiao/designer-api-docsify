@@ -1,5 +1,9 @@
 # DistributedObject
 
+```TypeScript
+interface DistributedObject
+```
+
 表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。<br>  
 > **说明：** 
 > 
@@ -47,7 +51,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 ```TypeScript
 off(
       type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -57,7 +61,7 @@ off(
 
 **废弃版本：** 9
 
-**替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**替代接口：** [off](arkts-arkdata-distributeddataobject-dataobject-i.md#offstatus)( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -96,7 +100,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 ```TypeScript
 on(
       type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline') => void
     ): void
 ```
 
@@ -106,7 +110,7 @@ on(
 
 **废弃版本：** 9
 
-**替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
+**替代接口：** [on](arkts-arkdata-distributeddataobject-dataobject-i.md#onstatus)( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline') =&gt; void )
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

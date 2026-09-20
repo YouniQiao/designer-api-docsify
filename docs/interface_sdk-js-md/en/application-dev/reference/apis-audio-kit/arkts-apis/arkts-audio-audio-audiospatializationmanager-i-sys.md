@@ -1,5 +1,9 @@
 # AudioSpatializationManager
 
+```TypeScript
+interface AudioSpatializationManager
+```
+
 Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management.
 
 Before calling any API in AudioSpatializationManager, you must use [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager) to obtain an AudioSpatializationManager instance.
@@ -274,6 +278,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isheadtrackingenabled-1"></a>
 
 ## isHeadTrackingEnabled
 
@@ -553,6 +559,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isspatializationenabled-1"></a>
 
 ## isSpatializationEnabled
 
@@ -1331,6 +1339,8 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 });
 ```
 
+<a id="setheadtrackingenabled-1"></a>
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1374,6 +1384,8 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 **Examples**
 
 See [setHeadTrackingEnabled](#setheadtrackingenabled)
+
+<a id="setheadtrackingenabled-2"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1549,6 +1561,8 @@ audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).t
 });
 ```
 
+<a id="setspatializationenabled-1"></a>
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1592,6 +1606,8 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 **Examples**
 
 See [setSpatializationEnabled](#setspatializationenabled)
+
+<a id="setspatializationenabled-2"></a>
 
 ## setSpatializationEnabled
 

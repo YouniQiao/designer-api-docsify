@@ -68,6 +68,8 @@ radio.getBasebandVersion(slotId).then((data: string) => {
 ```
 
 
+<a id="getbasebandversion-1"></a>
+
 ## getBasebandVersion
 
 ```TypeScript

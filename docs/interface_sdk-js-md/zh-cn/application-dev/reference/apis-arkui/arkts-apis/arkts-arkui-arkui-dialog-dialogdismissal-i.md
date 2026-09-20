@@ -1,5 +1,9 @@
 # DialogDismissal
 
+```TypeScript
+export interface DialogDismissal
+```
+
 提供有关关闭对话框的操作的信息。
 
 **起始版本：** 26.0.1

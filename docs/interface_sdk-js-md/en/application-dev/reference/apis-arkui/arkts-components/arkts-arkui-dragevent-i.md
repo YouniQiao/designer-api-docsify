@@ -1,5 +1,9 @@
 # DragEvent
 
+```TypeScript
+declare interface DragEvent
+```
+
 Provides information about the drag event.
 
 **Since:** 7
@@ -309,7 +313,7 @@ Obtains the dragging velocity along the main axis.
 
 | Type | Description |
 | --- | --- |
-| number | Dragging velocity along the main axis. The value is the arithmetic square root of the sum of the squares of the velocities along the x-axis and y-axis, in vp. |
+| number | Dragging velocity along the main axis. The value is the arithmetic square root of the sum of the squares of the velocities along the x-axis and y-axis, in vp/s. |
 
 ## getVelocityX
 
@@ -331,7 +335,7 @@ Obtains the dragging velocity along the x-axis.
 
 | Type | Description |
 | --- | --- |
-| number | Dragging velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. |
+| number | Dragging velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp/s. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. |
 
 ## getVelocityY
 
@@ -353,7 +357,7 @@ Obtains the dragging velocity along the y-axis.
 
 | Type | Description |
 | --- | --- |
-| number | Dragging velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. |
+| number | Dragging velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp/s. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. |
 
 ## getWindowX
 
@@ -573,7 +577,7 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 ## autoHideComponentUniqueIds
 
 ```TypeScript
-autoHideComponentUniqueIds?: number | number[]
+autoHideComponentUniqueIds?: number[]
 ```
 
 Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging. This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.

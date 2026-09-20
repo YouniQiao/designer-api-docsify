@@ -1,5 +1,9 @@
 # SceneResourceFactory
 
+```TypeScript
+export interface SceneResourceFactory extends RenderResourceFactory
+```
+
 Provides APIs for creating resources, such as cameras and light sources, used in 3D scenes. This class inherits from RenderResourceFactory.
 
 @extends RenderResourceFactory @interface SceneResourceFactory
@@ -79,6 +83,8 @@ function createCameraPromise(): Promise<Camera> {
   });
 }
 ```
+
+<a id="createcamera-1"></a>
 
 ## createCamera
 

@@ -1,5 +1,9 @@
 # LinearGradientStyle
 
+```TypeScript
+declare class LinearGradientStyle extends ShaderStyle
+```
+
 Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
 **Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)

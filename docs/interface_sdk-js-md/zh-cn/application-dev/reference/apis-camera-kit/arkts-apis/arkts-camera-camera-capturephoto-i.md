@@ -1,5 +1,9 @@
 # CapturePhoto
 
+```TypeScript
+interface CapturePhoto
+```
+
 获取全质量图和未压缩图的对象。
 
 **起始版本：** 23

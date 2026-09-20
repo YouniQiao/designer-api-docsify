@@ -1,5 +1,9 @@
 # AtManager
 
+```TypeScript
+interface AtManager
+```
+
 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md)获取实例。
 
 **起始版本：** 8
@@ -543,6 +547,8 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 ```
 
+<a id="requestpermissionsfromuser-1"></a>
+
 ## requestPermissionsFromUser
 
 ```TypeScript
@@ -641,6 +647,8 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
   console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="verifyaccesstoken-1"></a>
 
 ## verifyAccessToken
 

@@ -1,5 +1,9 @@
 # AccessibilitySelectedType
 
+```TypeScript
+export declare enum AccessibilitySelectedType
+```
+
 Defines the selected state types that can be specified for **Chip**. This API is used to control how the accessibility service conveys the component's selected state to users. Different selected state types provide different semantics and user experiences.
 
 | Name| Value| Description|  

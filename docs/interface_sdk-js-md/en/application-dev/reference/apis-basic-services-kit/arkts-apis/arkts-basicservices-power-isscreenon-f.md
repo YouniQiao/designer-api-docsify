@@ -51,6 +51,8 @@ power.isScreenOn()
 ```
 
 
+<a id="isscreenon-1"></a>
+
 ## isScreenOn
 
 ```TypeScript

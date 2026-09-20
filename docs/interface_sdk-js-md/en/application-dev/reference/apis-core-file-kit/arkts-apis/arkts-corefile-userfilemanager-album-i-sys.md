@@ -1,5 +1,9 @@
 # Album (System API)
 
+```TypeScript
+interface Album extends AbsAlbum
+```
+
 Provides APIs to manage albums.
 
 **Inheritance/Implementation:** Album extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md)
@@ -58,6 +62,8 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="addphotoassets-1"></a>
 
 ## addPhotoAssets
 
@@ -132,6 +138,8 @@ Commits the modification on the album attributes to the database. This API uses 
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="commitmodify-1"></a>
 
 ## commitModify
 
@@ -208,6 +216,8 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="deletephotoassets-1"></a>
 
 ## deletePhotoAssets
 
@@ -295,6 +305,8 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="recoverphotoassets-1"></a>
+
 ## recoverPhotoAssets
 
 ```TypeScript
@@ -375,6 +387,8 @@ Removes image and video assets from an album. The album and file resources must 
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="removephotoassets-1"></a>
 
 ## removePhotoAssets
 

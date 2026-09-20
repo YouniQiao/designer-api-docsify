@@ -1,5 +1,9 @@
 # ASTCResource (System API)
 
+```TypeScript
+interface ASTCResource
+```
+
 Defines the resource which can use ASTC.
 
 @interface ASTCResource

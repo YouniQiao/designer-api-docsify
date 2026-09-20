@@ -1,5 +1,9 @@
 # HttpRequestOptions
 
+```TypeScript
+export interface HttpRequestOptions
+```
+
 发起HTTP请求时，可选配置信息。
 
 **起始版本：** 6
@@ -85,7 +89,7 @@ caPath?: string
 ## certificatePinning
 
 ```TypeScript
-certificatePinning?: CertificatePinning | CertificatePinning[]
+certificatePinning?: CertificatePinning[]
 ```
 
 支持动态设置证书锁定配置，可以传入单个或多个证书PIN码。

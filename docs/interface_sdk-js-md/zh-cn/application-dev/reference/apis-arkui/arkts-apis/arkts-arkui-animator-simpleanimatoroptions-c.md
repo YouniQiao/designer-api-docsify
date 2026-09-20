@@ -1,5 +1,9 @@
 # SimpleAnimatorOptions
 
+```TypeScript
+export declare class SimpleAnimatorOptions
+```
+
 animator简易动画参数对象。与AnimatorOptions相比，duration、easing、delay、fill、direction、iterations等动画参数有默认值，可不设置。
 
 **起始版本：** 18

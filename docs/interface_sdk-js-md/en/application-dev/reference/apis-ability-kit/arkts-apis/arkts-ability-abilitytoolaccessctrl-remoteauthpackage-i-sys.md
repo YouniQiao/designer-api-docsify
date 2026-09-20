@@ -1,5 +1,9 @@
 # RemoteAuthPackage (System API)
 
+```TypeScript
+interface RemoteAuthPackage
+```
+
 Remote authorization package.
 
 **Since:** 26.0.1

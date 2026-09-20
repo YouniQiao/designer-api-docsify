@@ -148,6 +148,8 @@ try {
 ```
 
 
+<a id="setwatermarkimage-1"></a>
+
 ## setWatermarkImage
 
 ```TypeScript

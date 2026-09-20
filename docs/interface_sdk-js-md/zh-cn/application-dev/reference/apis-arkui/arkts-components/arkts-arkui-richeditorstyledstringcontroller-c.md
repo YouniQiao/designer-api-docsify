@@ -1,5 +1,9 @@
 # RichEditorStyledStringController
 
+```TypeScript
+declare class RichEditorStyledStringController extends RichEditorBaseController implements StyledStringController
+```
+
 使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
 
 ## 导入对象

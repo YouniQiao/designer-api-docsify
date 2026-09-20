@@ -1,5 +1,9 @@
 # StackLayoutAlgorithm
 
+```TypeScript
+export class StackLayoutAlgorithm implements LayoutAlgorithm
+```
+
 堆叠布局算法类。
 
 > **说明：** 

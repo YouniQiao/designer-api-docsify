@@ -1,5 +1,9 @@
 # ListBackPressBehavior
 
+```TypeScript
+declare interface ListBackPressBehavior
+```
+
 定义List组件的系统返回键行为。
 
 **起始版本：** 26.0.0

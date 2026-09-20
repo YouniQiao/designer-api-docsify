@@ -1,5 +1,9 @@
 # MutableBuilder
 
+```TypeScript
+declare class MutableBuilder<Args extends Object[]> extends WrappedBuilder<Args>
+```
+
 Defines the MutableBuilder class.
 
 **Inheritance/Implementation:** MutableBuilder extends WrappedBuilder<Args>

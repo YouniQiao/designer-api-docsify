@@ -1,5 +1,9 @@
 # NativeEmbedVisibilityInfo
 
+```TypeScript
+declare interface NativeEmbedVisibilityInfo
+```
+
 Provides visibility information about the same-layer tag, including the visibility status and tag ID. It is suitable for scenarios where monitoring same-layer element visibility is required, improving rendering state management accuracy and user experience.
 
 **Since:** 12

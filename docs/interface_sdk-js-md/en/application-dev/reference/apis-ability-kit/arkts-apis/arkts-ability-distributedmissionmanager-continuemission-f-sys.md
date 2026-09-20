@@ -154,6 +154,8 @@ try {
 ```
 
 
+<a id="continuemission-1"></a>
+
 ## continueMission
 
 ```TypeScript
@@ -204,6 +206,8 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 See [continueMission](#continuemission)
 
 
+<a id="continuemission-2"></a>
+
 ## continueMission
 
 ```TypeScript
@@ -247,6 +251,8 @@ Continues a mission on a remote device, with the bundle name specified. This API
 
 See [continueMission](#continuemission)
 
+
+<a id="continuemission-3"></a>
 
 ## continueMission
 

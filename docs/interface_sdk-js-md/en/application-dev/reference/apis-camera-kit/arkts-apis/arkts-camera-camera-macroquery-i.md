@@ -1,5 +1,9 @@
 # MacroQuery
 
+```TypeScript
+interface MacroQuery
+```
+
 MacroQuery provides the API to check the support for macro photography.
 
 **Since:** 19

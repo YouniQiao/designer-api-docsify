@@ -1,5 +1,9 @@
 # DialCallOptions (System API)
 
+```TypeScript
+export interface DialCallOptions
+```
+
 Provides an option for determining whether a call is a video call.
 
 **Since:** 9

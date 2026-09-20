@@ -1,5 +1,9 @@
 # OnContextMenuShowEvent
 
+```TypeScript
+declare interface OnContextMenuShowEvent
+```
+
 Defines the callback information triggered during a call to allow for the display of a custom context menu.
 
 **Since:** 12

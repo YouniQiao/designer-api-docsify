@@ -1,5 +1,9 @@
 # ComponentOptions
 
+```TypeScript
+declare interface ComponentOptions
+```
+
 自定义组件参数，用于配置是否支持组件冻结和全局复用池，适用于需要优化自定义组件性能表现和提升组件复用效率的场景。
 
 **起始版本：** 11

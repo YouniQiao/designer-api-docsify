@@ -1,5 +1,9 @@
 # SVGResourceLimitLevel（系统接口）
 
+```TypeScript
+enum SVGResourceLimitLevel
+```
+
 SVG资源限制等级枚举。
 
 更高等级允许解析和绘制SVG图像时使用更少的资源。无论指定哪种等级，系统默认的资源限制都会实施。

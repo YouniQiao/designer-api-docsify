@@ -1,5 +1,9 @@
 # AudioVolumeMode
 
+```TypeScript
+enum AudioVolumeMode
+```
+
 表示音量模式的枚举。
 
 @enum { int }

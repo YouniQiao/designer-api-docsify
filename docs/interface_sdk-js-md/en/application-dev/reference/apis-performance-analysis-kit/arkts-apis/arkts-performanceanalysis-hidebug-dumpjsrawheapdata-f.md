@@ -88,6 +88,8 @@ hidebug.dumpJsRawHeapData(true, true, true).then((filePathArray: Array<string>) 
 ```
 
 
+<a id="dumpjsrawheapdata-1"></a>
+
 ## dumpJsRawHeapData
 
 ```TypeScript
@@ -142,6 +144,8 @@ Dumps the original heap snapshot of the VM for the current thread and clears the
 
 See [dumpJsRawHeapData](#dumpjsrawheapdata)
 
+
+<a id="dumpjsrawheapdata-2"></a>
 
 ## dumpJsRawHeapData
 

@@ -1,5 +1,9 @@
 # GridObjectSortComponent
 
+```TypeScript
+export declare struct GridObjectSortComponent
+```
+
 **GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects.
 
 > **NOTE:** 

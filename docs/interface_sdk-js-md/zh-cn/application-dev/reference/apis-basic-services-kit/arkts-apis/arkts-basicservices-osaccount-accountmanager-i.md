@@ -1,5 +1,9 @@
 # AccountManager
 
+```TypeScript
+interface AccountManager
+```
+
 系统账号管理类。
 
 **起始版本：** 7
@@ -73,6 +77,8 @@ try {
 }
 ```
 
+<a id="checkmultiosaccountenabled-1"></a>
+
 ## checkMultiOsAccountEnabled
 
 ```TypeScript
@@ -143,6 +149,8 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 ```TypeScript
 判断ID为100的系统账号是否处于激活状态。
 ```
+
+<a id="checkosaccountactivated-1"></a>
 
 ## checkOsAccountActivated
 
@@ -233,6 +241,8 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 ```TypeScript
 判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
 ```
+
+<a id="checkosaccountconstraintenabled-1"></a>
 
 ## checkOsAccountConstraintEnabled
 
@@ -341,6 +351,8 @@ try {
   console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="checkosaccounttestable-1"></a>
 
 ## checkOsAccountTestable
 
@@ -477,6 +489,8 @@ try {
 }
 ```
 
+<a id="checkosaccountverified-1"></a>
+
 ## checkOsAccountVerified
 
 ```TypeScript
@@ -513,6 +527,8 @@ checkOsAccountVerified(): Promise<boolean>
 **示例**
 
 参见 [checkOsAccountVerified](#checkosaccountverified)
+
+<a id="checkosaccountverified-2"></a>
 
 ## checkOsAccountVerified
 
@@ -554,6 +570,8 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 **示例**
 
 参见 [checkOsAccountVerified](#checkosaccountverified)
+
+<a id="checkosaccountverified-3"></a>
 
 ## checkOsAccountVerified
 
@@ -665,6 +683,8 @@ try {
 }
 ```
 
+<a id="getactivatedosaccountlocalids-1"></a>
+
 ## getActivatedOsAccountLocalIds
 
 ```TypeScript
@@ -747,6 +767,8 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
   console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getcreatedosaccountscount-1"></a>
 
 ## getCreatedOsAccountsCount
 
@@ -852,6 +874,8 @@ try {
 }
 ```
 
+<a id="getcurrentosaccount-1"></a>
+
 ## getCurrentOsAccount
 
 ```TypeScript
@@ -946,6 +970,8 @@ accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
   console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getdistributedvirtualdeviceid-1"></a>
 
 ## getDistributedVirtualDeviceId
 
@@ -1072,6 +1098,8 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 获取ID为100的系统账号的全部约束。
 ```
 
+<a id="getosaccountallconstraints-1"></a>
+
 ## getOsAccountAllConstraints
 
 ```TypeScript
@@ -1150,6 +1178,8 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 ```TypeScript
 获取ID为100的系统账号的全部约束。
 ```
+
+<a id="getosaccountconstraints-1"></a>
 
 ## getOsAccountConstraints
 
@@ -1260,6 +1290,8 @@ try {
   console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getosaccountcount-1"></a>
 
 ## getOsAccountCount
 
@@ -1408,6 +1440,8 @@ try {
 }
 ```
 
+<a id="getosaccountlocalid-1"></a>
+
 ## getOsAccountLocalId
 
 ```TypeScript
@@ -1470,6 +1504,8 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 ```TypeScript
 查询与SN码12345关联的系统账号的ID。
 ```
+
+<a id="getosaccountlocalidbyserialnumber-1"></a>
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1578,6 +1614,8 @@ try {
 }
 ```
 
+<a id="getosaccountlocalidfordomain-1"></a>
+
 ## getOsAccountLocalIdForDomain
 
 ```TypeScript
@@ -1652,6 +1690,8 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 查询与SN码12345关联的系统账号的ID。
 ```
 
+<a id="getosaccountlocalidforserialnumber-1"></a>
+
 ## getOsAccountLocalIdForSerialNumber
 
 ```TypeScript
@@ -1725,6 +1765,8 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 ```TypeScript
 查询值为12345678的uid所属的系统账号ID。
 ```
+
+<a id="getosaccountlocalidforuid-1"></a>
 
 ## getOsAccountLocalIdForUid
 
@@ -1858,6 +1900,8 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 });
 ```
 
+<a id="getosaccountlocalidfromdomain-1"></a>
+
 ## getOsAccountLocalIdFromDomain
 
 ```TypeScript
@@ -1951,6 +1995,8 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 });
 ```
 
+<a id="getosaccountlocalidfromprocess-1"></a>
+
 ## getOsAccountLocalIdFromProcess
 
 ```TypeScript
@@ -2016,6 +2062,8 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```TypeScript
 查询值为12345678的uid所属的系统账号ID。
 ```
+
+<a id="getosaccountlocalidfromuid-1"></a>
 
 ## getOsAccountLocalIdFromUid
 
@@ -2276,6 +2324,8 @@ try {
 }
 ```
 
+<a id="getosaccounttype-1"></a>
+
 ## getOsAccountType
 
 ```TypeScript
@@ -2357,6 +2407,8 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 });
 ```
 
+<a id="getosaccounttypefromprocess-1"></a>
+
 ## getOsAccountTypeFromProcess
 
 ```TypeScript
@@ -2422,6 +2474,8 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 ```TypeScript
 获取ID为100的系统账号关联的SN码。
 ```
+
+<a id="getserialnumberbyosaccountlocalid-1"></a>
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2494,6 +2548,8 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 ```TypeScript
 获取ID为100的系统账号关联的SN码。
 ```
+
+<a id="getserialnumberforosaccountlocalid-1"></a>
 
 ## getSerialNumberForOsAccountLocalId
 
@@ -2586,6 +2642,8 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 });
 ```
 
+<a id="ismultiosaccountenable-1"></a>
+
 ## isMultiOsAccountEnable
 
 ```TypeScript
@@ -2649,6 +2707,8 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 ```TypeScript
 判断ID为100的系统账号是否处于激活状态。
 ```
+
+<a id="isosaccountactived-1"></a>
 
 ## isOsAccountActived
 
@@ -2719,6 +2779,8 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 ```TypeScript
 判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
 ```
+
+<a id="isosaccountconstraintenable-1"></a>
 
 ## isOsAccountConstraintEnable
 
@@ -2928,6 +2990,8 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 });
 ```
 
+<a id="isosaccountverified-1"></a>
+
 ## isOsAccountVerified
 
 ```TypeScript
@@ -2958,6 +3022,8 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 **示例**
 
 参见 [isOsAccountVerified](#isosaccountverified)
+
+<a id="isosaccountverified-2"></a>
 
 ## isOsAccountVerified
 
@@ -3049,6 +3115,8 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 });
 ```
 
+<a id="istestosaccount-1"></a>
+
 ## isTestOsAccount
 
 ```TypeScript
@@ -3137,6 +3205,8 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 });
 ```
 
+<a id="queryactivatedosaccountids-1"></a>
+
 ## queryActivatedOsAccountIds
 
 ```TypeScript
@@ -3219,6 +3289,8 @@ accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInf
   console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="querycurrentosaccount-1"></a>
 
 ## queryCurrentOsAccount
 
@@ -3313,6 +3385,8 @@ try {
   console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="querydistributedvirtualdeviceid-1"></a>
 
 ## queryDistributedVirtualDeviceId
 

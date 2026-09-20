@@ -1,5 +1,9 @@
 # SegmentButtonItemOptionsConstructorOptions
 
+```TypeScript
+interface SegmentButtonItemOptionsConstructorOptions
+```
+
 Construct parameters for SegmentButtonItemOptions.
 
 > **NOTE:** 

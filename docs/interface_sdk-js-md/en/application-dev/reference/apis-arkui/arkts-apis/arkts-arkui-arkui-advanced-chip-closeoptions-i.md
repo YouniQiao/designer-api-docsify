@@ -1,5 +1,9 @@
 # CloseOptions
 
+```TypeScript
+export interface CloseOptions extends AccessibilityOptions
+```
+
 Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**.
 
 Inherits from [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md).
@@ -26,9 +30,9 @@ Size of the default close icon of the **Chip** component. Percentage is not supp
 
 Default value:
 
-When **size** is **ChipSize.SMALL**, `&#36;r('sys.float.chip_small_font_size')`
+When **size** is **ChipSize.SMALL**, `$r('sys.float.chip_small_font_size')`
 
-Other cases: `&#36;r('sys.float.chip_normal_font_size')`
+Other cases: `$r('sys.float.chip_normal_font_size')`
 
 Unit: fp
 

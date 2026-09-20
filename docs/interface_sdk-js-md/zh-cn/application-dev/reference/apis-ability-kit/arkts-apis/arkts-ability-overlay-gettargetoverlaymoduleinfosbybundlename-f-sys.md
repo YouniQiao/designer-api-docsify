@@ -112,6 +112,8 @@ try {
 ```
 
 
+<a id="gettargetoverlaymoduleinfosbybundlename-1"></a>
+
 ## getTargetOverlayModuleInfosByBundleName
 
 ```TypeScript
@@ -154,6 +156,8 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, modul
 
 参见 [getTargetOverlayModuleInfosByBundleName](#gettargetoverlaymoduleinfosbybundlename)
 
+
+<a id="gettargetoverlaymoduleinfosbybundlename-2"></a>
 
 ## getTargetOverlayModuleInfosByBundleName
 

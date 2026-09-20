@@ -1,5 +1,9 @@
 # MonitorDecoratorOptions
 
+```TypeScript
+declare interface MonitorDecoratorOptions
+```
+
 @Monitor装饰器的配置选项。
 
 **起始版本：** 26.0.0

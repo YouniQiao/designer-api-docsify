@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="notifyformsvisible-1"></a>
+
 ## notifyFormsVisible
 
 ```TypeScript

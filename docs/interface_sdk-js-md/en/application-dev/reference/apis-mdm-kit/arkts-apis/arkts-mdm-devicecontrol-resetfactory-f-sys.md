@@ -18,7 +18,7 @@ Restores factory settings. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)(admin: Want, operation: Operation, addition?: string)
+**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1)(admin: Want, operation: Operation, addition?: string)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESET_DEVICE
 
@@ -84,6 +84,8 @@ deviceControl.resetFactory(wantTemp).then(() => {
 ```
 
 
+<a id="resetfactory-1"></a>
+
 ## resetFactory
 
 ```TypeScript
@@ -96,7 +98,7 @@ Restores factory settings. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)(admin: Want, operation: Operation, addition?: string)
+**Substitutes:** [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1)(admin: Want, operation: Operation, addition?: string)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESET_DEVICE
 

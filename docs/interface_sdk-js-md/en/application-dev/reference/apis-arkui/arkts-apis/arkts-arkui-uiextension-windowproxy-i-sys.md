@@ -1,5 +1,9 @@
 # WindowProxy
 
+```TypeScript
+interface WindowProxy
+```
+
 The proxy of the UIExtension window.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # VpnConnection（系统接口）
 
+```TypeScript
+export interface VpnConnection
+```
+
 VPN 连接对象。在调用 VpnConnection 的方法前，需要先通过[vpn.createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md)创建 VPN 连接对象。
 
 **起始版本：** 10
@@ -53,6 +57,8 @@ destroy(callback: AsyncCallback<void>): void
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 ```
+
+<a id="destroy-1"></a>
 
 ## destroy
 
@@ -132,6 +138,8 @@ protect(socketFd: number, callback: AsyncCallback<void>): void
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 ```
+
+<a id="protect-1"></a>
 
 ## protect
 
@@ -220,6 +228,8 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 ```
+
+<a id="setup-1"></a>
 
 ## setUp
 

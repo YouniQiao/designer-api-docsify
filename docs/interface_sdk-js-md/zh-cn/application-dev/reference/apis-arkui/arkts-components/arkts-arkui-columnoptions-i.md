@@ -1,5 +1,9 @@
 # ColumnOptions
 
+```TypeScript
+interface ColumnOptions
+```
+
 设置Column组件的子组件间距属性。
 
 > **说明：** 

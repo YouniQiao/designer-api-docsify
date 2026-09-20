@@ -1,5 +1,9 @@
 # CarAwarenessInfo（系统接口）
 
+```TypeScript
+export interface CarAwarenessInfo
+```
+
 汽车感知响应信息接口。
 
 **起始版本：** 26.0.1

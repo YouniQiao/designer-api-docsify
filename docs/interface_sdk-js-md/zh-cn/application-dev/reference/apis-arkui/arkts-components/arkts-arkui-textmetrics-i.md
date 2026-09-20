@@ -1,5 +1,9 @@
 # TextMetrics
 
+```TypeScript
+declare interface TextMetrics
+```
+
 文本的尺寸信息。
 
 **起始版本：** 8

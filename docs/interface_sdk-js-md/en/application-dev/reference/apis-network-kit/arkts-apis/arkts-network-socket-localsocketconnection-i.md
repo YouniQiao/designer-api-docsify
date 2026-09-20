@@ -1,5 +1,9 @@
 # LocalSocketConnection
 
+```TypeScript
+export interface LocalSocketConnection
+```
+
 Defines a local socket connection, that is, the session between the local socket client and the server. Before calling LocalSocketConnection APIs, you need to obtain a **LocalSocketConnection** object.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # SmartGestureShortcutOptions
 
+```TypeScript
+declare interface SmartGestureShortcutOptions
+```
+
 Smart gesture response behavior configuration object.
 
 **Since:** 26.0.0

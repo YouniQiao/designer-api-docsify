@@ -67,6 +67,8 @@ data.disableCellularData().then(() => {
 ```
 
 
+<a id="disablecellulardata-1"></a>
+
 ## disableCellularData
 
 ```TypeScript

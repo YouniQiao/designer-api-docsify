@@ -1,5 +1,9 @@
 # AccountManager
 
+```TypeScript
+interface AccountManager
+```
+
 Provides APIs for managing OS accounts.
 
 **Since:** 7
@@ -73,6 +77,8 @@ try {
 }
 ```
 
+<a id="checkmultiosaccountenabled-1"></a>
+
 ## checkMultiOsAccountEnabled
 
 ```TypeScript
@@ -144,6 +150,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 ```TypeScript
 Check whether OS account 100 is activated.
 ```
+
+<a id="checkosaccountactivated-1"></a>
 
 ## checkOsAccountActivated
 
@@ -236,6 +244,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 ```TypeScript
 Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
+
+<a id="checkosaccountconstraintenabled-1"></a>
 
 ## checkOsAccountConstraintEnabled
 
@@ -347,6 +357,8 @@ try {
   console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="checkosaccounttestable-1"></a>
 
 ## checkOsAccountTestable
 
@@ -485,6 +497,8 @@ try {
 }
 ```
 
+<a id="checkosaccountverified-1"></a>
+
 ## checkOsAccountVerified
 
 ```TypeScript
@@ -521,6 +535,8 @@ Checks whether the current OS account has been verified. This API uses a promise
 **Examples**
 
 See [checkOsAccountVerified](#checkosaccountverified)
+
+<a id="checkosaccountverified-2"></a>
 
 ## checkOsAccountVerified
 
@@ -563,6 +579,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 **Examples**
 
 See [checkOsAccountVerified](#checkosaccountverified)
+
+<a id="checkosaccountverified-3"></a>
 
 ## checkOsAccountVerified
 
@@ -675,6 +693,8 @@ try {
 }
 ```
 
+<a id="getactivatedosaccountlocalids-1"></a>
+
 ## getActivatedOsAccountLocalIds
 
 ```TypeScript
@@ -757,6 +777,8 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
   console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getcreatedosaccountscount-1"></a>
 
 ## getCreatedOsAccountsCount
 
@@ -863,6 +885,8 @@ try {
 }
 ```
 
+<a id="getcurrentosaccount-1"></a>
+
 ## getCurrentOsAccount
 
 ```TypeScript
@@ -958,6 +982,8 @@ accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
   console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getdistributedvirtualdeviceid-1"></a>
 
 ## getDistributedVirtualDeviceId
 
@@ -1085,6 +1111,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 Obtain all constraints of OS account 100.
 ```
 
+<a id="getosaccountallconstraints-1"></a>
+
 ## getOsAccountAllConstraints
 
 ```TypeScript
@@ -1165,6 +1193,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 ```TypeScript
 Obtain all constraints of OS account 100.
 ```
+
+<a id="getosaccountconstraints-1"></a>
 
 ## getOsAccountConstraints
 
@@ -1276,6 +1306,8 @@ try {
   console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getosaccountcount-1"></a>
 
 ## getOsAccountCount
 
@@ -1424,6 +1456,8 @@ try {
 }
 ```
 
+<a id="getosaccountlocalid-1"></a>
+
 ## getOsAccountLocalId
 
 ```TypeScript
@@ -1486,6 +1520,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 ```TypeScript
 Obtain the ID of the OS account whose SN is 12345.
 ```
+
+<a id="getosaccountlocalidbyserialnumber-1"></a>
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1594,6 +1630,8 @@ try {
 }
 ```
 
+<a id="getosaccountlocalidfordomain-1"></a>
+
 ## getOsAccountLocalIdForDomain
 
 ```TypeScript
@@ -1668,6 +1706,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 Obtain the ID of the OS account whose SN is 12345.
 ```
 
+<a id="getosaccountlocalidforserialnumber-1"></a>
+
 ## getOsAccountLocalIdForSerialNumber
 
 ```TypeScript
@@ -1737,6 +1777,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 ```TypeScript
 Obtain the ID of the OS account whose process UID is 12345678.
 ```
+
+<a id="getosaccountlocalidforuid-1"></a>
 
 ## getOsAccountLocalIdForUid
 
@@ -1870,6 +1912,8 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 });
 ```
 
+<a id="getosaccountlocalidfromdomain-1"></a>
+
 ## getOsAccountLocalIdFromDomain
 
 ```TypeScript
@@ -1964,6 +2008,8 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 });
 ```
 
+<a id="getosaccountlocalidfromprocess-1"></a>
+
 ## getOsAccountLocalIdFromProcess
 
 ```TypeScript
@@ -2029,6 +2075,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 ```TypeScript
 Obtain the ID of the OS account whose process UID is 12345678.
 ```
+
+<a id="getosaccountlocalidfromuid-1"></a>
 
 ## getOsAccountLocalIdFromUid
 
@@ -2289,6 +2337,8 @@ try {
 }
 ```
 
+<a id="getosaccounttype-1"></a>
+
 ## getOsAccountType
 
 ```TypeScript
@@ -2371,6 +2421,8 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 });
 ```
 
+<a id="getosaccounttypefromprocess-1"></a>
+
 ## getOsAccountTypeFromProcess
 
 ```TypeScript
@@ -2436,6 +2488,8 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 ```TypeScript
 Obtain the SN of the OS account 100.
 ```
+
+<a id="getserialnumberbyosaccountlocalid-1"></a>
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2508,6 +2562,8 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 ```TypeScript
 Obtain the SN of the OS account 100.
 ```
+
+<a id="getserialnumberforosaccountlocalid-1"></a>
 
 ## getSerialNumberForOsAccountLocalId
 
@@ -2600,6 +2656,8 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 });
 ```
 
+<a id="ismultiosaccountenable-1"></a>
+
 ## isMultiOsAccountEnable
 
 ```TypeScript
@@ -2664,6 +2722,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 ```TypeScript
 Check whether OS account 100 is activated.
 ```
+
+<a id="isosaccountactived-1"></a>
 
 ## isOsAccountActived
 
@@ -2736,6 +2796,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 ```TypeScript
 Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
+
+<a id="isosaccountconstraintenable-1"></a>
 
 ## isOsAccountConstraintEnable
 
@@ -2946,6 +3008,8 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 });
 ```
 
+<a id="isosaccountverified-1"></a>
+
 ## isOsAccountVerified
 
 ```TypeScript
@@ -2977,6 +3041,8 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 **Examples**
 
 See [isOsAccountVerified](#isosaccountverified)
+
+<a id="isosaccountverified-2"></a>
 
 ## isOsAccountVerified
 
@@ -3071,6 +3137,8 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 });
 ```
 
+<a id="istestosaccount-1"></a>
+
 ## isTestOsAccount
 
 ```TypeScript
@@ -3161,6 +3229,8 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 });
 ```
 
+<a id="queryactivatedosaccountids-1"></a>
+
 ## queryActivatedOsAccountIds
 
 ```TypeScript
@@ -3244,6 +3314,8 @@ accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInf
   console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="querycurrentosaccount-1"></a>
 
 ## queryCurrentOsAccount
 
@@ -3339,6 +3411,8 @@ try {
   console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="querydistributedvirtualdeviceid-1"></a>
 
 ## queryDistributedVirtualDeviceId
 

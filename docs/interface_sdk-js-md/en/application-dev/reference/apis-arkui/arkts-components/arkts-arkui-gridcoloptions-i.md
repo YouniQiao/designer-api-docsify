@@ -1,5 +1,9 @@
 # GridColOptions
 
+```TypeScript
+declare interface GridColOptions
+```
+
 Defines the options of the **GridCol** component.
 
 The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**, **lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint.

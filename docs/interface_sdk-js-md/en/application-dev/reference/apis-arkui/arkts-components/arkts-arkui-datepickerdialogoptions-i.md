@@ -1,5 +1,9 @@
 # DatePickerDialogOptions
 
+```TypeScript
+declare interface DatePickerDialogOptions extends DatePickerOptions
+```
+
 Defines the configuration options of the date picker dialog box.
 
 Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
@@ -554,9 +558,9 @@ Style of the lunar calendar switch.
 
 Default value: {
 
-selectedColor: `&#36;r('sys.color.ohos_id_color_text_primary_actived')`,
+selectedColor: `$r('sys.color.ohos_id_color_text_primary_actived')`,
 
-unselectedColor: `&#36;r('sys.color.ohos_id_color_switch_outline_off')`,
+unselectedColor: `$r('sys.color.ohos_id_color_switch_outline_off')`,
 
 strokeColor: Color.White
 

@@ -1,5 +1,9 @@
 # Canvas
 
+```TypeScript
+class Canvas
+```
+
 承载绘制内容与绘制状态的载体。Canvas提供矩形、圆形、椭圆、弧线、路径、文字、图片等多种图形的绘制能力，支持通过画笔和画刷设置绘制样式，支持画布裁剪、矩阵变换、画布状态保存与恢复等功能。
 
 > **说明：** 
@@ -101,6 +105,8 @@ clear(color: common2D.Color): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -419,6 +425,8 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<a id="drawcolor-1"></a>
+
 ## drawColor
 
 ```TypeScript
@@ -446,6 +454,8 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="drawcolor-2"></a>
 
 ## drawColor
 
@@ -871,6 +881,8 @@ drawRect(rect: common2D.Rect): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
+<a id="drawrect-1"></a>
+
 ## drawRect
 
 ```TypeScript
@@ -976,6 +988,8 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
+
+<a id="drawshadow-1"></a>
 
 ## drawShadow
 

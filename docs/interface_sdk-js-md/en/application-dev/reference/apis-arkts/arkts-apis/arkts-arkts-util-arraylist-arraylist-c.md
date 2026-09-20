@@ -1,5 +1,9 @@
 # ArrayList
 
+```TypeScript
+declare class ArrayList<T>
+```
+
 ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time.
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # FileAccessHelper (System API)
 
+```TypeScript
+interface FileAccessHelper
+```
+
 Provides a **FileAccessHelper** object.
 
 **Since:** 9
@@ -140,6 +144,8 @@ try {
   console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="access-1"></a>
 
 ## access
 
@@ -315,6 +321,8 @@ try {
 }
 ```
 
+<a id="copy-1"></a>
+
 ## copy
 
 ```TypeScript
@@ -348,6 +356,8 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 **Examples**
 
 See [copy](#copy)
+
+<a id="copy-2"></a>
 
 ## copy
 
@@ -497,6 +507,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="copyfile-1"></a>
 
 ## copyFile
 
@@ -689,6 +701,8 @@ try {
 }
 ```
 
+<a id="createfile-1"></a>
+
 ## createFile
 
 ```TypeScript
@@ -878,6 +892,8 @@ try {
 }
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -1024,6 +1040,8 @@ try {
 }
 ```
 
+<a id="getfileinfofromrelativepath-1"></a>
+
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1132,6 +1150,8 @@ try {
   console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="getfileinfofromuri-1"></a>
 
 ## getFileInfoFromUri
 
@@ -1287,6 +1307,8 @@ async function getRoots() {
   }
 }
 ```
+
+<a id="getroots-1"></a>
 
 ## getRoots
 
@@ -1480,6 +1502,8 @@ try {
 }
 ```
 
+<a id="mkdir-1"></a>
+
 ## mkDir
 
 ```TypeScript
@@ -1671,6 +1695,8 @@ try {
 }
 ```
 
+<a id="move-1"></a>
+
 ## move
 
 ```TypeScript
@@ -1856,6 +1882,8 @@ try {
   console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="movefile-1"></a>
 
 ## moveFile
 
@@ -2054,6 +2082,8 @@ try {
 }
 ```
 
+<a id="moveitem-1"></a>
+
 ## moveItem
 
 ```TypeScript
@@ -2116,6 +2146,8 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 **Examples**
 
 See [moveItem](#moveitem)
+
+<a id="moveitem-2"></a>
 
 ## moveItem
 
@@ -2298,6 +2330,8 @@ try {
 }
 ```
 
+<a id="openfile-1"></a>
+
 ## openFile
 
 ```TypeScript
@@ -2448,6 +2482,8 @@ async function getQuery02() {
   }
 }
 ```
+
+<a id="query-1"></a>
 
 ## query
 
@@ -2632,6 +2668,8 @@ try {
   console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="rename-1"></a>
 
 ## rename
 

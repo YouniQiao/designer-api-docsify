@@ -1,5 +1,9 @@
 # ServiceExtensionAbility（系统接口）
 
+```TypeScript
+declare class ServiceExtensionAbility
+```
+
 ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台服务创建、销毁、连接、断开等生命周期回调。
 
 **起始版本：** 9

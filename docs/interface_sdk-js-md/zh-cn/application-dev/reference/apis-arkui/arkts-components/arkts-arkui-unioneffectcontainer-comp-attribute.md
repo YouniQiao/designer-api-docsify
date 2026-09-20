@@ -1,5 +1,9 @@
 # UnionEffectContainer属性/事件
 
+```TypeScript
+declare class UnionEffectContainerAttribute extends CommonMethod<UnionEffectContainerAttribute>
+```
+
 支持通用属性，支持宽高设置。
 
 **说明：** 

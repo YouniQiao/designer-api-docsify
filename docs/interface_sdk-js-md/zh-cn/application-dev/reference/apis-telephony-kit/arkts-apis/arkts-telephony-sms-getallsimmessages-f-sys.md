@@ -67,6 +67,8 @@ promise.then((data: sms.SimShortMessage[]) => {
 ```
 
 
+<a id="getallsimmessages-1"></a>
+
 ## getAllSimMessages
 
 ```TypeScript

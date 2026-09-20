@@ -1,5 +1,9 @@
 # RemoteUserAuthResults (System API)
 
+```TypeScript
+interface RemoteUserAuthResults
+```
+
 Remote user authorization results.
 
 **Since:** 26.0.1

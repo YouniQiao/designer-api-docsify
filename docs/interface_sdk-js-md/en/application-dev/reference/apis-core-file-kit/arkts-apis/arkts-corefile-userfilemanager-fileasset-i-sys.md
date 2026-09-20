@@ -1,5 +1,9 @@
 # FileAsset (System API)
 
+```TypeScript
+interface FileAsset
+```
+
 Provides APIs for encapsulating file asset attributes.
 
 **Since:** 9
@@ -48,6 +52,8 @@ Closes a file. This API uses an asynchronous callback to return the result.
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -117,6 +123,8 @@ Commits the modification on the file metadata to the database. This API uses an 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="commitmodify-1"></a>
+
 ## commitModify
 
 ```TypeScript
@@ -181,6 +189,8 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="favorite-1"></a>
 
 ## favorite
 
@@ -338,6 +348,8 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="getexif-1"></a>
+
 ## getExif
 
 ```TypeScript
@@ -452,6 +464,8 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="getthumbnail-1"></a>
+
 ## getThumbnail
 
 ```TypeScript
@@ -482,6 +496,8 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 **Examples**
 
 See [getThumbnail](#getthumbnail)
+
+<a id="getthumbnail-2"></a>
 
 ## getThumbnail
 
@@ -556,6 +572,8 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="open-1"></a>
 
 ## open
 
@@ -671,6 +689,8 @@ The private files set to hidden state are located in the private album (in hidde
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="sethidden-1"></a>
+
 ## setHidden
 
 ```TypeScript
@@ -759,6 +779,8 @@ Sets user comment information of an image or video. This API uses an asynchronou
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="setusercomment-1"></a>
 
 ## setUserComment
 

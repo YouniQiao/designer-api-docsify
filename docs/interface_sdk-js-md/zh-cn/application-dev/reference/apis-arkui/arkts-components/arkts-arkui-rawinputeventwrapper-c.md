@@ -1,5 +1,9 @@
 # RawInputEventWrapper
 
+```TypeScript
+declare abstract class RawInputEventWrapper
+```
+
 原始输入事件包装器类。
 
 提供统一的接口来访问不同类型的输入事件，确保类型安全和向后兼容性。

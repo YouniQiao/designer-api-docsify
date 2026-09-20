@@ -1,5 +1,9 @@
 # PopInfo
 
+```TypeScript
+declare interface PopInfo
+```
+
 下一个页面返回的回调信息载体。
 
 **起始版本：** 11

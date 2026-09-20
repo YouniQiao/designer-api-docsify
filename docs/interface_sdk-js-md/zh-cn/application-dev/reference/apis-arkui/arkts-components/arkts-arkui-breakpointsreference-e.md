@@ -1,5 +1,9 @@
 # BreakpointsReference
 
+```TypeScript
+declare enum BreakpointsReference
+```
+
 设置栅格容器组件的断点参照物。
 
 **起始版本：** 9

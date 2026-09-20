@@ -1,5 +1,9 @@
 # AISessionResultType
 
+```TypeScript
+declare enum AISessionResultType
+```
+
 AI会话操作的结果状态。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # MaskFilter
 
+```TypeScript
+class MaskFilter
+```
+
 Implements a mask filter.
 
 > **NOTE:** 

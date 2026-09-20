@@ -1,5 +1,9 @@
 # IncrementalBackupSession (System API)
 
+```TypeScript
+class IncrementalBackupSession
+```
+
 Control class for incremental backup procedure.
 
 **Since:** 12
@@ -214,6 +218,8 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray, infos).then((
   console.error(`appendBundles failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 

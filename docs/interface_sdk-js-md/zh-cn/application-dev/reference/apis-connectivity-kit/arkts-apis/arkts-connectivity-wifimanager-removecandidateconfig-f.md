@@ -78,6 +78,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 
+<a id="removecandidateconfig-1"></a>
+
 ## removeCandidateConfig
 
 ```TypeScript

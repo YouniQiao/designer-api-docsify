@@ -81,6 +81,8 @@ async function getLog() {
 ```
 
 
+<a id="queryselffaultlog-1"></a>
+
 ## querySelfFaultLog
 
 ```TypeScript

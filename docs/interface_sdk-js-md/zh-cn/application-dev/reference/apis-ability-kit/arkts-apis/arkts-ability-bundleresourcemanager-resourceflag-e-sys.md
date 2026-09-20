@@ -1,5 +1,9 @@
 # ResourceFlag（系统接口）
 
+```TypeScript
+enum ResourceFlag
+```
+
 资源信息标志，指示需要获取的资源信息的内容。
 
 **起始版本：** 11

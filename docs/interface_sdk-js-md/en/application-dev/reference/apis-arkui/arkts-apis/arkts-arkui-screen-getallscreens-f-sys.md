@@ -104,6 +104,8 @@ promise.then((data: Array<screen.Screen>) => {
 ```
 
 
+<a id="getallscreens-1"></a>
+
 ## getAllScreens
 
 ```TypeScript
@@ -139,6 +141,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 See [getAllScreens](#getallscreens)
 
 
+<a id="getallscreens-2"></a>
+
 ## getAllScreens
 
 ```TypeScript
@@ -170,6 +174,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 See [getAllScreens](#getallscreens)
 
+
+<a id="getallscreens-3"></a>
 
 ## getAllScreens
 

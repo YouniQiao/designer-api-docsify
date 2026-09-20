@@ -1,5 +1,9 @@
 # EventResult
 
+```TypeScript
+declare class EventResult
+```
+
 EventResult is a class in ArkWeb Kit used to notify the **Web** component of the same-layer event consumption result. In same-layer embedding scenarios, the app and the **Web** component are both exposed in the event response chain. EventResult allows the app to declare to the **Web** component whether it has consumed a touch or mouse event, thereby determining whether the **Web** component continues to process the event. When the app sets the consumption result to **true**, it indicates that the app has consumed the event and the **Web** component will no longer consume it. When set to **false**, it indicates that the app does not consume the event, and the event will be consumed by the **Web** component. EventResult is used to set the consumption result of touch events ([TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md)) and mouse events ([MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md), limited to left, middle, and right buttons), with the mouse button type defined by MouseButton. It is applicable to event coordination scenarios where the app and the **Web** component interact at the same layer.
 
 For details about the sample code of the touch event, see [onNativeEmbedGestureEvent](arkts-arkweb-web-comp-attribute.md#onnativeembedgestureevent).
@@ -43,6 +47,8 @@ Sets the gesture event consumption result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | boolean | Yes | Whether to consume the gesture event.<br>The value **true** means to consume the gesture event, and **false** means the opposite. <br>If **null** or **undefined** is passed in, the value is **true**. |
+
+<a id="setgestureeventresult-1"></a>
 
 ## setGestureEventResult
 

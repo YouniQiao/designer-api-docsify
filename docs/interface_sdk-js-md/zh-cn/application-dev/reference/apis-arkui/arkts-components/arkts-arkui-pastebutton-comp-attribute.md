@@ -1,5 +1,9 @@
 # PasteButton属性/事件
 
+```TypeScript
+declare class PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
+```
+
 不支持通用属性，仅继承安全控件通用属性。
 
 不支持通用事件，仅支持以下事件。

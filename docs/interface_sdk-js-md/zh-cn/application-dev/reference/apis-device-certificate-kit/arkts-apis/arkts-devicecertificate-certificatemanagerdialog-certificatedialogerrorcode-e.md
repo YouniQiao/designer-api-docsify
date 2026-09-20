@@ -1,5 +1,9 @@
 # CertificateDialogErrorCode
 
+```TypeScript
+export enum CertificateDialogErrorCode
+```
+
 表示调用证书管理对话框相关API的错误码。
 
 **起始版本：** 13

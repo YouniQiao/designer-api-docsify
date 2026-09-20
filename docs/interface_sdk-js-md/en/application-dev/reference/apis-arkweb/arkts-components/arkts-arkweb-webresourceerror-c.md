@@ -1,5 +1,9 @@
 # WebResourceError
 
+```TypeScript
+declare class WebResourceError
+```
+
 WebResourceError is a class that provides error information when resource loading fails in the **Web** component. The error object is provided to the app through the `onErrorReceive` and `onHttpErrorReceive` event callbacks, encapsulating error details for debugging and error handling. It is typically used together with WebResourceRequest to determine which resource failed to load. For sample code, see [onErrorReceive event](arkts-arkweb-web-comp-attribute.md#onerrorreceive).
 
 **Since:** 8

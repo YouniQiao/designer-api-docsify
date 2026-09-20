@@ -1,5 +1,9 @@
 # DrawableTabBarIndicator
 
+```TypeScript
+declare interface DrawableTabBarIndicator
+```
+
 Uses an image resource as the indicator.
 
 **Since:** 22

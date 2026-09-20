@@ -70,6 +70,8 @@ data.setDefaultCellularDataSlotId(0).then(() => {
 ```
 
 
+<a id="setdefaultcellulardataslotid-1"></a>
+
 ## setDefaultCellularDataSlotId
 
 ```TypeScript

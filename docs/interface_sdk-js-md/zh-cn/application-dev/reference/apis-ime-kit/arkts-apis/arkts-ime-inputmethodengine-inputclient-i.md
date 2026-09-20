@@ -1,5 +1,9 @@
 # InputClient
 
+```TypeScript
+interface InputClient
+```
+
 InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的[on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。<br> <br>核心功能概述：<br> <br>- 文本获取：通过[getForward](#getforward) /[getForwardSync](#getforwardsync)获取光标前的文本，通过[getBackward](#getbackward)/ [getBackwardSync](#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。<br>- 文本编辑：通过[insertText](#inserttext)/ [insertTextSync](#inserttextsync)插入文本，通过[deleteForward](#deleteforward)/ [deleteForwardSync](#deleteforwardsync)删除光标前的文本，通过[deleteBackward](#deletebackward) /[deleteBackwardSync](#deletebackwardsync)删除光标后的文本。<br>- 功能键与光标：通过[sendKeyFunction](#sendkeyfunction)发送功能键（如回车键），通过[moveCursor](#movecursor)/ [moveCursorSync](#movecursorsync)移动光标。<br>- 选区操作：通过[selectByRange](#selectbyrange)/ [selectByRangeSync](#selectbyrangesync)按范围选中文本，通过[selectByMovement](#selectbymovement) /[selectByMovementSync](#selectbymovementsync)按方向选中文本。<br>- 编辑框属性：通过[getEditorAttribute](#geteditorattribute) /[getEditorAttributeSync](#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。<br>- 文本预览：通过[setPreviewText](#setpreviewtext)/ [setPreviewTextSync](#setpreviewtextsync)设置预览文本，通过[finishTextPreview](#finishtextpreview)/ [finishTextPreviewSync](#finishtextpreviewsync)结束文本预览。<br>- 私有通信：通过[sendPrivateCommand](#sendprivatecommand)向应用发送私有命令，通过[sendMessage](#sendmessage)/ [recvMessage](#recvmessage)进行消息通信。<br> <br>注意事项：<br> <br>- InputClient实例与当前绑定的编辑框关联，当编辑框失去焦点或输入法解绑时，该实例可能失效。<br>- 同名Sync后缀接口为同步接口，阻塞主线程，容易影响UI交互，需谨慎使用。<br> <br>下列API均需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart)获取到InputClient实例后，通过实例调用。
 
 **起始版本：** 9
@@ -72,6 +76,8 @@ inputClient.deleteBackward(length).then((result: boolean) => {
   console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deletebackward-1"></a>
 
 ## deleteBackward
 
@@ -236,6 +242,8 @@ inputClient.deleteForward(length).then((result: boolean) => {
   console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deleteforward-1"></a>
 
 ## deleteForward
 
@@ -496,6 +504,8 @@ inputClient.getBackward(length).then((text: string) => {
 });
 ```
 
+<a id="getbackward-1"></a>
+
 ## getBackward
 
 ```TypeScript
@@ -677,6 +687,8 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 });
 ```
 
+<a id="geteditorattribute-2"></a>
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -803,6 +815,8 @@ inputClient.getForward(length).then((text: string) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getforward-1"></a>
 
 ## getForward
 
@@ -955,6 +969,8 @@ inputClient.getTextIndexAtCursor().then((index: number) => {
 });
 ```
 
+<a id="gettextindexatcursor-1"></a>
+
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -1079,6 +1095,8 @@ inputClient.insertText('test').then((result: boolean) => {
   console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="inserttext-1"></a>
 
 ## insertText
 
@@ -1231,6 +1249,8 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 });
 ```
 
+<a id="movecursor-1"></a>
+
 ## moveCursor
 
 ```TypeScript
@@ -1368,7 +1388,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | 否 | 该对象将通过[onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | 否 | 该对象将通过[onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage-1)接收来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)接收终止此对象订阅的消息。<br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)对象，同时触发其[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)回调函数。 |
 
 **错误码：**
 
@@ -1449,6 +1469,8 @@ inputClient.selectByMovement(movement).then(() => {
   console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="selectbymovement-1"></a>
 
 ## selectByMovement
 
@@ -1577,6 +1599,8 @@ inputClient.selectByRange(range).then(() => {
   console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="selectbyrange-1"></a>
 
 ## selectByRange
 
@@ -1712,6 +1736,8 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 });
 ```
 
+<a id="sendextendaction-1"></a>
+
 ## sendExtendAction
 
 ```TypeScript
@@ -1817,6 +1843,8 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
   console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="sendkeyfunction-1"></a>
 
 ## sendKeyFunction
 

@@ -1,5 +1,9 @@
 # TextTimerOptions
 
+```TypeScript
+interface TextTimerOptions
+```
+
 用于构建TextTimer组件的选项。
 
 **起始版本：** 8

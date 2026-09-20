@@ -63,7 +63,7 @@ WaterFlow(options?: WaterFlowOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md)方法的返回值，可用于给WaterFlow节点设置滚动事件。 |
+| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-2)方法的返回值，可用于给WaterFlow节点设置滚动事件。 |
 | [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | 瀑布流组件参数对象。 |
 
 ### 类型

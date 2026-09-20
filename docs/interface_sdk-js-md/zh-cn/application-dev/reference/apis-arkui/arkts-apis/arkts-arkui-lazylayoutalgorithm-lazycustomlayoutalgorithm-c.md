@@ -1,5 +1,9 @@
 # LazyCustomLayoutAlgorithm
 
+```TypeScript
+export class LazyCustomLayoutAlgorithm implements LazyLayoutAlgorithm
+```
+
 自定义懒加载布局算法类。
 
 > **说明：** 

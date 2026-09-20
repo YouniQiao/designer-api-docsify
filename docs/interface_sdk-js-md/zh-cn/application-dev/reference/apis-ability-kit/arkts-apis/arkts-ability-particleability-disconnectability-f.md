@@ -87,6 +87,8 @@ particleAbility.disconnectAbility(connId).then(() => {
 ```
 
 
+<a id="disconnectability-1"></a>
+
 ## disconnectAbility
 
 ```TypeScript

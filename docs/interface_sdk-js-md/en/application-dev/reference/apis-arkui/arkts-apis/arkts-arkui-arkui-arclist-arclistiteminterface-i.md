@@ -1,5 +1,9 @@
 # ArcListItemInterface
 
+```TypeScript
+export interface ArcListItemInterface
+```
+
 The **ArcListItem** component is used to display individual child components in an ArcList component and must be used in conjunction with **ArcList**.
 
 > **NOTE:** 

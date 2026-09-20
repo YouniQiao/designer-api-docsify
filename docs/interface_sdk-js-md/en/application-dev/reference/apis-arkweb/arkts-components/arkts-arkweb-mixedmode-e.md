@@ -1,5 +1,9 @@
 # MixedMode
 
+```TypeScript
+declare enum MixedMode
+```
+
 Enumerates the mixed content modes.
 
 **Since:** 8

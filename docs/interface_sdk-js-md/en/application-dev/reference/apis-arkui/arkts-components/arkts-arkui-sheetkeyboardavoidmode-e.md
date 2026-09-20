@@ -1,5 +1,9 @@
 # SheetKeyboardAvoidMode
 
+```TypeScript
+declare enum SheetKeyboardAvoidMode
+```
+
 Define the mode of sheet how to avoid keyboard.
 
 @enum { number }

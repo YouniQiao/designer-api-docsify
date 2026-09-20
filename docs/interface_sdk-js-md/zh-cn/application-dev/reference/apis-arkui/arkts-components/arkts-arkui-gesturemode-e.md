@@ -1,5 +1,9 @@
 # GestureMode
 
+```TypeScript
+declare enum GestureMode
+```
+
 定义手势组的识别模式。
 
 **起始版本：** 7

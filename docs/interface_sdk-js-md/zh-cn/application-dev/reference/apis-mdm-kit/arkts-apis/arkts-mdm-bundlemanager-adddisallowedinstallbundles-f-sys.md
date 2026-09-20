@@ -111,6 +111,8 @@ bundleManager.addDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
 ```
 
 
+<a id="adddisallowedinstallbundles-1"></a>
+
 ## addDisallowedInstallBundles
 
 ```TypeScript
@@ -156,6 +158,8 @@ function addDisallowedInstallBundles(admin: Want, appIds: Array<string>, userId:
 
 参见 [addDisallowedInstallBundles](#adddisallowedinstallbundles)
 
+
+<a id="adddisallowedinstallbundles-2"></a>
 
 ## addDisallowedInstallBundles
 

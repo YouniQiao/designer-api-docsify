@@ -1,5 +1,9 @@
 # MaterialState
 
+```TypeScript
+enum MaterialState
+```
+
 材质使能状态枚举，表示应用级沉浸式系统材质配置的状态。
 
 **起始版本：** 26.0.0

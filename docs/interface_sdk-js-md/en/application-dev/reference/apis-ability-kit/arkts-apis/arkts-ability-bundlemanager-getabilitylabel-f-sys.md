@@ -94,6 +94,8 @@ try {
 ```
 
 
+<a id="getabilitylabel-1"></a>
+
 ## getAbilityLabel
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # NodeContainer属性/事件
 
+```TypeScript
+declare class NodeContainerAttribute extends CommonMethod<NodeContainerAttribute>
+```
+
 支持通用属性，但不支持动态属性设置。
 
 支持通用事件。

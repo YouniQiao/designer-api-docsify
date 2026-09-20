@@ -1,5 +1,9 @@
 # ndef(Standard NFC Tags)
 
+```TypeScript
+namespace ndef
+```
+
 Provides methods for accessing NDEF tag.
 
 **Since:** 9
@@ -23,6 +27,6 @@ import { tag } from '@kit.ConnectivityKit';
 | [makeMimeRecord](arkts-connectivity-ndef-makemimerecord-f.md) | Creates an NDEF record based on the specified MIME data and type. |
 | [makeExternalRecord](arkts-connectivity-ndef-makeexternalrecord-f.md) | Creates an NDEF record based on application-specific data. |
 | [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message from raw byte data. The data must comply with the NDEF record format. Otherwise, the NDEF record list contained in the **NdefMessage** object will be empty. |
-| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md) | Creates an NDEF message from the NDEF records list. |
+| [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md#createndefmessage-1) | Creates an NDEF message from the NDEF records list. |
 | [messageToBytes](arkts-connectivity-ndef-messagetobytes-f.md) | Converts an NDEF message to bytes. |
 | [makeApplicationRecord](arkts-connectivity-ndef-makeapplicationrecord-f.md) | Creates an NDEF record based on the specified application bundle name. |

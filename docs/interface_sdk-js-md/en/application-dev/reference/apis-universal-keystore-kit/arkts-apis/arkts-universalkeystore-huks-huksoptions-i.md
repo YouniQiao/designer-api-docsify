@@ -1,5 +1,9 @@
 # HuksOptions
 
+```TypeScript
+export interface HuksOptions
+```
+
 Defines **options** used in the APIs.
 
 **Since:** 8

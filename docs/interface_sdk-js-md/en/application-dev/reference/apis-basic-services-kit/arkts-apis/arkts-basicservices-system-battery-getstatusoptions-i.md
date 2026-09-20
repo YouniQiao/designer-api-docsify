@@ -1,5 +1,9 @@
 # GetStatusOptions
 
+```TypeScript
+export interface GetStatusOptions
+```
+
 Object that contains the API calling result.
 
 **Since:** 3

@@ -1,5 +1,9 @@
 # Emitter
 
+```TypeScript
+export class Emitter
+```
+
 该功能支持在同一进程的同一Emitter类实例中，跨不同线程或同一线程内发送和处理事件。它能够实现持续订阅事件、单次订阅事件、取消订阅事件以及将事件发送到事件队列，适用于需要基于独立实例进行线程间通信和事件管理的场景，不同Emitter实例类之间相互隔离，互不影响。
 
 **起始版本：** 22
@@ -132,6 +136,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter1.emit('eventId', options, eventData);
 ```
 
+<a id="emit-1"></a>
+
 ## emit
 
 ```TypeScript
@@ -231,6 +237,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 
 emitter1.emit('eventId', options, eventData);
 ```
+
+<a id="emit-2"></a>
 
 ## emit
 
@@ -332,6 +340,8 @@ let eventData: emitter.GenericEventData<Sample> = {
 
 emitter1.emit('eventId', options, eventData);
 ```
+
+<a id="emit-3"></a>
 
 ## emit
 
@@ -535,6 +545,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off('eventId', callback);
 ```
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -603,6 +615,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 
 emitter1.off('eventId', callback);
 ```
+
+<a id="off-2"></a>
 
 ## off
 
@@ -734,6 +748,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on('eventId', callback);
 ```
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -855,6 +871,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 
 emitter1.once('eventId', callback);
 ```
+
+<a id="once-1"></a>
 
 ## once
 

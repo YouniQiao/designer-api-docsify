@@ -1,5 +1,9 @@
 # Kdf
 
+```TypeScript
+interface Kdf
+```
+
 密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过[createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md)方法创建一个Kdf实例。
 
 **起始版本：** 11
@@ -55,6 +59,8 @@ PBKDF2算法
 ```TypeScript
 HKDF算法
 ```
+
+<a id="generatesecret-1"></a>
 
 ## generateSecret
 

@@ -1,5 +1,9 @@
 # promptAction
 
+```TypeScript
+declare namespace promptAction
+```
+
 创建并显示即时反馈、对话框和操作菜单，适用于系统通知、交互确认、菜单选择等场景。
 
 > **说明：** 
@@ -28,11 +32,11 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | [openToast](arkts-arkui-promptaction-opentoast-f.md) | 显示即时反馈并通过Promise返回其id。 |
 | [closeToast](arkts-arkui-promptaction-closetoast-f.md) | 关闭即时反馈。 |
 | [showDialog](arkts-arkui-promptaction-showdialog-f.md) | 创建并显示对话框，对话框响应结果使用callback异步回调返回。 |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md) | 创建并显示对话框，对话框通过Promise返回结果。 |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog-1) | 创建并显示对话框，对话框通过Promise返回结果。 |
 | [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | 打开自定义弹窗。通过Promise返回结果。 |
 | [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md) | 关闭自定义弹窗。 |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。 |
-| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md) | 创建并显示操作菜单，菜单响应后通过Promise返回结果。 |
+| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu-1) | 创建并显示操作菜单，菜单响应后通过Promise返回结果。 |
 
 ### 类
 

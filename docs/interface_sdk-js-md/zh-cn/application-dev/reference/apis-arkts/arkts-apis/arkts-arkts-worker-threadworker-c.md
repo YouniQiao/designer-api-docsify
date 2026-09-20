@@ -1,5 +1,9 @@
 # ThreadWorker
 
+```TypeScript
+class ThreadWorker implements WorkerEventTarget
+```
+
 使用以下方法前，需先构造ThreadWorker实例。ThreadWorker类继承WorkerEventTarget。
 
 使用Worker模块时，API version 18及之后的版本建议在宿主线程中注册onAllErrors回调，以捕获Worker线程生命周期内的各种异常。API version 18之前的版本应注册onerror回调。如果未注册onAllErrors或onerror回调，当Worker线程出现异常时会发生崩溃问题。注意，onerror接口仅能捕获onmessage回调中的同步异常，捕获异常后，Worker线程将进入销毁流程，无法继续使用。
@@ -553,6 +557,8 @@ let buffer = new ArrayBuffer(8);
 // 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
 workerInstance.postMessage(buffer, {transfer: [buffer]});
 ```
+
+<a id="postmessage-1"></a>
 
 ## postMessage
 

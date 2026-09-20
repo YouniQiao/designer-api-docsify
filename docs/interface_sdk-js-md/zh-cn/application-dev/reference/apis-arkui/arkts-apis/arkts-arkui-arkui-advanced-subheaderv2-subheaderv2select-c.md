@@ -1,5 +1,9 @@
 # SubHeaderV2Select
 
+```TypeScript
+export declare class SubHeaderV2Select
+```
+
 下拉选择器配置项，包含下拉选项内容、选中状态及回调事件。
 
 **起始版本：** 18

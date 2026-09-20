@@ -1,5 +1,9 @@
 # IsolatedOptions（系统接口）
 
+```TypeScript
+declare interface IsolatedOptions
+```
+
 用于在IsolatedComponent构造时传递构造参数。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # DialogSheet
 
+```TypeScript
+declare interface DialogSheet
+```
+
 The information of sheet item for action sheet style.
 
 **Since:** 26.0.1

@@ -74,6 +74,8 @@ commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
 ```
 
 
+<a id="setstaticsubscriberstate-1"></a>
+
 ## setStaticSubscriberState
 
 ```TypeScript
@@ -115,6 +117,8 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 参见 [setStaticSubscriberState](#setstaticsubscriberstate)
 
+
+<a id="setstaticsubscriberstate-2"></a>
 
 ## setStaticSubscriberState
 

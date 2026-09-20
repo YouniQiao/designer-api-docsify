@@ -1,5 +1,9 @@
 # SpatialPosition（系统接口）
 
+```TypeScript
+declare interface SpatialPosition
+```
+
 三维空间中的空间角位置。用于为组件设置空间效果参数。
 
 > **说明：** 

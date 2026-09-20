@@ -1,5 +1,9 @@
 # SystemSoundManager (System API)
 
+```TypeScript
+interface SystemSoundManager
+```
+
 System sound manager object.
 
 **Since:** 10
@@ -110,6 +114,8 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, len
   console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="addcustomizedtone-1"></a>
 
 ## addCustomizedTone
 
@@ -612,6 +618,8 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
+<a id="getmockhapticringtoneplayer-1"></a>
+
 ## getMockHapticRingtonePlayer
 
 ```TypeScript
@@ -876,6 +884,8 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: s
 });
 ```
 
+<a id="getsystemringtoneplayer-1"></a>
+
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -972,6 +982,8 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: stri
   console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="getsystemringtoneuri-1"></a>
 
 ## getSystemRingtoneUri
 
@@ -1723,6 +1735,8 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
   console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setsystemringtoneuri-1"></a>
 
 ## setSystemRingtoneUri
 

@@ -64,6 +64,8 @@ abilityManager.getForegroundUIAbilities().then((data: Array<abilityManager.Abili
 ```
 
 
+<a id="getforegrounduiabilities-1"></a>
+
 ## getForegroundUIAbilities
 
 ```TypeScript

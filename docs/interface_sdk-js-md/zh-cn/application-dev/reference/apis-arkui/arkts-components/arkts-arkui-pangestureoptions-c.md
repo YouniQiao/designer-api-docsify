@@ -1,5 +1,9 @@
 # PanGestureOptions
 
+```TypeScript
+declare class PanGestureOptions
+```
+
 定义PanGesture配置参数选项。
 
 **起始版本：** 7

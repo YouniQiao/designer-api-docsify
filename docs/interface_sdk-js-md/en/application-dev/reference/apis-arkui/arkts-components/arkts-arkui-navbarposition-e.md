@@ -1,5 +1,9 @@
 # NavBarPosition
 
+```TypeScript
+declare enum NavBarPosition
+```
+
 Position of the navigation page.
 
 **Since:** 9

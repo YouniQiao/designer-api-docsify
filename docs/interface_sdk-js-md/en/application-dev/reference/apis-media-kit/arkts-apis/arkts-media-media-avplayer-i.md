@@ -1,5 +1,9 @@
 # AVPlayer
 
+```TypeScript
+interface AVPlayer
+```
+
 AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md) to create an AVPlayer instance.
 
 When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](#onstatechange): listens for AVPlayer state changes. [on('error')](#onerror): listens for error events.
@@ -598,6 +602,8 @@ Obtains the audio and video track information. This API can be called only when 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+<a id="gettrackdescription-1"></a>
 
 ## getTrackDescription
 
@@ -1838,6 +1844,8 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 
+<a id="pause-1"></a>
+
 ## pause
 
 ```TypeScript
@@ -1889,6 +1897,8 @@ Starts to play an audio and video asset. This API can be called only when the AV
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+<a id="play-1"></a>
 
 ## play
 
@@ -1942,6 +1952,8 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Return by callback. |
+
+<a id="prepare-1"></a>
 
 ## prepare
 
@@ -1997,6 +2009,8 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+<a id="release-1"></a>
 
 ## release
 
@@ -2084,6 +2098,8 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+<a id="reset-1"></a>
 
 ## reset
 
@@ -2621,6 +2637,8 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+
+<a id="stop-1"></a>
 
 ## stop
 

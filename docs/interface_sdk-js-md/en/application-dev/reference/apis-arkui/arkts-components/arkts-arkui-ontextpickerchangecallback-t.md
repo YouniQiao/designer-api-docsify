@@ -1,7 +1,7 @@
 # OnTextPickerChangeCallback
 
 ```TypeScript
-declare type OnTextPickerChangeCallback = (selectItem: string | string[], index: number | number[]) => void
+declare type OnTextPickerChangeCallback = (selectItem: string[], index: number[]) => void
 ```
 
 Defines the **onChange** event callback signature.

@@ -1,5 +1,9 @@
 # AccessibilityExtensionContext
 
+```TypeScript
+declare class AccessibilityExtensionContext extends ExtensionContext
+```
+
 The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.
 
 The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.

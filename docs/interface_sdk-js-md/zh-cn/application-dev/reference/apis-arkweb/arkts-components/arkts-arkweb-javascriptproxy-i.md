@@ -1,5 +1,9 @@
 # JavaScriptProxy
 
+```TypeScript
+declare interface JavaScriptProxy
+```
+
 定义要注入的JavaScript对象，包括对象名、方法列表和权限配置。适用于需要实现JavaScript与原生交互的场景，提升跨语言调用的灵活性和安全性。
 
 **起始版本：** 12

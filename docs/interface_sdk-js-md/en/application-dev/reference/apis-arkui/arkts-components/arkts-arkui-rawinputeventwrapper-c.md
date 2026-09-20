@@ -1,5 +1,9 @@
 # RawInputEventWrapper
 
+```TypeScript
+declare abstract class RawInputEventWrapper
+```
+
 Raw input event wrapper class.
 
 Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.

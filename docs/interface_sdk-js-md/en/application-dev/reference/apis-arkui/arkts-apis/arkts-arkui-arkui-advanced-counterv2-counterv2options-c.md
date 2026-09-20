@@ -1,5 +1,9 @@
 # CounterV2Options
 
+```TypeScript
+declare class CounterV2Options
+```
+
 Defines the type and style of the **CounterV2** component.
 
 When you select a **CounterV2** type, you must select the corresponding **CounterV2** style. If the style parameter does not match the type, the default style of that type is used.

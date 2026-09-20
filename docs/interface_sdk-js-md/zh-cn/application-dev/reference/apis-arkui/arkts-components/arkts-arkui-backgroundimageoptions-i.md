@@ -1,5 +1,9 @@
 # BackgroundImageOptions
 
+```TypeScript
+interface BackgroundImageOptions
+```
+
 定义背景图选项。
 
 > **说明：** 

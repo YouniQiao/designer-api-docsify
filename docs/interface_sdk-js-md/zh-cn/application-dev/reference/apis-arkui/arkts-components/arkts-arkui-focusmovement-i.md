@@ -1,5 +1,9 @@
 # FocusMovement
 
+```TypeScript
+declare interface FocusMovement
+```
+
 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。
 
 > **说明：** 

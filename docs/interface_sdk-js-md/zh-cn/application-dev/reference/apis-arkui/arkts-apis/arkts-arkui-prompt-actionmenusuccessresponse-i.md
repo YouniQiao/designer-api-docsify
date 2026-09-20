@@ -1,5 +1,9 @@
 # ActionMenuSuccessResponse
 
+```TypeScript
+interface ActionMenuSuccessResponse
+```
+
 操作菜单的响应结果。
 
 **起始版本：** 8

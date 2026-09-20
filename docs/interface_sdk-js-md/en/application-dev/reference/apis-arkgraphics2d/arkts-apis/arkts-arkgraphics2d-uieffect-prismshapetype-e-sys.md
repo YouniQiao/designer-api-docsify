@@ -1,5 +1,9 @@
 # PrismShapeType (System API)
 
+```TypeScript
+enum PrismShapeType
+```
+
 Enumerates the prism shape types for SweepRefractionMask.
 
 **Since:** 26.0.1

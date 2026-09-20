@@ -1,5 +1,9 @@
 # PhotoEditorExtensionAbility
 
+```TypeScript
+declare class PhotoEditorExtensionAbility extends ExtensionAbility
+```
+
 Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos.
 
 @extends ExtensionAbility

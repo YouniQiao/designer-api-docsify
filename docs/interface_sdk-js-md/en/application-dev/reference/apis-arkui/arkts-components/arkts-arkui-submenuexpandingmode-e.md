@@ -1,5 +1,9 @@
 # SubMenuExpandingMode
 
+```TypeScript
+declare enum SubMenuExpandingMode
+```
+
 Enumerates the submenu expanding modes.
 
 **Since:** 12

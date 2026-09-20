@@ -1,5 +1,9 @@
 # TransitionHierarchyStrategy (System API)
 
+```TypeScript
+declare enum TransitionHierarchyStrategy
+```
+
 Enumerates the strategies for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process.
 
 **Since:** 12

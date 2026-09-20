@@ -1,5 +1,9 @@
 # AvailableLayoutArea
 
+```TypeScript
+declare enum AvailableLayoutArea
+```
+
 预览图宽高设置为百分比时的参考可布局区域大小。
 
 **起始版本：** 20

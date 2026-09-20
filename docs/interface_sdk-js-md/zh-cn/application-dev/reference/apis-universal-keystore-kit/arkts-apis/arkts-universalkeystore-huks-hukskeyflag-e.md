@@ -1,5 +1,9 @@
 # HuksKeyFlag
 
+```TypeScript
+export enum HuksKeyFlag
+```
+
 表示密钥的产生方式。
 
 **起始版本：** 8

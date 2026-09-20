@@ -51,6 +51,8 @@ Stage模型示例：
 ```
 
 
+<a id="deletepreferences-1"></a>
+
 ## deletePreferences
 
 ```TypeScript
@@ -92,6 +94,8 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 
 参见 [deletePreferences](#deletepreferences)
 
+
+<a id="deletepreferences-2"></a>
 
 ## deletePreferences
 
@@ -136,6 +140,8 @@ function deletePreferences(context: Context, name: string): Promise<void>
 
 参见 [deletePreferences](#deletepreferences)
 
+
+<a id="deletepreferences-3"></a>
 
 ## deletePreferences
 

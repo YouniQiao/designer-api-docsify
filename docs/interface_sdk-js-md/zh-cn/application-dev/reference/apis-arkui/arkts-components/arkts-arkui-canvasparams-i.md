@@ -1,5 +1,9 @@
 # CanvasParams
 
+```TypeScript
+declare interface CanvasParams
+```
+
 定义Canvas的具体配置参数。
 
 **起始版本：** 23

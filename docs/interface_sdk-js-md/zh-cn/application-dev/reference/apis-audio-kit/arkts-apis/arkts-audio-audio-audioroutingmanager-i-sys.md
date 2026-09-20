@@ -1,5 +1,9 @@
 # AudioRoutingManager
 
+```TypeScript
+interface AudioRoutingManager
+```
+
 音频路由管理。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
 
 **起始版本：** 9
@@ -577,6 +581,8 @@ async function getRoutingManager(){
 }
 ```
 
+<a id="selectinputdevice-1"></a>
+
 ## selectInputDevice
 
 ```TypeScript
@@ -761,6 +767,8 @@ async function selectOutputDevice(){
 }
 ```
 
+<a id="selectoutputdevice-1"></a>
+
 ## selectOutputDevice
 
 ```TypeScript
@@ -924,6 +932,8 @@ audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, output
 });
 ```
 
+<a id="selectoutputdevicebyfilter-1"></a>
+
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -954,6 +964,8 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 **示例**
 
 参见 [selectOutputDeviceByFilter](#selectoutputdevicebyfilter)
+
+<a id="selectoutputdevicebyfilter-2"></a>
 
 ## selectOutputDeviceByFilter
 
@@ -1080,6 +1092,8 @@ async function unexcludeOutputDevices(){
   });
 }
 ```
+
+<a id="unexcludeoutputdevices-1"></a>
 
 ## unexcludeOutputDevices
 

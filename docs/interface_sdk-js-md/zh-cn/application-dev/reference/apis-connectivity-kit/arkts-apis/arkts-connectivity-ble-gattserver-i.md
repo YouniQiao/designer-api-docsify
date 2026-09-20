@@ -1,5 +1,9 @@
 # GattServer
 
+```TypeScript
+interface GattServer
+```
+
 GATT通信中的服务端类。
 
 通过[ble.createGattServer](arkts-connectivity-ble-creategattserver-f.md)方法可以构造server实例。通过该实例可以操作server端的行为，如添加服务[addService](#addservice)、通知特征值变化notifyCharacteristicChanged等。可通过订阅[on('connectionStateChange')](#onconnectionstatechange)事件来感知连接状态，以及发起连接的client端设备地址。
@@ -466,6 +470,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="notifycharacteristicchanged-1"></a>
 
 ## notifyCharacteristicChanged
 

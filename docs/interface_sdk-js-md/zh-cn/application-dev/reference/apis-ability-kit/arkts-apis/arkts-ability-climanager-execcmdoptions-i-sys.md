@@ -1,5 +1,9 @@
 # ExecCmdOptions（系统接口）
 
+```TypeScript
+interface ExecCmdOptions
+```
+
 执行Shell命令的可选参数。可用于指定工作目录、环境变量、后台运行、前台执行时长、超时时长、安全策略及事件回调。
 
 **起始版本：** 26.0.0

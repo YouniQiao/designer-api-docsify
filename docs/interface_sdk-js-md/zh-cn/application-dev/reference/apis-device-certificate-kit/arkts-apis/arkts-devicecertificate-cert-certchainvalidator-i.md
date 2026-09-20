@@ -1,5 +1,9 @@
 # CertChainValidator
 
+```TypeScript
+interface CertChainValidator
+```
+
 证书链校验器对象。
 
 **起始版本：** 9
@@ -231,6 +235,8 @@ try {
   console.error(`validate failed, errCode: ${e.code}, errMsg: ${e.message}`);
 }
 ```
+
+<a id="validate-1"></a>
 
 ## validate
 

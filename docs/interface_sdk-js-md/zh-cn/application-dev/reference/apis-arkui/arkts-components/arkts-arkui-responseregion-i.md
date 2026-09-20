@@ -1,5 +1,9 @@
 # ResponseRegion
 
+```TypeScript
+declare interface ResponseRegion
+```
+
 由输入工具类型、触摸位置和大小组成的触摸热区。
 
 > **说明：** 

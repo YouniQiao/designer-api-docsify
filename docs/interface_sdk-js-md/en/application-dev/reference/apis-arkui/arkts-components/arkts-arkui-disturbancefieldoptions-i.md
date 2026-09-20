@@ -1,5 +1,9 @@
 # DisturbanceFieldOptions
 
+```TypeScript
+declare interface DisturbanceFieldOptions
+```
+
 Defines particle disturbance Field params.
 
 @interface DisturbanceFieldOptions

@@ -1,5 +1,9 @@
 # AnimationOptions
 
+```TypeScript
+declare interface AnimationOptions
+```
+
 Provides the configuration options for animation playback, including the playback duration, number of playback times, and autoplay behavior.
 
 **Since:** 12

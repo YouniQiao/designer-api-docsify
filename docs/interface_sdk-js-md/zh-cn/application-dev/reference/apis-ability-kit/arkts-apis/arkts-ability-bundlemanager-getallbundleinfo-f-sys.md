@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="getallbundleinfo-1"></a>
+
 ## getAllBundleInfo
 
 ```TypeScript
@@ -139,6 +141,8 @@ function getAllBundleInfo(bundleFlags: number, userId: number, callback: AsyncCa
 
 参见 [getAllBundleInfo](#getallbundleinfo)
 
+
+<a id="getallbundleinfo-2"></a>
 
 ## getAllBundleInfo
 

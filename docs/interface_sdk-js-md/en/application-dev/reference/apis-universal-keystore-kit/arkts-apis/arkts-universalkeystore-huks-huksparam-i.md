@@ -1,5 +1,9 @@
 # HuksParam
 
+```TypeScript
+export interface HuksParam
+```
+
 Defines the **param** field in the **properties** array of **options** used in the APIs.
 
 **Since:** 8

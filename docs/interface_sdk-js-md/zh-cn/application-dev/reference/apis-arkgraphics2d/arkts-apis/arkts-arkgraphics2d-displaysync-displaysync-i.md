@@ -1,5 +1,9 @@
 # DisplaySync
 
+```TypeScript
+interface DisplaySync
+```
+
 期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
 
 **起始版本：** 11

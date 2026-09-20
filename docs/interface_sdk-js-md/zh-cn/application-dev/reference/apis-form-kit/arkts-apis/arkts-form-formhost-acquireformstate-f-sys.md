@@ -98,6 +98,8 @@ try {
 ```
 
 
+<a id="acquireformstate-1"></a>
+
 ## acquireFormState
 
 ```TypeScript

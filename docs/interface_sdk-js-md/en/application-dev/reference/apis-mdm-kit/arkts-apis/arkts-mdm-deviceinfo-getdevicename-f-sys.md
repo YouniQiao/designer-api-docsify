@@ -85,6 +85,8 @@ deviceInfo.getDeviceName(wantTemp).then((result) => {
 ```
 
 
+<a id="getdevicename-1"></a>
+
 ## getDeviceName
 
 ```TypeScript

@@ -64,6 +64,8 @@ policy
 ```
 
 
+<a id="resetpolicies-1"></a>
+
 ## resetPolicies
 
 ```TypeScript

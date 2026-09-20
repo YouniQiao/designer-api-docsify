@@ -1,5 +1,9 @@
 # LabelOptions
 
+```TypeScript
+export interface LabelOptions
+```
+
 Defines the text attributes.
 
 **Since:** 12

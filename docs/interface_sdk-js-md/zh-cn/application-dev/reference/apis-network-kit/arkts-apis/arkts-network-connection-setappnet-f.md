@@ -46,6 +46,8 @@ function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
 
+<a id="setappnet-1"></a>
+
 ## setAppNet
 
 ```TypeScript

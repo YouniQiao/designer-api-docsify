@@ -1,5 +1,9 @@
 # ImmersiveOptions
 
+```TypeScript
+interface ImmersiveOptions
+```
+
 沉浸式材质参数。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # OnContextMenuShowEvent
 
+```TypeScript
+declare interface OnContextMenuShowEvent
+```
+
 定义调用时触发的回调信息，以允许自定义显示上下文菜单。
 
 **起始版本：** 12

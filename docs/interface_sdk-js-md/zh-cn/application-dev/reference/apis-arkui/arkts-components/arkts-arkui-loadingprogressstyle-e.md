@@ -1,5 +1,9 @@
 # LoadingProgressStyle
 
+```TypeScript
+declare enum LoadingProgressStyle
+```
+
 表示LoadingProgress的样式类型，不推荐使用。
 
 **起始版本：** 8

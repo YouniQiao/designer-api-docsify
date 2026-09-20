@@ -1,5 +1,9 @@
 # WebRotateEffect
 
+```TypeScript
+declare enum WebRotateEffect
+```
+
 Enumerates the modes in which the component's content is rendered to fit the new size during its width and height animation process when the component is rotated.
 
 **Since:** 22

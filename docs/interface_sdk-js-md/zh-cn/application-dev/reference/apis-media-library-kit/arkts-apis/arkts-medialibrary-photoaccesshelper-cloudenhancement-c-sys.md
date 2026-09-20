@@ -1,5 +1,9 @@
 # CloudEnhancement（系统接口）
 
+```TypeScript
+class CloudEnhancement
+```
+
 云增强管理类，该类用于生成AI云增强照片任务的管理、获取原照片与AI云增强照片的关联关系。
 
 **起始版本：** 13
@@ -334,6 +338,8 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="submitcloudenhancementtasks-1"></a>
 
 ## submitCloudEnhancementTasks
 

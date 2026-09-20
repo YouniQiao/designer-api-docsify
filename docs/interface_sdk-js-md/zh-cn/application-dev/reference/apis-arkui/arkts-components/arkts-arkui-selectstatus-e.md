@@ -1,5 +1,9 @@
 # SelectStatus
 
+```TypeScript
+declare enum SelectStatus
+```
+
 多选框群组的选中状态。
 
 **起始版本：** 8

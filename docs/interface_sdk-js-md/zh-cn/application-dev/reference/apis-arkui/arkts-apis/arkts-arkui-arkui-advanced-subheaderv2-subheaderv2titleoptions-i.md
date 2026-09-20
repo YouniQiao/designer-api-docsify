@@ -1,5 +1,9 @@
 # SubHeaderV2TitleOptions
 
+```TypeScript
+export interface SubHeaderV2TitleOptions
+```
+
 用于构建SubHeaderV2Title对象。
 
 **起始版本：** 18

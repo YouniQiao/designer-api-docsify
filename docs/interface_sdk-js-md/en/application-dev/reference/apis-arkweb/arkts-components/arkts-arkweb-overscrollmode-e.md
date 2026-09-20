@@ -1,5 +1,9 @@
 # OverScrollMode
 
+```TypeScript
+declare enum OverScrollMode
+```
+
 Enumerates whether to enable overscroll mode.
 
 **Since:** 11

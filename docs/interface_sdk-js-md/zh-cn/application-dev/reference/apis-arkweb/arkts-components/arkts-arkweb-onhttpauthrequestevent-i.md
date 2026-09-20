@@ -1,5 +1,9 @@
 # OnHttpAuthRequestEvent
 
+```TypeScript
+declare interface OnHttpAuthRequestEvent
+```
+
 定义收到HTTP认证请求时触发的回调信息，包括主机和域信息。适用于需要处理HTTP身份验证的场景，提升认证流程的灵活性和安全性。
 
 **起始版本：** 12

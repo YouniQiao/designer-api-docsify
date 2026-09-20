@@ -1,5 +1,9 @@
 # KVManager
 
+```TypeScript
+interface KVManager
+```
+
 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md)构建一个KVManager实例。
 
 **起始版本：** 7
@@ -95,6 +99,8 @@ try {
     console.error('closeKVStore e ' + e);
 }
 ```
+
+<a id="closekvstore-1"></a>
 
 ## closeKVStore
 
@@ -210,6 +216,8 @@ try {
 }
 ```
 
+<a id="deletekvstore-1"></a>
+
 ## deleteKVStore
 
 ```TypeScript
@@ -294,6 +302,8 @@ try {
     console.error('getAllKVStoreId e ' + e);
 }
 ```
+
+<a id="getallkvstoreid-1"></a>
 
 ## getAllKVStoreId
 
@@ -405,6 +415,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="getkvstore-1"></a>
 
 ## getKVStore
 

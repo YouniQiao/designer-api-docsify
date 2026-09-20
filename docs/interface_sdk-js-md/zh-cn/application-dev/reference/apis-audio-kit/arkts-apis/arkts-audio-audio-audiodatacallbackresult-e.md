@@ -1,5 +1,9 @@
 # AudioDataCallbackResult
 
+```TypeScript
+enum AudioDataCallbackResult
+```
+
 表示音频数据回调结果的枚举。
 
 @enum { int }

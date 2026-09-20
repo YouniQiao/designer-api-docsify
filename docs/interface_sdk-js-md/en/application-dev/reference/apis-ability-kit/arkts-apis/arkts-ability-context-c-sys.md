@@ -1,5 +1,9 @@
 # Context
 
+```TypeScript
+declare class Context extends BaseContext
+```
+
 Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
@@ -19,7 +23,7 @@ Creates the context based on the bundle name.
 > **NOTE:** 
 > 
 > If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md)
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md#createmodulecontext-1)
 > instead.
 > 
 > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
@@ -79,6 +83,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="createmodulecontext-1"></a>
+
 ## createModuleContext
 
 ```TypeScript
@@ -90,7 +96,7 @@ Creates the context based on the bundle name and module name.
 > **NOTE:** 
 > 
 > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md)
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md#createmodulecontext-1)
 > instead.
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # ProgressConfiguration
 
+```TypeScript
+declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>
+```
+
 Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>

@@ -1,5 +1,9 @@
 # TextTimerOptions
 
+```TypeScript
+interface TextTimerOptions
+```
+
 Sets the options used to build the **TextTimer** component.
 
 **Since:** 8

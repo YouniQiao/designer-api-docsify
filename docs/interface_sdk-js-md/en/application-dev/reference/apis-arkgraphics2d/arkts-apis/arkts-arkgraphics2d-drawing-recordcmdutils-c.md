@@ -1,5 +1,9 @@
 # RecordCmdUtils
 
+```TypeScript
+class RecordCmdUtils
+```
+
 This class offers a set of operations to generate drawing commands.
 
 **Since:** 26.0.1

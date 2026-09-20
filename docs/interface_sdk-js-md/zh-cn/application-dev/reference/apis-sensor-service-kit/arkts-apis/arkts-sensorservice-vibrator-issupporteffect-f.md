@@ -112,6 +112,8 @@ try {
 ```
 
 
+<a id="issupporteffect-1"></a>
+
 ## isSupportEffect
 
 ```TypeScript
@@ -134,7 +136,7 @@ function isSupportEffect(effectId: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示设备支持该effectId，可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)；返回false表示不支持，使用该effectId触发振动可能效果不佳。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示设备支持该effectId，可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)；返回false表示不支持，使用该effectId触发振动可能效果不佳。 |
 
 **错误码：**
 

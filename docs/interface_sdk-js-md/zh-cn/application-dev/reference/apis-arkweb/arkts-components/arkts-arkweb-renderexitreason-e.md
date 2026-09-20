@@ -1,5 +1,9 @@
 # RenderExitReason
 
+```TypeScript
+declare enum RenderExitReason
+```
+
 onRenderExited接口返回的渲染进程退出的具体原因。
 
 **起始版本：** 9

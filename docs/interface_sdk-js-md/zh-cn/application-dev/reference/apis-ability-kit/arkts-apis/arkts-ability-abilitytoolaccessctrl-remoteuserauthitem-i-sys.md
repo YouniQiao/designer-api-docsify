@@ -1,5 +1,9 @@
 # RemoteUserAuthItem（系统接口）
 
+```TypeScript
+interface RemoteUserAuthItem
+```
+
 远程用户授权项。
 
 **起始版本：** 26.0.1

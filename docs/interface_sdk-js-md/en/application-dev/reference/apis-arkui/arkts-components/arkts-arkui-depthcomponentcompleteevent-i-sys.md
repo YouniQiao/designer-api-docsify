@@ -1,5 +1,9 @@
 # DepthComponentCompleteEvent (System API)
 
+```TypeScript
+declare interface DepthComponentCompleteEvent
+```
+
 Information about the background resource loaded successfully.
 
 **Since:** 26.0.0

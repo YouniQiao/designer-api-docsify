@@ -1,5 +1,9 @@
 # SystemProperties
 
+```TypeScript
+declare enum SystemProperties
+```
+
 定义系统环境变量枚举值
 
 @enum { string }

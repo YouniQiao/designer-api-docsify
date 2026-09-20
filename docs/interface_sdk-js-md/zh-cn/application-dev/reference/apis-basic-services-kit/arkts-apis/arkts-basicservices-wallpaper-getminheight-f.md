@@ -54,6 +54,8 @@ wallpaper.getMinHeight().then((data: number) => {
 ```
 
 
+<a id="getminheight-1"></a>
+
 ## getMinHeight
 
 ```TypeScript

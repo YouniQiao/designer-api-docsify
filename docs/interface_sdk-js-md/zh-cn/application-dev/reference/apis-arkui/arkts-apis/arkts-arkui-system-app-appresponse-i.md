@@ -1,5 +1,9 @@
 # AppResponse
 
+```TypeScript
+export interface AppResponse
+```
+
 定义AppResponse信息。
 
 **起始版本：** 3

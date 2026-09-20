@@ -1,5 +1,9 @@
 # CloudFileCache
 
+```TypeScript
+class CloudFileCache
+```
+
 云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。
 
 **起始版本：** 11
@@ -59,6 +63,8 @@ try {
   console.error(`clean file cache failed with error message: ${error.message}, error code: ${error.code}`);
 }
 ```
+
+<a id="cleanfilecache-1"></a>
 
 ## cleanFileCache
 
@@ -181,6 +187,8 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -232,6 +240,8 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -335,6 +345,8 @@ fileCache.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="start-1"></a>
 
 ## start
 
@@ -537,6 +549,8 @@ fileCache.stop(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

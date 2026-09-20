@@ -82,6 +82,8 @@ print.updatePrinters([printerInfo]).then(() => {
 ```
 
 
+<a id="updateprinters-1"></a>
+
 ## updatePrinters
 
 ```TypeScript

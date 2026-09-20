@@ -1,5 +1,9 @@
 # Stream
 
+```TypeScript
+declare interface Stream
+```
+
 文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream实例。
 
 **起始版本：** 9
@@ -70,6 +74,8 @@ stream.close((err: BusinessError) => {
   }
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -229,6 +235,8 @@ stream.flush((err: BusinessError) => {
   }
 });
 ```
+
+<a id="flush-1"></a>
 
 ## flush
 
@@ -420,6 +428,8 @@ stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
 });
 ```
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript
@@ -518,6 +528,8 @@ stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
   }
 });
 ```
+
+<a id="read-2"></a>
 
 ## read
 
@@ -792,6 +804,8 @@ stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: num
 });
 ```
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript
@@ -890,6 +904,8 @@ stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: num
   stream.close();
 });
 ```
+
+<a id="write-2"></a>
 
 ## write
 

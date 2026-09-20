@@ -1,5 +1,9 @@
 # AgentExtensionContext
 
+```TypeScript
+declare class AgentExtensionContext extends ExtensionContext
+```
+
 The context of the agent service extension. It provides resources and methods that developers can access.
 
 @extends ExtensionContext

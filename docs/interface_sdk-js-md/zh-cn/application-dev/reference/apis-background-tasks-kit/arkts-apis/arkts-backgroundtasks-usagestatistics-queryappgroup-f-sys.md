@@ -98,6 +98,8 @@ usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
 ```
 
 
+<a id="queryappgroup-1"></a>
+
 ## queryAppGroup
 
 ```TypeScript
@@ -139,6 +141,8 @@ function queryAppGroup(): Promise<number>
 
 参见 [queryAppGroup](#queryappgroup)
 
+
+<a id="queryappgroup-2"></a>
 
 ## queryAppGroup
 
@@ -183,6 +187,8 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): voi
 
 参见 [queryAppGroup](#queryappgroup)
 
+
+<a id="queryappgroup-3"></a>
 
 ## queryAppGroup
 

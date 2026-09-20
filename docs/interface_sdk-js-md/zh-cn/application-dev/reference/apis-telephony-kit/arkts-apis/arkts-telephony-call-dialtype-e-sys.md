@@ -1,5 +1,9 @@
 # DialType（系统接口）
 
+```TypeScript
+export enum DialType
+```
+
 拨号类型。
 
 **起始版本：** 8

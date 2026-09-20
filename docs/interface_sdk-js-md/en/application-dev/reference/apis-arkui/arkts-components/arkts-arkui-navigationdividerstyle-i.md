@@ -1,5 +1,9 @@
 # NavigationDividerStyle
 
+```TypeScript
+declare interface NavigationDividerStyle
+```
+
 Color of the navigation divider and the upper and lower margins of the **Navigation** component.
 
 **Since:** 23

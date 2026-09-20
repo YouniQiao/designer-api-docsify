@@ -1,5 +1,9 @@
 # GaugeOptions
 
+```TypeScript
+interface GaugeOptions
+```
+
 数据量规图表选项。
 
 **起始版本：** 18

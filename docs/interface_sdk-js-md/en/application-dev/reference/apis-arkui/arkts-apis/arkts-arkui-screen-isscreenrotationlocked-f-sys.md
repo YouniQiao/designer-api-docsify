@@ -60,6 +60,8 @@ screen.isScreenRotationLocked((err: BusinessError, isLocked: boolean) => {
 ```
 
 
+<a id="isscreenrotationlocked-1"></a>
+
 ## isScreenRotationLocked
 
 ```TypeScript

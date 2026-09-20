@@ -1,5 +1,9 @@
 # ChipSuffixSymbolGlyphOptions
 
+```TypeScript
+export interface ChipSuffixSymbolGlyphOptions
+```
+
 Defines the accessibility reading functional attributes and tap event callback of the symbol-type suffix icon.
 
 **Since:** 14

@@ -1,5 +1,9 @@
 # RichEditorUrlStyle
 
+```TypeScript
+declare interface RichEditorUrlStyle
+```
+
 URL information.
 
 **Since:** 19

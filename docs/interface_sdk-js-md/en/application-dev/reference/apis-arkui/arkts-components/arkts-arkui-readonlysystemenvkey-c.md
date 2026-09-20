@@ -1,5 +1,9 @@
 # ReadonlySystemEnvKey
 
+```TypeScript
+declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>
+```
+
 Define read-only system environment variable keys.
 
 **Inheritance/Implementation:** ReadonlySystemEnvKey extends SystemEnvKey<T>

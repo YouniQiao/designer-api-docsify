@@ -1,5 +1,9 @@
 # MaterialState
 
+```TypeScript
+enum MaterialState
+```
+
 Enumerates the material enabling states, indicating the states of the application-level immersive system material configuration.
 
 **Since:** 26.0.0

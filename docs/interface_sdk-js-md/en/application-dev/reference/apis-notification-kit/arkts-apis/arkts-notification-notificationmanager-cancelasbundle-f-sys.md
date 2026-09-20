@@ -98,6 +98,8 @@ notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
 ```
 
 
+<a id="cancelasbundle-1"></a>
+
 ## cancelAsBundle
 
 ```TypeScript
@@ -146,6 +148,8 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 See [cancelAsBundle](#cancelasbundle)
 
+
+<a id="cancelasbundle-2"></a>
 
 ## cancelAsBundle
 

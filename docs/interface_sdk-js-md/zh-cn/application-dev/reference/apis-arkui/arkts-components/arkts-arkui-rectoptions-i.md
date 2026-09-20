@@ -1,5 +1,9 @@
 # RectOptions
 
+```TypeScript
+declare interface RectOptions
+```
+
 用于描述矩形绘制组件的绘制属性。
 
 > **说明：** 

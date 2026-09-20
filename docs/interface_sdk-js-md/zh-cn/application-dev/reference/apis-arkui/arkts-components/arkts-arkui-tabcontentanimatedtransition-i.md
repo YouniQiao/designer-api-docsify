@@ -1,5 +1,9 @@
 # TabContentAnimatedTransition
 
+```TypeScript
+declare interface TabContentAnimatedTransition
+```
+
 Tabs自定义切换动画相关信息。
 
 **起始版本：** 11

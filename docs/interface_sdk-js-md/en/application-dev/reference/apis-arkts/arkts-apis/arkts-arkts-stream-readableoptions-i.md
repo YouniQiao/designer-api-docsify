@@ -1,5 +1,9 @@
 # ReadableOptions
 
+```TypeScript
+interface ReadableOptions
+```
+
 Describes the options used in the **Readable** constructor.
 
 **Since:** 12

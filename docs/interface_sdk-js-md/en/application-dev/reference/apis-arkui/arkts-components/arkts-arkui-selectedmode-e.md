@@ -1,5 +1,9 @@
 # SelectedMode
 
+```TypeScript
+declare enum SelectedMode
+```
+
 Enumerates the display modes of selected subtabs.
 
 **Since:** 10

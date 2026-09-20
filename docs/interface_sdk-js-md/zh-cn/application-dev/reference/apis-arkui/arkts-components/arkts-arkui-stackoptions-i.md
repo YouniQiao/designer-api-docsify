@@ -1,5 +1,9 @@
 # StackOptions
 
+```TypeScript
+declare interface StackOptions
+```
+
 设置堆叠容器的子组件对齐方式。
 
 > **说明：** 

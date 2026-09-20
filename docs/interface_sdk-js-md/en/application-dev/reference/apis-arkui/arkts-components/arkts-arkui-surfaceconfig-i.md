@@ -1,5 +1,9 @@
 # SurfaceConfig
 
+```TypeScript
+declare interface SurfaceConfig
+```
+
 Describes whether the surface held by the **XComponent** is treated as opaque during rendering.
 
 **Since:** 22

@@ -78,6 +78,8 @@ bundle.getAllApplicationInfo(bundleFlags, (err, data) => {
 ```
 
 
+<a id="getallapplicationinfo-1"></a>
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -105,6 +107,8 @@ Obtains the information about all applications of the current user. This API use
 
 See [getAllApplicationInfo](#getallapplicationinfo)
 
+
+<a id="getallapplicationinfo-2"></a>
 
 ## getAllApplicationInfo
 

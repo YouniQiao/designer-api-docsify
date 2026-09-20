@@ -1,5 +1,9 @@
 # TypefaceArguments
 
+```TypeScript
+class TypefaceArguments
+```
+
 This module defines a struct for setting typeface arguments.
 
 > **NOTE:** 

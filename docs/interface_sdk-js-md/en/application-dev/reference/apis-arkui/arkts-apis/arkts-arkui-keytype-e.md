@@ -1,5 +1,9 @@
 # KeyType
 
+```TypeScript
+declare enum KeyType
+```
+
 Sets the status type of a button operation.
 
 **Since:** 7

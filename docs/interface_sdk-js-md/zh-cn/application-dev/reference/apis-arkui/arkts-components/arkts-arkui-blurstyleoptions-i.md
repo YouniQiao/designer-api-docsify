@@ -1,5 +1,9 @@
 # BlurStyleOptions
 
+```TypeScript
+declare interface BlurStyleOptions
+```
+
 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # BlankScreenDetectionConfig
 
+```TypeScript
+declare interface BlankScreenDetectionConfig
+```
+
 Provides the policy configuration options for blank screen detection, including the detection timing, method, and threshold. It is suitable for scenarios where custom blank screen detection behavior is required, improving blank screen monitoring flexibility and accuracy.
 
 **Since:** 22
@@ -14,7 +18,7 @@ contentfulNodesCountThreshold?: number
 
 This parameter takes effect only when the contentful node detection strategy is used.
 
-The value ranges from 0 to &#36;{maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.
+The value ranges from 0 to ${maximum nodes of the detection strategy}. If the value is less than or equal to the threshold, a near-white screen is triggered.
 
 Default value: 0.
 

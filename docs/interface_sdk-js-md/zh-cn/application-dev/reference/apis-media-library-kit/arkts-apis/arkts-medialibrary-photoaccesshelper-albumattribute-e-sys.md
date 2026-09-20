@@ -1,5 +1,9 @@
 # AlbumAttribute（系统接口）
 
+```TypeScript
+enum AlbumAttribute
+```
+
 枚举，相册的属性类型。
 
 **起始版本：** 26.0.0

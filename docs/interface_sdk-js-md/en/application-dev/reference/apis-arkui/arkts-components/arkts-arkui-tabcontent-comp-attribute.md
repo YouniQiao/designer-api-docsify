@@ -1,5 +1,9 @@
 # TabContent properties/events
 
+```TypeScript
+declare class TabContentAttribute extends CommonMethod<TabContentAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -86,6 +90,8 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 | --- | --- | --- | --- |
 | options | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.<br> **CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
 
+<a id="tabbar-1"></a>
+
 ## tabBar
 
 ```TypeScript
@@ -113,6 +119,8 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | Yes | Content displayed on the tab bar.<br>**SubTabBarStyle**: subtab style.<br>**BottomTabBarStyle**: bottom and side tab style |
+
+<a id="tabbar-2"></a>
 
 ## tabBar
 

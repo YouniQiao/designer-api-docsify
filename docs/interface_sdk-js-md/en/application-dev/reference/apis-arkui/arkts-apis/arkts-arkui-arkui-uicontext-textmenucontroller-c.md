@@ -1,5 +1,9 @@
 # TextMenuController
 
+```TypeScript
+export class TextMenuController
+```
+
 Provides the capability to control text menus.
 
 > **NOTE:** 

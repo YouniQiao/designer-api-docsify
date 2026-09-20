@@ -1,5 +1,9 @@
 # CounterV2DateData
 
+```TypeScript
+declare class CounterV2DateData
+```
+
 Defines common date attributes and methods, including year, month, and day.
 
 **Since:** 26.0.0

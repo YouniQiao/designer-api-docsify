@@ -1,5 +1,9 @@
 # ListItemOptions
 
+```TypeScript
+declare interface ListItemOptions
+```
+
 Defines ListItem component configuration options.
 
 **Since:** 10

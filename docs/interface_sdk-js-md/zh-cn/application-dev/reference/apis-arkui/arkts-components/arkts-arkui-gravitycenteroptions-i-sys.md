@@ -1,5 +1,9 @@
 # GravityCenterOptions（系统接口）
 
+```TypeScript
+declare interface GravityCenterOptions
+```
+
 定义引力中心参数。
 
 > **说明：** 

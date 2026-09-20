@@ -1,5 +1,9 @@
 # NavigationTitleMode
 
+```TypeScript
+declare enum NavigationTitleMode
+```
+
 标题栏显示模式。
 
 **起始版本：** 8

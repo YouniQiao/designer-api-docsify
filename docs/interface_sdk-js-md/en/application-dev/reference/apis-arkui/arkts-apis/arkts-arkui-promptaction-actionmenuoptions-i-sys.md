@@ -1,5 +1,9 @@
 # ActionMenuOptions
 
+```TypeScript
+interface ActionMenuOptions
+```
+
 Describes the options for showing the action menu.
 
 **Since:** 9

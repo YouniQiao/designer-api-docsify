@@ -65,6 +65,8 @@ call.postDialProceed(1, true).then(() => {
 ```
 
 
+<a id="postdialproceed-1"></a>
+
 ## postDialProceed
 
 ```TypeScript

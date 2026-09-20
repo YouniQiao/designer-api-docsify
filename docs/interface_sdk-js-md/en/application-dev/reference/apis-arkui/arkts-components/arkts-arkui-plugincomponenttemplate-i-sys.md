@@ -1,5 +1,9 @@
 # PluginComponentTemplate (System API)
 
+```TypeScript
+interface PluginComponentTemplate
+```
+
 PluginComponentTemplate
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # PasteDescription
 
+```TypeScript
+declare enum PasteDescription
+```
+
 Enumerates the text that can be displayed on the paste button.
 
 **Since:** 10

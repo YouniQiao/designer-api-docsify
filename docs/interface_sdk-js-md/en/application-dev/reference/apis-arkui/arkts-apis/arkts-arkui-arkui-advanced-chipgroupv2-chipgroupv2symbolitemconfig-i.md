@@ -1,5 +1,9 @@
 # ChipGroupV2SymbolItemConfig
 
+```TypeScript
+export interface ChipGroupV2SymbolItemConfig
+```
+
 Defines the configuration type of the suffix symbol icon.
 
 **Since:** 26.0.0

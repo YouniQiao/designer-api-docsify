@@ -1,5 +1,9 @@
 # AtomicServiceTabs
 
+```TypeScript
+export declare struct AtomicServiceTabs
+```
+
 **AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # ButtonOptions
 
+```TypeScript
+export declare class ButtonOptions
+```
+
 Declare ButtonOptions
 
 **Since:** 18

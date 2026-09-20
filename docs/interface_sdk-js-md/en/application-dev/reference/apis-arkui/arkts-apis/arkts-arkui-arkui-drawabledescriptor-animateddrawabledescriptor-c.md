@@ -1,5 +1,9 @@
 # AnimatedDrawableDescriptor
 
+```TypeScript
+export class AnimatedDrawableDescriptor extends DrawableDescriptor
+```
+
 Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the Image component. It inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
 
 **Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
@@ -68,6 +72,8 @@ struct Example {
   }
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

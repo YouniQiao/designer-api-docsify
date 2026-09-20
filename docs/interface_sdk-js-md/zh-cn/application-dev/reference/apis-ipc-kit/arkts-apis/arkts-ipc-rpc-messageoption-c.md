@@ -1,5 +1,9 @@
 # MessageOption
 
+```TypeScript
+class MessageOption
+```
+
 公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。
 
 **起始版本：** 7
@@ -54,6 +58,8 @@ class TestRemoteObject extends rpc.MessageOption {
   }
 }
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

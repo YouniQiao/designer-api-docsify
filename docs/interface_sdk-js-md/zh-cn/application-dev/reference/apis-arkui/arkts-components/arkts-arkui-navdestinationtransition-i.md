@@ -1,5 +1,9 @@
 # NavDestinationTransition
 
+```TypeScript
+declare interface NavDestinationTransition
+```
+
 NavDestination自定义动画接口。
 
 **起始版本：** 15

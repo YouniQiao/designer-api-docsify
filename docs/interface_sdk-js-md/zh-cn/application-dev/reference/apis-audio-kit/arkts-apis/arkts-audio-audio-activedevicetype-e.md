@@ -1,5 +1,9 @@
 # ActiveDeviceType
 
+```TypeScript
+enum ActiveDeviceType
+```
+
 表示活跃设备类型的枚举。
 
 > **说明：** 

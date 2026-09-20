@@ -1,5 +1,9 @@
 # BackgroundEffectOptions
 
+```TypeScript
+declare interface BackgroundEffectOptions
+```
+
 背景效果参数。
 
 **起始版本：** 11

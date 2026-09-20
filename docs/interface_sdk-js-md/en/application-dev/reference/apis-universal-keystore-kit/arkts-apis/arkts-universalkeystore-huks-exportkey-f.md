@@ -56,6 +56,8 @@ let result = huks.exportKey(keyAlias, emptyOptions);
 ```
 
 
+<a id="exportkey-1"></a>
+
 ## exportKey
 
 ```TypeScript
@@ -68,7 +70,7 @@ Exports a key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

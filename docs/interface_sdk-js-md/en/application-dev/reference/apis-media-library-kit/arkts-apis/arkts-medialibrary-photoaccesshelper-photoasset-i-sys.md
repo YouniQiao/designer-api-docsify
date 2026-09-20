@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset
+```
+
 PhotoAsset provides APIs for encapsulating file asset attributes.
 
 **Since:** 10
@@ -93,6 +97,8 @@ The edited file is transferred to the media library based on the URI, which is *
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="commiteditedasset-1"></a>
 
 ## commitEditedAsset
 
@@ -386,6 +392,8 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="getexif-1"></a>
+
 ## getExif
 
 ```TypeScript
@@ -603,6 +611,8 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="isedited-1"></a>
+
 ## isEdited
 
 ```TypeScript
@@ -687,6 +697,8 @@ The returned FD must be closed when it is not required.
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="open-1"></a>
 
 ## open
 
@@ -780,6 +792,8 @@ If the asset has never been edited, an empty string is returned.
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="requesteditdata-1"></a>
+
 ## requestEditData
 
 ```TypeScript
@@ -862,6 +876,8 @@ The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="requestphoto-2"></a>
+
 ## requestPhoto
 
 ```TypeScript
@@ -941,6 +957,8 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="requestsource-1"></a>
+
 ## requestSource
 
 ```TypeScript
@@ -1017,6 +1035,8 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="reverttooriginal-1"></a>
 
 ## revertToOriginal
 
@@ -1100,6 +1120,8 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="setfavorite-1"></a>
 
 ## setFavorite
 
@@ -1193,6 +1215,8 @@ Private files are stored in the private album. After obtaining private files fro
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="sethidden-1"></a>
 
 ## setHidden
 
@@ -1289,6 +1313,8 @@ The pending state can be removed only through **setPending(false)**. You can use
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="setpending-1"></a>
+
 ## setPending
 
 ```TypeScript
@@ -1379,6 +1405,8 @@ Sets user comment information of an image or video. This API uses an asynchronou
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="setusercomment-1"></a>
 
 ## setUserComment
 

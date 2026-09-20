@@ -1,5 +1,9 @@
 # UnifiedRecord
 
+```TypeScript
+class UnifiedRecord
+```
+
 对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
 
 **起始版本：** 10
@@ -122,6 +126,8 @@ let pixelMap: uniformDataStruct.PixelMap = {
 let pixelMapRecord =
   new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

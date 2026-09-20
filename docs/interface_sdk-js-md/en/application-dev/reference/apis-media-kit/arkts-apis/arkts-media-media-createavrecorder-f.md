@@ -68,6 +68,8 @@ media.createAVRecorder().then((recorder: media.AVRecorder) => {
 ```
 
 
+<a id="createavrecorder-2"></a>
+
 ## createAVRecorder
 
 ```TypeScript

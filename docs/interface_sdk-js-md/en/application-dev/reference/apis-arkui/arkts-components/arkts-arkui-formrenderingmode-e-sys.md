@@ -1,5 +1,9 @@
 # FormRenderingMode (System API)
 
+```TypeScript
+declare enum FormRenderingMode
+```
+
 Enumerates the widget rendering modes.
 
 **Since:** 11

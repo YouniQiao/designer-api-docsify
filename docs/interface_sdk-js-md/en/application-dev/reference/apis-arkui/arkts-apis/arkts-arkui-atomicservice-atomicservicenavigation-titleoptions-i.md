@@ -1,5 +1,9 @@
 # TitleOptions
 
+```TypeScript
+export interface TitleOptions
+```
+
 Title bar options.
 
 **Since:** 12

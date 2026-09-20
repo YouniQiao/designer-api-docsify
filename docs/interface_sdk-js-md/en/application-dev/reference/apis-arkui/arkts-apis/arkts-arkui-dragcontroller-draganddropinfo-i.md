@@ -1,5 +1,9 @@
 # DragAndDropInfo
 
+```TypeScript
+interface DragAndDropInfo
+```
+
 Provides the data reported when the state changes during dragging.
 
 **Since:** 11

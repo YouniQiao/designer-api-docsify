@@ -64,6 +64,8 @@ screenLock.sendScreenLockEvent('unlockScreenResult', 0).then((result: Boolean) =
 ```
 
 
+<a id="sendscreenlockevent-1"></a>
+
 ## sendScreenLockEvent
 
 ```TypeScript

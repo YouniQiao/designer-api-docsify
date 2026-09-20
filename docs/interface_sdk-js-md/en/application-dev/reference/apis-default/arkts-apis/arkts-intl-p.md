@@ -4,9 +4,9 @@
 
 ```TypeScript
 var Collator: {
-        new(locales?: string | string[], options?: CollatorOptions): Collator;
-        (locales?: string | string[], options?: CollatorOptions): Collator;
-        supportedLocalesOf(locales: string | string[], options?: CollatorOptions): string[];
+        new(locales?: string[], options?: CollatorOptions): Collator;
+        (locales?: string[], options?: CollatorOptions): Collator;
+        supportedLocalesOf(locales: string[], options?: CollatorOptions): string[];
     }
 ```
 
@@ -16,9 +16,9 @@ var Collator: {
 
 ```TypeScript
 var DateTimeFormat: {
-        new(locales?: string | string[], options?: DateTimeFormatOptions): DateTimeFormat;
-        (locales?: string | string[], options?: DateTimeFormatOptions): DateTimeFormat;
-        supportedLocalesOf(locales: string | string[], options?: DateTimeFormatOptions): string[];
+        new(locales?: string[], options?: DateTimeFormatOptions): DateTimeFormat;
+        (locales?: string[], options?: DateTimeFormatOptions): DateTimeFormat;
+        supportedLocalesOf(locales: string[], options?: DateTimeFormatOptions): string[];
         readonly prototype: DateTimeFormat;
     }
 ```
@@ -29,9 +29,9 @@ var DateTimeFormat: {
 
 ```TypeScript
 var NumberFormat: {
-        new(locales?: string | string[], options?: NumberFormatOptions): NumberFormat;
-        (locales?: string | string[], options?: NumberFormatOptions): NumberFormat;
-        supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[];
+        new(locales?: string[], options?: NumberFormatOptions): NumberFormat;
+        (locales?: string[], options?: NumberFormatOptions): NumberFormat;
+        supportedLocalesOf(locales: string[], options?: NumberFormatOptions): string[];
         readonly prototype: NumberFormat;
     }
 ```

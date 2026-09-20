@@ -1,5 +1,9 @@
 # FormColorMode（系统接口）
 
+```TypeScript
+enum FormColorMode
+```
+
 卡片色彩模式枚举。
 
 **起始版本：** 23

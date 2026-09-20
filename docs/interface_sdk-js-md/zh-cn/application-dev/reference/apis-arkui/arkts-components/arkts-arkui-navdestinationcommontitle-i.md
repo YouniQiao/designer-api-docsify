@@ -1,5 +1,9 @@
 # NavDestinationCommonTitle
 
+```TypeScript
+declare interface NavDestinationCommonTitle
+```
+
 NavDestination通用标题。
 
 **起始版本：** 9

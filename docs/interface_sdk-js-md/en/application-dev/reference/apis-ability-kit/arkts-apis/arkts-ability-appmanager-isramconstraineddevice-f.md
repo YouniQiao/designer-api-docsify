@@ -58,6 +58,8 @@ appManager.isRamConstrainedDevice((err, data) => {
 ```
 
 
+<a id="isramconstraineddevice-1"></a>
+
 ## isRamConstrainedDevice
 
 ```TypeScript

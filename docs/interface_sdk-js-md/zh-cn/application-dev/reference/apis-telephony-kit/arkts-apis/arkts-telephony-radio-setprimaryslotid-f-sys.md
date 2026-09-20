@@ -69,6 +69,8 @@ radio.setPrimarySlotId(slotId).then(() => {
 ```
 
 
+<a id="setprimaryslotid-1"></a>
+
 ## setPrimarySlotId
 
 ```TypeScript

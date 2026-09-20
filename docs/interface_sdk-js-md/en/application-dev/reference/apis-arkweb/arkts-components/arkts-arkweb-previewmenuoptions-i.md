@@ -1,5 +1,9 @@
 # PreviewMenuOptions
 
+```TypeScript
+declare interface PreviewMenuOptions
+```
+
 Configures preview menu options, supporting the vibration effect when the menu pops up. It is suitable for scenarios where enhanced menu interaction feedback is required, improving user experience.
 
 **Since:** 20

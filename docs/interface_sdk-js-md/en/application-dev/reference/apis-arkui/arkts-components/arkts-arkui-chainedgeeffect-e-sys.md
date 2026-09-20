@@ -1,5 +1,9 @@
 # ChainEdgeEffect (System API)
 
+```TypeScript
+declare enum ChainEdgeEffect
+```
+
 Declare edge effect of chain animation.
 
 **Since:** 10

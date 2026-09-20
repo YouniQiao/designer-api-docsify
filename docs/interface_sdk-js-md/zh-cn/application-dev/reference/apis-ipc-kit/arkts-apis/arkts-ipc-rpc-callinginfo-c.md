@@ -1,5 +1,9 @@
 # CallingInfo
 
+```TypeScript
+class CallingInfo
+```
+
 IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调用是否在同一设备上。
 
 **起始版本：** 23

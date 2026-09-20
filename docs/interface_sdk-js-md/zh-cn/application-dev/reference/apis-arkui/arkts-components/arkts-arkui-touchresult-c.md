@@ -1,5 +1,9 @@
 # TouchResult
 
+```TypeScript
+declare class TouchResult
+```
+
 自定义事件分发结果，开发者通过返回结果来影响事件分发。
 
 **起始版本：** 11

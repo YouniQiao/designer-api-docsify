@@ -1,4 +1,8 @@
-# uiEffect
+# uiEffect(Cascading Effect)
+
+```TypeScript
+declare namespace uiEffect
+```
 
 This module provides basic capabilities for component effects, including blur, brightening, and more. Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience. In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc.
 

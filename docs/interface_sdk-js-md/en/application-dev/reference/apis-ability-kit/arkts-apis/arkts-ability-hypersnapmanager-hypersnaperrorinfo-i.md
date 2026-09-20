@@ -1,5 +1,9 @@
 # HyperSnapErrorInfo
 
+```TypeScript
+export interface HyperSnapErrorInfo
+```
+
 Describes the Hyper Snap error information.
 
 **Since:** 26.0.1

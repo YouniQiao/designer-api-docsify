@@ -65,6 +65,8 @@ policy
 ```
 
 
+<a id="getbackgroundpolicybyuid-1"></a>
+
 ## getBackgroundPolicyByUid
 
 ```TypeScript

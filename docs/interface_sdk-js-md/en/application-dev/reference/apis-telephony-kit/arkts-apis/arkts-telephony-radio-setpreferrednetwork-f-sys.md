@@ -71,6 +71,8 @@ radio.setPreferredNetwork(slotId, mode).then(() => {
 ```
 
 
+<a id="setpreferrednetwork-1"></a>
+
 ## setPreferredNetwork
 
 ```TypeScript

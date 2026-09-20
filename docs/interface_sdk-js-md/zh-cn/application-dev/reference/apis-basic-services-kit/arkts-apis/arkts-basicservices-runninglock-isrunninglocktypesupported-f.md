@@ -52,6 +52,8 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)
 ```
 
 
+<a id="isrunninglocktypesupported-1"></a>
+
 ## isRunningLockTypeSupported
 
 ```TypeScript

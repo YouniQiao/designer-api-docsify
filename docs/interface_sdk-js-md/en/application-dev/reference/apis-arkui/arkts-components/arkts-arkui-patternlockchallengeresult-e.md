@@ -1,5 +1,9 @@
 # PatternLockChallengeResult
 
+```TypeScript
+declare enum PatternLockChallengeResult
+```
+
 Authentication challenge result of the pattern password.
 
 **Since:** 11

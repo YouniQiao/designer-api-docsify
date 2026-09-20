@@ -1,5 +1,9 @@
 # PrivacySearchResult
 
+```TypeScript
+interface PrivacySearchResult
+```
+
 定义隐私搜索操作的结果，包含结果的密文。和可选值密文。
 
 **起始版本：** 26.0.1

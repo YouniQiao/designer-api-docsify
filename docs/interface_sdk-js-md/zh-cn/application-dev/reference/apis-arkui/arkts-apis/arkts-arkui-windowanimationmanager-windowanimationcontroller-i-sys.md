@@ -1,5 +1,9 @@
 # WindowAnimationController（系统接口）
 
+```TypeScript
+export interface WindowAnimationController
+```
+
 窗口动画控制器。在创建一个WindowAnimationController对象时，需要实现其中的所有回调函数。
 
 **起始版本：** 9

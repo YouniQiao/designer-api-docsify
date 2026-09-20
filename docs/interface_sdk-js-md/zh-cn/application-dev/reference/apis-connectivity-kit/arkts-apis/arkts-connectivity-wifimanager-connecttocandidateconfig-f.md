@@ -63,6 +63,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 
+<a id="connecttocandidateconfig-1"></a>
+
 ## connectToCandidateConfig
 
 ```TypeScript

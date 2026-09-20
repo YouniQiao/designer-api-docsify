@@ -63,6 +63,8 @@ print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensi
 ```
 
 
+<a id="queryallprinterextensioninfos-1"></a>
+
 ## queryAllPrinterExtensionInfos
 
 ```TypeScript

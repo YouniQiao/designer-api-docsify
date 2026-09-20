@@ -47,6 +47,8 @@ avSession.stopCastDeviceDiscovery().then(() => {
 ```
 
 
+<a id="stopcastdevicediscovery-1"></a>
+
 ## stopCastDeviceDiscovery
 
 ```TypeScript

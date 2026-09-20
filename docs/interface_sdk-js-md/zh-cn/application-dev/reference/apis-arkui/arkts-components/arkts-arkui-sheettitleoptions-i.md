@@ -1,5 +1,9 @@
 # SheetTitleOptions
 
+```TypeScript
+declare interface SheetTitleOptions
+```
+
 半模态面板的标题。
 
 **起始版本：** 11

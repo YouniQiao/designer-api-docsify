@@ -1,5 +1,9 @@
 # SecurityDpiFollowStrategy (System API)
 
+```TypeScript
+declare enum SecurityDpiFollowStrategy
+```
+
 Defines the enum of the resolution following strategy for **SecurityUIExtensionComponent**.
 
 **Since:** 26.0.0

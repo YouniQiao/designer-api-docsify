@@ -1,5 +1,9 @@
 # TextResponseType
 
+```TypeScript
+declare enum TextResponseType
+```
+
 Response type of the menu.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # ModelType
 
+```TypeScript
+declare enum ModelType
+```
+
 The enum of model type @enum { number }
 
 **Since:** 12

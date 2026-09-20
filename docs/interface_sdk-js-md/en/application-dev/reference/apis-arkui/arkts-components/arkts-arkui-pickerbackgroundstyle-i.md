@@ -1,5 +1,9 @@
 # PickerBackgroundStyle
 
+```TypeScript
+declare interface PickerBackgroundStyle
+```
+
 Defines the background style configuration for selected picker items.
 
 **Since:** 20

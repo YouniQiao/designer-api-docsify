@@ -37,6 +37,8 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API.<br>**适用版本：** 11+ |
 
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript

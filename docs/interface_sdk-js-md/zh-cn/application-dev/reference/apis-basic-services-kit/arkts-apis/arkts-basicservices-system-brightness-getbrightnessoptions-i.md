@@ -1,5 +1,9 @@
 # GetBrightnessOptions
 
+```TypeScript
+export interface GetBrightnessOptions
+```
+
 获取屏幕亮度的参数对象。
 
 **起始版本：** 3

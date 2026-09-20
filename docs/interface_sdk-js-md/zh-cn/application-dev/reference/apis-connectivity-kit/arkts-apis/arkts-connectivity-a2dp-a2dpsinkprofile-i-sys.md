@@ -1,5 +1,9 @@
 # A2dpSinkProfile
 
+```TypeScript
+interface A2dpSinkProfile extends BaseProfile
+```
+
 管理a2dp sink业务。
 
 **继承/实现关系：** A2dpSinkProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)

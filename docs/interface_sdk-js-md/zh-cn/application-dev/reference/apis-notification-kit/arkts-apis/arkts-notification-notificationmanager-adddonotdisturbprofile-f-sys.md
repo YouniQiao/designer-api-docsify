@@ -109,6 +109,8 @@ notificationManager.addDoNotDisturbProfile(templates, userId).then(() => {
 ```
 
 
+<a id="adddonotdisturbprofile-1"></a>
+
 ## addDoNotDisturbProfile
 
 ```TypeScript

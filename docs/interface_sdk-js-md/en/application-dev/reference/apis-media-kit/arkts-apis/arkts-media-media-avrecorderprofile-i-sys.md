@@ -1,5 +1,9 @@
 # AVRecorderProfile
 
+```TypeScript
+interface AVRecorderProfile
+```
+
 Describes the audio and video recording profile.
 
 **Since:** 9

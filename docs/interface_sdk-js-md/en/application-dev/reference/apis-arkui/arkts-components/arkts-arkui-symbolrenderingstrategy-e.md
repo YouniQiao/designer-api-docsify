@@ -1,5 +1,9 @@
 # SymbolRenderingStrategy
 
+```TypeScript
+declare enum SymbolRenderingStrategy
+```
+
 The symbol rendering strategy.
 
 **Since:** 11

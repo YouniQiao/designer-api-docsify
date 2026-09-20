@@ -1,5 +1,9 @@
 # ScrollableBarModeOptions
 
+```TypeScript
+interface ScrollableBarModeOptions
+```
+
 Implements a **ScrollableBarModeOptions** object.
 
 **Since:** 10

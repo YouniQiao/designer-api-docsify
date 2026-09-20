@@ -1,5 +1,9 @@
 # CalendarDialogOptions
 
+```TypeScript
+declare interface CalendarDialogOptions extends CalendarOptions
+```
+
 日历选择器弹窗选项。
 
 继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。

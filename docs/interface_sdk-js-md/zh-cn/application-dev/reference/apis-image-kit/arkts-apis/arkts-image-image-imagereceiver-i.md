@@ -1,5 +1,9 @@
 # ImageReceiver
 
+```TypeScript
+interface ImageReceiver
+```
+
 ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方和生产者上进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
 
 在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md)创建ImageReceiver实例。
@@ -39,6 +43,8 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当获取surface id成功，err为undefined，data为获取到的surface id；否则为错误对象。 |
+
+<a id="getreceivingsurfaceid-1"></a>
 
 ## getReceivingSurfaceId
 
@@ -120,6 +126,8 @@ readLatestImage(callback: AsyncCallback<Image>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
 
+<a id="readlatestimage-1"></a>
+
 ## readLatestImage
 
 ```TypeScript
@@ -168,6 +176,8 @@ readNextImage(callback: AsyncCallback<Image>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
 
+<a id="readnextimage-1"></a>
+
 ## readNextImage
 
 ```TypeScript
@@ -213,6 +223,8 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放ImageReceiver实例成功，err为undefined，否则为错误对象。 |
+
+<a id="release-1"></a>
 
 ## release
 

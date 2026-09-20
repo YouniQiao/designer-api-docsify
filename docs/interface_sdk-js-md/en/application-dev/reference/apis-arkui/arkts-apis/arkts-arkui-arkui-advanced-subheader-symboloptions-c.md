@@ -1,5 +1,9 @@
 # SymbolOptions
 
+```TypeScript
+export declare class SymbolOptions
+```
+
 Declare type SymbolOptions
 
 **Since:** 12
@@ -24,7 +28,7 @@ Default value: **SymbolEffectStrategy.NONE**.
 
 **NOTE:** 
 
-For the resources referenced in **&#36;r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
+For the resources referenced in **$r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
 
 **Type:** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
@@ -116,7 +120,7 @@ Default value: **SymbolRenderingStrategy.SINGLE**.
 
 **NOTE:** 
 
-For the resources referenced in **&#36;r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
+For the resources referenced in **$r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
 
 **Type:** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 

@@ -1,5 +1,9 @@
 # TLSSocket
 
+```TypeScript
+export interface TLSSocket
+```
+
 TLSSocket连接。在调用TLSSocket的方法前，需要先通过[socket.constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md)创建TLSSocket对象。
 
 **起始版本：** 9
@@ -81,6 +85,8 @@ tls.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -212,6 +218,8 @@ tls.close().then(() => {
   console.error("failed" + err);
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -455,6 +463,8 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
   console.error("connect failed " + JSON.stringify(err));
 });
 ```
+
+<a id="connect-1"></a>
 
 ## connect
 
@@ -705,6 +715,8 @@ tls.getCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
+<a id="getcertificate-1"></a>
+
 ## getCertificate
 
 ```TypeScript
@@ -816,6 +828,8 @@ tls.getCipherSuite().then((data: Array<string>) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getciphersuite-1"></a>
 
 ## getCipherSuite
 
@@ -970,6 +984,8 @@ tls.getProtocol().then((data: string) => {
 });
 ```
 
+<a id="getprotocol-1"></a>
+
 ## getProtocol
 
 ```TypeScript
@@ -1076,6 +1092,8 @@ tls.getRemoteAddress().then(() => {
   console.error('getRemoteAddress fail');
 });
 ```
+
+<a id="getremoteaddress-1"></a>
 
 ## getRemoteAddress
 
@@ -1189,6 +1207,8 @@ tls.getRemoteCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
+<a id="getremotecertificate-1"></a>
+
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1300,6 +1320,8 @@ tls.getSignatureAlgorithms().then((data: Array<string>) => {
   console.error("failed" + err);
 });
 ```
+
+<a id="getsignaturealgorithms-1"></a>
 
 ## getSignatureAlgorithms
 
@@ -1475,6 +1497,8 @@ tls.getState().then(() => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -1600,31 +1624,6 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-## off('connect' | 'close')
-
-```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
-```
-
-取消订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
 ## off('error')
 
 ```TypeScript
@@ -1672,35 +1671,6 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。TLSSocket连接订阅某类接受消息事件触发的调用函数，返回TLSSocket连接信息。<br>**适用版本：** 11 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-订阅TLSSocket的连接事件或关闭事件。使用callback异步回调。
-
-> **说明：** 
-> 
-> bind方法调用成功后，才可调用此方法。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TLSSocket连接订阅某类事件触发的调用函数。 |
 
 **错误码：**
 
@@ -1823,6 +1793,8 @@ tls.send("xxxx").then(() => {
   console.error("failed" + err);
 });
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -1997,6 +1969,8 @@ tls.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

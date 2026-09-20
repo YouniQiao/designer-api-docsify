@@ -1,5 +1,9 @@
 # OnGeolocationShowEvent
 
+```TypeScript
+declare interface OnGeolocationShowEvent
+```
+
 Defines the callback information triggered when a request to obtain the geolocation information is received, including the origin information and geolocation object. It is suitable for scenarios where handling geolocation permissions is required.
 
 **Since:** 12

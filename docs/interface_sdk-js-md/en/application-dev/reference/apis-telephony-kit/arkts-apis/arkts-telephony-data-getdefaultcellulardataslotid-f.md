@@ -51,6 +51,8 @@ data.getDefaultCellularDataSlotId().then((contextData: number) => {
 ```
 
 
+<a id="getdefaultcellulardataslotid-1"></a>
+
 ## getDefaultCellularDataSlotId
 
 ```TypeScript

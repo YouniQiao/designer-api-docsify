@@ -1,5 +1,9 @@
 # HuksKeyPadding
 
+```TypeScript
+export enum HuksKeyPadding
+```
+
 表示填充算法。
 
 **起始版本：** 8

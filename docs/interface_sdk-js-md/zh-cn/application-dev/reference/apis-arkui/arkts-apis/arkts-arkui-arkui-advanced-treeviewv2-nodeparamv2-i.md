@@ -1,5 +1,9 @@
 # NodeParamV2
 
+```TypeScript
+export interface NodeParamV2
+```
+
 节点参数接口，用于配置树节点的属性。
 
 **起始版本：** 26.0.0

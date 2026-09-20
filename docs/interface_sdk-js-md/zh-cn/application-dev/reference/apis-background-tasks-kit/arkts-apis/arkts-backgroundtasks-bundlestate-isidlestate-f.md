@@ -54,6 +54,8 @@ bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
 ```
 
 
+<a id="isidlestate-1"></a>
+
 ## isIdleState
 
 ```TypeScript

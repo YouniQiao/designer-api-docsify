@@ -1,5 +1,9 @@
 # AlphabetIndexer属性/事件
 
+```TypeScript
+declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
+```
+
 width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
 
 padding属性默认为4vp。
@@ -507,7 +511,7 @@ selected(index: number)
 
 设置选中项索引值。与[AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md)中的selected同时设置时，该属性的优先级更高。
 
-从API version 10开始，该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 

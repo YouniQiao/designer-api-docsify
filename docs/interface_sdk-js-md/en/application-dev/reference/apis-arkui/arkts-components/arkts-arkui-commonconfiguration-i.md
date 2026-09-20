@@ -1,5 +1,9 @@
 # CommonConfiguration
 
+```TypeScript
+declare interface CommonConfiguration<T>
+```
+
 You need a custom class to implement the **ContentModifier** API.
 
 **Since:** 12

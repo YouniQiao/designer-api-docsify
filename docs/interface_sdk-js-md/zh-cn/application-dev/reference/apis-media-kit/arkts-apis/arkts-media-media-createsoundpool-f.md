@@ -87,6 +87,8 @@ media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) =
 ```
 
 
+<a id="createsoundpool-2"></a>
+
 ## createSoundPool
 
 ```TypeScript

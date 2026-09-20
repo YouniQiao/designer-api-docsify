@@ -1,5 +1,9 @@
 # OverlayOptions
 
+```TypeScript
+declare interface OverlayOptions
+```
+
 
 > **NOTE:** 
 > 

@@ -1,5 +1,9 @@
 # ButtonRole
 
+```TypeScript
+declare enum ButtonRole
+```
+
 按钮的角色。
 
 **起始版本：** 12

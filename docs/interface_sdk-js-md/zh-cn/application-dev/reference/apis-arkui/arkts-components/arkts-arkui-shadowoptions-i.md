@@ -1,5 +1,9 @@
 # ShadowOptions
 
+```TypeScript
+declare interface ShadowOptions
+```
+
 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。
 
 **起始版本：** 7

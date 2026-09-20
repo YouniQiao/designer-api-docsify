@@ -1,5 +1,9 @@
 # HashAlg
 
+```TypeScript
+enum HashAlg
+```
+
 定义用于隐私保护计算的哈希算法。
 
 **起始版本：** 26.0.1

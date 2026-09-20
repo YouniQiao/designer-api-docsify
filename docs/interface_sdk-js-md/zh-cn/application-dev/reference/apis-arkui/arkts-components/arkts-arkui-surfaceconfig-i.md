@@ -1,5 +1,9 @@
 # SurfaceConfig
 
+```TypeScript
+declare interface SurfaceConfig
+```
+
 Surface配置。
 
 **起始版本：** 22

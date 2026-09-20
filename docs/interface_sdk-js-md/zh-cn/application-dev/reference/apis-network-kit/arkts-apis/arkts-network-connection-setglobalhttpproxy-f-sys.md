@@ -80,6 +80,8 @@ connection.setGlobalHttpProxy({
 ```
 
 
+<a id="setglobalhttpproxy-1"></a>
+
 ## setGlobalHttpProxy
 
 ```TypeScript

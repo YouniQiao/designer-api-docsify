@@ -1,5 +1,9 @@
 # OnClientAuthenticationEvent
 
+```TypeScript
+declare interface OnClientAuthenticationEvent
+```
+
 Defines the callback information triggered when an SSL client certificate is required, including the host, port, and key type. It is suitable for scenarios where handling client certificate authentication is required, improving authentication process flexibility and security.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # CameraSharedStatus (System API)
 
+```TypeScript
+enum CameraSharedStatus
+```
+
 Enums for camera shared status.
 
 **Since:** 26.0.1

@@ -101,6 +101,8 @@ statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInf
 ```
 
 
+<a id="gettrafficstatsbyuid-1"></a>
+
 ## getTrafficStatsByUid
 
 ```TypeScript

@@ -68,6 +68,8 @@ call.setCallRestrictionPassword(0, "123456", "654321").then(() => {
 ```
 
 
+<a id="setcallrestrictionpassword-1"></a>
+
 ## setCallRestrictionPassword
 
 ```TypeScript

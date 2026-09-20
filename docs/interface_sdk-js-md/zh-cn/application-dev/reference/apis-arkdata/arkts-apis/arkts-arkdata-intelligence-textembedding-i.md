@@ -1,5 +1,9 @@
 # TextEmbedding
 
+```TypeScript
+interface TextEmbedding
+```
+
 描述文本嵌入模型的文本嵌入函数。
 
 下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md)获取到TextEmbedding实例，再通过此实例调用对应接口。
@@ -89,6 +93,8 @@ textEmbedding.loadModel()
     console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
+
+<a id="getembedding-1"></a>
 
 ## getEmbedding
 

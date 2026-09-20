@@ -1,5 +1,9 @@
 # DistortionParam（系统接口）
 
+```TypeScript
+declare interface DistortionParam
+```
+
 空间扭曲形变参数。
 
 > **说明：** 

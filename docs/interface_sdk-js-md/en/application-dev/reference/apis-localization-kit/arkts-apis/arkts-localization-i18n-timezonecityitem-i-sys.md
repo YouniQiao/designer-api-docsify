@@ -1,5 +1,9 @@
 # TimeZoneCityItem (System API)
 
+```TypeScript
+export interface TimeZoneCityItem
+```
+
 Represents a time zone and city combination item.
 
 **Since:** 10

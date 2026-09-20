@@ -1,5 +1,9 @@
 # OnLoadFinishedEvent
 
+```TypeScript
+declare interface OnLoadFinishedEvent
+```
+
 Defines the callback information triggered when the web page loading ends, including the page URL. It is suitable for scenarios where monitoring page loading completion is required, improving page lifecycle management capabilities.
 
 **Since:** 20

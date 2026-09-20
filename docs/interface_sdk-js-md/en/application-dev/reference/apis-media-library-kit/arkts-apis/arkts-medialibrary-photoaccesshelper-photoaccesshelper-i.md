@@ -1,5 +1,9 @@
 # PhotoAccessHelper
 
+```TypeScript
+interface PhotoAccessHelper
+```
+
 Helper functions to access photos and albums.
 
 **Since:** 10
@@ -81,6 +85,8 @@ Query whether the assets exist and whether the invoker has read permission on th
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The length of the input parameter queue is greater than 500. <br>2. The input parameter is null or undefined. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<a id="createasset-4"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -124,6 +130,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="createasset-5"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -165,6 +173,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="createasset-6"></a>
 
 ## createAsset
 
@@ -325,6 +335,8 @@ Creates a dialog box for deleting media files. This API uses an asynchronous cal
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="createdeleterequest-1"></a>
+
 ## createDeleteRequest
 
 ```TypeScript
@@ -481,6 +493,8 @@ Before the operation, ensure that the albums to obtain exist.
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getalbums-1"></a>
+
 ## getAlbums
 
 ```TypeScript
@@ -514,6 +528,8 @@ Before the operation, ensure that the albums to obtain exist.
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getalbums-2"></a>
 
 ## getAlbums
 
@@ -585,6 +601,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getassets-1"></a>
 
 ## getAssets
 
@@ -1097,6 +1115,8 @@ Call this API when the APIs of the PhotoAccessHelper instance are no longer used
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="release-1"></a>
 
 ## release
 

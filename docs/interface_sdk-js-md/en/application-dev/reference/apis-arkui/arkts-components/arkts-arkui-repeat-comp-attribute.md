@@ -1,5 +1,9 @@
 # Repeat properties/events
 
+```TypeScript
+declare class RepeatAttribute<T> extends DynamicNode<RepeatAttribute<T>>
+```
+
 In addition to the drag-and-drop sorting attribute, the following attributes are supported.
 
 **Inheritance/Implementation:** RepeatAttribute extends DynamicNode<RepeatAttribute<T>>

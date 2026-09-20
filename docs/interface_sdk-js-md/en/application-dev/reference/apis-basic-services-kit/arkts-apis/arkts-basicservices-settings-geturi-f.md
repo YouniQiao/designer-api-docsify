@@ -42,6 +42,8 @@ settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS).then((uri:string) => 
 ```
 
 
+<a id="geturi-1"></a>
+
 ## getURI
 
 ```TypeScript

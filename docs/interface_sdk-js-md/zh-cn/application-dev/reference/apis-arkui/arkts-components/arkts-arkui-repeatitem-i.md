@@ -1,5 +1,9 @@
 # RepeatItem
 
+```TypeScript
+interface RepeatItem<T>
+```
+
 数据项类型。
 
 **起始版本：** 12

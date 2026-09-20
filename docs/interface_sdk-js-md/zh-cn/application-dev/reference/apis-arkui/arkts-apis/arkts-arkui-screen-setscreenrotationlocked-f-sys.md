@@ -64,6 +64,8 @@ screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
 ```
 
 
+<a id="setscreenrotationlocked-1"></a>
+
 ## setScreenRotationLocked
 
 ```TypeScript

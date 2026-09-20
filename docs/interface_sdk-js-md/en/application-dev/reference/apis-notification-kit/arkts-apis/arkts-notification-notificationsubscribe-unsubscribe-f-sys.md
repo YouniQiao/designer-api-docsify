@@ -80,6 +80,8 @@ notificationSubscribe.unsubscribe(subscriber).then(() => {
 ```
 
 
+<a id="unsubscribe-1"></a>
+
 ## unsubscribe
 
 ```TypeScript

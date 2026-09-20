@@ -1,5 +1,9 @@
 # Layoutable
 
+```TypeScript
+declare interface Layoutable
+```
+
 子组件布局信息。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # AccountManager
 
+```TypeScript
+interface AccountManager
+```
+
 系统账号管理类。
 
 **起始版本：** 7
@@ -59,6 +63,8 @@ activateOsAccount(localId: number, callback: AsyncCallback<void>): void
 在ID为0的逻辑屏上激活ID为100的系统账号。
 ```
 
+<a id="activateosaccount-1"></a>
+
 ## activateOsAccount
 
 ```TypeScript
@@ -104,6 +110,8 @@ activateOsAccount(localId: number): Promise<void>
 **示例**
 
 参见 [activateOsAccount](#activateosaccount)
+
+<a id="activateosaccount-2"></a>
 
 ## activateOsAccount
 
@@ -300,6 +308,8 @@ try {
 }
 ```
 
+<a id="createosaccount-1"></a>
+
 ## createOsAccount
 
 ```TypeScript
@@ -438,6 +448,8 @@ try {
   console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="createosaccountfordomain-1"></a>
 
 ## createOsAccountForDomain
 
@@ -604,6 +616,8 @@ try {
   console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getbundleidforuid-1"></a>
 
 ## getBundleIdForUid
 
@@ -794,6 +808,8 @@ try {
 }
 ```
 
+<a id="getforegroundosaccountlocalid-1"></a>
+
 ## getForegroundOsAccountLocalId
 
 ```TypeScript
@@ -939,6 +955,8 @@ try {
 }
 ```
 
+<a id="getosaccountconstraintsourcetypes-1"></a>
+
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1023,6 +1041,8 @@ getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
 获取ID为100的系统账号的头像。
 ```
 
+<a id="getosaccountprofilephoto-1"></a>
+
 ## getOsAccountProfilePhoto
 
 ```TypeScript
@@ -1065,6 +1085,8 @@ getOsAccountProfilePhoto(localId: number): Promise<string>
 **示例**
 
 参见 [getOsAccountProfilePhoto](#getosaccountprofilephoto)
+
+<a id="getosaccounttype-2"></a>
 
 ## getOsAccountType
 
@@ -1224,6 +1246,8 @@ try {
 }
 ```
 
+<a id="ismainosaccount-1"></a>
+
 ## isMainOsAccount
 
 ```TypeScript
@@ -1302,6 +1326,8 @@ isOsAccountActivated(localId: number): Promise<boolean>
 判断ID为100的系统账号是否处于激活状态。
 ```
 
+<a id="isosaccountconstraintenabled-1"></a>
+
 ## isOsAccountConstraintEnabled
 
 ```TypeScript
@@ -1350,6 +1376,8 @@ isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boole
 ```TypeScript
 判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
 ```
+
+<a id="isosaccountunlocked-1"></a>
 
 ## isOsAccountUnlocked
 
@@ -1500,44 +1528,6 @@ try {
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
-
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<number>): void
-```
-
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' &#124; 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-参见 off
 
 ## off('switching')
 
@@ -1755,44 +1745,6 @@ try {
 }
 ```
 
-## on('activate' | 'activating')
-
-```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<number>): void
-```
-
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activate' &#124; 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
-
-**示例**
-
-参见 on
-
 ## on('switching')
 
 ```TypeScript
@@ -1984,6 +1936,8 @@ try {
 }
 ```
 
+<a id="queryallcreatedosaccounts-1"></a>
+
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2127,6 +2081,8 @@ try {
 }
 ```
 
+<a id="querymaxosaccountnumber-1"></a>
+
 ## queryMaxOsAccountNumber
 
 ```TypeScript
@@ -2245,6 +2201,8 @@ queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): voi
 ```TypeScript
 查询ID为100的系统账号信息。
 ```
+
+<a id="queryosaccountbyid-1"></a>
 
 ## queryOsAccountById
 
@@ -2393,6 +2351,8 @@ try {
 }
 ```
 
+<a id="removeosaccount-1"></a>
+
 ## removeOsAccount
 
 ```TypeScript
@@ -2437,6 +2397,8 @@ removeOsAccount(localId: number): Promise<void>
 **示例**
 
 参见 [removeOsAccount](#removeosaccount)
+
+<a id="removeosaccount-2"></a>
 
 ## removeOsAccount
 
@@ -2531,6 +2493,8 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 删除ID为100的系统账号的禁止使用Wi-Fi的约束。
 ```
 
+<a id="setosaccountconstraints-1"></a>
+
 ## setOsAccountConstraints
 
 ```TypeScript
@@ -2619,6 +2583,8 @@ setOsAccountName(localId: number, localName: string, callback: AsyncCallback<voi
 将ID为100的系统账号的账号名设置成demoName。
 ```
 
+<a id="setosaccountname-1"></a>
+
 ## setOsAccountName
 
 ```TypeScript
@@ -2705,6 +2671,8 @@ setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback
 ```TypeScript
 给ID为100的系统账号设置头像。
 ```
+
+<a id="setosaccountprofilephoto-1"></a>
 
 ## setOsAccountProfilePhoto
 

@@ -1,5 +1,9 @@
 # UnionEffectContainerOptions (System API)
 
+```TypeScript
+declare interface UnionEffectContainerOptions
+```
+
 Sets the construction options of **UnionEffectContainer**.
 
 **Since:** 23

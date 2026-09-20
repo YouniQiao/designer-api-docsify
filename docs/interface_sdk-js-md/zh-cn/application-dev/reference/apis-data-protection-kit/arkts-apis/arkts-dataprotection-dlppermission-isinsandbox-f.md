@@ -59,6 +59,8 @@ dlpPermission.isInSandbox((err, isInSandbox) => {
 ```
 
 
+<a id="isinsandbox-1"></a>
+
 ## isInSandbox
 
 ```TypeScript

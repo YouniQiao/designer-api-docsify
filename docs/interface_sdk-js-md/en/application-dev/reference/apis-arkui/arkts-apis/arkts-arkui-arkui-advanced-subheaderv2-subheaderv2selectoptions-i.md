@@ -1,5 +1,9 @@
 # SubHeaderV2SelectOptions
 
+```TypeScript
+export interface SubHeaderV2SelectOptions
+```
+
 Defines the options for initializing a **SubHeaderV2Select** object.
 
 **Since:** 18

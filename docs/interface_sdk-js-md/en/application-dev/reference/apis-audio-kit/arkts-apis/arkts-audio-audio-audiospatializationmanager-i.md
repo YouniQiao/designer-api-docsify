@@ -1,5 +1,9 @@
 # AudioSpatializationManager
 
+```TypeScript
+interface AudioSpatializationManager
+```
+
 Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management.
 
 Before calling any API in AudioSpatializationManager, you must use [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager) to obtain an AudioSpatializationManager instance.

@@ -1,5 +1,9 @@
 # SearchOptions
 
+```TypeScript
+declare interface SearchOptions
+```
+
 Describes the initialization options of the **Search** component.
 
 > **NOTE:** 
@@ -78,7 +82,7 @@ value?: ResourceStr
 
 Sets the text input in the search text box.
 
-Since API version 10, this parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 

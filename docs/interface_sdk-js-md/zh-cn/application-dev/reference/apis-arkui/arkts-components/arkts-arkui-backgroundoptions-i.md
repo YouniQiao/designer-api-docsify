@@ -1,5 +1,9 @@
 # BackgroundOptions
 
+```TypeScript
+declare interface BackgroundOptions
+```
+
 background配置选项。
 
 **起始版本：** 20

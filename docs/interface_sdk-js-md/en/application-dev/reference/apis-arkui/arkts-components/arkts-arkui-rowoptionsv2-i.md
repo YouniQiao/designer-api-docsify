@@ -1,5 +1,9 @@
 # RowOptionsV2
 
+```TypeScript
+interface RowOptionsV2
+```
+
 Sets the spacing between child components of the **Row** component. The spacing type **SpaceType** can be of the number, string, or Resource type.
 
 **Since:** 18

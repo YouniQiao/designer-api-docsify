@@ -1,5 +1,9 @@
 # AsrProcessingController（系统接口）
 
+```TypeScript
+interface AsrProcessingController
+```
+
 自动语音识别（ASR）处理控制器。
 
 **起始版本：** 12

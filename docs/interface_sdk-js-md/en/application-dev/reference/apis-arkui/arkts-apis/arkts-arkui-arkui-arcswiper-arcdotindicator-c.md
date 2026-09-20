@@ -1,5 +1,9 @@
 # ArcDotIndicator
 
+```TypeScript
+export class ArcDotIndicator
+```
+
 Describes the properties and behavior of the arc dot navigation indicator.
 
 **Since:** 18

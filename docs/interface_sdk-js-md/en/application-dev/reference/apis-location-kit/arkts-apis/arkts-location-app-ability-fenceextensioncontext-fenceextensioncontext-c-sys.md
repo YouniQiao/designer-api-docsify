@@ -1,5 +1,9 @@
 # FenceExtensionContext
 
+```TypeScript
+export default class FenceExtensionContext extends ExtensionContext
+```
+
 class of static subscriber extension context.
 
 @extends ExtensionContext

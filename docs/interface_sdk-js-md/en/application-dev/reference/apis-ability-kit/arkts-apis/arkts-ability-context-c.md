@@ -1,5 +1,9 @@
 # Context
 
+```TypeScript
+declare class Context extends BaseContext
+```
+
 Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
@@ -320,6 +324,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="getgroupdir-1"></a>
 
 ## getGroupDir
 

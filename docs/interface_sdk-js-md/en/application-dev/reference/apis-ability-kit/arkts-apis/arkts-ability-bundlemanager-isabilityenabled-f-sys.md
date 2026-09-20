@@ -144,6 +144,8 @@ try {
 ```
 
 
+<a id="isabilityenabled-1"></a>
+
 ## isAbilityEnabled
 
 ```TypeScript
@@ -178,6 +180,8 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 
 See [isAbilityEnabled](#isabilityenabled)
 
+
+<a id="isabilityenabled-2"></a>
 
 ## isAbilityEnabled
 

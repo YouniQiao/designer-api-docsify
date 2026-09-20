@@ -1,5 +1,9 @@
 # StarStyleOptions
 
+```TypeScript
+declare interface StarStyleOptions
+```
+
 Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component.
 
 > **NOTE:** 

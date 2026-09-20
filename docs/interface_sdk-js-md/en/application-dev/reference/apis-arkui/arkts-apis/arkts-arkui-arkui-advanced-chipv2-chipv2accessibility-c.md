@@ -1,5 +1,9 @@
 # ChipV2Accessibility
 
+```TypeScript
+export declare class ChipV2Accessibility
+```
+
 Defines the accessibility attribute class of **ChipV2**.
 
 **Since:** 26.0.0

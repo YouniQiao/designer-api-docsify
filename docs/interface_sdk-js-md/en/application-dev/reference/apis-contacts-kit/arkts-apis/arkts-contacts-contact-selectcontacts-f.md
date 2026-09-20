@@ -85,6 +85,8 @@ promise.then((data) => {
 ```
 
 
+<a id="selectcontacts-1"></a>
+
 ## selectContacts
 
 ```TypeScript
@@ -109,6 +111,8 @@ Selects a contact. This API uses a promise to return the result.
 
 See [selectContacts](#selectcontacts)
 
+
+<a id="selectcontacts-2"></a>
 
 ## selectContacts
 
@@ -141,6 +145,8 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 See [selectContacts](#selectcontacts)
 
+
+<a id="selectcontacts-3"></a>
 
 ## selectContacts
 

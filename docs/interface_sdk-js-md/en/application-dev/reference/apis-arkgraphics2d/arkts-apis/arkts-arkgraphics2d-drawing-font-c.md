@@ -1,5 +1,9 @@
 # Font
 
+```TypeScript
+class Font
+```
+
 Describes the attributes used for text rendering, such as size and typeface.
 
 > **NOTE:** 

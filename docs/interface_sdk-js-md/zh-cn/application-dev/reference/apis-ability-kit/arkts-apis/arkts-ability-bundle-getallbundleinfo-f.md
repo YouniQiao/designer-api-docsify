@@ -77,6 +77,8 @@ bundle.getAllBundleInfo(bundleFlag, userId, (err, data) => {
 ```
 
 
+<a id="getallbundleinfo-1"></a>
+
 ## getAllBundleInfo
 
 ```TypeScript
@@ -104,6 +106,8 @@ function getAllBundleInfo(bundleFlag: BundleFlag, callback: AsyncCallback<Array<
 
 参见 [getAllBundleInfo](#getallbundleinfo)
 
+
+<a id="getallbundleinfo-2"></a>
 
 ## getAllBundleInfo
 

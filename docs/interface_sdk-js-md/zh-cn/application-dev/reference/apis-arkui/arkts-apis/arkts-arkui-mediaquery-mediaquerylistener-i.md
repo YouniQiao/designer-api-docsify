@@ -1,5 +1,9 @@
 # MediaQueryListener
 
+```TypeScript
+interface MediaQueryListener extends MediaQueryResult
+```
+
 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
 
 继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。

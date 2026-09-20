@@ -1,5 +1,9 @@
 # Router
 
+```TypeScript
+export class Router
+```
+
 提供通过不同的url访问不同的页面，包括跳转到应用内的指定页面、同应用内的某个页面替换当前页面、返回上一页面或指定的页面等。Router还支持命名路由跳转、页面栈管理、参数传递、返回确认对话框等能力，适用于需要统一管理页面导航流程、处理页面间数据传递的场景，与UIContext集成使用可实现灵活的路由控制。
 
 Router基于页面栈机制管理页面导航，页面栈支持的最大容量为32个页面。当调用pushUrl时，目标页面会被压入栈顶；调用replaceUrl时，当前页面会被弹出栈并销毁，目标页面压入栈顶；调用back时，栈顶页面会被弹出。
@@ -61,6 +65,8 @@ back(options?: router.RouterOptions): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | 返回页面描述信息。当需要返回到指定的页面时传入此参数（通过url指定目标页面）；当只需返回上一页时可以不传入此参数。url指定返回的目标页面：若页面栈中存在该url，则返回至index最大的同名页面；若不存在则不响应操作。若url未设置，则返回上一页（页面不会重新构建，出栈后会被回收）。 |
+
+<a id="back-1"></a>
 
 ## back
 
@@ -307,6 +313,8 @@ pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+<a id="pushnamedroute-1"></a>
+
 ## pushNamedRoute
 
 ```TypeScript
@@ -344,6 +352,8 @@ pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+<a id="pushnamedroute-2"></a>
+
 ## pushNamedRoute
 
 ```TypeScript
@@ -376,6 +386,8 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+<a id="pushnamedroute-3"></a>
 
 ## pushNamedRoute
 
@@ -447,6 +459,8 @@ pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 
+<a id="pushurl-1"></a>
+
 ## pushUrl
 
 ```TypeScript
@@ -488,6 +502,8 @@ pushUrl(options: router.RouterOptions): Promise<void>
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 
+<a id="pushurl-2"></a>
+
 ## pushUrl
 
 ```TypeScript
@@ -520,6 +536,8 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+
+<a id="pushurl-3"></a>
 
 ## pushUrl
 
@@ -590,6 +608,8 @@ replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<vo
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+<a id="replacenamedroute-1"></a>
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -626,6 +646,8 @@ replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+<a id="replacenamedroute-2"></a>
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -657,6 +679,8 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 | [401](../../errorcode-universal.md#401-参数检查失败) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+<a id="replacenamedroute-3"></a>
 
 ## replaceNamedRoute
 
@@ -726,6 +750,8 @@ replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+<a id="replaceurl-1"></a>
+
 ## replaceUrl
 
 ```TypeScript
@@ -767,6 +793,8 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+<a id="replaceurl-2"></a>
+
 ## replaceUrl
 
 ```TypeScript
@@ -798,6 +826,8 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+
+<a id="replaceurl-3"></a>
 
 ## replaceUrl
 

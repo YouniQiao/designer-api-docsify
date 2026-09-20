@@ -86,6 +86,8 @@ inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((resu
 ```
 
 
+<a id="switchcurrentinputmethodandsubtype-1"></a>
+
 ## switchCurrentInputMethodAndSubtype
 
 ```TypeScript

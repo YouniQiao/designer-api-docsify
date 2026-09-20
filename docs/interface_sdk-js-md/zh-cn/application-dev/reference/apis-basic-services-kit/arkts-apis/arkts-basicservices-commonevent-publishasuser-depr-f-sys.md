@@ -79,6 +79,8 @@ commonEvent.publishAsUser('event', userId, options, publishCallBack);
 ```
 
 
+<a id="publishasuser-1"></a>
+
 ## publishAsUser
 
 ```TypeScript

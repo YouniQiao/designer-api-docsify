@@ -1,5 +1,9 @@
 # SelectParams
 
+```TypeScript
+export interface SelectParams
+```
+
 Provides optional attributes for the selection area.
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # LayoutBorderInfo
 
+```TypeScript
+declare interface LayoutBorderInfo
+```
+
 子组件边框信息
 
 @interface LayoutBorderInfo

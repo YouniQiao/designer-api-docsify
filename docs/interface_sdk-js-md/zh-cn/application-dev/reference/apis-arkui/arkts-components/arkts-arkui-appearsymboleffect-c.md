@@ -1,5 +1,9 @@
 # AppearSymbolEffect
 
+```TypeScript
+declare class AppearSymbolEffect extends SymbolEffect
+```
+
 AppearSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)

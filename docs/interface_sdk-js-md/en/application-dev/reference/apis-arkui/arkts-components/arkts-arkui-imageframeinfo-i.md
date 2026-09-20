@@ -1,5 +1,9 @@
 # ImageFrameInfo
 
+```TypeScript
+interface ImageFrameInfo
+```
+
 Image frame information set.
 
 **Since:** 7

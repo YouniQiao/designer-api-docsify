@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="cancel-3"></a>
+
 ## cancel
 
 ```TypeScript

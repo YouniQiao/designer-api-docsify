@@ -1,5 +1,9 @@
 # GestureRecognizer
 
+```TypeScript
+declare class GestureRecognizer
+```
+
 手势识别器对象。
 
 **起始版本：** 12

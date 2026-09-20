@@ -1,5 +1,9 @@
 # SelectionContainerAttribute
 
+```TypeScript
+export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>
+```
+
 支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
 支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。

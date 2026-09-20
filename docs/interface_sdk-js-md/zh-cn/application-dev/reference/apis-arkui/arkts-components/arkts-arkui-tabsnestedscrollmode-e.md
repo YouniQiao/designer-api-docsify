@@ -1,5 +1,9 @@
 # TabsNestedScrollMode
 
+```TypeScript
+declare enum TabsNestedScrollMode
+```
+
 Tabs组件和父组件的嵌套滚动模式枚举。
 
 **起始版本：** 24

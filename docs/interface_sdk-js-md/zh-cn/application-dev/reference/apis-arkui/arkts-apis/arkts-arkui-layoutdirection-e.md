@@ -1,5 +1,9 @@
 # LayoutDirection
 
+```TypeScript
+declare enum LayoutDirection
+```
+
 系统的布局方向类型。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # AVMusicTemplate
 
+```TypeScript
+class AVMusicTemplate
+```
+
 AVMusicTemplate interface
 
 **Since:** 23

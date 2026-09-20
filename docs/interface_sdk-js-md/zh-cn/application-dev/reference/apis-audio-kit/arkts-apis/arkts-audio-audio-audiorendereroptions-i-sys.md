@@ -1,5 +1,9 @@
 # AudioRendererOptions
 
+```TypeScript
+interface AudioRendererOptions
+```
+
 音频渲染器选项信息。
 
 **起始版本：** 8

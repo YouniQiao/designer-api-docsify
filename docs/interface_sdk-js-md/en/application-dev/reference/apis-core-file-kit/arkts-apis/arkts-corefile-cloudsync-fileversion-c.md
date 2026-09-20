@@ -1,5 +1,9 @@
 # FileVersion
 
+```TypeScript
+class FileVersion
+```
+
 Represents the device-cloud file version management class. It allows you to manage historical versions of client- cloud files, obtain the list of historical versions, download historical versions to the local device, replace the current local file with a historical version file, and query and remove conflict flags for version conflicts.
 
 **Since:** 20

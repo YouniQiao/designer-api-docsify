@@ -1,5 +1,9 @@
 # AtomicServiceWeb
 
+```TypeScript
+export declare struct AtomicServiceWeb
+```
+
 **AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
 
 > **NOTE:** 

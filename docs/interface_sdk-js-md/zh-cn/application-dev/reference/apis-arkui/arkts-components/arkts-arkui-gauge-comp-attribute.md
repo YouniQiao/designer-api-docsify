@@ -1,5 +1,9 @@
 # Gauge属性/事件
 
+```TypeScript
+declare class GaugeAttribute extends CommonMethod<GaugeAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。

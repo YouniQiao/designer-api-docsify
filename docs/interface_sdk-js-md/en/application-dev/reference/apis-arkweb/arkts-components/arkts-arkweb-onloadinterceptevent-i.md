@@ -1,5 +1,9 @@
 # OnLoadInterceptEvent
 
+```TypeScript
+declare interface OnLoadInterceptEvent
+```
+
 Defines the callback information triggered when resource loading is intercepted, including the request details. It is suitable for scenarios where intercepting or handling resource loading is required, improving resource control flexibility and security.
 
 **Since:** 12

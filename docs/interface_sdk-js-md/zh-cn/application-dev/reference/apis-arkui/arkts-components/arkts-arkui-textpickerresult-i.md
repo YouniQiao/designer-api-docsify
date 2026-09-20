@@ -1,5 +1,9 @@
 # TextPickerResult
 
+```TypeScript
+declare interface TextPickerResult
+```
+
 文本选择器结果。
 
 **起始版本：** 8
@@ -9,7 +13,7 @@
 ## index
 
 ```TypeScript
-index: number | number[]
+index: number[]
 ```
 
 选中项在选择范围数组中的索引值，索引从0开始。（文本选择器显示多列时，index为数组类型。）
@@ -25,7 +29,7 @@ index: number | number[]
 ## value
 
 ```TypeScript
-value: string | string[]
+value: string[]
 ```
 
 选中项的文本内容。

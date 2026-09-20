@@ -55,6 +55,8 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: n
 ```
 
 
+<a id="hasmatchedcalllog-1"></a>
+
 ## hasMatchedCallLog
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # DataProxyHandle
 
+```TypeScript
+interface DataProxyHandle
+```
+
 数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)构建一个实例。
 
 **起始版本：** 20

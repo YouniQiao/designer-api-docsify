@@ -1,5 +1,9 @@
 # ListBackPressBehavior
 
+```TypeScript
+declare interface ListBackPressBehavior
+```
+
 Defines the system back button behavior of the **List** component.
 
 **Since:** 26.0.0

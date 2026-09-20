@@ -148,6 +148,8 @@ notificationManager.publishAsBundle(representativeBundle, request).then(() => {
 ```
 
 
+<a id="publishasbundle-1"></a>
+
 ## publishAsBundle
 
 ```TypeScript
@@ -209,6 +211,8 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 
 参见 [publishAsBundle](#publishasbundle)
 
+
+<a id="publishasbundle-2"></a>
 
 ## publishAsBundle
 

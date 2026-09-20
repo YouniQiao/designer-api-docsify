@@ -67,6 +67,8 @@ promise.then((data: string[]) => {
 ```
 
 
+<a id="splitmessage-1"></a>
+
 ## splitMessage
 
 ```TypeScript

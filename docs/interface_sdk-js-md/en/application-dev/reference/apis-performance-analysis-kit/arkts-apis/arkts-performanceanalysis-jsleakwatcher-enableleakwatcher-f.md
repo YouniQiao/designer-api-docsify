@@ -68,6 +68,8 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
 ```
 
 
+<a id="enableleakwatcher-1"></a>
+
 ## enableLeakWatcher
 
 ```TypeScript

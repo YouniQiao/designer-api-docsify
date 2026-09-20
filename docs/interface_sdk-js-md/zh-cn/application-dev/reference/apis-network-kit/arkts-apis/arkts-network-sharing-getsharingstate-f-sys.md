@@ -69,6 +69,8 @@ sharing
 ```
 
 
+<a id="getsharingstate-1"></a>
+
 ## getSharingState
 
 ```TypeScript

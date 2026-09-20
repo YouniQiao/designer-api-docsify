@@ -65,6 +65,8 @@ statistics.getCellularTxBytes().then((stats: number) => {
 ```
 
 
+<a id="getcellulartxbytes-1"></a>
+
 ## getCellularTxBytes
 
 ```TypeScript

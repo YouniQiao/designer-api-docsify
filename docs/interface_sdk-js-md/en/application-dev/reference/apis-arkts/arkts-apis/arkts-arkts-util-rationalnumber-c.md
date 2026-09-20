@@ -1,5 +1,9 @@
 # RationalNumber
 
+```TypeScript
+class RationalNumber
+```
+
 Provides APIs to compare rational numbers and obtain numerators and denominators. For example, the **toString()** API can be used to convert a rational number into a string.
 
 **Since:** 8
@@ -118,6 +122,8 @@ let rationalNumber = new util.RationalNumber();
 ```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

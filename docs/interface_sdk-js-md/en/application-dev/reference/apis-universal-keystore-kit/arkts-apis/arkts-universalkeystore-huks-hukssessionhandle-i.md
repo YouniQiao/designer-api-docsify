@@ -1,5 +1,9 @@
 # HuksSessionHandle
 
+```TypeScript
+export interface HuksSessionHandle
+```
+
 Defines the struct for a HUKS handle.
 
 **Since:** 9

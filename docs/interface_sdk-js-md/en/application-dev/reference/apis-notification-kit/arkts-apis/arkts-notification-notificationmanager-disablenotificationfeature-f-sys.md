@@ -84,6 +84,8 @@ try {
 ```
 
 
+<a id="disablenotificationfeature-1"></a>
+
 ## disableNotificationFeature
 
 ```TypeScript

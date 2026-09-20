@@ -1,5 +1,9 @@
 # DateTimeFormat
 
+```TypeScript
+export class DateTimeFormat
+```
+
 提供日期格式化的能力。
 
 **起始版本：** 6
@@ -54,6 +58,8 @@ let formatter: intl.DateTimeFormat = new intl.DateTimeFormat('zh-CN', { dateStyl
 // 使用区域ID列表创建DateTimeFormat对象，因为ban为非法区域ID，因此使用zh区域ID创建DateTimeFormat对象
 formatter = new intl.DateTimeFormat(['ban', 'zh'], { dateStyle: 'full', timeStyle: 'medium' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

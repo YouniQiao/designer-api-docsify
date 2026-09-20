@@ -1,5 +1,9 @@
 # ButtonOptions
 
+```TypeScript
+declare interface ButtonOptions
+```
+
 Describes the button style.
 
 **Since:** 7

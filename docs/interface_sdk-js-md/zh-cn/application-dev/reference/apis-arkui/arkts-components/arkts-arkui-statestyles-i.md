@@ -1,5 +1,9 @@
 # StateStyles
 
+```TypeScript
+declare interface StateStyles
+```
+
 组件不同状态下的样式。
 
 **起始版本：** 8

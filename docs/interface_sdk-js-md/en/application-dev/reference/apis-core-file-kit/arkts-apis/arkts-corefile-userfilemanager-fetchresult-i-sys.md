@@ -1,5 +1,9 @@
 # FetchResult (System API)
 
+```TypeScript
+interface FetchResult<T>
+```
+
 Provides APIs to manage the file retrieval result.
 
 **Since:** 9
@@ -71,6 +75,8 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="getallobject-1"></a>
 
 ## getAllObject
 
@@ -160,6 +166,8 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
 
+<a id="getfirstobject-1"></a>
+
 ## getFirstObject
 
 ```TypeScript
@@ -217,6 +225,8 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="getlastobject-1"></a>
 
 ## getLastObject
 
@@ -277,6 +287,8 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="getnextobject-1"></a>
 
 ## getNextObject
 
@@ -344,6 +356,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 ```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 ```
+
+<a id="getpositionobject-1"></a>
 
 ## getPositionObject
 

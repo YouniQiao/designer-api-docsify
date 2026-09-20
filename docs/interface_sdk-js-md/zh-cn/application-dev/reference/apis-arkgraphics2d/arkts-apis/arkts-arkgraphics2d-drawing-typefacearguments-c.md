@@ -1,5 +1,9 @@
 # TypefaceArguments
 
+```TypeScript
+class TypefaceArguments
+```
+
 提供字体属性配置的类，用于配置可变字体的属性参数（如字重维度等轴标签及对应属性值）。
 
 > **说明：** 

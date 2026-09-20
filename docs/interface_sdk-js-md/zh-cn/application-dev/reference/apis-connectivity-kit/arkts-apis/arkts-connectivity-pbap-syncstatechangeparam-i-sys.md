@@ -1,5 +1,9 @@
 # SyncStateChangeParam（系统接口）
 
+```TypeScript
+interface SyncStateChangeParam
+```
+
 电话本同步状态变化信息。
 
 **起始版本：** 26.0.1

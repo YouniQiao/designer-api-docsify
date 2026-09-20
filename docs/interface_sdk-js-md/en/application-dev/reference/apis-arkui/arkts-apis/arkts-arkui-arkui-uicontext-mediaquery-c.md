@@ -1,5 +1,9 @@
 # MediaQuery
 
+```TypeScript
+export class MediaQuery
+```
+
 class MediaQuery
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # RichEditorGesture
 
+```TypeScript
+declare interface RichEditorGesture
+```
+
 Defines a user gesture event.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # Repeat属性/事件
 
+```TypeScript
+declare class RepeatAttribute<T> extends DynamicNode<RepeatAttribute<T>>
+```
+
 除支持拖拽排序属性外，还支持以下属性。
 
 **继承/实现关系：** RepeatAttribute extends DynamicNode<RepeatAttribute<T>>

@@ -1,5 +1,9 @@
 # SpringLoadingContext
 
+```TypeScript
+class SpringLoadingContext
+```
+
 定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态、动态刷新UI效果以及访问拖拽数据以确定是否处理拖拽操作。
 
 **起始版本：** 20

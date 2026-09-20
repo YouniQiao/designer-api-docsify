@@ -1,5 +1,9 @@
 # SwiperNestedScrollMode
 
+```TypeScript
+declare enum SwiperNestedScrollMode
+```
+
 Swiper组件和父组件的嵌套滚动模式枚举。
 
 **起始版本：** 11

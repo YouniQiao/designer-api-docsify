@@ -1,5 +1,9 @@
 # MonitorObjectType
 
+```TypeScript
+export enum MonitorObjectType
+```
+
 Enumerates the types of component objects to be monitored.
 
 **Since:** 24

@@ -1,5 +1,9 @@
 # ChipV2Size
 
+```TypeScript
+export declare enum ChipV2Size
+```
+
 Defines the size type that can be specified for the **ChipV2** component, such as a normal **ChipV2**.
 
 **Since:** 26.0.0

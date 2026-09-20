@@ -1,5 +1,9 @@
 # WritableSystemEnvKey
 
+```TypeScript
+declare class WritableSystemEnvKey<T> extends SystemEnvKey<T>
+```
+
 Defines writable system environment variable keys.
 
 **Inheritance/Implementation:** WritableSystemEnvKey extends SystemEnvKey<T>

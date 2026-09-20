@@ -1,5 +1,9 @@
 # ClientAuthenticationHandler
 
+```TypeScript
+declare class ClientAuthenticationHandler
+```
+
 ClientAuthenticationHandler是Web组件中处理SSL客户端证书认证请求的类。当服务器请求客户端证书进行TLS双向认证时，该处理器通过`onClientAuthenticationRequest`事件回调提供给应用，允许应用选择合适的证书凭据进行响应。示例代码参考[onClientAuthenticationRequest](arkts-arkweb-web-comp-attribute.md#onclientauthenticationrequest)事件。
 
 **起始版本：** 9
@@ -41,6 +45,8 @@ confirm(priKeyFile: string, certChainFile: string): void
 | priKeyFile | string | 是 | 存放私钥文件的完整路径。 |
 | certChainFile | string | 是 | 存放证书链文件的完整路径。 |
 
+<a id="confirm-1"></a>
+
 ## confirm
 
 ```TypeScript
@@ -60,6 +66,8 @@ confirm(authUri: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | authUri | string | 是 | 凭据的关键值。 |
+
+<a id="confirm-2"></a>
 
 ## confirm
 

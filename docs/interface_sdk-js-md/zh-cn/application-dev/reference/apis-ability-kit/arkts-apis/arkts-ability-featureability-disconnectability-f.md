@@ -93,6 +93,8 @@ featureAbility.disconnectAbility(connectId).then(() => {
 ```
 
 
+<a id="disconnectability-1"></a>
+
 ## disconnectAbility
 
 ```TypeScript

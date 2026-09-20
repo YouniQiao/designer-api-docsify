@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="settouchpaddoubletapanddragstate-1"></a>
+
 ## setTouchpadDoubleTapAndDragState
 
 ```TypeScript

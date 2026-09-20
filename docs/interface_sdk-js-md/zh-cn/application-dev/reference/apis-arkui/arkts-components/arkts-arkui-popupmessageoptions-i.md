@@ -1,5 +1,9 @@
 # PopupMessageOptions
 
+```TypeScript
+declare interface PopupMessageOptions
+```
+
 气泡文本的样式。
 
 **起始版本：** 10

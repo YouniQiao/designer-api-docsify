@@ -1,5 +1,9 @@
 # CameraInput
 
+```TypeScript
+interface CameraInput
+```
+
 相机设备输入对象。
 
 会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
@@ -39,6 +43,8 @@ close(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="close-1"></a>
 
 ## close
 
@@ -240,6 +246,8 @@ open(callback: AsyncCallback<void>): void
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
+<a id="open-1"></a>
+
 ## open
 
 ```TypeScript
@@ -268,6 +276,8 @@ open(): Promise<void>
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="open-2"></a>
 
 ## open
 
@@ -302,6 +312,8 @@ open(isSecureEnabled: boolean): Promise<bigint>
 | [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+
+<a id="open-3"></a>
 
 ## open
 

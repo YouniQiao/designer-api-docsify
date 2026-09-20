@@ -61,6 +61,8 @@ data.getCellularDataState().then((contextData: data.DataConnectState) => {
 ```
 
 
+<a id="getcellulardatastate-1"></a>
+
 ## getCellularDataState
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # FolderStack properties/events
 
+```TypeScript
+declare class FolderStackAttribute extends CommonMethod<FolderStackAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 

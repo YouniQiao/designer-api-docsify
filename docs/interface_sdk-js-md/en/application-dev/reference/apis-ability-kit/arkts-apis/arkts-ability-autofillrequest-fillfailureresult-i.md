@@ -1,5 +1,9 @@
 # FillFailureResult
 
+```TypeScript
+export interface FillFailureResult
+```
+
 Fill fail result.
 
 **Since:** 26.0.0

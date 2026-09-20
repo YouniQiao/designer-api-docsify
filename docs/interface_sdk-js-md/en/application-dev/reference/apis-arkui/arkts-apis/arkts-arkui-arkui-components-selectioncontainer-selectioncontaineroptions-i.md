@@ -1,5 +1,9 @@
 # SelectionContainerOptions
 
+```TypeScript
+export interface SelectionContainerOptions
+```
+
 Describes the initialization options of the SelectionContainer component.
 
 **Since:** 26.0.0

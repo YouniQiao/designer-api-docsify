@@ -1,5 +1,9 @@
 # ColumnSplit properties/events
 
+```TypeScript
+declare class ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 > **NOTE:** 

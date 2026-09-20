@@ -1,5 +1,9 @@
 # Battery
 
+```TypeScript
+export default class Battery
+```
+
 The module allows you to query the charging status and remaining power of a device.
 
 **Since:** 3

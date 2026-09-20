@@ -1,5 +1,9 @@
 # PinVerifyResult
 
+```TypeScript
+declare enum PinVerifyResult
+```
+
 Defines the PIN verification results, which identify the execution status of PIN verification.
 
 **Since:** 22

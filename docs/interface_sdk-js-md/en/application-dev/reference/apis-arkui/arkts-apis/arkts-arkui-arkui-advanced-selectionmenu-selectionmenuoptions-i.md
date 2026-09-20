@@ -1,5 +1,9 @@
 # SelectionMenuOptions
 
+```TypeScript
+export interface SelectionMenuOptions
+```
+
 Defines the configuration options of the **SelectionMenu** component.
 
 **Since:** 11

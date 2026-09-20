@@ -104,6 +104,8 @@ applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisallowedrunningbundles-1"></a>
+
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 
 参见 [getDisallowedRunningBundles](#getdisallowedrunningbundles)
 
+
+<a id="getdisallowedrunningbundles-2"></a>
 
 ## getDisallowedRunningBundles
 

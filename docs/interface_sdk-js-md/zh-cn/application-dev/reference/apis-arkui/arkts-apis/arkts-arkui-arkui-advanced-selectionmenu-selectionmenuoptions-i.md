@@ -1,5 +1,9 @@
 # SelectionMenuOptions
 
+```TypeScript
+export interface SelectionMenuOptions
+```
+
 SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参数。
 
 **起始版本：** 11

@@ -1,5 +1,9 @@
 # PluralRules
 
+```TypeScript
+export class PluralRules
+```
+
 提供获取单复数类型的能力。
 
 **起始版本：** 8
@@ -49,6 +53,8 @@ import { intl } from '@kit.LocalizationKit';
 // 使用zh-CN区域ID创建PluralRules对象，localeMatcher设置为lookup，type设置为cardinal
 let pluralRules: intl.PluralRules = new intl.PluralRules('zh-CN', { localeMatcher: 'lookup', type: 'cardinal' });
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

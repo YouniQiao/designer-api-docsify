@@ -1,5 +1,9 @@
 # GestureRecognizerState
 
+```TypeScript
+declare enum GestureRecognizerState
+```
+
 定义手势识别器状态。
 
 **起始版本：** 12

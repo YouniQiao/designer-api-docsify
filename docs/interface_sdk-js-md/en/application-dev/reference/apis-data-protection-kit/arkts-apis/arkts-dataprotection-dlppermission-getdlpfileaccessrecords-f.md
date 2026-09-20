@@ -60,6 +60,8 @@ dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
 ```
 
 
+<a id="getdlpfileaccessrecords-1"></a>
+
 ## getDLPFileAccessRecords
 
 ```TypeScript

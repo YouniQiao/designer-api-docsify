@@ -1,5 +1,9 @@
 # FlexSpaceOptions
 
+```TypeScript
+declare interface FlexSpaceOptions
+```
+
 设置Flex容器的子组件在主轴或交叉轴的间距。
 
 **起始版本：** 12

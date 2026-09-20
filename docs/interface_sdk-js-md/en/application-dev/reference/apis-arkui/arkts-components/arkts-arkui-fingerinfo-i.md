@@ -1,5 +1,9 @@
 # FingerInfo
 
+```TypeScript
+interface FingerInfo
+```
+
 Defines the finger information type.
 
 **Since:** 8

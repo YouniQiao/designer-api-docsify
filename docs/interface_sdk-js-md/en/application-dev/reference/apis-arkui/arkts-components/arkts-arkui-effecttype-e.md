@@ -1,5 +1,9 @@
 # EffectType
 
+```TypeScript
+declare enum EffectType
+```
+
 Enum of using the effects template mode.
 
 **Effect Template: **

@@ -89,6 +89,8 @@ try {
 ```
 
 
+<a id="publishasuser-1"></a>
+
 ## publishAsUser
 
 ```TypeScript

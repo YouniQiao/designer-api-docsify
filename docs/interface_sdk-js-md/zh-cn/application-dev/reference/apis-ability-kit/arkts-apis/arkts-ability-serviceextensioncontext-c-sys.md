@@ -1,5 +1,9 @@
 # ServiceExtensionContext（系统接口）
 
+```TypeScript
+declare class ServiceExtensionContext extends ExtensionContext
+```
+
 ServiceExtensionContext模块是ServiceExtensionAbility的上下文环境，继承自ExtensionContext。
 
 ServiceExtensionContext模块提供ServiceExtensionAbility具有的能力，包括启动、停止、绑定、解绑Ability。
@@ -302,6 +306,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="disconnectserviceextensionability-1"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -730,6 +736,8 @@ class ServiceExtension extends ServiceExtensionAbility {
 }
 ```
 
+<a id="requestmodaluiextension-1"></a>
+
 ## requestModalUIExtension
 
 ```TypeScript
@@ -1018,6 +1026,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -1076,6 +1086,8 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 **示例**
 
 参见 [startAbility](#startability)
+
+<a id="startability-2"></a>
 
 ## startAbility
 
@@ -1279,6 +1291,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilityascaller-1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1339,6 +1353,8 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 **示例**
 
 参见 [startAbilityAsCaller](#startabilityascaller)
+
+<a id="startabilityascaller-2"></a>
 
 ## startAbilityAsCaller
 
@@ -1738,6 +1754,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilitywithaccount-1"></a>
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1804,6 +1822,8 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 **示例**
 
 参见 [startAbilityWithAccount](#startabilitywithaccount)
+
+<a id="startabilitywithaccount-2"></a>
 
 ## startAbilityWithAccount
 
@@ -2035,6 +2055,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startrecentability-1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2097,6 +2119,8 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 **示例**
 
 参见 [startRecentAbility](#startrecentability)
+
+<a id="startrecentability-2"></a>
 
 ## startRecentAbility
 
@@ -2269,6 +2293,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startserviceextensionability-1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2438,6 +2464,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="startserviceextensionabilitywithaccount-1"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2767,6 +2795,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="stopserviceextensionability-1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2927,6 +2957,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="stopserviceextensionabilitywithaccount-1"></a>
+
 ## stopServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -3053,6 +3085,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="terminateself-1"></a>
 
 ## terminateSelf
 

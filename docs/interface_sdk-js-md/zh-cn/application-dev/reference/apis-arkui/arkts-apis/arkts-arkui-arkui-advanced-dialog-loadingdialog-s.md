@@ -1,5 +1,9 @@
 # LoadingDialog
 
+```TypeScript
+export declare struct LoadingDialog
+```
+
 进度加载类弹出框，用于显示操作执行中的提示信息。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # ImagingModeQuery (System API)
 
+```TypeScript
+interface ImagingModeQuery
+```
+
 Imaging mode query object.
 
 **Since:** 26.0.1

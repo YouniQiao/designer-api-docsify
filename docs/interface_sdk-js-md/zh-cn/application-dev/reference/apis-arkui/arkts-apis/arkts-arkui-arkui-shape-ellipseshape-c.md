@@ -1,5 +1,9 @@
 # EllipseShape
 
+```TypeScript
+export declare class EllipseShape extends BaseShape<EllipseShape>
+```
+
 用于clipShape和maskShape接口的椭圆形状。
 
 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。

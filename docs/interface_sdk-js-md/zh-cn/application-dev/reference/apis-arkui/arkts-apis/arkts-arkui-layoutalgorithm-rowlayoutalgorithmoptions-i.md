@@ -1,5 +1,9 @@
 # RowLayoutAlgorithmOptions
 
+```TypeScript
+interface RowLayoutAlgorithmOptions
+```
+
 设置水平方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。
 
 **起始版本：** 24

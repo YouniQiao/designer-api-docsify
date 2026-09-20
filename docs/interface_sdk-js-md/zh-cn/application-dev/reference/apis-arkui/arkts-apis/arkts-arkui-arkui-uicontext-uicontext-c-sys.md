@@ -1,5 +1,9 @@
 # UIContext
 
+```TypeScript
+export class UIContext
+```
+
 UIContext实例对象。
 
 > **说明：** 
@@ -91,6 +95,8 @@ freezeUINode(id: string, isFrozen: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+
+<a id="freezeuinode-1"></a>
 
 ## freezeUINode
 

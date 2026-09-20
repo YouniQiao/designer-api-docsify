@@ -1,5 +1,9 @@
 # PathIterator
 
+```TypeScript
+class PathIterator
+```
+
 Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
 
 > **NOTE:** 

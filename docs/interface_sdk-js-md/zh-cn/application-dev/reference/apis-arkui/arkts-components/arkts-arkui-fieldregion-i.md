@@ -1,5 +1,9 @@
 # FieldRegion
 
+```TypeScript
+declare interface FieldRegion
+```
+
 用于设置粒子场的区域信息。
 
 **起始版本：** 22

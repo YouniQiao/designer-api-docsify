@@ -1,5 +1,9 @@
 # CaptionsManager
 
+```TypeScript
+interface CaptionsManager
+```
+
 字幕配置管理。调用CaptionsManager的方法前，先调用[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md)获取CaptionsManager实例。
 
 **起始版本：** 8

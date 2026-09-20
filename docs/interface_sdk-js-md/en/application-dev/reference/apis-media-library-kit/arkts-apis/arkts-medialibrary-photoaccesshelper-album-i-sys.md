@@ -1,5 +1,9 @@
 # Album
 
+```TypeScript
+interface Album extends AbsAlbum
+```
+
 Provides APIs to manage albums.
 
 **Inheritance/Implementation:** Album extends [AbsAlbum](arkts-medialibrary-photoaccesshelper-absalbum-i.md)
@@ -61,6 +65,8 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="deleteassets-1"></a>
 
 ## deleteAssets
 
@@ -313,6 +319,8 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
+<a id="recoverassets-1"></a>
+
 ## recoverAssets
 
 ```TypeScript
@@ -403,6 +411,8 @@ Sets the cover of the user album. This API uses an asynchronous callback to retu
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="setcoveruri-1"></a>
 
 ## setCoverUri
 

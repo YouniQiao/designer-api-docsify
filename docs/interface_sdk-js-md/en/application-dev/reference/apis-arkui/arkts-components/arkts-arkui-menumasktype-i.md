@@ -1,5 +1,9 @@
 # MenuMaskType
 
+```TypeScript
+declare interface MenuMaskType
+```
+
 Sets the mask type.
 
 **Since:** 20
@@ -36,7 +40,7 @@ color?: ResourceColor
 
 Mask color.
 
-Default value: **&#36;r('sys.color.ohos_id_color_mask_thin')**
+Default value: **$r('sys.color.ohos_id_color_mask_thin')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

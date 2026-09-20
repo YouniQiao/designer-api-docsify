@@ -32,6 +32,8 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) in
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 
+<a id="bindcontroller-1"></a>
+
 ## bindController
 
 ```TypeScript
@@ -63,6 +65,8 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
+
+<a id="bindcontroller-2"></a>
 
 ## bindController
 
@@ -96,6 +100,8 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md) to the [Scro
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**Applicable version:** 15 - 24 |
 
 
+<a id="bindcontroller-3"></a>
+
 ## bindController
 
 ```TypeScript
@@ -127,6 +133,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
 
+
+<a id="bindcontroller-4"></a>
 
 ## bindController
 
@@ -160,6 +168,8 @@ Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontrol
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 
+<a id="bindcontroller-5"></a>
+
 ## bindController
 
 ```TypeScript
@@ -192,6 +202,8 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
 
 
+<a id="bindcontroller-6"></a>
+
 ## bindController
 
 ```TypeScript
@@ -223,6 +235,8 @@ Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
+
+<a id="bindcontroller-7"></a>
 
 ## bindController
 

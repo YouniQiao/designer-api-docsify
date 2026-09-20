@@ -1,5 +1,9 @@
 # WhiteBalanceGains（系统接口）
 
+```TypeScript
+interface WhiteBalanceGains
+```
+
 RGB white balance gain values.
 
 **起始版本：** 26.0.1

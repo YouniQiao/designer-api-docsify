@@ -1,5 +1,9 @@
 # WaterFlowLayoutMode
 
+```TypeScript
+declare enum WaterFlowLayoutMode
+```
+
 Enumerates the layout modes of the **WaterFlow** component.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # Paragraph
 
+```TypeScript
+class Paragraph
+```
+
 Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
 
 Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
@@ -554,6 +558,8 @@ let arrLineMetric =  paragraph.getLineMetrics();
 ```TypeScript
 let lineMetrics =  paragraph.getLineMetrics(0);
 ```
+
+<a id="getlinemetrics-1"></a>
 
 ## getLineMetrics
 

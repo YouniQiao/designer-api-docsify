@@ -1,5 +1,9 @@
 # InteractionModalUIExtension（系统接口）
 
+```TypeScript
+interface InteractionModalUIExtension extends InteractionUI
+```
+
 定义当意图执行完成时模态UIExtension要显示为交互界面的信息，不支持分布式。
 
 **继承/实现关系：** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)

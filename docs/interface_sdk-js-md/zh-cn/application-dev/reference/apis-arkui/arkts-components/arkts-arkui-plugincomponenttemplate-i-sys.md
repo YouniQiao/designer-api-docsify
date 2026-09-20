@@ -1,5 +1,9 @@
 # PluginComponentTemplate（系统接口）
 
+```TypeScript
+interface PluginComponentTemplate
+```
+
 定义插件组件模板信息，用于与提供方定义的组件绑定。
 
 **起始版本：** 9

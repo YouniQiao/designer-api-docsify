@@ -1,5 +1,9 @@
 # GridLayoutAlgorithm
 
+```TypeScript
+export class GridLayoutAlgorithm implements LayoutAlgorithm
+```
+
 A grid layout algorithm class, which is used to implement grid arrangement of child components. It is suitable for scenarios where child components need to be arranged in a grid format, such as grid menus, photo grids, app lists, and product displays. It supports setting the column count template, column spacing, and row spacing, which provides layout capabilities similar to the **Grid** component.
 
 > **NOTE:** 

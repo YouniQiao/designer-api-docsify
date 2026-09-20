@@ -1,5 +1,9 @@
 # ParticleUpdater
 
+```TypeScript
+declare enum ParticleUpdater
+```
+
 Enumerates the updater types of a particle.
 
 @enum { string }

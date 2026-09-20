@@ -1,5 +1,9 @@
 # GeometryTransitionOptions
 
+```TypeScript
+declare interface GeometryTransitionOptions
+```
+
 Defines the options of geometry transition.
 
 **Since:** 11

@@ -72,6 +72,8 @@ try {
 ```
 
 
+<a id="getcooperateswitchstate-1"></a>
+
 ## getCooperateSwitchState
 
 ```TypeScript

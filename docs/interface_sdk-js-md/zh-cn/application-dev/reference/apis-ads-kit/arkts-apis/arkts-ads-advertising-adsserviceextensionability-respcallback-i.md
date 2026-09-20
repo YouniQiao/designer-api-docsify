@@ -1,5 +1,9 @@
 # RespCallback
 
+```TypeScript
+export interface RespCallback
+```
+
 广告请求回调。
 
 **起始版本：** 11

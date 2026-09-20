@@ -1,5 +1,9 @@
 # GestureGroupInterface
 
+```TypeScript
+interface GestureGroupInterface
+```
+
 手势识别组合，即两种及以上手势组合为复合手势，支持顺序识别、并发识别和互斥识别。
 
 **起始版本：** 7

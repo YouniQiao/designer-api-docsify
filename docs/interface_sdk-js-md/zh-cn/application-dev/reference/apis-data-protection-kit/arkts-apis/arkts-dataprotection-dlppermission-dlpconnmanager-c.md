@@ -1,5 +1,9 @@
 # DlpConnManager
 
+```TypeScript
+export class DlpConnManager
+```
+
 用于调用registerPlugin和unregisterPlugin接口，在SA（System Ability）中注册或注销回调能力。
 
 > **说明：** 

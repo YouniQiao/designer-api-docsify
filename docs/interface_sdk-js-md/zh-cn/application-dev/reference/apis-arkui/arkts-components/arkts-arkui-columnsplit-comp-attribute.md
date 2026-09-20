@@ -1,5 +1,9 @@
 # ColumnSplit属性/事件
 
+```TypeScript
+declare class ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 支持通用事件。

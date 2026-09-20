@@ -1,5 +1,9 @@
 # DragEvent
 
+```TypeScript
+declare interface DragEvent
+```
+
 拖拽事件信息。
 
 **起始版本：** 7
@@ -573,7 +577,7 @@ startDataLoading(options: DataSyncOptions): string
 ## autoHideComponentUniqueIds
 
 ```TypeScript
-autoHideComponentUniqueIds?: number | number[]
+autoHideComponentUniqueIds?: number[]
 ```
 
 设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。

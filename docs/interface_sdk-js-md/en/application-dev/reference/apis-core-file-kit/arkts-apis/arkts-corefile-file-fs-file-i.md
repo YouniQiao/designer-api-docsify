@@ -1,5 +1,9 @@
 # File
 
+```TypeScript
+declare interface File
+```
+
 Represents a **File** object opened by **open()**.
 
 **Since:** 9
@@ -128,6 +132,8 @@ file.lock(true, (err: BusinessError) => {
 });
 ```
 
+<a id="lock-1"></a>
+
 ## lock
 
 ```TypeScript
@@ -160,6 +166,8 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 **Examples**
 
 See [lock](#lock)
+
+<a id="lock-2"></a>
 
 ## lock
 

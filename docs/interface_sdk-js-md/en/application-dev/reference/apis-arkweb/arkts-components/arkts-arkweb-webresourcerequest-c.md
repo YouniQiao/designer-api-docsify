@@ -1,5 +1,9 @@
 # WebResourceRequest
 
+```TypeScript
+declare class WebResourceRequest
+```
+
 WebResourceRequest is a class in the Web component that represents a network resource request, providing detailed metadata about the requested resource. This object is used in event callbacks such as `onErrorReceive`, `onHttpErrorReceive`, and request interception to help developers diagnose network errors, monitor request status, and implement resource interception control. By using this class, the app can improve error handling, enhance request controllability, and optimize user experience. For sample code, see [onErrorReceive event](arkts-arkweb-web-comp-attribute.md#onerrorreceive).
 
 **Since:** 8

@@ -1,5 +1,9 @@
 # ContextMenuInputFieldType
 
+```TypeScript
+declare enum ContextMenuInputFieldType
+```
+
 Enumerates the input field types.
 
 **Since:** 9

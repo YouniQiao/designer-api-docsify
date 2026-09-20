@@ -1,5 +1,9 @@
 # SwipeGestureEvent
 
+```TypeScript
+interface SwipeGestureEvent extends BaseGestureEvent
+```
+
 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin)的event参数来传递。
 
 **继承/实现关系：** SwipeGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)

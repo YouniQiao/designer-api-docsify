@@ -1,5 +1,9 @@
 # InnerFullScreenLaunchComponent（系统接口）
 
+```TypeScript
+export declare struct InnerFullScreenLaunchComponent
+```
+
 非显式全屏拉起原子化服务组件，拉起方可以选择拉起原子化服务的时机。当被拉起方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
 
 > **说明：** 

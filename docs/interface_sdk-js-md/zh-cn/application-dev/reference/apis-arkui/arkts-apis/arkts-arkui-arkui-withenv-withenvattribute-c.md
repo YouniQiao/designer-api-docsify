@@ -1,5 +1,9 @@
 # WithEnvAttribute
 
+```TypeScript
+export declare class WithEnvAttribute
+```
+
 定义WithEnv组件的属性功能。
 
 **起始版本：** 26.0.0

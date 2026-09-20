@@ -1,5 +1,9 @@
 # ParticleConfigs
 
+```TypeScript
+interface ParticleConfigs
+```
+
 设置粒子配置项。
 
 **起始版本：** 10

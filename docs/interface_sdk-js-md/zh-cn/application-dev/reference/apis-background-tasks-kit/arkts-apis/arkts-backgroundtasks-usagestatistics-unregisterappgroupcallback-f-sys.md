@@ -69,6 +69,8 @@ usageStatistics.unregisterAppGroupCallBack((err: BusinessError) => {
 ```
 
 
+<a id="unregisterappgroupcallback-1"></a>
+
 ## unregisterAppGroupCallBack
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # RemoteProxy
 
+```TypeScript
+class RemoteProxy extends IRemoteObject
+```
+
 实现IRemoteObject代理对象。
 
 **继承/实现关系：** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
@@ -368,6 +372,8 @@ sendMessageRequest(
 上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendMessageRequest接口方法发送消息
 ```
 
+<a id="sendmessagerequest-1"></a>
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -457,6 +463,8 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
 ```
 
+<a id="sendrequest-1"></a>
+
 ## sendRequest
 
 ```TypeScript
@@ -504,6 +512,8 @@ sendRequest(
 ```TypeScript
 上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
 ```
+
+<a id="sendrequest-2"></a>
 
 ## sendRequest
 

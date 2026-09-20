@@ -1,5 +1,9 @@
 # TabsAnimationEvent
 
+```TypeScript
+declare interface TabsAnimationEvent
+```
+
 Describes the animation information of the **Tabs** component.
 
 **Since:** 11

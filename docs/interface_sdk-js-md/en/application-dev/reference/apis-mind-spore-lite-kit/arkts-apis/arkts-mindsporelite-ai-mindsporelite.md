@@ -20,14 +20,14 @@ import { mindSporeLite } from '@kit.MindSporeLiteKit';
 | --- | --- |
 | [getAllNNRTDeviceDescriptions](arkts-mindsporelite-mindsporelite-getallnnrtdevicedescriptions-f.md) | Obtain the all device descriptions in NNRT. |
 | [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md) | Create a Model instance from buffer |
-| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md) | Create a Model instance from buffer |
-| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md) | Create a Model instance from buffer |
+| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadmodelfrombuffer-1) | Create a Model instance from buffer |
+| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadmodelfrombuffer-2) | Create a Model instance from buffer |
 | [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md) | Creates a Model instance file description |
-| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md) | Create a Model instance from file description |
-| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md) | Create a Model instance from file description |
+| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadmodelfromfd-1) | Create a Model instance from file description |
+| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadmodelfromfd-2) | Create a Model instance from file description |
 | [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md) | Create a Model instance from file path |
-| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md) | Create a Model instance from file path. |
-| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md) | Create a Model instance from file path. |
+| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadmodelfromfile-1) | Create a Model instance from file path. |
+| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadmodelfromfile-2) | Create a Model instance from file path. |
 | [loadTrainModelFromBuffer](arkts-mindsporelite-mindsporelite-loadtrainmodelfrombuffer-f.md) | Load train model from buffer |
 | [loadTrainModelFromFd](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfd-f.md) | Load train model from file description |
 | [loadTrainModelFromFile](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfile-f.md) | Load train model from file |

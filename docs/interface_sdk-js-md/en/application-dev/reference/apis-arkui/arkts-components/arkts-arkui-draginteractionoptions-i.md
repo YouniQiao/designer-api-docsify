@@ -1,5 +1,9 @@
 # DragInteractionOptions
 
+```TypeScript
+declare interface DragInteractionOptions
+```
+
 Interaction behavior for the floating preview image
 
 **Since:** 12
@@ -60,7 +64,7 @@ Whether to enable haptic feedback during dragging.
 
 **true**: Enable haptic feedback during dragging.
 
-**false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks (configured using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)).
+**false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks (configured using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)).
 
 Note: The settings take effect only when the application has the **ohos.permission.VIBRATE** permission and the user has enabled haptic feedback.
 

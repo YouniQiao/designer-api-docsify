@@ -1,5 +1,9 @@
 # DismissReason
 
+```TypeScript
+declare enum DismissReason
+```
+
 Enumerates the reasons for popup dismissal.
 
 **Since:** 12

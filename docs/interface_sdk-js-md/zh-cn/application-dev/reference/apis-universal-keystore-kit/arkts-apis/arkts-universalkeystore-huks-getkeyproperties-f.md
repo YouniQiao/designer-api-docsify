@@ -62,6 +62,8 @@ let result = huks.getKeyProperties(keyAlias, emptyOptions);
 ```
 
 
+<a id="getkeyproperties-1"></a>
+
 ## getKeyProperties
 
 ```TypeScript
@@ -73,14 +75,14 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md)
+> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md)(keyAlias: string, options: HuksOptions)
+**替代接口：** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1)(keyAlias: string, options: HuksOptions)
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

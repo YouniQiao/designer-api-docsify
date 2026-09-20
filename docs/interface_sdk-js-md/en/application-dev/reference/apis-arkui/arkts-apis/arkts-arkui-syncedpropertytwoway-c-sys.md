@@ -1,5 +1,10 @@
 # SyncedPropertyTwoWay (System API)
 
+```TypeScript
+declare class SyncedPropertyTwoWay<T> extends SubscribedAbstractProperty<T>
+  implements ISinglePropertyChangeSubscriber<T>
+```
+
 Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with two-way synchronization.
 
 **Inheritance/Implementation:** SyncedPropertyTwoWay extends SubscribedAbstractProperty<T> and implements ISinglePropertyChangeSubscriber<T>

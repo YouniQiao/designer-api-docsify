@@ -1,5 +1,9 @@
 # DividerStyle
 
+```TypeScript
+interface DividerStyle
+```
+
 分割线样式对象。
 
 **起始版本：** 10

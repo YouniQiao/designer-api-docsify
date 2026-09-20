@@ -79,6 +79,8 @@ try {
 ```
 
 
+<a id="acquireformdata-1"></a>
+
 ## acquireFormData
 
 ```TypeScript

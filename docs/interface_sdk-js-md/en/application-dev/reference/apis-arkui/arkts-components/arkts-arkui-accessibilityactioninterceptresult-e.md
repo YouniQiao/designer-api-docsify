@@ -1,5 +1,9 @@
 # AccessibilityActionInterceptResult
 
+```TypeScript
+declare enum AccessibilityActionInterceptResult
+```
+
 Enum for the result of accessibility action intercept function
 
 **Since:** 20

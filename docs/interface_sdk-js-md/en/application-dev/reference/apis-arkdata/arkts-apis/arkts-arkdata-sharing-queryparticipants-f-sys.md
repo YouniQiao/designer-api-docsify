@@ -60,6 +60,8 @@ cloudData.sharing.queryParticipants('sharing_resource_test', (err: BusinessError
 ```
 
 
+<a id="queryparticipants-1"></a>
+
 ## queryParticipants
 
 ```TypeScript

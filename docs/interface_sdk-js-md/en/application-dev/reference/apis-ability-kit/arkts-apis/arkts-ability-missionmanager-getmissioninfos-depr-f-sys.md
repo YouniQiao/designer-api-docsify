@@ -66,6 +66,8 @@ try {
 ```
 
 
+<a id="getmissioninfos-1"></a>
+
 ## getMissionInfos
 
 ```TypeScript

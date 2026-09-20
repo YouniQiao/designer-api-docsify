@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="getkeyeventpolicies-1"></a>
+
 ## getKeyEventPolicies
 
 ```TypeScript

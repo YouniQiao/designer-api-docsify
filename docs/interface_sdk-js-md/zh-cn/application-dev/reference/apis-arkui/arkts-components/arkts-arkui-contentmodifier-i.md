@@ -1,5 +1,9 @@
 # ContentModifier
 
+```TypeScript
+declare interface ContentModifier<T>
+```
+
 开发者需要自定义class实现ContentModifier接口。
 
 **起始版本：** 12

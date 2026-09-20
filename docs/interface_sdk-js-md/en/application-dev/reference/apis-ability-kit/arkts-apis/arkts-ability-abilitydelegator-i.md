@@ -1,5 +1,9 @@
 # AbilityDelegator
 
+```TypeScript
+export interface AbilityDelegator
+```
+
 The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md).
 
 > **NOTE:** 
@@ -87,6 +91,8 @@ abilityDelegator.addAbilityMonitor(monitor).then(() => {
   console.info('addAbilityMonitor promise');
 });
 ```
+
+<a id="addabilitymonitor-1"></a>
 
 ## addAbilityMonitor
 
@@ -235,6 +241,8 @@ abilityDelegator.addAbilityStageMonitor({
   console.info('addAbilityStageMonitor promise');
 });
 ```
+
+<a id="addabilitystagemonitor-1"></a>
 
 ## addAbilityStageMonitor
 
@@ -420,6 +428,8 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+<a id="doabilitybackground-1"></a>
+
 ## doAbilityBackground
 
 ```TypeScript
@@ -535,6 +545,8 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+<a id="doabilityforeground-1"></a>
+
 ## doAbilityForeground
 
 ```TypeScript
@@ -646,6 +658,8 @@ abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
 });
 ```
 
+<a id="executeshellcommand-1"></a>
+
 ## executeShellCommand
 
 ```TypeScript
@@ -671,6 +685,8 @@ Executes a shell command with the timeout period specified. This API uses an asy
 **Examples**
 
 See [executeShellCommand](#executeshellcommand)
+
+<a id="executeshellcommand-2"></a>
 
 ## executeShellCommand
 
@@ -764,6 +780,8 @@ abilityDelegator.finishTest(msg, 0).then(() => {
   console.info('finishTest promise');
 });
 ```
+
+<a id="finishtest-1"></a>
 
 ## finishTest
 
@@ -954,6 +972,8 @@ abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
 });
 ```
 
+<a id="getcurrenttopability-1"></a>
+
 ## getCurrentTopAbility
 
 ```TypeScript
@@ -1037,6 +1057,8 @@ abilityDelegator.print(msg).then(() => {
   console.info('print promise');
 });
 ```
+
+<a id="print-1"></a>
 
 ## print
 
@@ -1185,6 +1207,8 @@ abilityDelegator.removeAbilityMonitor(monitor).then(() => {
 });
 ```
 
+<a id="removeabilitymonitor-1"></a>
+
 ## removeAbilityMonitor
 
 ```TypeScript
@@ -1332,6 +1356,8 @@ abilityDelegator.removeAbilityStageMonitor({
   console.info('removeAbilityStageMonitor promise');
 });
 ```
+
+<a id="removeabilitystagemonitor-1"></a>
 
 ## removeAbilityStageMonitor
 
@@ -1569,6 +1595,8 @@ abilityDelegator.startAbility(want).then((data: void) => {
 });
 ```
 
+<a id="startability-1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -1728,6 +1756,8 @@ abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
 });
 ```
 
+<a id="waitabilitymonitor-1"></a>
+
 ## waitAbilityMonitor
 
 ```TypeScript
@@ -1760,6 +1790,8 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 **Examples**
 
 See [waitAbilityMonitor](#waitabilitymonitor)
+
+<a id="waitabilitymonitor-2"></a>
 
 ## waitAbilityMonitor
 
@@ -1885,6 +1917,8 @@ abilityDelegator.waitAbilityStageMonitor({
 });
 ```
 
+<a id="waitabilitystagemonitor-1"></a>
+
 ## waitAbilityStageMonitor
 
 ```TypeScript
@@ -1917,6 +1951,8 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 **Examples**
 
 See [waitAbilityStageMonitor](#waitabilitystagemonitor)
+
+<a id="waitabilitystagemonitor-2"></a>
 
 ## waitAbilityStageMonitor
 

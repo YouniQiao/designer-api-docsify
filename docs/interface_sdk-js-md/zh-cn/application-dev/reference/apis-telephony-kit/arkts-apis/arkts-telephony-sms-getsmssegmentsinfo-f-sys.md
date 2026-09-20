@@ -66,6 +66,8 @@ promise.then((data: sms.SmsSegmentsInfo) => {
 ```
 
 
+<a id="getsmssegmentsinfo-1"></a>
+
 ## getSmsSegmentsInfo
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # FetchResult
 
+```TypeScript
+interface FetchResult<T>
+```
+
 FetchResult provides APIs to manage the file retrieval result.
 
 **Since:** 10
@@ -88,6 +92,8 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getallobjects-1"></a>
+
 ## getAllObjects
 
 ```TypeScript
@@ -168,6 +174,8 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getfirstobject-1"></a>
 
 ## getFirstObject
 
@@ -251,6 +259,8 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getlastobject-1"></a>
+
 ## getLastObject
 
 ```TypeScript
@@ -306,6 +316,8 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getnextobject-1"></a>
 
 ## getNextObject
 
@@ -363,6 +375,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getobjectbyposition-1"></a>
 
 ## getObjectByPosition
 

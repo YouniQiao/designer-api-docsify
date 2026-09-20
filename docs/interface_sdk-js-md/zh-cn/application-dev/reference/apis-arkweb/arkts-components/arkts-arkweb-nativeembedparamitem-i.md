@@ -1,5 +1,9 @@
 # NativeEmbedParamItem
 
+```TypeScript
+declare interface NativeEmbedParamItem
+```
+
 提供同层渲染object标签内嵌param元素的详细信息，包括状态和参数。适用于需要监控param元素变化的场景，提升同层元素管理的灵活性和准确性。
 
 **起始版本：** 21

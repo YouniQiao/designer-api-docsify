@@ -1,5 +1,9 @@
 # SessionRestore (System API)
 
+```TypeScript
+class SessionRestore
+```
+
 Control class for restore procedure.
 
 **Since:** 10
@@ -219,6 +223,8 @@ async function appendBundles() {
   }
 }
 ```
+
+<a id="appendbundles-1"></a>
 
 ## appendBundles
 
@@ -986,6 +992,8 @@ async function getFileHandle() {
 }
 ```
 
+<a id="getfilehandle-1"></a>
+
 ## getFileHandle
 
 ```TypeScript
@@ -1432,6 +1440,8 @@ function createSessionRestore() {
 }
 g_session = createSessionRestore();
 ```
+
+<a id="publishfile-1"></a>
 
 ## publishFile
 

@@ -1,5 +1,9 @@
 # SubTabBarStyle
 
+```TypeScript
+declare class SubTabBarStyle
+```
+
 Implements the subtab style. A transition animation is played when the user switches between tabs.
 
 **Since:** 9
@@ -53,6 +57,8 @@ Constructor used to create a **SubTabBarStyle** instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -131,6 +137,8 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 | Type | Description |
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
+
+<a id="indicator-1"></a>
 
 ## indicator
 
@@ -216,6 +224,8 @@ Static constructor used to create a **SubTabBarStyle** instance.
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object created. |
 
+<a id="of-1"></a>
+
 ## of
 
 ```TypeScript
@@ -271,6 +281,8 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 | Type | Description |
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
+
+<a id="padding-1"></a>
 
 ## padding
 

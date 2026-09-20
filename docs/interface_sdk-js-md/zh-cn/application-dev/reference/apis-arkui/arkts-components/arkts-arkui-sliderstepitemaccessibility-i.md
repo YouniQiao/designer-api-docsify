@@ -1,5 +1,9 @@
 # SliderStepItemAccessibility
 
+```TypeScript
+declare interface SliderStepItemAccessibility
+```
+
 Slider刻度点的无障碍文本信息。
 
 **起始版本：** 20

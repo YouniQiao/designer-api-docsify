@@ -1,5 +1,9 @@
 # GattClientDevice
 
+```TypeScript
+interface GattClientDevice
+```
+
 client端类，使用client端方法之前需要创建该类的实例进行操作，通过createGattClientDevice(deviceId: string)方法构造此实例。
 
 从API version 9开始支持，从API version 10开始废弃。
@@ -219,6 +223,8 @@ try {
 }
 ```
 
+<a id="getdevicename-1"></a>
+
 ## getDeviceName
 
 ```TypeScript
@@ -327,6 +333,8 @@ try {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
 ```
+
+<a id="getrssivalue-1"></a>
 
 ## getRssiValue
 
@@ -446,6 +454,8 @@ try {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
 ```
+
+<a id="getservices-1"></a>
 
 ## getServices
 
@@ -736,6 +746,8 @@ try {
 }
 ```
 
+<a id="readcharacteristicvalue-1"></a>
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -872,6 +884,8 @@ try {
     console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
 }
 ```
+
+<a id="readdescriptorvalue-1"></a>
 
 ## readDescriptorValue
 

@@ -1,5 +1,9 @@
 # DedicatedWorkerGlobalScope
 
+```TypeScript
+export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope
+```
+
 Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **继承/实现关系：** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
@@ -171,6 +175,8 @@ parentPort.onmessage = (e: MessageEvents) => {
 }
 ```
 
+<a id="postmessage-1"></a>
+
 ## postMessage
 
 ```TypeScript
@@ -241,6 +247,8 @@ parentPort.onmessage = (e: MessageEvents) => {
   parentPort.postMessage("receive data from main thread");
 }
 ```
+
+<a id="postmessage-2"></a>
 
 ## postMessage
 

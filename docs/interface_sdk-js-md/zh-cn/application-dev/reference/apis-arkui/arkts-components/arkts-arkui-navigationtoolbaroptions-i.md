@@ -1,5 +1,9 @@
 # NavigationToolbarOptions
 
+```TypeScript
+declare interface NavigationToolbarOptions
+```
+
 工具栏选项。
 
 **起始版本：** 11

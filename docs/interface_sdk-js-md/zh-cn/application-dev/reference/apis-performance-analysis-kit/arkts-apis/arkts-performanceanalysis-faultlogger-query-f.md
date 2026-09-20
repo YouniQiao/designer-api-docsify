@@ -98,6 +98,8 @@ async function getLog() {
 ```
 
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript

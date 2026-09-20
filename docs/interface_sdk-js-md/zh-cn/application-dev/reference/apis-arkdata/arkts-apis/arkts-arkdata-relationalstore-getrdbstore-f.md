@@ -68,6 +68,8 @@ Stage模型示例：
 ```
 
 
+<a id="getrdbstore-1"></a>
+
 ## getRdbStore
 
 ```TypeScript

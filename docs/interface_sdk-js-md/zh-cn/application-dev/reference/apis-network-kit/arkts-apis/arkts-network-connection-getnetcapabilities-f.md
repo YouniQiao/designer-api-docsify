@@ -80,6 +80,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 ```
 
 
+<a id="getnetcapabilities-1"></a>
+
 ## getNetCapabilities
 
 ```TypeScript

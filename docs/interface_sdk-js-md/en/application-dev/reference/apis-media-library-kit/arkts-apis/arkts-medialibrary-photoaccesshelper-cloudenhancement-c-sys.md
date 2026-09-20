@@ -1,5 +1,9 @@
 # CloudEnhancement (System API)
 
+```TypeScript
+class CloudEnhancement
+```
+
 Provides APIs for cloud enhancement management, including managing the tasks of generating AI-powered cloud- enhanced photos and obtaining the association between the original photos and AI cloud-enhanced photos.
 
 **Since:** 13
@@ -336,6 +340,8 @@ Submits cloud enhancement tasks. This API uses a promise to return the result.
 ```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
+
+<a id="submitcloudenhancementtasks-1"></a>
 
 ## submitCloudEnhancementTasks
 

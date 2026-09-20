@@ -1,5 +1,9 @@
 # LayoutDirection
 
+```TypeScript
+declare enum LayoutDirection
+```
+
 Enumerates system layout directions.
 
 **Since:** 7

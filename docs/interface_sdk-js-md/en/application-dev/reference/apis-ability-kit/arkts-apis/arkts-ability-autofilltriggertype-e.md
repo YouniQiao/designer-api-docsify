@@ -1,5 +1,9 @@
 # AutoFillTriggerType
 
+```TypeScript
+export enum AutoFillTriggerType
+```
+
 This module specifies how the autofill service is triggered, based on different user gestures.
 
 **Since:** 26.0.0

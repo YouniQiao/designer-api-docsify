@@ -1,5 +1,9 @@
 # TabBarIconStyle
 
+```TypeScript
+declare interface TabBarIconStyle
+```
+
 Represents a label icon style object.
 
 **Since:** 12

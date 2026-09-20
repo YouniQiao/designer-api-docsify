@@ -1,5 +1,9 @@
 # AddPermissionUsedRecordOptions（系统接口）
 
+```TypeScript
+interface AddPermissionUsedRecordOptions
+```
+
 添加权限使用记录可选参数集。
 
 **起始版本：** 12

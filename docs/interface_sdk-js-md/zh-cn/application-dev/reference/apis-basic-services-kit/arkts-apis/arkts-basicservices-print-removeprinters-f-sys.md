@@ -66,6 +66,8 @@ print.removePrinters([printerId]).then(() => {
 ```
 
 
+<a id="removeprinters-1"></a>
+
 ## removePrinters
 
 ```TypeScript

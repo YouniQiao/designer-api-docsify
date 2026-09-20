@@ -1,5 +1,9 @@
 # WithEnvAttribute
 
+```TypeScript
+export declare class WithEnvAttribute
+```
+
 Supports the following **WithEnv**-specific attributes.
 
 The [universal events](../arkts-components/arkts-arkui-commonmethod-c.md) are not supported.

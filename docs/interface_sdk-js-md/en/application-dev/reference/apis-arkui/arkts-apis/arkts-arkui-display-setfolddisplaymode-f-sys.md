@@ -61,6 +61,8 @@ try {
 ```
 
 
+<a id="setfolddisplaymode-1"></a>
+
 ## setFoldDisplayMode
 
 ```TypeScript

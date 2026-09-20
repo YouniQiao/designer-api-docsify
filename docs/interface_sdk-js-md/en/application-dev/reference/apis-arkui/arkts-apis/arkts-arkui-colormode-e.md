@@ -1,5 +1,9 @@
 # ColorMode
 
+```TypeScript
+declare enum ColorMode
+```
+
 Enumerates system color modes.
 
 **Since:** 7

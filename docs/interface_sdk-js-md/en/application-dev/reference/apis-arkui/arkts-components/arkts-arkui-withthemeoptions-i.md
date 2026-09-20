@@ -1,5 +1,9 @@
 # WithThemeOptions
 
+```TypeScript
+declare interface WithThemeOptions
+```
+
 Defines the default theme and color mode for components within the **WithTheme** scope.
 
 **Since:** 12

@@ -107,6 +107,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="gettopwindow-1"></a>
+
 ## getTopWindow
 
 ```TypeScript
@@ -119,7 +121,7 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext)
+**Substitutes:** [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)(ctx: BaseContext)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -136,6 +138,8 @@ Obtains the top window of the current application. This API uses a promise to re
 See [getTopWindow](#gettopwindow)
 
 
+<a id="gettopwindow-2"></a>
+
 ## getTopWindow
 
 ```TypeScript
@@ -148,7 +152,7 @@ Obtains the top window of the current application. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext)
+**Substitutes:** [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)(ctx: BaseContext)
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -168,6 +172,8 @@ Obtains the top window of the current application. This API uses a promise to re
 
 See [getTopWindow](#gettopwindow)
 
+
+<a id="gettopwindow-3"></a>
 
 ## getTopWindow
 

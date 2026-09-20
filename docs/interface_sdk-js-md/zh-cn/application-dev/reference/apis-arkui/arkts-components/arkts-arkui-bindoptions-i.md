@@ -1,5 +1,9 @@
 # BindOptions
 
+```TypeScript
+declare interface BindOptions
+```
+
 半模态、全模态的公共配置接口。
 
 **起始版本：** 10

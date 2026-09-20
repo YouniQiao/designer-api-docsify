@@ -1,5 +1,9 @@
 # DragStartRequestStatus
 
+```TypeScript
+const enum DragStartRequestStatus
+```
+
 Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when onDragStart is called.
 
 **Since:** 18

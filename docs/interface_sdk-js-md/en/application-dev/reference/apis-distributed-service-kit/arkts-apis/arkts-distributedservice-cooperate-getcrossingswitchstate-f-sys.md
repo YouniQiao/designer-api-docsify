@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="getcrossingswitchstate-1"></a>
+
 ## getCrossingSwitchState
 
 ```TypeScript
@@ -85,7 +87,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)(networkId: string)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

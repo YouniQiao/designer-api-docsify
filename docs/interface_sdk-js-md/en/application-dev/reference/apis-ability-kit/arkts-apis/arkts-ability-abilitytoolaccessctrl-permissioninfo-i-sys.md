@@ -1,5 +1,9 @@
 # PermissionInfo (System API)
 
+```TypeScript
+interface PermissionInfo
+```
+
 Permission information.
 
 **Since:** 26.0.0

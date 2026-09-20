@@ -1,5 +1,9 @@
 # ThemeColorMode
 
+```TypeScript
+declare enum ThemeColorMode
+```
+
 设置颜色模式。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # BadgeParam
 
+```TypeScript
+declare interface BadgeParam
+```
+
 包含用于创建Badge组件的基础参数。
 
 **起始版本：** 7

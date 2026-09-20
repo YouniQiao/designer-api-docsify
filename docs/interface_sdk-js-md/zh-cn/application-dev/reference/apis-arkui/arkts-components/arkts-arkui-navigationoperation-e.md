@@ -1,5 +1,9 @@
 # NavigationOperation
 
+```TypeScript
+declare enum NavigationOperation
+```
+
 页面跳转类型。
 
 **起始版本：** 11

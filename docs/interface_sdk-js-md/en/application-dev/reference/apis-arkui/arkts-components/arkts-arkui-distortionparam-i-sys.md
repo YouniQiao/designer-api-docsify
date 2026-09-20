@@ -1,5 +1,9 @@
 # DistortionParam (System API)
 
+```TypeScript
+declare interface DistortionParam
+```
+
 Defines the spatial distortion parameters.
 
 > **NOTE:** 

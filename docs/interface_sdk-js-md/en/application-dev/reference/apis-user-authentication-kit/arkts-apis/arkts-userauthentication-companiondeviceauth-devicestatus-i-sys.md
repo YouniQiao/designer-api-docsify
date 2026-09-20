@@ -1,5 +1,9 @@
 # DeviceStatus (System API)
 
+```TypeScript
+interface DeviceStatus
+```
+
 Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, list of supported service IDs, and device sub-profile name.
 
 **Since:** 23

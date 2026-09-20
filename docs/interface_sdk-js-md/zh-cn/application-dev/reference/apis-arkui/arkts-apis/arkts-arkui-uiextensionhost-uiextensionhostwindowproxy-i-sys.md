@@ -1,5 +1,9 @@
 # UIExtensionHostWindowProxy（系统接口）
 
+```TypeScript
+interface UIExtensionHostWindowProxy
+```
+
 Transition Controller
 
 **起始版本：** 11
@@ -143,6 +147,8 @@ export default class EntryAbility extends UIExtensionAbility {
   }
 }
 ```
+
+<a id="createsubwindowwithoptions-1"></a>
 
 ## createSubWindowWithOptions
 

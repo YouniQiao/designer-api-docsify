@@ -1,5 +1,9 @@
 # SpatialPosition (System API)
 
+```TypeScript
+declare interface SpatialPosition
+```
+
 Spatial corner positions in 3D space.
 
 **Since:** 26.0.0

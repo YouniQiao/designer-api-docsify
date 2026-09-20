@@ -1,5 +1,9 @@
 # DepthSpaceType（系统接口）
 
+```TypeScript
+declare enum DepthSpaceType
+```
+
 景深空间类型枚举。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # ChainAnimationOptions (System API)
 
+```TypeScript
+declare interface ChainAnimationOptions
+```
+
 Defines the chain animation options.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # Configuration
 
+```TypeScript
+declare interface Configuration
+```
+
 Defines the data type of the interface restriction.
 
 @interface Configuration

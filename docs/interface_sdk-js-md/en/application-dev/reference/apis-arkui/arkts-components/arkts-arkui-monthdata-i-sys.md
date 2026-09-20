@@ -1,5 +1,9 @@
 # MonthData (System API)
 
+```TypeScript
+interface MonthData
+```
+
 Date object.
 
 **Since:** 7

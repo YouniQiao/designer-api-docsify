@@ -1,5 +1,9 @@
 # ScreenCaptureMonitor（系统接口）
 
+```TypeScript
+interface ScreenCaptureMonitor
+```
+
 录屏状态监控类，用于查询和监听系统录屏的录屏状态。在调用ScreenCaptureMonitor方法前，需要先通过[getScreenCaptureMonitor()](arkts-media-media-getscreencapturemonitor-f-sys.md)构建一个[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)实例。
 
 **起始版本：** 18

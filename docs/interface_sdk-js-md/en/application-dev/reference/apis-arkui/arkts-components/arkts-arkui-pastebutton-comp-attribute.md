@@ -1,5 +1,9 @@
 # PasteButton properties/events
 
+```TypeScript
+declare class PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
+```
+
 This component can only inherit the universal attributes of security components.
 
 <br>Only the following events are supported.

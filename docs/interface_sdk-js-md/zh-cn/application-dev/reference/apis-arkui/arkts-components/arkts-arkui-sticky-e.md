@@ -1,5 +1,9 @@
 # Sticky
 
+```TypeScript
+declare enum Sticky
+```
+
 ListItem吸顶效果枚举。
 
 **起始版本：** 7

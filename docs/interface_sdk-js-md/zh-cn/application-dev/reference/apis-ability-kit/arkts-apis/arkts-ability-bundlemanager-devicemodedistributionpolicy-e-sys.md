@@ -1,5 +1,9 @@
 # DeviceModeDistributionPolicy（系统接口）
 
+```TypeScript
+enum DeviceModeDistributionPolicy
+```
+
 定义设备模式分发策略枚举，用于指定应用程序如何分发到设备上。
 
 **起始版本：** 26.0.1

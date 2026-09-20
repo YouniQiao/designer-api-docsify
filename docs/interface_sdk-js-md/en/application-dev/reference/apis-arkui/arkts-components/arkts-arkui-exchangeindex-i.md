@@ -1,5 +1,9 @@
 # ExchangeIndex
 
+```TypeScript
+interface ExchangeIndex
+```
+
 Defines position of exchange data.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # Buffer
 
+```TypeScript
+class Buffer
+```
+
 The Buffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 9
@@ -210,7 +214,7 @@ console.info(buf1.equals(buf3).toString());
 
 ```TypeScript
 fill(
-      value: string | Buffer | Uint8Array | number | number | number,
+      value: string | Buffer | Uint8Array | number,
       offset?: number,
       end?: number,
       encoding?: BufferEncoding
@@ -259,7 +263,7 @@ console.info(b.toString());
 ## includes
 
 ```TypeScript
-includes(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
+includes(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
 ```
 
 Checks whether this **Buffer** object contains the specified value.
@@ -299,7 +303,7 @@ console.info(buf.includes('be').toString());
 ## indexOf
 
 ```TypeScript
-indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+indexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
 Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
@@ -379,7 +383,7 @@ Output: 0
 ## lastIndexOf
 
 ```TypeScript
-lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+lastIndexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
 ```
 
 Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.

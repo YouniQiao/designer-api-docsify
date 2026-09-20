@@ -61,6 +61,8 @@ try {
 ```
 
 
+<a id="getallwindowlayoutinfo-1"></a>
+
 ## getAllWindowLayoutInfo
 
 ```TypeScript

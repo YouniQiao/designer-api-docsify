@@ -96,6 +96,8 @@ try {
 ```
 
 
+<a id="getformsinfo-1"></a>
+
 ## getFormsInfo
 
 ```TypeScript
@@ -129,6 +131,8 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 
 参见 [getFormsInfo](#getformsinfo)
 
+
+<a id="getformsinfo-2"></a>
 
 ## getFormsInfo
 

@@ -1,8 +1,7 @@
 # DataOperation
 
 ```TypeScript
-declare type DataOperation =
-  DataAddOperation | DataDeleteOperation | DataChangeOperation | DataMoveOperation | DataExchangeOperation | DataReloadOperation
+declare type DataOperation =DataAddOperation | DataDeleteOperation | DataChangeOperation | DataMoveOperation | DataExchangeOperation | DataReloadOperation
 ```
 
 All data operation types.

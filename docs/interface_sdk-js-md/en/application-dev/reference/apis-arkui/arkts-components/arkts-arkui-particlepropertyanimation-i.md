@@ -1,5 +1,9 @@
 # ParticlePropertyAnimation
 
+```TypeScript
+interface ParticlePropertyAnimation<T>
+```
+
 Defines the particle property lifecycle. @interface ParticlePropertyAnimation
 
 **Since:** 10

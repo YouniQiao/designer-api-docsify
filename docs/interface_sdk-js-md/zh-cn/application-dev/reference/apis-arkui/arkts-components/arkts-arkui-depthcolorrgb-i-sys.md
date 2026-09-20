@@ -1,5 +1,9 @@
 # DepthColorRGB（系统接口）
 
+```TypeScript
+declare interface DepthColorRGB
+```
+
 深度空间中的RGB颜色。用于为组件设置空间效果参数。
 
 > **说明：** 

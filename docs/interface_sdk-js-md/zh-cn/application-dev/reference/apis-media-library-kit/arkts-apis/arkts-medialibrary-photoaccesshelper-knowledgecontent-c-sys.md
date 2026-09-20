@@ -1,5 +1,9 @@
 # KnowledgeContent（系统接口）
 
+```TypeScript
+class KnowledgeContent
+```
+
 支持的MIME类型。
 
 **起始版本：** 23

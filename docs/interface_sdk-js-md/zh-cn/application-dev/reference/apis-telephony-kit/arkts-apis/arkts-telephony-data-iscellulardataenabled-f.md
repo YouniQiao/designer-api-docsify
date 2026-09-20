@@ -64,6 +64,8 @@ data.isCellularDataEnabled().then((contextData: boolean) => {
 ```
 
 
+<a id="iscellulardataenabled-1"></a>
+
 ## isCellularDataEnabled
 
 ```TypeScript

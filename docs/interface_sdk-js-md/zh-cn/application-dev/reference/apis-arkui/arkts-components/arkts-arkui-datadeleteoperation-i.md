@@ -1,5 +1,9 @@
 # DataDeleteOperation
 
+```TypeScript
+interface DataDeleteOperation
+```
+
 删除数据操作。
 
 **起始版本：** 12

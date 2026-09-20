@@ -1,5 +1,9 @@
 # ImageParticleParameters
 
+```TypeScript
+interface ImageParticleParameters
+```
+
 设置图片选项。
 
 **起始版本：** 10

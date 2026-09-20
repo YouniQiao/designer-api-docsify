@@ -1,5 +1,9 @@
 # RichEditorLayoutStyle
 
+```TypeScript
+interface RichEditorLayoutStyle
+```
+
 Defines image layout information.
 
 **Since:** 11

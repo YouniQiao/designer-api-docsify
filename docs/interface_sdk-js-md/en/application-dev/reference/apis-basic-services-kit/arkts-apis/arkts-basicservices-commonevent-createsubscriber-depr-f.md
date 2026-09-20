@@ -79,6 +79,8 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
 ```
 
 
+<a id="createsubscriber-1"></a>
+
 ## createSubscriber
 
 ```TypeScript
@@ -91,7 +93,7 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md)(subscribeInfo: CommonEventSubscribeInfo)
+**Substitutes:** [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber-1)(subscribeInfo: CommonEventSubscribeInfo)
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

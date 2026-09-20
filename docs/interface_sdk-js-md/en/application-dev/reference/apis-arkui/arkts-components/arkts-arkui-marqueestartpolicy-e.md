@@ -1,5 +1,9 @@
 # MarqueeStartPolicy
 
+```TypeScript
+declare enum MarqueeStartPolicy
+```
+
 Enumerates the marquee scrolling modes.
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # ScrollAnimationOptions
 
+```TypeScript
+declare interface ScrollAnimationOptions
+```
+
 自定义滚动动效的参数选项。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # IRemoteBroker
 
+```TypeScript
+interface IRemoteBroker
+```
+
 远端对象的代理持有者。用于获取代理对象。
 
 **起始版本：** 7

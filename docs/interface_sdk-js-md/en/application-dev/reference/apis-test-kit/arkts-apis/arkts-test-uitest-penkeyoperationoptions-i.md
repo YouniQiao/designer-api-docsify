@@ -1,5 +1,9 @@
 # PenKeyOperationOptions
 
+```TypeScript
+declare interface PenKeyOperationOptions
+```
+
 Pen key operation options.
 
 **Since:** 26.0.0

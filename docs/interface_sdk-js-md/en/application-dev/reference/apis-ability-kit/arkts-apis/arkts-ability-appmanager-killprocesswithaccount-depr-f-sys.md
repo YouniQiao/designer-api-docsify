@@ -74,6 +74,8 @@ appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountC
 ```
 
 
+<a id="killprocesswithaccount-1"></a>
+
 ## killProcessWithAccount
 
 ```TypeScript

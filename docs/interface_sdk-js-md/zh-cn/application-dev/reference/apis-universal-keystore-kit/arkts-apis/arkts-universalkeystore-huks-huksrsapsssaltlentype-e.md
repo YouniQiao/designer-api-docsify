@@ -1,5 +1,9 @@
 # HuksRsaPssSaltLenType
 
+```TypeScript
+export enum HuksRsaPssSaltLenType
+```
+
 表示Rsa在签名验签、padding为pss时需指定的salt_len类型。
 
 **起始版本：** 10

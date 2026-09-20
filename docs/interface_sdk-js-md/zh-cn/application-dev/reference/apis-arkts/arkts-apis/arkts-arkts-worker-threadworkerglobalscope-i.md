@@ -1,5 +1,9 @@
 # ThreadWorkerGlobalScope
 
+```TypeScript
+export interface ThreadWorkerGlobalScope extends GlobalScope
+```
+
 Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。ThreadWorkerGlobalScope类继承GlobalScope9+。
 
 **继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
@@ -268,6 +272,8 @@ workerPort.onmessage = (e: MessageEvents): void => {
     workerPort.postMessage("receive data from main thread");
 }
 ```
+
+<a id="postmessage-1"></a>
 
 ## postMessage
 

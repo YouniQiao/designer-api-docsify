@@ -429,7 +429,7 @@
   - [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)
   - [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)
   - [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)
-  - [属性](arkts-arkui-ohosarkuiarcswiper-p.md)
+  - [属性](arkts-arkui-arkui-arcswiper-p.md)
 - [@ohos.arkui.components.ArkDynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout.md)
   - [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md)
   - [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md)
@@ -463,7 +463,7 @@
   - [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md)
   - [SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)
   - [常量](arkts-arkui-arkui-components-selectioncontainer-con.md)
-- [@ohos.arkui.componentSnapshot](arkts-arkui-arkui-componentsnapshot.md)
+- [@ohos.arkui.componentSnapshot(组件截图)](arkts-arkui-arkui-componentsnapshot.md)
   - [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md)
   - [get](arkts-arkui-componentsnapshot-get-f.md)
   - [getSync](arkts-arkui-componentsnapshot-getsync-f.md)
@@ -474,7 +474,7 @@
   - [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md)
   - [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md)
   - [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md)
-- [@ohos.arkui.componentUtils](arkts-arkui-arkui-componentutils.md)
+- [@ohos.arkui.componentUtils(组件工具)](arkts-arkui-arkui-componentutils.md)
   <!--Del-->
   - [getItemsInShapePath(系统接口)](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md)<!--DelEnd-->
   - [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md)
@@ -508,7 +508,7 @@
   - [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
   - [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
   - [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md)
-- [@ohos.arkui.dragController](arkts-arkui-arkui-dragcontroller.md)
+- [@ohos.arkui.dragController(拖拽控制)](arkts-arkui-arkui-dragcontroller.md)
   - [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md)
   - [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md)
   - [getDragPreview](arkts-arkui-dragcontroller-getdragpreview-f.md)
@@ -1569,7 +1569,8 @@
   - [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)
 <!--Del-->
 - [inspector](arkts-arkui-inspector.md)<!--DelEnd-->
-  - [Profiler](arkts-arkui-profiler-n.md)
+  <!--Del-->
+  - [Profiler(系统接口)](arkts-arkui-profiler-n.md)<!--DelEnd-->
     <!--Del-->
     - [registerVsyncCallback(系统接口)](arkts-arkui-profiler-registervsynccallback-f-sys.md)<!--DelEnd-->
     <!--Del-->

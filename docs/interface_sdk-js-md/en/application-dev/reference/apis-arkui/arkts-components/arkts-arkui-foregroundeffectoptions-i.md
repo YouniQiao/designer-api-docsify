@@ -1,5 +1,9 @@
 # ForegroundEffectOptions
 
+```TypeScript
+declare interface ForegroundEffectOptions
+```
+
 Describes the foreground effect.
 
 **Since:** 12

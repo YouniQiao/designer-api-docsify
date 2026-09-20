@@ -66,6 +66,8 @@ try {
 ```
 
 
+<a id="factoryreset-1"></a>
+
 ## factoryReset
 
 ```TypeScript

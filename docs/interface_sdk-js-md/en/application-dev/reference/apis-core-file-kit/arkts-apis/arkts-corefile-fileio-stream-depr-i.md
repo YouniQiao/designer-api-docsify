@@ -1,5 +1,9 @@
 # Stream
 
+```TypeScript
+declare interface Stream
+```
+
 Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously.
 
 **Since:** 6
@@ -58,6 +62,8 @@ ss.close((err: BusinessError) => {
   // Do something.
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -170,6 +176,8 @@ ss.flush((err: BusinessError) => {
   // Do something.
 });
 ```
+
+<a id="flush-1"></a>
 
 ## flush
 
@@ -307,6 +315,8 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
 });
 ```
 
+<a id="read-1"></a>
+
 ## read
 
 ```TypeScript
@@ -379,6 +389,8 @@ ss.read(arrayBuffer, option, (err: BusinessError, readResult: fileio.ReadOut) =>
   }
 });
 ```
+
+<a id="read-2"></a>
 
 ## read
 
@@ -598,6 +610,8 @@ ss.write("hello, world", option, (err: BusinessError, bytesWritten: number) => {
 });
 ```
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript
@@ -665,6 +679,8 @@ ss.write("hello, world", option, (err: BusinessError, bytesWritten: number) => {
   }
 });
 ```
+
+<a id="write-2"></a>
 
 ## write
 

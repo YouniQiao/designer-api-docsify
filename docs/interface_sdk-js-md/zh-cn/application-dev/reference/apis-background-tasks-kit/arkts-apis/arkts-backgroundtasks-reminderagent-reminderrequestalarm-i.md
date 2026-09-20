@@ -1,5 +1,9 @@
 # ReminderRequestAlarm
 
+```TypeScript
+interface ReminderRequestAlarm extends ReminderRequest
+```
+
 闹钟实例对象，用于设置提醒的时间。
 
 **继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

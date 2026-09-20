@@ -86,6 +86,8 @@ try {
 ```
 
 
+<a id="getlowresolutionmissionsnapshot-1"></a>
+
 ## getLowResolutionMissionSnapShot
 
 ```TypeScript

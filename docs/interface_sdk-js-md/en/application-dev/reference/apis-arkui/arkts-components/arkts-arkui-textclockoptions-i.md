@@ -1,5 +1,9 @@
 # TextClockOptions
 
+```TypeScript
+declare interface TextClockOptions
+```
+
 Options used to build the **TextClock** component.
 
 > **NOTE:** 

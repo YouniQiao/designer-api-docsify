@@ -1,5 +1,9 @@
 # NavBarPosition
 
+```TypeScript
+declare enum NavBarPosition
+```
+
 导航页位置。
 
 **起始版本：** 9

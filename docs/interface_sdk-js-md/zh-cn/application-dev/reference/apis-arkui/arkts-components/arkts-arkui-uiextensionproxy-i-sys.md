@@ -1,5 +1,9 @@
 # UIExtensionProxy（系统接口）
 
+```TypeScript
+declare interface UIExtensionProxy
+```
+
 用于在双方建立连接成功后，组件使用方将数据发送给被拉起的Ability，并订阅和取消订阅扩展Ability的注册事件。
 
 **起始版本：** 10

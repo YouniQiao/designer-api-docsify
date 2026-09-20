@@ -1,5 +1,9 @@
 # ShaderEffect
 
+```TypeScript
+class ShaderEffect
+```
+
 Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
 
 > **NOTE:** 

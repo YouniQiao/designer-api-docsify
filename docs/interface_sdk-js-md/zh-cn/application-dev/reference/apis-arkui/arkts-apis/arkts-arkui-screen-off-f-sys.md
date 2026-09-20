@@ -35,6 +35,8 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -63,6 +65,8 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+
+<a id="off-2"></a>
 
 ## off
 

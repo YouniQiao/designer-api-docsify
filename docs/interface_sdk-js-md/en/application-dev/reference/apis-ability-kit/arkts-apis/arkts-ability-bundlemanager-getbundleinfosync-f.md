@@ -83,6 +83,8 @@ try {
 ```
 
 
+<a id="getbundleinfosync-1"></a>
+
 ## getBundleInfoSync
 
 ```TypeScript

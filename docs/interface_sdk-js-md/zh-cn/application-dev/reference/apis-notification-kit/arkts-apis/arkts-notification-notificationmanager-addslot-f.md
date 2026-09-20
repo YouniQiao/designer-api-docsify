@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="addslot-2"></a>
+
 ## addSlot
 
 ```TypeScript
@@ -104,6 +106,8 @@ notificationManager.addSlot(notificationSlot).then(() => {
 ```
 
 
+<a id="addslot-3"></a>
+
 ## addSlot
 
 ```TypeScript
@@ -122,7 +126,7 @@ function addSlot(type: SlotType): Promise<void>
 
 [getSlot](arkts-notification-notificationmanager-getslot-f.md) 获取指定类型的通知渠道。
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) 删除当前应用指定类型的通知渠道。
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot-1) 删除当前应用指定类型的通知渠道。
 
 [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) 删除当前应用的所有渠道通知。
 

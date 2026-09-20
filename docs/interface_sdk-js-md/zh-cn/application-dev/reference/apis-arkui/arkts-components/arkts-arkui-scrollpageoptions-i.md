@@ -1,5 +1,9 @@
 # ScrollPageOptions
 
+```TypeScript
+declare interface ScrollPageOptions
+```
+
 翻页模式的参数选项。
 
 **起始版本：** 14

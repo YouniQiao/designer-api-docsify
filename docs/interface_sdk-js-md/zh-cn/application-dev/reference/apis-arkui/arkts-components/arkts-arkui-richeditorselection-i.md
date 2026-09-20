@@ -1,5 +1,9 @@
 # RichEditorSelection
 
+```TypeScript
+declare interface RichEditorSelection
+```
+
 选中内容信息。
 
 **起始版本：** 10

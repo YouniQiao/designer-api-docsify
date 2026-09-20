@@ -1,5 +1,9 @@
 # EventListener
 
+```TypeScript
+export interface EventListener
+```
+
 Implements event listening.
 
 **Since:** 7

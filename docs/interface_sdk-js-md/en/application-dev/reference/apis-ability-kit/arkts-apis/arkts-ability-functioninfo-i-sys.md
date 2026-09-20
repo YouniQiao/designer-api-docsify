@@ -1,5 +1,9 @@
 # FunctionInfo (System API)
 
+```TypeScript
+export interface FunctionInfo
+```
+
 FunctionInfo describes the basic information of a CLI function.
 
 **Since:** 26.0.0

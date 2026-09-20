@@ -1,5 +1,9 @@
 # WebResponseType
 
+```TypeScript
+declare enum WebResponseType
+```
+
 菜单的响应类型。
 
 **起始版本：** 13

@@ -1,5 +1,9 @@
 # Md
 
+```TypeScript
+interface Md
+```
+
 消息摘要接口，定义计算消息摘要的方法。调用前，需通过[createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md)方法创建一个Md实例。
 
 **起始版本：** 9
@@ -147,6 +151,8 @@ export default {
     }
 };
 ```
+
+<a id="digest-1"></a>
 
 ## digest
 
@@ -455,6 +461,8 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+<a id="update-1"></a>
 
 ## update
 

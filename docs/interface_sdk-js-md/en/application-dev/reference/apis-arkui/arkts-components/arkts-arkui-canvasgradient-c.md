@@ -1,5 +1,9 @@
 # CanvasGradient
 
+```TypeScript
+declare class CanvasGradient
+```
+
 A gradient object that allows multiple color breakpoints to be set through the **addColorStop** method, achieving smooth color transitions. It is suitable for canvas filling and stroking scenarios.
 
 **Since:** 8
@@ -50,6 +54,8 @@ The following example demonstrates the brightness difference between SDR and HDR
 
 Since API version 26.0.0, the [addColorStop](#addcolorstop) API additionally supports HDR brightening through the ColorMetrics type input parameter.
 ```
+
+<a id="addcolorstop-1"></a>
 
 ## addColorStop
 

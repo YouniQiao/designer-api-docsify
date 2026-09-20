@@ -85,6 +85,8 @@ promise.then((data) => {
 ```
 
 
+<a id="selectcontacts-1"></a>
+
 ## selectContacts
 
 ```TypeScript
@@ -109,6 +111,8 @@ function selectContacts(): Promise<Array<Contact>>
 
 参见 [selectContacts](#selectcontacts)
 
+
+<a id="selectcontacts-2"></a>
 
 ## selectContacts
 
@@ -141,6 +145,8 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 参见 [selectContacts](#selectcontacts)
 
+
+<a id="selectcontacts-3"></a>
 
 ## selectContacts
 

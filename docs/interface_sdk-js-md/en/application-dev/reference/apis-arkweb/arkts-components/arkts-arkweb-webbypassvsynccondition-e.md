@@ -1,5 +1,9 @@
 # WebBypassVsyncCondition
 
+```TypeScript
+declare enum WebBypassVsyncCondition
+```
+
 Enumerates whether to allow the rendering process to bypass the vsync scheduling.
 
 **Since:** 20

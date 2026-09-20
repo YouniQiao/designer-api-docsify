@@ -1,5 +1,9 @@
 # TextMenuShowMode
 
+```TypeScript
+declare enum TextMenuShowMode
+```
+
 菜单的显示模式。
 
 **起始版本：** 16

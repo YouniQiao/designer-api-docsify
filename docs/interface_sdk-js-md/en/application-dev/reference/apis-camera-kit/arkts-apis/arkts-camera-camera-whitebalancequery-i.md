@@ -1,5 +1,9 @@
 # WhiteBalanceQuery
 
+```TypeScript
+interface WhiteBalanceQuery
+```
+
 WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance mode range supported.
 
 **Since:** 20

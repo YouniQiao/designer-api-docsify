@@ -1,5 +1,9 @@
 # KeyEvent
 
+```TypeScript
+declare interface KeyEvent
+```
+
 按键事件信息。
 
 **起始版本：** 7

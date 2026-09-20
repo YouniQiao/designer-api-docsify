@@ -1,6 +1,10 @@
 # Calendar
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain
+```TypeScript
+export interface Calendar
+```
+
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar-1) or getCalendar() to obtain
 
 a **Calendar** object before calling related APIs.
 
@@ -112,6 +116,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
   }
 });
 ```
+
+<a id="addevent-1"></a>
 
 ## addEvent
 
@@ -262,6 +268,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 });
 ```
 
+<a id="addevents-1"></a>
+
 ## addEvents
 
 ```TypeScript
@@ -399,6 +407,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="deleteevent-1"></a>
 
 ## deleteEvent
 
@@ -554,6 +564,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="deleteevents-1"></a>
 
 ## deleteEvents
 
@@ -814,6 +826,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 });
 ```
 
+<a id="getevents-1"></a>
+
 ## getEvents
 
 ```TypeScript
@@ -848,6 +862,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 **Examples**
 
 See [getEvents](#getevents)
+
+<a id="getevents-2"></a>
 
 ## getEvents
 
@@ -1142,6 +1158,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 });
 ```
 
+<a id="setconfig-1"></a>
+
 ## setConfig
 
 ```TypeScript
@@ -1278,6 +1296,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="updateevent-1"></a>
 
 ## updateEvent
 

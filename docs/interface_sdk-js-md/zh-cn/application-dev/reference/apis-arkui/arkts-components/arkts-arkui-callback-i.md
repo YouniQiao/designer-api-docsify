@@ -1,5 +1,9 @@
 # Callback
 
+```TypeScript
+declare interface Callback<T, V = void>
+```
+
 定义基础的回调函数。
 
 @typedef Callback&lt;T, V = void&gt;

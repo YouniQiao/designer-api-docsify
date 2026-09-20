@@ -1,5 +1,9 @@
 # GestureModifier
 
+```TypeScript
+declare interface GestureModifier
+```
+
 开发者需要自定义class实现GestureModifier接口。
 
 **起始版本：** 12

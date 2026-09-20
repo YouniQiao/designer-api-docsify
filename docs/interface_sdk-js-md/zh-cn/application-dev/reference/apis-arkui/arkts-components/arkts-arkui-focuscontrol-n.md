@@ -1,5 +1,9 @@
 # focusControl
 
+```TypeScript
+declare namespace focusControl
+```
+
 焦点控制模块。
 
 **起始版本：** 9

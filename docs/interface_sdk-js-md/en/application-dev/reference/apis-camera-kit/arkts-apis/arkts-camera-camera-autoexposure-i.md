@@ -1,5 +1,9 @@
 # AutoExposure
 
+```TypeScript
+interface AutoExposure extends AutoExposureQuery
+```
+
 **AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md).
 
 It provides APIs related to auto exposure.

@@ -52,6 +52,8 @@ geolocation.isGeoServiceAvailable().then((result) => {
 ```
 
 
+<a id="isgeoserviceavailable-1"></a>
+
 ## isGeoServiceAvailable
 
 ```TypeScript

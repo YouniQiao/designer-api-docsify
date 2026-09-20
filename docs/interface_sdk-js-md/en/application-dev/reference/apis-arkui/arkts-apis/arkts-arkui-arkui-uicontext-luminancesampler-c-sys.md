@@ -1,5 +1,9 @@
 # LuminanceSampler (System API)
 
+```TypeScript
+export class LuminanceSampler
+```
+
 Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback.
 
 > **NOTE:** 

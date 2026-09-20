@@ -70,6 +70,8 @@ ethernet.getAllActiveIfaces().then((data: string[]) => {
 ```
 
 
+<a id="getallactiveifaces-1"></a>
+
 ## getAllActiveIfaces
 
 ```TypeScript

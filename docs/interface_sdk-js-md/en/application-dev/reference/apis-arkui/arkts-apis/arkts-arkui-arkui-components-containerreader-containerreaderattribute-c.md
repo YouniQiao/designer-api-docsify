@@ -1,5 +1,9 @@
 # ContainerReaderAttribute
 
+```TypeScript
+export declare class ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>
+```
+
 In addition to the [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 [Universal events](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.

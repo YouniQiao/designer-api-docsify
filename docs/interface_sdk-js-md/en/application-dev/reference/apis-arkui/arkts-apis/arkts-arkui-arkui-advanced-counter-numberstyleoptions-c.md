@@ -1,5 +1,9 @@
 # NumberStyleOptions
 
+```TypeScript
+declare class NumberStyleOptions extends InlineStyleOptions
+```
+
 Defines the list and compact counter attributes and events.
 
 Inherits from [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) and includes all attributes of that API. This section only describes the newly added attributes. For inherited attributes, see the parent API.

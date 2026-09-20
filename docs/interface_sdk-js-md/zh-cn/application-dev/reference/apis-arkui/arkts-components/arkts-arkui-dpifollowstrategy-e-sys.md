@@ -1,5 +1,9 @@
 # DpiFollowStrategy（系统接口）
 
+```TypeScript
+declare enum DpiFollowStrategy
+```
+
 表示不同类型的DpiFollowStrategy的枚举。
 
 **起始版本：** 12

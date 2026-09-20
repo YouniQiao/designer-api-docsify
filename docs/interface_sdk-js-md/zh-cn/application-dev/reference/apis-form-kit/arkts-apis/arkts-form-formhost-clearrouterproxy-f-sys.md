@@ -76,6 +76,8 @@ try {
 ```
 
 
+<a id="clearrouterproxy-1"></a>
+
 ## clearRouterProxy
 
 ```TypeScript

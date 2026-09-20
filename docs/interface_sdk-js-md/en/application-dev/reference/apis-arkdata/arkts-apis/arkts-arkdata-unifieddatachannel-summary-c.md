@@ -1,5 +1,9 @@
 # Summary
 
+```TypeScript
+class Summary
+```
+
 Summarizes the data information of the **unifiedData** object, including the data type and size.
 
 **Since:** 10

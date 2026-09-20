@@ -1,5 +1,9 @@
 # SequenceRunner
 
+```TypeScript
+class SequenceRunner
+```
+
 表示串行队列的任务，用于执行一组需要串行执行的任务。
 
 **起始版本：** 11
@@ -41,6 +45,8 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 ```TypeScript
 let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

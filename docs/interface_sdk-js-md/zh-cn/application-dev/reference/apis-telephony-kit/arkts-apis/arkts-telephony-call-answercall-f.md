@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="answercall-2"></a>
+
 ## answerCall
 
 ```TypeScript

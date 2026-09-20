@@ -1,5 +1,9 @@
 # BundleExtensionPolicyInfo (System API)
 
+```TypeScript
+export interface BundleExtensionPolicyInfo
+```
+
 Defines bundle extension policy information.
 
 **Since:** 26.0.1

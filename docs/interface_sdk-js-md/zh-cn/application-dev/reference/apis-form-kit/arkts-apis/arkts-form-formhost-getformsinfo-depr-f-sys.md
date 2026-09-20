@@ -72,6 +72,8 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formIn
 ```
 
 
+<a id="getformsinfo-1"></a>
+
 ## getFormsInfo
 
 ```TypeScript
@@ -108,6 +110,8 @@ function getFormsInfo(
 
 参见 [getFormsInfo](#getformsinfo)
 
+
+<a id="getformsinfo-2"></a>
 
 ## getFormsInfo
 

@@ -1,5 +1,9 @@
 # RichEditorInsertValue
 
+```TypeScript
+declare interface RichEditorInsertValue
+```
+
 Defines information about the text to be inserted.
 
 **Since:** 10

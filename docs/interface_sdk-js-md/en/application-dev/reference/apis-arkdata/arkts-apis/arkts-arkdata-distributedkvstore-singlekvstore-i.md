@@ -1,5 +1,9 @@
 # SingleKVStore
 
+```TypeScript
+interface SingleKVStore
+```
+
 Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance.
 
 **Since:** 9
@@ -75,6 +79,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="backup-1"></a>
 
 ## backup
 
@@ -249,6 +255,8 @@ try {
 }
 ```
 
+<a id="closeresultset-1"></a>
+
 ## closeResultSet
 
 ```TypeScript
@@ -344,6 +352,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="commit-1"></a>
 
 ## commit
 
@@ -459,6 +469,8 @@ try {
 }
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -560,6 +572,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="deletebackup-1"></a>
 
 ## deleteBackup
 
@@ -760,6 +774,8 @@ try {
 }
 ```
 
+<a id="deletebatch-1"></a>
+
 ## deleteBatch
 
 ```TypeScript
@@ -860,6 +876,8 @@ try {
 }
 ```
 
+<a id="enablesync-1"></a>
+
 ## enableSync
 
 ```TypeScript
@@ -899,7 +917,7 @@ See [enableSync](#enablesync)
 ## get
 
 ```TypeScript
-get(key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
+get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
 Obtains the value of the specified key. This API uses an asynchronous callback to return the result.
@@ -982,10 +1000,12 @@ try {
 }
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
-get(key: string): Promise<boolean | string | number | number | Uint8Array>
+get(key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
 Obtains the value of the specified key. This API uses a promise to return the result.
@@ -1265,6 +1285,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1462,6 +1484,8 @@ try {
 }
 ```
 
+<a id="getentries-2"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1653,6 +1677,8 @@ try {
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -2048,6 +2074,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2250,6 +2278,8 @@ try {
 }
 ```
 
+<a id="getresultset-2"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2446,6 +2476,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -2755,6 +2787,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -2926,6 +2960,8 @@ try {
 }
 ```
 
+<a id="getsecuritylevel-1"></a>
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -2982,6 +3018,8 @@ Unsubscribes from data changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -3035,6 +3073,8 @@ Subscribes to data changes of the specified type.
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -3063,7 +3103,7 @@ Subscribes to the cross-device data sync completion events.
 ## put
 
 ```TypeScript
-put(key: string, value: Uint8Array | string | number | number | boolean, callback: AsyncCallback<void>): void
+put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void
 ```
 
 Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
@@ -3129,10 +3169,12 @@ try {
 }
 ```
 
+<a id="put-1"></a>
+
 ## put
 
 ```TypeScript
-put(key: string, value: Uint8Array | string | number | number | boolean): Promise<void>
+put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 ```
 
 Adds a KV pair of the specified type to this KV store. This API uses a promise to return the result.
@@ -3277,6 +3319,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="putbatch-1"></a>
 
 ## putBatch
 
@@ -3466,6 +3510,8 @@ try {
 }
 ```
 
+<a id="removedevicedata-1"></a>
+
 ## removeDeviceData
 
 ```TypeScript
@@ -3576,6 +3622,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="restore-1"></a>
 
 ## restore
 
@@ -3728,6 +3776,8 @@ try {
 }
 ```
 
+<a id="rollback-1"></a>
+
 ## rollback
 
 ```TypeScript
@@ -3825,6 +3875,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="setsyncparam-1"></a>
 
 ## setSyncParam
 
@@ -3932,6 +3984,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="setsyncrange-1"></a>
 
 ## setSyncRange
 
@@ -4064,6 +4118,8 @@ try {
   console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="starttransaction-1"></a>
 
 ## startTransaction
 
@@ -4245,6 +4301,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="sync-1"></a>
 
 ## sync
 

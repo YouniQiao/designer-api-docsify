@@ -147,6 +147,8 @@ notificationSubscribe.remove(hashCodes, reason).then(() => {
 ```
 
 
+<a id="remove-1"></a>
+
 ## remove
 
 ```TypeScript
@@ -195,6 +197,8 @@ Removes a notification based on the bundle information and notification key. Thi
 See [remove](#remove)
 
 
+<a id="remove-2"></a>
+
 ## remove
 
 ```TypeScript
@@ -236,6 +240,8 @@ Removes a notification based on the specified unique notification ID. This API u
 See [remove](#remove)
 
 
+<a id="remove-3"></a>
+
 ## remove
 
 ```TypeScript
@@ -275,6 +281,8 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 
 See [remove](#remove)
 
+
+<a id="remove-4"></a>
 
 ## remove
 
@@ -321,6 +329,8 @@ Removes a notification based on the specified unique notification ID. This API u
 
 See [remove](#remove)
 
+
+<a id="remove-5"></a>
 
 ## remove
 

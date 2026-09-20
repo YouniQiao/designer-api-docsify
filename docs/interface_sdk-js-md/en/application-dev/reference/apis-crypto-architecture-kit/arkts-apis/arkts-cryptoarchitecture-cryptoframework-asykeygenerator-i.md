@@ -1,5 +1,9 @@
 # AsyKeyGenerator
 
+```TypeScript
+interface AsyKeyGenerator
+```
+
 Asymmetric key generator interface, defining methods for generating asymmetric keys. Before use, you must create an **AsyKeyGenerator** instance by using [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md).
 
 **Since:** 9
@@ -95,6 +99,8 @@ keyGenPromise.then(keyPair => {
 });
 ```
 
+<a id="convertkey-1"></a>
+
 ## convertKey
 
 ```TypeScript
@@ -175,6 +181,8 @@ keyGenPromise.then(keyPair => {
   console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="convertkey-2"></a>
 
 ## convertKey
 
@@ -262,6 +270,8 @@ keyGenPromise.then(keyPair => {
   console.error(`convertKey failed, errCode: ${error.code}, errMsg: ${error.message}`);
 });
 ```
+
+<a id="convertkey-3"></a>
 
 ## convertKey
 
@@ -533,6 +543,8 @@ async function testConvertPemKeyByPromise() {
 }
 ```
 
+<a id="convertpemkey-1"></a>
+
 ## convertPemKey
 
 ```TypeScript
@@ -706,6 +718,8 @@ function testConvertPemKeyBySync() {
 }
 ```
 
+<a id="convertpemkeysync-1"></a>
+
 ## convertPemKeySync
 
 ```TypeScript
@@ -811,6 +825,8 @@ keyGenPromise.then(keyPair => {
   console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
 });
 ```
+
+<a id="generatekeypair-1"></a>
 
 ## generateKeyPair
 

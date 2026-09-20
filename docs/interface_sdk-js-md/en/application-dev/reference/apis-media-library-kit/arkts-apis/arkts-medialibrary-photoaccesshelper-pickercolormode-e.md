@@ -1,5 +1,9 @@
 # PickerColorMode
 
+```TypeScript
+export enum PickerColorMode
+```
+
 Enumerates the Picker color modes.
 
 **Since:** 26.0.1

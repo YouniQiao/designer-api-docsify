@@ -1,5 +1,9 @@
 # SwiperDisplayMode
 
+```TypeScript
+declare enum SwiperDisplayMode
+```
+
 Enumerates the modes in which elements are displayed along the main axis.
 
 **Since:** 7

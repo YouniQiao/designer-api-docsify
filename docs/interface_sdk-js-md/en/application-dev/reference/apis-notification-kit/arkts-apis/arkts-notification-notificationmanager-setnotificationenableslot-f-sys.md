@@ -106,6 +106,8 @@ notificationManager.setNotificationEnableSlot(
 ```
 
 
+<a id="setnotificationenableslot-1"></a>
+
 ## setNotificationEnableSlot
 
 ```TypeScript
@@ -158,6 +160,8 @@ This API can be properly called on devices other than wearables. If it is called
 
 See [setNotificationEnableSlot](#setnotificationenableslot)
 
+
+<a id="setnotificationenableslot-2"></a>
 
 ## setNotificationEnableSlot
 

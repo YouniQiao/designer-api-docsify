@@ -81,6 +81,8 @@ statfs.getTotalSize(path, (err: BusinessError, number: number) => {
 ```
 
 
+<a id="gettotalsize-1"></a>
+
 ## getTotalSize
 
 ```TypeScript

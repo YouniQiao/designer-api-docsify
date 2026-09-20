@@ -1,5 +1,9 @@
 # OffsetOptions
 
+```TypeScript
+declare interface OffsetOptions
+```
+
 初始滚动偏移量的参数选项。
 
 **起始版本：** 12

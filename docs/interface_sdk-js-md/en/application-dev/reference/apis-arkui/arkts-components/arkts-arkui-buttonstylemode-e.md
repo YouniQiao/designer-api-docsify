@@ -1,5 +1,9 @@
 # ButtonStyleMode
 
+```TypeScript
+declare enum ButtonStyleMode
+```
+
 Enumerates the button importance levels.
 
 **Since:** 11

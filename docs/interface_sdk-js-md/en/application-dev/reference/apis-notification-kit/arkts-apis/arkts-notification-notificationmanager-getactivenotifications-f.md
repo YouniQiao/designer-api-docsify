@@ -65,6 +65,8 @@ notificationManager.getActiveNotifications().then((data: Array<notificationManag
 ```
 
 
+<a id="getactivenotifications-1"></a>
+
 ## getActiveNotifications
 
 ```TypeScript
@@ -81,7 +83,7 @@ This API is used to query the detailed information list of all stored notificati
 
 **See also:**
 
-[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) sets the notification badge number.
 
 **Return value:**
 

@@ -1,5 +1,9 @@
 # SwiperAnimationMode
 
+```TypeScript
+declare enum SwiperAnimationMode
+```
+
 Enumerates the animation mode for moving to a specific page in the **Swiper** component.
 
 **Since:** 15

@@ -1,5 +1,9 @@
 # PasswordIcon
 
+```TypeScript
+interface PasswordIcon
+```
+
 PasswordIcon对象。
 
 **起始版本：** 10

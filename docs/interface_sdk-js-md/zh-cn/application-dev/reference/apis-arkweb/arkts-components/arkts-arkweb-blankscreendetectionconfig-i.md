@@ -1,5 +1,9 @@
 # BlankScreenDetectionConfig
 
+```TypeScript
+declare interface BlankScreenDetectionConfig
+```
+
 提供白屏检测的策略配置选项，包括检测时机、方法和阈值。适用于需要自定义白屏检测行为的场景，提升白屏监控的灵活性和准确性。
 
 **起始版本：** 22
@@ -14,7 +18,7 @@ contentfulNodesCountThreshold?: number
 
 在使用到检测有内容的节点检测策略时，才会生效。
 
-可以设置0-&#36;{检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
+可以设置0-${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
 
 默认值：0。
 

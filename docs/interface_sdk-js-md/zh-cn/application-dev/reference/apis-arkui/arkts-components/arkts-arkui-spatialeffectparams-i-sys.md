@@ -1,5 +1,9 @@
 # SpatialEffectParams（系统接口）
 
+```TypeScript
+declare interface SpatialEffectParams
+```
+
 空间效果选项。用于为组件设置空间效果参数。
 
 > **说明：** 

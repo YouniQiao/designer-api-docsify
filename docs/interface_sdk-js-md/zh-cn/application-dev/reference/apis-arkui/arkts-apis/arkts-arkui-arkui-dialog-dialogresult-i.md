@@ -1,5 +1,9 @@
 # DialogResult
 
+```TypeScript
+export interface DialogResult
+```
+
 对话的响应结果。
 
 **起始版本：** 26.0.1

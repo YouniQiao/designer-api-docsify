@@ -1,5 +1,9 @@
 # RichEditorSymbolSpanStyle
 
+```TypeScript
+declare interface RichEditorSymbolSpanStyle
+```
+
 Sets the symbol span style.
 
 **Since:** 11

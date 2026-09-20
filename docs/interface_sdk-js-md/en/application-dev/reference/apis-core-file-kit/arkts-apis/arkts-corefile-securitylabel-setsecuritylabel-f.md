@@ -69,6 +69,8 @@ securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
 ```
 
 
+<a id="setsecuritylabel-1"></a>
+
 ## setSecurityLabel
 
 ```TypeScript

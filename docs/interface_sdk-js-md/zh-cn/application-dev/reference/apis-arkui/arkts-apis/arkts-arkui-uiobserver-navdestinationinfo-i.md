@@ -1,5 +1,9 @@
 # NavDestinationInfo
 
+```TypeScript
+export interface NavDestinationInfo
+```
+
 NavDestination组件信息，由系统返回给开发者。
 
 **起始版本：** 11

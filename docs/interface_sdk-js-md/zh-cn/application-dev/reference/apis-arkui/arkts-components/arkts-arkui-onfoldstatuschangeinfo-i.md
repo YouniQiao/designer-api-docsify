@@ -1,5 +1,9 @@
 # OnFoldStatusChangeInfo
 
+```TypeScript
+interface OnFoldStatusChangeInfo
+```
+
 折叠状态改变时的信息，仅在横屏状态下生效。
 
 > **说明：** 

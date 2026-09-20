@@ -1,5 +1,9 @@
 # ImageCreator
 
+```TypeScript
+interface ImageCreator
+```
+
 ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。
 
 在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md)创建ImageCreator实例，ImageCreator不支持多线程。
@@ -37,6 +41,8 @@ dequeueImage(callback: AsyncCallback<Image>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当获取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
+
+<a id="dequeueimage-1"></a>
 
 ## dequeueImage
 
@@ -113,6 +119,8 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 | image | [Image](arkts-image-image-image-i.md) | 是 | 绘制好的buffer图像。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当将图片放入队列成功，err为undefined，否则为错误对象。 |
 
+<a id="queueimage-1"></a>
+
 ## queueImage
 
 ```TypeScript
@@ -158,6 +166,8 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+
+<a id="release-1"></a>
 
 ## release
 

@@ -1,4 +1,4 @@
-# @ohos.arkui.dragController
+# @ohos.arkui.dragController(DragController)
 
 This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
 
@@ -28,7 +28,7 @@ import { dragController } from '@kit.ArkUI';
 | --- | --- |
 | [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
 | [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. |
-| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
+| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
 | [getDragPreview](arkts-arkui-dragcontroller-getdragpreview-f.md) | Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. |
 
 ### Classes

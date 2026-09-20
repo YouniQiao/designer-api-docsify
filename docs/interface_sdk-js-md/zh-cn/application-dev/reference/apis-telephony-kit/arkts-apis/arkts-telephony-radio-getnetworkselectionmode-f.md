@@ -62,6 +62,8 @@ radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) =>
 ```
 
 
+<a id="getnetworkselectionmode-1"></a>
+
 ## getNetworkSelectionMode
 
 ```TypeScript

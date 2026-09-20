@@ -1,5 +1,9 @@
 # DeviceManager
 
+```TypeScript
+interface DeviceManager
+```
+
 Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
 **Since:** 7
@@ -139,6 +143,8 @@ Obtains the information about a specific device based on the network ID. This AP
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 ```
 
+<a id="getdeviceinfo-1"></a>
+
 ## getDeviceInfo
 
 ```TypeScript
@@ -220,6 +226,8 @@ Obtains local device information. This API uses an asynchronous callback to retu
 ```TypeScript
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 ```
+
+<a id="getlocaldeviceinfo-1"></a>
 
 ## getLocalDeviceInfo
 
@@ -336,6 +344,8 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 ```
 
+<a id="gettrusteddevicelist-1"></a>
+
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -411,6 +421,8 @@ Obtains all trusted devices synchronously.
 ```TypeScript
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 ```
+
+<a id="gettrusteddevicelistsync-1"></a>
 
 ## getTrustedDeviceListSync
 
@@ -1155,6 +1167,8 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 ```TypeScript
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 ```
+
+<a id="startdevicediscovery-1"></a>
 
 ## startDeviceDiscovery
 

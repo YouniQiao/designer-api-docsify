@@ -90,6 +90,8 @@ bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
 ```
 
 
+<a id="getbundleinfo-1"></a>
+
 ## getBundleInfo
 
 ```TypeScript
@@ -122,6 +124,8 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 
 参见 [getBundleInfo](#getbundleinfo)
 
+
+<a id="getbundleinfo-2"></a>
 
 ## getBundleInfo
 

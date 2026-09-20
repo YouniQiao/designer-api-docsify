@@ -1,5 +1,9 @@
 # SliderBlockStyle
 
+```TypeScript
+declare interface SliderBlockStyle
+```
+
 Describes the style of the slider in the block direction.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # IndicatorComponent properties/events
 
+```TypeScript
+declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>
+```
+
 Defines the IndicatorComponent attribute functions.
 
 @extends CommonMethod&lt;IndicatorComponentAttribute&gt;

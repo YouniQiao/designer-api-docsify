@@ -1,5 +1,9 @@
 # ContainerReaderInterface
 
+```TypeScript
+export interface ContainerReaderInterface
+```
+
 **ContainerReader** is a container breakpoint component used to obtain breakpoint information based on container size in dynamic scenarios and perform responsive layout. This component returns the container's size and breakpoint in real time through [two-way binding](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters), enabling you to create and lay out components based on container size.
 
 > **NOTE:** 

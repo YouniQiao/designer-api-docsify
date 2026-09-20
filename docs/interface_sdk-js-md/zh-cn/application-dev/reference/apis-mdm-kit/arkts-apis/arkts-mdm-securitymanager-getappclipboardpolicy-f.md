@@ -115,6 +115,8 @@ try {
 ```
 
 
+<a id="getappclipboardpolicy-1"></a>
+
 ## getAppClipboardPolicy
 
 ```TypeScript
@@ -158,6 +160,8 @@ function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string
 参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
+<a id="getappclipboardpolicy-2"></a>
+
 ## getAppClipboardPolicy
 
 ```TypeScript
@@ -200,6 +204,8 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 
 参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
+
+<a id="getappclipboardpolicy-3"></a>
 
 ## getAppClipboardPolicy
 

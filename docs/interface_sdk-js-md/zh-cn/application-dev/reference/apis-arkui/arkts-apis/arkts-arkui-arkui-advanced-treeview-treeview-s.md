@@ -1,5 +1,9 @@
 # TreeView
 
+```TypeScript
+export declare struct TreeView
+```
+
 树视图作为一种分层显示的列表，适合显示嵌套结构。树视图包含父节点和子节点，支持展开或折叠。
 
 树视图适用于效率型应用的侧边导航栏中，如备忘录、电子邮件、图库等。

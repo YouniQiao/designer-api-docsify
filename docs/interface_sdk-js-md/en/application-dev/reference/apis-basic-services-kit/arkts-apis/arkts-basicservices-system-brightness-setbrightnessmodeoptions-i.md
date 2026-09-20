@@ -1,5 +1,9 @@
 # SetBrightnessModeOptions
 
+```TypeScript
+export interface SetBrightnessModeOptions
+```
+
 Options for setting the screen brightness mode.
 
 **Since:** 3

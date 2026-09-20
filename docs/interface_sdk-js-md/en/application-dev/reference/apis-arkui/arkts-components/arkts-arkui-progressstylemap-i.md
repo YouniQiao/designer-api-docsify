@@ -1,5 +1,9 @@
 # ProgressStyleMap
 
+```TypeScript
+declare interface ProgressStyleMap
+```
+
 Defines the mapping between progress indicators and styles.
 
 **Since:** 10

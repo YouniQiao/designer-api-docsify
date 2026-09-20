@@ -1,5 +1,9 @@
 # IsoDepTag
 
+```TypeScript
+export interface IsoDepTag extends TagSession
+```
+
 IsoDepTag 提供对ISO-DEP(ISO 14443-4)技术的属性和I/O操作的访问，继承自TagSession。
 
 TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
@@ -160,6 +164,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="isextendedapdusupported-1"></a>
 
 ## isExtendedApduSupported
 

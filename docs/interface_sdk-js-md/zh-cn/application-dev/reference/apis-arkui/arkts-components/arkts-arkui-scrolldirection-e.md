@@ -1,5 +1,9 @@
 # ScrollDirection
 
+```TypeScript
+declare enum ScrollDirection
+```
+
 滚动方向枚举。
 
 FREE（自由滚动）模式下支持的能力：

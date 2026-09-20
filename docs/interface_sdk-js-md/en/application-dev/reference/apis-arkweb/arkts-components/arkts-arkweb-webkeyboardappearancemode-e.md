@@ -1,5 +1,9 @@
 # WebKeyboardAppearanceMode
 
+```TypeScript
+declare enum WebKeyboardAppearanceMode
+```
+
 Defines the input method immersive mode in the WebView, which controls the display style of the soft keyboard and helps developers provide a consistent visual experience based on the app theme and user preferences. It supports the default appearance, system-following, light immersive, and dark immersive styles.
 
 **Since:** 26.0.0

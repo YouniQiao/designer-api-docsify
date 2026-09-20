@@ -1,5 +1,9 @@
 # TimePickerResult
 
+```TypeScript
+declare interface TimePickerResult
+```
+
 Describes a time in 24-hour format.
 
 **Since:** 8

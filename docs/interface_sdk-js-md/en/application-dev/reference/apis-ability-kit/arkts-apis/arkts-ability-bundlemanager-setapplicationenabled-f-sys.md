@@ -133,6 +133,8 @@ try {
 ```
 
 
+<a id="setapplicationenabled-1"></a>
+
 ## setApplicationEnabled
 
 ```TypeScript
@@ -180,6 +182,8 @@ Sets the enabled or disabled state of a specified application or application clo
 See [setApplicationEnabled](#setapplicationenabled)
 
 
+<a id="setapplicationenabled-2"></a>
+
 ## setApplicationEnabled
 
 ```TypeScript
@@ -217,6 +221,8 @@ Enables or disables an application. This API uses an asynchronous callback to re
 
 See [setApplicationEnabled](#setapplicationenabled)
 
+
+<a id="setapplicationenabled-3"></a>
 
 ## setApplicationEnabled
 

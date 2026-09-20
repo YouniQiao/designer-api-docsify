@@ -1,5 +1,9 @@
 # IconGroupSuffix
 
+```TypeScript
+export declare struct IconGroupSuffix
+```
+
 The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience.
 
 > **NOTE:** 
@@ -25,7 +29,7 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `&#36;r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color.
+System material style of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color.
 
 Default value: **undefined**
 

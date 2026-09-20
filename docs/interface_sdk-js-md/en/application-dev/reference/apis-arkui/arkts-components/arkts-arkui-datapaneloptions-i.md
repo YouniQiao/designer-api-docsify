@@ -1,5 +1,9 @@
 # DataPanelOptions
 
+```TypeScript
+declare interface DataPanelOptions
+```
+
 Defines data panel configuration options.
 
 **Since:** 7

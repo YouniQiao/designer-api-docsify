@@ -69,6 +69,8 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 ```
 
 
+<a id="sendevent-1"></a>
+
 ## sendEvent
 
 ```TypeScript
@@ -81,7 +83,7 @@ function sendEvent(event: EventInfo): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)(event: EventInfo)
+**替代接口：** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1)(event: EventInfo)
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

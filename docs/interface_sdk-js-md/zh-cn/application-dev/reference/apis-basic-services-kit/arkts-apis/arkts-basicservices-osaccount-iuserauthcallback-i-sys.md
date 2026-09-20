@@ -1,5 +1,9 @@
 # IUserAuthCallback（系统接口）
 
+```TypeScript
+interface IUserAuthCallback
+```
+
 表示用户认证回调类。
 
 **起始版本：** 8

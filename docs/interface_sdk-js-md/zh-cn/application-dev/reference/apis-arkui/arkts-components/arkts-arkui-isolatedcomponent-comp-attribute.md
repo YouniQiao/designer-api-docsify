@@ -1,5 +1,9 @@
 # IsolatedComponent属性/事件
 
+```TypeScript
+declare class IsolatedComponentAttribute extends CommonMethod<IsolatedComponentAttribute>
+```
+
 仅支持width、height和backgroundColor通用属性。
 
 不支持通用事件。

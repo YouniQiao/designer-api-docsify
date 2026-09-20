@@ -97,6 +97,8 @@ try {
 ```
 
 
+<a id="uploadfile-1"></a>
+
 ## uploadFile
 
 ```TypeScript

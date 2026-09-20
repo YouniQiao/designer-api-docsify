@@ -1,5 +1,9 @@
 # SpatialEffectParams (System API)
 
+```TypeScript
+declare interface SpatialEffectParams
+```
+
 Spatial effect params.
 
 **Since:** 26.0.0

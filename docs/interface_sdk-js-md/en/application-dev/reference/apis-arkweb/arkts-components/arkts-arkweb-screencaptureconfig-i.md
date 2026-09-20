@@ -1,5 +1,9 @@
 # ScreenCaptureConfig
 
+```TypeScript
+declare interface ScreenCaptureConfig
+```
+
 Provides the web screen capture configuration options, including the capture mode. It is suitable for scenarios where custom web page screen recording behavior is required, improving screen recording flexibility and user experience.
 
 **Since:** 10

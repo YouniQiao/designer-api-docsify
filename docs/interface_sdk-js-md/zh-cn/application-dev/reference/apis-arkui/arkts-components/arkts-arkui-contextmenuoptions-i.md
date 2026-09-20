@@ -1,5 +1,9 @@
 # ContextMenuOptions
 
+```TypeScript
+declare interface ContextMenuOptions
+```
+
 菜单项的信息。
 
 **表1：同时设置offset与placement时菜单的偏移位置**
@@ -26,9 +30,9 @@
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
 | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu-1) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu-1) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
 | [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **起始版本：** 10
@@ -781,9 +785,9 @@ placement?: Placement
 
 **说明：** 
 
-1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)入参时，默认值为Placement.BottomLeft。
+1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu-1)入参时，默认值为Placement.BottomLeft。
 2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)入参时，默认效果为菜单跟随点击位置弹出。
-3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)入参时，默认值为Placement.BottomLeft。
+3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)入参时，默认值为Placement.BottomLeft。
 4. placement值设置为undefined、null或缺省时，按默认值处理。
 
 **类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
@@ -806,7 +810,7 @@ placement?: Placement
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-长按悬浮菜单或使用[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。
+长按悬浮菜单或使用[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。
 
 默认值：MenuPreviewMode.NONE，无预览内容。
 

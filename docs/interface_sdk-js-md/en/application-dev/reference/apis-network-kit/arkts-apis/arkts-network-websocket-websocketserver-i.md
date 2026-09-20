@@ -1,5 +1,9 @@
 # WebSocketServer
 
+```TypeScript
+export interface WebSocketServer
+```
+
 Defines a **WebSocketServer** object. You need to use [webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md) to create a **WebSocketServer** object before using its methods.
 
 **Since:** 19

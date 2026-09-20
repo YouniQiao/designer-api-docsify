@@ -1,5 +1,9 @@
 # InputMethodController
 
+```TypeScript
+interface InputMethodController
+```
+
 In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 6
@@ -11,6 +15,8 @@ In the following API examples, you must first use [getController](arkts-ime-inpu
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
 ```
+
+<a id="hidesoftkeyboard-2"></a>
 
 ## hideSoftKeyboard
 
@@ -88,6 +94,8 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
   console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="showsoftkeyboard-2"></a>
 
 ## showSoftKeyboard
 

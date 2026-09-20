@@ -1,5 +1,9 @@
 # OnPermissionRequestEvent
 
+```TypeScript
+declare interface OnPermissionRequestEvent
+```
+
 定义收到权限请求时触发的回调信息，包括请求详情。适用于需要处理权限授予的场景，提升权限管理的灵活性和安全性。
 
 **起始版本：** 12

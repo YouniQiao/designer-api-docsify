@@ -1,5 +1,9 @@
 # RichEditorTextSpanOptions
 
+```TypeScript
+declare interface RichEditorTextSpanOptions
+```
+
 Defines the options for adding a text span.
 
 **Since:** 10

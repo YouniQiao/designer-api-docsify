@@ -1,5 +1,9 @@
 # BlendMode
 
+```TypeScript
+declare enum BlendMode
+```
+
 混合模式。
 
 > **说明：** 

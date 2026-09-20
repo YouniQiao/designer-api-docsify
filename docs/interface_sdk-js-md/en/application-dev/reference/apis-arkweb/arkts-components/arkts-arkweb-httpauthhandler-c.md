@@ -1,5 +1,9 @@
 # HttpAuthHandler
 
+```TypeScript
+declare class HttpAuthHandler
+```
+
 HttpAuthHandler is a handler class used by the Web component to process HTTP authentication requests. When the server returns 401 Unauthorized to request authentication, the Web component obtains an HttpAuthHandler instance through the onHttpAuthRequest event callback, and the app decides whether to provide authentication credentials. For sample code, see [onHttpAuthRequest](arkts-arkweb-web-comp-attribute.md#onhttpauthrequest).
 
 **Since:** 9

@@ -1,5 +1,9 @@
 # MenuElement
 
+```TypeScript
+declare interface MenuElement
+```
+
 菜单项的图标、文本和交互信息。
 
 **起始版本：** 7

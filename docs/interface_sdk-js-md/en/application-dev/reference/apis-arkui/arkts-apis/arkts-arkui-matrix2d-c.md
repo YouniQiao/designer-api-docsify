@@ -1,5 +1,9 @@
 # Matrix2D
 
+```TypeScript
+declare class Matrix2D
+```
+
 A matrix object used for graphic transformation in CanvasRenderingContext2D, OffscreenCanvasRenderingContext2D, CanvasPattern, and Path2D. It can perform scaling, rotation, translation, and other transformations on the matrix.
 
 **Matrix2D** is used in the following scenarios:
@@ -37,6 +41,8 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -167,6 +173,8 @@ Performs a rotation operation on the current matrix. This API is an empty API an
 | Type | Description |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-c.md) | Result matrix object after rotation, which can be used to perform rotation transformation on graphics. |
+
+<a id="rotate-1"></a>
 
 ## rotate
 

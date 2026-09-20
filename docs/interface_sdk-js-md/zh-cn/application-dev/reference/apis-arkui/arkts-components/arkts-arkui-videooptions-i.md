@@ -1,5 +1,9 @@
 # VideoOptions
 
+```TypeScript
+declare interface VideoOptions
+```
+
 定义Video的具体配置参数。
 
 **起始版本：** 7
@@ -125,8 +129,8 @@ string格式可用于加载本地图片和网络图片，
 
 Resource格式可以跨包/跨模块访问资源文件。
 
-- 支持rawfile文件下的资源，即通过&#36;rawfile引用图片。  
-- 支持通过&#36;r引用系统资源或者应用资源中的图片。
+- 支持rawfile文件下的资源，即通过$rawfile引用图片。  
+- 支持通过$r引用系统资源或者应用资源中的图片。
 
 默认值：空字符串
 
@@ -152,7 +156,7 @@ src?: string | Resource
 
 Resource格式可以跨包/跨模块访问资源文件，常用于访问本地视频。
 
-- 仅支持rawfile文件下的资源，即通过&#36;rawfile引用视频文件。
+- 仅支持rawfile文件下的资源，即通过$rawfile引用视频文件。
 
 string格式可用于加载网络视频和本地视频，常用于加载网络视频。
 

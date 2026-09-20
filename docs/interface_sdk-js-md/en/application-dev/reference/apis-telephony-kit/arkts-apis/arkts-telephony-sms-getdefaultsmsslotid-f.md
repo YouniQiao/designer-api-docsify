@@ -47,6 +47,8 @@ sms.getDefaultSmsSlotId().then((data: number) => {
 ```
 
 
+<a id="getdefaultsmsslotid-1"></a>
+
 ## getDefaultSmsSlotId
 
 ```TypeScript

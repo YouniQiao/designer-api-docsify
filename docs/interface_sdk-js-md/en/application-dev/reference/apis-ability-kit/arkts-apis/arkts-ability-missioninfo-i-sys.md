@@ -1,5 +1,9 @@
 # MissionInfo (System API)
 
+```TypeScript
+export interface MissionInfo
+```
+
 The module defines detailed information about a mission. The information can be obtained through [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md).
 
 **Since:** 8

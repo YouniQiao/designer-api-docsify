@@ -1,5 +1,9 @@
 # ChipItemStyle
 
+```TypeScript
+export interface ChipItemStyle
+```
+
 Defines the common attributes of chips.
 
 > **NOTE:** 
@@ -9,7 +13,7 @@ Defines the common attributes of chips.
 > 
 > 2. When **backgroundColor** and **selectedBackgroundColor** are set to **undefined**, the default background color is displayed. When an invalid value is passed in, the background color is transparent.
 > 
-> 3. Starting from API version 26.0.0, when **backgroundSystemMaterial** is set to a system material with auto-invert, **fontColor** uses a system-predefined invertible color resource (such as `&#36;r('sys.color.font_primary')`),and the color automatically adapts to the inverted color of the material background color.
+> 3. Starting from API version 26.0.0, when **backgroundSystemMaterial** is set to a system material with auto-invert, **fontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`),and the color automatically adapts to the inverted color of the material background color.
 
 **Since:** 12
 
@@ -29,7 +33,7 @@ backgroundColor?: ResourceColor
 
 Chip background color.
 
-Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
+Default value: **$r('sys.color.ohos_id_color_button_normal')**
 
 **Note:** Since API version 26.0.0, when **backgroundSystemMaterial** is set, **backgroundColor** must be set to **Color.Transparent**; otherwise, it conflicts with the system material. When **backgroundSystemMaterial** is undefined, the **backgroundColor** attribute takes effect.
 
@@ -53,7 +57,7 @@ fontColor?: ResourceColor
 
 Chip text color.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
+Default value: **$r('sys.color.ohos_id_color_text_primary')**
 
 **Note:** Since API version 26.0.0, when **backgroundSystemMaterial** is set to a system material with auto-invert, **fontColor** uses a system-predefined invertible color resource, and the text color automatically adapts to the inverted color of the material background color.
 
@@ -77,7 +81,7 @@ selectedBackgroundColor?: ResourceColor
 
 Chip background color when selected.
 
-Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
+Default value: **$r('sys.color.ohos_id_color_emphasize')**
 
 **Note:** Since API version 26.0.0, when **selectedBackgroundSystemMaterial** is set, **selectedBackgroundColor** must be set to **Color.Transparent**; otherwise, it conflicts with the system material. When **selectedBackgroundSystemMaterial** is **undefined**, the **selectedBackgroundColor** attribute takes effect.
 
@@ -101,9 +105,9 @@ selectedFontColor?: ResourceColor
 
 Chip text color when selected.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**
+Default value: **$r('sys.color.ohos_id_color_text_primary_contrary')**
 
-**Note:** Since API version 26.0.0, when **selectedBackgroundSystemMaterial** is set to a system material with auto -invert, **selectedFontColor** uses a system-predefined invertible color resource (for example, `&#36;r('sys.color.font_primary')`), and the color automatically adapts to the inverted color of the material background color.
+**Note:** Since API version 26.0.0, when **selectedBackgroundSystemMaterial** is set to a system material with auto -invert, **selectedFontColor** uses a system-predefined invertible color resource (for example, `$r('sys.color.font_primary')`), and the color automatically adapts to the inverted color of the material background color.
 
 When the value is **undefined**, the default value of **selectedFontColor** is used.
 

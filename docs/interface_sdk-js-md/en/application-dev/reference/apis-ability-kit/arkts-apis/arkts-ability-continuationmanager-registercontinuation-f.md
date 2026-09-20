@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="registercontinuation-1"></a>
+
 ## registerContinuation
 
 ```TypeScript
@@ -144,6 +146,8 @@ Registers the continuation management service and obtains a token. This API uses
 
 See [registerContinuation](#registercontinuation)
 
+
+<a id="registercontinuation-2"></a>
 
 ## registerContinuation
 

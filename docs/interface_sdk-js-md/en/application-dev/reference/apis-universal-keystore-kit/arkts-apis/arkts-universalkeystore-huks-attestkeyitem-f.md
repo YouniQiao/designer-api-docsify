@@ -238,6 +238,8 @@ async function attestKey() {
 ```
 
 
+<a id="attestkeyitem-1"></a>
+
 ## attestKeyItem
 
 ```TypeScript

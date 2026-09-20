@@ -56,6 +56,8 @@ connection.hasDefaultNet().then((data: boolean) => {
 ```
 
 
+<a id="hasdefaultnet-1"></a>
+
 ## hasDefaultNet
 
 ```TypeScript

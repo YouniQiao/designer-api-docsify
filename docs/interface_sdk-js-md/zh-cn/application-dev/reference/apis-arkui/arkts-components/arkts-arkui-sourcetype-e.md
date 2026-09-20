@@ -1,5 +1,9 @@
 # SourceType
 
+```TypeScript
+declare enum SourceType
+```
+
 定义输入源对应的设备类型。
 
 **起始版本：** 8

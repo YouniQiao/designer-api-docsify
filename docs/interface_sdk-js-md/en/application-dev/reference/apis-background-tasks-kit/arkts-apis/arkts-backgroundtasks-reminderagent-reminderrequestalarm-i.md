@@ -1,5 +1,9 @@
 # ReminderRequestAlarm
 
+```TypeScript
+interface ReminderRequestAlarm extends ReminderRequest
+```
+
 Defines a reminder for an alarm.
 
 **Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)

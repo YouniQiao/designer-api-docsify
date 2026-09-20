@@ -1,5 +1,9 @@
 # EdgeLightParams (System API)
 
+```TypeScript
+declare interface EdgeLightParams
+```
+
 Defines the parameters of the edge light effect.
 
 **Since:** 26.0.0

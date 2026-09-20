@@ -1,5 +1,9 @@
 # GeometryInfo
 
+```TypeScript
+declare interface GeometryInfo extends SizeResult
+```
+
 父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md)。
 
 **继承/实现关系：** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)

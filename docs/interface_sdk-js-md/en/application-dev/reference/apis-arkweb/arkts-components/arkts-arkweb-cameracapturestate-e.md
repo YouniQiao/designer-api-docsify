@@ -1,5 +1,9 @@
 # CameraCaptureState
 
+```TypeScript
+declare enum CameraCaptureState
+```
+
 Defines the camera capture states, which identify the current working status of the camera and help developers monitor camera resource usage in real time, optimizing resource management and user privacy protection.
 
 **Since:** 23

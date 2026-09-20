@@ -1,5 +1,9 @@
 # RichEditorImageSpanResult
 
+```TypeScript
+declare interface RichEditorImageSpanResult
+```
+
 Provides the image information returned by the backend.
 
 **Since:** 10

@@ -1,5 +1,9 @@
 # CapsuleStyleOptions
 
+```TypeScript
+declare interface CapsuleStyleOptions extends ScanEffectOptions, CommonProgressStyleOptions
+```
+
 胶囊样式选项。
 
 继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。

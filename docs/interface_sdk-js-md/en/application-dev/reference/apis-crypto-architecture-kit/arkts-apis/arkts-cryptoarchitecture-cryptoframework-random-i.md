@@ -1,5 +1,9 @@
 # Random
 
+```TypeScript
+interface Random
+```
+
 Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md).
 
 **Since:** 9
@@ -176,6 +180,8 @@ export default {
     }
 };
 ```
+
+<a id="generaterandom-1"></a>
 
 ## generateRandom
 

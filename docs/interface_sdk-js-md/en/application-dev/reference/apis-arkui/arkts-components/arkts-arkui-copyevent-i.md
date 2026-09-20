@@ -1,5 +1,9 @@
 # CopyEvent
 
+```TypeScript
+declare interface CopyEvent
+```
+
 User copy event.
 
 **Since:** 12

@@ -55,6 +55,8 @@ statfs.getFreeBytes(path, (err: BusinessError, freeBytes:Number) => {
 ```
 
 
+<a id="getfreebytes-1"></a>
+
 ## getFreeBytes
 
 ```TypeScript

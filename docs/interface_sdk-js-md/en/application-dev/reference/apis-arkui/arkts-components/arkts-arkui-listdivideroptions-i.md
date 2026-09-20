@@ -1,5 +1,9 @@
 # ListDividerOptions
 
+```TypeScript
+declare interface ListDividerOptions
+```
+
 Defines the divider style of the list or list item group.
 
 > **NOTE:** 

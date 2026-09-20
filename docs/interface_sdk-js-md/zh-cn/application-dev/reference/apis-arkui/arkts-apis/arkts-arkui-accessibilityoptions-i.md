@@ -1,5 +1,9 @@
 # AccessibilityOptions
 
+```TypeScript
+declare interface AccessibilityOptions
+```
+
 定义AccessibilityOptions的结构体。
 
 **起始版本：** 14

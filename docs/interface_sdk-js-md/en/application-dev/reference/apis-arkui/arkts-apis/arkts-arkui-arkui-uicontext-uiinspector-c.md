@@ -1,5 +1,9 @@
 # UIInspector
 
+```TypeScript
+export class UIInspector
+```
+
 Provides APIs for registering the component layout and drawing display completion callbacks.
 
 **Since:** 10
@@ -42,6 +46,8 @@ Registers a callback for layout and drawing display completion notifications for
 | Type | Description |
 | --- | --- |
 | [inspector.ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+
+<a id="createcomponentobserver-1"></a>
 
 ## createComponentObserver
 

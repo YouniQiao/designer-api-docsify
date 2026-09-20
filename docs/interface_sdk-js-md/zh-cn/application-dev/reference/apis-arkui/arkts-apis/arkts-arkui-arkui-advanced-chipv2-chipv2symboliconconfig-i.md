@@ -1,5 +1,9 @@
 # ChipV2SymbolIconConfig
 
+```TypeScript
+export interface ChipV2SymbolIconConfig
+```
+
 ChipV2SymbolIconConfig定义Symbol图标的属性配置。
 
 **起始版本：** 26.0.0

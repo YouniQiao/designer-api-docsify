@@ -1,5 +1,9 @@
 # HomePathInfo
 
+```TypeScript
+declare interface HomePathInfo
+```
+
 Defines the home page **NavDestination** information.
 
 **Since:** 20

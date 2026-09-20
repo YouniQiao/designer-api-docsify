@@ -96,6 +96,8 @@ try {
 ```
 
 
+<a id="getprofilebyextensionability-1"></a>
+
 ## getProfileByExtensionAbility
 
 ```TypeScript

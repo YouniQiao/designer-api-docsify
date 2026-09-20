@@ -1,5 +1,9 @@
 # OnErrorReceiveEvent
 
+```TypeScript
+export declare interface OnErrorReceiveEvent
+```
+
 Represents the callback invoked when an error occurs during web page loading.
 
 **Since:** 12

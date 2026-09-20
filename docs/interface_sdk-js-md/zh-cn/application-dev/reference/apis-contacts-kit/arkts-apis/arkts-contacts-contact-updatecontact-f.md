@@ -113,6 +113,8 @@ contact.selectContacts().then((data) => {
 ```
 
 
+<a id="updatecontact-1"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -147,6 +149,8 @@ function updateContact(context: Context, contact: Contact, callback: AsyncCallba
 参见 [updateContact](#updatecontact)
 
 
+<a id="updatecontact-2"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -177,6 +181,8 @@ function updateContact(contact: Contact, attrs: ContactAttributes, callback: Asy
 
 参见 [updateContact](#updatecontact)
 
+
+<a id="updatecontact-3"></a>
 
 ## updateContact
 
@@ -213,6 +219,8 @@ function updateContact(context: Context, contact: Contact, attrs: ContactAttribu
 参见 [updateContact](#updatecontact)
 
 
+<a id="updatecontact-4"></a>
+
 ## updateContact
 
 ```TypeScript
@@ -248,6 +256,8 @@ function updateContact(contact: Contact, attrs?: ContactAttributes): Promise<voi
 
 参见 [updateContact](#updatecontact)
 
+
+<a id="updatecontact-5"></a>
 
 ## updateContact
 

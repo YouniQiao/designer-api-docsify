@@ -112,6 +112,8 @@ call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
 ```
 
 
+<a id="rejectcall-1"></a>
+
 ## rejectCall
 
 ```TypeScript
@@ -158,6 +160,8 @@ Rejects a call. This API uses a promise to return the result.
 See [rejectCall](#rejectcall)
 
 
+<a id="rejectcall-2"></a>
+
 ## rejectCall
 
 ```TypeScript
@@ -197,6 +201,8 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 
 See [rejectCall](#rejectcall)
 
+
+<a id="rejectcall-4"></a>
 
 ## rejectCall
 

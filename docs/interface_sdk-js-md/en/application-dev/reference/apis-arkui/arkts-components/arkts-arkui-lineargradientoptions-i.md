@@ -1,5 +1,9 @@
 # LinearGradientOptions
 
+```TypeScript
+declare interface LinearGradientOptions
+```
+
 Defines the linear gradient parameters.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # RenderStrategy
 
+```TypeScript
+declare enum RenderStrategy
+```
+
 Enumerates rendering strategies for drawing rounded corners.
 
 **Since:** 22

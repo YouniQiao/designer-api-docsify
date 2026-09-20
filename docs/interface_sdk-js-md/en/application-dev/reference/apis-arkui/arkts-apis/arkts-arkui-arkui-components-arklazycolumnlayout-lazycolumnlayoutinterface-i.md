@@ -1,5 +1,9 @@
 # LazyColumnLayoutInterface
 
+```TypeScript
+export interface LazyColumnLayoutInterface
+```
+
 Defines the lazy column layout component.
 
 @interface LazyColumnLayoutInterface

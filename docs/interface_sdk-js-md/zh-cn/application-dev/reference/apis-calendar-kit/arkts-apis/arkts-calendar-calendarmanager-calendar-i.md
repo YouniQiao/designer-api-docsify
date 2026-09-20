@@ -1,6 +1,10 @@
 # Calendar
 
-下列API示例中需先通过[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
+```TypeScript
+export interface Calendar
+```
+
+下列API示例中需先通过[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar-1)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar-2)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
@@ -110,6 +114,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
   }
 });
 ```
+
+<a id="addevent-1"></a>
 
 ## addEvent
 
@@ -260,6 +266,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 });
 ```
 
+<a id="addevents-1"></a>
+
 ## addEvents
 
 ```TypeScript
@@ -397,6 +405,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="deleteevent-1"></a>
 
 ## deleteEvent
 
@@ -552,6 +562,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="deleteevents-1"></a>
 
 ## deleteEvents
 
@@ -814,6 +826,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 });
 ```
 
+<a id="getevents-1"></a>
+
 ## getEvents
 
 ```TypeScript
@@ -848,6 +862,8 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 **示例**
 
 参见 [getEvents](#getevents)
+
+<a id="getevents-2"></a>
 
 ## getEvents
 
@@ -1138,6 +1154,8 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 });
 ```
 
+<a id="setconfig-1"></a>
+
 ## setConfig
 
 ```TypeScript
@@ -1274,6 +1292,8 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
   }
 });
 ```
+
+<a id="updateevent-1"></a>
 
 ## updateEvent
 

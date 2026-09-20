@@ -1,5 +1,9 @@
 # RunningAppClone（系统接口）
 
+```TypeScript
+export interface RunningAppClone
+```
+
 定义分身应用在运行态的结构信息。
 
 **起始版本：** 12

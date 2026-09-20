@@ -1,5 +1,9 @@
 # PixelMap
 
+```TypeScript
+interface PixelMap
+```
+
 Represents data of the pixel map type defined by the system.
 
 **Since:** 15
@@ -15,7 +19,7 @@ import { uniformDataStruct } from '@kit.ArkData';
 ## details
 
 ```TypeScript
-details?: Record<string, number | number | number | string | Uint8Array>
+details?: Record<string, number | string | Uint8Array>
 ```
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.

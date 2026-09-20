@@ -1,5 +1,9 @@
 # Role（系统接口）
 
+```TypeScript
+enum Role
+```
+
 设备角色。
 
 **起始版本：** 26.0.1

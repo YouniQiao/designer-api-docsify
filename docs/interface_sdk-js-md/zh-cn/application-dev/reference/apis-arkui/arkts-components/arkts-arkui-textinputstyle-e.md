@@ -1,5 +1,9 @@
 # TextInputStyle
 
+```TypeScript
+declare enum TextInputStyle
+```
+
 文本输入样式。
 
 **起始版本：** 9

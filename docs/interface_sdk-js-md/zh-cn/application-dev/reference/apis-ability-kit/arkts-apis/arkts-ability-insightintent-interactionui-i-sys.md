@@ -1,5 +1,9 @@
 # InteractionUI（系统接口）
 
+```TypeScript
+interface InteractionUI
+```
+
 定义当前意图执行完成后需要展示的交互界面的信息。
 
 **起始版本：** 26.0.1

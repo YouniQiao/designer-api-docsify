@@ -56,6 +56,8 @@ storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: stor
 ```
 
 
+<a id="getcurrentbundlestats-1"></a>
+
 ## getCurrentBundleStats
 
 ```TypeScript

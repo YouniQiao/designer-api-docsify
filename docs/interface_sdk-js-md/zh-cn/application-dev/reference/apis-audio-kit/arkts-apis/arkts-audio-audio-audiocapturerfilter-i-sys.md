@@ -1,5 +1,9 @@
 # AudioCapturerFilter（系统接口）
 
+```TypeScript
+interface AudioCapturerFilter
+```
+
 过滤条件类。在调用selectOutputDeviceByFilter接口前，需要先创建AudioCapturerFilter实例。
 
 **起始版本：** 18

@@ -133,6 +133,8 @@ try {
 ```
 
 
+<a id="setapplicationenabled-1"></a>
+
 ## setApplicationEnabled
 
 ```TypeScript
@@ -180,6 +182,8 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 参见 [setApplicationEnabled](#setapplicationenabled)
 
 
+<a id="setapplicationenabled-2"></a>
+
 ## setApplicationEnabled
 
 ```TypeScript
@@ -217,6 +221,8 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 
 参见 [setApplicationEnabled](#setapplicationenabled)
 
+
+<a id="setapplicationenabled-3"></a>
 
 ## setApplicationEnabled
 

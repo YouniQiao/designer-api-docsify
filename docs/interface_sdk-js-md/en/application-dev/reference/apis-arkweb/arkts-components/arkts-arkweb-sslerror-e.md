@@ -1,5 +1,9 @@
 # SslError
 
+```TypeScript
+declare enum SslError
+```
+
 Enumerates the error codes returned by **onSslErrorEventReceive** API.
 
 **Since:** 9

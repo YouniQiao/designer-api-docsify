@@ -1,5 +1,9 @@
 # ImageRenderMode
 
+```TypeScript
+declare enum ImageRenderMode
+```
+
 Interpolation effect of the image.
 
 **Since:** 7

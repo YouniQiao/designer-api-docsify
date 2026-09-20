@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="movemissiontofront-1"></a>
+
 ## moveMissionToFront
 
 ```TypeScript
@@ -139,6 +141,8 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 See [moveMissionToFront](#movemissiontofront)
 
+
+<a id="movemissiontofront-2"></a>
 
 ## moveMissionToFront
 

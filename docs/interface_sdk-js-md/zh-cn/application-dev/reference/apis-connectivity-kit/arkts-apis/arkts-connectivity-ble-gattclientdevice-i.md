@@ -1,5 +1,9 @@
 # GattClientDevice
 
+```TypeScript
+interface GattClientDevice
+```
+
 GATT客户端类，提供了和服务端进行连接和数据传输等操作方法。
 
 使用该类的方法前，需通过[createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)方法构造该类的实例。通过创建不同的该类实例，可以管理多路GATT连接。
@@ -264,6 +268,8 @@ try {
 }
 ```
 
+<a id="getdevicename-1"></a>
+
 ## getDeviceName
 
 ```TypeScript
@@ -370,6 +376,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="getrssivalue-1"></a>
 
 ## getRssiValue
 
@@ -513,6 +521,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="getservices-1"></a>
 
 ## getServices
 
@@ -1061,6 +1071,8 @@ try {
 }
 ```
 
+<a id="readcharacteristicvalue-1"></a>
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1202,6 +1214,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="readdescriptorvalue-1"></a>
 
 ## readDescriptorValue
 
@@ -1500,6 +1514,8 @@ try {
 }
 ```
 
+<a id="setcharacteristicchangeindication-1"></a>
+
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1644,6 +1660,8 @@ try {
   console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="setcharacteristicchangenotification-1"></a>
 
 ## setCharacteristicChangeNotification
 
@@ -1909,6 +1927,8 @@ try {
 }
 ```
 
+<a id="writecharacteristicvalue-1"></a>
+
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -2054,6 +2074,8 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
+
+<a id="writedescriptorvalue-1"></a>
 
 ## writeDescriptorValue
 

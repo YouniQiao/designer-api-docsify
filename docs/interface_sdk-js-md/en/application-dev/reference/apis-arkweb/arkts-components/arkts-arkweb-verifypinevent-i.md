@@ -1,5 +1,9 @@
 # VerifyPinEvent
 
+```TypeScript
+declare interface VerifyPinEvent
+```
+
 Defines the callback triggered to notify the user of PIN verification.
 
 **Since:** 22

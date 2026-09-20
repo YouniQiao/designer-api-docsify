@@ -1,5 +1,9 @@
 # DataShareHelper (System API)
 
+```TypeScript
+interface DataShareHelper
+```
+
 Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md).
 
 **Since:** 9
@@ -156,6 +160,8 @@ try {
   console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="batchinsert-1"></a>
 
 ## batchInsert
 
@@ -418,6 +424,8 @@ try {
 }
 ```
 
+<a id="delete-1"></a>
+
 ## delete
 
 ```TypeScript
@@ -624,6 +632,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="denormalizeuri-1"></a>
+
 ## denormalizeUri
 
 ```TypeScript
@@ -716,6 +726,8 @@ if (dataShareHelper != undefined) {
   let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="getpublisheddata-1"></a>
 
 ## getPublishedData
 
@@ -862,6 +874,8 @@ try {
 }
 ```
 
+<a id="insert-1"></a>
+
 ## insert
 
 ```TypeScript
@@ -967,6 +981,8 @@ if (dataShareHelper != undefined) {
   });
 }
 ```
+
+<a id="normalizeuri-1"></a>
 
 ## normalizeUri
 
@@ -1075,6 +1091,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="notifychange-1"></a>
+
 ## notifyChange
 
 ```TypeScript
@@ -1116,6 +1134,8 @@ In non-silent scenarios, the size of the **uri** parameter passed in this API ca
 **Examples**
 
 See [notifyChange](#notifychange)
+
+<a id="notifychange-2"></a>
 
 ## notifyChange
 
@@ -1191,13 +1211,15 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on-1) API.
 
 **Since:** 12
 
@@ -1214,7 +1236,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on-1). |
 
 **Error codes:**
 
@@ -1345,6 +1367,8 @@ Notification triggering: In non-silent scenarios, a notification is published if
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -1556,6 +1580,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="publish-1"></a>
+
 ## publish
 
 ```TypeScript
@@ -1640,6 +1666,8 @@ if (dataShareHelper != undefined) {
   let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="publish-2"></a>
 
 ## publish
 
@@ -1822,6 +1850,8 @@ try {
 }
 ```
 
+<a id="query-1"></a>
+
 ## query
 
 ```TypeScript
@@ -1985,6 +2015,8 @@ try {
   console.error(`Failed to update. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="update-1"></a>
 
 ## update
 

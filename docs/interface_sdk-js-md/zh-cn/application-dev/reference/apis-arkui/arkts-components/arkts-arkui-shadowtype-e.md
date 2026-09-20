@@ -1,5 +1,9 @@
 # ShadowType
 
+```TypeScript
+declare enum ShadowType
+```
+
 阴影类型。
 
 **起始版本：** 10

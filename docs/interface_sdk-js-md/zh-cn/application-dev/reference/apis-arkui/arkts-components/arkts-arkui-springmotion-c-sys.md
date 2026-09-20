@@ -1,5 +1,9 @@
 # SpringMotion（系统接口）
 
+```TypeScript
+declare class SpringMotion
+```
+
 弹簧动画模型。可以基于起点、终点、初始速度和弹簧属性构建弹簧动画。
 
 **起始版本：** 7

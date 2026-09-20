@@ -1,5 +1,9 @@
 # BaseHandlerOptions
 
+```TypeScript
+interface BaseHandlerOptions
+```
+
 基础手势处理器配置参数。
 
 **起始版本：** 15

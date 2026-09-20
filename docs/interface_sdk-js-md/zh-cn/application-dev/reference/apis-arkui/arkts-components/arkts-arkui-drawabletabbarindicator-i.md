@@ -1,5 +1,9 @@
 # DrawableTabBarIndicator
 
+```TypeScript
+declare interface DrawableTabBarIndicator
+```
+
 使用图片资源作为下划线的对象。
 
 **起始版本：** 22

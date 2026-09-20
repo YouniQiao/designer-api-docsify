@@ -1,5 +1,9 @@
 # IconCommonOptions
 
+```TypeScript
+export interface IconCommonOptions
+```
+
 Defines the common icon options of the chip.
 
 > **NOTE:** 
@@ -24,7 +28,7 @@ activatedFillColor?: ResourceColor
 
 Icon fill color when the **Chip** is activated. This attribute takes effect only when the image format is SVG.
 
-Default value: **&#36;r('sys.color.chip_active_icon_color')**
+Default value: **$r('sys.color.chip_active_icon_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -46,7 +50,7 @@ fillColor?: ResourceColor
 
 Icon fill color. This attribute takes effect only when the image format is SVG.
 
-Default value: **&#36;r('sys.color.chip_usually_icon_color')**
+Default value: **$r('sys.color.chip_usually_icon_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -71,9 +75,9 @@ Icon size. Percentage is not supported. Abnormal values are handled as the defau
 Default value:
 
 - When **ChipOptions.size** is **ChipSize.SMALL**, the default value is  
-**{width: &#36;r('sys.float.chip_small_icon_size'), height: &#36;r('sys.float.chip_small_icon_size')}**  
+**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**  
 - When **ChipOptions.size** is **ChipSize.NORMAL**, the default value is  
-**{width: &#36;r('sys.float.chip_normal_icon_size'), height: &#36;r('sys.float.chip_normal_icon_size')}**
+**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**
 
 Unit: vp
 

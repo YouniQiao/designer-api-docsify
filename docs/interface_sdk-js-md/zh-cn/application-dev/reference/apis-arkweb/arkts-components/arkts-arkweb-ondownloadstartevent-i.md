@@ -1,5 +1,9 @@
 # OnDownloadStartEvent
 
+```TypeScript
+declare interface OnDownloadStartEvent
+```
+
 定义通知主应用开始下载文件的回调信息，包括URL、用户代理和文件详情。适用于需要监控和管理文件下载的场景，提升下载流程的可控性和用户体验。
 
 **起始版本：** 12

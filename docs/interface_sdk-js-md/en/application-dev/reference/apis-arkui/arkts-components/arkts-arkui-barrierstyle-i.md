@@ -1,5 +1,9 @@
 # BarrierStyle
 
+```TypeScript
+declare interface BarrierStyle
+```
+
 Defines the style of a barrier, which is used to define the ID, direction, and dependent components of a barrier. Child components can reference the barrier by its ID as an anchor for alignment and positioning.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # Font
 
+```TypeScript
+export class Font
+```
+
 Provides APIs for registering custom fonts.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # CameraManager
 
+```TypeScript
+interface CameraManager
+```
+
 相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md)接口获取相机管理实例。
 
 **起始版本：** 10
@@ -49,6 +53,8 @@ createCameraInput(camera: CameraDevice): CameraInput
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+<a id="createcamerainput-1"></a>
 
 ## createCameraInput
 
@@ -229,6 +235,8 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 
+<a id="createphotooutput-1"></a>
+
 ## createPhotoOutput
 
 ```TypeScript
@@ -295,6 +303,8 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+<a id="createpreviewoutput-1"></a>
 
 ## createPreviewOutput
 
@@ -402,6 +412,8 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+
+<a id="createvideooutput-1"></a>
 
 ## createVideoOutput
 
@@ -623,6 +635,8 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 | 类型 | 说明 |
 | --- | --- |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 相机输出能力。 |
+
+<a id="getsupportedoutputcapability-1"></a>
 
 ## getSupportedOutputCapability
 

@@ -75,6 +75,8 @@ try {
 ```
 
 
+<a id="getusernonstopapps-1"></a>
+
 ## getUserNonStopApps
 
 ```TypeScript

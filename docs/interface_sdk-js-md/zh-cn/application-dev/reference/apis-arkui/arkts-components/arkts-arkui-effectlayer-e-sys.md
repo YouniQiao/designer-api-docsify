@@ -1,5 +1,9 @@
 # EffectLayer（系统接口）
 
+```TypeScript
+declare enum EffectLayer
+```
+
 EffectComponent的渲染层级。
 
 **起始版本：** 20

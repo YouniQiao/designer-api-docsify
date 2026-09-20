@@ -1,5 +1,9 @@
 # FillMode
 
+```TypeScript
+declare enum FillMode
+```
+
 Sets the status before and after execution of the animation in the current playback direction.
 
 **Since:** 7

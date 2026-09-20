@@ -1,5 +1,9 @@
 # PrivacyProtocol
 
+```TypeScript
+interface PrivacyProtocol
+```
+
 定义隐私协议配置，包括数据集大小、协议类型等。用于隐私保护计算。
 
 **起始版本：** 26.0.1

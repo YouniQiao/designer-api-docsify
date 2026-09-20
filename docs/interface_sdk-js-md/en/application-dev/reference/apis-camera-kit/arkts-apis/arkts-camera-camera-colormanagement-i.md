@@ -1,5 +1,9 @@
 # ColorManagement
 
+```TypeScript
+interface ColorManagement extends ColorManagementQuery
+```
+
 **ColorManagement** inherits from [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md).
 
 It provides the APIs for color space settings.

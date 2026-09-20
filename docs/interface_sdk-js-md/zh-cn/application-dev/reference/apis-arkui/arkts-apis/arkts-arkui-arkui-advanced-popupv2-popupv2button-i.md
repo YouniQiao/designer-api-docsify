@@ -1,5 +1,9 @@
 # PopupV2Button
 
+```TypeScript
+export interface PopupV2Button
+```
+
 PopupV2Button定义按钮的相关属性和事件。
 
 @typedef PopupV2Button

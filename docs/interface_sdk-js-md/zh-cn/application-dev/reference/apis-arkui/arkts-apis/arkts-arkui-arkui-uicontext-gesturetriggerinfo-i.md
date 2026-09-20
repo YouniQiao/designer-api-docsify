@@ -1,5 +1,9 @@
 # GestureTriggerInfo
 
+```TypeScript
+export interface GestureTriggerInfo
+```
+
 特定手势回调函数触发时的信息。
 
 **起始版本：** 20

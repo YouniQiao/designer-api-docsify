@@ -1,5 +1,9 @@
 # BorderImageOption
 
+```TypeScript
+declare interface BorderImageOption
+```
+
 Border image option
 
 @interface BorderImageOption

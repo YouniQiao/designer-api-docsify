@@ -90,6 +90,8 @@ try {
 ```
 
 
+<a id="getfilesyncstate-1"></a>
+
 ## getFileSyncState
 
 ```TypeScript
@@ -128,6 +130,8 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 
 参见 [getFileSyncState](#getfilesyncstate)
 
+
+<a id="getfilesyncstate-2"></a>
 
 ## getFileSyncState
 

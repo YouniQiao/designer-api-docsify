@@ -1,5 +1,9 @@
 # CameraInput
 
+```TypeScript
+interface CameraInput
+```
+
 **CameraInput** defines the camera input object.
 
 It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
@@ -39,6 +43,8 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="close-1"></a>
 
 ## close
 
@@ -240,6 +246,8 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+<a id="open-1"></a>
+
 ## open
 
 ```TypeScript
@@ -268,6 +276,8 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="open-2"></a>
 
 ## open
 
@@ -302,6 +312,8 @@ Opens this camera device. This API uses a promise to return the result.
 | [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
 | [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+<a id="open-3"></a>
 
 ## open
 

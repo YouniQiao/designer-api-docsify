@@ -1,5 +1,9 @@
 # HiRetrievalConfig
 
+```TypeScript
+interface HiRetrievalConfig
+```
+
 应用灰度活动配置。
 
 **起始版本：** 26.0.0

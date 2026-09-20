@@ -77,6 +77,8 @@ deviceStandby.getExemptedApps(resourceTypes).then( (res: Array<deviceStandby.Exe
 ```
 
 
+<a id="getexemptedapps-1"></a>
+
 ## getExemptedApps
 
 ```TypeScript

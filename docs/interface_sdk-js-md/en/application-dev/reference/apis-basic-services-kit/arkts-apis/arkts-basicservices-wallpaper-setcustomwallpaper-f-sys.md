@@ -73,6 +73,8 @@ try {
 ```
 
 
+<a id="setcustomwallpaper-1"></a>
+
 ## setCustomWallpaper
 
 ```TypeScript

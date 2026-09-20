@@ -1,5 +1,9 @@
 # ApplicationReservedFlag (System API)
 
+```TypeScript
+export enum ApplicationReservedFlag
+```
+
 Each bit of this ApplicationReservedFlag value identifies relevant information.
 
 **Since:** 26.0.1

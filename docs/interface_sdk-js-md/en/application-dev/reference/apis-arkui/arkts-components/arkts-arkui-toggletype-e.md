@@ -1,5 +1,9 @@
 # ToggleType
 
+```TypeScript
+declare enum ToggleType
+```
+
 Enumerates toggle types.
 
 **Since:** 8

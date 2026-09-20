@@ -1,5 +1,9 @@
 # HttpInterceptorChain
 
+```TypeScript
+export class HttpInterceptorChain
+```
+
 Defines HTTP interceptor chain.
 
 **Since:** 22

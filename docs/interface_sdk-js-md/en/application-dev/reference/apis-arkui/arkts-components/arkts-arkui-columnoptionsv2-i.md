@@ -1,5 +1,9 @@
 # ColumnOptionsV2
 
+```TypeScript
+interface ColumnOptionsV2
+```
+
 Sets the spacing between child components of the **Column** component. The spacing type **SpaceType** can be number, string, or Resource.
 
 **Since:** 18

@@ -1,5 +1,9 @@
 # ErrorCode
 
+```TypeScript
+enum ErrorCode
+```
+
 表示错误码的枚举。
 
 **起始版本：** 11

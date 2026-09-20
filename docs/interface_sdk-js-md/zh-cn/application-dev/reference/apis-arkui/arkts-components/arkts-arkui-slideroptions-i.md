@@ -1,5 +1,9 @@
 # SliderOptions
 
+```TypeScript
+declare interface SliderOptions
+```
+
 滑动条的信息。
 
 **起始版本：** 7
@@ -168,7 +172,7 @@ value?: number
 
 默认值：与属性min的取值一致。
 
-从API version 10开始，该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+从API version 10开始，该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -176,7 +180,7 @@ value?: number
 
 小于min时取min，大于max时取max。
 
-&#36;&#36;运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考示例7（设置滑动条的双向绑定）。
+$$运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考示例7（设置滑动条的双向绑定）。
 
 **类型：** number
 

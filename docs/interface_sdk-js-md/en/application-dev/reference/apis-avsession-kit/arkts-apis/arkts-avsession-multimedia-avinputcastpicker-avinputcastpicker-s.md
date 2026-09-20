@@ -1,5 +1,9 @@
 # AVInputCastPicker
 
+```TypeScript
+export declare struct AVInputCastPicker
+```
+
 Picker used to show available input devices. @struct { AVInputCastPicker }
 
 **Since:** 20

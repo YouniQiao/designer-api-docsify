@@ -62,6 +62,8 @@ screenLock.lock().then((data: Boolean) => {
 ```
 
 
+<a id="lock-1"></a>
+
 ## lock
 
 ```TypeScript

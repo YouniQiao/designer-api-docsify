@@ -1,5 +1,9 @@
 # WindowModeFollowStrategy (System API)
 
+```TypeScript
+declare enum WindowModeFollowStrategy
+```
+
 Enumerates the following strategies of the window mode.
 
 **Since:** 18

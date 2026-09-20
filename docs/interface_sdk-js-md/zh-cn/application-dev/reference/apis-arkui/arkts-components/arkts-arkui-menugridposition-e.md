@@ -1,5 +1,9 @@
 # MenuGridPosition
 
+```TypeScript
+declare enum MenuGridPosition
+```
+
 栅格菜单在菜单中的位置枚举值。
 
 **起始版本：** 26.0.0

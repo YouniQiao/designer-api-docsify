@@ -1,5 +1,9 @@
 # ModalTransition
 
+```TypeScript
+declare enum ModalTransition
+```
+
 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。
 
 **起始版本：** 10

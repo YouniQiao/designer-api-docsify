@@ -95,6 +95,8 @@ promise.then((data: sensor.RotationMatrixResponse) => {
 ```
 
 
+<a id="createrotationmatrix-1"></a>
+
 ## createRotationMatrix
 
 ```TypeScript
@@ -133,6 +135,8 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 参见 [createRotationMatrix](#createrotationmatrix)
 
 
+<a id="createrotationmatrix-2"></a>
+
 ## createRotationMatrix
 
 ```TypeScript
@@ -167,6 +171,8 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 参见 [createRotationMatrix](#createrotationmatrix)
 
+
+<a id="createrotationmatrix-3"></a>
 
 ## createRotationMatrix
 

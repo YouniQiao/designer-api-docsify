@@ -79,6 +79,8 @@ promise.then(() => {
 ```
 
 
+<a id="setcbconfig-1"></a>
+
 ## setCBConfig
 
 ```TypeScript

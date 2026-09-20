@@ -1,5 +1,9 @@
 # OnErrorReceiveEvent
 
+```TypeScript
+export declare interface OnErrorReceiveEvent
+```
+
 定义网页加载遇到错误时触发该回调。
 
 **起始版本：** 12

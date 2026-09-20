@@ -1,5 +1,9 @@
 # NestedScrollOptionsExt
 
+```TypeScript
+declare interface NestedScrollOptionsExt
+```
+
 用于设置Web组件嵌套滚动规则，支持上下左右四个方向的滚动选项。
 
 **起始版本：** 14

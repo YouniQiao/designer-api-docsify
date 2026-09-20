@@ -1,5 +1,9 @@
 # CommonSegmentButtonOptions
 
+```TypeScript
+interface CommonSegmentButtonOptions
+```
+
 Defines the customizable attributes of a segment button component.
 
 **Since:** 11
@@ -50,7 +54,7 @@ For capsule-type multi-select segment buttons (**type** is **"capsule"** and **m
 
 The radius size is limited by the component size. The maximum value is half of the component width or height. Percentage setting is not supported. If the value exceeds the maximum, it is automatically corrected to the maximum. If a percentage is used, the default value is used.
 
-Default value: `&#36;r('sys.float.segmentbutton_container_shape')`
+Default value: `$r('sys.float.segmentbutton_container_shape')`
 
 If the value is **undefined**, the default value is used.
 
@@ -72,7 +76,7 @@ backgroundColor?: ResourceColor
 
 Color of the background.
 
-Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
+Default value: **$r('sys.color.ohos_id_color_button_normal')**
 
 If the value is **undefined**, the default value is used.
 
@@ -196,7 +200,7 @@ fontColor?: ResourceColor
 
 Text color of the button in unselected state.
 
-Default value: **&#36;r('sys.color.ohos_id_color_text_secondary')**
+Default value: **$r('sys.color.ohos_id_color_text_secondary')**
 
 If the value is **undefined**, the default value is used.
 
@@ -218,7 +222,7 @@ fontSize?: DimensionNoPercentage
 
 Font size of the button in unselected state (percentage setting is not supported).
 
-Default value: **&#36;r('sys.float.ohos_id_text_size_body2')**
+Default value: **$r('sys.float.ohos_id_text_size_body2')**
 
 Unit: fp
 
@@ -306,7 +310,7 @@ For capsule-type multi-select segment buttons (**type** is **"capsule"** and **m
 
 The radius size is limited by the component size. The maximum value is half of the component width or height. Percentage setting is not supported. If the value exceeds the maximum, it is automatically corrected to the maximum. If a percentage is used, the default value is used.
 
-Default value: `&#36;r('sys.float.segmentbutton_selected_background_shape')`
+Default value: `$r('sys.float.segmentbutton_selected_background_shape')`
 
 If the value is **undefined**, the default value is used.
 
@@ -382,9 +386,9 @@ Color of the background for the button in selected state.
 
 Default value:
 
-When **type** is **"tab"**, the default value is `&#36;r('sys.color.segment_button_checked_foreground_color')`.
+When **type** is **"tab"**, the default value is `$r('sys.color.segment_button_checked_foreground_color')`.
 
-When **type** is **"capsule"**, the default value is `&#36;r('sys.color.ohos_id_color_emphasize')`.
+When **type** is **"capsule"**, the default value is `$r('sys.color.ohos_id_color_emphasize')`.
 
 If the value is **undefined**, the default value is used.
 
@@ -408,9 +412,9 @@ Text color of the button in selected state.
 
 Default value:
 
-When type is **"tab"**, the default value is `&#36;r('sys.color.ohos_id_color_text_primary')`.
+When type is **"tab"**, the default value is `$r('sys.color.ohos_id_color_text_primary')`.
 
-When type is **"capsule"**, the default value is `&#36;r('sys.color.ohos_id_color_foreground_contrary')`.
+When type is **"capsule"**, the default value is `$r('sys.color.ohos_id_color_foreground_contrary')`.
 
 If the value is **undefined**, the default value is used.
 
@@ -432,7 +436,7 @@ selectedFontSize?: DimensionNoPercentage
 
 Font size of the button in selected state (percentage setting is not supported).
 
-Default value: **&#36;r('sys.float.ohos_id_text_size_body2')**
+Default value: **$r('sys.float.ohos_id_text_size_body2')**
 
 Unit: fp
 

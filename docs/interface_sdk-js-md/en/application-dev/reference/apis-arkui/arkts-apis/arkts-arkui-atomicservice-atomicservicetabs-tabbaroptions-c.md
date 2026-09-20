@@ -1,5 +1,9 @@
 # TabBarOptions
 
+```TypeScript
+export declare class TabBarOptions
+```
+
 Array of tab bar container configurations.
 
 **Since:** 12

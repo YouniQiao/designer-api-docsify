@@ -1,5 +1,9 @@
 # Updater (System API)
 
+```TypeScript
+export interface Updater
+```
+
 Defines a utility class that provides online system update functions, such as checking new versions online, downloading upgrade packages, installing update packages, managing upgrade policies, and obtaining version information.
 
 Use scenarios: OTA upgrade, online system upgrade, automatic version check, and upgrade management.
@@ -143,6 +147,8 @@ try {
   console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="checknewversion-1"></a>
 
 ## checkNewVersion
 
@@ -327,6 +333,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="clearerror-1"></a>
 
 ## clearError
 
@@ -527,6 +535,8 @@ try {
 }
 ```
 
+<a id="download-1"></a>
+
 ## download
 
 ```TypeScript
@@ -711,6 +721,8 @@ try {
 }
 ```
 
+<a id="getcurrentversiondescription-1"></a>
+
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -861,6 +873,8 @@ try {
   console.error(`Fail to get updater error: ${error}`);
 }
 ```
+
+<a id="getcurrentversioninfo-1"></a>
 
 ## getCurrentVersionInfo
 
@@ -1031,6 +1045,8 @@ try {
 }
 ```
 
+<a id="getnewversiondescription-1"></a>
+
 ## getNewVersionDescription
 
 ```TypeScript
@@ -1200,6 +1216,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="getnewversioninfo-1"></a>
 
 ## getNewVersionInfo
 
@@ -1377,6 +1395,8 @@ try {
 }
 ```
 
+<a id="gettaskinfo-1"></a>
+
 ## getTaskInfo
 
 ```TypeScript
@@ -1526,6 +1546,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="getupgradepolicy-1"></a>
 
 ## getUpgradePolicy
 
@@ -1842,6 +1864,8 @@ try {
 }
 ```
 
+<a id="pausedownload-1"></a>
+
 ## pauseDownload
 
 ```TypeScript
@@ -2025,6 +2049,8 @@ try {
 }
 ```
 
+<a id="resumedownload-1"></a>
+
 ## resumeDownload
 
 ```TypeScript
@@ -2181,6 +2207,8 @@ try {
 }
 ```
 
+<a id="setupgradepolicy-1"></a>
+
 ## setUpgradePolicy
 
 ```TypeScript
@@ -2330,6 +2358,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="terminateupgrade-1"></a>
 
 ## terminateUpgrade
 
@@ -2516,6 +2546,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="upgrade-1"></a>
 
 ## upgrade
 

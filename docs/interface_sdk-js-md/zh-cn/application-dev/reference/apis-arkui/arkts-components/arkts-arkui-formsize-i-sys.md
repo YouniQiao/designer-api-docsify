@@ -1,5 +1,9 @@
 # FormSize（系统接口）
 
+```TypeScript
+interface FormSize
+```
+
 卡片大小信息。
 
 **起始版本：** 18

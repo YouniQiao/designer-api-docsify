@@ -104,6 +104,8 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getdisalloweduninstallbundles-1"></a>
+
 ## getDisallowedUninstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ function getDisallowedUninstallBundles(admin: Want, userId: number, callback: As
 
 参见 [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
 
+
+<a id="getdisalloweduninstallbundles-2"></a>
 
 ## getDisallowedUninstallBundles
 

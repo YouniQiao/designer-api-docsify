@@ -78,6 +78,8 @@ usageStatistics.queryNotificationEventStats(0, 20000000000000, (err: BusinessErr
 ```
 
 
+<a id="querynotificationeventstats-1"></a>
+
 ## queryNotificationEventStats
 
 ```TypeScript

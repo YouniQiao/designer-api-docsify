@@ -1,5 +1,9 @@
 # FaceAuthManager（系统接口）
 
+```TypeScript
+class FaceAuthManager
+```
+
 人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的SurfaceId。
 
 **起始版本：** 9

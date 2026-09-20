@@ -1,5 +1,9 @@
 # AccessibilityHoverEvent
 
+```TypeScript
+declare interface AccessibilityHoverEvent extends BaseEvent
+```
+
 The accessibility hover action triggers this method invocation.
 
 **Inheritance/Implementation:** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

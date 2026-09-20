@@ -1,5 +1,9 @@
 # ExecuteParam (System API)
 
+```TypeScript
+interface ExecuteParam
+```
+
 Defines the parameter used to execute an intent call.
 
 **Since:** 11

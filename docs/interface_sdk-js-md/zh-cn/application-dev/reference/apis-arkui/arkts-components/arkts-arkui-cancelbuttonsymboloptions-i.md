@@ -1,5 +1,9 @@
 # CancelButtonSymbolOptions
 
+```TypeScript
+interface CancelButtonSymbolOptions
+```
+
 定义清除按钮Symbol图标选项。
 
 **起始版本：** 12

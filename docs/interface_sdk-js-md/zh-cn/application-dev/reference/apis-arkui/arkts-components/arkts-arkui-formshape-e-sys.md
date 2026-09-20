@@ -1,5 +1,9 @@
 # FormShape（系统接口）
 
+```TypeScript
+declare enum FormShape
+```
+
 定义卡片形状枚举。
 
 **起始版本：** 12

@@ -66,6 +66,8 @@ print.updateExtensionInfo(info).then(() => {
 ```
 
 
+<a id="updateextensioninfo-1"></a>
+
 ## updateExtensionInfo
 
 ```TypeScript

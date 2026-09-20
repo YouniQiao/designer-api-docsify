@@ -120,6 +120,8 @@ try {
 ```
 
 
+<a id="save-1"></a>
+
 ## save
 
 ```TypeScript
@@ -157,6 +159,8 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 
 参见 [save](#save)
 
+
+<a id="save-2"></a>
 
 ## save
 

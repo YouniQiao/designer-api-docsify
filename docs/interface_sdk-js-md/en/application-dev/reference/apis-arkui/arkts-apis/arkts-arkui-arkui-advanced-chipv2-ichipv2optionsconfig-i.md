@@ -1,5 +1,9 @@
 # IChipV2OptionsConfig
 
+```TypeScript
+export interface IChipV2OptionsConfig
+```
+
 Defines the configuration API of **ChipV2** options.
 
 **Since:** 26.0.0
@@ -142,7 +146,7 @@ activatedBackgroundColor?: ColorMetrics
 
 Background color of **ChipV2** when activated.
 
-Default value: **&#36;r('sys.color.chip_container_activated_color')**
+Default value: **$r('sys.color.chip_container_activated_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -212,7 +216,7 @@ backgroundColor?: ColorMetrics
 
 Background color of **ChipV2**.
 
-Default value: **&#36;r('sys.color.chip_background_color')**
+Default value: **$r('sys.color.chip_background_color')**
 
 If the value is **undefined**, the default value is used.
 
@@ -258,9 +262,9 @@ Rounded corner radius of the **ChipV2** background. Percentage values are not su
 
 Default values:
 
-When **size** is **ChipV2Size.NORMAL**, the default **borderRadius** is **&#36;r('sys.float.chip_border_radius_normal')**.
+When **size** is **ChipV2Size.NORMAL**, the default **borderRadius** is **$r('sys.float.chip_border_radius_normal')**.
 
-When **size** is **ChipV2Size.SMALL**, the default **borderRadius** is **&#36;r('sys.float.chip_border_radius_small')**.
+When **size** is **ChipV2Size.SMALL**, the default **borderRadius** is **$r('sys.float.chip_border_radius_small')**.
 
 Unit: vp
 
@@ -286,8 +290,8 @@ Configuration of the close icon, including accessibility configuration. Set this
 
 Default values:
 
-- Default size: When **size** is **ChipV2Size.SMALL**, the default value is `&#36;r('sys.float.chip_small_font_size')`.  
-In other cases, the default value is `&#36;r('sys.float.chip_normal_font_size')`.  
+- Default size: When **size** is **ChipV2Size.SMALL**, the default value is `$r('sys.float.chip_small_font_size')`.  
+In other cases, the default value is `$r('sys.float.chip_normal_font_size')`.  
 - Default accessibility: No accessibility description.
 
 If the value is **undefined**, the default value is used.
@@ -360,10 +364,10 @@ The priority of this **fontSize** is lower than that of the **fontSize** attribu
 
 Default values:
 
-- When **size** is **ChipV2Size.SMALL**, the default text value is `&#36;r('sys.float.chip_small_font_size')`, and the  
-default icon value is `&#36;r('sys.float.chip_small_icon_size')`.  
-- In other cases, the default text value is `&#36;r('sys.float.chip_normal_font_size')`, and the default icon value is  
-`&#36;r('sys.float.chip_normal_icon_size')`.
+- When **size** is **ChipV2Size.SMALL**, the default text value is `$r('sys.float.chip_small_font_size')`, and the  
+default icon value is `$r('sys.float.chip_small_icon_size')`.  
+- In other cases, the default text value is `$r('sys.float.chip_normal_font_size')`, and the default icon value is  
+`$r('sys.float.chip_normal_icon_size')`.
 
 Unit: fp
 

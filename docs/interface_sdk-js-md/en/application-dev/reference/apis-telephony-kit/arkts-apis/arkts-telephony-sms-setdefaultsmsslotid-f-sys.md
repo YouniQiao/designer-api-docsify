@@ -65,6 +65,8 @@ sms.setDefaultSmsSlotId(0).then(() => {
 ```
 
 
+<a id="setdefaultsmsslotid-1"></a>
+
 ## setDefaultSmsSlotId
 
 ```TypeScript

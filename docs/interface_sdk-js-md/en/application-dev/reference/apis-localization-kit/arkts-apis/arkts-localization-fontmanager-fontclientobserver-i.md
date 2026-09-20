@@ -1,5 +1,9 @@
 # FontClientObserver
 
+```TypeScript
+interface FontClientObserver
+```
+
 Observer for font service death events. When the font service dies unexpectedly, the [onServiceDied](#onservicedied) callback is invoked.
 
 **Since:** 26.0.1

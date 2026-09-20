@@ -1,5 +1,9 @@
 # PanGestureOptions
 
+```TypeScript
+declare class PanGestureOptions
+```
+
 Defines the PanGesture options.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # ImageAttachmentInterface
 
+```TypeScript
+declare interface ImageAttachmentInterface
+```
+
 定义图片设置项接口。
 
 **起始版本：** 12

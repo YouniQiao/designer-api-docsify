@@ -1,5 +1,9 @@
 # GestureTriggerInfo
 
+```TypeScript
+export interface GestureTriggerInfo
+```
+
 Defines the information provided when a specific gesture callback is triggered.
 
 **Since:** 20

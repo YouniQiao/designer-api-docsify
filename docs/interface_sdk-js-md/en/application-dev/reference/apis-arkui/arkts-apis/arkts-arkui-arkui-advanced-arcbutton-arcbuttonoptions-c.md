@@ -1,5 +1,9 @@
 # ArcButtonOptions
 
+```TypeScript
+export declare class ArcButtonOptions
+```
+
 Defines the default or custom style parameters for the **ArcButton** component.
 
 **Since:** 18

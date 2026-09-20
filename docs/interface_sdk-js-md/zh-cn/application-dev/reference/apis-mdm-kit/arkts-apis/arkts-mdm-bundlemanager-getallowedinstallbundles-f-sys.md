@@ -104,6 +104,8 @@ bundleManager.getAllowedInstallBundles(wantTemp, 100).then((result) => {
 ```
 
 
+<a id="getallowedinstallbundles-1"></a>
+
 ## getAllowedInstallBundles
 
 ```TypeScript
@@ -148,6 +150,8 @@ function getAllowedInstallBundles(admin: Want, userId: number, callback: AsyncCa
 
 参见 [getAllowedInstallBundles](#getallowedinstallbundles)
 
+
+<a id="getallowedinstallbundles-2"></a>
 
 ## getAllowedInstallBundles
 

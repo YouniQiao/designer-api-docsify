@@ -89,6 +89,8 @@ promise.then((data: sensor.RotationMatrixResponse) => {
 ```
 
 
+<a id="createrotationmatrix-1"></a>
+
 ## createRotationMatrix
 
 ```TypeScript
@@ -122,6 +124,8 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 See [createRotationMatrix](#createrotationmatrix)
 
 
+<a id="createrotationmatrix-2"></a>
+
 ## createRotationMatrix
 
 ```TypeScript
@@ -150,6 +154,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 See [createRotationMatrix](#createrotationmatrix)
 
+
+<a id="createrotationmatrix-3"></a>
 
 ## createRotationMatrix
 

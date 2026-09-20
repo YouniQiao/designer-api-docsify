@@ -75,6 +75,8 @@ try {
 ```
 
 
+<a id="getallowedkioskapps-1"></a>
+
 ## getAllowedKioskApps
 
 ```TypeScript

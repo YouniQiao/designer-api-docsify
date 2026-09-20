@@ -64,6 +64,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 ```
 
 
+<a id="getworkstatus-1"></a>
+
 ## getWorkStatus
 
 ```TypeScript

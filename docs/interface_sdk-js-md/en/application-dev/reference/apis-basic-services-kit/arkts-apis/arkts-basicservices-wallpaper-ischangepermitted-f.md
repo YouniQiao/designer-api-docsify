@@ -51,6 +51,8 @@ wallpaper.isChangePermitted().then((data: Boolean) => {
 ```
 
 
+<a id="ischangepermitted-1"></a>
+
 ## isChangePermitted
 
 ```TypeScript

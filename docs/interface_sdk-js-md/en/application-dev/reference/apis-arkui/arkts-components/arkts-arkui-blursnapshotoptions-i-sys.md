@@ -1,5 +1,9 @@
 # BlurSnapshotOptions (System API)
 
+```TypeScript
+declare interface BlurSnapshotOptions
+```
+
 Defines the options for blur snapshot optimization. Setting this object enables blur optimization.
 
 **Since:** 26.0.0

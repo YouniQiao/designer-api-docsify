@@ -1,5 +1,9 @@
 # SslErrorHandler
 
+```TypeScript
+declare class SslErrorHandler
+```
+
 SslErrorHandler is a class in the Web component for handling SSL certificate verification errors. When an SSL certificate error (such as certificate expiration, hostname mismatch, or untrusted CA) is encountered while loading a secure page, the app can obtain an SslErrorHandler instance through the onSslErrorEvent callback and decide whether to continue loading or cancel navigation. For sample code, see the [onSslErrorEvent](arkts-arkweb-web-comp-attribute.md#onsslerrorevent) event.
 
 **Since:** 9
@@ -33,6 +37,8 @@ Notifies the Web component to cancel this request and stops the current SSL cert
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+<a id="handlecancel-1"></a>
 
 ## handleCancel
 

@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="getallbundleinfo-1"></a>
+
 ## getAllBundleInfo
 
 ```TypeScript
@@ -139,6 +141,8 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 See [getAllBundleInfo](#getallbundleinfo)
 
+
+<a id="getallbundleinfo-2"></a>
 
 ## getAllBundleInfo
 

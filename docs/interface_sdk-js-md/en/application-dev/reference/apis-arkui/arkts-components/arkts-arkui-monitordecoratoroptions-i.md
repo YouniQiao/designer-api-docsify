@@ -1,5 +1,9 @@
 # MonitorDecoratorOptions
 
+```TypeScript
+declare interface MonitorDecoratorOptions
+```
+
 Defines MonitorDecoratorOptions interface
 
 **Since:** 26.0.0

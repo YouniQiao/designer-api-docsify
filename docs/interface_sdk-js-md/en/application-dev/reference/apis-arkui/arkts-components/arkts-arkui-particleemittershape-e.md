@@ -1,5 +1,9 @@
 # ParticleEmitterShape
 
+```TypeScript
+declare enum ParticleEmitterShape
+```
+
 Enumerates the emitter shapes of a particle.
 
 @enum { string }

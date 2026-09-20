@@ -1,5 +1,9 @@
 # FeatureForDevice
 
+```TypeScript
+enum FeatureForDevice
+```
+
 设备特性枚举。
 
 **起始版本：** 24

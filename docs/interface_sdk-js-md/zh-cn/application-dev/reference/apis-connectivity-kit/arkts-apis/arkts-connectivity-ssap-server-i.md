@@ -1,5 +1,9 @@
 # Server
 
+```TypeScript
+interface Server
+```
+
 SSAP服务端类，提供了和客户端进行连接和数据交互等操作方法。
 
 使用该类的方法前，需通过[ssap.createServer](arkts-connectivity-ssap-createserver-f.md)方法构造该类的实例。

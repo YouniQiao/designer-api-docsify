@@ -1,5 +1,9 @@
 # MotionBlurAnchor
 
+```TypeScript
+declare interface MotionBlurAnchor
+```
+
 运动模糊锚点坐标。
 
 **起始版本：** 12

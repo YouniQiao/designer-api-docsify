@@ -1,5 +1,9 @@
 # ControlSize
 
+```TypeScript
+declare enum ControlSize
+```
+
 按钮的尺寸。
 
 **起始版本：** 11

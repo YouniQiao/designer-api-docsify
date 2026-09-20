@@ -1,5 +1,9 @@
 # Ellipse properties/events
 
+```TypeScript
+declare class EllipseAttribute extends CommonShapeMethod<EllipseAttribute>
+```
+
 The [universal attributes](arkts-arkui-commonmethod-c.md) and [universal attributes for drawing components](arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** EllipseAttribute extends CommonShapeMethod<EllipseAttribute>

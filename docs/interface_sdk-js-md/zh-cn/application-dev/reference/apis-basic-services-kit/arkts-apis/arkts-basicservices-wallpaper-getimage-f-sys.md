@@ -64,6 +64,8 @@ wallpaper.getImage(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.P
 ```
 
 
+<a id="getimage-1"></a>
+
 ## getImage
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # DeviceResponse
 
+```TypeScript
+export interface DeviceResponse
+```
+
 **Since:** 3
 
 **Deprecated since:** 6

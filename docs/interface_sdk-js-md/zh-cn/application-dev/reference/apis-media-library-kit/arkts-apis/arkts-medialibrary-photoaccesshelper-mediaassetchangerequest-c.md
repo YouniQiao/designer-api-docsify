@@ -1,5 +1,9 @@
 # MediaAssetChangeRequest
 
+```TypeScript
+class MediaAssetChangeRequest implements MediaChangeRequest
+```
+
 MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
 
 资产变更请求。
@@ -61,6 +65,8 @@ addResource(type: ResourceType, fileUri: string): void
 ```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
+
+<a id="addresource-1"></a>
 
 ## addResource
 
@@ -127,6 +133,8 @@ constructor(asset: PhotoAsset)
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
+
+<a id="createassetrequest-2"></a>
 
 ## createAssetRequest
 
@@ -281,6 +289,8 @@ static deleteAssets(context: Context, assets: Array<PhotoAsset>): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<a id="deleteassets-1"></a>
+
 ## deleteAssets
 
 ```TypeScript
@@ -422,6 +432,8 @@ saveCameraPhoto(): void
 | --- | --- |
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
+
+<a id="savecameraphoto-1"></a>
 
 ## saveCameraPhoto
 

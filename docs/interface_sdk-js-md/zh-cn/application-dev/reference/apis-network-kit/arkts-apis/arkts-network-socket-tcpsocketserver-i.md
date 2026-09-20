@@ -1,5 +1,9 @@
 # TCPSocketServer
 
+```TypeScript
+export interface TCPSocketServer
+```
+
 TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过[socket.constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md)创建TCPSocketServer对象。
 
 **起始版本：** 10
@@ -265,6 +269,8 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -423,6 +429,8 @@ tcpServer.listen(listenAddr).then(() => {
   console.error('listen fail');
 });
 ```
+
+<a id="listen-1"></a>
 
 ## listen
 
@@ -730,6 +738,8 @@ tcpServer.setExtraOptions(tcpExtraOptions).then(() => {
   console.error('setExtraOptions fail');
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

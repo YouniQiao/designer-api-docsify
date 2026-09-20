@@ -1,5 +1,9 @@
 # SearchParams
 
+```TypeScript
+export interface SearchParams
+```
+
 Provides optional attributes for the search area.
 
 **Since:** 18
@@ -108,7 +112,7 @@ Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
 componentBackgroundColor?: ResourceColor
 ```
 
-Background color of a component. Default value: **&#36;r('sys.color.ohos_id_color_text_field_sub_bg')**.
+Background color of a component. Default value: **$r('sys.color.ohos_id_color_text_field_sub_bg')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -238,7 +242,7 @@ Type of the Enter key. Default value: **EnterKeyType.Search**.
 fontColor?: ResourceColor
 ```
 
-Font color of the input text. Default value: **&#36;r('sys.color.ohos_id_color_text_secondary')**.
+Font color of the input text. Default value: **$r('sys.color.ohos_id_color_text_secondary')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -507,7 +511,7 @@ Callback triggered when text is about to be inserted. **true**: Insert the input
 placeholderColor?: ResourceColor
 ```
 
-Placeholder text color. Default value: **&#36;r('sys.color.ohos_id_color_text_secondary')**.
+Placeholder text color. Default value: **$r('sys.color.ohos_id_color_text_secondary')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -523,7 +527,7 @@ Placeholder text color. Default value: **&#36;r('sys.color.ohos_id_color_text_se
 placeholderFont?: Font
 ```
 
-Placeholder text style, including the font size, font weight, font family, and font style. Default value: **{size: &#36;r('sys_float.ohos_id_text_size_body1')}**.
+Placeholder text style, including the font size, font weight, font family, and font style. Default value: **{size: $r('sys_float.ohos_id_text_size_body1')}**.
 
 **Type:** Font
 
@@ -539,7 +543,7 @@ Placeholder text style, including the font size, font weight, font family, and f
 pressedBackgroundColor?: ResourceColor
 ```
 
-Background color of the pressed component. Default value: **&#36;r('sys.color.ohos_id_color_click_effect')**.
+Background color of the pressed component. Default value: **$r('sys.color.ohos_id_color_click_effect')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -642,7 +646,7 @@ Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 textFont?: Font
 ```
 
-Style of the text entered in the search box, including the font size, font width, font family, and font style. Currently, only the default font family is supported. Default value: **{size: &#36;r('sys_float.ohos_id_text_size_body1')}**.
+Style of the text entered in the search box, including the font size, font width, font family, and font style. Currently, only the default font family is supported. Default value: **{size: $r('sys_float.ohos_id_text_size_body1')}**.
 
 **Type:** Font
 

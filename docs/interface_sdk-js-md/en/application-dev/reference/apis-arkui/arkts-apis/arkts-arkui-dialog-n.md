@@ -1,5 +1,9 @@
 # dialog
 
+```TypeScript
+declare namespace dialog
+```
+
 Provides unified dialog APIs.
 
 **Since:** 26.0.1

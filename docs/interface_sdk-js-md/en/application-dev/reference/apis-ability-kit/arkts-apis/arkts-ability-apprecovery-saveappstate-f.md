@@ -68,6 +68,8 @@ try {
 ```
 
 
+<a id="saveappstate-1"></a>
+
 ## saveAppState
 
 ```TypeScript

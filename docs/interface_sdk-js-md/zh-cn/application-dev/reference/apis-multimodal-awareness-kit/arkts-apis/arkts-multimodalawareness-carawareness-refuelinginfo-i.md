@@ -1,5 +1,9 @@
 # RefuelingInfo
 
+```TypeScript
+export interface RefuelingInfo
+```
+
 加油响应信息接口。
 
 **起始版本：** 26.0.1

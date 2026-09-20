@@ -1,5 +1,9 @@
 # BatchResult
 
+```TypeScript
+interface BatchResult
+```
+
 Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md) and [batchUpdate](arkts-assetstore-asset-batchupdate-f.md).
 
 **Since:** 26.0.0

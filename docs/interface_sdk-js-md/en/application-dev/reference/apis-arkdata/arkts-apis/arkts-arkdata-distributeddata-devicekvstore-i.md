@@ -1,5 +1,9 @@
 # DeviceKVStore
 
+```TypeScript
+interface DeviceKVStore extends KVStore
+```
+
 Provides APIs to query and synchronize data in a device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md). Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object.
 
 **Inheritance/Implementation:** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
@@ -73,6 +77,8 @@ try {
     console.error('CloseResultSet e ' + e);
 }
 ```
+
+<a id="closeresultset-1"></a>
 
 ## closeResultSet
 
@@ -197,6 +203,8 @@ try {
     console.error('Get e ' + e);
 }
 ```
+
+<a id="get-1"></a>
 
 ## get
 
@@ -494,6 +502,8 @@ try {
 }
 ```
 
+<a id="getentries-1"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -728,6 +738,8 @@ try {
 }
 ```
 
+<a id="getentries-2"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -955,6 +967,8 @@ try {
     console.error('GetEntries e ' + e);
 }
 ```
+
+<a id="getentries-3"></a>
 
 ## getEntries
 
@@ -1189,6 +1203,8 @@ try {
 }
 ```
 
+<a id="getentries-4"></a>
+
 ## getEntries
 
 ```TypeScript
@@ -1417,6 +1433,8 @@ try {
     console.error('GetEntries e ' + e);
 }
 ```
+
+<a id="getentries-5"></a>
 
 ## getEntries
 
@@ -1864,6 +1882,8 @@ try {
 }
 ```
 
+<a id="getresultset-1"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2081,6 +2101,8 @@ try {
 }
 ```
 
+<a id="getresultset-2"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2291,6 +2313,8 @@ try {
     console.error('GetResultSet e ' + e);
 }
 ```
+
+<a id="getresultset-3"></a>
 
 ## getResultSet
 
@@ -2508,6 +2532,8 @@ try {
 }
 ```
 
+<a id="getresultset-4"></a>
+
 ## getResultSet
 
 ```TypeScript
@@ -2719,6 +2745,8 @@ try {
     console.error('GetResultSet e ' + e);
 }
 ```
+
+<a id="getresultset-5"></a>
 
 ## getResultSet
 
@@ -3084,6 +3112,8 @@ try {
 }
 ```
 
+<a id="getresultsize-1"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -3236,6 +3266,8 @@ try {
 }
 ```
 
+<a id="getresultsize-2"></a>
+
 ## getResultSize
 
 ```TypeScript
@@ -3383,6 +3415,8 @@ try {
     console.error('GetResultSize e ' + e);
 }
 ```
+
+<a id="getresultsize-3"></a>
 
 ## getResultSize
 
@@ -3560,6 +3594,8 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -3606,6 +3642,8 @@ Subscribes to data changes of the specified type.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -3704,6 +3742,8 @@ try {
     console.error('RemoveDeviceData e ' + e);
 }
 ```
+
+<a id="removedevicedata-1"></a>
 
 ## removeDeviceData
 

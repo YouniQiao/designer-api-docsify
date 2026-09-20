@@ -1,5 +1,9 @@
 # ListOptions
 
+```TypeScript
+interface ListOptions
+```
+
 Defines the options of the **List** component.
 
 > **NOTE:** 

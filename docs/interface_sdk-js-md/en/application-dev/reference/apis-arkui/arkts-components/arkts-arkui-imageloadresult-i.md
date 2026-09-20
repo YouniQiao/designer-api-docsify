@@ -1,5 +1,9 @@
 # ImageLoadResult
 
+```TypeScript
+declare interface ImageLoadResult
+```
+
 Describes the object returned after the callback is triggered when an image is successfully loaded or decoded.
 
 **Since:** 12

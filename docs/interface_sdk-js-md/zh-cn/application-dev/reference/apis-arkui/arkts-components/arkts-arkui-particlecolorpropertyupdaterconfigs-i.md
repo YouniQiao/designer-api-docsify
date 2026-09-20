@@ -1,5 +1,9 @@
 # ParticleColorPropertyUpdaterConfigs
 
+```TypeScript
+interface ParticleColorPropertyUpdaterConfigs
+```
+
 设置粒子颜色属性更新器的配置。
 
 **起始版本：** 10

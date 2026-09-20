@@ -1,5 +1,9 @@
 # EditableTitleBarOptions
 
+```TypeScript
+export declare interface EditableTitleBarOptions
+```
+
 Indicates the options of the editable title bar.
 
 **Since:** 12

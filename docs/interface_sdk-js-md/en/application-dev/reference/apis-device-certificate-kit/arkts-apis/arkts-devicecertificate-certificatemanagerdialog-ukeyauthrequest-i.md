@@ -1,5 +1,9 @@
 # UkeyAuthRequest
 
+```TypeScript
+export interface UkeyAuthRequest
+```
+
 USB key PIN authentication request.
 
 **Since:** 22

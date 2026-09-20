@@ -1,5 +1,9 @@
 # Authenticator
 
+```TypeScript
+class Authenticator
+```
+
 认证器基类。
 
 **起始版本：** 8

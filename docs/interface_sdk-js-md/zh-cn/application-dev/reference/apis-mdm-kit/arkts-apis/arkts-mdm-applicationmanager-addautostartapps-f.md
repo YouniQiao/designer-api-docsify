@@ -102,6 +102,8 @@ try {
 ```
 
 
+<a id="addautostartapps-1"></a>
+
 ## addAutoStartApps
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # AccessibilityExtensionContext
 
+```TypeScript
+declare class AccessibilityExtensionContext extends ExtensionContext
+```
+
 AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
 
 辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
@@ -103,6 +107,8 @@ axContext.getFocusElement(isAccessibilityFocus, (err: BusinessError, data: Acces
 });
 ```
 
+<a id="getfocuselement-1"></a>
+
 ## getFocusElement
 
 ```TypeScript
@@ -139,6 +145,8 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 **示例**
 
 参见 [getFocusElement](#getfocuselement)
+
+<a id="getfocuselement-2"></a>
 
 ## getFocusElement
 
@@ -251,6 +259,8 @@ axContext.getWindowRootElement(windowId, (err: BusinessError, data: Accessibilit
 });
 ```
 
+<a id="getwindowrootelement-1"></a>
+
 ## getWindowRootElement
 
 ```TypeScript
@@ -287,6 +297,8 @@ getWindowRootElement(windowId?: number): Promise<AccessibilityElement>
 **示例**
 
 参见 [getWindowRootElement](#getwindowrootelement)
+
+<a id="getwindowrootelement-2"></a>
 
 ## getWindowRootElement
 
@@ -390,6 +402,8 @@ axContext.getWindows(displayId, (err: BusinessError, data: AccessibilityElement[
 });
 ```
 
+<a id="getwindows-1"></a>
+
 ## getWindows
 
 ```TypeScript
@@ -426,6 +440,8 @@ getWindows(displayId?: number): Promise<Array<AccessibilityElement>>
 **示例**
 
 参见 [getWindows](#getwindows)
+
+<a id="getwindows-2"></a>
 
 ## getWindows
 
@@ -526,6 +542,8 @@ axContext.injectGesture(gesturePath, (err: BusinessError) => {
   console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
 });
 ```
+
+<a id="injectgesture-1"></a>
 
 ## injectGesture
 
@@ -665,6 +683,8 @@ try {
   console.error(`Failed to set target bundle names. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="settargetbundlename-1"></a>
 
 ## setTargetBundleName
 

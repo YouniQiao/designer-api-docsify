@@ -1,5 +1,9 @@
 # ComposeTitleBarV2MenuItemParams
 
+```TypeScript
+export interface ComposeTitleBarV2MenuItemParams
+```
+
 菜单项参数接口，用于创建ComposeTitleBarV2MenuItem实例。
 
 **起始版本：** 26.0.0

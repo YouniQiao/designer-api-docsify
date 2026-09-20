@@ -1,5 +1,9 @@
 # AlertDialogParam
 
+```TypeScript
+declare interface AlertDialogParam
+```
+
 警告弹窗的样式。
 
 **起始版本：** 7

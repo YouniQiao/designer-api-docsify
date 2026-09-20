@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="isapplicationenabled-1"></a>
+
 ## isApplicationEnabled
 
 ```TypeScript
@@ -137,6 +139,8 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 参见 [isApplicationEnabled](#isapplicationenabled)
 
+
+<a id="isapplicationenabled-2"></a>
 
 ## isApplicationEnabled
 

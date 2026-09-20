@@ -1,5 +1,9 @@
 # SweepGradientOptions
 
+```TypeScript
+declare interface SweepGradientOptions
+```
+
 Defines the sweep gradient parameters.
 
 > **NOTE:** 

@@ -115,6 +115,8 @@ async function grantUriPermissionExample() {
 ```
 
 
+<a id="granturipermission-1"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -158,6 +160,8 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 参见 [grantUriPermission](#granturipermission)
 
+
+<a id="granturipermission-2"></a>
 
 ## grantUriPermission
 

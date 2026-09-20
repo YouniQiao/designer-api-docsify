@@ -1,5 +1,9 @@
 # RotateOptions
 
+```TypeScript
+declare interface RotateOptions
+```
+
 组件旋转参数。
 
 > **说明：** 

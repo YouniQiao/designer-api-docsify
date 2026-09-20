@@ -1,5 +1,9 @@
 # OnPdfLoadEvent
 
+```TypeScript
+declare interface OnPdfLoadEvent
+```
+
 定义PDF加载成功或失败时触发的函数。
 
 **起始版本：** 20

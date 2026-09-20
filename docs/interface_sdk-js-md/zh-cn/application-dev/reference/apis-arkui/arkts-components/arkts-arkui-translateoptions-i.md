@@ -1,5 +1,9 @@
 # TranslateOptions
 
+```TypeScript
+declare interface TranslateOptions
+```
+
 定义平移选项。
 
 **起始版本：** 7

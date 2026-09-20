@@ -1,5 +1,9 @@
 # DetectedBlankScreenReason
 
+```TypeScript
+declare enum DetectedBlankScreenReason
+```
+
 白屏的具体原因，用于标识页面白屏现象的底层原因，帮助开发者快速定位问题来源，提升页面加载问题的排查效率和用户体验。
 
 **起始版本：** 22

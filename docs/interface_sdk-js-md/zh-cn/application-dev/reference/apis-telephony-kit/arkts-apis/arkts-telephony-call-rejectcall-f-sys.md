@@ -112,6 +112,8 @@ call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
 ```
 
 
+<a id="rejectcall-1"></a>
+
 ## rejectCall
 
 ```TypeScript
@@ -158,6 +160,8 @@ function rejectCall(callId?: number, options?: RejectMessageOptions): Promise<vo
 参见 [rejectCall](#rejectcall)
 
 
+<a id="rejectcall-2"></a>
+
 ## rejectCall
 
 ```TypeScript
@@ -197,6 +201,8 @@ function rejectCall(callId: number, callback: AsyncCallback<void>): void
 
 参见 [rejectCall](#rejectcall)
 
+
+<a id="rejectcall-4"></a>
 
 ## rejectCall
 

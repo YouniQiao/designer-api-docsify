@@ -1,5 +1,9 @@
 # AnalysisToolResult（系统接口）
 
+```TypeScript
+interface AnalysisToolResult
+```
+
 分析工具执行的结果。
 
 **起始版本：** 26.0.1

@@ -1,5 +1,9 @@
 # NestedScrollInfo
 
+```TypeScript
+declare interface NestedScrollInfo
+```
+
 嵌套可滚动容器组件信息。
 
 **起始版本：** 14

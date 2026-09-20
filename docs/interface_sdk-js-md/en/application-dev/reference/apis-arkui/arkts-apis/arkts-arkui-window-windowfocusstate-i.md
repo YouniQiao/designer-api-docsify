@@ -1,5 +1,9 @@
 # WindowFocusState
 
+```TypeScript
+interface WindowFocusState
+```
+
 Describes the focus state change information of the window.
 
 **Since:** 26.0.1

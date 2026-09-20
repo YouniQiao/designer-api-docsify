@@ -54,6 +54,8 @@ wallpaper.isOperationAllowed().then((data: boolean) => {
 ```
 
 
+<a id="isoperationallowed-1"></a>
+
 ## isOperationAllowed
 
 ```TypeScript

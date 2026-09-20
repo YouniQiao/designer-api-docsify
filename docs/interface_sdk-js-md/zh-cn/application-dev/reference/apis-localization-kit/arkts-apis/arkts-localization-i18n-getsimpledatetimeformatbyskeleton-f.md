@@ -68,6 +68,8 @@ try {
 ```
 
 
+<a id="getsimpledatetimeformatbyskeleton-1"></a>
+
 ## getSimpleDateTimeFormatBySkeleton
 
 ```TypeScript

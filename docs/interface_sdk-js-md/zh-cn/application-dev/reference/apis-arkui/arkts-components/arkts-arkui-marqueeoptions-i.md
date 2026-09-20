@@ -1,5 +1,9 @@
 # MarqueeOptions
 
+```TypeScript
+interface MarqueeOptions
+```
+
 Marquee初始化参数。
 
 > **说明：** 

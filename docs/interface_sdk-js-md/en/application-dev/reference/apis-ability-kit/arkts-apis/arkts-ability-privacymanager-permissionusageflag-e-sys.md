@@ -1,5 +1,9 @@
 # PermissionUsageFlag (System API)
 
+```TypeScript
+enum PermissionUsageFlag
+```
+
 Enumerates the modes for querying the permission usage records.
 
 **Since:** 9

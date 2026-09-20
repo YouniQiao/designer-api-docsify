@@ -1,5 +1,9 @@
 # FontOptions
 
+```TypeScript
+interface FontOptions
+```
+
 注册的自定义字体信息。
 
 > **说明：** 

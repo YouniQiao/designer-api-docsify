@@ -1,5 +1,9 @@
 # DynamicRangeModeOptions
 
+```TypeScript
+interface DynamicRangeModeOptions
+```
+
 Defines the dynamic range mode used for the snapshot.
 
 **Since:** 23

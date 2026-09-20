@@ -1,5 +1,9 @@
 # SliderStepItemAccessibility
 
+```TypeScript
+declare interface SliderStepItemAccessibility
+```
+
 Provides accessibility configuration of the slider step markers.
 
 **Since:** 20

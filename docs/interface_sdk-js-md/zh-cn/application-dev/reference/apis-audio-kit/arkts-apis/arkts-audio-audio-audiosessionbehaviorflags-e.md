@@ -1,5 +1,9 @@
 # AudioSessionBehaviorFlags
 
+```TypeScript
+enum AudioSessionBehaviorFlags
+```
+
 表示音频会话行为的枚举。
 
 **起始版本：** 24

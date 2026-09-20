@@ -1,5 +1,9 @@
 # MarqueeOptions
 
+```TypeScript
+interface MarqueeOptions
+```
+
 Describes the initialization options of the **Marquee** component.
 
 > **NOTE:** 

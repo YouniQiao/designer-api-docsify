@@ -1,5 +1,9 @@
 # Button
 
+```TypeScript
+export interface Button
+```
+
 定义按钮的提示信息。
 
 **起始版本：** 3

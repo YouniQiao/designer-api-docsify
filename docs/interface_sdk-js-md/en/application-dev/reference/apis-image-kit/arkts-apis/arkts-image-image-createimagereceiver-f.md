@@ -60,6 +60,8 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 ```
 
 
+<a id="createimagereceiver-1"></a>
+
 ## createImageReceiver
 
 ```TypeScript
@@ -96,6 +98,8 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 See [createImageReceiver](#createimagereceiver)
 
+
+<a id="createimagereceiver-3"></a>
 
 ## createImageReceiver
 

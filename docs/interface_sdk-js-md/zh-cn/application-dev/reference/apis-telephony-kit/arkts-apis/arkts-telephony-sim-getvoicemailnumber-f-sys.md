@@ -65,6 +65,8 @@ sim.getVoiceMailNumber(0).then((data: string) => {
 ```
 
 
+<a id="getvoicemailnumber-1"></a>
+
 ## getVoiceMailNumber
 
 ```TypeScript

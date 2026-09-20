@@ -1,5 +1,9 @@
 # AudioVolumeGroupManager
 
+```TypeScript
+interface AudioVolumeGroupManager
+```
+
 管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
 
 **起始版本：** 9
@@ -68,6 +72,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
   console.error('Fail to adjust the system volume by step.');
 });
 ```
+
+<a id="adjustsystemvolumebystep-1"></a>
 
 ## adjustSystemVolumeByStep
 
@@ -167,6 +173,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).the
   console.error('Fail to adjust the volume by step.');
 });
 ```
+
+<a id="adjustvolumebystep-1"></a>
 
 ## adjustVolumeByStep
 
@@ -329,6 +337,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
 });
 ```
+
+<a id="mute-1"></a>
 
 ## mute
 
@@ -513,6 +523,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).th
 });
 ```
 
+<a id="setringermode-1"></a>
+
 ## setRingerMode
 
 ```TypeScript
@@ -604,6 +616,8 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
   console.info('Promise returned to indicate a successful volume setting.');
 });
 ```
+
+<a id="setvolume-1"></a>
 
 ## setVolume
 

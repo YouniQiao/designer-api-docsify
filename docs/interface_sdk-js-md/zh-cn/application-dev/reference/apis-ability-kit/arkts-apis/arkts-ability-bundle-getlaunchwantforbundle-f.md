@@ -60,6 +60,8 @@ bundle.getLaunchWantForBundle(bundleName, (err, data) => {
 ```
 
 
+<a id="getlaunchwantforbundle-1"></a>
+
 ## getLaunchWantForBundle
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ArcSwiperAttribute
 
+```TypeScript
+declare class ArcSwiperAttribute extends CommonMethod<ArcSwiperAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.

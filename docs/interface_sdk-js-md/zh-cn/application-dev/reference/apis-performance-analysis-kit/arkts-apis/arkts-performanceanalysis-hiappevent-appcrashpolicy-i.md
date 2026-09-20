@@ -1,5 +1,9 @@
 # AppCrashPolicy
 
+```TypeScript
+interface AppCrashPolicy
+```
+
 提供崩溃事件配置策略的定义。
 
 **起始版本：** 24

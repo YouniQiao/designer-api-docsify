@@ -1,5 +1,9 @@
 # PasteEvent
 
+```TypeScript
+declare interface PasteEvent
+```
+
 Defines a user paste event.
 
 **Since:** 11

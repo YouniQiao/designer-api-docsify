@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="rejectcall-3"></a>
+
 ## rejectCall
 
 ```TypeScript

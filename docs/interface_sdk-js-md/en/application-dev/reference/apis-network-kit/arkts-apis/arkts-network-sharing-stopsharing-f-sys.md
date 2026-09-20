@@ -72,6 +72,8 @@ sharing
 ```
 
 
+<a id="stopsharing-1"></a>
+
 ## stopSharing
 
 ```TypeScript

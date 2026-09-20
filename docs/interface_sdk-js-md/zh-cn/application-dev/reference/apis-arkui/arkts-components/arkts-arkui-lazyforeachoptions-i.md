@@ -1,5 +1,9 @@
 # LazyForEachOptions
 
+```TypeScript
+declare interface LazyForEachOptions
+```
+
 用于配置LazyForEach的资源释放策略、内存优化策略，以及是否使能自定义组件冻结。
 
 > **说明：** 

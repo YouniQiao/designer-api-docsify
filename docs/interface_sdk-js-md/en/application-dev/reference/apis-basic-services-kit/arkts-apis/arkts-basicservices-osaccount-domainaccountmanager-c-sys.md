@@ -1,5 +1,9 @@
 # DomainAccountManager
 
+```TypeScript
+class DomainAccountManager
+```
+
 Provides APIs for domain account management.
 
 **Since:** 18
@@ -107,6 +111,8 @@ try {
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="auth-1"></a>
 
 ## auth
 
@@ -285,6 +291,8 @@ try {
 }
 ```
 
+<a id="authwithpopup-1"></a>
+
 ## authWithPopup
 
 ```TypeScript
@@ -444,6 +452,8 @@ try {
   console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="getaccesstoken-2"></a>
 
 ## getAccessToken
 
@@ -614,6 +624,8 @@ try {
 }
 ```
 
+<a id="getaccountinfo-1"></a>
+
 ## getAccountInfo
 
 ```TypeScript
@@ -782,6 +794,8 @@ try {
   console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="hasaccount-1"></a>
 
 ## hasAccount
 
@@ -1074,6 +1088,8 @@ try {
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="updateaccounttoken-1"></a>
 
 ## updateAccountToken
 

@@ -1,5 +1,9 @@
 # SelectOption
 
+```TypeScript
+declare interface SelectOption
+```
+
 下拉菜单项的信息。
 
 **起始版本：** 8

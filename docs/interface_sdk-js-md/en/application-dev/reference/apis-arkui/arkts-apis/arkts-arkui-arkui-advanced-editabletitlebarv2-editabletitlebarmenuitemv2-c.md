@@ -1,5 +1,9 @@
 # EditableTitleBarMenuItemV2
 
+```TypeScript
+export declare class EditableTitleBarMenuItemV2
+```
+
 Declaration of the menu item on the right side.
 
 **Since:** 26.0.0

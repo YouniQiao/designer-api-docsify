@@ -1,5 +1,9 @@
 # HoverEventParam
 
+```TypeScript
+declare interface HoverEventParam
+```
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

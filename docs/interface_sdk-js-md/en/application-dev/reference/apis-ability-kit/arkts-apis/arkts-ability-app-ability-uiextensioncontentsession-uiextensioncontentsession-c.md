@@ -1,5 +1,9 @@
 # UIExtensionContentSession
 
+```TypeScript
+declare class UIExtensionContentSession
+```
+
 UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application.
 
 **Since:** 10
@@ -264,6 +268,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+<a id="setwindowprivacymode-1"></a>
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -404,6 +410,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+<a id="startabilitybytype-2"></a>
+
 ## startAbilityByType
 
 ```TypeScript
@@ -541,6 +549,8 @@ struct Index {
 }
 ```
 
+<a id="terminateself-1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -677,6 +687,8 @@ struct Index {
   }
 }
 ```
+
+<a id="terminateselfwithresult-1"></a>
 
 ## terminateSelfWithResult
 

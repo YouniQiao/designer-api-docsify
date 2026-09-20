@@ -1,5 +1,9 @@
 # FinishCallbackType
 
+```TypeScript
+declare enum FinishCallbackType
+```
+
 Defines the type of the **onFinish** callback.
 
 **Since:** 11

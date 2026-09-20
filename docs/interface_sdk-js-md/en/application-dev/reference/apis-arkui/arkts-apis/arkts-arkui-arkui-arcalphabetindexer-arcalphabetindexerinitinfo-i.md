@@ -1,5 +1,9 @@
 # ArcAlphabetIndexerInitInfo
 
+```TypeScript
+declare interface ArcAlphabetIndexerInitInfo
+```
+
 Initialization parameters for the **ArcAlphabetIndexer** component.
 
 **Since:** 18

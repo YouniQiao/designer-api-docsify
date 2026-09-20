@@ -1,5 +1,9 @@
 # NavigationPolicy
 
+```TypeScript
+declare enum NavigationPolicy
+```
+
 WebView中新窗口的打开方式，支持弹窗、新窗口、前台和后台标签页等多种方式。
 
 **起始版本：** 23

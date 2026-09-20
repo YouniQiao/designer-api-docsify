@@ -749,7 +749,8 @@
   - [UIServiceExtensionAbility(system api)](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.app.ability.verticalPanelManager](arkts-ability-app-ability-verticalpanelmanager.md)<!--DelEnd-->
-  - [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md)
+  <!--Del-->
+  - [verticalPanelManager(system api)](arkts-ability-verticalpanelmanager-n.md)<!--DelEnd-->
     <!--Del-->
     - [startVerticalPanel(system api)](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -1402,7 +1403,8 @@
   - [UpgradeFlag(system api)](arkts-ability-freeinstall-upgradeflag-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.bundle.innerBundleManager](arkts-ability-bundle-innerbundlemanager.md)<!--DelEnd-->
-  - [innerBundleManager](arkts-ability-innerbundlemanager-n.md)
+  <!--Del-->
+  - [innerBundleManager(system api)](arkts-ability-innerbundlemanager-n.md)<!--DelEnd-->
     <!--Del-->
     - [getAllLauncherAbilityInfos(system api)](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md)<!--DelEnd-->
     <!--Del-->

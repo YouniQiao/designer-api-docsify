@@ -1,5 +1,9 @@
 # AccessibilityOptions
 
+```TypeScript
+export interface AccessibilityOptions
+```
+
 Defines the accessibility options of the suffix icon.
 
 **Since:** 14

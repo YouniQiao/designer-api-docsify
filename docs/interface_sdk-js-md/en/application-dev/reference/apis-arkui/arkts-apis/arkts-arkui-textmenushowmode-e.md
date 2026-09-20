@@ -1,5 +1,9 @@
 # TextMenuShowMode
 
+```TypeScript
+declare enum TextMenuShowMode
+```
+
 Enumerates the text menu display modes.
 
 **Since:** 16

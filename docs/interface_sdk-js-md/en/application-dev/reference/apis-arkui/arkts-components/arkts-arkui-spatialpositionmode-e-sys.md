@@ -1,5 +1,9 @@
 # SpatialPositionMode (System API)
 
+```TypeScript
+declare enum SpatialPositionMode
+```
+
 Spatial position mode. Indicates the coordinate system used by the corner positions.
 
 **Since:** 26.0.0

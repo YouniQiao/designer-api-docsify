@@ -1,5 +1,9 @@
 # XComponentOptions
 
+```TypeScript
+declare interface XComponentOptions
+```
+
 定义XComponent的具体配置参数。
 
 **起始版本：** 12

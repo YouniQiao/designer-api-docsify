@@ -1,5 +1,9 @@
 # WithThemeOptions
 
+```TypeScript
+declare interface WithThemeOptions
+```
+
 设置WithTheme作用域内组件默认配色及深浅色模式。
 
 **起始版本：** 12

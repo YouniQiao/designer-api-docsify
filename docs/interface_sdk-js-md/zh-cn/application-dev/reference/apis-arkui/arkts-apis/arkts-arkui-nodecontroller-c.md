@@ -1,5 +1,9 @@
 # NodeController
 
+```TypeScript
+export abstract class NodeController
+```
+
 NodeController用于管理自定义节点的创建、显示、更新等操作，并负责将自定义节点挂载到NodeContainer上，适用于需要在页面中动态创建、更新、复用自定义节点的场景。
 
 > **说明：** 

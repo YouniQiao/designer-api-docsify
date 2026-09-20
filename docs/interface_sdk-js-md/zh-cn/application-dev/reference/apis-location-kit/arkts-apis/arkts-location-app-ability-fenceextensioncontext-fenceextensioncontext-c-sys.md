@@ -1,5 +1,9 @@
 # FenceExtensionContext
 
+```TypeScript
+export default class FenceExtensionContext extends ExtensionContext
+```
+
 FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的上下文环境。
 
 @extends ExtensionContext

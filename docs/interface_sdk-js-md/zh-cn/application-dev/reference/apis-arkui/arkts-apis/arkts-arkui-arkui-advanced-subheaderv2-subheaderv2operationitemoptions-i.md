@@ -1,5 +1,9 @@
 # SubHeaderV2OperationItemOptions
 
+```TypeScript
+export interface SubHeaderV2OperationItemOptions
+```
+
 用于构建SubHeaderV2OperationItem对象。
 
 **起始版本：** 18

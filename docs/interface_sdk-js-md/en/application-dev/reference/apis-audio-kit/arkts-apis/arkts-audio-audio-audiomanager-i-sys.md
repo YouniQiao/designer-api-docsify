@@ -1,5 +1,9 @@
 # AudioManager
 
+```TypeScript
+interface AudioManager
+```
+
 This interface implements audio volume and device management.
 
 Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
@@ -257,6 +261,8 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
   console.error(`Failed to set the audio scene mode ${err}`);
 });
 ```
+
+<a id="setaudioscene-1"></a>
 
 ## setAudioScene
 

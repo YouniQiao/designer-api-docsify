@@ -67,6 +67,8 @@ data.enableCellularData().then(() => {
 ```
 
 
+<a id="enablecellulardata-1"></a>
+
 ## enableCellularData
 
 ```TypeScript

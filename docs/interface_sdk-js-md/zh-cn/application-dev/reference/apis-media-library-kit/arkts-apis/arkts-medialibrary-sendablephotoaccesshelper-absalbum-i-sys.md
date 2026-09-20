@@ -1,5 +1,9 @@
 # AbsAlbum
 
+```TypeScript
+interface AbsAlbum  extends lang.ISendable
+```
+
 定义相册的抽象接口。
 
 **继承/实现关系：** AbsAlbum extends lang.ISendable

@@ -1,5 +1,9 @@
 # MulticastSocket
 
+```TypeScript
+export interface MulticastSocket extends UDPSocket
+```
+
 MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过[socket.constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md)创建MulticastSocket对象。
 
 **继承/实现关系：** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md)
@@ -84,6 +88,8 @@ multicast.addMembership(addr).then(() => {
   console.error('addMembership fail');
 });
 ```
+
+<a id="addmembership-1"></a>
 
 ## addMembership
 
@@ -202,6 +208,8 @@ multicast.dropMembership(addr).then(() => {
 });
 ```
 
+<a id="dropmembership-1"></a>
+
 ## dropMembership
 
 ```TypeScript
@@ -310,6 +318,8 @@ multicast.getLoopbackMode().then((value: Boolean) => {
 });
 ```
 
+<a id="getloopbackmode-1"></a>
+
 ## getLoopbackMode
 
 ```TypeScript
@@ -411,6 +421,8 @@ multicast.getMulticastTTL().then((value: Number) => {
   console.error('set ttl failed');
 });
 ```
+
+<a id="getmulticastttl-1"></a>
 
 ## getMulticastTTL
 
@@ -575,6 +587,8 @@ multicast.setLoopbackMode(false).then(() => {
 });
 ```
 
+<a id="setloopbackmode-1"></a>
+
 ## setLoopbackMode
 
 ```TypeScript
@@ -685,6 +699,8 @@ multicast.setMulticastTTL(8).then(() => {
   console.error('set ttl failed');
 });
 ```
+
+<a id="setmulticastttl-1"></a>
 
 ## setMulticastTTL
 

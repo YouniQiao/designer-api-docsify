@@ -1,5 +1,9 @@
 # TextArea属性/事件
 
+```TypeScript
+declare class TextAreaAttribute extends CommonMethod<TextAreaAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
@@ -859,6 +863,8 @@ lineSpacing(value: LengthMetrics)
 | --- | --- | --- | --- |
 | value | LengthMetrics | 是 | 文本的行间距。 |
 
+<a id="linespacing-1"></a>
+
 ## lineSpacing
 
 ```TypeScript
@@ -975,6 +981,8 @@ maxLines(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 内联输入风格编辑态时文本可显示的最大行数。<br>配置textOverflow时超出截断；未配置textOverflow时，内联模式获焦状态下文本可滚动显示，非获焦状态下不生效；非内联模式按行截断。<br>取值范围：(0, UINT32_MAX]。传入0或负数时，按照默认值处理。 |
+
+<a id="maxlines-1"></a>
 
 ## maxLines
 
@@ -1274,6 +1282,8 @@ onSubmit(callback: (enterKey: EnterKeyType) => void)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | (enterKey: EnterKeyType) =&gt; void | 是 | callback of the listened event. |
+
+<a id="onsubmit-1"></a>
 
 ## onSubmit
 

@@ -1,5 +1,9 @@
 # ExpandedRegionLayoutOptions
 
+```TypeScript
+export interface ExpandedRegionLayoutOptions
+```
+
 Defines layout information for the expanded state.
 
 **Since:** 12

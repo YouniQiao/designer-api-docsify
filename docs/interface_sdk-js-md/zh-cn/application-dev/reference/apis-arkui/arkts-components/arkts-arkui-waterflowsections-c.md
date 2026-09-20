@@ -1,5 +1,9 @@
 # WaterFlowSections
 
+```TypeScript
+declare class WaterFlowSections
+```
+
 瀑布流分组信息。
 
 > **说明：** 

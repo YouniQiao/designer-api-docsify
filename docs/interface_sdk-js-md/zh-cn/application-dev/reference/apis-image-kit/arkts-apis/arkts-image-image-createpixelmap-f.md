@@ -71,6 +71,8 @@ function createPixelMap() {
 ```
 
 
+<a id="createpixelmap-1"></a>
+
 ## createPixelMap
 
 ```TypeScript

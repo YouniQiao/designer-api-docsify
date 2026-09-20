@@ -1,5 +1,9 @@
 # HyperSnapErrorCode
 
+```TypeScript
+export enum HyperSnapErrorCode
+```
+
 枚举Hyper Snap错误码。
 
 **起始版本：** 26.0.1

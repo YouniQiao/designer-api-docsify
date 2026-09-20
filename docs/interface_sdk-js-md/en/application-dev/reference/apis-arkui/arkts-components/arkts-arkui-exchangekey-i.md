@@ -1,5 +1,9 @@
 # ExchangeKey
 
+```TypeScript
+interface ExchangeKey
+```
+
 Defines new key of exchange data.
 
 **Since:** 12

@@ -187,6 +187,8 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (
 ```
 
 
+<a id="allocresourceandshare-1"></a>
+
 ## allocResourceAndShare
 
 ```TypeScript
@@ -227,6 +229,8 @@ function allocResourceAndShare(
 
 参见 [allocResourceAndShare](#allocresourceandshare)
 
+
+<a id="allocresourceandshare-2"></a>
 
 ## allocResourceAndShare
 

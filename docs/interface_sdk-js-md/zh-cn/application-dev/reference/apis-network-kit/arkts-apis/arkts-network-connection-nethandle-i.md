@@ -1,5 +1,9 @@
 # NetHandle
 
+```TypeScript
+export interface NetHandle
+```
+
 网络句柄。
 
 在调用NetHandle的方法之前，需要先获取NetHandle对象。例如可通过[getDefaultNet](arkts-network-connection-getdefaultnet-f.md)获取系统当前默认网络的网络句柄。
@@ -159,6 +163,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+<a id="bindsocket-1"></a>
+
 ## bindSocket
 
 ```TypeScript
@@ -263,6 +269,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   });
 });
 ```
+
+<a id="getaddressbyname-1"></a>
 
 ## getAddressByName
 
@@ -373,6 +381,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   });
 });
 ```
+
+<a id="getaddressesbyname-1"></a>
 
 ## getAddressesByName
 

@@ -65,6 +65,8 @@ call.isInEmergencyCall().then((data: boolean) => {
 ```
 
 
+<a id="isinemergencycall-1"></a>
+
 ## isInEmergencyCall
 
 ```TypeScript

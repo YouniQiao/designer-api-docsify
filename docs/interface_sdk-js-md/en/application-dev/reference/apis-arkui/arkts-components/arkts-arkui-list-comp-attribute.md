@@ -1,5 +1,9 @@
 # List properties/events
 
+```TypeScript
+declare class ListAttribute extends ScrollableCommonMethod<ListAttribute>
+```
+
 In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
 In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
@@ -80,6 +84,8 @@ When a list is nested with **LazyForEach**, and within **LazyForEach** there is 
 | --- | --- | --- | --- |
 | value | number | Yes | Number of list items or list item groups to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
 
+<a id="cachedcount-1"></a>
+
 ## cachedCount
 
 ```TypeScript
@@ -112,6 +118,8 @@ When **cachedCount** is set for the list, the system preloads and lays out the *
 | --- | --- | --- | --- |
 | count | number | Yes | Number of list items to be preloaded.<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
 | show | boolean | Yes | Whether to display the preloaded list items. If this parameter is set to **true**, the preloaded list items are displayed. If this parameter is set to **false**, the preloaded list items are not displayed.<br> Default value: **false** |
+
+<a id="cachedcount-2"></a>
 
 ## cachedCount
 
@@ -246,6 +254,8 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 | --- | --- | --- | --- |
 | value | number | Yes | Offset from the end of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:** <br>If the set value is a negative number, the default value will be used. |
 
+<a id="contentendoffset-1"></a>
+
 ## contentEndOffset
 
 ```TypeScript
@@ -293,6 +303,8 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Offset from the start of the list content to the boundary of the list display area.<br> Default value: **0**<br>Unit: vp<br>**NOTE:** <br>If the set value is a negative number, the default value will be used. |
+
+<a id="contentstartoffset-1"></a>
 
 ## contentStartOffset
 
@@ -543,6 +555,8 @@ on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup*
 | --- | --- | --- | --- |
 | value | number &#124; LengthConstrain | Yes | Number of columns or rows in the list.<br>Default value: **1**<br>Value range: [1, +∞) |
 | gutter | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | No | Column gap or row gap.<br>Default value: **0** <br>Value range: [0, +∞) <br>**NOTE:** <br>This parameter takes effect when the number of columns or rows is greater than 1.<br>**Since:** 10 |
+
+<a id="lanes-1"></a>
 
 ## lanes
 

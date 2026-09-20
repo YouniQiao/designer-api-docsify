@@ -1,5 +1,9 @@
 # NestedScrollOptionsExt
 
+```TypeScript
+declare interface NestedScrollOptionsExt
+```
+
 Sets the nested scrolling rules of the **Web** component, supporting scrolling options in four directions: up, down, left, and right.
 
 **Since:** 14

@@ -1,5 +1,9 @@
 # GridItem properties/events
 
+```TypeScript
+declare class GridItemAttribute extends CommonMethod<GridItemAttribute>
+```
+
 **Inheritance/Implementation:** GridItemAttribute extends CommonMethod<GridItemAttribute>
 
 **Since:** 7
@@ -160,7 +164,7 @@ This attribute must be used before the polymorphic style is set. Otherwise, the 
 selected(value: boolean)
 ```
 
-Sets whether the grid item is selected. This attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Sets whether the grid item is selected. This attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 

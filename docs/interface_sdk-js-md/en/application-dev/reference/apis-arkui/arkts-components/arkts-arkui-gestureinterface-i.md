@@ -1,5 +1,9 @@
 # GestureInterface
 
+```TypeScript
+interface GestureInterface<T>
+```
+
 Defines the gesture API.
 
 **Since:** 11

@@ -1,5 +1,9 @@
 # OperationInfo (System API)
 
+```TypeScript
+interface OperationInfo
+```
+
 Operation information.
 
 **Since:** 26.0.0

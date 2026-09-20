@@ -1,5 +1,9 @@
 # LazyVWaterFlowLayoutAttribute
 
+```TypeScript
+export declare class LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
+```
+
 Defines the lazy vertical waterflow layout attribute.
 
 @extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;

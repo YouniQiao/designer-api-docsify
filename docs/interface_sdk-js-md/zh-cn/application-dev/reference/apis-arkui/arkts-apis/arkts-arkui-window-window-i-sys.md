@@ -1,5 +1,9 @@
 # Window
 
+```TypeScript
+interface Window
+```
+
 当前窗口实例，窗口管理器管理的基本单元。
 
 下列API示例中都需先使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)、[createWindow()](arkts-arkui-window-createwindow-f.md)、[findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
@@ -330,6 +334,8 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="binddialogtarget-1"></a>
+
 ## bindDialogTarget
 
 ```TypeScript
@@ -364,6 +370,8 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 **示例**
 
 参见 [bindDialogTarget](#binddialogtarget)
+
+<a id="binddialogtarget-2"></a>
 
 ## bindDialogTarget
 
@@ -404,6 +412,8 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 **示例**
 
 参见 [bindDialogTarget](#binddialogtarget)
+
+<a id="binddialogtarget-3"></a>
 
 ## bindDialogTarget
 
@@ -642,6 +652,8 @@ promise.then(() => {
 });
 ```
 
+<a id="hide-1"></a>
+
 ## hide
 
 ```TypeScript
@@ -795,6 +807,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="hidenonsystemfloatingwindows-1"></a>
+
 ## hideNonSystemFloatingWindows
 
 ```TypeScript
@@ -892,6 +906,8 @@ promise.then(() => {
   console.error(`Failed to hide the window with animation. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="hidewithanimation-1"></a>
 
 ## hideWithAnimation
 
@@ -1188,6 +1204,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="raiseabovetarget-1"></a>
 
 ## raiseAboveTarget
 
@@ -1915,6 +1933,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setforbidsplitmove-1"></a>
+
 ## setForbidSplitMove
 
 ```TypeScript
@@ -2165,15 +2185,15 @@ setRotationLocked(locked: boolean): Promise<void>
 
 > **说明：** 
 > 
-> - 如果在锁定期间主窗口通过[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。
+> - 如果在锁定期间主窗口通过[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)设置显示方向属性，则解除旋转锁定后该窗口在前台还原最后一次的方向请求。
 > 
-> - 如果在锁定期间系统窗口通过[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)设置显示方向。
+> - 如果在锁定期间系统窗口通过[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)设置显示方向属性，则解除旋转锁定后该窗口在前台且层级最高时还原最后一次的方向请求。低层级窗口通过setRotationLocked设置旋转锁定不会影响高层级系统窗口调用[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)设置显示方向。
 > 
 > - 如果在锁定期间sensor方向发生了变化，则解除旋转锁定后还原到最后一次的sensor方向。
 > 
 > - 如果在锁定期间应用调用[setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)设置屏幕方向，忽略该次屏幕方向设置。
 > 
-> - 解除锁定时，根据主窗口的显示方向属性[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。
+> - 解除锁定时，根据主窗口的显示方向属性[setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)、sensor方向等决定应用显示方向，具体见[窗口旋转简介](../../../windowmanager/window-rotation.md#窗口旋转简介)。
 > 
 > - 不影响应用[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)orientation属性设置的启动方向。
 
@@ -2596,6 +2616,8 @@ try {
 }
 ```
 
+<a id="setwatermarkflag-1"></a>
+
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -2741,6 +2763,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setwindowmode-1"></a>
+
 ## setWindowMode
 
 ```TypeScript
@@ -2831,6 +2855,8 @@ promise.then(() => {
 });
 ```
 
+<a id="setwindowtype-1"></a>
+
 ## setWindowType
 
 ```TypeScript
@@ -2912,6 +2938,8 @@ promise.then(() => {
   console.error(`Failed to show the window with animation. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="showwithanimation-1"></a>
 
 ## showWithAnimation
 

@@ -1,5 +1,9 @@
 # PopupBorderLinearGradient
 
+```TypeScript
+declare interface PopupBorderLinearGradient
+```
+
 Sets the color and direction of the linear gradient for the outlines.
 
 **Since:** 20

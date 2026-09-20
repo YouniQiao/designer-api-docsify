@@ -1,5 +1,9 @@
 # BarMode
 
+```TypeScript
+declare enum BarMode
+```
+
 TabBar布局模式枚举。
 
 **起始版本：** 7

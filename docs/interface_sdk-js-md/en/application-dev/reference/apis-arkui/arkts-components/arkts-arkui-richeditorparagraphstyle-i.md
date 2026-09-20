@@ -1,5 +1,9 @@
 # RichEditorParagraphStyle
 
+```TypeScript
+declare interface RichEditorParagraphStyle
+```
+
 Defines the paragraph style.
 
 **Since:** 11

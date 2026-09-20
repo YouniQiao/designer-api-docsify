@@ -1,5 +1,9 @@
 # VideoController
 
+```TypeScript
+declare class VideoController
+```
+
 A **VideoController** object can control one or more **Video** components.
 
 ## Objects to Import
@@ -120,6 +124,8 @@ Sets the video playback position.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Video playback progress position. <br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)] <br>If the **value** is greater than **duration**, the progress jumps to the end; if the **value** is less than 0, no progress jump is performed. <br>Unit: s <br>Since API version 8, the video seek mode can be set. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime-1). |
+
+<a id="setcurrenttime-1"></a>
 
 ## setCurrentTime
 

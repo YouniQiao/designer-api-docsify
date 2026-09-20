@@ -1,5 +1,9 @@
 # OnLoadStartedEvent
 
+```TypeScript
+declare interface OnLoadStartedEvent
+```
+
 Defines the callback information triggered when the web page loading begins, including the page URL. It is suitable for scenarios where monitoring page loading start is required, improving page lifecycle management capabilities.
 
 **Since:** 20

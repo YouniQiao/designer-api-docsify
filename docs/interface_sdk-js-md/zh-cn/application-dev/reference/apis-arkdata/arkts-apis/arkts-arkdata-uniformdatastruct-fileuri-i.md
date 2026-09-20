@@ -1,5 +1,9 @@
 # FileUri
 
+```TypeScript
+interface FileUri
+```
+
 文件地址类型数据，用于描述文件的URI地址信息。创建FileUri对象后，可用于文件拖拽、文件共享等场景，支持通过uriAuthorizationPolicies控制文件访问权限，实现跨应用的文件数据传递和权限管理。
 
 **起始版本：** 15
@@ -15,7 +19,7 @@ import { uniformDataStruct } from '@kit.ArkData';
 ## details
 
 ```TypeScript
-details?: Record<string, number | number | number | string | Uint8Array>
+details?: Record<string, number | string | Uint8Array>
 ```
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。

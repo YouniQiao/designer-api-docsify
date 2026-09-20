@@ -1,5 +1,9 @@
 # ColumnLayoutAlgorithm
 
+```TypeScript
+export class ColumnLayoutAlgorithm implements LayoutAlgorithm
+```
+
 垂直方向线性布局算法类。
 
 > **说明：** 

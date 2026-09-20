@@ -1,5 +1,9 @@
 # Map
 
+```TypeScript
+class Map<K, V>
+```
+
 A non-linear data structure.
 
 > **NOTE:** 
@@ -94,6 +98,8 @@ A constructor used to create an ArkTS map.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArkTS Map's constructor cannot be directly invoked. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -404,6 +410,8 @@ Updates this ArkTS map with key-value pairs from the specified ArkTS Map.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The putAll method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification exception |
+
+<a id="putall-1"></a>
 
 ## putAll
 

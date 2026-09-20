@@ -68,6 +68,8 @@ sim.alterPin2(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
 ```
 
 
+<a id="alterpin2-1"></a>
+
 ## alterPin2
 
 ```TypeScript

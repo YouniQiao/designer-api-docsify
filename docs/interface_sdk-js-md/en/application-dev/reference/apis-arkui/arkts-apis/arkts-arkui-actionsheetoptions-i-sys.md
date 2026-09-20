@@ -1,5 +1,9 @@
 # ActionSheetOptions
 
+```TypeScript
+interface ActionSheetOptions
+```
+
 Provides **ActionSheet** configuration options.
 
 **Since:** 8

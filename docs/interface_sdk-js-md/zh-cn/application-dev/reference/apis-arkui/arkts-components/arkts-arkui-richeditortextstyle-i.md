@@ -1,5 +1,9 @@
 # RichEditorTextStyle
 
+```TypeScript
+declare interface RichEditorTextStyle
+```
+
 文本样式信息。
 
 **起始版本：** 10
@@ -40,7 +44,7 @@ fontColor?: ResourceColor
 
 文本颜色。
 
-默认值：&#36;r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
+默认值：$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

@@ -1,5 +1,9 @@
 # Preferences
 
+```TypeScript
+interface Preferences
+```
+
 首选项实例，提供获取和修改存储数据的接口。
 
 下列接口都需先使用[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md)获取到Preferences实例，再通过此实例调用对应接口。
@@ -65,6 +69,8 @@ promise.then(() => {
   console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="clear-1"></a>
 
 ## clear
 
@@ -168,6 +174,8 @@ deleteStartupPromise.then(() => {
   console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
 })
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -298,6 +306,8 @@ flushResult.then(() => {
 })
 ```
 
+<a id="flush-1"></a>
+
 ## flush
 
 ```TypeScript
@@ -419,6 +429,8 @@ data.then((data: preferences.ValueType) => {
 })
 ```
 
+<a id="get-1"></a>
+
 ## get
 
 ```TypeScript
@@ -526,6 +538,8 @@ allData.then((value: Object) => {
   console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="getall-1"></a>
 
 ## getAll
 
@@ -699,6 +713,8 @@ isStartupSet.then((val: boolean) => {
   console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="has-1"></a>
 
 ## has
 
@@ -1046,6 +1062,8 @@ putStartupPref.then(() => {
   console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
 })
 ```
+
+<a id="put-1"></a>
 
 ## put
 

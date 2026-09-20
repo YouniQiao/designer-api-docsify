@@ -1,5 +1,9 @@
 # DragPreview
 
+```TypeScript
+export class DragPreview
+```
+
 拖拽背板的对象，在OnDrop和OnDragEnd回调中使用不生效。
 
 **起始版本：** 11

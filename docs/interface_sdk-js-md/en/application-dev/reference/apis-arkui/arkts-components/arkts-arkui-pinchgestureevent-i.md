@@ -1,5 +1,9 @@
 # PinchGestureEvent
 
+```TypeScript
+interface PinchGestureEvent extends BaseGestureEvent
+```
+
 Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin).
 
 **Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)

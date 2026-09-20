@@ -1,5 +1,9 @@
 # RoundedRectOptions
 
+```TypeScript
+declare interface RoundedRectOptions
+```
+
 Describes the drawing attributes of the rounded rectangle component.
 
 > **NOTE:** 

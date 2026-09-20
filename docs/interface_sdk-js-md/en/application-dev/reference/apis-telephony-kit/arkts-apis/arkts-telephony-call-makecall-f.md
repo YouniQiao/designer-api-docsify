@@ -83,6 +83,8 @@ call.makeCall("138xxxxxxxx", makeOptions).then(() => {
 ```
 
 
+<a id="makecall-1"></a>
+
 ## makeCall
 
 ```TypeScript
@@ -124,6 +126,8 @@ Launches the call screen and displays the dialed number. This API uses a promise
 See [makeCall](#makecall)
 
 
+<a id="makecall-2"></a>
+
 ## makeCall
 
 ```TypeScript
@@ -164,6 +168,8 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 See [makeCall](#makecall)
 
+
+<a id="makecall-3"></a>
 
 ## makeCall
 

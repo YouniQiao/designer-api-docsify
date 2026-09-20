@@ -1,5 +1,9 @@
 # BrightnessResponse
 
+```TypeScript
+export interface BrightnessResponse
+```
+
 Defines a response that returns the screen brightness.
 
 **Since:** 3

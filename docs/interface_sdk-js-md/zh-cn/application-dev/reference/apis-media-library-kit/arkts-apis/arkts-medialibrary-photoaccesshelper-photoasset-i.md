@@ -1,5 +1,9 @@
 # PhotoAsset
 
+```TypeScript
+interface PhotoAsset
+```
+
 提供封装文件属性的方法。
 
 **起始版本：** 10
@@ -77,6 +81,8 @@ close(fd: number, callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument. |
 | 14000011 | System inner fail |
 
+<a id="close-1"></a>
+
 ## close
 
 ```TypeScript
@@ -145,6 +151,8 @@ commitModify(callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
+
+<a id="commitmodify-1"></a>
 
 ## commitModify
 
@@ -247,6 +255,8 @@ getReadOnlyFd(callback: AsyncCallback<number>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail. Possible causes:<br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<a id="getreadonlyfd-1"></a>
+
 ## getReadOnlyFd
 
 ```TypeScript
@@ -313,6 +323,8 @@ getThumbnail(callback: AsyncCallback<image.PixelMap>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<a id="getthumbnail-1"></a>
+
 ## getThumbnail
 
 ```TypeScript
@@ -344,6 +356,8 @@ getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void
 | 13900012 | Permission denied |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getthumbnail-2"></a>
 
 ## getThumbnail
 

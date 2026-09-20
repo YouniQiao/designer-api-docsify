@@ -98,6 +98,8 @@ print.startPrintJob(jobInfo).then(() => {
 ```
 
 
+<a id="startprintjob-1"></a>
+
 ## startPrintJob
 
 ```TypeScript

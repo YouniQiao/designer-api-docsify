@@ -86,6 +86,8 @@ adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
 ```
 
 
+<a id="authorizeadmin-1"></a>
+
 ## authorizeAdmin
 
 ```TypeScript

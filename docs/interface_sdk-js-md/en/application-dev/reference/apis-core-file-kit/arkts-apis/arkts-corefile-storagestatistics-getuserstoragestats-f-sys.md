@@ -85,6 +85,8 @@ storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStat
 ```
 
 
+<a id="getuserstoragestats-1"></a>
+
 ## getUserStorageStats
 
 ```TypeScript
@@ -121,6 +123,8 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 See [getUserStorageStats](#getuserstoragestats)
 
+
+<a id="getuserstoragestats-2"></a>
 
 ## getUserStorageStats
 
@@ -165,6 +169,8 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 
 See [getUserStorageStats](#getuserstoragestats)
 
+
+<a id="getuserstoragestats-3"></a>
 
 ## getUserStorageStats
 

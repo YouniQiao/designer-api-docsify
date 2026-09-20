@@ -58,6 +58,8 @@ connection.isDefaultNetMetered().then((data: boolean) => {
 ```
 
 
+<a id="isdefaultnetmetered-1"></a>
+
 ## isDefaultNetMetered
 
 ```TypeScript

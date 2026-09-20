@@ -1,5 +1,9 @@
 # TextMenuItemId
 
+```TypeScript
+declare class TextMenuItemId
+```
+
 自定义菜单项的Id值。用于识别菜单选项，内置菜单项Id值见下列属性表格。
 
 **起始版本：** 12

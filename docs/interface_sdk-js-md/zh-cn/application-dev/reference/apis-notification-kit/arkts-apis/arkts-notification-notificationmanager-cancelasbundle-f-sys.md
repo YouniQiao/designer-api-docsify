@@ -98,6 +98,8 @@ notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
 ```
 
 
+<a id="cancelasbundle-1"></a>
+
 ## cancelAsBundle
 
 ```TypeScript
@@ -146,6 +148,8 @@ function cancelAsBundle(id: number, representativeBundle: string, userId: number
 
 参见 [cancelAsBundle](#cancelasbundle)
 
+
+<a id="cancelasbundle-2"></a>
 
 ## cancelAsBundle
 

@@ -1,5 +1,9 @@
 # ItemState
 
+```TypeScript
+declare enum ItemState
+```
+
 步骤导航器nextLabel的显示状态。
 
 **起始版本：** 8

@@ -87,6 +87,8 @@ try {
 ```
 
 
+<a id="getrealactivetime-1"></a>
+
 ## getRealActiveTime
 
 ```TypeScript
@@ -119,6 +121,8 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 See [getRealActiveTime](#getrealactivetime)
 
+
+<a id="getrealactivetime-2"></a>
 
 ## getRealActiveTime
 

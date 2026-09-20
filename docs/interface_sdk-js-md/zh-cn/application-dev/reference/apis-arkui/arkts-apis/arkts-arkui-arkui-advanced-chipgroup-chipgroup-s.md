@@ -1,5 +1,9 @@
 # ChipGroup
 
+```TypeScript
+export declare struct ChipGroup
+```
+
 ChipGroup组件提供操作块群组能力，支持单选或多选模式，可自定义样式、图标和间距，支持选中状态管理和事件回调。适用于文件分类、资源筛选、标签选择、内容分组等多种场景，帮助开发者快速实现选择功能，提供统一的视觉和交互体验。
 
 > **说明：** 
@@ -24,7 +28,7 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`&#36;r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。
 
 默认值：undefined
 
@@ -126,7 +130,7 @@ itemStyle?: ChipItemStyle
 
 默认值：
 
-{ size: ChipSize.NORMAL, backgroundColor: &#36;r('sys.color.ohos_id_color_button_normal'), fontColor: &#36;r('sys.color.ohos_id_color_text_primary'), selectedFontColor: &#36;r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: &#36;r('sys.color.ohos_id_color_emphasize') }
+{ size: ChipSize.NORMAL, backgroundColor: $r('sys.color.ohos_id_color_button_normal'), fontColor: $r('sys.color.ohos_id_color_text_primary'), selectedFontColor: $r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: $r('sys.color.ohos_id_color_emphasize') }
 
 值为undefined时，按默认值处理。
 
@@ -194,7 +198,7 @@ Chip状态改变时的回调方法，用于监听Chip选中状态的变更。该
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件选中状态的系统材质样式。不同材质具有不同的效果，能够影响组件选中时的backgroundColor、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自动反色的系统材质时，selectedFontColor如果使用系统预定义的可反色颜色资源（如`&#36;r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。当设置selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突。
+设置组件选中状态的系统材质样式。不同材质具有不同的效果，能够影响组件选中时的backgroundColor、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自动反色的系统材质时，selectedFontColor如果使用系统预定义的可反色颜色资源（如`$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。当设置selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突。
 
 默认值：undefined
 

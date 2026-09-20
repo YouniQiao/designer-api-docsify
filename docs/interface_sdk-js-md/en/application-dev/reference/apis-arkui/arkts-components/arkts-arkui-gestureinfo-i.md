@@ -1,5 +1,9 @@
 # GestureInfo
 
+```TypeScript
+declare interface GestureInfo
+```
+
 Defines the gesture information type.
 
 **Since:** 11

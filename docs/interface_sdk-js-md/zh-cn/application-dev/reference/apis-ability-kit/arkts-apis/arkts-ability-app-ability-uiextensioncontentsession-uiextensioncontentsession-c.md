@@ -1,5 +1,9 @@
 # UIExtensionContentSession
 
+```TypeScript
+declare class UIExtensionContentSession
+```
+
 UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
 **起始版本：** 10
@@ -264,6 +268,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+<a id="setwindowprivacymode-1"></a>
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -404,6 +410,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+<a id="startabilitybytype-2"></a>
+
 ## startAbilityByType
 
 ```TypeScript
@@ -541,6 +549,8 @@ struct Index {
 }
 ```
 
+<a id="terminateself-1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -677,6 +687,8 @@ struct Index {
   }
 }
 ```
+
+<a id="terminateselfwithresult-1"></a>
 
 ## terminateSelfWithResult
 

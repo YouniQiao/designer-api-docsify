@@ -1,5 +1,9 @@
 # TextPicker properties/events
 
+```TypeScript
+declare class TextPickerAttribute extends CommonMethod<TextPickerAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -31,6 +35,8 @@ Sets whether to enable loop scrolling.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable loop scrolling.<br>- **true**: Enable loop scrolling.<br>- **false**: Disable loop scrolling.<br>Default value: **true** |
+
+<a id="canloop-1"></a>
 
 ## canLoop
 
@@ -73,6 +79,8 @@ Sets the height of the picker items.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; string | Yes | Height of the picker items.<br>Value range:<br>Number type: [0, +∞), in vp.<br>String type: numeric string only, for example, **"56"**.<br>Default value: selected item 56 vp, unselected item 36 vp.<br>**NOTE:** <br>The set value applies to both selected and unselected items. |
+
+<a id="defaultpickeritemheight-1"></a>
 
 ## defaultPickerItemHeight
 
@@ -184,6 +192,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
+<a id="disappeartextstyle-1"></a>
+
 ## disappearTextStyle
 
 ```TypeScript
@@ -205,6 +215,8 @@ Sets the text color, font size, and font weight of edge items (the second item a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+
+<a id="disappeartextstyle-2"></a>
 
 ## disappearTextStyle
 
@@ -251,6 +263,8 @@ If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [DividerOptions](arkts-arkui-divideroptions-i.md) &#124; null | Yes |  |
+
+<a id="divider-1"></a>
 
 ## divider
 
@@ -319,6 +333,8 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of the fade effect.<br>Default value: **36vp**<br>Value range: [0, +∞). Percentages are supported.<br>**NOTE:** <br>1. If the value is set to a percentage, **100%** equals half the height of the text picker.<br>2. A value of **0** disables the fade effect.<br>3. Values exceeding half the height of the text picker revert to the default value.<br>4. If the value is **undefined** or negative, the default value is used. |
+
+<a id="gradientheight-1"></a>
 
 ## gradientHeight
 
@@ -389,7 +405,7 @@ This API is supported since API version 8 and deprecated since API version 10. N
 ## onChange
 
 ```TypeScript
-onChange(callback: (value: string | string[], index: number | number[]) => void)
+onChange(callback: (value: string[], index: number[]) => void)
 ```
 
 Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.
@@ -407,6 +423,8 @@ This callback is triggered only after the scroll animation completes. To obtain 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | (value: string &#124; string[], index: number &#124; number[]) =&gt; void | Yes |  |
+
+<a id="onchange-1"></a>
 
 ## onChange
 
@@ -490,6 +508,8 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 | --- | --- | --- | --- |
 | callback | [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | Yes | Event triggered when the scrolling in the text picker stops. |
 
+<a id="onscrollstop-1"></a>
+
 ## onScrollStop
 
 ```TypeScript
@@ -538,12 +558,12 @@ Sets the background style of selected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: &#36;r('sys.color.comp_background_tertiary'),<br>borderRadius: &#36;r('sys.float.corner_radius_level12')<br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes | Background color and corner radius for selected items. Applies to all columns in multi-column mode.<br>Default value:<br>{ <br>color: $r('sys.color.comp_background_tertiary'),<br>borderRadius: $r('sys.float.corner_radius_level12')<br>} |
 
 ## selectedIndex
 
 ```TypeScript
-selectedIndex(value: number | number[])
+selectedIndex(value: number[])
 ```
 
 Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md). Use the number type for single-column pickers. Use the number[] type for multi-column pickers.
@@ -562,10 +582,12 @@ Sets the index of the selected item or items in the data list. This setting take
 | --- | --- | --- | --- |
 | value | number &#124; number[] | Yes | Index of the selected item or items in the data list. The index is zero-based.<br>Default value: **0**<br>If the value is negative or exceeds the maximum index, the default value is used.<br> |
 
+<a id="selectedindex-1"></a>
+
 ## selectedIndex
 
 ```TypeScript
-selectedIndex(index: Optional<number | number[]>)
+selectedIndex(index: Optional<number[]>)
 ```
 
 Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md). Use the number type for single-column pickers. Use the number[] type for multi-column pickers. Compared with [selectedIndex&lt;sup&gt;10+&lt;/sup&gt;](#selectedindex), this API supports the **undefined** type for the **index** parameter.
@@ -606,6 +628,8 @@ Sets the text color, font size, and font weight of the selected item.
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight of the selected item.<br>Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
 
+<a id="selectedtextstyle-1"></a>
+
 ## selectedTextStyle
 
 ```TypeScript
@@ -627,6 +651,8 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+
+<a id="selectedtextstyle-2"></a>
 
 ## selectedTextStyle
 
@@ -672,6 +698,8 @@ Sets the text color, font size, and font weight of candidate items (the first it
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
+<a id="textstyle-1"></a>
+
 ## textStyle
 
 ```TypeScript
@@ -693,6 +721,8 @@ Sets the text color, font size, and font weight of candidate items (the first it
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+
+<a id="textstyle-2"></a>
 
 ## textStyle
 

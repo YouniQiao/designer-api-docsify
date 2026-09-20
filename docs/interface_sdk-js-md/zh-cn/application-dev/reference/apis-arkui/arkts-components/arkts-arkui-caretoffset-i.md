@@ -1,5 +1,9 @@
 # CaretOffset
 
+```TypeScript
+declare interface CaretOffset
+```
+
 光标相对输入框的位置信息。
 
 **起始版本：** 11

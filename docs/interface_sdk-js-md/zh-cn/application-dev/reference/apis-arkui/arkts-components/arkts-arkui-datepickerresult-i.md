@@ -1,5 +1,9 @@
 # DatePickerResult
 
+```TypeScript
+declare interface DatePickerResult
+```
+
 日期选择器返回的时间格式。
 
 **起始版本：** 8

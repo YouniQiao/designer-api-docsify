@@ -1,5 +1,9 @@
 # MediaAssetDataHandler
 
+```TypeScript
+interface MediaAssetDataHandler<T>
+```
+
 MediaAssetDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**.
 
 **Since:** 11

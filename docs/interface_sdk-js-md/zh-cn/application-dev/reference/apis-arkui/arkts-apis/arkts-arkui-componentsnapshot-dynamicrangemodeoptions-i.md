@@ -1,5 +1,9 @@
 # DynamicRangeModeOptions
 
+```TypeScript
+interface DynamicRangeModeOptions
+```
+
 定义截图所使用的动态范围模式。
 
 **起始版本：** 23

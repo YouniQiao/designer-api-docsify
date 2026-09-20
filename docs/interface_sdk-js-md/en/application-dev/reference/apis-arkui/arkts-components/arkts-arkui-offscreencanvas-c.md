@@ -1,5 +1,9 @@
 # OffscreenCanvas
 
+```TypeScript
+declare class OffscreenCanvas
+```
+
 The **OffscreenCanvas** component is used to draw custom graphics.
 
 When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
@@ -42,6 +46,8 @@ Constructs an **OffscreenCanvas** object.
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp. |
 | height | number | Yes | Height of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp. |
+
+<a id="constructor-1"></a>
 
 ## constructor
 

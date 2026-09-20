@@ -1,5 +1,9 @@
 # CheckboxGroupResult
 
+```TypeScript
+declare interface CheckboxGroupResult
+```
+
 Name and status of a check box group.
 
 **Since:** 8

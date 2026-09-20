@@ -69,6 +69,8 @@ notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
 ```
 
 
+<a id="issupportdonotdisturbmode-1"></a>
+
 ## isSupportDoNotDisturbMode
 
 ```TypeScript

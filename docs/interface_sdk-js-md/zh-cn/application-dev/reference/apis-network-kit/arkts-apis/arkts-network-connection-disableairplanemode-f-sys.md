@@ -58,6 +58,8 @@ connection.disableAirplaneMode().then((error: void) => {
 ```
 
 
+<a id="disableairplanemode-1"></a>
+
 ## disableAirplaneMode
 
 ```TypeScript

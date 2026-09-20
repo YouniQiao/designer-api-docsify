@@ -1,5 +1,9 @@
 # TransitionHierarchyStrategy（系统接口）
 
+```TypeScript
+declare enum TransitionHierarchyStrategy
+```
+
 共享元素动画过程中in/out组件层级位置移动策略枚举。
 
 **起始版本：** 12

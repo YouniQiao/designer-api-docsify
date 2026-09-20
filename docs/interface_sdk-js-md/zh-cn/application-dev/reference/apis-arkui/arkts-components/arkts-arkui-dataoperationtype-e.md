@@ -1,5 +1,9 @@
 # DataOperationType
 
+```TypeScript
+declare enum DataOperationType
+```
+
 枚举类型，数据操作说明。
 
 **起始版本：** 12

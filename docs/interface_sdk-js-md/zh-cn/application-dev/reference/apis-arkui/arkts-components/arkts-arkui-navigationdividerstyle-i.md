@@ -1,5 +1,9 @@
 # NavigationDividerStyle
 
+```TypeScript
+declare interface NavigationDividerStyle
+```
+
 Navigation分割线颜色及上下边距。
 
 **起始版本：** 23

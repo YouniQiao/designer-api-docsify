@@ -1,5 +1,9 @@
 # Search属性/事件
 
+```TypeScript
+declare class SearchAttribute extends CommonMethod<SearchAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
 
 除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
@@ -959,6 +963,8 @@ onSubmit(callback: Callback<string>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | Callback&lt;string&gt; | 是 | 搜索提交回调，其返回值为当前搜索框中输入的文本内容。<br>**适用版本：** 18 |
+
+<a id="onsubmit-1"></a>
 
 ## onSubmit
 

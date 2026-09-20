@@ -61,6 +61,8 @@ power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)
 ```
 
 
+<a id="setpowermode-1"></a>
+
 ## setPowerMode
 
 ```TypeScript

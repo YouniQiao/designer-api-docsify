@@ -1,5 +1,9 @@
 # ScrollEffectOptions
 
+```TypeScript
+declare interface ScrollEffectOptions
+```
+
 Defines the scroll effect options for the title bar.
 
 **Since:** 26.0.0

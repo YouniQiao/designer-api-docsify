@@ -1,5 +1,9 @@
 # ArkListOptions
 
+```TypeScript
+declare interface ArkListOptions
+```
+
 Provides basic parameters for creating an **ArcList** component.
 
 **Since:** 18

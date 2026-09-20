@@ -1,5 +1,9 @@
 # HoverEvent
 
+```TypeScript
+declare interface HoverEvent extends BaseEvent
+```
+
 Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

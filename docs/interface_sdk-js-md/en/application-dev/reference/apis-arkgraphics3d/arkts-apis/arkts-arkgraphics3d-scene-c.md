@@ -1,5 +1,9 @@
 # Scene
 
+```TypeScript
+export declare class Scene
+```
+
 Describes a scene.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # CheckboxGroup properties/events
 
+```TypeScript
+declare class CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -33,6 +37,8 @@ Sets the check box shape of the check box group.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Check box shape of the check box group.<br>Default value: **CheckBoxShape.CIRCLE**.<br>**NOTE:** <br>The **CheckboxGroup** component is displayed according to the set shape.<br>All check boxes in the **CheckboxGroup** component that do not have their shape individually set will inherit the shape of the **CheckboxGroup**.<br>Check boxes in the **CheckboxGroup** component that have their shape individually set will prioritize their own shape setting over the shape of the **CheckboxGroup**. |
+
+<a id="checkboxshape-1"></a>
 
 ## checkboxShape
 
@@ -106,6 +112,8 @@ Sets the check mark style of the check box.
 | --- | --- | --- | --- |
 | value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. |
 
+<a id="mark-1"></a>
+
 ## mark
 
 ```TypeScript
@@ -150,6 +158,8 @@ Triggered when the selected status of the check box group or any check box where
 | --- | --- | --- | --- |
 | callback | [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Yes | Information about the check box group.<br>**Since:** 18 |
 
+<a id="onchange-1"></a>
+
 ## onChange
 
 ```TypeScript
@@ -184,7 +194,7 @@ Sets whether to select all check boxes in the group. If the **select** attribute
 
 When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.
 
-Since API version 10, this attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
@@ -202,6 +212,8 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to select all.<br>Default value: **false**.<br>The value **true** means to select all check boxes in the group, and **false** means to deselect all check boxes in the group. |
 
+<a id="selectall-1"></a>
+
 ## selectAll
 
 ```TypeScript
@@ -212,7 +224,7 @@ Sets whether to select all. If the **select** attribute is set for a Checkbox co
 
 When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.
 
-This attribute supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 
@@ -250,7 +262,9 @@ Sets the color of the selected check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected check box.<br>Default value: **&#36;r('sys.color.ohos_id_color_text_primary_activated')**<br>An invalid value is handled as the default value. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected check box.<br>Default value: **$r('sys.color.ohos_id_color_text_primary_activated')**<br>An invalid value is handled as the default value. |
+
+<a id="selectedcolor-1"></a>
 
 ## selectedColor
 
@@ -274,7 +288,7 @@ Sets the color of the selected check box. Compared with [selectedColor](#selecte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the selected check box.<br>If **resColor** is set to **undefined**, the default value **&#36;r('sys.color.ohos_id_color_text_primary_activated')** is used.<br>An invalid value is handled as the default value. |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Color of the selected check box.<br>If **resColor** is set to **undefined**, the default value **$r('sys.color.ohos_id_color_text_primary_activated')** is used.<br>An invalid value is handled as the default value. |
 
 ## unselectedColor
 
@@ -296,7 +310,9 @@ Sets the border color of the check box when it is not selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.<br>Default value: **&#36;r('sys.color.ohos_id_color_switch_outline_off')** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.<br>Default value: **$r('sys.color.ohos_id_color_switch_outline_off')** |
+
+<a id="unselectedcolor-1"></a>
 
 ## unselectedColor
 
@@ -318,4 +334,4 @@ Sets the border color of the check box when it is not selected. Compared with [u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Border color of the check box when it is not selected.<br>If **resColor** is set to **undefined**, the default value **&#36;r('sys.color.ohos_id_color_switch_outline_off')** is used. |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Border color of the check box when it is not selected.<br>If **resColor** is set to **undefined**, the default value **$r('sys.color.ohos_id_color_switch_outline_off')** is used. |

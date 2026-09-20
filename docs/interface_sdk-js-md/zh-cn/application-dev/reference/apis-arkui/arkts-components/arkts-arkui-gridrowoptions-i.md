@@ -1,5 +1,9 @@
 # GridRowOptions
 
+```TypeScript
+declare interface GridRowOptions
+```
+
 设置栅格行布局容器的布局选项。
 
 **起始版本：** 9

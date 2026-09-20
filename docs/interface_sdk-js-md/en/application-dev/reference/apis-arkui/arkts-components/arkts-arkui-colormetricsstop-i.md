@@ -1,5 +1,9 @@
 # ColorMetricsStop
 
+```TypeScript
+declare interface ColorMetricsStop
+```
+
 Describes the breakpoint of the gradient color.
 
 **Since:** 23

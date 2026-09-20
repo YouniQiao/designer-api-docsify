@@ -1,5 +1,9 @@
 # ParticleColorOptions
 
+```TypeScript
+interface ParticleColorOptions
+```
+
 The color changes randomly, with the per-second change difference being a value randomly generated from the range. The target color is obtained by applying the change difference to the current color value of each of the R, G, B, A channels.
 
 > **NOTE:** 

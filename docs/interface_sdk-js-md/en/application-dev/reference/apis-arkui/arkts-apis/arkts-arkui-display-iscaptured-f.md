@@ -51,6 +51,8 @@ try {
 ```
 
 
+<a id="iscaptured-1"></a>
+
 ## isCaptured
 
 ```TypeScript

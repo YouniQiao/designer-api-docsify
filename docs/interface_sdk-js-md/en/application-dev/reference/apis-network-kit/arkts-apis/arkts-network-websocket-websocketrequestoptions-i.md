@@ -1,5 +1,9 @@
 # WebSocketRequestOptions
 
+```TypeScript
+export interface WebSocketRequestOptions
+```
+
 Defines the optional parameters carried in the request for establishing a WebSocket connection.
 
 **Since:** 6

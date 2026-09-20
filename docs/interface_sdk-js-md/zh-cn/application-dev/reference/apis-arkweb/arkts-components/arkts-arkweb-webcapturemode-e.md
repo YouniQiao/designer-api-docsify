@@ -1,5 +1,9 @@
 # WebCaptureMode
 
+```TypeScript
+declare enum WebCaptureMode
+```
+
 Web屏幕捕获模式。
 
 **起始版本：** 10

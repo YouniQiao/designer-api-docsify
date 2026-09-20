@@ -1,5 +1,9 @@
 # ParagraphStyleInterface
 
+```TypeScript
+declare interface ParagraphStyleInterface
+```
+
 ParagraphStyleInterface
 
 **Since:** 12

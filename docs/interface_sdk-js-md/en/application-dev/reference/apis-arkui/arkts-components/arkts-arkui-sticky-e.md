@@ -1,5 +1,9 @@
 # Sticky
 
+```TypeScript
+declare enum Sticky
+```
+
 Enumerates the sticky effects for list items.
 
 **Since:** 7

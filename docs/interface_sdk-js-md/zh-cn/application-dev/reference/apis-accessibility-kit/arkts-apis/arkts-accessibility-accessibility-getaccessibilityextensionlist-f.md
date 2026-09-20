@@ -53,6 +53,8 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 ```
 
 
+<a id="getaccessibilityextensionlist-1"></a>
+
 ## getAccessibilityExtensionList
 
 ```TypeScript

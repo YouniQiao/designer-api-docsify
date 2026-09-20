@@ -1,5 +1,9 @@
 # SelectionContainerAttribute
 
+```TypeScript
+export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>
+```
+
 Defines the attributes of SelectionContainer.
 
 **Inheritance/Implementation:** SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>

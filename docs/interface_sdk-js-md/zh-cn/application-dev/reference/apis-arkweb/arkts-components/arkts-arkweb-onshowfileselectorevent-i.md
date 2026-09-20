@@ -1,5 +1,9 @@
 # OnShowFileSelectorEvent
 
+```TypeScript
+declare interface OnShowFileSelectorEvent
+```
+
 定义文件选择器结果的回调信息，包括结果和参数详情。
 
 **起始版本：** 12

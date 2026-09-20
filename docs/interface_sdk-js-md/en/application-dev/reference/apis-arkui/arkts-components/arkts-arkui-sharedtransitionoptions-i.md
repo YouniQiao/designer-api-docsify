@@ -1,5 +1,9 @@
 # sharedTransitionOptions
 
+```TypeScript
+declare interface sharedTransitionOptions
+```
+
 Parameters of the shared element transition animation.
 
 > **NOTE:** 

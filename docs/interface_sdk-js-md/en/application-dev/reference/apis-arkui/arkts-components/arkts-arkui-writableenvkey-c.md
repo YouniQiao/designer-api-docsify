@@ -1,5 +1,9 @@
 # WritableEnvKey
 
+```TypeScript
+declare class WritableEnvKey
+```
+
 Defines the writable system environment key.
 
 **Since:** 26.0.0

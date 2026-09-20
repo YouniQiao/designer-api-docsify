@@ -1,5 +1,9 @@
 # DragResult
 
+```TypeScript
+declare enum DragResult
+```
+
 Defines the result of a drag operation and the drop-selection state of a component.
 
 **Since:** 10

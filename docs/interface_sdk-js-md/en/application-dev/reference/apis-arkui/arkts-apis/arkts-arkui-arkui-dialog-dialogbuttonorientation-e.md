@@ -1,5 +1,9 @@
 # DialogButtonOrientation
 
+```TypeScript
+export enum DialogButtonOrientation
+```
+
 The arrangement of buttons in dialog.
 
 **Since:** 26.0.1

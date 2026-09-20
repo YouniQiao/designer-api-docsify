@@ -1,5 +1,9 @@
 # PermissionStateChangeType
 
+```TypeScript
+export enum PermissionStateChangeType
+```
+
 Enumerates the operations that trigger permission state changes.
 
 **Since:** 18

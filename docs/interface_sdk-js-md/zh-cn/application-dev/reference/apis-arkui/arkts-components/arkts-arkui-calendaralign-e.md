@@ -1,5 +1,9 @@
 # CalendarAlign
 
+```TypeScript
+declare enum CalendarAlign
+```
+
 对齐方式类型。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # RotationGestureInterface
 
+```TypeScript
+interface RotationGestureInterface extends GestureInterface<RotationGestureInterface>
+```
+
 **RotationGesture** is used to trigger a rotation gesture, which recognizes rotational movements using two to five fingers, with a minimum angular change of 1 degree. This gesture cannot be triggered using a two-finger rotation operation on a trackpad.
 
 **Inheritance/Implementation:** RotationGestureInterface extends GestureInterface<RotationGestureInterface>
@@ -33,6 +37,8 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 | Type | Description |
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
+<a id="call-1"></a>
 
 ## [[Call]]
 
@@ -87,6 +93,8 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 | Type | Description |
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) |  |
+
+<a id="onactioncancel-1"></a>
 
 ## onActionCancel
 

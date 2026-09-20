@@ -1,5 +1,9 @@
 # AlignRuleOption
 
+```TypeScript
+declare interface AlignRuleOption
+```
+
 Defines the align rule options of relative container.
 
 **起始版本：** 9

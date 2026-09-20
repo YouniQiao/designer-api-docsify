@@ -1,5 +1,9 @@
 # ModalMode
 
+```TypeScript
+declare enum ModalMode
+```
+
 子窗菜单的模态模式。
 
 **起始版本：** 20

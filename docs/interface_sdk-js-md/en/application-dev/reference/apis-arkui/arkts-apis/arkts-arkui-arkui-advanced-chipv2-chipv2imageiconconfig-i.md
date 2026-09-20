@@ -1,5 +1,9 @@
 # ChipV2ImageIconConfig
 
+```TypeScript
+export interface ChipV2ImageIconConfig
+```
+
 Defines the common icon attribute configuration.
 
 **Since:** 26.0.0
@@ -20,7 +24,7 @@ activatedFillColor?: ColorMetrics
 
 Icon fill color when **ChipV2** is activated.
 
-Default value: **&#36;r('sys.color.chip_active_icon_color')**. The default value is not applied to non-SVG images.
+Default value: **$r('sys.color.chip_active_icon_color')**. The default value is not applied to non-SVG images.
 
 If the value is **undefined**, the default value is used.
 
@@ -46,7 +50,7 @@ fillColor?: ColorMetrics
 
 Icon fill color.
 
-Default value: **&#36;r('sys.color.chip_usually_icon_color')**. The default value is not applied to non-SVG images.
+Default value: **$r('sys.color.chip_usually_icon_color')**. The default value is not applied to non-SVG images.
 
 If the value is **undefined**, the default value is used.
 
@@ -97,9 +101,9 @@ Icon size. Percentage values are not supported. If an invalid value is passed, t
 Default value:
 
 - When **ChipV2Options.size** is **ChipV2Size.SMALL**, the default value is  
-**{width: &#36;r('sys.float.chip_small_icon_size'), height: &#36;r('sys.float.chip_small_icon_size')}**.  
+**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**.  
 - When **ChipV2Options.size** is **ChipV2Size.NORMAL**, the default value is  
-**{width: &#36;r('sys.float.chip_normal_icon_size'), height: &#36;r('sys.float.chip_normal_icon_size')}**.
+**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**.
 
 Unit: vp
 

@@ -1,5 +1,9 @@
 # NetConnection
 
+```TypeScript
+export interface NetConnection
+```
+
 网络连接对象类型。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # DialogMessage
 
+```TypeScript
+declare interface DialogMessage extends DialogTextStyleOptions
+```
+
 Message options for the dialog box, combining message content with text style.
 
 **Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)

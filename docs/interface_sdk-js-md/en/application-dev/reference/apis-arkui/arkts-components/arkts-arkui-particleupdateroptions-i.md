@@ -1,5 +1,9 @@
 # ParticleUpdaterOptions
 
+```TypeScript
+interface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater>
+```
+
 Defines the particle updater options.
 
 > **NOTE:** 

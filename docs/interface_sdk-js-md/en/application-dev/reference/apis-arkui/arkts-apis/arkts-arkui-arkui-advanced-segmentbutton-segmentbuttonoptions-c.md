@@ -1,5 +1,9 @@
 # SegmentButtonOptions
 
+```TypeScript
+declare class SegmentButtonOptions
+```
+
 
 > **NOTE:** 
 > 
@@ -142,7 +146,7 @@ For capsule-type multi-selection segment buttons (**type** is **"capsule"** and 
 
 The corner radius is limited by the component size. The maximum value is half of the component width or height. Percentage setting is not supported. When the value exceeds the maximum, it is automatically corrected to the maximum. When a percentage is used, the default value is used.
 
-Default value: `&#36;r('sys.float.segmentbutton_container_shape')`
+Default value: `$r('sys.float.segmentbutton_container_shape')`
 
 When the value is **undefined**, the default value is used.
 
@@ -164,7 +168,7 @@ backgroundColor: ResourceColor
 
 Background color of the segment button component.
 
-When the value is **undefined**, the background color is **&#36;r('sys.color.ohos_id_color_button_normal')**.
+When the value is **undefined**, the background color is **$r('sys.color.ohos_id_color_button_normal')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -294,7 +298,7 @@ fontColor: ResourceColor
 
 Text color of the segment button component in the unselected state.
 
-When the value is **undefined**, the color is **&#36;r('sys.color.ohos_id_color_text_secondary')**.
+When the value is **undefined**, the color is **$r('sys.color.ohos_id_color_text_secondary')**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -316,7 +320,7 @@ Font size of the segment button component in the unselected state. Percentage se
 
 Unit: fp
 
-When the value is **undefined**, the font size is **&#36;r('sys.float.ohos_id_text_size_body2')**.
+When the value is **undefined**, the font size is **$r('sys.float.ohos_id_text_size_body2')**.
 
 **Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 
@@ -390,7 +394,7 @@ For capsule-type multi-selection segment buttons (**type** is **"capsule"** and 
 
 The corner radius is limited by the component size. The maximum value is half of the component width or height. Percentage setting is not supported. When the value exceeds the maximum, it is automatically corrected to the maximum. When a percentage is used, the default value is used.
 
-Default value: `&#36;r('sys.float.segmentbutton_selected_background_shape')`
+Default value: `$r('sys.float.segmentbutton_selected_background_shape')`
 
 When the value is **undefined**, the default value is used.
 
@@ -488,9 +492,9 @@ selectedBackgroundColor: ResourceColor
 
 Background color of the segment button component in the selected state.
 
-When the value is **undefined** and type is **"tab"**, the background color is `&#36;r('sys.color.segment_button_checked_foreground_color')`.
+When the value is **undefined** and type is **"tab"**, the background color is `$r('sys.color.segment_button_checked_foreground_color')`.
 
-When type is **"capsule"**, the background color is `&#36;r('sys.color.ohos_id_color_emphasize')`.
+When type is **"capsule"**, the background color is `$r('sys.color.ohos_id_color_emphasize')`.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -510,9 +514,9 @@ selectedFontColor: ResourceColor
 
 Text color of the segment button component in the selected state.
 
-When the value is **undefined** and **type** is **"tab"**, the color is `&#36;r('sys.color.ohos_id_color_text_primary')`.
+When the value is **undefined** and **type** is **"tab"**, the color is `$r('sys.color.ohos_id_color_text_primary')`.
 
-When **type** is **"capsule"**, the color is `&#36;r('sys.color.ohos_id_color_foreground_contrary')`.
+When **type** is **"capsule"**, the color is `$r('sys.color.ohos_id_color_foreground_contrary')`.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -534,7 +538,7 @@ Font size of the segment button component in the selected state. Percentage sett
 
 Unit: fp
 
-When the value is **undefined**, the font size is **&#36;r('sys.float.ohos_id_text_size_body2')**.
+When the value is **undefined**, the font size is **$r('sys.float.ohos_id_text_size_body2')**.
 
 **Type:** [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md)
 

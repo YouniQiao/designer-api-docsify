@@ -1,5 +1,9 @@
 # KeySource
 
+```TypeScript
+declare enum KeySource
+```
+
 定义触发按键事件的设备类型。
 
 **起始版本：** 7

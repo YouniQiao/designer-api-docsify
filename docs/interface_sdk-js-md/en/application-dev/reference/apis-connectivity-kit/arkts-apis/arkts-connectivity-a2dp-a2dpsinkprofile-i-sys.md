@@ -1,5 +1,9 @@
 # A2dpSinkProfile
 
+```TypeScript
+interface A2dpSinkProfile extends BaseProfile
+```
+
 Manage a2dp sink profile.
 
 **Inheritance/Implementation:** A2dpSinkProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)

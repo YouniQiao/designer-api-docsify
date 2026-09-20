@@ -1,5 +1,9 @@
 # MenuItemOptions
 
+```TypeScript
+declare interface MenuItemOptions
+```
+
 Provides information about the menu item.
 
 **Since:** 9

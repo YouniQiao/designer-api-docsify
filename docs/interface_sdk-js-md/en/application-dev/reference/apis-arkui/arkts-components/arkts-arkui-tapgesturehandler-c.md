@@ -1,5 +1,9 @@
 # TapGestureHandler
 
+```TypeScript
+declare class TapGestureHandler extends GestureHandler<TapGestureHandler>
+```
+
 Defines a type of gesture handler object for tap gestures.
 
 **Inheritance/Implementation:** TapGestureHandler extends GestureHandler<TapGestureHandler>

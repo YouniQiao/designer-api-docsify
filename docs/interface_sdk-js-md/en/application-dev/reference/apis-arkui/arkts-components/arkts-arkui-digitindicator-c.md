@@ -1,5 +1,9 @@
 # DigitIndicator
 
+```TypeScript
+declare class DigitIndicator extends Indicator<DigitIndicator>
+```
+
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
 > **NOTE:** 

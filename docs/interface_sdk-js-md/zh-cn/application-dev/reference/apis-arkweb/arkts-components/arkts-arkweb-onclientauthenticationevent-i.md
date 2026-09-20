@@ -1,5 +1,9 @@
 # OnClientAuthenticationEvent
 
+```TypeScript
+declare interface OnClientAuthenticationEvent
+```
+
 定义需要提供SSL客户端证书时触发的回调信息，包括主机、端口和密钥类型。适用于需要处理客户端证书认证的场景，提升认证流程的灵活性和安全性。
 
 **起始版本：** 12

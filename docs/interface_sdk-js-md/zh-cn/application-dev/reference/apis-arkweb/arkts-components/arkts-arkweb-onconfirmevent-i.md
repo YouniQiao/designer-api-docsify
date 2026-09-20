@@ -1,5 +1,9 @@
 # OnConfirmEvent
 
+```TypeScript
+declare interface OnConfirmEvent
+```
+
 定义网页触发 `confirm()` 弹窗时的回调函数。
 
 **起始版本：** 12

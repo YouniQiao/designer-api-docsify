@@ -82,6 +82,8 @@ promise.then((data) => {
 ```
 
 
+<a id="querygroups-1"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -115,6 +117,8 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 参见 [queryGroups](#querygroups)
 
 
+<a id="querygroups-2"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -144,6 +148,8 @@ function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): voi
 
 参见 [queryGroups](#querygroups)
 
+
+<a id="querygroups-3"></a>
 
 ## queryGroups
 
@@ -179,6 +185,8 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 参见 [queryGroups](#querygroups)
 
 
+<a id="querygroups-4"></a>
+
 ## queryGroups
 
 ```TypeScript
@@ -213,6 +221,8 @@ function queryGroups(holder?: Holder): Promise<Array<Group>>
 
 参见 [queryGroups](#querygroups)
 
+
+<a id="querygroups-5"></a>
 
 ## queryGroups
 

@@ -1,5 +1,9 @@
 # ListItemGroupOptions
 
+```TypeScript
+declare interface ListItemGroupOptions
+```
+
 ListItemGroup组件参数。
 
 **起始版本：** 9

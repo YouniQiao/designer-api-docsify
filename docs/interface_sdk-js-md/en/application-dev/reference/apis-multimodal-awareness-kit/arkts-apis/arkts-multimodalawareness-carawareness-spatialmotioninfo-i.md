@@ -1,5 +1,9 @@
 # SpatialMotionInfo
 
+```TypeScript
+export interface SpatialMotionInfo
+```
+
 Interface for spatial motion response info.
 
 **Since:** 26.0.1

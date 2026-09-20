@@ -1,5 +1,9 @@
 # ChipV2AccessibilityConfig
 
+```TypeScript
+export interface ChipV2AccessibilityConfig
+```
+
 Defines the accessibility attribute configuration.
 
 **Since:** 26.0.0

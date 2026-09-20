@@ -1,5 +1,9 @@
 # NavDestinationMode
 
+```TypeScript
+declare enum NavDestinationMode
+```
+
 Mode of the **NavDestination** component.
 
 **Since:** 11

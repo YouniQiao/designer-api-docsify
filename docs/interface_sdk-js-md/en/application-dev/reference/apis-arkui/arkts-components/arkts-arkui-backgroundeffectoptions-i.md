@@ -1,5 +1,9 @@
 # BackgroundEffectOptions
 
+```TypeScript
+declare interface BackgroundEffectOptions
+```
+
 Defines the options of BackgroundEffect
 
 **Since:** 11

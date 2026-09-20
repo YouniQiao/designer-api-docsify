@@ -77,6 +77,8 @@ call.setCallTransfer(0, callTransferInfo).then(() => {
 ```
 
 
+<a id="setcalltransfer-1"></a>
+
 ## setCallTransfer
 
 ```TypeScript

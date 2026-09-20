@@ -1,5 +1,9 @@
 # I18NUtil
 
+```TypeScript
+export class I18NUtil
+```
+
 国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。
 
 **起始版本：** 9
@@ -344,6 +348,8 @@ try {
   console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="getunicodewrappedfilepath-1"></a>
 
 ## getUnicodeWrappedFilePath
 

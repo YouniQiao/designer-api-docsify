@@ -1,5 +1,9 @@
 # SecurityUIExtensionProxy（系统接口）
 
+```TypeScript
+declare interface SecurityUIExtensionProxy
+```
+
 用于在双方建立连接成功后，向被拉起的Ability发送数据，以及订阅和取消订阅事件回调。
 
 **起始版本：** 26.0.0

@@ -1,5 +1,9 @@
 # PopInfo
 
+```TypeScript
+declare interface PopInfo
+```
+
 Provides the callback information returned when a page is popped out of the routing stack.
 
 **Since:** 11

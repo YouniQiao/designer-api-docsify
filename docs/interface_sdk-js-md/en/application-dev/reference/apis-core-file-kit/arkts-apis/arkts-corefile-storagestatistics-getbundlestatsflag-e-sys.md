@@ -1,5 +1,9 @@
 # GetBundleStatsFlag (System API)
 
+```TypeScript
+export enum GetBundleStatsFlag
+```
+
 Enumerates the flags for obtaining the bundle statistics.
 
 **Since:** 26.0.1

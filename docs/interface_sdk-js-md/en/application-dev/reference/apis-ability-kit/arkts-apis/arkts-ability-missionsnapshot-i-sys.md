@@ -1,5 +1,9 @@
 # MissionSnapshot (System API)
 
+```TypeScript
+export interface MissionSnapshot
+```
+
 The module defines the snapshot of a mission. The snapshot can be obtained through [missionManager.getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md).
 
 **Since:** 8

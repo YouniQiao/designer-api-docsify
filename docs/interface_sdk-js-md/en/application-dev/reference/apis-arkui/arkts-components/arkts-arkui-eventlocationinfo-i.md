@@ -1,5 +1,9 @@
 # EventLocationInfo
 
+```TypeScript
+declare interface EventLocationInfo
+```
+
 Provides coordinate information for tap gestures.
 
 **Since:** 20

@@ -88,6 +88,8 @@ policy
 ```
 
 
+<a id="isuidnetallowed-1"></a>
+
 ## isUidNetAllowed
 
 ```TypeScript
@@ -133,6 +135,8 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 参见 [isUidNetAllowed](#isuidnetallowed)
 
 
+<a id="isuidnetallowed-2"></a>
+
 ## isUidNetAllowed
 
 ```TypeScript
@@ -172,6 +176,8 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 
 参见 [isUidNetAllowed](#isuidnetallowed)
 
+
+<a id="isuidnetallowed-3"></a>
 
 ## isUidNetAllowed
 

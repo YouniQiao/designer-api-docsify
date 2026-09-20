@@ -1,5 +1,9 @@
 # SubTabBarStyle
 
+```TypeScript
+declare class SubTabBarStyle
+```
+
 子页签样式。打开后在切换页签时会播放跳转动画。
 
 **起始版本：** 9
@@ -53,6 +57,8 @@ SubTabBarStyle的构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -131,6 +137,8 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 | 类型 | 说明 |
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+
+<a id="indicator-1"></a>
 
 ## indicator
 
@@ -216,6 +224,8 @@ SubTabBarStyle的静态构造函数。
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
 
+<a id="of-1"></a>
+
 ## of
 
 ```TypeScript
@@ -271,6 +281,8 @@ padding(value: Padding | Dimension): SubTabBarStyle
 | 类型 | 说明 |
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+
+<a id="padding-1"></a>
 
 ## padding
 

@@ -1,5 +1,9 @@
 # SpringProp (System API)
 
+```TypeScript
+declare class SpringProp
+```
+
 Customize spring properties.
 
 **Since:** 7

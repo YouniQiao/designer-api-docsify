@@ -1,5 +1,9 @@
 # ItemState
 
+```TypeScript
+declare enum ItemState
+```
+
 Display status of **nextLabel** in the stepper.
 
 **Since:** 8

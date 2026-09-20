@@ -1,5 +1,9 @@
 # RichEditorSpanPosition
 
+```TypeScript
+declare interface RichEditorSpanPosition
+```
+
 Span位置信息。
 
 **起始版本：** 10

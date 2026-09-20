@@ -86,6 +86,8 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
+<a id="getallcontinuoustasks-1"></a>
+
 ## getAllContinuousTasks
 
 ```TypeScript

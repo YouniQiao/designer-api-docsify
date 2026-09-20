@@ -88,6 +88,8 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
 ```
 
 
+<a id="setdatetime-1"></a>
+
 ## setDateTime
 
 ```TypeScript

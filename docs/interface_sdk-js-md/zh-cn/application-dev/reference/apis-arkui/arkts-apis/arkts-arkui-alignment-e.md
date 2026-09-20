@@ -1,5 +1,9 @@
 # Alignment
 
+```TypeScript
+declare enum Alignment
+```
+
 Alignment enumeration description.
 
 @enum { number }

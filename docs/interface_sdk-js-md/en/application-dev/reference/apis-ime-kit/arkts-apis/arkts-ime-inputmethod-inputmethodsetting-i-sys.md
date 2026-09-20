@@ -1,5 +1,9 @@
 # InputMethodSetting
 
+```TypeScript
+interface InputMethodSetting
+```
+
 In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
@@ -18,7 +22,7 @@ import { inputMethod } from '@kit.IMEKit';
 enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
 ```
 
-Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>function enableInputMethodSafely() {<br> const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); <br> if (!currentIme) {<br> console.error("Failed to get current input method"); <br> return; <br> } <br> <br> inputMethod.getSetting() <br> .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) <br> .then(() =&gt; {<br> console.info('Succeeded in enable inputmethod.'); <br> }) <br> .catch((err: BusinessError) =&gt; {<br> console.error(`Failed to enableInputMethod. Code: &#36;{err.code}, message: &#36;{err.message}`); <br> }); <br>} <br> <br>enableInputMethodSafely(); <br>```
+Enables or disables an input method. This API uses a promise to return the result. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>function enableInputMethodSafely() {<br> const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod(); <br> if (!currentIme) {<br> console.error("Failed to get current input method"); <br> return; <br> } <br> <br> inputMethod.getSetting() <br> .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE) <br> .then(() =&gt; {<br> console.info('Succeeded in enable inputmethod.'); <br> }) <br> .catch((err: BusinessError) =&gt; {<br> console.error(`Failed to enableInputMethod. Code: ${err.code}, message: ${err.message}`); <br> }); <br>} <br> <br>enableInputMethodSafely(); <br>```
 
 **Since:** 20
 
@@ -91,6 +95,8 @@ inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodE
 });
 ```
 
+<a id="enableinputmethod-1"></a>
+
 ## enableInputMethod
 
 ```TypeScript
@@ -141,6 +147,8 @@ Change the enabled state of an input method of a specified user.
 **Examples**
 
 See [enableInputMethod](#enableinputmethod)
+
+<a id="getallinputmethodssync-1"></a>
 
 ## getAllInputMethodsSync
 
@@ -205,7 +213,7 @@ try {
 getCursorInfo(userId?: number): CursorInfo
 ```
 
-Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>try {<br> let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); <br> console.info(`get cursorInfo success, left: &#36;{cursorInfo.left}, top: &#36;{cursorInfo.top}, width: &#36;{cursorInfo.width}, height: &#36;{cursorInfo.height}, displayId: &#36;{cursorInfo.displayId}`); <br>} catch (err) {<br> let error = err as BusinessError; <br> console.error(`Failed to get cursorInfo. Code: &#36;{error.code}, message: &#36;{error.message}`); <br>} <br>```
+Obtains the cursor information of a specified user. If the edit box does not notify the input method service of the cursor information, all attribute values returned are **0**. <br> <br>**Example** <br> <br>```ts <br>import { BusinessError } from '@kit.BasicServicesKit'; <br> <br>try {<br> let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo(); <br> console.info(`get cursorInfo success, left: ${cursorInfo.left}, top: ${cursorInfo.top}, width: ${cursorInfo.width}, height: ${cursorInfo.height}, displayId: ${cursorInfo.displayId}`); <br>} catch (err) {<br> let error = err as BusinessError; <br> console.error(`Failed to get cursorInfo. Code: ${error.code}, message: ${error.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -258,7 +266,7 @@ try {
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: &#36;{err.code}, message: &#36;{err.message}`); <br>} <br>```
+Obtains the default input method capabilities. To optimize performance, the returned **InputMethodProperty** object ensures that only the `name` and `id` attributes that uniquely identify the input method capability are correct. Other attributes may be empty. <br> <br>**Example** <br> <br>```ts <br>try {<br> const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility(); <br> console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id); <br>} catch (err) {<br> console.error(`Failed to getDefaultInputMethodAbility. Code: ${err.code}, message: ${err.message}`); <br>} <br>```
 
 **Since:** 26.0.0
 
@@ -294,6 +302,8 @@ try {
   console.error(`Failed to getDefaultInputMethodAbility. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="getinputmethodssync-1"></a>
 
 ## getInputMethodsSync
 
@@ -477,6 +487,8 @@ try {
   console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<a id="ispanelshown-1"></a>
 
 ## isPanelShown
 

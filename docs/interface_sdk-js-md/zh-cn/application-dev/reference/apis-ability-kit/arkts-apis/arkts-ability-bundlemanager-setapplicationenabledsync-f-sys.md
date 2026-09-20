@@ -77,6 +77,8 @@ try {
 ```
 
 
+<a id="setapplicationenabledsync-1"></a>
+
 ## setApplicationEnabledSync
 
 ```TypeScript

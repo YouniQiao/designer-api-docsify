@@ -1,5 +1,9 @@
 # PasteData
 
+```TypeScript
+interface PasteData
+```
+
 剪贴板内容对象。剪贴板内容包含一个或者多个内容条目（[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)）以及属性描述对象（[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)）。在调用PasteData的接口前，需要先通过[createData()](arkts-basicservices-pasteboard-createdata-f.md)或[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)获取一个PasteData对象。
 
 **起始版本：** 6
@@ -81,6 +85,8 @@ let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_
 let dataXml = new ArrayBuffer(256);
 pasteData.addRecord('app/xml', dataXml);
 ```
+
+<a id="addrecord-1"></a>
 
 ## addRecord
 

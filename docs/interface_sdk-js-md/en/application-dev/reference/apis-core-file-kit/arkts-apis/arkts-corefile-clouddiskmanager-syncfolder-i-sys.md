@@ -1,5 +1,9 @@
 # SyncFolder (System API)
 
+```TypeScript
+interface SyncFolder
+```
+
 Encapsulates the sync root information.
 
 **Since:** 21

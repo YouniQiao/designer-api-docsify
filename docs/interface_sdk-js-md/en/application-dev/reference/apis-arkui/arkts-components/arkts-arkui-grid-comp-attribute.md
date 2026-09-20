@@ -1,5 +1,9 @@
 # Grid properties/events
 
+```TypeScript
+declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>
+```
+
 In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
 In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
@@ -55,6 +59,8 @@ The number of the grid items to be cached before and after the currently display
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**.<br>When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
+
+<a id="cachedcount-1"></a>
 
 ## cachedCount
 
@@ -154,6 +160,8 @@ If this attribute is set to **'0fr'**, the column width is 0, and grid item in t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string | Yes |  |
+
+<a id="columnstemplate-1"></a>
 
 ## columnsTemplate
 
@@ -870,6 +878,8 @@ Sets the scrollbar color.
 | --- | --- | --- | --- |
 | value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: **'#182431'** (40% opacity)<br>A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**.<br>A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -911,6 +921,8 @@ Sets the scrollbar width. This attribute cannot be set in percentage. After the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; string | Yes | Scrollbar width.<br>Default value: **4**<br>Unit: vp<br>If this parameter is set to a value less than or equal to 0, the default value is used. The value **0** means not to show the scrollbar. |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

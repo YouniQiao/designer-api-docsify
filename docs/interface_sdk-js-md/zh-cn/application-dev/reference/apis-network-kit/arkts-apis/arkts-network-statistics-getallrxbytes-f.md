@@ -61,6 +61,8 @@ statistics.getAllRxBytes().then((stats: number) => {
 ```
 
 
+<a id="getallrxbytes-1"></a>
+
 ## getAllRxBytes
 
 ```TypeScript

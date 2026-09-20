@@ -1,5 +1,9 @@
 # PenKey
 
+```TypeScript
+declare enum PenKey
+```
+
 Pen key type enum.
 
 **Since:** 26.0.0

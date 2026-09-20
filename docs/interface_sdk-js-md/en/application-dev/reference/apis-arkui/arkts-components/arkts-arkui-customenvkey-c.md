@@ -1,5 +1,9 @@
 # CustomEnvKey
 
+```TypeScript
+declare class CustomEnvKey<S>
+```
+
 Defines the custom environment Key.
 
 **Since:** 26.0.0

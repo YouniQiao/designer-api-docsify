@@ -1,5 +1,9 @@
 # TouchTestInfo
 
+```TypeScript
+declare class TouchTestInfo
+```
+
 Provides information about the coordinate system, ID, and size of the component where the current touch point is located.
 
 **Since:** 11

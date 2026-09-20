@@ -55,6 +55,8 @@ promise.then((data) => {
 ```
 
 
+<a id="selectcontact-1"></a>
+
 ## selectContact
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ShadowStyle
 
+```TypeScript
+declare enum ShadowStyle
+```
+
 组件阴影效果。
 
 **起始版本：** 10

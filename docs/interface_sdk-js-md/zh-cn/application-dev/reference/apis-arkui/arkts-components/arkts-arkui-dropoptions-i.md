@@ -1,5 +1,9 @@
 # DropOptions
 
+```TypeScript
+declare interface DropOptions
+```
+
 设置落入过程的参数。
 
 **起始版本：** 15

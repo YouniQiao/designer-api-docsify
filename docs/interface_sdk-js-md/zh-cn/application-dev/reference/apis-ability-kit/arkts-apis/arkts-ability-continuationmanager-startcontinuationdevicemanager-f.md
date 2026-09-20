@@ -104,6 +104,8 @@ try {
 ```
 
 
+<a id="startcontinuationdevicemanager-1"></a>
+
 ## startContinuationDeviceManager
 
 ```TypeScript
@@ -149,6 +151,8 @@ function startContinuationDeviceManager(
 
 参见 [startContinuationDeviceManager](#startcontinuationdevicemanager)
 
+
+<a id="startcontinuationdevicemanager-2"></a>
 
 ## startContinuationDeviceManager
 

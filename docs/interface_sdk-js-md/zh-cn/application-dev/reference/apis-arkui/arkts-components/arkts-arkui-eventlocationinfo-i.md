@@ -1,5 +1,9 @@
 # EventLocationInfo
 
+```TypeScript
+declare interface EventLocationInfo
+```
+
 用于点击手势获取点击位置坐标。
 
 **起始版本：** 20

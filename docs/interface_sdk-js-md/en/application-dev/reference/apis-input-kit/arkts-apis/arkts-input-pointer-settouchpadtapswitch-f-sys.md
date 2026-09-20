@@ -93,6 +93,8 @@ struct Index {
 ```
 
 
+<a id="settouchpadtapswitch-1"></a>
+
 ## setTouchpadTapSwitch
 
 ```TypeScript

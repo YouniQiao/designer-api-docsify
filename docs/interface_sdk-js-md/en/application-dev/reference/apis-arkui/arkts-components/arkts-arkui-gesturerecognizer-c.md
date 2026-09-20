@@ -1,5 +1,9 @@
 # GestureRecognizer
 
+```TypeScript
+declare class GestureRecognizer
+```
+
 Gesture recognizer object.
 
 **Since:** 12

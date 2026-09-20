@@ -61,6 +61,8 @@ Checks whether there are call records that meet the specified conditions. By def
 ```
 
 
+<a id="hasmatchedcalllog-1"></a>
+
 ## hasMatchedCallLog
 
 ```TypeScript

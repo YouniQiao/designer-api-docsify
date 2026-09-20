@@ -1,5 +1,9 @@
 # Zip
 
+```TypeScript
+interface Zip
+```
+
 Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Deflate, or Gzip format.
 
 **Since:** 12

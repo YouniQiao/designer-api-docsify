@@ -85,6 +85,8 @@ console.info(buf2.toString());
 ```
 
 
+<a id="from-1"></a>
+
 ## from
 
 ```TypeScript
@@ -125,6 +127,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 参见 [from](#from)
 
 
+<a id="from-2"></a>
+
 ## from
 
 ```TypeScript
@@ -163,6 +167,8 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 参见 [from](#from)
 
+
+<a id="from-3"></a>
 
 ## from
 

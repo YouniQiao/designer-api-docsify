@@ -1,5 +1,9 @@
 # StopCode
 
+```TypeScript
+export enum StopCode
+```
+
 枚举停止代码， 用于ON_STOP函数。
 
 **起始版本：** 26.0.1

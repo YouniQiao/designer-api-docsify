@@ -1,5 +1,9 @@
 # PrismShapeType（系统接口）
 
+```TypeScript
+enum PrismShapeType
+```
+
 枚举 SweepRefractionMask 的棱镜形状类型。
 
 **起始版本：** 26.0.1

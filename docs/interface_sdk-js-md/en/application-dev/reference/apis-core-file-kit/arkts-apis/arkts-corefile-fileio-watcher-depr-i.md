@@ -1,5 +1,9 @@
 # Watcher
 
+```TypeScript
+declare interface Watcher
+```
+
 Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening.
 
 **Since:** 7
@@ -58,6 +62,8 @@ watcher.stop(() => {
   console.info("close watcher succeed");
 })
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

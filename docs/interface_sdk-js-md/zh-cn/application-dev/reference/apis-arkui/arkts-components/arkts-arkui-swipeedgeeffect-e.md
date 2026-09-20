@@ -1,5 +1,9 @@
 # SwipeEdgeEffect
 
+```TypeScript
+declare enum SwipeEdgeEffect
+```
+
 滑动效果枚举。
 
 **起始版本：** 9

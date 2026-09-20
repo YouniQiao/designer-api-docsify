@@ -1,5 +1,9 @@
 # LinearGradientBlurOptions
 
+```TypeScript
+declare interface LinearGradientBlurOptions
+```
+
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

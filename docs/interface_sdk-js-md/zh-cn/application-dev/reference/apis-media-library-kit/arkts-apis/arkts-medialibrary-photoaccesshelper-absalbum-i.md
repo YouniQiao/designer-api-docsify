@@ -1,5 +1,9 @@
 # AbsAlbum
 
+```TypeScript
+interface AbsAlbum
+```
+
 定义相册的抽象接口。
 
 **起始版本：** 10
@@ -42,6 +46,8 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getassets-1"></a>
 
 ## getAssets
 

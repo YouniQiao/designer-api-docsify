@@ -106,6 +106,8 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 ```
 
 
+<a id="setwallpaper-1"></a>
+
 ## setWallpaper
 
 ```TypeScript

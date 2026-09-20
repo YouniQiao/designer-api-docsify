@@ -1,5 +1,9 @@
 # LunarSwitchStyle
 
+```TypeScript
+declare interface LunarSwitchStyle
+```
+
 定义了DatePickerDialog组件中农历切换开关的样式。
 
 **起始版本：** 14
@@ -14,7 +18,7 @@ selectedColor?: ResourceColor
 
 设置开关开启时开关的背景颜色。
 
-> 默认值：&#36;r('sys.color.ohos_id_color_text_primary_actived')。
+> 默认值：$r('sys.color.ohos_id_color_text_primary_actived')。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +62,7 @@ unselectedColor?: ResourceColor
 
 设置开关未开启时开关的边框颜色。
 
-> 默认值：&#36;r('sys.color.ohos_id_color_switch_outline_off')。
+> 默认值：$r('sys.color.ohos_id_color_switch_outline_off')。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

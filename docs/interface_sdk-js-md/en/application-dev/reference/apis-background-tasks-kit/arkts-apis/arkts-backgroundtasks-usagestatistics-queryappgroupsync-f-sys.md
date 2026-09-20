@@ -60,6 +60,8 @@ let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera")
 ```
 
 
+<a id="queryappgroupsync-1"></a>
+
 ## queryAppGroupSync
 
 ```TypeScript

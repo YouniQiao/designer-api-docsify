@@ -1,5 +1,9 @@
 # CommonArcButtonOptions
 
+```TypeScript
+interface CommonArcButtonOptions
+```
+
 ArcButton的默认样式或自定义样式参数。
 
 **起始版本：** 18

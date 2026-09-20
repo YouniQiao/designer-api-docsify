@@ -65,6 +65,8 @@ dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
 ```
 
 
+<a id="getdlpgatheringpolicy-1"></a>
+
 ## getDLPGatheringPolicy
 
 ```TypeScript

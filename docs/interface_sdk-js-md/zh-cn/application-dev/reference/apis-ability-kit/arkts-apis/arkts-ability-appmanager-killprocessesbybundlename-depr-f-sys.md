@@ -71,6 +71,8 @@ appManager.killProcessesByBundleName(bundleName)
 ```
 
 
+<a id="killprocessesbybundlename-1"></a>
+
 ## killProcessesByBundleName
 
 ```TypeScript

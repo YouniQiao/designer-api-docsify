@@ -81,6 +81,8 @@ promise.then((data) => {
 ```
 
 
+<a id="querymycard-1"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -114,6 +116,8 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 参见 [queryMyCard](#querymycard)
 
 
+<a id="querymycard-2"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -143,6 +147,8 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 
 参见 [queryMyCard](#querymycard)
 
+
+<a id="querymycard-3"></a>
 
 ## queryMyCard
 
@@ -178,6 +184,8 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 参见 [queryMyCard](#querymycard)
 
 
+<a id="querymycard-4"></a>
+
 ## queryMyCard
 
 ```TypeScript
@@ -212,6 +220,8 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 
 参见 [queryMyCard](#querymycard)
 
+
+<a id="querymycard-5"></a>
 
 ## queryMyCard
 

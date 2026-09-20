@@ -1,5 +1,9 @@
 # TextPickerRangeContent
 
+```TypeScript
+declare interface TextPickerRangeContent
+```
+
 单列数据选择器的数据选项内容。
 
 **起始版本：** 10

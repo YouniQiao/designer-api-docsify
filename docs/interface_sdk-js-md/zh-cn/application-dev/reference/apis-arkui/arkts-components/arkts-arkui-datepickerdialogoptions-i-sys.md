@@ -1,5 +1,9 @@
 # DatePickerDialogOptions
 
+```TypeScript
+declare interface DatePickerDialogOptions extends DatePickerOptions
+```
+
 日期选择器弹窗选项。
 
 继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。

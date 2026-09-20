@@ -23,7 +23,7 @@ function getAbilityLists(
 
 **废弃版本：** 9
 
-**替代接口：** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
+**替代接口：** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -67,6 +67,8 @@ accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, da
 });
 ```
 
+
+<a id="getabilitylists-1"></a>
 
 ## getAbilityLists
 

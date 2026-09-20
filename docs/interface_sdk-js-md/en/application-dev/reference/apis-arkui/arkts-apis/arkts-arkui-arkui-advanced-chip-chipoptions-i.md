@@ -1,5 +1,9 @@
 # ChipOptions
 
+```TypeScript
+export interface ChipOptions
+```
+
 Defines the style and specific style parameters of the **Chip** component.
 
 > **NOTE:** 
@@ -10,14 +14,14 @@ Defines the style and specific style parameters of the **Chip** component.
 > 
 > 2. When **backgroundColor** and **activatedBackgroundColor** are set to **undefined**, the default background color is displayed. When they are set to invalid values, the background color is transparent.
 > 
-> 3. When an icon is set for **prefixSymbol** or **suffixSymbol**, if the chip is in the inactive state, the icon color **fontColor** is `[&#36;r('sys.color.ohos_id_color_secondary')]`; if the chip is in the activated state, the icon color **fontColor** is `[&#36;r('sys.color.ohos_id_color_text_primary_contrary')]`. In addition, when **size** is
-> **ChipSize.SMALL**, the default font size of the icon is `&#36;r('sys.float.chip_small_icon_size')`; when **size** is
-> **ChipSize.NORMAL** or a custom size, the default font size of the icon is `&#36;r('sys.float.chip_normal_icon_size')`.
+> 3. When an icon is set for **prefixSymbol** or **suffixSymbol**, if the chip is in the inactive state, the icon color **fontColor** is `[$r('sys.color.ohos_id_color_secondary')]`; if the chip is in the activated state, the icon color **fontColor** is `[$r('sys.color.ohos_id_color_text_primary_contrary')]`. In addition, when **size** is
+> **ChipSize.SMALL**, the default font size of the icon is `$r('sys.float.chip_small_icon_size')`; when **size** is
+> **ChipSize.NORMAL** or a custom size, the default font size of the icon is `$r('sys.float.chip_normal_icon_size')`.
 > 
-> 4. When icons are set for **prefixIcon** and **suffixIcon**, the default value of **fillColor** is `&#36;r('sys.color.chip_usually_icon_color')`. The color parsing of **fillColor** is consistent with that of the
+> 4. When icons are set for **prefixIcon** and **suffixIcon**, the default value of **fillColor** is `$r('sys.color.chip_usually_icon_color')`. The color parsing of **fillColor** is consistent with that of the
 > **Image** component.
 > 
-> 5. When icons are set for **prefixIcon** and **suffixIcon**, the default value of **activatedFillColor** is `&#36;r('sys.color.chip_active_icon_color')`. The color parsing of **activatedFillColor** is consistent with that of the **Image** component.
+> 5. When icons are set for **prefixIcon** and **suffixIcon**, the default value of **activatedFillColor** is `$r('sys.color.chip_active_icon_color')`. The color parsing of **activatedFillColor** is consistent with that of the **Image** component.
 > 
 > 6. Starting from API version 26.0.0, when **backgroundSystemMaterial** is configured as an auto-invert material,the fill color of **prefixIcon** and **suffixIcon**, as well as the text color of **prefixSymbol** and
 > **suffixSymbol** in the inactive state, will use system resources that support color inversion. These colors will
@@ -171,7 +175,7 @@ activatedBackgroundColor?: ResourceColor
 
 Background color of the Chip in the activated state.
 
-Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
+Default value: **$r('sys.color.ohos_id_color_emphasize')**
 
 If the value is **undefined**, the default value is used. If an invalid value is assigned, the background color is transparent.
 
@@ -243,7 +247,7 @@ backgroundColor?: ResourceColor
 
 Background color of the Chip.
 
-Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
+Default value: **$r('sys.color.ohos_id_color_button_normal')**
 
 If the value is **undefined**, the default value is used. If an invalid value is assigned, the background color is transparent.
 
@@ -291,7 +295,7 @@ Corner radius of the Chip background. Percentage is not supported. If a percenta
 
 Value range: [0, +∞)
 
-Default value: **&#36;r('sys.float.ohos_id_corner_radius_button')**
+Default value: **$r('sys.float.ohos_id_corner_radius_button')**
 
 Unit: vp
 
@@ -389,9 +393,9 @@ The priority of this **fontSize** is lower than the **fontSize** attributes in *
 
 Default values:
 
-- When **size** is **ChipSize.SMALL**, text: `&#36;r('sys.float.chip_small_font_size')`; icon:  
-`&#36;r('sys.float.chip_small_icon_size')`  
-- In other cases, text: `&#36;r('sys.float.chip_normal_font_size')`; icon: `&#36;r('sys.float.chip_normal_icon_size')`
+- When **size** is **ChipSize.SMALL**, text: `$r('sys.float.chip_small_font_size')`; icon:  
+`$r('sys.float.chip_small_icon_size')`  
+- In other cases, text: `$r('sys.float.chip_normal_font_size')`; icon: `$r('sys.float.chip_normal_icon_size')`
 
 Unit: fp
 

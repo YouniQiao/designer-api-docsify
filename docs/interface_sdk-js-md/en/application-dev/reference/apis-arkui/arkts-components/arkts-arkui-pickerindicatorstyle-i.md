@@ -1,5 +1,9 @@
 # PickerIndicatorStyle
 
+```TypeScript
+declare interface PickerIndicatorStyle
+```
+
 Sets parameters of the selected item indicator style.
 
 **Since:** 22

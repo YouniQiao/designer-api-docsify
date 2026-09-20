@@ -1,5 +1,9 @@
 # EditableTitleBarStyleV2Options
 
+```TypeScript
+export declare interface EditableTitleBarStyleV2Options
+```
+
 标题栏样式配置选项接口。
 
 **起始版本：** 26.0.0
@@ -64,9 +68,9 @@ contentMargin?: LocalizedMargin
 
 {
 
-start: LengthMetrics.resource(&#36;r('sys.float.margin_left')),
+start: LengthMetrics.resource($r('sys.float.margin_left')),
 
-end: LengthMetrics.resource(&#36;r('sys.float.margin_right'))
+end: LengthMetrics.resource($r('sys.float.margin_right'))
 
 }。
 

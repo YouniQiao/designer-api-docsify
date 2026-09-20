@@ -1,5 +1,9 @@
 # ColorControls (System API)
 
+```TypeScript
+interface ColorControls extends ColorControlsQuery
+```
+
 Implements color controls. It inherits from [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md).
 
 **Inheritance/Implementation:** ColorControls extends [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md)

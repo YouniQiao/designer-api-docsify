@@ -1,5 +1,9 @@
 # SheetOptions
 
+```TypeScript
+declare interface SheetOptions extends BindOptions
+```
+
 继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
 
 半模态页面内容选项。
@@ -439,7 +443,7 @@ maskColor?: ResourceColor
 
 半模态页面的背景蒙层颜色。
 
-默认值：&#36;r('sys.color.ohos_id_color_mask_thin')。
+默认值：$r('sys.color.ohos_id_color_mask_thin')。
 
 **说明：** 
 

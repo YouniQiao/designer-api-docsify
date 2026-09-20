@@ -1,5 +1,9 @@
 # SizeOptions
 
+```TypeScript
+declare interface SizeOptions
+```
+
 Defines the width and height of a component during layout.
 
 **Since:** 7

@@ -1,5 +1,9 @@
 # PanelType
 
+```TypeScript
+declare enum PanelType
+```
+
 设置可滑动面板的类型
 
 > **说明：** 

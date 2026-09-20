@@ -1,5 +1,9 @@
 # Navigator属性/事件
 
+```TypeScript
+declare class NavigatorAttribute extends CommonMethod<NavigatorAttribute>
+```
+
 Navigator的属性。
 
 **继承/实现关系：** NavigatorAttribute extends CommonMethod<NavigatorAttribute>

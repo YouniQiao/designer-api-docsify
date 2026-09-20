@@ -1,5 +1,9 @@
 # AudioDeviceCallbackInfo (System API)
 
+```TypeScript
+export interface AudioDeviceCallbackInfo
+```
+
 Defines the audio device information.
 
 **Since:** 10

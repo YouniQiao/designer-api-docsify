@@ -1,5 +1,9 @@
 # GallerySync（系统接口）
 
+```TypeScript
+class GallerySync
+```
+
 云图同步对象，用来支撑图库应用媒体资源端云同步流程。在使用前，需要先创建GallerySync实例。
 
 **起始版本：** 10
@@ -65,6 +69,8 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+<a id="off-1"></a>
 
 ## off
 
@@ -194,6 +200,8 @@ gallerySync.start((err: BusinessError) => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -320,6 +328,8 @@ gallerySync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

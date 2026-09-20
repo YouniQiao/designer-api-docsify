@@ -1,5 +1,9 @@
 # KVStore
 
+```TypeScript
+interface KVStore
+```
+
 Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync. Before calling any method in **KVStore**, you must use getKVStore to obtain a **KVStore** object.
 
 **Since:** 7
@@ -66,6 +70,8 @@ try {
     console.error('Commit e ' + e);
 }
 ```
+
+<a id="commit-1"></a>
 
 ## commit
 
@@ -161,6 +167,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="delete-1"></a>
 
 ## delete
 
@@ -281,6 +289,8 @@ try {
 }
 ```
 
+<a id="deletebatch-1"></a>
+
 ## deleteBatch
 
 ```TypeScript
@@ -366,6 +376,8 @@ try {
 }
 ```
 
+<a id="enablesync-1"></a>
+
 ## enableSync
 
 ```TypeScript
@@ -421,6 +433,8 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -467,6 +481,8 @@ Subscribes to data changes of the specified type.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
+
+<a id="on-1"></a>
 
 ## on
 
@@ -548,6 +564,8 @@ try {
     console.error("An unexpected error occurred. Error:" + e);
 }
 ```
+
+<a id="put-1"></a>
 
 ## put
 
@@ -668,6 +686,8 @@ try {
 }
 ```
 
+<a id="putbatch-1"></a>
+
 ## putBatch
 
 ```TypeScript
@@ -752,6 +772,8 @@ try {
 }
 ```
 
+<a id="rollback-1"></a>
+
 ## rollback
 
 ```TypeScript
@@ -831,6 +853,8 @@ try {
     console.error('SetSyncRange e ' + e);
 }
 ```
+
+<a id="setsyncrange-1"></a>
 
 ## setSyncRange
 
@@ -941,6 +965,8 @@ try {
     console.error('startTransaction e ' + e);
 }
 ```
+
+<a id="starttransaction-1"></a>
 
 ## startTransaction
 

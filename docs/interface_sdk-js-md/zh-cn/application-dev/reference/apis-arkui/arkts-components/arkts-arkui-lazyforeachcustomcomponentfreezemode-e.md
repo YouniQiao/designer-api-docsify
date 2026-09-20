@@ -1,5 +1,9 @@
 # LazyForEachCustomComponentFreezeMode
 
+```TypeScript
+declare enum LazyForEachCustomComponentFreezeMode
+```
+
 选择是否使能自定义组件冻结。
 
 > **说明：** 

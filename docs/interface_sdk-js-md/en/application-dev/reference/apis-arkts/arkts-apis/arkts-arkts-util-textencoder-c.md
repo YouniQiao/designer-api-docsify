@@ -1,5 +1,9 @@
 # TextEncoder
 
+```TypeScript
+class TextEncoder
+```
+
 Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported. When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the encoding format. You must explicitly specify the encoding format to obtain the required encoding result.
 
 **Since:** 7
@@ -35,6 +39,8 @@ let textEncoder = new util.TextEncoder();
 ```TypeScript
 let textEncoder = new util.TextEncoder("utf-8");
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 
@@ -178,6 +184,8 @@ let result = textEncoder.encodeInto('abcd', uint8);
 console.info("uint8 = " + uint8);
 // Output: uint8 = 97,98,99,100
 ```
+
+<a id="encodeinto-1"></a>
 
 ## encodeInto
 

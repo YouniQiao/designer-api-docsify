@@ -1,5 +1,9 @@
 # BarGridColumnOptions
 
+```TypeScript
+interface BarGridColumnOptions
+```
+
 Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen sizes.
 
 **Since:** 10

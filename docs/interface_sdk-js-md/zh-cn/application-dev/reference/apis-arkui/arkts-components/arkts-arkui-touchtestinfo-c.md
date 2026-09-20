@@ -1,5 +1,9 @@
 # TouchTestInfo
 
+```TypeScript
+declare class TouchTestInfo
+```
+
 当前屏幕触点所在组件的坐标系、id和尺寸相关信息。
 
 **起始版本：** 11

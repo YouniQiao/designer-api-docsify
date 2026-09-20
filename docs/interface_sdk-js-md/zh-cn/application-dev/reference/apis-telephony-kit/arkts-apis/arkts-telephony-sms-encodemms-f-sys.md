@@ -79,6 +79,8 @@ sms.encodeMms(mmsInformation).then((data: number[]) => {
 ```
 
 
+<a id="encodemms-1"></a>
+
 ## encodeMms
 
 ```TypeScript

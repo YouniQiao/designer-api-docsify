@@ -1,5 +1,9 @@
 # Updater（系统接口）
 
+```TypeScript
+export interface Updater
+```
+
 提供在线检查新版本、下载升级包、安装升级包、管理升级策略、获取版本信息等系统在线更新功能的工具类。
 
 使用场景：设备厂商OTA升级客户端应用、在线系统升级、自动版本检查和升级管理。
@@ -137,6 +141,8 @@ try {
   console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="checknewversion-1"></a>
 
 ## checkNewVersion
 
@@ -319,6 +325,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="clearerror-1"></a>
 
 ## clearError
 
@@ -515,6 +523,8 @@ try {
 }
 ```
 
+<a id="download-1"></a>
+
 ## download
 
 ```TypeScript
@@ -693,6 +703,8 @@ try {
 }
 ```
 
+<a id="getcurrentversiondescription-1"></a>
+
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -840,6 +852,8 @@ try {
   console.error(`Fail to get updater error: ${error}`);
 }
 ```
+
+<a id="getcurrentversioninfo-1"></a>
 
 ## getCurrentVersionInfo
 
@@ -1008,6 +1022,8 @@ try {
 }
 ```
 
+<a id="getnewversiondescription-1"></a>
+
 ## getNewVersionDescription
 
 ```TypeScript
@@ -1173,6 +1189,8 @@ try {
 }
 ```
 
+<a id="getnewversioninfo-1"></a>
+
 ## getNewVersionInfo
 
 ```TypeScript
@@ -1337,6 +1355,8 @@ try {
 }
 ```
 
+<a id="gettaskinfo-1"></a>
+
 ## getTaskInfo
 
 ```TypeScript
@@ -1479,6 +1499,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="getupgradepolicy-1"></a>
 
 ## getUpgradePolicy
 
@@ -1790,6 +1812,8 @@ try {
 }
 ```
 
+<a id="pausedownload-1"></a>
+
 ## pauseDownload
 
 ```TypeScript
@@ -1971,6 +1995,8 @@ try {
 }
 ```
 
+<a id="resumedownload-1"></a>
+
 ## resumeDownload
 
 ```TypeScript
@@ -2127,6 +2153,8 @@ try {
 }
 ```
 
+<a id="setupgradepolicy-1"></a>
+
 ## setUpgradePolicy
 
 ```TypeScript
@@ -2275,6 +2303,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="terminateupgrade-1"></a>
 
 ## terminateUpgrade
 
@@ -2459,6 +2489,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="upgrade-1"></a>
 
 ## upgrade
 

@@ -1,5 +1,9 @@
 # AutoSaveCallback
 
+```TypeScript
+export interface AutoSaveCallback
+```
+
 当保存请求完成时所触发的回调接口。
 
 **起始版本：** 11

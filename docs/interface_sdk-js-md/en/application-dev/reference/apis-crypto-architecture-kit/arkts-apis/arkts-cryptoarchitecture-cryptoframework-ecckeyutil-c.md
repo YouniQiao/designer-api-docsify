@@ -1,5 +1,9 @@
 # ECCKeyUtil
 
+```TypeScript
+class ECCKeyUtil
+```
+
 Provides utilities for ECC key parameter generation and point conversion based on the specified elliptic curve.
 
 **Since:** 11

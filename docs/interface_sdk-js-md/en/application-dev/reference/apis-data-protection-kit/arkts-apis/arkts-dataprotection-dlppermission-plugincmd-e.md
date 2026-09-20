@@ -1,5 +1,9 @@
 # PluginCmd
 
+```TypeScript
+export enum PluginCmd
+```
+
 Enumerates command codes for the plugin of an enterprise security application.
 
 **Since:** 26.0.1

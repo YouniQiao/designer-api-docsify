@@ -1,5 +1,9 @@
 # ArcScrollBarOptions
 
+```TypeScript
+declare interface ArcScrollBarOptions
+```
+
 ArcScrollBar的构造函数参数。
 
 > **说明：** 

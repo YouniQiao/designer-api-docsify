@@ -88,6 +88,8 @@ try {
 ```
 
 
+<a id="setdisposedstatus-1"></a>
+
 ## setDisposedStatus
 
 ```TypeScript

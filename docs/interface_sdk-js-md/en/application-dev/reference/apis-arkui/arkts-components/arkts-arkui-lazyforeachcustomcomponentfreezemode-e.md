@@ -1,5 +1,9 @@
 # LazyForEachCustomComponentFreezeMode
 
+```TypeScript
+declare enum LazyForEachCustomComponentFreezeMode
+```
+
 Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach.
 
 **Since:** 26.0.0

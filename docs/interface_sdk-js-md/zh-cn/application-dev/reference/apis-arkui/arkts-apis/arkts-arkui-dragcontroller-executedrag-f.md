@@ -51,6 +51,8 @@ Execute a drag event.
 ```
 
 
+<a id="executedrag-1"></a>
+
 ## executeDrag
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # TCPSocket
 
+```TypeScript
+export interface TCPSocket
+```
+
 TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md)创建TCPSocket对象。
 
 **起始版本：** 7
@@ -83,6 +87,8 @@ tcp.bind(bindAddr).then(() => {
   console.error('bind fail');
 });
 ```
+
+<a id="bind-1"></a>
 
 ## bind
 
@@ -216,6 +222,8 @@ tcp.close().then(() => {
   console.error('close fail');
 });
 ```
+
+<a id="close-1"></a>
 
 ## close
 
@@ -360,6 +368,8 @@ tcp.connect(tcpconnectoptions).then(() => {
   console.error('connect fail');
 });
 ```
+
+<a id="connect-1"></a>
 
 ## connect
 
@@ -589,6 +599,8 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
+<a id="getremoteaddress-1"></a>
+
 ## getRemoteAddress
 
 ```TypeScript
@@ -745,6 +757,8 @@ tcp.getSocketFd().then((data: number) => {
   console.info("socketFd: " + data);
 })
 ```
+
+<a id="getsocketfd-1"></a>
 
 ## getSocketFd
 
@@ -903,6 +917,8 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
+<a id="getstate-1"></a>
+
 ## getState
 
 ```TypeScript
@@ -1023,25 +1039,6 @@ off(type: 'connect' | 'close', callback?: Callback<void>): void
 | type | 'connect' &#124; 'close' | 是 | 取消订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
-## off('connect' | 'close')
-
-```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
-```
-
-取消订阅TCPSocket的连接事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | 是 | 取消订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
 ## off('error')
 
 ```TypeScript
@@ -1079,25 +1076,6 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。返回TCPSocket连接信息。<br>**适用版本：** 11 |
-
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-订阅TCPSocket的连接事件或关闭事件。使用callback异步回调。
-
-**起始版本：** 7
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connect' &#124; 'close' | 是 | 订阅的事件类型。<br>- 'connect'：连接事件。<br>- 'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。TCPSocket的连接事件或关闭事件触发时调用回调函数。 |
 
 ## on('connect' | 'close')
 
@@ -1224,6 +1202,8 @@ tcp.connect(tcpconnectoptions, () => {
   });
 })
 ```
+
+<a id="send-1"></a>
 
 ## send
 
@@ -1433,6 +1413,8 @@ tcp.connect(tcpconnectoptions, () => {
   });
 });
 ```
+
+<a id="setextraoptions-1"></a>
 
 ## setExtraOptions
 

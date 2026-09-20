@@ -1,5 +1,9 @@
 # TextContentControllerOptions
 
+```TypeScript
+declare interface TextContentControllerOptions
+```
+
 Provides configuration options for text insertion operations in text input components.
 
 **Since:** 15

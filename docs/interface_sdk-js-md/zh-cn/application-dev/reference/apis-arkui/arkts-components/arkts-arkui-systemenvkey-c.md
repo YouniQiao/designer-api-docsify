@@ -1,5 +1,9 @@
 # SystemEnvKey
 
+```TypeScript
+declare class SystemEnvKey<T>
+```
+
 系统环境变量Key对应的类型。
 
 **起始版本：** 26.0.0

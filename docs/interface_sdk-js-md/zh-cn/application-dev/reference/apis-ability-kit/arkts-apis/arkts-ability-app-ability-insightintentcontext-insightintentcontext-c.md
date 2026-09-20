@@ -1,5 +1,9 @@
 # InsightIntentContext
 
+```TypeScript
+declare class InsightIntentContext
+```
+
 本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)和[@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的属性，为意图执行提供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md)。
 
 **起始版本：** 11
@@ -270,6 +274,8 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
   }
 }
 ```
+
+<a id="startability-1"></a>
 
 ## startAbility
 

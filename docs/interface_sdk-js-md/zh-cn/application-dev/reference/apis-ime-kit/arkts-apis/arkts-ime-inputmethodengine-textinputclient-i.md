@@ -1,5 +1,9 @@
 # TextInputClient
 
+```TypeScript
+interface TextInputClient
+```
+
 下列API示例中都需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart)回调获取到TextInputClient实例，再通过此实例调用对应方法。<br> <br>  
 > **说明：** <br>
 > <br>
@@ -78,6 +82,8 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
   console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deletebackward-1"></a>
 
 ## deleteBackward
 
@@ -204,6 +210,8 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 });
 ```
 
+<a id="deleteforward-1"></a>
+
 ## deleteForward
 
 ```TypeScript
@@ -321,6 +329,8 @@ textInputClient.getBackward(length).then((text: string) => {
 });
 ```
 
+<a id="getbackward-1"></a>
+
 ## getBackward
 
 ```TypeScript
@@ -431,6 +441,8 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 });
 ```
 
+<a id="geteditorattribute-1"></a>
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -535,6 +547,8 @@ textInputClient.getForward(length).then((text: string) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getforward-1"></a>
 
 ## getForward
 
@@ -651,6 +665,8 @@ textInputClient.insertText('test').then((result: boolean) => {
 });
 ```
 
+<a id="inserttext-1"></a>
+
 ## insertText
 
 ```TypeScript
@@ -666,7 +682,7 @@ insertText(text: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text: string): Promise&lt;boolean&gt;
+**替代接口：** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext-1)(text: string): Promise&lt;boolean&gt;
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -773,6 +789,8 @@ textInputClient.sendKeyFunction(action).then((result: boolean) => {
   console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="sendkeyfunction-1"></a>
 
 ## sendKeyFunction
 

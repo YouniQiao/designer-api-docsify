@@ -1,5 +1,9 @@
 # Size
 
+```TypeScript
+interface Size extends lang.ISendable
+```
+
 表示图片尺寸。
 
 继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。

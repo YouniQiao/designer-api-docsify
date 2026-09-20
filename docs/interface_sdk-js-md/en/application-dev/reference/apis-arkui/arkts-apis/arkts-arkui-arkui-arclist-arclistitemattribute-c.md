@@ -1,5 +1,9 @@
 # ArcListItemAttribute
 
+```TypeScript
+export declare class ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 **Inheritance/Implementation:** ArcListItemAttribute extends CommonMethod<ArcListItemAttribute>

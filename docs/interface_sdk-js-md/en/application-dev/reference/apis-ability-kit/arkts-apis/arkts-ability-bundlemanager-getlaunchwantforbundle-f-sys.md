@@ -107,6 +107,8 @@ try {
 ```
 
 
+<a id="getlaunchwantforbundle-1"></a>
+
 ## getLaunchWantForBundle
 
 ```TypeScript
@@ -144,6 +146,8 @@ Obtains the Want used to launch the bundle based on the given bundle name. This 
 
 See [getLaunchWantForBundle](#getlaunchwantforbundle)
 
+
+<a id="getlaunchwantforbundle-2"></a>
 
 ## getLaunchWantForBundle
 

@@ -1,5 +1,9 @@
 # SymbolSpan properties/events
 
+```TypeScript
+declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
+```
+
 The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not supported. Only the following attributes are supported.
 
 The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
@@ -145,6 +149,8 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) &#124; string | Yes | Weight of the symbol span.<br>Default value: **FontWeight.Normal** |
+
+<a id="fontweight-1"></a>
 
 ## fontWeight
 

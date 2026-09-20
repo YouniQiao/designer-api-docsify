@@ -1,5 +1,9 @@
 # AnalysisToolType (System API)
 
+```TypeScript
+export enum AnalysisToolType
+```
+
 Enumerates the smart analysis tool types.
 
 **Since:** 26.0.1

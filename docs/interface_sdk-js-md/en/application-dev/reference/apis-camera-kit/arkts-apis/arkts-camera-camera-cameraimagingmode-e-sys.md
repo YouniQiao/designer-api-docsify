@@ -1,5 +1,9 @@
 # CameraImagingMode (System API)
 
+```TypeScript
+enum CameraImagingMode
+```
+
 Enumerates the camera imaging modes.
 
 **Since:** 26.0.1

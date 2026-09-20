@@ -1,5 +1,9 @@
 # SliderChangeMode
 
+```TypeScript
+declare enum SliderChangeMode
+```
+
 滑块状态值，包括按下、拖动、离开、点击滑动条使滑块移动时。
 
 **起始版本：** 7

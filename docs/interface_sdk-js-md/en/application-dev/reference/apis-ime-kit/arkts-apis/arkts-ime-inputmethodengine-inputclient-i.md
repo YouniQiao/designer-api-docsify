@@ -1,5 +1,9 @@
 # InputClient
 
+```TypeScript
+interface InputClient
+```
+
 You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodability-i.md#oninputstart) to obtain a **InputClient** instance, and then use this instance to call the following APIs.
 
 **Since:** 9
@@ -72,6 +76,8 @@ inputClient.deleteBackward(length).then((result: boolean) => {
   console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deletebackward-1"></a>
 
 ## deleteBackward
 
@@ -232,6 +238,8 @@ inputClient.deleteForward(length).then((result: boolean) => {
   console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="deleteforward-1"></a>
 
 ## deleteForward
 
@@ -484,6 +492,8 @@ inputClient.getBackward(length).then((text: string) => {
 });
 ```
 
+<a id="getbackward-1"></a>
+
 ## getBackward
 
 ```TypeScript
@@ -674,6 +684,8 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 });
 ```
 
+<a id="geteditorattribute-2"></a>
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -808,6 +820,8 @@ inputClient.getForward(length).then((text: string) => {
   console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="getforward-1"></a>
 
 ## getForward
 
@@ -956,6 +970,8 @@ inputClient.getTextIndexAtCursor().then((index: number) => {
 });
 ```
 
+<a id="gettextindexatcursor-1"></a>
+
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -1076,6 +1092,8 @@ inputClient.insertText('test').then((result: boolean) => {
   console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="inserttext-1"></a>
 
 ## insertText
 
@@ -1224,6 +1242,8 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 });
 ```
 
+<a id="movecursor-1"></a>
+
 ## moveCursor
 
 ```TypeScript
@@ -1355,7 +1375,7 @@ Registers or unregisters MessageHandler. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage-1) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1434,6 +1454,8 @@ inputClient.selectByMovement(movement).then(() => {
   console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="selectbymovement-1"></a>
 
 ## selectByMovement
 
@@ -1553,6 +1575,8 @@ inputClient.selectByRange(range).then(() => {
   console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="selectbyrange-1"></a>
 
 ## selectByRange
 
@@ -1677,6 +1701,8 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 });
 ```
 
+<a id="sendextendaction-1"></a>
+
 ## sendExtendAction
 
 ```TypeScript
@@ -1778,6 +1804,8 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
   console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<a id="sendkeyfunction-1"></a>
 
 ## sendKeyFunction
 

@@ -69,6 +69,8 @@ connectedTag.write(rawData, (err)=> {
 ```
 
 
+<a id="write-1"></a>
+
 ## write
 
 ```TypeScript

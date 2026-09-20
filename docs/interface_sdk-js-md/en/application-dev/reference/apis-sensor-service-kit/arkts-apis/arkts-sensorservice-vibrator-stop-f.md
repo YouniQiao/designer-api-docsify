@@ -81,6 +81,8 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: Busin
 ```
 
 
+<a id="stop-1"></a>
+
 ## stop
 
 ```TypeScript
@@ -93,7 +95,7 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 

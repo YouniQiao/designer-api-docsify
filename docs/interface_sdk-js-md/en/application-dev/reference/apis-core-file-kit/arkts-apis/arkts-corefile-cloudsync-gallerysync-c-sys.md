@@ -1,5 +1,9 @@
 # GallerySync (System API)
 
+```TypeScript
+class GallerySync
+```
+
 Provides APIs to implement device-cloud sync of media assets in **Gallery**. Before using the APIs of **GallerySync**, you need to create a **GallerySync** instance.
 
 **Since:** 10
@@ -65,6 +69,8 @@ Removes the specified callback from the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+<a id="off-1"></a>
 
 ## off
 
@@ -194,6 +200,8 @@ gallerySync.start((err: BusinessError) => {
 });
 ```
 
+<a id="start-1"></a>
+
 ## start
 
 ```TypeScript
@@ -321,6 +329,8 @@ gallerySync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop-1"></a>
 
 ## stop
 

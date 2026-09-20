@@ -1,5 +1,9 @@
 # AccessibilityElement
 
+```TypeScript
+export declare interface AccessibilityElement
+```
+
 An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.
 
 Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow).
@@ -386,6 +390,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementbyfocusdirection-1"></a>
+
 ## findElementByFocusDirection
 
 ```TypeScript
@@ -676,6 +682,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementsbycondition-1"></a>
+
 ## findElementsByCondition
 
 ```TypeScript
@@ -812,6 +820,8 @@ rootElement.getCursorPosition((err: BusinessError, data: number) => {
   console.info(`succeeded in getting cursor position, ${data}`);
 });
 ```
+
+<a id="getcursorposition-1"></a>
 
 ## getCursorPosition
 

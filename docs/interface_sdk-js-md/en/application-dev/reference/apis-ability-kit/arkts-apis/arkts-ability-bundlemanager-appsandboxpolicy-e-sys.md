@@ -1,5 +1,9 @@
 # AppSandboxPolicy (System API)
 
+```TypeScript
+export enum AppSandboxPolicy
+```
+
 App sandbox policy for dual-mode (2in1/tablet) scenarios.
 
 **Since:** 26.0.1

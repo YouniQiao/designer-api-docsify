@@ -74,6 +74,8 @@ usageStatistics.queryBundleStatsInfos(0, 20000000000000).then((res:usageStatisti
 ```
 
 
+<a id="querybundlestatsinfos-1"></a>
+
 ## queryBundleStatsInfos
 
 ```TypeScript

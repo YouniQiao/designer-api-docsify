@@ -117,6 +117,8 @@ wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
 ```
 
 
+<a id="startbackgroundrunning-1"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # ToolBarItemPlacement
 
+```TypeScript
+declare enum ToolBarItemPlacement
+```
+
 Enumerates the placement options for toolbar items in the title bar.
 
 **Since:** 20

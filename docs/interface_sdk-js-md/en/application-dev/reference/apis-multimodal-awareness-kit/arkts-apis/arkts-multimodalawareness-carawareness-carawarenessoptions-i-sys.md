@@ -1,5 +1,9 @@
 # CarAwarenessOptions (System API)
 
+```TypeScript
+export interface CarAwarenessOptions
+```
+
 Interface for car awareness information
 
 **Since:** 26.0.1

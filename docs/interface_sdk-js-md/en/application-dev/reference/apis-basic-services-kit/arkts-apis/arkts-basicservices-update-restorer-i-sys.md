@@ -1,5 +1,9 @@
 # Restorer (System API)
 
+```TypeScript
+export interface Restorer
+```
+
 Defines a tool class for restoring factory settings, such as clearing data in the user partition, deeply clearing data in the user and OS partitions, and synchronously clearing file keys.
 
 > **Factory reset**
@@ -200,6 +204,8 @@ try {
   console.error(`Fail to get factoryRestorer: ${error}`);
 }
 ```
+
+<a id="factoryreset-1"></a>
 
 ## factoryReset
 

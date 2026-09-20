@@ -1,5 +1,9 @@
 # ClickEvent
 
+```TypeScript
+declare interface ClickEvent extends BaseEvent
+```
+
 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
@@ -242,7 +246,7 @@ windowY: number
 x: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick-1)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
 单位：vp
 

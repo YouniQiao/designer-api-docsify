@@ -68,6 +68,8 @@ notificationManager.getDeviceRemindType().then((data: notificationManager.Device
 ```
 
 
+<a id="getdeviceremindtype-1"></a>
+
 ## getDeviceRemindType
 
 ```TypeScript

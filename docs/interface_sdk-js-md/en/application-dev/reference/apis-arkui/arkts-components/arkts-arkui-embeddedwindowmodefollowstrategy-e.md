@@ -1,5 +1,9 @@
 # EmbeddedWindowModeFollowStrategy
 
+```TypeScript
+declare enum EmbeddedWindowModeFollowStrategy
+```
+
 Enumeration of different types of EmbeddedWindowModeFollowStrategy.
 
 **Since:** 26.0.0

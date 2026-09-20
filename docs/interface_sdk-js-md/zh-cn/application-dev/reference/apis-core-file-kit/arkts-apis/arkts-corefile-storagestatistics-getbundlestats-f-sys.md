@@ -98,6 +98,8 @@ try {
 ```
 
 
+<a id="getbundlestats-1"></a>
+
 ## getBundleStats
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # HeifsMetadata
 
+```TypeScript
+class HeifsMetadata implements Metadata
+```
+
 HeifsMetadata implements Metadata
 
 HEIF序列图像元数据类，用于存储图像的元数据。

@@ -1,5 +1,9 @@
 # DynamicRangeMode
 
+```TypeScript
+declare enum DynamicRangeMode
+```
+
 Describes the dynamic range of the image to be displayed.
 
 **Since:** 12

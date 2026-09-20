@@ -1,5 +1,9 @@
 # AccessibilityExtensionContext
 
+```TypeScript
+declare class AccessibilityExtensionContext extends ExtensionContext
+```
+
 The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.
 
 The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
@@ -103,6 +107,8 @@ axContext.getFocusElement(isAccessibilityFocus, (err: BusinessError, data: Acces
 });
 ```
 
+<a id="getfocuselement-1"></a>
+
 ## getFocusElement
 
 ```TypeScript
@@ -139,6 +145,8 @@ Obtains the focus element. This API uses a promise to return the result.
 **Examples**
 
 See [getFocusElement](#getfocuselement)
+
+<a id="getfocuselement-2"></a>
 
 ## getFocusElement
 
@@ -251,6 +259,8 @@ axContext.getWindowRootElement(windowId, (err: BusinessError, data: Accessibilit
 });
 ```
 
+<a id="getwindowrootelement-1"></a>
+
 ## getWindowRootElement
 
 ```TypeScript
@@ -287,6 +297,8 @@ Obtains the root element of the specified window. This API uses a promise to ret
 **Examples**
 
 See [getWindowRootElement](#getwindowrootelement)
+
+<a id="getwindowrootelement-2"></a>
 
 ## getWindowRootElement
 
@@ -390,6 +402,8 @@ axContext.getWindows(displayId, (err: BusinessError, data: AccessibilityElement[
 });
 ```
 
+<a id="getwindows-1"></a>
+
 ## getWindows
 
 ```TypeScript
@@ -426,6 +440,8 @@ Obtains all windows on the specified display. This API uses a promise to return 
 **Examples**
 
 See [getWindows](#getwindows)
+
+<a id="getwindows-2"></a>
 
 ## getWindows
 
@@ -526,6 +542,8 @@ axContext.injectGesture(gesturePath, (err: BusinessError) => {
   console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
 });
 ```
+
+<a id="injectgesture-1"></a>
 
 ## injectGesture
 
@@ -665,6 +683,8 @@ try {
   console.error(`Failed to set target bundle names. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="settargetbundlename-1"></a>
 
 ## setTargetBundleName
 

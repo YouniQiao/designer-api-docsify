@@ -1,5 +1,9 @@
 # DatePickerDialog
 
+```TypeScript
+declare class DatePickerDialog
+```
+
 根据指定的日期范围创建日期滑动选择器并展示在弹窗上。
 
 **起始版本：** 8

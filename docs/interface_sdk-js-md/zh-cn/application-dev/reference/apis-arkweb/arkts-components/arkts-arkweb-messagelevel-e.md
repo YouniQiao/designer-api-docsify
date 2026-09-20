@@ -1,5 +1,9 @@
 # MessageLevel
 
+```TypeScript
+declare enum MessageLevel
+```
+
 ConsoleMessage的信息级别。
 
 > **说明：** 

@@ -1,5 +1,9 @@
 # Circle properties/events
 
+```TypeScript
+declare class CircleAttribute extends CommonShapeMethod<CircleAttribute>
+```
+
 In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** CircleAttribute extends CommonShapeMethod<CircleAttribute>

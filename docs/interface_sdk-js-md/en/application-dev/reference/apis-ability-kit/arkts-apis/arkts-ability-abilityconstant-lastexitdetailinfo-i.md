@@ -1,5 +1,9 @@
 # LastExitDetailInfo
 
+```TypeScript
+export interface LastExitDetailInfo
+```
+
 Describes the key runtime information of the process where the ability last exited.
 
 **Since:** 18

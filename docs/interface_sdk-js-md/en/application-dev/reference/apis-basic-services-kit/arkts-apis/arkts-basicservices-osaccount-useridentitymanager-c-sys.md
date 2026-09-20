@@ -1,5 +1,9 @@
 # UserIdentityManager (System API)
 
+```TypeScript
+class UserIdentityManager
+```
+
 Provides APIs for managing the user identity.
 
 **Since:** 8
@@ -421,6 +425,8 @@ try {
 }
 ```
 
+<a id="getauthinfo-1"></a>
+
 ## getAuthInfo
 
 ```TypeScript
@@ -457,6 +463,8 @@ Obtains authentication information of the specified type. This API uses an async
 **Examples**
 
 See [getAuthInfo](#getauthinfo)
+
+<a id="getauthinfo-2"></a>
 
 ## getAuthInfo
 
@@ -499,6 +507,8 @@ Obtains authentication information. This API uses a promise to return the result
 **Examples**
 
 See [getAuthInfo](#getauthinfo)
+
+<a id="getauthinfo-3"></a>
 
 ## getAuthInfo
 
@@ -795,6 +805,8 @@ try {
   console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="opensession-1"></a>
 
 ## openSession
 

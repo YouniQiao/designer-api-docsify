@@ -1,5 +1,9 @@
 # WebResponseType
 
+```TypeScript
+declare enum WebResponseType
+```
+
 Enumerates the response types of the menu.
 
 **Since:** 13

@@ -1,5 +1,9 @@
 # BaseCustomComponent
 
+```TypeScript
+declare class BaseCustomComponent extends CommonAttribute
+```
+
 Custom Component base class and it is migrated from class CustomComponent.
 
 **Inheritance/Implementation:** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-comp-attribute.md#commonattribute)
@@ -402,6 +406,8 @@ Queries the **NavDestination** information of this custom component. This API ha
 | Type | Description |
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
+
+<a id="querynavdestinationinfo-1"></a>
 
 ## queryNavDestinationInfo
 

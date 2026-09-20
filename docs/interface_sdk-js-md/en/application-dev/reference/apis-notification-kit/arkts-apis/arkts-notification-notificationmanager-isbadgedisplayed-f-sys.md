@@ -75,6 +75,8 @@ notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
 ```
 
 
+<a id="isbadgedisplayed-1"></a>
+
 ## isBadgeDisplayed
 
 ```TypeScript

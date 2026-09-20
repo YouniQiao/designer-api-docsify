@@ -1,5 +1,9 @@
 # MonitorObjectType
 
+```TypeScript
+export enum MonitorObjectType
+```
+
 需要监控的组件对象类型枚举。
 
 **起始版本：** 24

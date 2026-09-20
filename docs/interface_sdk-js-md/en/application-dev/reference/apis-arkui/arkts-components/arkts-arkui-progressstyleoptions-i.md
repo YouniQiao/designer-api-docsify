@@ -1,5 +1,9 @@
 # ProgressStyleOptions
 
+```TypeScript
+declare interface ProgressStyleOptions extends CommonProgressStyleOptions
+```
+
 Defines the progress bar style options.
 
 Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).

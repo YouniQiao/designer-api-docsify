@@ -1,5 +1,9 @@
 # ToneHapticsSettings（系统接口）
 
+```TypeScript
+interface ToneHapticsSettings
+```
+
 系统铃音的振动设置。
 
 **起始版本：** 14

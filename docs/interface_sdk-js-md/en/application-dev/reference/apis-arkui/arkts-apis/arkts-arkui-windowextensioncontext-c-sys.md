@@ -1,5 +1,9 @@
 # WindowExtensionContext (System API)
 
+```TypeScript
+declare class WindowExtensionContext extends ExtensionContext
+```
+
 The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability.
@@ -132,6 +136,8 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+<a id="startability-1"></a>
 
 ## startAbility
 

@@ -1,5 +1,9 @@
 # window
 
+```TypeScript
+declare namespace window
+```
+
 **起始版本：** 6
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -17,27 +21,27 @@ import { window } from '@kit.ArkUI';
 | 名称 | 说明 |
 | --- | --- |
 | [createWindow](arkts-arkui-window-createwindow-f.md) | 创建子窗口或者系统窗口，使用callback异步回调。 |
-| [createWindow](arkts-arkui-window-createwindow-f.md) | 创建子窗口或者系统窗口，使用Promise异步回调。 |
+| [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1) | 创建子窗口或者系统窗口，使用Promise异步回调。 |
 | [create](arkts-arkui-window-create-f.md) | 创建子窗口，使用callback异步回调。 |
-| [create](arkts-arkui-window-create-f.md) | 创建子窗口，使用Promise异步回调。 |
-| [create](arkts-arkui-window-create-f.md) | 创建系统窗口，使用Promise异步回调。 |
-| [create](arkts-arkui-window-create-f.md) | 创建系统窗口，使用callback异步回调。 |
+| [create](arkts-arkui-window-create-f.md#create-1) | 创建子窗口，使用Promise异步回调。 |
+| [create](arkts-arkui-window-create-f.md#create-2) | 创建系统窗口，使用Promise异步回调。 |
+| [create](arkts-arkui-window-create-f.md#create-3) | 创建系统窗口，使用callback异步回调。 |
 | [find](arkts-arkui-window-find-f.md) | 查找id所对应的窗口，使用callback异步回调。 |
-| [find](arkts-arkui-window-find-f.md) | 查找id所对应的窗口，使用Promise异步回调。 |
+| [find](arkts-arkui-window-find-f.md#find-1) | 查找id所对应的窗口，使用Promise异步回调。 |
 | [findWindow](arkts-arkui-window-findwindow-f.md) | 查找指定名称对应的窗口。 |
 | [getTopWindow](arkts-arkui-window-gettopwindow-f.md) | 获取当前应用内最后显示的窗口，使用callback异步回调。 |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md) | 获取当前应用内最后显示的窗口，使用callback异步回调。 |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-1) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-2) | 获取当前应用内最后显示的窗口，使用Promise异步回调。 |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-3) | 获取当前应用内最后显示的窗口，使用callback异步回调。 |
 | [getLastWindow](arkts-arkui-window-getlastwindow-f.md) | 获取当前应用内层级最高的子窗口，使用callback异步回调。 |
-| [getLastWindow](arkts-arkui-window-getlastwindow-f.md) | 获取当前应用内层级最高的子窗口，使用Promise异步回调。 |
+| [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1) | 获取当前应用内层级最高的子窗口，使用Promise异步回调。 |
 | [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md) | 在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。 |
 | [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md) | 主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。 |
 | [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md) | 主窗口和子窗口可正常调用，用于将触屏输入事件从源窗口转移到目标窗口。使用Promise异步回调。 |
 | [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f.md) | 获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise异步回调。 |
 | [getWindowsByCoordinate](arkts-arkui-window-getwindowsbycoordinate-f.md) | 查询本应用指定坐标下的可见窗口数组，按当前窗口层级排列，层级最高的窗口对应数组下标为0，使用Promise异步回调。 |
 | [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md) | 获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。 |
-| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md) | 根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md)等价。 |
+| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo-1) | 根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md)等价。 |
 | [getGlobalWindowMode](arkts-arkui-window-getglobalwindowmode-f.md) | 获取指定屏幕上生命周期位于前台的窗口对应的窗口模式，使用Promise异步回调。 |
 | [onApplicationFocusStateChange](arkts-arkui-window-onapplicationfocusstatechange-f.md) | 开启应用进程获焦状态变化的监听。此监听针对应用间的获焦状态变化，若同应用内窗口间的获焦状态发生变化，则不会触发回调函数。 |
 | [offApplicationFocusStateChange](arkts-arkui-window-offapplicationfocusstatechange-f.md) | 关闭应用进程获焦状态变化的监听。 |
@@ -53,20 +57,20 @@ import { window } from '@kit.ArkUI';
 | --- | --- |
 | [createSubWindowAndBindParent](arkts-arkui-window-createsubwindowandbindparent-f-sys.md) | 创建一个子窗，并绑定父窗。使用Promise异步回调。 |
 | [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md) | 最小化指定ID的屏幕中的所有主窗口。 |
-| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md) | 最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。 |
+| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md#minimizeall-1) | 最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。 |
 | [minimizeAllWithExclusion](arkts-arkui-window-minimizeallwithexclusion-f-sys.md) | 最小化指定ID的屏幕中除指定窗口之外的所有主窗口，使用Promise异步回调。 |
 | [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md) | 多窗口快速切换时隐藏或者恢复应用窗口。 |
-| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md) | 多窗口快速切换时隐藏或者恢复应用窗口，使用Promise异步回调。 |
+| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md#toggleshownstateforallappwindows-1) | 多窗口快速切换时隐藏或者恢复应用窗口，使用Promise异步回调。 |
 | [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md) | 设置窗口布局模式，使用callback异步回调。 |
-| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md) | 设置窗口布局模式，使用Promise异步回调。 |
+| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md#setwindowlayoutmode-1) | 设置窗口布局模式，使用Promise异步回调。 |
 | [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md) | 设置手势导航启用状态。使用callback异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。 |
-| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md) | 设置手势导航启用状态。使用Promise异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。 |
+| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setgesturenavigationenabled-1) | 设置手势导航启用状态。使用Promise异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。 |
 | [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md) | 设置屏幕水印图片显示状态。使用Promise异步回调。 |
-| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md) | 设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md)等价。 |
-| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md) | 设置屏幕水印图片显示状态。使用callback异步回调。 |
+| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-1) | 设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2)等价。 |
+| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2) | 设置屏幕水印图片显示状态。使用callback异步回调。 |
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) | 设置系统窗口的窗口层级。使用Promise异步回调。 |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | 获取指定的前台窗口当前栈顶Navigation中的NavDestination名称，使用Promise异步回调。 |
-| [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。 |
+| [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode-1)接口设置），截图结果为白屏。 |
 | [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) | 开启状态栏、导航栏属性变化的监听。 |
 | [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) | 关闭状态栏、导航栏属性变化的监听。 |
 | [on](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) | 添加手势导航启用状态变化的监听。 |

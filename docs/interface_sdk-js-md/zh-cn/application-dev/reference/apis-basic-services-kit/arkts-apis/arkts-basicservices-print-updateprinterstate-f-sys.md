@@ -69,6 +69,8 @@ print.updatePrinterState(printerId, state).then(() => {
 ```
 
 
+<a id="updateprinterstate-1"></a>
+
 ## updatePrinterState
 
 ```TypeScript

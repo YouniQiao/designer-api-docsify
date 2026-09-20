@@ -80,6 +80,8 @@ prompt.showDialog({
 ```
 
 
+<a id="showdialog-1"></a>
+
 ## showDialog
 
 ```TypeScript

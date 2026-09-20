@@ -1,5 +1,9 @@
 # ContextMenuController
 
+```TypeScript
+export declare class ContextMenuController
+```
+
 Provides the capability to control the closing of context menus.
 
 > **NOTE:** 

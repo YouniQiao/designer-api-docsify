@@ -84,6 +84,8 @@ try {
 ```
 
 
+<a id="getallusertrustedcertificates-1"></a>
+
 ## getAllUserTrustedCertificates
 
 ```TypeScript

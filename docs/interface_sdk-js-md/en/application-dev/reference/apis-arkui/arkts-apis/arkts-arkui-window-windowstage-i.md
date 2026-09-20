@@ -1,5 +1,9 @@
 # WindowStage
 
+```TypeScript
+interface WindowStage
+```
+
 Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
 
 Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
@@ -49,6 +53,8 @@ Create sub window of the stage.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The subWindow has been created and can not be created again. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+
+<a id="createsubwindow-1"></a>
 
 ## createSubWindow
 
@@ -148,6 +154,8 @@ Get main window of the stage.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
+<a id="getmainwindow-1"></a>
+
 ## getMainWindow
 
 ```TypeScript
@@ -234,6 +242,8 @@ Get sub window of the stage.
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+
+<a id="getsubwindow-1"></a>
 
 ## getSubWindow
 
@@ -326,6 +336,8 @@ Loads the content of a page, with its path in the current project specified, to 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
 
+<a id="loadcontent-1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -362,6 +374,8 @@ Loads the content of a page, with its path in the current project specified, to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 |
+
+<a id="loadcontent-2"></a>
 
 ## loadContent
 
@@ -425,6 +439,8 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
+<a id="loadcontentbyname-1"></a>
+
 ## loadContentByName
 
 ```TypeScript
@@ -454,6 +470,8 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+
+<a id="loadcontentbyname-2"></a>
 
 ## loadContentByName
 
@@ -522,6 +540,8 @@ Unsubscribes from the window stage lifecycle change event.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
+<a id="off-1"></a>
+
 ## off
 
 ```TypeScript
@@ -550,6 +570,8 @@ Unsubscribes from the window stage lifecycle change event.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
+
+<a id="off-2"></a>
 
 ## off
 
@@ -613,6 +635,8 @@ Subscribes to the window stage lifecycle change event.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
+<a id="on-1"></a>
+
 ## on
 
 ```TypeScript
@@ -641,6 +665,8 @@ Subscribes to the window stage lifecycle change event.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
+
+<a id="on-2"></a>
 
 ## on
 
@@ -798,6 +824,8 @@ If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled)
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
+<a id="setcustomdensity-1"></a>
+
 ## setCustomDensity
 
 ```TypeScript
@@ -876,7 +904,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 > 
 > Before calling this API, you are advised to complete page loading via
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent-1). If this API is called before the application
 > completes page loading, the intended functionality does not take effect. As a result, only the application's
 > launch page is displayed in the multitasking view.
 
@@ -975,6 +1003,8 @@ Sets the supported window modes.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="setsupportedwindowmodes-1"></a>
 
 ## setSupportedWindowModes
 
@@ -1086,6 +1116,8 @@ Set to automatically save the window rect.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+<a id="setwindowrectautosave-1"></a>
 
 ## setWindowRectAutoSave
 

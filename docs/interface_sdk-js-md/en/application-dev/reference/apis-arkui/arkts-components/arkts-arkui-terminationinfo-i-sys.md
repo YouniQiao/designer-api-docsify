@@ -1,5 +1,9 @@
 # TerminationInfo (System API)
 
+```TypeScript
+declare interface TerminationInfo
+```
+
 Indicates the information when the provider of the embedded UI is terminated.
 
 **Since:** 12

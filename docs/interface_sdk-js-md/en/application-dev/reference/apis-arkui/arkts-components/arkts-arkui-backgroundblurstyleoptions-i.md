@@ -1,5 +1,9 @@
 # BackgroundBlurStyleOptions
 
+```TypeScript
+declare interface BackgroundBlurStyleOptions extends BlurStyleOptions
+```
+
 Defines the options of backgroundBlurStyle
 
 **Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)

@@ -1,5 +1,9 @@
 # RichEditorDeleteDirection
 
+```TypeScript
+declare enum RichEditorDeleteDirection
+```
+
 删除方向。
 
 **起始版本：** 10

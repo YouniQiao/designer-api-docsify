@@ -1,5 +1,9 @@
 # OnDataResubmittedEvent
 
+```TypeScript
+declare interface OnDataResubmittedEvent
+```
+
 定义网页表单可以重新提交时触发的回调信息，包括提交句柄。适用于需要处理表单重试提交的场景，提升表单交互的可靠性和用户体验。
 
 **起始版本：** 12

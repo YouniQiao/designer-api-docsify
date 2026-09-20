@@ -1,5 +1,9 @@
 # DepthComponentOptions (System API)
 
+```TypeScript
+declare interface DepthComponentOptions
+```
+
 Defines the options of DepthComponent.
 
 **Since:** 26.0.0

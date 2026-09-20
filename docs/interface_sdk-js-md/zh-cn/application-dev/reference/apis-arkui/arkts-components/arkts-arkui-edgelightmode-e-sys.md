@@ -1,5 +1,9 @@
 # EdgeLightMode（系统接口）
 
+```TypeScript
+declare enum EdgeLightMode
+```
+
 边缘光效动画模式枚举。
 
 **起始版本：** 26.0.0

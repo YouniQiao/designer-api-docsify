@@ -1,5 +1,9 @@
 # CopyOptions
 
+```TypeScript
+declare enum CopyOptions
+```
+
 Indicates the share option.
 
 **起始版本：** 9

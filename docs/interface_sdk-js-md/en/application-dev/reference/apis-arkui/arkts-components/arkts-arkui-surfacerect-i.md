@@ -1,5 +1,9 @@
 # SurfaceRect
 
+```TypeScript
+declare interface SurfaceRect
+```
+
 Describes the rectangle of the surface held by the **XComponent**.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # DragStartRequestStatus
 
+```TypeScript
+const enum DragStartRequestStatus
+```
+
 定义应用是否可以发起拖拽的枚举类型。仅在onDragStart调用时有效。
 
 **起始版本：** 18

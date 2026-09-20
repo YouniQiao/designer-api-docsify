@@ -1,5 +1,9 @@
 # KeyboardAvoidMode
 
+```TypeScript
+declare enum KeyboardAvoidMode
+```
+
 Enumerates modes in which a popup responds when the keyboard is displayed.
 
 **Since:** 12

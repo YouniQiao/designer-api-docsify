@@ -78,6 +78,8 @@ function createPixelMapSync() {
 ```
 
 
+<a id="createpixelmapsync-1"></a>
+
 ## createPixelMapSync
 
 ```TypeScript

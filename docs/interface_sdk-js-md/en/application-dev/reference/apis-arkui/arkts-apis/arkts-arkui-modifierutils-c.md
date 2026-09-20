@@ -1,5 +1,9 @@
 # ModifierUtils
 
+```TypeScript
+export declare class ModifierUtils
+```
+
 ModifierUtils provides utility methods for modifier and attribute operations.
 
 **Since:** 26.0.0

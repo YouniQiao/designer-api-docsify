@@ -1,5 +1,9 @@
 # EmbedOptions
 
+```TypeScript
+declare interface EmbedOptions
+```
+
 Configuration for Web same-layer rendering. Configures Web same-layer rendering options, including support for fixed size and CSS display properties. It is suitable for scenarios where same-layer element rendering optimization is required, improving rendering compatibility and flexibility.
 
 **Since:** 16

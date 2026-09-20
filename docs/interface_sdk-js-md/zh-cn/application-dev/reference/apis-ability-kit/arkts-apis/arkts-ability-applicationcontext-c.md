@@ -1,5 +1,9 @@
 # ApplicationContext
 
+```TypeScript
+declare class ApplicationContext extends Context
+```
+
 ApplicationContext作为应用上下文，继承自Context，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
 > **说明：** 
@@ -77,6 +81,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<a id="clearupapplicationdata-1"></a>
 
 ## clearUpApplicationData
 
@@ -387,6 +393,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="getrunningprocessinformation-1"></a>
+
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -551,6 +559,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="killallprocesses-1"></a>
+
 ## killAllProcesses
 
 ```TypeScript
@@ -593,6 +603,8 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 **示例**
 
 参见 [killAllProcesses](#killallprocesses)
+
+<a id="killallprocesses-2"></a>
 
 ## killAllProcesses
 

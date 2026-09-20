@@ -1,5 +1,9 @@
 # GestureType
 
+```TypeScript
+enum GestureType
+```
+
 定义手势类型。
 
 **起始版本：** 11

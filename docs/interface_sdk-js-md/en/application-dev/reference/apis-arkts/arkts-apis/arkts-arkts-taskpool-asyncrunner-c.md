@@ -1,5 +1,9 @@
 # AsyncRunner
 
+```TypeScript
+export class AsyncRunner
+```
+
 Implements an asynchronous queue, for which you can specify the task execution concurrency and queuing policy.
 
 **Since:** 18
@@ -42,6 +46,8 @@ let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
 ```TypeScript
 let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

@@ -1,5 +1,9 @@
 # RootSceneSession (System API)
 
+```TypeScript
+interface RootSceneSession
+```
+
 Defines the session of RootScene.
 
 @interface RootSceneSession

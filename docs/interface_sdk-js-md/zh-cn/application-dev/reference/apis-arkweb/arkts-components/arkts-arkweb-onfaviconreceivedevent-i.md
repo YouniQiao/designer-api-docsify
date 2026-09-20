@@ -1,5 +1,9 @@
 # OnFaviconReceivedEvent
 
+```TypeScript
+declare interface OnFaviconReceivedEvent
+```
+
 定义应用接收到新favicon时触发的回调信息，包括图标PixelMap对象。适用于需要获取网页favicon的场景，提升图标管理的灵活性和用户体验。
 
 **起始版本：** 12

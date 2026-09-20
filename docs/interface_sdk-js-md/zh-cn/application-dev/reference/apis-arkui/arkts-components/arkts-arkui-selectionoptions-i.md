@@ -1,5 +1,9 @@
 # SelectionOptions
 
+```TypeScript
+declare interface SelectionOptions
+```
+
 setTextSelection选中文字时的配置。
 
 **起始版本：** 12

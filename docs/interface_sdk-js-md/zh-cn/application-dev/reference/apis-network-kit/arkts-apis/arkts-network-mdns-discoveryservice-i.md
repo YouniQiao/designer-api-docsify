@@ -1,5 +1,9 @@
 # DiscoveryService
 
+```TypeScript
+export interface DiscoveryService
+```
+
 指定服务类型的发现服务对象。
 
 **起始版本：** 10

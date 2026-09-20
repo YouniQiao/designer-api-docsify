@@ -1,5 +1,9 @@
 # RotateAngleOptions
 
+```TypeScript
+declare interface RotateAngleOptions
+```
+
 指定各轴旋转角的旋转参数选项。
 
 > **说明：** 

@@ -6,6 +6,8 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
+<a id="setvalue-2"></a>
+
 ## setValue
 
 ```TypeScript
@@ -70,6 +72,8 @@ settings.setValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100', set
 ```
 
 
+<a id="setvalue-3"></a>
+
 ## setValue
 
 ```TypeScript
@@ -104,6 +108,8 @@ Set settingsdata value.
 
 See [setValue](#setvalue)
 
+
+<a id="setvalue-4"></a>
 
 ## setValue
 

@@ -1,5 +1,9 @@
 # SaveIconStyle
 
+```TypeScript
+declare enum SaveIconStyle
+```
+
 Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10

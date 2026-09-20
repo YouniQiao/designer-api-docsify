@@ -1,5 +1,9 @@
 # TextPickerDialogOptionsExt
 
+```TypeScript
+declare interface TextPickerDialogOptionsExt extends TextPickerOptions
+```
+
 文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)。
 
 **继承/实现关系：** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
@@ -617,8 +621,8 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 > 默认值：
 > 
 > <br>{
-> <br>color: &#36;r('sys.color.comp_background_tertiary'),
-> <br>borderRadius: &#36;r('sys.float.corner_radius_level12')
+> <br>color: $r('sys.color.comp_background_tertiary'),
+> <br>borderRadius: $r('sys.float.corner_radius_level12')
 > <br>}
 
 **类型：** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)

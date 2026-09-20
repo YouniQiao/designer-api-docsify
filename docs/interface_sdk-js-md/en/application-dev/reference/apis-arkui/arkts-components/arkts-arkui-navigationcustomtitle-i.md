@@ -1,5 +1,9 @@
 # NavigationCustomTitle
 
+```TypeScript
+declare interface NavigationCustomTitle
+```
+
 Defines a custom title for the **Navigation** component.
 
 **Since:** 9

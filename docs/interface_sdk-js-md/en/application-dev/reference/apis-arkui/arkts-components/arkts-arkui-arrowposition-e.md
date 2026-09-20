@@ -1,5 +1,9 @@
 # ArrowPosition
 
+```TypeScript
+declare enum ArrowPosition
+```
+
 Enumerates arrow positions.
 
 **Since:** 10

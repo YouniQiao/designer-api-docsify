@@ -1,5 +1,9 @@
 # RichEditorImageSpanStyle
 
+```TypeScript
+declare interface RichEditorImageSpanStyle
+```
+
 图片样式。
 
 **起始版本：** 10

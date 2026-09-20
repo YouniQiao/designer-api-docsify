@@ -96,6 +96,8 @@ cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
 ```
 
 
+<a id="notifydatachange-1"></a>
+
 ## notifyDataChange
 
 ```TypeScript
@@ -130,6 +132,8 @@ Notifies the device-cloud service that the cloud data of a specific application 
 
 See [notifyDataChange](#notifydatachange)
 
+
+<a id="notifydatachange-2"></a>
 
 ## notifyDataChange
 
@@ -173,6 +177,8 @@ Notifies the device-cloud service of the cloud data change information of a spec
 
 See [notifyDataChange](#notifydatachange)
 
+
+<a id="notifydatachange-3"></a>
 
 ## notifyDataChange
 

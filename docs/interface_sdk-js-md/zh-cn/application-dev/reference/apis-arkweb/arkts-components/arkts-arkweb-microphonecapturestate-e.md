@@ -1,5 +1,9 @@
 # MicrophoneCaptureState
 
+```TypeScript
+declare enum MicrophoneCaptureState
+```
+
 定义麦克风使用状态的值，用于标识麦克风的当前工作状态，帮助开发者实时监控麦克风资源使用情况，优化资源管理和用户隐私保护。
 
 **起始版本：** 23

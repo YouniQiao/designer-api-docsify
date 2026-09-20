@@ -1,5 +1,9 @@
 # SlideEffect
 
+```TypeScript
+declare enum SlideEffect
+```
+
 Slide-in and slide-out effects for page transitions.
 
 @enum { number }

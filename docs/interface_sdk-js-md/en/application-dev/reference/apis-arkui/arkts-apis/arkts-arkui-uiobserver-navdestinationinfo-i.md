@@ -1,5 +1,9 @@
 # NavDestinationInfo
 
+```TypeScript
+export interface NavDestinationInfo
+```
+
 Information about the **NavDestination** component, returned by the system to developers.
 
 **Since:** 11

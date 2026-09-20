@@ -1,5 +1,9 @@
 # MouseHistoricalPoint
 
+```TypeScript
+declare interface MouseHistoricalPoint
+```
+
 鼠标事件历史点信息。
 
 历史点按时间顺序排列，获取到的第一个历史点是最早发生的事件的信息，最后一个是最新发生事件的信息。历史点的数量取决于系统事件队列的配置和硬件性能。历史点主要用于如下场景：

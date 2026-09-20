@@ -107,6 +107,8 @@ try {
 ```
 
 
+<a id="getlaunchwantforbundle-1"></a>
+
 ## getLaunchWantForBundle
 
 ```TypeScript
@@ -144,6 +146,8 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 
 参见 [getLaunchWantForBundle](#getlaunchwantforbundle)
 
+
+<a id="getlaunchwantforbundle-2"></a>
 
 ## getLaunchWantForBundle
 

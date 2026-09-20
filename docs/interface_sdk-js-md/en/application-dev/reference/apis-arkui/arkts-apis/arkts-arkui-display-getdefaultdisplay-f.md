@@ -59,6 +59,8 @@ promise.then((data: display.Display) => {
 ```
 
 
+<a id="getdefaultdisplay-1"></a>
+
 ## getDefaultDisplay
 
 ```TypeScript

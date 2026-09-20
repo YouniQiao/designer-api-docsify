@@ -84,6 +84,8 @@ bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
 ```
 
 
+<a id="getapplicationinfo-1"></a>
+
 ## getApplicationInfo
 
 ```TypeScript
@@ -114,6 +116,8 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 
 参见 [getApplicationInfo](#getapplicationinfo)
 
+
+<a id="getapplicationinfo-2"></a>
 
 ## getApplicationInfo
 

@@ -1,5 +1,9 @@
 # Image
 
+```TypeScript
+interface Image extends lang.ISendable
+```
+
 Provides APIs for basic image operations, including obtaining image information and reading and writing image data.
 
 An Image instance is returned when [readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage) and [readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage) are called. This class inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable).

@@ -107,6 +107,8 @@ wantAgent.getWantAgent({
 ```
 
 
+<a id="getwantagent-1"></a>
+
 ## getWantAgent
 
 ```TypeScript

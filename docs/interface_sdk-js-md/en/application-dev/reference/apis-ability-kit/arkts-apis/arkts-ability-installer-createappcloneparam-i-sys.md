@@ -1,5 +1,9 @@
 # CreateAppCloneParam (System API)
 
+```TypeScript
+export interface CreateAppCloneParam
+```
+
 Describes the parameters used for creating an application clone.
 
 **Since:** 12

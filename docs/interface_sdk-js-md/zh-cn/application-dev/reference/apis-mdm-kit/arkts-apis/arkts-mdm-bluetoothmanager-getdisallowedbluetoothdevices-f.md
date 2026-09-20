@@ -78,6 +78,8 @@ try {
 ```
 
 
+<a id="getdisallowedbluetoothdevices-1"></a>
+
 ## getDisallowedBluetoothDevices
 
 ```TypeScript

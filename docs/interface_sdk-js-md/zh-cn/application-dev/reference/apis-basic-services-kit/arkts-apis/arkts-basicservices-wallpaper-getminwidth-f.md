@@ -54,6 +54,8 @@ wallpaper.getMinWidth().then((data: number) => {
 ```
 
 
+<a id="getminwidth-1"></a>
+
 ## getMinWidth
 
 ```TypeScript

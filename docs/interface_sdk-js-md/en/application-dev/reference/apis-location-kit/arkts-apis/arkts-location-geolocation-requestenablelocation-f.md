@@ -50,6 +50,8 @@ geolocation.requestEnableLocation().then((result) => {
 ```
 
 
+<a id="requestenablelocation-1"></a>
+
 ## requestEnableLocation
 
 ```TypeScript

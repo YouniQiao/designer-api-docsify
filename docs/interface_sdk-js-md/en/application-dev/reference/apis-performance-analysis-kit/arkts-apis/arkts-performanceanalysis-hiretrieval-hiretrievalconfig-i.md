@@ -1,5 +1,9 @@
 # HiRetrievalConfig
 
+```TypeScript
+interface HiRetrievalConfig
+```
+
 HiRetrieval functionality config.
 
 **Since:** 26.0.0

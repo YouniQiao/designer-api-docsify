@@ -1,5 +1,9 @@
 # ParticleType
 
+```TypeScript
+declare enum ParticleType
+```
+
 Enumerates the particle types.
 
 @enum { string }

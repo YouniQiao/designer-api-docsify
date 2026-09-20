@@ -1,5 +1,9 @@
 # AudioRoutingManager
 
+```TypeScript
+interface AudioRoutingManager
+```
+
 This interface implements audio routing management.
 
 Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
@@ -94,6 +98,8 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 | deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
 
+<a id="getdevices-1"></a>
+
 ## getDevices
 
 ```TypeScript
@@ -176,6 +182,8 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
+<a id="getpreferoutputdeviceforrendererinfo-1"></a>
+
 ## getPreferOutputDeviceForRendererInfo
 
 ```TypeScript
@@ -234,6 +242,8 @@ Obtains the input device with the highest priority based on the audio capturer i
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+
+<a id="getpreferredinputdeviceforcapturerinfo-1"></a>
 
 ## getPreferredInputDeviceForCapturerInfo
 
@@ -347,6 +357,8 @@ Checks whether a communication device is active. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | Active audio device type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
+
+<a id="iscommunicationdeviceactive-1"></a>
 
 ## isCommunicationDeviceActive
 
@@ -710,6 +722,8 @@ You are advised to use the [AVCastPicker component](../../../media/avsession/usi
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | Audio device flag. |
 | active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+<a id="setcommunicationdevice-1"></a>
 
 ## setCommunicationDevice
 

@@ -1,5 +1,9 @@
 # AdLoader
 
+```TypeScript
+export class AdLoader
+```
+
 Provides the APIs for loading ads.
 
 **Since:** 11

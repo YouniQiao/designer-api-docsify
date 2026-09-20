@@ -1,5 +1,9 @@
 # WebDarkMode
 
+```TypeScript
+declare enum WebDarkMode
+```
+
 Web深色模式的配置，用于控制网页内容的深色主题显示，帮助开发者根据用户偏好和系统主题提升视觉体验和可读性。
 
 **起始版本：** 9

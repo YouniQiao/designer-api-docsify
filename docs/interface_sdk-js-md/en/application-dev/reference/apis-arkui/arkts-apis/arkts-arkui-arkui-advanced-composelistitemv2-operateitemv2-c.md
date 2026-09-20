@@ -1,5 +1,9 @@
 # OperateItemV2
 
+```TypeScript
+export declare class OperateItemV2
+```
+
 Declare OperateItemV2
 
 **Since:** 26.0.0

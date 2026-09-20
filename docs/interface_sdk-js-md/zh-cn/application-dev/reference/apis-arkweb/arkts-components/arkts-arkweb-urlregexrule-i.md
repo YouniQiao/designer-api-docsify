@@ -1,5 +1,9 @@
 # UrlRegexRule
 
+```TypeScript
+declare interface UrlRegexRule
+```
+
 定义Url正则表达式规则。
 
 **起始版本：** 23

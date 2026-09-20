@@ -1,5 +1,9 @@
 # CalendarPickerDialog
 
+```TypeScript
+declare class CalendarPickerDialog
+```
+
 点击日期弹出日历选择器弹窗，可在弹窗内选择日期。
 
 **起始版本：** 10

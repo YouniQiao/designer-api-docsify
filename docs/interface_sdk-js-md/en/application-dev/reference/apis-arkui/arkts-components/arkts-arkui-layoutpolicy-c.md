@@ -1,5 +1,9 @@
 # LayoutPolicy
 
+```TypeScript
+declare class LayoutPolicy
+```
+
 Layout policy for the width and height of a component. It provides three layout policy options: **matchParent**, **wrapContent**, and **fixAtIdealSize**, which are respectively used for scenarios where the component adapts to the parent component layout, adapts to the content but does not exceed the parent component size, and adapts to the content and may exceed the parent component size.
 
 > **NOTE:** 

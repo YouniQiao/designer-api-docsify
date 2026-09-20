@@ -1,5 +1,9 @@
 # DynamicLayoutAttribute
 
+```TypeScript
+export declare class DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>
+```
+
 The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.
 
 > **NOTE:** 

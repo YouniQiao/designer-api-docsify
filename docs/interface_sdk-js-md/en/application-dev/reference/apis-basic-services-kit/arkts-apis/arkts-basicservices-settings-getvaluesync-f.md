@@ -70,6 +70,8 @@ let value:string = settings.getValueSync(helper, settings.display.SCREEN_BRIGHTN
 ```
 
 
+<a id="getvaluesync-1"></a>
+
 ## getValueSync
 
 ```TypeScript
@@ -102,6 +104,8 @@ Get value from settingsdata(synchronous method)
 
 See [getValueSync](#getvaluesync)
 
+
+<a id="getvaluesync-2"></a>
 
 ## getValueSync
 

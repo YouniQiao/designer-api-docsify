@@ -1,5 +1,9 @@
 # DatePicker properties/events
 
+```TypeScript
+declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>
+```
+
 In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
@@ -78,6 +82,8 @@ Sets the text style for edge items (the second item above or below the selected 
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
+<a id="disappeartextstyle-1"></a>
+
 ## disappearTextStyle
 
 ```TypeScript
@@ -141,6 +147,8 @@ Sets whether to display dates in lunar calendar format.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format.<br>- **false**: Do not display dates in lunar calendar format.<br>Default value: **false** |
+
+<a id="lunar-1"></a>
 
 ## lunar
 
@@ -210,6 +218,8 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 | --- | --- | --- | --- |
 | callback | Callback&lt;Date&gt; | Yes | Selected date, where the year, month, and day portions are subject to the selection, the hour and minute portions are subject to the current system time, and the second portion is always **00**.<br>**Since:** 18 |
 
+<a id="ondatechange-1"></a>
+
 ## onDateChange
 
 ```TypeScript
@@ -258,6 +268,8 @@ Sets the text style for the selected item.
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight of the selected item.<br>Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
 
+<a id="selectedtextstyle-1"></a>
+
 ## selectedTextStyle
 
 ```TypeScript
@@ -301,6 +313,8 @@ Sets the text style for candidate items (the first item immediately above or bel
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+
+<a id="textstyle-1"></a>
 
 ## textStyle
 

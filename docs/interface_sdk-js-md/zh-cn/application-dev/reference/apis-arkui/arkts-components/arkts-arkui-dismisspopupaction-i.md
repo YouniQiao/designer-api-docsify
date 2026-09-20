@@ -1,5 +1,9 @@
 # DismissPopupAction
 
+```TypeScript
+declare interface DismissPopupAction
+```
+
 气泡关闭的信息。
 
 **起始版本：** 12

@@ -1,5 +1,9 @@
 # ContinuousTaskDetailedCancelReason
 
+```TypeScript
+export enum ContinuousTaskDetailedCancelReason
+```
+
 Describes the detailed reason for canceling a continuous task.
 
 **Since:** 26.0.0

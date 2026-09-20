@@ -1,5 +1,9 @@
 # TapRecognizer
 
+```TypeScript
+declare class TapRecognizer extends GestureRecognizer
+```
+
 Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

@@ -85,6 +85,8 @@ deviceInfo.getDeviceSerial(wantTemp).then((result) => {
 ```
 
 
+<a id="getdeviceserial-1"></a>
+
 ## getDeviceSerial
 
 ```TypeScript

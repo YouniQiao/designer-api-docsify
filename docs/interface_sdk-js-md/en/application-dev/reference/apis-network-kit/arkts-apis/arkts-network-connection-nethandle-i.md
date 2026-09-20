@@ -1,5 +1,9 @@
 # NetHandle
 
+```TypeScript
+export interface NetHandle
+```
+
 Represents the network handle.
 
 Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
@@ -159,6 +163,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+<a id="bindsocket-1"></a>
+
 ## bindSocket
 
 ```TypeScript
@@ -263,6 +269,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   });
 });
 ```
+
+<a id="getaddressbyname-1"></a>
 
 ## getAddressByName
 
@@ -373,6 +381,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
   });
 });
 ```
+
+<a id="getaddressesbyname-1"></a>
 
 ## getAddressesByName
 

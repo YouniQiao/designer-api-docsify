@@ -1,5 +1,9 @@
 # RectOptions
 
+```TypeScript
+declare interface RectOptions
+```
+
 Describes the drawing attributes of the **Rect** component.
 
 > **NOTE:** 

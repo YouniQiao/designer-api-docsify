@@ -1,5 +1,9 @@
 # MultiAppMode (System API)
 
+```TypeScript
+export enum MultiAppMode
+```
+
 The module defines whether an application supports the multi-app mode.
 
 **Since:** 12

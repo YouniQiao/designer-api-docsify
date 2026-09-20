@@ -1,5 +1,9 @@
 # Display
 
+```TypeScript
+interface Display
+```
+
 Implements a Display instance, with attributes and APIs defined.
 
 Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
@@ -78,6 +82,8 @@ promise.then((data) => {
   console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="hasimmersivewindow-1"></a>
 
 ## hasImmersiveWindow
 

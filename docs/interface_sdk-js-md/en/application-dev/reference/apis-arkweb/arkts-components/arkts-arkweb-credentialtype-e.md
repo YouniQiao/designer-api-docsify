@@ -1,5 +1,9 @@
 # CredentialType
 
+```TypeScript
+declare enum CredentialType
+```
+
 Defines the credential types used for identity authentication.
 
 **Since:** 22

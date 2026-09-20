@@ -59,6 +59,8 @@ dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
 ```
 
 
+<a id="getdlpsupportedfiletypes-1"></a>
+
 ## getDLPSupportedFileTypes
 
 ```TypeScript

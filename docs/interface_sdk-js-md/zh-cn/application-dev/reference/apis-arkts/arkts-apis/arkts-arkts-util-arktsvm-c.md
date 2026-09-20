@@ -1,5 +1,9 @@
 # ArkTSVM
 
+```TypeScript
+class ArkTSVM
+```
+
 为开发者提供虚拟机维测能力的类。
 
 **起始版本：** 23

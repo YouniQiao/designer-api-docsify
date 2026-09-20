@@ -1,5 +1,9 @@
 # PersistenceV2
 
+```TypeScript
+export declare class PersistenceV2 extends AppStorageV2
+```
+
 Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
 
 **Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
@@ -49,6 +53,8 @@ Stores key-value pair data on the application disk. If the given key already exi
 ```TypeScript
 The following is the sample code for globalConnect to persist data of the Map type:
 ```
+
+<a id="globalconnect-1"></a>
 
 ## globalConnect
 

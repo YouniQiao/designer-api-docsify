@@ -1,5 +1,9 @@
 # ShowDialogOptions
 
+```TypeScript
+export interface ShowDialogOptions
+```
+
 Defines the option of show dialog.
 
 @interface ShowDialogOptions

@@ -1,5 +1,9 @@
 # UrlRegexRule
 
+```TypeScript
+declare interface UrlRegexRule
+```
+
 Defines the URL regular expression rule.
 
 **Since:** 23

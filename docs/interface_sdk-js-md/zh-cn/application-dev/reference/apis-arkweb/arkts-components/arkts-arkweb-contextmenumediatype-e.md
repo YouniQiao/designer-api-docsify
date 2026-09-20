@@ -1,5 +1,9 @@
 # ContextMenuMediaType
 
+```TypeScript
+declare enum ContextMenuMediaType
+```
+
 触发上下文菜单的网页元素类型。
 
 **起始版本：** 9

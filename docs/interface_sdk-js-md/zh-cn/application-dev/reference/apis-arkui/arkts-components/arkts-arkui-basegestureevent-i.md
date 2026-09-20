@@ -1,5 +1,9 @@
 # BaseGestureEvent
 
+```TypeScript
+interface BaseGestureEvent extends BaseEvent
+```
+
 基础手势事件类型。继承自[BaseEvent](arkts-arkui-baseevent-i.md)。
 
 **继承/实现关系：** BaseGestureEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)

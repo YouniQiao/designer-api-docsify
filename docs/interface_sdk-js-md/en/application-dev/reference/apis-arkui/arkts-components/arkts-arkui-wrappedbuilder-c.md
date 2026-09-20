@@ -1,5 +1,9 @@
 # WrappedBuilder
 
+```TypeScript
+declare class WrappedBuilder<Args extends Object[]>
+```
+
 Defines the WrappedBuilder class.
 
 **Since:** 11

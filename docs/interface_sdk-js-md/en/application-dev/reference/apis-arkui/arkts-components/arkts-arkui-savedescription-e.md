@@ -1,5 +1,9 @@
 # SaveDescription
 
+```TypeScript
+declare enum SaveDescription
+```
+
 Enumerates the text that can be displayed on the save button.
 
 **Since:** 10

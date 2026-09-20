@@ -1,5 +1,9 @@
 # UIExtensionComponent属性/事件
 
+```TypeScript
+declare class UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>
+```
+
 定义UIExtensionComponent的属性函数。
 
 **继承/实现关系：** UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>

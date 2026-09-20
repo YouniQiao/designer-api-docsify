@@ -1,5 +1,9 @@
 # Common属性/事件
 
+```TypeScript
+declare class CommonAttribute extends CommonMethod<CommonAttribute>
+```
+
 CommonAttribute for ide.
 
 **继承/实现关系：** CommonAttribute extends CommonMethod<CommonAttribute>

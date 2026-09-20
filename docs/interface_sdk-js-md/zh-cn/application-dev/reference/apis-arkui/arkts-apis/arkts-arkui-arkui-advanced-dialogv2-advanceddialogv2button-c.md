@@ -1,5 +1,9 @@
 # AdvancedDialogV2Button
 
+```TypeScript
+export declare class AdvancedDialogV2Button
+```
+
 弹出框操作区按钮。
 
 > **说明：** 

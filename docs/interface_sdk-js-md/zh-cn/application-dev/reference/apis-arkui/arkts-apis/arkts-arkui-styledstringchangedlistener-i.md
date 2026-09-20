@@ -1,5 +1,9 @@
 # StyledStringChangedListener
 
+```TypeScript
+declare interface StyledStringChangedListener
+```
+
 属性字符串的文本内容变化监听器。
 
 **起始版本：** 12

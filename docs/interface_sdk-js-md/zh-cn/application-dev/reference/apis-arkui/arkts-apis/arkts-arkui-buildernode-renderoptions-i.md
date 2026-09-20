@@ -1,5 +1,9 @@
 # RenderOptions
 
+```TypeScript
+export interface RenderOptions
+```
+
 创建BuilderNode时的可选参数。
 
 **起始版本：** 11

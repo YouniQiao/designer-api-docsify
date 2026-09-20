@@ -85,6 +85,8 @@ console.info(buf2.toString());
 ```
 
 
+<a id="from-1"></a>
+
 ## from
 
 ```TypeScript
@@ -124,6 +126,8 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 See [from](#from)
 
 
+<a id="from-3"></a>
+
 ## from
 
 ```TypeScript
@@ -154,6 +158,8 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 See [from](#from)
 
+
+<a id="from-4"></a>
 
 ## from
 
@@ -187,6 +193,8 @@ Creates a **Buffer** object based on the specified object.
 
 See [from](#from)
 
+
+<a id="from-5"></a>
 
 ## from
 

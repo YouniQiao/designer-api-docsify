@@ -1,5 +1,9 @@
 # GestureMode
 
+```TypeScript
+declare enum GestureMode
+```
+
 Defines the recognition mode of a gesture group.
 
 **Since:** 7

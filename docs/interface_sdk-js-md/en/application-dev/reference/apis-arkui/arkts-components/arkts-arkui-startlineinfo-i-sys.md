@@ -1,5 +1,9 @@
 # StartLineInfo (System API)
 
+```TypeScript
+declare interface StartLineInfo
+```
+
 Define start line info used in GridLayoutOptions.
 
 **Since:** 23

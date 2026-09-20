@@ -98,6 +98,8 @@ let result = huks.generateKey(keyAlias, options);
 ```
 
 
+<a id="generatekey-1"></a>
+
 ## generateKey
 
 ```TypeScript
@@ -110,7 +112,7 @@ Generates a key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md)(keyAlias: string, options: HuksOptions)
+**Substitutes:** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1)(keyAlias: string, options: HuksOptions)
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

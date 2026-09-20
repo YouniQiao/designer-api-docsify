@@ -1,5 +1,9 @@
 # WebNavigationType
 
+```TypeScript
+declare enum WebNavigationType
+```
+
 Enumerates the navigation types.
 
 **Since:** 11

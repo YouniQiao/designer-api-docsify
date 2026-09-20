@@ -1,5 +1,9 @@
 # RefreshStatus
 
+```TypeScript
+declare enum RefreshStatus
+```
+
 Enumerates the states of a refresh operation.
 
 **Since:** 8

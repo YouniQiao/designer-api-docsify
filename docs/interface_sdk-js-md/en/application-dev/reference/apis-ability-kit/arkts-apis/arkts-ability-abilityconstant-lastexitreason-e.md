@@ -1,5 +1,9 @@
 # LastExitReason
 
+```TypeScript
+export enum LastExitReason
+```
+
 Enumerates the reasons for the last exit of the ability. You can use it together with the value of **launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
 
 **Since:** 9

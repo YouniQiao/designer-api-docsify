@@ -71,6 +71,8 @@ connection.getDefaultNet().then((data: connection.NetHandle) => {
 ```
 
 
+<a id="getdefaultnet-1"></a>
+
 ## getDefaultNet
 
 ```TypeScript

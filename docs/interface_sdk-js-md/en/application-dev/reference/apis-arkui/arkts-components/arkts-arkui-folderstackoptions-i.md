@@ -1,5 +1,9 @@
 # FolderStackOptions
 
+```TypeScript
+interface FolderStackOptions
+```
+
 Configuration object for the **FolderStack** hover status, which describes the information about child components that need to be moved to the upper screen in hover status.
 
 > **NOTE:** 

@@ -1,5 +1,9 @@
 # ImagingMode (System API)
 
+```TypeScript
+interface ImagingMode extends ImagingModeQuery
+```
+
 Implements imaging mode.
 
 **Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md)

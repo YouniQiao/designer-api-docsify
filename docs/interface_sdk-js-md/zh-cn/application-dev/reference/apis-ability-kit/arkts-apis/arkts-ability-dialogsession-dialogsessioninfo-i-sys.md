@@ -1,5 +1,9 @@
 # DialogSessionInfo（系统接口）
 
+```TypeScript
+export interface DialogSessionInfo
+```
+
 提供会话信息，包括请求方信息、目标组件信息列表、其他参数。
 
 **起始版本：** 11

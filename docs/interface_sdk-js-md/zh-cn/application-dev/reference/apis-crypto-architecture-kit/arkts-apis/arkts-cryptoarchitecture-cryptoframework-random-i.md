@@ -1,5 +1,9 @@
 # Random
 
+```TypeScript
+interface Random
+```
+
 随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md)创建一个Random实例。
 
 **起始版本：** 9
@@ -176,6 +180,8 @@ export default {
     }
 };
 ```
+
+<a id="generaterandom-1"></a>
 
 ## generateRandom
 

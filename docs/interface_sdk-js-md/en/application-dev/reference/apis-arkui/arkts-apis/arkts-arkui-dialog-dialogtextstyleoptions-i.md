@@ -1,5 +1,9 @@
 # DialogTextStyleOptions
 
+```TypeScript
+declare interface DialogTextStyleOptions
+```
+
 Defines DialogTextStyleOptions in the dialog.
 
 **Since:** 26.0.1

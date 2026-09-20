@@ -1,5 +1,9 @@
 # LayoutBorderInfo
 
+```TypeScript
+declare interface LayoutBorderInfo
+```
+
 Provides the border information of the child component.
 
 @interface LayoutBorderInfo

@@ -1,5 +1,9 @@
 # MenuOptions
 
+```TypeScript
+declare interface MenuOptions extends ContextMenuOptions
+```
+
 Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
 
 @extends ContextMenuOptions @interface MenuOptions

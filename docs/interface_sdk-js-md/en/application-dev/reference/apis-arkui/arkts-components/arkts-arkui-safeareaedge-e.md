@@ -1,5 +1,9 @@
 # SafeAreaEdge
 
+```TypeScript
+declare enum SafeAreaEdge
+```
+
 Edge of the safe area for expanding the layout.
 
 **Since:** 10

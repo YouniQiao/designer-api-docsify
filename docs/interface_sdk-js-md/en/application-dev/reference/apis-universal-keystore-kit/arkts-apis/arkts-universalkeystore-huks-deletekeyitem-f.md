@@ -137,6 +137,8 @@ huks.deleteKeyItem(keyAlias, emptyOptions)
 ```
 
 
+<a id="deletekeyitem-1"></a>
+
 ## deleteKeyItem
 
 ```TypeScript

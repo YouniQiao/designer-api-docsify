@@ -101,6 +101,8 @@ featureAbility.terminateSelfWithResult(
 ```
 
 
+<a id="terminateselfwithresult-1"></a>
+
 ## terminateSelfWithResult
 
 ```TypeScript

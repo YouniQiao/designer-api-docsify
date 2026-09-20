@@ -1,5 +1,9 @@
 # SelectionMenuOptions
 
+```TypeScript
+declare interface SelectionMenuOptions
+```
+
 Sets menu options.
 
 **Since:** 10

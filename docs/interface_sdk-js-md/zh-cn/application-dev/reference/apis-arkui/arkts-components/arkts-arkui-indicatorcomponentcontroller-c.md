@@ -1,5 +1,9 @@
 # IndicatorComponentController
 
+```TypeScript
+declare class IndicatorComponentController
+```
+
 Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。通过将同一IndicatorComponentController实例传入IndicatorComponent的构造函数和Swiper组件的indicator属性，可实现Indicator与Swiper的绑定联动。
 
 **起始版本：** 15

@@ -78,6 +78,8 @@ notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notificati
 ```
 
 
+<a id="isnotificationslotenabled-1"></a>
+
 ## isNotificationSlotEnabled
 
 ```TypeScript

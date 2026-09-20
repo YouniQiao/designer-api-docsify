@@ -1,5 +1,9 @@
 # RichEditorBuilderSpanOptions
 
+```TypeScript
+declare interface RichEditorBuilderSpanOptions
+```
+
 设置builder插入的偏移位置和样式。
 
 **起始版本：** 11

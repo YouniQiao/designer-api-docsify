@@ -1,5 +1,9 @@
 # OppServerProfile
 
+```TypeScript
+interface OppServerProfile
+```
+
 Manager OPP server profile.
 
 **Since:** 16

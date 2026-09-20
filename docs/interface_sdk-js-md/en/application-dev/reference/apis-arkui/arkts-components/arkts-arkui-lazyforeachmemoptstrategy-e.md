@@ -1,5 +1,9 @@
 # LazyForEachMemOptStrategy
 
+```TypeScript
+declare enum LazyForEachMemOptStrategy
+```
+
 Defines a type for memory optimization strategy.
 
 **Since:** 26.0.0

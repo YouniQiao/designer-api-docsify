@@ -1,5 +1,9 @@
 # AtManager
 
+```TypeScript
+interface AtManager
+```
+
 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md)获取实例。
 
 **起始版本：** 8
@@ -142,6 +146,8 @@ atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((statu
   console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="getpermissionrequesttogglestatus-1"></a>
 
 ## getPermissionRequestToggleStatus
 
@@ -423,6 +429,8 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
   }
 });
 ```
+
+<a id="grantusergrantedpermission-1"></a>
 
 ## grantUserGrantedPermission
 
@@ -1011,6 +1019,8 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+<a id="revokeusergrantedpermission-1"></a>
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1129,6 +1139,8 @@ atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.Permiss
   console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setpermissionrequesttogglestatus-1"></a>
 
 ## setPermissionRequestToggleStatus
 

@@ -1,5 +1,9 @@
 # TabContent属性/事件
 
+```TypeScript
+declare class TabContentAttribute extends CommonMethod<TabContentAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -84,6 +88,8 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 | --- | --- | --- | --- |
 | options | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | TabBar上显示内容。<br>CustomBuilder：?构造器，内部可以传入组件（API version 8版本以上适用）。<br>**适用版本：** 18 |
 
+<a id="tabbar-1"></a>
+
 ## tabBar
 
 ```TypeScript
@@ -113,6 +119,8 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 是 | TabBar上显示的内容，支持子页签样式或底部页签样式。<br>SubTabBarStyle：?子页签样式。<br> BottomTabBarStyle：?底部页签和侧边页签样式，底部样式没有下划线效果。 |
+
+<a id="tabbar-2"></a>
 
 ## tabBar
 

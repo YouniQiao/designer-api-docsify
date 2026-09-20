@@ -423,6 +423,8 @@ async function testAbort() {
 ```
 
 
+<a id="abortsession-1"></a>
+
 ## abortSession
 
 ```TypeScript

@@ -1,5 +1,9 @@
 # PanDirection
 
+```TypeScript
+declare enum PanDirection
+```
+
 与SwipeDirection不同，PanDirection没有角度限制。
 
 **起始版本：** 7

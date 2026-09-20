@@ -61,6 +61,8 @@ media.createVideoPlayer().then((video: media.VideoPlayer) => {
 ```
 
 
+<a id="createvideoplayer-1"></a>
+
 ## createVideoPlayer
 
 ```TypeScript

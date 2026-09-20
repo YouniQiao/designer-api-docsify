@@ -1,5 +1,9 @@
 # TabTitleBarMenuItem
 
+```TypeScript
+export declare class TabTitleBarMenuItem
+```
+
 **起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

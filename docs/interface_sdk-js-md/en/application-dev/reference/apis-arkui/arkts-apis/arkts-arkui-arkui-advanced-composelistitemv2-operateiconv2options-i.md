@@ -1,5 +1,9 @@
 # OperateIconV2Options
 
+```TypeScript
+export interface OperateIconV2Options
+```
+
 Declare interface OperateIconV2Options
 
 **Since:** 26.0.0

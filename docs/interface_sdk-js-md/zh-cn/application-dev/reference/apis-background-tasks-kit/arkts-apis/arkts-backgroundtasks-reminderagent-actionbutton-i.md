@@ -1,5 +1,9 @@
 # ActionButton
 
+```TypeScript
+interface ActionButton
+```
+
 用于设置弹出的提醒通知信息上显示的按钮类型和标题。
 
 **起始版本：** 7

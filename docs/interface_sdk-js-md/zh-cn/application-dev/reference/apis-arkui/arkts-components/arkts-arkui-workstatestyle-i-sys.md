@@ -1,5 +1,9 @@
 # WorkStateStyle（系统接口）
 
+```TypeScript
+interface WorkStateStyle
+```
+
 Work state style.
 
 **起始版本：** 7

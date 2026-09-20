@@ -66,6 +66,8 @@ notificationManager.getActiveNotificationCount().then((data: number) => {
 ```
 
 
+<a id="getactivenotificationcount-1"></a>
+
 ## getActiveNotificationCount
 
 ```TypeScript
@@ -82,7 +84,7 @@ function getActiveNotificationCount(): Promise<number>
 
 **参见：**
 
-[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设置角标个数。
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) 设置角标个数。
 
 **返回值：**
 

@@ -51,6 +51,8 @@ Stage model:
 ```
 
 
+<a id="resolvelocalservice-1"></a>
+
 ## resolveLocalService
 
 ```TypeScript

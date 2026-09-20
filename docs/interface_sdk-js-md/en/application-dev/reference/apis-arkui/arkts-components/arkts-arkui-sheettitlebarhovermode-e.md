@@ -1,5 +1,9 @@
 # SheetTitleBarHoverMode
 
+```TypeScript
+declare enum SheetTitleBarHoverMode
+```
+
 Enum of title bar hover modes.
 
 **Since:** 26.0.1

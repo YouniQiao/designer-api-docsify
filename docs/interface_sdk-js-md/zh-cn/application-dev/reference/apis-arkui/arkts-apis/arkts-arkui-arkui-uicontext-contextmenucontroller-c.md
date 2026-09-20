@@ -1,5 +1,9 @@
 # ContextMenuController
 
+```TypeScript
+export declare class ContextMenuController
+```
+
 提供控制菜单关闭的能力。开发者可以通过此接口在特定场景下（如定时关闭、点击外部区域关闭等）主动关闭菜单。
 
 > **说明：** 

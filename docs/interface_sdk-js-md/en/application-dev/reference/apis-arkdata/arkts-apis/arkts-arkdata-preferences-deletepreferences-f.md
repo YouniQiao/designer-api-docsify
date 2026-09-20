@@ -47,6 +47,8 @@ Stage model:
 ```
 
 
+<a id="deletepreferences-1"></a>
+
 ## deletePreferences
 
 ```TypeScript
@@ -84,6 +86,8 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 See [deletePreferences](#deletepreferences)
 
+
+<a id="deletepreferences-2"></a>
 
 ## deletePreferences
 
@@ -124,6 +128,8 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 See [deletePreferences](#deletepreferences)
 
+
+<a id="deletepreferences-3"></a>
 
 ## deletePreferences
 

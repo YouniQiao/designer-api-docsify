@@ -60,6 +60,8 @@ cloudData.sharing.exit('sharing_resource_test', (err: BusinessError, result) => 
 ```
 
 
+<a id="exit-1"></a>
+
 ## exit
 
 ```TypeScript

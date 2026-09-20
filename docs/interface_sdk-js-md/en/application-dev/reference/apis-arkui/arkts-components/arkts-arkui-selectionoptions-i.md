@@ -1,5 +1,9 @@
 # SelectionOptions
 
+```TypeScript
+declare interface SelectionOptions
+```
+
 Defines the selection options.
 
 **Since:** 12

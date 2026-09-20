@@ -1,5 +1,9 @@
 # HiPlayDeviceInfo（系统接口）
 
+```TypeScript
+interface HiPlayDeviceInfo
+```
+
 HiPlay 设备类型定义
 
 **起始版本：** 24

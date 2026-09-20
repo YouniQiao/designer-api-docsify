@@ -75,6 +75,8 @@ notificationManager.displayBadge(bundle, false).then(() => {
 ```
 
 
+<a id="displaybadge-1"></a>
+
 ## displayBadge
 
 ```TypeScript

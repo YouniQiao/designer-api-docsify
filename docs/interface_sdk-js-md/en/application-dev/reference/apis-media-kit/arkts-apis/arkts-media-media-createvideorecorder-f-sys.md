@@ -66,6 +66,8 @@ media.createVideoRecorder().then((video: media.VideoRecorder) => {
 ```
 
 
+<a id="createvideorecorder-2"></a>
+
 ## createVideoRecorder
 
 ```TypeScript

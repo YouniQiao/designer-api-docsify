@@ -1,5 +1,9 @@
 # OnBeforeUnloadEvent
 
+```TypeScript
+declare interface OnBeforeUnloadEvent
+```
+
 Defines the callback triggered when the user is about to leave the current page in refresh or close scenarios. It is suitable for scenarios such as form editing, allowing developers to intercept the leave action and display a confirmation dialog, thereby preventing accidental loss of unsubmitted user data.
 
 **Since:** 12

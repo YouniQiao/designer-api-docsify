@@ -71,6 +71,8 @@ sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
 ```
 
 
+<a id="getsimaccountinfo-1"></a>
+
 ## getSimAccountInfo
 
 ```TypeScript

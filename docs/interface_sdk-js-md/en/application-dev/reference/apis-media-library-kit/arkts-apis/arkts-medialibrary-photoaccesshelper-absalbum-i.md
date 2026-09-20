@@ -1,5 +1,9 @@
 # AbsAlbum
 
+```TypeScript
+interface AbsAlbum
+```
+
 Defines the abstract interface of albums.
 
 **Since:** 10
@@ -42,6 +46,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 11 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+<a id="getassets-1"></a>
 
 ## getAssets
 

@@ -1,5 +1,9 @@
 # HuksKeyPurpose
 
+```TypeScript
+export enum HuksKeyPurpose
+```
+
 表示密钥用途。
 
 一个密钥仅能用于单类用途，不能既用于加解密又用于签名验签。

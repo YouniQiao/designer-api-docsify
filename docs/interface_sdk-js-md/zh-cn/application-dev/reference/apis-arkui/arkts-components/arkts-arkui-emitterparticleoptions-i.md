@@ -1,5 +1,9 @@
 # EmitterParticleOptions
 
+```TypeScript
+interface EmitterParticleOptions<PARTICLE extends ParticleType>
+```
+
 粒子配置。
 
 > **说明：** 

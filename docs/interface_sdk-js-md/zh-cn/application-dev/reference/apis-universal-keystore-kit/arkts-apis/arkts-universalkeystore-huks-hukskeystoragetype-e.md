@@ -1,5 +1,9 @@
 # HuksKeyStorageType
 
+```TypeScript
+export enum HuksKeyStorageType
+```
+
 表示密钥存储方式。
 
 **起始版本：** 8

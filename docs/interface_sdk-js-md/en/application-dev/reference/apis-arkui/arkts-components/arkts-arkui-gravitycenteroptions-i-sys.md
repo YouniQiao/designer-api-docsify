@@ -1,5 +1,9 @@
 # GravityCenterOptions (System API)
 
+```TypeScript
+declare interface GravityCenterOptions
+```
+
 Defines the parameters of the center of gravity.
 
 **Since:** 26.0.0

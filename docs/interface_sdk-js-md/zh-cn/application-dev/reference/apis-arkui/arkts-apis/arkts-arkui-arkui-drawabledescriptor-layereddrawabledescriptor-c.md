@@ -1,5 +1,9 @@
 # LayeredDrawableDescriptor
 
+```TypeScript
+export class LayeredDrawableDescriptor extends DrawableDescriptor
+```
+
 当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：

@@ -1,5 +1,9 @@
 # TaskInfo
 
+```TypeScript
+export interface TaskInfo
+```
+
 Represents the background load task information, which is used to register task.
 
 **Since:** 26.0.1

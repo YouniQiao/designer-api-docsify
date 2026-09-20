@@ -117,6 +117,8 @@ try {
 ```
 
 
+<a id="getappprovisioninfo-1"></a>
+
 ## getAppProvisionInfo
 
 ```TypeScript
@@ -157,6 +159,8 @@ function getAppProvisionInfo(bundleName: string, userId: number, callback: Async
 
 参见 [getAppProvisionInfo](#getappprovisioninfo)
 
+
+<a id="getappprovisioninfo-2"></a>
 
 ## getAppProvisionInfo
 

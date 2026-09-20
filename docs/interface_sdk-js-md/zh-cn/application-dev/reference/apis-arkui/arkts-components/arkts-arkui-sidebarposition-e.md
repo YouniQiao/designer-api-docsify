@@ -1,5 +1,9 @@
 # SideBarPosition
 
+```TypeScript
+declare enum SideBarPosition
+```
+
 侧边栏显示位置。
 
 **起始版本：** 9

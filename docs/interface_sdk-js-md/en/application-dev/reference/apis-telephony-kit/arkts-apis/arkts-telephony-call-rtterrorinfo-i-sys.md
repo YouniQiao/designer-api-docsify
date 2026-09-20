@@ -1,5 +1,9 @@
 # RttErrorInfo (System API)
 
+```TypeScript
+export interface RttErrorInfo
+```
+
 Indicates the info of the rtt error.
 
 **Since:** 22

@@ -1,5 +1,9 @@
 # TouchRecognizer
 
+```TypeScript
+declare class TouchRecognizer
+```
+
 触摸识别器对象。
 
 **起始版本：** 20
@@ -71,6 +75,8 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 | 类型 | 说明 |
 | --- | --- |
 | boolean | the query result. |
+
+<a id="ishostbelongsto-1"></a>
 
 ## isHostBelongsTo
 

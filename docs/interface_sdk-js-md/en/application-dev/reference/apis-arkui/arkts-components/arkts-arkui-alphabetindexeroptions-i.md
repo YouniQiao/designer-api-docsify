@@ -1,5 +1,9 @@
 # AlphabetIndexerOptions
 
+```TypeScript
+interface AlphabetIndexerOptions
+```
+
 Defines the options of the **AlphabetIndexer** component.
 
 > **NOTE:** 
@@ -38,7 +42,7 @@ Index of the initial selected item. If the value is out of range, the default va
 
 Value range: [0, arrayValue.length-1]
 
-This parameter supports two-way binding through [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

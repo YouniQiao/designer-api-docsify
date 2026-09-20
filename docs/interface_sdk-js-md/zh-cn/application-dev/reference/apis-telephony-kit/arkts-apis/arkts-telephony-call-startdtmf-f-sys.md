@@ -67,6 +67,8 @@ call.startDTMF(1, "0").then(() => {
 ```
 
 
+<a id="startdtmf-1"></a>
+
 ## startDTMF
 
 ```TypeScript

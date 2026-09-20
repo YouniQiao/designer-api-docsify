@@ -1,5 +1,9 @@
 # ListItemStyle
 
+```TypeScript
+declare enum ListItemStyle
+```
+
 Enumerates the card styles of the List component.
 
 **Since:** 10

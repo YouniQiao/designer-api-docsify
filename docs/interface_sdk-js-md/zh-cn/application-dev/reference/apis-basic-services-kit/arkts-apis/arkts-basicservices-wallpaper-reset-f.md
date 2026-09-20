@@ -57,6 +57,8 @@ wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
 ```
 
 
+<a id="reset-1"></a>
+
 ## reset
 
 ```TypeScript

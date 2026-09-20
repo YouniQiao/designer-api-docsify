@@ -59,6 +59,8 @@ connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
 ```
 
 
+<a id="getglobalhttpproxy-1"></a>
+
 ## getGlobalHttpProxy
 
 ```TypeScript

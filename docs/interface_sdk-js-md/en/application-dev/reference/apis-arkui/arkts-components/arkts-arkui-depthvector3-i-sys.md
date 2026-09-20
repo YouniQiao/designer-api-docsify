@@ -1,5 +1,9 @@
 # DepthVector3 (System API)
 
+```TypeScript
+declare interface DepthVector3
+```
+
 3D vector in depth space.
 
 **Since:** 26.0.0

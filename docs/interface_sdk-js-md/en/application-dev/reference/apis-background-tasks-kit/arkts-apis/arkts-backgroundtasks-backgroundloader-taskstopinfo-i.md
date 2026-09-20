@@ -1,5 +1,9 @@
 # TaskStopInfo
 
+```TypeScript
+export interface TaskStopInfo
+```
+
 Represents the background load task stop information, which is used to ON_STOP function.
 
 **Since:** 26.0.1

@@ -81,6 +81,8 @@ continuationManager.startDeviceManager(
 ```
 
 
+<a id="startdevicemanager-1"></a>
+
 ## startDeviceManager
 
 ```TypeScript
@@ -111,6 +113,8 @@ Starts the device selection module to show the list of available devices on the 
 
 See [startDeviceManager](#startdevicemanager)
 
+
+<a id="startdevicemanager-2"></a>
 
 ## startDeviceManager
 

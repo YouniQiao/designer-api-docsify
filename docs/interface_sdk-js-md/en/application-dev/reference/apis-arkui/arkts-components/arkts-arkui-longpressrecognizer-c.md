@@ -1,5 +1,9 @@
 # LongPressRecognizer
 
+```TypeScript
+declare class LongPressRecognizer extends GestureRecognizer
+```
+
 Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)

@@ -1,5 +1,9 @@
 # Session
 
+```TypeScript
+export interface Session
+```
+
 A **Session** instance indicates a session created on an SE **Reader** instance. You can use [Reader.openSession](arkts-connectivity-omapi-reader-i.md#opensession) to obtain a **Session** instance.
 
 **Since:** 10
@@ -374,6 +378,8 @@ function secureElementDemo() {
 }
 ```
 
+<a id="openbasicchannel-1"></a>
+
 ## openBasicChannel
 
 ```TypeScript
@@ -407,6 +413,8 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 **Examples**
 
 See [openBasicChannel](#openbasicchannel)
+
+<a id="openbasicchannel-2"></a>
 
 ## openBasicChannel
 
@@ -447,6 +455,8 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 **Examples**
 
 See [openBasicChannel](#openbasicchannel)
+
+<a id="openbasicchannel-3"></a>
 
 ## openBasicChannel
 
@@ -634,6 +644,8 @@ function secureElementDemo() {
 }
 ```
 
+<a id="openlogicalchannel-1"></a>
+
 ## openLogicalChannel
 
 ```TypeScript
@@ -667,6 +679,8 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 **Examples**
 
 See [openLogicalChannel](#openlogicalchannel)
+
+<a id="openlogicalchannel-2"></a>
 
 ## openLogicalChannel
 
@@ -707,6 +721,8 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 **Examples**
 
 See [openLogicalChannel](#openlogicalchannel)
+
+<a id="openlogicalchannel-3"></a>
 
 ## openLogicalChannel
 

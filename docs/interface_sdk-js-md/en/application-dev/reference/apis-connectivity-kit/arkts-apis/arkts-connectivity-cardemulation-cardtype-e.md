@@ -1,5 +1,9 @@
 # CardType
 
+```TypeScript
+enum CardType
+```
+
 Enumerates the types of services used by the card emulation application.
 
 **Since:** 9

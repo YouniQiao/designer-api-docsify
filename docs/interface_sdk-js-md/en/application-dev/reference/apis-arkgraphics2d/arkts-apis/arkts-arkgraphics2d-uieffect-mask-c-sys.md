@@ -1,5 +1,9 @@
 # Mask (System API)
 
+```TypeScript
+class Mask
+```
+
 Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc.
 
 **Since:** 20
@@ -243,6 +247,8 @@ struct Index {
   }
 }
 ```
+
+<a id="createpixelmapmask-1"></a>
 
 ## createPixelMapMask
 

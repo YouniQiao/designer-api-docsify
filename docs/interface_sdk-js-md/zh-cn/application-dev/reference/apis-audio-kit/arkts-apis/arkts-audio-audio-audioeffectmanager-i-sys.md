@@ -1,5 +1,9 @@
 # AudioEffectManager（系统接口）
 
+```TypeScript
+interface AudioEffectManager
+```
+
 音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取AudioEffectManager实例。
 
 @typedef AudioEffectManager

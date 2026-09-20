@@ -1,5 +1,9 @@
 # FrictionMotion（系统接口）
 
+```TypeScript
+declare class FrictionMotion
+```
+
 摩擦动画模型。可以通过摩擦力、初始位置和初始速度构建摩擦动画。
 
 **起始版本：** 7

@@ -1,5 +1,9 @@
 # PlaybackInfo
 
+```TypeScript
+interface PlaybackInfo
+```
+
 用于描述当前视频播放的进度。
 
 > **说明：** 

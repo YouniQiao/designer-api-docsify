@@ -64,6 +64,8 @@ sim.getOperatorConfigs(0).then((data: Array<sim.OperatorConfig>) => {
 ```
 
 
+<a id="getoperatorconfigs-1"></a>
+
 ## getOperatorConfigs
 
 ```TypeScript

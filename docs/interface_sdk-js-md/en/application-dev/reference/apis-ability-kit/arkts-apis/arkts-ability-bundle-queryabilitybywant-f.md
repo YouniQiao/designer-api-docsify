@@ -96,6 +96,8 @@ bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
 ```
 
 
+<a id="queryabilitybywant-1"></a>
+
 ## queryAbilityByWant
 
 ```TypeScript
@@ -126,6 +128,8 @@ No permission is required for obtaining the caller's own information.
 
 See [queryAbilityByWant](#queryabilitybywant)
 
+
+<a id="queryabilitybywant-2"></a>
 
 ## queryAbilityByWant
 

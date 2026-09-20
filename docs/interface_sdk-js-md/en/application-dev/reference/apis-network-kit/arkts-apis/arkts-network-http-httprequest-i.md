@@ -1,5 +1,9 @@
 # HttpRequest
 
+```TypeScript
+export interface HttpRequest
+```
+
 Defines an HTTP request task. Before invoking APIs provided by **HttpRequest**, you must call [createHttp()](arkts-network-http-createhttp-f.md) to create an **HttpRequestTask** object.
 
 **Since:** 6
@@ -521,6 +525,8 @@ Error codes
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 ```
 
+<a id="request-1"></a>
+
 ## request
 
 ```TypeScript
@@ -601,6 +607,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 **Examples**
 
 See [request](#request)
+
+<a id="request-2"></a>
 
 ## request
 
@@ -814,6 +822,8 @@ Error codes
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 ```
 
+<a id="requestinstream-1"></a>
+
 ## requestInStream
 
 ```TypeScript
@@ -880,6 +890,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 **Examples**
 
 See [requestInStream](#requestinstream)
+
+<a id="requestinstream-2"></a>
 
 ## requestInStream
 

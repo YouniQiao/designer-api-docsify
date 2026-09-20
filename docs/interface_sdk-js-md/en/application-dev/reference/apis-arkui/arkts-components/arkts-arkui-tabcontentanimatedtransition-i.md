@@ -1,5 +1,9 @@
 # TabContentAnimatedTransition
 
+```TypeScript
+declare interface TabContentAnimatedTransition
+```
+
 Provides the information about the custom tab switching animation.
 
 **Since:** 11

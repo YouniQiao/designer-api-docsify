@@ -1,5 +1,9 @@
 # SearchButtonParams
 
+```TypeScript
+export interface SearchButtonParams
+```
+
 搜索框末尾搜索按钮设置项。
 
 **起始版本：** 18

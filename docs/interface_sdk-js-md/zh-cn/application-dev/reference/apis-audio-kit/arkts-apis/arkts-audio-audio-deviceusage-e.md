@@ -1,5 +1,9 @@
 # DeviceUsage
 
+```TypeScript
+enum DeviceUsage
+```
+
 表示音频设备类型的枚举（根据用途分类）。
 
 @enum { int }

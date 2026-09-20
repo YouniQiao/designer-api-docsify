@@ -1,5 +1,9 @@
 # ExecResult (System API)
 
+```TypeScript
+interface ExecResult
+```
+
 Execute result of a tool execution.
 
 **Since:** 26.0.0

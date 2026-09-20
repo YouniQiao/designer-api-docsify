@@ -1,5 +1,9 @@
 # TextPickerDialog
 
+```TypeScript
+declare class TextPickerDialog
+```
+
 Defines TextPickerDialog which uses show method to show TextPicker dialog.
 
 **起始版本：** 8

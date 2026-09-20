@@ -1,5 +1,9 @@
 # ReusableOptions
 
+```TypeScript
+declare interface ReusableOptions
+```
+
 Defines the options for Reusable ClassDecorator.
 
 @interface ReusableOptions

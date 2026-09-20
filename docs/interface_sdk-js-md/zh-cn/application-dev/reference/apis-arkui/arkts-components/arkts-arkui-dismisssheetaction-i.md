@@ -1,5 +1,9 @@
 # DismissSheetAction
 
+```TypeScript
+declare interface DismissSheetAction
+```
+
 半模态关闭前的回调。
 
 **起始版本：** 12

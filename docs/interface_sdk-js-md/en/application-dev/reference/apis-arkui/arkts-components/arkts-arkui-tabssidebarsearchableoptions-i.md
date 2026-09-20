@@ -1,5 +1,9 @@
 # TabsSidebarSearchableOptions
 
+```TypeScript
+declare interface TabsSidebarSearchableOptions
+```
+
 Defines the options for the searchable sidebar tab bar.
 
 **Since:** 26.2.0

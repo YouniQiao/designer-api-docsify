@@ -1,5 +1,9 @@
 # KeyboardOptions
 
+```TypeScript
+declare interface KeyboardOptions
+```
+
 Whether to support keyboard avoidance.
 
 **Since:** 12

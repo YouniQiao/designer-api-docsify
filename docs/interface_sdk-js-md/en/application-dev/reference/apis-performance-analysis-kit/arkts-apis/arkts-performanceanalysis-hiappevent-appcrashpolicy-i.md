@@ -1,5 +1,9 @@
 # AppCrashPolicy
 
+```TypeScript
+interface AppCrashPolicy
+```
+
 Defines the application crash event configuration policy.
 
 **Since:** 24

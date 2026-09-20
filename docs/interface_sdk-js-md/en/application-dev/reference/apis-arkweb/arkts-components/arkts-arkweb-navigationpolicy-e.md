@@ -1,5 +1,9 @@
 # NavigationPolicy
 
+```TypeScript
+declare enum NavigationPolicy
+```
+
 Defines the modes of opening a new window in the WebView, including pop-up windows, new windows, foreground tabs, and background tabs.
 
 **Since:** 23

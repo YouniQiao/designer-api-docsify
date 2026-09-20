@@ -1,5 +1,9 @@
 # ExpandMode
 
+```TypeScript
+export enum ExpandMode
+```
+
 Enumerates the expansion mode of child nodes.
 
 **Since:** 15

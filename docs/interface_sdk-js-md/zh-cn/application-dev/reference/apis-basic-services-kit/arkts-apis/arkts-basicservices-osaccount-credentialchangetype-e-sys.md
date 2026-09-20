@@ -1,5 +1,9 @@
 # CredentialChangeType（系统接口）
 
+```TypeScript
+enum CredentialChangeType
+```
+
 表示凭据变更类型的枚举。
 
 **起始版本：** 23

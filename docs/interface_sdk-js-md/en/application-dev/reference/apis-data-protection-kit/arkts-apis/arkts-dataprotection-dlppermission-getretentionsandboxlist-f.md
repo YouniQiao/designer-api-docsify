@@ -79,6 +79,8 @@ dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
 ```
 
 
+<a id="getretentionsandboxlist-1"></a>
+
 ## getRetentionSandboxList
 
 ```TypeScript
@@ -114,6 +116,8 @@ This API is used to query the sandbox retention information of a specified appli
 
 See [getRetentionSandboxList](#getretentionsandboxlist)
 
+
+<a id="getretentionsandboxlist-2"></a>
 
 ## getRetentionSandboxList
 

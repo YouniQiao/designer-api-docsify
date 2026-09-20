@@ -1,5 +1,9 @@
 # OnHttpAuthRequestEvent
 
+```TypeScript
+declare interface OnHttpAuthRequestEvent
+```
+
 Defines the callback information triggered when an HTTP authentication request is received, including the host and realm information. It is suitable for scenarios where handling HTTP authentication is required, improving authentication process flexibility and security.
 
 **Since:** 12

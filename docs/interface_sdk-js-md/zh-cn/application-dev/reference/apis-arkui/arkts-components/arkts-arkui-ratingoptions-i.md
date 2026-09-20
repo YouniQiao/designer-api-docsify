@@ -1,5 +1,9 @@
 # RatingOptions
 
+```TypeScript
+declare interface RatingOptions
+```
+
 评分组件的信息。
 
 > **说明：** 
@@ -50,7 +54,7 @@ rating: number
 
 小于0取0，大于[stars](arkts-arkui-rating-comp-attribute.md#stars)取最大值stars。
 
-该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** number
 

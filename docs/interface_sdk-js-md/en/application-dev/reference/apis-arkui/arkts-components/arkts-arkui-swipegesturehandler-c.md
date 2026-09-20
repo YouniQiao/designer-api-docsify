@@ -1,5 +1,9 @@
 # SwipeGestureHandler
 
+```TypeScript
+declare class SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>
+```
+
 Defines a swipe gesture handler object.
 
 **Inheritance/Implementation:** SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>

@@ -252,6 +252,8 @@ async function testImportWrappedFunc(alias: string, wrappingAlias: string, optio
 ```
 
 
+<a id="importwrappedkeyitem-1"></a>
+
 ## importWrappedKeyItem
 
 ```TypeScript

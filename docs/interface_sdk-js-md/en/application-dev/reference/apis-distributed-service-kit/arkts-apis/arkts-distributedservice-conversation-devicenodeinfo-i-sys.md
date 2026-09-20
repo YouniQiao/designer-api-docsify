@@ -1,5 +1,9 @@
 # DeviceNodeInfo (System API)
 
+```TypeScript
+interface DeviceNodeInfo
+```
+
 Defines the device node information, including the network ID, device name, device type ID, near-field status, and UDID.
 
 **Since:** 26.0.1

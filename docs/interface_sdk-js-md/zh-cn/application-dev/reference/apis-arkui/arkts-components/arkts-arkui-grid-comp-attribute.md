@@ -1,5 +1,9 @@
 # Grid属性/事件
 
+```TypeScript
+declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>
+```
+
 除支持[通用属性](arkts-arkui-commonmethod-c.md)和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还支持以下属性：
 
 除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
@@ -55,6 +59,8 @@ cachedCount(value: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 预加载的GridItem的数量。<br>默认值：垂直滚动时为一个屏幕内可显示的行数，水平滚动时为一个屏幕内可显示的列数，最大值为16。<br>取值范围：[0, +∞)，设置为小于0的值时，按1处理。<br>通过状态变量单独更新value值时，Grid组件不会触发布局更新，缓存节点数量仅会在下次布局时更新。 |
+
+<a id="cachedcount-1"></a>
 
 ## cachedCount
 
@@ -163,6 +169,8 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string | 是 |  |
+
+<a id="columnstemplate-1"></a>
 
 ## columnsTemplate
 
@@ -897,6 +905,8 @@ scrollBarColor(value: Color | number | string)
 | --- | --- | --- | --- |
 | value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | 是 | 滚动条的颜色。<br>默认值：'#182431'（40%不透明度）<br>number为HEX格式颜色，支持rgb或者argb，示例：0 xffffff。<br>string为rgb或者argb格式颜色，示例：'#ffffff'。 |
 
+<a id="scrollbarcolor-1"></a>
+
 ## scrollBarColor
 
 ```TypeScript
@@ -938,6 +948,8 @@ scrollBarWidth(value: number | string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number &#124; string | 是 | 滚动条的宽度。<br>默认值：4<br>单位：vp<br>取值范围：[0, +∞)，设置为小于0的值时，按默认值处理。设置为0时，不显示滚动条。 |
+
+<a id="scrollbarwidth-1"></a>
 
 ## scrollBarWidth
 

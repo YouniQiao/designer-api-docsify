@@ -1,5 +1,9 @@
 # FormSize (System API)
 
+```TypeScript
+interface FormSize
+```
+
 Provides the widget size information.
 
 **Since:** 18

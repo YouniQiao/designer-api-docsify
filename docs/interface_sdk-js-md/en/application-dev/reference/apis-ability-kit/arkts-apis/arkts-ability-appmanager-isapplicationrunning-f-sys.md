@@ -80,6 +80,8 @@ try {
 ```
 
 
+<a id="isapplicationrunning-1"></a>
+
 ## isApplicationRunning
 
 ```TypeScript

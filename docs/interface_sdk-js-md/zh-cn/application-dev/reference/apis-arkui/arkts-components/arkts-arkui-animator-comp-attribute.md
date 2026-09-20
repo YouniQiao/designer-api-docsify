@@ -1,5 +1,9 @@
 # Animator属性/事件
 
+```TypeScript
+declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>
+```
+
 定义Animator属性。
 
 **继承/实现关系：** AnimatorAttribute extends CommonMethod<AnimatorAttribute>

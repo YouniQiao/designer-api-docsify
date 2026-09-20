@@ -1,5 +1,9 @@
 # PanelType
 
+```TypeScript
+declare enum PanelType
+```
+
 Sets the type of sliding panel.
 
 **Since:** 7

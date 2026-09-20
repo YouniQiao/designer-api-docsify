@@ -1,5 +1,9 @@
 # HitTestMode
 
+```TypeScript
+declare enum HitTestMode
+```
+
 定义触摸测试的响应逻辑及节点阻塞规则。
 
 > **说明：** 

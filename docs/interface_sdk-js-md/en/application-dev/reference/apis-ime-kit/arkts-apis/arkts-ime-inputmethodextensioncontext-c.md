@@ -1,5 +1,9 @@
 # InputMethodExtensionContext
 
+```TypeScript
+declare class InputMethodExtensionContext extends ExtensionContext
+```
+
 The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>  
 > **NOTE:** <br>
 > <br>
@@ -80,6 +84,8 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
   }
 }
 ```
+
+<a id="destroy-1"></a>
 
 ## destroy
 

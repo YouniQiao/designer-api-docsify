@@ -1,5 +1,9 @@
 # SequenceRunner
 
+```TypeScript
+class SequenceRunner
+```
+
 Implements a serial queue, in which all tasks are executed in sequence.
 
 **Since:** 11
@@ -41,6 +45,8 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 ```TypeScript
 let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

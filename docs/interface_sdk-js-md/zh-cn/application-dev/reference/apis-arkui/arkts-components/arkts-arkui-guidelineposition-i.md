@@ -1,5 +1,9 @@
 # GuideLinePosition
 
+```TypeScript
+declare interface GuideLinePosition
+```
+
 guideLine位置参数，用于定义guideLine的位置。
 
 **起始版本：** 12

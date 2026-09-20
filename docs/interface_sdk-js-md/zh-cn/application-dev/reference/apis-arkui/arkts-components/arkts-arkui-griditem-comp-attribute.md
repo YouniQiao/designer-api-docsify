@@ -1,5 +1,9 @@
 # GridItem属性/事件
 
+```TypeScript
+declare class GridItemAttribute extends CommonMethod<GridItemAttribute>
+```
+
 **继承/实现关系：** GridItemAttribute extends CommonMethod<GridItemAttribute>
 
 **起始版本：** 7
@@ -158,7 +162,7 @@ selectable(value: boolean)
 selected(value: boolean)
 ```
 
-设置当前GridItem选中状态。该属性支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置当前GridItem选中状态。该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该属性需要在设置多态样式前使用才能生效选中态样式。
 

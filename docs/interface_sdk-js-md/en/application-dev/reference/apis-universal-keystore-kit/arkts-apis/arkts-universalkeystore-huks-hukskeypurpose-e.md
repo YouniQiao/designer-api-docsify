@@ -1,5 +1,9 @@
 # HuksKeyPurpose
 
+```TypeScript
+export enum HuksKeyPurpose
+```
+
 Enumerates the key purposes.
 
 A key can be used only for a single purpose. You cannot use the same key for both encryption/decryption and signature verification.

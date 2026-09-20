@@ -84,6 +84,8 @@ call.makeCall("138xxxxxxxx", makeOptions).then(() => {
 ```
 
 
+<a id="makecall-1"></a>
+
 ## makeCall
 
 ```TypeScript
@@ -125,6 +127,8 @@ function makeCall(phoneNumber: string): Promise<void>
 参见 [makeCall](#makecall)
 
 
+<a id="makecall-2"></a>
+
 ## makeCall
 
 ```TypeScript
@@ -165,6 +169,8 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 
 参见 [makeCall](#makecall)
 
+
+<a id="makecall-3"></a>
 
 ## makeCall
 

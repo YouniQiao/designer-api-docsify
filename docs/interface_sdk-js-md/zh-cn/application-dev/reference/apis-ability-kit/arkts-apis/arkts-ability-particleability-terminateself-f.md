@@ -49,6 +49,8 @@ particleAbility.terminateSelf().then(() => {
 ```
 
 
+<a id="terminateself-1"></a>
+
 ## terminateSelf
 
 ```TypeScript

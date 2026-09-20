@@ -1,5 +1,9 @@
 # CloudAsset (System API)
 
+```TypeScript
+export interface CloudAsset extends relationalStore.Asset
+```
+
 Represents the cloud asset information.
 
 **Inheritance/Implementation:** CloudAsset extends relationalStore.Asset

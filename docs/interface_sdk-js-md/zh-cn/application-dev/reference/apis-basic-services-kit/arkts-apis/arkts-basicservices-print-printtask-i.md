@@ -1,5 +1,9 @@
 # PrintTask
 
+```TypeScript
+interface PrintTask
+```
+
 打印任务完成后的事件监听回调接口类。
 
 **起始版本：** 10

@@ -1,5 +1,9 @@
 # EffectDirection
 
+```TypeScript
+declare enum EffectDirection
+```
+
 The direction type of symbol effect.
 
 **Since:** 12

@@ -1,5 +1,9 @@
 # PosterOptions
 
+```TypeScript
+declare interface PosterOptions
+```
+
 Defines display options for the first frame of the video.
 
 **Since:** 18

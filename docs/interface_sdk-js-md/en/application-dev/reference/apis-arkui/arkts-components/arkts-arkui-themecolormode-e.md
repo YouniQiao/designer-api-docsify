@@ -1,5 +1,9 @@
 # ThemeColorMode
 
+```TypeScript
+declare enum ThemeColorMode
+```
+
 Enumerates the color modes.
 
 **Since:** 10

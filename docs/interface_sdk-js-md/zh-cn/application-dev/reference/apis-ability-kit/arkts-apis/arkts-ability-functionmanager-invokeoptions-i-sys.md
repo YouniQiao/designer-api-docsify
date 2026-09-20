@@ -1,5 +1,9 @@
 # InvokeOptions（系统接口）
 
+```TypeScript
+interface InvokeOptions
+```
+
 Function调用的可选参数。包含Function调用时的应用上下文信息。
 
 **起始版本：** 26.0.0

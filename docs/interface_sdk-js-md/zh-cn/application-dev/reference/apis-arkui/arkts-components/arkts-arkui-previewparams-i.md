@@ -1,5 +1,9 @@
 # PreviewParams
 
+```TypeScript
+interface PreviewParams
+```
+
 @Preview参数对象。
 
 设置@Preview的参数，指定预览设备的相关属性，如不同设备、不同屏幕状态等。

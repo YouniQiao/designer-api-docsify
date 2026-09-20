@@ -1,5 +1,9 @@
 # RatingConfiguration
 
+```TypeScript
+declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>
+```
+
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
 
 **继承/实现关系：** RatingConfiguration extends CommonConfiguration<RatingConfiguration>
@@ -42,7 +46,7 @@ rating: number
 
 小于0取0，大于[stars](arkts-arkui-rating-comp-attribute.md#stars)取最大值stars。
 
-该参数支持[&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 

@@ -1,5 +1,9 @@
 # RowOptions
 
+```TypeScript
+declare interface RowOptions
+```
+
 Sets the spacing between child components of the **Row** component.
 
 > **NOTE:** 

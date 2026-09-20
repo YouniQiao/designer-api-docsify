@@ -1,5 +1,9 @@
 # BlurOptions
 
+```TypeScript
+declare interface BlurOptions
+```
+
 灰阶模糊参数。
 
 **起始版本：** 11

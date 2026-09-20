@@ -1,5 +1,9 @@
 # RemoteObject
 
+```TypeScript
+class RemoteObject extends IRemoteObject
+```
+
 实现远程对象。服务提供者必须继承此类。
 
 **继承/实现关系：** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
@@ -603,6 +607,8 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
+<a id="onremotemessagerequest-1"></a>
+
 ## onRemoteMessageRequest
 
 ```TypeScript
@@ -836,6 +842,8 @@ try {
 }
 ```
 
+<a id="sendmessagerequest-1"></a>
+
 ## sendMessageRequest
 
 ```TypeScript
@@ -1027,6 +1035,8 @@ try {
 }
 ```
 
+<a id="sendrequest-1"></a>
+
 ## sendRequest
 
 ```TypeScript
@@ -1142,6 +1152,8 @@ try {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
+
+<a id="sendrequest-2"></a>
 
 ## sendRequest
 

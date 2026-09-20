@@ -1,5 +1,9 @@
 # DatePicker属性/事件
 
+```TypeScript
+declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>
+```
+
 除支持通用属性外，还支持以下属性：
 
 除支持通用事件外，还支持以下事件：
@@ -78,6 +82,8 @@ disappearTextStyle(value: PickerTextStyle)
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
+<a id="disappeartextstyle-1"></a>
+
 ## disappearTextStyle
 
 ```TypeScript
@@ -145,6 +151,8 @@ lunar(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 日期是否显示为农历。<br>- true：显示为农历。<br>- false：不显示为农历。<br>默认值：false |
+
+<a id="lunar-1"></a>
 
 ## lunar
 
@@ -218,6 +226,8 @@ onDateChange(callback: Callback<Date>)
 | --- | --- | --- | --- |
 | callback | Callback&lt;Date&gt; | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。适用于需要在用户确认日期选择后获取选中日期、更新界面或执行业务逻辑的场景。<br>**适用版本：** 18 |
 
+<a id="ondatechange-1"></a>
+
 ## onDateChange
 
 ```TypeScript
@@ -266,6 +276,8 @@ selectedTextStyle(value: PickerTextStyle)
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
 
+<a id="selectedtextstyle-1"></a>
+
 ## selectedTextStyle
 
 ```TypeScript
@@ -309,6 +321,8 @@ textStyle(value: PickerTextStyle)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
+
+<a id="textstyle-1"></a>
 
 ## textStyle
 

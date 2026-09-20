@@ -1,5 +1,9 @@
 # LineOptions
 
+```TypeScript
+interface LineOptions
+```
+
 Describes the options of the line.
 
 > **NOTE:** 

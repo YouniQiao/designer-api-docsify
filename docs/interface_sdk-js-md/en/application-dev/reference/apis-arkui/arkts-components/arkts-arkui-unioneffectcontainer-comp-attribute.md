@@ -1,5 +1,9 @@
 # UnionEffectContainer properties/events
 
+```TypeScript
+declare class UnionEffectContainerAttribute extends CommonMethod<UnionEffectContainerAttribute>
+```
+
 Universal attributes are supported. The width and height can be set.
 
 > **NOTE:** 

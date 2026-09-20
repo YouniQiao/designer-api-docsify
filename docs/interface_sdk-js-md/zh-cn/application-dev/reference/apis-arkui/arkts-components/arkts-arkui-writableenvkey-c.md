@@ -1,5 +1,9 @@
 # WritableEnvKey
 
+```TypeScript
+declare class WritableEnvKey
+```
+
 定义可写的系统环境变量Key集合，用于通过@Env装饰器获取对应的系统环境变量。可通过[WithEnv](../arkts-apis/arkts-arkui-arkui-withenv-con.md)中的env方法设置局部环境变量值以影响后代组件渲染，具体示例请参见[示例2（设置局部布局方向）](../../../reference/apis-arkui/arkui-ts/ts-container-with-env.md#示例2设置局部布局方向)。
 
 **起始版本：** 26.0.0

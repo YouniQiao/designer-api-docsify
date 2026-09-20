@@ -1,5 +1,9 @@
 # TextDataDetectorConfig
 
+```TypeScript
+declare interface TextDataDetectorConfig
+```
+
 该配置只支持Text组件和RichEditor组件。
 
 **起始版本：** 11

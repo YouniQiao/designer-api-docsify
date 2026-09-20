@@ -86,6 +86,8 @@ hidebug.dumpJsRawHeapData(true, true, true).then((filePathArray: Array<string>) 
 ```
 
 
+<a id="dumpjsrawheapdata-1"></a>
+
 ## dumpJsRawHeapData
 
 ```TypeScript
@@ -138,6 +140,8 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 
 参见 [dumpJsRawHeapData](#dumpjsrawheapdata)
 
+
+<a id="dumpjsrawheapdata-2"></a>
 
 ## dumpJsRawHeapData
 

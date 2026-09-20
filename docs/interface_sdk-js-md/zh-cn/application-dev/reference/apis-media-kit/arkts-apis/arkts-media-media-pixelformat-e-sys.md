@@ -1,5 +1,9 @@
 # PixelFormat（系统接口）
 
+```TypeScript
+enum PixelFormat
+```
+
 获取视频缩略图时，输出的缩略图采用的颜色格式枚举。
 
 **起始版本：** 11

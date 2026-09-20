@@ -1,5 +1,9 @@
 # Summary
 
+```TypeScript
+class Summary
+```
+
 描述统一数据对象的数据摘要，包括数据类型和大小。
 
 **起始版本：** 10

@@ -63,6 +63,8 @@ call.getMainCallId(1).then((data: number) => {
 ```
 
 
+<a id="getmaincallid-1"></a>
+
 ## getMainCallId
 
 ```TypeScript

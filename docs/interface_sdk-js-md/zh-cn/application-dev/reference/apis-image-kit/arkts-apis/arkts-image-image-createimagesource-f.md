@@ -149,6 +149,8 @@ async function CreateImageSource(context : Context) {
 ```
 
 
+<a id="createimagesource-2"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -226,6 +228,8 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource
 参见 [createImageSource](#createimagesource)
 
 
+<a id="createimagesource-4"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -258,6 +262,8 @@ function createImageSource(fd: number): ImageSource
 
 参见 [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-6"></a>
 
 ## createImageSource
 
@@ -295,6 +301,8 @@ function createImageSource(fd: number, options: SourceOptions): ImageSource
 参见 [createImageSource](#createimagesource)
 
 
+<a id="createimagesource-8"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -329,6 +337,8 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 参见 [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-10"></a>
 
 ## createImageSource
 
@@ -365,6 +375,8 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 
 参见 [createImageSource](#createimagesource)
 
+
+<a id="createimagesource-12"></a>
 
 ## createImageSource
 

@@ -62,6 +62,8 @@ call.setMuted().then(() => {
 ```
 
 
+<a id="setmuted-1"></a>
+
 ## setMuted
 
 ```TypeScript

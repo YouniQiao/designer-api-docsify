@@ -1,5 +1,9 @@
 # OnFirstContentfulPaintEvent
 
+```TypeScript
+declare interface OnFirstContentfulPaintEvent
+```
+
 Defines the callback information for the first content paint on the web page, including the load time and paint time. It is suitable for scenarios where monitoring page rendering performance is required, improving performance optimization accuracy and user experience.
 
 **Since:** 12

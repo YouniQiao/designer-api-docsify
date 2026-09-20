@@ -1,5 +1,9 @@
 # ReplaceEffectType
 
+```TypeScript
+declare enum ReplaceEffectType
+```
+
 The replace effect type of symbol.
 
 **Since:** 20

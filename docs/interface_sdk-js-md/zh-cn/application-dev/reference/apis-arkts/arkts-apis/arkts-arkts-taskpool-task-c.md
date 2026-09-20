@@ -1,5 +1,9 @@
 # Task
 
+```TypeScript
+class Task
+```
+
 调用Task中的任何接口前必须先使用构造函数创建Task对象。任务可以多次执行，也可以放入任务组、串行队列或异步队列执行，还支持添加依赖关系。
 
 **起始版本：** 9
@@ -123,6 +127,8 @@ let taskName: string = "taskName";
 let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
 let name: string = task.name;
 ```
+
+<a id="constructor-1"></a>
 
 ## constructor
 

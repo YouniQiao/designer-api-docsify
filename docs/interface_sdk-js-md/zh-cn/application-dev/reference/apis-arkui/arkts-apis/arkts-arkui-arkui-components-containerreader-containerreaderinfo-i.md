@@ -1,5 +1,9 @@
 # ContainerReaderInfo
 
+```TypeScript
+export interface ContainerReaderInfo
+```
+
 定义ContainerReader组件的配置选项，用于指定容器尺寸读取和断点值获取的参数，不能通过此参数改变组件尺寸和断点值。
 
 **起始版本：** 26.0.0

@@ -108,6 +108,8 @@ try {
 ```
 
 
+<a id="getanglevariation-1"></a>
+
 ## getAngleVariation
 
 ```TypeScript
