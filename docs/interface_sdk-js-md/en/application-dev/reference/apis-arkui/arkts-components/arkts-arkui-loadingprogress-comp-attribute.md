@@ -64,7 +64,7 @@ Creates a content modifier.
 enableLoading(value: boolean)
 ```
 
-Sets whether to display the LoadingProgress animation. The component still takes up space in the layout when the loading animation is not shown. The universal attribute Visibility.Hidden hides the entire component area, including the regions specified by [border](arkts-arkui-common-comp-commonmethod-c.md#border) and padding. In contrast, when the value of **enableLoading** is set to **false**, only the loading animation itself is hidden without affecting the borders or other elements.
+Sets whether to display the LoadingProgress animation. The component still takes up space in the layout when the loading animation is not shown. The universal attribute Visibility.Hidden hides the entire component area, including the regions specified by [border](arkts-arkui-common-comp-commonmethod-c.md#border) and [padding](arkts-arkui-common-comp-commonmethod-c.md#padding). In contrast, when the value of **enableLoading** is set to **false**, only the loading animation itself is hidden without affecting the borders or other elements.
 
 **Since:** 10
 

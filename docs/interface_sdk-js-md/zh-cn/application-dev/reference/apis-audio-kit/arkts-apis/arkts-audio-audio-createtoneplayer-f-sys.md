@@ -14,6 +14,8 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 
 创建DTMF播放器。使用callback异步回调。
 
+使用场景包括系统电话应用拨号界面的按键音，以及电话呼叫的回铃音。
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone

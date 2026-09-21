@@ -49,8 +49,8 @@ constructor(value: CustomDialogControllerOptions)
 > **说明：** 
 > 
 > 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置背景色
-> backgroundColor、背景模糊
-> backgroundBlurStyle
+> [backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、背景模糊
+> [backgroundBlurStyle](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle)
 > 、尺寸设置等属性，通过属性绑定的状态变量来实现动态刷新的效果。
 > 
 > 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。

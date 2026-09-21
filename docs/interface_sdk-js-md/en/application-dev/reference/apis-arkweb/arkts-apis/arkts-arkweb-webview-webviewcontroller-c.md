@@ -278,7 +278,7 @@ Sets the bottom avoidance height of the visible viewport on the web page.
 > recommended that this API be used when the editable area of the web page is tapped to pull up the keyboard. If
 > this API is used in this scenario, the keyboard avoidance mode is set to **OVERLAYS_CONTENT**.
 > 
-> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance mode is specified by keyboardAvoidMode().
+> - When the height of this API is set to **0**, the web page content can be restored, and the keyboard avoidance mode is specified by [keyboardAvoidMode()](../arkts-components/arkts-arkweb-web-comp-attribute.md#keyboardavoidmode).
 
 **Since:** 20
 
@@ -1009,9 +1009,7 @@ Disables the camera capture of the current web page.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [startCamera](#startcamera).
-```
 
 ## constructor
 
@@ -1102,8 +1100,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## createPdf
@@ -1315,9 +1334,7 @@ Creates web message ports.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext).
-```
 
 ## createWebPrintDocumentAdapter
 
@@ -1593,8 +1610,27 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          let str=objName.test();
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## enableAdsBlock
@@ -2108,9 +2144,7 @@ Obtains the current ArkWeb kernel version.
 
 **Examples**
 
-```TypeScript
 For details, see [setActiveWebEngineVersion](#setactivewebengineversion).
-```
 
 ## getAttachState
 
@@ -2140,7 +2174,7 @@ Obtains the historical information list of the current WebView.
 
 > **NOTE:** 
 > 
-> onLoadIntercept is triggered when the loading starts. At this time, no
+> [onLoadIntercept](../arkts-components/arkts-arkweb-web-comp-attribute.md#onloadintercept) is triggered when the loading starts. At this time, no
 > historical node is generated. Therefore, the historical stack obtained by calling **getBackForwardEntries** in
 > **onLoadIntercept** does not include the page that is being loaded.
 
@@ -3094,8 +3128,36 @@ struct Index {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.testBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## getMediaPlaybackState
@@ -3623,8 +3685,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        body {
+          width:3000px;
+          height:6000px;
+          padding-right:170px;
+          padding-left:170px;
+          border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## getSecurityLevel
@@ -3746,35 +3829,6 @@ Queries whether the subframe error page feature is enabled.
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 **Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("iframe_error.html"), controller: this.controller })
-        .onControllerAttached(() => {
-          // Enable the error page feature for mainframe and subframe.
-          this.controller.setErrorPageEnabled(true, true);
-          // Check whether the subframe error page feature is enabled.
-          let isSubframeEnabled: boolean = this.controller.getSubframeErrorPageEnabled();
-          console.info("Subframe error page enabled: " + isSubframeEnabled);
-
-          // Enable only the mainframe error page feature, not the subframe.
-          this.controller.setErrorPageEnabled(true, false);
-          let isSubframeEnabled2: boolean = this.controller.getSubframeErrorPageEnabled();
-          console.info("Subframe error page enabled after disable: " + isSubframeEnabled2);
-        })
-    }
-  }
-}
-```
 
 ## getSurfaceId
 
@@ -4006,8 +4060,37 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 You can customize User-Agent based on the default User-Agent.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State ua: string = "";
+
+  aboutToAppear(): void {
+    webview.once('webInited', () => {
+      try {
+        // Customize a User-Agent on the application side.
+        this.ua = this.controller.getUserAgent() + 'xxx';
+        this.controller.setCustomUserAgent(this.ua);
+      } catch (error) {
+        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+      }
+    })
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## getUserAgentClientHintsEnabled
@@ -4030,9 +4113,7 @@ Queries whether the User-Agent Client Hints feature is currently enabled.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-```
 
 ## getUserAgentMetadata
 
@@ -4060,9 +4141,7 @@ Obtains the UserAgentMetadata information of a user agent.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-```
 
 ## getWebId
 
@@ -4263,8 +4342,20 @@ Loads the dynamic library file of the web engine through this API before the **W
 
 **Examples**
 
-```TypeScript
 This example uses EntryAbility to describe how to load the dynamic library of the Web component during the Ability creation phase.
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.initializeWebEngine()
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## injectOfflineResources
@@ -4305,34 +4396,249 @@ After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode
 
 **Examples**
 
-```TypeScript
 When appropriate, use this API in conjunction with dynamic components. Offline Web components are used to inject resources into the engine's memory cache, and at the appropriate time, the service Web components load and utilize these resources. The following is a code example:
 
 First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
-```
 
 ```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
 Write the basic code required by the dynamic component.
-```
 
 ```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
 Write the component code for injecting resources. In this example, the local resource content reads the local file in the rawfile directory through the file reading API.
-```
 
 ```TypeScript
+// InjectWebview.ets
+import { webview } from '@kit.ArkWeb';
+import { resourceConfigs } from "./Resource";
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(async () => {
+      try {
+        data.controller.injectOfflineResources(await getData (data.context));
+      } catch (err) {
+        console.error("error: " + err.code + " " + err.message);
+      }
+    })
+    .fileAccess(true)
+}
+
+export const injectWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export async function getData(context: UIContext) {
+  const resourceMapArr: Array<webview.OfflineResourceMap> = [];
+
+  // Read the configuration and read the file content from the rawfile directory.
+  for (let config of resourceConfigs) {
+    let buf: Uint8Array = new Uint8Array(0);
+    if (config.localPath) {
+      buf = await readRawFile(config.localPath, context);
+    }
+
+    resourceMapArr.push({
+      urlList: config.urlList,
+      resource: buf,
+      responseHeaders: config.responseHeaders,
+      type: config.type,
+    })
+  }
+
+  return resourceMapArr;
+}
+
+export async function readRawFile(url: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(url);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
 Compile the code of the service component.
-```
 
 ```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // The component can be extended based on service requirements.
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
 Write the resource configuration information.
-```
 
 ```TypeScript
+// Resource.ets
+import { webview } from '@kit.ArkWeb';
+
+export interface ResourceConfig {
+  urlList: Array<string>,
+  type: webview.OfflineResourceType,
+  responseHeaders: Array<Header>,
+  localPath: string, // Path for storing local resources in the rawfile directory.
+}
+
+export const resourceConfigs: Array<ResourceConfig> = [
+  {
+    localPath: "example.png",
+    urlList: [
+      "https://www.example.com/",
+      "https://www.example.com/path1/example.png",
+      "https://www.example.com/path2/example.png",
+    ],
+    type: webview.OfflineResourceType.IMAGE,
+    responseHeaders: [
+      { headerKey: "Cache-Control", headerValue: "max-age=1000" },
+      { headerKey: "Content-Type", headerValue: "image/png" },
+    ]
+  },
+  {
+    localPath: "example.js",
+    urlList: [ // Only one URL is provided, which serves as both the resource source and the network request address.
+      "https://www.example.com/example.js",
+    ],
+    type: webview.OfflineResourceType.CLASSIC_JS,
+    responseHeaders: [
+      // Used in <script crossorigin="anonymous"/> mode to provide additional response headers.
+      { headerKey: "Cross-Origin", headerValue:"anonymous" }
+    ]
+  },
+];
+```
+
 Use the component on the page.
-```
 
 ```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { injectWebview } from "./InjectWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State injectNode: NodeController | undefined = undefined;
+  injectController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // Initialize the Web component for injecting local resources. Provide an empty HTML page as the URL.
+    this.injectNode = createNode(injectWebview,
+        { url: "https://www.example.com/empty.html", controller: this.injectController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // Load the Web component used by the service at a proper time. In this example, the button is clicked.
+      Button("Load Page")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url: "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // The Web component used for the service.
+      NodeContainer(this.businessNode);
+    }
+  }
+}
+```
+
 Example of a loaded HTML web page:
+
+```TypeScript
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <img src="https://www.example.com/path1/request.png" />
+  <img src="https://www.example.com/path2/request.png" />
+  <script src="https://www.example.com/example.js" crossorigin="anonymous"></script>
+</body>
+</html>
 ```
 
 ## isActiveWebEngineEvergreen
@@ -4355,8 +4661,22 @@ Checks whether the system is using the evergreen kernel, that is, the latest ker
 
 **Examples**
 
-```TypeScript
 This example shows how to determine whether the evergreen kernel is used in the EntryAbility creation phase.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    if (webview.WebviewController.isActiveWebEngineEvergreen()) {
+      console.info("Active Web Engine is Evergreen")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## isAdsBlockEnabled
@@ -4776,8 +5096,37 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 
 **Examples**
 
-```TypeScript
 When both baseUrl and historyUrl are empty:
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
+              "text/html",
+              // UTF-8 is charset.
+              "UTF-8"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ```TypeScript
@@ -4811,16 +5160,104 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 Specifies baseUrl.
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=aa/bb.jpg>", // Attempt to load the image from "https: // xxx.com/" + "aa/bb.jpg".
+              "text/html",
+              "UTF-8",
+              "https://xxx.com/",
+              "about:blank"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Example of loading local resource:
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  updateContent: string = '<body><div><image src="resource://rawfile/xxx.png" alt="image -- end" width="500" height="250"></image></div></body>'
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            // UTF-8 is charset.
+            this.controller.loadData(this.updateContent, "text/html", "UTF-8", " ", " ");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Load the sandbox image.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=bb.jpg>", // Try to download the image from "file:///xxx/" + "bb.jpg".
+              "text/html",
+              "UTF-8",
+              // Load the image path in the local application sandbox. Change the path to the actual sandbox path.
+              "file:///data/storage/el2/base/haps/entry/files/data/.cache_dir/",
+              ""
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .fileAccess(true) // Enable the file access functionality to load images in the application sandbox.
+    }
+  }
+}
 ```
 
 ## loadUrl
@@ -4909,26 +5346,111 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 There are three methods for loading local resource files:
 
 Using $rawfile.
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // Load a local resource file through $rawfile.
+            this.controller.loadUrl($rawfile('index.html'));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Resource protocol.
 
 Using the  protocol prefix can avoid the issue where the URL is truncated by the number sign (#) when the conventional  method is used to handle URLs containing "#" for routing. When a URL contains a "#", the content following the "#" is treated as a fragment.
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // Load local resource files through the resource protocol.
+            this.controller.loadUrl("resource://rawfile/index.html#home");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Create an index.html file in src/main/resources/rawfile.
-```
 
 ```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<div id="content"></div>
+
+<script>
+  function loadContent() {
+    var hash = window.location.hash;
+    var contentDiv = document.getElementById('content');
+
+    if (hash === '#home') {
+      contentDiv.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
+    } else {
+      contentDiv.innerHTML = '<h1>Default Page</h1><p>This is the default content.</p>';
+    }
+  }
+
+  // Load the UI.
+  window.addEventListener('load', loadContent);
+
+  // Update the UI when the hash changes.
+  window.addEventListener('hashchange', loadContent);
+</script>
+</body>
+</html>
+```
+
 Load the local file through the sandbox path. For details, see the sample code for loading the sandbox path in [Loading Web Pages](../../../web/web-page-loading-with-web-components.md#loading-local-pages).
 
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World</p>
+  </body>
+</html>
 ```
 
 ## off('controllerAttachStateChange')
@@ -4952,8 +5474,57 @@ Deregisters the attach state event of **WebViewController**. After the deregistr
 
 **Examples**
 
-```TypeScript
 Use on to register multiple callbacks, which are triggered when the attach state changes. Use off to deregister a callback or all callbacks.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  // Build a callback.
+  handleControllerAttachStateChange = (state: webview.ControllerAttachState) => {
+    if (state == webview.ControllerAttachState.UNATTACHED) {
+      console.info('handleControllerAttachStateChange: Controller is unattached.');
+    } else {
+      console.info('handleControllerAttachStateChange: Controller is attached.');
+    }
+  };
+  aboutToAppear() {
+    try {
+      this.controller.on('controllerAttachStateChange', this.handleControllerAttachStateChange);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+    try {
+      // Register a callback to receive the notification of the controller attach state change.
+      this.controller.on('controllerAttachStateChange', (state: webview.ControllerAttachState) => {
+        if (state == webview.ControllerAttachState.UNATTACHED) {
+          console.info('Controller is unattached.');
+        } else {
+          console.info('Controller is attached.');
+        }
+      })
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+  aboutToDisappear() {
+    // Cancel the specified registered callback.
+    // this.controller.off('controllerAttachStateChange', this.handleControllerAttachStateChange);
+    // Cancel all registered callbacks.
+    this.controller.off('controllerAttachStateChange');
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## on('controllerAttachStateChange')
@@ -4977,9 +5548,7 @@ Registers the attach state event of **WebViewController**, which obtains the att
 
 **Examples**
 
-```TypeScript
 For details, see [off](#offcontrollerattachstatechange).
-```
 
 ## onActive
 
@@ -5368,8 +5937,39 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blue {
+          background-color: lightblue;
+        }
+        .green {
+          background-color: lightgreen;
+        }
+        .blue, .green {
+         font-size:16px;
+         height:200px;
+         text-align: center;       /* Horizontally centered */
+         line-height: 200px;       /* Vertically centered (the height matches the container height) */
+        }
+    </style>
+</head>
+<body>
+<div class="blue" >webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+</body>
+</html>
 ```
 
 ## pageUp
@@ -5552,8 +6152,33 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+    
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
 ```
 
 ## pauseMicrophone
@@ -5583,9 +6208,7 @@ Pauses microphone capture on the current web page.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [resumeMicrophone](#resumemicrophone).
-```
 
 ## postMessage
 
@@ -5690,8 +6313,27 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Message Port Demo</title>
+</head>
+
+  <body>
+    <h1>WebView Message Port Demo</h1>
+    <div>
+        <input type="button" value="SendToEts" onclick="PostMsgToEts(msgFromJS.value);"/><br/>
+        <input id="msgFromJS" type="text" value="send this message from HTML to ets"/><br/>
+    </div>
+    <p class="output">display received message send from ets</p>
+  </body>
+  <script src="xxx.js"></script>
+</html>
 ```
 
 ```TypeScript
@@ -5847,32 +6489,213 @@ The API determines whether to update the existing bytecode cache based on the pr
 
 **Examples**
 
-```TypeScript
 The API is recommended for use in conjunction with dynamic components. Employ offline Web components to generate bytecode caches, and at the appropriate time, load service Web components to utilize these bytecode caches. The following is a code example:
 
 First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
-```
 
 ```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
 Write the basic code required by the dynamic component.
-```
 
 ```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
 Write a component for generating bytecode caches. In this example, the local JavaScript resource content is read through the file reading API from a local file in the rawfile directory.
-```
 
 ```TypeScript
+// PrecompileWebview.ets
+import { BuilderData } from "./DynamicComponent";
+import { Config, configs } from "./PrecompileConfig";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(() => {
+      precompile(data.controller, configs, data.context);
+    })
+    .fileAccess(true)
+}
+
+export const precompileWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export const precompile = async (controller: WebviewController, configs: Array<Config>, context: UIContext) => {
+  for (const config of configs) {
+    let content = await readRawFile(config.localPath, context);
+
+    try {
+      controller.precompileJavaScript(config.url, content, config.options)
+        .then(errCode => {
+          console.error("precompile successfully! " + errCode);
+        }).catch((errCode: number) => {
+          console.error("precompile failed. " + errCode);
+      });
+    } catch (err) {
+      console.error("precompile failed. " + err.code + " " + err.message);
+    }
+  }
+}
+
+async function readRawFile(path: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
 JavaScript resources can also be obtained through [data request](../../apis-network-kit/arkts-apis/arkts-network-net-http.md). However, the HTTP response headers obtained through this method are not in the standard HTTP response header format. You need to convert the response headers to the standard HTTP response header format before use. For example, if the response header obtained through data request is e-tag, it needs to be converted to E-Tag before use.
 
 Compile the code of the service component.
-```
 
 ```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // The component can be extended based on service requirements.
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
 Write the resource configuration information.
-```
 
 ```TypeScript
+// PrecompileConfig.ets
+import { webview } from '@kit.ArkWeb'
+
+export interface Config {
+  url:  string,
+  localPath: string, // Local resource path
+  options: webview.CacheOptions
+}
+
+export let configs: Array<Config> = [
+  {
+    url: "https://www.example.com/example.js",
+    localPath: "example.js",
+    options: {
+      responseHeaders: [
+        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
+        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
+      ]
+    }
+  }
+]
+```
+
 Use the component on the page.
+
+```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { precompileWebview } from "./PrecompileWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State precompileNode: NodeController | undefined = undefined;
+  precompileController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // Initialize the Web component used to inject local resources.
+    this.precompileNode = createNode(precompileWebview,
+      { url: "https://www.example.com/empty.html", controller: this.precompileController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // Load the Web component used by the service at a proper time. In this example, the button is clicked.
+      Button("Load Page")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url:  "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // The Web component used for the service.
+      NodeContainer(this.businessNode);
+    }
+  }
+}
 ```
 
 ## prefetchPage
@@ -6384,8 +7207,40 @@ struct Index {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <p id="asyncDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.asyncTestBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+
+          objAsyncName.asyncTest();
+          objAsyncName.asyncString("async test data");
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## removeAllCache
@@ -6630,14 +7485,66 @@ If the value of **state** is too large, exceptions may occur. It is recommended 
 
 **Examples**
 
-```TypeScript
 To perform operations on files, you must first import the fs module. For details, see [File Management](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md).
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('RestoreWebState')
+        .onClick(() => {
+          try {
+            let path: string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // Synchronously open a file.
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE);
+              let stat = fileIo.statSync(path);
+              let size = stat.size;
+              let buf = new ArrayBuffer(size);
+              fileIo.read(file.fd, buf, (err, readLen) => {
+                if (err) {
+                  console.error("console error with error message: " + err.message + ", error code: " + err.code);
+                } else {
+                  console.info("read file data succeed");
+                  this.controller.restoreWebState(new Uint8Array(buf.slice(0, readLen)));
+                  fileIo.closeSync(file);
+                }
+              });
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Modify the EntryAbility.ets file.
 
 Obtain the path of the application cache file.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // Data synchronization between the UIAbility component and the page can be implemented by binding cacheDir to the AppStorage object.
+    AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+  }
+}
 ```
 
 ## resumeAllMedia
@@ -6736,8 +7643,33 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
 ```
 
 ## resumeMicrophone
@@ -6842,8 +7774,38 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+ </head>
+ <body>
+   <video id="video" width="400px" height="400px" autoplay="autoplay">
+   </video>
+   <input type="button" title="HTML5 Microphone" value="Enable Microphone" onclick="getMedia()" />
+   <script>
+     function getMedia() {
+       let constraints = {
+         video: {
+           width: 500,
+           height: 500
+         },
+         audio: true
+       }
+       let video = document.getElementById("video");
+       let promise = navigator.mediaDevices.getUserMedia(constraints);
+       promise.then(function(MediaStream) {
+         video.srcObject = MediaStream;
+         video.play();
+       })
+     }
+   </script>
+ </body>
+</html>
 ```
 
 ## runJavaScript
@@ -6929,8 +7891,25 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
 ```
 
 <a id="runjavascript-1"></a>
@@ -7019,8 +7998,25 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
 ```
 
 ## runJavaScriptExt
@@ -7029,7 +8025,7 @@ HTML file to be loaded:
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-Executes a JavaScript script asynchronously and returns the script execution result through a promise. **runJavaScriptExt** can be invoked only after **loadUrl** is executed, for example, in onPageEnd.
+Executes a JavaScript script asynchronously and returns the script execution result through a promise. **runJavaScriptExt** can be invoked only after **loadUrl** is executed, for example, in [onPageEnd](../arkts-components/arkts-arkweb-web-comp-attribute.md#onpageend).
 
 > **NOTE:** 
 > 
@@ -7228,8 +8224,21 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
 ```
 
 <a id="runjavascriptext-1"></a>
@@ -7447,8 +8456,21 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
 ```
 
 ## scrollBy
@@ -7516,8 +8538,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## scrollByWithResult
@@ -7581,8 +8623,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## scrollTo
@@ -7650,8 +8712,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## searchAllAsync
@@ -7716,8 +8798,16 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World Highlight Hello World</p>
+  </body>
+</html>
 ```
 
 ## searchNext
@@ -7803,14 +8893,57 @@ Serializes the page status history of the current WebView.
 
 **Examples**
 
-```TypeScript
 To perform operations on files, you must first import the fs module. For details, see [File Management](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md).
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('serializeWebState')
+        .onClick(() => {
+          try {
+            let state = this.controller.serializeWebState();
+            let path:string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // Synchronously open a file.
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+              fileIo.writeSync(file.fd, state.buffer);
+              fileIo.closeSync(file.fd);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 Modify the EntryAbility.ets file.
 
 Obtain the path of the application cache file.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        // Data synchronization between the UIAbility component and the page can be implemented by binding cacheDir to the AppStorage object.
+        AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+    }
+}
 ```
 
 ## setActiveWebEngineVersion
@@ -7839,8 +8972,23 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 
 **Examples**
 
-```TypeScript
 This example shows how to set the ArkWeb kernel version in the EntryAbility creation phase.
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.setActiveWebEngineVersion(webview.ArkWebEngineVersion.M132)
+    if (webview.WebviewController.getActiveWebEngineVersion() == webview.ArkWebEngineVersion.M132) {
+      console.info("Active Web Engine Version set to M132")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## setAppCustomUserAgent
@@ -8335,7 +9483,7 @@ Sets a custom user agent, which will overwrite the default user agent.
 
 > **NOTE:** 
 > 
-> - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the onControllerAttached callback. Do not set it in the
+> - When **src** of the **Web** component is set to a URL, it is recommended to set **User-Agent** in the [onControllerAttached](../arkts-components/arkts-arkweb-web-comp-attribute.md#oncontrollerattached) callback. Do not set it in the
 > **onLoadIntercept** callback, as this may cause the setting to fail or lead to unexpected results.
 > 
 > - If **User-Agent** is not set in the **onControllerAttached** callback, calling **setCustomUserAgent** later may cause an anomaly where the loaded page does not match the actually set **User-Agent**.
@@ -8515,7 +9663,7 @@ When **enable** is set to **true**, an error page is displayed when a mainframe 
 > 
 > - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
 > 
-> - You can use errorPageEvent.request.isMainFrame() to determine whether the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
+> - You can use [errorPageEvent.request.isMainFrame()](../arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe) to determine whether the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
 > **onOverrideErrorPage** callback.
 
 **Since:** 26.0.0
@@ -8611,9 +9759,7 @@ Sets the IP address of the host after domain name resolution.
 
 **Examples**
 
-```TypeScript
 For details, see [clearHostIP](#clearhostip).
-```
 
 ## setHttpDns
 
@@ -8720,8 +9866,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<h1>online attribute </h1>
+<p id="demo"></p>
+<button onclick="func()">click</button>
+<script>
+    // Check whether the browser is online.
+    var online1 = navigator.onLine;
+    document.getElementById("demo").innerHTML = "Browser online:" + online1;
+
+    function func(){
+      var online2 = navigator.onLine;
+      document.getElementById("demo").innerHTML = "Browser online:" + online2;
+    }
+</script>
+</body>
+</html>
 ```
 
 ## setPathAllowingUniversalAccess
@@ -8730,7 +9896,7 @@ HTML file to be loaded:
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of fileAccess will be overridden by the behavior of this API.)
+Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of [fileAccess](../arkts-components/arkts-arkweb-web-comp-attribute.md#fileaccess) will be overridden by the behavior of this API.)
 
 Using setPathAllowingUniversalAccess to relax cross-origin access restrictions on directories is a high-risk operation. Based on the principle of least privilege, the paths for el1 and el2 are fixed. The paths in the path list must conform to one of the following path formats:
 
@@ -8759,7 +9925,7 @@ Using setPathAllowingUniversalAccess to relax cross-origin access restrictions o
 * /data/storage/el2/base/temp  
 * /data/storage/el2/base/haps/entry/temp/example
 
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
+If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the [fileAccess](../arkts-components/arkts-arkweb-web-comp-attribute.md#fileaccess).
 
 **Since:** 12
 
@@ -8814,12 +9980,60 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 Load the HTML file, which is located in the application resource directory resource/resfile/index.html.
-```
 
 ```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <script>
+        function getFile() {
+            var file = "file:///data/storage/el1/bundle/entry/resources/resfile/js/script.js";
+            var xmlHttpReq = new XMLHttpRequest();
+            xmlHttpReq.onreadystatechange = function(){
+                console.info("readyState:" + xmlHttpReq.readyState);
+                console.info("status:" + xmlHttpReq.status);
+                if(xmlHttpReq.readyState == 4){
+                    if (xmlHttpReq.status == 200) {
+                // If the path list is set on the eTS, resources can be obtained.
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " success";
+                    } else {
+                // If the path list is not set on the eTS, a CORS error is triggered.
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " failed";
+                    }
+                }
+            }
+            xmlHttpReq.open("GET", file);
+            xmlHttpReq.send(null);
+        }
+
+    </script>
+</head>
+
+<body>
+<div class="page">
+    <button id="example" onclick="getFile()">stealFile</button>
+</div>
+<div id="text"></div>
+</body>
+
+</html>
+```
+
 In the HTML file, use the file protocol to access the local JS file through XMLHttpRequest. The JS file is stored in resource/resfile/js/script.js.
+
+```TypeScript
+const body = document.body;
+const element = document.createElement('div');
+element.textContent = 'success';
+body.appendChild(element);
 ```
 
 ## setPrintBackground
@@ -9034,8 +10248,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+      body {
+        width:2560px;
+        height:2560px;
+        padding-right:170px;
+        padding-left:170px;
+        border:5px solid blueviolet;
+      }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## setServiceWorkerWebSchemeHandler
@@ -9636,9 +10871,7 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
-```
 
 ## setWebDebuggingAccess
 
@@ -9917,8 +11150,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:3000px;
+            height:3000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## startCamera
@@ -10018,8 +11271,38 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <video id="video" width="400px" height="400px" autoplay>
+    </video>
+    <input type="button" title="HTML5 Camera" value="Enable Camera" onclick="getMedia()" />
+    <script>
+      function getMedia() {
+        let constraints = {
+          video: {
+            width: 500,
+            height: 500
+          },
+          audio: true
+        }
+        let video = document.getElementById("video");
+        let promise = navigator.mediaDevices.getUserMedia(constraints);
+        promise.then(function(mediaStream) {
+          video.srcObject = mediaStream;
+          video.play();
+        })
+      }
+    </script>
+  </body>
+</html>
 ```
 
 ## startDownload
@@ -10204,9 +11487,7 @@ Stops the camera capture of the current web page.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [startCamera](#startcamera).
-```
 
 ## stopMicrophone
 
@@ -10228,9 +11509,7 @@ Stops microphone capture on the current web page.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [resumeMicrophone](#resumemicrophone).
-```
 
 ## storeWebArchive
 
@@ -10504,8 +11783,41 @@ Asynchronously waits for the **WebViewController** to be attached to the **Web**
 
 **Examples**
 
-```TypeScript
 In the initialization phase, set the WebViewController to wait for the attachment to complete. The timeout interval is 1000 ms. If the attachment is complete or times out, the callback is triggered.
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  async aboutToAppear() {
+    this.controller.waitForAttached(1000).then((state: webview.ControllerAttachState) => {
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        // The callback is triggered when the attachment is complete or times out.
+        console.info('Controller is attached.');
+      }
+    })
+    try {
+      const state = await this.controller.waitForAttached(1000);
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        console.info('Controller is attached.');
+      }
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## warmupServiceWorker

@@ -105,12 +105,28 @@ digest(): Promise<DataBlob>
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function mdByPromise() {
+  let md = cryptoFramework.createMd('SHA256');
+  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
+  let mdOutput = await md.digest();
+  console.info('[Promise]: MD result: ' + mdOutput.data);
+  console.info('[Promise]: MD len: ' + md.getMdLength());
+}
+```
+
 JS示例：
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="MdTest">Md异步测试</input>
+</div>
 ```
 
 ```TypeScript
@@ -224,12 +240,28 @@ digestSync(): DataBlob
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function mdBySync() {
+  let md = cryptoFramework.createMd('SHA256');
+  md.updateSync({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
+  let mdOutput = md.digestSync();
+  console.info('[Sync]: MD result: ' + mdOutput.data);
+  console.info('[Sync]: MD len: ' + md.getMdLength());
+}
+```
+
 JS示例：
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="MdTestSync">Md同步测试</input>
+</div>
 ```
 
 ```TypeScript

@@ -28,7 +28,7 @@ Push
 
 **废弃版本：** 13
 
-**替代接口：** pushPath
+**替代接口：** [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -44,7 +44,7 @@ Back
 
 **废弃版本：** 13
 
-**替代接口：** pop
+**替代接口：** [pop](arkts-arkui-navigation-comp-navpathstack-c.md#pop)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -60,7 +60,7 @@ Replace
 
 **废弃版本：** 13
 
-**替代接口：** replacePath
+**替代接口：** [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

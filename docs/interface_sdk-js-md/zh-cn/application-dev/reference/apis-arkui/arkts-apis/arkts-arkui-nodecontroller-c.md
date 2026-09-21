@@ -24,7 +24,7 @@ aboutToAppear?(): void
 
 > **说明：** 
 > 
-> 回调时机参考onAppear。
+> 回调时机参考[onAppear](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onappear)。
 
 **起始版本：** 11
 
@@ -124,7 +124,7 @@ onAttach?(): void
 
 > **说明：** 
 > 
-> 回调时机参考onAttach。
+> 回调时机参考[onAttach](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onattach)。
 
 **起始版本：** 18
 
@@ -166,7 +166,7 @@ onDetach?(): void
 
 > **说明：** 
 > 
-> 回调时机参考onDetach。
+> 回调时机参考[onDetach](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ondetach)。
 
 **起始版本：** 18
 

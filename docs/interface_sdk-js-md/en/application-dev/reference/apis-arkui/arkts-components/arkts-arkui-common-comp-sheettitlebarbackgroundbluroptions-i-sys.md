@@ -20,7 +20,7 @@ blurStyle?: SheetTitleBarBackgroundBlur
 
 Blur style. Set to GRADIENT to enable gradient blur effect. Default value: **SheetTitleBarBackgroundBlur.NONE**.
 
-**Type:** [SheetTitleBarBackgroundBlur](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e.md)
+**Type:** [SheetTitleBarBackgroundBlur](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e-sys.md)
 
 **Since:** 26.0.1
 

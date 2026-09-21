@@ -162,7 +162,7 @@ To enable haptic feedback, you must declare the following permission under **req
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -312,7 +312,7 @@ Compared with the [onChange](#onchange) event, this event is triggered earlier, 
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 18
 

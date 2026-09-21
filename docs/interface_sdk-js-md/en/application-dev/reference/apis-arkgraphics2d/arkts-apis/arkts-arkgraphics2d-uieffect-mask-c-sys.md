@@ -18,6 +18,34 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
+## createAtlasFrameMask
+
+```TypeScript
+static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask
+```
+
+Creates an atlas frame mask for sprite sheet frame animation. The mask carries atlas frame parameters used to drive atlas frame animation.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| atlasInfo | [drawing.AtlasImage](arkts-arkgraphics2d-drawing-atlasimage-i-sys.md) | Yes | the atlas frame parameters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the atlas frame parameters. |
+
 ## createBinocularMask
 
 ```TypeScript

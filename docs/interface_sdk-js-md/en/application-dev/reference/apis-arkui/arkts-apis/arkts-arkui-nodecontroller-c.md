@@ -24,7 +24,7 @@ Called after the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-c
 
 > **NOTE:** 
 > 
-> For details about the callback timing, see onAppear.
+> For details about the callback timing, see [onAppear](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onappear).
 
 **Since:** 11
 
@@ -127,7 +127,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 
 > **NOTE:** 
 > 
-> For details about the callback timing, see onAttach.
+> For details about the callback timing, see [onAttach](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onattach).
 
 **Since:** 18
 
@@ -169,7 +169,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-co
 
 > **NOTE:** 
 > 
-> For details about the callback timing, see onDetach.
+> For details about the callback timing, see [onDetach](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ondetach).
 
 **Since:** 18
 

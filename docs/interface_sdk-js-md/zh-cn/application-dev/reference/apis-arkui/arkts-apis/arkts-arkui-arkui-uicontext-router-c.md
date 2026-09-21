@@ -68,8 +68,13 @@ back(options?: router.RouterOptions): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.back({url:'pages/detail'});
 ```
 
 <a id="back-1"></a>
@@ -99,8 +104,23 @@ back(index: number, params?: Object): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.back(1);
+```
+
+完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.back(1, {info:'来自Home页'}); // 携带参数返回
 ```
 
 ## clear
@@ -127,8 +147,14 @@ clear(): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.clear();
 ```
 
 ## getLength
@@ -163,8 +189,15 @@ getLength(): string
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let size = router.getLength();        
+console.info('pages stack size = ' + size);
 ```
 
 ## getParams
@@ -191,8 +224,13 @@ getParams(): Object
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.getParams();
 ```
 
 ## getStackSize
@@ -267,8 +305,19 @@ getState(): router.RouterState
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let page = router.getState();
+if (page != undefined) {
+  console.info('current index = ' + page.index);
+  console.info('current name = ' + page.name);
+  console.info('current path = ' + page.path);
+}
 ```
 
 ## getStateByIndex
@@ -301,8 +350,20 @@ getStateByIndex(index: number): router.RouterState | undefined
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let options: router.RouterState | undefined = router.getStateByIndex(1);
+if (options != undefined) {
+  console.info('index = ' + options.index);
+  console.info('name = ' + options.name);
+  console.info('path = ' + options.path);
+  console.info('params = ' + options.params);
+}
 ```
 
 ## getStateByUrl
@@ -335,8 +396,19 @@ getStateByUrl(url: string): Array<router.RouterState>
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+let options:Array<router.RouterState> = router.getStateByUrl('pages/index');
+for (let i: number = 0; i < options.length; i++) {
+  console.info('index = ' + options[i].index);
+  console.info('name = ' + options[i].name);
+  console.info('path = ' + options[i].path);
+  console.info('params = ' + options[i].params);
+}
 ```
 
 ## hideAlertBeforeBackPage
@@ -357,8 +429,14 @@ hideAlertBeforeBackPage(): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.hideAlertBeforeBackPage();
 ```
 
 ## pushNamedRoute
@@ -1814,6 +1892,21 @@ showAlertBeforeBackPage(options: router.EnableAlertOptions): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+try {
+  router.showAlertBeforeBackPage({            
+    message: 'Message Info'        
+  });
+} catch(error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showAlertBeforeBackPage failed, code is ${code}, message is ${message}`);
+}
 ```

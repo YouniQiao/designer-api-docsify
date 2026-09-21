@@ -39,8 +39,26 @@ Closes this FetchResult instance to invalidate it. After this instance is releas
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('fetchResultCloseDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    fetchResult.close();
+    console.info('close succeed.');
+  } catch (err) {
+    console.error(`close fail. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## contains
@@ -73,8 +91,27 @@ Checks whether the specified file asset is contained in the result set. This API
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('fetchResultContainsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let ret: boolean = await fetchResult.contains(asset);
+    console.info(`succeed. ${ret}`);
+  } catch (err) {
+    console.error(`fail. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getAllObjects
@@ -106,8 +143,27 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAllObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  fetchResult.getAllObjects((err, photoAssetList) => {
+    if (photoAssetList !== undefined) {
+      console.info('photoAssetList length: ', photoAssetList.length);
+    } else {
+      console.error(`photoAssetList failed with err:${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getallobjects-1"></a>
@@ -141,8 +197,22 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getAllObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  console.info('photoAssetList length: ', photoAssetList.length);
+}
 ```
 
 ## getCount
@@ -174,8 +244,22 @@ Obtains the total number of files in the result set.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getCountDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let fetchCount = fetchResult.getCount();
+  console.info('fetchCount = ', fetchCount);
+}
 ```
 
 ## getFirstObject
@@ -207,8 +291,27 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getFirstObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  fetchResult.getFirstObject((err, photoAsset) => {
+    if (photoAsset !== undefined) {
+      console.info('photoAsset displayName: ', photoAsset.displayName);
+    } else {
+      console.error(`photoAsset failed with err:${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getfirstobject-1"></a>
@@ -242,8 +345,22 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getFirstObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  console.info('photoAsset displayName: ', photoAsset.displayName);
+}
 ```
 
 ## getIndex
@@ -276,8 +393,27 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('fetchResultGetIndexDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let ret: number = await fetchResult.getIndex(asset);
+    console.info(`succeed. ${ret}`);
+  } catch (err) {
+    console.error(`fail. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getLastObject
@@ -309,8 +445,27 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getLastObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  fetchResult.getLastObject((err, photoAsset) => {
+    if (photoAsset !== undefined) {
+      console.info('photoAsset displayName: ', photoAsset.displayName);
+    } else {
+      console.error(`photoAsset failed with err: ${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getlastobject-1"></a>
@@ -344,8 +499,22 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getLastObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
+  console.info('photoAsset displayName: ', photoAsset.displayName);
+}
 ```
 
 ## getNextObject
@@ -379,8 +548,30 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getNextObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  await fetchResult.getFirstObject();
+  if (!fetchResult.isAfterLast()) {
+    fetchResult.getNextObject((err, photoAsset) => {
+      if (photoAsset !== undefined) {
+        console.info('photoAsset displayName: ', photoAsset.displayName);
+      } else {
+        console.error(`photoAsset failed with err: ${err.code}, ${err.message}`);
+      }
+    });
+  }
+}
 ```
 
 <a id="getnextobject-1"></a>
@@ -416,8 +607,25 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getNextObjectDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  await fetchResult.getFirstObject();
+  if (!fetchResult.isAfterLast()) {
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getNextObject();
+    console.info('photoAsset displayName: ', photoAsset.displayName);
+  }
+}
 ```
 
 ## getObjectByPosition
@@ -450,8 +658,27 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getObjectByPositionDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  fetchResult.getObjectByPosition(0, (err, photoAsset) => {
+    if (photoAsset !== undefined) {
+      console.info('photoAsset displayName: ', photoAsset.displayName);
+    } else {
+      console.error(`photoAsset failed with err: ${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getobjectbyposition-1"></a>
@@ -491,8 +718,26 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getObjectByPositionDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  if (fetchResult === undefined) {
+    console.error('fetchResult is undefined');
+    return;
+  }
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getObjectByPosition(0);
+  console.info('photoAsset displayName: ', photoAsset.displayName);
+}
 ```
 
 ## getObjectsByIndexSet
@@ -531,8 +776,27 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('fetchResultGetObjectsByIndexSetDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let indexSet: number[] = [0, 1];
+    let ret: photoAccessHelper.PhotoAsset[] = await fetchResult.getObjectsByIndexSet(indexSet);
+    console.info(`succeed. ${ret.length}`);
+  } catch (err) {
+    console.error(`fail. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getRangeObjects
@@ -570,8 +834,34 @@ Obtains the file asset array of a specified length (second parameter) from the s
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { photoAccessHelper} from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getRangeObjectsDemo');
+  type PhotoAsset = photoAccessHelper.PhotoAsset;
+  let testNum: string = "getRangeObjects_test_003";
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+  };
+  let fetchResult1: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+  let fetchResult2: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
+      await phAccessHelper.getAssets(fetchOptions);
+  let count: number = fetchResult1.getCount();
+  const half: number = Math.ceil(count / 2);
+  let promises: Promise<PhotoAsset[]>[] = [];
+  promises[0] = fetchResult1.getRangeObjects(0, half);
+  promises[1] = fetchResult2.getRangeObjects(half, count - half);
+  let photoAssetsArray: PhotoAsset[][] = await Promise.all(promises);
+  let photoAssets: PhotoAsset[] = photoAssetsArray[0].concat(photoAssetsArray[1]);
+  console.info('photoAssets length: ', photoAssets.length);
+}
 ```
 
 ## isAfterLast
@@ -603,6 +893,25 @@ Checks whether the cursor is in the last row of the result set.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let fetchCount = fetchResult.getCount();
+  console.info('count:' + fetchCount);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
+  if (fetchResult.isAfterLast()) {
+    console.info('photoAsset isAfterLast displayName = ', photoAsset.displayName);
+  } else {
+    console.info('photoAsset not isAfterLast.');
+  }
+}
 ```

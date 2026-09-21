@@ -37,7 +37,7 @@ Dynamically adds a listener to the state variable of state management V2. For de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
-| path | string &#124; string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time.<br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
+| path | string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time.<br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called.<br>If an unsupported type is provided, a runtime error is thrown. |
 | options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md). By default, the asynchronous callback is used. |
 
@@ -289,7 +289,7 @@ Deletes the listener added to the state variable of the state management V2 by c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
-| path | string &#124; string[] | Yes | Name path of the variable to be deleted. You can specify a path or pass a string array to delete the listener functions of multiple state variables at a time.<br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
+| path | string[] | Yes | Name path of the variable to be deleted. You can specify a path or pass a string array to delete the listener functions of multiple state variables at a time.<br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | No | Listener function to be deleted.<br>If this parameter is not specified, all listener functions registered with the variable corresponding to the path will be deleted. <br>If an unsupported type is provided, a runtime error is thrown. |
 
 **Error codes:**

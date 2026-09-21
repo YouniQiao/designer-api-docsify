@@ -54,7 +54,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：** 
 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的onAppear生命周期中去控制。
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear)生命周期中去控制。
 > 
 > - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
 > 

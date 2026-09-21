@@ -24,7 +24,7 @@ Normal
 
 **说明：** 
 
-从API version 8开始支持，从API version 22开始废弃，建议使用index替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[index](arkts-arkui-swiper-comp-attribute.md#index)替代。
 
 **起始版本：** 8
 
@@ -90,7 +90,7 @@ Skip
 
 **说明：** 
 
-从API version 8开始支持，从API version 22开始废弃，建议使用index替代。
+从API version 8开始支持，从API version 22开始废弃，建议使用[index](arkts-arkui-swiper-comp-attribute.md#index)替代。
 
 **起始版本：** 8
 

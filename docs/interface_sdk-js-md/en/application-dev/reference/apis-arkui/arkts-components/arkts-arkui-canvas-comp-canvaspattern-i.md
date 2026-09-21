@@ -4,7 +4,7 @@
 declare interface CanvasPattern
 ```
 
-**CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency.
+**CanvasPattern** represents an object, created by the [createPattern](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#createpattern) API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency.
 
 **Since:** 8
 

@@ -3504,8 +3504,23 @@ setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boole
 
 **示例**
 
-```TypeScript
 关于drm模块的示例具体可见[@ohos.multimedia.drm](../apis-drm-kit/arkts-apis-drm.md)。
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // 创建MediaKeySystem系统。
+  let keySystem:drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+  // 创建MediaKeySession解密会话。
+  let keySession:drm.MediaKeySession = keySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+  // 生成许可证请求、设置许可证响应等。
+  // 安全视频通路标志。
+  let secureVideoPath:boolean = false;
+  // 设置解密配置。
+  avPlayer.setDecryptionConfig(keySession, secureVideoPath);
+}
 ```
 
 ## setLoudnessGain

@@ -26,7 +26,7 @@ ACTION_BUTTON_TYPE_CLOSE = 0
 
 **废弃版本：** 9
 
-**替代接口：** ACTION_BUTTON_TYPE_CLOSE
+**替代接口：** [ACTION_BUTTON_TYPE_CLOSE](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#action_button_type_close)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -42,6 +42,6 @@ ACTION_BUTTON_TYPE_SNOOZE = 1
 
 **废弃版本：** 9
 
-**替代接口：** ACTION_BUTTON_TYPE_SNOOZE
+**替代接口：** [ACTION_BUTTON_TYPE_SNOOZE](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#action_button_type_snooze)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

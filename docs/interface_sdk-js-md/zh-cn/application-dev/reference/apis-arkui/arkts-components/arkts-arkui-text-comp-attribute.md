@@ -59,7 +59,7 @@ bindSelectionMenu的长按响应时长为600ms，[bindContextMenu](arkts-arkui-c
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 > 
 > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。
 > 
@@ -263,7 +263,7 @@ draggable(value: boolean)
 
 设置选中文本拖拽效果。未通过该接口设置时，默认选中文本不可拖拽。
 
-不能和onDragStart事件同时使用。
+不能和[onDragStart](arkts-arkui-common-comp-commonmethod-c.md#ondragstart)事件同时使用。
 
 当draggable设置为true时，需配合CopyOptions使用，设置copyOptions为CopyOptions.InApp或者CopyOptions.LocalDevice，支持对选中文本的拖拽及复制到输入框。
 
@@ -287,7 +287,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu)的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：** 
 > 
@@ -401,7 +401,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 13
 
@@ -594,7 +594,7 @@ fontFeature(value: string)
 > 
 > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。
 > 
-> 字体排版引擎会对开发者传入的宽度width进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。
+> 字体排版引擎会对开发者传入的宽度[width](arkts-arkui-common-comp-commonmethod-c.md#width)进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。
 > 
 > 当多个Text组件在[Row](arkts-arkui-row-comp.md#row)容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置
 > [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight)或者是以[Flex](arkts-arkui-common-comp.md#common)布局来约束子组件的主轴尺寸。
@@ -1228,7 +1228,7 @@ minLines(minLines: Optional<number>)
 
 与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。
 
-如果文本设置了constraintSize，那么组件最后显示高度会在constraintSize约束内。
+如果文本设置了[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)，那么组件最后显示高度会在[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)约束内。
 
 **起始版本：** 22
 
@@ -1358,7 +1358,7 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 * 纯空格文本时，修饰线、阴影、背景色跟随空格文本显示；  
 * 行首空格不在优化范围内，行尾文本强制换行，每行行尾空格根据组件宽度优化行尾空格。
 
-当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizetrailingspace)为true时，不允许同时设置文本背景色backgroundColor、空格装饰线[decoration](#decoration)和对齐[textAlign](#textalign)三个属性。
+当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizetrailingspace)为true时，不允许同时设置文本背景色[backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、空格装饰线[decoration](#decoration)和对齐[textAlign](#textalign)三个属性。
 
 **起始版本：** 20
 
@@ -1502,7 +1502,7 @@ selection(selectionStart: number, selectionEnd: number)
 
 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
 
-当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当clip设置为false时，超出父组件的文本可以被选中。
+当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)设置为false时，超出父组件的文本可以被选中。
 
 可通过[onTextSelectionChange](#ontextselectionchange)接口获取选中区域位置变化结果。
 
@@ -1543,6 +1543,76 @@ shaderStyle(shader: ShaderStyle)
 | --- | --- | --- | --- |
 | shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | 是 | 径向渐变或线性渐变或纯色。<br>根据传入的参数区分处理径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色[ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)，最终设置到Text文本上显示为渐变色效果。<br>**说明：** <br>当设置为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)时，若[RadialGradientOptions](arkts-arkui-common-comp-radialgradientoptions-i.md)的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
 
+## strokeColor
+
+```TypeScript
+strokeColor(color: Optional<ResourceColor>)
+```
+
+设置文本描边的颜色。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+**卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | 描边颜色。默认值为字体颜色，设置异常值时取默认值。 |
+
+## strokeJoinStyle
+
+```TypeScript
+strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
+```
+
+设置文本描边拐角样式。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strokeJoinStyle | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) &#124; undefined | 是 | 文本描边拐角样式。<br>值为**undefined**时，按**StrokeJoinStyle.MITER_JOIN**处理。具体枚举值及其说明请参考[StrokeJoinStyle](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#strokejoinstyle)。 |
+
+## strokeWidth
+
+```TypeScript
+strokeWidth(width: Optional<LengthMetrics>)
+```
+
+设置文本描边的宽度。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+**卡片能力：** 从API版本26.2.0开始，该接口支持在ArkTS卡片中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | 是 | 文本描边的宽度。LengthMetrics的unit值是px时：<br>设置值小于0，显示实心字。<br>设置值大于0，显示空心字。<br>默认值：0，表示无描边效果。 |
+
 ## tailIndents
 
 ```TypeScript
@@ -1577,7 +1647,7 @@ textAlign(value: TextAlign)
 
 文本段落宽度占满Text组件宽度。
 
-可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下：
+可通过[align](arkts-arkui-common-comp-commonmethod-c.md#align)属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下：
 
 - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。  
 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。  
@@ -1716,7 +1786,7 @@ textOverflow(options: TextOverflowOptions)
 
 - 文本在一行内滚动显示。  
 - 设置[maxLines](#maxlines)、[copyOption](#copyoption)、[selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即[enableDataDetector](#enabledatadetector)设置enable为true时不生效）。  
-- Text组件clip属性默认为true。  
+- Text组件[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)属性默认为true。  
 - 属性字符串的[CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md)不支持跑马灯模式。  
 - [textAlign](#textalign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。  
 - 从API version 12开始，当TextOverflowOptions设置为TextOverflow.MARQUEE时，支持ImageSpan组件，文本和图片可在一行内滚动显示。

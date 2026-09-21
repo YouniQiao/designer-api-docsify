@@ -34,9 +34,7 @@ Called when auto save request is failed to be handled.
 
 **Examples**
 
-```TypeScript
 See autoFillManager.requestAutoSave.
-```
 
 ## onSuccess
 
@@ -56,6 +54,4 @@ Called when auto save request is successfully handled.
 
 **Examples**
 
-```TypeScript
 See autoFillManager.requestAutoSave.
-```

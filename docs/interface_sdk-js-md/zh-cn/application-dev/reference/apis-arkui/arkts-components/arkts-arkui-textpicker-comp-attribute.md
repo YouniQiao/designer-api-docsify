@@ -434,7 +434,7 @@ onChange(callback: (value: string[], index: number[]) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: string &#124; string[], index: number &#124; number[]) =&gt; void | 是 |  |
+| callback | (value: string[], index: number[]) =&gt; void | 是 |  |
 
 <a id="onchange-1"></a>
 
@@ -478,7 +478,7 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 > 
 > - 在多列联动场景中，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点；跟随变化的选项并不涉及滑动，因此回调返回值中仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 > 
-> - 该接口不支持在attributeModifier中调用。
+> - 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 18
 
@@ -508,7 +508,7 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 > 
 > - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用[onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止，则使用onScrollStop。
 > 
-> - 从API version 20开始，该接口支持在attributeModifier中调用。
+> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 14
 
@@ -540,7 +540,7 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 > 
 > - 与[onEnterSelectedArea](#onenterselectedarea)事件的差别在于，onScrollStop关注的是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用[onEnterSelectedArea](#onenterselectedarea)；若需确认滚动行为完全停止，则使用onScrollStop。
 > 
-> - 从API version 20开始，该接口支持在attributeModifier中调用。
+> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 18
 
@@ -598,7 +598,7 @@ selectedIndex(value: number[])
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; number[] | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0 <br>当value的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
+| value | number[] | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0 <br>当value的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
 
 <a id="selectedindex-1"></a>
 
@@ -622,7 +622,7 @@ selectedIndex(index: Optional<number[]>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number &#124; number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0 <br>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md)中的selected值。<br>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
+| index | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0 <br>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md)中的selected值。<br>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
 
 ## selectedTextStyle
 

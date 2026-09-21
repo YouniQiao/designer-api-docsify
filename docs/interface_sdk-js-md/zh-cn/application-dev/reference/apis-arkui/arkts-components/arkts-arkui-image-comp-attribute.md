@@ -12,7 +12,7 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 > 
 > - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component)。
 > 
-> - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦](../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。Image组件默认不获焦，需将focusable属性设置为true，即可使用Tab键将焦点切换到组件上，再将[focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch)属性设置为true，即可实现点击获焦。
+> - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦](../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。Image组件默认不获焦，需将[focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable)属性设置为true，即可使用Tab键将焦点切换到组件上，再将[focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch)属性设置为true，即可实现点击获焦。
 > 
 > - 图片格式支持SVG图源，SVG标签文档请参考[SVG标签说明](arkts-arkui-common-comp.md#common)。
 > 
@@ -99,7 +99,7 @@ antialiased(isAntialiased: Optional<boolean>)
 
 > **说明：** 
 > 
-> 如果图片设置了背景色属性(backgroundColor)，图片的抗锯齿属性设置为true不会影响背景色的
+> 如果图片设置了背景色属性([backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor))，图片的抗锯齿属性设置为true不会影响背景色的
 > 锯齿效果。
 > 
 > 和[resizable](#resizable)一起使用时，该属性不生效。
@@ -310,13 +310,13 @@ enableAnalyzer(enable: boolean)
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。&lt;!--RP3--&gt;&lt;!--RP3End--&gt;
 
-不能和overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)属性将失效。该特性依赖设备能力。
+不能和[overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay)属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)属性将失效。该特性依赖设备能力。
 
 分析图像要求是静态非矢量图，即svg、gif等图像类型不支持分析，支持传入[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)进行分析，目前仅支持[RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md)类型，使用方式见[示例5（开启图像AI分析）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例5开启图像ai分析)。
 
 [alt](#alt)占位图不支持分析，[objectRepeat](#objectrepeat)属性仅在取值为ImageRepeat.NoRepeat时支持分析，隐私遮罩属性[obscured](arkts-arkui-common-comp-commonmethod-c.md#obscured)打开时不支持分析。
 
-基于完整原始图像进行分析，设置clip、margin、borderRadius、position和[objectFit](#objectfit)属性导致图像显示不完整，或使用[renderMode](#rendermode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](#copyoption)属性不影响AI分析功能。
+基于完整原始图像进行分析，设置[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)、[margin](arkts-arkui-common-comp-commonmethod-c.md#margin)、[borderRadius](arkts-arkui-common-comp-commonmethod-c.md#borderradius)、[position](arkts-arkui-common-comp-commonmethod-c.md#position)和[objectFit](#objectfit)属性导致图像显示不完整，或使用[renderMode](#rendermode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](#copyoption)属性不影响AI分析功能。
 
 当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
@@ -324,7 +324,7 @@ enableAnalyzer(enable: boolean)
 > 
 > - 需要配置权限：ohos.permission.INTERNET。
 > 
-> - 从API version 12开始，该接口支持在attributeModifier中调用。
+> - 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -1050,7 +1050,7 @@ resizable(value: ResizableOptions)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 

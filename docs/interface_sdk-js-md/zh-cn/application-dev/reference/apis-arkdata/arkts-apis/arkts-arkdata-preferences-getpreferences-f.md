@@ -39,12 +39,46 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+let dataPreferences: preferences.Preferences | null = null;
+
+preferences.getPreferences(context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
+  if (err) {
+    console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    return;
+  }
+  dataPreferences = val;
+  console.info("Succeeded in getting preferences.");
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | null = null;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.getPreferences(this.context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
+      if (err) {
+        console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+        return;
+      }
+      dataPreferences = val;
+      console.info("Succeeded in getting preferences.");
+    })
+  }
+}
 ```
 
 
@@ -86,12 +120,49 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+let dataPreferences: preferences.Preferences | null = null;
+
+let options: preferences.Options = { name: 'myStore' };
+preferences.getPreferences(context, options, (err: BusinessError, val: preferences.Preferences) => {
+  if (err) {
+    console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    return;
+  }
+  dataPreferences = val;
+  console.info("Succeeded in getting preferences.");
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | null = null;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    preferences.getPreferences(this.context, options, (err: BusinessError, val: preferences.Preferences) => {
+      if (err) {
+        console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+        return;
+      }
+      dataPreferences = val;
+      console.info("Succeeded in getting preferences.");
+    })
+  }
+}
 ```
 
 
@@ -135,12 +206,45 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+
+let dataPreferences: preferences.Preferences | null = null;
+let sp = preferences.getPreferences(context, 'myStore');
+sp.then((object: preferences.Preferences) => {
+  dataPreferences = object;
+  console.info("Succeeded in getting preferences.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | null = null;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let sp = preferences.getPreferences(this.context, 'myStore');
+    sp.then((object: preferences.Preferences) => {
+      dataPreferences = object;
+      console.info("Succeeded in getting preferences.");
+    }).catch((err: BusinessError) => {
+      console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    })
+  }
+}
 ```
 
 
@@ -187,10 +291,45 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+
+let dataPreferences: preferences.Preferences | null = null;
+let options: preferences.Options = { name: 'myStore' };
+let sp = preferences.getPreferences(context, options);
+sp.then((object: preferences.Preferences) => {
+  dataPreferences = object;
+  console.info("Succeeded in getting preferences.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | null = null;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    let sp = preferences.getPreferences(this.context, options);
+    sp.then((object: preferences.Preferences) => {
+      dataPreferences = object;
+      console.info("Succeeded in getting preferences.");
+    }).catch((err: BusinessError) => {
+      console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    })
+  }
+}
 ```

@@ -46,7 +46,7 @@ Sets the symbol effect of the symbol span.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ Sets the color of the symbol span.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -102,7 +102,7 @@ Sets the size of the symbol span. When using the string type, numeric string val
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -132,7 +132,7 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -187,7 +187,7 @@ Sets the rendering strategy of the symbol span.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 

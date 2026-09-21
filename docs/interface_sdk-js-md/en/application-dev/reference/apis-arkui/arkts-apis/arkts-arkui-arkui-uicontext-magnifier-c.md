@@ -49,12 +49,47 @@ Binds the magnifier to the component with the specified ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Component ID, which can be set through the universal attribute id or key. If the component ID is an empty string or no component is found based on the specified ID, the magnifier is not displayed. |
+| id | string | Yes | Component ID, which can be set through the universal attribute [id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) or [key](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#key). If the component ID is an empty string or no component is found based on the specified ID, the magnifier is not displayed. |
 
 **Examples**
 
-```TypeScript
 This example listens to the onTouch event to control the magnifier to zoom in on an image.
+
+```TypeScript
+import { Magnifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MagnifierExample {
+  private magnifier: Magnifier = this.getUIContext().getMagnifier();
+
+  build() {
+    Column() {
+      // Replace $r('app.media.startIcon') with the image resource file you use.
+      Image($r('app.media.startIcon'))
+        .draggable(false)
+        .width(200)
+        .height(200)
+        .margin(50)
+        .id('image')
+        .onTouch((event: TouchEvent) => {
+          if (event && event.sourceTool === SourceTool.Finger) {
+            if (event.type === TouchType.Down) {
+              this.magnifier.bind('image');
+            } else if (event.type === TouchType.Move) {
+              let touchX = event.touches[0].x;
+              let touchY = event.touches[0].y;
+              this.magnifier.show(touchX, touchY);
+            } else if (event.type === TouchType.Up) {
+              this.magnifier.unbind();
+            } else if (event.type === TouchType.Cancel) {
+              this.magnifier.unbind();
+            }
+          }
+        })
+    }
+  }
+}
 ```
 
 ## show
@@ -87,9 +122,7 @@ Sets the position of the component content displayed by the magnifier relative t
 
 **Examples**
 
-```TypeScript
 For details, see the [bind](#bind) example.
-```
 
 ## unbind
 
@@ -109,6 +142,4 @@ Unbinds the magnifier from the current component.
 
 **Examples**
 
-```TypeScript
 For details, see the [bind](#bind) example.
-```

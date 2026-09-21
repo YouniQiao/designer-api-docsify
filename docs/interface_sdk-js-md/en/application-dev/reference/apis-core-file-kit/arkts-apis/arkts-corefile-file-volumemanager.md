@@ -6,8 +6,6 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,6 +13,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [getExternalDiskInfos](arkts-corefile-volumemanager-getexternaldiskinfos-f.md) | Obtains information about all external storage physical disks. This API uses a promise to return the result. |
+| [getExternalVolumeInfos](arkts-corefile-volumemanager-getexternalvolumeinfos-f.md) | Obtains information about all external storage volumes. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -50,6 +55,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 | [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount) | Unmounts a volume. This API uses an asynchronous callback to return the result. |
 | [unmount](arkts-corefile-volumemanager-unmount-f-sys.md#unmount-1) | Unmounts a volume. This API uses a promise to return the result. |
 <!--DelEnd-->
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [ExternalDiskInfo](arkts-corefile-volumemanager-externaldiskinfo-i.md) | External disk information. |
+| [ExternalVolumeInfo](arkts-corefile-volumemanager-externalvolumeinfo-i.md) | External volume information. |
 
 <!--Del-->
 ### Interfaces(System API)

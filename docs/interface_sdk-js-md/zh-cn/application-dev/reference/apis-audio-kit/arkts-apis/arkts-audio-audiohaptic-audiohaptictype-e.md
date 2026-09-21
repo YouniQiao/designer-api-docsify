@@ -6,8 +6,6 @@ enum AudioHapticType
 
 枚举，音振类型。
 
-@enum { int }
-
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

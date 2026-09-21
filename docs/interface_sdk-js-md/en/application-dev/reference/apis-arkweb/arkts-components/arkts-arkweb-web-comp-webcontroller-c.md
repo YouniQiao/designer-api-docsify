@@ -210,25 +210,6 @@ Clears the browsing history.
 
 **Examples**
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-
-  build() {
-    Column() {
-      Button('clearHistory')
-        .onClick(() => {
-          this.controller.clearHistory()
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -684,8 +665,25 @@ struct Index {
 }
 ```
 
-```TypeScript
 Loaded HTML file.
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        Hello world!
+        <script type="text/javascript">
+            function htmlTest() {
+                str = objName.test("test function")
+                console.info('objName.test result:'+ str)
+            }
+        </script>
+    </body>
+</html>
 ```
 
 ## requestFocus
@@ -777,8 +775,25 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 Loaded HTML file.
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+  </head>
+  <body>
+      Hello world!
+      <script type="text/javascript">
+          function test() {
+              console.info('Ark WebComponent')
+              return "This value is from index.html"
+          }
+      </script>
+  </body>
+</html>
 ```
 
 ## stop

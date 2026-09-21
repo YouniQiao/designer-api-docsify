@@ -47,6 +47,80 @@ Creates an **ArcList** component instance with specified configuration options.
 
 ## Examples
 
-```TypeScript
 This example demonstrates an ArcList component with a header component and auto-scaling child items.
+
+```TypeScript
+// xxx.ets
+import { ComponentContent, LengthMetrics, UIContext, CircleShape } from '@kit.ArkUI';
+// Starting from API version 22, you do not need to manually import ArcListAttribute and ArcListItemAttribute. For details, refer to the Modules to Import section of the ArcList and ArcListItem reference documents.
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('header')
+      .fontSize('60px')
+      .fontWeight(FontWeight.Bold)
+      .fontColor(Color.Black)
+  }.margin(0)
+}
+
+@Entry
+@Component
+struct Index {
+  @State private numItems: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  private watchSize: string = '466px'; // Default size on wearables: 466*466
+  private listSize: string = '414px'; // Item width
+
+  context: UIContext = this.getUIContext();
+  headerContent: ComponentContent<Object> = new ComponentContent(this.context, wrapBuilder(buildText));
+
+  @Builder
+  buildList() {
+    Stack() {
+      Column() {
+      }
+      .justifyContent(FlexAlign.Center)
+      .width(this.watchSize)
+      .height(this.watchSize)
+      .clipShape(new CircleShape({ width: '100%', height: '100%' }))
+      .backgroundColor(Color.White)
+
+      ArcList({ initialIndex: 0, header: this.headerContent }) {
+        ForEach(this.numItems, (item: number, index: number) => {
+          ArcListItem() {
+            Button('' + item, { type: ButtonType.Capsule })
+              .width(this.listSize)
+              .height('100px')
+              .fontSize('40px')
+              .focusable(true)
+              .focusOnTouch(true)
+              .backgroundColor(0x17A98D)
+          }.align(Alignment.Center)
+        }, (item: number, index: number) => (item + index).toString())
+      }
+      .space(LengthMetrics.px(10))
+      .borderRadius(this.watchSize)
+      .focusable(true)
+      .focusOnTouch(true)
+      .defaultFocus(true)
+    }
+    .align(Alignment.Center)
+    .width(this.watchSize)
+    .height(this.watchSize)
+    .border({color: Color.Black, width: 1})
+    .borderRadius(this.watchSize)
+  }
+
+  build() {
+    Column() {
+      this.buildList()
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
 ```

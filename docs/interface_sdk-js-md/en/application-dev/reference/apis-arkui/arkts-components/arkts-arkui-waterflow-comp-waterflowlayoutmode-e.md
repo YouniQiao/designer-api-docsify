@@ -38,8 +38,8 @@ Sliding window mode. Only the layout information inside the viewport is consider
 
 1. During a non-animated redirection to a distant position, water flow items are laid out forward or backward based
 on the target position. If the user then swipes back to the original position, the layout of the content may differ from before. This can lead to misalignment of the top nodes when a user swipes back to the top after the redirection. To counteract this issue, in this layout mode, the layout will be automatically adjusted after reaching the top of the viewport to ensure that the top is aligned. If there are multiple sections, adjustments will be made to the sections within the viewport when sliding ends.
-2. The total offset returned by the currentOffset
-or offset API of [scroller](arkts-arkui-waterflow-comp-waterflowoptions-i.md) is inaccurate after the jump or data update is triggered. The offset will be recalibrated when the user scrolls back to the top. The offset API is added in API version 23 and later versions.
+2. The total offset returned by the [currentOffset](arkts-arkui-scroll-comp-scroller-c.md#currentoffset)
+or [offset](arkts-arkui-scroll-comp-scroller-c.md#offset) API of [scroller](arkts-arkui-waterflow-comp-waterflowoptions-i.md) is inaccurate after the jump or data update is triggered. The offset will be recalibrated when the user scrolls back to the top. The offset API is added in API version 23 and later versions.
 3. If a jump action (for example, by calling [scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)
 without animation or [scrollEdge](arkts-arkui-scroll-comp-scroller-c.md#scrolledge)) and an input offset (such as from a swipe gesture or a scrolling animation) are both initiated within the same frame, both will be executed.
 4. If the [scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex) API is called without animation

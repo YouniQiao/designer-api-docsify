@@ -36,7 +36,7 @@ getCategory(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 铃声类别，取值参考铃声类别的常量。 |
+| number | 铃声类别，取值参考[铃声类别的常量](../../../reference/apis-audio-kit/js-apis-systemSoundManager-sys.md#常量)。 |
 
 **错误码：**
 
@@ -132,7 +132,7 @@ getMediaType():MediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| [MediaType](arkts-audio-systemsoundmanager-mediatype-e-sys.md) | 媒体类型，如果应用未调用过setMediaType设置媒体类型，则此函数返回的默认值为AUDIO。 |
 
 **错误码：**
 
@@ -230,7 +230,7 @@ setCategory(category: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| category | number | 是 | 铃声类别，取值参考铃声类别的常量。 |
+| category | number | 是 | 铃声类别，取值参考[铃声类别的常量](../../../reference/apis-audio-kit/js-apis-systemSoundManager-sys.md#常量)。 |
 
 **错误码：**
 

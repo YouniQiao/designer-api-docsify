@@ -18,7 +18,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 fill(value: ResourceColor | ColorMetrics)
 ```
 
-Sets the color of the fill area. [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) can be used to describe the color for HDR brightening. This attribute can be dynamically set using attributeModifier. If this attribute is not set, the default fill color is Color.Black. Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. When this attribute is set together with the universal attribute **foregroundColor**, the one set later takes effect.
+Sets the color of the fill area. [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) can be used to describe the color for HDR brightening. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier). If this attribute is not set, the default fill color is Color.Black. Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. When this attribute is set together with the universal attribute **foregroundColor**, the one set later takes effect.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Sets the color of the fill area. [ColorMetrics](../arkts-apis/arkts-arkui-graphi
 stroke(value: ResourceColor | ColorMetrics)
 ```
 
-Sets the stroke color. [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) can be used to describe the color for HDR brightening. This attribute can be dynamically set using attributeModifier. If this attribute is not set, the default stroke color is Color.Transparent, that is, no stroke is drawn. Abnormal values undefined and null are treated as the default value, and NaN and Infinity are treated as Color.Black.
+Sets the stroke color. [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) can be used to describe the color for HDR brightening. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier). If this attribute is not set, the default stroke color is Color.Transparent, that is, no stroke is drawn. Abnormal values undefined and null are treated as the default value, and NaN and Infinity are treated as Color.Black.
 
 **Since:** 26.0.0
 

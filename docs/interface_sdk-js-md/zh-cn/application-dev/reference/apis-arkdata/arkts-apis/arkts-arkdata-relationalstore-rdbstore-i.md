@@ -469,12 +469,72 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 **示例**
 
-```TypeScript
 关系型数据库：
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+let value5 = "Jack";
+let value6 = 19;
+let value7 = 101.5;
+let value8 = new Uint8Array([6, 7, 8, 9, 10]);
+let value9 = "Tom";
+let value10 = 20;
+let value11 = 102.5;
+let value12 = new Uint8Array([11, 12, 13, 14, 15]);
+
+const valueBucket1: relationalStore.ValuesBucket = {
+  'NAME': value1,
+  'AGE': value2,
+  'SALARY': value3,
+  'CODES': value4
+};
+const valueBucket2: relationalStore.ValuesBucket = {
+  'NAME': value5,
+  'AGE': value6,
+  'SALARY': value7,
+  'CODES': value8
+};
+const valueBucket3: relationalStore.ValuesBucket = {
+  'NAME': value9,
+  'AGE': value10,
+  'SALARY': value11,
+  'CODES': value12
+};
+
+let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
+if (store != undefined) {
+  (store as relationalStore.RdbStore).batchInsert("EMPLOYEE", valueBuckets).then((insertNum: number) => {
+    if (insertNum == -1) {
+      console.error(`batchInsert is failed`);
+      return;
+    }
+    console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+  }).catch((err: BusinessError) => {
+    console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+  })
+}
+```
+
 向量数据库：
+
+```TypeScript
+let createSql = "CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, data1 floatvector(2));";
+await store!.execute(createSql, 0, undefined); // 创建关系表，第二个参数0表示不开启显式事务，第三个参数undefined表示sql未使用绑定参数化
+let floatVector = Float32Array.from([1.2, 2.3]);
+let valueBucketArray = new Array<relationalStore.ValuesBucket>();
+for (let i = 0; i < 100; i++) { // 构造一个BucketArray用于写入
+  const row : relationalStore.ValuesBucket = {
+    "id" : i,
+    "data1" : floatVector,
+  }
+  valueBucketArray.push(row);
+}
+await store!.batchInsert("test", valueBucketArray); // 执行批量写入
 ```
 
 ## batchInsertSync
@@ -2352,12 +2412,55 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 
 **示例**
 
-```TypeScript
 关系型数据库：
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 校验数据库完整性
+if (store != undefined) {
+  const SQL_CHECK_INTEGRITY = 'PRAGMA integrity_check';
+  (store as relationalStore.RdbStore).execute(SQL_CHECK_INTEGRITY).then((data) => {
+    console.info(`check result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`check failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+
+// 删除表中所有数据
+if (store != undefined) {
+  const SQL_DELETE_TABLE = 'DELETE FROM test';
+  (store as relationalStore.RdbStore).execute(SQL_DELETE_TABLE).then((data) => {
+    console.info(`delete result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+
+// 删表
+if (store != undefined) {
+  const SQL_DROP_TABLE = 'DROP TABLE test';
+  (store as relationalStore.RdbStore).execute(SQL_DROP_TABLE).then((data) => {
+    console.info(`drop result: ${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`drop failed, code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
+
 向量数据库：
+
+```TypeScript
+// FLOATVECTOR(2)是维度为2的向量属性，后续操作repr需依照该维度进行。
+let createSql = "CREATE TABLE test (ID INTEGER PRIMARY KEY,REPR FLOATVECTOR(2));";
+// 建表
+await store!.execute(createSql);
+// 使用参数绑定插入数据
+let insertSql = "insert into test VALUES(?, ?);";
+const vectorValue: Float32Array = Float32Array.from([1.5, 6.6]);
+await store!.execute(insertSql, [0, vectorValue]);
+// 不使用绑定参数直接执行
+await store!.execute("insert into test values(1, '[3.5, 1.8]');");
 ```
 
 <a id="execute-1"></a>
@@ -4618,12 +4721,49 @@ querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 
 **示例**
 
-```TypeScript
 关系型数据库：
-```
 
 ```TypeScript
+if (store != undefined) {
+  (store as relationalStore.RdbStore).querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'", async (err, resultSet) => {
+    if (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+      return;
+    }
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏。
+      resultSet.close();
+    }
+  });
+}
+```
+
 向量数据库：
+
+```TypeScript
+// 相似度的计算符号是<->，余弦距离的计算符号是<=>
+const querySql = "select id, repr <-> '[1.5,5.6]' as distance from test ORDER BY repr <-> '[1.5,5.6]' limit 10 offset 1;";
+let resultSet = await store.querySql(querySql);
+
+// 聚合查询，其中group by支持多列
+const querySql1 = "select id, repr from test group by id, repr having max(repr<=>'[1.5,5.6]');";
+let resultSet1 = await store.querySql(querySql1);
+
+// 子查询，最大支持嵌套32层
+const querySql2 = "select * from test where id in (select id from test1)";
+let resultSet2 = await store.querySql(querySql2);
 ```
 
 <a id="querysql-1"></a>
@@ -4732,12 +4872,42 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **示例**
 
-```TypeScript
 关系型数据库：
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (store != undefined) {
+  (store as relationalStore.RdbStore).querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'").then(async (resultSet: relationalStore.ResultSet) => {
+    console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+    // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+    try {
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+        const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+        const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+    } catch (err) {
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    } finally {
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏。
+      resultSet.close();
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+  });
+}
+```
+
 向量数据库：
+
+```TypeScript
+// 查询id为1，与[1.5, 2.5]相似度小于0.5，且以相似度进行升序排序的前10条数据
+const querySql = "select id, repr <-> ? as distance from test where id = ? and repr <-> ? < 0.5 ORDER BY repr <-> ? limit 10;";
+const vectorValue: Float32Array = new Float32Array([1.5, 2.5]);
+let resultSet = await store.querySql(querySql, [vectorValue, 1, vectorValue, vectorValue]);
 ```
 
 ## querySqlSync
@@ -5171,8 +5341,45 @@ rekey(cryptoParam?: CryptoParam): Promise<void>
 
 **示例**
 
-```TypeScript
 示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+// 示例1：使用默认的加密参数
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    let store: relationalStore.RdbStore | undefined = undefined;
+    const STORE_CONFIG1: relationalStore.StoreConfig = {
+      name: 'rdbstore1.db',
+      securityLevel: relationalStore.SecurityLevel.S3,
+      encrypt: true
+    };
+
+    relationalStore.getRdbStore(this.context, STORE_CONFIG1).then(async (rdbStore: relationalStore.RdbStore) => {
+      store = rdbStore;
+      console.info('Get RdbStore successfully.');
+
+      let cryptoParam1: relationalStore.CryptoParam = {
+        encryptionKey: new Uint8Array()
+      };
+
+      if (store != undefined) {
+        try {
+          await (store as relationalStore.RdbStore).rekey(cryptoParam1);
+          console.info('rekey successful');
+        } catch (err) {
+          let e = err as BusinessError;
+          console.error(`rekey failed, code is ${err.code}, message is ${err.message}`);
+        }
+      }
+    }).catch((err: Error) => {
+      let e = err as BusinessError;
+      console.error(`Get RdbStore failed, code is ${e.code}, message is ${e.message}`);
+    });
+  }
+}
 ```
 
 ```TypeScript

@@ -546,7 +546,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 > **NOTE:** 
 > 
-> You are not advised to use stack operations in aboutToAppear, as the
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -592,7 +592,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 > **NOTE:** 
 > 
-> You are not advised to use stack operations in aboutToAppear, as the
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -636,7 +636,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE:** 
 > 
-> You are not advised to use stack operations in aboutToAppear, as the
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -683,7 +683,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE:** 
 > 
-> You are not advised to use stack operations in aboutToAppear, as the
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -880,7 +880,7 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the [onReady](arkts-arkui-navdestination-comp-attribute.md#onready) callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md).
 
 **Since:** 12
 

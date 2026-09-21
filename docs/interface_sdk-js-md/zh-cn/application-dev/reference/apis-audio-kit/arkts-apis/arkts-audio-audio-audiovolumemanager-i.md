@@ -4,7 +4,7 @@
 interface AudioVolumeManager
 ```
 
-音量管理。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
+音量管理，提供音量组信息查询、应用级音量控制、系统音量百分比管理等功能。适用于需要对音量进行精细化控制、监听音量变化、管理应用级音量的场景。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ getAppVolumePercentage(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回应用的音量。 |
+| Promise&lt;number&gt; | Promise对象，返回应用的音量。  取值范围为[0, 100]，单位为百分号（%）。 |
 
 **示例**
 
@@ -205,7 +205,7 @@ getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupM
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| groupId | number | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
+| groupId | number | 是 | 音量组ID，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 | 回调函数。当获取音频组音量管理器实例成功，err为undefined，data为获取到的音频组音量管理器实例；否则为错误对象。 |
 
 **示例**
@@ -244,7 +244,7 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| groupId | number | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
+| groupId | number | 是 | 音量组ID，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 
 **返回值：**
 
@@ -286,7 +286,7 @@ getVolumeGroupManagerSync(groupId: number): AudioVolumeGroupManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| groupId | number | 是 | 音量组id，默认使用DEFAULT_VOLUME_GROUP_ID。 |
+| groupId | number | 是 | 音量组ID，默认使用DEFAULT_VOLUME_GROUP_ID。 |
 
 **返回值：**
 
@@ -331,7 +331,7 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流。 |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
 | volumeLevel | number | 是 | 音量等级。 |
 | device | [DeviceType](arkts-audio-audio-devicetype-e.md) | 是 | 设备类型。 |
 
@@ -413,7 +413,7 @@ try {
 off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-取消监听系统音量变化事件。使用callback异步回调。
+取消监听系统音量变化事件。
 
 > **说明：** 
 > 
@@ -432,8 +432,8 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'volumeChange' | 是 | 事件回调类型，支持的事件为'volumeChange'，当取消监听系统音量变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
+| type | 'volumeChange' | 是 | 事件回调类型，支持的事件为'volumeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('volumeChange')](#onvolumechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -464,7 +464,7 @@ audioVolumeManager.off('volumeChange', volumeChangeCallback);
 off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-取消监听当前应用的应用级音量变化事件。使用callback异步回调。
+取消监听当前应用的应用级音量变化事件。
 
 **起始版本：** 19
 
@@ -474,8 +474,8 @@ off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'appVolumeChange' | 是 | 事件回调类型，支持的事件为'appVolumeChange'，当取消监听当前应用的应用级音量变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
+| type | 'appVolumeChange' | 是 | 事件回调类型，支持的事件为'appVolumeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('appVolumeChange')](#onappvolumechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -505,7 +505,7 @@ audioVolumeManager.off('appVolumeChange', appVolumeChangeCallback);
 off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 ```
 
-取消监听系统音频流音量变化事件（当系统音频流音量发生变化时触发）。使用callback异步回调。
+取消监听系统音频流音量变化事件。
 
 **起始版本：** 20
 
@@ -515,8 +515,8 @@ off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'streamVolumeChange' | 是 | 事件回调类型，支持的事件为'streamVolumeChange'，当取消监听系统音量变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | 回调函数，返回变化后的音量信息。 |
+| type | 'streamVolumeChange' | 是 | 事件回调类型，支持的事件为'streamVolumeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('streamVolumeChange')](#onstreamvolumechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -627,7 +627,7 @@ on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<Stre
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'streamVolumeChange' | 是 | 事件回调类型，支持的事件为'streamVolumeChange'，当系统音量发生变化时，触发该事件。 |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 需要监听音量变化的音频流类型。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
 **错误码：**
@@ -662,13 +662,13 @@ setAppVolumePercentage(volume: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | number | 是 | 要设置的音量值。 |
+| volume | number | 是 | 要设置的音量值。<br>取值范围为[0, 100]，单位为百分号（%）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

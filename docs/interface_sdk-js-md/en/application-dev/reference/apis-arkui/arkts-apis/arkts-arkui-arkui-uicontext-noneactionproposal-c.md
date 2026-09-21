@@ -39,6 +39,67 @@ Constructor for the smart gesture no-op action handling.
 
 **Examples**
 
-```TypeScript
 This example implements customizing the smart gesture action handling to smart gesture no-action handling in the smart gesture listening callback. For the complete example, see [Example 1 (Enabling Smart Gestures and Customizing Action Handling)](./arkts-apis-uicontext-smartgesturecontroller.md#example-1-enabling-smart-gestures-and-customizing-action-handling).
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+  NoneActionProposal,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    let result = new GestureHandlingResolution(true);
+    let noneProposal = new NoneActionProposal();
+    result.selectedProposal = noneProposal;
+    return result;
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.clearMonitors();
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component 1')
+          .id('target_text1')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+        Text('Text component 2')
+          .id('target_text2')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```

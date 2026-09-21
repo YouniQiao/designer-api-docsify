@@ -624,16 +624,52 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 **示例**
 
-```TypeScript
 无参数Action。
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// Action描述中无明确要求的，均为无参数Action。
+rootElement.performAction('click').then(() => {
+  console.info(`succeeded in performing action.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 有参数Action（setSelection）。
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// setSelection示例代码。
+rootElement.performAction('setSelection', {
+  selectTextBegin: '0', // 表示选择起始位置。
+  selectTextEnd: '8',   // 表示选择结束位置。
+  selectTextInForWard: true   // true表示为前光标，false表示为后光标。
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 有参数Action（setCursorPosition）。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// setCursorPosition示例代码。
+rootElement.performAction('setCursorPosition', {
+  offset: '1'   // 表示光标的设置位置。
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 <a id="performaction-2"></a>

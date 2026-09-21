@@ -58,7 +58,7 @@ For details about curves unaffected by **animationDuration**, see [Interpolation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Duration of the tab switching animation.<br>Default value:<br>API version 10 and earlier versions: If this parameter is set to **null** or is not set, the default value **0**, which means no animation for tab switching. If this parameter is set to **undefined** or a value less than 0, the default value is **300**.<br>API version 11 and later versions: If this parameter is set to an invalid value or is not set, the default value is **0** when the tab bar is set to **BottomTabBarStyle** and **300** when the tab bar is set to any other style.<br>Unit: ms<br>Value range: 0, +∞). |
+| value | number | Yes | Duration of the tab switching animation.<br>Default value:<br>API version 10 and earlier versions: If this parameter is set to **null** or is not set, the default value **0**, which means no animation for tab switching. If this parameter is set to **undefined** or a value less than 0, the default value is **300**.<br>API version 11 and later versions: If this parameter is set to an invalid value or is not set, the default value is **0** when the tab bar is set to **BottomTabBarStyle** and **300** when the tab bar is set to any other style.<br>Unit: ms<br>Value range: [0, +∞). |
 
 ## animationMode
 
@@ -70,7 +70,7 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 
 > **NOTE:** 
 > 
-> This attribute cannot be called within [attributeModifier.
+> This attribute cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Sets the background blur style of the tab bar.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -493,11 +493,11 @@ calling the TabsController.changeIndex() API.
 If the second custom animation is triggered during the execution of the first custom animation, the **onChange** and **onAnimationEnd** events of the first custom animation are triggered when the second custom animation starts.
 7. When a custom animation is used, the layout mode of the page involved in the animation is changed to **Stack**.
 If the **zIndex** attribute is not set for related pages, the **zIndex** values of all pages are the same. In this case, the pages are rendered in the order in which they are added to the component tree (that is, the sequence of page indexes). In light of this, to control the rendering levels of pages, set the **zIndex** attribute of the pages.
-8. This attribute cannot be called within attributeModifier.
+8. This attribute cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -545,7 +545,7 @@ Sets the edge effect used when the boundary of the scrolling area is reached.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 17.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 17.
 
 **Since:** 12
 
@@ -759,7 +759,7 @@ right arrow key on the keyboard to switch to a new page while the tab bar has fo
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -931,6 +931,72 @@ Sets whether the tabs are scrollable.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the tabs are scrollable.<br>**true** (default): The tabs are scrollable.<br> **false**: The tabs are not scrollable. |
+
+## sidebarBottomBar
+
+```TypeScript
+sidebarBottomBar(bottomBar: Optional<ComponentContent>)
+```
+
+Sets the bottom bar content of the sidebar tab bar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bottomBar | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;ComponentContent&gt; | Yes | bottom bar content of the sidebar tab bar. |
+
+## sidebarDisplayStyle
+
+```TypeScript
+sidebarDisplayStyle(style: Optional<TabsSidebarDisplayStyle>)
+```
+
+Sets the display style of the sidebar for the **Tab** component.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[TabsSidebarDisplayStyle](arkts-arkui-tabs-comp-tabssidebardisplaystyle-e.md)&gt; | Yes |  |
+
+## sidebarFooter
+
+```TypeScript
+sidebarFooter(footer: Optional<ComponentContent>)
+```
+
+Sets the footer content of the sidebar tab bar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| footer | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;ComponentContent&gt; | Yes | footer content of the sidebar tab bar. |
 
 ## sidebarHeader
 

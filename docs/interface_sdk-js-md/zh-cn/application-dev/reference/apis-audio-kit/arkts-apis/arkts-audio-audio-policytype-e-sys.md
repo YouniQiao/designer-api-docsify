@@ -6,8 +6,6 @@ enum PolicyType
 
 表示静音策略类型的枚举。
 
-@enum { int }
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

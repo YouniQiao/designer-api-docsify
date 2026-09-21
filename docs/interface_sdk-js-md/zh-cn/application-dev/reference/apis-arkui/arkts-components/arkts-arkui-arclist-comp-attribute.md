@@ -78,7 +78,7 @@ childrenMainSize(size: Optional<ChildrenMainSize>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ChildrenMainSize](arkts-arkui-common-comp-childrenmainsize-c.md)&gt; | 是 | 通过[ChildrenMainSize](arkts-arkui-common-comp-childrenmainsize-c.md)对象向ArcList组件精确提供所有子组件在主轴方向的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用[scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)等场景时，仍能保持其滑动位置的准确性。进而保证了scrollTo能够精准跳转至指定位置，currentOffset或offset准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。<br> **说明：** <br>提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知ArcList组件，否则可能导致ArcList组件显示异常。 |
+| size | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ChildrenMainSize](arkts-arkui-common-comp-childrenmainsize-c.md)&gt; | 是 | 通过[ChildrenMainSize](arkts-arkui-common-comp-childrenmainsize-c.md)对象向ArcList组件精确提供所有子组件在主轴方向的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用[scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)等场景时，仍能保持其滑动位置的准确性。进而保证了[scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto)能够精准跳转至指定位置，[currentOffset](arkts-arkui-scroll-comp-scroller-c.md#currentoffset)或[offset](arkts-arkui-scroll-comp-scroller-c.md#offset)准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。<br> **说明：** <br>提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知ArcList组件，否则可能导致ArcList组件显示异常。 |
 
 ## digitalCrownSensitivity
 
@@ -138,7 +138,7 @@ fadingEdge(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。<br>fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。<br>fadingEdge生效时，组件会裁剪到边界，设置组件的clip属性为false不生效。<br>设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。<br>默认值：false |
+| enable | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。<br>fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。<br>fadingEdge生效时，组件会裁剪到边界，设置组件的[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)属性为false不生效。<br>设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。<br>默认值：false |
 
 ## flingSpeedLimit
 
@@ -404,4 +404,4 @@ space(space: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | 是 | 列表子项之间的间距。<br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
+| space | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | 是 | 列表子项之间的间距。<br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的[visibility](arkts-arkui-common-comp-commonmethod-c.md#visibility)属性设置为None时不显示，但该子组件上下的space还会生效。 |

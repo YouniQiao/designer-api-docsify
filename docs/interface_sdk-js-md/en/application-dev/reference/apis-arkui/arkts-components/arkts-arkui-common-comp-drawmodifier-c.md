@@ -34,9 +34,7 @@ drawBehind Method. Executed before drawing associated Node.
 
 **Examples**
 
-```TypeScript
 See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
-```
 
 ## drawContent
 
@@ -62,9 +60,7 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 **Examples**
 
-```TypeScript
 See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
-```
 
 ## drawForeground
 
@@ -90,9 +86,7 @@ drawforeground Method. This method is executed after drawing the associated Node
 
 **Examples**
 
-```TypeScript
 See [Example 2: Implementing Custom Foreground Drawing for a Container Through DrawModifier](#example-2-implementing-custom-foreground-drawing-for-a-container-through-drawmodifier).
-```
 
 ## drawFront
 
@@ -118,9 +112,7 @@ drawFront Method. Executed after drawing associated Node.
 
 **Examples**
 
-```TypeScript
 See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
-```
 
 ## drawOverlay
 
@@ -228,6 +220,4 @@ Invalidate the component, which will cause a re-render of the component. No over
 
 **Examples**
 
-```TypeScript
 See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
-```

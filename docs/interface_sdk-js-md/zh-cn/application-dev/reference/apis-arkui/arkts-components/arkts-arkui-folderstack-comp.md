@@ -50,16 +50,162 @@ FolderStack(options?: FolderStackOptions)
 
 ## 示例
 
-```TypeScript
 ### 示例1（FolderStack折叠屏悬停能力）
 
 该示例实现了折叠屏悬停能力。
 
 图1 横屏展开图2 横屏半折叠
-```
 
 ```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      // upperItems将所需要的悬停到上半屏的id放入upperItems传入，其余组件会堆叠在下半屏区域
+      FolderStack({ upperItems: ['upperitemsId'] }) {
+        // 此Column会自动上移到上半屏
+        Column() {
+          Text('video zone').height('100%').width('100%').textAlign(TextAlign.Center).fontSize(25)
+        }.backgroundColor('rgb(0, 74, 175)').width('100%').height('100%').id('upperitemsId')
+
+        // 下列两个Column堆叠在下半屏区域
+        Column() {
+          Text('video title')
+            .width('100%')
+            .height(50)
+            .textAlign(TextAlign.Center)
+            .backgroundColor('rgb(213, 213, 213)')
+            .fontSize(25)
+        }.width('100%').height('100%').justifyContent(FlexAlign.Start)
+
+        Column() {
+          Text('video bar ')
+            .width('100%')
+            .height(50)
+            .textAlign(TextAlign.Center)
+            .backgroundColor('rgb(213, 213, 213)')
+            .fontSize(25)
+        }.width('100%').height('100%').justifyContent(FlexAlign.End)
+      }
+      .backgroundColor('rgb(39, 135, 217)')
+      // 是否启动动效
+      .enableAnimation(true)
+      // 是否自动旋转
+      .autoHalfFold(true)
+      // folderStack回调 当折叠状态改变时回调
+      .onFolderStateChange((msg) => {
+        if (msg.foldStatus === FoldStatus.FOLD_STATUS_EXPANDED) {
+          console.info('The device is currently in the expanded state')
+        } else if (msg.foldStatus === FoldStatus.FOLD_STATUS_HALF_FOLDED) {
+          console.info('The device is currently in the half folded state')
+        } else {
+          // ...
+        }
+      })
+      // hoverStatusChange回调 当悬停状态改变时回调
+      .onHoverStatusChange((msg) => {
+        console.info('this foldStatus:' + msg.foldStatus);
+        console.info('this isHoverMode:' + msg.isHoverMode);
+        console.info('this appRotation:' + msg.appRotation);
+        console.info('this windowStatusType:' + msg.windowStatusType);
+      })
+      // folderStack如果不撑满页面全屏，作为普通Stack使用
+      .alignContent(Alignment.Bottom)
+      .height('100%')
+      .width('100%')
+
+    }
+    .height('100%')
+    .width('100%')
+    .borderWidth(1)
+    .borderColor('rgb(213, 213, 213)')
+    .backgroundColor('rgb(0, 74, 175)')
+    .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
+  }
+}
+```
+
 ### 示例2（使用attributeModifier动态设置FolderStack组件的属性及方法）
 
 该示例展示了如何使用attributeModifier动态设置FolderStack组件的onFolderStateChange和onHoverStatusChange方法。
+
+```TypeScript
+// xxx.ets
+class MyFolderStackModifier implements AttributeModifier<FolderStackAttribute> {
+  applyNormalAttribute(instance: FolderStackAttribute): void {
+    // folderStack回调 当折叠状态改变时回调
+    instance.onFolderStateChange((msg) => {
+      if (msg.foldStatus === FoldStatus.FOLD_STATUS_EXPANDED) {
+        console.info('The device is currently in the expanded state')
+      } else if (msg.foldStatus === FoldStatus.FOLD_STATUS_HALF_FOLDED) {
+        console.info('The device is currently in the half folded state')
+      } else if (msg.foldStatus === FoldStatus.FOLD_STATUS_FOLDED) {
+        console.info('The device is currently in the folded state')
+      } else {
+        // ...
+      }
+    })
+    // hoverStatusChange回调 当悬停状态改变时回调
+    instance.onHoverStatusChange((msg) => {
+      console.info('this foldStatus:' + msg.foldStatus);
+      console.info('this isHoverMode:' + msg.isHoverMode);
+      console.info('this appRotation:' + msg.appRotation);
+      console.info('this windowStatusType:' + msg.windowStatusType);
+    })
+  }
+}
+
+@Entry
+@Component
+struct attributeDemo {
+  @State modifier: MyFolderStackModifier = new MyFolderStackModifier()
+
+  build() {
+    Column() {
+      // upperItems将所需要的悬停到上半屏的id放入upperItems传入，其余组件会堆叠在下半屏区域
+      FolderStack({ upperItems: ['upperitemsId'] }) {
+        // 此Column会自动上移到上半屏
+        Column() {
+          Text('video zone').height('100%').width('100%').textAlign(TextAlign.Center).fontSize(25)
+        }.backgroundColor('rgb(0, 74, 175)').width('100%').height('100%').id('upperitemsId')
+
+        // 下列两个Column堆叠在下半屏区域
+        Column() {
+          Text('video title')
+            .width('100%')
+            .height(50)
+            .textAlign(TextAlign.Center)
+            .backgroundColor('rgb(213, 213, 213)')
+            .fontSize(25)
+        }.width('100%').height('100%').justifyContent(FlexAlign.Start)
+
+        Column() {
+          Text('video bar ')
+            .width('100%')
+            .height(50)
+            .textAlign(TextAlign.Center)
+            .backgroundColor('rgb(213, 213, 213)')
+            .fontSize(25)
+        }.width('100%').height('100%').justifyContent(FlexAlign.End)
+      }
+      .backgroundColor('rgb(39, 135, 217)')
+      // 是否启动动效
+      .enableAnimation(true)
+      // 是否自动旋转
+      .autoHalfFold(true)
+      .attributeModifier(this.modifier)
+      // folderStack如果不撑满页面全屏，作为普通Stack使用
+      .alignContent(Alignment.Bottom)
+      .height('100%')
+      .width('100%')
+    }
+    .height('100%')
+    .width('100%')
+    .borderWidth(1)
+    .borderColor('rgb(213, 213, 213)')
+    .backgroundColor('rgb(0, 74, 175)')
+    .expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])
+  }
+}
 ```

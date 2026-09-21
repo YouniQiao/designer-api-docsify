@@ -234,7 +234,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number &#124; number &#124; string &#124; boolean | Yes | Value specified. |
+| value | number &#124; string &#124; boolean | Yes | Value specified. |
 
 **Return value:**
 
@@ -330,7 +330,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the field, which cannot contain ^. |
-| value | number &#124; number &#124; string &#124; boolean | Yes | Indicates the value to be compared. |
+| value | number &#124; string &#124; boolean | Yes | Indicates the value to be compared. |
 
 **Return value:**
 
@@ -389,7 +389,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number &#124; number &#124; string | Yes | Value specified. |
+| value | number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -682,7 +682,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number &#124; number &#124; string | Yes | Value specified. |
+| value | number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -741,7 +741,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number &#124; number &#124; string | Yes | Value specified. |
+| value | number &#124; string | Yes | Value specified. |
 
 **Return value:**
 
@@ -913,7 +913,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | number &#124; number &#124; string &#124; boolean | Yes | Value specified. |
+| value | number &#124; string &#124; boolean | Yes | Value specified. |
 
 **Return value:**
 

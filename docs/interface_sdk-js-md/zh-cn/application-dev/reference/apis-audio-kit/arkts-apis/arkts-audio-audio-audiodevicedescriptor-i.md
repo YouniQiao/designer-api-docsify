@@ -180,7 +180,7 @@ SystemCapability.Multimedia.Audio.Core
 readonly id: number
 ```
 
-唯一的设备id。
+唯一的设备ID。
 
 SystemCapability.Multimedia.Audio.Device
 

@@ -30,6 +30,66 @@ Creates a **NodeContainer** component.
 
 ## Examples
 
-```TypeScript
 This example demonstrates how to mount a BuilderNode through NodeController.
+
+```TypeScript
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+declare class Params {
+  text: string
+}
+
+@Builder
+function buttonBuilder(params: Params) {
+  Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.SpaceEvenly }) {
+    Text(params.text)
+      .fontSize(12)
+    Button(`This is a Button`, { type: ButtonType.Normal, stateEffect: true })
+      .fontSize(12)
+      .borderRadius(8)
+      .backgroundColor(0x317aff)
+  }
+  .height(100)
+  .width(200)
+}
+
+class MyNodeController extends NodeController {
+  private rootNode: BuilderNode<[Params]> | null = null;
+  private wrapBuilder: WrappedBuilder<[Params]> = wrapBuilder(buttonBuilder);
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    if (this.rootNode === null) {
+      this.rootNode = new BuilderNode(uiContext);
+      this.rootNode.build(this.wrapBuilder, { text: 'This is a Text' })
+    }
+    return this.rootNode.getFrameNode();
+  }
+
+  aboutToDisappear() {
+    this.rootNode?.dispose();
+  }
+}
+
+
+@Entry
+@Component
+struct Index {
+  private baseNode: MyNodeController = new MyNodeController()
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent: FlexAlign.SpaceEvenly }) {
+      Text('This is a NodeContainer contains a text and a button ')
+        .fontSize(9)
+        .fontColor(0xCCCCCC)
+      NodeContainer(this.baseNode)
+        .borderWidth(1)
+        .onClick(() => {
+          console.info('click event');
+        })
+    }
+    .padding({ left: 35, right: 35, top: 35 })
+    .height(200)
+    .width(300)
+  }
+}
 ```

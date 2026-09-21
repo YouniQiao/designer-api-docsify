@@ -1482,7 +1482,6 @@ When the first UIAbility launched under a module needs to redirect to another UI
 
 **Examples**
 
-```TypeScript
 Set a DelegatorAbility.
 
 Configure abilitySrcEntryDelegator and abilityStageSrcEntryDelegator in the [module.json5](../../../quick-start/module-configuration-file.md) file. When the first UIAbility of the module is cold started, the system preferentially starts the UIAbility specified by abilitySrcEntryDelegator.
@@ -1492,10 +1491,34 @@ Configure abilitySrcEntryDelegator and abilityStageSrcEntryDelegator in the [mod
 > If the UIAbility is started by calling [startAbilityByCall](#startabilitybycall), the system ignores abilitySrcEntryDelegator and abilityStageSrcEntryDelegator configured in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 > 
 > The module name specified by abilityStageSrcEntryDelegator must be different from the current module name.
-```
 
 ```TypeScript
+{
+  "module": {
+    // ...
+    "abilityStageSrcEntryDelegator": "xxxModuleName",
+    "abilitySrcEntryDelegator": "xxxAbilityName",
+    // ...
+  }
+}
+```
+
 Revoke the DelegatorAbility.
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class DelegatorAbility extends UIAbility {
+  onForeground() {
+    // After the DelegatorAbility completes the specific operation, call revokeDelegator to revert to the first UIAbility.
+    this.context.revokeDelegator().then(() => {
+      console.info('revokeDelegator success');
+    }).catch((err: BusinessError) => {
+      console.error(`revokeDelegator failed, code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
 ```
 
 ## setAbilityInstanceInfo
@@ -2582,16 +2605,129 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for c
 
 **Examples**
 
-```TypeScript
 The following code demonstrates that the caller launches the callee to the background, sends a message to the callee after successfully obtaining the Caller object, and then releases the Caller object.
-```
 
 ```TypeScript
+import { Caller, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { rpc } from '@kit.IPCKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+class TestParcelable implements rpc.Parcelable {
+  age: number = 0;
+  name: string = '';
+  marshalling(dataOut: rpc.MessageSequence): boolean {
+    dataOut.writeInt(this.age);
+    dataOut.writeString(this.name);
+    return true;
+  }
+  unmarshalling(dataIn: rpc.MessageSequence): boolean {
+    this.age = dataIn.readInt();
+    this.name = dataIn.readString();
+    return true;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onForeground() {
+    let caller: Caller;
+    // Start the ability in the background.
+    let wantBackground: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+    };
+
+    try {
+      // Obtain the Caller communication object and start the UIAbility in the background.
+      caller = await this.context.startAbilityByCall(wantBackground);
+      await caller.call('TEST_CALL', new TestParcelable());
+      caller.release();
+    } catch (err) {
+      // Process input parameter errors.
+      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
+    }
+  }
+}
+```
+
 The following code demonstrates that the callee registers a listener after being launched and unregisters the listener when destroyed.
-```
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { rpc } from '@kit.IPCKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+class TestParcelable implements rpc.Parcelable {
+  age: number = 0;
+  name: string = '';
+  marshalling(dataOut: rpc.MessageSequence): boolean {
+    dataOut.writeInt(this.age);
+    dataOut.writeString(this.name);
+    return true;
+  }
+  unmarshalling(dataIn: rpc.MessageSequence): boolean {
+    this.age = dataIn.readInt();
+    this.name = dataIn.readString();
+    return true;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onCreate');
+    // Register a listener.
+    this.callee.on('TEST_CALL', (data: rpc.MessageSequence) => {
+      let recv = new TestParcelable();
+      data.readParcelable(recv);
+      recv.age++;
+      return recv;
+    });
+  }
+
+  onDestroy(): void {
+    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onDestroy');
+    // Unregisters the listener.
+    this.callee.off('TEST_CALL');
+  }
+}
+```
+
 The following code demonstrates the scenario where the caller launches the callee to the foreground.
+
+```TypeScript
+import { Caller, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+export default class EntryAbility extends UIAbility {
+  async onForeground() {
+    let caller: Caller;
+    // Launch the UIAbility to the foreground and set 'ohos.aafwk.param.callAbilityToForeground' in parameters to true.
+    let wantForeground: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      parameters: {
+        'ohos.aafwk.param.callAbilityToForeground': true
+      }
+    };
+
+    try {
+      // Obtain the Caller communication object and start the UIAbility in the foreground.
+      caller = await this.context.startAbilityByCall(wantForeground);
+      caller.release();
+    } catch (err) {
+      // Process input parameter errors.
+      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
+    }
+  }
+}
 ```
 
 ## startAbilityByType
@@ -3572,12 +3708,49 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
 The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
-```
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      // Destroy the current UIAbility.
+      this.context.terminateSelf((err: BusinessError) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('terminateSelf succeed');
+      });
+    } catch (err) {
+      // Capture the synchronization parameter error.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 (Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilities": [
+      {
+        // ...
+        "removeMissionAfterTerminate": true
+      }
+    ]
+  }
+}
 ```
 
 <a id="terminateself-1"></a>
@@ -3622,12 +3795,49 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 **Examples**
 
-```TypeScript
 The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
-```
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      // Destroy the current UIAbility.
+      this.context.terminateSelf()
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('terminateSelf succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Capture the synchronization parameter error.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 (Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilities": [
+      {
+        // ...
+        "removeMissionAfterTerminate": true
+      }
+    ]
+  }
+}
 ```
 
 ## terminateSelfWithResult

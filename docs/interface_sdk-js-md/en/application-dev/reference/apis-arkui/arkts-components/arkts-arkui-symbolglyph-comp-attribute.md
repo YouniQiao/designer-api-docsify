@@ -24,7 +24,7 @@ Sets the effect strategy of the **SymbolGlyph** component.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Sets the color of the **SymbolGlyph** component.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ The display size of the symbol glyph is controlled by the **fontSize** setting. 
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -138,7 +138,7 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -237,7 +237,7 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -263,7 +263,7 @@ shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle)
 
 Applies a gradient or solid color shader effect to the **SymbolGlyph** component.
 
-This API supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). When set, **shaderStyle** takes precedence over fontColor and any AI-based styling. To apply a simple solid color, using fontColor is recommended.
+This API supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). When set, **shaderStyle** takes precedence over [fontColor](arkts-arkui-symbolspan-comp-attribute.md#fontcolor) and any AI-based styling. To apply a simple solid color, using [fontColor](arkts-arkui-symbolspan-comp-attribute.md#fontcolor) is recommended.
 
 **Since:** 20
 

@@ -64,7 +64,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 enableLoading(value: boolean)
 ```
 
-设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括[border](arkts-arkui-common-comp-commonmethod-c.md#border)、padding等整个组件范围，而enableLoading=false只隐藏LoadingProgress本身动画内容，不包括border等。
+设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括[border](arkts-arkui-common-comp-commonmethod-c.md#border)、[padding](arkts-arkui-common-comp-commonmethod-c.md#padding)等整个组件范围，而enableLoading=false只隐藏LoadingProgress本身动画内容，不包括border等。
 
 **起始版本：** 10
 

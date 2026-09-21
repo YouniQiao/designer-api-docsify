@@ -105,11 +105,11 @@ Default value: **1vp**
 
 Unit: vp
 
-Value range: 0, +∞).
+Value range: [0, +∞).
 
 **NOTE:** 
 
-Percentage values are not supported. The priority of this attribute is lower than that of the universal attribute [height. If the value of this attribute is greater than that of **height**, cropping is performed based on the **height** settings. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value.
+Percentage values are not supported. The priority of this attribute is lower than that of the universal attribute [height](arkts-arkui-common-comp-commonmethod-c.md#height). If the value of this attribute is greater than that of **height**, cropping is performed based on the **height** settings. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

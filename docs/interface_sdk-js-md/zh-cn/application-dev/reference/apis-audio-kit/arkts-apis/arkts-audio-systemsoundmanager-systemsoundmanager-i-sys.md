@@ -113,7 +113,7 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
 | toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i-sys.md) | 是 | 铃音属性。 |
-| fd | number | 是 | 文件描述符，可通过[fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md)获取。 |
+| fd | number | 是 | 文件描述符，可通过[fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen)获取。 |
 | offset | number | 否 | 读取数据的偏移量（以字节为单位）。默认情况下为0。 |
 | length | number | 否 | 读取的数据的长度（以字节为单位）。默认情况下，长度为偏移后的剩余全部字节数。 |
 
@@ -840,7 +840,7 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
+| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取的系统铃声的类型。 |
 
 **返回值：**
 
@@ -882,6 +882,12 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 
 获取系统铃声播放器。使用callback异步回调。
 
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [getRingtonePlayer](#getringtoneplayer)
+> 替代。
+
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -898,7 +904,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined，data为获取到的系统铃声播放器；否则为错误对象。 |
 
 **示例**
 
@@ -931,6 +937,12 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 ```
 
 获取系统铃声播放器。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [getRingtonePlayer](#getringtoneplayer)
+> 替代。
 
 **起始版本：** 10
 
@@ -983,6 +995,11 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 
 获取系统铃声uri。使用callback异步回调。
 
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [getRingtoneUri](#getringtoneuri)替代。
+
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -1030,6 +1047,11 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 ```
 
 获取系统铃声uri。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [getRingtoneUri](#getringtoneuri)替代。
 
 **起始版本：** 10
 
@@ -1454,7 +1476,7 @@ systemSoundManagerInstance.openToneHaptics(context, hapticsUri).then((value: num
 openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSoundError]>>
 ```
 
-获取系统铃声的属性列表。使用Promise异步回调。
+批量打开铃声文件。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -1687,7 +1709,7 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)。 |
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
@@ -1731,6 +1753,11 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 
 设置系统铃声uri。使用callback异步回调。
 
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [setRingtoneUri](#setringtoneuri)替代。
+
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -1746,7 +1773,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)。 |
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
@@ -1781,6 +1808,11 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 
 设置系统铃声uri。使用Promise异步回调。
 
+> **说明：** 
+> 
+> 从 API version 10 开始支持，从 API version 11 开始废弃，建议使用
+> [setRingtoneUri](#setringtoneuri)替代。
+
 **起始版本：** 10
 
 **废弃版本：** 11
@@ -1796,7 +1828,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
+| uri | string | 是 | 被设置的系统铃声的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)。 |
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 
 **返回值：**
@@ -1843,8 +1875,8 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用的上下文。 |
-| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
-| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) | 是 | 被设置的系统提示音的类型。 |
+| uri | string | 是 | 被设置的系统提示音的uri，资源支持可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)。 |
+| type | [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e-sys.md) | 是 | 待获取的系统提示音的类型。 |
 
 **返回值：**
 

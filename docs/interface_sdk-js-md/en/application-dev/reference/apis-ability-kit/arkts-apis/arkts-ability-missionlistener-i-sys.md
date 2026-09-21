@@ -101,9 +101,7 @@ Called when the system creates a mission.
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```
 
 ## onMissionDestroyed
 
@@ -127,9 +125,7 @@ Called when the system destroys a mission.
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```
 
 ## onMissionIconUpdated
 
@@ -154,9 +150,7 @@ Called when the system updates the icon of a mission.
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```
 
 ## onMissionLabelUpdated
 
@@ -180,9 +174,7 @@ Called when the system updates the label of a mission.
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```
 
 ## onMissionMovedToFront
 
@@ -206,9 +198,7 @@ Called when the system moves a mission to the foreground.
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```
 
 ## onMissionSnapshotChanged
 
@@ -232,6 +222,4 @@ This callback is triggered when the system updates the task thumbnail of a missi
 
 **Examples**
 
-```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-```

@@ -16,7 +16,7 @@ The mode of adjusting the text font size to adapt to the layout.
 MAX_LINES_FIRST
 ```
 
-the text height adaptation mode to maxLines first.
+the text height adaptation mode to [maxLines](../arkts-components/arkts-arkui-textarea-comp-attribute.md#maxlines) first.
 
 **Since:** 10
 

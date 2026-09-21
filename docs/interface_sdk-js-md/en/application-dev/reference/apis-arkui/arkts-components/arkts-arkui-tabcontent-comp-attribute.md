@@ -24,7 +24,7 @@ Called when the tab content is about to be hidden. The scenarios include the tab
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ Called when the tab content is about to be displayed. The scenarios include the 
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 

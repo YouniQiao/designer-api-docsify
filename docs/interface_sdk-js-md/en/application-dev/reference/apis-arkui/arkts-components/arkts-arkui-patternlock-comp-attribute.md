@@ -86,7 +86,7 @@ Sets the background color.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 9
 
@@ -132,7 +132,7 @@ The callback parameter is an array of digits, where each digit represents the in
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 

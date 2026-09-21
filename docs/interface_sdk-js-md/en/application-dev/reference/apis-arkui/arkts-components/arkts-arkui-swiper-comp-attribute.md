@@ -283,11 +283,11 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 
 Sets the number of elements to display per page.
 
-**number** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The childelements are stretched or shrunk to equally divide the **Swiper** component's width (minus **displayCount-1** times **itemSpace**). Values less than or equal to 0 are treated as the default value **1**.
+**number** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The child elements are stretched or shrunk to equally divide the **Swiper** component's width (minus **displayCount-1** times **itemSpace**). Values less than or equal to 0 are treated as the default value **1**.
 
 **string** type: Only **'auto'** is supported. Child elements are laid out linearly based on their main-axis width without adapting to the **Swiper** component's width. [customContentTransition](#customcontenttransition) and [onContentDidScroll](#oncontentdidscroll) events are disabled.
 
-**SwiperAutoFill** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. Thesystem automatically works out the number of elements per page based on the width and **minSize** settings of the **Swiper** component. If **minSize** is left empty or set to a value less than or equal to 0, the **Swiper** component displays one column.
+**SwiperAutoFill** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The system automatically works out the number of elements per page based on the width and **minSize** settings of the **Swiper** component. If **minSize** is left empty or set to a value less than or equal to 0, the **Swiper** component displays one column.
 
 > **NOTE:** 
 > 
@@ -303,7 +303,7 @@ Sets the number of elements to display per page.
 > 
 > - If **displayCount** is set to **'auto'** and **swipeByGroup** is set to **true**, each child element will be treated as a group for page switching, allowing only one page to be switched at a time. In this case, you are advised not to set **swipeByGroup** or set **swipeByGroup** to **false**.
 > 
-> - This API can be called within attributeModifier since API version 18.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)&lt;!--RP1--&gt;&lt;!--RP1End--&gt;, the number of displayed navigation dots follows the rules below.
 
@@ -351,13 +351,13 @@ displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGr
 
 Sets the number of elements to display per page.
 
-**number** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The childelements are stretched or shrunk to equally divide the **Swiper** component's width (minus **displayCount-1** times **itemSpace**). Values less than or equal to 0 are treated as the default value **1**.
+**number** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The child elements are stretched or shrunk to equally divide the **Swiper** component's width (minus **displayCount-1** times **itemSpace**). Values less than or equal to 0 are treated as the default value **1**.
 
 **string** type: Only **'auto'** is supported. Child elements are laid out linearly based on their main-axis width without adapting to the **Swiper** component's width. [customContentTransition](#customcontenttransition) and [onContentDidScroll](#oncontentdidscroll) events are disabled.
 
-**SwiperAutoFill** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. Thesystem automatically works out the number of elements per page based on the width and **minSize** settings of the **Swiper** component. If **minSize** is left empty or set to a value less than or equal to 0, the **Swiper** component displays one column.
+**SwiperAutoFill** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The system automatically works out the number of elements per page based on the width and **minSize** settings of the **Swiper** component. If **minSize** is left empty or set to a value less than or equal to 0, the **Swiper** component displays one column.
 
-**ItemFillPolicy** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. Thenumber of displayed elements is determined based on the breakpoint type corresponding to the **Swiper** component's width. For example, if the breakpoint type is set to **ItemFillPolicy.BREAKPOINT_DEFAULT**, one column is displayed when the component width falls within the sm or smaller breakpoint range, two columns are displayed for the md breakpoint range, and three columns are displayed for the lg or a larger breakpoint range.
+**ItemFillPolicy** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The number of displayed elements is determined based on the breakpoint type corresponding to the **Swiper** component's width. For example, if the breakpoint type is set to **ItemFillPolicy.BREAKPOINT_DEFAULT**, one column is displayed when the component width falls within the sm or smaller breakpoint range, two columns are displayed for the md breakpoint range, and three columns are displayed for the lg or a larger breakpoint range.
 
 For details about the parameter, see [displayCount](#displaycount).
 
@@ -704,11 +704,11 @@ When the main axis runs horizontally and either **nextMargin** or **prevMargin**
 
 When the main axis runs vertically and either **nextMargin** or **prevMargin** is greater than the measured height of the child component, both margins are hidden.
 
-When using the **nextMargin** or **prevMargin** API, avoid applying size constraints to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
+When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 
@@ -1001,11 +1001,11 @@ When the main axis runs horizontally and either **nextMargin** or **prevMargin**
 
 When the main axis runs vertically and either **nextMargin** or **prevMargin** is greater than the measured height of the child component, both margins are hidden.
 
-When using the **nextMargin** or **prevMargin** API, avoid applying size constraints to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
+When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 

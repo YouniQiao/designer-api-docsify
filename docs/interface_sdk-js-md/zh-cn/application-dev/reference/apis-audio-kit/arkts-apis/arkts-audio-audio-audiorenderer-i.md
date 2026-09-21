@@ -338,7 +338,21 @@ audioRenderer.getAudioTime().then((timestamp: number) => {
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-获取输出音频流时间戳和位置信息，适配倍速接口。使用Promise异步回调。获取输出音频流时间戳和位置信息，通常用于进行音画同步对齐。注意，当实际播放位置（framePosition）为0时，时间戳（timestamp）是固定值，直到流真正开始播放时才会更新。当调用Flush接口时实际播放位置也会被重置。当音频流路由（route）变化时，例如设备变化或者输出类型变化时，播放位置也会被重置，但此时时间戳仍会持续增长。推荐当实际播放位置和时间戳的变化稳定后再使用该接口获取的值。该接口适配倍速接口，例如当播放速度设置为2倍时，播放位置的增长速度也会返回为正常的2倍。
+获取输出音频流时间戳和位置信息，适配倍速接口。使用Promise异步回调。获取输出音频流时间戳和位置信息，通常用于进行音画同步对齐，播放位置单位为采样数（samples），时间戳单位为纳秒（ns）。当设备切换或暂停恢复时，由于播放通路本身需要一段时间恢复，调用该接口获取的播放位置和时间戳会短暂地保持在切换或暂停前的状态。该接口通常用来实现音画同步，调用频率建议高于200ms一次，推荐频率为每分钟一次。在能保证音画同步效果的情况下，不需要频繁地查询时间戳，避免出现功耗问题。
+
+> **说明：** 
+> 
+> - 当实际播放位置（framePosition）为0时，时间戳（timestamp）是固定值，直到流真正开始播放时才会更新。
+> 
+> - 播放位置（framePosition）单位为采样数，采样数计算方式为采样率乘以时间（例如，当采样率为48000Hz时，20ms音频数据对应的采样数为48000*0.02，即采样点为960）。
+> 
+> - 当调用Flush接口时实际播放位置也会被重置。
+> 
+> - 在调用此函数之前，确保音频流处于运行状态，并且至少已成功播放一帧数据。
+> 
+> - 当音频流路由（route）变化时，例如设备变化或者输出类型变化时，播放位置可能也会被重置，但此时时间戳仍会持续增长。推荐当实际播放位置和时间戳的变化稳定后再使用该接口获取的值。
+> 
+> - 该接口适配倍速接口，例如当播放速度设置为2倍时，播放位置的增长速度也会返回为正常的2倍。
 
 **起始版本：** 19
 
@@ -491,7 +505,7 @@ getBufferSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。  单位为字节。 |
+| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。  单位为字节（Byte）。 |
 
 **示例**
 
@@ -524,7 +538,7 @@ getBufferSizeSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回缓冲区大小，单位为字节。 |
+| number | 返回缓冲区大小，单位为字节（Byte）。 |
 
 **示例**
 
@@ -697,7 +711,7 @@ getLatency(type: AudioLatencyType): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回音频时延，单位为毫秒。 |
+| number | 返回音频时延，单位为毫秒（ms）。 |
 
 **错误码：**
 
@@ -737,7 +751,7 @@ getLoudnessGain(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回播放的响度值，单位为分贝。 |
+| number | 返回播放的响度值，单位为分贝（dB）。 |
 
 **示例**
 
@@ -937,26 +951,6 @@ try {
 }
 ```
 
-## getNoiseReductionMode
-
-```TypeScript
-getNoiseReductionMode(): NoiseReductionMode
-```
-
-Gets the noise reduction mode for current audio renderer. The mode will only consider the default and setted status, audio output device and stream concurrency will not be considered.
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio renderer, the default value is [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity). |
-
 ## getRendererInfo
 
 ```TypeScript
@@ -1063,7 +1057,7 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
 
 **起始版本：** 8
 
@@ -1101,7 +1095,7 @@ getRenderRate(): Promise<AudioRendererRate>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
 
 **起始版本：** 8
 
@@ -1139,7 +1133,7 @@ getRenderRateSync(): AudioRendererRate
 
 > **说明：** 
 > 
-> 从API version 10开始支持，从API version 11开始废弃，建议使用[getSpeed](#getspeed)替代。
+> 从 API version 10开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
 
 **起始版本：** 10
 
@@ -1319,32 +1313,6 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
-
-## getSupportedNoiseReductionModes
-
-```TypeScript
-getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
-```
-
-Gets all the supported noise reduction modes for current device platform. Currently the noise reduction effect is only supported when using [STREAM_USAGE_VOICE_MESSAGE](arkts-audio-audio-streamusage-e.md#stream_usage_voice_message), other supported usage may be extened later. The supported modes will only consider the audio format and device platform, audio output device and stream concurrency will not be considered.
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | The supported noise reduction mode array, at least [FIDELITY](arkts-audio-audio-noisereductionmode-e.md#fidelity) is supported. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
 
 ## getUnderflowCount
 
@@ -1819,7 +1787,7 @@ audioRenderer.off('writeData', writeDataCallback);
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅音频焦点介绍文档。
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 9
 
@@ -2398,7 +2366,9 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 > 
 > - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。
 > 
-> - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设备。
+> - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设备。具体请参阅文档[设置音频默认输出设备](../../../media/audio/audio-output-device-switcher.md#设置默认输出设备)。
+> 
+> - 本接口优先级低于AudioSessionManager的[setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice)。如果使用AudioSessionManager的setDefaultOutputDevice设置了默认音频输出设备，本接口的设置将不会生效。
 
 **起始版本：** 12
 
@@ -2621,7 +2591,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| loudnessGain | number | 是 | 设置播放的响度值，单位为dB，响度范围为[-90.0, 24.0]。默认值为0.0dB。 |
+| loudnessGain | number | 是 | 设置播放的响度值，单位为分贝（dB），响度范围为[-90.0, 24.0]。默认值为0.0dB。 |
 
 **返回值：**
 
@@ -2642,35 +2612,6 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 audioRenderer.setLoudnessGain(1.0);
 ```
 
-## setNoiseReductionMode
-
-```TypeScript
-setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
-```
-
-Sets noise reduction mode for current audio renderer. The supported mode should be obtained by getSupportedNoiseReductionModes. The actual effect may vary from different audio devices, and will be invalid when there are multiple direct streams running simultaneously. The mode can only be changed in created and stopped state.
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| noiseReductionMode | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 是 | The noise reduction mode to set. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) | Illegal state, audio renderer is in running or released state. |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | The setted mode is not supported. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
-
 ## setRenderRate
 
 ```TypeScript
@@ -2681,7 +2622,7 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[setSpeed](#setspeed)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
 
 **起始版本：** 8
 
@@ -2724,7 +2665,7 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[setSpeed](#setspeed)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
 
 **起始版本：** 8
 
@@ -2901,7 +2842,7 @@ setVolumeWithRamp(volume: number, duration: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volume | number | 是 | 渐变目标音量值，音量范围为[0.0, 1.0]。 |
-| duration | number | 是 | 渐变持续时间，单位为ms。 |
+| duration | number | 是 | 渐变持续时间，单位为毫秒（ms）。 |
 
 **错误码：**
 
@@ -3058,7 +2999,7 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[on('writeData')](#onwritedata)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[on('writeData')](#onwritedata)替代。
 
 **起始版本：** 8
 
@@ -3134,7 +3075,7 @@ write(buffer: ArrayBuffer): Promise<number>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[on('writeData')](#onwritedata)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[on('writeData')](#onwritedata)替代。
 
 **起始版本：** 8
 

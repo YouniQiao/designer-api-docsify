@@ -40,9 +40,7 @@ getPosition(): number
 
 **示例**
 
-```TypeScript
 完整示例代码参考[initialize](#initialize)。
-```
 
 ## getSize
 
@@ -66,9 +64,7 @@ getSize(): number
 
 **示例**
 
-```TypeScript
 完整示例代码参考[initialize](#initialize)。
-```
 
 ## initialize
 
@@ -200,9 +196,7 @@ WebHttpBodyStream是否采用分块传输。
 
 **示例**
 
-```TypeScript
 完整示例代码参考[initialize](#initialize)。
-```
 
 ## isEof
 
@@ -226,9 +220,7 @@ isEof(): boolean
 
 **示例**
 
-```TypeScript
 完整示例代码参考[initialize](#initialize)。
-```
 
 ## isInMemory
 
@@ -251,10 +243,6 @@ isInMemory(): boolean
 | boolean | WebHttpBodyStream中的上传数据是否在内存中。<br>如果WebHttpBodyStream中的上传数据完全在内存中，并且所有读取请求都将同步成功，则返回true。对于分块传输类型的数据，预期返回false。 |
 
 **示例**
-
-```TypeScript
-完整示例代码参考[initialize](#initialize)。
-```
 
 ## read
 
@@ -290,6 +278,4 @@ read(size: number): Promise<ArrayBuffer>
 
 **示例**
 
-```TypeScript
 完整示例代码参考[initialize](#initialize)。
-```

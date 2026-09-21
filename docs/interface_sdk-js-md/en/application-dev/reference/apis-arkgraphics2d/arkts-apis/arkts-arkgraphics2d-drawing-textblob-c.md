@@ -107,6 +107,42 @@ class DrawingRenderNode extends RenderNode {
 }
 ```
 
+## makeFromPosTextWithFallback
+
+```TypeScript
+static makeFromPosTextWithFallback(
+      text: string, len: number, points: common2D.Point[], font: Font): Array<TextBlob>
+```
+
+Creates a sequence of TextBlob objects from text with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. One text blob is created per run of consecutive codepoints that share the same typeface. The coordinates of each font in the TextBlob object are determined by the coordinate information in the points array.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Content to be used for drawing the text blob. |
+| len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext). |
+| points | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of len. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md)&gt; | An array of TextBlob objects. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
 ## makeFromRunBuffer
 
 ```TypeScript
@@ -219,6 +255,33 @@ class DrawingRenderNode extends RenderNode {
   }
 }
 ```
+
+## makeFromStringWithFallback
+
+```TypeScript
+static makeFromStringWithFallback(text: string, font: Font): Array<TextBlob>
+```
+
+Creates a sequence of TextBlob objects from a string with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. One text blob is created per run of consecutive codepoints that share the same typeface.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Content to be used for drawing the text blob. |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | Yes | Font object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md)&gt; | An array of TextBlob objects. |
 
 ## uniqueID
 

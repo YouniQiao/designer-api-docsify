@@ -36,12 +36,27 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 
 **Examples**
 
-```TypeScript
 FA model:
-```
 
 ```TypeScript
+// Obtain the context.
+import { featureAbility } from '@kit.AbilityKit';
+
+let context = featureAbility.getContext();
+preferences.removePreferencesFromCacheSync(context, 'myStore');
+```
+
 Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.removePreferencesFromCacheSync(this.context, 'myStore');
+  }
+}
 ```
 
 
@@ -80,10 +95,27 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 
 **Examples**
 
-```TypeScript
 FA model:
-```
 
 ```TypeScript
+// Obtain the context.
+import { featureAbility } from '@kit.AbilityKit';
+
+let context = featureAbility.getContext();
+let options: preferences.Options = { name: 'myStore' };
+preferences.removePreferencesFromCacheSync(context, options);
+```
+
 Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    preferences.removePreferencesFromCacheSync(this.context, options);
+  }
+}
 ```

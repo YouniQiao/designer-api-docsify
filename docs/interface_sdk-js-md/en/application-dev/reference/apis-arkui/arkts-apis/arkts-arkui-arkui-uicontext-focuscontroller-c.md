@@ -102,8 +102,52 @@ Clears the focus and forcibly moves the focus to the root container node of the 
 
 **Examples**
 
-```TypeScript
 In this example, button2 receives initial focus by default. After clearFocus is clicked, focus returns to the page's root container node column1. Pressing the Tab key then restores focus to button2. Clicking button1 transfers focus to that button. Following another clearFocus click, focus again returns to column1, and pressing Tab subsequently moves focus to button1.
+
+```TypeScript
+@Entry
+@Component
+struct ClearFocusExample {
+  @State buttonColor: Color = Color.Blue;
+
+  build() {
+    Column({ space: 20 }) {
+      Column({ space: 5 }) {
+        Button('button1')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(Color.Blue)
+        Button('button2')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(this.buttonColor)
+          .defaultFocus(true)
+          .onFocus(() => {
+            this.buttonColor = Color.Red;
+          })
+          .onBlur(() => {
+            this.buttonColor = Color.Blue;
+          })
+        Button('clearFocus')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .backgroundColor(Color.Blue)
+          .onClick(() => {
+            this.getUIContext().getFocusController().clearFocus();
+          })
+      }
+      .id('column2')
+    }
+    .id('column1')
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## isActive
@@ -132,8 +176,52 @@ For details about the focus activation state, see [Basic Concepts](../../../ui/a
 
 **Examples**
 
-```TypeScript
 The following example verifies that isActive() returns the focus activation state of the UI instance.
+
+```TypeScript
+@Entry
+@Component
+struct IsActiveExample {
+  @State btColor: Color = Color.Blue;
+
+  build() {
+    Column({ space: 20 }) {
+      Column({ space: 5 }) {
+        Button('button1')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(Color.Blue)
+          .onClick(() => {
+            console.info('button1 onClick');
+            this.getUIContext().getFocusController().activate(true);
+            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
+          })
+        Button('button2')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(this.btColor)
+          .defaultFocus(true)
+          .onClick(() => {
+            console.info('button2 onClick');
+            this.getUIContext().getFocusController().activate(false);
+            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
+          })
+          .onFocus(() => {
+            this.btColor = Color.Red;
+          })
+          .onBlur(() => {
+            this.btColor = Color.Blue;
+          })
+      }
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## requestFocus

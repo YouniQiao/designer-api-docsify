@@ -32,9 +32,7 @@ enterFullscreen(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## exitFullscreen
 
@@ -52,9 +50,7 @@ exitFullscreen(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## pause
 
@@ -72,9 +68,7 @@ pause(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## play
 
@@ -92,9 +86,7 @@ play(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## release
 
@@ -112,9 +104,7 @@ release(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## resumePlayer
 
@@ -130,9 +120,7 @@ resumePlayer?(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## seek
 
@@ -156,9 +144,7 @@ seek(targetTime: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## setMuted
 
@@ -182,9 +168,7 @@ setMuted(muted: boolean): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## setPlaybackRate
 
@@ -208,9 +192,7 @@ setPlaybackRate(playbackRate: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## setVolume
 
@@ -234,9 +216,7 @@ setVolume(volume: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## suspendPlayer
 
@@ -258,9 +238,7 @@ suspendPlayer?(type: SuspendType): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```
 
 ## updateRect
 
@@ -287,6 +265,4 @@ updateRect(x: number, y: number, width: number, height: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-```

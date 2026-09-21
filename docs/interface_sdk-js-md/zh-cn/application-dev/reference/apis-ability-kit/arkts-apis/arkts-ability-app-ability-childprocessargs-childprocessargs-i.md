@@ -55,8 +55,40 @@ fds?: Record<string, number>
 
 **示例**
 
-```TypeScript
 示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+// 主进程中：
+import { common, ChildProcessArgs, childProcessManager } from '@kit.AbilityKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Text('Click')
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+            let path = context.filesDir + '/test.txt';
+            let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
+            let args: ChildProcessArgs = {
+              entryParams: 'testParam',
+              fds: {
+                'key1': file.fd
+              }
+            };
+            childProcessManager.startArkChildProcess('entry/./ets/process/DemoProcess.ets', args);
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 ```TypeScript

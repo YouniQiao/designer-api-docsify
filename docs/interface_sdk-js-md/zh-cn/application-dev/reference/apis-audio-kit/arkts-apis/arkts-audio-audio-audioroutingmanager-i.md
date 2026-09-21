@@ -4,7 +4,7 @@
 interface AudioRoutingManager
 ```
 
-音频路由管理。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
+音频路由管理，支持选择输入输出设备、管理设备过滤、查询首选设备等。适用于需要灵活控制音频流设备路由、实现特定应用或音频流的设备选择、或排除特定设备的场景。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
 
 **起始版本：** 9
 
@@ -80,7 +80,7 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回音频可选设备列表。 |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise对象，返回设备列表。 |
+| Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise对象，返回音频设备列表。 |
 
 **示例**
 
@@ -196,7 +196,7 @@ getDevicesSync(deviceFlag: DeviceFlag): AudioDeviceDescriptors
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回设备列表。 |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回音频设备列表。 |
 
 **错误码：**
 
@@ -529,7 +529,7 @@ isCommunicationDeviceActive(deviceType: CommunicationDeviceType, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 活跃音频设备类型。 |
+| deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 是 | 通信设备类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定通信设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对象。 |
 
 **示例**
@@ -665,7 +665,7 @@ audioRoutingManager.isMicBlockDetectionSupported().then((value: boolean) => {
 off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-取消监听音频设备连接状态变化事件。使用callback异步回调。
+取消监听音频设备连接状态变化事件。
 
 **起始版本：** 9
 
@@ -675,8 +675,8 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当取消监听音频设备连接变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回设备更新详情。 |
+| type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('deviceChange')](#ondevicechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -707,7 +707,7 @@ audioRoutingManager.off('deviceChange', deviceChangeCallback);
 off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-取消监听音频可选设备连接状态变化事件。使用callback异步回调。
+取消监听音频可选设备连接状态变化事件。
 
 **起始版本：** 12
 
@@ -717,8 +717,8 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'，当取消监听音频可选设备连接变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回可选设备更新详情。 |
+| type | 'availableDeviceChange' | 是 | 事件回调类型，支持的事件为'availableDeviceChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('availableDeviceChange')](#onavailabledevicechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -749,7 +749,7 @@ audioRoutingManager.off('availableDeviceChange', availableDeviceChangeCallback);
 off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听最高优先级输出音频设备变化事件。使用callback异步回调。
+取消监听最高优先级输出音频设备变化事件。
 
 **起始版本：** 10
 
@@ -759,8 +759,8 @@ off(type: 'preferOutputDeviceChangeForRendererInfo', callback?: Callback<AudioDe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'preferOutputDeviceChangeForRendererInfo' | 是 | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo'，当取消监听最高优先级输出音频设备变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输出设备信息。 |
+| type | 'preferOutputDeviceChangeForRendererInfo' | 是 | 事件回调类型，支持的事件为'preferOutputDeviceChangeForRendererInfo'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('preferOutputDeviceChangeForRendererInfo')](#onpreferoutputdevicechangeforrendererinfo)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -793,7 +793,7 @@ audioRoutingManager.off('preferOutputDeviceChangeForRendererInfo', preferOutputD
 off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听最高优先级输入音频设备变化事件。使用callback异步回调。
+取消监听最高优先级输入音频设备变化事件。
 
 **起始版本：** 10
 
@@ -803,8 +803,8 @@ off(type: 'preferredInputDeviceChangeForCapturerInfo', callback?: Callback<Audio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'preferredInputDeviceChangeForCapturerInfo' | 是 | 事件回调类型，支持的事件为'preferredInputDeviceChangeForCapturerInfo'，当取消监听最高优先级输入音频设备变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数，返回优先级最高的输入设备信息。 |
+| type | 'preferredInputDeviceChangeForCapturerInfo' | 是 | 事件回调类型，支持的事件为'preferredInputDeviceChangeForCapturerInfo'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('preferredInputDeviceChangeForCapturerInfo')](#onpreferredinputdevicechangeforcapturerinfo)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -837,7 +837,7 @@ audioRoutingManager.off('preferredInputDeviceChangeForCapturerInfo', preferredIn
 off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): void
 ```
 
-取消监听麦克风堵塞状态变化事件。使用callback异步回调。
+取消监听麦克风堵塞状态变化事件。
 
 **起始版本：** 13
 
@@ -847,8 +847,8 @@ off(type: 'micBlockStatusChanged', callback?: Callback<DeviceBlockStatusInfo>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'micBlockStatusChanged' | 是 | 事件回调类型，支持的事件为'micBlockStatusChanged'，当取消监听音频麦克风是否被堵塞变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | 回调函数，返回麦克风被堵塞状态和设备信息。 |
+| type | 'micBlockStatusChanged' | 是 | 事件回调类型，支持的事件为'micBlockStatusChanged'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('micBlockStatusChanged')](#onmicblockstatuschanged)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -1071,7 +1071,7 @@ audioRoutingManager.isMicBlockDetectionSupported().then((value: boolean) => {
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置通信设备激活状态。使用callback异步回调。该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。推荐使用AVSession提供的设备切换组件，实现通话设备切换。
+设置通信设备激活状态。使用callback异步回调。该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。推荐使用AVSession提供的[设备切换组件](../../../media/avsession/using-switch-call-devices.md)，实现通话设备切换。
 
 **起始版本：** 9
 
@@ -1107,7 +1107,7 @@ audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>
 ```
 
-设置通信设备激活状态。使用Promise异步回调。该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。推荐开发者使用AVSession提供的设备切换组件，实现通话设备切换。
+设置通信设备激活状态。使用Promise异步回调。该接口由于功能设计变化，将在后续版本废弃，不建议开发者使用。推荐开发者使用AVSession提供的[设备切换组件](../../../media/avsession/using-switch-call-devices.md)，实现通话设备切换。
 
 **起始版本：** 9
 
@@ -1124,7 +1124,7 @@ setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

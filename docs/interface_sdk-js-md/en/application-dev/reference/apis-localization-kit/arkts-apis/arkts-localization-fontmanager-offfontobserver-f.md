@@ -12,7 +12,7 @@ import { fontManager } from '@kit.LocalizationKit';
 function offFontObserver(): void
 ```
 
-Unregisters the font service death observer.
+Unregisters the font service status listener.
 
 **Since:** 26.0.1
 

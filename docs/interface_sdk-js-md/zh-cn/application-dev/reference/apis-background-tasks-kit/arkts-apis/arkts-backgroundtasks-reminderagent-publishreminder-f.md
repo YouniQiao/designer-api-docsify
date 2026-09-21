@@ -18,7 +18,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 **废弃版本：** 9
 
-**替代接口：** publishReminder
+**替代接口：** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -62,7 +62,7 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** publishReminder
+**替代接口：** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 

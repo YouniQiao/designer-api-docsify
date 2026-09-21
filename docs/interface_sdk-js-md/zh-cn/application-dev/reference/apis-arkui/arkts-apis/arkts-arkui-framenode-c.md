@@ -76,9 +76,7 @@ addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandle
 
 **示例**
 
-```TypeScript
 请参考组件设置和删除多态样式状态示例。
-```
 
 ## adoptChild
 
@@ -112,9 +110,7 @@ adoptChild(child: FrameNode): void
 
 **示例**
 
-```TypeScript
 完整示例请参考接纳为附属节点示例。
-```
 
 ## appendChild
 
@@ -147,9 +143,7 @@ appendChild(node: FrameNode): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## cancelAnimations
 
@@ -181,9 +175,7 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 
 **示例**
 
-```TypeScript
 请参考动画创建与取消示例。
-```
 
 ## clearChildren
 
@@ -209,9 +201,7 @@ clearChildren(): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## constructor
 
@@ -378,9 +368,7 @@ convertPositionFromWindow(positionByWindow: Position): Position
 
 **示例**
 
-```TypeScript
 请参考局部与窗口坐标转换示例。
-```
 
 ## convertPositionToWindow
 
@@ -419,9 +407,7 @@ convertPositionToWindow(positionByLocal: Position): Position
 
 **示例**
 
-```TypeScript
 请参考局部与窗口坐标转换示例。
-```
 
 ## createAnimation
 
@@ -456,9 +442,7 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 
 **示例**
 
-```TypeScript
 请参考动画创建与取消示例。
-```
 
 ## createFrameNodes
 
@@ -860,9 +844,7 @@ getChild(index: number): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 <a id="getchild-1"></a>
 
@@ -897,9 +879,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考LazyForEach场景节点操作示例。
-```
 
 ## getChildrenCount
 
@@ -925,9 +905,7 @@ getChildrenCount(): number
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 <a id="getchildrencount-1"></a>
 
@@ -1208,9 +1186,7 @@ getCrossLanguageOptions(): CrossLanguageOptions
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getCustomProperty
 
@@ -1242,9 +1218,7 @@ getCustomProperty(name: string): Object | undefined
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getFirstChild
 
@@ -1270,9 +1244,7 @@ getFirstChild(): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1298,9 +1270,7 @@ getFirstChildIndexWithoutExpand(): number
 
 **示例**
 
-```TypeScript
 请参考LazyForEach场景节点操作示例。
-```
 
 ## getFrameNodeById
 
@@ -1493,9 +1463,7 @@ getGlobalPositionOnDisplay(): Position
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getId
 
@@ -1521,9 +1489,7 @@ getId(): string
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getInspectorInfo
 
@@ -1553,9 +1519,7 @@ getInspectorInfo(): Object
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getInteractionEventBindingInfo
 
@@ -1587,9 +1551,7 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getLastChildIndexWithoutExpand
 
@@ -1615,9 +1577,7 @@ getLastChildIndexWithoutExpand(): number
 
 **示例**
 
-```TypeScript
 请参考LazyForEach场景节点操作示例。
-```
 
 ## getLayoutPosition
 
@@ -1643,9 +1603,7 @@ getLayoutPosition(): Position
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getMeasuredSize
 
@@ -1671,9 +1629,7 @@ getMeasuredSize(): Size
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getNextSibling
 
@@ -1699,9 +1655,7 @@ getNextSibling(): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getNodePropertyValue
 
@@ -1733,9 +1687,7 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 
 **示例**
 
-```TypeScript
 请参考动画创建与取消示例。
-```
 
 ## getNodeType
 
@@ -1761,9 +1713,7 @@ getNodeType(): string
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getOpacity
 
@@ -1789,9 +1739,7 @@ getOpacity(): number
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getParent
 
@@ -1817,9 +1765,7 @@ getParent(): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考节点操作示例和获取根节点示例。
-```
 
 ## getPositionToParent
 
@@ -1913,7 +1859,7 @@ struct Index {
 getPositionToParentWithTransform(): Position
 ```
 
-获取FrameNode相对于父组件带有绘制属性的位置偏移，单位为VP，绘制属性比如transform、translate等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于父组件带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform)、[translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -2085,7 +2031,7 @@ struct Index {
 getPositionToScreenWithTransform(): Position
 ```
 
-获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如transform、translate等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform)、[translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -2256,7 +2202,7 @@ struct Index {
 getPositionToWindowWithTransform(): Position
 ```
 
-获取FrameNode相对于窗口带有绘制属性的位置偏移，单位为VP，绘制属性比如transform、translate等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于窗口带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform)、[translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -2359,9 +2305,7 @@ getPreviousSibling(): FrameNode | null
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getRenderNode
 
@@ -2445,9 +2389,7 @@ getUniqueId(): number
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getUserConfigBorderWidth
 
@@ -2473,9 +2415,7 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getUserConfigMargin
 
@@ -2501,9 +2441,7 @@ getUserConfigMargin(): Edges<LengthMetrics>
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getUserConfigPadding
 
@@ -2529,9 +2467,7 @@ getUserConfigPadding(): Edges<LengthMetrics>
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## getUserConfigSize
 
@@ -2557,9 +2493,7 @@ getUserConfigSize(): SizeT<LengthMetrics>
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## insertChildAfter
 
@@ -2593,9 +2527,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## invalidate
 
@@ -2635,8 +2567,106 @@ invalidateAttributes(): void
 
 **示例**
 
-```TypeScript
 从API version 21开始，通过if else动态切换两个节点，并且在节点创建时调用invalidateAttributes即时触发节点属性更新，避免组件切换过程中出现闪烁。
+
+```TypeScript
+// index.ets
+import { FrameNode, NodeController, typeNode, NodeContent } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义NodeAdapter控制器
+class MyNodeAdapterController extends NodeController {
+  rootNode: FrameNode | null = null;
+  imageUrl: string = '';
+
+  constructor(imageUrl: string) {
+    super();
+    this.imageUrl = imageUrl;
+  }
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let imageNode = typeNode.createNode(uiContext, 'Image');
+    imageNode.initialize($r(this.imageUrl))
+    imageNode.attribute.syncLoad(true).width(100).height(100);
+    // 强制当前帧内即时节点更新，避免出现切换闪烁
+    imageNode.invalidateAttributes();
+    return imageNode;
+  }
+}
+
+// 自定义挂载事件的自定义组件，挂载前加载样例图片
+@Component
+struct NodeComponent3 {
+  private rootSlot: NodeContent = new NodeContent();
+
+  aboutToAppear(): void {
+    const uiContext = this.getUIContext();
+    let imageNode = typeNode.createNode(uiContext, 'Image');
+    imageNode.initialize($r('app.media.startIcon'))
+    imageNode.attribute.syncLoad(true).width(100).height(100);
+    imageNode.invalidateAttributes();
+    this.rootSlot.addFrameNode(imageNode);
+  }
+
+  build() {
+    ContentSlot(this.rootSlot)
+  }
+}
+
+// 自定义挂载事件的自定义组件，挂载前加载样例图片
+@Component
+struct NodeComponent4 {
+  private rootSlot: NodeContent = new NodeContent();
+
+  aboutToAppear(): void {
+    const uiContext = this.getUIContext();
+    let imageNode = typeNode.createNode(uiContext, 'Image');
+    imageNode.initialize($r('app.media.startIcon'))
+    imageNode.attribute.syncLoad(true).width(100).height(100);
+    imageNode.invalidateAttributes();
+    this.rootSlot.addFrameNode(imageNode);
+  }
+
+  build() {
+    ContentSlot(this.rootSlot)
+  }
+}
+
+@Entry
+@Component
+struct ListNodeTest {
+  @State flag: boolean = true;
+  adapterController: MyNodeAdapterController = new MyNodeAdapterController('app.media.startIcon');
+
+  build() {
+    Column() {
+      Text('ListNode Adapter');
+      if (this.flag) {
+        NodeComponent3()
+      } else {
+        NodeComponent4()
+      }
+      if (this.flag) {
+        NodeContainer(this.adapterController)
+          .width(300).height(300)
+          .borderWidth(1).borderColor(Color.Black)
+      } else {
+        NodeContainer(this.adapterController)
+          .width(300).height(300)
+          .borderWidth(1).borderColor(Color.Black)
+      }
+      if (this.flag) {
+        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
+      } else {
+        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
+      }
+      Button('change').onClick(() => {
+        this.flag = !this.flag;
+      })
+    }
+    .borderWidth(1)
+    .width('100%')
+  }
+}
 ```
 
 ## isAttached
@@ -2663,9 +2693,7 @@ isAttached(): boolean
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## isClipToFrame
 
@@ -2691,9 +2719,7 @@ isClipToFrame(): boolean
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## isDisposed
 
@@ -2719,9 +2745,7 @@ isDisposed(): boolean
 
 **示例**
 
-```TypeScript
 请参考检验FrameNode是否有效示例。
-```
 
 ## isInRenderState
 
@@ -2836,9 +2860,7 @@ isModifiable(): boolean
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## isOnMainTree
 
@@ -3439,9 +3461,7 @@ isVisible(): boolean
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## layout
 
@@ -3467,9 +3487,7 @@ layout(position: Position): void
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## measure
 
@@ -3495,9 +3513,7 @@ measure(constraint: LayoutConstraint): void
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## moveTo
 
@@ -3540,9 +3556,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## onDraw
 
@@ -3570,9 +3584,7 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## onLayout
 
@@ -3598,9 +3610,7 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## onMeasure
 
@@ -3626,9 +3636,7 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## recycle
 
@@ -3648,9 +3656,7 @@ recycle(): void
 
 **示例**
 
-```TypeScript
 请参考节点复用回收使用示例。
-```
 
 ## removeAdoptedChild
 
@@ -3684,9 +3690,7 @@ removeAdoptedChild(child: FrameNode): void
 
 **示例**
 
-```TypeScript
 完整示例请参考接纳为附属节点示例。
-```
 
 ## removeChild
 
@@ -3718,9 +3722,7 @@ removeChild(node: FrameNode): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## removeSupportedUIStates
 
@@ -3746,9 +3748,7 @@ removeSupportedUIStates(uiStates: number): void
 
 **示例**
 
-```TypeScript
 请参考组件设置和删除多态样式状态示例。
-```
 
 ## reuse
 
@@ -3768,9 +3768,7 @@ reuse(): void
 
 **示例**
 
-```TypeScript
 请参考节点复用回收使用示例。
-```
 
 ## setCrossLanguageOptions
 
@@ -3815,9 +3813,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 **示例**
 
-```TypeScript
 请参考节点操作示例。
-```
 
 ## setLayoutPosition
 
@@ -3843,9 +3839,7 @@ setLayoutPosition(position: Position): void
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## setMeasuredSize
 
@@ -3871,9 +3865,7 @@ setMeasuredSize(size: Size): void
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## setNeedsLayout
 
@@ -3893,9 +3885,7 @@ setNeedsLayout(): void
 
 **示例**
 
-```TypeScript
 请参考节点自定义示例。
-```
 
 ## commonAttribute
 
@@ -3926,9 +3916,7 @@ get commonAttribute(): CommonAttribute
 
 **示例**
 
-```TypeScript
 请参考基础事件示例。
-```
 
 ## commonEvent
 
@@ -3952,9 +3940,7 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **示例**
 
-```TypeScript
 请参考基础事件示例和LazyForEach场景基础事件使用示例。
-```
 
 ## gestureEvent
 
@@ -3978,6 +3964,4 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **示例**
 
-```TypeScript
 请参考手势事件示例。
-```

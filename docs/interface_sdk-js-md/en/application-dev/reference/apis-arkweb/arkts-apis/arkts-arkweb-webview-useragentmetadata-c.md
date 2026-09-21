@@ -38,9 +38,7 @@ Obtains the architecture type of the platform. If the corresponding [setArchitec
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getBitness
 
@@ -64,9 +62,7 @@ Obtains the bitness type of the platform. If the corresponding [setBitness](#set
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getBrandVersionList
 
@@ -90,9 +86,7 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getFormFactors
 
@@ -116,9 +110,7 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getFullVersion
 
@@ -142,9 +134,7 @@ Obtains the full version number. If the corresponding [setFullVersion](#setfullv
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getMobile
 
@@ -168,9 +158,7 @@ Obtains whether the device is a mobile device. If the corresponding [setMobile](
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getModel
 
@@ -194,9 +182,7 @@ Obtains the device model. If the corresponding [setModel](#setmodel) is not call
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getPlatform
 
@@ -220,9 +206,7 @@ Obtains the operating system name. If the corresponding [setPlatform](#setplatfo
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getPlatformVersion
 
@@ -246,9 +230,7 @@ Obtains the operating system version number. If the corresponding [setPlatformVe
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getWow64
 
@@ -272,10 +254,6 @@ Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If 
 
 **Examples**
 
-```TypeScript
-For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
-
 ## setArchitecture
 
 ```TypeScript
@@ -298,9 +276,7 @@ Sets the architecture type of the platform.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setBitness
 
@@ -324,9 +300,7 @@ Sets the bitness type of the platform.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setBrandVersionList
 
@@ -350,9 +324,7 @@ Sets the brand and version information.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setFormFactors
 
@@ -376,9 +348,7 @@ Sets the device form, such as the mobile phone or tablet.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setFullVersion
 
@@ -402,9 +372,7 @@ Sets the full version number.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setMobile
 
@@ -428,9 +396,7 @@ Sets whether the device is a mobile device.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setModel
 
@@ -454,9 +420,7 @@ Sets the device model.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setPlatform
 
@@ -480,9 +444,7 @@ Sets the OS name.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setPlatformVersion
 
@@ -506,9 +468,7 @@ Sets the OS version.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setWow64
 
@@ -532,6 +492,4 @@ Sets whether the binary file runs in 32-bit mode on a 64-bit Windows.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```

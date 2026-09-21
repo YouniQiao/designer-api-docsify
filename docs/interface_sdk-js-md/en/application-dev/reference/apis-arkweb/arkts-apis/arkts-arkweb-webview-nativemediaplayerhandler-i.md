@@ -38,9 +38,7 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleDurationChanged
 
@@ -64,9 +62,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleEnded
 
@@ -84,9 +80,7 @@ When media playback ends, this method is called to notify the ArkWeb kernel of t
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleError
 
@@ -111,9 +105,7 @@ When an error occurs in the player, this method is called to notify the ArkWeb k
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleFullscreenChanged
 
@@ -137,9 +129,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleMutedChanged
 
@@ -163,9 +153,7 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleNetworkStateChanged
 
@@ -189,9 +177,7 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handlePlaybackRateChanged
 
@@ -215,9 +201,7 @@ When the playback rate of the player changes, this method is called to notify th
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleReadyStateChanged
 
@@ -241,9 +225,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleSeekFinished
 
@@ -261,9 +243,7 @@ When the player completes seeking, this method is called to notify the ArkWeb ke
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleSeeking
 
@@ -281,9 +261,7 @@ When the player enters the seek state, this method is called to notify the ArkWe
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleStatusChanged
 
@@ -307,9 +285,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleTimeUpdate
 
@@ -333,9 +309,7 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## handleVideoSizeChanged
 
@@ -360,10 +334,6 @@ When the player parses the video dimensions, this method is called to notify the
 
 **Examples**
 
-```TypeScript
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
-
 ## handleVolumeChanged
 
 ```TypeScript
@@ -386,6 +356,4 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```

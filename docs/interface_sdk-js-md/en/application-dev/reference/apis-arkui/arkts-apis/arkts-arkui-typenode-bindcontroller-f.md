@@ -114,9 +114,7 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swiper-comp-swipercon
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Swiper')12+.
-```
 
 
 <a id="bindcontroller-2"></a>

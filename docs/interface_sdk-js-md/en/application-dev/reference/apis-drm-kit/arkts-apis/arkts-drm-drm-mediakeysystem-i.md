@@ -161,13 +161,6 @@ Destroys this MediaKeySystem instance.
 
 **Examples**
 
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
-let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
-mediaKeySystem.destroy();
-```
-
 ## generateKeySystemRequest
 
 ```TypeScript

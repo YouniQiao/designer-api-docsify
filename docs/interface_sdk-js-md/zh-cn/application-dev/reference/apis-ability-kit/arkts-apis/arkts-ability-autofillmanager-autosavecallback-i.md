@@ -34,9 +34,7 @@ onFailure(): void
 
 **示例**
 
-```TypeScript
 参见autoFillManager.requestAutoSave。
-```
 
 ## onSuccess
 
@@ -56,6 +54,4 @@ onSuccess(): void
 
 **示例**
 
-```TypeScript
 参见autoFillManager.requestAutoSave。
-```

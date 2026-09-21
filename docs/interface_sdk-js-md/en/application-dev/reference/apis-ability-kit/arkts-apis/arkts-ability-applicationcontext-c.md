@@ -1071,8 +1071,34 @@ Unregisters the listener for application process state changes. This API uses an
 
 **Examples**
 
-```TypeScript
 Assume that [ApplicationContext.on('applicationStateChange')](#onapplicationstatechange) is used to register a callback named applicationStateChangeCallback. The following example shows how to unregister the corresponding listener.
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  },
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+};
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // Obtain the application context.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // In this example, the callback parameter is ApplicationStateChangeCallback. Replace it with the actual value.
+      // If no value is passed in, all the listeners for the corresponding event are unregistered.
+      applicationContext.off('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
 ```
 
 ## offSystemConfigurationUpdated

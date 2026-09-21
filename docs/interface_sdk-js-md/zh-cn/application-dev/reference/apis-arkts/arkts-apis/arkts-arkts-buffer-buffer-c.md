@@ -233,7 +233,7 @@ fill(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; Buffer &#124; Uint8Array &#124; number &#124; number &#124; number | 是 | 用于填充的值。<br>**适用版本：** 11 |
+| value | string &#124; Buffer &#124; Uint8Array &#124; number | 是 | 用于填充的值。<br>**适用版本：** 11 |
 | offset | number | 否 | 起始偏移量。取值范围：&gt;= 0且&lt;= Buffer.length。默认值：0。 |
 | end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
@@ -278,7 +278,7 @@ includes(value: string | number | Buffer | Uint8Array, byteOffset?: number, enco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -318,7 +318,7 @@ indexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, encod
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要查找的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要查找的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -398,7 +398,7 @@ lastIndexOf(value: string | number | Buffer | Uint8Array, byteOffset?: number, e
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; number &#124; number &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
+| value | string &#124; number &#124; Buffer &#124; Uint8Array | 是 | 要搜索的内容。<br>**适用版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：Buffer.length。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 

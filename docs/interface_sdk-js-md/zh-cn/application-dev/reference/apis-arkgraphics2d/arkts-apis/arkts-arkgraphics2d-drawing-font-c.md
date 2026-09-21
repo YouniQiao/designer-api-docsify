@@ -973,6 +973,39 @@ let font = new drawing.Font();
 font.measureText("drawing", drawing.TextEncoding.TEXT_ENCODING_UTF8);
 ```
 
+## measureTextWithFallback
+
+```TypeScript
+measureTextWithFallback(text: string, encoding: TextEncoding): number
+```
+
+获取文本宽度，支持字体回退。若当前字型的字体不支持某些字符时，会自动从系统中查找回退字体。若未找到回退字体，则仍使用当前字型的字体。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 待测量的文本内容，将按encoding指定的编码方式进行解析。 |
+| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 指定文本编码类型。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回包含回退字体的文本宽度，浮点数。单位为物理像素px。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
 ## setBaselineSnap
 
 ```TypeScript
@@ -1398,3 +1431,36 @@ let text : string = 'hello world';
 let glyphs : number[] = font.textToGlyphs(text);
 console.info("drawing text toglyphs OnTestFunction num =  " + glyphs.length );
 ```
+
+## textToGlyphsWithFallback
+
+```TypeScript
+textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallbackInfo>
+```
+
+将文本转换为字形索引，支持字体回退。若当前字型的字体不支持某些字符时，会自动从系统中查找回退字体。若未找到回退字体，则仍使用当前字型的字体。返回数组中的每个元素包含使用相同回退字体的字形。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 待转换为字形索引的文本字符串。 |
+| glyphCount | number | 否 | 文本表示的字形数量，该参数为整数。传入时必须与[countText](#counttext)获取的值相等，不传入时默认为text表示的字形数量。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[TypefaceFallbackInfo](arkts-arkgraphics2d-drawing-typefacefallbackinfo-i.md)&gt; | 返回字体回退信息数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |

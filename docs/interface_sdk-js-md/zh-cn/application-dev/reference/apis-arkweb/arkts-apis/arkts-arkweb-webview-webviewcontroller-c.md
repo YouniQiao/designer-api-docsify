@@ -271,7 +271,7 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 > 
 > - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。
 > 
-> - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用keyboardAvoidMode()声明的模式。
+> - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用[keyboardAvoidMode()](../arkts-components/arkts-arkweb-web-comp-attribute.md#keyboardavoidmode)声明的模式。
 
 **起始版本：** 20
 
@@ -1002,9 +1002,7 @@ closeCamera(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[startCamera](#startcamera)。
-```
 
 ## constructor
 
@@ -1095,8 +1093,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## createPdf
@@ -1308,9 +1327,7 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 **示例**
 
-```TypeScript
 完整示例代码参考[onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext)。
-```
 
 ## createWebPrintDocumentAdapter
 
@@ -1586,8 +1603,27 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          let str=objName.test();
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## enableAdsBlock
@@ -2101,9 +2137,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 **示例**
 
-```TypeScript
 请参考[setActiveWebEngineVersion](#setactivewebengineversion)。
-```
 
 ## getAttachState
 
@@ -2133,7 +2167,7 @@ getBackForwardEntries(): BackForwardList
 
 > **说明：** 
 > 
-> onLoadIntercept在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用
+> [onLoadIntercept](../arkts-components/arkts-arkweb-web-comp-attribute.md#onloadintercept)在加载开始的时候触发，该时刻还未生成历史节点，所以在onLoadIntercept中调用
 > getBackForwardEntries拿到的历史栈不包括当前正在加载中的跳转。
 
 **起始版本：** 9
@@ -3086,8 +3120,36 @@ struct Index {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.testBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## getMediaPlaybackState
@@ -3615,8 +3677,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        body {
+          width:3000px;
+          height:6000px;
+          padding-right:170px;
+          padding-left:170px;
+          border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## getSecurityLevel
@@ -3740,10 +3823,6 @@ getSubframeErrorPageEnabled(): boolean
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 **示例**
-
-```TypeScript
-完整示例代码参考[setErrorPageEnabled](#seterrorpageenabled)。
-```
 
 ## getSurfaceId
 
@@ -3974,8 +4053,37 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 支持开发者基于默认的User-Agent去定制User-Agent。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  @State ua: string = "";
+
+  aboutToAppear(): void {
+    webview.once('webInited', () => {
+      try {
+        // 应用侧用法示例，定制User-Agent。
+        this.ua = this.controller.getUserAgent() + 'xxx';
+        this.controller.setCustomUserAgent(this.ua);
+      } catch (error) {
+        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+      }
+    })
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## getUserAgentClientHintsEnabled
@@ -3998,9 +4106,7 @@ static getUserAgentClientHintsEnabled(): boolean
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-```
 
 ## getUserAgentMetadata
 
@@ -4028,9 +4134,7 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-```
 
 ## getWebId
 
@@ -4231,8 +4335,20 @@ static initializeWebEngine(): void
 
 **示例**
 
-```TypeScript
 本示例以EntryAbility为例，描述了在Ability创建阶段完成Web组件动态库加载的功能。
+
+```TypeScript
+// EntryAbility.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.initializeWebEngine()
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## injectOfflineResources
@@ -4273,34 +4389,249 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 
 **示例**
 
-```TypeScript
 接口推荐配合动态组件使用，使用离线的Web组件用于将资源注入到内核的内存缓存中，并在适当的时机加载业务用Web组件使用这些资源。下方是代码示例：
 
 首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
-```
 
 ```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
 编写动态组件所需基础代码。
-```
 
 ```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
 编写用于注入资源的组件代码，本例中的本地资源内容通过文件读取接口读取rawfile目录下的本地文件。
-```
 
 ```TypeScript
+// InjectWebview.ets
+import { webview } from '@kit.ArkWeb';
+import { resourceConfigs } from "./Resource";
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(async () => {
+      try {
+        data.controller.injectOfflineResources(await getData (data.context));
+      } catch (err) {
+        console.error("error: " + err.code + " " + err.message);
+      }
+    })
+    .fileAccess(true)
+}
+
+export const injectWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export async function getData(context: UIContext) {
+  const resourceMapArr: Array<webview.OfflineResourceMap> = [];
+
+  // 读取配置，从rawfile目录中读取文件内容
+  for (let config of resourceConfigs) {
+    let buf: Uint8Array = new Uint8Array(0);
+    if (config.localPath) {
+      buf = await readRawFile(config.localPath, context);
+    }
+
+    resourceMapArr.push({
+      urlList: config.urlList,
+      resource: buf,
+      responseHeaders: config.responseHeaders,
+      type: config.type,
+    })
+  }
+
+  return resourceMapArr;
+}
+
+export async function readRawFile(url: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(url);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
 编写业务用组件代码。
-```
 
 ```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // 此处组件可根据业务需要自行扩展
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
 编写资源配置信息。
-```
 
 ```TypeScript
+// Resource.ets
+import { webview } from '@kit.ArkWeb';
+
+export interface ResourceConfig {
+  urlList: Array<string>,
+  type: webview.OfflineResourceType,
+  responseHeaders: Array<Header>,
+  localPath: string, // 本地资源存放在rawfile目录下的路径
+}
+
+export const resourceConfigs: Array<ResourceConfig> = [
+  {
+    localPath: "example.png",
+    urlList: [
+      "https://www.example.com/",
+      "https://www.example.com/path1/example.png",
+      "https://www.example.com/path2/example.png",
+    ],
+    type: webview.OfflineResourceType.IMAGE,
+    responseHeaders: [
+      { headerKey: "Cache-Control", headerValue: "max-age=1000" },
+      { headerKey: "Content-Type", headerValue: "image/png" },
+    ]
+  },
+  {
+    localPath: "example.js",
+    urlList: [ // 仅提供一个URL，这个URL既作为资源的源，也作为资源的网络请求地址
+      "https://www.example.com/example.js",
+    ],
+    type: webview.OfflineResourceType.CLASSIC_JS,
+    responseHeaders: [
+      // 以<script crossorigin="anonymous" />方式使用，提供额外的响应头
+      { headerKey: "Cross-Origin", headerValue:"anonymous" }
+    ]
+  },
+];
+```
+
 在页面中使用。
-```
 
 ```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { injectWebview } from "./InjectWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State injectNode: NodeController | undefined = undefined;
+  injectController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // 初始化用于注入本地资源的Web组件, 提供一个空的html页面作为URL即可
+    this.injectNode = createNode(injectWebview,
+        { url: "https://www.example.com/empty.html", controller: this.injectController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例
+      Button("加载页面")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url: "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // 用于业务的Web组件
+      NodeContainer(this.businessNode);
+    }
+  }
+}
+```
+
 加载的HTML网页示例。
+
+```TypeScript
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <img src="https://www.example.com/path1/request.png" />
+  <img src="https://www.example.com/path2/request.png" />
+  <script src="https://www.example.com/example.js" crossorigin="anonymous"></script>
+</body>
+</html>
 ```
 
 ## isActiveWebEngineEvergreen
@@ -4323,8 +4654,22 @@ static isActiveWebEngineEvergreen(): boolean
 
 **示例**
 
-```TypeScript
 本示例以EntryAbility为例，实现了在Ability创建阶段判断应用是否正在使用常青内核的功能。
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    if (webview.WebviewController.isActiveWebEngineEvergreen()) {
+      console.info("Active Web Engine is Evergreen")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## isAdsBlockEnabled
@@ -4743,8 +5088,37 @@ data数据必须使用base64编码或将内容中的任何#字符编码为%23。
 
 **示例**
 
-```TypeScript
 baseUrl与historyUrl同时为空。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
+              "text/html",
+              // UTF-8为charset。
+              "UTF-8"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ```TypeScript
@@ -4778,16 +5152,104 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 指定baseUrl。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=aa/bb.jpg>", // 会尝试从"https://xxx.com/" + "aa/bb.jpg"加载该图片
+              "text/html",
+              "UTF-8",
+              "https://xxx.com/",
+              "about:blank"
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 加载本地资源。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  updateContent: string = '<body><div><image src="resource://rawfile/xxx.png" alt="image -- end" width="500" height="250"></image></div></body>'
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            // UTF-8为charset。
+            this.controller.loadData(this.updateContent, "text/html", "UTF-8", " ", " ");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 加载沙箱图片。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadData')
+        .onClick(() => {
+          try {
+            this.controller.loadData(
+              "<img src=bb.jpg>", // 尝试从"file:///xxx/" + "bb.jpg"加载该图片。
+              "text/html",
+              "UTF-8",
+              // 加载本地应用沙箱内的图片路径，请将路径改为实际使用的沙箱路径。
+              "file:///data/storage/el2/base/haps/entry/files/data/.cache_dir/",
+              ""
+            );
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+        .fileAccess(true) // 为了加载应用沙箱内的图片，需要启用文件访问功能。 
+    }
+  }
+}
 ```
 
 ## loadUrl
@@ -4876,26 +5338,111 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载本地网页，加载本地资源文件有三种方式。
 
 $rawfile方式。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // 通过$rawfile加载本地资源文件。
+            this.controller.loadUrl($rawfile('index.html'));
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 resource协议。
 
 使用  协议前缀可以避免常规  方式在处理带有“#”路由链接时URL会被“#”截断的问题。当URL中包含“#”号时，“#”后面的内容会被视为锚点（fragment）。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('loadUrl')
+        .onClick(() => {
+          try {
+            // 通过resource协议加载本地资源文件。
+            this.controller.loadUrl("resource://rawfile/index.html#home");
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 在“srcmainresourcesrawfile”文件夹下创建index.html：
-```
 
 ```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<div id="content"></div>
+
+<script>
+  function loadContent() {
+    var hash = window.location.hash;
+    var contentDiv = document.getElementById('content');
+
+    if (hash === '#home') {
+      contentDiv.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
+    } else {
+      contentDiv.innerHTML = '<h1>Default Page</h1><p>This is the default content.</p>';
+    }
+  }
+
+  // 加载界面
+  window.addEventListener('load', loadContent);
+
+  // 当hash变化时，更新界面
+  window.addEventListener('hashchange', loadContent);
+</script>
+</body>
+</html>
+```
+
 通过沙箱路径加载本地文件，可以参考[web](../../../web/web-page-loading-with-web-components.md#加载本地页面)加载沙箱路径的示例代码。
 
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World</p>
+  </body>
+</html>
 ```
 
 ## off('controllerAttachStateChange')
@@ -4919,8 +5466,57 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 
 **示例**
 
-```TypeScript
 on可以注册多个回调，当绑定状态改变后会获取当前的绑定状态并触发这些回调。off可以取消注册某个回调，也可以取消注册所有回调。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+  // 构建回调函数
+  handleControllerAttachStateChange = (state: webview.ControllerAttachState) => {
+    if (state == webview.ControllerAttachState.UNATTACHED) {
+      console.info('handleControllerAttachStateChange: Controller is unattached.');
+    } else {
+      console.info('handleControllerAttachStateChange: Controller is attached.');
+    }
+  };
+  aboutToAppear() {
+    try {
+      this.controller.on('controllerAttachStateChange', this.handleControllerAttachStateChange);
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+    try {
+      // 注册回调以接收controller绑定状态更改通知
+      this.controller.on('controllerAttachStateChange', (state: webview.ControllerAttachState) => {
+        if (state == webview.ControllerAttachState.UNATTACHED) {
+          console.info('Controller is unattached.');
+        } else {
+          console.info('Controller is attached.');
+        }
+      })
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+  aboutToDisappear() {
+    // 取消指定注册回调
+    // this.controller.off('controllerAttachStateChange', this.handleControllerAttachStateChange);
+    // 取消所有注册回调
+    this.controller.off('controllerAttachStateChange');
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## on('controllerAttachStateChange')
@@ -4944,9 +5540,7 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 
 **示例**
 
-```TypeScript
 请参考[off](#offcontrollerattachstatechange)。
-```
 
 ## onActive
 
@@ -5335,8 +5929,39 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .blue {
+          background-color: lightblue;
+        }
+        .green {
+          background-color: lightgreen;
+        }
+        .blue, .green {
+         font-size:16px;
+         height:200px;
+         text-align: center;       /* 水平居中 */
+         line-height: 200px;       /* 垂直居中（值等于容器高度） */
+        }
+    </style>
+</head>
+<body>
+<div class="blue" >webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+<div class="green">webArea</div>
+<div class="blue">webArea</div>
+</body>
+</html>
 ```
 
 ## pageUp
@@ -5519,8 +6144,33 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+    
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
 ```
 
 ## pauseMicrophone
@@ -5549,9 +6199,7 @@ pauseMicrophone(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
-```
 
 ## postMessage
 
@@ -5656,8 +6304,27 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Message Port Demo</title>
+</head>
+
+  <body>
+    <h1>WebView Message Port Demo</h1>
+    <div>
+        <input type="button" value="SendToEts" onclick="PostMsgToEts(msgFromJS.value);"/><br/>
+        <input id="msgFromJS" type="text" value="send this message from HTML to ets"/><br/>
+    </div>
+    <p class="output">display received message send from ets</p>
+  </body>
+  <script src="xxx.js"></script>
+</html>
 ```
 
 ```TypeScript
@@ -5813,32 +6480,213 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 
 **示例**
 
-```TypeScript
 接口推荐配合动态组件使用，使用离线的Web组件用于生成字节码缓存，并在适当的时机加载业务用Web组件使用这些字节码缓存。下方是代码示例：
 
 首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
-```
 
 ```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+const localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        return;
+      }
+
+      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
+    });
+  }
+}
+```
+
 编写动态组件所需基础代码。
-```
 
 ```TypeScript
+// DynamicComponent.ets
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+export interface BuilderData {
+  url: string;
+  controller: WebviewController;
+  context: UIContext;
+}
+
+let storage : LocalStorage | undefined = undefined;
+
+export class NodeControllerImpl extends NodeController {
+  private rootNode: BuilderNode<BuilderData[]> | null = null;
+  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
+
+  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
+    storage = context.getSharedLocalStorage();
+    super();
+    this.wrappedBuilder = wrappedBuilder;
+  }
+
+  makeNode(): FrameNode | null {
+    if (this.rootNode != null) {
+      return this.rootNode.getFrameNode();
+    }
+    return null;
+  }
+
+  initWeb(url: string, controller: WebviewController) {
+    if(this.rootNode != null) {
+      return;
+    }
+
+    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
+    if (!uiContext) {
+      return;
+    }
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
+  }
+}
+
+export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
+  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
+  baseNode.initWeb(data.url, data.controller);
+  return baseNode;
+}
+```
+
 编写用于生成字节码缓存的组件，本例中的本地Javascript资源内容通过文件读取接口读取rawfile目录下的本地文件。
-```
 
 ```TypeScript
+// PrecompileWebview.ets
+import { BuilderData } from "./DynamicComponent";
+import { Config, configs } from "./PrecompileConfig";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  Web({ src: data.url, controller: data.controller })
+    .onControllerAttached(() => {
+      precompile(data.controller, configs, data.context);
+    })
+    .fileAccess(true)
+}
+
+export const precompileWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+
+export const precompile = async (controller: WebviewController, configs: Array<Config>, context: UIContext) => {
+  for (const config of configs) {
+    let content = await readRawFile(config.localPath, context);
+
+    try {
+      controller.precompileJavaScript(config.url, content, config.options)
+        .then(errCode => {
+          console.error("precompile successfully! " + errCode);
+        }).catch((errCode: number) => {
+          console.error("precompile failed. " + errCode);
+      });
+    } catch (err) {
+      console.error("precompile failed. " + err.code + " " + err.message);
+    }
+  }
+}
+
+async function readRawFile(path: string, context: UIContext) {
+  try {
+    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
+  } catch (err) {
+    return new Uint8Array(0);
+  }
+}
+```
+
 JavaScript资源的获取方式也可通过[数据请求](../../apis-network-kit/arkts-apis/arkts-network-net-http.md)的方式获取，但此方法获取到的HTTP响应头非标准HTTP响应头格式，需额外将响应头转换成标准HTTP响应头格式后使用。如通过数据请求获取到的响应头是e-tag，则需要将其转换成E-Tag后使用。
 
 编写业务用组件代码。
-```
 
 ```TypeScript
+// BusinessWebview.ets
+import { BuilderData } from "./DynamicComponent";
+
+@Builder
+function WebBuilder(data: BuilderData) {
+  // 此处组件可根据业务需要自行扩展
+  Web({ src: data.url, controller: data.controller })
+    .cacheMode(CacheMode.Default)
+}
+
+export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
+```
+
 编写资源配置信息。
-```
 
 ```TypeScript
+// PrecompileConfig.ets
+import { webview } from '@kit.ArkWeb'
+
+export interface Config {
+  url:  string,
+  localPath: string, // 本地资源路径
+  options: webview.CacheOptions
+}
+
+export let configs: Array<Config> = [
+  {
+    url: "https://www.example.com/example.js",
+    localPath: "example.js",
+    options: {
+      responseHeaders: [
+        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
+        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
+      ]
+    }
+  }
+]
+```
+
 在页面中使用。
+
+```TypeScript
+// Index.ets
+import { webview } from '@kit.ArkWeb';
+import { NodeController } from '@kit.ArkUI';
+import { createNode } from "./DynamicComponent"
+import { precompileWebview } from "./PrecompileWebview"
+import { businessWebview } from "./BusinessWebview"
+
+@Entry
+@Component
+struct Index {
+  @State precompileNode: NodeController | undefined = undefined;
+  precompileController: webview.WebviewController = new webview.WebviewController();
+
+  @State businessNode: NodeController | undefined = undefined;
+  businessController: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    // 初始化用于注入本地资源的Web组件
+    this.precompileNode = createNode(precompileWebview,
+      { url: "https://www.example.com/empty.html", controller: this.precompileController, context: this.getUIContext()});
+  }
+
+  build() {
+    Column() {
+      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例
+      Button("加载页面")
+        .onClick(() => {
+          this.businessNode = createNode(businessWebview, {
+            url:  "https://www.example.com/business.html",
+            controller: this.businessController,
+            context: this.getUIContext()
+          });
+        })
+      // 用于业务的Web组件
+      NodeContainer(this.businessNode);
+    }
+  }
+}
 ```
 
 ## prefetchPage
@@ -6350,8 +7198,40 @@ struct Index {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <button type="button" onclick="htmlTest()">Click Me!</button>
+      <p id="demo"></p>
+      <p id="webDemo"></p>
+      <p id="asyncDemo"></p>
+      <script type="text/javascript">
+        function htmlTest() {
+          // This function call expects to return "ArkUI Web Component"
+          let str=objName.test("webtest data");
+          objName.testNumber(1);
+          objName.asyncTestBool(true);
+          document.getElementById("demo").innerHTML=str;
+          console.info('objName.test result:'+ str)
+
+          // This function call expects to return "Web test"
+          let webStr = objTestName.webTest();
+          document.getElementById("webDemo").innerHTML=webStr;
+          console.info('objTestName.webTest result:'+ webStr)
+
+          objAsyncName.asyncTest();
+          objAsyncName.asyncString("async test data");
+        }
+      </script>
+    </body>
+</html>
 ```
 
 ## removeAllCache
@@ -6604,14 +7484,66 @@ restoreWebState(state: Uint8Array) : void
 
 **示例**
 
-```TypeScript
 对文件的操作需要导入文件管理模块，详情请参考[文件管理](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md)。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('RestoreWebState')
+        .onClick(() => {
+          try {
+            let path: string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // 以同步方法打开文件。
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE);
+              let stat = fileIo.statSync(path);
+              let size = stat.size;
+              let buf = new ArrayBuffer(size);
+              fileIo.read(file.fd, buf, (err, readLen) => {
+                if (err) {
+                  console.error("console error with error message: " + err.message + ", error code: " + err.code);
+                } else {
+                  console.info("read file data succeed");
+                  this.controller.restoreWebState(new Uint8Array(buf.slice(0, readLen)));
+                  fileIo.closeSync(file);
+                }
+              });
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 修改EntryAbility.ets。
 
 获取应用缓存文件路径。
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
+    AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+  }
+}
 ```
 
 ## resumeAllMedia
@@ -6710,8 +7642,33 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!DOCTYPE html>
+<html>
+    <body>
+        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
+        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
+        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
+    </body>
+</html>
+<script>
+    var timer = null;
+    var num = 0;
+
+    function startTimer() {
+        timer = setInterval(function() {
+            document.getElementById("show_num").value = ++num;
+        }, 1000);
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        document.getElementById("show_num").value = 0;
+        num = 0;
+    }
+</script>
 ```
 
 ## resumeMicrophone
@@ -6816,8 +7773,38 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+ </head>
+ <body>
+   <video id="video" width="400px" height="400px" autoplay="autoplay">
+   </video>
+   <input type="button" title="HTML5麦克风" value="开启麦克风" onclick="getMedia()" />
+   <script>
+     function getMedia() {
+       let constraints = {
+         video: {
+           width: 500,
+           height: 500
+         },
+         audio: true
+       }
+       let video = document.getElementById("video");
+       let promise = navigator.mediaDevices.getUserMedia(constraints);
+       promise.then(function(MediaStream) {
+         video.srcObject = MediaStream;
+         video.play();
+       })
+     }
+   </script>
+ </body>
+</html>
 ```
 
 ## runJavaScript
@@ -6903,8 +7890,25 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
 ```
 
 <a id="runjavascript-1"></a>
@@ -6993,8 +7997,25 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Hello world!
+    <script type="text/javascript">
+      function test() {
+        console.info('Ark WebComponent')
+        return "This value is from index.html"
+      }
+    </script>
+  </body>
+</html>
 ```
 
 ## runJavaScriptExt
@@ -7003,7 +8024,7 @@ struct WebComponent {
 runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 ```
 
-异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如onPageEnd中调用。
+异步执行JavaScript脚本，并通过Promise方式返回脚本执行的结果。runJavaScriptExt需要在loadUrl完成后，比如[onPageEnd](../arkts-components/arkts-arkweb-web-comp-attribute.md#onpageend)中调用。
 
 > **说明：** 
 > 
@@ -7202,8 +8223,21 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
 ```
 
 <a id="runjavascriptext-1"></a>
@@ -7421,8 +8455,21 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en-gb">
+<body>
+<h1>run JavaScript Ext demo</h1>
+</body>
+<script type="text/javascript">
+function test() {
+  return "hello, world";
+}
+</script>
+</html>
 ```
 
 ## scrollBy
@@ -7490,8 +8537,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## scrollByWithResult
@@ -7555,8 +8622,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## scrollTo
@@ -7624,8 +8711,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:2000px;
+            height:2000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## searchAllAsync
@@ -7690,8 +8797,16 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Hello World Highlight Hello World</p>
+  </body>
+</html>
 ```
 
 ## searchNext
@@ -7777,14 +8892,57 @@ serializeWebState() : Uint8Array
 
 **示例**
 
-```TypeScript
 对文件的操作需要导入文件管理模块，详情请参考[文件管理](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-n.md)。
-```
 
 ```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('serializeWebState')
+        .onClick(() => {
+          try {
+            let state = this.controller.serializeWebState();
+            let path:string | undefined = AppStorage.get("cacheDir");
+            if (path) {
+              path += '/WebState';
+              // 以同步方法打开文件。
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+              fileIo.writeSync(file.fd, state.buffer);
+              fileIo.closeSync(file.fd);
+            }
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 修改EntryAbility.ets。
 
 获取应用缓存文件路径。
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+        // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
+        AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
+    }
+}
 ```
 
 ## setActiveWebEngineVersion
@@ -7813,8 +8971,23 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 **示例**
 
-```TypeScript
 本示例以EntryAbility为例，实现了在Ability创建阶段设置ArkWeb内核版本的功能。
+
+```TypeScript
+// xxx.ets
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { webview } from '@kit.ArkWeb';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info("EntryAbility onCreate")
+    webview.WebviewController.setActiveWebEngineVersion(webview.ArkWebEngineVersion.M132)
+    if (webview.WebviewController.getActiveWebEngineVersion() == webview.ArkWebEngineVersion.M132) {
+      console.info("Active Web Engine Version set to M132")
+    }
+    console.info("EntryAbility onCreate done")
+  }
+}
 ```
 
 ## setAppCustomUserAgent
@@ -8307,7 +9480,7 @@ setCustomUserAgent(userAgent: string): void
 
 > **说明：** 
 > 
-> - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
+> - 当Web组件src设置了URL时，建议在[onControllerAttached](../arkts-components/arkts-arkweb-web-comp-attribute.md#oncontrollerattached)回调中设置User-Agent。不要在onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
 > 
 > - 若未在onControllerAttached回调中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现象。
 > 
@@ -8486,7 +9659,7 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 > 
 > - 当includeSubframe设置为false时，本接口行为与[setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功能，不启用subframe错误页功能。
 > 
-> - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在onOverrideErrorPage回调中分别设置对应的自定义错误页。26.0.0
+> - 可通过[errorPageEvent.request.isMainFrame()](../arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe)判断错误来源是mainframe还是subframe，以便在onOverrideErrorPage回调中分别设置对应的自定义错误页。26.0.0
 
 **起始版本：** 26.0.0
 
@@ -8584,9 +9757,7 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 
 **示例**
 
-```TypeScript
 请参考[clearHostIP](#clearhostip)。
-```
 
 ## setHttpDns
 
@@ -8693,8 +9864,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<h1>online 属性</h1>
+<p id="demo"></p>
+<button onclick="func()">click</button>
+<script>
+    // 检测浏览器是否在线。
+    var online1 = navigator.onLine;
+    document.getElementById("demo").innerHTML = "浏览器在线：" + online1;
+
+    function func(){
+      var online2 = navigator.onLine;
+      document.getElementById("demo").innerHTML = "浏览器在线：" + online2;
+    }
+</script>
+</body>
+</html>
 ```
 
 ## setPathAllowingUniversalAccess
@@ -8703,7 +9894,7 @@ struct WebComponent {
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。
+设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源文件，同时限制访问范围以保证安全的场景。（[fileAccess](../arkts-components/arkts-arkweb-web-comp-attribute.md#fileaccess)的行为将会被此接口行为覆盖）。
 
 setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式：
 
@@ -8728,7 +9919,7 @@ setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风�
 * /data/storage/el2/base/temp  
 * /data/storage/el2/base/haps/entry/temp/example
 
-当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的行为为准。
+当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以[fileAccess](../arkts-components/arkts-arkweb-web-comp-attribute.md#fileaccess)的行为为准。
 
 **起始版本：** 12
 
@@ -8783,12 +9974,60 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件，位于应用资源目录resource/resfile/index.html。
-```
 
 ```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <script>
+        function getFile() {
+            var file = "file:///data/storage/el1/bundle/entry/resources/resfile/js/script.js";
+            var xmlHttpReq = new XMLHttpRequest();
+            xmlHttpReq.onreadystatechange = function(){
+                console.info("readyState:" + xmlHttpReq.readyState);
+                console.info("status:" + xmlHttpReq.status);
+                if(xmlHttpReq.readyState == 4){
+                    if (xmlHttpReq.status == 200) {
+                // 如果ets侧正确设置路径列表，则此处能正常获取资源
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " success";
+                    } else {
+                // 如果ets侧不设置路径列表，则此处会触发CORS跨域检查错误
+                        const element = document.getElementById('text');
+                        element.textContent = "load " + file + " failed";
+                    }
+                }
+            }
+            xmlHttpReq.open("GET", file);
+            xmlHttpReq.send(null);
+        }
+
+    </script>
+</head>
+
+<body>
+<div class="page">
+    <button id="example" onclick="getFile()">stealFile</button>
+</div>
+<div id="text"></div>
+</body>
+
+</html>
+```
+
 html中使用file协议通过XMLHttpRequest跨域访问本地js文件，js文件位于resource/resfile/js/script.js。
+
+```TypeScript
+const body = document.body;
+const element = document.createElement('div');
+element.textContent = 'success';
+body.appendChild(element);
 ```
 
 ## setPrintBackground
@@ -9003,8 +10242,29 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+      body {
+        width:2560px;
+        height:2560px;
+        padding-right:170px;
+        padding-left:170px;
+        border:5px solid blueviolet;
+      }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## setServiceWorkerWebSchemeHandler
@@ -9599,9 +10859,7 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-```
 
 ## setWebDebuggingAccess
 
@@ -9877,8 +11135,28 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>
+        body {
+            width:3000px;
+            height:3000px;
+            padding-right:170px;
+            padding-left:170px;
+            border:5px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+Scroll Test
+</body>
+</html>
 ```
 
 ## startCamera
@@ -9978,8 +11256,38 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <video id="video" width="400px" height="400px" autoplay>
+    </video>
+    <input type="button" title="HTML5摄像头" value="开启摄像头" onclick="getMedia()" />
+    <script>
+      function getMedia() {
+        let constraints = {
+          video: {
+            width: 500,
+            height: 500
+          },
+          audio: true
+        }
+        let video = document.getElementById("video");
+        let promise = navigator.mediaDevices.getUserMedia(constraints);
+        promise.then(function(mediaStream) {
+          video.srcObject = mediaStream;
+          video.play();
+        })
+      }
+    </script>
+  </body>
+</html>
 ```
 
 ## startDownload
@@ -10164,9 +11472,7 @@ stopCamera(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[startCamera](#startcamera)。
-```
 
 ## stopMicrophone
 
@@ -10188,9 +11494,7 @@ stopMicrophone(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[resumeMicrophone](#resumemicrophone)。
-```
 
 ## storeWebArchive
 
@@ -10464,8 +11768,41 @@ waitForAttached(timeout: number): Promise<ControllerAttachState>
 
 **示例**
 
-```TypeScript
 在初始化阶段设置WebViewController等待绑定完成，超时时间为1000ms。若绑定完成或者超时则会触发回调。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  async aboutToAppear() {
+    this.controller.waitForAttached(1000).then((state: webview.ControllerAttachState) => {
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        // 绑定完成或者超时都会触发回调
+        console.info('Controller is attached.');
+      }
+    })
+    try {
+      const state = await this.controller.waitForAttached(1000);
+      if (state == webview.ControllerAttachState.ATTACHED) {
+        console.info('Controller is attached.');
+      }
+    } catch (error) {
+      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+    }
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
 ```
 
 ## warmupServiceWorker

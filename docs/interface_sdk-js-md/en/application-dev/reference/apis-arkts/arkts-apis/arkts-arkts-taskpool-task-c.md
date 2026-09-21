@@ -196,10 +196,38 @@ function inspectStatus(arg: number): number {
 }
 ```
 
-```TypeScript
 > NOTE
 > 
 > isCanceled must be used together with taskpool.cancel. If cancel is not called, isCanceled returns false by default.
+
+```TypeScript
+@Concurrent
+function inspectStatus(arg: number): number {
+  // Check whether the task has been canceled and respond accordingly.
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled before 2s sleep.");
+    return arg + 2;
+  }
+  // Wait for 2s.
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  // Check again whether the task has been canceled and respond accordingly.
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled after 2s sleep.");
+    return arg + 3;
+  }
+  return arg + 1;
+}
+
+let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
+taskpool.execute(task).then((res: Object) => {
+  console.info("taskpool test result: " + res);
+}).catch((err: string) => {
+  console.error("taskpool test occur error: " + err);
+});
+// If cancel is not called, isCanceled() returns false by default, and the task execution result is 101.
 ```
 
 ## isDone

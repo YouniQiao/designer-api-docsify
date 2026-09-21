@@ -181,7 +181,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：** 
 
-> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的onAppear生命周期中去控制。
+> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear)生命周期中去控制。
 
 **起始版本：** 18
 

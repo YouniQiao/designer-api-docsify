@@ -206,9 +206,7 @@ According to the preceding initialization process, if the property exists in App
 
 **Examples**
 
-```TypeScript
 For details about how to use persistProp, see [Accessing a PersistentStorage-Initialized Property from AppStorage](../../../ui/state-management/arkts-persiststorage.md#accessing-a-persistentstorage-initialized-property-from-appstorage).
-```
 
 ## PersistProps
 

@@ -44,6 +44,49 @@ Closes this context menu.
 
 **Examples**
 
-```TypeScript
 This example demonstrates how to trigger the close() API of ContextMenuController via a timer to close the menu automatically after a specified delay.
+
+```TypeScript
+import { ContextMenuController } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  menu: ContextMenuController = this.getUIContext().getContextMenuController();
+
+  @Builder MenuBuilder() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button('Test ContextMenu1 Close')
+      Divider().strokeWidth(2).margin(5).color(Color.Black)
+      Button('Test ContextMenu2')
+      Divider().strokeWidth(2).margin(5).color(Color.Black)
+      Button('Test ContextMenu3')
+    }
+    .width(200)
+    .height(160)
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button("Start Timer").onClick(()=>
+      {
+        setTimeout(() => {
+          this.menu.close();
+        }, 10000);
+      })
+
+      Column() {
+        Text("Test ContextMenu close")
+          .fontSize(20)
+          .width('100%')
+          .height(500)
+          .backgroundColor(0xAFEEEE)
+          .textAlign(TextAlign.Center)
+      }
+      .bindContextMenu(this.MenuBuilder, ResponseType.LongPress)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```

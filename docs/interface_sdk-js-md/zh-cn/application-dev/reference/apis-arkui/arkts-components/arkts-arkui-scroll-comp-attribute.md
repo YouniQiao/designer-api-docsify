@@ -364,7 +364,7 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 支持[offsetRemain](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md)为负值。
 
-若通过onScrollFrameBegin事件和[scrollBy](arkts-arkui-scroll-comp-scroller-c.md#scrollby)方法实现容器嵌套滚动，需设置子滚动节点的[EdgeEffect](#edgeeffect)为None。如Scroll嵌套List滚动时，List组件的edgeEffect属性需设置为EdgeEffect.None，否则抛滑List，会触发List的边缘回弹动画，导致嵌套滚动失效。
+若通过onScrollFrameBegin事件和[scrollBy](arkts-arkui-scroll-comp-scroller-c.md#scrollby)方法实现容器嵌套滚动，需设置子滚动节点的[EdgeEffect](#edgeeffect)为None。如Scroll嵌套List滚动时，List组件的[edgeEffect](arkts-arkui-list-comp-attribute.md#edgeeffect)属性需设置为EdgeEffect.None，否则抛滑List，会触发List的边缘回弹动画，导致嵌套滚动失效。
 
 满足以下任一条件时触发该事件：
 

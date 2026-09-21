@@ -746,7 +746,7 @@ Specifies the text content and text matching pattern of the component.
 
 > **NOTE:** 
 > 
-> If the accessibilityLevel
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel)
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
 > the target component for searching for the component. In this case, the [On.text()](#text) API does not
 > take effect.
@@ -883,7 +883,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 > **NOTE:** 
 > 
-> If the accessibilityLevel
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel)
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
 > of the target component for searching for the component. In this case, you can use the
 > [On.originalText()](#originaltext) API.

@@ -30,12 +30,46 @@ function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>):
 
 **示例**
 
-```TypeScript
 FA模型示例（需使用js代码开发）：
-```
 
 ```TypeScript
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+const callback = (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
+  } else {
+    console.info('Operation stopBackgroundRunning succeeded');
+  }
+}
+
+backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext(), callback);
+```
+
 Stage模型示例：
+
+```TypeScript
+import UIAbility from '@ohos.app.ability.UIAbility';
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import Want from '@ohos.app.ability.Want';
+import AbilityConstant from '@ohos.app.ability.AbilityConstant';
+import { BusinessError } from '@ohos.base';
+
+const callback = (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
+  } else {
+    console.info('Operation stopBackgroundRunning succeeded');
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    backgroundTaskManager.stopBackgroundRunning(this.context, callback);
+  }
+};
 ```
 
 
@@ -71,10 +105,17 @@ function stopBackgroundRunning(context: Context): Promise<void>
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
-Stage模型示例：
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+// 取消长时任务
+backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext()).then(() => {
+  console.info('Operation stopBackgroundRunning succeeded');
+}).catch((err: BusinessError) => {
+  console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
+});
 ```

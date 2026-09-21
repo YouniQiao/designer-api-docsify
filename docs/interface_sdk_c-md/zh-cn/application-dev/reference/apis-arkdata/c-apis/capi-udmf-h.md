@@ -27,6 +27,7 @@
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) | OH_UdmfOptions | 数据操作选项，定义数据操作的可选参数。 |
 | [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md) | OH_UdmfDataLoadParams | 表示数据加载参数结构体。 |
 | [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md) | OH_UdmfDataLoadInfo | 表示数据加载信息结构体。 |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | 描述统一数据的汇总信息。 |
 
 ### 枚举
 
@@ -109,6 +110,11 @@
 | [int OH_UdmfOptions_Reset(OH_UdmfOptions* pThis)](#oh_udmfoptions_reset) | - | 重置数据操作选项[OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)实例为空。 |
 | [Udmf_Visibility OH_UdmfOptions_GetVisibility(OH_UdmfOptions* pThis)](#oh_udmfoptions_getvisibility) | - | 从数据操作选项[OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)实例中获取数据可见性等级。 |
 | [int OH_UdmfOptions_SetVisibility(OH_UdmfOptions* pThis, Udmf_Visibility visibility)](#oh_udmfoptions_setvisibility) | - | 设置数据操作选项[OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)实例中的数据可见性等级。 |
+| [OH_UDMF_Summary *OH_UDMF_CreateSummary(void)](#oh_udmf_createsummary) | - | 创建[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例。 |
+| [void OH_UDMF_DestroySummary(OH_UDMF_Summary *summary)](#oh_udmf_destroysummary) | - | 销毁[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)指针指向的堆内存。 请注意，对于同一个指针，不能重复调用此函数。 |
+| [int OH_UDMF_GetSummaryOverviewTypes(const OH_UDMF_Summary *summary, const char *const **types, int64_t *count)](#oh_udmf_getsummaryoverviewtypes) | - | 获取[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例概览中的所有数据类型。<br> 返回的数组和字符串由summary拥有。调用者不得修改或释放它们。它们在摘要被 [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)销毁之前一直有效。每个返回的数据类型都是非空的、以NUL结尾的UTF-8字符串。 返回的数据类型顺序未指定。如果概览为空，则*types为nullptr，*count为0。 |
+| [int OH_UDMF_GetSummaryOverviewSize(const OH_UDMF_Summary *summary, const char *type, int64_t *dataSize)](#oh_udmf_getsummaryoverviewsize) | - | 获取与[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的概述中的数据类型关联的数据大小。 |
+| [int OH_UDMF_GetSummaryFilenameExtensions(const OH_UDMF_Summary *summary, const char *const **filenameExtensions, int64_t *count)](#oh_udmf_getsummaryfilenameextensions) | - | 获取[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例中的所有文件扩展名。<br> 每个返回的扩展名包括前导句点，并使用小写ASCII字母，是非空的、以NUL结尾的字符串。 返回的数组和字符串由summary拥有。调用者不得修改或释放它们。它们在摘要被[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)销毁 或再次成功填充之前一直有效。如果没有有效的文件扩展名可用，*filenameExtensions为nullptr，*count为0。 |
 | [int OH_Udmf_GetUnifiedData(const char* key, Udmf_Intention intention, OH_UdmfData* unifiedData)](#oh_udmf_getunifieddata) | - | 向统一数据管理框架数据库中获取统一数据对象[OH_UdmfData](capi-udmf-oh-udmfdata.md)数据。 |
 | [int OH_Udmf_GetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData** dataArray, unsigned int* dataSize)](#oh_udmf_getunifieddatabyoptions) | - | 通过数据通路类型从统一数据管理框架数据库中获取统一数据对象[OH_UdmfData](capi-udmf-oh-udmfdata.md)数据。 |
 | [int OH_Udmf_SetUnifiedData(Udmf_Intention intention, OH_UdmfData* unifiedData, char* key, unsigned int keyLen)](#oh_udmf_setunifieddata) | - | 向统一数据管理框架数据库中写入统一数据对象[OH_UdmfData](capi-udmf-oh-udmfdata.md)数据。 |
@@ -2113,6 +2119,162 @@ int OH_UdmfOptions_SetVisibility(OH_UdmfOptions* pThis, Udmf_Visibility visibili
 **参考：**
 
 OH_UdmfOptions Udmf_Visibility Udmf_ErrCode
+
+
+### OH_UDMF_CreateSummary()
+
+```c
+OH_UDMF_Summary *OH_UDMF_CreateSummary(void)
+```
+
+**描述：**
+
+创建[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**起始版本：** 26.0.1
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_UDMF_Summary *](capi-udmf-oh-udmf-summary.md) | 如果操作成功，返回一个指向[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的指针，调用者拥有该实例的所有权，  不再需要时必须调用[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)释放。如果内存不足，则返回nullptr。 |
+
+**参考：**
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)
+
+
+### OH_UDMF_DestroySummary()
+
+```c
+void OH_UDMF_DestroySummary(OH_UDMF_Summary *summary)
+```
+
+**描述：**
+
+销毁[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)指针指向的堆内存。 请注意，对于同一个指针，不能重复调用此函数。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] 表示指向[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的指针。 该实例必须是[OH_UDMF_CreateSummary](capi-udmf-h.md#oh_udmf_createsummary)创建的有效实例。 该指针不能为NULL。 |
+
+**参考：**
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_CreateSummary](capi-udmf-h.md#oh_udmf_createsummary)
+
+
+### OH_UDMF_GetSummaryOverviewTypes()
+
+```c
+int OH_UDMF_GetSummaryOverviewTypes(const OH_UDMF_Summary *summary, const char *const **types, int64_t *count)
+```
+
+**描述：**
+
+获取[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例概览中的所有数据类型。<br> 返回的数组和字符串由summary拥有。调用者不得修改或释放它们。它们在摘要被 [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)销毁之前一直有效。每个返回的数据类型都是非空的、以NUL结尾的UTF-8字符串。 返回的数据类型顺序未指定。如果概览为空，则*types为nullptr，*count为0。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] 表示指向[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的指针。该指针不能为NULL。 |
+| const char *const **types | [out] 表示数据类型的输出数组。每个元素都是非空的、以NUL结尾的UTF-8字符串。 调用[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)方法后该参数失效。该指针不能为NULL。 如果本函数返回非[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode)的任何值，则*types保持不变。 |
+| int64_t *count | [out] 表示输出数组中的数据类型的数量。该值为非负整数，且在int64_t范围内；概览为空时为0。该指针不能为NULL。 如果本函数返回非[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode)的任何值，则*count保持不变。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int | 返回执行的状态代码。      <br>若返回UDMF_E_OK，表示执行成功。      <br>若返回UDMF_E_INVALID_PARAM，表示传入了无效参数。具体请参阅错误码定义[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)。 |
+
+**参考：**
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_GetSummaryOverviewSize](capi-udmf-h.md#oh_udmf_getsummaryoverviewsize)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_GetSummaryOverviewSize()
+
+```c
+int OH_UDMF_GetSummaryOverviewSize(const OH_UDMF_Summary *summary, const char *type, int64_t *dataSize)
+```
+
+**描述：**
+
+获取与[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的概述中的数据类型关联的数据大小。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] 表示指向[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的指针。该指针不能为NULL。 |
+| const char *type | [in] 表示用作概述键的数据类型，是以NUL结尾的UTF-8字符串，且不能为空。该指针不能为NULL。 |
+| int64_t *dataSize | [out] 表示以字节为单位的输出数据大小。只有当该函数返回[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode)时，该值才有效。 如果未找到该数据类型，则*dataSize被设置为-1。如果本函数返回[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode)，则*dataSize保持不变。 该指针不能为NULL。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int | 返回执行的状态代码。      <br>若返回UDMF_E_OK，表示执行成功。      <br>若返回UDMF_E_INVALID_PARAM，表示传入了无效参数。      <br>若返回UDMF_ERR，表示内部数据错误。可能的原因是服务故障或者内存不足等。具体请参阅错误码定义[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)。 |
+
+**参考：**
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_GetSummaryOverviewTypes](capi-udmf-h.md#oh_udmf_getsummaryoverviewtypes)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_GetSummaryFilenameExtensions()
+
+```c
+int OH_UDMF_GetSummaryFilenameExtensions(const OH_UDMF_Summary *summary, const char *const **filenameExtensions, int64_t *count)
+```
+
+**描述：**
+
+获取[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例中的所有文件扩展名。<br> 每个返回的扩展名包括前导句点，并使用小写ASCII字母，是非空的、以NUL结尾的字符串。 返回的数组和字符串由summary拥有。调用者不得修改或释放它们。它们在摘要被[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)销毁 或再次成功填充之前一直有效。如果没有有效的文件扩展名可用，*filenameExtensions为nullptr，*count为0。
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] 表示指向[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)实例的指针。该指针不能为NULL。 |
+| const char *const **filenameExtensions | [out] 表示文件扩展名的输出数组。每个元素都是非空的、以NUL结尾的ASCII字符串。 调用[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)方法后该参数失效。该指针不能为NULL。 如果本函数返回非[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode)的任何值，则*filenameExtensions保持不变。 |
+| int64_t *count | [out] 表示输出数组中的文件扩展名的数量。该值为非负整数，且在int64_t范围内；没有有效的文件扩展名时为0。该指针不能为NULL。 如果本函数返回非[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode)的任何值，则*count保持不变。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int | 返回执行的状态代码。      <br>若返回UDMF_E_OK，表示执行成功。      <br>若返回UDMF_E_INVALID_PARAM，表示传入了无效参数。具体请参阅错误码定义[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)。 |
+
+**参考：**
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
 
 
 ### OH_Udmf_GetUnifiedData()

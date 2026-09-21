@@ -30,7 +30,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -111,7 +111,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
@@ -164,7 +164,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 

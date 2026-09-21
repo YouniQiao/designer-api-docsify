@@ -4,7 +4,7 @@
 enum SpatialAudioSourceType
 ```
 
-枚举空间音频源类型。
+表示空间音频源类型的枚举。
 
 **起始版本：** 24
 
@@ -34,7 +34,7 @@ SPATIAL_AUDIO_SOURCE_TYPE_STEREO = 0
 SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1
 ```
 
-音频生动源类型。
+Audio Vivid源类型。
 
 **起始版本：** 24
 
@@ -50,7 +50,7 @@ SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1
 SPATIAL_AUDIO_SOURCE_TYPE_MULTI_CHANNEL = 2
 ```
 
-多通道源类型。
+多声道源类型。
 
 **起始版本：** 24
 

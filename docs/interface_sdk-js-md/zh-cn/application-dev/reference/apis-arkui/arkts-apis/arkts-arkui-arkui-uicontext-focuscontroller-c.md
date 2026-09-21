@@ -107,8 +107,52 @@ clearFocus(): void
 
 **示例**
 
-```TypeScript
 在该示例中，按钮"button2"默认获焦，点击按钮"clearFocus"后，焦点回到该页面的根容器节点"column1"，此时按下键盘TAB键，按钮"button2"重新获焦。可通过点击"button1"使该按钮获焦，点击按钮"clearFocus"后，焦点同样回到该页面的根容器节点"column1"，此时按下键盘TAB键，由按钮"button1"重新获焦。
+
+```TypeScript
+@Entry
+@Component
+struct ClearFocusExample {
+  @State buttonColor: Color = Color.Blue;
+
+  build() {
+    Column({ space: 20 }) {
+      Column({ space: 5 }) {
+        Button('button1')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(Color.Blue)
+        Button('button2')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(this.buttonColor)
+          .defaultFocus(true)
+          .onFocus(() => {
+            this.buttonColor = Color.Red;
+          })
+          .onBlur(() => {
+            this.buttonColor = Color.Blue;
+          })
+        Button('clearFocus')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .backgroundColor(Color.Blue)
+          .onClick(() => {
+            this.getUIContext().getFocusController().clearFocus();
+          })
+      }
+      .id('column2')
+    }
+    .id('column1')
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## isActive
@@ -137,8 +181,52 @@ isActive(): boolean
 
 **示例**
 
-```TypeScript
 验证isActive返回UI实例的焦点激活态。
+
+```TypeScript
+@Entry
+@Component
+struct IsActiveExample {
+  @State btColor: Color = Color.Blue;
+
+  build() {
+    Column({ space: 20 }) {
+      Column({ space: 5 }) {
+        Button('button1')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(Color.Blue)
+          .onClick(() => {
+            console.info('button1 onClick');
+            this.getUIContext().getFocusController().activate(true);
+            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
+          })
+        Button('button2')
+          .width(200)
+          .height(70)
+          .fontColor(Color.White)
+          .focusOnTouch(true)
+          .backgroundColor(this.btColor)
+          .defaultFocus(true)
+          .onClick(() => {
+            console.info('button2 onClick');
+            this.getUIContext().getFocusController().activate(false);
+            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
+          })
+          .onFocus(() => {
+            this.btColor = Color.Red;
+          })
+          .onBlur(() => {
+            this.btColor = Color.Blue;
+          })
+      }
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## requestFocus

@@ -34,9 +34,7 @@ Called when auto fill request is failed to be handled.
 
 **Examples**
 
-```TypeScript
 See autoFillManager.requestAutoFill.
-```
 
 ## onSuccess
 
@@ -56,6 +54,4 @@ Called when auto fill request is successfully handled.
 
 **Examples**
 
-```TypeScript
 See autoFillManager.requestAutoFill.
-```

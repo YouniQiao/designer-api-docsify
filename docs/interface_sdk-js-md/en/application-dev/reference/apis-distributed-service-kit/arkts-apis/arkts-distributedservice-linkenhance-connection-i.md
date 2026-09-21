@@ -90,8 +90,29 @@ Connects to the server on the client after the **Connection** object is successf
 
 **Examples**
 
-```TypeScript
 After creating a Connection object, the application on the client device calls connect() to connect to the target device (that is, the server).
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // Subscribe to connectResult events.
+  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+  // Initiate a connection.
+  connection.connect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
 ```
 
 ## disconnect

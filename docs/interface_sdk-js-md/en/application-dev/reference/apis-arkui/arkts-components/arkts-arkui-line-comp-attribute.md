@@ -18,7 +18,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 endPoint(value: Array<any>)
 ```
 
-Sets the coordinates of the line end point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports attributeModifier for dynamic setting of the attribute method. Abnormal values are processed as the default value.
+Sets the coordinates of the line end point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) for dynamic setting of the attribute method. Abnormal values are processed as the default value.
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ Sets the coordinates of the line end point (relative to the origin at the upper 
 startPoint(value: Array<any>)
 ```
 
-Sets the coordinates of the line start point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports attributeModifier for dynamic setting of the attribute method. Abnormal values are processed as the default value.
+Sets the coordinates of the line start point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) for dynamic setting of the attribute method. Abnormal values are processed as the default value.
 
 **Since:** 7
 

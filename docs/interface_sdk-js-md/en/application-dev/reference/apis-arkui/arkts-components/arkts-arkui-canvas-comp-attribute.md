@@ -20,16 +20,16 @@ The universal events are supported.
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 This API must be used together with [startImageAnalyzer](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md#startimageanalyzer) and [stopImageAnalyzer](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md#stopimageanalyzer) in [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md).
 
-This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** will become invalid. This feature depends on the device capability. You can use the [ImageAnalyzerController.getImageAnalyzerSupportTypes](../arkts-apis/arkts-arkui-imageanalyzercontroller-c.md#getimageanalyzersupporttypes) API to query the analysis types supported by the device.
+This attribute cannot be used together with the [overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay) attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** will become invalid. This feature depends on the device capability. You can use the [ImageAnalyzerController.getImageAnalyzerSupportTypes](../arkts-apis/arkts-arkui-imageanalyzercontroller-c.md#getimageanalyzersupporttypes) API to query the analysis types supported by the device.
 
 > **NOTE:** 
 > 
 > This API can be called within
-> attributeModifier
+> [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)
 > since API version 20.
 
 **Since:** 12
@@ -52,7 +52,7 @@ This attribute cannot be used together with the overlay attribute. If they are s
 onReady(event: VoidCallback)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using attributeModifier is supported.
+Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 
@@ -80,7 +80,7 @@ When this event is triggered, the canvas is cleared. The width and height of the
 onReady(event: Callback<DrawingRenderingContext | undefined> | undefined)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using attributeModifier is supported.
+Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 

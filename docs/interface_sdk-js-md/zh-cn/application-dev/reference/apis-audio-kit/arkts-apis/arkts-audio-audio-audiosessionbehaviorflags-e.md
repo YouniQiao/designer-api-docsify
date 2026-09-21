@@ -62,8 +62,6 @@ PAUSE_WHEN_INTERRUPTED = 0x00000004
 
 **注意：** 该标志不能与MUTE_WHEN_INTERRUPTED共存，若同时设置，仅该标志生效。
 
-26.0.0
-
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。

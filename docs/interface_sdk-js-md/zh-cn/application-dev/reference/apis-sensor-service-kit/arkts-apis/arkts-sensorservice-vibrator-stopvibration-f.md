@@ -41,12 +41,80 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 **示例**
 
-```TypeScript
 停止指定时长振动：
-```
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 按照指定时长振动
+  vibrator.startVibration({
+    type: 'time',
+    duration: 1000,
+  }, {
+    id: 0,
+    usage: 'alarm' // 根据实际选择类型归属不同的开关管控
+  }).then(() => {
+    console.info('Succeed in starting vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // 按照VIBRATOR_STOP_MODE_TIME模式停止振动
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_TIME).then(() => {
+    console.info('Succeed in stopping vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 停止预置振动：
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 按照预置效果振动
+  vibrator.startVibration({
+    type: 'preset',
+    effectId: 'haptic.notice.success',
+    count: 1,
+  }, {
+    id: 0,
+    usage: 'notification' // 根据实际选择类型归属不同的开关管控
+  }).then(() => {
+    console.info('Succeed in starting vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // 按照VIBRATOR_STOP_MODE_PRESET模式停止振动
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
+    console.info('Succeed in stopping vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
 ```
 
 
@@ -82,12 +150,88 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 
 **示例**
 
-```TypeScript
 停止指定时长振动：
-```
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 按照指定时长振动
+  vibrator.startVibration({
+    type: 'time',
+    duration: 1000,
+  }, {
+    id: 0,
+    usage: 'alarm' // 根据实际选择类型归属不同的开关管控
+  }, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in starting vibration');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // 按照VIBRATOR_STOP_MODE_TIME模式停止振动
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_TIME, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in stopping vibration');
+  })
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 停止预置振动：
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 按照预置效果振动
+  vibrator.startVibration({
+    type: 'preset',
+    effectId: 'haptic.notice.success',
+    count: 1,
+  }, {
+    id: 0,
+    usage: 'notification' // 根据实际选择类型归属不同的开关管控
+  }, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in starting vibration');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // 按照VIBRATOR_STOP_MODE_PRESET模式停止振动
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in stopping vibration');
+  })
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
 ```
 
 

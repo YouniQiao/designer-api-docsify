@@ -72,7 +72,7 @@ cachedCount(count: number, show: boolean)
 
 设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll)开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。
 
-设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪clip或内容裁剪[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
+设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)或内容裁剪[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 **起始版本：** 14
 
@@ -753,11 +753,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 1. 用户交互（如手指滑动、键鼠操作等）触发滚动。
 2. Grid惯性滚动。
-3. 调用fling接口触发滚动。
+3. 调用[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除fling接口外的其他滚动控制接口。
+1. 调用除[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口外的其他滚动控制接口。
 2. 越界回弹。
 3. 拖动滚动条。
 

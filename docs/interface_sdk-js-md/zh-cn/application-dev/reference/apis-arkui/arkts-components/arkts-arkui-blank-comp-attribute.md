@@ -20,7 +20,7 @@ declare class BlankAttribute extends CommonMethod<BlankAttribute>
 color(value: ResourceColor)
 ```
 
-设置空白填充的填充颜色，支持attributeModifier动态设置属性方法。
+设置空白填充的填充颜色，支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。
 
 **起始版本：** 7
 

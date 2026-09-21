@@ -196,7 +196,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 
@@ -255,7 +255,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu)的入参列表中不包含被屏蔽的菜单选项。
 
 **起始版本：** 12
 
@@ -455,7 +455,7 @@ enterKeyType(value: EnterKeyType)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -1063,7 +1063,7 @@ minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSiz
 minLines(lines: Optional<number>)
 ```
 
-设置最小行数。组件的高度将根据lines自动调整，确保显示高度不低于lines对应的高度。如果设置了constraintSize，那么组件最后显示高度会在constraintSize约束内。未通过该接口设置时，默认最小行数为1。
+设置最小行数。组件的高度将根据lines自动调整，确保显示高度不低于lines对应的高度。如果设置了[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)，那么组件最后显示高度会在[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)约束内。未通过该接口设置时，默认最小行数为1。
 
 **起始版本：** 20
 
@@ -1872,7 +1872,7 @@ textAlign(value: TextAlign)
 
 支持TextAlign.Start、TextAlign.Center和TextAlign.End。从API version 11开始，新增TextAlign.JUSTIFY选项。
 
-可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置。
+可通过[align](arkts-arkui-common-comp-commonmethod-c.md#align)属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置。
 
 - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。  
 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。  

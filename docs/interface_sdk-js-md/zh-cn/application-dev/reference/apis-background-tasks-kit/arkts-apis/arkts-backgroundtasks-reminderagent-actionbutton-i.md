@@ -34,7 +34,7 @@ title: string
 
 **废弃版本：** 9
 
-**替代接口：** title
+**替代接口：** [title](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#title)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +52,6 @@ type: ActionButtonType
 
 **废弃版本：** 9
 
-**替代接口：** type
+**替代接口：** [type](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#type)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

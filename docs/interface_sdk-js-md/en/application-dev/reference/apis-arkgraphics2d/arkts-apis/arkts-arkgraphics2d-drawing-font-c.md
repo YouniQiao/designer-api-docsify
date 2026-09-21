@@ -974,6 +974,39 @@ let font = new drawing.Font();
 font.measureText("drawing", drawing.TextEncoding.TEXT_ENCODING_UTF8);
 ```
 
+## measureTextWithFallback
+
+```TypeScript
+measureTextWithFallback(text: string, encoding: TextEncoding): number
+```
+
+Measures the width of text with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text content to be measured. |
+| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | Yes | Text encoding. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Width of the text including fallback fonts. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
 ## setBaselineSnap
 
 ```TypeScript
@@ -1399,3 +1432,36 @@ let text : string = 'hello world';
 let glyphs : number[] = font.textToGlyphs(text);
 console.info("drawing text toglyphs OnTestFunction num =  " + glyphs.length );
 ```
+
+## textToGlyphsWithFallback
+
+```TypeScript
+textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallbackInfo>
+```
+
+Converts text into glyph indices with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. Each element in the returned array contains glyphs that share the same fallback typeface.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Text content to be converted. |
+| glyphCount | number | No | Number of glyphs represented by the text. The value must be the same as the value obtained from [countText](#counttext). The default value is the number of characters in the text string. The value is an integer. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;[TypefaceFallbackInfo](arkts-arkgraphics2d-drawing-typefacefallbackinfo-i.md)&gt; | Array of typeface fallback info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |

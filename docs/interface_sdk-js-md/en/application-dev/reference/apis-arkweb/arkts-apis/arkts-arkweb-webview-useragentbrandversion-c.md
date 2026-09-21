@@ -40,9 +40,7 @@ Obtains the brand name.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getFullVersion
 
@@ -66,9 +64,7 @@ Obtains the full version number.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## getMajorVersion
 
@@ -92,9 +88,7 @@ Obtains the major version number.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setBrand
 
@@ -118,9 +112,7 @@ Sets the brand name.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setFullVersion
 
@@ -144,9 +136,7 @@ Sets the full version number.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```
 
 ## setMajorVersion
 
@@ -170,6 +160,4 @@ Sets the major version number.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled).
-```

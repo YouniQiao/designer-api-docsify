@@ -8,7 +8,7 @@ Supported
 
 **ColumnSplit** limits the height of child components through dividers. During initialization, the divider positions are calculated based on the heights of the child components. After initialization, dynamically modifying the height of child components does not take effect, and the divider positions remain unchanged. After **resizeable** is set to **true**, the height of child components can be changed by dragging adjacent dividers.
 
-After initialization, when dynamic modification of the margin, [border](arkts-arkui-common-comp-commonmethod-c.md#border), or padding universal attributes causes a child component size to exceed the spacing between adjacent dividers, dragging the divider to change the child component height is not supported.
+After initialization, when dynamic modification of the [margin](arkts-arkui-common-comp-commonmethod-c.md#margin), [border](arkts-arkui-common-comp-commonmethod-c.md#border), or [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) universal attributes causes a child component size to exceed the spacing between adjacent dividers, dragging the divider to change the child component height is not supported.
 
 ## ColumnSplit
 
@@ -34,16 +34,59 @@ Creates a vertical split layout container with dividers between child components
 
 ## Examples
 
-```TypeScript
 ### Example 1: Setting the Resizable ColumnSplit Component
 
 This example shows how to set the resizable ColumnSplit component and its effect.
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ColumnSplitExample {
+  build() {
+    Column() {
+      Text('The dividing line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
+      ColumnSplit() {
+        Text('1').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('2').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('3').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('4').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('5').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+      }
+      .borderWidth(1)
+      .resizeable(true) // Set the divider draggable.
+      .width('90%').height('60%')
+    }.width('100%')
+  }
+}
+```
+
 ### Example 2: Setting the ColumnSplit Component with Spacing
 
 This example shows how to set the ColumnSplit component with spacing and its effect.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ColumnSplitDividerExample {
+  build() {
+    Column() {
+      Text('The dividing line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
+      ColumnSplit() {
+        Text('1').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('2').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('3').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+        Text('4').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+        Text('5').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+      }
+      .borderWidth(1)
+      .divider({ startMargin: 5, endMargin: 5 }) // Set the distance between the divider and child components.
+      .width('90%')
+      .height('60%')
+    }.width('100%')
+  }
+}
 ```

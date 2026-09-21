@@ -1346,7 +1346,7 @@ supported: 'sans-serif', 'serif', 'monospace'.
 
 Since API version 20, this API can be used to set a registered custom font (only available in the main thread, not supported in worker threads; the DevEco Studio previewer does not support displaying custom fonts). There are two ways to register a custom font. One is through the ArkUI asynchronous API
 
-this.uiContext.getFont().registerFont. Drawing immediately after calling this API may cause the custom font to not take effect.
+this.uiContext.getFont().[registerFont](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md#registerfont). Drawing immediately after calling this API may cause the custom font to not take effect.
 
 The other is to directly call the font engine's fontCollection.[loadFontSync](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#loadfontsync) API to register the custom font with the font engine. When directly calling the font engine API to register a custom font, the **fontCollection** instance must be **text.FontCollection.getGlobalInstance()**, because the component loads fonts from this instance by default. Using other instances may cause the custom font to not take effect.
 

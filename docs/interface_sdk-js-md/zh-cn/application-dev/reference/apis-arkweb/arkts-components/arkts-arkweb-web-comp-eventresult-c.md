@@ -50,9 +50,7 @@ setGestureEventResult(result: boolean): void
 
 **示例**
 
-```TypeScript
 触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
-```
 
 <a id="setgestureeventresult-1"></a>
 
@@ -77,9 +75,7 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 
 **示例**
 
-```TypeScript
 触摸事件示例代码参考[onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent)。
-```
 
 ## setMouseEventResult
 
@@ -102,6 +98,4 @@ setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 
 **示例**
 
-```TypeScript
 鼠标事件示例代码参考[onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent)。
-```

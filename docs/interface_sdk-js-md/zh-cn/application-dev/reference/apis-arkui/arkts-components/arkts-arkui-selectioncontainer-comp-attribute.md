@@ -68,7 +68,7 @@ caretColor(color: Optional<ResourceColor>)
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中文本手柄颜色。
 > 
-> - 在跨节点场景中Text子组件caretColor设置无效，始终使用SelectionContainer的配置。
+> - 在跨节点场景中Text子组件[caretColor](arkts-arkui-text-comp-attribute.md#caretcolor)设置无效，始终使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -94,7 +94,7 @@ copyOption(value: Optional<CopyOptions>)
 
 > **说明：** 
 > 
-> Text子组件已显式设置copyOption时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
+> Text子组件已显式设置[copyOption](arkts-arkui-text-comp-attribute.md#copyoption)时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -260,7 +260,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>)
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。
 > 
-> - Text子组件已显式设置selectedBackgroundColor时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
+> - Text子组件已显式设置[selectedBackgroundColor](arkts-arkui-text-comp-attribute.md#selectedbackgroundcolor)时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 

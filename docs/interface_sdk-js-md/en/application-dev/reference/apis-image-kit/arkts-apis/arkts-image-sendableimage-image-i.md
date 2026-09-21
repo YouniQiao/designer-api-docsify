@@ -10,7 +10,7 @@ An Image instance is returned when [readNextImage](arkts-image-sendableimage-ima
 
 Images occupy a large amount of memory. When you finish using an Image instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Inheritance/Implementation:** Image extends lang.ISendable
+**Inheritance/Implementation:** Image extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 12
 

@@ -6,8 +6,6 @@ interface AudioSpatialEnabledStateForDevice
 
 监听设备空间音频开关状态。
 
-@interface AudioSpatialEnabledStateForDevice
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization

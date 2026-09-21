@@ -26,7 +26,7 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void)
 > 
 > - `itemGenerator`的参数为`RepeatItem`，该参数将`item`和`index`结合到了一起，请勿将`RepeatItem`参数拆开使用。
 > 
-> - 该接口不支持在attributeModifier中调用。
+> - 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -54,7 +54,7 @@ key(keyGenerator: (item: T, index: number) => string)
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -84,7 +84,7 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -112,7 +112,7 @@ templateId(typedFunc: TemplateTypedFunc<T>)
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -138,7 +138,7 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions)
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 

@@ -129,9 +129,7 @@ endAxis(axis: Axis): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[beginAxis](#beginaxis)示例。
-```
 
 ## moveTo
 
@@ -307,9 +305,7 @@ releaseButton(button: Button): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[pressButton](#pressbutton)示例。
-```
 
 ## updateAxis
 
@@ -350,6 +346,4 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[beginAxis](#beginaxis)示例。
-```

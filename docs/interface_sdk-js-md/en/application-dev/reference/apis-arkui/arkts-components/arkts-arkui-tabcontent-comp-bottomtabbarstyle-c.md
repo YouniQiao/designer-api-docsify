@@ -79,7 +79,7 @@ Sets the ID of the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | ID of the bottom tab. |
+| value | string | Yes | [ID](arkts-arkui-common-comp-commonmethod-c.md#id) of the bottom tab. |
 
 **Return value:**
 

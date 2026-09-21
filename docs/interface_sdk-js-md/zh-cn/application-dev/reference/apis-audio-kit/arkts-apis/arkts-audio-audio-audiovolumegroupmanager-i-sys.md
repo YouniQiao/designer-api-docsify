@@ -4,7 +4,7 @@
 interface AudioVolumeGroupManager
 ```
 
-管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
+管理音频组音量，支持设置和调节指定音量流、控制静音状态、设置铃声模式等。适用于需要对特定音量组进行独立管理、实现铃声模式切换、调节系统音量的场景。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
 
 **起始版本：** 9
 
@@ -22,7 +22,7 @@ import { audio } from '@kit.AudioKit';
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
-单步设置指定流的音量。使用callback异步回调。
+调节指定音量类型的系统音量，使音量等级按步长加或减，适用于音量条滑动调节场景。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -71,7 +71,7 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>
 ```
 
-单步设置指定流的音量。使用Promise异步回调。
+调节指定音量类型的系统音量，使音量等级按步长加或减，适用于音量条滑动调节场景。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -92,7 +92,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -121,7 +121,7 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
-调节当前最高优先级的流的音量，使音量值按步长加或减。使用callback异步回调。
+调节当前最高优先级的音频播放流对应音量类型的系统音量，使音量等级按步长加或减，适用于音量条滑动调节场景。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -170,7 +170,7 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
 
-单步设置当前最高优先级的流的音量。使用Promise异步回调。
+调节当前最高优先级的音频播放流对应音量类型的系统音量，使音量等级按步长加或减，适用于音量条滑动调节场景。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -190,7 +190,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -237,7 +237,7 @@ getActiveVolumeTypeSync(uid: number): AudioVolumeType
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 音频音量类型。 |
+| [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 当前活跃的音频音量类型。 |
 
 **错误码：**
 
@@ -357,7 +357,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -373,7 +373,7 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 setMicMute(mute: boolean): Promise<void>
 ```
 
-设置麦克风静音状态。使用Promise异步回调。
+设置麦克风静音状态。此设置不会持久化保存，系统重启时会重置。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -393,7 +393,7 @@ setMicMute(mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -418,7 +418,7 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
 setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
 
-设置麦克风持久化静音状态。使用Promise异步回调。
+设置麦克风持久化静音状态。设置后，静音状态将按照指定的策略类型保持，直至显式取消。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -523,7 +523,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -600,7 +600,7 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -632,13 +632,13 @@ setVolumeWithFlag(volumeType: AudioVolumeType, volume: number, flags: number): P
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volume | number | 是 | 音量等级，可设置范围通过[getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume)和[getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume)获取。 |
-| flags | number | 是 | 音量等级，可设置范围通过[getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume)和[getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume)获取。 |
+| flags | number | 是 | 是否需要显示系统音量条，0为不需要显示，1为需要显示。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

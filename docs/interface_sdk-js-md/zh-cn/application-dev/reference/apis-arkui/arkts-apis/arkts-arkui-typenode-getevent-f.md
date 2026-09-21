@@ -31,9 +31,7 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 **示例**
 
-```TypeScript
 完整示例请参考滚动事件示例。
-```
 
 
 <a id="getevent-1"></a>
@@ -69,9 +67,7 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 **示例**
 
-```TypeScript
 完整示例请参考滚动事件示例。
-```
 
 
 <a id="getevent-2"></a>
@@ -107,9 +103,7 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 **示例**
 
-```TypeScript
 完整示例请参考滚动事件示例。
-```
 
 
 <a id="getevent-3"></a>
@@ -145,6 +139,4 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 **示例**
 
-```TypeScript
 完整示例请参考滚动事件示例。
-```

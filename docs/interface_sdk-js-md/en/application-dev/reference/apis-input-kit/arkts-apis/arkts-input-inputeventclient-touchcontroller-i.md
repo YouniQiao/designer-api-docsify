@@ -148,9 +148,7 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details, see [touchDown](#touchdown).
-```
 
 ## touchUp
 
@@ -190,6 +188,4 @@ Releases a touch point. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details, see [touchDown](#touchdown).
-```

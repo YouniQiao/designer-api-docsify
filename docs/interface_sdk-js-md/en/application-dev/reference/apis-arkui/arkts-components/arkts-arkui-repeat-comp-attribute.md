@@ -26,7 +26,7 @@ Component generator. When the return value of [.templateId()](#templateid) does 
 > 
 > - The **itemGenerator** parameter is of the **RepeatItem** type, which combines **item** and **index**. Do not destructure **RepeatItem**.
 > 
-> - This API cannot be called within attributeModifier.
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Key generator.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Renders the corresponding template child component based on the template type.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ Assigns a template type for this data item.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ Enables virtual scrolling for **Repeat**.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 

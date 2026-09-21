@@ -41,8 +41,25 @@ constructor(begin: number, end: number)
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200); // 动画插值过程从100到200，其余动画参数使用默认值。
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## delay
@@ -75,8 +92,25 @@ delay(delay: number): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).delay(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## direction
@@ -109,8 +143,25 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).direction(PlayMode.Alternate);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## duration
@@ -143,8 +194,25 @@ duration(duration: number): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(500);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## easing
@@ -177,8 +245,25 @@ easing(curve: string): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).easing("ease-in");
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## fill
@@ -211,8 +296,25 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).fill(FillMode.Forwards);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```
 
 ## iterations
@@ -245,6 +347,23 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 **示例**
 
-```TypeScript
 完整示例请参考基于ArkTS扩展的声明式开发范式。
+
+```TypeScript
+import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct AnimatorTest {
+  private animatorResult: AnimatorResult | undefined = undefined;
+  options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).iterations(3);
+
+  create() {
+    this.animatorResult = this.getUIContext().createAnimator(this.options);
+  }
+
+  build() {
+    // ......
+  }
+}
 ```

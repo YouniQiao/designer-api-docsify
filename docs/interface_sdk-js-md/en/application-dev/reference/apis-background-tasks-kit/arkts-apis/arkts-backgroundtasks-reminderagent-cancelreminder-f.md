@@ -18,7 +18,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** cancelReminder
+**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -55,7 +55,7 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** cancelReminder
+**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

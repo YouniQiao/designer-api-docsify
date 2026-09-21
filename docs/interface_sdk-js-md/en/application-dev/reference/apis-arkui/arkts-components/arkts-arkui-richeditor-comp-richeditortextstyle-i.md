@@ -90,7 +90,7 @@ There can be multiple **&lt;feature-tag-value&gt;** values, which are separated 
 
 For example, the input format for monospaced clock fonts is "ss01" on.
 
-For details about the supported font features, see Font Feature List.
+For details about the supported font features, see [Font Feature List](arkts-arkui-text-comp-attribute.md#fontfeature).
 
 Font features are advanced typographic features, such as ligatures and monospace, for OpenType fonts. They are typically used in custom fonts and require the support of the font itself.
 

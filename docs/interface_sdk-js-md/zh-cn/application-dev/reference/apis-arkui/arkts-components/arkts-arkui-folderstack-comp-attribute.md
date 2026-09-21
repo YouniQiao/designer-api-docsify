@@ -18,11 +18,11 @@ In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md)
 alignContent(value: Alignment)
 ```
 
-设置子组件在容器内的对齐方式，调用后子组件按照指定的对齐方式在容器内排列。该属性与align同时设置时，后设置的属性生效。
+设置子组件在容器内的对齐方式，调用后子组件按照指定的对齐方式在容器内排列。该属性与[align](arkts-arkui-common-comp-commonmethod-c.md#align)同时设置时，后设置的属性生效。
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -50,7 +50,7 @@ autoHalfFold(value: boolean)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -76,7 +76,7 @@ enableAnimation(value: boolean)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -104,7 +104,7 @@ onFolderStateChange(callback: OnFoldStatusChangeCallback)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -132,7 +132,7 @@ onHoverStatusChange(handler: OnHoverStatusChangeCallback)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 

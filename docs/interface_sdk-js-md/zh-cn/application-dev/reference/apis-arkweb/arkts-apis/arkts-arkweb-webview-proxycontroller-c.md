@@ -47,9 +47,7 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## removeProxyOverride
 

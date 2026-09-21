@@ -36,7 +36,7 @@ This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Number of water flow items to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
+| value | number | Yes | Number of water flow items to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. |
 
 <a id="cachedcount-1"></a>
 
@@ -48,7 +48,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of flow items to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. **FlowItem** elements outside the visible area and cache range will be released.
 
@@ -213,7 +213,7 @@ Sets the size constraints of the child components during layout. For details abo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE:** <br>1. If both **itemConstraintSize** and the constraintSize attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute constraintSize. |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE:** <br>1. If both **itemConstraintSize** and the [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize). |
 
 ## layoutDirection
 
@@ -315,11 +315,11 @@ This event is triggered when either of the following conditions is met:
 
 1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
 2. The **WaterFlow** component scrolls by inertia.
-3. Scrolling is triggered by calling the fling API.
+3. Scrolling is triggered by calling the [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) API.
 
 This event is not triggered in the following scenarios:
 
-1. A scroll control API other than fling is called.
+1. A scroll control API other than [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) is called.
 2. The out-of-bounds bounce effect is active.
 3. The scrollbar is dragged.
 

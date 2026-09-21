@@ -18,7 +18,7 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** cancelAllReminders
+**Substitutes:** [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -54,7 +54,7 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** cancelAllReminders
+**Substitutes:** [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

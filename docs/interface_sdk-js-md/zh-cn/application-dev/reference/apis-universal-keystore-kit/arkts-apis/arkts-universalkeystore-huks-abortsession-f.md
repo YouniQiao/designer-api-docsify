@@ -48,16 +48,86 @@ abortSession终止密钥操作。使用callback异步回调。
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用，
+ * 当这三个操作中的任一阶段发生错误时，都需要调用huks.abortSession来终止密钥的使用
+ *
+ * 以下以RSA密钥的callback功能使用为例
+ */
+
+let keyAlias = 'HuksDemoRSA';
+let properties: Array<huks.HuksParam> = []
+let options: huks.HuksOptions = {
+  properties: properties,
+  inData: new Uint8Array(0)
+};
+let handle: number = 0;
+
+async function huksAbort() {
+  properties = [{
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_RSA
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PADDING,
+    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS1_V1_5
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_DIGEST,
+    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
+    value: huks.HuksCipherMode.HUKS_MODE_ECB,
+  }];
+
+  /* 1. 生成密钥 */
+  huks.generateKeyItem(keyAlias, options, (error) => {
+    if (error) {
+      console.error(`callback: generateKeyItem failed`);
+    } else {
+      console.info(`callback: generateKeyItem success`);
+      /* 2. 初始化密钥会话 */
+      huks.initSession(keyAlias, options, (error, data) => { // 以initSession阶段进行abortSession为例
+        if (error) {
+          console.error(`callback: initSession failed`);
+        } else {
+          console.info(`callback: initSession success, data = ${JSON.stringify(data)}`);
+          handle = data.handle;
+          /* 3. 发生错误，终止密钥操作 */
+          huks.abortSession(handle, options, (error) => {
+            if (error) {
+              console.error(`callback: abortSession failed`);
+            } else {
+              console.info(`callback: abortSession success`);
+            }
+          });
+        }
+      });
+    }
+  });
+}
+```
+
 JS示例：
 
 > 说明
 > 
 > JS示例代码仅供轻量级设备使用。
+
+```TypeScript
+<stack class="container">
+    <input type="button" class="threeStageBtn1" @click="threeStageEncrypt">加密数据</input>
+    <input type="button" class="threeStageBtn2" @click="threeStageDecrypt">解密数据</input>
+    <text class="result">{{result}}</text>
+</stack>
 ```
 
 ```TypeScript

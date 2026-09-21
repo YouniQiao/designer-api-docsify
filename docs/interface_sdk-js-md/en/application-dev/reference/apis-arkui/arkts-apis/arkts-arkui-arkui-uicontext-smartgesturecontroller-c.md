@@ -42,8 +42,54 @@ Clears all monitoring callbacks registered for the current **UIContext**.
 
 **Examples**
 
-```TypeScript
 This example shows how to clear all callbacks for listening to smart gestures using the clearMonitors API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.clearMonitors();
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## clearSelected
@@ -64,8 +110,52 @@ Clears the currently selected node of smart gestures.
 
 **Examples**
 
-```TypeScript
 This example shows how to request the component to be selected and the selected state to be automatically cleared in 5,000 ms using the requestSelected and clearSelected APIs. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+        Button('Request Selection')
+          .onClick(() => {
+            this.controller.requestSelected('target_text');
+            setTimeout(() => {
+              this.controller.clearSelected();
+              console.info('smartGesture selected is clear');
+            }, 5000);
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## enableSmartTapAndSlideGestures
@@ -98,8 +188,43 @@ Sets whether to enable the tap and slide operations of smart gestures.
 
 **Examples**
 
-```TypeScript
 This example shows how to enable and disable smart gestures using the enableSmartTapAndSlideGestures API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## registerMonitor
@@ -138,8 +263,55 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 
 **Examples**
 
-```TypeScript
 This example shows how to register a callback for listening to smart gestures using the registerMonitor API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    // Consume the current smart gesture and follow the system default action handling.
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.unregisterMonitor(this.smartGestureMonitor);
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## requestSelected
@@ -152,7 +324,7 @@ Requests to set the specified component as the current smart gesture selected no
 
 > **NOTE:** 
 > 
-> - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an onClick event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
+> - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an [onClick](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onclick-1) event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
 > 
 > - Whether a component can respond to smart gestures is determined by **enabled** in [smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut).
 
@@ -168,12 +340,56 @@ Requests to set the specified component as the current smart gesture selected no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Component id. |
+| id | string | Yes | Component [id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id). |
 
 **Examples**
 
-```TypeScript
 This example shows how to request the component to be selected and the selected state to be automatically cleared in 5,000 ms using the requestSelected and clearSelected APIs. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+        Button('Request Selection')
+          .onClick(() => {
+            this.controller.requestSelected('target_text');
+            setTimeout(() => {
+              this.controller.clearSelected();
+              console.info('smartGesture selected is clear');
+            }, 5000);
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## unregisterMonitor
@@ -200,6 +416,52 @@ Unregisters a smart gesture monitoring callback.
 
 **Examples**
 
-```TypeScript
 This example shows how to unregister a callback for listening to smart gestures using the unregisterMonitor API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.unregisterMonitor(this.smartGestureMonitor);
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('Text component')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```

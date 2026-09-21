@@ -158,12 +158,28 @@ generateRandom(len: number): Promise<DataBlob>
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rand = cryptoFramework.createRandom();
+let promiseGenerateRand = rand.generateRandom(12);
+promiseGenerateRand.then(randData => {
+  console.info('[Promise]: rand result: ' + randData.data);
+}).catch((error: BusinessError) => {
+  console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
 JS示例：
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="RandTest">Rand异步测试</input>
+</div>
 ```
 
 ```TypeScript
@@ -267,12 +283,33 @@ generateRandomSync(len: number): DataBlob
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rand = cryptoFramework.createRandom();
+try {
+  let randData = rand.generateRandomSync(12);
+  if (randData != null) {
+    console.info('[Sync]: rand result: ' + randData.data);
+  } else {
+    console.error('[Sync]: get rand result: fail.');
+  }
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
 JS示例：
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="RandTestSync">Rand同步测试</input>
+</div>
 ```
 
 ```TypeScript

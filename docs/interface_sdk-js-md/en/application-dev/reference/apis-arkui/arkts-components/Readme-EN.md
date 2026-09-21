@@ -765,7 +765,8 @@
   - [SheetKeyboardAvoidMode](arkts-arkui-common-comp-sheetkeyboardavoidmode-e.md)
   - [SheetMode](arkts-arkui-common-comp-sheetmode-e.md)
   - [SheetSize](arkts-arkui-common-comp-sheetsize-e.md)
-  - [SheetTitleBarBackgroundBlur](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e.md)
+  <!--Del-->
+  - [SheetTitleBarBackgroundBlur(system api)](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e-sys.md)<!--DelEnd-->
   - [SheetTitleBarHoverMode](arkts-arkui-common-comp-sheettitlebarhovermode-e.md)
   - [SheetType](arkts-arkui-common-comp-sheettype-e.md)
   - [SourceTool](arkts-arkui-common-comp-sourcetool-e.md)
@@ -1947,6 +1948,7 @@
   - [TabBarStyle](arkts-arkui-tabs-comp-tabbarstyle-e.md)
   - [TabsCacheMode](arkts-arkui-tabs-comp-tabscachemode-e.md)
   - [TabsNestedScrollMode](arkts-arkui-tabs-comp-tabsnestedscrollmode-e.md)
+  - [TabsSidebarDisplayStyle](arkts-arkui-tabs-comp-tabssidebardisplaystyle-e.md)
 - [Text](arkts-arkui-text-comp.md)
   - [Text properties/events](arkts-arkui-text-comp-attribute.md)
   - [TextMarqueeOptions](arkts-arkui-text-comp-textmarqueeoptions-i.md)

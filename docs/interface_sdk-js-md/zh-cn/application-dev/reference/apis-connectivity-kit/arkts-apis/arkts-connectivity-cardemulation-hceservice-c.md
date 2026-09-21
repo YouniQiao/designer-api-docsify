@@ -118,12 +118,80 @@ on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+// 适用于除轻量级智能穿戴产品之外其他设备
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+import { bundleManager, AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+let hceService: cardEmulation.HceService = new cardEmulation.HceService();
+let element: bundleManager.ElementName;
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onCreate');
+    element = {
+      bundleName: want.bundleName ?? '',
+      abilityName: want.abilityName ?? '',
+      moduleName: want.moduleName
+    };
+    const apduCallback: AsyncCallback<number[]> = (err, data) => {
+      // 处理数据和异常
+      console.info("got apdu data");
+    };
+    hceService.on('hceCmd', apduCallback);
+  }
+  onDestroy() {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onDestroy');
+    hceService.stop(element);
+  }
+  // 生命周期内的其他功能
+}
+```
+
 JS示例：
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let appName = "com.example.testquestionlite";
+
+export default {
+  data:{
+    fontSize: '30px',
+    fontColor: '#50609f',
+    hide: 'show',
+    headCon: appName,
+    paymentAid: ["A0000000041010", "A0000000041012"]
+  },
+  onCreate() {
+    console.info('onCreate');
+  },
+  onReady() {
+    cardEmulation.hasHceCapability();
+    cardEmulation.isDefaultService(appName, cardEmulation.CardType.PAYMENT);
+    cardEmulation.isDefaultService(appName, cardEmulation.CardType.OTHER);
+    let hceService = new cardEmulation.HceService();
+
+    hceService.start(appName, this.paymentAid);
+    hceService.on("hceCmd", (data) => {
+      console.info('data:' + data);
+      // 应用程序实际想要发送的数据， 此处仅作为示例
+      let responseData = [0x1, 0x2];
+      hceService.transmit(responseData, () => {
+        console.info('sendResponse start');
+      });
+      console.info('sendResponse end');
+    });
+  },
+  onDestroy() {
+  }
+  // 生命周期内的其他功能
+}
 ```
 
 ## sendResponse
@@ -154,12 +222,21 @@ sendResponse(responseApdu: number[]): void
 
 **示例**
 
-```TypeScript
 ArkTS示例：
 
 示例请参见[transmit](#transmit)接口的示例。
 
 JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript
@@ -282,12 +359,21 @@ startHCE(aidList: string[]): boolean
 
 **示例**
 
-```TypeScript
 ArkTS示例：
 
 示例请参见on接口的示例。
 
 JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript
@@ -396,12 +482,21 @@ stopHCE(): boolean
 
 **示例**
 
-```TypeScript
 ArkTS示例：
 
 示例请参见on接口的示例。
 
 JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript

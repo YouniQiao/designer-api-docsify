@@ -24,13 +24,13 @@ Navigates to the specified page in the application.
 
 **NOTE:** 
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** pushPath
+**Substitutes:** [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,13 +46,13 @@ Returns to the specified page. If the specified page does not exist in the stack
 
 **NOTE:** 
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use pop instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pop](arkts-arkui-navigation-comp-navpathstack-c.md#pop) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** pop
+**Substitutes:** [pop](arkts-arkui-navigation-comp-navpathstack-c.md#pop)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,13 +68,13 @@ Replaces the current page with another one in the application and destroys the c
 
 **NOTE:** 
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** replacePath
+**Substitutes:** [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -55,16 +55,106 @@ GridRow(option?: GridRowOptions)
 
 ## 示例
 
-```TypeScript
 ### 示例1（栅格布局的基本用法）
 
 本示例展示GridRow组件的基本用法。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GridRowExample {
+  @State bgColors: Color[] = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Pink, Color.Grey, Color.Blue, Color.Brown]
+  @State currentBp: string = 'unknown'
+
+  build() {
+    Column() {
+      GridRow({
+        columns: 5,
+        gutter: { x: 5, y: 10 },
+        breakpoints: { value: ['400vp', '600vp', '800vp'],
+          reference: BreakpointsReference.WindowSize },
+        direction: GridRowDirection.Row
+      }) {
+        ForEach(this.bgColors, (color: Color) => {
+          GridCol({ span: { xs: 1, sm: 2, md: 3, lg: 4 }, offset: 0, order: 0 }) {
+            Row().width('100%').height('20vp')
+          }.borderColor(color).borderWidth(2)
+        })
+      }.width('100%').height('100%')
+      .onBreakpointChange((breakpoint) => {
+        this.currentBp = breakpoint
+      })
+    }.width('80%').margin({ left: 10, top: 5, bottom: 5 }).height(200)
+    .border({ color: '#880606', width: 2 })
+  }
+}
+```
+
 ### 示例2（AlignItems的基本用法）
 
 本示例展示GridCol组件在不同alignItems对齐方式下的效果。
+
+```TypeScript
+@ComponentV2
+struct AlignItemsDemo {
+  bgColors: Color[] = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Pink];
+  @Param alignment: ItemAlign = ItemAlign.Start; // 接收父组件传入的alignItems属性值
+
+  ToString(alignment: ItemAlign): string {
+    switch (alignment) {
+      case ItemAlign.Start:
+        return 'ItemAlign.Start';
+      case ItemAlign.Center:
+        return 'ItemAlign.Center';
+      case ItemAlign.End:
+        return 'ItemAlign.End';
+      case ItemAlign.Stretch:
+        return 'ItemAlign.Stretch';
+      default:
+        return 'ItemAlign.Auto';
+    }
+  }
+
+  build() {
+    Column() {
+      Text(this.ToString(this.alignment))
+        .fontSize(9)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+        .alignSelf(ItemAlign.Start)
+      GridRow({
+        columns: 5,
+        gutter: { x: 5, y: 10 },
+      }) {
+        ForEach(this.bgColors, (color: Color, index: number) => {
+          GridCol({ span: 1 }) {
+            Row() {
+            }.width('100%').height(`${(index + 1) * 20}%`) // GridCol内的Row设置不同的高度，方便观察alignItems属性的效果
+          }.borderColor(color).borderWidth(2)
+        })
+      }
+      .border({ color: '#880606', width: 2 })
+      .alignItems(this.alignment)
+      .width('100%')
+    }
+    .height('20%')
+  }
+}
+
+@Entry
+@ComponentV2
+struct GridRowExample {
+  alignmentArray: ItemAlign[] = [ItemAlign.Start, ItemAlign.Center, ItemAlign.End, ItemAlign.Stretch];
+
+  build() {
+    Column({ space: 15 }) {
+      ForEach(this.alignmentArray, (ele: ItemAlign) => {
+        AlignItemsDemo({ alignment: ele })
+      })
+    }.width('80%').margin({ left: 10, top: 5, bottom: 5 }).height('100%')
+  }
+}
 ```

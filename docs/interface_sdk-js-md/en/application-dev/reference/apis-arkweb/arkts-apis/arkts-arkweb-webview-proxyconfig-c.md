@@ -32,9 +32,7 @@ Hostnames without a period character will bypass the proxy and directly connect 
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## clearImplicitRules
 
@@ -52,9 +50,7 @@ Overrides the default behavior and forcibly sends the local host address or loca
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## enableReverseBypass
 
@@ -84,9 +80,7 @@ Reverses the bypass rule.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## getBypassRules
 
@@ -110,9 +104,7 @@ Obtains the list of URLs that do not use the proxy.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## getProxyRules
 
@@ -136,9 +128,7 @@ Obtains proxy rules.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## insertBypassRule
 
@@ -168,9 +158,7 @@ Inserts a bypass rule, specifying which URLs should bypass the proxy and directl
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## insertDirectRule
 
@@ -204,9 +192,7 @@ Inserts a direct rule, specifying that URLs matching the schemeFilter condition 
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## insertProxyRule
 
@@ -255,9 +241,7 @@ For example:
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## isReverseBypassEnabled
 
@@ -281,6 +265,4 @@ Obtains the value of [enableReverseBypass](#enablereversebypass). For details, s
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```

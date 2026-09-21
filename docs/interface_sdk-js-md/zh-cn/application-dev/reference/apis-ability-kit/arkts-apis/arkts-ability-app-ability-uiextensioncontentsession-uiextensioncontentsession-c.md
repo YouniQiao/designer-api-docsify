@@ -165,12 +165,60 @@ loadContentByName(name: string, storage?: LocalStorage): void
 
 **示例**
 
-```TypeScript
 UIExtensionAbility组件的实现：
-```
 
 ```TypeScript
+// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import './pages/UIExtensionPage'; // 导入命名路由页面，示例代码以“./pages/UIExtensionPage.ets”文件为例，在实际代码开发过程中修改为真实路径和文件名称。
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // 其他生命周期和实现
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let storage: LocalStorage = new LocalStorage();
+    storage.setOrCreate('session', session);
+
+    let name: string = 'UIExtPage'; // 命名路由页面的名字。
+    try {
+      session.loadContentByName(name, storage);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`Failed to load content by name ${name}, code: ${code}, msg: ${message}`);
+    }
+  }
+
+  // 其他生命周期和实现
+}
+```
+
 UIExtensionAbility组件加载的命名路由页面的实现：
+
+```TypeScript
+// “./pages/UIExtensionPage.ets”文件的实现。
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+
+@Entry({ routeName: 'UIExtPage' }) // 通过“routeName”定义命名路由页面的名字。
+@Component
+struct UIExtensionPage {
+  @State message: string = 'Hello world';
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined = this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 ## setWindowPrivacyMode

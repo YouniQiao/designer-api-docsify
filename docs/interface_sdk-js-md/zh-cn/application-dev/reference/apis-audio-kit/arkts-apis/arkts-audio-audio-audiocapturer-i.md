@@ -114,7 +114,7 @@ try {
 getAudioTime(callback: AsyncCallback<number>): void
 ```
 
-获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用callback异步回调。
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒（ns）。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -144,7 +144,7 @@ audioCapturer.getAudioTime((err: BusinessError, timestamp: number) => {
 getAudioTime(): Promise<number>
 ```
 
-获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒（ns）。使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -154,7 +154,7 @@ getAudioTime(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。  单位为纳秒。 |
+| Promise&lt;number&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。单位为纳秒（ns）。 |
 
 **示例**
 
@@ -174,7 +174,7 @@ audioCapturer.getAudioTime().then((timestamp: number) => {
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-获取输入音频流时间戳和当前数据帧位置信息。该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
+获取输入音频流时间戳和当前数据帧位置信息。该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒（ns）。
 
 **起始版本：** 19
 
@@ -248,7 +248,7 @@ try {
 getAudioTimeSync(): number
 ```
 
-获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。
+获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒（ns）。同步返回结果。
 
 **起始版本：** 10
 
@@ -258,7 +258,7 @@ getAudioTimeSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回时间戳。 |
+| number | 返回时间戳，单位为纳秒（ns）。 |
 
 **示例**
 
@@ -290,7 +290,7 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。<br>单位为字节。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。<br>单位为字节（Byte）。 |
 
 **示例**
 
@@ -324,7 +324,7 @@ getBufferSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。  单位为字节。 |
+| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。单位为字节（Byte）。 |
 
 **示例**
 
@@ -354,7 +354,7 @@ getBufferSizeSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回缓冲区大小，单位为字节。 |
+| number | 返回缓冲区大小，单位为字节（Byte）。 |
 
 **示例**
 
@@ -1168,7 +1168,7 @@ audioCapturer.on('stateChange', (state: audio.AudioState) => {
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅音频焦点介绍文档。
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 10
 
@@ -1310,7 +1310,7 @@ audioCapturer.on('audioCapturerChange', (capturerChangeInfo: audio.AudioCapturer
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
+监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100毫秒（ms）数据进行静音。
 
 **起始版本：** 11
 
@@ -1722,7 +1722,7 @@ try {
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-设置当前录制音频流是否启用静音打断模式。使用Promise异步回调。
+设置当前录制音频流是否启用[静音打断模式](../../../media/audio/using-audiocapturer-for-recording.md#设置静音打断模式)。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -1732,7 +1732,7 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muteWhenInterrupted | boolean | 是 | 设置当前录制音频流是否启用静音打断模式, true表示启用，false表示不启用，保持为默认打断模式。 |
+| muteWhenInterrupted | boolean | 是 | 设置当前录制音频流是否启用静音打断模式，true表示启用，false表示不启用，保持为默认打断模式。 |
 
 **返回值：**
 

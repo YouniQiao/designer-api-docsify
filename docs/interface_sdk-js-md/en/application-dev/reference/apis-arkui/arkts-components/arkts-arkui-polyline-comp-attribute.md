@@ -18,7 +18,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 points(value: Array<any>)
 ```
 
-Sets the list of coordinate points that the polyline passes through. This attribute supports attributeModifier for dynamic setting of the attribute.
+Sets the list of coordinate points that the polyline passes through. This attribute supports [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) for dynamic setting of the attribute.
 
 **Since:** 7
 

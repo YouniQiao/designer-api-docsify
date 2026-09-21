@@ -6,8 +6,6 @@ enum AsrNoiseSuppressionMode
 
 枚举，自动语音识别（ASR）的噪音抑制模式。
 
-@enum { int }
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

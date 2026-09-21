@@ -22,7 +22,7 @@ The default color is black.
 
 **NOTE:** 
 
-Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the textShadow attribute.
+Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the [textShadow](arkts-arkui-text-comp-attribute.md#textshadow) attribute.
 
 With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to the shadow drawing area.
 
@@ -52,7 +52,7 @@ Default value: **false**.
 
 **NOTE:** 
 
-This attribute does not take effect in textShadow.
+This attribute does not take effect in [textShadow](arkts-arkui-text-comp-attribute.md#textshadow).
 
 **Type:** boolean
 

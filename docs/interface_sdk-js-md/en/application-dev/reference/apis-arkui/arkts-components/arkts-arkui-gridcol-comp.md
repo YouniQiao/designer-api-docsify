@@ -39,6 +39,46 @@ Defines a grid column layout component. After creation, it participates in the l
 
 ## Examples
 
-```TypeScript
 This example demonstrates the basic usage of GridCol.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GridColExample {
+  @State bgColors: Color[] =
+    [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Pink, Color.Grey, Color.Blue, Color.Brown]
+  @State currentBp: string = 'unknown'
+
+  build() {
+    Column() {
+      // Create the grid container, configure the column count, spacing, and responsive breakpoints.
+      GridRow({
+        columns: 5,
+        gutter: { x: 5, y: 10 },
+        // Set the responsive breakpoints based on window size.
+        breakpoints: {
+          value: ['400vp', '600vp', '800vp'],
+          reference: BreakpointsReference.WindowSize
+        },
+        direction: GridRowDirection.Row
+      }) {
+        ForEach(this.bgColors, (color: Color) => {
+          // Configure span values at different breakpoints to implement responsive layout.
+          GridCol({
+            span: { xs: 1, sm: 2, md: 3, lg: 4 },
+            offset: 0,
+            order: 0
+          }) {
+            Row().width('100%').height('20vp')
+          }.borderColor(color).borderWidth(2)
+        })
+      }.width('100%').height('100%')
+      .onBreakpointChange((breakpoint) => {
+        this.currentBp = breakpoint
+      })
+    }.width('80%').margin({ left: 10, top: 5, bottom: 5 }).height(200)
+    .border({ color: '#880606', width: 2 })
+  }
+}
 ```

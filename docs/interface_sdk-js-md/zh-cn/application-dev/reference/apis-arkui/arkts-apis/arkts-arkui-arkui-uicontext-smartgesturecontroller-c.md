@@ -42,8 +42,54 @@ clearMonitors(): void
 
 **示例**
 
-```TypeScript
 本示例通过clearMonitors接口实现了清空智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.clearMonitors();
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## clearSelected
@@ -64,8 +110,52 @@ clearSelected(): void
 
 **示例**
 
-```TypeScript
 本示例通过requestSelected接口和clearSelected接口实现了请求组件选中并在5000ms后自动清除选中，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+        Button('请求选中')
+          .onClick(() => {
+            this.controller.requestSelected('target_text');
+            setTimeout(() => {
+              this.controller.clearSelected();
+              console.info('smartGesture selected is clear');
+            }, 5000);
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## enableSmartTapAndSlideGestures
@@ -98,8 +188,43 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 
 **示例**
 
-```TypeScript
 本示例通过enableSmartTapAndSlideGestures接口实现了启用和关闭智慧手势，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## registerMonitor
@@ -138,8 +263,55 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 
 **示例**
 
-```TypeScript
 本示例通过registerMonitor接口实现了注册智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    // 消费当前智慧手势并沿用系统默认动作处理。
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.unregisterMonitor(this.smartGestureMonitor);
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## requestSelected
@@ -152,7 +324,7 @@ requestSelected(id: string): void
 
 > **说明：** 
 > 
-> - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了onClick或绑定了单击手势[TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture)。
+> - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了[onClick](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onclick-1)或绑定了单击手势[TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture)。
 > 
 > - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut)中的enabled决定。
 
@@ -168,12 +340,56 @@ requestSelected(id: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 组件的id。 |
+| id | string | 是 | 组件的[id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id)。 |
 
 **示例**
 
-```TypeScript
 本示例通过requestSelected接口和clearSelected接口实现了请求组件选中并在5000ms后自动清除选中，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+        Button('请求选中')
+          .onClick(() => {
+            this.controller.requestSelected('target_text');
+            setTimeout(() => {
+              this.controller.clearSelected();
+              console.info('smartGesture selected is clear');
+            }, 5000);
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```
 
 ## unregisterMonitor
@@ -200,6 +416,52 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 
 **示例**
 
-```TypeScript
 本示例通过unregisterMonitor接口实现了注销智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+
+```TypeScript
+import {
+  BaseGestureHandlingProposal,
+  GestureHandlingResolution,
+} from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SmartGestureControllerExample {
+  private controller = this.getUIContext().getSmartGestureController();
+  private smartGestureMonitor = (proposal: BaseGestureHandlingProposal) => {
+    return new GestureHandlingResolution(true);
+  };
+
+  aboutToAppear(): void {
+    this.controller.enableSmartTapAndSlideGestures(true);
+    this.controller.registerMonitor(this.smartGestureMonitor);
+  }
+
+  aboutToDisappear(): void {
+    this.controller.unregisterMonitor(this.smartGestureMonitor);
+    this.controller.enableSmartTapAndSlideGestures(false);
+  }
+
+  build() {
+    Scroll() {
+      Column({ space: 12 }) {
+        Text('文本组件')
+          .id('target_text')
+          .fontSize(18)
+          .width('100%')
+          .padding(12)
+          .borderRadius(10)
+          .borderWidth(1)
+          .smartGestureShortcut({ action: GestureShortcut.PRIMARY, enabled: true, selectable: true })
+          .onClick(() => {
+            console.info('smartGesture click is triggered');
+          })
+      }.width('100%')
+    }
+    .layoutWeight(1)
+    .width('100%')
+    .height('100%')
+    .padding(12)
+  }
+}
 ```

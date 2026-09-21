@@ -52,9 +52,7 @@ Customizes the position of the child component to be arranged. When the position
 
 **Examples**
 
-```TypeScript
 For details, see [Example 1: Implementing Waterfall Layout Using a Custom Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
-```
 
 ## onMeasure
 

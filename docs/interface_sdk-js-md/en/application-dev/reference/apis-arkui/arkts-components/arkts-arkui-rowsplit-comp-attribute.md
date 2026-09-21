@@ -8,7 +8,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 
 > **NOTE:** 
 > 
-> The default value of shape clipping of the **RowSplit** component is
+> The default value of [shape clipping](arkts-arkui-common-comp-commonmethod-c.md#clip) of the **RowSplit** component is
 > **true**.
 
 The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.

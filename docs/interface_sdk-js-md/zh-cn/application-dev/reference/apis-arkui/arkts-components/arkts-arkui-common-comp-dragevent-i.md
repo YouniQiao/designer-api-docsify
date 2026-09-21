@@ -590,7 +590,7 @@ autoHideComponentUniqueIds?: number[]
 
 开发者应在[onDragEnd](arkts-arkui-common-comp-commonmethod-c.md#ondragend)或[onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop)中恢复组件显示状态。
 
-**类型：** number &#124; number[]
+**类型：** number[]
 
 **起始版本：** 26.0.0
 

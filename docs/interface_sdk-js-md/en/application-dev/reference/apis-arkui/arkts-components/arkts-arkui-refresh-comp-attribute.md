@@ -72,7 +72,7 @@ Called when the pull-down distance changes.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 

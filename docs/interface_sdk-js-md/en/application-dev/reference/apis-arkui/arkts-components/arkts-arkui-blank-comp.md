@@ -39,7 +39,6 @@ axis. If it does not have a cross axis size specified, it will fill up the paren
 
 ## Examples
 
-```TypeScript
 ### Example 1: Filling Remaining Space
 
 This example shows how the Blank component fills the remaining space in landscape and portrait modes.
@@ -51,10 +50,50 @@ Portrait mode
 Landscape mode
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BlankExample {
+  build() {
+    Column() {
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        Blank()
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.width('100%').backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+    }.backgroundColor(0xEFEFEF).padding(20)
+  }
+}
+```
+
 ### Example 2: Filling a Fixed Width
 
 This example shows the effect of using the min parameter of the Blank component when its parent component does not have a width set.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct BlankExample {
+  build() {
+    Column({ space: 20 }) {
+      // If the width of the parent container is not set, the Blank component becomes invalid. In this case, you can set min to specify the minimum width.
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        Blank().color(Color.Yellow)
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+
+      Row() {
+        Text('Bluetooth').fontSize(18)
+        // Set the minimum width to 160.
+        Blank('160').color(Color.Yellow)
+        Toggle({ type: ToggleType.Switch }).margin({ top: 14, bottom: 14, left: 6, right: 6 })
+      }.backgroundColor(0xFFFFFF).borderRadius(15).padding({ left: 12 })
+
+    }.backgroundColor(0xEFEFEF).padding(20).width('100%')
+  }
+}
 ```

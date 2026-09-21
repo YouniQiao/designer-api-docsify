@@ -8,7 +8,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp.md#common), th
 
 > **NOTE:** 
 > 
-> The default value of shape clipping of the **ColumnSplit** component is **true**.
+> The default value of [shape clipping](arkts-arkui-common-comp-commonmethod-c.md#clip) of the **ColumnSplit** component is **true**.
 
 The [universal events](arkts-arkui-common-comp.md#common) are supported.
 
@@ -50,8 +50,8 @@ Sets whether the divider can be dragged. When set to **true**, the user can drag
 
 > **NOTE:** 
 > 
-> After initialization, when dynamic modification of the margin,
-> [border](arkts-arkui-common-comp-commonmethod-c.md#border), or padding universal attributes causes a child
+> After initialization, when dynamic modification of the [margin](arkts-arkui-common-comp-commonmethod-c.md#margin),
+> [border](arkts-arkui-common-comp-commonmethod-c.md#border), or [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) universal attributes causes a child
 > component size to exceed the spacing between adjacent dividers, dragging the divider to change the child
 > component height is not supported.
 

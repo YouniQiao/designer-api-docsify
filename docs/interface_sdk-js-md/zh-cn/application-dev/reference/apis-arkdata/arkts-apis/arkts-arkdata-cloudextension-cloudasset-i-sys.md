@@ -6,7 +6,7 @@ export interface CloudAsset extends relationalStore.Asset
 
 云资产的信息。
 
-**继承/实现关系：** CloudAsset extends relationalStore.Asset
+**继承/实现关系：** CloudAsset extends [relationalStore.Asset](arkts-arkdata-relationalstore-asset-i.md)
 
 **起始版本：** 11
 

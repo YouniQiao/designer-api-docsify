@@ -985,14 +985,80 @@ readException(): void
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-```
 
 ```TypeScript
+// FA模型需要从@kit.AbilityKit导入featureAbility
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'connection succeeded');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'disconnection succeeded');
+  },
+  onFailed: () => {
+    hilog.error(0x0000, 'testTag', 'connection failed');
+  }
+};
+let want: Want = {
+  // 获取服务端包名和ability名称
+  bundleName: 'com.ohos.server',
+  abilityName: 'com.ohos.server.EntryAbility',
+};
+
+// FA模型使用此方法连接服务
+// FA.connectAbility(want,connect);
+
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// 建立连接后返回的Id需要保存下来，在解绑服务时需要作为参数传入
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
 上述onConnect回调函数中的proxy对象需要等ability异步连接成功后才会被赋值，然后才可调用proxy对象的sendRequest接口方法发送消息
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeNoException();
+  data.writeString('hello');
+  if (proxy != undefined) {
+    let a = proxy.sendRequest(1, data, reply, option) as Object;
+    let b = a as Promise<rpc.SendRequestResult>;
+    b.then((result: rpc.SendRequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendRequest got result');
+        result.reply.readException();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendRequest got exception: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+  }
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
 ```
 
 ## readFileDescriptor

@@ -40,9 +40,7 @@ getBrand(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```
 
 ## getFullVersion
 
@@ -66,9 +64,7 @@ getFullVersion(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```
 
 ## getMajorVersion
 
@@ -92,9 +88,7 @@ getMajorVersion(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```
 
 ## setBrand
 
@@ -118,9 +112,7 @@ setBrand(brand: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```
 
 ## setFullVersion
 
@@ -144,9 +136,7 @@ setFullVersion(fullVersion: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```
 
 ## setMajorVersion
 
@@ -170,6 +160,4 @@ setMajorVersion(majorVersion: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-```

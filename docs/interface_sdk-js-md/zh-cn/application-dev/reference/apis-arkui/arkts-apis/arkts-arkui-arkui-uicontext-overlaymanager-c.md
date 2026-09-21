@@ -161,8 +161,83 @@ Creates a floating layer node with the specified display order. This API allows 
 
 **示例**
 
-```TypeScript
 本示例展示如何调用addComponentContentWithOrder接口创建浮层节点并指定显示顺序。
+
+```TypeScript
+import { ComponentContent, PromptAction, LevelOrder, UIContext, OverlayManager } from '@kit.ArkUI';
+
+class Params {
+  text: string = '';
+  offset: Position;
+  constructor(text: string, offset: Position) {
+    this.text = text;
+    this.offset = offset;
+  }
+}
+@Builder
+function builderText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(30)
+      .fontWeight(FontWeight.Bold)
+  }.offset(params.offset)
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = '弹窗';
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private overlayNode: OverlayManager = this.ctx.getOverlayManager();
+  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
+  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
+  @StorageLink('arrayIndex') arrayIndex: number = 0;
+  @StorageLink('componentOffset') componentOffset: Position = { x: 0, y: 80 };
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('OverlayManager下面弹窗')
+          .fontSize(20)
+          .onClick(() => {
+            let componentContent = new ComponentContent(
+              this.ctx, wrapBuilder<[Params]>(builderText),
+              new Params(this.message + (this.contentArray.length), this.componentOffset)
+            );
+            this.contentArray.push(componentContent);
+            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.1));
+            let topOrder: LevelOrder = this.promptAction.getTopOrder();
+            if (topOrder !== undefined) {
+              console.info('topOrder: ' + topOrder.getOrder());
+            }
+            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
+            if (bottomOrder !== undefined) {
+              console.info('bottomOrder: ' + bottomOrder.getOrder());
+            }
+          })
+        Button('OverlayManager上面弹窗')
+          .fontSize(20)
+          .onClick(() => {
+            let componentContent = new ComponentContent(
+              this.ctx, wrapBuilder<[Params]>(builderText),
+              new Params(this.message + (this.contentArray.length), this.componentOffset)
+            );
+            this.contentArray.push(componentContent);
+            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.2));
+            let topOrder: LevelOrder = this.promptAction.getTopOrder();
+            if (topOrder !== undefined) {
+              console.info('topOrder: ' + topOrder.getOrder());
+            }
+            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
+            if (bottomOrder !== undefined) {
+              console.info('bottomOrder: ' + bottomOrder.getOrder());
+            }
+          })
+      }.width('100%')
+    }.height('100%')
+  }
+}
 ```
 
 ## hideAllComponentContents
@@ -183,9 +258,7 @@ Hide all ComponentContents on the OverlayManager.
 
 **示例**
 
-```TypeScript
 请参考[addComponentContent](#addcomponentcontent)示例。
-```
 
 ## hideComponentContent
 
@@ -211,9 +284,7 @@ Hide the ComponentContent.
 
 **示例**
 
-```TypeScript
 请参考[addComponentContent](#addcomponentcontent)示例。
-```
 
 ## openOrderOverlay
 
@@ -324,9 +395,7 @@ Removes a specified ComponentContent node from the OverlayManager
 
 **示例**
 
-```TypeScript
 请参考[addComponentContent](#addcomponentcontent)示例。
-```
 
 ## showAllComponentContents
 
@@ -346,9 +415,7 @@ Show all ComponentContents on the OverlayManager.
 
 **示例**
 
-```TypeScript
 请参考[addComponentContent](#addcomponentcontent)示例。
-```
 
 ## showComponentContent
 
@@ -374,6 +441,4 @@ Show the ComponentContent.
 
 **示例**
 
-```TypeScript
 请参考[addComponentContent](#addcomponentcontent)示例。
-```

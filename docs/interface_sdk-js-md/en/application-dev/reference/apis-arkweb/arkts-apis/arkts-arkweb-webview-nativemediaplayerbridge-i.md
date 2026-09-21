@@ -32,9 +32,7 @@ Enables the player to enter full screen mode.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## exitFullscreen
 
@@ -52,9 +50,7 @@ Enables the player to exit full screen mode.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## pause
 
@@ -72,9 +68,7 @@ Pauses playback.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## play
 
@@ -92,9 +86,7 @@ Plays the media.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## release
 
@@ -112,9 +104,7 @@ Releases this player.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## resumePlayer
 
@@ -130,9 +120,7 @@ Notifies the app to rebuild the player and restore its status information. This 
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## seek
 
@@ -156,9 +144,7 @@ Seeks to a specific time point in the media.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## setMuted
 
@@ -182,9 +168,7 @@ Sets the muted status.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## setPlaybackRate
 
@@ -208,9 +192,7 @@ Sets the playback rate.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## setVolume
 
@@ -234,9 +216,7 @@ Sets the playback volume.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## suspendPlayer
 
@@ -258,9 +238,7 @@ Notifies the app to destroy the player and save its status information. This met
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```
 
 ## updateRect
 
@@ -287,6 +265,4 @@ Notifies the app of the surface position information. This method is called back
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-```

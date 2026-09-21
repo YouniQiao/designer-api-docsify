@@ -85,18 +85,79 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 ## Examples
 
-```TypeScript
 ### Example 1: Setting the Layout Attributes of the Column Component
 
 This example demonstrates how to set the layout attributes of the Column component, such as the spacing and alignment mode, and its effect.
-```
 
 ```TypeScript
-
+// resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "stringSpace",
+      "value": "5"
+    }
+  ]
+}
 ```
 
-```TypeScript
-### Example 2: Configuring the Reverse Attribute
 
-This example demonstrates how to set the reverse attribute of the Column component and its effect.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct ColumnExample {
+  build() {
+    Scroll() {
+      Column({ space: 5 }) {
+        // Set the vertical spacing between two adjacent child components to 5.
+        Text('space').width('90%')
+        Column({ space: 5 }) {
+          Column().width('100%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('100%').height(30).backgroundColor(0x00FFFF)
+        }.width('90%').height(100).border({ width: 1 })
+
+        // Set the spacing between child elements using the Resource type.
+        Text('Resource space').width('90%')
+        Column({ space: $r('app.string.stringSpace') }) {
+          Column().width('100%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('100%').height(30).backgroundColor(0x00FFFF)
+        }.width('90%').height(100).border({ width: 1 })
+
+        // Set the alignment mode of the child components in the horizontal direction.
+        Text('alignItems(Start)').width('90%')
+        Column() {
+          Column().width('50%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('50%').height(30).backgroundColor(0x00FFFF)
+        }.alignItems(HorizontalAlign.Start).width('90%').border({ width: 1 })
+
+        Text('alignItems(End)').width('90%')
+        Column() {
+          Column().width('50%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('50%').height(30).backgroundColor(0x00FFFF)
+        }.alignItems(HorizontalAlign.End).width('90%').border({ width: 1 })
+
+        Text('alignItems(Center)').width('90%')
+        Column() {
+          Column().width('50%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('50%').height(30).backgroundColor(0x00FFFF)
+        }.alignItems(HorizontalAlign.Center).width('90%').border({ width: 1 })
+
+        // Set the alignment mode of the child components in the vertical direction.
+        Text('justifyContent(Center)').width('90%')
+        Column() {
+          Column().width('90%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('90%').height(30).backgroundColor(0x00FFFF)
+        }.height(100).border({ width: 1 }).justifyContent(FlexAlign.Center)
+
+        Text('justifyContent(End)').width('90%')
+        Column() {
+          Column().width('90%').height(30).backgroundColor(0xAFEEEE)
+          Column().width('90%').height(30).backgroundColor(0x00FFFF)
+        }.height(100).border({ width: 1 }).justifyContent(FlexAlign.End)
+      }.width('100%').padding({ top: 5 })
+    }.width('100%').height('100%')
+  }
+}
 ```

@@ -10,8 +10,6 @@ interface AudioHapticFileDescriptor
 > 
 > 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。
 
-@typedef AudioHapticFileDescriptor
-
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

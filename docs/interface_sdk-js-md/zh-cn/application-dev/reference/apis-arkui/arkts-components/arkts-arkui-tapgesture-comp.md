@@ -98,26 +98,116 @@ TapGesture(event: (event: GestureEvent) => void)
 
 ## 示例
 
-```TypeScript
 ### 示例1（双击手势识别）
 
 该示例通过TapGesture实现了双击手势的识别。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TapGestureExample {
+  @State value: string = '';
+
+  build() {
+    Column() {
+      // 单指双击文本触发手势事件
+      Text('Click twice').fontSize(28)
+        .gesture(
+        TapGesture({ count: 2 })
+          .onAction((event: GestureEvent) => {
+            if (event) {
+              this.value = JSON.stringify(event.fingerList[0]);
+            }
+          })
+        );
+      Text(this.value);
+    }
+    .height(300)
+    .width(300)
+    .padding(20)
+    .border({ width: 3 })
+    .margin(30);
+  }
+}
+```
+
 ### 示例2（获取单击手势坐标）
 
 该示例通过TapGesture获取单击手势点击位置的坐标。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TapGestureExample {
+
+  build() {
+    Column() {
+      Text('Click Once').fontSize(28)
+        .gesture(
+          TapGesture({ count: 1, fingers: 1 })
+            .onAction((event: GestureEvent | undefined) => {
+              if (event) {
+                console.info(`x = ${JSON.stringify(event.tapLocation?.x)}`);
+                console.info(`y = ${JSON.stringify(event.tapLocation?.y)}`);
+                console.info(`windowX = ${JSON.stringify(event.tapLocation?.windowX)}`);
+                console.info(`windowY = ${JSON.stringify(event.tapLocation?.windowY)}`);
+                console.info(`displayX = ${JSON.stringify(event.tapLocation?.displayX)}`);
+                console.info(`displayY = ${JSON.stringify(event.tapLocation?.displayY)}`);
+                // 从API version 23开始，新增globalDisplayX和globalDisplayY属性。
+                console.info(`globalDisplayX = ${JSON.stringify(event.tapLocation?.globalDisplayX)}`);
+                console.info(`globalDisplayY = ${JSON.stringify(event.tapLocation?.globalDisplayY)}`);
+              }
+            })
+        );
+    }
+    .height(200)
+    .width(300)
+    .padding(20)
+    .border({ width: 3 })
+    .margin(30)
+  }
+}
+```
+
 ### 示例3（获取组件实时位置）
 
 该示例通过[getCurrentLocalPosition](#getcurrentlocalposition)方法获取点击位置相对于当前组件实时位置左上角的坐标。
 
 从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GetCurrentLocalPositionExample {
+  @State positionText: string = '';
+  @State textOffsetY: number = 0;
+
+  build() {
+    Column() {
+      Button('点击获取点击位置相对于当前组件实时位置左上角的坐标').translate({ y: this.textOffsetY })
+        .gesture(
+          TapGesture({ count: 1 })
+            .onAction((event: GestureEvent) => {
+              if (event) {
+                // 移动组件后延迟获取点击位置相对于组件实时位置左上角的坐标。
+                this.textOffsetY = -200;
+                setTimeout(() => {
+                  let localPos: Coordinate2D | undefined = event?.tapLocation?.getCurrentLocalPosition?.();
+                  this.positionText = `相对于当前组件实时位置左上角的坐标:\n  x: ${localPos?.x ?? 0}\n  y: ${localPos?.y ?? 0}`;
+                }, 2000);
+              }
+            })
+        );
+
+      Text(this.positionText);
+    }.width('100%');
+  }
+}
 ```

@@ -48,7 +48,7 @@ Triggered when the breakpoint changes. The **breakpoints** parameter received by
 
 > **NOTE:** 
 > 
-> - When [breakpointsreference](arkts-arkui-gridrow-comp-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, do not dynamically modify the padding or margin attribute of the **GridRow** component in the **onBreakpointChange** callback. Otherwise, it may cause cyclic triggering of component size calculation, layout jitter, or rendering performance degradation.
+> - When [breakpointsreference](arkts-arkui-gridrow-comp-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, do not dynamically modify the [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) or [margin](arkts-arkui-common-comp-commonmethod-c.md#margin) attribute of the **GridRow** component in the **onBreakpointChange** callback. Otherwise, it may cause cyclic triggering of component size calculation, layout jitter, or rendering performance degradation.
 
 **Since:** 9
 

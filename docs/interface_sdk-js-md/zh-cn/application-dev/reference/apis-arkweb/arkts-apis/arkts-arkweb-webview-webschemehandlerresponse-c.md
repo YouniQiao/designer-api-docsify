@@ -98,9 +98,7 @@ getCustomErrorCode(): number
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getEncoding
 
@@ -124,9 +122,7 @@ getEncoding(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getHeaderByName
 
@@ -156,9 +152,7 @@ getHeaderByName(name: string): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getMimeType
 
@@ -182,9 +176,7 @@ getMimeType(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getNetErrorCode
 
@@ -208,9 +200,7 @@ getNetErrorCode(): WebNetErrorList
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getStatus
 
@@ -234,9 +224,7 @@ getStatus(): number
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getStatusText
 
@@ -260,9 +248,7 @@ getStatusText(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## getUrl
 
@@ -288,9 +274,7 @@ getUrl(): string
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setCustomErrorCode
 
@@ -298,7 +282,7 @@ getUrl(): string
 setCustomErrorCode(customErrorCode: number): void
 ```
 
-给当前的Response设置自定义错误码。详情参考WebResourceError.getCustomErrorCode。
+给当前的Response设置自定义错误码。详情参考[WebResourceError.getCustomErrorCode](../arkts-components/arkts-arkweb-web-comp-webresourceerror-c.md#getcustomerrorcode)。
 
 **起始版本：** 26.0.1
 
@@ -314,9 +298,7 @@ setCustomErrorCode(customErrorCode: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setEncoding
 
@@ -346,9 +328,7 @@ setEncoding(encoding: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setHeaderByName
 
@@ -368,8 +348,8 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 头部（header）的名称，指定要设置的HTTP响应头字段名。常见值包括'Content-Type'（内容类型）、'Authorization'（授权信息）、'Cache-Control'（缓存控制）等。 |
-| value | string | 是 | 头部（header）的值，指定HTTP响应头字段的具体内容。需要与name参数对应的头部字段匹配，如name为'Content-Type'时，value可以是'text/html; charset=utf-8'。 |
+| name | string | 是 | 头部（header）的名称，指定要设置的HTTP响应头字段名。常见值包括'Content-Type'（内容类型）、'Authorization'（授权信息）、'Cache- Control'（缓存控制）等。 |
+| value | string | 是 | 头部（header）的值，指定HTTP响应头字段的具体内容。需要与name参数对应的头部字段匹配，如name为'Content-Type'时，value可以是'text/ html; charset=utf-8'。 |
 | overwrite | boolean | 是 | 如果为true，将覆盖现有的头部，否则不覆盖。 |
 
 **错误码：**
@@ -380,9 +360,7 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setMimeType
 
@@ -412,9 +390,7 @@ setMimeType(type: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setNetErrorCode
 
@@ -444,9 +420,7 @@ setNetErrorCode(code: WebNetErrorList): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setStatus
 
@@ -476,9 +450,7 @@ setStatus(code: number): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setStatusText
 
@@ -508,9 +480,7 @@ setStatusText(text: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```
 
 ## setUrl
 
@@ -540,6 +510,4 @@ setUrl(url: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[constructor](#constructor)。
-```

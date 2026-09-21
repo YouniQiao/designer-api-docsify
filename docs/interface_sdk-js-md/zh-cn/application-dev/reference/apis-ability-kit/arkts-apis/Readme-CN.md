@@ -538,6 +538,8 @@
   <!--Del-->
   - [InteractionModalUIExtension(系统接口)](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [InteractionText(系统接口)](arkts-ability-insightintent-interactiontext-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [InteractionUI(系统接口)](arkts-ability-insightintent-interactionui-i-sys.md)<!--DelEnd-->
   - [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md)
   - [ExecuteMode](arkts-ability-insightintent-executemode-e.md)
@@ -1067,6 +1069,8 @@
   - [getBundleArchiveInfo(系统接口)](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getBundleArchiveInfoSync(系统接口)](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getBundleExtensionPolicyInfo(系统接口)](arkts-ability-bundlemanager-getbundleextensionpolicyinfo-f-sys.md)<!--DelEnd-->
   - [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md)
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
@@ -1155,6 +1159,8 @@
   - [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)
   <!--Del-->
   - [AppProvisionInfo(系统接口)](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BundleExtensionPolicyInfo(系统接口)](arkts-ability-bundlemanager-bundleextensionpolicyinfo-t-sys.md)<!--DelEnd-->
   - [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)
   <!--Del-->
   - [BundleOptions(系统接口)](arkts-ability-bundlemanager-bundleoptions-t-sys.md)<!--DelEnd-->
@@ -1197,6 +1203,10 @@
   - [ApplicationFlag(系统接口)](arkts-ability-bundlemanager-applicationflag-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ApplicationInfoFlag(系统接口)](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ApplicationReservedFlag(系统接口)](arkts-ability-bundlemanager-applicationreservedflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AppSandboxPolicy(系统接口)](arkts-ability-bundlemanager-appsandboxpolicy-e-sys.md)<!--DelEnd-->
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag(系统接口)](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
@@ -1907,13 +1917,19 @@
   - [BundleInfo](arkts-ability-bundleinfo.md)
     - [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md)
     - [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md)
+    <!--Del-->
+    - [BundleExtensionPolicyInfo(系统接口)](arkts-ability-bundleinfo-bundleextensionpolicyinfo-i-sys.md)<!--DelEnd-->
     - [BundleInfo](arkts-ability-bundleinfo-i.md)
+    <!--Del-->
+    - [BundleInfo(系统接口)](arkts-ability-bundleinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [BundleOptions(系统接口)](arkts-ability-bundleinfo-bundleoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [DynamicIconInfo(系统接口)](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md)<!--DelEnd-->
     - [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)
     - [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)
+    <!--Del-->
+    - [SignatureInfo(系统接口)](arkts-ability-bundleinfo-signatureinfo-i-sys.md)<!--DelEnd-->
     - [UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
   <!--Del-->
   - [BundlePackInfo](arkts-ability-bundlepackinfo.md)<!--DelEnd-->
@@ -1955,6 +1971,8 @@
     - [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)
     - [Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)
     - [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
+    <!--Del-->
+    - [HapModuleInfo(系统接口)](arkts-ability-hapmoduleinfo-i-sys.md)<!--DelEnd-->
     - [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)
     - [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)
   - [LauncherAbilityInfo](arkts-ability-launcherabilityinfo.md)

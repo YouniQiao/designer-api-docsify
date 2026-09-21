@@ -47,9 +47,7 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 
 **Examples**
 
-```TypeScript
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 <a id="didfail-1"></a>
 
@@ -183,9 +181,7 @@ Notify that this request should be failed.
 
 **Examples**
 
-```TypeScript
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ```TypeScript
 // xxx.ets
@@ -281,9 +277,7 @@ Notifies the **Web** component that the intercepted request is complete and no m
 
 **Examples**
 
-```TypeScript
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## didReceiveResponse
 
@@ -314,9 +308,7 @@ Passes the constructed response header to the intercepted request. This API must
 
 **Examples**
 
-```TypeScript
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## didReceiveResponseBody
 
@@ -347,6 +339,4 @@ Passes the constructed response body to the intercepted request. This API must b
 
 **Examples**
 
-```TypeScript
 For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```

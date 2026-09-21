@@ -32,7 +32,7 @@ Sets the offset of the baseline. This attribute coexists with the **baselineOffs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics | Yes | Offset of the baseline. If the value specified is a percentage, the default value is used.<br>A positive value moves the content upwards, while a negative value moves it downwards.<br>Default value: **0**<br>In the **ImageSpan**, when this parameter is set to a non-zero value, the verticalAlign is fixed to **ImageSpanAlignment.BASELINE**; when this parameter is set to **0**, verticalAlign must be set to **ImageSpanAlignment.BASELINE** for the baseline alignment strategy to take effect. |
+| value | LengthMetrics | Yes | Offset of the baseline. If the value specified is a percentage, the default value is used.<br>A positive value moves the content upwards, while a negative value moves it downwards.<br>Default value: **0**<br>In the **ImageSpan**, when this parameter is set to a non-zero value, the [verticalAlign](arkts-arkui-imagespan-comp-attribute.md#verticalalign) is fixed to **ImageSpanAlignment.BASELINE**; when this parameter is set to **0**, [verticalAlign](arkts-arkui-imagespan-comp-attribute.md#verticalalign) must be set to **ImageSpanAlignment.BASELINE** for the baseline alignment strategy to take effect. |
 
 **Return value:**
 

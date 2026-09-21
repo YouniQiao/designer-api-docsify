@@ -40,9 +40,7 @@ onAbilityBackground(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityContinue
 
@@ -68,9 +66,7 @@ onAbilityContinue(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityCreate
 
@@ -96,9 +92,7 @@ onAbilityCreate(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityDestroy
 
@@ -124,9 +118,7 @@ onAbilityDestroy(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityForeground
 
@@ -152,9 +144,7 @@ onAbilityForeground(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilitySaveState
 
@@ -180,9 +170,7 @@ onAbilitySaveState?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillBackground
 
@@ -208,9 +196,7 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillContinue
 
@@ -236,9 +222,7 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillCreate
 
@@ -264,9 +248,7 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillDestroy
 
@@ -292,9 +274,7 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillForeground
 
@@ -320,9 +300,7 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onAbilityWillSaveState
 
@@ -348,9 +326,7 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onNewWant
 
@@ -376,9 +352,7 @@ onNewWant?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWillNewWant
 
@@ -404,9 +378,7 @@ onWillNewWant?(ability: UIAbility): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageActive
 
@@ -433,9 +405,7 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageCreate
 
@@ -462,9 +432,7 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageDestroy
 
@@ -491,9 +459,7 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageInactive
 
@@ -520,9 +486,7 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageRestore
 
@@ -549,9 +513,7 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageWillCreate
 
@@ -578,9 +540,7 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageWillDestroy
 
@@ -607,9 +567,7 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```
 
 ## onWindowStageWillRestore
 
@@ -636,6 +594,4 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **示例**
 
-```TypeScript
 参见AbilityLifecycleCallback使用示例。
-```

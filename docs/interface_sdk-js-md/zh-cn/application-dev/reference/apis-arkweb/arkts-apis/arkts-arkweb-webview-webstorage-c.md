@@ -129,8 +129,95 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 加载的html文件。
+
+```TypeScript
+<!-- index.html -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <meta charset="UTF-8">
+   <title>test</title>
+   <script type="text/javascript">
+
+       // 打开或创建数据库
+       var request = indexedDB.open('myDatabase', 1);
+
+       // 如果数据库版本变化或首次创建时触发
+       request.onupgradeneeded = function(event) {
+           var db = event.target.result;
+
+           // 创建对象存储（表），设置主键为‘id’
+           var objectStore = db.createObjectStore('customers', { keyPath: 'id' });
+
+           // 为‘name’创建索引
+           objectStore.createIndex('name', 'name', { unique: false });
+       };
+
+       // 打开数据库成功时的回调
+       request.onsuccess = function(event) {
+           var db = event.target.result;
+
+           const customerData = [
+               {id: 1, name: 'John Doe', email: 'john@example.com'},
+               {id: 2, name: 'John Doe', email: 'john@example.com'},
+           ]
+
+           // 插入数据
+           var transaction = db.transaction('customers', 'readwrite');
+           var objectStore = transaction.objectStore('customers');
+
+           customerData.forEach((customer) => {
+               objectStore.add(customer);
+           });
+
+           transaction.oncomplete = function () {
+               console.info('Transaction completed: data added');
+           }
+           
+           transaction.onerror = function (event) {
+               console.error("Transaction failed", event);
+           }
+           
+           // 查询数据
+           var queryTransaction = db.transaction(['customers']);
+           var queryObjectStore = queryTransaction.objectStore('customers');
+           var query = queryObjectStore.get(2);
+           
+           query.onsuccess = function (event) {
+               console.info('query succ');
+               console.info('Customer:', event.target.result);
+               console.info('Customer id:', event.target.result.id);
+               console.info('Customer name:', event.target.result.name);
+               console.info('Customer email:', event.target.result.email);
+           };
+           
+           queryObjectStore.openCursor().onsuccess = (event) => {
+               const cursor = event.target.result;
+               if (cursor) {
+                   var msg = "<p>查询记录：" + cursor.key + "</p>";
+                   document.querySelector("#status").innerHTML += msg;
+                   var msg = "<p><b>" + cursor.value.name + "</b></p>";
+                   document.querySelector("#status").innerHTML += msg;
+                   console.info(`SSN ${cursor.key} 对应的名字是 ${cursor.value.name}`);
+                   cursor.continue();
+               } else {
+                   console.info("没有更多记录了")
+               }
+           }
+       };
+
+       // 错误处理
+       request.onerror = function(event) {
+           console.error('Database error:', event.target.error);
+       };
+
+     </script>
+ </head>
+ <body>
+ <div id="status" name="status">状态信息</div>
+ </body>
+ </html>
 ```
 
 ## getOriginQuota

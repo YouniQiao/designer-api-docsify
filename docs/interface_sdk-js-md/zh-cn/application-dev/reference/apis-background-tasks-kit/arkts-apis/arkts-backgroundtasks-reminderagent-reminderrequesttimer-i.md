@@ -36,6 +36,6 @@ triggerTimeInSeconds: number
 
 **废弃版本：** 9
 
-**替代接口：** triggerTimeInSeconds
+**替代接口：** [triggerTimeInSeconds](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#triggertimeinseconds)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

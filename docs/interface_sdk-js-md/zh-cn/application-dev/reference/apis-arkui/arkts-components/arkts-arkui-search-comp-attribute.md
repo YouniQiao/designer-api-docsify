@@ -162,7 +162,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 
@@ -239,7 +239,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu)的入参列表中不包含被屏蔽的菜单选项。
 
 **起始版本：** 12
 
@@ -487,7 +487,7 @@ fontFeature(value: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 文字特性效果，用于设置OpenType字体的高级排版能力，如连字、数字等宽等。<br>格式为："ss01" on。更多支持的属性详见fontFeature属性列表。 |
+| value | string | 是 | 文字特性效果，用于设置OpenType字体的高级排版能力，如连字、数字等宽等。<br>格式为："ss01" on。更多支持的属性详见[fontFeature](arkts-arkui-text-comp-attribute.md#fontfeature)属性列表。 |
 
 ## halfLeading
 
@@ -1030,7 +1030,7 @@ IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 20
 

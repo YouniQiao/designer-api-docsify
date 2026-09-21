@@ -187,10 +187,34 @@ Starts a **photoPicker** page for the user to select one or more images or video
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
     let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  try {
+    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
       if (err) {
         console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
         return;

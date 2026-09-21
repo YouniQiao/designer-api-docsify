@@ -144,7 +144,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮Capsule的样式。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形[ROUNDED_RECTANGLE](arkts-arkui-button-comp-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮[Capsule](arkts-arkui-button-comp-buttontype-e.md#capsule)的样式。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -266,7 +266,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮Capsule的样式。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形[ROUNDED_RECTANGLE](arkts-arkui-button-comp-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮[Capsule](arkts-arkui-button-comp-buttontype-e.md#capsule)的样式。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -421,7 +421,7 @@ systemMaterial?: SystemUiMaterial
 > **说明：** 
 > 
 > - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。
-> - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色backgroundColor、背景模糊backgroundBlurStyle、背景效果backgroundEffect、边框颜色borderColor、边框宽度borderWidth、阴影shadow，当设置系统材质时，上述接口不生效。
+> - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色[backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、背景模糊[backgroundBlurStyle](arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-comp-commonmethod-c.md#backgroundeffect)、边框颜色[borderColor](arkts-arkui-common-comp-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-comp-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow)，当设置系统材质时，上述接口不生效。
 
 **类型：** [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md)
 

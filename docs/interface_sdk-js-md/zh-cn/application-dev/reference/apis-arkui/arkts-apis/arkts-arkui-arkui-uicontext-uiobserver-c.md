@@ -52,8 +52,181 @@ addGlobalGestureListener(type: GestureListenerType,
 
 **示例**
 
-```TypeScript
 该示例使用全局手势监听器实时追踪Tap、Pan和LongPress三个独立区域的触发状态，记录各手势的触发次数和最后操作信息，并在组件生命周期内自动管理监听器的注册与注销。
+
+```TypeScript
+// Index.ets
+// 演示uiObserver.addGlobalGestureListener(type, option, callback)
+// uiObserver.removeGlobalGestureListener(type, callback)
+
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureListenerCallback } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State tapCount: number = 0;
+  @State panCount: number = 0;
+  @State longPressCount: number = 0;
+  @State lastAction: string = '无';
+  @State lastArea: string = '无';
+
+  // 存储监听器回调引用
+  private tapCallback?: GestureListenerCallback;
+  private panCallback?: GestureListenerCallback;
+  private longPressCallback?: GestureListenerCallback;
+
+  // 启用全局监听
+  aboutToAppear() {
+    this.addGlobalListeners();
+  }
+  // 终止全局监听
+  aboutToDisappear() {
+    this.removeGlobalListeners();
+  }
+
+  private addGlobalListeners() {
+    const observer = this.getUIContext().getUIObserver();
+
+    // Tap监听任务
+    this.tapCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'tap-area') {
+        this.tapCount++;
+        this.lastAction = '点击';
+        this.lastArea = 'Tap区域';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.TAP,
+      { actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END] },
+      this.tapCallback
+    );
+
+    // Pan监听任务
+    this.panCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'pan-area') {
+        this.panCount++;
+        this.lastAction = '平移';
+        this.lastArea = 'Pan区域';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.PAN,
+      {
+        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
+      },
+      this.panCallback
+    );
+
+    // LongPress监听任务
+    this.longPressCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'longpress-area') {
+        this.longPressCount++;
+        this.lastAction = '长按';
+        this.lastArea = 'LongPress区域';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.LONG_PRESS,
+      {
+        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
+      },
+      this.longPressCallback
+    );
+  }
+
+  private removeGlobalListeners() {
+    const observer = this.getUIContext().getUIObserver();
+// 0、2、1分别表示Tap、Pan和LongPress手势类型，用于移除对应的全局监听
+    if (this.tapCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.TAP, this.tapCallback);
+    }
+    if (this.panCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.PAN, this.panCallback);
+    }
+    if (this.longPressCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.LONG_PRESS, this.longPressCallback);
+    }
+  }
+
+  build() {
+    Column() {
+      // 手势数据统计面板
+      Row({ space: 30 }) {
+        Column() {
+          Text('点击次数：').fontSize(16)
+          Text(`${this.tapCount}`).fontSize(24).fontColor('#FF6B81')
+        }
+        Column() {
+          Text('平移次数：').fontSize(16)
+          Text(`${this.panCount}`).fontSize(24).fontColor('#7BED9F')
+        }
+        Column() {
+          Text('长按次数：').fontSize(16)
+          Text(`${this.longPressCount}`).fontSize(24).fontColor('#70A1FF')
+        }
+      }
+      .margin(10)
+
+      Text(`最后动作：${this.lastAction}（${this.lastArea}）`)
+        .fontSize(18)
+        .margin(10)
+
+      // 手势区域
+      Row() {
+        Text('Tap区域').fontSize(18)
+      }
+      .id('tap-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#FF6B81' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(TapGesture().onAction((event: GestureEvent) => {
+        // 具体实现内容
+      }))
+
+      Row() {
+        Text('Pan区域').fontSize(18)
+      }
+      .id('pan-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#7BED9F' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(
+        PanGesture()
+          .onActionStart((event: GestureEvent) => {
+            // 具体实现内容
+          })
+          .onActionEnd((event: GestureEvent) => {
+            // 具体实现内容
+          })
+      )
+
+      Row() {
+        Text('LongPress区域').fontSize(18)
+      }
+      .id('longpress-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#70A1FF' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(
+        LongPressGesture()
+          .onAction((event: GestureEvent) => {
+            // 具体实现内容
+          })
+          .onActionEnd((event: GestureEvent) => {
+            // 具体实现内容
+          })
+      )
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## off('navDestinationUpdate')
@@ -80,9 +253,7 @@ off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callba
 
 **示例**
 
-```TypeScript
 参考[on('navDestinationUpdate')](#onnavdestinationupdate)接口示例。
-```
 
 ## off('navDestinationUpdate')
 
@@ -109,9 +280,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('navDestinationUpdate')](#onnavdestinationupdate)接口示例。
-```
 
 ## off('navDestinationUpdateByUniqueId')
 
@@ -139,9 +308,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('navDestinationUpdateByUniqueId')](#onnavdestinationupdatebyuniqueid)接口示例。
-```
 
 ## off('scrollEvent')
 
@@ -169,9 +336,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('scrollEvent')](#onscrollevent)接口示例。
-```
 
 ## off('scrollEvent')
 
@@ -198,9 +363,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('scrollEvent')](#onscrollevent)接口示例。
-```
 
 ## off('routerPageUpdate')
 
@@ -227,9 +390,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('routerPageUpdate')](#onrouterpageupdate)接口示例。
-```
 
 ## off('densityUpdate')
 
@@ -256,9 +417,7 @@ off(type: 'densityUpdate', callback?: Callback<observer.DensityInfo>): void
 
 **示例**
 
-```TypeScript
 参考[on('densityUpdate')](#ondensityupdate)接口示例。
-```
 
 ## off('willDraw')
 
@@ -285,9 +444,7 @@ off(type: 'willDraw', callback?: Callback<void>): void
 
 **示例**
 
-```TypeScript
 参考[on('willDraw')](#onwilldraw)接口示例。
-```
 
 ## off('didLayout')
 
@@ -314,9 +471,7 @@ off(type: 'didLayout', callback?: Callback<void>): void
 
 **示例**
 
-```TypeScript
 参考[on('didLayout')](#ondidlayout)接口示例。
-```
 
 ## off('navDestinationSwitch')
 
@@ -346,9 +501,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('navDestinationSwitch')](#onnavdestinationswitch)接口示例。
-```
 
 ## off('navDestinationSwitch')
 
@@ -380,9 +533,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('navDestinationSwitch')](#onnavdestinationswitch)接口示例。
-```
 
 ## off('willClick')
 
@@ -409,9 +560,7 @@ Removes a callback function to be called before clickEvent is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## off('didClick')
 
@@ -438,9 +587,7 @@ Removes a callback function to be called after clickEvent is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## off('willClick')
 
@@ -467,9 +614,7 @@ Removes a callback function to be called before tapGesture is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## off('didClick')
 
@@ -496,9 +641,7 @@ Removes a callback function to be called after tapGesture is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## off('beforePanStart')
 
@@ -506,7 +649,7 @@ Removes a callback function to be called after tapGesture is called.
 off(type: 'beforePanStart', callback?: PanListenerCallback): void
 ```
 
-取消[on('beforePanStart')](#onbeforepanstart)监听Pan手势onActionStart事件执行前的callback回调。
+取消[on('beforePanStart')](#onbeforepanstart)监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行前的callback回调。
 
 **起始版本：** 19
 
@@ -520,14 +663,12 @@ off(type: 'beforePanStart', callback?: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'beforePanStart' | 是 | 监听事件，固定为'beforePanStart'，即Pan手势onActionStart事件执行前的指令下发情况。 |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势onActionStart事件执行前的指令下发监听回调。 |
+| type | 'beforePanStart' | 是 | 监听事件，固定为'beforePanStart'，即Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行前的指令下发情况。 |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行前的指令下发监听回调。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## off('beforePanEnd')
 
@@ -535,7 +676,7 @@ off(type: 'beforePanStart', callback?: PanListenerCallback): void
 off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 ```
 
-取消[on('beforePanEnd')](#onbeforepanend)监听Pan手势onActionEnd事件执行前的callback回调。
+取消[on('beforePanEnd')](#onbeforepanend)监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行前的callback回调。
 
 **起始版本：** 19
 
@@ -549,14 +690,12 @@ off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'beforePanEnd' | 是 | 监听事件，固定为'beforePanEnd'，即Pan手势onActionEnd事件执行前的指令下发情况。 |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势onActionEnd事件执行前的指令下发监听回调。 |
+| type | 'beforePanEnd' | 是 | 监听事件，固定为'beforePanEnd'，即Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行前的指令下发情况。 |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行前的指令下发监听回调。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## off('afterPanStart')
 
@@ -564,7 +703,7 @@ off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 off(type: 'afterPanStart', callback?: PanListenerCallback): void
 ```
 
-取消[on('afterPanStart')](#onafterpanstart)监听Pan手势onActionStart事件执行后的callback回调。
+取消[on('afterPanStart')](#onafterpanstart)监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行后的callback回调。
 
 **起始版本：** 19
 
@@ -578,14 +717,12 @@ off(type: 'afterPanStart', callback?: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'afterPanStart' | 是 | 监听事件，固定为'afterPanStart'，即Pan手势onActionStart事件执行后的指令下发情况。 |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势onActionStart事件执行后的指令下发监听回调。 |
+| type | 'afterPanStart' | 是 | 监听事件，固定为'afterPanStart'，即Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行后的指令下发情况。 |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行后的指令下发监听回调。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## off('afterPanEnd')
 
@@ -593,7 +730,7 @@ off(type: 'afterPanStart', callback?: PanListenerCallback): void
 off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 ```
 
-取消[on('afterPanEnd')](#onafterpanend)监听Pan手势onActionEnd事件执行后的callback回调。
+取消[on('afterPanEnd')](#onafterpanend)监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行后的callback回调。
 
 **起始版本：** 19
 
@@ -607,14 +744,12 @@ off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'afterPanEnd' | 是 | 监听事件，固定为'afterPanEnd'，即Pan手势onActionEnd事件执行后的指令下发情况。 |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势onActionEnd事件执行后的指令下发监听回调。 |
+| type | 'afterPanEnd' | 是 | 监听事件，固定为'afterPanEnd'，即Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行后的指令下发情况。 |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 否 | 需要被注销的回调函数。不传参数时，取消所有的Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行后的指令下发监听回调。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## off('tabContentUpdate')
 
@@ -642,9 +777,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('tabContentUpdate')](#ontabcontentupdate)接口示例。
-```
 
 ## off('tabContentUpdate')
 
@@ -671,9 +804,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('tabContentUpdate')](#ontabcontentupdate)接口示例。
-```
 
 ## off('tabChange')
 
@@ -701,9 +832,7 @@ off(type: 'tabChange', config: observer.ObserverOptions, callback?: Callback<obs
 
 **示例**
 
-```TypeScript
 参考[on('tabChange')](#ontabchange)接口示例。
-```
 
 ## off('tabChange')
 
@@ -730,9 +859,7 @@ off(type: 'tabChange', callback?: Callback<observer.TabContentInfo>): void
 
 **示例**
 
-```TypeScript
 参考[on('tabChange')](#ontabchange)接口示例。
-```
 
 ## off('windowSizeLayoutBreakpointChange')
 
@@ -759,9 +886,7 @@ off(type: 'windowSizeLayoutBreakpointChange', callback?: Callback<observer.Windo
 
 **示例**
 
-```TypeScript
 参考[on('windowSizeLayoutBreakpointChange')](#onwindowsizelayoutbreakpointchange)接口示例。
-```
 
 ## off('nodeRenderState')
 
@@ -789,9 +914,7 @@ off(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback?: NodeRenderSt
 
 **示例**
 
-```TypeScript
 参考[on('nodeRenderState')](#onnoderenderstate)接口示例。
-```
 
 ## off('textChange')
 
@@ -818,9 +941,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('textChange')](#ontextchange)示例。
-```
 
 ## off('textChange')
 
@@ -848,9 +969,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **示例**
 
-```TypeScript
 参考[on('textChange')](#ontextchange)示例。
-```
 
 ## offNavDestinationSizeChange
 
@@ -876,9 +995,7 @@ offNavDestinationSizeChange(callback?: Callback<observer.NavDestinationInfo>): v
 
 **示例**
 
-```TypeScript
 参考[onNavDestinationSizeChange](#onnavdestinationsizechange)接口示例。
-```
 
 ## offNavDestinationSizeChangeByUniqueId
 
@@ -905,9 +1022,7 @@ offNavDestinationSizeChangeByUniqueId(navigationUniqueId: number, callback?: Cal
 
 **示例**
 
-```TypeScript
 参考[onNavDestinationSizeChangeByUniqueId](#onnavdestinationsizechangebyuniqueid)接口示例。
-```
 
 ## offRouterPageSizeChange
 
@@ -933,9 +1048,7 @@ offRouterPageSizeChange(callback?: Callback<observer.RouterPageInfo>): void
 
 **示例**
 
-```TypeScript
 参考[onRouterPageSizeChange](#onrouterpagesizechange)接口示例。
-```
 
 ## offSwiperContentUpdate
 
@@ -961,9 +1074,7 @@ offSwiperContentUpdate(callback?: Callback<SwiperContentInfo>): void
 
 **示例**
 
-```TypeScript
 参考[onSwiperContentUpdate](#onswipercontentupdate)接口示例。
-```
 
 <a id="offswipercontentupdate-1"></a>
 
@@ -992,9 +1103,7 @@ offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback<Swi
 
 **示例**
 
-```TypeScript
 参考[onSwiperContentUpdate](#onswipercontentupdate)接口示例。
-```
 
 ## on('navDestinationUpdate')
 
@@ -1178,8 +1287,71 @@ Registers a callback function to be called when the navigation destination is up
 
 **示例**
 
-```TypeScript
 通过[Navigation](../arkui-ts/ts-basic-components-navigation.md)的uniqueId，可以监听[NavDestination](../arkui-ts/ts-basic-components-navdestination.md)组件的状态变化。
+
+```TypeScript
+// Index.ets
+// 演示on('navDestinationUpdateByUniqueId', navigationUniqueId, callback)
+// off('navDestinationUpdateByUniqueId', navigationUniqueId, callback)
+
+@Component
+struct PageOne {
+  private text = '';
+  private uniqueId = -1;
+  aboutToAppear() {
+    // 获取Navigation的uniqueId
+    let navigationUniqueId = this.queryNavigationInfo()?.uniqueId;
+    if (navigationUniqueId) {
+      this.uniqueId = navigationUniqueId.valueOf();
+    }
+    this.text = JSON.stringify(this.uniqueId);
+    // 添加监听，指定Navigation的uniqueId
+    this.getUIContext().getUIObserver().on('navDestinationUpdateByUniqueId', this.uniqueId, (info) => {
+      console.info('NavDestination state update navigationId', JSON.stringify(info));
+    });
+  }
+  aboutToDisappear() {
+    // 取消监听，不选择回调时，取消所有监听的回调
+    this.getUIContext().getUIObserver().off('navDestinationUpdateByUniqueId', this.uniqueId);
+  }
+  build() {
+    NavDestination() {
+      Text('pageOne')
+      Text('navigationUniqueId是：' + this.text)
+        .width('80%')
+        .height(50)
+        .margin(50)
+        .fontSize(20)
+    }.title('pageOne')
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private stack: NavPathStack = new NavPathStack();
+
+  @Builder
+  pageBuilder(name: string) {
+    PageOne()
+  }
+
+  build() {
+    Column() {
+      Navigation(this.stack) {
+        Button('push').onClick(() => {
+          // 将PageOne的NavDestination入栈
+          this.stack.pushPath({ name: 'pageOne' });
+        })
+      }
+      .id('testId')
+      .title('Navigation')
+      .navDestination(this.pageBuilder)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## on('scrollEvent')
@@ -1208,9 +1380,7 @@ Registers a callback function to be called when the scroll event start or stop.
 
 **示例**
 
-```TypeScript
 参考[on('scrollEvent')](#onscrollevent)接口示例。
-```
 
 ## on('scrollEvent')
 
@@ -1765,9 +1935,7 @@ Registers a callback function to be called before clickEvent is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## on('didClick')
 
@@ -1794,9 +1962,7 @@ Registers a callback function to be called after clickEvent is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## on('willClick')
 
@@ -1934,9 +2100,7 @@ Registers a callback function to be called after tapGesture is called.
 
 **示例**
 
-```TypeScript
 参考[on('willClick')](#onwillclick)接口示例。
-```
 
 ## on('beforePanStart')
 
@@ -1944,7 +2108,7 @@ Registers a callback function to be called after tapGesture is called.
 on(type: 'beforePanStart', callback: PanListenerCallback): void
 ```
 
-监听Pan手势onActionStart事件，在onActionStart事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件，在[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -1958,7 +2122,7 @@ on(type: 'beforePanStart', callback: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'beforePanStart' | 是 | 监听事件，固定为'beforePanStart'，用于监听Pan手势onActionStart事件执行前的指令下发情况，所注册回调将于Pan手势onActionStart事件触发前触发。 |
+| type | 'beforePanStart' | 是 | 监听事件，固定为'beforePanStart'，用于监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行前的指令下发情况，所注册回调将于Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件触发前触发。 |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
@@ -2078,7 +2242,7 @@ struct PanExample {
 on(type: 'beforePanEnd', callback: PanListenerCallback): void
 ```
 
-监听Pan手势onActionEnd事件执行前的指令下发情况，在onActionEnd事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行前的指令下发情况，在[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -2092,14 +2256,12 @@ on(type: 'beforePanEnd', callback: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'beforePanEnd' | 是 | 监听事件，固定为'beforePanEnd'，用于监听Pan手势onActionEnd事件执行前的指令下发情况，所注册回调将于Pan手势onActionEnd事件触发前触发。 |
+| type | 'beforePanEnd' | 是 | 监听事件，固定为'beforePanEnd'，用于监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行前的指令下发情况，所注册回调将于Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件触发前触发。 |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## on('afterPanStart')
 
@@ -2107,7 +2269,7 @@ on(type: 'beforePanEnd', callback: PanListenerCallback): void
 on(type: 'afterPanStart', callback: PanListenerCallback): void
 ```
 
-监听Pan手势onActionStart事件执行后的指令下发情况，在onActionStart事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行后的指令下发情况，在[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -2121,14 +2283,12 @@ on(type: 'afterPanStart', callback: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'afterPanStart' | 是 | 监听事件，固定为'afterPanStart'，用于监听Pan手势onActionStart事件执行后的指令下发情况，所注册回调将于Pan手势onActionStart事件触发后触发。 |
+| type | 'afterPanStart' | 是 | 监听事件，固定为'afterPanStart'，用于监听Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件执行后的指令下发情况，所注册回调将于Pan手势[onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart)事件触发后触发。 |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## on('afterPanEnd')
 
@@ -2136,7 +2296,7 @@ on(type: 'afterPanStart', callback: PanListenerCallback): void
 on(type: 'afterPanEnd', callback: PanListenerCallback): void
 ```
 
-监听Pan手势onActionEnd事件执行后的指令下发情况，在onActionEnd事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行后的指令下发情况，在[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -2150,14 +2310,12 @@ on(type: 'afterPanEnd', callback: PanListenerCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'afterPanEnd' | 是 | 监听事件，固定为'afterPanEnd'，用于监听Pan手势onActionEnd事件执行后的指令下发情况，所注册回调将于Pan手势onActionEnd事件触发后触发。 |
+| type | 'afterPanEnd' | 是 | 监听事件，固定为'afterPanEnd'，用于监听Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件执行后的指令下发情况，所注册回调将于Pan手势[onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend)事件触发后触发。 |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | 是 | 回调函数。可以获得Pan手势事件的[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)，[GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)和组件的[FrameNode](arkts-arkui-framenode-c.md)。 |
 
 **示例**
 
-```TypeScript
 参考[on('beforePanStart')](#onbeforepanstart)接口示例。
-```
 
 ## on('tabContentUpdate')
 
@@ -2553,8 +2711,55 @@ on(type: 'windowSizeLayoutBreakpointChange', callback: Callback<observer.WindowS
 
 **示例**
 
-```TypeScript
 该示例展示添加和取消监听窗口尺寸布局断点变化的方法。
+
+```TypeScript
+import { uiObserver, window } from '@kit.ArkUI';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  private changeOrientation(isLandscape: boolean) {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    window.getLastWindow(context).then((lastWindow) => {
+      lastWindow.setPreferredOrientation(isLandscape ? window.Orientation.LANDSCAPE : window.Orientation.PORTRAIT);
+    });
+  }
+
+  @State message: string = '';
+  @State widthBreakpoint: WidthBreakpoint = WidthBreakpoint.WIDTH_SM;
+  @State heightBreakpoint: HeightBreakpoint = HeightBreakpoint.HEIGHT_SM;
+  winSizeLayoutBreakpointCallback = (info: uiObserver.WindowSizeLayoutBreakpointInfo) => {
+    this.widthBreakpoint = info.widthBreakpoint;
+    this.heightBreakpoint = info.heightBreakpoint;
+    this.message = 'widthBpt:' + this.widthBreakpoint.toString() + 'heightBpt:' + this.heightBreakpoint.toString();
+  }
+
+  build() {
+    Column() {
+      Text(this.message)
+      Button('注册窗口尺寸布局断点变化监听')
+        .onClick(() => {
+          this.getUIContext()
+            .getUIObserver()
+            .on('windowSizeLayoutBreakpointChange', this.winSizeLayoutBreakpointCallback);
+        })
+      Button('解除窗口尺寸布局断点变化监听')
+        .onClick(() => {
+          this.getUIContext()
+            .getUIObserver()
+            .off('windowSizeLayoutBreakpointChange', this.winSizeLayoutBreakpointCallback);
+        })
+      Button("竖屏").onClick(() => {
+        this.changeOrientation(false);
+      })
+      Button("横屏").onClick(() => {
+        this.changeOrientation(true);
+      })
+    }
+  }
+}
 ```
 
 ## on('nodeRenderState')
@@ -2567,7 +2772,7 @@ on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStat
 
 注意节点数量的限制。出于性能考虑，在单个UI实例中，注册节点太多，将会抛出异常。
 
-通常，当组件被移动到屏幕外时，会收到RENDER_OUT的通知。但在某些情况下，即使组件移动到屏幕外也不会触发RENDER_OUT通知。例如，具有缓存功能的组件Swiper，即使cachedCount属性中的参数isShown配置为true，也不会触发RENDER_OUT通知。
+通常，当组件被移动到屏幕外时，会收到RENDER_OUT的通知。但在某些情况下，即使组件移动到屏幕外也不会触发RENDER_OUT通知。例如，具有缓存功能的组件Swiper，即使[cachedCount](../arkts-components/arkts-arkui-swiper-comp-attribute.md#cachedcount-1)属性中的参数isShown配置为true，也不会触发RENDER_OUT通知。
 
 **起始版本：** 20
 
@@ -2593,8 +2798,116 @@ on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStat
 
 **示例**
 
-```TypeScript
 该示例展示了如何对目标组件添加监听和取消监听。当向左滑动，被监听组件从屏幕消失，会收到RENDER_OUT的通知，然后向右滑动，被监听组件重新出现在屏幕上，会收到RENDER_IN通知。
+
+```TypeScript
+// Index.ets
+// 演示uiObserver.on('nodeRenderState', nodeIdentity, callback)
+// uiObserver.off('nodeRenderState', nodeIdentity, callback)
+
+// 在页面Component中使用
+import { NodeRenderState } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State fontColor: string = '#182431';
+  @State selectedFontColor: string = '#007DFF';
+  @State currentIndex: number = 0;
+  @State selectedIndex: number = 0;
+  @State notice: string = "";
+  private controller: TabsController = new TabsController();
+
+  @Builder
+  tabBuilder(index: number, name: string) {
+    Column() {
+      Text(name)
+        .fontColor(this.selectedIndex === index ? this.selectedFontColor : this.fontColor)
+        .fontSize(16)
+        .fontWeight(this.selectedIndex === index ? 500 : 400)
+        .lineHeight(22)
+        .margin({ top: 17, bottom: 7 })
+      Divider()
+        .strokeWidth(2)
+        .color('#007DFF')
+        .opacity(this.selectedIndex === index ? 1 : 0)
+    }.width('100%')
+  }
+
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.Start, index: this.currentIndex, controller: this.controller }) {
+        TabContent() {
+          Column() {
+            Column() {
+              Button("被监听节点").margin({ top: 5 }).id("button_1")
+              Button("添加监听").margin({ top: 5 }).onClick(() => {
+                let node: FrameNode | null = this.getUIContext().getFrameNodeById("button_1");
+                if (node) {
+                  let observer = this.getUIContext().getUIObserver();
+                  // 添加监听
+                  observer.on("nodeRenderState", node?.getUniqueId(), (state: NodeRenderState, node?: FrameNode) => {
+                    // 根据节点状态修改通知信息
+                    if (state === 0) {
+                      this.notice = "RENDER_IN";
+                    } else {
+                      this.notice = "RENDER_OUT";
+                    }
+                    console.info("节点状态发生改变，当前状态：", state);
+                  });
+                }
+              })
+              Button("取消监听").margin({ top: 5 }).onClick(() => {
+                let node: FrameNode | null = this.getUIContext().getFrameNodeById("button_1");
+                if (node) {
+                  let observer = this.getUIContext().getUIObserver();
+                  // 取消监听，不选择回调时，取消所有监听的回调
+                  observer.off("nodeRenderState", node?.getUniqueId());
+                }
+                this.notice = "";
+              })
+            }
+          }.width('100%').height('100%').backgroundColor('#00CB87')
+        }.tabBar(this.tabBuilder(0, 'green'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#007DFF')
+        }.tabBar(this.tabBuilder(1, 'blue'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#FFBF00')
+        }.tabBar(this.tabBuilder(2, 'yellow'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#E67C92')
+        }.tabBar(this.tabBuilder(3, 'pink'))
+      }
+      .vertical(false)
+      .barMode(BarMode.Fixed)
+      .barWidth(360)
+      .barHeight(56)
+      .animationDuration(400)
+      .onChange((index: number) => {
+        this.currentIndex = index;
+        this.selectedIndex = index;
+      })
+      .onAnimationStart((index: number, targetIndex: number, event: TabsAnimationEvent) => {
+        if (index === targetIndex) {
+          return;
+        }
+        this.selectedIndex = targetIndex;
+      })
+      .width(360)
+      .height(296)
+      .margin({ top: 52 })
+      .backgroundColor('#F1F3F5')
+
+      Text(`收到的通知：${this.notice}`)
+        .fontSize(20)
+        .margin(10)
+    }.width('100%')
+  }
+}
 ```
 
 ## on('textChange')
@@ -2734,9 +3047,7 @@ Registers a callback function to be called when text field's content is changed.
 
 **示例**
 
-```TypeScript
 参考[on('textChange')](#ontextchange)示例。
-```
 
 ## onNavDestinationSizeChange
 
@@ -3159,6 +3470,4 @@ removeGlobalGestureListener(type: GestureListenerType, callback?: GestureListene
 
 **示例**
 
-```TypeScript
 参考[addGlobalGestureListener](#addglobalgesturelistener)接口示例。
-```

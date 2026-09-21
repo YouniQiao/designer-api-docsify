@@ -53,13 +53,6 @@ Defines the typeface weight.
 
 **Examples**
 
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let typefaceArgument = new drawing.TypefaceArguments();
-typefaceArgument.addVariation('wght', 10);
-```
-
 ## constructor
 
 ```TypeScript

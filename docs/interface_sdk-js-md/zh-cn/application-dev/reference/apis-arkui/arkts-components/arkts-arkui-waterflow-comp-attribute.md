@@ -36,7 +36,7 @@ cachedCount(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 预加载的FlowItem的数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
+| value | number | 是 | 预加载的FlowItem的数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：[0, +∞)，设置为小于0的值时，按1处理。 |
 
 <a id="cachedcount-1"></a>
 
@@ -48,7 +48,7 @@ cachedCount(count: number, show: boolean)
 
 设置预加载的FlowItem数量，并配置是否显示预加载节点。
 
-配合[clip或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
+配合[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了virtualScroll开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
 
@@ -209,7 +209,7 @@ itemConstraintSize(value: ConstraintSizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。<br>**说明：** <br>1.同时设置itemConstraintSize和FlowItem的constraintSize属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性constraintSize相同。 |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。 <br>**说明：** <br>1.同时设置itemConstraintSize和FlowItem的[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)相同。 |
 
 ## layoutDirection
 
@@ -311,11 +311,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 1. 用户交互（如手指滑动、键鼠操作等）触发滚动。
 2. WaterFlow惯性滚动。
-3. 调用fling接口触发滚动。
+3. 调用[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除fling接口外的其他滚动控制接口。
+1. 调用除[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口外的其他滚动控制接口。
 2. 越界回弹。
 3. 拖动滚动条。
 
@@ -345,7 +345,7 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 

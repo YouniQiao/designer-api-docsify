@@ -1047,8 +1047,23 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-```TypeScript
 The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
 ```
 
 ## migrateFile

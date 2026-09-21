@@ -76,7 +76,7 @@ RichEditor滚动条的显示模式。
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 13
 
@@ -223,7 +223,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 > **说明：** 
 > 
-> 从API version 23开始，该接口支持在attributeModifier中调用。
+> 从API version 23开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 
@@ -280,11 +280,11 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 与[bindSelectionMenu](#bindselectionmenu)的区别：editMenuOptions在系统默认菜单风格基础上添加扩展项，触发条件不变，适合仅需扩展菜单项的场景；bindSelectionMenu完全自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。
 
-调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu)的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -366,7 +366,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 13
 
@@ -392,7 +392,7 @@ enableKeyboardOnFocus(isEnabled: boolean)
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -420,7 +420,7 @@ enablePreviewText(enable: boolean)
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -712,7 +712,7 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -740,7 +740,7 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -964,7 +964,7 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -1016,7 +1016,7 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 

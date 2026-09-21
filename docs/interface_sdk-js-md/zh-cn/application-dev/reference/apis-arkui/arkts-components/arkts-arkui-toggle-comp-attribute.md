@@ -106,7 +106,7 @@ switchPointColor(color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br>默认值：$r('sys.color.ohos_id_color_foreground_contrary')<br> **说明：** <br>同时设置了systemMaterial新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br>默认值：$r('sys.color.ohos_id_color_foreground_contrary')<br> **说明：** <br>同时设置了[systemMaterial](arkts-arkui-common-comp-commonmethod-c.md#systemmaterial)新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
 
 ## switchStyle
 

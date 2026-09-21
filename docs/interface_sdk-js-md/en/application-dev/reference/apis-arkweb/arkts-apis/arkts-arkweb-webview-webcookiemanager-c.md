@@ -1851,6 +1851,8 @@ Sets whether to delay the initialization of the ArkWeb kernel. If this method is
 > - This API is a global static method. It must be called before using ArkWeb components and initializing the ArkWeb kernel. Otherwise, the setting does not take effect.
 > 
 > - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel separately afterwards.
+> 
+> -Since API version 26.0.1, when set to **true**, CookieManager interfaces can be used in asynchronous threads.
 
 **Since:** 22
 

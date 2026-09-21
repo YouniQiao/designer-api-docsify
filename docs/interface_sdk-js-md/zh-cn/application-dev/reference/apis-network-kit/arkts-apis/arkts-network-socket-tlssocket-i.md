@@ -223,7 +223,7 @@ tls.close().then(() => {
 connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，使用callback异步回调。需要注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以"-----ENDCERTIFICATE-----"结尾，自API12开始，为非必填项。
+在TLSSocket上bind成功之后，进行通信连接，并创建和初始化TLS会话，实现建立连接过程，启动与服务器的TLS/SSL握手，实现数据传输功能，使用callback异步回调。需要注意options入参下secureOptions内的ca在API11及之前的版本为必填项，需填入服务端的ca证书(用于认证校验服务端的数字证书)，证书内容以"-----BEGIN CERTIFICATE-----"开头，以"-----END CERTIFICATE-----"结尾，自API12开始，为非必填项。
 
 **起始版本：** 9
 
@@ -331,8 +331,89 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
 示例（设置socket代理）：
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsTwoWay: socket.TLSSocket = socket.constructTLSSocketInstance();  // 双向认证
+let bindAddr: socket.NetAddress = {
+   address: '192.168.xx.xxx',
+  // 绑定指定网络接口
+}
+tlsTwoWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let twoWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let twoWaySecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: twoWayNetAddr,
+  secureOptions: twoWaySecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"],
+  proxy: proxyOptions,
+}
+
+tlsTwoWay.connect(tlsConnectOptions, (err: BusinessError) => {
+  console.error("connect callback error" + err);
+});
+
+let tlsOneWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // 单向认证
+tlsOneWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let oneWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let oneWaySecureOptions: socket.TLSSecureOptions = {
+  ca: ["xxxx", "xxxx"],
+  cipherSuite: "AES256-SHA256"
+}
+let oneWayProxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsOneWayConnectOptions: socket.TLSConnectOptions = {
+  address: oneWayNetAddr,
+  secureOptions: oneWaySecureOptions,
+  proxy: oneWayProxyOptions,
+}
+tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
+  console.error("connect callback error" + err);
+});
 ```
 
 <a id="connect-1"></a>
@@ -460,8 +541,93 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 });
 ```
 
-```TypeScript
 示例（设置socket代理）：
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsTwoWay: socket.TLSSocket = socket.constructTLSSocketInstance();  // 双向认证
+let bindAddr: socket.NetAddress = {
+   address: '192.168.xx.xxx',
+  // 绑定指定网络接口
+}
+tlsTwoWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let twoWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let twoWaySecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: twoWayNetAddr,
+  secureOptions: twoWaySecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"],
+  proxy: proxyOptions,
+}
+
+tlsTwoWay.connect(tlsConnectOptions).then(() => {
+  console.info("connect successfully");
+}).catch((err: BusinessError) => {
+  console.error("connect failed " + JSON.stringify(err));
+});
+
+let tlsOneWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // 单向认证
+tlsOneWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let oneWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let oneWaySecureOptions: socket.TLSSecureOptions = {
+  ca: ["xxxx", "xxxx"],
+  cipherSuite: "AES256-SHA256"
+}
+let oneWayProxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsOneWayConnectOptions: socket.TLSConnectOptions = {
+  address: oneWayNetAddr,
+  secureOptions: oneWaySecureOptions,
+  proxy: oneWayProxyOptions,
+}
+tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
+  console.info("connect successfully");
+}).catch((err: BusinessError) => {
+  console.error("connect failed " + JSON.stringify(err));
+});
 ```
 
 ## getCertificate

@@ -26,7 +26,7 @@ Countdown reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** REMINDER_TYPE_TIMER
+**Substitutes:** [REMINDER_TYPE_TIMER](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_timer)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -42,7 +42,7 @@ Calendar reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** REMINDER_TYPE_CALENDAR
+**Substitutes:** [REMINDER_TYPE_CALENDAR](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_calendar)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -58,6 +58,6 @@ Alarm reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** REMINDER_TYPE_ALARM
+**Substitutes:** [REMINDER_TYPE_ALARM](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_alarm)
 
 **System capability:** SystemCapability.Notification.ReminderAgent

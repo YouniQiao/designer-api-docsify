@@ -78,10 +78,24 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryGroups(context, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -165,10 +179,28 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryGroups(context, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -258,8 +290,22 @@ function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
+
+// 请在组件内获取context。
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryGroups(context, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
+});
 ```

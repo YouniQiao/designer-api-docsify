@@ -32,7 +32,7 @@ baselineOffset(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 设置Span基线的偏移量，设置该值为百分比时，按默认值显示。<br>正数内容向上偏移，负数向下偏移。<br>在ImageSpan中，设置为非0时，verticalAlign将固定为ImageSpanAlignment.BASELINE对齐；设置为0时，要使基线对齐策略生效，需同时设置verticalAlign为ImageSpanAlignment.BASELINE。 |
+| value | LengthMetrics | 是 | 设置Span基线的偏移量，设置该值为百分比时，按默认值显示。<br>正数内容向上偏移，负数向下偏移。<br>在ImageSpan中，设置为非0时，[verticalAlign](arkts-arkui-imagespan-comp-attribute.md#verticalalign)将固定为ImageSpanAlignment.BASELINE对齐；设置为0时，要使基线对齐策略生效，需同时设置[verticalAlign](arkts-arkui-imagespan-comp-attribute.md#verticalalign)为ImageSpanAlignment.BASELINE。 |
 
 **返回值：**
 

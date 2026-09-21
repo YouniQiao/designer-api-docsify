@@ -116,8 +116,14 @@ ThreadWorker构造函数。
 
 **示例**
 
-```TypeScript
 以下示例展示了在Stage模型的entry模块Index.ets文件中加载Worker线程文件的方法，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
+const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
 ```
 
 ## dispatchEvent

@@ -74,7 +74,7 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>)
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 21
 

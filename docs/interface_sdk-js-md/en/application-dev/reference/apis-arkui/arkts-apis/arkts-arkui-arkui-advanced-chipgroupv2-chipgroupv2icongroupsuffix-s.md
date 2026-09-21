@@ -40,7 +40,7 @@ Constructs a **ChipGroupV2IconGroupSuffix** component.
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter) effect.
+System material style of the component. Different materials have different effects, which can affect the component's [backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor), [borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth), [shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow) effect, and [materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter) effect.
 
 Default value: **undefined**, meaning no material style is applied.
 
@@ -62,7 +62,7 @@ items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2Symbol
 
 Array of custom items displayed in the suffix area, supporting **ChipGroupV2IconItemConfig** (image icon), **SymbolGlyphModifier** (symbol icon), or **ChipGroupV2SymbolItemConfig** (symbol icon configuration) types.
 
-When **SymbolGlyphModifier** is passed, using **symbolEffect** to modify the animation type and effectStrategy to set the animation is not supported.
+When **SymbolGlyphModifier** is passed, using **symbolEffect** to modify the animation type and [effectStrategy](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy) to set the animation is not supported.
 
 **Type:** Array&lt;[ChipGroupV2IconItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) &#124; [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md) &#124; [ChipGroupV2SymbolItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
 

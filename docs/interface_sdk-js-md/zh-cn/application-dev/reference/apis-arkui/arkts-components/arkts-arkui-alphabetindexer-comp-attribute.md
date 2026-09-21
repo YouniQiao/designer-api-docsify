@@ -4,11 +4,11 @@
 declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 ```
 
-width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+[width](arkts-arkui-common-comp-commonmethod-c.md#width)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
 
-padding属性默认为4vp。
+[padding](arkts-arkui-common-comp-commonmethod-c.md#padding)属性默认为4vp。
 
-文本最大的字体缩放倍数maxFontScale和最小的字体缩放倍数minFontScale皆为1，不跟随系统字体大小调节变化。
+文本最大的字体缩放倍数[maxFontScale](arkts-arkui-text-comp-attribute.md#maxfontscale)和最小的字体缩放倍数[minFontScale](arkts-arkui-text-comp-attribute.md#minfontscale)皆为1，不跟随系统字体大小调节变化。
 
 除支持通用属性外，还支持以下属性：
 
@@ -55,7 +55,7 @@ autoCollapse(value: boolean)
 
 > **说明：** 
 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -173,7 +173,7 @@ itemSize(value: string | number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string &#124; number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。<br>实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右padding，索引项高度最大为（组件高度-上下padding）/索引项个数。传入值小于等于0时，按照默认值处理。<br>默认值：16.0<br>单位：vp |
+| value | string &#124; number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。<br>实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右[padding](arkts-arkui-common-comp-commonmethod-c.md#padding)，索引项高度最大为（组件高度-上下[padding](arkts-arkui-common-comp-commonmethod-c.md#padding)）/索引项个数。传入值小于等于0时，按照默认值处理。<br>默认值：16.0<br>单位：vp |
 
 ## onPopupSelect
 

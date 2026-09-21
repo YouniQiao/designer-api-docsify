@@ -6,8 +6,6 @@ enum ConnectType
 
 枚举，设备连接类型。
 
-@enum { int }
-
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

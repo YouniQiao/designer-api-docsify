@@ -148,7 +148,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 

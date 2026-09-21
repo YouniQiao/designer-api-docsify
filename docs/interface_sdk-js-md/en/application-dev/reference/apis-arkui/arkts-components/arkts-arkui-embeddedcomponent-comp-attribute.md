@@ -48,7 +48,7 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ Triggered when the the launched EmbeddedUIExtensionAbility exits normally by cal
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 

@@ -55,7 +55,7 @@ When the custom menu is too long, it is recommended that nest a [Scroll](arkts-a
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the
 > system's default style and trigger conditions are preserved.
@@ -252,7 +252,7 @@ draggable(value: boolean)
 
 Sets the drag effect of the selected text.
 
-This attribute cannot be used together with the onDragStart event.
+This attribute cannot be used together with the [onDragStart](arkts-arkui-common-comp-commonmethod-c.md#ondragstart) event.
 
 If set to **true**, **draggable** must be used in conjunction with CopyOptions. When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
 
@@ -278,7 +278,7 @@ Sets the extended options for the custom menu, including the text content, icon,
 
 When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
 > **NOTE:** 
 > 
@@ -394,7 +394,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 13
 
@@ -578,7 +578,7 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of
 > them exist, only the content in **Span** or **ImageSpan** is displayed.
 > 
-> The typesetting engine rounds down the value of width to ensure that
+> The typesetting engine rounds down the value of [width](arkts-arkui-common-comp-commonmethod-c.md#width) to ensure that
 > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
 > clipped.
 > 
@@ -1205,7 +1205,7 @@ If the actual text height is less than the height for the minimum number of line
 
 When this API and [maxLines](#maxlines) are both set, the minimum line height cannot exceed the maximum line height.
 
-If constraintSize is set for the text, the component height is confined within the constraintSize bounds.
+If [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) is set for the text, the component height is confined within the [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) bounds.
 
 **Since:** 22
 
@@ -1327,7 +1327,7 @@ When **Text.optimizeTrailingSpace** is set to **true**:
 * For text containing only spaces, decoration lines, shadows, and background colors follow the space text display.  
 * Leading spaces are not optimized. When text with trailing spaces wraps, trailing spaces on each line are optimized based on component width.
 
-When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set backgroundColor, [decoration](#decoration), and [textAlign](#textalign) attributes.
+When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [decoration](#decoration), and [textAlign](#textalign) attributes.
 
 **Since:** 20
 
@@ -1473,7 +1473,7 @@ If [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, the setting
 
 If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the text content. If the value is less than 0, the value **0** will be used. If the value is greater than **textSize**, **textSize** will be used.
 
-If the selection range falls within a truncated or invisible area, selection is ignored. When clip is set to **false**, the text outside the parent component can be selected.
+If the selection range falls within a truncated or invisible area, selection is ignored. When [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) is set to **false**, the text outside the parent component can be selected.
 
 You can obtain the selection range change result through the [onTextSelectionChange](#ontextselectionchange) API.
 
@@ -1498,7 +1498,7 @@ You can obtain the selection range change result through the [onTextSelectionCha
 shaderStyle(shader: ShaderStyle)
 ```
 
-Applies gradient or solid color effects to text. Supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). **shaderStyle** takes precedence over fontColor and AI-based styling. For solid colors, prefer using fontColor.
+Applies gradient or solid color effects to text. Supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). **shaderStyle** takes precedence over [fontColor](arkts-arkui-symbolspan-comp-attribute.md#fontcolor) and AI-based styling. For solid colors, prefer using [fontColor](arkts-arkui-symbolspan-comp-attribute.md#fontcolor).
 
 **Since:** 20
 
@@ -1513,6 +1513,76 @@ Applies gradient or solid color effects to text. Supports [RadialGradientStyle](
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes | Shader effect.<br>Based on the input, the system applies a radial gradient ([RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)), linear gradient ([LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)), or solid color ([ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)). <br>**NOTE:** <br>If [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md) is used and the **center** parameter (from [RadialGradientOptions](arkts-arkui-common-comp-radialgradientoptions-i.md)) is outside the component bounds, setting **repeating** to **true** enhances the gradient effect. |
+
+## strokeColor
+
+```TypeScript
+strokeColor(color: Optional<ResourceColor>)
+```
+
+Sets the text stroke color.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Stroke color.<br>Default value: font color. Invalid values are treated as the default value. |
+
+## strokeJoinStyle
+
+```TypeScript
+strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
+```
+
+Sets the join style of the text stroke.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strokeJoinStyle | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) &#124; undefined | Yes | Join style of the text stroke.<br>If the value is **undefined**, the join style is set to the default value **StrokeJoinStyle.MITER_JOIN**. For details, see [StrokeJoinStyle](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#strokejoinstyle). |
+
+## strokeWidth
+
+```TypeScript
+strokeWidth(width: Optional<LengthMetrics>)
+```
+
+Sets the text stroke width.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Text stroke width. When the unit of **LengthMetrics** is **px**:<br>Values &lt; 0: solid text.<br>Values &gt; 0: outlined text. <br>Default value: **0** (no stroke). |
 
 ## tailIndents
 
@@ -1548,7 +1618,7 @@ Sets the horizontal alignment of the text.
 
 The text takes up the full width of the **Text** component.
 
-The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows:
+The vertical position of the text paragraph can be controlled by the [align](arkts-arkui-common-comp-commonmethod-c.md#align) attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows:
 
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
 - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  
@@ -1690,7 +1760,7 @@ When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
 
 - Text scrolls horizontally within a single line.  
 - [maxLines](#maxlines) and[copyOption](#copyoption) are ignored.  
-- The clip attribute of the **Text** component defaults to **true**.  
+- The [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) attribute of the **Text** component defaults to **true**.  
 - [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) is not supported in marquee mode.  
 - Behavior of [textAlign](#textalign): If the text does not scroll, **textAlign** applies; if  
 the text scrolls, **textAlign** is ignored.  

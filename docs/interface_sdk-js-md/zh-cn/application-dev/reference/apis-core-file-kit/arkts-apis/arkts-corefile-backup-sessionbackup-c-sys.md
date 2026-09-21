@@ -662,8 +662,24 @@ try {
 }
 ```
 
-```TypeScript
 异步返回JSON串示例：
+
+```TypeScript
+{
+ "scanned": [ // 本次扫描完成的应用，已返回结果的应用在下一次回调中不会再继续返回
+     {
+         "name": "com.example.hiworld", // 应用名称
+         "dataSize": 1006060, // 数据量大小
+         "incDataSize":-1 // 增量数据量大小，全量扫描、非精确扫描时为-1，增量精确扫描时为实际增量数据量大小
+     },
+     {
+         "name": "com.example.myAPP",
+         "dataSize": 5000027,
+         "incDataSize": -1
+     }
+ ],
+ "scanning": "com.example.smartAPP" // 正在扫描的应用，在最后一次结果返回时，该字段为空
+}
 ```
 
 ## getCompatibilityInfo
@@ -909,8 +925,23 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-```TypeScript
 能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
 ```
 
 ## release

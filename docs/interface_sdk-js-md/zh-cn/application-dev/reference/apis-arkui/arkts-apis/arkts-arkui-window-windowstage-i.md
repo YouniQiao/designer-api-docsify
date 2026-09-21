@@ -1917,7 +1917,7 @@ export default class EntryAbility extends UIAbility {
         bundleManager.SupportWindowMode.FULL_SCREEN,
         bundleManager.SupportWindowMode.SPLIT,
         bundleManager.SupportWindowMode.FLOATING
-      ], true);
+      ]);
       promise.then(() => {
         console.info('Succeeded in setting window support modes');
       }).catch((err: BusinessError) => {

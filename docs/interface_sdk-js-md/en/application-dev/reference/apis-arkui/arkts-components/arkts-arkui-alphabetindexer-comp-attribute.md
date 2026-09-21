@@ -4,11 +4,11 @@
 declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 ```
 
-When the width attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the [width](arkts-arkui-common-comp-commonmethod-c.md#width) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
-The default value of the padding attribute is 4 vp.
+The default value of the [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) attribute is 4 vp.
 
-The maxFontScale and minFontScale attributes are both set to a constant value of 1, which means that they do not change with the system font size.
+The [maxFontScale](arkts-arkui-text-comp-attribute.md#maxfontscale) and [minFontScale](arkts-arkui-text-comp-attribute.md#minfontscale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
 
 In addition to the universal attributes, the following attributes are supported.
 
@@ -55,7 +55,7 @@ When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -173,7 +173,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.<br>The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right padding, and the maximum height of an index item is (component height minus the top and bottom padding)/number of index items. If the input value is less than or equal to 0, the default value is used.<br>Default value: **16.0**<br>Unit: vp |
+| value | string &#124; number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.<br>The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right [padding](arkts-arkui-common-comp-commonmethod-c.md#padding), and the maximum height of an index item is (component height minus the top and bottom [padding](arkts-arkui-common-comp-commonmethod-c.md#padding))/number of index items. If the input value is less than or equal to 0, the default value is used.<br>Default value: **16.0**<br>Unit: vp |
 
 ## onPopupSelect
 

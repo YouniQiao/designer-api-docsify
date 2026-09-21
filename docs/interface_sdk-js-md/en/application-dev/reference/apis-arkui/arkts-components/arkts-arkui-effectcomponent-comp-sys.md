@@ -60,16 +60,98 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 ## Examples
 
-```TypeScript
 ### Example 1: Using the EffectComponent Component
 
 This example demonstrates how to use the EffectComponent component.
 
 
-```
 
 ```TypeScript
+//Index.ets
+@Entry
+@Component
+struct Index {
+  build() {
+    Stack() {
+      Image($r("app.media.example"))
+        .autoResize(true)
+      EffectComponent() {
+        Column({ space: 20 }) {
+          // Use backgroundBlurStyle to apply a background blur effect.
+          Text("Normal text with backgroundBlurStyle")
+            .textAlign(TextAlign.Center)
+            .fontSize(16)
+            .fontWeight(FontWeight.Medium)
+            .backgroundBlurStyle(BlurStyle.Thick)
+            .borderRadius(16)
+            .width('90%')
+            .height('48')
+
+          // Do not apply a background blur effect.
+          Text("Normal text without blur effect")
+            .textAlign(TextAlign.Center)
+            .fontSize(16)
+            .fontWeight(FontWeight.Medium)
+            .border({ width: 1 })
+            .borderRadius(16)
+            .width('90%')
+            .height('48')
+
+          // Use useEffect to combine drawing of the background blur effect, with blur settings inherited from <EffectComponent>.
+          Text("Normal text with useEffect blur 1")
+            .textAlign(TextAlign.Center)
+            .useEffect(true)
+            .fontSize(16)
+            .fontWeight(FontWeight.Medium)
+            .borderRadius(16)
+            .width('90%')
+            .height('48')
+
+          // Use useEffect to combine drawing of the background blur effect, with blur settings inherited from <EffectComponent>.
+          Text("Normal text with useEffect blur 2")
+            .textAlign(TextAlign.Center)
+            .useEffect(true)
+            .fontSize(16)
+            .fontWeight(FontWeight.Medium)
+            .borderRadius(16)
+            .width('90%')
+            .height('48')
+        }
+        .width('100%')
+      }
+      .backgroundBlurStyle(BlurStyle.Thin)
+    }
+    .backgroundColor(Color.Black)
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ### Example 2: Independent Rendering Layer
 
 This example demonstrates how to render the charging text layer.
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Stack() {
+      Image($r("app.media.startIcon"))
+        .autoResize(true)
+      EffectComponent({effectLayer: EffectLayer.CHARGE_TEXT}) {
+        Text('CHARGE_TEXT')
+          .height('50%')
+          .width('100%')
+          .fontSize(50)
+          .textAlign(TextAlign.Center);
+      }
+      .backgroundBlurStyle(BlurStyle.Thin)
+    }
+    .backgroundColor(Color.Black)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```

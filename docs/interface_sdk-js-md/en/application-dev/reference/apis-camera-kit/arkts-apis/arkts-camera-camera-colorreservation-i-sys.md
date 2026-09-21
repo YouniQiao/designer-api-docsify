@@ -49,22 +49,6 @@ Obtains the color reservation type in use.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getColorReservation(session: camera.VideoSessionForSys): camera.ColorReservationType | undefined {
-  let colorReservation: camera.ColorReservationType | undefined = undefined;
-  try {
-    colorReservation = session.getColorReservation();
-  } catch (error) {
-    // Return the error code error.code on failure and handle it.
-    let err = error as BusinessError;
-    console.error(`The setColorReservation call failed. error code: ${err.code}`);
-  }
-  return colorReservation;
-}
-```
-
 ## setColorReservation
 
 ```TypeScript

@@ -6,8 +6,6 @@ interface AudioTimestampInfo
 
 音频流时间戳和当前数据帧位置信息。
 
-@typedef AudioTimestampInfo
-
 **起始版本：** 19
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -38,7 +36,7 @@ readonly framePos: number
 readonly timestamp: number
 ```
 
-播放或者录制到当前数据帧位置时对应的时间戳，单位为纳秒。
+播放或者录制到当前数据帧位置时对应的时间戳，单位为纳秒（ns）。
 
 **类型：** number
 

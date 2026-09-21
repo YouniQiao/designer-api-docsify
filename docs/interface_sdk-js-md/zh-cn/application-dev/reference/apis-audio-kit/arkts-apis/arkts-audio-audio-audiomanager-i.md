@@ -227,7 +227,7 @@ let debugManager: audio.AudioDebuggingManager = audioManager.getDebuggingManager
 getDeviceEnhanceManager(): AudioDeviceEnhanceManager
 ```
 
-获取音频设备增强管理器实例。
+获取音频设备增强管理器。
 
 **起始版本：** 26.0.0
 
@@ -239,7 +239,7 @@ getDeviceEnhanceManager(): AudioDeviceEnhanceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | 返回一个AudioDeviceEnhanceManager实例。 |
+| [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | 返回AudioDeviceEnhanceManager实例。 |
 
 **示例**
 
@@ -524,6 +524,32 @@ audioManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
 });
 ```
 
+## getRecordingManager
+
+```TypeScript
+getRecordingManager(): AudioRecordingManager
+```
+
+获取录音策略管理器。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | 返回AudioRecordingManager实例。 |
+
+**示例**
+
+```TypeScript
+let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
+```
+
 ## getRingerMode
 
 ```TypeScript
@@ -624,7 +650,7 @@ getRoutingManager(): AudioRoutingManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | AudioRoutingManager实例。 |
+| [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | 返回AudioRoutingManager实例。 |
 
 **示例**
 
@@ -650,7 +676,7 @@ getSessionManager(): AudioSessionManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | AudioSessionManager实例。 |
+| [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | 返回AudioSessionManager实例。 |
 
 **示例**
 
@@ -674,7 +700,7 @@ getSpatializationManager(): AudioSpatializationManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | AudioSpatializationManager实例。 |
+| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | 返回AudioSpatializationManager实例。 |
 
 **示例**
 
@@ -698,7 +724,7 @@ getStreamManager(): AudioStreamManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | AudioStreamManager实例。 |
+| [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | 返回AudioStreamManager实例。 |
 
 **示例**
 
@@ -817,7 +843,7 @@ getVolumeManager(): AudioVolumeManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | AudioVolumeManager实例。 |
+| [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | 返回AudioVolumeManager实例。 |
 
 **示例**
 
@@ -1200,8 +1226,7 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-> 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)替代。
 
 **起始版本：** 7
 
@@ -1245,8 +1270,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-> 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)替代。
 
 **起始版本：** 7
 
@@ -1287,7 +1311,7 @@ audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 ```
 
-取消监听音频场景变化事件。使用callback异步回调。
+取消监听音频场景变化事件。
 
 **起始版本：** 20
 
@@ -1297,8 +1321,8 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'，当取消监听当前音频场景变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数，返回当前音频场景模式。 |
+| type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('audioSceneChange')](#onaudioscenechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -1322,7 +1346,7 @@ audioManager.off('audioSceneChange', audioSceneChangeCallback);
 off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 ```
 
-取消监听音频设备连接变化事件。使用callback异步回调。
+取消监听音频设备连接变化事件。
 
 > **说明：** 
 > 
@@ -1341,8 +1365,8 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当取消监听音频设备连接变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回设备更新详情。 |
+| type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('deviceChange')](#ondevicechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -1366,12 +1390,13 @@ audioManager.off('deviceChange', deviceChangeCallback);
 off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void
 ```
 
-取消监听音频打断事件。使用callback异步回调。
+取消监听音频打断事件。
 
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 11开始废弃，建议使用
-> off('audioInterrupt')替代。
+> [off('audioInterrupt')](../../../reference/apis-audio-kit/arkts-apis-audio-AudioCapturer.md#offaudiointerrupt10)
+> 替代。
 
 **起始版本：** 7
 
@@ -1385,9 +1410,9 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'interrupt' | 是 | 事件回调类型，支持的事件为'interrupt'，当取消监听音频打断事件时，触发该事件。 |
+| type | 'interrupt' | 是 | 事件回调类型，支持的事件为'interrupt'。 |
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 | 音频打断事件类型的参数。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数，返回打断事件信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('interrupt')](#oninterrupt)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -1887,8 +1912,7 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-> 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)替代。
 
 **起始版本：** 7
 
@@ -1934,8 +1958,7 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
-> 替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)替代。
 
 **起始版本：** 7
 

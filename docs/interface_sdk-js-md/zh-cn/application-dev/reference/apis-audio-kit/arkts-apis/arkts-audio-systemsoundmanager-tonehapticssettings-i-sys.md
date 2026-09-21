@@ -24,7 +24,7 @@ import { systemSoundManager } from '@kit.AudioKit';
 hapticsUri?: string
 ```
 
-振动URI。
+振动 URI。当 [mode](#mode) 为 NON_SYC 时，用户可以设置或获取此参数；在其他情况下，该 URI 无效，应予以忽略。
 
 **类型：** string
 
@@ -40,7 +40,7 @@ hapticsUri?: string
 mode: ToneHapticsMode
 ```
 
-铃音振动模式。
+振动模式。
 
 **类型：** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md)
 

@@ -825,10 +825,29 @@ If the user denies authorization, the dialog cannot be pulled up again. Permissi
 
 **Examples**
 
-```TypeScript
 For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
+
+```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// Obtain the context within the component.
+let context: Context = this.getUIContext().getHostContext() as Context;
+let windowId = 0; // Obtain the window ID: let windowId = window.findWindow(window name).getWindowProperties().id;
+// Request user authorization for a specified permission based on the window ID
+atManager.requestPermissionsFromUserWithWindowId(context, windowId, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
+  console.info(`requestPermissionsFromUserWithWindowId success, result: ${data}`);
+  console.info('requestPermissionsFromUserWithWindowId data permissions:' + data.permissions);
+  console.info('requestPermissionsFromUserWithWindowId data authResults:' + data.authResults);
+  console.info('requestPermissionsFromUserWithWindowId data dialogShownResults:' + data.dialogShownResults);
+  console.info('requestPermissionsFromUserWithWindowId data errorReasons:' + data.errorReasons);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionsFromUserWithWindowId fail, code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## revokePermission

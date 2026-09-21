@@ -74,7 +74,7 @@ Customize the CheckboxGroup content area. When this attribute is set, the settin
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 21
 

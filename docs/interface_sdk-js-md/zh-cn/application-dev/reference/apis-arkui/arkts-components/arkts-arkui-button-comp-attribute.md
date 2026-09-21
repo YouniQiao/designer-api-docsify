@@ -20,11 +20,11 @@ declare class ButtonAttribute extends CommonMethod<ButtonAttribute>
 buttonStyle(value: ButtonStyleMode)
 ```
 
-设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。
+设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、[fontColor](#fontcolor)和[role](#role)接口设置，实际显示效果以最后一次设置为准。
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -74,7 +74,7 @@ controlSize(value: ControlSize)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -284,7 +284,7 @@ minFontScale(scale: number | Resource)
 role(value: ButtonRole)
 ```
 
-设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过backgroundColor、[fontColor](#fontcolor)和[buttonStyle](#buttonstyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
+设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、[fontColor](#fontcolor)和[buttonStyle](#buttonstyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
 
 **起始版本：** 12
 

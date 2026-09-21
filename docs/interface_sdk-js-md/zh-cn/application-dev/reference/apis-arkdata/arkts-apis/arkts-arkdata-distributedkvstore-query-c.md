@@ -235,7 +235,7 @@ equalTo(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | number &#124; number &#124; string &#124; boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | number &#124; string &#124; boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -330,7 +330,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | Indicates the field, which cannot contain ^. |
-| value | number &#124; number &#124; string &#124; boolean | 是 | Indicates the value to be compared. |
+| value | number &#124; string &#124; boolean | 是 | Indicates the value to be compared. |
 
 **返回值：**
 
@@ -388,7 +388,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | number &#124; number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -676,7 +676,7 @@ lessThan(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | number &#124; number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -734,7 +734,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | number &#124; number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | number &#124; string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -904,7 +904,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | number &#124; number &#124; string &#124; boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | number &#124; string &#124; boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 

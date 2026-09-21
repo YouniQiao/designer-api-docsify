@@ -200,8 +200,18 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Obtain the application context.
+let context = this.getUIContext().getHostContext() as Context;
+// The tel URI format is supported since API version 15, for example, tel:13xxxx.
+call.makeCall(context, "138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+});
 ```

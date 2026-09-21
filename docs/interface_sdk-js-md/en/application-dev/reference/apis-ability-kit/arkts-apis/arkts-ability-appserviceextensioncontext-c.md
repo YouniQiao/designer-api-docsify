@@ -150,9 +150,7 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 
 **Examples**
 
-```TypeScript
 For details, see [connectServiceExtensionAbility](#connectserviceextensionability).
-```
 
 ## startAbility
 

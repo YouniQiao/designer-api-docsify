@@ -24,7 +24,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 > **说明：** 
 > 
-> - 从API version 12开始，该接口支持在attributeModifier中调用。
+> - 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 > 
 > - 动效属性，仅支持使用effectStrategy属性或单个symbolEffect属性，不支持多种动效属性混合使用。
 > 
@@ -56,7 +56,7 @@ fontColor(value: Array<ResourceColor>)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -86,7 +86,7 @@ fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 
 > **说明：** 
 > 
-> 该接口支持在attributeModifier中调用。
+> 该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 26.0.0
 
@@ -116,7 +116,7 @@ fontSize(value: number | string | Resource)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -146,7 +146,7 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -245,7 +245,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 

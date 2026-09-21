@@ -88,7 +88,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 id(value: string): SubTabBarStyle
 ```
 
-Sets the ID of the subtab.
+Sets the [ID](arkts-arkui-common-comp-commonmethod-c.md#id) of the subtab.
 
 **Since:** 11
 
@@ -102,7 +102,7 @@ Sets the ID of the subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | ID of the subtab. |
+| value | string | Yes | [ID](arkts-arkui-common-comp-commonmethod-c.md#id) of the subtab. |
 
 **Return value:**
 

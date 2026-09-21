@@ -55,8 +55,181 @@ Registers a callback to listen for gesture triggering information.
 
 **Examples**
 
-```TypeScript
 This example uses global gesture listeners to monitor the trigger status of three independent areas (Tap, Pan, and LongPress) in real time, records the trigger count and last operation information for each gesture, and automatically manages the registration and unregistration of listeners during the component's lifecycle.
+
+```TypeScript
+// Index.ets
+// Example usage of uiObserver.addGlobalGestureListener(type, option, callback)
+// uiObserver.removeGlobalGestureListener(type, callback)
+
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureListenerCallback } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State tapCount: number = 0;
+  @State panCount: number = 0;
+  @State longPressCount: number = 0;
+  @State lastAction: string = 'None';
+  @State lastArea: string = 'None';
+
+  // Store listener callback references.
+  private tapCallback?: GestureListenerCallback;
+  private panCallback?: GestureListenerCallback;
+  private longPressCallback?: GestureListenerCallback;
+
+  // Enable global listeners.
+  aboutToAppear() {
+    this.addGlobalListeners();
+  }
+  // Disable global listeners.
+  aboutToDisappear() {
+    this.removeGlobalListeners();
+  }
+
+  private addGlobalListeners() {
+    const observer = this.getUIContext().getUIObserver();
+
+    // Tap listener.
+    this.tapCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'tap-area') {
+        this.tapCount++;
+        this.lastAction = 'Tap';
+        this.lastArea = 'Tap area';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.TAP,
+      { actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END] },
+      this.tapCallback
+    );
+
+    // Pan listener.
+    this.panCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'pan-area') {
+        this.panCount++;
+        this.lastAction = 'Pan';
+        this.lastArea = 'Pan area';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.PAN,
+      {
+        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
+      },
+      this.panCallback
+    );
+
+    // LongPress listener.
+    this.longPressCallback = (info: GestureTriggerInfo) => {
+      if (info.event?.target?.id === 'longpress-area') {
+        this.longPressCount++;
+        this.lastAction = 'Long press';
+        this.lastArea = 'Long press area';
+      }
+    };
+    observer.addGlobalGestureListener(
+      GestureListenerType.LONG_PRESS,
+      {
+        actionPhases: [GestureActionPhase.WILL_START, GestureActionPhase.WILL_END]
+      },
+      this.longPressCallback
+    );
+  }
+
+  private removeGlobalListeners() {
+    const observer = this.getUIContext().getUIObserver();
+// 0, 2, and 1 indicate the tap, pan, and long-press gesture types, respectively, which are used to remove the corresponding global listeners.
+    if (this.tapCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.TAP, this.tapCallback);
+    }
+    if (this.panCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.PAN, this.panCallback);
+    }
+    if (this.longPressCallback) {
+      observer.removeGlobalGestureListener(GestureListenerType.LONG_PRESS, this.longPressCallback);
+    }
+  }
+
+  build() {
+    Column() {
+      // Gesture data statistics panel.
+      Row({ space: 30 }) {
+        Column() {
+          Text('Tap count:').fontSize(16)
+          Text(`${this.tapCount}`).fontSize(24).fontColor('#FF6B81')
+        }
+        Column() {
+          Text('Pan count:').fontSize(16)
+          Text(`${this.panCount}`).fontSize(24).fontColor('#7BED9F')
+        }
+        Column() {
+          Text('Long-press count:').fontSize(16)
+          Text(`${this.longPressCount}`).fontSize(24).fontColor('#70A1FF')
+        }
+      }
+      .margin(10)
+
+      Text(`Last action: ${this.lastAction} (${this.lastArea})`)
+        .fontSize(18)
+        .margin(10)
+
+      // Gesture areas.
+      Row() {
+        Text('Tap area').fontSize(18)
+      }
+      .id('tap-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#FF6B81' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(TapGesture().onAction((event: GestureEvent) => {
+        // Implementation details.
+      }))
+
+      Row() {
+        Text('Pan area').fontSize(18)
+      }
+      .id('pan-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#7BED9F' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(
+        PanGesture()
+          .onActionStart((event: GestureEvent) => {
+            // Implementation details.
+          })
+          .onActionEnd((event: GestureEvent) => {
+            // Implementation details.
+          })
+      )
+
+      Row() {
+        Text('LongPress area').fontSize(18)
+      }
+      .id('longpress-area')
+      .width('90%')
+      .height(120)
+      .margin(10)
+      .border({ width: 2, color: '#70A1FF' })
+      .justifyContent(FlexAlign.Center)
+      .gesture(
+        LongPressGesture()
+          .onAction((event: GestureEvent) => {
+            // Implementation details.
+          })
+          .onActionEnd((event: GestureEvent) => {
+            // Implementation details.
+          })
+      )
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## off('navDestinationUpdate')
@@ -85,9 +258,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('navDestinationUpdate')](#onnavdestinationupdate).
-```
 
 ## off('navDestinationUpdate')
 
@@ -114,9 +285,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('navDestinationUpdate')](#onnavdestinationupdate).
-```
 
 ## off('navDestinationUpdateByUniqueId')
 
@@ -144,9 +313,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('navDestinationUpdateByUniqueId')](#onnavdestinationupdatebyuniqueid).
-```
 
 ## off('scrollEvent')
 
@@ -174,9 +341,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('scrollEvent')](#onscrollevent).
-```
 
 ## off('scrollEvent')
 
@@ -203,9 +368,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('scrollEvent')](#onscrollevent).
-```
 
 ## off('routerPageUpdate')
 
@@ -232,9 +395,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('routerPageUpdate')](#onrouterpageupdate).
-```
 
 ## off('densityUpdate')
 
@@ -261,9 +422,7 @@ Unregisters the listener for screen pixel density changes.
 
 **Examples**
 
-```TypeScript
 See the example for [on('densityUpdate')](#ondensityupdate).
-```
 
 ## off('willDraw')
 
@@ -290,9 +449,7 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willDraw')](#onwilldraw).
-```
 
 ## off('didLayout')
 
@@ -319,9 +476,7 @@ Unregisters the listener for layout completion status in each frame.
 
 **Examples**
 
-```TypeScript
 See the example for [on('didLayout')](#ondidlayout).
-```
 
 ## off('navDestinationSwitch')
 
@@ -351,9 +506,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('navDestinationSwitch')](#onnavdestinationswitch).
-```
 
 ## off('navDestinationSwitch')
 
@@ -385,9 +538,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('navDestinationSwitch')](#onnavdestinationswitch).
-```
 
 ## off('willClick')
 
@@ -414,9 +565,7 @@ Removes a callback function to be called before clickEvent is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## off('didClick')
 
@@ -443,9 +592,7 @@ Removes a callback function to be called after clickEvent is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## off('willClick')
 
@@ -472,9 +619,7 @@ Removes a callback function to be called before tapGesture is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## off('didClick')
 
@@ -501,9 +646,7 @@ Removes a callback function to be called after tapGesture is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## off('beforePanStart')
 
@@ -511,7 +654,7 @@ See the example for [on('willClick')](#onwillclick).
 off(type: 'beforePanStart', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture onActionStart pre-execution events, canceling callbacks registered via [on('beforePanStart')](#onbeforepanstart).
+Unregisters the listener for pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) pre-execution events, canceling callbacks registered via [on('beforePanStart')](#onbeforepanstart).
 
 **Since:** 19
 
@@ -525,14 +668,12 @@ Unregisters the listener for pan gesture onActionStart pre-execution events, can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture onActionStart event will be removed. |
+| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event will be removed. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## off('beforePanEnd')
 
@@ -540,7 +681,7 @@ See the example for [on('beforePanStart')](#onbeforepanstart).
 off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture onActionEnd pre-execution events, canceling callbacks registered via [on('beforePanEnd')](#onbeforepanend).
+Unregisters the listener for pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) pre-execution events, canceling callbacks registered via [on('beforePanEnd')](#onbeforepanend).
 
 **Since:** 19
 
@@ -554,14 +695,12 @@ Unregisters the listener for pan gesture onActionEnd pre-execution events, cance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture onActionEnd event will be removed. |
+| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch before the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event will be removed. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## off('afterPanStart')
 
@@ -569,7 +708,7 @@ See the example for [on('beforePanStart')](#onbeforepanstart).
 off(type: 'afterPanStart', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture onActionStart post-execution events, canceling callbacks registered via [on('afterPanStart')](#onafterpanstart).
+Unregisters the listener for pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) post-execution events, canceling callbacks registered via [on('afterPanStart')](#onafterpanstart).
 
 **Since:** 19
 
@@ -583,14 +722,12 @@ Unregisters the listener for pan gesture onActionStart post-execution events, ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture onActionStart event will be removed. |
+| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event will be removed. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## off('afterPanEnd')
 
@@ -598,7 +735,7 @@ See the example for [on('beforePanStart')](#onbeforepanstart).
 off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture onActionEnd post-execution events, canceling callbacks registered via [on('afterPanEnd')](#onafterpanend).
+Unregisters the listener for pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) post-execution events, canceling callbacks registered via [on('afterPanEnd')](#onafterpanend).
 
 **Since:** 19
 
@@ -612,14 +749,12 @@ Unregisters the listener for pan gesture onActionEnd post-execution events, canc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'afterPanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture onActionEnd event will be removed. |
+| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'afterPanEnd'**, indicating command dispatch after the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | No | Target listener to unregister. If no parameter is provided, all callback listeners for command dispatch after the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event will be removed. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## off('tabContentUpdate')
 
@@ -647,9 +782,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('tabContentUpdate')](#ontabcontentupdate).
-```
 
 ## off('tabContentUpdate')
 
@@ -676,9 +809,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('tabContentUpdate')](#ontabcontentupdate).
-```
 
 ## off('tabChange')
 
@@ -706,9 +837,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('tabChange')](#ontabchange).
-```
 
 ## off('tabChange')
 
@@ -735,9 +864,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 See the example for [on('tabChange')](#ontabchange).
-```
 
 ## off('windowSizeLayoutBreakpointChange')
 
@@ -764,9 +891,7 @@ Unregisters previously registered window size layout breakpoint change listeners
 
 **Examples**
 
-```TypeScript
 See the example for [on('windowSizeLayoutBreakpointChange')](#onwindowsizelayoutbreakpointchange).
-```
 
 ## off('nodeRenderState')
 
@@ -794,9 +919,7 @@ Unregisters the callback for listening for node rendering state changes.
 
 **Examples**
 
-```TypeScript
 See the example for [on('nodeRenderState')](#onnoderenderstate).
-```
 
 ## off('textChange')
 
@@ -823,9 +946,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 For details, see [on('textChange')](#ontextchange).
-```
 
 ## off('textChange')
 
@@ -853,9 +974,7 @@ Removes a callback function that was previously registered with `on()`.
 
 **Examples**
 
-```TypeScript
 For details, see [on('textChange')](#ontextchange).
-```
 
 ## offNavDestinationSizeChange
 
@@ -881,9 +1000,7 @@ Removes the listener callback registered using the **onNavDestinationSizeChange*
 
 **Examples**
 
-```TypeScript
 See the example for the [onNavDestinationSizeChange](#onnavdestinationsizechange) API.
-```
 
 ## offNavDestinationSizeChangeByUniqueId
 
@@ -910,9 +1027,7 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 
 **Examples**
 
-```TypeScript
 See the example for the [onNavDestinationSizeChangeByUniqueId](#onnavdestinationsizechangebyuniqueid) API.
-```
 
 ## offRouterPageSizeChange
 
@@ -938,9 +1053,7 @@ Removes the listener callback registered using the **onRouterPageSizeChange** AP
 
 **Examples**
 
-```TypeScript
 See the example for the [onRouterPageSizeChange](#onrouterpagesizechange) API.
-```
 
 ## offSwiperContentUpdate
 
@@ -966,9 +1079,7 @@ Unregister the listener for content switching events of the **Swiper** component
 
 **Examples**
 
-```TypeScript
 See the example for the [onSwiperContentUpdate](#onswipercontentupdate) API.
-```
 
 <a id="offswipercontentupdate-1"></a>
 
@@ -997,9 +1108,7 @@ Unregister the listener for content switching events of a specific **Swiper** co
 
 **Examples**
 
-```TypeScript
 See the example for the [onSwiperContentUpdate](#onswipercontentupdate) API.
-```
 
 ## on('navDestinationUpdate')
 
@@ -1185,8 +1294,71 @@ Registers a callback function to be called when the navigation destination is up
 
 **Examples**
 
-```TypeScript
 This example demonstrates how to listen for [NavDestination](../arkui-ts/ts-basic-components-navdestination.md) component state changes using the [Navigation](../arkui-ts/ts-basic-components-navigation.md) component's uniqueId.
+
+```TypeScript
+// Index.ets
+// Example usage of on('navDestinationUpdateByUniqueId', navigationUniqueId, callback)
+// off('navDestinationUpdateByUniqueId', navigationUniqueId, callback)
+
+@Component
+struct PageOne {
+  private text = '';
+  private uniqueId = -1;
+  aboutToAppear() {
+    // Obtain the uniqueId of the target Navigation component.
+    let navigationUniqueId = this.queryNavigationInfo()?.uniqueId;
+    if (navigationUniqueId) {
+      this.uniqueId = navigationUniqueId.valueOf();
+    }
+    this.text = JSON.stringify(this.uniqueId);
+    // Register a listener with the specified Navigation component uniqueId.
+    this.getUIContext().getUIObserver().on('navDestinationUpdateByUniqueId', this.uniqueId, (info) => {
+      console.info('NavDestination state update navigationId', JSON.stringify(info));
+    });
+  }
+  aboutToDisappear() {
+    // Unregister the listener. Omitting the callback parameter removes all registered listeners.
+    this.getUIContext().getUIObserver().off('navDestinationUpdateByUniqueId', this.uniqueId);
+  }
+  build() {
+    NavDestination() {
+      Text('pageOne')
+      Text('navigationUniqueId: ' + this.text)
+        .width('80%')
+        .height(50)
+        .margin(50)
+        .fontSize(20)
+    }.title('pageOne')
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private stack: NavPathStack = new NavPathStack();
+
+  @Builder
+  pageBuilder(name: string) {
+    PageOne()
+  }
+
+  build() {
+    Column() {
+      Navigation(this.stack) {
+        Button('push').onClick(() => {
+          // Push the PageOne NavDestination onto the navigation stack.
+          this.stack.pushPath({ name: 'pageOne' });
+        })
+      }
+      .id('testId')
+      .title('Navigation')
+      .navDestination(this.pageBuilder)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## on('scrollEvent')
@@ -1215,9 +1387,7 @@ Registers a callback function to be called when the scroll event start or stop.
 
 **Examples**
 
-```TypeScript
 See the example for [on('scrollEvent')](#onscrollevent).
-```
 
 ## on('scrollEvent')
 
@@ -1772,9 +1942,7 @@ Registers a callback function to be called before clickEvent is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## on('didClick')
 
@@ -1801,9 +1969,7 @@ Registers a callback function to be called after clickEvent is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## on('willClick')
 
@@ -1941,9 +2107,7 @@ Registers a callback function to be called after tapGesture is called.
 
 **Examples**
 
-```TypeScript
 See the example for [on('willClick')](#onwillclick).
-```
 
 ## on('beforePanStart')
 
@@ -1951,7 +2115,7 @@ See the example for [on('willClick')](#onwillclick).
 on(type: 'beforePanStart', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture onActionStart pre-execution events, executing the callback before the actual onActionStart event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) pre-execution events, executing the callback before the actual [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -1965,7 +2129,7 @@ Listens for pan gesture onActionStart pre-execution events, executing the callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. The registered callback is triggered before **onActionStart** is executed. |
+| type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. The registered callback is triggered before **onActionStart** is executed. |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 **Examples**
@@ -2085,7 +2249,7 @@ struct PanExample {
 on(type: 'beforePanEnd', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture onActionEnd pre-execution events, executing the callback before the actual onActionEnd event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) pre-execution events, executing the callback before the actual [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -2099,14 +2263,12 @@ Listens for pan gesture onActionEnd pre-execution events, executing the callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. The registered callback is triggered before **onActionEnd** is executed. |
+| type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. The registered callback is triggered before **onActionEnd** is executed. |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## on('afterPanStart')
 
@@ -2114,7 +2276,7 @@ See the example for [on('beforePanStart')](#onbeforepanstart).
 on(type: 'afterPanStart', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture onActionStart post-execution events, executing the callback after the actual onActionStart event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) post-execution events, executing the callback after the actual [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -2128,14 +2290,12 @@ Listens for pan gesture onActionStart post-execution events, executing the callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. The registered callback is triggered after **onActionStart** is executed. |
+| type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture [onActionStart](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionstart) event. The registered callback is triggered after **onActionStart** is executed. |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## on('afterPanEnd')
 
@@ -2143,7 +2303,7 @@ See the example for [on('beforePanStart')](#onbeforepanstart).
 on(type: 'afterPanEnd', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture onActionEnd post-execution events, executing the callback after the actual onActionEnd event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) post-execution events, executing the callback after the actual [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -2157,14 +2317,12 @@ Listens for pan gesture onActionEnd post-execution events, executing the callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. The registered callback is triggered after **onActionEnd** is executed. |
+| type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch after the execution of the pan gesture [onActionEnd](../arkts-components/arkts-arkui-tapgesture-comp-pangestureinterface-i.md#onactionend) event. The registered callback is triggered after **onActionEnd** is executed. |
 | callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-tapgesture-comp-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 **Examples**
 
-```TypeScript
 See the example for [on('beforePanStart')](#onbeforepanstart).
-```
 
 ## on('tabContentUpdate')
 
@@ -2560,8 +2718,55 @@ Registers a callback for window size layout breakpoint changes. This enables ada
 
 **Examples**
 
-```TypeScript
 This example demonstrates how to register and unregister window size layout breakpoint change listeners.
+
+```TypeScript
+import { uiObserver, window } from '@kit.ArkUI';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  private changeOrientation(isLandscape: boolean) {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    window.getLastWindow(context).then((lastWindow) => {
+      lastWindow.setPreferredOrientation(isLandscape ? window.Orientation.LANDSCAPE : window.Orientation.PORTRAIT);
+    });
+  }
+
+  @State message: string = '';
+  @State widthBreakpoint: WidthBreakpoint = WidthBreakpoint.WIDTH_SM;
+  @State heightBreakpoint: HeightBreakpoint = HeightBreakpoint.HEIGHT_SM;
+  winSizeLayoutBreakpointCallback = (info: uiObserver.WindowSizeLayoutBreakpointInfo) => {
+    this.widthBreakpoint = info.widthBreakpoint;
+    this.heightBreakpoint = info.heightBreakpoint;
+    this.message = 'widthBpt:' + this.widthBreakpoint.toString() + 'heightBpt:' + this.heightBreakpoint.toString();
+  }
+
+  build() {
+    Column() {
+      Text(this.message)
+      Button('Register Window Size Breakpoint Change Listener')
+        .onClick(() => {
+          this.getUIContext()
+            .getUIObserver()
+            .on('windowSizeLayoutBreakpointChange', this.winSizeLayoutBreakpointCallback);
+        })
+      Button('Unregister Window Size Breakpoint Change Listener')
+        .onClick(() => {
+          this.getUIContext()
+            .getUIObserver()
+            .off('windowSizeLayoutBreakpointChange', this.winSizeLayoutBreakpointCallback);
+        })
+      Button("Portrait").onClick(() => {
+        this.changeOrientation(false);
+      })
+      Button("Landscape").onClick(() => {
+        this.changeOrientation(true);
+      })
+    }
+  }
+}
 ```
 
 ## on('nodeRenderState')
@@ -2574,7 +2779,7 @@ Registers a callback to be invoked when the rendering state of a specific node c
 
 Be mindful of node quantity limitations. For performance reasons, registering too many nodes within a single UI instance will throw an exception.
 
-Typically, a **RENDER_OUT** notification is received when a component moves off-screen. However, in certain scenarios, a **RENDER_OUT** notification might not be triggered even if a component has moved off-screen. For example, components with caching capabilities like Swiper will not trigger **RENDER_OUT** notifications even when the **isShown** parameter in the cachedCount attribute is set to **true**.
+Typically, a **RENDER_OUT** notification is received when a component moves off-screen. However, in certain scenarios, a **RENDER_OUT** notification might not be triggered even if a component has moved off-screen. For example, components with caching capabilities like Swiper will not trigger **RENDER_OUT** notifications even when the **isShown** parameter in the [cachedCount](../arkts-components/arkts-arkui-swiper-comp-attribute.md#cachedcount-1) attribute is set to **true**.
 
 **Since:** 20
 
@@ -2600,8 +2805,116 @@ Typically, a **RENDER_OUT** notification is received when a component moves off-
 
 **Examples**
 
-```TypeScript
 This example demonstrates how to add and remove listeners for a target component. When the user swipes left, the target component disappears from the screen, triggering a RENDER_OUT notification. When the user swipes right, the component reappears on the screen, triggering a RENDER_IN notification.
+
+```TypeScript
+// Index.ets
+// Example usage of uiObserver.on('nodeRenderState', nodeIdentity, callback)
+// uiObserver.off('nodeRenderState', nodeIdentity, callback)
+
+// Used in page components.
+import { NodeRenderState } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State fontColor: string = '#182431';
+  @State selectedFontColor: string = '#007DFF';
+  @State currentIndex: number = 0;
+  @State selectedIndex: number = 0;
+  @State notice: string = "";
+  private controller: TabsController = new TabsController();
+
+  @Builder
+  tabBuilder(index: number, name: string) {
+    Column() {
+      Text(name)
+        .fontColor(this.selectedIndex === index ? this.selectedFontColor : this.fontColor)
+        .fontSize(16)
+        .fontWeight(this.selectedIndex === index ? 500 : 400)
+        .lineHeight(22)
+        .margin({ top: 17, bottom: 7 })
+      Divider()
+        .strokeWidth(2)
+        .color('#007DFF')
+        .opacity(this.selectedIndex === index ? 1 : 0)
+    }.width('100%')
+  }
+
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.Start, index: this.currentIndex, controller: this.controller }) {
+        TabContent() {
+          Column() {
+            Column() {
+              Button("Listened Node").margin({ top: 5 }).id("button_1")
+              Button("Add Listener").margin({ top: 5 }).onClick(() => {
+                let node: FrameNode | null = this.getUIContext().getFrameNodeById("button_1");
+                if (node) {
+                  let observer = this.getUIContext().getUIObserver();
+                  // Add event listeners.
+                  observer.on("nodeRenderState", node?.getUniqueId(), (state: NodeRenderState, node?: FrameNode) => {
+                    // Update notification content based on node state changes.
+                    if (state === 0) {
+                      this.notice = "RENDER_IN";
+                    } else {
+                      this.notice = "RENDER_OUT";
+                    }
+                    console.info("Node state changed. Current state: ", state);
+                  });
+                }
+              })
+              Button("Remove Listener").margin({ top: 5 }).onClick(() => {
+                let node: FrameNode | null = this.getUIContext().getFrameNodeById("button_1");
+                if (node) {
+                  let observer = this.getUIContext().getUIObserver();
+                  // Unregister the listener. Omitting the callback parameter removes all registered listeners.
+                  observer.off("nodeRenderState", node?.getUniqueId());
+                }
+                this.notice = "";
+              })
+            }
+          }.width('100%').height('100%').backgroundColor('#00CB87')
+        }.tabBar(this.tabBuilder(0, 'green'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#007DFF')
+        }.tabBar(this.tabBuilder(1, 'blue'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#FFBF00')
+        }.tabBar(this.tabBuilder(2, 'yellow'))
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#E67C92')
+        }.tabBar(this.tabBuilder(3, 'pink'))
+      }
+      .vertical(false)
+      .barMode(BarMode.Fixed)
+      .barWidth(360)
+      .barHeight(56)
+      .animationDuration(400)
+      .onChange((index: number) => {
+        this.currentIndex = index;
+        this.selectedIndex = index;
+      })
+      .onAnimationStart((index: number, targetIndex: number, event: TabsAnimationEvent) => {
+        if (index === targetIndex) {
+          return;
+        }
+        this.selectedIndex = targetIndex;
+      })
+      .width(360)
+      .height(296)
+      .margin({ top: 52 })
+      .backgroundColor('#F1F3F5')
+
+      Text(`Notification received: ${this.notice}`)
+        .fontSize(20)
+        .margin(10)
+    }.width('100%')
+  }
+}
 ```
 
 ## on('textChange')
@@ -2741,9 +3054,7 @@ Registers a callback function to be called when text field's content is changed.
 
 **Examples**
 
-```TypeScript
 For details, see [on('textChange')](#ontextchange).
-```
 
 ## onNavDestinationSizeChange
 
@@ -3166,6 +3477,4 @@ Unregisters the specified global gesture listener.
 
 **Examples**
 
-```TypeScript
 See the example for the [addGlobalGestureListener](#addglobalgesturelistener) API .
-```

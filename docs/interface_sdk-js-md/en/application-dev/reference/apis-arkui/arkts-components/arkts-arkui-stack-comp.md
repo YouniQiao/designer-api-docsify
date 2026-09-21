@@ -2,7 +2,7 @@
 
 Defines a stack container where child components are successively stacked and the latter one overwrites the previous one. The stacking order is based on the declaration order of child components in the parent container. A child component declared later has a higher rendering level and visually covers the preceding child components. It is suitable for scenarios that require layered layout, such as floating buttons or prompt messages on a page, text labels overlaid on images or videos, and multi-layer pop-up windows or dialog boxes. Compared with nesting multiple containers to achieve the layered effect, **Stack** provides a simpler and more efficient solution.
 
-> **NOTE** > > - The general attribute align supports the mirroring capability on > this component.
+> **NOTE** > > - The general attribute [align](arkts-arkui-common-comp-commonmethod-c.md#align) supports the mirroring capability on > this component.
 
 ## Child Components
 
@@ -23,7 +23,7 @@ Defines a stack container where child components are successively stacked and th
 > thereby optimize performance. For best practices, see
 > [Optimizing Component Nesting - Preferentially Using Component Properties Instead of Nested Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-component-nesting-optimization#section78181114123811).
 > 
-> When both the **alignContent** parameter of this API and align are
+> When both the **alignContent** parameter of this API and [align](arkts-arkui-common-comp-commonmethod-c.md#align) are
 > set, whichever is set last takes effect. When both the **alignContent** parameter of this API and the
 > **alignContent** attribute are set, the value set by the attribute takes effect.
 
@@ -50,9 +50,3 @@ Defines a stack container where child components are successively stacked and th
 | [StackOptions](arkts-arkui-stack-comp-stackoptions-i.md) | Sets the alignment method of the child component in the stack container. |
 
 ## Examples
-
-```TypeScript
-When the [alignContent](#aligncontent) attribute of the Stack component is set to Alignment.Bottom and [syncLoad](#syncload) is set to true, the child components are displayed horizontally centered at the bottom of the Stack component, and all child components are loaded within the same frame.
-
-The syncLoad attribute is added since API version 26.0.0.
-```

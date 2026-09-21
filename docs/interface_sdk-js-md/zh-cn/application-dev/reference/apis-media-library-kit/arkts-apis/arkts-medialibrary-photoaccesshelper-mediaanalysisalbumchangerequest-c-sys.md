@@ -126,8 +126,20 @@ static createAnalysisAlbumRequest(
 
 **示例**
 
-```TypeScript
 photoAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('createAlbumRequestDemo');
+  try {
+    let albumName: string = 'newAlbumName' + new Date().getTime();
+    let albumChangeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest = photoAccessHelper.MediaAnalysisAlbumChangeRequest.createAnalysisAlbumRequest(context, albumName, photoAccessHelper.AlbumSubtype.PORTRAIT);
+    await phAccessHelper.applyChanges(albumChangeRequest);
+    console.info('apply createAlbumRequest successfully');
+  } catch (err) {
+    console.error(`createAlbumRequestDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## setDefaultCoverUri

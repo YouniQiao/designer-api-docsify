@@ -10,8 +10,6 @@ interface AudioInterrupt
 > 
 > 从API version 7开始支持，从API version 9开始废弃，无替代接口。
 
-@typedef AudioInterrupt
-
 **起始版本：** 7
 
 **废弃版本：** 9

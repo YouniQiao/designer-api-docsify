@@ -18,7 +18,7 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 **废弃版本：** 9
 
-**替代接口：** getValidReminders
+**替代接口：** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -74,7 +74,7 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 **废弃版本：** 9
 
-**替代接口：** getValidReminders
+**替代接口：** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

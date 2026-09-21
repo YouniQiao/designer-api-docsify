@@ -54,7 +54,7 @@ params(value: object)
 
 **废弃版本：** 13
 
-**替代接口：** param
+**替代接口：** [param](arkts-arkui-navigation-comp-navpathinfo-c.md#param)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

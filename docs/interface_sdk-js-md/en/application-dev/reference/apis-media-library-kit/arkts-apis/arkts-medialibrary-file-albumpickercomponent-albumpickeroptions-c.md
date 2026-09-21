@@ -38,7 +38,7 @@ Type of the filter. You can use it to display images, videos, or both. If this p
 fontSize?: number | string
 ```
 
-Font size. For details about the value range, see fontSize.
+Font size. For details about the value range, see [fontSize](../../apis-arkui/arkts-components/arkts-arkui-text-comp-attribute.md#fontsize).
 
 **Type:** number &#124; string
 

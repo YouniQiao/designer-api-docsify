@@ -20,11 +20,11 @@ The universal events are supported.
 buttonStyle(value: ButtonStyleMode)
 ```
 
-Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontcolor), and [role](#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [fontColor](#fontcolor), and [role](#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ Sets the size for the button.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -284,7 +284,7 @@ Sets the minimum font scale factor for text.
 role(value: ButtonRole)
 ```
 
-Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontcolor), and [buttonStyle](#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [fontColor](#fontcolor), and [buttonStyle](#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ INVERT = 'invert'
 AVERAGE = 'average'
 ```
 
-设置控件背景阴影色为控件背景阴影区域的平均色。仅支持在入参类型为ShadowOptions的shadow中设置该枚举。
+设置控件背景阴影色为控件背景阴影区域的平均色。仅支持在入参类型为ShadowOptions的[shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow)中设置该枚举。
 
 **起始版本：** 11
 
@@ -48,7 +48,7 @@ AVERAGE = 'average'
 PRIMARY = 'primary'
 ```
 
-设置控件背景阴影色为控件背景阴影区域的主色。仅支持在入参类型为ShadowOptions的shadow中设置该枚举。
+设置控件背景阴影色为控件背景阴影区域的主色。仅支持在入参类型为ShadowOptions的[shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow)中设置该枚举。
 
 **起始版本：** 11
 

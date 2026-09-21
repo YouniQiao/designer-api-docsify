@@ -1279,9 +1279,7 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 
 **示例**
 
-```TypeScript
 参考createNode('List')示例。
-```
 
 
 <a id="createnode-18"></a>
@@ -1458,9 +1456,7 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 **示例**
 
-```TypeScript
 参考createNode('List')示例。
-```
 
 
 <a id="createnode-21"></a>
@@ -1591,9 +1587,7 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 **示例**
 
-```TypeScript
 参考createNode('WaterFlow')示例。
-```
 
 
 <a id="createnode-23"></a>
@@ -2800,6 +2794,4 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 
 **示例**
 
-```TypeScript
 参考createNode('Grid')示例。
-```

@@ -32,7 +32,6 @@ Stops an HTTP request task and releases system resources.
 
 **Examples**
 
-```TypeScript
 ### destroy
 
 destroy(): void
@@ -42,6 +41,12 @@ Stops an HTTP request task and releases system resources.
 Atomic service API: This API can be used in atomic services since API version 11.
 
 System capability: SystemCapability.Communication.NetStack
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+let httpRequest = http.createHttp();
+
+httpRequest.destroy();
 ```
 
 ## enableAutoCookie
@@ -76,7 +81,6 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 
 **Examples**
 
-```TypeScript
 ### enableAutoCookie
 
 enableAutoCookie(enable: boolean): void
@@ -94,6 +98,29 @@ System capability: SystemCapability.Communication.NetStack
 Model restriction: This API can be used only in the stage model.
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+let url = "EXAMPLE_URL"; // Access URL. You need to define the URL based on the actual scenario.
+
+// Enable automatic cookie sharing.
+httpRequest.enableAutoCookie(true);
+
+httpRequest.request(url, {
+  method: http.RequestMethod.GET
+}).then((data: http.HttpResponse) => {
+  console.info('first request code:' + data.responseCode);
+  // Subsequent requests will automatically reuse the cookies saved by this instance.
+  return httpRequest.request(url, { method: http.RequestMethod.GET });
+}).then((data: http.HttpResponse) => {
+  console.info('second request code:' + data.responseCode);
+}).catch((err: Error) => {
+  console.error('error:' + JSON.stringify(err));
+}).finally(() => {
+  httpRequest.destroy();
+});
 ```
 
 ## off("headerReceive")
@@ -121,7 +148,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Examples**
 
-```TypeScript
 ### off("headerReceive")
 
 off(type: "headerReceive", callback?: AsyncCallback<Object>): void
@@ -135,6 +161,12 @@ Unregisters the observer for HTTP Response Header events.
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.off("headerReceive");
 ```
 
 ## off("headersReceive")
@@ -160,7 +192,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Examples**
 
-```TypeScript
 ### off("headersReceive")
 
 off(type: "headersReceive", callback?: Callback<Object>): void
@@ -172,6 +203,15 @@ Atomic service API: This API can be used in atomic services since API version 11
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
+httpRequest.off("headersReceive");
 ```
 
 ## off("dataReceive")
@@ -197,7 +237,6 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 
 **Examples**
 
-```TypeScript
 ### off("dataReceive")
 
 off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
@@ -209,6 +248,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
 ```
 
 ## off("dataEnd")
@@ -234,7 +282,6 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 
 **Examples**
 
-```TypeScript
 ### off("dataEnd")
 
 off(type: "dataEnd", callback?: Callback<void>): void
@@ -246,6 +293,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
 ```
 
 ## off('dataReceiveProgress')
@@ -271,7 +327,6 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 
 **Examples**
 
-```TypeScript
 ### off('dataReceiveProgress')
 
 off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
@@ -283,6 +338,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
 ```
 
 ## off('dataSendProgress')
@@ -308,7 +372,6 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 
 **Examples**
 
-```TypeScript
 ### off('dataSendProgress')
 
 off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
@@ -320,9 +383,17 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
-```
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
+```
+
 ### off('dataSendProgress')
 
 off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
@@ -340,6 +411,15 @@ Defines the data sending progress information.
 Atomic service API: This API can be used in atomic services since API version 15.
 
 System capability: SystemCapability.Communication.NetStack
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
 ```
 
 ## on("headerReceive")
@@ -367,7 +447,6 @@ Registers an observer for HTTP Response Header events.
 
 **Examples**
 
-```TypeScript
 ### on("headerReceive")
 
 on(type: "headerReceive", callback: AsyncCallback<Object>): void
@@ -379,6 +458,15 @@ Registers an observer for HTTP Response Header events.
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headerReceive", (data: BusinessError) => {
+  console.error("error:" + JSON.stringify(data));
+});
 ```
 
 ## on("headersReceive")
@@ -404,7 +492,6 @@ Registers an observer for HTTP Response Header events.
 
 **Examples**
 
-```TypeScript
 ### on("headersReceive")
 
 on(type: "headersReceive", callback: Callback<Object>): void
@@ -416,6 +503,15 @@ Atomic service API: This API can be used in atomic services since API version 11
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
+httpRequest.off("headersReceive");
 ```
 
 ## on("dataReceive")
@@ -441,7 +537,6 @@ Registers an observer for events indicating receiving of HTTP streaming response
 
 **Examples**
 
-```TypeScript
 ### on("dataReceive")
 
 on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
@@ -453,6 +548,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceive", (data: ArrayBuffer) => {
+  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
+});
+httpRequest.off("dataReceive");
 ```
 
 ## on("dataEnd")
@@ -478,7 +582,6 @@ Registers an observer for events indicating completion of receiving HTTP streami
 
 **Examples**
 
-```TypeScript
 ### on("dataEnd")
 
 on(type: "dataEnd", callback: Callback<void>): void
@@ -490,6 +593,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataEnd", () => {
+  console.info("Receive dataEnd !");
+});
+httpRequest.off("dataEnd");
 ```
 
 ## on('dataReceiveProgress')
@@ -515,7 +627,6 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 
 **Examples**
 
-```TypeScript
 ### on('dataReceiveProgress')
 
 on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
@@ -527,6 +638,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
+  console.info("dataReceiveProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataReceiveProgress");
 ```
 
 ## on('dataSendProgress')
@@ -552,7 +672,6 @@ Registers an observer for events indicating progress of sending HTTP requests.
 
 **Examples**
 
-```TypeScript
 ### on('dataSendProgress')
 
 on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
@@ -564,6 +683,15 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
+  console.info("dataSendProgress:" + JSON.stringify(data));
+});
+httpRequest.off("dataSendProgress");
 ```
 
 ## once("headersReceive")
@@ -589,7 +717,6 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 
 **Examples**
 
-```TypeScript
 ### once("headersReceive")
 
 once(type: "headersReceive", callback: Callback<Object>): void
@@ -601,6 +728,14 @@ Atomic service API: This API can be used in atomic services since API version 15
 System capability: SystemCapability.Communication.NetStack
 
 Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.once("headersReceive", (header: Object) => {
+  console.info("header: " + JSON.stringify(header));
+});
 ```
 
 ## request
@@ -681,7 +816,6 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 **Examples**
 
-```TypeScript
 ### request
 
 request(url: string, callback: AsyncCallback<HttpResponse>): void
@@ -703,6 +837,22 @@ Parameters
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Result:' + data.result);
+    console.info('code:' + data.responseCode);
+    console.info('type:' + JSON.stringify(data.resultType));
+    console.info('header:' + JSON.stringify(data.header));
+    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  } else {
+    console.error('error:' + JSON.stringify(err));
+  }
+});
 ```
 
 <a id="request-1"></a>
@@ -786,7 +936,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
 ### request
 
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>):void
@@ -808,6 +957,47 @@ Parameters
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+  // You are advised to use the body field to transfer the request body content. The specific format needs to be negotiated with the server.
+  body: 'data to send', // Supported since API version 26.
+  // You are advised to use the queryParams field to transfer URL parameters. The value can be a string or an object.
+  queryParams: { scene: 'request-demo', page: 1 }, // Supported since API version 26.
+    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add the header field based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000, // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. The system proxy is used by default. If this parameter is set to false, no proxy is used. This field is supported since API version 10.
+};
+
+httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Result:' + data.result);
+    console.info('code:' + data.responseCode);
+    console.info('type:' + JSON.stringify(data.resultType));
+    console.info('header:' + JSON.stringify(data.header));
+    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  } else {
+    console.error('error:' + JSON.stringify(err));
+  }
+});
 ```
 
 <a id="request-2"></a>
@@ -896,7 +1086,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
 ### request
 
 request(url: string, options? : HttpRequestOptions): Promise<HttpResponse>
@@ -920,6 +1109,36 @@ Return value
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data:http.HttpResponse) => {
+  console.info('Result:' + data.result);
+  console.info('code:' + data.responseCode);
+  console.info('type:' + JSON.stringify(data.resultType));
+  console.info('header:' + JSON.stringify(data.header));
+  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+  console.info('header.content-Type:' + data.header);
+  console.info('header.Status-Line:' + data.header);
+}).catch((err:Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
 ```
 
 ## requestInStream
@@ -986,7 +1205,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
 ### requestInStream
 
 requestInStream(url: string, callback: AsyncCallback<number>): void
@@ -1004,6 +1222,19 @@ Parameters
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) => {
+  if (!err) {
+    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
+  } else {
+    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+  }
+})
 ```
 
 <a id="requestinstream-1"></a>
@@ -1073,7 +1304,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
 ### requestInStream
 
 requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
@@ -1091,6 +1321,41 @@ Parameters
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send', // Since API version 26, you are advised to use the body field to transfer the request body content. The specific format needs to be negotiated with the server.
+    expectDataType: http.HttpDataType.STRING, // Optional. This field specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add the header field based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000, // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. The system proxy is used by default. If this parameter is set to false, no proxy is used. This field is supported since API version 10.
+};
+httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
+  if (!err) {
+    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
+  } else {
+    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+  }
+})
 ```
 
 <a id="requestinstream-2"></a>
@@ -1165,7 +1430,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-```TypeScript
 ### requestInStream
 
 requestInStream(url: string, options? : HttpRequestOptions): Promise<number>
@@ -1185,6 +1449,30 @@ Return value
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.requestInStream("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data: number) => {
+  console.info("requestInStream OK!" + data);
+}).catch((err: Error) => {
+  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+});
 ```
 
 ## requestSync
@@ -1270,7 +1558,6 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 **Examples**
 
-```TypeScript
 ### requestSync
 
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
@@ -1296,4 +1583,43 @@ Return value
 Error codes
 
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
+    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
+    extraData: 'data to send',
+    expectDataType: http.HttpDataType.STRING, // Optional. This field specifies the type of the return data.
+    usingCache: true, // Optional. The default value is true.
+    priority: 1, // Optional. The default value is 1.
+    // You can add the header field based on service requirements.
+    header: new Header('application/json'),
+    readTimeout: 60000, // Optional. The default value is 60000, in ms.
+    connectTimeout: 60000, // Optional. The default value is 60000, in ms.
+    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
+    usingProxy: false, // Optional. The system proxy is used by default. If this parameter is set to false, no proxy is used. This field is supported since API version 10.
+};
+let url = "EXAMPLE_URL"; // Access URL.
+try {
+  let data: http.HttpResponse = httpRequest.requestSync(url, options);
+  console.info('Result:' + data.result);
+  console.info('code:' + data.responseCode);
+  console.info('type:' + JSON.stringify(data.resultType));
+  console.info('header:' + JSON.stringify(data.header));
+  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
+} catch (err) {
+  console.error('error:' + JSON.stringify(err));
+}
+httpRequest.destroy();
 ```

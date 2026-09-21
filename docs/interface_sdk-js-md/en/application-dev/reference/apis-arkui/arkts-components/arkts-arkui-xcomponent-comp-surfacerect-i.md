@@ -11,7 +11,7 @@ Describes the rectangle of the surface held by the **XComponent**.
 > The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the
 > [setXComponentSurfaceRect](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither
 > [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor
-> padding is set.
+> [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) is set.
 > 
 > Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may
 > lead to rendering issues.

@@ -4,7 +4,7 @@
 interface AudioVolumeGroupManager
 ```
 
-管理音频组音量。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
+管理音频组音量，支持设置和调节指定音量流、控制静音状态、设置铃声模式等。适用于需要对特定音量组进行独立管理、实现铃声模式切换、调节系统音量的场景。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。
 
 **起始版本：** 9
 
@@ -747,7 +747,7 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
+| Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
 
 **示例**
 
@@ -917,7 +917,7 @@ try {
 isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定音量流静音状态。使用callback异步回调。
+获取指定音量类型静音状态。使用callback异步回调。
 
 > **说明：** 
 > 
@@ -937,7 +937,7 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取音量静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 **示例**
 
@@ -961,7 +961,7 @@ audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError,
 isMute(volumeType: AudioVolumeType): Promise<boolean>
 ```
 
-获取指定音量流是否被静音。使用Promise异步回调。
+获取指定音量类型静音状态。使用Promise异步回调。
 
 > **说明：** 
 > 
@@ -1006,7 +1006,7 @@ audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA).then((isMute: boolea
 isMuteSync(volumeType: AudioVolumeType): boolean
 ```
 
-获取指定音量流是否被静音。同步返回结果。
+获取指定音量类型静音状态。同步返回结果。
 
 > **说明：** 
 > 
@@ -1031,7 +1031,7 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 流静音状态。返回true表示静音，返回false表示非静音。 |
+| boolean | 音量是否为静音状态。返回true表示静音，返回false表示非静音。 |
 
 **错误码：**
 
@@ -1085,7 +1085,7 @@ console.info(`Succeeded in checking whether the volume is unadjustable, isVolume
 off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 ```
 
-取消监听铃声模式变化事件。使用callback异步回调。
+取消监听铃声模式变化事件。
 
 **起始版本：** 18
 
@@ -1095,8 +1095,8 @@ off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当取消监听铃声模式变化事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | 回调函数，返回变化后的铃音模式。 |
+| type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('ringerModeChange')](#onringermodechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -1126,7 +1126,7 @@ audioVolumeGroupManager.off('ringerModeChange', ringerModeChangeCallback);
 off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 ```
 
-取消监听系统麦克风状态更改事件。使用callback异步回调。
+取消监听系统麦克风状态更改事件。
 
 **起始版本：** 12
 
@@ -1136,8 +1136,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'，当取消监听系统麦克风状态更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | 回调函数，返回变更后的麦克风状态。 |
+| type | 'micStateChange' | 是 | 事件回调类型，支持的事件为'micStateChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('micStateChange')](#onmicstatechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -1303,7 +1303,7 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

@@ -36,7 +36,7 @@ daysOfWeek?: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** daysOfWeek
+**替代接口：** [daysOfWeek](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#daysofweek)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -54,7 +54,7 @@ hour: number
 
 **废弃版本：** 9
 
-**替代接口：** hour
+**替代接口：** [hour](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#hour)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -72,6 +72,6 @@ minute: number
 
 **废弃版本：** 9
 
-**替代接口：** minute
+**替代接口：** [minute](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#minute)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

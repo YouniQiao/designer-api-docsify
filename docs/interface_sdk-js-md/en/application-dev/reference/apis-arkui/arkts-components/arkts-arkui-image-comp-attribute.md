@@ -10,7 +10,7 @@ The **Image** component is usually used to display images in applications. It su
 
 > - This component supports the TIFF image format since API version 23.
 > 
-> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused state. For instructions on how to set focus, see [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).By default, the **Image** component is not focusable. To enable it to gain focus, set both the focusable and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch) attributes to
+> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused state. For instructions on how to set focus, see [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).By default, the **Image** component is not focusable. To enable it to gain focus, set both the [focusable](arkts-arkui-common-comp-commonmethod-c.md#focusable) and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch) attributes to
 > **true**.
 > 
 > - The **Image** component supports SVG image sources. For details about SVG tags, see [SVG Tags](arkts-arkui-common-comp.md#common).
@@ -103,7 +103,7 @@ Sets whether to enable anti-aliasing for the edges of a pixel map image. If the 
 
 > **NOTE:** 
 > 
-> If the backgroundColor attribute is set for an image,
+> If the [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor) attribute is set for an image,
 > setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the
 > background color.
 > 
@@ -315,7 +315,7 @@ Images to be analyzed must be static, non-vector images. That is, SVG and GIF im
 
 The [alt](#alt) placeholder image does not support analysis. The [objectRepeat](#objectrepeat) attribute supports analysis only when it is set to **ImageRepeat.NoRepeat**. Analysis is not supported when the [obscured](arkts-arkui-common-comp-commonmethod-c.md#obscured) attribute is enabled.
 
-Analysis is performed based on the complete original image. Even if the settings of the clip, margin, borderRadius, position, and [objectFit](#objectfit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](#rendermode), analysis will still be conducted on the complete original image. The [copyOption](#copyoption) attribute does not affect the AI image analyzer functionality.
+Analysis is performed based on the complete original image. Even if the settings of the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip), [margin](arkts-arkui-common-comp-commonmethod-c.md#margin), [borderRadius](arkts-arkui-common-comp-commonmethod-c.md#borderradius), [position](arkts-arkui-common-comp-commonmethod-c.md#position), and [objectFit](#objectfit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](#rendermode), analysis will still be conducted on the complete original image. The [copyOption](#copyoption) attribute does not affect the AI image analyzer functionality.
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
@@ -323,7 +323,7 @@ This attribute does not take effect when the parameter type of the component is 
 > 
 > - The **ohos.permission.INTERNET** permission is required.
 > 
-> - This API can be called within attributeModifier since API version 12.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -1045,7 +1045,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 

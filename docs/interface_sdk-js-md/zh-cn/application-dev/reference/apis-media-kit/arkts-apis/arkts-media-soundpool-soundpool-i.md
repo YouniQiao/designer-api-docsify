@@ -12,9 +12,7 @@ export declare interface SoundPool
 > 
 > - on('loadComplete')：监听资源加载完成。建议开发者监听此回调以确保音频在加载完成后进行播放。
 > 
-> -
-> on('playFinishedWithStreamId')：监听播
-> 放完成，同时返回播放结束的音频的streamId。
+> - on('playFinishedWithStreamId')：监听播放完成，同时返回播放结束的音频的streamId。
 > 
 > - on('playFinished')：监听播放完成。
 > 

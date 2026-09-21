@@ -50,7 +50,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
@@ -104,7 +104,7 @@ Defines the callback of the custom transition animation.
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -214,7 +214,7 @@ Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfig
 enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 ```
 
-Sets whether to enable the linkage between the [onShown](arkts-arkui-navdestination-comp-attribute.md#onshown) and onHidden lifecycle callbacks of the NavDestination page and the full-modal triggering.
+Sets whether to enable the linkage between the [onShown](arkts-arkui-navdestination-comp-attribute.md#onshown) and [onHidden](arkts-arkui-navdestination-comp-attribute.md#onhidden) lifecycle callbacks of the NavDestination page and the full-modal triggering.
 
 **Since:** 21
 
@@ -434,7 +434,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change
@@ -668,10 +668,10 @@ Sets whether the **Navigation** component is recoverable. If set to recoverable,
 
 > **NOTE:** 
 > 
-> 1. For this API to work properly, you must first set the universal attribute id of the
+> 1. For this API to work properly, you must first set the universal attribute [id](arkts-arkui-common-comp-commonmethod-c.md#id) of the
 > **Navigation** component.
 > 
-> 2. This API must be used together with the recoverable API of
+> 2. This API must be used together with the [recoverable](arkts-arkui-navdestination-comp-attribute.md#recoverable) API of
 > **NavDestination**.
 > 
 > 3. Non-serializable information, such as non-serializable parameters and custom **onPop**, is discarded and cannot be restored during the recovery process.
@@ -765,7 +765,7 @@ Sets the style of the system status bar when the home page of the **Navigation**
 > 
 > 9. The status bar style set by **Navigation** or **NavDestination** does not apply in non-fullscreen windows.
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -791,7 +791,7 @@ Sets the page title.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 8
 
@@ -860,7 +860,7 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 > 
 > The following are not allowed: modify the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, change the animation effects through the **effectStrategy** attribute, or change

@@ -60,7 +60,7 @@ The number of the grid items to be cached before and after the currently display
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**.<br>When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
+| value | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**.<br>When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
 
 <a id="cachedcount-1"></a>
 
@@ -72,7 +72,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of grid items to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns. This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 **Since:** 14
 
@@ -730,11 +730,11 @@ This event is triggered when either of the following conditions is met:
 
 1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
 2. The **Grid** component scrolls by inertia.
-3. Call the fling API to trigger scrolling.
+3. Call the [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) API to trigger scrolling.
 
 This event is not triggered in the following scenarios:
 
-1. A scroll control API other than fling is called.
+1. A scroll control API other than [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) is called.
 2. The out-of-bounds bounce effect is active.
 3. The scrollbar is dragged.
 

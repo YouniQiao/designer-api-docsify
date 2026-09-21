@@ -43,7 +43,7 @@ get(key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | 是 | 回调函数。返回获取查询的值。 |
 
 **错误码：**
 
@@ -186,7 +186,7 @@ get(key: string): Promise<boolean | string | number | Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Promise对象。返回获取查询的值，值的类型取决于存储时的数据类型。 |
+| Promise&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Promise对象。返回获取查询的值，值的类型取决于存储时的数据类型。 |
 
 **错误码：**
 
@@ -334,7 +334,7 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 | key | string | 是 | 要查询数据的键名，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的数据类型），失败时返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | 是 | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的数据类型），失败时返回错误对象。 |
 
 **错误码：**
 
@@ -487,7 +487,7 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Promise对象。返回匹配给定条件的值，值的类型取决于存储时的数据类型。 |
+| Promise&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Promise对象。返回匹配给定条件的值，值的类型取决于存储时的数据类型。 |
 
 **错误码：**
 

@@ -1199,8 +1199,23 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-```TypeScript
 能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
 ```
 
 ## migrateFile

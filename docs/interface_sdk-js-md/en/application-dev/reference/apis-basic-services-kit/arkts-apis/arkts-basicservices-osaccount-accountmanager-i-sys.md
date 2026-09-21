@@ -55,8 +55,25 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
 Activate OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.activateOsAccount(localId, (err: BusinessError)=>{
+    if (err) {
+      console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('activateOsAccount successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="activateosaccount-1"></a>
@@ -105,8 +122,23 @@ Activates an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 Activate OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.activateOsAccount(localId).then(() => {
+    console.info('activateOsAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="activateosaccount-2"></a>
@@ -159,8 +191,24 @@ Currently, cross-logical-display activation is not supported. That is, you canno
 
 **Examples**
 
-```TypeScript
 Activate the OS account 100 on the logical screen 0.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let displayId: number = 0;
+try {
+  accountManager.activateOsAccount(localId, displayId).then(() => {
+    console.info('activateOsAccount with displayId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
+}
 ```
 
 ## bindDomainAccount
@@ -542,8 +590,23 @@ Deactivates an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 Deactivate OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.deactivateOsAccount(localId).then(() => {
+    console.info('deactivateOsAccount successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`deactivateOsAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`deactivateOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## getBundleIdForUid
@@ -744,8 +807,23 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 
 **Examples**
 
-```TypeScript
 Obtain all constraints of OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getEnabledOsAccountConstraints(localId).then((constraints: string[]) => {
+    console.info('getEnabledOsAccountConstraints, constraints: ' + constraints);
+  }).catch((err: BusinessError) => {
+    console.error(`getEnabledOsAccountConstraints err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getEnabledOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## getForegroundOsAccountDisplayId
@@ -1015,8 +1093,25 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 
 **Examples**
 
-```TypeScript
 Obtain the profile photo of OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId, (err: BusinessError, photo: string)=>{
+    if (err) {
+      console.error(`getOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('get photo:' + photo + ' by localId: ' + localId);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="getosaccountprofilephoto-1"></a>
@@ -1062,8 +1157,23 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
 Obtain the profile photo of OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
+    console.info('getOsAccountProfilePhoto: ' + photo);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="getosaccounttype-2"></a>
@@ -1266,8 +1376,23 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
 Check whether OS account 100 is activated.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.isOsAccountActivated(localId).then((isActivated: boolean) => {
+    console.info('isOsAccountActivated successfully, isActivated: ' + isActivated);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="isosaccountconstraintenabled-1"></a>
@@ -1313,8 +1438,24 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 
 **Examples**
 
-```TypeScript
 Check whether OS account 100 is forbidden to use Wi-Fi.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.isOsAccountConstraintEnabled(localId, constraint).then((isEnabled: boolean) => {
+    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="isosaccountunlocked-1"></a>
@@ -2110,8 +2251,25 @@ Queries information about the OS account of the given ID. This API uses an async
 
 **Examples**
 
-```TypeScript
 Query information about OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.queryOsAccountById(localId, (err: BusinessError, accountInfo: osAccount.OsAccountInfo)=>{
+    if (err) {
+      console.error(`queryOsAccountById exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('queryOsAccountById accountInfo:' + JSON.stringify(accountInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="queryosaccountbyid-1"></a>
@@ -2157,8 +2315,23 @@ Queries information about the OS account of the given ID. This API uses a promis
 
 **Examples**
 
-```TypeScript
 Query information about OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## removeOsAccount
@@ -2395,8 +2568,26 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
 Disable Wi-Fi for OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let constraint: string = 'constraint.wifi';
+try {
+  accountManager.setOsAccountConstraints(localId, [constraint], true, (err: BusinessError) => {
+    if (err) {
+      console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountConstraints successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="setosaccountconstraints-1"></a>
@@ -2445,8 +2636,23 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
 Remove the constraint on the use of Wi-Fi for OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
+    console.info('setOsAccountConstraints successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## setOsAccountName
@@ -2487,8 +2693,26 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
 Set the name of OS account 100 to demoName.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let name: string = 'demoName';
+try {
+  accountManager.setOsAccountName(localId, name, (err: BusinessError) => {
+    if (err) {
+      console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountName successfully');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="setosaccountname-1"></a>
@@ -2536,8 +2760,24 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 Set the name of OS account 100 to demoName.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let name: string = 'testName';
+try {
+  accountManager.setOsAccountName(localId, name).then(() => {
+    console.info('setOsAccountName successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## setOsAccountProfilePhoto
@@ -2578,8 +2818,29 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 
 **Examples**
 
-```TypeScript
 Set a profile photo for OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
+'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
+'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
+'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
+try {
+  accountManager.setOsAccountProfilePhoto(localId, photo, (err: BusinessError)=>{
+    if (err) {
+      console.error(`setOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setOsAccountProfilePhoto successful.');
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 <a id="setosaccountprofilephoto-1"></a>
@@ -2627,8 +2888,27 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
 Set a profile photo for OS account 100.
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
+'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
+'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
+'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
+try {
+  accountManager.setOsAccountProfilePhoto(localId, photo).then(() => {
+    console.info('setOsAccountProfilePhoto success');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## setOsAccountType

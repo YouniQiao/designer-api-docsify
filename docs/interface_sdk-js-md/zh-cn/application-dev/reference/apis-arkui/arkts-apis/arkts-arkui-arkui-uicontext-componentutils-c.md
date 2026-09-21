@@ -38,7 +38,7 @@ getRectangleById(id: string): componentUtils.ComponentInfo
 > 该接口需要在目标组件布局完成以后获取目标组件区域大小信息，建议在[布局回调](arkts-arkui-arkui-inspector.md)中使用该接口。如果组件动态创建但未挂载组件树，则无法通过该接口获取正常的
 > 组件信息。因为此时组件一般未经过UI框架的测量与布局，请确保组件已挂载到组件树后再尝试获取组件信息。
 > 
-> 该接口返回的组件位置为布局位置，某些属性计算不支持，如位置设置类offset、markAnchor、[Edges](arkts-arkui-graphics-edges-i.md) 和[LocalizedEdges](arkts-arkui-localizededges-i.md)类型的position，以及图形变换类rotate、translate、scale、transform。可使用替代接口[getPositionToWindowWithTransform](arkts-arkui-framenode-c.md#getpositiontowindowwithtransform)，获取组件相对于窗口且带有绘制属性的位置偏移。
+> 该接口返回的组件位置为布局位置，某些属性计算不支持，如位置设置类[offset](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#offset)、[markAnchor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#markanchor)、[Edges](arkts-arkui-graphics-edges-i.md) 和[LocalizedEdges](arkts-arkui-localizededges-i.md)类型的[position](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#position)，以及图形变换类[rotate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#rotate)、[translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate)、[scale](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#scale)、[transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform)。可使用替代接口[getPositionToWindowWithTransform](arkts-arkui-framenode-c.md#getpositiontowindowwithtransform)，获取组件相对于窗口且带有绘制属性的位置偏移。
 
 **起始版本：** 10
 

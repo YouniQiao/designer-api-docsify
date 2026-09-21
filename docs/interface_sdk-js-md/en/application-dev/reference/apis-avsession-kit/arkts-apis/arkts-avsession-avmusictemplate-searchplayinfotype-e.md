@@ -67,3 +67,31 @@ play video list.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## PLAY_KARAOKE
+
+```TypeScript
+PLAY_KARAOKE = 'playKaroke'
+```
+
+K song on demand
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## PLAY_KARAOKE_LIST
+
+```TypeScript
+PLAY_KARAOKE_LIST = 'playKarokeList'
+```
+
+K song playlist on-demand
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate

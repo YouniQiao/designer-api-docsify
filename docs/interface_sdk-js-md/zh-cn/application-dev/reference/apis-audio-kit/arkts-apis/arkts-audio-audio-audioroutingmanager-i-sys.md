@@ -4,7 +4,7 @@
 interface AudioRoutingManager
 ```
 
-音频路由管理。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
+音频路由管理，支持选择输入输出设备、管理设备过滤、查询首选设备等。适用于需要灵活控制音频流设备路由、实现特定应用或音频流的设备选择、或排除特定设备的场景。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。
 
 **起始版本：** 9
 
@@ -200,7 +200,7 @@ getPreferredInputDeviceByFilter(filter: AudioCapturerFilter): AudioDeviceDescrip
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | The preferred devices. |
+| [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 返回音频输入设备信息。 |
 
 **错误码：**
 
@@ -293,7 +293,7 @@ async function selectOutputDeviceByFilter(){
 off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听指定过滤条件下最高优先级输出设备变化事件。使用callback异步回调。
+取消订阅指定过滤条件下首选输出设备变化事件。
 
 **起始版本：** 21
 
@@ -305,8 +305,8 @@ off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDevice
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'preferredOutputDeviceChangeByFilter' | 是 | 要监听的事件类型。仅支持 preferredOutputDeviceChangeByFilter 事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 订阅中使用的回调函数。 |
+| type | 'preferredOutputDeviceChangeByFilter' | 是 | 事件回调类型，支持的事件为'preferredOutputDeviceChangeByFilter' |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 待取消的首选输出设备变化回调函数，不填写时取消该事件的所有回调。 |
 
 **错误码：**
 
@@ -619,7 +619,7 @@ selectInputDevice(inputAudioDevices: AudioDeviceDescriptors): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -676,7 +676,7 @@ selectInputDeviceByFilter(filter: AudioCapturerFilter, inputAudioDevices: AudioD
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -803,7 +803,7 @@ selectOutputDevice(outputAudioDevices: AudioDeviceDescriptors): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -924,7 +924,7 @@ selectOutputDeviceByFilter(filter: AudioRendererFilter, outputAudioDevices: Audi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

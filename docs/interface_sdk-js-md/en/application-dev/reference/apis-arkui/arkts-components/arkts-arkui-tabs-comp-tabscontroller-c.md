@@ -76,7 +76,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 > **NOTE:** 
 > 
-> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first preloading in the onAppear lifecycle of **Tabs**.
+> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first preloading in the [onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear) lifecycle of **Tabs**.
 > 
 > - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling this API.
 > 

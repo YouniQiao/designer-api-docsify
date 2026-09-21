@@ -46,16 +46,120 @@ GridItem(value?: GridItemOptions)
 
 ## 示例
 
-```TypeScript
 ### 示例1（GridItem设置自身位置）
 
 GridItem通过设置合理的rowStart、rowEnd、columnStart、columnEnd属性来设置自身位置。需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](ts-container-grid.md#gridlayoutoptions10对象说明)参数，详细可参考Grid的[示例1（固定行列Grid）](ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GridItemExample {
+  @State numbers: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
+
+  build() {
+    Column() {
+      Grid() {
+        GridItem() {
+          Text('4')
+            .fontSize(16)
+            .backgroundColor(0xFAEEE0)
+            .width('100%')
+            .height('100%')
+            .textAlign(TextAlign.Center)
+        }.rowStart(1).rowEnd(2).columnStart(1).columnEnd(2) // 同时设置合理的行列号
+
+        ForEach(this.numbers, (item: string) => {
+          GridItem() {
+            Text(item)
+              .fontSize(16)
+              .backgroundColor(0xF9CF93)
+              .width('100%')
+              .height('100%')
+              .textAlign(TextAlign.Center)
+          }
+        }, (item: string) => item)
+
+        GridItem() {
+          Text('5')
+            .fontSize(16)
+            .backgroundColor(0xDBD0C0)
+            .width('100%')
+            .height('100%')
+            .textAlign(TextAlign.Center)
+        }.columnStart(1).columnEnd(4) // 未设置行号，不按columnStart(1)定位；此处从第5行、索引为0的列开始并跨4列布局
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr 1fr')
+      .rowsTemplate('1fr 1fr 1fr 1fr 1fr')
+      .width('90%').height(300)
+    }.width('100%').margin({ top: 5 })
+  }
+}
+```
+
 ### 示例2（设置GridItem样式）
 
 使用GridItemOptions设置GridItem样式。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GridItemExample {
+  @State numbers: string[] = ['0', '1', '2'];
+
+  build() {
+    Column({ space: 5 }) {
+      Grid() {
+        ForEach(this.numbers, (rowItem: string) => {
+          ForEach(this.numbers, (item: string) => {
+            GridItem({ style: GridItemStyle.NONE }) {
+              Text(item)
+                .fontSize(16)
+                .width('100%')
+                .height('100%')
+                .textAlign(TextAlign.Center)
+                .focusable(true)
+            }
+            .backgroundColor(0xF9CF93)
+          }, (item: string) => item)
+        }, (rowItem: string) => rowItem)
+      }
+      .columnsTemplate('1fr 1fr 1fr')
+      .rowsTemplate('1fr 1fr')
+      .columnsGap(4)
+      .rowsGap(4)
+      .width('60%')
+      .backgroundColor(0xFAEEE0)
+      .height(150)
+      .padding(4)
+
+      Grid() {
+        ForEach(this.numbers, (rowItem: string) => {
+          ForEach(this.numbers, (item: string) => {
+            GridItem({ style: GridItemStyle.PLAIN }) {
+              Text(item)
+                .fontSize(16)
+                .width('100%')
+                .height('100%')
+                .textAlign(TextAlign.Center)
+                .focusable(true)
+            }
+            .backgroundColor(0xF9CF93)
+          }, (item: string) => item)
+        }, (rowItem: string) => rowItem)
+      }
+      .columnsTemplate('1fr 1fr 1fr')
+      .rowsTemplate('1fr 1fr')
+      .columnsGap(4)
+      .rowsGap(4)
+      .width('60%')
+      .backgroundColor(0xFAEEE0)
+      .height(150)
+      .padding(4)
+    }.width('100%').margin({ top: 5 })
+  }
+}
 ```

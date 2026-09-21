@@ -1468,12 +1468,77 @@ startAbilityByCall(want: Want): Promise<Caller>
 
 **示例**
 
-```TypeScript
 后台启动：
-```
 
 ```TypeScript
+import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let caller: Caller;
+    // 后台启动Ability，不配置parameters
+    let wantBackground: Want = {
+      bundleName: 'com.example.myservice',
+      moduleName: 'entry',
+      abilityName: 'EntryAbility',
+      deviceId: ''
+    };
+
+    try {
+      this.context.startAbilityByCall(wantBackground)
+        .then((obj: Caller) => {
+          // 执行正常业务
+          caller = obj;
+          console.info('startAbilityByCall succeed');
+        }).catch((error: BusinessError) => {
+        // 处理业务逻辑错误
+        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
+      });
+    } catch (paramError) {
+      // 处理入参错误异常
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 前台启动：
+
+```TypeScript
+import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let caller: Caller;
+    // 前台启动Ability，将parameters中的'ohos.aafwk.param.callAbilityToForeground'配置为true
+    let wantForeground: Want = {
+      bundleName: 'com.example.myservice',
+      moduleName: 'entry',
+      abilityName: 'EntryAbility',
+      deviceId: '',
+      parameters: {
+        'ohos.aafwk.param.callAbilityToForeground': true
+      }
+    };
+
+    try {
+      this.context.startAbilityByCall(wantForeground)
+        .then((obj: Caller) => {
+          // 执行正常业务
+          caller = obj;
+          console.info('startAbilityByCall succeed');
+        }).catch((error: BusinessError) => {
+        // 处理业务逻辑错误
+        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
+      });
+    } catch (paramError) {
+      // 处理入参错误异常
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
 ```
 
 ## startAbilityByCallWithAccount

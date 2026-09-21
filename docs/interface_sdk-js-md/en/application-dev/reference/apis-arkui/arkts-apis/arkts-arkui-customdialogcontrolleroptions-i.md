@@ -307,7 +307,7 @@ You can set separate radii for the four corners.
 
 Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }**
 
-Note: The default corner radius of the background is 32 vp. This attribute must be used together with the borderRadius attribute.
+Note: The default corner radius of the background is 32 vp. This attribute must be used together with the [borderRadius](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderradius) attribute.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 

@@ -18,7 +18,7 @@ declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 points(value: Array<any>)
 ```
 
-设置折线经过坐标点列表，支持通过attributeModifier动态设置属性。
+设置折线经过坐标点列表，支持通过[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性。
 
 **起始版本：** 7
 

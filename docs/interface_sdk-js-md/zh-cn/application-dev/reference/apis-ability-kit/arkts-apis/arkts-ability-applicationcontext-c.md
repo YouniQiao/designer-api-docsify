@@ -898,8 +898,34 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 
 **示例**
 
-```TypeScript
 假定已使用[ApplicationContext.on('applicationStateChange')](#onapplicationstatechange)方法注册名为applicationStateChangeCallback回调，下面示例展示如何取消对应的事件监听。
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  },
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+};
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 本例中的callback参数取值为ApplicationStateChangeCallback，需要替换为实际值。
+      // 如果callback字段不传入参数，则取消所有已注册的该类型事件的监听。
+      applicationContext.off('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
 ```
 
 ## offSystemConfigurationUpdated

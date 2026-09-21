@@ -48,7 +48,6 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 **Examples**
 
-```TypeScript
 showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>):void
 
 Creates and displays an action menu. This API uses an asynchronous callback to return the result.
@@ -70,14 +69,111 @@ Error codes
 For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
 
 Example 1
-```
 
 ```TypeScript
+import { promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  promptAction.showActionMenu({
+    title: 'Title Info',
+    buttons: [
+      {
+        text: 'item1',
+        color: '#666666'
+      },
+      {
+        text: 'item2',
+        color: '#000000'
+      },
+    ]
+  }, (err, data) => {
+    if (err) {
+      console.info('showActionMenu err: ' + err);
+      return;
+    }
+    console.info('showActionMenu success callback, click button: ' + data.index);
+  })
+} catch (error) {
+  let message = (error as BusinessError).message
+  let code = (error as BusinessError).code
+  console.error(`showActionMenu args error code is ${code}, message is ${message}`);
+};
+```
+
 
 
 Example 2
 
 This example demonstrates how to use the onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear properties of ActionMenuOptions to implement the action menu lifecycle callbacks, supported since API version 19.
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State isShown: boolean = false
+  @State textColor: Color = Color.Black
+  @State blueColor: Color = Color.Blue
+
+  @State onWillAppear: boolean = false
+  @State onDidAppear: boolean = false
+  @State onWillDisappear: boolean = false
+  @State onDidDisappear: boolean = false
+  build() {
+    Column({ space: 50 }) {
+      Text('onWillAppear').fontColor(this.onWillAppear ? this.blueColor : this.textColor)
+      Text('onDidAppear').fontColor(this.onDidAppear ? this.blueColor : this.textColor)
+      Text('onWillDisappear').fontColor(this.onWillDisappear ? this.blueColor : this.textColor)
+      Text('onDidDisappear').fontColor(this.onDidDisappear ? this.blueColor : this.textColor)
+      Button('click')
+        .width(200)
+        .height(100)
+        .margin(100)
+        .fontColor(this.textColor)
+        .onClick(() => {
+          promptAction.showActionMenu({
+            title: 'showActionMenu Title Info',
+            buttons: [
+              {
+                text: 'item1',
+                color: '#666666'
+              },
+              {
+                text: 'item2',
+                color: '#000000'
+              },
+            ],
+            onWillAppear:() => {
+              console.info("promptAction menu cycle life onWillAppear");
+              this.onWillAppear = true;
+            },
+            onDidAppear:() => {
+              console.info("promptAction menu cycle life onDidAppear");
+              this.onDidAppear = true;
+            },
+            onWillDisappear:() => {
+              this.isShown = false;
+              console.info("promptAction menu cycle life onWillDisappear");
+              this.onWillDisappear = true;
+            },
+            onDidDisappear:() => {
+              console.info("promptAction menu cycle life onDidDisappear");
+              this.onDidDisappear = true;
+            }
+          })
+            .then(data => {
+              console.info('showActionMenu success, click button: ' + data.index);
+            })
+            .catch((err: Error) => {
+              console.info('showActionMenu error: ' + err);
+            })
+        })
+    }
+    .width('100%')
+  }
+}
 ```
 
 
@@ -130,7 +226,6 @@ Creates and displays an action menu in the given settings. This API uses a promi
 
 **Examples**
 
-```TypeScript
 showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 
 Creates and displays an action menu in the given settings. This API uses a promise to return the result.
@@ -152,4 +247,27 @@ Return value
 Error codes
 
 For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
+
+```TypeScript
+import { promptAction } from '@kit.ArkUI';
+
+promptAction.showActionMenu({
+  title: 'showActionMenu Title Info',
+  buttons: [
+    {
+      text: 'item1',
+      color: '#666666'
+    },
+    {
+      text: 'item2',
+      color: '#000000'
+    },
+  ]
+})
+  .then(data => {
+    console.info('showActionMenu success, click button: ' + data.index);
+  })
+  .catch((err: Error) => {
+    console.info('showActionMenu error: ' + err);
+  })
 ```

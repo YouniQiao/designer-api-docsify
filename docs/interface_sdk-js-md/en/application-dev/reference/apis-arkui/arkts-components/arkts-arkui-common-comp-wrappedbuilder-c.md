@@ -51,14 +51,3 @@ constructor(builder: (...args: Args) => void)
 | builder | (...args: Args) =&gt; void | Yes |  |
 
 **Examples**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// Use WrappedBuilder to wrap myBuilder.
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```

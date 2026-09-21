@@ -18,7 +18,7 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** addNotificationSlot
+**替代接口：** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -60,7 +60,7 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** addNotificationSlot
+**替代接口：** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

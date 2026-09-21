@@ -62,6 +62,23 @@ struct Index {
 }
 ```
 
-```TypeScript
 When @Type is used to decorate attributes of a nested class, only the custom class type is supported. If other class types are transferred, the persistence will fail.
+
+```TypeScript
+@ObservedV2
+class SampleChild {
+  @Trace id: number = 0;
+  count: number = 10;
+}
+
+@ObservedV2
+class Sample {
+  // Recommended method: Decorate the sampleChild attribute of the custom Sample class, whose type is SampleChild.
+  @Type(SampleChild)
+  @Trace sampleChild: SampleChild = new SampleChild();
+
+  // Not recommended. The type of the nested class of the decorated attributes is Array<number>.
+  @Type(Array<number>)
+  @Trace value: Array<Array<number>> = new Array();
+}
 ```

@@ -52,7 +52,7 @@ Sets the data that needs to be passed to the target page during redirection.
 
 **Deprecated since:** 13
 
-**Substitutes:** param
+**Substitutes:** [param](arkts-arkui-navigation-comp-navpathinfo-c.md#param)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

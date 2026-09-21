@@ -293,8 +293,63 @@ Specifies a clear animation host instance context via the UIContext object and t
 
 **Examples**
 
-```TypeScript
 This example shows how to use animateToImmediately to implement immediate delivery of an explicit animation through a UIContext object.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct AnimateToImmediatelyExample {
+  @State widthSize: number = 250
+  @State heightSize: number = 100
+  @State opacitySize: number = 0
+  private flag: boolean = true
+  uiContext: UIContext | null | undefined = this.getUIContext();
+
+  build() {
+    Column() {
+      Column()
+        .width(this.widthSize)
+        .height(this.heightSize)
+        .backgroundColor(Color.Green)
+        .opacity(this.opacitySize)
+      Button('change size')
+        .margin(30)
+        .onClick(() => {
+          if (this.flag) {
+            this.uiContext?.animateToImmediately({
+              delay: 0,
+              duration: 1000
+            }, () => {
+              this.opacitySize = 1
+            })
+            this.uiContext?.animateTo({
+              delay: 1000,
+              duration: 1000
+            }, () => {
+              this.widthSize = 150
+              this.heightSize = 60
+            })
+          } else {
+            this.uiContext?.animateToImmediately({
+              delay: 0,
+              duration: 1000
+            }, () => {
+              this.widthSize = 250
+              this.heightSize = 100
+            })
+            this.uiContext?.animateTo({
+              delay: 1000,
+              duration: 1000
+            }, () => {
+              this.opacitySize = 0
+            })
+          }
+          this.flag = !this.flag
+        })
+    }.width('100%').margin({ top: 5 })
+  }
+}
 ```
 
 ## applyDefaultImmersiveStrategy
@@ -349,9 +404,7 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 **Examples**
 
-```TypeScript
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-```
 
 ## bindTabsToScrollable
 
@@ -1364,9 +1417,7 @@ Get ComponentSnapshot.
 
 **Examples**
 
-```TypeScript
 See the example for [ComponentSnapshot](arkts-apis-uicontext-componentsnapshot.md).
-```
 
 ## getComponentUtils
 
@@ -1392,9 +1443,7 @@ get object ComponentUtils.
 
 **Examples**
 
-```TypeScript
 For the complete example, see [Example 1: Obtaining the ComponentUtils Object](arkts-arkui-arkui-componentutils.md#example-1-obtaining-the-componentutils-object).
-```
 
 ## getContextMenuController
 
@@ -1442,9 +1491,7 @@ Get object cursor controller.
 
 **Examples**
 
-```TypeScript
 See the example for [CursorController](arkts-apis-uicontext-cursorcontroller.md).
-```
 
 ## getDialogPresenter
 
@@ -1470,9 +1517,7 @@ Get the Dialog object.
 
 **Examples**
 
-```TypeScript
 See the example for [DialogPresenter](arkts-apis-uicontext-dialogpresenter.md).
-```
 
 ## getDragController
 
@@ -1498,9 +1543,7 @@ Get DragController.
 
 **Examples**
 
-```TypeScript
 See the example for [DragController](./arkts-apis-uicontext-dragcontroller.md).
-```
 
 ## getFilteredInspectorTree
 
@@ -1581,12 +1624,25 @@ struct ComponentPage {
 }
 ```
 
-```TypeScript
 When the "content" filter field is passed, the returned JSON string has the following structure:
-```
 
 ```TypeScript
+InsTree : {"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"Column","$ID":15,"type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{},"$children":[{"$type":"Button","$ID":16,"type":"build-in","$rect":"[293.00, 72.00],[427.00,132.00]","$debugLine":"","$attrs":{}},{"$type":"Button","$ID":18,"type":"build-in","$rect":"[237.00, 132.00],[484.00,192.00]","$debugLine":"","$attrs":{}}]}]}\
+InsTree -| type: root, ID: undefined
+InsTree --| type: Column, ID: 15
+InsTree ---| type: Button, ID: 16
+InsTree ---| type: Button, ID: 18
+```
+
 Since API version 20, when the "isLayoutInspector" filter field is passed, the returned JSON string structure includes an outer layer with "type" and "content" fields, where "content" contains the original JSON structure (as returned without this field), and the return value structure includes custom components. This JSON string structure is as follows:
+
+```TypeScript
+InsTree : {"type":"root","content":{"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"JsView","$ID":13,"type":"custom","state":{"observedPropertiesInfo":[],"viewInfo":{"componentName":"ComponentPage","id":14,"isV2":false,"isViewActive_":true}},"$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"{\"$line\":\"(0:0)\"}","viewTag":"ComponentPage","$attrs":{"viewKey":"13"},"$children":[{"$type":"Column","$ID":15, "type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{ ...
+InsTree -| type: root, ID: undefined
+InsTree --| type: JsView, ID: 13
+InsTree ---| type: Column, ID: 15
+InsTree ----| type: Button, ID: 16
+InsTree ----| type: Button, ID: 18
 ```
 
 ## getFilteredInspectorTreeById
@@ -1609,7 +1665,7 @@ Obtains the attributes of the specified component and its child components. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the target component. |
+| id | string | Yes | [ID](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) of the target component. |
 | depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of<br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
 | filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
@@ -1662,8 +1718,12 @@ struct ComponentPage {
 }
 ```
 
-```TypeScript
 This JSON string structure is as follows:
+
+```TypeScript
+result1: {"$type":"root","width":"1260.000000","height":"2720.000000","$resolution":"3.250000","$children":[{"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}]}
+result2: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
+result3: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
 ```
 
 ## getFocusController
@@ -1690,9 +1750,7 @@ Get FocusController.
 
 **Examples**
 
-```TypeScript
 See the example for [FocusController](arkts-apis-uicontext-focuscontroller.md).
-```
 
 ## getFont
 
@@ -1718,9 +1776,7 @@ Obtains a **Font** object.
 
 **Examples**
 
-```TypeScript
 See the example for [Font](arkts-apis-uicontext-font.md).
-```
 
 ## getFrameNodeById
 
@@ -1752,9 +1808,7 @@ Get FrameNode by id.
 
 **Examples**
 
-```TypeScript
 See Example of Obtaining the Root Node.
-```
 
 ## getFrameNodeByUniqueId
 
@@ -1928,8 +1982,22 @@ Obtains the avoidance mode of the virtual keyboard.
 
 **Examples**
 
-```TypeScript
 See [Example 4: Setting the Keyboard Avoidance Mode to Resize](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-4-setting-the-keyboard-avoidance-mode-to-resize), [Example 5: Setting Keyboard Avoidance Mode to Offset](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-5-setting-keyboard-avoidance-mode-to-offset), and [Example 6: Switching Avoidance Modes](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-6-switching-avoidance-modes).
+
+```TypeScript
+// EntryAbility.ets
+import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility{
+  onWindowStageCreate(windowStage: window.WindowStage) {
+
+      windowStage.loadContent('pages/Index', (err, data) => {
+        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
+        let currentKeyboardAvoidMode = uiContext.getKeyboardAvoidMode();
+        console.info("KeyboardAvoidMode:", JSON.stringify(currentKeyboardAvoidMode));
+      });
+    }
+}
 ```
 
 ## getLastFocusedUIContext
@@ -2062,9 +2130,7 @@ Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which 
 
 **Examples**
 
-```TypeScript
 See the example of the bind API in [Magnifier](arkts-apis-uicontext-magnifier.md).
-```
 
 ## getMaxFontScale
 
@@ -2090,8 +2156,20 @@ Get the max font scale.
 
 **Examples**
 
-```TypeScript
 Refer to the [configuration tag](../../../quick-start/app-configuration-file.md#configuration) and set the value of fontSizeMaxScale to "1.75".
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('getMaxFontScale').onClick(() => {
+        console.info('getMaxFontScale', this.getUIContext().getMaxFontScale().toFixed(2));
+      });
+    }
+  }
+}
 ```
 
 ## getMeasureUtils
@@ -2118,9 +2196,7 @@ Obtains a **MeasureUtils** object for text calculation.
 
 **Examples**
 
-```TypeScript
 See the example for [MeasureUtils](arkts-apis-uicontext-measureutils.md).
-```
 
 ## getMediaQuery
 
@@ -2146,9 +2222,7 @@ get object mediaQuery.
 
 **Examples**
 
-```TypeScript
 See the mediaquery Example.
-```
 
 ## getNavigationInfoByUniqueId
 
@@ -2180,9 +2254,7 @@ Get navigation information of the frameNode with uniqueId.
 
 **Examples**
 
-```TypeScript
 See the example of [getPageInfoByUniqueId](#getpageinfobyuniqueid).
-```
 
 ## getOverlayManager
 
@@ -2208,9 +2280,7 @@ Obtains the OverlayManager object.
 
 **Examples**
 
-```TypeScript
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-```
 
 ## getOverlayManagerOptions
 
@@ -2236,9 +2306,7 @@ Get object OverlayManagerOptions.
 
 **Examples**
 
-```TypeScript
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-```
 
 ## getPageInfoByUniqueId
 
@@ -2533,9 +2601,7 @@ Obtains a PromptAction object.
 
 **Examples**
 
-```TypeScript
 See the example for [PromptAction](arkts-apis-uicontext-promptaction.md).
-```
 
 ## getRouter
 
@@ -2561,9 +2627,7 @@ Obtains a Router object.
 
 **Examples**
 
-```TypeScript
 See the example for pushUrl.
-```
 
 ## getSharedLocalStorage
 
@@ -2654,9 +2718,7 @@ Get object smart gesture controller.
 
 **Examples**
 
-```TypeScript
 For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
-```
 
 ## getTextMenuController
 
@@ -2682,9 +2744,7 @@ Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.
 
 **Examples**
 
-```TypeScript
 See the example for [TextMenuController](arkts-apis-uicontext-textmenucontroller.md).
-```
 
 ## getUIInspector
 
@@ -2710,9 +2770,7 @@ Obtains the **UIInspector** object.
 
 **Examples**
 
-```TypeScript
 See the example for [UIInspector](./arkts-apis-uicontext-uiinspector.md).
-```
 
 ## getUIObserver
 
@@ -3160,8 +3218,20 @@ Checks whether current font scale follows the system.
 
 **Examples**
 
-```TypeScript
 Refer to the [configuration tag](../../../quick-start/app-configuration-file.md#configuration) and set the value of fontSizeScale to "followSystem".
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('isFollowingSystemFontScale').onClick(() => {
+        console.info('isFollowingSystemFontScale', this.getUIContext().isFollowingSystemFontScale());
+      });
+    }
+  }
+}
 ```
 
 ## keyframeAnimateTo
@@ -4227,8 +4297,21 @@ Sets the avoidance mode for the virtual keyboard.
 
 **Examples**
 
-```TypeScript
 See [Example 4: Setting the Keyboard Avoidance Mode to Resize](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-4-setting-the-keyboard-avoidance-mode-to-resize), [Example 5: Setting Keyboard Avoidance Mode to Offset](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-5-setting-keyboard-avoidance-mode-to-offset), and [Example 6: Switching Avoidance Modes](../arkui-ts/ts-universal-attributes-expand-safe-area.md#example-6-switching-avoidance-modes).
+
+```TypeScript
+// EntryAbility.ets
+import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility{
+  onWindowStageCreate(windowStage: window.WindowStage) {
+
+      windowStage.loadContent('pages/Index', (err, data) => {
+        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
+        uiContext.setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE);
+      });
+    }
+}
 ```
 
 ## setOverlayManagerOptions
@@ -4261,9 +4344,7 @@ Init OverlayManager.
 
 **Examples**
 
-```TypeScript
 See the example for [OverlayManager](arkts-apis-uicontext-overlaymanager.md).
-```
 
 ## setPixelRoundMode
 
@@ -4384,31 +4465,6 @@ Sets the text selection clear policy for text component. Default policy: **TextS
 | policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
 **Examples**
-
-```TypeScript
-import { TextSelectionClearPolicy } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .fontSize(20)
-        .margin(10)
-        .copyOption(CopyOptions.LocalDevice)
-      Button('Set Clear Policy')
-        .onClick(() => {
-          this.getUIContext()?.setTextSelectionClearPolicy(TextSelectionClearPolicy.CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## showActionSheet
 
@@ -4818,9 +4874,7 @@ Unbind tabs from nested scrollable container components.
 
 **Examples**
 
-```TypeScript
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-```
 
 ## unbindTabsFromScrollable
 
@@ -4847,9 +4901,7 @@ Unbind tabs from scrollable container component.
 
 **Examples**
 
-```TypeScript
 See the example for [bindTabsToScrollable](#bindtabstoscrollable).
-```
 
 ## updateBindSheet
 

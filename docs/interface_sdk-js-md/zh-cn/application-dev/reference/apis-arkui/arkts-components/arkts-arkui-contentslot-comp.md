@@ -36,6 +36,27 @@ ContentSlot(content: Content)
 
 ## 示例
 
-```TypeScript
 下面的示例展示了ContentSlot的基本用法。
+
+```TypeScript
+import { nativeNode } from 'libNativeNode.so'; // 开发者自己实现的so
+import { NodeContent, Content } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Parent {
+  private nodeContent: Content = new NodeContent();
+
+  aboutToAppear() {
+    // 通过C-API创建节点，并添加到管理器nodeContent上
+    nativeNode.createNativeNode(this.nodeContent);
+  }
+
+  build() {
+    Column() {
+      // 显示nodeContent管理器里存放的Native侧的组件
+      ContentSlot(this.nodeContent)
+    }
+  }
+}
 ```

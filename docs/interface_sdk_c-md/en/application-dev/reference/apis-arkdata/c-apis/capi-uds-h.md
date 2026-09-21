@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides uniform data struct(UDS).
+Defines the APIs and structs related to the uniform data structs. If the parameter type is char*, the string must end with a null character ('\0').
 
 **Library**: libudmf.so
 
@@ -20,11 +20,11 @@ Provides uniform data struct(UDS).
 | -- | -- | -- |
 | [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) | OH_UdsPlainText | Describes the unified data struct of plaintext. |
 | [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) | OH_UdsHyperlink | Describes the unified data struct of hyperlink. |
-| [OH_UdsHtml](capi-udmf-oh-udshtml.md) | OH_UdsHtml | Describes the unified data struct of html. |
+| [OH_UdsHtml](capi-udmf-oh-udshtml.md) | OH_UdsHtml | Defines a struct for the unified data of the Hypertext Markup Language (HTML) type. |
 | [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) | OH_UdsAppItem | Describes the unified data struct of open harmony application item. |
 | [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) | OH_UdsFileUri | Describes the unified data struct of file uri. |
 | [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) | OH_UdsPixelMap | Describes the unified data struct of open harmony pixel map. |
-| [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) | OH_UdsContentForm | Describes the unified data struct of content form. |
+| [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) | OH_UdsContentForm | Defines a struct for the unified data of the content card type. |
 | [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) | OH_UdsArrayBuffer | Describes the unified data struct of array buffer. |
 | [OH_UdsDetails](capi-udmf-oh-udsdetails.md) | OH_UdsDetails | Describes the key-value object of UDS data. |
 
@@ -32,13 +32,13 @@ Provides uniform data struct(UDS).
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Udmf_AuthPermission](#udmf_authpermission) | Udmf_AuthPermission | Describes authorization permission values. |
+| [Udmf_AuthPermission](#udmf_authpermission) | Udmf_AuthPermission | Enumerates the URI authorization policies in the drag scenario.<br> > **NOTE**<br>> > This authorization policy takes effect only in drag scenarios.<br> The **NONE**, **READ**, **WRITE**, and **PERSIST** policies are supported. They can be combined, and only the following combinations take effect:<br> - **NONE**: No file permission is granted. - **READ**: Only one-time read permission is granted. - **WRITE**: Only one-time read and write permissions are granted. (Write permission includes read permission.) - **READ+WRITE**: One-time read and write authorization is performed, which is equivalent to **WRITE** authorization. - **READ+PERSIST**: Persistent read permission is granted. - **WRITE+PERSIST**: Persistent read and write permissions are granted. - **READ+WRITE+PERSIST**: Persistent read and write permissions are granted. The rules for applying the drag authorization policies are as follows (in descending order of priority): - Single data level: The **FileUri** and **HTML** (UDSs) support the configuration of authorization policy parameters, which take effect only once for a single record and have the highest priority. - [OH_UdmfData](capi-udmf-oh-udmfdata.md) level: The authorization parameters provided in [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) are valid for a single drag operation. If an authorization policy is configured for a piece of data, the configuration of the data is preferentially used. This level has the second highest priority. - Default level: If no authorization policy is configured for a single piece of data or [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md), proxy authorization is performed based on the default drag logic. The default logic is as follows: - FileUri data: By default, the **READ**, **WRITE**, and **PERSIST** permissions are granted in drag scenarios. - HTML data: Grants read permission only to the URIs in the img tags of the HTML text. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | Creates a pointer to the instance of the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur. |
 | [void OH_UdsPlainText_Destroy(OH_UdsPlainText* pThis)](#oh_udsplaintext_destroy) | Destroy a pointer that points to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance. |
 | [const char* OH_UdsPlainText_GetType(OH_UdsPlainText* pThis)](#oh_udsplaintext_gettype) | Get type id from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
 | [const char* OH_UdsPlainText_GetContent(OH_UdsPlainText* pThis)](#oh_udsplaintext_getcontent) | Get content from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
@@ -49,7 +49,7 @@ Provides uniform data struct(UDS).
 | [int OH_UdsPlainText_SetDetails(OH_UdsPlainText* pThis, const OH_UdsDetails* details)](#oh_udsplaintext_setdetails) | Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
 | [OH_UdsHyperlink* OH_UdsHyperlink_Create()](#oh_udshyperlink_create) | Creates a pointer to the instance of the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [void OH_UdsHyperlink_Destroy(OH_UdsHyperlink* pThis)](#oh_udshyperlink_destroy) | Destroy a pointer that points to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
-| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | Get type from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
 | [const char* OH_UdsHyperlink_GetUrl(OH_UdsHyperlink* pThis)](#oh_udshyperlink_geturl) | Get url from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [const char* OH_UdsHyperlink_GetDescription(OH_UdsHyperlink* pThis)](#oh_udshyperlink_getdescription) | Get description from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [int OH_UdsHyperlink_GetDetails(OH_UdsHyperlink* pThis, OH_UdsDetails* details)](#oh_udshyperlink_getdetails) | Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
@@ -58,7 +58,7 @@ Provides uniform data struct(UDS).
 | [int OH_UdsHyperlink_SetDetails(OH_UdsHyperlink* pThis, const OH_UdsDetails* details)](#oh_udshyperlink_setdetails) | Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [OH_UdsHtml* OH_UdsHtml_Create()](#oh_udshtml_create) | Creates a pointer to the instance of the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [void OH_UdsHtml_Destroy(OH_UdsHtml* pThis)](#oh_udshtml_destroy) | Destroy a pointer that points to the [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
-| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | Get html from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
 | [const char* OH_UdsHtml_GetContent(OH_UdsHtml* pThis)](#oh_udshtml_getcontent) | Get content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [const char* OH_UdsHtml_GetPlainContent(OH_UdsHtml* pThis)](#oh_udshtml_getplaincontent) | Get plain content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [int OH_UdsHtml_GetDetails(OH_UdsHtml* pThis, OH_UdsDetails* details)](#oh_udshtml_getdetails) | Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
@@ -110,13 +110,13 @@ Provides uniform data struct(UDS).
 | [int OH_UdsContentForm_GetThumbData(OH_UdsContentForm* pThis, unsigned char** thumbData, unsigned int* len)](#oh_udscontentform_getthumbdata) | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetDescription(OH_UdsContentForm* pThis)](#oh_udscontentform_getdescription) | Get description from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetTitle(OH_UdsContentForm* pThis)](#oh_udscontentform_gettitle) | Get title from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
 | [const char* OH_UdsContentForm_GetAppName(OH_UdsContentForm* pThis)](#oh_udscontentform_getappname) | Get app name from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetLinkUri(OH_UdsContentForm* pThis)](#oh_udscontentform_getlinkuri) | Get link url from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetThumbData(OH_UdsContentForm* pThis, const unsigned char* thumbData, unsigned int len)](#oh_udscontentform_setthumbdata) | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetDescription(OH_UdsContentForm* pThis, const char* description)](#oh_udscontentform_setdescription) | Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetTitle(OH_UdsContentForm* pThis, const char* title)](#oh_udscontentform_settitle) | Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
 | [int OH_UdsContentForm_SetAppName(OH_UdsContentForm* pThis, const char* appName)](#oh_udscontentform_setappname) | Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetLinkUri(OH_UdsContentForm* pThis, const char* linkUri)](#oh_udscontentform_setlinkuri) | Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [OH_UdsDetails* OH_UdsDetails_Create()](#oh_udsdetails_create) | Creates a pointer to the instance of the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
@@ -138,7 +138,7 @@ enum Udmf_AuthPermission
 
 **Description**
 
-Describes authorization permission values.
+Enumerates the URI authorization policies in the drag scenario.<br> > **NOTE**<br>> > This authorization policy takes effect only in drag scenarios.<br> The **NONE**, **READ**, **WRITE**, and **PERSIST** policies are supported. They can be combined, and only the following combinations take effect:<br> - **NONE**: No file permission is granted. - **READ**: Only one-time read permission is granted. - **WRITE**: Only one-time read and write permissions are granted. (Write permission includes read permission.) - **READ+WRITE**: One-time read and write authorization is performed, which is equivalent to **WRITE** authorization. - **READ+PERSIST**: Persistent read permission is granted. - **WRITE+PERSIST**: Persistent read and write permissions are granted. - **READ+WRITE+PERSIST**: Persistent read and write permissions are granted. The rules for applying the drag authorization policies are as follows (in descending order of priority): - Single data level: The **FileUri** and **HTML** (UDSs) support the configuration of authorization policy parameters, which take effect only once for a single record and have the highest priority. - [OH_UdmfData](capi-udmf-oh-udmfdata.md) level: The authorization parameters provided in [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) are valid for a single drag operation. If an authorization policy is configured for a piece of data, the configuration of the data is preferentially used. This level has the second highest priority. - Default level: If no authorization policy is configured for a single piece of data or [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md), proxy authorization is performed based on the default drag logic. The default logic is as follows: - FileUri data: By default, the **READ**, **WRITE**, and **PERSIST** permissions are granted in drag scenarios. - HTML data: Grants read permission only to the URIs in the img tags of the HTML text.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -146,10 +146,10 @@ Describes authorization permission values.
 
 | Enum item | Description |
 | -- | -- |
-| UDMF_PERM_NONE = 0 | No permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_READ = 1u << 0 | Read permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_WRITE = 1u << 1 | Write permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_PERSIST = 1u << 2 | Persist permission.<br>**Since**: 26.0.0 |
+| UDMF_PERM_NONE = 0 | No permission granted.<br>**Since**: 26.0.0 |
+| UDMF_PERM_READ = 1u << 0 | Permission to read or view data.<br>**Since**: 26.0.0 |
+| UDMF_PERM_WRITE = 1u << 1 | Permission to modify data (including READ).<br>**Since**: 26.0.0 |
+| UDMF_PERM_PERSIST = 1u << 2 | Permission to persist files.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -162,7 +162,7 @@ OH_UdsPlainText* OH_UdsPlainText_Create()
 
 **Description**
 
-Creates a pointer to the instance of the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
+Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -348,7 +348,7 @@ Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md)* pThis | Represents a pointer to an instance of [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| const char* content | Represents a new content string. |
+| const char* content | Pointer to the plain text content to set. |
 
 **Returns**:
 
@@ -483,7 +483,7 @@ const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)
 
 **Description**
 
-Get type from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
+Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -754,7 +754,7 @@ const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)
 
 **Description**
 
-Get html from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
+Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -986,7 +986,7 @@ Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsHtml](capi-udmf-oh-udshtml.md)* pThis | Represents a pointer to an instance of [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| uint32_t authPolicy | Represents auth policy. |
+| uint32_t authPolicy | URI authorization policy in drag scenarios. The default value is READ (read-only authorization), which takes effect only in scenarios such as the img tag. This policy is used only for a single record and has the highest priority. For details about the policy, see [Udmf_AuthPermission](capi-uds-h.md#udmf_authpermission). |
 
 **Returns**:
 
@@ -1812,13 +1812,13 @@ Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md)* pThis | Represents a pointer to an instance of [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| uint32_t authPolicy | Indicates the identity authorization policy. |
+| uint32_t authPolicy | URI authorization policy in the drag scenario. The default value is READ+WRITE+PERSIST, which is used only for a single record and has the highest priority. For details about the policy, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode).          [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success.          [UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args. |
+| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode).      <br>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success.      <br>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args. |
 
 **Reference**:
 
@@ -2334,7 +2334,7 @@ int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIc
 
 **Description**
 
-Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2526,7 +2526,7 @@ int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* 
 
 **Description**
 
-Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2850,7 +2850,7 @@ Get the all keys from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 | Type | Description |
 | -- | -- |
-| char** | Returns string list of keys. Memory will be released after calling the OH_UdsDetails_Destroy function. |
+| char** | Returns a double pointer to the result set if the operation is successful;      <br>returns nullptr otherwise.      <br>When [OH_UdsDetails_Destroy](capi-uds-h.md#oh_udsdetails_destroy) is used to destroy the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) instance,      the return value is also released. |
 
 **Reference**:
 

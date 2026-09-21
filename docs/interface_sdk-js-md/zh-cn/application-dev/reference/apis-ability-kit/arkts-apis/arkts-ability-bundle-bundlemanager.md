@@ -100,6 +100,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo) | 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。 |
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo-1) | 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。 |
 | [getBundleArchiveInfoSync](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md) | 以同步方法根据给定的hapFilePath和bundleFlags获取BundleInfo对象。 |
+| [getBundleExtensionPolicyInfo](arkts-ability-bundlemanager-getbundleextensionpolicyinfo-f-sys.md) | 获取指定应用的包扩展策略信息。 |
 | [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md) | 查询当前用户下指定应用的安装状态。 |
 | [getDeveloperIds](arkts-ability-bundlemanager-getdeveloperids-f-sys.md) | 根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。 |
 | [getDynamicIcon](arkts-ability-bundlemanager-getdynamicicon-f-sys.md) | 根据给定的bundleName获得动态图标对应的moduleName。使用Promise异步回调。 |
@@ -183,6 +184,8 @@ import { bundleManager } from '@kit.AbilityKit';
 | [AppDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md) | 标识应用[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。 |
 | [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md) | 应用信息标志，指示需要获取的应用信息的内容。 |
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | 标识应用和用户之间的各种状态类型。 |
+| [ApplicationReservedFlag](arkts-ability-bundlemanager-applicationreservedflag-e-sys.md) | 该ApplicationReservedFlag值的每一位标识相关信息。 |
+| [AppSandboxPolicy](arkts-ability-bundlemanager-appsandboxpolicy-e-sys.md) | 双模式（2in1/平板）场景下的应用沙箱策略。 |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | 包信息标志，指示需要获取的包信息的内容。 |
 | [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 标识应用的安装状态。 |
 | [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | 定义设备模式分发策略枚举，用于指定应用程序如何分发到设备上。 |
@@ -221,6 +224,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md) | 应用[HarmonyAppProvision配置文件](../../../security/app-provision-structure.md)中的信息。 |
+| [BundleExtensionPolicyInfo](arkts-ability-bundlemanager-bundleextensionpolicyinfo-t-sys.md) | 描述包扩展策略信息。 |
 | [BundleOptions](arkts-ability-bundlemanager-bundleoptions-t-sys.md) | 应用包选项，用于设置或查询应用相关信息。 |
 | [DynamicIconInfo](arkts-ability-bundlemanager-dynamiciconinfo-t-sys.md) | 应用的动态图标信息。 |
 | [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | [module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息。 |

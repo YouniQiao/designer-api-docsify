@@ -107,6 +107,42 @@ class DrawingRenderNode extends RenderNode {
 }
 ```
 
+## makeFromPosTextWithFallback
+
+```TypeScript
+static makeFromPosTextWithFallback(
+      text: string, len: number, points: common2D.Point[], font: Font): Array<TextBlob>
+```
+
+使用文本创建一组TextBlob对象，支持字体回退。若当前字型的字体不支持某些字符时，会自动从系统中查找回退字体。若未找到回退字体，则仍使用当前字型的字体。每段连续且使用相同字体的字符会创建一个TextBlob对象。TextBlob对象中每个字符的坐标由points数组中对应的坐标信息决定。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 用于绘制TextBlob的文本内容。 |
+| len | number | 是 | 字形数量，即通过[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取的整数值。 |
+| points | [common2D.Point](arkts-arkgraphics2d-common2d-point-i.md)[] | 是 | 用于指定每个字形坐标的二维点数组，数组长度需与len一致。 |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | 是 | 字型对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md)&gt; | 创建的TextBlob对象数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
 ## makeFromRunBuffer
 
 ```TypeScript
@@ -219,6 +255,33 @@ class DrawingRenderNode extends RenderNode {
   }
 }
 ```
+
+## makeFromStringWithFallback
+
+```TypeScript
+static makeFromStringWithFallback(text: string, font: Font): Array<TextBlob>
+```
+
+使用字符串创建一组TextBlob对象，支持字体回退。若当前字型的字体不支持某些字符时，会自动从系统中查找回退字体。若未找到回退字体，则仍使用当前字型的字体。每段连续且使用相同字体的字符会创建一个TextBlob对象。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| text | string | 是 | 用于绘制TextBlob的文本内容。 |
+| font | [Font](arkts-arkgraphics2d-drawing-font-c.md) | 是 | 字型对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;[TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md)&gt; | 创建的TextBlob对象数组。 |
 
 ## uniqueID
 

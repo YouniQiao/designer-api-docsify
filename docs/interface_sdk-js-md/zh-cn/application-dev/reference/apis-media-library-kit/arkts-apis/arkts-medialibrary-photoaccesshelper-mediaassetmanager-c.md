@@ -168,8 +168,41 @@ static quickRequestImage(
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.QuickImageDataHandler<image.Picture> {
+  onDataPrepared(data: image.Picture, imageSource: image.ImageSource, map: Map<string, string>) {
+    console.info('on image data prepared');
+  }
+}
+
+async function example(context: Context) {
+  console.info('quickRequestImage');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let requestOptions: photoAccessHelper.RequestOptions = {
+    deliveryMode: photoAccessHelper.DeliveryMode.HIGH_QUALITY_MODE,
+  }
+  const handler = new MediaHandler();
+  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      await photoAccessHelper.MediaAssetManager.quickRequestImage(context, photoAsset, requestOptions, handler);
+      console.info('quickRequestImage successfully');
+  });
+}
 ```
 
 ## requestImage
@@ -216,8 +249,49 @@ static requestImage(
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+class MediaHandler implements photoAccessHelper.MediaAssetDataHandler<image.ImageSource> {
+  onDataPrepared(data: image.ImageSource) {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    console.info('on image data prepared');
+  }
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('requestImage');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let requestOptions: photoAccessHelper.RequestOptions = {
+    deliveryMode: photoAccessHelper.DeliveryMode.HIGH_QUALITY_MODE,
+  }
+  const handler = new MediaHandler();
+
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('fetchResult success');
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset === undefined) {
+      console.error('photoAsset is undefined');
+      return;
+    }
+    await photoAccessHelper.MediaAssetManager.requestImage(context, photoAsset, requestOptions, handler);
+    console.info('requestImage successfully');
+  });
+}
 ```
 
 ## requestImageData
@@ -264,8 +338,48 @@ static requestImageData(
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+class MediaDataHandler implements photoAccessHelper.MediaAssetDataHandler<ArrayBuffer> {
+  onDataPrepared(data: ArrayBuffer) {
+    if (data === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    console.info('on image data prepared');
+  }
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('requestImageData');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let requestOptions: photoAccessHelper.RequestOptions = {
+    deliveryMode: photoAccessHelper.DeliveryMode.HIGH_QUALITY_MODE,
+  }
+  const handler = new MediaDataHandler();
+
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset === undefined) {
+      console.error('requestImageData photoAsset is undefined');
+      return;
+    }
+      await photoAccessHelper.MediaAssetManager.requestImageData(context, photoAsset, requestOptions, handler);
+      console.info('requestImageData successfully');
+  });
+}
 ```
 
 ## requestMovingPhoto
@@ -313,8 +427,46 @@ static requestMovingPhoto(
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+class MovingPhotoHandler implements photoAccessHelper.MediaAssetDataHandler<photoAccessHelper.MovingPhoto> {
+  async onDataPrepared(movingPhoto: photoAccessHelper.MovingPhoto) {
+    if (movingPhoto === undefined) {
+      console.error('Error occurred when preparing data');
+      return;
+    }
+    console.info("moving photo acquired successfully, uri: " + movingPhoto.getUri());
+  }
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo(photoAccessHelper.PhotoKeys.PHOTO_SUBTYPE, photoAccessHelper.PhotoSubtype.MOVING_PHOTO);
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  // 请确保图库内存在动态照片。
+  let assetResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  if (!assetResult) {
+    console.error('Failed to get assets');
+    return;
+  }
+  let asset: photoAccessHelper.PhotoAsset = await assetResult.getFirstObject();
+  let requestOptions: photoAccessHelper.RequestOptions = {
+    deliveryMode: photoAccessHelper.DeliveryMode.FAST_MODE,
+  }
+  const handler = new MovingPhotoHandler();
+  try {
+    let requestId: string = await photoAccessHelper.MediaAssetManager.requestMovingPhoto(context, asset, requestOptions, handler);
+    console.info("moving photo requested successfully, requestId: " + requestId);
+  } catch (err) {
+    console.error(`Failed to request moving photo. Code: ${err.code}, message: ${err.message}`);
+  }
+}
 ```
 
 ## requestVideoFile
@@ -366,6 +518,38 @@ static requestVideoFile(
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+class MediaDataHandler implements photoAccessHelper.MediaAssetDataHandler<boolean> {
+    onDataPrepared(data: boolean) {
+        console.info('on video request status prepared');
+    }
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('requestVideoFile');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let requestOptions: photoAccessHelper.RequestOptions = {
+    deliveryMode: photoAccessHelper.DeliveryMode.HIGH_QUALITY_MODE,
+  }
+  const handler = new MediaDataHandler();
+  let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4';
+  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+      console.info('fetchResult success');
+      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      await photoAccessHelper.MediaAssetManager.requestVideoFile(context, photoAsset, requestOptions, fileUri, handler);
+      console.info('requestVideoFile successfully');
+  });
+}
 ```

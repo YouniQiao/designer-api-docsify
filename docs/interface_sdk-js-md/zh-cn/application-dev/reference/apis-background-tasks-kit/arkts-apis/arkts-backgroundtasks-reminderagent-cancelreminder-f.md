@@ -18,7 +18,7 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** cancelReminder
+**替代接口：** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -55,7 +55,7 @@ function cancelReminder(reminderId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** cancelReminder
+**替代接口：** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

@@ -168,7 +168,7 @@ defaultWindowSizeType?: number
 handleId?: number
 ```
 
-navigation控件下的子页面ID，点击"恢复全屏窗口"按钮后，恢复到指定的页面。只适用于UIAbility使用[Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation)管理页面的场景，可以设置为Navigation下的子页面ID。默认为-1，恢复Navigation栈顶页面。推荐使用方法getUniqueId()获取页面ID。使用[Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation)模块内页面路由时，推荐使用[系统路由表](../../../ui/arkts-navigation-cross-package.md#系统路由表)，否则可能会出现getUniqueId()获取页面ID不准确的情况。
+navigation控件下的子页面ID，点击"恢复全屏窗口"按钮后，恢复到指定的页面。只适用于UIAbility使用[Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation)管理页面的场景，可以设置为Navigation下的子页面ID。默认为-1，恢复Navigation栈顶页面。推荐使用方法[getUniqueId()](../arkts-components/arkts-arkui-common-comp-basecustomcomponent-c.md#getuniqueid)获取页面ID。使用[Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation)模块内页面路由时，推荐使用[系统路由表](../../../ui/arkts-navigation-cross-package.md#系统路由表)，否则可能会出现[getUniqueId()](../arkts-components/arkts-arkui-common-comp-basecustomcomponent-c.md#getuniqueid)获取页面ID不准确的情况。
 
 **类型：** number
 

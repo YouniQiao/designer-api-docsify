@@ -58,7 +58,7 @@ animationCurve不设置时，由于滑动TabContent翻页动画曲线interpolati
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | Tabs翻页的动画时长。<br>默认值：<br>API version 10及以前，不设置该属性或设置为null时，默认值为0，即Tabs翻页无动画。设置为小于0或undefined时，默认值为300。<br>API version 11及以后，不设置该属性或设置为异常值，且设置TabBar为BottomTabBarStyle样式时，默认值为0。设置TabBar为其他样式时，默认值为300。<br>单位：ms<br>取值范围：0, +∞) |
+| value | number | 是 | Tabs翻页的动画时长。<br>默认值：<br>API version 10及以前，不设置该属性或设置为null时，默认值为0，即Tabs翻页无动画。设置为小于0或undefined时，默认值为300。<br>API version 11及以后，不设置该属性或设置为异常值，且设置TabBar为BottomTabBarStyle样式时，默认值为0。设置TabBar为其他样式时，默认值为300。<br>单位：ms<br>取值范围：[0, +∞) |
 
 ## animationMode
 
@@ -70,7 +70,7 @@ animationMode(mode: Optional<AnimationMode>)
 
 > **说明：** 
 
-> 此属性不支持在[attributeModifier中调用。
+> 此属性不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -96,7 +96,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 
 > **说明：** 
 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -443,12 +443,12 @@ customContentTransition(delegate: TabsCustomContentTransitionCallback)
 4. 目前自定义切换动画只支持两种场景触发：点击页签和调用TabsController.changeIndex()接口。
 5. 当使用自定义切换动画时，Tabs组件支持的事件中，除了onGestureSwipe，其他事件均支持。
 6. [onChange](#onchange)和[onAnimationEnd](#onanimationend)事件的触发时机需要特殊说明：如果在第一次自定义动画执行过程中，触发了第二次自定义动画，那么在开始第二次自定义动画时，就会触发第一次自定义动画的onChange和onAnimationEnd事件。
-7. 当使用自定义动画时，参与动画的页面布局方式会改为Stack布局。如果开发者未主动设置相关页面的zIndex属性，那么所有页面的zIndex值是一样的，页面的渲染层级会按照在组件树上的顺序（即页面的index值顺序）确定。因此，开发者需要主动修改页面的zIndex属性，来控制页面的渲染层级。
-8. 此属性不支持在attributeModifier中调用。
+7. 当使用自定义动画时，参与动画的页面布局方式会改为Stack布局。如果开发者未主动设置相关页面的[zIndex](arkts-arkui-common-comp-commonmethod-c.md#zindex)属性，那么所有页面的zIndex值是一样的，页面的渲染层级会按照在组件树上的顺序（即页面的index值顺序）确定。因此，开发者需要主动修改页面的zIndex属性，来控制页面的渲染层级。
+8. 此属性不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 > **说明：** 
 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -496,7 +496,7 @@ edgeEffect(edgeEffect: Optional<EdgeEffect>)
 
 > **说明：** 
 
-> 从API version 17开始，该接口支持在attributeModifier中调用。
+> 从API version 17开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -684,7 +684,7 @@ onContentWillChange(handler: OnTabsContentWillChangeCallback)
 
 > **说明：** 
 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 

@@ -150,9 +150,7 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[connectServiceExtensionAbility](#connectserviceextensionability)。
-```
 
 ## startAbility
 

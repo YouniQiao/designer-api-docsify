@@ -725,8 +725,50 @@ udp.send(sendOptions, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
 示例（设置socket代理）：
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',  // 本端地址
+  port: 1234
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',  // 对端地址
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress,
+  proxy: proxyOptions,
+}
+udp.send(sendOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('send fail');
+    return;
+  }
+  console.info('send success');
+});
 ```
 
 <a id="send-1"></a>
@@ -806,8 +848,47 @@ udp.send(sendOptions).then(() => {
 });
 ```
 
-```TypeScript
 示例（设置socket代理）：
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // 本端地址
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+  return;
+});
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx', // 对端地址
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let sendOptions: socket.UDPSendOptions = {
+  data: 'Hello, server!',
+  address: netAddress,
+  proxy: proxyOptions,
+}
+udp.send(sendOptions).then(() => {
+  console.info('send success');
+}).catch((err: BusinessError) => {
+  console.error('send fail');
+});
 ```
 
 ## setExtraOptions

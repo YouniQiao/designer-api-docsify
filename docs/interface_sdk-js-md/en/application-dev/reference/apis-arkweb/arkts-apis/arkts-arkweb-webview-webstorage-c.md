@@ -127,8 +127,95 @@ struct WebComponent {
 }
 ```
 
-```TypeScript
 HTML file to be loaded:
+
+```TypeScript
+<!-- index.html -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <meta charset="UTF-8">
+   <title>test</title>
+   <script type="text/javascript">
+
+       // Open or create a database.
+       var request = indexedDB.open('myDatabase', 1);
+
+       // Triggered when the database version changes or the database is created for the first time.
+       request.onupgradeneeded = function(event) {
+           var db = event.target.result;
+
+           // Create an object store (table) and set the primary key to id.
+           var objectStore = db.createObjectStore('customers', { keyPath: 'id' });
+
+           // Create an index for name.
+           objectStore.createIndex('name', 'name', { unique: false });
+       };
+
+       // Called when the database is successfully opened.
+       request.onsuccess = function(event) {
+           var db = event.target.result;
+
+           const customerData = [
+               {id: 1, name: 'John Doe', email: 'john@example.com'},
+               {id: 2, name: 'John Doe', email: 'john@example.com'},
+           ]
+
+           // Insert data.
+           var transaction = db.transaction('customers', 'readwrite');
+           var objectStore = transaction.objectStore('customers');
+
+           customerData.forEach((customer) => {
+               objectStore.add(customer);
+           });
+
+           transaction.oncomplete = function () {
+               console.info('Transaction completed: data added');
+           }
+           
+           transaction.onerror = function (event) {
+               console.error("Transaction failed", event);
+           }
+           
+           // Query data.
+           var queryTransaction = db.transaction(['customers']);
+           var queryObjectStore = queryTransaction.objectStore('customers');
+           var query = queryObjectStore.get(2);
+           
+           query.onsuccess = function (event) {
+               console.info('query succ');
+               console.info('Customer:', event.target.result);
+               console.info('Customer id:', event.target.result.id);
+               console.info('Customer name:', event.target.result.name);
+               console.info('Customer email:', event.target.result.email);
+           };
+           
+           queryObjectStore.openCursor().onsuccess = (event) => {
+               const cursor = event.target.result;
+               if (cursor) {
+                   var msg = "<p>Query record: " + cursor.key + "</p>";
+                   document.querySelector("#status").innerHTML += msg;
+                   var msg = "<p><b>" + cursor.value.name + "</b></p>";
+                   document.querySelector("#status").innerHTML += msg;
+                   console.info(`SSN ${cursor.key} corresponds to ${cursor.value.name}`);
+                   cursor.continue();
+               } else {
+                   console.info("No more records")
+               }
+           }
+       };
+
+       // Error handling.
+       request.onerror = function(event) {
+           console.error('Database error:', event.target.error);
+       };
+
+     </script>
+ </head>
+ <body>
+ <div id="status" name="status">Status</div>
+ </body>
+ </html>
 ```
 
 ## getOriginQuota

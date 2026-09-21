@@ -1940,14 +1940,6 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 
 **示例**
 
-```TypeScript
-async function isReleased(pixelMap: image.PixelMap) { // 未释放的PixelMap。
-  pixelMap.isReleased(); // 返回false。
-  await pixelMap.release();
-  pixelMap.isReleased(); // 返回true。
-}
-```
-
 ## marshalling
 
 ```TypeScript

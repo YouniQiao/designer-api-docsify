@@ -289,8 +289,39 @@ tcp.connect(tcpconnectoptions, (err: BusinessError) => {
 })
 ```
 
-```TypeScript
 Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000,
+  proxy: proxyOptions,
+}
+tcp.connect(tcpconnectoptions, (err: BusinessError) => {
+  if (err) {
+    console.error('connect fail');
+    return;
+  }
+  console.info('connect success');
+})
 ```
 
 <a id="connect-1"></a>
@@ -362,8 +393,37 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
-```TypeScript
 Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tcpconnectoptions: socket.TCPConnectOptions = {
+  address: netAddress,
+  timeout: 6000,
+  proxy: proxyOptions,
+}
+tcp.connect(tcpconnectoptions).then(() => {
+  console.info('connect success')
+}).catch((err: BusinessError) => {
+  console.error('connect fail');
+});
 ```
 
 ## getLocalAddress

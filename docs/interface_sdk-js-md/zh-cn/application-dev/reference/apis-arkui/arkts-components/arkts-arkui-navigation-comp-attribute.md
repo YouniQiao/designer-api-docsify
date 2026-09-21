@@ -23,8 +23,8 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 > **说明：** 
 > 
 > 不支持通过SymbolGlyphModifier对象的
-> fontSize属性修改图标大小、
-> effectStrategy属性修改动效、
+> [fontSize](arkts-arkui-symbolglyph-comp-attribute.md#fontsize)属性修改图标大小、
+> [effectStrategy](arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy)属性修改动效、
 > [symbolEffect](arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)属性修改动效类型。
 
 **起始版本：** 9
@@ -51,11 +51,11 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 > 
 > 不支持通过SymbolGlyphModifier对象的
-> fontSize属性修改图标大小、
-> effectStrategy属性修改动效、
+> [fontSize](arkts-arkui-symbolglyph-comp-attribute.md#fontsize)属性修改图标大小、
+> [effectStrategy](arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy)属性修改动效、
 > [symbolEffect](arkts-arkui-symbolglyph-comp-attribute.md#symboleffect)属性修改动效类型。
 
 **起始版本：** 19
@@ -106,7 +106,7 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -216,11 +216,11 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 ```
 
-设置是否启用NavDestination页面onHidden、[onShown](arkts-arkui-navdestination-comp-attribute.md#onshown)生命周期与全模态的联动触发。
+设置是否启用NavDestination页面[onHidden](arkts-arkui-navdestination-comp-attribute.md#onhidden)、[onShown](arkts-arkui-navdestination-comp-attribute.md#onshown)生命周期与全模态的联动触发。
 
 > **说明：** 
 > 
-> 从API version 23开始，该接口支持在attributeModifier中调用。
+> 从API version 23开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 21
 
@@ -433,7 +433,7 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 19
 
@@ -660,9 +660,9 @@ recoverable(recoverable: Optional<boolean>)
 
 > **说明：** 
 > 
-> 1. 使用该接口需要先设置Navigation的通用属性id，否则该接口无效。
+> 1. 使用该接口需要先设置Navigation的通用属性[id](arkts-arkui-common-comp-commonmethod-c.md#id)，否则该接口无效。
 > 
-> 2. 该接口需要配合NavDestination的recoverable接口使用。
+> 2. 该接口需要配合NavDestination的[recoverable](arkts-arkui-navdestination-comp-attribute.md#recoverable)接口使用。
 > 
 > 3. 恢复的过程中不可序列化的信息，例如不可序列化的参数与用户设置的onPop等，会被丢弃，无法恢复。
 > 
@@ -756,7 +756,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 > 
 > 9. 非全屏窗口下，Navigation/NavDestination设置的状态栏不生效。
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -782,7 +782,7 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 > **说明：** 
 > 
-> 从API version 12开始，该接口支持在attributeModifier中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 8
 
@@ -857,7 +857,7 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 
 > **说明：** 
 > 
-> 从API version 20开始，该接口支持在attributeModifier中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 

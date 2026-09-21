@@ -75,8 +75,29 @@ getXComponentSurfaceId(): string
 
 **示例**
 
-```TypeScript
 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+
+```TypeScript
+// xxx.ets
+
+@Entry
+  @Component
+  struct Index {
+    myXComponentController: XComponentController = new XComponentController();
+
+    build() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+        XComponent({
+          type: XComponentType.SURFACE,
+          controller: this.myXComponentController
+        })
+          .onLoad(() => {
+            let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+            console.info("XComponent SurfaceId: " + surfaceId);
+          })
+      }
+    }
+  }
 ```
 
 ## getXComponentSurfaceRect

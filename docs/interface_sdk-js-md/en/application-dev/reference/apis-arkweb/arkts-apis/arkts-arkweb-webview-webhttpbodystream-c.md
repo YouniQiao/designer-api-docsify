@@ -40,9 +40,7 @@ Reads the current read position in this **WebHttpBodyStream** instance.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [initialize](#initialize).
-```
 
 ## getSize
 
@@ -66,9 +64,7 @@ Obtains the size of data in this **WebHttpBodyStream** instance. This API always
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [initialize](#initialize).
-```
 
 ## initialize
 
@@ -200,9 +196,7 @@ Checks whether this **WebHttpBodyStream** instance is transmitted by chunk.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [initialize](#initialize).
-```
 
 ## isEof
 
@@ -226,9 +220,7 @@ Checks whether all data in this **WebHttpBodyStream** instance has been read.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [initialize](#initialize).
-```
 
 ## isInMemory
 
@@ -251,10 +243,6 @@ Checks whether the uploaded data in this **WebHttpBodyStream** instance is in me
 | boolean | Whether the uploaded data in the **WebHttpBodyStream** instance is stored in memory.<br>This API returns **true** if all the upload data in the **WebHttpBodyStream** instance is in memory and all read requests will be completed synchronously. **false** is returned if the data is chunked. |
 
 **Examples**
-
-```TypeScript
-For the complete sample code, see [initialize](#initialize).
-```
 
 ## read
 
@@ -290,6 +278,4 @@ Reads data from this **WebHttpBodyStream** instance.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [initialize](#initialize).
-```

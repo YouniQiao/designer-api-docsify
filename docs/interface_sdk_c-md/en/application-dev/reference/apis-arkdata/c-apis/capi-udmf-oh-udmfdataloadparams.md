@@ -6,7 +6,7 @@ typedef struct OH_UdmfDataLoadParams OH_UdmfDataLoadParams
 
 ## Overview
 
-Indicates data loading params.
+Defines a struct for data loading parameters.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

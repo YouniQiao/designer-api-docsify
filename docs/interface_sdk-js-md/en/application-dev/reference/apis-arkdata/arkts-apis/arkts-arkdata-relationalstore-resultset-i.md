@@ -41,12 +41,6 @@ Closes this **resultSet** to release memory. If the **resultSet** is not closed,
 
 **Examples**
 
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).close();
-}
-```
-
 ## getAsset
 
 ```TypeScript
@@ -955,8 +949,52 @@ Obtains the sendable data from the current row. The sendable data can be passed 
 
 **Examples**
 
-```TypeScript
 For details about the definition of this.context in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { relationalStore } from '@kit.ArkData';
+import { taskpool } from '@kit.ArkTS';
+import { common } from '@kit.AbilityKit';
+import { sendableRelationalStore } from '@kit.ArkData';
+
+@Concurrent
+async function getDataByName(name: string, context: common.UIAbilityContext) {
+  const STORE_CONFIG: relationalStore.StoreConfig = {
+    name: "RdbTest.db",
+    securityLevel: relationalStore.SecurityLevel.S3
+  };
+  const store = await relationalStore.getRdbStore(context, STORE_CONFIG);
+  const predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", name);
+  const resultSet = store.querySync(predicates);
+
+  if (resultSet.rowCount > 0) {
+    resultSet.goToFirstRow();
+    const sendableValuesBucket = resultSet.getSendableRow();
+    resultSet.close();
+    return sendableValuesBucket;
+  } else {
+    resultSet.close();
+    return null;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    const task = new taskpool.Task(getDataByName, 'Lisa', this.context);
+    const sendableValuesBucket = await taskpool.execute(task) as sendableRelationalStore.ValuesBucket;
+
+    if (sendableValuesBucket) {
+      const columnCount = sendableValuesBucket.size;
+      const age = sendableValuesBucket.get('age');
+      const name = sendableValuesBucket.get('name');
+      console.info(`Query data in taskpool succeeded, name is "${name}", age is "${age}"`);
+    }
+  }
+}
 ```
 
 ## getString

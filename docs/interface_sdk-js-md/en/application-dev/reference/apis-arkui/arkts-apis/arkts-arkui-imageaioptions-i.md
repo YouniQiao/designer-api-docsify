@@ -13,7 +13,7 @@ Provides the AI image analysis options.
 > this API takes precedence.
 > 
 > This API depends on device capabilities and must be used together with the
-> enableAnalyzer API of the corresponding component (for example, the
+> [enableAnalyzer](../arkts-components/arkts-arkui-image-comp-attribute.md#enableanalyzer) API of the corresponding component (for example, the
 > [Image](../arkts-components/arkts-arkui-image-comp.md#image) component).
 
 **Since:** 12

@@ -6,8 +6,6 @@ enum AudioDataCallbackResult
 
 表示音频数据回调结果的枚举。
 
-@enum { int }
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

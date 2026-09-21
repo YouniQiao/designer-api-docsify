@@ -430,7 +430,7 @@ This callback is triggered only after the scroll animation completes. To obtain 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string &#124; string[], index: number &#124; number[]) =&gt; void | Yes |  |
+| callback | (value: string[], index: number[]) =&gt; void | Yes |  |
 
 <a id="onchange-1"></a>
 
@@ -472,7 +472,7 @@ Triggered when an option enters the selection zone during text picker scrolling 
 > 
 > - In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason is that it identifies nodes where items enter the divider area during scrolling. However, items that change in response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
 > 
-> - This API cannot be called within attributeModifier.
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 18
 
@@ -500,7 +500,7 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 14
 
@@ -530,7 +530,7 @@ If the scrolling is initiated by a gesture, this event is triggered when the fin
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 18
 
@@ -588,7 +588,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; number[] | Yes | Index of the selected item or items in the data list. The index is zero-based.<br>Default value: **0**<br>If the value is negative or exceeds the maximum index, the default value is used.<br> |
+| value | number[] | Yes | Index of the selected item or items in the data list. The index is zero-based.<br>Default value: **0**<br>If the value is negative or exceeds the maximum index, the default value is used.<br> |
 
 <a id="selectedindex-1"></a>
 
@@ -612,7 +612,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number &#124; number[]&gt; | Yes | Index of the selected item or items in the data list. The index is zero-based.<br>Default value: **0**<br>If **index** is **undefined**, the **selected** value of [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md) is used.<br>If it is negative or exceeds the maximum index, the default value is used.<br> |
+| index | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number[]&gt; | Yes | Index of the selected item or items in the data list. The index is zero-based.<br>Default value: **0**<br>If **index** is **undefined**, the **selected** value of [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md) is used.<br>If it is negative or exceeds the maximum index, the default value is used.<br> |
 
 ## selectedTextStyle
 

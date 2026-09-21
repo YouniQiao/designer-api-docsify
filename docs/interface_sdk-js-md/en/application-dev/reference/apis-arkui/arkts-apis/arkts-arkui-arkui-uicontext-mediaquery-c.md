@@ -49,6 +49,4 @@ Sets the media query criteria and returns the corresponding listening handle
 
 **Examples**
 
-```TypeScript
 See the example for mediaquery.
-```

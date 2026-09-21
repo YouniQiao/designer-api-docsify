@@ -24,7 +24,7 @@ dynamicRangeMode?: DynamicRangeMode
 
 Dynamic range mode used for the snapshot.
 
-By default, the system snapshots in STANDARD mode. If the dynamic range mode used by the target component is known, you can specify the dynamic range mode using the **dynamicRangeMode** field and set **isAuto** to **false** to achieve the expected snapshot effect.
+By default, the system snapshots in [STANDARD](../arkts-components/arkts-arkui-image-comp-attribute.md#dynamicrangemode) mode. If the dynamic range mode used by the target component is known, you can specify the dynamic range mode using the **dynamicRangeMode** field and set **isAuto** to **false** to achieve the expected snapshot effect.
 
 There are three dynamic range modes available. HDR is applied for **HIGH** and **CONSTRAINT** modes, and SDR is applied for **STANDARD** mode.
 
@@ -36,7 +36,7 @@ After a valid dynamic range mode is specified, the dynamic range to be used for 
 4. If both SDR and HDR are used for the child components, HDR is applied for the snapshot.
 5. If both conditions 3 and 4 are met, SDR is applied for the snapshot.
 
-For details about the enum values, see DynamicRangeMode.
+For details about the enum values, see [DynamicRangeMode](../arkts-components/arkts-arkui-image-comp-attribute.md#dynamicrangemode).
 
 Default value: **STANDARD**
 

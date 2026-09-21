@@ -34,7 +34,7 @@ Text on the button.
 
 **Deprecated since:** 9
 
-**Substitutes:** title
+**Substitutes:** [title](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#title)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +52,6 @@ Button type.
 
 **Deprecated since:** 9
 
-**Substitutes:** type
+**Substitutes:** [type](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#type)
 
 **System capability:** SystemCapability.Notification.ReminderAgent

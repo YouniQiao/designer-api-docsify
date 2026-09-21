@@ -22,7 +22,7 @@ When the content is more than one screen in a scrollable component, the main tit
 
 The effect where the main title's size changes in response to content scrolling is effective only when **title** is set to **ResourceStr** or **NavigationCommonTitle**. If **title** is set to any other value type, the main title changes in mere location when pulled down.
 
-For this effect to work when the content is less than one screen in a scrollable component, set the **options** parameter of the scrollable component's edgeEffect attribute to **true**. In the non-scrolling state, the height of the title bar is the same as in **Full** mode; in the scrolling state, the minimum height of the title bar is the same as in **Mini** mode.
+For this effect to work when the content is less than one screen in a scrollable component, set the **options** parameter of the scrollable component's [edgeEffect](arkts-arkui-list-comp-attribute.md#edgeeffect) attribute to **true**. In the non-scrolling state, the height of the title bar is the same as in **Full** mode; in the scrolling state, the minimum height of the title bar is the same as in **Mini** mode.
 
 **Since:** 8
 

@@ -4,6 +4,8 @@
 export interface DeviceResponse
 ```
 
+Defines the device profile information.
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -58,7 +60,7 @@ Brand.
 deviceType: string
 ```
 
-Device type. The options are as follows: phone: smartphone tablet: tablet tv: smart TV wearable: wearable liteWearable: lite wearable ar: AR vr: virtual reality earphones: headset pc: personal computer speaker: speaker smartVision: smart visual device linkIoT: connection module
+Device type. The options are as follows: **phone**, **tablet**, **tv**, and **wearable**.
 
 **Type:** string
 
@@ -130,7 +132,7 @@ Model.
 product: string
 ```
 
-Product number.
+Product code.
 
 **Type:** string
 
@@ -166,7 +168,7 @@ System region.
 screenDensity: number
 ```
 
-Screen density, unit dpi.
+Screen pixel density, which indicates the number of pixels per inch on the screen, in dots per inch (DPI). The screen pixel density varies depending on the device.
 
 **Type:** number
 
@@ -184,7 +186,9 @@ Screen density, unit dpi.
 screenShape: 'rect' | 'circle'
 ```
 
-Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle screen.
+Screen shape. The options are as follows:  
+- **rect**: rectangular screen  
+- **circle**: round screen
 
 **Type:** 'rect' &#124; 'circle'
 
@@ -202,7 +206,9 @@ Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle
 sdkMinorApiVersion?: number
 ```
 
-Minor API version of the system software. From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion. Example: 26.0.0 Value range: (-∞,+∞).
+SDK minor API version. Since API version 26.0.0, the API version is in the format of **apiVersion.sdkMinorApiVersion.sdkPatchApiVersion**. If the value fails to be obtained, **-1** is returned, which does not affect the overall return status of the **getInfo** API.
+
+**Model constraint:** This API can be used only in the FA model. **Since version**: 26.0.0 Example: 0
 
 **Type:** number
 
@@ -220,7 +226,9 @@ Minor API version of the system software. From API 26 and later versions, the sy
 sdkPatchApiVersion?: number
 ```
 
-Minor API version of the system software. From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion. Example: 26.0.0 Value range: (-∞,+∞).
+SDK patch API version. Since API version 26.0.0, the API version is in the format of **apiVersion.sdkMinorApiVersion.sdkPatchApiVersion**. If the value fails to be obtained, **-1** is returned, which does not affect the overall return status of the **getInfo** API.
+
+**Model constraint:** This API can be used only in the FA model. **Since version**: 26.0.0 Example: 0
 
 **Type:** number
 
@@ -238,7 +246,7 @@ Minor API version of the system software. From API 26 and later versions, the sy
 windowHeight: number
 ```
 
-Window Height, unit px.
+Available window height, in px. The available window size varies on different devices.
 
 **Type:** number
 
@@ -256,7 +264,7 @@ Window Height, unit px.
 windowWidth: number
 ```
 
-Window width, unit px.
+Available window width, in px. The available window size varies on different devices.
 
 **Type:** number
 

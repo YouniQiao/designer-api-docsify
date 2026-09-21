@@ -49,16 +49,38 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 删除密钥 */
+huks.deleteKeyItem(keyAlias, emptyOptions, (error) => {
+  if (error) {
+    console.error(`callback: deleteKeyItem failed`);
+  } else {
+    console.info(`callback: deleteKeyItem key success`);
+  }
+});
+```
+
 JS示例：
 
 > 说明
 > 
 > JS示例代码仅供轻量级设备使用。
+
+```TypeScript
+<stack class="container">
+    <input type="button" class="deleteBtn" @click="deleteKey">删除密钥</input>
+    <text class="result">{{result}}</text>
+</stack>
 ```
 
 ```TypeScript

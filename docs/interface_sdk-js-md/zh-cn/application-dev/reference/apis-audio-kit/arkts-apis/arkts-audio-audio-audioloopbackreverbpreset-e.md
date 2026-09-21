@@ -6,8 +6,6 @@ enum AudioLoopbackReverbPreset
 
 表示返听混响模式的枚举。
 
-@enum { int }
-
 **起始版本：** 21
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

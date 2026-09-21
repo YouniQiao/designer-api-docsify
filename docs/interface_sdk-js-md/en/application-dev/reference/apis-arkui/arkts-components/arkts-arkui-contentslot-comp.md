@@ -36,6 +36,27 @@ Called when content is added to a placeholder component
 
 ## Examples
 
-```TypeScript
 The following example shows the basic usage of ContentSlot.
+
+```TypeScript
+import { nativeNode } from 'libNativeNode.so'; // Developer-implemented .so file.
+import { NodeContent, Content } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Parent {
+  private nodeContent: Content = new NodeContent();
+
+  aboutToAppear() {
+    // Create a node through the C API and add it to the nodeContent manager.
+    nativeNode.createNativeNode(this.nodeContent);
+  }
+
+  build() {
+    Column() {
+      // Display the native components stored in the nodeContent manager.
+      ContentSlot(this.nodeContent)
+    }
+  }
+}
 ```

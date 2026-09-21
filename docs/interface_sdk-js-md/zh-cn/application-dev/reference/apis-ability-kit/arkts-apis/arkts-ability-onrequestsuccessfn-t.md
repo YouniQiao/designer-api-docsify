@@ -22,6 +22,4 @@ export type OnRequestSuccessFn = (name: string) => void
 
 **示例**
 
-```TypeScript
 参见[OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md)。
-```

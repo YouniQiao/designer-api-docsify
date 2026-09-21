@@ -40,9 +40,7 @@ Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityContinue
 
@@ -68,9 +66,7 @@ Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityCreate
 
@@ -96,9 +92,7 @@ Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#o
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityDestroy
 
@@ -124,9 +118,7 @@ Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityForeground
 
@@ -152,9 +144,7 @@ Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilitySaveState
 
@@ -180,9 +170,7 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillBackground
 
@@ -208,9 +196,7 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillContinue
 
@@ -236,9 +222,7 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillCreate
 
@@ -264,9 +248,7 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillDestroy
 
@@ -292,9 +274,7 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillForeground
 
@@ -320,9 +300,7 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onAbilityWillSaveState
 
@@ -348,9 +326,7 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onNewWant
 
@@ -376,9 +352,7 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWillNewWant
 
@@ -404,9 +378,7 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageActive
 
@@ -433,9 +405,7 @@ Called when the main window of the UIAbility gains focus.
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageCreate
 
@@ -462,9 +432,7 @@ Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiabi
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageDestroy
 
@@ -491,9 +459,7 @@ Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiab
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageInactive
 
@@ -520,9 +486,7 @@ Called when the main window of the UIAbility loses focus.
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageRestore
 
@@ -549,9 +513,7 @@ Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiab
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageWillCreate
 
@@ -578,9 +540,7 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageWillDestroy
 
@@ -607,9 +567,7 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```
 
 ## onWindowStageWillRestore
 
@@ -636,6 +594,4 @@ Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uia
 
 **Examples**
 
-```TypeScript
 For details, see AbilityLifecycleCallback Usage Example.
-```

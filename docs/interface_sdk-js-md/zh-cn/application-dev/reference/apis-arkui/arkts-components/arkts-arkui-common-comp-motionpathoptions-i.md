@@ -42,7 +42,7 @@ from的处理值会约束to的取值，需满足to值 &gt;= from的处理值。�
 path: string
 ```
 
-位移动画的运动路径，使用svg路径字符串。path中支持使用start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.x end.y Z'，更多说明请参考[绘制路径](../../../ui/ui-js-components-svg-path.md)。
+位移动画的运动路径，使用[svg路径字符串](arkts-arkui-path-comp-pathoptions-i.md#commands)。path中支持使用start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.x end.y Z'，更多说明请参考[绘制路径](../../../ui/ui-js-components-svg-path.md)。
 
 设置为空字符串时相当于不设置路径动画，传入不符合SVG路径规范的字符串时路径动画不生效。
 

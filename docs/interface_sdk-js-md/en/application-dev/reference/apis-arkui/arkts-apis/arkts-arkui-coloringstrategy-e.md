@@ -32,7 +32,7 @@ The foreground colors are the inverse of the component background colors. This s
 AVERAGE = 'average'
 ```
 
-The shadow colors of the component are the average color obtained from the component background shadow area. This strategy is only applicable when set within the shadow attribute whose input parameter type is ShadowOptions.
+The shadow colors of the component are the average color obtained from the component background shadow area. This strategy is only applicable when set within the [shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow) attribute whose input parameter type is ShadowOptions.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ The shadow colors of the component are the average color obtained from the compo
 PRIMARY = 'primary'
 ```
 
-The shadow colors of the component are the primary color obtained from the component background shadow area. This strategy is only applicable when set within the shadow attribute whose input parameter type is ShadowOptions.
+The shadow colors of the component are the primary color obtained from the component background shadow area. This strategy is only applicable when set within the [shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow) attribute whose input parameter type is ShadowOptions.
 
 **Since:** 11
 

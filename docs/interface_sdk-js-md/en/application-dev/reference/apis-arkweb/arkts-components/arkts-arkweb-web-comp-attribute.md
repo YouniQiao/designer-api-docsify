@@ -410,9 +410,9 @@ Sets a custom text selection menu for the **Web** component.
 > It is not recommended to use both at the same time. Choose based on the degree of customization required.
 > You can use this attribute to customize a text menu.
 
-You can use onCreateMenu to modify, add, and delete menu options. If you do not want to display the text menu, return an empty array.
+You can use [onCreateMenu](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) to modify, add, and delete menu options. If you do not want to display the text menu, return an empty array.
 
-You can use onMenuItemClick to customize the callback for menu options. This function is triggered after a menu option is clicked and determines whether to execute the default callback based on the return value. If **true** is returned, the system callback is not executed. If **false** is returned, the system callback is executed.
+You can use [onMenuItemClick](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#onmenuitemclick) to customize the callback for menu options. This function is triggered after a menu option is clicked and determines whether to execute the default callback based on the return value. If **true** is returned, the system callback is not executed. If **false** is returned, the system callback is executed.
 
 In [onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#properties-1), this callback is triggered after the text selection area changes and before the menu is displayed. You can modify, add, or delete menu options in the callback to dynamically update the menu.
 
@@ -3025,7 +3025,7 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event?: { data: string &#124; WebResourceRequest }) =&gt; boolean | Yes | URL information.<br>The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
+| callback | (event?: { data: string &#124; WebResourceRequest}) =&gt; boolean | Yes | URL information.<br>The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
 
 ## onVerifyPin
 

@@ -42,7 +42,7 @@ busAddress: string
 driver: string
 ```
 
-声卡驱动。
+声卡驱动信息。
 
 **类型：** string
 

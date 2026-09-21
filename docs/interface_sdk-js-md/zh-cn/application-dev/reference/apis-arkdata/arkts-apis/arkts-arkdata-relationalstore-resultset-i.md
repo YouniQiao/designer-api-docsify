@@ -41,12 +41,6 @@ close(): void
 
 **示例**
 
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as relationalStore.ResultSet).close();
-}
-```
-
 ## getAsset
 
 ```TypeScript
@@ -949,8 +943,50 @@ getSendableRow(): sendableRelationalStore.ValuesBucket
 
 **示例**
 
-```TypeScript
 示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。
+
+```TypeScript
+// EntryAbility.ets
+import { window } from '@kit.ArkUI';
+import { UIAbility, common } from '@kit.AbilityKit';
+import { relationalStore, sendableRelationalStore } from '@kit.ArkData';
+import { taskpool } from '@kit.ArkTS';
+
+@Concurrent
+async function getDataByName(name: string, context: common.UIAbilityContext) {
+  const STORE_CONFIG: relationalStore.StoreConfig = {
+    name: "RdbTest.db",
+    securityLevel: relationalStore.SecurityLevel.S3
+  };
+  const store = await relationalStore.getRdbStore(context, STORE_CONFIG);
+  const predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", name);
+  const resultSet = store.querySync(predicates);
+
+  if (resultSet.rowCount > 0) {
+    resultSet.goToFirstRow();
+    const sendableValuesBucket = resultSet.getSendableRow();
+    resultSet.close();
+    return sendableValuesBucket;
+  } else {
+    resultSet.close();
+    return null;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onWindowStageCreate(windowStage: window.WindowStage) {
+    const task = new taskpool.Task(getDataByName, 'Lisa', this.context);
+    const sendableValuesBucket = await taskpool.execute(task) as sendableRelationalStore.ValuesBucket;
+
+    if (sendableValuesBucket) {
+      const columnCount = sendableValuesBucket.size;
+      const age = sendableValuesBucket.get('age');
+      const name = sendableValuesBucket.get('name');
+      console.info(`Query data in taskpool succeeded, name is "${name}", age is "${age}"`);
+    }
+  }
+}
 ```
 
 ## getString

@@ -1,4 +1,4 @@
-# SheetTitleBarBackgroundBlur
+# SheetTitleBarBackgroundBlur (System API)
 
 ```TypeScript
 declare enum SheetTitleBarBackgroundBlur
@@ -9,6 +9,8 @@ Enum of title bar background blur styles.
 **Since:** 26.0.1
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## NONE
 
@@ -22,9 +24,9 @@ No blur effect.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
 
 ## GRADIENT
 
@@ -38,6 +40,6 @@ Gradient blur: fades from the top of the title bar downward to transparent. The 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.

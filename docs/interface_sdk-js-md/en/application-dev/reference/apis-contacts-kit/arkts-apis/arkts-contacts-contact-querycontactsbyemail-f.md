@@ -76,14 +76,28 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -166,14 +180,32 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByEmail(context, 'xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -254,14 +286,30 @@ Queries a contact based on the specified email and attributes. This API uses an 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByEmail(context, 'xxx@email.com', {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -347,14 +395,34 @@ Queries a contact based on the specified email, holder, and attributes. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByEmail(context, 'xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -446,12 +514,27 @@ Queries a contact based on the specified email, holder, and attributes. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContactsByEmail(context, 'xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
 ```

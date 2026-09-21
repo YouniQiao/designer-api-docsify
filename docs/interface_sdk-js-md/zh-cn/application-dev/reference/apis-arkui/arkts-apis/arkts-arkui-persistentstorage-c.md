@@ -200,9 +200,7 @@ static persistProp<T>(key: string, defaultValue: T): void
 
 **示例**
 
-```TypeScript
 persistProp具体用法详见[从AppStorage中访问PersistentStorage初始化的属性](../../../ui/state-management/arkts-persiststorage.md#从appstorage中访问persistentstorage初始化的属性)。
-```
 
 ## PersistProps
 

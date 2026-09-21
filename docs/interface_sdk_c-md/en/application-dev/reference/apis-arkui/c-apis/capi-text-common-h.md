@@ -46,6 +46,7 @@ Defines a set of text common enum and interface.
 | [ArkUI_KeyboardAppearance](#arkui_keyboardappearance) | ArkUI_KeyboardAppearance | Defines the keyboard style of input box |
 | [ArkUI_TextMenuItemId](#arkui_textmenuitemid) | ArkUI_TextMenuItemId | Enumerates the text menu item id. |
 | [OH_ArkUI_LineBreakStrategy](#oh_arkui_linebreakstrategy) | OH_ArkUI_LineBreakStrategy | Enumerates line break policies. |
+| [OH_ArkUI_StrokeJoinStyle](#oh_arkui_strokejoinstyle) | OH_ArkUI_StrokeJoinStyle | Enumerates the join styles of a text stroke. |
 | [ArkUI_TextSpanType](#arkui_textspantype) | ArkUI_TextSpanType | Enumerates the text span type. |
 | [ArkUI_TextResponseType](#arkui_textresponsetype) | ArkUI_TextResponseType | Enumerates the text response type. |
 
@@ -411,6 +412,26 @@ Enumerates line break policies.
 | OH_ARKUI_LINE_BREAK_STRATEGY_GREEDY = 0 |  |
 | OH_ARKUI_LINE_BREAK_STRATEGY_HIGH_QUALITY = 1 |  |
 | OH_ARKUI_LINE_BREAK_STRATEGY_BALANCE = 2 |  |
+
+### OH_ArkUI_StrokeJoinStyle
+
+```c
+enum OH_ArkUI_StrokeJoinStyle
+```
+
+**Description**
+
+Enumerates the join styles of a text stroke.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
+**Since**: 26.2.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN = 0 |  |
+| OH_ARKUI_STROKE_JOIN_STYLE_ROUND_JOIN = 1 |  |
+| OH_ARKUI_STROKE_JOIN_STYLE_BEVEL_JOIN = 2 |  |
 
 ### ArkUI_TextSpanType
 

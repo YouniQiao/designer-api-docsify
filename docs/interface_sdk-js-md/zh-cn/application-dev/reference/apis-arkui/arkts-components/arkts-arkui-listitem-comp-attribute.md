@@ -42,7 +42,7 @@ onSelect(event: (isSelected: boolean) => void)
 
 ListItem元素被鼠标框选的状态改变时触发回调。
 
-外层[List](arkts-arkui-list-comp.md#list)组件设置multiSelectable为true开启鼠标框选，且当前ListItem的[selectable](#selectable)属性为true时，触发该回调。
+外层[List](arkts-arkui-list-comp.md#list)组件设置[multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable)为true开启鼠标框选，且当前ListItem的[selectable](#selectable)属性为true时，触发该回调。
 
 **起始版本：** 8
 
@@ -66,7 +66,7 @@ ListItem元素被鼠标框选的状态改变时触发回调。
 selectable(value: boolean)
 ```
 
-设置当前ListItem元素是否可以被鼠标框选。外层[List](arkts-arkui-list-comp.md#list)组件设置multiSelectable为true开启鼠标框选时，ListItem的框选才生效。
+设置当前ListItem元素是否可以被鼠标框选。外层[List](arkts-arkui-list-comp.md#list)组件设置[multiSelectable](arkts-arkui-list-comp-attribute.md#multiselectable)为true开启鼠标框选时，ListItem的框选才生效。
 
 **起始版本：** 8
 

@@ -62,12 +62,99 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 **示例**
 
-```TypeScript
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
+```
+
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
 ```
 
 <a id="dofinal-1"></a>
@@ -122,8 +209,54 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 **示例**
 
-```TypeScript
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
 ```
 
 <a id="dofinal-3"></a>
@@ -169,12 +302,99 @@ doFinal(data: DataBlob): Promise<DataBlob>
 
 **示例**
 
-```TypeScript
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+function cipherByCallback() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  symKeyGenerator.generateSymKey((err, symKey) => {
+    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
+      let message = 'This is a test';
+      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+      cipher.update(plainText, (err, encryptUpdate) => {
+        cipher.doFinal(null, (err, tag) => {
+          gcmParams.authTag = tag;
+          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+        });
+      });
+    });
+  });
+}
+```
+
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
 ```
 
 <a id="dofinal-4"></a>
@@ -236,8 +456,49 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 **示例**
 
-```TypeScript
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherByPromise() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = await cipher.update(plainText);
+  gcmParams.authTag = await cipher.doFinal(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
 ```
 
 ## doFinalSync
@@ -290,8 +551,49 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 **示例**
 
-```TypeScript
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function generateRandom(len: number) {
+  let rand = cryptoFramework.createRandom();
+  let generateRandSync = rand.generateRandomSync(len);
+  return generateRandSync;
+}
+
+function genGcmParamsSpec() {
+  let ivBlob = generateRandom(12);
+  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  let dataAad = new Uint8Array(arr);
+  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
+  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let dataTag = new Uint8Array(arr);
+  let tagBlob: cryptoFramework.DataBlob = {
+    data: dataTag
+  };
+  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
+    iv: ivBlob,
+    aad: aadBlob,
+    authTag: tagBlob,
+    algName: 'GcmParamsSpec'
+  };
+  return gcmParamsSpec;
+}
+
+async function cipherBySync() {
+  let gcmParams = genGcmParamsSpec();
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
+  let symKey = await symKeyGenerator.generateSymKey();
+  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
+  let message = 'This is a test';
+  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
+  let encryptUpdate = cipher.updateSync(plainText);
+  gcmParams.authTag = cipher.doFinalSync(null);
+  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
+}
 ```
 
 ## getCipherSpec

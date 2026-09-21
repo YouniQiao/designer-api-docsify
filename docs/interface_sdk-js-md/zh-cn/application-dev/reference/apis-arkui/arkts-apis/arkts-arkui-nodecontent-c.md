@@ -108,6 +108,73 @@ removeFrameNode(node: FrameNode): void
 
 **示例**
 
-```TypeScript
 添加和删除NodeContent中的FrameNode节点。
+
+```TypeScript
+// xxx.ets
+import { NodeContent, typeNode } from '@kit.ArkUI';
+
+class NodeContentCtrl {
+  content: NodeContent;
+  textNode: Array<typeNode.Text> = new Array();
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    this.content = new NodeContent();
+    this.uiContext = uiContext;
+  }
+
+  addNode() {
+    let node = typeNode.createNode(this.uiContext, 'Text');
+    node.initialize('ContentText:' + this.textNode.length).fontSize(20);
+    this.textNode.push(node);
+    this.content.addFrameNode(node);
+  }
+
+  removeNode() {
+    let node = this.textNode.pop();
+    if (node) {
+      this.content.removeFrameNode(node);
+    }
+  }
+
+  removeFront() {
+    let node = this.textNode.shift();
+    if (node) {
+      this.content.removeFrameNode(node);
+    }
+  }
+
+  getContent(): NodeContent {
+    return this.content;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  controller = new NodeContentCtrl(this.getUIContext());
+
+  build() {
+    Row() {
+      Column() {
+        ContentSlot(this.controller.getContent())
+        Button('AddToSlot')
+          .onClick(() => {
+            this.controller.addNode();
+          })
+        Button('RemoveBack')
+          .onClick(() => {
+            this.controller.removeNode();
+          })
+        Button('RemoveFront')
+          .onClick(() => {
+            this.controller.removeFront();
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
 ```

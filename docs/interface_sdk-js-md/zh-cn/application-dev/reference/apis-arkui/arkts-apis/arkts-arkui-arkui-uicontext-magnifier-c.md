@@ -49,12 +49,47 @@ bind(id: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 组件id，可通过通用属性id或key设置。当组件id为空字符串或未找到匹配id的组件时，不显示放大镜。 |
+| id | string | 是 | 组件id，可通过通用属性[id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id)或[key](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#key)设置。当组件id为空字符串或未找到匹配id的组件时，不显示放大镜。 |
 
 **示例**
 
-```TypeScript
 该示例通过监听onTouch事件控制放大镜对图片进行放大显示。
+
+```TypeScript
+import { Magnifier } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MagnifierExample {
+  private magnifier: Magnifier = this.getUIContext().getMagnifier();
+
+  build() {
+    Column() {
+      // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
+      Image($r('app.media.startIcon'))
+        .draggable(false)
+        .width(200)
+        .height(200)
+        .margin(50)
+        .id('image')
+        .onTouch((event: TouchEvent) => {
+          if (event && event.sourceTool === SourceTool.Finger) {
+            if (event.type === TouchType.Down) {
+              this.magnifier.bind('image');
+            } else if (event.type === TouchType.Move) {
+              let touchX = event.touches[0].x;
+              let touchY = event.touches[0].y;
+              this.magnifier.show(touchX, touchY);
+            } else if (event.type === TouchType.Up) {
+              this.magnifier.unbind();
+            } else if (event.type === TouchType.Cancel) {
+              this.magnifier.unbind();
+            }
+          }
+        })
+    }
+  }
+}
 ```
 
 ## show
@@ -90,9 +125,7 @@ show(x: number, y: number): void
 
 **示例**
 
-```TypeScript
 请参考[bind](#bind)示例。
-```
 
 ## unbind
 
@@ -112,6 +145,4 @@ unbind(): void
 
 **示例**
 
-```TypeScript
 请参考[bind](#bind)示例。
-```

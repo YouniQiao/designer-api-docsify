@@ -114,9 +114,7 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 
 **示例**
 
-```TypeScript
 请参考createNode('Swiper')12+示例。
-```
 
 
 <a id="bindcontroller-2"></a>

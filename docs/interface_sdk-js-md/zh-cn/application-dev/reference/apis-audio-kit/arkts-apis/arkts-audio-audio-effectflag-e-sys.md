@@ -6,8 +6,6 @@ enum EffectFlag
 
 枚举，音效分类。
 
-@enum { int }
-
 **起始版本：** 18
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

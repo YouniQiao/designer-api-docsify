@@ -50,9 +50,7 @@ Sets the gesture event consumption result.
 
 **Examples**
 
-```TypeScript
 For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
-```
 
 <a id="setgestureeventresult-1"></a>
 
@@ -77,9 +75,7 @@ Sets the gesture event consumption result and bubbling control.
 
 **Examples**
 
-```TypeScript
 For details, see [onNativeEmbedGestureEvent](./arkts-basic-components-web-events.md#onnativeembedgestureevent).
-```
 
 ## setMouseEventResult
 
@@ -102,6 +98,4 @@ Sets the mouse event consumption result and bubbling control.
 
 **Examples**
 
-```TypeScript
 For details about the sample code of the mouse event, see [onNativeEmbedMouseEvent](./arkts-basic-components-web-events.md#onnativeembedmouseevent).
-```

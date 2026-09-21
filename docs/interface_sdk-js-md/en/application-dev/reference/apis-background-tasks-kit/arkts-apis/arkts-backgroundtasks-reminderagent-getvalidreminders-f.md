@@ -18,7 +18,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** getValidReminders
+**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -74,7 +74,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** getValidReminders
+**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

@@ -86,7 +86,7 @@ When a list is nested with **LazyForEach**, and within **LazyForEach** there is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Number of list items or list item groups to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
+| value | number | Yes | Number of list items or list item groups to be preloaded (cached).<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. |
 
 <a id="cachedcount-1"></a>
 
@@ -98,7 +98,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 > **NOTE:** 
 > 
@@ -120,7 +120,7 @@ When **cachedCount** is set for the list, the system preloads and lays out the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | number | Yes | Number of list items to be preloaded.<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: 0, +∞).<br>Values less than 0 are treated as **1**. |
+| count | number | Yes | Number of list items to be preloaded.<br>Default value: number of nodes visible on the screen, with the maximum value of 16<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. |
 | show | boolean | Yes | Whether to display the preloaded list items. If this parameter is set to **true**, the preloaded list items are displayed. If this parameter is set to **false**, the preloaded list items are not displayed.<br> Default value: **false** |
 
 <a id="cachedcount-2"></a>
@@ -137,7 +137,7 @@ If the first parameter of the **cachedCount** attribute is of the **number** typ
 
 If the first parameter of the **cachedCount** attribute is of the **CacheCountInfo** type, preloading and layout will occur during idle frames when the number of cached rows is less than **CacheCountInfo.minCount**. When the number of cached rows is greater than **CacheCountInfo.maxCount**, the nodes outside the specified range will be destroyed or reused. When the UI is idle (no animation or user operation), a specified number (specified by **CacheCountInfo.maxCount**) of rows of list items will be preloaded above and below the visible area.
 
-When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 Default behavior: The **count** parameter is of the **number** type by default, with its value set based on the number of nodes displayed on the screen, up to a maximum of 16. Preloaded **ListItem** components are not involved in drawing by default.
 
@@ -212,11 +212,11 @@ Sets the size information of the child components of a **List** component along 
 
 > **NOTE:** 
 > 
-> - This attribute provides the **List** component with the size of all child components in the main-axis direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in scenarios such as varying main-axis sizes among child components, adding or removing child components, or using [scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex). In this way, scrollTo can accurately jump to the specified position, currentOffset can obtain the accurate scroll position, and the built-in scroll bar can be smoothly moved without jumps.
+> - This attribute provides the **List** component with the size of all child components in the main-axis direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in scenarios such as varying main-axis sizes among child components, adding or removing child components, or using [scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex). In this way, [scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto) can accurately jump to the specified position, [currentOffset](arkts-arkui-scroll-comp-scroller-c.md#currentoffset) can obtain the accurate scroll position, and the built-in scroll bar can be smoothly moved without jumps.
 > 
 > - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components in **ListItemGroup**. This calculated size must then be passed to the **List** component.
 > 
-> - If a child component contains **ListItemGroup** components, the childrenMainSize attribute must be set for each
+> - If a child component contains **ListItemGroup** components, the [childrenMainSize](arkts-arkui-listitemgroup-comp-attribute.md#childrenmainsize) attribute must be set for each
 > **ListItemGroup** component. The **List** component and each **ListItemGroup** component must be bound to a
 > **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.
 > 
@@ -811,7 +811,7 @@ Automatic scrolling of the list cannot be triggered when a list item is dragged 
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 14.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 14.
 
 **Since:** 8
 
@@ -967,11 +967,11 @@ This event is triggered when either of the following conditions is met:
 
 1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
 2. The **List** component scrolls by inertia.
-3. Call the fling API to trigger scrolling.
+3. Call the [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) API to trigger scrolling.
 
 This event is not triggered in the following scenarios:
 
-1. A scroll control API other than fling is called.
+1. A scroll control API other than [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) is called.
 2. The out-of-bounds bounce effect is active.
 3. The scrollbar is dragged.
 

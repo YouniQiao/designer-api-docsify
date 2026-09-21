@@ -18,7 +18,7 @@ declare class RectAttribute extends CommonShapeMethod<RectAttribute>
 radius(value: Length | Array<any>)
 ```
 
-设置圆角半径大小，取值范围≥0，支持attributeModifier动态设置属性方法。该属性与[radiusWidth](#radiuswidth)、[radiusHeight](#radiusheight)属性效果类似，在组合使用时优先于radiusWidth和radiusHeight生效。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角半径大小，取值范围≥0，支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。该属性与[radiusWidth](#radiuswidth)、[radiusHeight](#radiusheight)属性效果类似，在组合使用时优先于radiusWidth和radiusHeight生效。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ radius(value: Length | Array<any>)
 radiusHeight(value: Length)
 ```
 
-设置圆角的高度。仅设置radiusHeight时，圆角的高度和宽度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角的高度。仅设置radiusHeight时，圆角的高度和宽度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 
@@ -66,7 +66,7 @@ radiusHeight(value: Length)
 radiusWidth(value: Length)
 ```
 
-设置圆角的宽度。仅设置radiusWidth时，圆角的宽度和高度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角的宽度。仅设置radiusWidth时，圆角的宽度和高度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 

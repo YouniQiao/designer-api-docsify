@@ -780,7 +780,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 

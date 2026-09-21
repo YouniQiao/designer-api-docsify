@@ -550,6 +550,8 @@
   <!--Del-->
   - [InteractionModalUIExtension(system api)](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [InteractionText(system api)](arkts-ability-insightintent-interactiontext-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [InteractionUI(system api)](arkts-ability-insightintent-interactionui-i-sys.md)<!--DelEnd-->
   - [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md)
   - [ExecuteMode](arkts-ability-insightintent-executemode-e.md)
@@ -2042,6 +2044,8 @@
     - [DynamicIconInfo(system api)](arkts-ability-bundleinfo-dynamiciconinfo-i-sys.md)<!--DelEnd-->
     - [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)
     - [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)
+    <!--Del-->
+    - [SignatureInfo(system api)](arkts-ability-bundleinfo-signatureinfo-i-sys.md)<!--DelEnd-->
     - [UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
   <!--Del-->
   - [BundlePackInfo](arkts-ability-bundlepackinfo.md)<!--DelEnd-->

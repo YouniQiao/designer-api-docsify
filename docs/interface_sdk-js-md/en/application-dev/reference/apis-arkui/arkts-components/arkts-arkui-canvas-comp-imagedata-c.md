@@ -83,7 +83,7 @@ One-dimensional array that stores pixel data in RGBA format. Each pixel occupies
 
 > **NOTE:** 
 > 
-> The px2vp
+> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > API can be used for unit conversion.
 
 **Type:** Uint8ClampedArray
@@ -108,7 +108,7 @@ Actual height of the rectangle.<br>The unit is px.
 
 > **NOTE:** 
 > 
-> The px2vp
+> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > API can be used for unit conversion.
 
 **Type:** number
@@ -133,7 +133,7 @@ Actual width of the rectangle.<br>The unit is px.
 
 > **NOTE:** 
 > 
-> The px2vp
+> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > API can be used for unit conversion.
 
 **Type:** number

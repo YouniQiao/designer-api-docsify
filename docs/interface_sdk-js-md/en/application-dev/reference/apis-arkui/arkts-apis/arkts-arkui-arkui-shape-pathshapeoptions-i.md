@@ -22,7 +22,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 commands?: string
 ```
 
-Path drawing commands. For more about the commands, see commands.
+Path drawing commands. For more about the commands, see [commands](../arkts-components/arkts-arkui-path-comp-attribute.md#commands).
 
 **Type:** string
 

@@ -335,8 +335,205 @@ inheritFreezeOptions(enabled: boolean): void
 
 **示例**
 
-```TypeScript
 该示例演示了BuilderNode设置继承状态为true，继承父自定义组件的冻结策略，在处于不活跃状态时冻结，切换为活跃状态时解冻，更新缓存的数据。
+
+```TypeScript
+import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+// 自定义传递参数的类
+class Params {
+  count: number = 0;
+
+  constructor(count: number) {
+    this.count = count;
+  }
+}
+
+@Builder
+// builder组件
+function buildText(params: Params) {
+
+  Column() {
+    TextBuilder({ message: params.count })
+  }
+}
+
+// 继承NodeController实现自定义textNode控制器
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private textNode: BuilderNode<[Params]> | null = null;
+  private count: number = 0;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.textNode = new BuilderNode(context, { selfIdealSize: { width: 150, height: 150 } });
+    this.textNode.build(wrapBuilder<[Params]>(buildText), new Params(this.count)); // 创建BuilderNode节点
+    this.textNode.inheritFreezeOptions(true); // 设置BuilderNode的冻结继承状态为true
+    if (this.rootNode !== null) {
+      this.rootNode.appendChild(this.textNode.getFrameNode()); // 将BuilderNode上树
+    }
+    return this.rootNode;
+  }
+
+  update(): void {
+    if (this.textNode !== null) {
+      this.count += 1;
+      this.textNode.update(new Params(this.count)); // 更新BuilderNode中的数据，可以触发Log
+    }
+
+  }
+
+  aboutToDisappear() {
+    this.textNode?.dispose();
+  }
+}
+
+const textNodeController: TextNodeController = new TextNodeController();
+
+@Entry
+@Component
+struct MyNavigationTestStack {
+  @Provide('pageInfo') pageInfo: NavPathStack = new NavPathStack();
+  @State message: number = 0;
+  @State logNumber: number = 0;
+
+  @Builder
+  PageMap(name: string) {
+    if (name === 'pageOne') {
+      PageOneStack({ message: this.message, logNumber: this.logNumber })
+    } else if (name === 'pageTwo') {
+      PageTwoStack({ message: this.message, logNumber: this.logNumber })
+    }
+  }
+
+  build() {
+    Column() {
+      Button('update builderNode') // 点击更新BuilderNode
+        .onClick(() => {
+          textNodeController.update();
+        })
+      Navigation(this.pageInfo) {
+        Column() {
+          Button('Next Page', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              this.pageInfo.pushPath({ name: 'pageOne' }); // 将name指定的NavDestination页面信息入栈
+            })
+        }
+      }.title('NavIndex')
+      .navDestination(this.PageMap)
+      .mode(NavigationMode.Stack)
+    }
+  }
+}
+
+@Component
+struct PageOneStack { // 页面一
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 1;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Button('Next Page', { stateEffect: true, type: ButtonType.Capsule }) // 切换至页面二
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPathByName('pageTwo', null);
+          })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回主页面
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component
+struct PageTwoStack { // 页面二
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 2;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Text('BuilderNode处于冻结')
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回至页面一
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct NavigationContentMsgStack {
+  @Link message: number;
+  @Link index: number;
+  @Link logNumber: number;
+
+  build() {
+    Column() {
+      if (this.index === 1) {
+        NodeContainer(textNodeController)
+      }
+    }
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct TextBuilder {
+  @Prop @Watch('info') message: number = 0;
+  @State count: number = 0;
+
+  info() {
+    this.count++;
+    console.info(`freeze-test TextBuilder message callback change time ${this.count}`); // 根据message内容变化来打印日志来判断是否冻结
+    console.info(`freeze-test TextBuilder message callback change message ${this.message}`); // 根据message内容变化来打印日志来判断是否冻结
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(`文本更新内容： ${this.message}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Text(`文本更新次数： ${this.count}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+      }
+    }
+  }
+}
 ```
 
 ## isDisposed
@@ -363,8 +560,116 @@ isDisposed(): boolean
 
 **示例**
 
-```TypeScript
 该示例演示了BuilderNode释放节点前后分别使用[isDisposed](#isdisposed)接口验证节点的状态，释放节点前节点调用isDisposed接口返回false，释放节点后节点调用isDisposed接口返回true。
+
+```TypeScript
+import { FrameNode, NodeController, BuilderNode } from '@kit.ArkUI';
+
+// 自定义组件
+@Component
+struct TestComponent {
+  build() {
+    Column() {
+      Text('This is a BuilderNode.')
+        .fontSize(25)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .height(30)
+    .backgroundColor(Color.Gray)
+  }
+
+  aboutToAppear() {
+    console.info('aboutToAppear');
+  }
+
+  aboutToDisappear() {
+    console.info('aboutToDisappear');
+  }
+}
+
+@Builder
+function buildComponent() {
+  TestComponent()
+}
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private builderNode: BuilderNode<[]> | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
+    this.builderNode.build(new WrappedBuilder(buildComponent));
+
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 300, height: 300 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+
+    return this.rootNode;
+  }
+
+  // 释放当前builderNode
+  dispose() {
+    if (this.builderNode !== null) {
+      this.builderNode.dispose();
+    }
+  }
+
+  // 检验当前builderNode是否已被释放
+  isDisposed(): string {
+    if (this.builderNode !== null) {
+      if (this.builderNode.isDisposed()) {
+        return 'builderNode isDisposed is true';
+      } else {
+        return 'builderNode isDisposed is false';
+      }
+    }
+    return 'builderNode is null';
+  }
+
+  removeBuilderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
+      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State text: string = '';
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('BuilderNode dispose')
+        .onClick(() => {
+          this.myNodeController.removeBuilderNode();
+          this.myNodeController.dispose();
+          this.text = '';
+        })
+        .width(200)
+        .height(50)
+      Button('BuilderNode isDisposed')
+        .onClick(() => {
+          this.text = this.myNodeController.isDisposed();
+        })
+        .width(200)
+        .height(50)
+      Text(this.text)
+        .fontSize(25)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## postInputEvent
@@ -383,7 +688,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > 
 > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
-> - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看onTouch。
+> - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看[onTouch](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ontouch)。
 > 
 > - 注入事件为轴事件[（AxisEvent）](../arkts-components/arkts-arkui-common-comp-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发[RotationGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md)。
 > 
@@ -419,9 +724,7 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 
 **示例**
 
-```TypeScript
 请参考示例1（BuilderNode中鼠标事件）、示例2（BuilderNode中触摸事件）、示例3（BuilderNode中轴事件）。
-```
 
 ## postInputEventWithStrategy
 
@@ -439,7 +742,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > 
 > - 传入的坐标值单位需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
-> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看onTouch。
+> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看[onTouch](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ontouch)。
 > 
 > - 注入事件为轴事件[AxisEvent](../arkts-components/arkts-arkui-common-comp-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势[RotationGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md)。
 > 
@@ -476,9 +779,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 **示例**
 
-```TypeScript
 请参考示例16（BuilderNode中带竞争策略的鼠标事件）、示例17（BuilderNode中带竞争策略的触摸事件）、示例18（BuilderNode中带竞争策略的轴事件）。
-```
 
 ## postTouchEvent
 

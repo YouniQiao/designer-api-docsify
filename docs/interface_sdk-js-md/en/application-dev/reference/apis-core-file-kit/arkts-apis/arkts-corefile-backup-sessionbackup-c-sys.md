@@ -653,8 +653,24 @@ try {
 }
 ```
 
-```TypeScript
 Example of a JSON string returned asynchronously:
+
+```TypeScript
+{
+ "scanned": [ // Scanned application. The result will not be returned in the next callback.
+     {
+         "name": "com.example.hiworld", // Application name.
+         "dataSize": 1006060, // Data size.
+         "incDataSize":-1 // Incremental data size. The value is -1 for full scan and inaccurate scan, and is the actual incremental data size for incremental accurate scan.
+     },
+     {
+         "name": "com.example.myAPP",
+         "dataSize": 5000027,
+         "incDataSize": -1
+     }
+ ],
+ "scanning": "com.example.smartAPP" // Application that is being scanned. This field is empty when the last result is returned.
+}
 ```
 
 ## getCompatibilityInfo
@@ -899,8 +915,23 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-```TypeScript
 The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
+
+```TypeScript
+{
+ "backupVersion" : "16.0",
+ "bundleInfos" :[{
+   "allToBackup" : true,
+   "extensionName" : "BackupExtensionAbility",
+   "name" : "com.example.hiworld",
+   "needToInstall" : false,
+   "spaceOccupied" : 0,
+   "versionCode" : 1000000,
+   "versionName" : "1.0.0"
+   }],
+ "deviceType" : "default",
+ "systemFullName" : "OpenHarmony-4.0.0.0"
+}
 ```
 
 ## release

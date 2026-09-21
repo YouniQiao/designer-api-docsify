@@ -34,7 +34,7 @@ abilityName: string
 
 **废弃版本：** 9
 
-**替代接口：** abilityName
+**替代接口：** [abilityName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#abilityname)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +52,6 @@ pkgName: string
 
 **废弃版本：** 9
 
-**替代接口：** pkgName
+**替代接口：** [pkgName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#pkgname)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

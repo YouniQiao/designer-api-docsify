@@ -65,8 +65,67 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 
 **示例**
 
-```TypeScript
 该示例通过调用closeCustomDialog接口，关闭已弹出的dialogContent对应的自定义弹窗。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "hello";
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode)
+              .then(() => {
+                console.info('succeeded');
+              })
+              .catch((error: BusinessError) => {
+                console.error(`OpenCustomDialog args error code is ${error.code}, message is ${error.message}`);
+              })
+            setTimeout(() => {
+              promptAction.closeCustomDialog(contentNode)
+                .then(() => {
+                  console.info('succeeded');
+                })
+                .catch((error: BusinessError) => {
+                  console.error(`CloseCustomDialog args error code is ${error.code}, message is ${error.message}`);
+                })
+            }, 2000); // 2秒后自动关闭
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 <a id="closecustomdialog-1"></a>
@@ -196,8 +255,58 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 **示例**
 
-```TypeScript
 该示例通过调用closeMenu接口，展示了关闭Menu的功能。
+
+```TypeScript
+import { ComponentContent, FrameNode } from '@kit.ArkUI';
+
+export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  showMenu(context, uniqueId, contentNode);
+}
+
+@Builder
+function MyMenu() {
+  Column() {
+    Menu() {
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
+    }
+  }
+  .width('80%')
+  .padding('20lpx')
+}
+
+export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  const promptAction = context.getPromptAction();
+  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
+  let frameNodeTarget = frameNode?.getFirstChild();
+  frameNodeTarget = frameNodeTarget?.getChild(0);
+  let targetId = frameNodeTarget?.getUniqueId();
+  promptAction.openMenu(contentNode, { id: targetId }, {
+    enableArrow: true,
+  });
+  setTimeout(() => {
+    promptAction.closeMenu(contentNode);
+  }, 2000);
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
+        .borderRadius('16lpx')
+        .width('80%')
+        .margin(10)
+        .onClick(() => {
+          let context = this.getUIContext();
+          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
+          doSomething(context, this.getUniqueId(), contentNode);
+        })
+    }
+  }
+}
 ```
 
 ## closePopup
@@ -238,9 +347,7 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 **示例**
 
-```TypeScript
 请参考[openPopup](#openpopup)示例。
-```
 
 ## closeToast
 
@@ -274,9 +381,7 @@ closeToast(toastId: number): void
 
 **示例**
 
-```TypeScript
 请参考[openToast18+](#opentoast)的示例。
-```
 
 ## getBottomOrder
 
@@ -302,8 +407,64 @@ getBottomOrder(): LevelOrder
 
 **示例**
 
-```TypeScript
 获取最底层显示的弹窗层级值。
+
+```TypeScript
+import { ComponentContent, PromptAction, LevelOrder, promptAction, UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Params {
+  text: string = "";
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column({ space: 20 }) {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = '弹窗';
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private contentNode: ComponentContent<Object> =
+    new ComponentContent(this.ctx, wrapBuilder(buildText), new Params(this.message));
+
+  private baseDialogOptions: promptAction.BaseDialogOptions = {
+    showInSubWindow: false,
+    levelOrder: LevelOrder.clamp(30.1),
+  };
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('openCustomDialog弹窗')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.openCustomDialog(this.contentNode, this.baseDialogOptions)
+              .then(() => {
+                let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
+                if (bottomOrder !== undefined) {
+                  console.info('bottomOrder: ' + bottomOrder.getOrder());
+                }
+              })
+              .catch((err: BusinessError) => {
+                console.error(`openCustomDialog error code is ${err.code}, message is ${err.message}`);
+              })
+          })
+      }.width('100%')
+    }.height('100%')
+  }
+}
 ```
 
 ## getTopOrder
@@ -332,8 +493,64 @@ getTopOrder(): LevelOrder
 
 **示例**
 
-```TypeScript
 获取最顶层显示的弹窗层级值。
+
+```TypeScript
+import { ComponentContent, PromptAction, LevelOrder, promptAction, UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Params {
+  text: string = "";
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column({ space: 20 }) {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = '弹窗';
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private contentNode: ComponentContent<Object> =
+    new ComponentContent(this.ctx, wrapBuilder(buildText), new Params(this.message));
+
+  private baseDialogOptions: promptAction.BaseDialogOptions = {
+    showInSubWindow: false,
+    levelOrder: LevelOrder.clamp(30.1),
+  };
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('openCustomDialog弹窗')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.openCustomDialog(this.contentNode, this.baseDialogOptions)
+              .then(() => {
+                let topOrder: LevelOrder = this.promptAction.getTopOrder();
+                if (topOrder !== undefined) {
+                  console.info('topOrder: ' + topOrder.getOrder());
+                }
+              })
+              .catch((err: BusinessError) => {
+                console.error(`openCustomDialog error code is ${err.code}, message is ${err.message}`);
+              })
+          })
+      }.width('100%')
+    }.height('100%')
+  }
+}
 ```
 
 ## openCustomDialog
@@ -375,8 +592,101 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 **示例**
 
-```TypeScript
 该示例通过监听[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)（系统语言、深浅色等）的变化，调用ComponentContent<T> 的[update](arkts-arkui-arkui-uicontext-dialogpresenter-c.md#update)和updateConfiguration实现自定义弹窗的数据更新及节点的全量刷新。
+
+```TypeScript
+import { ComponentContent } from '@kit.ArkUI';
+import { AbilityConstant, Configuration, EnvironmentCallback, ConfigurationConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+class Params {
+  text: string = "";
+  colorMode: resourceManager.ColorMode = resourceManager.ColorMode.LIGHT
+
+  constructor(text: string, colorMode: resourceManager.ColorMode) {
+    this.text = text
+    this.colorMode = colorMode
+  }
+}
+
+@Builder
+function BuilderDialog(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor(params.colorMode == resourceManager.ColorMode.LIGHT ? "#D5D5D5" : "#004AAF")
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "hello";
+  contentNode: ComponentContent<Params> | null = null;
+  callbackId: number | undefined = 0;
+
+  aboutToAppear(): void {
+    let environmentCallback: EnvironmentCallback = {
+      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
+      },
+      onConfigurationUpdated: (config: Configuration): void => {
+        console.info(`onConfigurationUpdated ${config}`);
+        this.getUIContext().getHostContext()?.getApplicationContext().resourceManager.getConfiguration((err,
+          config) => {
+          // 调用ComponentContent的update更新colorMode信息
+          this.contentNode?.update(new Params(this.message, config.colorMode))
+          setTimeout(() => {
+            // 调用ComponentContent的updateConfiguration，触发节点的全量更新
+            this.contentNode?.updateConfiguration()
+          })
+        })
+      }
+    }
+    // 注册监听系统环境变化监听器
+    this.callbackId =
+      this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback)
+    // 设置应用深浅色跟随系统
+    this.getUIContext()
+      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET)
+  }
+
+  aboutToDisappear() {
+    // 解注册监听系统环境变化的回调
+    this.getUIContext().getHostContext()?.getApplicationContext().off('environment', this.callbackId)
+    this.contentNode?.dispose()
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            if (this.contentNode == null && uiContext.getHostContext() != undefined) {
+              this.contentNode = new ComponentContent(uiContext, wrapBuilder(BuilderDialog), new Params(this.message,
+                uiContext.getHostContext()!!.getApplicationContext().resourceManager.getConfigurationSync().colorMode))
+            }
+            if (this.contentNode == null) {
+              return
+            }
+            promptAction.closeCustomDialog(this.contentNode)
+            // 先关闭已存在的弹窗，再重新打开
+            promptAction.openCustomDialog(this.contentNode).then(() => {
+              console.info("succeeded")
+            }).catch((error: BusinessError) => {
+              console.error(`OpenCustomDialog args error code is ${error.code}, message is ${error.message}`);
+            })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 <a id="opencustomdialog-1"></a>
@@ -534,8 +844,68 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 
 **示例**
 
-```TypeScript
 通过openCustomDialogWithController接口传入弹窗控制器并与自定义弹窗绑定。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent, promptAction } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+  dialogController: promptAction.DialogController = new promptAction.DialogController();
+
+  constructor(text: string, dialogController: promptAction.DialogController) {
+    this.text = text;
+    this.dialogController = dialogController;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    Button('点我关闭弹窗：通过外部传递的DialogController')
+      .onClick(() => {
+        if (params.dialogController != undefined) {
+          params.dialogController.close();
+        }
+      })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local message: string = "hello";
+  private dialogController: promptAction.DialogController = new promptAction.DialogController();
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText),
+              new Params(this.message, this.dialogController));
+            promptAction.openCustomDialogWithController(contentNode, this.dialogController)
+              .then(() => {
+                console.info('succeeded');
+              })
+              .catch((error: BusinessError) => {
+                console.error(`OpenCustomDialogWithController args error code is ${error.code}, message is ${error.message}`);
+              })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 ## openMenu
@@ -590,8 +960,55 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 **示例**
 
-```TypeScript
 该示例通过调用openMenu接口，展示了弹出Menu的功能。
+
+```TypeScript
+import { ComponentContent, FrameNode } from '@kit.ArkUI';
+
+export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  showMenu(context, uniqueId, contentNode);
+}
+
+@Builder
+function MyMenu() {
+  Column() {
+    Menu() {
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
+    }
+  }
+  .width('80%')
+  .padding('20lpx')
+}
+
+export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  const promptAction = context.getPromptAction();
+  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
+  let frameNodeTarget = frameNode?.getFirstChild();
+  frameNodeTarget = frameNodeTarget?.getChild(0);
+  let targetId = frameNodeTarget?.getUniqueId();
+  promptAction.openMenu(contentNode, { id: targetId }, {
+    enableArrow: true,
+  });
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
+        .borderRadius('16lpx')
+        .width('80%')
+        .margin(10)
+        .onClick(() => {
+          let context = this.getUIContext();
+          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
+          doSomething(context, this.getUniqueId(), contentNode);
+        })
+    }
+  }
+}
 ```
 
 ## openPopup
@@ -644,8 +1061,88 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 **示例**
 
-```TypeScript
 该示例通过调用openPopup、updatePopup和closePopup接口，展示了弹出、更新以及关闭Popup的功能。
+
+```TypeScript
+import { ComponentContent, FrameNode } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface PopupParam {
+  updateFunc?: () => void;
+  closeFunc?: () => void;
+}
+
+export function showPopup(context: UIContext, uniqueId: number, contentNode: ComponentContent<PopupParam>,
+  popupParam: PopupParam) {
+  const promptAction = context.getPromptAction();
+  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
+  let targetId = frameNode?.getFirstChild()?.getUniqueId();
+  promptAction.openPopup(contentNode, { id: targetId }, {
+    radius: 16,
+    mask: { color: Color.Pink },
+    enableArrow: true,
+  })
+    .then(() => {
+      console.info('openPopup success');
+    })
+    .catch((err: BusinessError) => {
+      console.error('openPopup error: ' + err.code + ' ' + err.message);
+    })
+  popupParam.updateFunc = () => {
+    promptAction.updatePopup(contentNode, {
+      enableArrow: false
+    }, true)
+      .then(() => {
+        console.info('updatePopup success');
+      })
+      .catch((err: BusinessError) => {
+        console.error('updatePopup error: ' + err.code + ' ' + err.message);
+      })
+  }
+  popupParam.closeFunc = () => {
+    promptAction.closePopup(contentNode)
+      .then(() => {
+        console.info('closePopup success');
+      })
+      .catch((err: BusinessError) => {
+        console.error('closePopup error: ' + err.code + ' ' + err.message);
+      })
+  }
+}
+
+@Builder
+function buildText(param?: PopupParam) {
+  Column() {
+    Text('popup')
+    Button('Update Popup')
+      .fontSize(20)
+      .onClick(() => {
+        param?.updateFunc?.();
+      })
+    Button('Close Popup')
+      .fontSize(20)
+      .onClick(() => {
+        param?.closeFunc?.();
+      })
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('Open Popup')
+        .fontSize(20)
+        .onClick(() => {
+          let context = this.getUIContext();
+          const popupParam: PopupParam = {};
+          const contentNode = new ComponentContent(context, wrapBuilder(buildText), popupParam);
+          showPopup(context, this.getUniqueId(), contentNode, popupParam);
+        })
+    }
+  }
+}
 ```
 
 ## openToast
@@ -685,8 +1182,49 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 
 **示例**
 
-```TypeScript
 该示例通过调用openToast和closeToast接口，展示了弹出以及关闭Toast的功能。
+
+```TypeScript
+import { PromptAction, promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  @State toastId: number = 0;
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('OpenToast')
+        .height(100)
+        .onClick(() => {
+          this.promptAction.openToast({
+            message: 'Toast Message',
+            duration: 10000,
+            showMode:promptAction.ToastShowMode.DEFAULT,
+          }).then((toastId: number) => {
+            this.toastId = toastId;
+          })
+            .catch((error: BusinessError) => {
+              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
+            })
+        })
+      Blank().height(50)
+      Button('Close Toast')
+        .height(100)
+        .onClick(() => {
+          try {
+            this.promptAction.closeToast(this.toastId);
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`CloseToast error code is ${code}, message is ${message}`);
+          };
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
 ```
 
 ## presentCustomDialog
@@ -883,12 +1421,84 @@ struct Index {
 }
 ```
 
-```TypeScript
 该示例通过调用showActionMenu接口，展示了弹出操作菜单以及通过Promise获取响应结果的功能。
-```
 
 ```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showActionMenu')
+        .onClick(() => {
+          this.promptAction.showActionMenu({
+            title: 'showActionMenu Title Info',
+            buttons: [
+              {
+                text: 'item1',
+                color: '#666666'
+              },
+              {
+                text: 'item2',
+                color: '#000000'
+              },
+            ]
+          })
+            .then(data => {
+              console.info('showActionMenu success, click button: ' + data.index);
+            })
+            .catch((err: BusinessError) => {
+              console.error(`showActionMenu error code is ${err.code}, message is ${err.message}`);
+            })
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
+
 该示例通过调用showActionMenu接口，展示了弹出操作菜单以及返回菜单响应结果的功能。
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showActionMenu')
+        .onClick(() => {
+          try {
+            this.promptAction.showActionMenu({
+              title: 'Title Info',
+              buttons: [
+                {
+                  text: 'item1',
+                  color: '#666666'
+                },
+                {
+                  text: 'item2',
+                  color: '#000000'
+                }
+              ]
+            }, { index: 0 });
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`showActionMenu args error code is ${code}, message is ${message}`);
+          }
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
 ```
 
 <a id="showactionmenu-1"></a>
@@ -966,8 +1576,44 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 **示例**
 
-```TypeScript
 该示例通过调用showActionMenu接口，展示了弹出操作菜单以及通过Promise获取响应结果的功能。
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showActionMenu')
+        .onClick(() => {
+          this.promptAction.showActionMenu({
+            title: 'showActionMenu Title Info',
+            buttons: [
+              {
+                text: 'item1',
+                color: '#666666'
+              },
+              {
+                text: 'item2',
+                color: '#000000'
+              },
+            ]
+          })
+            .then(data => {
+              console.info('showActionMenu success, click button: ' + data.index);
+            })
+            .catch((err: BusinessError) => {
+              console.error(`showActionMenu error code is ${err.code}, message is ${err.message}`);
+            })
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
 ```
 
 ## showDialog
@@ -1002,8 +1648,51 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 **示例**
 
-```TypeScript
 该示例通过调用showDialog接口，展示了弹出对话框并返回对话框响应结果的功能。
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showDialog')
+        .onClick(() => {
+          try {
+            this.promptAction.showDialog({
+              title: 'showDialog Title Info',
+              message: 'Message Info',
+              buttons: [
+                {
+                  text: 'button1',
+                  color: '#000000'
+                },
+                {
+                  text: 'button2',
+                  color: '#000000'
+                }
+              ]
+            }, (err, data) => {
+              if (err) {
+                console.error(`showDialog err: ${err}`);
+                return;
+              }
+              console.info('showDialog success callback, click button: ' + data.index);
+            });
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`showDialog args error code is ${code}, message is ${message}`);
+          };
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
 ```
 
 <a id="showdialog-1"></a>
@@ -1045,8 +1734,45 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 **示例**
 
-```TypeScript
 该示例通过调用showDialog接口，展示了弹出对话框并通过Promise获取对话框响应结果的功能。
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showDialog')
+        .onClick(() => {
+          this.promptAction.showDialog({
+            title: 'Title Info',
+            message: 'Message Info',
+            buttons: [
+              {
+                text: 'button1',
+                color: '#000000'
+              },
+              {
+                text: 'button2',
+                color: '#000000'
+              }
+            ],
+          })
+            .then(data => {
+              console.info('showDialog success, click button: ' + data.index);
+            })
+            .catch((err: BusinessError) => {
+              console.error('showDialog error: ' + err.code + ' ' + err.message);
+            })
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
 ```
 
 ## showToast
@@ -1080,12 +1806,50 @@ showToast(options: promptAction.ShowToastOptions): void
 
 **示例**
 
-```TypeScript
 该示例通过options参数中的systemMaterial属性设置组件的系统材质，实现了Toast的沉浸光感效果。
 
 该示例配图为高算力设备强档效果，组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
 
 从API版本26.0.0开始，参数options的类型promptAction.ShowToastOptions中新增了systemMaterial属性。
+
+```TypeScript
+import { PromptAction, promptAction, uiMaterial } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showToast')
+        .position({x: 125, y:300})
+        .onClick(() => {
+          try {
+            this.promptAction.showToast({
+              message: 'Message Info',
+              duration: 2000,
+              showMode:promptAction.ToastShowMode.DEFAULT,
+              // 设置系统材质接口
+              systemMaterial: new uiMaterial.ImmersiveMaterial({
+                style: uiMaterial.ImmersiveStyle.THIN
+              })
+            });
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`showToast args error code is ${code}, message is ${message}`);
+          };
+        })
+    }
+    .width('100%')
+    .height('100%')
+    // 请开发者替换为实际资源文件
+    .backgroundImage($r("app.media.img"))
+    .backgroundImageSize({width: '100%', height: '100%'})
+  }
+}
 ```
 
 ## updateCustomDialog
@@ -1127,8 +1891,68 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 
 **示例**
 
-```TypeScript
 该示例通过调用updateCustomDialog接口，动态调整已弹出自定义弹窗的位置。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ComponentContent } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+  }.backgroundColor('#FFF0F0F0')
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = "hello";
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let promptAction = uiContext.getPromptAction();
+            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
+            promptAction.openCustomDialog(contentNode)
+              .then(() => {
+                console.info('succeeded');
+              })
+              .catch((error: BusinessError) => {
+                console.error(`openCustomDialog args error code is ${error.code}, message is ${error.message}`);
+              })
+
+            setTimeout(() => {
+              promptAction.updateCustomDialog(contentNode, { alignment: DialogAlignment.CenterEnd })
+                .then(() => {
+                  console.info('succeeded');
+                })
+                .catch((error: BusinessError) => {
+                  console.error(`updateCustomDialog args error code is ${error.code}, message is ${error.message}`);
+                })
+            }, 2000); // 2秒后自动更新弹窗位置
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 ## updateMenu
@@ -1177,8 +2001,60 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 **示例**
 
-```TypeScript
 该示例通过调用updateMenu接口，展示了更新Menu箭头样式的功能。
+
+```TypeScript
+import { ComponentContent, FrameNode } from '@kit.ArkUI';
+
+export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  showMenu(context, uniqueId, contentNode);
+}
+
+@Builder
+function MyMenu() {
+  Column() {
+    Menu() {
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
+      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
+    }
+  }
+  .width('80%')
+  .padding('20lpx')
+}
+
+export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
+  const promptAction = context.getPromptAction();
+  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
+  let frameNodeTarget = frameNode?.getFirstChild();
+  frameNodeTarget = frameNodeTarget?.getChild(0);
+  let targetId = frameNodeTarget?.getUniqueId();
+  promptAction.openMenu(contentNode, { id: targetId }, {
+    enableArrow: true,
+  });
+  setTimeout(() => {
+    promptAction.updateMenu(contentNode, {
+      enableArrow: false,
+    });
+  }, 2000);
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
+        .borderRadius('16lpx')
+        .width('80%')
+        .margin(10)
+        .onClick(() => {
+          let context = this.getUIContext();
+          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
+          doSomething(context, this.getUniqueId(), contentNode);
+        })
+    }
+  }
+}
 ```
 
 ## updatePopup
@@ -1225,6 +2101,4 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 **示例**
 
-```TypeScript
 请参考[openPopup](#openpopup)示例。
-```

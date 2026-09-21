@@ -36,7 +36,7 @@ Reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** dateTime
+**Substitutes:** [dateTime](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#datetime)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -54,7 +54,7 @@ Date on which the reminder repeats.
 
 **Deprecated since:** 9
 
-**Substitutes:** repeatDays
+**Substitutes:** [repeatDays](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#repeatdays)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -72,6 +72,6 @@ Month in which the reminder repeats.
 
 **Deprecated since:** 9
 
-**Substitutes:** repeatMonths
+**Substitutes:** [repeatMonths](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md#repeatmonths)
 
 **System capability:** SystemCapability.Notification.ReminderAgent

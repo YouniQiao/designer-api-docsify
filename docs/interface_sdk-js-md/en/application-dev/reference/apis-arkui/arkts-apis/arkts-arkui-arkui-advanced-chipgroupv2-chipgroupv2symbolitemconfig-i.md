@@ -120,7 +120,7 @@ symbol: SymbolGlyphModifier
 
 **SymbolGlyphModifier** configuration object for the suffix icon. After being set, the specified symbol icon is displayed in the suffix area of the **ChipGroupV2**, with support for configuring display style, rendering mode, color, and other attributes.
 
-**Note:** When **SymbolGlyphModifier** is passed in, using **symbolEffect** to modify the animation type and effectStrategy to set the animation is not supported.
+**Note:** When **SymbolGlyphModifier** is passed in, using **symbolEffect** to modify the animation type and [effectStrategy](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy) to set the animation is not supported.
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

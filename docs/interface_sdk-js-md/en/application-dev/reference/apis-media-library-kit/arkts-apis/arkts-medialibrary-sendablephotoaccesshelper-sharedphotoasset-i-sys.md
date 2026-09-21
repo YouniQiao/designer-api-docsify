@@ -6,7 +6,7 @@ interface SharedPhotoAsset extends lang.ISendable
 
 Defines the shared photo asset
 
-**Inheritance/Implementation:** SharedPhotoAsset extends lang.ISendable
+**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 14
 

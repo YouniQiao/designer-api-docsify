@@ -25,7 +25,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system parameter value asynchronously. If the operation is successful, **err** is **undefined** and **data** is the system parameter value. If the operation fails, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 
@@ -76,8 +76,8 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
-| def | string | Yes | Default value. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| def | string | Yes | Default value of the system parameter. It works only when the system parameter does not exist.<br> Its value can be a random character string. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system parameter value asynchronously. If the operation is successful, **err** is **undefined** and **data** is the system parameter value. If the operation fails, **err** is an error object and **data** is **undefined**. |
 
 **Error codes:**
 
@@ -128,13 +128,13 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key to be queried. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
-| def | string | No | Default value of the system parameter.<br> It works only when the system parameter does not exist.<br> The value can be **undefined** or any custom value. |
+| def | string | No | Default value of the system parameter.<br> It works only when the system parameter does not exist. <br> Its value can be **undefined** or a random character string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the execution result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

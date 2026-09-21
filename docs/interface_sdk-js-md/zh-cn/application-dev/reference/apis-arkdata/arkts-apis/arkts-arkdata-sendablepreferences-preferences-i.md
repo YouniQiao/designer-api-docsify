@@ -8,7 +8,7 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 
 下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)获取到Preferences实例，再通过此实例调用对应接口。
 
-**继承/实现关系：** Preferences extends lang.ISendable
+**继承/实现关系：** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
 
 **起始版本：** 12
 

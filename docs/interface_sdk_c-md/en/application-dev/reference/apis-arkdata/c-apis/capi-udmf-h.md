@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides unified data management framework related functions and enumerations.
+Defines the APIs, data structs, and enums for accessing the UDMF. If the parameter type is char*, the string must end with a null character ('\0').
 
 **Library**: libudmf.so
 
@@ -18,15 +18,16 @@ Provides unified data management framework related functions and enumerations.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_UdmfData](capi-udmf-oh-udmfdata.md) | OH_UdmfData | Describes the unified data type. |
-| [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) | OH_UdmfRecord | Describes the record type in the unified data. |
-| [OH_UdmfRecordProvider](capi-udmf-oh-udmfrecordprovider.md) | OH_UdmfRecordProvider | Defines the data provider. |
-| [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) | OH_UdmfProperty | Describes some property parameters of unified data. |
-| [OH_Udmf_ProgressInfo](capi-udmf-oh-udmf-progressinfo.md) | OH_Udmf_ProgressInfo | Represents the udmf progress information. |
-| [OH_UdmfGetDataParams](capi-udmf-oh-udmfgetdataparams.md) | OH_UdmfGetDataParams | Represents the parameters of udmf get data with progress info. |
-| [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) | OH_UdmfOptions | Describes the optional arguments of data operation |
-| [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md) | OH_UdmfDataLoadParams | Indicates data loading params. |
-| [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md) | OH_UdmfDataLoadInfo | Indicates data loading information. |
+| [OH_UdmfData](capi-udmf-oh-udmfdata.md) | OH_UdmfData | Defines a struct for a unified data object. |
+| [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) | OH_UdmfRecord | Defines a struct for a data record in a unified data object. |
+| [OH_UdmfRecordProvider](capi-udmf-oh-udmfrecordprovider.md) | OH_UdmfRecordProvider | Defines the data record provider in a unified data object. |
+| [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) | OH_UdmfProperty | Defines a struct for a data record property in a unified data object. |
+| [OH_Udmf_ProgressInfo](capi-udmf-oh-udmf-progressinfo.md) | OH_Udmf_ProgressInfo | Defines a struct for progress information. |
+| [OH_UdmfGetDataParams](capi-udmf-oh-udmfgetdataparams.md) | OH_UdmfGetDataParams | Defines a struct for the parameters used to obtain UDMF data asynchronously. |
+| [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) | OH_UdmfOptions | Defines the optional parameters for data operations. |
+| [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md) | OH_UdmfDataLoadParams | Defines a struct for data loading parameters. |
+| [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md) | OH_UdmfDataLoadInfo | Defines a struct for the data loading information. |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | Describes summary information of unified data. |
 
 ### Enum
 
@@ -42,15 +43,15 @@ Provides unified data management framework related functions and enumerations.
 
 | Name | Description |
 | -- | -- |
-| UDMF_KEY_BUFFER_LEN (512) | The key minimum memory space size of Unified Data.<br>**Since**: 12 |
+| UDMF_KEY_BUFFER_LEN (512) | Minimum space length of the unique identifier of a unified data object.<br>**Since**: 12 |
 
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo, OH_UdmfData* data)](#oh_udmf_dataprogresslistener) | OH_Udmf_DataProgressListener | Defines the callback function used to return the progress information and data. |
+| [typedef void (\*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo, OH_UdmfData* data)](#oh_udmf_dataprogresslistener) | OH_Udmf_DataProgressListener | Defines the callback used to return progress information and data. When using it, check whether a null pointer is returned. Data is returned only when the progress reaches 100%. |
 | [typedef OH_UdmfData* (\*OH_Udmf_DataLoadHandler)(OH_UdmfDataLoadInfo* acceptableInfo)](#oh_udmf_dataloadhandler) | OH_Udmf_DataLoadHandler | Indicates the callback function for loading data. |
-| [OH_UdmfData* OH_UdmfData_Create()](#oh_udmfdata_create) | - | Creates a pointer to the instance of the [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
+| [OH_UdmfData* OH_UdmfData_Create()](#oh_udmfdata_create) | - | Creates an [OH_UdmfData](capi-udmf-oh-udmfdata.md) pointer and its instance. When the pointer is no longer needed, use OH_UdmfData_Destroy to destroy the instance; otherwise, memory leaks may occur. |
 | [void OH_UdmfData_Destroy(OH_UdmfData* pThis)](#oh_udmfdata_destroy) | - | Destroy a pointer that points to the [OH_UdmfData](capi-udmf-oh-udmfdata.md) instance. |
 | [int OH_UdmfData_AddRecord(OH_UdmfData* pThis, OH_UdmfRecord* record)](#oh_udmfdata_addrecord) | - | Add one {OH_UdmfRecord} record to the [OH_UdmfData](capi-udmf-oh-udmfdata.md) data. |
 | [bool OH_UdmfData_HasType(OH_UdmfData* pThis, const char* type)](#oh_udmfdata_hastype) | - | Check whether the type exists in the [OH_UdmfData](capi-udmf-oh-udmfdata.md) data. |
@@ -63,7 +64,7 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_UdmfRecordProvider_SetData(OH_UdmfRecordProvider* provider, void* context, const OH_UdmfRecordProvider_GetData callback, const UdmfData_Finalize finalize)](#oh_udmfrecordprovider_setdata) | - | Sets a callback function to obtain data. |
 | [OH_UdmfRecord* OH_UdmfRecord_Create()](#oh_udmfrecord_create) | - | Creates a pointer to the instance of the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md), it's relate with UDS data. |
 | [void OH_UdmfRecord_Destroy(OH_UdmfRecord* pThis)](#oh_udmfrecord_destroy) | - | Destroy a pointer that points to an instance of [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md). |
-| [int OH_UdmfRecord_AddGeneralEntry(OH_UdmfRecord* pThis, const char* typeId, unsigned char* entry, unsigned int count)](#oh_udmfrecord_addgeneralentry) | - | Add one custom data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record. |
+| [int OH_UdmfRecord_AddGeneralEntry(OH_UdmfRecord* pThis, const char* typeId, unsigned char* entry, unsigned int count)](#oh_udmfrecord_addgeneralentry) | - | Adds user-defined general data to a unified data record [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md). This API cannot be used for defined UDS types (such as PlainText, Link, and Pixelmap). |
 | [int OH_UdmfRecord_AddPlainText(OH_UdmfRecord* pThis, OH_UdsPlainText* plainText)](#oh_udmfrecord_addplaintext) | - | Add one {OH_UdsPlainText} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record. |
 | [int OH_UdmfRecord_AddHyperlink(OH_UdmfRecord* pThis, OH_UdsHyperlink* hyperlink)](#oh_udmfrecord_addhyperlink) | - | Add one {OH_UdsHyperlink} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record. |
 | [int OH_UdmfRecord_AddHtml(OH_UdmfRecord* pThis, OH_UdsHtml* html)](#oh_udmfrecord_addhtml) | - | Add one {OH_UdsHtml} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record. |
@@ -109,6 +110,11 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_UdmfOptions_Reset(OH_UdmfOptions* pThis)](#oh_udmfoptions_reset) | - | Reset [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) to default. |
 | [Udmf_Visibility OH_UdmfOptions_GetVisibility(OH_UdmfOptions* pThis)](#oh_udmfoptions_getvisibility) | - | Get visibility from the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
 | [int OH_UdmfOptions_SetVisibility(OH_UdmfOptions* pThis, Udmf_Visibility visibility)](#oh_udmfoptions_setvisibility) | - | Set visibility value to [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
+| [OH_UDMF_Summary *OH_UDMF_CreateSummary(void)](#oh_udmf_createsummary) | - | Creates an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance. |
+| [void OH_UDMF_DestroySummary(OH_UDMF_Summary *summary)](#oh_udmf_destroysummary) | - | Destroy the heap memory pointed to by the pointer of [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md). Note that this function cannot be called repeatedly for the same pointer. |
+| [int OH_UDMF_GetSummaryOverviewTypes(const OH_UDMF_Summary *summary, const char *const **types, int64_t *count)](#oh_udmf_getsummaryoverviewtypes) | - | Gets all data types in the overview of an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.<br> The returned array and strings are owned by summary. The caller must not modify or free them. They remain valid until summary is destroyed by [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary). Each returned data type is a non-empty NUL-terminated UTF-8 string. The order of the returned data types is unspecified. If the overview is empty, *types is nullptr and *count is 0. |
+| [int OH_UDMF_GetSummaryOverviewSize(const OH_UDMF_Summary *summary, const char *type, int64_t *dataSize)](#oh_udmf_getsummaryoverviewsize) | - | Gets the data size associated with a data type in the overview of an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance. |
+| [int OH_UDMF_GetSummaryFilenameExtensions(const OH_UDMF_Summary *summary, const char *const **filenameExtensions, int64_t *count)](#oh_udmf_getsummaryfilenameextensions) | - | Gets all file name extensions in an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.<br> Each returned extension includes the leading period and uses lowercase ASCII letters, and is a non-empty NUL-terminated string. The returned array and strings are owned by summary. The caller must not modify or free them. They remain valid until summary is destroyed by [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary) or until the summary is populated again successfully. If no valid file name extension is available, *filenameExtensions is nullptr and *count is 0. |
 | [int OH_Udmf_GetUnifiedData(const char* key, Udmf_Intention intention, OH_UdmfData* unifiedData)](#oh_udmf_getunifieddata) | - | Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data from udmf database. |
 | [int OH_Udmf_GetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData** dataArray, unsigned int* dataSize)](#oh_udmf_getunifieddatabyoptions) | - | Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data array from udmf database by intention. |
 | [int OH_Udmf_SetUnifiedData(Udmf_Intention intention, OH_UdmfData* unifiedData, char* key, unsigned int keyLen)](#oh_udmf_setunifieddata) | - | Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database. |
@@ -121,7 +127,7 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_UdmfProgressInfo_GetStatus(OH_Udmf_ProgressInfo* progressInfo)](#oh_udmfprogressinfo_getstatus) | - | Gets the status from the {@OH_Udmf_ProgressInfo}. |
 | [OH_UdmfGetDataParams* OH_UdmfGetDataParams_Create()](#oh_udmfgetdataparams_create) | - | Creates a pointer to the instance of the [OH_UdmfGetDataParams](capi-udmf-oh-udmfgetdataparams.md). |
 | [void OH_UdmfGetDataParams_Destroy(OH_UdmfGetDataParams* pThis)](#oh_udmfgetdataparams_destroy) | - | Destroy a pointer that points to an instance of [OH_UdmfGetDataParams](capi-udmf-oh-udmfgetdataparams.md). |
-| [void OH_UdmfGetDataParams_SetDestUri(OH_UdmfGetDataParams* params, const char* destUri)](#oh_udmfgetdataparams_setdesturi) | - | Sets the destination uri to the {@OH_UdmfGetDataParams}. |
+| [void OH_UdmfGetDataParams_SetDestUri(OH_UdmfGetDataParams* params, const char* destUri)](#oh_udmfgetdataparams_setdesturi) | - | Sets the destination path in an asynchronous request parameter {@OH_UdmfGetDataParams}.If the destination path is set, file-type data is copied to the specified path, and the file-type data obtained in the callback is replaced with the URI of the destination path. If the destination path is not set, no file copy is performed, and the file-type data obtained in the callback is the URI of the source path. If the application involves complex file processing policies or needs to copy files to multiple paths, it is recommended not to set this parameter and let the application handle the file copy. |
 | [void OH_UdmfGetDataParams_SetFileConflictOptions(OH_UdmfGetDataParams* params, const Udmf_FileConflictOptions options)](#oh_udmfgetdataparams_setfileconflictoptions) | - | Sets the file conflict options to the {@OH_UdmfGetDataParams}. |
 | [void OH_UdmfGetDataParams_SetProgressIndicator(OH_UdmfGetDataParams* params, const Udmf_ProgressIndicator progressIndicator)](#oh_udmfgetdataparams_setprogressindicator) | - | Sets the progress indicator to the {@OH_UdmfGetDataParams}. |
 | [void OH_UdmfGetDataParams_SetDataProgressListener(OH_UdmfGetDataParams* params, const OH_Udmf_DataProgressListener dataProgressListener)](#oh_udmfgetdataparams_setdataprogresslistener) | - | Sets the progress indicator to the {@OH_UdmfGetDataParams}. |
@@ -133,7 +139,7 @@ Provides unified data management framework related functions and enumerations.
 | [OH_UdmfDataLoadInfo* OH_UdmfDataLoadInfo_Create()](#oh_udmfdataloadinfo_create) | - | Creates a pointer to the instance of the [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md). |
 | [void OH_UdmfDataLoadInfo_Destroy(OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadinfo_destroy) | - | Destroy the heap memory pointed to by the pointer of [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md). Note that this function cannot be called repeatedly for the same pointer. |
 | [char** OH_UdmfDataLoadInfo_GetTypes(OH_UdmfDataLoadInfo* dataLoadInfo, unsigned int* count)](#oh_udmfdataloadinfo_gettypes) | - | Gets the types from the {@OH_UdmfDataLoadInfo}. |
-| [void OH_UdmfDataLoadInfo_SetType(OH_UdmfDataLoadInfo* dataLoadInfo, const char* type)](#oh_udmfdataloadinfo_settype) | - | Sets the data load info to the {@OH_UdmfDataLoadInfo}. |
+| [void OH_UdmfDataLoadInfo_SetType(OH_UdmfDataLoadInfo* dataLoadInfo, const char* type)](#oh_udmfdataloadinfo_settype) | - | Sets the data type in a data load information {@OH_UdmfDataLoadInfo}. |
 | [int OH_UdmfDataLoadInfo_GetRecordCount(OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadinfo_getrecordcount) | - | Gets the record count from the {@OH_UdmfDataLoadInfo}. |
 | [void OH_UdmfDataLoadInfo_SetRecordCount(OH_UdmfDataLoadInfo* dataLoadInfo, unsigned int recordCount)](#oh_udmfdataloadinfo_setrecordcount) | - | Sets the record count to the {@OH_UdmfDataLoadInfo}. |
 
@@ -141,7 +147,7 @@ Provides unified data management framework related functions and enumerations.
 
 | Name | Description |
 | -- | -- |
-| void (*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo, OH_UdmfData* data) | Defines the callback function used to return the progress information and data.<br>**Since**: 15 |
+| void (*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo, OH_UdmfData* data) | Defines the callback used to return progress information and data. When using it, check whether a null pointer is returned. Data is returned only when the progress reaches 100%.<br>**Since**: 15 |
 | OH_UdmfData* (*OH_Udmf_DataLoadHandler)(OH_UdmfDataLoadInfo* acceptableInfo) | Indicates the callback function for loading data.<br>**Since**: 20 |
 | void (*UdmfData_Finalize)(void* context) | Defines the callback function used free the context.<br>**Since**: 13 |
 | void* (*OH_UdmfRecordProvider_GetData)(void* context, const char* type) | Defines a callback function used to obtain data by type.<br>**Since**: 13 |
@@ -259,7 +265,7 @@ typedef void (*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo,
 
 **Description**
 
-Defines the callback function used to return the progress information and data.
+Defines the callback used to return progress information and data. When using it, check whether a null pointer is returned. Data is returned only when the progress reaches 100%.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -306,7 +312,7 @@ OH_UdmfData* OH_UdmfData_Create()
 
 **Description**
 
-Creates a pointer to the instance of the [OH_UdmfData](capi-udmf-oh-udmfdata.md).
+Creates an [OH_UdmfData](capi-udmf-oh-udmfdata.md) pointer and its instance. When the pointer is no longer needed, use OH_UdmfData_Destroy to destroy the instance; otherwise, memory leaks may occur.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -671,7 +677,7 @@ int OH_UdmfRecord_AddGeneralEntry(OH_UdmfRecord* pThis, const char* typeId, unsi
 
 **Description**
 
-Add one custom data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record.
+Adds user-defined general data to a unified data record [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md). This API cannot be used for defined UDS types (such as PlainText, Link, and Pixelmap).
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2115,6 +2121,162 @@ Set visibility value to [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).
 OH_UdmfOptions Udmf_Visibility Udmf_ErrCode
 
 
+### OH_UDMF_CreateSummary()
+
+```c
+OH_UDMF_Summary *OH_UDMF_CreateSummary(void)
+```
+
+**Description**
+
+Creates an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.0.1
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_UDMF_Summary *](capi-udmf-oh-udmf-summary.md) | Returns a pointer to the [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance created if the operation is successful.      The caller owns the returned instance and must release it by calling [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)      when it is no longer needed.      <br>Returns nullptr if the memory is insufficient. |
+
+**Reference**:
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary)
+
+
+### OH_UDMF_DestroySummary()
+
+```c
+void OH_UDMF_DestroySummary(OH_UDMF_Summary *summary)
+```
+
+**Description**
+
+Destroy the heap memory pointed to by the pointer of [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md). Note that this function cannot be called repeatedly for the same pointer.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] Represents a pointer to an instance of [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md). This instance must be a valid instance created by [OH_UDMF_CreateSummary](capi-udmf-h.md#oh_udmf_createsummary). The pointer must not be NULL. |
+
+**Reference**:
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_CreateSummary](capi-udmf-h.md#oh_udmf_createsummary)
+
+
+### OH_UDMF_GetSummaryOverviewTypes()
+
+```c
+int OH_UDMF_GetSummaryOverviewTypes(const OH_UDMF_Summary *summary, const char *const **types, int64_t *count)
+```
+
+**Description**
+
+Gets all data types in the overview of an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.<br> The returned array and strings are owned by summary. The caller must not modify or free them. They remain valid until summary is destroyed by [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary). Each returned data type is a non-empty NUL-terminated UTF-8 string. The order of the returned data types is unspecified. If the overview is empty, *types is nullptr and *count is 0.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] Represents a pointer to an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance. The pointer must not be NULL. |
+| const char *const **types | [out] Represents the output array of data types. Each element is a non-empty NUL-terminated UTF-8 string. This parameter becomes invalid after the [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary) method is called. The pointer must not be NULL. If this function returns any value other than [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode), *types is unchanged. |
+| int64_t *count | [out] Represents the number of data types in the output array. The value is a non-negative integer within the range of int64_t and is 0 when the overview is empty. The pointer must not be NULL. If this function returns any value other than [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode), *count is unchanged. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode).          <ul>          <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success.</li>          <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args.</li>          </ul> |
+
+**Reference**:
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_GetSummaryOverviewSize](capi-udmf-h.md#oh_udmf_getsummaryoverviewsize)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_GetSummaryOverviewSize()
+
+```c
+int OH_UDMF_GetSummaryOverviewSize(const OH_UDMF_Summary *summary, const char *type, int64_t *dataSize)
+```
+
+**Description**
+
+Gets the data size associated with a data type in the overview of an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] Represents a pointer to an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance. The pointer must not be NULL. |
+| const char *type | [in] Represents the data type used as the overview key. It is a NUL-terminated UTF-8 string and must not be empty. The pointer must not be NULL. |
+| int64_t *dataSize | [out] Represents the output data size in bytes. The value is valid only when this function returns [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode). If the data type is not found, *dataSize is set to -1. If this function returns [UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode), *dataSize is unchanged. The pointer must not be NULL. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode).          <ul>          <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success.</li>          <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args.</li>          <li>[UDMF_ERR](capi-udmf-err-code-h.md#udmf_errcode) Internal data error.              The possible cause is that the server is faulty or the memory is insufficient.</li>          </ul> |
+
+**Reference**:
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[OH_UDMF_GetSummaryOverviewTypes](capi-udmf-h.md#oh_udmf_getsummaryoverviewtypes)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
+### OH_UDMF_GetSummaryFilenameExtensions()
+
+```c
+int OH_UDMF_GetSummaryFilenameExtensions(const OH_UDMF_Summary *summary, const char *const **filenameExtensions, int64_t *count)
+```
+
+**Description**
+
+Gets all file name extensions in an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance.<br> Each returned extension includes the leading period and uses lowercase ASCII letters, and is a non-empty NUL-terminated string. The returned array and strings are owned by summary. The caller must not modify or free them. They remain valid until summary is destroyed by [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary) or until the summary is populated again successfully. If no valid file name extension is available, *filenameExtensions is nullptr and *count is 0.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) *summary | [in] Represents a pointer to an [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) instance. The pointer must not be NULL. |
+| const char *const **filenameExtensions | [out] Represents the output array of file name extensions. Each element is a non-empty NUL-terminated ASCII string. This parameter becomes invalid after the [OH_UDMF_DestroySummary](capi-udmf-h.md#oh_udmf_destroysummary) method is called. The pointer must not be NULL. If this function returns any value other than [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode), *filenameExtensions is unchanged. |
+| int64_t *count | [out] Represents the number of file name extensions in the output array. The value is a non-negative integer within the range of int64_t and is 0 when no file name extension is available. The pointer must not be NULL. If this function returns any value other than [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode), *count is unchanged. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode).          <ul>          <li>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success.</li>          <li>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args.</li>          </ul> |
+
+**Reference**:
+
+[OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md)
+[Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode)
+
+
 ### OH_Udmf_GetUnifiedData()
 
 ```c
@@ -2492,7 +2654,7 @@ void OH_UdmfGetDataParams_SetDestUri(OH_UdmfGetDataParams* params, const char* d
 
 **Description**
 
-Sets the destination uri to the {@OH_UdmfGetDataParams}.
+Sets the destination path in an asynchronous request parameter {@OH_UdmfGetDataParams}.If the destination path is set, file-type data is copied to the specified path, and the file-type data obtained in the callback is replaced with the URI of the destination path. If the destination path is not set, no file copy is performed, and the file-type data obtained in the callback is the URI of the source path. If the application involves complex file processing policies or needs to copy files to multiple paths, it is recommended not to set this parameter and let the application handle the file copy.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -2806,7 +2968,7 @@ void OH_UdmfDataLoadInfo_SetType(OH_UdmfDataLoadInfo* dataLoadInfo, const char* 
 
 **Description**
 
-Sets the data load info to the {@OH_UdmfDataLoadInfo}.
+Sets the data type in a data load information {@OH_UdmfDataLoadInfo}.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

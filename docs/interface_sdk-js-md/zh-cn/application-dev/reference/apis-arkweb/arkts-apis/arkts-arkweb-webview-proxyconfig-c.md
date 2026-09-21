@@ -32,9 +32,7 @@ bypassHostnamesWithoutPeriod(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## clearImplicitRules
 
@@ -52,9 +50,7 @@ clearImplicitRules(): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## enableReverseBypass
 
@@ -84,9 +80,7 @@ enableReverseBypass(reverse: boolean): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## getBypassRules
 
@@ -110,9 +104,7 @@ getBypassRules(): Array<string>
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## getProxyRules
 
@@ -136,9 +128,7 @@ getProxyRules(): Array<ProxyRule>
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## insertBypassRule
 
@@ -168,9 +158,7 @@ insertBypassRule(bypassRule: string): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## insertDirectRule
 
@@ -204,9 +192,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## insertProxyRule
 
@@ -255,9 +241,7 @@ host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多�
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```
 
 ## isReverseBypassEnabled
 
@@ -281,6 +265,4 @@ isReverseBypassEnabled(): boolean
 
 **示例**
 
-```TypeScript
 完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-```

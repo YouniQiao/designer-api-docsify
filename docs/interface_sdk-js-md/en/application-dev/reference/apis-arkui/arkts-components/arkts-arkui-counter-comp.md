@@ -28,6 +28,43 @@ Create Counter component.
 
 ## Examples
 
-```TypeScript
 This example shows the basic usage of the Counter component. Tap the + and - buttons to change the counter value.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CounterExample {
+  @State counterValue1: number = 0;
+  @State counterValue2: number = 0;
+
+  build() {
+    Column({ space: 50 }) {
+      Counter() {
+        Text(this.counterValue1.toString())
+      }
+      .onInc(() => {
+        this.counterValue1++;
+      })
+      .onDec(() => {
+        this.counterValue1--;
+      })
+
+      Counter() {
+        Text(this.counterValue2.toString())
+      }
+      .onInc(() => {
+        this.counterValue2++;
+      })
+      .onDec(() => {
+        this.counterValue2--;
+      })
+      .enableInc(true)
+      .enableDec(false)
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
 ```

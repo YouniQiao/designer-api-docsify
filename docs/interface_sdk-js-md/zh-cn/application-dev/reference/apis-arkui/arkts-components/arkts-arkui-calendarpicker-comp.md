@@ -49,15 +49,37 @@ CalendarPicker(options?: CalendarOptions)
 
 ## 示例
 
-```TypeScript
 ### 示例1（设置下拉日历弹窗）
 
 该示例通过calendarPicker实现了日历选择器组件，提供下拉日历弹窗。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private selectedDate: Date = new Date('2024-03-05');
+
+  build() {
+    Column() {
+      Column() {
+        CalendarPicker({ hintRadius: 10, selected: this.selectedDate })
+          .edgeAlign(CalendarAlign.END)
+          .textStyle({ color: '#ff182431', font: { size: 20, weight: FontWeight.Normal } })
+          .margin(10)
+          .onChange((value) => {
+            console.info(`CalendarPicker onChange: ${value.toString()}`);
+          })
+      }.alignItems(HorizontalAlign.End).width("100%")
+
+      Text('日历日期选择器').fontSize(30)
+    }.width('100%').margin({ top: 350 })
+  }
+}
+```
+
 ### 示例2（设置开始日期和结束日期）
 
 该示例通过start和end设置日历选择器的开始日期和结束日期。
@@ -65,12 +87,60 @@ CalendarPicker(options?: CalendarOptions)
 从API version 18开始，[CalendarOptions](#calendaroptions对象说明)中新增了start、end属性。
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private selectedDate: Date = new Date('2025-01-15');
+  private startDate: Date = new Date('2025-01-05');
+  private endDate: Date = new Date('2025-01-25');
+
+  build() {
+    Column() {
+      Column() {
+        CalendarPicker({ hintRadius: 10, selected: this.selectedDate, start: this.startDate, end: this.endDate })
+          .edgeAlign(CalendarAlign.END)
+          .textStyle({ color: '#ff182431', font: { size: 20, weight: FontWeight.Normal } })
+          .margin(10)
+          .onChange((value) => {
+            console.info(`CalendarPicker onChange: ${value.toString()}`);
+          })
+      }.alignItems(HorizontalAlign.End).width("100%")
+    }.width('100%').margin({ top: 350 })
+  }
+}
+```
+
 ### 示例3（设置日历选择器在系统当前日期时，保持高亮显示和禁用日期区间）
 
 该示例通过markToday设置日历选择器在系统当前日期时，开启保持高亮显示，同时，通过disabledDateRange设置日历选择器的禁用日期区间。
 
 从API version 19开始，新增了[markToday](#marktoday19)接口，[CalendarOptions](#calendaroptions对象说明)中新增了disabledDateRange属性。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct CalendarPickerExample {
+  private disabledDateRange: DateRange[] = [
+    { start: new Date('2025-01-01'), end: new Date('2025-01-02') },
+    { start: new Date('2025-01-09'), end: new Date('2025-01-10') },
+    { start: new Date('2025-01-15'), end: new Date('2025-01-16') },
+    { start: new Date('2025-01-19'), end: new Date('2025-01-19') },
+    { start: new Date('2025-01-22'), end: new Date('2025-01-25') }
+  ];
+
+  build() {
+    Column() {
+      CalendarPicker({ disabledDateRange: this.disabledDateRange })
+        .margin(10)
+        .markToday(true)
+        .onChange((value) => {
+          console.info(`CalendarPicker onChange: ${value.toString()}`);
+        })
+    }.alignItems(HorizontalAlign.End).width('100%')
+  }
+}
 ```

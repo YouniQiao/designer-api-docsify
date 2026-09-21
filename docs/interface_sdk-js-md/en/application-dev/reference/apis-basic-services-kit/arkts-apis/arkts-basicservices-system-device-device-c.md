@@ -24,7 +24,11 @@ import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit'
 static getInfo(options?: GetDeviceOptions): void
 ```
 
-Obtains the device information.
+Obtains the device information. This API asynchronously reads the system device information and uses a callback to return the device brand, model, screen parameters, and other data.
+
+> **NOTE:** 
+> 
+> Do not call **Device.getInfo** before the **onShow** event of the home page.
 
 **Since:** 3
 
@@ -38,16 +42,43 @@ Obtains the device information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No | Options |
+| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No | Parameters for obtaining the device information. If the parameters are not specified, the default configuration is used to obtain basic device information. |
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+interface DeviceData {
+  brand: string;
+}
+
+export default class Page {
+  getInfo() {
+    try {
+      Device.getInfo({
+        success: (data: DeviceData) => {
+          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
+        },
+        fail: (data: any, code: number) => {
+          console.error(`Failed to obtain device information. Code: ${code}, message: ${data}`);
+        },
+      });
+    } catch (error) {
+      console.error('Failed to call device information API:', error);
+    }
+  }
+}
+```
+
 JS example:
+
+```TypeScript
+<div class="container">
+    <text class="title">Device Information</text>
+    <input type="button" value="Get Device Brand" class="button" onclick="getDeviceInfo"></input>
+    <text class="info">{{brandInfo}}</text>
+</div>
 ```
 
 ```TypeScript

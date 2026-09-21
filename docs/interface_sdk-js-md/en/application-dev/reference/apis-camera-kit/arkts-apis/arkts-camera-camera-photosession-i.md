@@ -255,6 +255,28 @@ function unregisterSystemPressureLevelChangeCallback(photoSession: camera.PhotoS
 }
 ```
 
+## offCameraSwitchRequest
+
+```TypeScript
+offCameraSwitchRequest(callback?: Callback<CameraDevice>): void
+```
+
+Unsubscribes camera switch request event callback.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | No | Callback used to get the target camera device. |
+
 ## offExposureInfoChange
 
 ```TypeScript
@@ -570,6 +592,28 @@ function registerSystemPressureLevelChangeCallback(photoSession: camera.PhotoSes
     photoSession.on('systemPressureLevelChange', callback);
 }
 ```
+
+## onCameraSwitchRequest
+
+```TypeScript
+onCameraSwitchRequest(callback: Callback<CameraDevice>): void
+```
+
+Subscribes camera switch request event callback.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | Yes | Callback used to get the target camera device. |
 
 ## onExposureInfoChange
 

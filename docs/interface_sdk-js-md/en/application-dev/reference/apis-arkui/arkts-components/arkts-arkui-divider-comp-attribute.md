@@ -20,7 +20,7 @@ The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 color(value: ResourceColor)
 ```
 
-Sets the color of the divider. This attribute can be dynamically set using attributeModifier.
+Sets the color of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ Sets the color of the divider. This attribute can be dynamically set using attri
 lineCap(value: LineCapStyle)
 ```
 
-Sets the line cap style of the divider. This attribute can be dynamically set using attributeModifier.
+Sets the line cap style of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -64,15 +64,15 @@ Sets the line cap style of the divider. This attribute can be dynamically set us
 strokeWidth(value: number | string)
 ```
 
-Sets the stroke width of the divider. This attribute can be dynamically set using attributeModifier.
+Sets the stroke width of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 > **NOTE:** 
 > 
 > - The width of the divider cannot be in percentage.
 > 
-> - When a horizontal divider is used, **strokeWidth** controls the height, and its priority is lower than that of the universal attribute height. When a vertical divider is used,
+> - When a horizontal divider is used, **strokeWidth** controls the height, and its priority is lower than that of the universal attribute [height](arkts-arkui-common-comp-commonmethod-c.md#height). When a vertical divider is used,
 > **strokeWidth** controls the width, and its priority is lower than that of the universal attribute
-> width.
+> [width](arkts-arkui-common-comp-commonmethod-c.md#width).
 > 
 > - If the size exceeds the value set by the universal attribute, the divider is clipped based on the universal attribute.
 > 
@@ -98,7 +98,7 @@ Sets the stroke width of the divider. This attribute can be dynamically set usin
 vertical(value: boolean)
 ```
 
-Sets the direction of the divider. This attribute can be dynamically set using attributeModifier.
+Sets the direction of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 

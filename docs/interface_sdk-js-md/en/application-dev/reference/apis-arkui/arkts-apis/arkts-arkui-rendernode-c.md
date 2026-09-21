@@ -42,7 +42,7 @@ Appends a child node to this RenderNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNodecannot be adopted."<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -325,20 +325,164 @@ Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-
 
 **Examples**
 
-```TypeScript
 Code in ArkTS:
-```
 
 ```TypeScript
+// Index.ets
+import bridge from 'libentry.so'; // The .so file is written and generated from your Node-API implementation.
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
+
+// Extend RenderNode to implement custom drawing.
+class MyRenderNode extends RenderNode {
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+  }
+
+  // Invoked when the RenderNode undergoes drawing operations.
+  draw(context: DrawContext) {
+    // The width and height in the context need to be converted from vp to px.
+    bridge.nativeOnDraw(0, context, this.uiContext.vp2px(context.size.width), this.uiContext.vp2px(context.size.height));
+  }
+}
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      const renderNode = new MyRenderNode(uiContext);
+      renderNode.size = { width: 100, height: 100 };
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 The C++ side can obtain the canvas through the Node-API and perform subsequent custom drawing operations.
-```
 
 ```TypeScript
+// native_bridge.cpp
+#include "napi/native_api.h"
+#include <native_drawing/drawing_canvas.h>
+#include <native_drawing/drawing_color.h>
+#include <native_drawing/drawing_path.h>
+#include <native_drawing/drawing_pen.h>
+
+static napi_value OnDraw(napi_env env, napi_callback_info info)
+{
+    size_t argc = 4;
+    napi_value args[4] = { nullptr };
+    napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
+
+    int32_t id;
+    napi_get_value_int32(env, args[0], &id);
+    
+    // Obtain the pointer to the canvas.
+    void* temp = nullptr;
+    napi_unwrap(env, args[1], &temp);
+    OH_Drawing_Canvas *canvas = reinterpret_cast<OH_Drawing_Canvas*>(temp);
+    
+    // Obtain the canvas width.
+    int32_t width;
+    napi_get_value_int32(env, args[2], &width);
+    
+    // Obtain the canvas height.
+    int32_t height;
+    napi_get_value_int32(env, args[3], &height);
+    
+    // Pass in information such as the canvas, height, and width to the drawing API for custom drawing.
+    auto path = OH_Drawing_PathCreate();
+    OH_Drawing_PathMoveTo(path, width / 4, height / 4);
+    OH_Drawing_PathLineTo(path, width * 3 / 4, height / 4);
+    OH_Drawing_PathLineTo(path, width * 3 / 4, height * 3 / 4);
+    OH_Drawing_PathLineTo(path, width / 4, height * 3 / 4);
+    OH_Drawing_PathLineTo(path, width / 4, height / 4);
+    OH_Drawing_PathClose(path);
+    
+    auto pen = OH_Drawing_PenCreate();
+    OH_Drawing_PenSetWidth(pen, 10);
+    OH_Drawing_PenSetColor(pen, OH_Drawing_ColorSetArgb(0xFF, 0xFF, 0x00, 0x00));
+    OH_Drawing_CanvasAttachPen(canvas, pen);
+    
+    OH_Drawing_CanvasDrawPath(canvas, path);
+    OH_Drawing_CanvasDetachPen(canvas);
+    OH_Drawing_PenDestroy(pen);
+    OH_Drawing_PathDestroy(path);
+
+    return nullptr;
+}
+
+EXTERN_C_START
+static napi_value Init(napi_env env, napi_value exports)
+{
+    napi_property_descriptor desc[] = {
+        { "nativeOnDraw", nullptr, OnDraw, nullptr, nullptr, nullptr, napi_default, nullptr }
+    };
+    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
+    return exports;
+}
+EXTERN_C_END
+
+static napi_module demoModule = {
+    .nm_version = 1,
+    .nm_flags = 0,
+    .nm_filename = nullptr,
+    .nm_register_func = Init,
+    .nm_modname = "entry",
+    .nm_priv = ((void*)0),
+    .reserved = { 0 },
+};
+
+extern "C" __attribute__((constructor)) void RegisterEntryModule(void)
+{
+    napi_module_register(&demoModule);
+}
+```
+
 Add the following content to the src/main/cpp/CMakeLists.txt file of the project:
-```
 
 ```TypeScript
+# the minimum version of CMake.
+cmake_minimum_required(VERSION 3.4.1)
+project(NapiTest)
+
+set(NATIVERENDER_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+
+include_directories(${NATIVERENDER_ROOT_PATH}
+                    ${NATIVERENDER_ROOT_PATH}/include)
+
+add_library(entry SHARED native_bridge.cpp)
+target_link_libraries(entry PUBLIC libace_napi.z.so)
+target_link_libraries(entry PUBLIC libace_ndk.z.so)
+target_link_libraries(entry PUBLIC libnative_drawing.so)
+```
+
 In the  file of the project, add the definition of the custom drawing API on the ArkTS side, for example:
+
+```TypeScript
+import { DrawContext } from '@kit.ArkUI';
+
+export const nativeOnDraw: (id: number, context: DrawContext, width: number, height: number) => number;
 ```
 
 ## getChild
@@ -731,7 +875,7 @@ Inserts a child node after the specified child node of this RenderNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNodecannot be adopted."<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 

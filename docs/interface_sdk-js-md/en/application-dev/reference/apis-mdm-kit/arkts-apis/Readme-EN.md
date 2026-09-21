@@ -209,10 +209,12 @@
   - [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)
   - [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md)
 - [@ohos.enterprise.common(Common Module)](arkts-mdm-enterprise-common.md)
+  - [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md)
   - [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)
   - [InstallationResult](arkts-mdm-common-installationresult-i.md)
   - [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md)
   - [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md)
+  - [ManagedFeature](arkts-mdm-common-managedfeature-e.md)
   - [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md)
   - [QueryPolicy](arkts-mdm-common-querypolicy-e.md)
   - [Result](arkts-mdm-common-result-e.md)
@@ -514,6 +516,7 @@
   - [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md)
   - [getDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-getdisallowedpermissiveusbdevices-f.md)
   - [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md)
+  - [getUsbSerialNumber](arkts-mdm-usbmanager-getusbserialnumber-f.md)
   - [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md)
   <!--Del-->
   - [isUsbDisabled(system api)](arkts-mdm-usbmanager-isusbdisabled-f-sys.md)<!--DelEnd-->

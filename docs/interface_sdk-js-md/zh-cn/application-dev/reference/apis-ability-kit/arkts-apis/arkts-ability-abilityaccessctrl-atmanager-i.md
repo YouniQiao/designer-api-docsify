@@ -357,8 +357,22 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 
 **示例**
 
-```TypeScript
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 拉起跳转设置页弹窗
+atManager.openPermissionOnSetting(context, 'ohos.permission.HOOK_KEY_EVENT').then((data: abilityAccessCtrl.SelectedResult) => {
+  console.info(`openPermissionOnSetting success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`openPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## requestGlobalSwitch
@@ -411,8 +425,22 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 **示例**
 
-```TypeScript
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 拉起全局开关设置弹窗
+atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then((data: boolean) => {
+  console.info(`requestGlobalSwitch success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`requestGlobalSwitch fail, code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## requestPermissionOnSetting
@@ -467,8 +495,22 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 **示例**
 
-```TypeScript
 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 拉起权限设置弹窗
+atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((data: Array<abilityAccessCtrl.GrantStatus>) => {
+  console.info(`requestPermissionOnSetting success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## requestPermissionsFromUser
@@ -515,10 +557,30 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 **示例**
 
-```TypeScript
 下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 请求用户授权
+atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
+  if (err) {
+    console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`requestPermissionsFromUser success, result: ${data}`);
+    console.info('requestPermissionsFromUser data permissions:' + data.permissions);
+    console.info('requestPermissionsFromUser data authResults:' + data.authResults);
+    console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
+    console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
+  }
+});
 ```
 
 <a id="requestpermissionsfromuser-1"></a>
@@ -568,10 +630,28 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 **示例**
 
-```TypeScript
 下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
+
+```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建权限管理器实例
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// 请在组件内获取context
+let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+// 请求用户授权
+atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
+  console.info(`requestPermissionsFromUser success, result: ${data}`);
+  console.info('requestPermissionsFromUser data permissions:' + data.permissions);
+  console.info('requestPermissionsFromUser data authResults:' + data.authResults);
+  console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
+  console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
+}).catch((err: BusinessError): void => {
+  console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 ## verifyAccessToken

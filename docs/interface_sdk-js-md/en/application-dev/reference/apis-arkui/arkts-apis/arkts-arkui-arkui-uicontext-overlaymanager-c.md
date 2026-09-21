@@ -177,8 +177,83 @@ This API allows you to define the stacking order of the nodes when they are crea
 
 **Examples**
 
-```TypeScript
 This example demonstrates how to use addComponentContentWithOrder to create an overlay node with the specified display order.
+
+```TypeScript
+import { ComponentContent, PromptAction, LevelOrder, UIContext, OverlayManager } from '@kit.ArkUI';
+
+class Params {
+  text: string = "";
+  offset: Position;
+  constructor(text: string, offset: Position) {
+    this.text = text;
+    this.offset = offset;
+  }
+}
+@Builder
+function builderText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(30)
+      .fontWeight(FontWeight.Bold)
+  }.offset(params.offset)
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Dialog box';
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private overlayNode: OverlayManager = this.ctx.getOverlayManager();
+  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
+  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
+  @StorageLink('arrayIndex') arrayIndex: number = 0;
+  @StorageLink("componentOffset") componentOffset: Position = { x: 0, y: 80 };
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('OverlayManager Bottom Overlay')
+          .fontSize(20)
+          .onClick(() => {
+            let componentContent = new ComponentContent(
+              this.ctx, wrapBuilder<[Params]>(builderText),
+              new Params(this.message + (this.contentArray.length), this.componentOffset)
+            );
+            this.contentArray.push(componentContent);
+            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.1));
+            let topOrder: LevelOrder = this.promptAction.getTopOrder();
+            if (topOrder !== undefined) {
+              console.error('topOrder: ' + topOrder.getOrder());
+            }
+            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
+            if (bottomOrder !== undefined) {
+              console.error('bottomOrder: ' + bottomOrder.getOrder());
+            }
+          })
+        Button('OverlayManager Top Overlay')
+          .fontSize(20)
+          .onClick(() => {
+            let componentContent = new ComponentContent(
+              this.ctx, wrapBuilder<[Params]>(builderText),
+              new Params(this.message + (this.contentArray.length), this.componentOffset)
+            );
+            this.contentArray.push(componentContent);
+            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.2));
+            let topOrder: LevelOrder = this.promptAction.getTopOrder();
+            if (topOrder !== undefined) {
+              console.error('topOrder: ' + topOrder.getOrder());
+            }
+            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
+            if (bottomOrder !== undefined) {
+              console.error('bottomOrder: ' + bottomOrder.getOrder());
+            }
+          })
+      }.width('100%')
+    }.height('100%')
+  }
+}
 ```
 
 ## hideAllComponentContents
@@ -199,9 +274,7 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 
 **Examples**
 
-```TypeScript
 See the example for [addComponentContent](#addcomponentcontent).
-```
 
 ## hideComponentContent
 
@@ -227,9 +300,7 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 
 **Examples**
 
-```TypeScript
 See the example for [addComponentContent](#addcomponentcontent).
-```
 
 ## openOrderOverlay
 
@@ -290,9 +361,7 @@ Removes a specified node from the **OverlayManager**.
 
 **Examples**
 
-```TypeScript
 See the example for [addComponentContent](#addcomponentcontent).
-```
 
 ## showAllComponentContents
 
@@ -312,9 +381,7 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 
 **Examples**
 
-```TypeScript
 See the example for [addComponentContent](#addcomponentcontent).
-```
 
 ## showComponentContent
 
@@ -340,6 +407,4 @@ Shows a specified **ComponentContent** node on the **OverlayManager**.
 
 **Examples**
 
-```TypeScript
 See the example for [addComponentContent](#addcomponentcontent).
-```

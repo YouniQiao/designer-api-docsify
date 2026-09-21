@@ -26,7 +26,7 @@ import { audio } from '@kit.AudioKit';
 appVolume: number
 ```
 
-应用程序的音量。取值限定为整数。
+应用程序的音量，该值应为整数。
 
 **类型：** number
 
@@ -44,7 +44,7 @@ appVolume: number
 clientUid: number
 ```
 
-应用程序的UID。取值限定为整数。
+应用程序的UID，该值应为整数。
 
 **类型：** number
 

@@ -36,8 +36,10 @@ let last = hilog.getOutputType();
 hilog.info(0x0001, "testTag", 'last output type:%{public}d', last);
 ```
 
-```TypeScript
 Log result:
 
 Console output.
+
+```TypeScript
+05-15 16:57:04.238  40518-40518  A00001/testTag  com.example.hilogDemo  I  last output type:4
 ```

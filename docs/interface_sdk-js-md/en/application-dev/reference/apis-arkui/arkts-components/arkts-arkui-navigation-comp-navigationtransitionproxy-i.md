@@ -52,7 +52,7 @@ Updates the progress of this interactive transition animation. (Non-interactive 
 
 > **NOTE:** 
 > 
-> You are not advised to use stack operations in aboutToAppear, as the
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 

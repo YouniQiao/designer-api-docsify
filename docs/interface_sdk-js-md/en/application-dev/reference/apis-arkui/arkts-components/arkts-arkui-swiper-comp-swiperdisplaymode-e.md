@@ -76,13 +76,13 @@ AUTO_LINEAR
 
 The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting [displayCount](arkts-arkui-swiper-comp-attribute.md#displaycount) to **'auto'** (string type). For details, see [displayCount](arkts-arkui-swiper-comp-attribute.md#displaycount).
 
-Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use Scroller.scrollTo instead.
+Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use [Scroller.scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto) instead.
 
 **Since:** 10
 
 **Deprecated since:** 12
 
-**Substitutes:** scrollTo
+**Substitutes:** [scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto)
 
 **Model restriction:** This API can be used only in the stage model.
 

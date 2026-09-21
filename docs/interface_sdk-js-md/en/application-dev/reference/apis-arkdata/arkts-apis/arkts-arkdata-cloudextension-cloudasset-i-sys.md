@@ -6,7 +6,7 @@ export interface CloudAsset extends relationalStore.Asset
 
 Represents the cloud asset information.
 
-**Inheritance/Implementation:** CloudAsset extends relationalStore.Asset
+**Inheritance/Implementation:** CloudAsset extends [relationalStore.Asset](arkts-arkdata-relationalstore-asset-i.md)
 
 **Since:** 11
 

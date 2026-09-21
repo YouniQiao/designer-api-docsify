@@ -6,8 +6,6 @@ interface AudioHapticManager
 
 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md)创建实例。
 
-@typedef AudioHapticManager
-
 **起始版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

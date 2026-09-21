@@ -4,7 +4,7 @@
 export declare class MultiNavPathStack extends NavPathStack
 ```
 
-MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用NavDestination的onReady等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
+MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用NavDestination的[onReady](../arkts-components/arkts-arkui-navdestination-comp-attribute.md#onready)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
 
 **继承/实现关系：** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navigation-comp-navpathstack-c.md)
 

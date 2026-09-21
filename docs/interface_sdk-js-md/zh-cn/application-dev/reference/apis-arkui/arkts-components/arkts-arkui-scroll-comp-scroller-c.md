@@ -14,7 +14,7 @@ declare class Scroller
 
 > 3. 以aboutToAppear为例，aboutToAppear在创建自定义组件的新实例后，在执行其build()方法之前执行。因此如果滚动组件在自定义组件build内，在该自定义组件aboutToAppear执行时，内部滚动组件还没有创建，是不能正常调用上述Scroller方法的。
 
-> 4. 以onAppear为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用Scroller方法的。
+> 4. 以[onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用Scroller方法的。
 
 ## 导入对象
 
@@ -96,7 +96,7 @@ currentOffset() : OffsetResult
 > 
 > 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明。推荐使用[offset](#offset)函数，其返回类型显式包含undefined。
 > 
-> 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过childrenMainSize属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
+> 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过[childrenMainSize](arkts-arkui-list-comp-attribute.md#childrenmainsize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
 
 **起始版本：** 7
 
@@ -448,7 +448,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 > 
 > 2. 在[LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each)、[ForEach](arkts-arkui-foreach-comp-attribute.md)、[Repeat](arkts-arkui-repeat-comp.md#repeatdefines-repeat-component)刷新数据源时，需确保在数据刷新完成之后再调用此接口。
 > 
-> 3. 从API version 11开始，在List中支持contentStartOffset和contentEndOffset。从API version 22开始，在Grid和WaterFlow组件中支持设置contentStartOffset和contentEndOffset。
+> 3. 从API version 11开始，在List中支持[contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset)和[contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset)。从API version 22开始，在Grid和WaterFlow组件中支持设置contentStartOffset和contentEndOffset。
 > 
 > - 当滚动容器组件设置contentStartOffset时，如果ScrollAlign设置为START，滚动结束时，指定item首部会与滚动容器组件contentStartOffset处对齐。
 > 

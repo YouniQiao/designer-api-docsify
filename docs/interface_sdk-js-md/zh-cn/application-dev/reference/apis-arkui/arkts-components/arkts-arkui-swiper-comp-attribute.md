@@ -10,7 +10,7 @@ declare class SwiperAttribute extends CommonMethod<SwiperAttribute>
 
 > **说明：** 
 
-> Swiper组件通用属性clip的默认值为true。
+> Swiper组件通用属性[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)的默认值为true。
 
 **继承/实现关系：** SwiperAttribute extends CommonMethod<SwiperAttribute>
 
@@ -296,7 +296,7 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 > 
 > - displayCount设置为'auto'时，若设置swipeByGroup为true，则单个子元素按组翻页，一次只能翻一页。在此情况下，建议开发者不设置swipeByGroup或者设置swipeByGroup为false。
 > 
-> - 从API version 18开始，该接口支持在attributeModifier中调用。
+> - 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 当导航点样式设定为圆形导航点，视窗内显示子元素数量大于1（多页场景）&lt;!--RP1--&gt;&lt;!--RP1End--&gt;，显示导航点数量情况如下表：
 
@@ -687,11 +687,11 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 
 当主轴方向为纵向布局时，nextMargin或prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。
 
-使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
+使用nextMargin/prevMargin接口时，不要对子组件进行[尺寸范围限制](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
 > **说明：** 
 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 
@@ -980,11 +980,11 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 
 当主轴方向为纵向布局时，nextMargin/prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。
 
-使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
+使用nextMargin/prevMargin接口时，不要对子组件进行[尺寸范围限制](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
 > **说明：** 
 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 10
 

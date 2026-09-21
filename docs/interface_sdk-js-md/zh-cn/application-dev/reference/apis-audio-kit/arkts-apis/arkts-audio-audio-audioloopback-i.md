@@ -10,8 +10,6 @@ interface AudioLoopback
 
 > - 本Interface首批接口从API version 20开始支持。
 
-@typedef AudioLoopback
-
 **起始版本：** 20
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

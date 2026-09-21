@@ -230,7 +230,7 @@ parameters?: Record<string, number | string | boolean>
 
 Carried parameters.
 
-**Type:** Record&lt;string, number &#124; number &#124; string &#124; boolean&gt;
+**Type:** Record&lt;string, number &#124; string &#124; boolean&gt;
 
 **Since:** 9
 

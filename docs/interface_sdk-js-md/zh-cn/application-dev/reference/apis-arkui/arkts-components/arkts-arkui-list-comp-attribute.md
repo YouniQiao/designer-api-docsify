@@ -86,7 +86,7 @@ List下嵌套使用LazyForEach，并且LazyForEach下嵌套使用ListItemGroup�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | ListItem/ListItemGroup的预加载数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
+| value | number | 是 | ListItem/ListItemGroup的预加载数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：[0, +∞)，设置为小于0的值时，按1处理。 |
 
 <a id="cachedcount-1"></a>
 
@@ -98,7 +98,7 @@ cachedCount(count: number, show: boolean)
 
 设置列表的预加载行数，并配置是否显示预加载节点。懒加载场景才会预加载List显示区域外上下各cachedCount行，非懒加载场景会全量加载。
 
-List设置cachedCount后，显示区域外上下各会预加载并布局cachedCount行。计算预加载行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合裁剪[clip或内容裁剪[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
+List设置cachedCount后，显示区域外上下各会预加载并布局cachedCount行。计算预加载行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合裁剪[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)或内容裁剪[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 > **说明：** 
 > 
@@ -119,7 +119,7 @@ List设置cachedCount后，显示区域外上下各会预加载并布局cachedCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | number | 是 | 列表的预加载行数。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。 <br>取值范围：0, +∞)，设置为小于0的值时，按1处理。 |
+| count | number | 是 | 列表的预加载行数。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。 <br>取值范围：[0, +∞)，设置为小于0的值时，按1处理。 |
 | show | boolean | 是 | 被预加载的ListItem/ListItemGroup是否需要显示。设置为true时显示预加载的ListItem/ListItemGroup，设置为false时不显示预加载的ListItem/ListItemGroup。<br> 默认值：false |
 
 <a id="cachedcount-2"></a>
@@ -136,7 +136,7 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 
 若cachedCount属性的第一个参数为CacheCountInfo类型，当已缓存行数小于CacheCountInfo.minCount时，会在帧间空闲时隙预加载和布局。当已缓存行数大于CacheCountInfo.maxCount时，会将超出范围的节点销毁或回收复用。UI空闲时（无动画或用户操作），会在显示区域外上下各预加载CacheCountInfo.maxCount行。
 
-计算预加载行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合[clip或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
+计算预加载行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 默认行为：count参数默认为number类型，数值根据屏幕内显示的节点个数设置，最大值为16。预加载的ListItem默认不参与绘制。
 
@@ -207,11 +207,11 @@ childrenMainSize(value: ChildrenMainSize)
 
 > **说明：** 
 > 
-> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)等场景时，List组件能够维护其滑动位置准确性。这样，scrollTo可以准确地跳转到指定位置，currentOffset可以获取到当前准确的滑动位置，内置滚动条可以实现平滑移动无跳变。
+> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex)等场景时，List组件能够维护其滑动位置准确性。这样，[scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto)可以准确地跳转到指定位置，[currentOffset](arkts-arkui-scroll-comp-scroller-c.md#currentoffset)可以获取到当前准确的滑动位置，内置滚动条可以实现平滑移动无跳变。
 > 
 > - 当子组件是ListItemGroup时，需要根据ListItemGroup的列数、ListItemGroup中ListItem在主轴方向的间距以及ListItemGroup中header、footer和ListItem的大小，来准确计算出ListItemGroup在主轴方向的整体大小，并传递给List组件。
 > 
-> - 如果子组件有ListItemGroup，必须为每一个ListItemGroup设置childrenMainSize属性。List组件和每一个ListItemGroup组件都要通过childrenMainSize属性接口一对一绑定一个ChildrenMainSize对象。
+> - 如果子组件有ListItemGroup，必须为每一个ListItemGroup设置[childrenMainSize](arkts-arkui-listitemgroup-comp-attribute.md#childrenmainsize)属性。List组件和每一个ListItemGroup组件都要通过childrenMainSize属性接口一对一绑定一个ChildrenMainSize对象。
 > 
 > - 多列场景使用LazyForEach生成子组件时，需确保LazyForEach全部生成ListItemGroup组件或者全部生成ListItem组件。
 
@@ -807,7 +807,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 > **说明：** 
 > 
-> 从API version 14开始，该接口支持在attributeModifier中调用。
+> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 8
 
@@ -970,11 +970,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 1. 用户交互（如手指滑动、键鼠操作等）触发滚动。
 2. List惯性滚动。
-3. 调用fling接口触发滚动。
+3. 调用[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除fling接口外的其他滚动控制接口。
+1. 调用除[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)接口外的其他滚动控制接口。
 2. 越界回弹。
 3. 拖动滚动条。
 

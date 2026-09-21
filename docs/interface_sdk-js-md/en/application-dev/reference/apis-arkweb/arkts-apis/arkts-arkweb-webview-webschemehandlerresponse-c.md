@@ -116,9 +116,7 @@ Obtains the character encoding format of the response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getHeaderByName
 
@@ -148,9 +146,7 @@ Obtains the value of a response header field by name.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getMimeType
 
@@ -174,9 +170,7 @@ Obtains the MIME type of this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getNetErrorCode
 
@@ -200,9 +194,7 @@ Obtains the network error code of the response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getStatus
 
@@ -226,9 +218,7 @@ Obtains the HTTP status code of the response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getStatusText
 
@@ -252,9 +242,7 @@ Obtains the status text of this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## getUrl
 
@@ -280,9 +268,7 @@ Risk warning: To obtain a URL for JavaScriptProxy communication API authenticati
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setCustomErrorCode
 
@@ -332,9 +318,7 @@ Sets the character encoding format for the current response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setHeaderByName
 
@@ -366,9 +350,7 @@ Sets the header information for this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setMimeType
 
@@ -398,9 +380,7 @@ Sets the MIME type for the current response. For example, set it to text/html wh
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setNetErrorCode
 
@@ -430,9 +410,7 @@ Sets the network error code for this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setStatus
 
@@ -462,9 +440,7 @@ Sets the HTTP status code for this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setStatusText
 
@@ -494,9 +470,7 @@ Sets the status text for this response.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```
 
 ## setUrl
 
@@ -526,6 +500,4 @@ Sets the redirection URL or the URL changed due to HSTS for this response. After
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [constructor](#constructor).
-```

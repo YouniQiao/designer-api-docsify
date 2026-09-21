@@ -22,7 +22,7 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -368,7 +368,7 @@ Sets the background blur style of the drop-down menu.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -440,7 +440,7 @@ Sets the background color of the drop-down menu.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -512,7 +512,7 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -540,7 +540,7 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 18
 
@@ -876,7 +876,7 @@ If both [optionFont](#optionfont) and **Font** of **optionTextModifier** are set
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -1148,7 +1148,7 @@ If both [selectedOptionFont](#selectedoptionfont) and **Font** of **selectedOpti
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -1264,7 +1264,7 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 

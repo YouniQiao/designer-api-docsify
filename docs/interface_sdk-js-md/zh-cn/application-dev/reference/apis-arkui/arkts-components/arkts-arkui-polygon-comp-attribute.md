@@ -18,7 +18,7 @@ declare class PolygonAttribute extends CommonShapeMethod<PolygonAttribute>
 points(value: Array<any>)
 ```
 
-设置多边形的顶点坐标列表，支持attributeModifier动态设置属性方法。异常值按照默认值处理。
+设置多边形的顶点坐标列表，支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。异常值按照默认值处理。
 
 **起始版本：** 7
 

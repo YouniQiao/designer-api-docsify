@@ -460,7 +460,7 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result. If the accessibilityLevel attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#gettext) cannot.
+Obtains the text information of this component. This API uses a promise to return the result. If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel) attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#gettext) cannot.
 
 **Since:** 20
 
@@ -506,7 +506,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 > **NOTE:** 
 > 
-> If the accessibilityLevel
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel)
 > attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
 > text information of the component. In this case, you can use
 > [Component.getOriginalText ()](#getoriginaltext) instead.

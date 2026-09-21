@@ -162,7 +162,7 @@ enableHapticFeedback(enable: boolean)
 
 > **说明：** 
 > 
-> 从API version 18开始，该接口支持在attributeModifier中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -316,7 +316,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult>)
 
 > **说明：** 
 > 
-> 该接口不支持在attributeModifier中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 18
 

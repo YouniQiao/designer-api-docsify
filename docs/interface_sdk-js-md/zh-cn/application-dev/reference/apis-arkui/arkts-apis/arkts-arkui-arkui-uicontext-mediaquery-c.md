@@ -49,6 +49,4 @@ matchMediaSync(condition: string): mediaQuery.MediaQueryListener
 
 **示例**
 
-```TypeScript
 完整示例请参考mediaquery示例。
-```

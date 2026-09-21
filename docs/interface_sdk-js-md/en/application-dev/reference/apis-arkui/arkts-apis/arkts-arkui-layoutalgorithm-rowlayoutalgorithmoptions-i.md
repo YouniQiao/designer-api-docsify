@@ -42,7 +42,7 @@ Invalid values are treated as the default value.
 isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute direction. If the direction attribute takes effect, the child components are arranged based on **direction** and then are reversed based on **isReverse**. **false** indicates to arrange child components in the horizontal direction in normal order.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#direction). If the [direction](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#direction) attribute takes effect, the child components are arranged based on **direction** and then are reversed based on **isReverse**. **false** indicates to arrange child components in the horizontal direction in normal order.
 
 Default value: **false**
 

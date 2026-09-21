@@ -49,8 +49,13 @@ Returns to the previous page or a specified page.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.back({url:'pages/detail'});
 ```
 
 <a id="back-1"></a>
@@ -80,8 +85,23 @@ Returns to the specified page.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.back(1);
+```
+
+See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.back(1, {info:'From the home page'}); // Returning with parameters.
 ```
 
 ## clear
@@ -102,8 +122,14 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.clear();
 ```
 
 ## getLength
@@ -136,8 +162,15 @@ Obtains the number of pages in the current stack.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let size = router.getLength();        
+console.info('pages stack size = ' + size);
 ```
 
 ## getParams
@@ -164,8 +197,13 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+router.getParams();
 ```
 
 ## getStackSize
@@ -240,8 +278,19 @@ Obtains state information about the current page.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let page = router.getState();
+if (page != undefined) {
+  console.info('current index = ' + page.index);
+  console.info('current name = ' + page.name);
+  console.info('current path = ' + page.path);
+}
 ```
 
 ## getStateByIndex
@@ -274,8 +323,20 @@ Obtains the status information about a page by its index.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let options: router.RouterState | undefined = router.getStateByIndex(1);
+if (options != undefined) {
+  console.info('index = ' + options.index);
+  console.info('name = ' + options.name);
+  console.info('path = ' + options.path);
+  console.info('params = ' + options.params);
+}
 ```
 
 ## getStateByUrl
@@ -308,8 +369,19 @@ Obtains the status information about a page by its URL.
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+let options:Array<router.RouterState> = router.getStateByUrl('pages/index');
+for (let i: number = 0; i < options.length; i++) {
+  console.info('index = ' + options[i].index);
+  console.info('name = ' + options[i].name);
+  console.info('path = ' + options[i].path);
+  console.info('params = ' + options[i].params);
+}
 ```
 
 ## hideAlertBeforeBackPage
@@ -330,8 +402,14 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+router.hideAlertBeforeBackPage();
 ```
 
 ## pushNamedRoute
@@ -1778,6 +1856,21 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Examples**
 
-```TypeScript
 See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uiContext: UIContext = this.getUIContext();
+let router: Router = uiContext.getRouter();
+try {
+  router.showAlertBeforeBackPage({            
+    message: 'Message Info'        
+  });
+} catch(error) {
+  let message = (error as BusinessError).message;
+  let code = (error as BusinessError).code;
+  console.error(`showAlertBeforeBackPage failed, code is ${code}, message is ${message}`);
+}
 ```

@@ -9,7 +9,7 @@ The **ChipGroup** component provides chip group capabilities, supporting single-
 > **NOTE:** 
 > 
 > With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect
-> strategy with effectStrategy is supported.
+> strategy with [effectStrategy](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy) is supported.
 
 **Since:** 12
 
@@ -29,7 +29,7 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects and can affect the backgroundColor, [border](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#border), and shadow visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color.
+System material style of the component. Different materials have different effects and can affect the [backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [border](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#border), and [shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow) visual properties of the component. When a system material with auto-invert is set, if **fontColor** uses a system-predefined invertible color resource (such as `$r('sys.color.font_primary')`), the color automatically adapts to the inverted color of the material background color.
 
 Default value: **undefined**
 

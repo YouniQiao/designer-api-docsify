@@ -18,7 +18,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** addNotificationSlot
+**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -60,7 +60,7 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** addNotificationSlot
+**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

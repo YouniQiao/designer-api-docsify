@@ -36,9 +36,7 @@ Obtains the URL of the frame that triggers this request.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getHeader
 
@@ -62,9 +60,7 @@ Obtains the information about the resource request header.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getHttpBodyStream
 
@@ -88,9 +84,7 @@ Obtains the **WebHttpBodyStream** instance in this resource request.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getReferrer
 
@@ -114,9 +108,7 @@ Obtains the referrer.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getRequestMethod
 
@@ -140,9 +132,7 @@ Obtains the request method.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getRequestResourceType
 
@@ -164,9 +154,7 @@ Obtains the resource type of this resource request.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## getRequestUrl
 
@@ -190,9 +178,7 @@ Obtains the URL of the resource request.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## hasGesture
 
@@ -216,9 +202,7 @@ Checks whether the resource request is associated with a gesture (for example, a
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```
 
 ## isMainFrame
 
@@ -242,6 +226,4 @@ Checks whether the resource request is from the main frame.
 
 **Examples**
 
-```TypeScript
 For the complete sample code, see [onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-```

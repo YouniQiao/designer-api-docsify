@@ -89,6 +89,4 @@ Registers a media query listener. The callback is triggered when the media attri
 
 **Examples**
 
-```TypeScript
 For details, see [off('change')](#offchange).
-```

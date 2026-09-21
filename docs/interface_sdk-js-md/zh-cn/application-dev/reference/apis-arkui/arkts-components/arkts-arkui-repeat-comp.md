@@ -30,10 +30,52 @@ Repeat基于数组类型数据来进行循环渲染，一般与滚动容器组�
 
 ## 示例
 
-```TypeScript
 ### 示例1（使用自动内存优化策略）
 
 以下示例中，通过[VirtualScrollOptions](arkts-arkui-repeat-comp-virtualscrolloptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。点击Scroll按钮，使列表跳转，旧节点进入缓存池。应用退后台时，清理缓存。应用恢复前台时，恢复缓存。
 
 从API版本26.0.0开始，VirtualScrollOptions新增memoryOptimizationStrategy属性。
+
+```TypeScript
+@ComponentV2
+struct ChildComponent {
+  aboutToAppear() {
+    console.info('ChildComponent aboutToAppear');
+  }
+  aboutToDisappear() {
+    console.info('ChildComponent aboutToDisappear');
+  }
+  build() {
+    Text('ChildComponent')
+  }
+}
+
+@Entry
+@ComponentV2
+struct MemoryOptimizeDemo {
+  @Local data: Array<number> = [];
+  private scroller: Scroller = new Scroller();
+  aboutToAppear() {
+    for (let i = 0; i < 100; i++) {
+      this.data.push(i);
+    }
+  }
+  build() {
+    Column() {
+      Button('Scroll').onClick(() => { // 点击按钮触发列表跳转，旧组件进入缓存池
+        this.scroller.scrollToIndex(30);
+      })
+      List({ scroller: this.scroller }) {
+        Repeat<number>(this.data)
+          .each((repeatItem: RepeatItem<number>) => {
+            ListItem() {
+              ChildComponent()
+            }
+          })
+          .virtualScroll({ memoryOptimizationStrategy: RepeatMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION }) // 使用自动内存优化策略
+      }
+      .cachedCount(5)
+    }
+  }
+}
 ```

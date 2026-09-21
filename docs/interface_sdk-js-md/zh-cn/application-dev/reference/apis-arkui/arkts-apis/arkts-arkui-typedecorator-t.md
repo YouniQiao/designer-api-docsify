@@ -62,6 +62,23 @@ struct Index {
 }
 ```
 
-```TypeScript
 在使用@Type装饰嵌套类属性时，仅支持自定义class类型，传入其他类型会持久化失败。
+
+```TypeScript
+@ObservedV2
+class SampleChild {
+  @Trace id: number = 0;
+  count: number = 10;
+}
+
+@ObservedV2
+class Sample {
+  // 建议用法，装饰自定义Sample类中的sampleChild属性，其类型为SampleChild类型
+  @Type(SampleChild)
+  @Trace sampleChild: SampleChild = new SampleChild();
+
+  // 不建议用法，装饰的嵌套类属性类型是Array<number>
+  @Type(Array<number>)
+  @Trace value: Array<Array<number>> = new Array();
+}
 ```

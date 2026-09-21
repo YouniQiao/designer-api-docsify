@@ -84,7 +84,7 @@ Default value: **0**
 3. Since API version 10, this parameter supports two-way binding through
 [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-**Type:** number &#124; number[]
+**Type:** number[]
 
 **Default:** 0
 
@@ -116,7 +116,7 @@ It does not work when the picker contains images or mixed content.
 4. Single-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 5. Multi-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
 **Default:** 
 - API versions 8 to 9: value of the first item

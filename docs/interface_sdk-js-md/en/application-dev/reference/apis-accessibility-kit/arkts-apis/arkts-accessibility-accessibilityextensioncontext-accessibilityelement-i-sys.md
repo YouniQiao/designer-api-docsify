@@ -124,16 +124,58 @@ Performs an action on an accessibility node element based on the action type and
 
 **Examples**
 
-```TypeScript
 Action without parameters.
-```
 
 ```TypeScript
+// Example of parameterless Action:
+import { AccessibilityAction } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Actions without explicit requirements in the description are all parameterless Actions.
+rootElement.executeAction(AccessibilityAction.CLICK).then(() => {
+  console.info(`succeeded in performing action CLICK`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action CLICK. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 Action with parameters (setSelection).
-```
 
 ```TypeScript
+// Example of parameterized Action:
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// selectTextBegin: start position of the selection.
+// selectTextEnd: end position of the selection.
+// selectTextInForWard: true indicates the front cursor, and false indicates the rear cursor.
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Example code for setSelection.
+rootElement.executeAction(AccessibilityAction.SET_SELECTION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_SELECTION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_SELECTION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 Action with parameters (setCursorPosition).
+
+```TypeScript
+// Example with parameter Action:
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// offset: indicates the cursor position to set.
+let parameter : Parameter = { offset: '1' };
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+// Example code for setCursorPosition.
+rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_CURSOR_POSITION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_CURSOR_POSITION. Code: ${err?.code}, message: ${err?.message}`);
+});
 ```
 
 ## findElement('textType')

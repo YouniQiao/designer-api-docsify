@@ -392,9 +392,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Swiper')12+.
-```
 
 
 <a id="getattribute-6"></a>
@@ -501,9 +499,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Scroll').
-```
 
 
 <a id="getattribute-8"></a>
@@ -758,9 +754,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 **Examples**
 
-```TypeScript
 See the example for createNode('List').
-```
 
 
 <a id="getattribute-12"></a>
@@ -796,9 +790,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 **Examples**
 
-```TypeScript
 See the example for createNode('List').
-```
 
 
 <a id="getattribute-13"></a>
@@ -1016,9 +1008,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 **Examples**
 
-```TypeScript
 See the example for createNode('WaterFlow').
-```
 
 
 <a id="getattribute-17"></a>
@@ -1054,9 +1044,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 **Examples**
 
-```TypeScript
 See the example for createNode('WaterFlow').
-```
 
 
 <a id="getattribute-18"></a>
@@ -1494,9 +1482,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Grid').
-```
 
 
 <a id="getattribute-25"></a>
@@ -1532,6 +1518,4 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Grid').
-```

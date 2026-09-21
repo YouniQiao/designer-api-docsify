@@ -10,7 +10,7 @@ var Collator: {
     }
 ```
 
-**Type:** {         new(locales?: string &#124; string[], options?: CollatorOptions): Collator;         (locales?: string &#124; string[], options?: CollatorOptions): Collator;         supportedLocalesOf(locales: string &#124; string[], options?: CollatorOptions): string[];     }
+**Type:** {         new(locales?: string[], options?: CollatorOptions): Collator;         (locales?: string[], options?: CollatorOptions): Collator;         supportedLocalesOf(locales: string[], options?: CollatorOptions): string[];     }
 
 ## DateTimeFormat
 
@@ -23,7 +23,7 @@ var DateTimeFormat: {
     }
 ```
 
-**Type:** {         new(locales?: string &#124; string[], options?: DateTimeFormatOptions): DateTimeFormat;         (locales?: string &#124; string[], options?: DateTimeFormatOptions): DateTimeFormat;         supportedLocalesOf(locales: string &#124; string[], options?: DateTimeFormatOptions): string[];         readonly prototype: DateTimeFormat;     }
+**Type:** {         new(locales?: string[], options?: DateTimeFormatOptions): DateTimeFormat;         (locales?: string[], options?: DateTimeFormatOptions): DateTimeFormat;         supportedLocalesOf(locales: string[], options?: DateTimeFormatOptions): string[];         readonly prototype: DateTimeFormat;     }
 
 ## NumberFormat
 
@@ -36,4 +36,4 @@ var NumberFormat: {
     }
 ```
 
-**Type:** {         new(locales?: string &#124; string[], options?: NumberFormatOptions): NumberFormat;         (locales?: string &#124; string[], options?: NumberFormatOptions): NumberFormat;         supportedLocalesOf(locales: string &#124; string[], options?: NumberFormatOptions): string[];         readonly prototype: NumberFormat;     }
+**Type:** {         new(locales?: string[], options?: NumberFormatOptions): NumberFormat;         (locales?: string[], options?: NumberFormatOptions): NumberFormat;         supportedLocalesOf(locales: string[], options?: NumberFormatOptions): string[];         readonly prototype: NumberFormat;     }

@@ -6,7 +6,7 @@ declare class SpanAttribute extends BaseSpan<SpanAttribute>
 
 属性继承自[BaseSpan](arkts-arkui-span-comp-basespan-c.md)。
 
-通用事件支持点击事件onClick、悬浮事件onHover。
+通用事件支持[点击事件onClick](arkts-arkui-common-comp-commonmethod-c.md#onclick)、[悬浮事件onHover](arkts-arkui-common-comp-commonmethod-c.md#onhover)。
 
 @extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
 

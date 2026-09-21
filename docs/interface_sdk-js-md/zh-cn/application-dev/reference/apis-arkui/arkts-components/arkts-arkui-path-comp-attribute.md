@@ -18,7 +18,7 @@ declare class PathAttribute extends CommonShapeMethod<PathAttribute>
 commands(value: ResourceStr)
 ```
 
-设置符合[SVG路径描述规范](arkts-arkui-path-comp.md#svg路径描述规范)的命令字符串，单位为px。命令字符串决定了路径的绘制形状和轨迹。支持attributeModifier动态设置属性方法。像素单位转换方法请参考[像素单位转换](arkts-arkui-common-comp.md#common)。
+设置符合[SVG路径描述规范](arkts-arkui-path-comp.md#svg路径描述规范)的命令字符串，单位为px。命令字符串决定了路径的绘制形状和轨迹。支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。像素单位转换方法请参考[像素单位转换](arkts-arkui-common-comp.md#common)。
 
 **起始版本：** 7
 

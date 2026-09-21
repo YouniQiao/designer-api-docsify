@@ -42,12 +42,28 @@ static getStatus(options?: GetStatusOptions): void
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+Battery.getStatus({
+    success: (data: BatteryResponse) => {
+        console.info('success get battery level:' + data.level);
+    },
+    fail: (data: string, code: number) => {
+        console.error('fail to get battery level code:' + code + ', data: ' + data);
+    }
+});
+```
+
 JS示例：
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="Get Data" style="width: 240px; height: 50px; margin: 5px;" onclick="getBatteryInfo"></input>
+    <text class="title">level: {{ capacity }}</text>
+    <text class="title">charging: {{ charging }}</text>
+</div>
 ```
 
 ```TypeScript

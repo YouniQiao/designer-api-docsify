@@ -34,6 +34,7 @@ import { usbManager } from '@kit.MDMKit';
 | [getDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-getdisallowedpermissiveusbdevices-f.md) | Obtains the USB device types that have been disallowed via [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md). |
 | [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md#getdisallowedusbdevices) | Obtains the disallowed USB device types. |
 | [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md#getdisallowedusbdevices-1) | Obtains the disallowed USB device types. |
+| [getUsbSerialNumber](arkts-mdm-usbmanager-getusbserialnumber-f.md) | Queries the serial number of the usb device. |
 | [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md#getusbstoragedeviceaccesspolicy) | Obtains the access policy of the USB storage device. |
 | [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md#getusbstoragedeviceaccesspolicy-1) | Obtains the USB storage device (baseClass = 0x08) access policy. |
 | [removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md) | Removes allowed USB devices. |

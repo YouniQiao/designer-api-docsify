@@ -223,10 +223,33 @@ save(callback: AsyncCallback<Array<string>>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import { picker } from '@kit.CoreFileKit';
-async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+async function example04(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
     let photoPicker = new picker.PhotoViewPicker(context);
-    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg', 'PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
       if (err) {
         console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
         return;

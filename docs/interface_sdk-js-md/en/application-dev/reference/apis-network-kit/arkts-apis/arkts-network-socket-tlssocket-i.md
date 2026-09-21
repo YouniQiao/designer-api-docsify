@@ -225,7 +225,7 @@ tls.close().then(() => {
 connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets up a **TLSSocket** connection, and creates and initializes a TLS session after **bind** is successfully called. During this process, a TLS/SSL handshake is performed between the application and the server to implement data transmission. This API uses an asynchronous callback to return the result. Note that **ca** in **secureOptions** of the **options** parameter is mandatory in API version 11 or earlier. You need to enter the CA certificate of the server for certificate authentication. The certificate content starts with "-----BEGINCERTIFICATE-----" and ends with "-----END CERTIFICATE-----". This field is optional since API version 12.
+Sets up a **TLSSocket** connection, and creates and initializes a TLS session after **bind** is successfully called. During this process, a TLS/SSL handshake is performed between the application and the server to implement data transmission. This API uses an asynchronous callback to return the result. Note that **ca** in **secureOptions** of the **options** parameter is mandatory in API version 11 or earlier. You need to enter the CA certificate of the server for certificate authentication. The certificate content starts with "-----BEGIN CERTIFICATE-----" and ends with "-----END CERTIFICATE-----". This field is optional since API version 12.
 
 **Since:** 9
 
@@ -333,8 +333,89 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
 Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsTwoWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // Two-way authentication
+let bindAddr: socket.NetAddress = {
+   address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tlsTwoWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let twoWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let twoWaySecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: twoWayNetAddr,
+  secureOptions: twoWaySecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"],
+  proxy: proxyOptions,
+}
+
+tlsTwoWay.connect(tlsConnectOptions, (err: BusinessError) => {
+  console.error("connect callback error" + err);
+});
+
+let tlsOneWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // One-way authentication
+tlsOneWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let oneWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let oneWaySecureOptions: socket.TLSSecureOptions = {
+  ca: ["xxxx", "xxxx"],
+  cipherSuite: "AES256-SHA256"
+}
+let oneWayProxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsOneWayConnectOptions: socket.TLSConnectOptions = {
+  address: oneWayNetAddr,
+  secureOptions: oneWaySecureOptions,
+  proxy: oneWayProxyOptions,
+}
+tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
+  console.error("connect callback error" + err);
+});
 ```
 
 <a id="connect-1"></a>
@@ -462,8 +543,93 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 });
 ```
 
-```TypeScript
 Example (with socket proxy):
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsTwoWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // Two-way authentication
+let bindAddr: socket.NetAddress = {
+   address: '192.168.xx.xxx',
+  // Bind the specified network API.
+}
+tlsTwoWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let twoWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let socks5Server: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let twoWaySecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let proxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: twoWayNetAddr,
+  secureOptions: twoWaySecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"],
+  proxy: proxyOptions,
+}
+
+tlsTwoWay.connect(tlsConnectOptions).then(() => {
+  console.info("connect successfully");
+}).catch((err: BusinessError) => {
+  console.error("connect failed " + JSON.stringify(err));
+});
+
+let tlsOneWay: socket.TLSSocket = socket.constructTLSSocketInstance(); // One-way authentication
+tlsOneWay.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+let oneWayNetAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let oneWaySecureOptions: socket.TLSSecureOptions = {
+  ca: ["xxxx", "xxxx"],
+  cipherSuite: "AES256-SHA256"
+}
+let oneWayProxyOptions: socket.ProxyOptions = {
+  type : 1,
+  address: socks5Server,
+  username: "xxx",
+  password: "xxx"
+}
+let tlsOneWayConnectOptions: socket.TLSConnectOptions = {
+  address: oneWayNetAddr,
+  secureOptions: oneWaySecureOptions,
+  proxy: oneWayProxyOptions,
+}
+tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
+  console.info("connect successfully");
+}).catch((err: BusinessError) => {
+  console.error("connect failed " + JSON.stringify(err));
+});
 ```
 
 ## getCertificate

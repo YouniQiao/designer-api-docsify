@@ -36,6 +36,4 @@ The function of window animation finished callback.
 
 **Examples**
 
-```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-```

@@ -48,16 +48,83 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Examples**
 
-```TypeScript
 ArkTS sample code:
-```
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* huks.initSession, huks.updateSession, and huks.finishSession must be used together.
+ * If an error occurs in any of the three operations, call huks.abortSession to abort the key operation.
+ *
+ * The following uses a 2048-bit RSA key as an example. The callback-based APIs are used.
+ */
+
+let keyAlias = "HuksDemoRSA";
+let properties: Array<huks.HuksParam> = []
+let options: huks.HuksOptions = {
+  properties: properties,
+  inData: new Uint8Array(0)
+};
+let handle: number = 0;
+
+async function huksAbort() {
+  properties = [{
+    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
+    value: huks.HuksKeyAlg.HUKS_ALG_RSA
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
+    value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
+    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_PADDING,
+    value: huks.HuksKeyPadding.HUKS_PADDING_PKCS1_V1_5
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_DIGEST,
+    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
+  }, {
+    tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
+    value: huks.HuksCipherMode.HUKS_MODE_ECB,
+  }];
+
+  huks.generateKeyItem(keyAlias, options, (error) => {
+    if (error) {
+      console.error(`callback: generateKeyItem failed`);
+    } else {
+      console.info(`callback: generateKeyItem success`);
+      huks.initSession(keyAlias, options, (error, data) => { // Use abortSession to abort initSession.
+        if (error) {
+          console.error(`callback: initSession failed`);
+        } else {
+          console.info(`callback: initSession success, data = ${JSON.stringify(data)}`);
+          handle = data.handle;
+          huks.abortSession(handle, options, (error) => {
+            if (error) {
+              console.error(`callback: abortSession failed`);
+            } else {
+              console.info(`callback: abortSession success`);
+            }
+          });
+        }
+      });
+    }
+  });
+}
+```
+
 JS sample code:
 
 > NOTE
 > 
 > The JS sample code is used only for the lightweight devices.
+
+```TypeScript
+<stack class="container">
+    <input type="button" class="threeStageBtn1" @click="threeStageEncrypt">Encrypt Data</input>
+    <input type="button" class="threeStageBtn2" @click="threeStageDecrypt">Decrypt Data</input>
+    <text class="result">{{result}}</text>
+</stack>
 ```
 
 ```TypeScript

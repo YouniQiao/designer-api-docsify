@@ -49,8 +49,27 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 
 **示例**
 
-```TypeScript
 此外，更多HMAC的完整示例可参考开发指导中[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacByCallback() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
+    mac.init(symKey, (err) => {
+      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
+        mac.doFinal((err, output) => {
+          console.info('[Callback]: HMAC result: ' + output.data);
+          console.info('[Callback]: MAC len: ' + mac.getMacLength());
+        });
+      });
+    });
+  });
+}
 ```
 
 <a id="dofinal-1"></a>
@@ -87,8 +106,23 @@ doFinal(): Promise<DataBlob>
 
 **示例**
 
-```TypeScript
 此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+async function hmacByPromise() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = await symKeyGenerator.convertKey(keyBlob);
+  await mac.init(symKey);
+  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = await mac.doFinal();
+  console.info('[Promise]: HMAC result: ' + macOutput.data);
+  console.info('[Promise]: MAC len: ' + mac.getMacLength());
+}
 ```
 
 ## doFinalSync
@@ -124,8 +158,23 @@ doFinalSync(): DataBlob
 
 **示例**
 
-```TypeScript
 此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { buffer } from '@kit.ArkTS';
+
+function hmacBySync() {
+  let mac = cryptoFramework.createMac('SHA256');
+  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
+  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  let symKey = symKeyGenerator.convertKeySync(keyBlob);
+  mac.initSync(symKey);
+  mac.updateSync({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
+  let macOutput = mac.doFinalSync();
+  console.info('[Sync]: HMAC result: ' + macOutput.data);
+  console.info('[Sync]: MAC len: ' + mac.getMacLength());
+}
 ```
 
 ## getMacLength

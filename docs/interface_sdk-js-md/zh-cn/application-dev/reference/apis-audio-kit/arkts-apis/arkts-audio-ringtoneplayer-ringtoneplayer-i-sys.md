@@ -6,8 +6,6 @@ export interface RingtonePlayer
 
 系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer)创建实例。
 
-@typedef RingtonePlayer
-
 **起始版本：** 10
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -119,7 +117,7 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器信息成功，err为undefined data为获取到的音频渲染器信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器信息成功，err为undefined，data为获取到的音频渲染器信息；否则为错误对象。 |
 
 **示例**
 

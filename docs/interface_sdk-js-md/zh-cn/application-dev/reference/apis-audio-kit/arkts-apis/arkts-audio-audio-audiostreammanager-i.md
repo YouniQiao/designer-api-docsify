@@ -4,7 +4,7 @@
 interface AudioStreamManager
 ```
 
-音频流管理。在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
+AudioStreamManager是音频系统中的音频流管理模块。本模块提供音频流生命周期管理能力，包括音频渲染器和采集器的信息查询、状态监听、音效模式管理等。当开发者需要实时掌握音频流状态变化以优化音频应用用户体验时，使用本模块接口完成相关操作。在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
 
 > **说明：** 
 
@@ -36,8 +36,8 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则为错误对象。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为当前音效模式的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
@@ -121,7 +121,7 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
@@ -420,8 +420,12 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 > **说明：** 
 > 
-> 从API version 9开始支持，从API version 20开始废弃，建议使用
-> [isStreamActive](#isstreamactive)替代。
+> 从API version 9开始支持，从API version 20开始废弃，建议使用[isStreamActive](#isstreamactive)替代。注意
+> 替代接口与原接口入参存在差异，例如[StreamUsage](arkts-audio-audio-streamusage-e.md)中提供了`STREAM_USAGE_MUSIC`、`
+> STREAM_USAGE_MOVIE`、`STREAM_USAGE_AUDIOBOOK`、`STREAM_USAGE_GAME`等更细分的类型，而
+> [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)中这些类型统一归入`MEDIA`类型。具体映射关系请参考
+> [音量控制](../../../media/audio/using-right-streamusage-for-playback.md#音量控制)中常见的播放流类型与音量类型的对应关系，迁移时根据实际业务场景选择对应的
+> StreamUsage值。
 
 **起始版本：** 9
 
@@ -464,8 +468,12 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 > **说明：** 
 > 
-> 从API version 9开始支持，从API version 20开始废弃，建议使用
-> [isStreamActive](#isstreamactive)替代。
+> 从API version 9开始支持，从API version 20开始废弃，建议使用[isStreamActive](#isstreamactive)替代。注意
+> 替代接口与原接口入参存在差异，例如[StreamUsage](arkts-audio-audio-streamusage-e.md)中提供了`STREAM_USAGE_MUSIC`、`
+> STREAM_USAGE_MOVIE`、`STREAM_USAGE_AUDIOBOOK`、`STREAM_USAGE_GAME`等更细分的类型，而
+> [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)中这些类型统一归入`MEDIA`类型。具体映射关系请参考
+> [音量控制](../../../media/audio/using-right-streamusage-for-playback.md#音量控制)中常见的播放流类型与音量类型的对应关系，迁移时根据实际业务场景选择对应的
+> StreamUsage值。
 
 **起始版本：** 9
 
@@ -509,8 +517,12 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 > **说明：** 
 > 
-> 从API version 10开始支持，从API version 20开始废弃，建议使用
-> [isStreamActive](#isstreamactive)替代。
+> 从API version 10开始支持，从API version 20开始废弃，建议使用[isStreamActive](#isstreamactive)替代。注
+> 意替代接口与原接口入参存在差异，例如[StreamUsage](arkts-audio-audio-streamusage-e.md)中提供了`STREAM_USAGE_MUSIC`、`
+> STREAM_USAGE_MOVIE`、`STREAM_USAGE_AUDIOBOOK`、`STREAM_USAGE_GAME`等更细分的类型，而
+> [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)中这些类型统一归入`MEDIA`类型。具体映射关系请参考
+> [音量控制](../../../media/audio/using-right-streamusage-for-playback.md#音量控制)中常见的播放流类型与音量类型的对应关系，迁移时根据实际业务场景选择对应的
+> StreamUsage值。
 
 **起始版本：** 10
 
@@ -970,7 +982,7 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
@@ -1004,7 +1016,7 @@ try {
 off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-取消监听音频渲染器更改事件。使用callback异步回调。
+取消监听音频渲染器更改事件。
 
 > **说明：** 
 > 
@@ -1018,8 +1030,8 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。 |
+| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('audioRendererChange')](#onaudiorendererchange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 
@@ -1047,7 +1059,7 @@ audioStreamManager.off('audioRendererChange', audioRendererChangeCallback);
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-取消监听音频采集器更改事件。使用callback异步回调。
+取消监听音频采集器更改事件。
 
 > **说明：** 
 > 
@@ -1061,8 +1073,8 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。 |
+| type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('audioCapturerChange')](#onaudiocapturerchange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **错误码：**
 

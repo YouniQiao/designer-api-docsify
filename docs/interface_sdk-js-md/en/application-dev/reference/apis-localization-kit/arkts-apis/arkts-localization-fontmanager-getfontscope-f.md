@@ -32,7 +32,7 @@ Queries the scope of a font by URL. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[FontScope](arkts-localization-fontmanager-fontscope-e.md)&gt; | Promise used to return the query result. <br>- The [FontScope](arkts-localization-fontmanager-fontscope-e.md) value is returned. |
+| Promise&lt;[FontScope](arkts-localization-fontmanager-fontscope-e.md)&gt; | Promise used to return the query result. |
 
 **Error codes:**
 

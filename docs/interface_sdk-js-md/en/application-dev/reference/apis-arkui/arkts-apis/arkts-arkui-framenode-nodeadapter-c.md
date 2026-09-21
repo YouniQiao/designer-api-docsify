@@ -171,9 +171,7 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Examples**
 
-```TypeScript
 See [NodeAdapter Validity Check Example.
-```
 
 ## moveItem
 
@@ -217,7 +215,7 @@ Called when a FrameNode is attached to the NodeAdapter.
 > node, instead of when the host node is attached to the main tree. In this case, the host node may not have been
 > attached to the main tree. If the node on which the callback logic depends has been mounted (for example,
 > accessing layout information or executing animation), you are advised to register
-> onAppear in the callback and place the related logic in **onAppear** for
+> [onAppear](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onappear) in the callback and place the related logic in **onAppear** for
 > execution. If you set this callback by dynamically assigning a value, complete the setting before calling
 > [attachNodeAdapter](#attachnodeadapter). Otherwise, the callback may fail to be triggered.
 
@@ -451,6 +449,4 @@ Get the total number of node count.
 
 **Examples**
 
-```TypeScript
 See the example for [NodeAdapter Usage Example.
-```

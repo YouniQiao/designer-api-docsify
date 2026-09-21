@@ -44,7 +44,7 @@ Constructs a **SegmentButtonV2ItemOptions** instance.
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description of the segmented button item.
+[Accessibility description](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitydescription) of the segmented button item.
 
 Default value: **""**
 
@@ -68,7 +68,7 @@ If the value is **undefined**, the default value is used.
 accessibilityLevel?: string
 ```
 
-Accessibility level of the segmented button item accessibilityLevel.
+Accessibility level of the segmented button item [accessibilityLevel](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel).
 
 Default value: **"auto"**
 
@@ -94,7 +94,7 @@ If the value is **undefined**, the default value is used.
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the segmented button item.
+[Accessibility text](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext) of the segmented button item.
 
 Default value: **""**
 

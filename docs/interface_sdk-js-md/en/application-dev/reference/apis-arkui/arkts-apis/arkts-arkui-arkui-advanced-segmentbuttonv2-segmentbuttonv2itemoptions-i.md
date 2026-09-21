@@ -29,7 +29,7 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description of the segmented button item.
+[Accessibility description](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitydescription) of the segmented button item.
 
 Default value: **""**
 
@@ -51,7 +51,7 @@ If the value is **undefined**, the default value is used.
 accessibilityLevel?: string
 ```
 
-Accessibility level of the segmented button item. For details, see accessibilityLevel.
+Accessibility level of the segmented button item. For details, see [accessibilityLevel](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel).
 
 Default value: **"auto"**
 
@@ -73,7 +73,7 @@ If the value is **undefined**, the default value is used.
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the segmented button item. For details, see accessibilityText.
+Accessibility text of the segmented button item. For details, see [accessibilityText](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext).
 
 Default value: **""**
 

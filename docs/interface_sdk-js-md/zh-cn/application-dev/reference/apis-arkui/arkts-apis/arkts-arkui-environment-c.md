@@ -91,9 +91,7 @@ static envProp<S>(key: string, value: S): boolean
 
 **示例**
 
-```TypeScript
 envProp具体使用，详见[从UI中访问Environment参数](../../../ui/state-management/arkts-environment.md#从ui中访问environment参数)。
-```
 
 ## EnvProps
 
@@ -187,15 +185,6 @@ static Keys(): Array<string>
 | Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
 
 **示例**
-
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
 
 ## keys
 

@@ -52,8 +52,28 @@ clone(title: string): Promise<PhotoAsset>
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { systemDateTime } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let title: string = systemDateTime.getTime().toString();
+    let newAsset: photoAccessHelper.PhotoAsset = await photoAsset.clone(title);
+    console.info('get new asset successfully');
+  } catch (error) {
+    console.error(`failed to get new asset. message =  ${error.code}, ${error.message}`);
+  }
+}
 ```
 
 ## close
@@ -89,8 +109,34 @@ close(fd: number, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let fd: number = await photoAsset.getReadOnlyFd();
+    console.info('file fd', fd);
+    photoAsset.close(fd, (err) => {
+      if (err === undefined) {
+        console.info('asset close succeed.');
+      } else {
+        console.error(`close failed, error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (err) {
+    console.error(`close failed, error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 <a id="close-1"></a>
@@ -133,8 +179,29 @@ close(fd: number): Promise<void>
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let fd: number = await asset.getReadOnlyFd();
+    console.info('file fd', fd);
+    await asset.close(fd);
+    console.info('asset close succeed.');
+  } catch (err) {
+    console.error(`close failed, error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## commitModify
@@ -172,8 +239,40 @@ commitModify(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: ['title'],
+    predicates: predicates
+  };
+  // 获取照片资源集合。
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  // 获取第一个照片资源对象。
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  if (photoAsset === undefined) {
+    console.error('photoAsset is undefined');
+    return;
+  }
+  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
+  // 获取当前标题值。
+  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
+  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
+  photoAsset.set(title, 'newTitle2');
+  photoAsset.commitModify((err) => {
+    if (!err) {
+      let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
+      console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
+    } else {
+      console.error(`commitModify failed, error: ${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="commitmodify-1"></a>
@@ -213,8 +312,36 @@ commitModify(): Promise<void>
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: ['title'],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  if (photoAsset === undefined) {
+    console.error('commitModifyPromise photoAsset is undefined');
+    return;
+  }
+  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
+  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
+  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
+  photoAsset.set(title, 'newTitle3');
+  try {
+    await photoAsset.commitModify();
+    let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
+    console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
+  } catch (err) {
+    console.error(`release failed. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## get
@@ -252,8 +379,28 @@ get(member: string): MemberType
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('photoAssetGetDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: ['title'],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let title: photoAccessHelper.PhotoKeys = photoAccessHelper.PhotoKeys.TITLE;
+    let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title.toString());
+    console.info('photoAsset Get photoAssetTitle = ', photoAssetTitle);
+  } catch (err) {
+    console.error(`release failed. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getReadOnlyFd
@@ -293,8 +440,30 @@ getReadOnlyFd(callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getReadOnlyFdDemo');
+  // 需要保证设备中存在可读取图片视频文件。
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let assetResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  let photoAsset: photoAccessHelper.PhotoAsset = await assetResult.getFirstObject();
+  photoAsset.getReadOnlyFd((err, fd) => {
+    if (!err) {
+      console.info('File fd' + fd);
+      photoAsset.close(fd);
+    } else {
+      console.error(`getReadOnlyFd err: ${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getreadonlyfd-1"></a>
@@ -336,8 +505,37 @@ getReadOnlyFd(): Promise<number>
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getReadOnlyFdDemo');
+  try {
+    // 需要保证设备中存在可读取图片视频文件。
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: photoAccessHelper.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let assetResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAsset: photoAccessHelper.PhotoAsset = await assetResult.getFirstObject();
+    if (photoAsset === undefined) {
+      console.error('photoAsset is undefined');
+      return;
+    }
+    let fd: number = await photoAsset.getReadOnlyFd();
+    if (!err) {
+      console.info('File fd' + fd);
+      photoAsset.close(fd);
+    } else {
+      console.error('getReadOnlyFd fail');
+    }
+  } catch (err) {
+    console.error(`getReadOnlyFd demo err: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getThumbnail
@@ -373,8 +571,29 @@ getThumbnail(callback: AsyncCallback<image.PixelMap>): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  console.info('asset displayName = ', asset.displayName);
+  asset.getThumbnail((err, pixelMap) => {
+    if (!err) {
+      console.info('getThumbnail successful ' + pixelMap);
+    } else {
+      console.error(`getThumbnail fail with error: ${err.code}, ${err.message}`);
+    }
+  });
+}
 ```
 
 <a id="getthumbnail-1"></a>
@@ -413,8 +632,35 @@ getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let size: image.Size = { width: 720, height: 720 };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let asset = await fetchResult.getFirstObject();
+    console.info('asset displayName = ', asset.displayName);
+    asset.getThumbnail(size, (err, pixelMap) => {
+      if (!err) {
+        console.info('getThumbnail successful ' + pixelMap);
+      } else {
+        console.error(`getThumbnail fail with error: ${err.code}, ${err.message}`);
+      }
+    });
+  } catch (error) {
+    console.error(`Error fetching assets: ${error.message}`);
+  }
+}
 ```
 
 <a id="getthumbnail-2"></a>
@@ -458,8 +704,30 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let size: image.Size = { width: 720, height: 720 };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  console.info('asset displayName = ', asset.displayName);
+  asset.getThumbnail(size).then((pixelMap) => {
+    console.info('getThumbnail successful ' + pixelMap);
+  }).catch((err: BusinessError) => {
+    console.error(`getThumbnail fail with error: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 ## set
@@ -491,8 +759,27 @@ set(member: string, value: string): void
 
 **示例**
 
-```TypeScript
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('photoAssetSetDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: photoAccessHelper.FetchOptions = {
+      fetchColumns: ['title'],
+      predicates: predicates
+    };
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
+    photoAsset.set(title, 'newTitle');
+  } catch (err) {
+    console.error(`release failed. error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## displayName

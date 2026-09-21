@@ -46,6 +46,7 @@
 | [ArkUI_KeyboardAppearance](#arkui_keyboardappearance) | ArkUI_KeyboardAppearance | 定义输入框拉起的键盘样式。 |
 | [ArkUI_TextMenuItemId](#arkui_textmenuitemid) | ArkUI_TextMenuItemId | 文本菜单项id枚举。 |
 | [OH_ArkUI_LineBreakStrategy](#oh_arkui_linebreakstrategy) | OH_ArkUI_LineBreakStrategy | 换行策略类型枚举。 |
+| [OH_ArkUI_StrokeJoinStyle](#oh_arkui_strokejoinstyle) | OH_ArkUI_StrokeJoinStyle | 定义文本描边拐角样式枚举值。 |
 | [ArkUI_TextSpanType](#arkui_textspantype) | ArkUI_TextSpanType | 自定义文本选择菜单的文本识别类型枚举。 |
 | [ArkUI_TextResponseType](#arkui_textresponsetype) | ArkUI_TextResponseType | 自定义文本选择菜单的响应类型枚举。 |
 
@@ -419,6 +420,26 @@ enum OH_ArkUI_LineBreakStrategy
 | OH_ARKUI_LINE_BREAK_STRATEGY_GREEDY = 0 |  |
 | OH_ARKUI_LINE_BREAK_STRATEGY_HIGH_QUALITY = 1 |  |
 | OH_ARKUI_LINE_BREAK_STRATEGY_BALANCE = 2 |  |
+
+### OH_ArkUI_StrokeJoinStyle
+
+```c
+enum OH_ArkUI_StrokeJoinStyle
+```
+
+**描述：**
+
+定义文本描边拐角样式枚举值。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.2.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN = 0 | 尖角连接，文本描边拐角处显示为尖角。 |
+| OH_ARKUI_STROKE_JOIN_STYLE_ROUND_JOIN | 圆角连接，文本描边拐角处显示为圆角。 |
+| OH_ARKUI_STROKE_JOIN_STYLE_BEVEL_JOIN | 斜角连接，文本描边拐角处显示为斜角。 |
 
 ### ArkUI_TextSpanType
 

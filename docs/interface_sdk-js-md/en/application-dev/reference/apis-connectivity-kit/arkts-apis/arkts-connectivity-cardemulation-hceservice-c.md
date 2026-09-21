@@ -118,12 +118,80 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+// Applicable to devices other than lite wearables
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
+import { bundleManager, AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+let hceService: cardEmulation.HceService = new cardEmulation.HceService();
+let element: bundleManager.ElementName;
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onCreate');
+    element = {
+      bundleName: want.bundleName ?? '',
+      abilityName: want.abilityName ?? '',
+      moduleName: want.moduleName
+    };
+    const apduCallback: AsyncCallback<number[]> = (err, data) => {
+      // Implement data processing and handle exceptions.
+      console.info("got apdu data");
+    };
+    hceService.on('hceCmd', apduCallback);
+  }
+  onDestroy() {
+    hilog.info(0x0000, 'testHce', '%{public}s', 'Ability onDestroy');
+    hceService.stop(element);
+  }
+  // Other functions in the lifecycle
+}
+```
+
 JS example:
+
+```TypeScript
+// Applicable to lite wearables
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+let appName = "com.example.testquestionlite";
+
+export default {
+  data:{
+    fontSize: '30px',
+    fontColor: '#50609f',
+    hide: 'show',
+    headCon: appName,
+    paymentAid: ["A0000000041010", "A0000000041012"]
+  },
+  onCreate() {
+    console.info('onCreate');
+  },
+  onReady() {
+    cardEmulation.hasHceCapability();
+    cardEmulation.isDefaultService(appName, cardEmulation.CardType.PAYMENT);
+    cardEmulation.isDefaultService(appName, cardEmulation.CardType.OTHER);
+    let hceService = new cardEmulation.HceService();
+
+    hceService.start(appName, this.paymentAid);
+    hceService.on("hceCmd", (data) => {
+      console.info('data:' + data);
+      // Data to be sent by the application. The following data is for reference only.
+      let responseData = [0x1, 0x2];
+      hceService.transmit(responseData, () => {
+        console.info('sendResponse start');
+      });
+      console.info('sendResponse end');
+    });
+  },
+  onDestroy() {
+  }
+  // Other functions in the lifecycle
+}
 ```
 
 ## sendResponse
@@ -159,12 +227,21 @@ Sends a response to the peer card reader.
 
 **Examples**
 
-```TypeScript
 ArkTS example:
 
 For details, see the example of [transmit](#transmit).
 
 JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript
@@ -292,12 +369,21 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Examples**
 
-```TypeScript
 ArkTS example:
 
 For details, see the example of on.
 
 JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript
@@ -411,12 +497,21 @@ Stops HCE, including exiting the current application from the foreground, releas
 
 **Examples**
 
-```TypeScript
 ArkTS example:
 
 For details, see the example of on.
 
 JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
 ```
 
 ```TypeScript

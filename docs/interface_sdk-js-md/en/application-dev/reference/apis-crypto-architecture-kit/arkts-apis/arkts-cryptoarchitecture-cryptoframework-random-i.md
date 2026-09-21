@@ -158,12 +158,28 @@ Generates a random number of the specified length. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rand = cryptoFramework.createRandom();
+let promiseGenerateRand = rand.generateRandom(12);
+promiseGenerateRand.then(randData => {
+  console.info('[Promise]: rand result: ' + randData.data);
+}).catch((error: BusinessError) => {
+  console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
 JS example:
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto test</text>
+    <input class="btn" @click="RandTest">Rand asynchronous test</input>
+</div>
 ```
 
 ```TypeScript
@@ -267,12 +283,33 @@ Generates a random number of the specified length. This API returns the result s
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rand = cryptoFramework.createRandom();
+try {
+  let randData = rand.generateRandomSync(12);
+  if (randData != null) {
+    console.info('[Sync]: rand result: ' + randData.data);
+  } else {
+    console.error('[Sync]: get rand result: fail.');
+  }
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
+}
+```
+
 JS example:
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto test</text>
+    <input class="btn" @click="RandTestSync">Rand synchronous test</input>
+</div>
 ```
 
 ```TypeScript

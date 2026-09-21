@@ -44,8 +44,60 @@ Set a new value of form info.
 
 ## Examples
 
-```TypeScript
 Widget example
 
 This example creates a 2 x 2 widget and registers event callbacks.
+
+```TypeScript
+// card.ets
+@Entry
+@Component
+struct CardExample {
+  @State formId:string = '0';
+  build() {
+    Column() {
+      Text('this is a card')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+      FormComponent({
+        id:this.formId,
+        name:"Form1",
+        bundle:"com.example.cardexample",
+        ability:"FormAbility",
+        module:"entry",
+        dimension:FormDimension.Dimension_2_2,
+        temporary:false
+      })
+        .allowUpdate(true)
+        .size({width:360,height:360})
+        .visibility(Visibility.Visible)
+        .onAcquired((form: FormCallbackInfo)=>{
+          console.info(`form info : ${form?.id}`);
+          // Invalid form id
+          if (form.id == -1) {
+            this.formId = form.idString;
+          } else {
+            this.formId = form.id.toString();
+          }
+        })
+        .onError((error)=>{
+          console.error(`fail to add form, error code: ${error?.errcode}, error message: ${error?.msg}`);
+        })
+        .onUninstall((form: FormCallbackInfo)=>{
+          console.info(`uninstall form success : ${form?.id}`);
+          // Invalid form id
+          if (form.id == -1) {
+            this.formId = form.idString;
+          } else {
+            this.formId = form.id.toString();
+          }
+        })
+        .onUpdate((form: FormCallbackInfo)=>{
+          console.info(`form update done : ${form?.id}`);
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```

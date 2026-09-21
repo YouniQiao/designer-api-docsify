@@ -6,7 +6,7 @@ interface PhotoAccessHelper extends lang.ISendable
 
 Helper functions to access photos and albums.
 
-**Inheritance/Implementation:** PhotoAccessHelper extends lang.ISendable
+**Inheritance/Implementation:** PhotoAccessHelper extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
 
 **Since:** 12
 
@@ -62,8 +62,26 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('createAssetDemo');
+  try {
+    let photoType: sendablePhotoAccessHelper.PhotoType = sendablePhotoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let options: photoAccessHelper.CreateOptions = {
+      title: 'testPhoto'
+    }
+    let uri: string = await phAccessHelper.createAsset(photoType, extension, options);
+    console.info('createAsset uri' + uri);
+    console.info('createAsset successfully');
+  } catch (err) {
+    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getAlbums
@@ -104,8 +122,34 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  // Obtain the album named newAlbumName.
+  console.info('getAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  phAccessHelper.getAlbums(fetchOptions).then( async (fetchResult) => {
+    if (fetchResult === undefined) {
+      console.error('getAlbumsPromise fetchResult is undefined');
+      return;
+    }
+    let album: sendablePhotoAccessHelper.Album = await fetchResult.getFirstObject();
+    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
+    fetchResult.close();
+  }).catch((err: BusinessError) => {
+    console.error(`getAlbumsPromise failed with err: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 <a id="getalbums-1"></a>
@@ -154,8 +198,34 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  // Obtain the album named newAlbumName.
+  console.info('getAlbumsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  predicates.equalTo('album_name', 'newAlbumName');
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions).then( async (fetchResult) => {
+    if (fetchResult === undefined) {
+      console.error('getAlbumsPromise fetchResult is undefined');
+      return;
+    }
+    let album: sendablePhotoAccessHelper.Album = await fetchResult.getFirstObject();
+    console.info('getAlbumsPromise successfully, albumName: ' + album.albumName);
+    fetchResult.close();
+  }).catch((err: BusinessError) => {
+    console.error(`getAlbumsPromise failed with err: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 ## getAssets
@@ -194,8 +264,32 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('getAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    if (fetchResult !== undefined) {
+      console.info('fetchResult success');
+      let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset !== undefined) {
+        console.info('photoAsset.displayName :' + photoAsset.displayName);
+      }
+    }
+  } catch (err) {
+    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getBurstAssets
@@ -235,8 +329,41 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('getBurstAssets');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let photoAssetList: Array<sendablePhotoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  let photoAsset: sendablePhotoAccessHelper.PhotoAsset;
+  // burstKey is a 36-bit UUID, which can be obtained from photoAccessHelper.PhotoKeys.
+  for(photoAsset of photoAssetList){
+    let burstKey: string = photoAccessHelper.PhotoKeys.BURST_KEY.toString();
+    let photoAccessBurstKey: photoAccessHelper.MemberType = photoAsset.get(burstKey).toString();
+    try {
+      let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await
+      phAccessHelper.getBurstAssets(photoAccessBurstKey, fetchOption);
+      if (fetchResult !== undefined) {
+        console.info('fetchResult success');
+        let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+        if (photoAsset !== undefined) {
+          console.info('photoAsset.displayName :' + photoAsset.displayName);
+        }
+      }
+    } catch (err) {
+      console.error(`getBurstAssets failed, error: ${err.code}, ${err.message}`);
+    }
+  }
+}
 ```
 
 ## release
@@ -265,6 +392,22 @@ Releases the **PhotoAccessHelper** instance. Call this method when the APIs of t
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
+
+```TypeScript
+async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
+  console.info('releaseDemo');
+  try {
+    console.info('use function...');
+  } catch (err) {
+    console.error(`function error ...`);
+  }finally{
+      try{
+          phAccessHelper?.release();
+          console.info(`release success`);
+      } catch(e){
+          console.error(`release error :${e}`);
+      }
+  }
+}
 ```

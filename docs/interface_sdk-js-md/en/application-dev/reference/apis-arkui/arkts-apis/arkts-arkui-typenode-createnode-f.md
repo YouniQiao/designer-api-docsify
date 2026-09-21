@@ -1279,9 +1279,7 @@ Creates a FrameNode of the **ListItem** type.
 
 **Examples**
 
-```TypeScript
 See the example for createNode('List').
-```
 
 
 <a id="createnode-18"></a>
@@ -1458,9 +1456,7 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 **Examples**
 
-```TypeScript
 See the example for createNode('List').
-```
 
 
 <a id="createnode-21"></a>
@@ -1591,9 +1587,7 @@ Creates a FrameNode of the **FlowItem** type.
 
 **Examples**
 
-```TypeScript
 See the example for createNode('WaterFlow').
-```
 
 
 <a id="createnode-23"></a>
@@ -2800,6 +2794,4 @@ Creates a FrameNode of the **GridItem** type.
 
 **Examples**
 
-```TypeScript
 See the example for createNode('Grid').
-```

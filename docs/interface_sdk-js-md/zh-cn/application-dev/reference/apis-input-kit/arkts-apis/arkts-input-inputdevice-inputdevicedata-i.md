@@ -47,7 +47,7 @@ bus: number
 ## displayId
 
 ```TypeScript
-displayId?: number
+readonly displayId?: number
 ```
 
 绑定的目标显示器ID。当系统中有绑定关系时存在该字段，未绑定时不存在该字段。

@@ -46,8 +46,8 @@ resizeable(value: boolean)
 
 > **说明：** 
 > 
-> 初始化后，当动态修改margin、[border](arkts-arkui-common-comp-commonmethod-c.md#border)、
-> padding通用属性导致子组件尺寸大于相邻分割线间距时，不支持拖动分割线改变子组件的高度。
+> 初始化后，当动态修改[margin](arkts-arkui-common-comp-commonmethod-c.md#margin)、[border](arkts-arkui-common-comp-commonmethod-c.md#border)、
+> [padding](arkts-arkui-common-comp-commonmethod-c.md#padding)通用属性导致子组件尺寸大于相邻分割线间距时，不支持拖动分割线改变子组件的高度。
 
 **起始版本：** 7
 

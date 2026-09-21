@@ -20,7 +20,7 @@
 > 
 > - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
 > 
-> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置opacity属性不生效。
+> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置[opacity](arkts-arkui-common-comp-commonmethod-c.md#opacity)属性不生效。
 
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 

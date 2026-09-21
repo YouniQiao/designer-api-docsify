@@ -935,6 +935,35 @@ prop.tag = 'TestTag';
 pasteData.setProperty(prop);
 ```
 
-```TypeScript
 The localOnly and shareOption attributes of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) are mutually exclusive. The shareOption attribute is prioritized, and its value affects the value of localOnly.
+
+```TypeScript
+(async () => {
+    let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+    let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
+    prop.shareOption = pasteboard.ShareOption.INAPP;
+    prop.localOnly = false;
+    pasteData.setProperty(prop);
+    const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+
+    await systemPasteboard.setData(pasteData).then(async () => {
+        console.info('Succeeded in setting PasteData.');
+        await systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+            let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
+            prop.localOnly; // true
+        });
+    });
+
+    prop.shareOption = pasteboard.ShareOption.LOCALDEVICE;
+    prop.localOnly = false;
+    pasteData.setProperty(prop);
+
+    await systemPasteboard.setData(pasteData).then(async () => {
+        console.info('Succeeded in setting PasteData.');
+        await systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+            let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
+            prop.localOnly; // true
+        });
+    });
+})
 ```

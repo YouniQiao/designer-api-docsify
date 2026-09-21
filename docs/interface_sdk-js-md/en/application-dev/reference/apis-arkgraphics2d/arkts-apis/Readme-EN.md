@@ -61,10 +61,15 @@
   - [Tool](arkts-arkgraphics2d-drawing-tool-c.md)
   - [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md)
   - [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md)
+  <!--Del-->
+  - [AtlasImage(system api)](arkts-arkgraphics2d-drawing-atlasimage-i-sys.md)<!--DelEnd-->
   - [FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md)
   - [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)
   - [RecordCmd](arkts-arkgraphics2d-drawing-recordcmd-i.md)
   - [TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)
+  - [TypefaceFallbackInfo](arkts-arkgraphics2d-drawing-typefacefallbackinfo-i.md)
+  <!--Del-->
+  - [AtlasInterpolationMode(system api)](arkts-arkgraphics2d-drawing-atlasinterpolationmode-e-sys.md)<!--DelEnd-->
   - [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)
   - [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md)
   - [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md)
@@ -188,6 +193,12 @@
     - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)
     <!--Del-->
     - [Filter(system api)](arkts-arkgraphics2d-uieffect-filter-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [GlassMarbleContentParam(system api)](arkts-arkgraphics2d-uieffect-glassmarblecontentparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [GlassMarbleMaterialParam(system api)](arkts-arkgraphics2d-uieffect-glassmarblematerialparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [GlassMarbleSphereParam(system api)](arkts-arkgraphics2d-uieffect-glassmarblesphereparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [HdrBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md)<!--DelEnd-->
     <!--Del-->

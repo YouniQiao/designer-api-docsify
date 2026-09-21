@@ -57,8 +57,24 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('addResourceByFileUriDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
+    // Ensure that the asset specified by fileUri exists.
+    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('addResourceByFileUri successfully');
+  } catch (err) {
+    console.error(`addResourceByFileUriDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 <a id="addresource-1"></a>
@@ -99,8 +115,23 @@ Adds a resource using **ArrayBuffer** data.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('addResourceByArrayBufferDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
+    let buffer: ArrayBuffer = new ArrayBuffer(2048);
+    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, buffer);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('addResourceByArrayBuffer successfully');
+  } catch (err) {
+    console.error(`addResourceByArrayBufferDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## constructor
@@ -132,8 +163,22 @@ Constructor used to initialize an asset change request.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('MediaAssetChangeRequest constructorDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(photoAsset);
+}
 ```
 
 <a id="createassetrequest-2"></a>
@@ -176,8 +221,27 @@ Create an asset change request based on the file type and filename extension.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('createAssetRequestDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
+    let extension: string = 'jpg';
+    let options: photoAccessHelper.CreateOptions = {
+      title: 'testPhoto'
+    }
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension, options);
+    // Ensure that the asset specified by fileUri exists.
+    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply createAssetRequest successfully');
+  } catch (err) {
+    console.error(`createAssetRequestDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## createImageAssetRequest
@@ -221,8 +285,21 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('createImageAssetRequestDemo');
+  try {
+    // Ensure that the asset specified by fileUri exists.
+    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, fileUri);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply createImageAssetRequest successfully');
+  } catch (err) {
+    console.error(`createImageAssetRequestDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## createVideoAssetRequest
@@ -264,8 +341,21 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('createVideoAssetRequestDemo');
+  try {
+    // Ensure that the asset specified by fileUri exists.
+    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createVideoAssetRequest(context, fileUri);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply createVideoAssetRequest successfully');
+  } catch (err) {
+    console.error(`createVideoAssetRequestDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## deleteAssets
@@ -305,8 +395,27 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, photoAssetList);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 <a id="deleteassets-1"></a>
@@ -349,8 +458,27 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('deleteAssetsDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOptions: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    await photoAccessHelper.MediaAssetChangeRequest.deleteAssets(context, [asset.uri]);
+    console.info('deleteAssets successfully');
+  } catch (err) {
+    console.error(`deleteAssetsDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## discardCameraPhoto
@@ -374,8 +502,20 @@ Discards the photo taken by the camera.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset) {
+  console.info('discardCameraPhotoDemo');
+  try {
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+    assetChangeRequest.discardCameraPhoto();
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply discardCameraPhoto successfully');
+  } catch (err) {
+    console.error(`apply discardCameraPhoto failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getAsset
@@ -413,8 +553,22 @@ Obtains the asset in this asset change request.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('getAssetDemo');
+  try {
+    // Ensure that the asset specified by fileUri exists.
+    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createImageAssetRequest(context, fileUri);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    let asset: photoAccessHelper.PhotoAsset = assetChangeRequest.getAsset();
+    console.info('create asset successfully with uri = ' + asset.uri);
+  } catch (err) {
+    console.error(`getAssetDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## getWriteCacheHandler
@@ -453,8 +607,26 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
+  console.info('getWriteCacheHandlerDemo');
+  try {
+    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.VIDEO;
+    let extension: string = 'mp4';
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
+    let fd: number = await assetChangeRequest.getWriteCacheHandler();
+    console.info('getWriteCacheHandler successfully');
+    // write data into fd..
+    await fileIo.close(fd);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+  } catch (err) {
+    console.error(`getWriteCacheHandlerDemo failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## saveCameraPhoto
@@ -478,8 +650,20 @@ Saves the photo taken by the camera.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset) {
+  console.info('saveCameraPhotoDemo');
+  try {
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+    assetChangeRequest.saveCameraPhoto();
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply saveCameraPhoto successfully');
+  } catch (err) {
+    console.error(`apply saveCameraPhoto failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 <a id="savecameraphoto-1"></a>
@@ -511,8 +695,24 @@ Saves the photo taken by the camera.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+async function example(context: Context, asset: photoAccessHelper.PhotoAsset) {
+  console.info('saveCameraPhotoDemo');
+  try {
+    let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+    assetChangeRequest.saveCameraPhoto(photoAccessHelper.ImageFileType.JPEG);
+    await phAccessHelper.applyChanges(assetChangeRequest);
+    console.info('apply saveCameraPhoto successfully');
+  } catch (err) {
+    console.error(`apply saveCameraPhoto failed with error: ${err.code}, ${err.message}`);
+  }
+}
 ```
 
 ## setFavorite
@@ -541,8 +741,29 @@ Favorites or unfavorites this file asset.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setFavorite(true);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 ## setOrientation
@@ -572,8 +793,29 @@ Sets the orientation of this image.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setOrientationDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setOrientation(90);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setOrientation successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setOrientation failed with error: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 ## setTitle
@@ -605,8 +847,30 @@ Sets the media asset title.
 
 **Examples**
 
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setTitleDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  let newTitle: string = 'newTitle';
+  assetChangeRequest.setTitle(newTitle);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setTitle successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setTitle failed with error: ${err.code}, ${err.message}`);
+  });
+}
 ```
 
 ## comment

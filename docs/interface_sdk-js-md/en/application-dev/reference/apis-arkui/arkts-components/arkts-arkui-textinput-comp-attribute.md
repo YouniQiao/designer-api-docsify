@@ -264,7 +264,7 @@ From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/a
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 
@@ -313,7 +313,7 @@ Sets the extended options of the custom menu, including the text content, icon, 
 
 When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -1235,7 +1235,7 @@ Triggered when the password visibility state is toggled.
 
 > **NOTE:** 
 > 
-> This API can be called in attributeModifier since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -1313,7 +1313,7 @@ From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -1705,7 +1705,7 @@ The character counter is not displayed in the [inline style](../../../ui/arkts-c
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -1956,7 +1956,7 @@ Sets the horizontal alignment of the text.
 
 Available options are **TextAlign.Start**, **TextAlign.Center**, and **TextAlign.End**. **TextAlign.JUSTIFY** behaves the same as **TextAlign.Start**.
 
-You can use the align attribute to control the vertical position of a text paragraph. In this component, the **align** attribute cannot be used to control the horizontal position of a text paragraph.
+You can use the [align](arkts-arkui-common-comp-commonmethod-c.md#align) attribute to control the vertical position of a text paragraph. In this component, the **align** attribute cannot be used to control the horizontal position of a text paragraph.
 
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
 - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  

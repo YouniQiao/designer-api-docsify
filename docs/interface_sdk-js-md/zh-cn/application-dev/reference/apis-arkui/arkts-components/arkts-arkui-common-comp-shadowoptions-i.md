@@ -22,7 +22,7 @@ color?: Color | string | Resource | ColoringStrategy
 
 **说明：** 
 
-从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、textShadow中使用。
+从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、[textShadow](arkts-arkui-text-comp-attribute.md#textshadow)中使用。
 
 当前仅支持平均取色和主色取色，智能取色区域为shadow绘制区域。
 
@@ -50,7 +50,7 @@ fill?: boolean
 
 **说明：** 
 
-textShadow中该字段不生效。
+[textShadow](arkts-arkui-text-comp-attribute.md#textshadow)中该字段不生效。
 
 **类型：** boolean
 
@@ -78,7 +78,7 @@ offsetX?: number | Resource
 
 **说明：** 
 
-如需使用vp单位的数值可用vp2px进行转换。
+如需使用vp单位的数值可用[vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)进行转换。
 
 如果offsetX为Resource类型，则传入的值需为number类型。
 
@@ -106,7 +106,7 @@ offsetY?: number | Resource
 
 **说明：** 
 
-如需使用vp单位的数值可用vp2px进行转换。
+如需使用vp单位的数值可用[vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)进行转换。
 
 如果offsetY为Resource类型，则传入的值需为number类型。
 
@@ -128,7 +128,7 @@ radius: number | Resource
 
 阴影模糊半径。
 
-取值范围：0, +∞)，API版本26.0.0开始取值范围变更为(-∞, +∞)
+取值范围：[0, +∞)，API版本26.0.0开始取值范围变更为(-∞, +∞)
 
 单位：px
 
@@ -136,7 +136,7 @@ radius: number | Resource
 
 API版本26.0.0之前，设置小于0的值时，按值为0处理。从API版本26.0.0开始，设置的值即为最终取值，当设置负数值时阴影消失。
 
-如需使用vp单位的数值可用[vp2px进行转换。
+如需使用vp单位的数值可用[vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)进行转换。
 
 如果radius为Resource类型，则传入的值需为number类型。
 

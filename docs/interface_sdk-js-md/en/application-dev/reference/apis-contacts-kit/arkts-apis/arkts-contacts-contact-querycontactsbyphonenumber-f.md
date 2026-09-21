@@ -77,14 +77,28 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -167,14 +181,32 @@ Queries a contact based on the specified phone number and holder. This API uses 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -254,14 +286,30 @@ Queries a contact based on the specified phone number and attributes. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -348,14 +396,34 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
 ```
 
 
@@ -447,12 +515,28 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Internal error. The query resultSet is nullptr. 3.Internal error. The query resultSet is empty. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context in the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
 ```

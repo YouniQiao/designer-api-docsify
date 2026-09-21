@@ -79,7 +79,7 @@ readonly data: Uint8ClampedArray
 一维数组，保存了RGBA格式的像素数据，每个像素占4字节，依次为R、G、B、A，数据值范围为0到255。  
 > **说明：** 
 > 
-> 可使用px2vp
+> 可使用[px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > 接口进行单位转换。
 
 **类型：** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md)
@@ -103,7 +103,7 @@ readonly height: number
 矩形区域实际像素高度。<br>单位为px。  
 > **说明：** 
 > 
-> 可使用px2vp
+> 可使用[px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > 接口进行单位转换。
 
 **类型：** number
@@ -128,7 +128,7 @@ readonly width: number
 
 > **说明：** 
 > 
-> 可使用px2vp
+> 可使用[px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
 > 接口进行单位转换。
 
 **类型：** number

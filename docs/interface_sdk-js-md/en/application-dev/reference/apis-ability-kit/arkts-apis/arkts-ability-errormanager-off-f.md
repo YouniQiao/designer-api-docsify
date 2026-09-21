@@ -222,8 +222,29 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 errorManager.off('unhandledRejection');
 ```
 
-```TypeScript
 Or:
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
+  if (promise === promise1) {
+    console.info('promise1 is rejected');
+  }
+  console.info('reason.name: ', reason.name);
+  console.info('reason.message: ', reason.message);
+  if (reason.stack) {
+    console.info('reason.stack: ', reason.stack);
+  }
+};
+
+errorManager.on('unhandledRejection', observer);
+
+let promise1 = new Promise<void>(() => {}).then(() => {
+  throw new Error('uncaught error')
+})
+
+errorManager.off('unhandledRejection', observer);
 ```
 
 

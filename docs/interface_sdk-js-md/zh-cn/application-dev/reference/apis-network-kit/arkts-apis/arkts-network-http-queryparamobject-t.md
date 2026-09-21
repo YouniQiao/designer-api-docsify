@@ -12,4 +12,4 @@ export type QueryParamObject = Record<string, QueryParamValue[]>
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-**类型：** Record&lt;string, [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | [QueryParamValue](arkts-network-http-queryparamvalue-t.md)[]&gt;
+**类型：** Record&lt;string, [QueryParamValue](arkts-network-http-queryparamvalue-t.md)[]&gt;

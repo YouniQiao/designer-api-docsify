@@ -38,14 +38,6 @@ Obtains the effect types supported by the camera controller.
 
 **Examples**
 
-```TypeScript
-function getSupportedEffectTypes(videoSession: camera.VideoSession): Array<camera.ControlCenterEffectType> {
-    let effectTypes: Array<camera.ControlCenterEffectType> = [];
-    effectTypes = videoSession.getSupportedEffectTypes();
-    return effectTypes;
-}
-```
-
 ## isControlCenterSupported
 
 ```TypeScript

@@ -407,9 +407,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 > 两者不宜同时使用，建议根据自定义程度需求选择。
 > 用户可以通过该属性设置自定义的文本菜单。
 
-在onCreateMenu中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。
+在[onCreateMenu](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu)中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。
 
-在onMenuItemClick中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true不执行系统回调，返回false继续执行系统回调。
+在[onMenuItemClick](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#onmenuitemclick)中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true不执行系统回调，返回false继续执行系统回调。
 
 在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。
 
@@ -3032,7 +3032,7 @@ onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest}) => b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event?: { data: string &#124; WebResourceRequest }) =&gt; boolean | 是 | url的相关信息。<br>返回值：boolean，true表示阻止此次加载，false表示允许此次加载。 |
+| callback | (event?: { data: string &#124; WebResourceRequest}) =&gt; boolean | 是 | url的相关信息。<br>返回值：boolean，true表示阻止此次加载，false表示允许此次加载。 |
 
 ## onVerifyPin
 

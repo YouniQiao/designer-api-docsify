@@ -70,7 +70,7 @@ enablePreviewMenu?: boolean
 
 默认值：false
 
-当copyOptions设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+当[copyOptions](../arkts-components/arkts-arkui-richeditor-comp-attribute.md#copyoptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
 
 本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、Wearable设备中调用功能不生效。
 

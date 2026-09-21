@@ -50,7 +50,3 @@ Constructor for the smart gesture click action handling.
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node that responds to the click action. |
 
 **Examples**
-
-```TypeScript
-This example implements custom smart gesture action handling as smart gesture click action handling in the smart gesture listening callback. For the complete example, see [Example 1 (Enabling Smart Gestures and Customizing Action Handling)](./arkts-apis-uicontext-smartgesturecontroller.md#example-1-enabling-smart-gestures-and-customizing-action-handling).
-```

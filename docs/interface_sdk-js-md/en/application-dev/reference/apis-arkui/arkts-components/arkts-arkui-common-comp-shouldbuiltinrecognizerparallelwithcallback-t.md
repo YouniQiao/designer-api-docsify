@@ -18,7 +18,7 @@ Represents the callback used to set the parallel relationship between built-in g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | [GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md) | Yes | Built-in gesture recognizer of the current component. Currently only a built- in gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
+| current | [GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md) | Yes | Built-in gesture recognizer of the current component. Currently only a built- in gesture recognizer of the [GestureType](arkts-arkui-tapgesture-comp-gesturetype-e.md).PAN_GESTURE type is supported. |
 | others | Array&lt;[GestureRecognizer](arkts-arkui-tapgesture-comp-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same type from other components with higher priority in the response chain. |
 
 **Return value:**

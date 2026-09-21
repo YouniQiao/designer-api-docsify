@@ -76,7 +76,7 @@ Display mode of the RichEditor scroll bar.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 13
 
@@ -224,7 +224,7 @@ The custom keyboard supports the continue function. You can call the [setCustomK
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 23.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 23.
 
 **Since:** 10
 
@@ -280,11 +280,11 @@ Sets the extended options for the default system menu, including text content, i
 
 Difference from [bindSelectionMenu](#bindselectionmenu): editMenuOptions adds extension items on top of the system default menu style, with the trigger conditions unchanged, and is suitable for scenarios where only menu item extension is needed; bindSelectionMenu fully customizes the menu style and trigger conditions, and is suitable for scenarios where deep menu customization is needed.
 
-When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems) or [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+When [disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems) or [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -366,7 +366,7 @@ Sets whether to enable haptic feedback.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 13
 
@@ -392,7 +392,7 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -420,7 +420,7 @@ After this feature is enabled, the pinyin and stroke characters entered during i
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -712,7 +712,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -740,7 +740,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -964,7 +964,7 @@ This callback is not supported when the **RichEditor** component built with [Ric
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 
@@ -1016,7 +1016,7 @@ After this attribute is set, the prompt text is displayed when the component has
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 12
 

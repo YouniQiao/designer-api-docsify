@@ -18,7 +18,7 @@ declare class LineAttribute extends CommonShapeMethod<LineAttribute>
 endPoint(value: Array<any>)
 ```
 
-设置直线终点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
+设置直线终点坐标点（相对于Line组件绘制区域的左上角原点），支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法，异常值按照默认值处理。
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ endPoint(value: Array<any>)
 startPoint(value: Array<any>)
 ```
 
-设置直线起点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
+设置直线起点坐标点（相对于Line组件绘制区域的左上角原点），支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法，异常值按照默认值处理。
 
 **起始版本：** 7
 

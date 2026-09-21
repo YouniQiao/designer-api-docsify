@@ -4,7 +4,7 @@
 const enum DragStartRequestStatus
 ```
 
-Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when onDragStart is called.
+Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ondragstart) is called.
 
 **Since:** 18
 

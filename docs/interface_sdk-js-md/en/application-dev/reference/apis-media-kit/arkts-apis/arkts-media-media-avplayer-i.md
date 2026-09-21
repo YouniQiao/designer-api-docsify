@@ -3525,8 +3525,23 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 
 **Examples**
 
-```TypeScript
 For details about the DRM module, see [@ohos.multimedia.drm](../apis-drm-kit/arkts-apis-drm.md).
+
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+async function  test(){
+  let avPlayer = await media.createAVPlayer();
+  // Create a media key system.
+  let keySystem:drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+  // Create a media key session.
+  let keySession:drm.MediaKeySession = keySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
+  // Generate a media key request and set the response to the media key request.
+  // Flag indicating whether a secure video channel is used.
+  let secureVideoPath:boolean = false;
+  // Set the decryption configuration.
+  avPlayer.setDecryptionConfig(keySession, secureVideoPath);
+}
 ```
 
 ## setLoudnessGain

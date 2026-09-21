@@ -1483,12 +1483,77 @@ ohos.permission.START_INVISIBLE_ABILITY permission.
 
 **Examples**
 
-```TypeScript
 Start an ability in the background.
-```
 
 ```TypeScript
+import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let caller: Caller;
+    // Start an ability in the background by not passing parameters.
+    let wantBackground: Want = {
+      bundleName: 'com.example.myservice',
+      moduleName: 'entry',
+      abilityName: 'EntryAbility',
+      deviceId: ''
+    };
+
+    try {
+      this.context.startAbilityByCall(wantBackground)
+        .then((obj: Caller) => {
+          // Carry out normal service processing.
+          caller = obj;
+          console.info('startAbilityByCall succeed');
+        }).catch((error: BusinessError) => {
+        // Process service logic errors.
+        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
+      });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 Start an ability in the foreground.
+
+```TypeScript
+import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let caller: Caller;
+    // Start an ability in the foreground with ohos.aafwk.param.callAbilityToForeground in parameters set to true.
+    let wantForeground: Want = {
+      bundleName: 'com.example.myservice',
+      moduleName: 'entry',
+      abilityName: 'EntryAbility',
+      deviceId: '',
+      parameters: {
+        'ohos.aafwk.param.callAbilityToForeground': true
+      }
+    };
+
+    try {
+      this.context.startAbilityByCall(wantForeground)
+        .then((obj: Caller) => {
+          // Carry out normal service processing.
+          caller = obj;
+          console.info('startAbilityByCall succeed');
+        }).catch((error: BusinessError) => {
+        // Process service logic errors.
+        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
+      });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
 ```
 
 ## startAbilityByCallWithAccount

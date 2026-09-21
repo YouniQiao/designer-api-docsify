@@ -11,7 +11,7 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
 > placeholder nodes.
 > 
-> The maximum value of maxFontScale for the digit-style navigation indicator is
+> The maximum value of [maxFontScale](arkts-arkui-text-comp-attribute.md#maxfontscale) for the digit-style navigation indicator is
 > **2**.
 > 
 > The mirror display of the page number depends on the RTL status of the system.

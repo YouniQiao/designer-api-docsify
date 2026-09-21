@@ -40,9 +40,7 @@ Obtains the **ProxySchemeFilter** information in the proxy rule.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## getUrl
 
@@ -66,6 +64,4 @@ Obtains the URL specified in the proxy rule.
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```

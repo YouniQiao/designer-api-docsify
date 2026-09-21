@@ -169,6 +169,10 @@
   <!--Del-->
   - [ResultInfo(system api)](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [SearchQuery(system api)](arkts-medialibrary-photoaccesshelper-searchquery-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SearchResult(system api)](arkts-medialibrary-photoaccesshelper-searchresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SearchSuggestionResult(system api)](arkts-medialibrary-photoaccesshelper-searchsuggestionresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SharedAlbumAsset(system api)](arkts-medialibrary-photoaccesshelper-sharedalbumasset-i-sys.md)<!--DelEnd-->

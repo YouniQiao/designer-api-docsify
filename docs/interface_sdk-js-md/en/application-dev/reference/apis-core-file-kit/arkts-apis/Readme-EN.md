@@ -416,8 +416,7 @@
   - [recover(system api)](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.volumeManager(Volume Management)](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
+- [@ohos.file.volumeManager(Volume Management)](arkts-corefile-file-volumemanager.md)
   <!--Del-->
   - [burn(system api)](arkts-corefile-volumemanager-burn-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -440,6 +439,8 @@
   - [getAllVolumes(system api)](arkts-corefile-volumemanager-getallvolumes-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDiskById(system api)](arkts-corefile-volumemanager-getdiskbyid-f-sys.md)<!--DelEnd-->
+  - [getExternalDiskInfos](arkts-corefile-volumemanager-getexternaldiskinfos-f.md)
+  - [getExternalVolumeInfos](arkts-corefile-volumemanager-getexternalvolumeinfos-f.md)
   <!--Del-->
   - [getOpProcess(system api)](arkts-corefile-volumemanager-getopprocess-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -460,6 +461,8 @@
   - [unmount(system api)](arkts-corefile-volumemanager-unmount-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Disk(system api)](arkts-corefile-volumemanager-disk-i-sys.md)<!--DelEnd-->
+  - [ExternalDiskInfo](arkts-corefile-volumemanager-externaldiskinfo-i.md)
+  - [ExternalVolumeInfo](arkts-corefile-volumemanager-externalvolumeinfo-i.md)
   <!--Del-->
   - [FormatParams(system api)](arkts-corefile-volumemanager-formatparams-i-sys.md)<!--DelEnd-->
   <!--Del-->

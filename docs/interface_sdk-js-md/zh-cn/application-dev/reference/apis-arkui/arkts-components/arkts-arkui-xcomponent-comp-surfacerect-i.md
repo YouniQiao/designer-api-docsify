@@ -10,7 +10,7 @@ declare interface SurfaceRect
 
 > 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置
 > [border](arkts-arkui-common-comp-commonmethod-c.md#border)和
-> padding，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。
+> [padding](arkts-arkui-common-comp-commonmethod-c.md#padding)，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。
 > 
 > 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。
 > 

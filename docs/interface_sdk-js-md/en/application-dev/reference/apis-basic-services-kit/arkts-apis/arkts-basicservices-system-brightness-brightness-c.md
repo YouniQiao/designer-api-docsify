@@ -42,12 +42,27 @@ Obtains the screen brightness adjustment mode.
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+brightness.getMode({
+    success: (data: BrightnessModeResponse) => {
+      console.info('success get mode:' + data.mode);
+    },
+    fail: (data: string, code: number) => {
+      console.error('handling get mode fail, code:' + code + ', data: ' + data);
+    }
+});
+```
+
 JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="Get Mode" style="width: 240px; height: 50px; margin: 5px;" onclick="getMode"></input>
+    <text class="title">getMode: {{ mode }}</text>
+</div>
 ```
 
 ```TypeScript
@@ -116,12 +131,27 @@ Obtains the current screen brightness.
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+brightness.getValue({
+    success: (data: BrightnessResponse) => {
+      console.info('success get brightness value:' + data.value);
+    },
+    fail: (data: string, code: number) => {
+      console.error('get brightness fail, code: ' + code + ', data: ' + data);
+    }
+});
+```
+
 JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="Get Value" style="width: 240px; height: 50px; margin: 5px;" onclick="getValue"></input>
+    <text class="title">getValue: {{ value }}</text>
+</div>
 ```
 
 ```TypeScript
@@ -199,12 +229,28 @@ timeout (automatic). It cannot prevent screen-off caused by user actions (such a
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+brightness.setKeepScreenOn({
+    keepScreenOn: true,
+    success: () => {
+      console.info('handling set keep screen on success.');
+    },
+    fail: (data: string, code: number) => {
+      console.error('handling set keep screen on fail, code:' + code + ', data: ' + data);
+    }
+});
+```
+
 JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="SetKeepScreenOn" style="width: 240px; height: 50px; margin: 5px;" onclick="setKeepScreenOn"></input>
+    <text class="title">setKeepScreenOn: {{ keepScreenOn }}</text>
+</div>
 ```
 
 ```TypeScript
@@ -273,12 +319,28 @@ Sets the screen brightness adjustment mode.
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+brightness.setMode({
+    mode: 1,
+    success: () => {
+      console.info('handling set mode success.');
+    },
+    fail: (data: string, code: number) => {
+      console.error('handling set mode fail, code:' + code + ', data: ' + data);
+    }
+});
+```
+
 JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="Set Mode" style="width: 240px; height: 50px; margin: 5px;" onclick="setMode"></input>
+    <text class="title">setMode: {{ mode }}</text>
+</div>
 ```
 
 ```TypeScript
@@ -349,12 +411,28 @@ Sets the screen brightness.
 
 **Examples**
 
-```TypeScript
 ArkTS example:
-```
 
 ```TypeScript
+brightness.setValue({
+    value: 100,
+    success: () => {
+      console.info('handling set brightness success.');
+    },
+    fail: (data: string, code: number) => {
+      console.error('handling set brightness value fail, code:' + code + ', data: ' + data);
+    }
+});
+```
+
 JS example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <input type="button" value="Set Value" style="width: 240px; height: 50px; margin: 5px;" onclick="setValue"></input>
+    <text class="title">setValue: {{ value }}</text>
+</div>
 ```
 
 ```TypeScript

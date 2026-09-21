@@ -196,7 +196,7 @@ From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/a
 
 > **NOTE:** 
 > 
-> This API cannot be called within attributeModifier.
+> This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 
@@ -245,7 +245,7 @@ Sets the extended options of the custom context menu on selection, including the
 
 When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -439,7 +439,7 @@ Sets the type of the Enter key.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -1052,7 +1052,7 @@ If the value of **minFontSize** is less than or equal to 0, the adaptive font si
 minLines(lines: Optional<number>)
 ```
 
-Sets the minimum number of lines displayed for the component. When constraintSize is set, the component's final height respects the defined constraints.
+Sets the minimum number of lines displayed for the component. When [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) is set, the component's final height respects the defined constraints.
 
 **Since:** 20
 
@@ -1808,7 +1808,7 @@ Sets the horizontal alignment of the text.
 
 Available options are **TextAlign.Start**, **TextAlign.Center**, and **TextAlign.End**. **TextAlign.JUSTIFY** is available since API version 11.
 
-The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component.
+The vertical position of the text paragraph can be controlled by the [align](arkts-arkui-common-comp-commonmethod-c.md#align) attribute, but the horizontal position cannot be controlled by **align** in this component.
 
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
 - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  

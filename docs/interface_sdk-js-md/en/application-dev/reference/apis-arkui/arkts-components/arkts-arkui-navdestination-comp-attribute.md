@@ -24,7 +24,7 @@ Sets the icon of the back button on the title bar.
 
 > **NOTE:** 
 
-> - This API can be called within attributeModifier since API version 12.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 > 
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
@@ -56,7 +56,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 > **NOTE:** 
 
-> - This API cannot be called within attributeModifier.
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
@@ -91,7 +91,7 @@ Binds the **NavDestination** component with a nested scrollable container, which
 > 
 > - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of multiple scrollable containers simultaneously.
 > 
-> - This API can be called in attributeModifier since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 14
 
@@ -121,7 +121,7 @@ Binds the **NavDestination** component with a scrollable container, which can be
 > 
 > - If a **NavDestination** component is bound to multiple scrollable containers, scrolling in any of these containers triggers the display or hiding animations of the title bar and toolbar. Specifically, when any scrollable container reaches either the bottom or the top, the display animation for the title bar and toolbar is triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of multiple scrollable containers simultaneously.
 > 
-> - This API can be called in attributeModifier since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 14
 
@@ -147,7 +147,7 @@ Sets a custom transition animation for the **NavDestination** component.
 
 > **NOTE:** 
 
-> - This API cannot be called within attributeModifier.
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > - If both this attribute and [systemTransition](#systemtransition) are set,whichever is set later takes effect.
 
@@ -389,7 +389,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 > **NOTE:** 
 
-> - This API can be called within attributeModifier since API version 14.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 14.
 > 
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
@@ -421,7 +421,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 > **NOTE:** 
 
-> - This API cannot be called within attributeModifier.
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 > 
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or
@@ -452,7 +452,7 @@ Sets the mode of the **NavDestination** component. Dynamic modification is not s
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -478,7 +478,7 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 
 > **NOTE:** 
 
-> This API can be called in attributeModifier since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 17
 
@@ -550,7 +550,7 @@ Triggered when the **NavDestination** component becomes inactive (not on top of 
 
 > **NOTE:** 
 
-> This API can be called in attributeModifier since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 17
 
@@ -576,9 +576,9 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 > **NOTE:** 
 
-> - This callback is not triggered by replacePath or [replaceDestination](arkts-arkui-navigation-comp-navpathstack-c.md#replacedestination).
+> - This callback is not triggered by [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath) or [replaceDestination](arkts-arkui-navigation-comp-navpathstack-c.md#replacedestination).
 > 
-> - This API can be called in attributeModifier since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 19
 
@@ -604,7 +604,7 @@ Triggered when the **NavDestination** component is about to build a child compon
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -654,7 +654,7 @@ Triggered when the **NavDestination** component returns.
 
 > **NOTE:** 
 
-> This API can be called in attributeModifier since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 
 **Since:** 15
 
@@ -726,7 +726,7 @@ Called when the **NavDestination** component is about to be mounted. The routing
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -752,7 +752,7 @@ Called when the the **NavDestination** component is about to be unmounted (or wh
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -778,7 +778,7 @@ Called when the **NavDestination** component is about to be hidden.
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -804,7 +804,7 @@ Called when the **NavDestination** component is about to display.
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -860,11 +860,11 @@ Sets the display orientation for the **NavDestination** component. After the tra
 recoverable(recoverable: Optional<boolean>)
 ```
 
-Sets whether the **NavDestination** component is recoverable. If set to recoverable, when the application process exits unexpectedly and restarts, the **NavDestination** component will be automatically re-created. To use this feature, ensure that the recoverable attribute is set for the **Navigation** component associated with the **NavDestination** component.
+Sets whether the **NavDestination** component is recoverable. If set to recoverable, when the application process exits unexpectedly and restarts, the **NavDestination** component will be automatically re-created. To use this feature, ensure that the [recoverable](arkts-arkui-navigation-comp-attribute.md#recoverable) attribute is set for the **Navigation** component associated with the **NavDestination** component.
 
 > **NOTE:** 
 
-> This API must be used together with the recoverable API of
+> This API must be used together with the [recoverable](arkts-arkui-navigation-comp-attribute.md#recoverable) API of
 > **Navigation**.
 
 **Since:** 14
@@ -892,9 +892,9 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 > - The setting takes effect only when the **NavDestination** component is used in conjunction with the
 > **Navigation** component.
 > 
-> - For other usage restrictions, see the description of systemBarStylefor the **Navigation** component.
+> - For other usage restrictions, see the description of [systemBarStyle](arkts-arkui-navigation-comp-attribute.md#systembarstyle)for the **Navigation** component.
 > 
-> - This API can be called within attributeModifier since API version 20.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -943,7 +943,7 @@ Sets the page title. When the title string is too long: (1) If no subtitle is se
 
 > **NOTE:** 
 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 9
 
@@ -968,7 +968,7 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 > **NOTE:** 
 
-> - This API can be called within attributeModifier since API version 20.
+> - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 > 
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or

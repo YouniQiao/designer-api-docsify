@@ -64,7 +64,7 @@ readonly muted?: boolean
 readonly streamId: number
 ```
 
-音频流唯一id。
+音频流唯一ID。
 
 **类型：** number
 

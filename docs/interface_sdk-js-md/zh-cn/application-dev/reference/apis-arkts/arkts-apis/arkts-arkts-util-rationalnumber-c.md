@@ -214,8 +214,14 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.equals(rational);
+console.info("result = " + result);
+// 输出结果：result = false
 ```
 
 ## getCommonDivisor
@@ -316,8 +322,13 @@ console.info("result = " + result);
 // 输出结果：result = 2
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
+let result = rationalNumber.getDenominator();
+console.info("result = " + result);
+// 输出结果：result = 2
 ```
 
 ## getNumerator
@@ -349,8 +360,13 @@ console.info("result = " + result);
 // 输出结果：result = 1
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.getNumerator();
+console.info("result = " + result);
+// 输出结果：result = 1
 ```
 
 ## isFinite
@@ -382,8 +398,13 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isFinite();
+console.info("result = " + result);
+// 输出结果：result = true
 ```
 
 ## isNaN
@@ -415,8 +436,13 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isNaN();
+console.info("result = " + result);
+// 输出结果：result = false
 ```
 
 ## isZero
@@ -448,8 +474,13 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.isZero();
+console.info("result = " + result);
+// 输出结果：result = false
 ```
 
 ## parseRationalNumber
@@ -519,8 +550,13 @@ console.info("result = " + result);
 // 输出结果：result = 1/2
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.toString();
+console.info("result = " + result);
+// 输出结果：result = 1/2
 ```
 
 ## valueOf
@@ -552,6 +588,11 @@ console.info("result = " + result);
 // 输出结果：result = 0.5
 ```
 
-```TypeScript
 API 9及以上建议使用以下写法：
+
+```TypeScript
+let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
+let result = rationalNumber.valueOf();
+console.info("result = " + result);
+// 输出结果：result = 0.5
 ```

@@ -24,7 +24,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 commands(commands: string): PathShape
 ```
 
-设置路径的绘制指令，用于定义PathShape的绘制路径。指令遵循SVG路径数据格式，具体支持的绘制命令请参考commands。
+设置路径的绘制指令，用于定义PathShape的绘制路径。指令遵循SVG路径数据格式，具体支持的绘制命令请参考[commands](../arkts-components/arkts-arkui-path-comp-attribute.md#commands)。
 
 > **说明：** 
 > 
@@ -48,7 +48,7 @@ commands(commands: string): PathShape
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| commands | string | 是 | 路径的绘制指令，格式要求请参考commands支持的绘制命令。传入无效指令时不产生可见路径。 |
+| commands | string | 是 | 路径的绘制指令，格式要求请参考[commands](../arkts-components/arkts-arkui-path-comp-attribute.md#commands)支持的绘制命令。传入无效指令时不产生可见路径。 |
 
 **返回值：**
 

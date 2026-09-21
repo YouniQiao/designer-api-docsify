@@ -582,7 +582,7 @@ autoHideComponentUniqueIds?: number[]
 
 Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging. This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.
 
-**Type:** number &#124; number[]
+**Type:** number[]
 
 **Since:** 26.0.0
 

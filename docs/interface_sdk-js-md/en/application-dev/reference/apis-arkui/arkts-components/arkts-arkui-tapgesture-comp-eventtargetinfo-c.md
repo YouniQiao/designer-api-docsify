@@ -30,7 +30,7 @@ Obtains the ID of this component.
 
 | Type | Description |
 | --- | --- |
-| string | ID of the current component. |
+| string | [ID](arkts-arkui-common-comp-commonmethod-c.md#id) of the current component. |
 
 ## getUniqueId
 

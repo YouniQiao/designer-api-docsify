@@ -23,7 +23,7 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 1. 同时使用onGetItemMainSizeByIndex和FlowItem的宽高属性时，主轴大小以onGetItemMainSizeByIndex返回结果为准，onGetItemMainSizeByIndex会覆盖FlowItem的主轴长度。
 2. 使用onGetItemMainSizeByIndex可以提高瀑布流跳转到指定位置或index时的效率，避免混用设置onGetItemMainSizeByIndex和未设置的分组，否则会导致布局异常。
 3. onGetItemMainSizeByIndex返回负数时，FlowItem主轴大小为0。
-4. 如果FlowItem主轴大小会随数据动态变化，应保证onGetItemMainSizeByIndex返回值与数据源保持一致。使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)时，数据变化后应调用onDataChange、[onDataReloaded](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatareloaded)或[onDatasetChange](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatasetchange)等方法通知框架数据已变化；使用[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)时，应按Repeat的数据更新规则修改状态数组。
+4. 如果FlowItem主轴大小会随数据动态变化，应保证onGetItemMainSizeByIndex返回值与数据源保持一致。使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)时，数据变化后应调用[onDataChange](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatachange)、[onDataReloaded](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatareloaded)或[onDatasetChange](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatasetchange)等方法通知框架数据已变化；使用[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)时，应按Repeat的数据更新规则修改状态数组。
 
 **起始版本：** 12
 

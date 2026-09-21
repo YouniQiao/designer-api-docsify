@@ -52,10 +52,27 @@ destroy(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  Destroy(): void {
+    this.VpnConnection.destroy((error: BusinessError) => {
+      console.error(JSON.stringify(error));
+    });
+  }
+  build() { }
+}
 ```
 
 <a id="destroy-1"></a>
@@ -94,10 +111,29 @@ destroy(): Promise<void>
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  Destroy(): void {
+    this.VpnConnection.destroy().then(() => {
+      console.info("destroy success.");
+    }).catch((err: BusinessError) => {
+      console.error("destroy fail" + JSON.stringify(err));
+    });
+  }
+  build() { }
+}
 ```
 
 ## protect
@@ -137,10 +173,45 @@ protect(socketFd: number, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { socket, vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+
+  Protect(): void {
+    let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+    let ipAddress: socket.NetAddress = {
+      address: "0.0.0.0"
+    }
+    tcp.bind(ipAddress);
+    let netAddress: socket.NetAddress = {
+      address: "192.168.1.11",
+      port: 8888
+    }
+    let addressConnect: socket.TCPConnectOptions = {
+      address: netAddress,
+      timeout: 6000
+    }
+    tcp.connect(addressConnect);
+    tcp.getSocketFd().then((tunnelFd: number) => {
+      console.info("tunnelFd: " + tunnelFd);
+      this.VpnConnection.protect(tunnelFd, (error: BusinessError) => {
+        console.error(JSON.stringify(error));
+      });
+    });
+  }
+  build() { }
+}
 ```
 
 <a id="protect-1"></a>
@@ -187,10 +258,47 @@ protect(socketFd: number): Promise<void>
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { socket, vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+
+  Protect(): void {
+    let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+    let ipAddress: socket.NetAddress = {
+      address: "0.0.0.0"
+    }
+    tcp.bind(ipAddress);
+    let netAddress: socket.NetAddress = {
+      address: "192.168.1.11",
+      port: 8888
+    }
+    let addressConnect: socket.TCPConnectOptions = {
+      address: netAddress,
+      timeout: 6000
+    }
+    tcp.connect(addressConnect);
+    tcp.getSocketFd().then((tunnelFd: number) => {
+      console.info("tunnelFd: " + tunnelFd);
+      this.VpnConnection.protect(tunnelFd).then(() => {
+        console.info("protect success.");
+      }).catch((err: BusinessError) => {
+        console.error("protect fail" + JSON.stringify(err));
+      });
+    });
+  }
+  build() { }
+}
 ```
 
 ## setUp
@@ -231,10 +339,42 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  SetUp(): void {
+    let config: vpn.VpnConfig = {
+      addresses: [{
+        address: {
+          address: "10.0.0.5",
+          family: 1
+        },
+        prefixLength: 24
+      }],
+      mtu: 1400,
+      dnsAddresses: ["114.114.114.114"]
+    }
+    this.VpnConnection.setUp(config, (error: BusinessError, data: number) => {
+      if (error) {
+        console.error(JSON.stringify(error));
+        return;
+      };
+      console.info("tunfd: " + JSON.stringify(data));
+    });
+  }
+  build() { }
+}
 ```
 
 <a id="setup-1"></a>
@@ -282,8 +422,38 @@ setUp(config: VpnConfig): Promise<number>
 
 **示例**
 
-```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+
+```TypeScript
+import { vpn } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
+  SetUp(): void {
+    let config: vpn.VpnConfig = {
+      addresses: [{
+        address: {
+          address: "10.0.0.5",
+          family: 1
+        },
+        prefixLength: 24
+      }],
+      mtu: 1400,
+      dnsAddresses: ["114.114.114.114"]
+    }
+    this.VpnConnection.setUp(config).then((data: number) => {
+      console.info("setUp success, tunfd: " + JSON.stringify(data));
+    }).catch((err: BusinessError) => {
+      console.error("setUp fail" + JSON.stringify(err));
+    });
+  }
+  build() { }
+}
 ```

@@ -12,7 +12,7 @@ import { systemParameter } from '@kit.BasicServicesKit';
 function set(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a value for the specified key. This API uses an asynchronous callback to return the result.
+Sets a value of the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -28,9 +28,9 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Target key. |
-| value | string | Yes | Value to set. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | Key to be set. |
+| value | string | Yes | Value to set. For details about length limit, see [Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the setting result asynchronously. If the setting is successful, **err** is **undefined**. If the setting fails, **err** is an error object. |
 
 **Examples**
 
@@ -59,7 +59,7 @@ try {
 function set(key: string, value: string): Promise<void>
 ```
 
-Sets a value for the specified key. This API uses a promise to return the result.
+Sets a value of the specified key. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -75,14 +75,14 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Target key. |
-| value | string | Yes | Value to set. |
+| key | string | Yes | Key to be set. |
+| value | string | Yes | Value to set. For details about length limit, see [Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the execution result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 

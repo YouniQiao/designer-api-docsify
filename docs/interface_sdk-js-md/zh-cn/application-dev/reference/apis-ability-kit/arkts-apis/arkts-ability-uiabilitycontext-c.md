@@ -2518,16 +2518,129 @@ startAbilityByCall(want: Want): Promise<Caller>
 
 **示例**
 
-```TypeScript
 下面代码展示的是，调用方启动目标方到后台，获取Caller成功后发消息到目标方，然后释放Caller对象。
-```
 
 ```TypeScript
+import { Caller, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { rpc } from '@kit.IPCKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+class TestParcelable implements rpc.Parcelable {
+  age: number = 0;
+  name: string = '';
+  marshalling(dataOut: rpc.MessageSequence): boolean {
+    dataOut.writeInt(this.age);
+    dataOut.writeString(this.name);
+    return true;
+  }
+  unmarshalling(dataIn: rpc.MessageSequence): boolean {
+    this.age = dataIn.readInt();
+    this.name = dataIn.readString();
+    return true;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  async onForeground() {
+    let caller: Caller;
+    // 后台启动Ability
+    let wantBackground: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+    };
+
+    try {
+      // 获取Caller通信对象，将UIAbility启动到后台
+      caller = await this.context.startAbilityByCall(wantBackground);
+      await caller.call('TEST_CALL', new TestParcelable());
+      caller.release();
+    } catch (err) {
+      // 处理入参错误异常
+      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
+    }
+  }
+}
+```
+
 下面代码展示，目标方启动后注册监听，销毁时取消监听。
-```
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { rpc } from '@kit.IPCKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+class TestParcelable implements rpc.Parcelable {
+  age: number = 0;
+  name: string = '';
+  marshalling(dataOut: rpc.MessageSequence): boolean {
+    dataOut.writeInt(this.age);
+    dataOut.writeString(this.name);
+    return true;
+  }
+  unmarshalling(dataIn: rpc.MessageSequence): boolean {
+    this.age = dataIn.readInt();
+    this.name = dataIn.readString();
+    return true;
+  }
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onCreate');
+    // 注册监听
+    this.callee.on('TEST_CALL', (data: rpc.MessageSequence) => {
+      let recv = new TestParcelable();
+      data.readParcelable(recv);
+      recv.age++;
+      return recv;
+    });
+  }
+
+  onDestroy(): void {
+    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onDestroy');
+    // 取消监听
+    this.callee.off('TEST_CALL');
+  }
+}
+```
+
 下面代码展示，调用方启动目标方到前台场景。
+
+```TypeScript
+import { Caller, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const DOMAIN = 0x0000;
+const LOG_TAG = 'TEST_TAG';
+
+export default class EntryAbility extends UIAbility {
+  async onForeground() {
+    let caller: Caller;
+    // 启动UIAbility到前台，将parameters中的'ohos.aafwk.param.callAbilityToForeground'配置为true
+    let wantForeground: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      parameters: {
+        'ohos.aafwk.param.callAbilityToForeground': true
+      }
+    };
+
+    try {
+      // 获取Caller通信对象，将UIAbility启动到前台
+      caller = await this.context.startAbilityByCall(wantForeground);
+      caller.release();
+    } catch (err) {
+      // 处理入参错误异常
+      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
+    }
+  }
+}
 ```
 
 ## startAbilityByType
@@ -3380,12 +3493,49 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
 使用terminateSelf接口停止UIAbility示例代码如下，默认情况下应用会在最近任务列表中保留快照。
-```
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      // 销毁UIAbility自身
+      this.context.terminateSelf((err: BusinessError) => {
+        if (err.code) {
+          // 处理业务逻辑错误
+          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('terminateSelf succeed');
+      });
+    } catch (err) {
+      // 捕获同步的参数错误
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 （可选）如果需要在停止UIAbility时，清理任务中心的相关任务（即不保留最近任务列表中的快照），需要在[module.json5](../../../quick-start/module-configuration-file.md)配置文件中将removeMissionAfterTerminate字段取值配置为true。
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilities": [
+      {
+        // ...
+        "removeMissionAfterTerminate": true
+      }
+    ]
+  }
+}
 ```
 
 <a id="terminateself-1"></a>
@@ -3430,12 +3580,49 @@ terminateSelf(): Promise<void>
 
 **示例**
 
-```TypeScript
 使用terminateSelf接口停止UIAbility示例代码如下，默认情况下应用会在最近任务列表中保留快照。
-```
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+      // 销毁UIAbility自身
+      this.context.terminateSelf()
+        .then(() => {
+          // 执行正常业务
+          console.info('terminateSelf succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 捕获同步的参数错误
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 （可选）如果需要在停止UIAbility时，清理任务中心的相关任务（即不保留最近任务列表中的快照），需要在[module.json5](../../../quick-start/module-configuration-file.md)配置文件中将removeMissionAfterTerminate字段取值配置为true。
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilities": [
+      {
+        // ...
+        "removeMissionAfterTerminate": true
+      }
+    ]
+  }
+}
 ```
 
 ## terminateSelfWithResult

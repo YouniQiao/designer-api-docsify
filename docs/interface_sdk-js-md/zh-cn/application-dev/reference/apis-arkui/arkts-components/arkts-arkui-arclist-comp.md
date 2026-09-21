@@ -20,7 +20,7 @@
 > 
 > - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)发生变化以后，会更新子组件索引值。
 > 
-> - ArcList子组件visibility属性设置为Hidden或None依然会计算索引值。
+> - ArcList子组件[visibility](arkts-arkui-common-comp-commonmethod-c.md#visibility)属性设置为Hidden或None依然会计算索引值。
 
 ## ArcList
 
@@ -59,6 +59,80 @@ ArcList(options?: ArkListOptions)
 
 ## 示例
 
-```TypeScript
 该示例增加了ArcList支持标题栏设置的效果，子项自动缩放显示。
+
+```TypeScript
+// xxx.ets
+import { ComponentContent, LengthMetrics, UIContext, CircleShape } from '@kit.ArkUI';
+// 从API version 22开始，无需手动导入ArcListAttribute和ArcListItemAttribute。具体请参考ArcList、ArcListItem的导入模块说明。
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+
+@Builder
+function buildText() {
+  Column() {
+    Text('header')
+      .fontSize('60px')
+      .fontWeight(FontWeight.Bold)
+      .fontColor(Color.Black)
+  }.margin(0)
+}
+
+@Entry
+@Component
+struct Index {
+  @State private numItems: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  private watchSize: string = '466px'; // Wearable默认宽高：466*466
+  private listSize: string = '414px'; // item宽度
+
+  context: UIContext = this.getUIContext();
+  headerContent: ComponentContent<Object> = new ComponentContent(this.context, wrapBuilder(buildText));
+
+  @Builder
+  buildList() {
+    Stack() {
+      Column() {
+      }
+      .justifyContent(FlexAlign.Center)
+      .width(this.watchSize)
+      .height(this.watchSize)
+      .clipShape(new CircleShape({ width: '100%', height: '100%' }))
+      .backgroundColor(Color.White)
+
+      ArcList({ initialIndex: 0, header: this.headerContent }) {
+        ForEach(this.numItems, (item: number, index: number) => {
+          ArcListItem() {
+            Button('' + item, { type: ButtonType.Capsule })
+              .width(this.listSize)
+              .height('100px')
+              .fontSize('40px')
+              .focusable(true)
+              .focusOnTouch(true)
+              .backgroundColor(0x17A98D)
+          }.align(Alignment.Center)
+        }, (item: number, index: number) => (item + index).toString())
+      }
+      .space(LengthMetrics.px(10))
+      .borderRadius(this.watchSize)
+      .focusable(true)
+      .focusOnTouch(true)
+      .defaultFocus(true)
+    }
+    .align(Alignment.Center)
+    .width(this.watchSize)
+    .height(this.watchSize)
+    .border({color: Color.Black, width: 1})
+    .borderRadius(this.watchSize)
+  }
+
+  build() {
+    Column() {
+      this.buildList()
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
 ```

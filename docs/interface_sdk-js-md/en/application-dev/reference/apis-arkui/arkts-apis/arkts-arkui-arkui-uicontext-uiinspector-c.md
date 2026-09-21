@@ -39,7 +39,7 @@ Registers a callback for layout and drawing display completion notifications for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the target component, set using the universal attributes id or key. |
+| id | string | Yes | ID of the target component, set using the universal attributes [id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) or [key](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#key). |
 
 **Return value:**
 
@@ -112,7 +112,7 @@ Registers a callback for layout and drawing display completion notifications for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string &#124; number | Yes | When the type is string, it indicates the ID of the specified component, set using the universal attributes id or key.<br>When the type is number, it indicates the unique ID of the node allocated by the system, obtained through <br>getUniqueId. When using the unique ID to create a listener handle, <br>ensure that the node corresponding to the unique ID exists. Otherwise, the listener does not take effect. <br>The value of the parameter in the number type is an integer ranging from 1 to 2147483647. |
+| id | string &#124; number | Yes | When the type is string, it indicates the ID of the specified component, set using the universal attributes [id](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) or [key](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#key). <br>When the type is number, it indicates the unique ID of the node allocated by the system, obtained through <br>[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid). When using the unique ID to create a listener handle, <br>ensure that the node corresponding to the unique ID exists. Otherwise, the listener does not take effect. <br>The value of the parameter in the number type is an integer ranging from 1 to 2147483647. |
 
 **Return value:**
 

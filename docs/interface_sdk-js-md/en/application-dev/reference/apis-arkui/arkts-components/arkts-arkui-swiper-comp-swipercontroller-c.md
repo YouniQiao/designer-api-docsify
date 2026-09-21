@@ -183,7 +183,7 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 > **NOTE:** 
 > 
 > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
-> first preloading in the onAppear lifecycle of **Swiper**.
+> first preloading in the [onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear) lifecycle of **Swiper**.
 
 **Since:** 18
 

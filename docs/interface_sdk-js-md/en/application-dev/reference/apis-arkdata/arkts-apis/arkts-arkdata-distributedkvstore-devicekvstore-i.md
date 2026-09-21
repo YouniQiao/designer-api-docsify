@@ -37,7 +37,7 @@ Obtains the value of the specified key for this device. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ Obtains the value of the specified key for this device. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Promise used to return the value obtained. |
+| Promise&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -327,7 +327,7 @@ Obtains a string value that matches the specified device ID and key. This API us
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | key | string | Yes | Key of the value to obtain. It cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
@@ -479,7 +479,7 @@ Obtains a string value that matches the specified device ID and key. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean &#124; string &#124; number &#124; number &#124; Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
+| Promise&lt;boolean &#124; string &#124; number &#124; Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
 
 **Error codes:**
 

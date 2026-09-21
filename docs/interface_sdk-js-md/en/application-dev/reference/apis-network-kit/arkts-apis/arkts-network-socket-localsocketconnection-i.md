@@ -88,10 +88,38 @@ Obtains the local socket address of a **LocalSocketConnection** connection. This
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddr: socket.LocalAddress = {
+  address: sandboxPath
+}
+server.listen(localAddr).then(() => {
+  console.info('listen success');
+  let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+  let connectOpt: socket.LocalConnectOptions = {
+    address: localAddr,
+    timeout: 6000
+  }
+  client.connect(connectOpt).then(() => {
+    server.getLocalAddress().then((localPath: string) => {
+      console.info("success, localPath is" + JSON.stringify(localPath));
+    }).catch((err: BusinessError) => {
+      console.error("FAIL " + JSON.stringify(err));
+    })
+  }).catch((err: Object) => {
+    console.error('connect fail: ' + JSON.stringify(err));
+  });
+});
 ```
 
 ## getSocketFd
@@ -122,10 +150,32 @@ Obtains the file descriptor of a LocalSocketConnection connection. This API uses
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr : socket.LocalAddress = {
+  address: sandboxPath
+}
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.getSocketFd().then((fd: number) => {
+    console.info(`Socket FD: ${fd}`);
+  }).catch((err: Object) => {
+    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
+  });
+});
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error(`listen fail: ${JSON.stringify(err)}`);
+})
 ```
 
 ## off('message')
@@ -287,10 +337,36 @@ Subscribes to **message** events of the **LocalSocketConnection** object. This A
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let listenAddr: socket.LocalAddress = {
+  address: sandboxPath
+}
+server.listen(listenAddr).then(() => {
+  console.info("listen success");
+}).catch((err: Object) => {
+  console.error("listen fail: " + JSON.stringify(err));
+});
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  connection.on('message', (value: socket.LocalSocketMessageInfo) => {
+    const uintArray = new Uint8Array(value.message);
+    let messageView = '';
+    for (let i = 0; i < uintArray.length; i++) {
+      messageView += String.fromCharCode(uintArray[i]);
+    }
+    console.info('total: ' + JSON.stringify(value));
+    console.info('message information: ' + messageView);
+  });
+});
 ```
 
 ## on('close')

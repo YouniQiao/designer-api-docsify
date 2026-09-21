@@ -346,11 +346,11 @@ flingSpeedLimit(speedLimit: number): T
 > 
 > - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。
 > 
-> - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用fling方法。
+> - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)方法。
 > 
-> - 使用鼠标滚轮、键盘方向键方式滚动，或通过scrollTo等方法直接滚动到指定位置，不会产生惯性动效。
+> - 使用鼠标滚轮、键盘方向键方式滚动，或通过[scrollTo](arkts-arkui-scroll-comp-scroller-c.md#scrollto)等方法直接滚动到指定位置，不会产生惯性动效。
 > 
-> - 如果惯性动效通过fling方法触发，则flingSpeedLimit设置不生效。
+> - 如果惯性动效通过[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)方法触发，则flingSpeedLimit设置不生效。
 
 **起始版本：** 11
 
@@ -378,7 +378,7 @@ flingSpeedLimit(speedLimit: number): T
 friction(value: number | Resource): T
 ```
 
-设置摩擦系数，手动划动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中嵌套滚动组件间的联动效果（如List组件的链式动效chainAnimation）有间接影响，适用于需要调整惯性滚动减速快慢的场景。设置为小于等于0的值时，按默认值处理。
+设置摩擦系数，手动划动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中嵌套滚动组件间的联动效果（如List组件的链式动效[chainAnimation](arkts-arkui-list-comp-attribute.md#chainanimation)）有间接影响，适用于需要调整惯性滚动减速快慢的场景。设置为小于等于0的值时，按默认值处理。
 
 **起始版本：** 11
 
@@ -695,7 +695,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 滚动事件回调，滚动组件滚动前触发。与onDidScroll的对比：onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同时使用。
 
-回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。[Scroll](arkts-arkui-scroll-comp.md#scroll)组件的onWillScroll接口的参数类型是[ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md)。
+回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。[Scroll](arkts-arkui-scroll-comp.md#scroll)组件的[onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll)接口的参数类型是[ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md)。
 
 > **说明：** 
 > 
@@ -763,7 +763,7 @@ onWillStartFling(handler: VoidCallback): T
 
 > **说明：** 
 > 
-> - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。
+> - 如果惯性动效通过[fling](arkts-arkui-scroll-comp-scroller-c.md#fling)方法触发，则onWillStartFling不触发。
 > 
 > - 惯性动效的触发场景参考flingSpeedLimit方法的说明。
 

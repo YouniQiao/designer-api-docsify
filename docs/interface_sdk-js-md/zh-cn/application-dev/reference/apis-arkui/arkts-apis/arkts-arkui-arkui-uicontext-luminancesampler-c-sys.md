@@ -49,8 +49,92 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 
 **示例**
 
-```TypeScript
 从API version 23开始，新增支持[setBackgroundLuminanceSamplingConfigs](#setbackgroundluminancesamplingconfigs)、[onBackgroundLuminanceChange](#onbackgroundluminancechange)、[offBackgroundLuminanceChange](#offbackgroundluminancechange)接口，该示例通过调用这三个接口，展示了获取对应组件的取色器，并通过取色器给组件设置取色参数和取色回调，通过取色回调实现自定义的根据背景色反色效果。
+
+```TypeScript
+import { LengthMetrics, Edges } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct PagePicker {
+  @State arr: string[] =
+    ['#FFF7F7F7', '#FF004AAF', '#FF4169E1', '#FFA52A2A', '#FF008000', '#FFFFA500', '#FFFFC0CB', '#FF808080'];
+  @State myButtonWidthStr: string = '400px';
+  @State myButtonWidth: number = 400;
+  @State myButtonHeightStr: string = '150px';
+  @State myButtonHeight: number = 150;
+  @State myColor: string = '#FFF7F7F7';
+  @State myButtonFontColor: string = '#FF004AAF';
+
+  build() {
+    Row() {
+      Stack() {
+        Scroll() {
+          Column() {
+            ForEach(this.arr, (item: Color) => {
+              Column()
+                .width('100%')
+                .height(200)
+                .backgroundColor(item)
+            })
+            ForEach(this.arr, (item: Color) => {
+              Column()
+                .width('100%')
+                .height(200)
+                .backgroundColor(item)
+            })
+          }
+          .width('100%')
+        }
+        .width('100%')
+        .height('100%')
+
+        Button('Button')
+          .backgroundColor(this.myColor)
+          .fontColor(this.myButtonFontColor)
+          .margin({ bottom: 300 })
+          .width(this.myButtonWidthStr)
+          .height(this.myButtonHeightStr)
+          .id("myButton")
+          .onClick(() => {
+            let uiContext = this.getUIContext();
+            let uniqueId = this.getUniqueId();
+            // 获取取色器
+            let luminanceSampler = uiContext.getLuminanceSampler({ id: "myButton", componentId: uniqueId });
+            // 设置节点自身的取色范围
+            let edges: Edges<LengthMetrics> = {
+              top: LengthMetrics.px(0),
+              bottom: LengthMetrics.px(this.myButtonHeight),
+              left: LengthMetrics.px(0),
+              right: LengthMetrics.px(this.myButtonWidth)
+            };
+
+            luminanceSampler?.setBackgroundLuminanceSamplingConfigs({
+              samplingInterval: 300,
+              brightThreshold: 200,
+              darkThreshold: 100,
+              region: edges
+            });
+            // 取色回调
+            let luminanceChangeCallback = (luminance: number) => {
+              if (luminance > 200) {
+                this.myColor = '#FF004AAF';
+                this.myButtonFontColor = '#FFF7F7F7';
+              } else if (luminance < 100) {
+                this.myColor = '#FFF7F7F7';
+                this.myButtonFontColor = '#FF004AAF';
+              }
+            };
+            luminanceSampler?.offBackgroundLuminanceChange();
+            luminanceSampler?.onBackgroundLuminanceChange(luminanceChangeCallback);
+          })
+      }.width('100%')
+      .height('100%')
+      .alignContent(Alignment.Bottom)
+    }
+    .height('100%')
+  }
+}
 ```
 
 ## onBackgroundLuminanceChange
@@ -79,9 +163,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 **示例**
 
-```TypeScript
 参考[offBackgroundLuminanceChange](#offbackgroundluminancechange)的示例。
-```
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -113,6 +195,4 @@ setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfig
 
 **示例**
 
-```TypeScript
 参考[offBackgroundLuminanceChange](#offbackgroundluminancechange)的示例。
-```

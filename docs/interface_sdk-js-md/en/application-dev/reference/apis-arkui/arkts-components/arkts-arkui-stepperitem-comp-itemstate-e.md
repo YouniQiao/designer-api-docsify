@@ -24,7 +24,7 @@ The button on the right is clickable and can navigate users to the next **Steppe
 
 **NOTE:** 
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [index](arkts-arkui-swiper-comp-attribute.md#index) instead.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ The button on the right reads "Skip" by default. You can define the processing l
 
 **NOTE:** 
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [index](arkts-arkui-swiper-comp-attribute.md#index) instead.
 
 **Since:** 8
 

@@ -57,10 +57,25 @@ Binds the address of a local socket file. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance()
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let address : socket.LocalAddress = {
+  address: sandboxPath
+}
+client.bind(address).then(() => {
+  console.info('bind success')
+}).catch((err: Object) => {
+  console.error('failed to bind: ' + JSON.stringify(err))
+})
 ```
 
 ## close
@@ -141,10 +156,29 @@ Connects to the specified socket file. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
 ```
 
 ## getExtraOptions
@@ -177,10 +211,34 @@ Obtains the socket properties of the **LocalSocket** object. This API uses a pro
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success');
+  client.getExtraOptions().then((options : socket.ExtraOptionsBase) => {
+    console.info('options: ' + JSON.stringify(options));
+  }).catch((err: Object) => {
+    console.error('setExtraOptions fail: ' + JSON.stringify(err));
+  });
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
 ```
 
 ## getLocalAddress
@@ -215,10 +273,31 @@ Obtains the local socket address of a **LocalSocket** connection. This API uses 
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let address : socket.LocalAddress = {
+  address: sandboxPath
+}
+client.bind(address).then(() => {
+  console.error('bind success');
+  client.getLocalAddress().then((localPath: string) => {
+    console.info("SUCCESS " + JSON.stringify(localPath));
+  }).catch((err: BusinessError) => {
+    console.error("FAIL " + JSON.stringify(err));
+  })
+}).catch((err: Object) => {
+  console.error('failed to bind: ' + JSON.stringify(err));
+})
 ```
 
 ## getSocketFd
@@ -249,10 +328,34 @@ Obtains the file descriptor of the **LocalSocket** object. This API uses a promi
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect ok')
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err))
+})
+client.getSocketFd().then((data: number) => {
+  console.info("fd: " + data);
+}).catch((err: Object) => {
+  console.error("getSocketFd failed: " + JSON.stringify(err));
+})
 ```
 
 ## getState
@@ -279,10 +382,34 @@ Obtains the local socket connection status. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success');
+  client.getState().then(() => {
+    console.info('getState success');
+  }).catch((err: Object) => {
+    console.error('getState fail: ' + JSON.stringify(err))
+  });
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
 ```
 
 ## off('message')
@@ -638,10 +765,37 @@ Sends data over a local socket connection. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance()
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success')
+}).catch((err: Object) => {
+  console.error('connect failed: ' + JSON.stringify(err))
+})
+let sendOpt: socket.LocalSendOptions = {
+  data: 'Hello world!'
+}
+client.send(sendOpt).then(() => {
+  console.info('send success')
+}).catch((err: Object) => {
+  console.error('send fail: ' + JSON.stringify(err))
+})
 ```
 
 ## setExtraOptions
@@ -681,8 +835,37 @@ Sets the properties of the **LocalSocket** object. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { common } from '@kit.AbilityKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let sandboxPath: string = context.filesDir + '/testSocket';
+let localAddress : socket.LocalAddress = {
+  address: sandboxPath
+}
+let connectOpt: socket.LocalConnectOptions = {
+  address: localAddress,
+  timeout: 6000
+}
+client.connect(connectOpt).then(() => {
+  console.info('connect success');
+  let options: socket.ExtraOptionsBase = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    socketTimeout: 3000
+  }
+  client.setExtraOptions(options).then(() => {
+    console.info('setExtraOptions success');
+  }).catch((err: Object) => {
+    console.error('setExtraOptions fail: ' + JSON.stringify(err));
+  });
+}).catch((err: Object) => {
+  console.error('connect fail: ' + JSON.stringify(err));
+});
 ```

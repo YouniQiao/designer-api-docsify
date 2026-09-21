@@ -88,14 +88,35 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+  import { contact } from '@kit.ContactsKit';
+
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  contact.addContact(context, {
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, (err: BusinessError, data) => {
+    if (err) {
+      console.error(`Failed to add Contact. Code:${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
+  });
 ```
 
 
@@ -188,12 +209,29 @@ Adds a contact. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
 
 **Examples**
 
-```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a UI page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+  import { common } from '@kit.AbilityKit';
+
+  // Obtain the context within the component.
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  let promise = contact.addContact(context, {
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  });
+  promise.then((data) => {
+    console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
+  });
 ```

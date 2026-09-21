@@ -18,6 +18,34 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
+## createAtlasFrameMask
+
+```TypeScript
+static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask
+```
+
+创建用于精灵图集序列帧动画的图集帧遮罩。该遮罩携带用于驱动图集序列帧动画的图集帧参数。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| atlasInfo | [drawing.AtlasImage](arkts-arkgraphics2d-drawing-atlasimage-i-sys.md) | 是 | 图集帧参数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回携带图集帧参数的Mask实例。 |
+
 ## createBinocularMask
 
 ```TypeScript

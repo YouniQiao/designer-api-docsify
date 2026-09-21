@@ -73,18 +73,76 @@ Row(options?: RowOptions | RowOptionsV2)
 
 ## 示例
 
-```TypeScript
 ### 示例1（设置Row组件的布局属性）
 
 本示例展示设置Row组件的布局属性，如间距、对齐方式等属性后的效果。
-```
 
 ```TypeScript
-
+// resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "stringSpace",
+      "value": "5"
+    }
+  ]
+}
 ```
 
-```TypeScript
-### 示例2（设置反转属性）
 
-本示例展示设置Row组件的reverse属性后的效果，演示如何实现子组件排列顺序的反转。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct RowExample {
+  build() {
+    Column({ space: 5 }) {
+      // 设置子组件水平方向的间距为5
+      Text('space').width('90%')
+      Row({ space: 5 }) {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').height(107).border({ width: 1 })
+
+      // 通过资源引用方式设置子组件水平方向的间距
+      Text('Resource space').width('90%')
+      // 使用资源引用方式设置space属性（API 18+支持）
+      Row({ space: $r('app.string.stringSpace') }) {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').height(107).border({ width: 1 })
+
+      // 设置子组件垂直方向对齐方式
+      Text('alignItems(Bottom)').width('90%')
+      // 设置子组件底部对齐
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').alignItems(VerticalAlign.Bottom).height('15%').border({ width: 1 })
+
+      Text('alignItems(Center)').width('90%')
+      // 设置子组件垂直居中对齐
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').alignItems(VerticalAlign.Center).height('15%').border({ width: 1 })
+
+      // 设置子组件水平方向对齐方式
+      Text('justifyContent(End)').width('90%')
+      // 设置子组件右对齐
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').border({ width: 1 }).justifyContent(FlexAlign.End)
+
+      Text('justifyContent(Center)').width('90%')
+      // 设置子组件水平居中对齐
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').border({ width: 1 }).justifyContent(FlexAlign.Center)
+    }.width('100%')
+  }
+}
 ```

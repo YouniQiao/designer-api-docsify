@@ -165,12 +165,60 @@ Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIEx
 
 **Examples**
 
-```TypeScript
 Implementation of the UIExtensionAbility:
-```
 
 ```TypeScript
+// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
+import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import './pages/UIExtensionPage'; // Import the named route page. The ./pages/UIExtensionPage.ets file is used as an example in the sample code. Change the path and file name to the actual ones during your development.
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // Other lifecycles and implementations
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let storage: LocalStorage = new LocalStorage();
+    storage.setOrCreate('session', session);
+
+    let name: string = 'UIExtPage'; // Name of the named route page.
+    try {
+      session.loadContentByName(name, storage);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`Failed to load content by name ${name}, code: ${code}, msg: ${message}`);
+    }
+  }
+
+  // Other lifecycles and implementations
+}
+```
+
 Implementation of the named route page loaded by the UIExtensionAbility:
+
+```TypeScript
+// Implementation of the ./pages/UIExtensionPage.ets file.
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+
+@Entry ({routeName: 'UIExtPage'}) // Use routeName to define the name of the named route page.
+@Component
+struct UIExtensionPage {
+  @State message: string = 'Hello world';
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined = this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
 ```
 
 ## setWindowPrivacyMode

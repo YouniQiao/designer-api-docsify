@@ -6,8 +6,6 @@ enum AudioVolumeMode
 
 表示音量模式的枚举。
 
-@enum { int }
-
 **起始版本：** 19
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

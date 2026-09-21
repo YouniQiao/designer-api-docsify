@@ -624,16 +624,52 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Examples**
 
-```TypeScript
 Action without parameters.
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+// If no specific requirement is stated in the action description, the action has no parameters.
+rootElement.performAction('click').then(() => {
+  console.info(`succeeded in performing action.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 Action with parameters (setSelection).
-```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+// Example code for setSelection.
+rootElement.performAction('setSelection', {
+  selectTextBegin: '0', // Indicates the start position of the selection.
+  selectTextEnd: '8',   // Indicates the end position of the selection.
+  selectTextInForWard: true   // The value true indicates the front cursor, and false indicates the rear cursor.
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 Action with parameters (setCursorPosition).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+// Example code for setCursorPosition.
+rootElement.performAction('setCursorPosition', {
+  offset: '1'   // Indicates the cursor position to set.
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
 ```
 
 <a id="performaction-2"></a>

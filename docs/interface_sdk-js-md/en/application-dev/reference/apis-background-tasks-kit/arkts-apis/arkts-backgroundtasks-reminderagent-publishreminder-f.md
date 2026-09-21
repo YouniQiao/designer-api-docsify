@@ -18,7 +18,7 @@ Publishes a reminder through the reminder agent. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** publishReminder
+**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -62,7 +62,7 @@ Publishes a reminder through the reminder agent. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** publishReminder
+**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 

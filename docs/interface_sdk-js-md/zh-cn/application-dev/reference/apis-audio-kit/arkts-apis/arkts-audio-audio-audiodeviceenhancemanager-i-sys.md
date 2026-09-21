@@ -26,7 +26,7 @@ import { audio } from '@kit.AudioKit';
 getSoundCardInfo(): Promise<SoundCardInfo>
 ```
 
-获取声卡信息。此方法使用 Promise 返回查询结果。
+获取当前音频设备的内置声卡信息，包括声卡名称、声卡厂商，声卡型号等。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i-sys.md)&gt; | Promise 过去用于返回声卡信息。 |
+| Promise&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i-sys.md)&gt; | Promise对象，返回内置声卡信息。 |
 
 **错误码：**
 

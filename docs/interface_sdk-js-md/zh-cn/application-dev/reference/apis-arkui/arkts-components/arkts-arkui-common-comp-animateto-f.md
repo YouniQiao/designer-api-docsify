@@ -10,7 +10,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 
 > **说明：** 
 > 
-> - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的animateTo来明确UI的执行上下文。
+> - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)来明确UI的执行上下文。
 > 
 > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
 > 

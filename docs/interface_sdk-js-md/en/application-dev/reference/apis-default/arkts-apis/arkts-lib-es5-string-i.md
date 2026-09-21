@@ -94,7 +94,7 @@ Determines whether two strings are equivalent in the current or specified locale
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | that | string | Yes |  |
-| locales | string &#124; string[] | No |  |
+| locales | string[] | No |  |
 | options | [Intl.CollatorOptions](arkts-intl-collatoroptions-i.md) | No |  |
 
 ## match
@@ -231,7 +231,7 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string &#124; string[] | No |  |
+| locales | string[] | No |  |
 
 ## toLocaleUpperCase
 
@@ -245,7 +245,7 @@ Returns a string where all alphabetic characters have been converted to uppercas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string &#124; string[] | No |  |
+| locales | string[] | No |  |
 
 ## toLowerCase
 

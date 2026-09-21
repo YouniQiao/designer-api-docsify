@@ -20,7 +20,7 @@ The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 color(value: ResourceColor)
 ```
 
-Sets the fill color of the **Blank** component. This attribute can be dynamically set using attributeModifier.
+Sets the fill color of the **Blank** component. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 

@@ -43,12 +43,41 @@ function removePreferencesFromCache(context: Context, name: string, callback: As
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+preferences.removePreferencesFromCache(context, 'myStore', (err: BusinessError) => {
+  if (err) {
+    console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in removing preferences.");
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.removePreferencesFromCache(this.context, 'myStore', (err: BusinessError) => {
+      if (err) {
+        console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+        return;
+      }
+      console.info("Succeeded in removing preferences.");
+    })
+  }
+}
 ```
 
 
@@ -94,12 +123,43 @@ function removePreferencesFromCache(context: Context, options: Options, callback
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+let options: preferences.Options = { name: 'myStore' };
+preferences.removePreferencesFromCache(context, options, (err: BusinessError) => {
+  if (err) {
+    console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in removing preferences.");
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    preferences.removePreferencesFromCache(this.context, options, (err: BusinessError) => {
+      if (err) {
+        console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+        return;
+      }
+      console.info("Succeeded in removing preferences.");
+    })
+  }
+}
 ```
 
 
@@ -147,12 +207,39 @@ function removePreferencesFromCache(context: Context, name: string): Promise<voi
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+let sp = preferences.removePreferencesFromCache(context, 'myStore');
+sp.then(() => {
+  console.info("Succeeded in removing preferences.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let sp = preferences.removePreferencesFromCache(this.context, 'myStore');
+    sp.then(() => {
+      console.info("Succeeded in removing preferences.");
+    }).catch((err: BusinessError) => {
+      console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+    })
+  }
+}
 ```
 
 
@@ -203,10 +290,39 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 **示例**
 
-```TypeScript
 FA模型示例：
-```
 
 ```TypeScript
+// 获取context
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let context = featureAbility.getContext();
+let options: preferences.Options = { name: 'myStore' };
+let sp = preferences.removePreferencesFromCache(context, options);
+sp.then(() => {
+  console.info("Succeeded in removing preferences.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+})
+```
+
 Stage模型示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    let sp = preferences.removePreferencesFromCache(this.context, options);
+    sp.then(() => {
+      console.info("Succeeded in removing preferences.");
+    }).catch((err: BusinessError) => {
+      console.error("Failed to remove preferences. code =" + err.code + ", message = " + err.message);
+    })
+  }
+}
 ```

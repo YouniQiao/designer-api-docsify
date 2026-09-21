@@ -18,7 +18,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 points(value: Array<any>)
 ```
 
-Sets the vertex coordinates of the polygon. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
+Sets the vertex coordinates of the polygon. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier). Invalid values are treated as the default value.
 
 **Since:** 7
 

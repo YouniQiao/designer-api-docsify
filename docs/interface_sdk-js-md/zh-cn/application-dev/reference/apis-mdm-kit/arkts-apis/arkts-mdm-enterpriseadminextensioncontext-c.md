@@ -71,12 +71,37 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 
 **示例**
 
-```TypeScript
 需要在module.json5中配置被启动组件的信息。permissions为可选字段，需根据实际情况进行替换或者不填。
-```
 
 ```TypeScript
+"abilities": [
+  {
+    "name": "MainAbility",
+    "srcEntry": "./ets/MainAbility/MainAbility.ts",
+    "description": "$string:MainAbility_desc",
+    "icon": "$media:icon",
+    "label": "$string:MainAbility_label",
+    "startWindowIcon": "$media:icon",
+    "startWindowBackground": "$color:white",
+    "exported": true,
+    "permissions": [
+      "ohos.permission.START_UI_ABILITY"
+    ]
+  }
+]
+```
+
 调用方应用需要在module.json5中申请对应的权限。启动其他应用中的组件时，调用方应用必须获取该组件所要求的权限。
+
+```TypeScript
+"requestPermissions": [
+  {
+    "name": "ohos.permission.START_UI_ABILITY"
+  },
+  {
+    "name": "ohos.permission.ENTERPRISE_START_ABILITIES"
+  }
+]
 ```
 
 ```TypeScript

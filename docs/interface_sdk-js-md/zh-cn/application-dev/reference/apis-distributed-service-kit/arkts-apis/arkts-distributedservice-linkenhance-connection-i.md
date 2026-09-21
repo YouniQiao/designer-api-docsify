@@ -90,8 +90,29 @@ connect(): void
 
 **示例**
 
-```TypeScript
 客户端设备上的应用在创建Connection对象成功后，调用connect()方法连接目标设备（即服务端）。
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅连接结果
+  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+  // 发起连接
+  connection.connect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
 ```
 
 ## disconnect

@@ -24,7 +24,7 @@ nextLabel(value: string)
 
 > **说明：** 
 
-> 从API version 8开始支持，从API version 22开始废弃，建议使用showNext替代。
+> 从API version 8开始支持，从API version 22开始废弃，建议使用[showNext](arkts-arkui-swiper-comp-swipercontroller-c.md#shownext)替代。
 
 **起始版本：** 8
 
@@ -52,7 +52,7 @@ prevLabel(value: string)
 
 > **说明：** 
 
-> 从API version 8开始支持，从API version 22开始废弃，建议使用showPrevious替代。
+> 从API version 8开始支持，从API version 22开始废弃，建议使用[showPrevious](arkts-arkui-swiper-comp-swipercontroller-c.md#showprevious)替代。
 
 **起始版本：** 8
 

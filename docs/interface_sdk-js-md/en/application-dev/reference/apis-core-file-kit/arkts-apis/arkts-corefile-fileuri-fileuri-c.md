@@ -8,7 +8,7 @@ FileUri represents the uri of the file.
 
 @extends uri.URI
 
-**Inheritance/Implementation:** FileUri extends uri.URI
+**Inheritance/Implementation:** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md)
 
 **Since:** 15
 

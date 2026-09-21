@@ -26,7 +26,7 @@ REMINDER_TYPE_TIMER = 0
 
 **废弃版本：** 9
 
-**替代接口：** REMINDER_TYPE_TIMER
+**替代接口：** [REMINDER_TYPE_TIMER](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_timer)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -42,7 +42,7 @@ REMINDER_TYPE_CALENDAR = 1
 
 **废弃版本：** 9
 
-**替代接口：** REMINDER_TYPE_CALENDAR
+**替代接口：** [REMINDER_TYPE_CALENDAR](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_calendar)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -58,6 +58,6 @@ REMINDER_TYPE_ALARM = 2
 
 **废弃版本：** 9
 
-**替代接口：** REMINDER_TYPE_ALARM
+**替代接口：** [REMINDER_TYPE_ALARM](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_alarm)
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

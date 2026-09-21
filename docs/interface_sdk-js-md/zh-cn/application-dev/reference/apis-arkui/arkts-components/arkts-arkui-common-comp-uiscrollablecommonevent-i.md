@@ -68,7 +68,7 @@ setOnReachStart(callback: Callback<void> | undefined): void
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-设置onScrollFrameBegin事件的回调。
+设置[onScrollFrameBegin](arkts-arkui-scroll-comp-attribute.md#onscrollframebegin)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 

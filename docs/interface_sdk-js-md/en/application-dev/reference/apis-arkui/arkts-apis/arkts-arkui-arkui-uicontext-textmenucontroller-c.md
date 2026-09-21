@@ -38,7 +38,7 @@ Disables specified system service menu items in the text selection menu.
 > 
 > - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md).
 > 
-> - After this API is called, the editMenuOptions API of text components will be affected. The parameter list of its onCreateMenu callback will not include the disabled menu options.
+> - After this API is called, the [editMenuOptions](../arkts-components/arkts-arkui-text-comp-attribute.md#editmenuoptions) API of text components will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not include the disabled menu options.
 > 
 > - Components involving text selection menus include the following: [Text](../arkts-components/arkts-arkui-text-comp.md#text),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input),[Search](../arkts-components/arkts-arkui-search-comp.md#search), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md#web).
 > 
@@ -134,7 +134,7 @@ Disables all system service menu items in the text selection menu.
 > 
 > - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md).
 > 
-> - After this API is called, the editMenuOptions API of text components will be affected. The parameter list of its onCreateMenu callback will not include the disabled menu options.
+> - After this API is called, the [editMenuOptions](../arkts-components/arkts-arkui-text-comp-attribute.md#editmenuoptions) API of text components will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not include the disabled menu options.
 > 
 > - Components involving text selection menus include the following: [Text](../arkts-components/arkts-arkui-text-comp.md#text),[TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input),[Search](../arkts-components/arkts-arkui-search-comp.md#search), [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor), and [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp.md#web).
 > 

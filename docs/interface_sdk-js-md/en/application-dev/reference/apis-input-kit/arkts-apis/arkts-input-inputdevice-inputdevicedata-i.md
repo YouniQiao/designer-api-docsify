@@ -47,7 +47,7 @@ Bus type of the input device. By default, the bus type reported by the input dev
 ## displayId
 
 ```TypeScript
-displayId?: number
+readonly displayId?: number
 ```
 
 Indicates the bound target displayId.

@@ -65,12 +65,30 @@ headers: Object
 
 **示例**
 
-```TypeScript
 ArkTS示例：
-```
 
 ```TypeScript
+fetch.fetch({
+  url: 'test_url',
+  success: (response) => {
+    console.info('fetch success');
+    console.info(JSON.stringify(response));
+  },
+  fail: (data: Object, code) => {
+    console.error('fetch failed, data: ' + JSON.stringify(data) + ', code: ' + code);
+  }
+});
+```
+
 JS示例：
+
+```TypeScript
+<!-- index.hml -->
+<div class="container">
+    <text class="title">测试网络连接</text>
+    <input type="button" value="点击测试" style="width: 240px; height: 50px;margin: 5px;" onclick="usingFetch"></input>
+    <text class="title" style="color: {{fontColor}};">{{result}}</text>
+</div>
 ```
 
 ```TypeScript
@@ -127,6 +145,20 @@ export default {
 };
 ```
 
-```TypeScript
 > 说明：默认支持https，如果要支持http，需要在config.json里增加network标签，属性标识 "cleartextTraffic":  true。
+
+```TypeScript
+{
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+      // 用户的其它配置信息
+      // ...
+    }
+  }
+  // 用户的其它配置信息
+  // ...
+}
 ```

@@ -37,7 +37,7 @@ Obtains the size, position, translation, scaling, rotation, and affine matrix in
 > **NOTE:** 
 > 
 > This API should be called after the target component's layout is complete to obtain its size information. It is
-> recommended that you use this API within onAppear.
+> recommended that you use this API within [onAppear](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onappear).
 
 **Since:** 10
 

@@ -126,9 +126,9 @@ animateTo(value: AnimateParam, event: () => void): void
 > 
 > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
 > 
-> - 如果在aboutToAppear中调用动画，自定义组件内的build还未执行，内部组件还未创建，动画时机过早，动画属性没有初值无法对组件产生动画。
+> - 如果在[aboutToAppear](../arkts-components/arkts-arkui-common-comp-basecustomcomponent-c.md#abouttoappear)中调用动画，自定义组件内的build还未执行，内部组件还未创建，动画时机过早，动画属性没有初值无法对组件产生动画。
 > 
-> - 执行aboutToDisappear时，组件即将销毁，不能在aboutToDisappear里面做动画。
+> - 执行[aboutToDisappear](../arkts-components/arkts-arkui-common-comp-basecustomcomponent-c.md#abouttodisappear)时，组件即将销毁，不能在aboutToDisappear里面做动画。
 > 
 > - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md)添加动画效果。
 > 
@@ -260,8 +260,63 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 **示例**
 
-```TypeScript
 该示例通过UIContext对象获取显式立即动画，并调用animateToImmediately接口实现参数定义的动画效果。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct AnimateToImmediatelyExample {
+  @State widthSize: number = 250
+  @State heightSize: number = 100
+  @State opacitySize: number = 0
+  private flag: boolean = true
+  uiContext: UIContext | null | undefined = this.getUIContext();
+
+  build() {
+    Column() {
+      Column()
+        .width(this.widthSize)
+        .height(this.heightSize)
+        .backgroundColor(Color.Green)
+        .opacity(this.opacitySize)
+      Button('change size')
+        .margin(30)
+        .onClick(() => {
+          if (this.flag) {
+            this.uiContext?.animateToImmediately({
+              delay: 0,
+              duration: 1000
+            }, () => {
+              this.opacitySize = 1
+            })
+            this.uiContext?.animateTo({
+              delay: 1000,
+              duration: 1000
+            }, () => {
+              this.widthSize = 150
+              this.heightSize = 60
+            })
+          } else {
+            this.uiContext?.animateToImmediately({
+              delay: 0,
+              duration: 1000
+            }, () => {
+              this.widthSize = 250
+              this.heightSize = 100
+            })
+            this.uiContext?.animateTo({
+              delay: 1000,
+              duration: 1000
+            }, () => {
+              this.opacitySize = 0
+            })
+          }
+          this.flag = !this.flag
+        })
+    }.width('100%').margin({ top: 5 })
+  }
+}
 ```
 
 ## bindTabsToNestedScrollable
@@ -290,9 +345,7 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 **示例**
 
-```TypeScript
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
-```
 
 ## bindTabsToScrollable
 
@@ -1022,7 +1075,7 @@ fp2px(value: number): number
 
 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
-字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
+字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../arkts-components/arkts-arkui-common-comp-configuration-i.md#fontscale)。
 
 > **说明：** 
 > 
@@ -1311,9 +1364,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 **示例**
 
-```TypeScript
 完整示例请参考[ComponentSnapshot](arkts-apis-uicontext-componentsnapshot.md)中的示例。
-```
 
 ## getComponentUtils
 
@@ -1339,9 +1390,7 @@ get object ComponentUtils.
 
 **示例**
 
-```TypeScript
 完整示例请参考[示例1（获取ComponentUtils对象）](arkts-arkui-arkui-componentutils.md#示例1获取componentutils对象)。
-```
 
 ## getContextMenuController
 
@@ -1389,9 +1438,7 @@ Get object cursor controller.
 
 **示例**
 
-```TypeScript
 完整示例请参考[CursorController](arkts-apis-uicontext-cursorcontroller.md)中的示例。
-```
 
 ## getDialogPresenter
 
@@ -1417,9 +1464,7 @@ getDialogPresenter(): DialogPresenter
 
 **示例**
 
-```TypeScript
 完整示例请参考[DialogPresenter](arkts-apis-uicontext-dialogpresenter.md)中的示例。
-```
 
 ## getDragController
 
@@ -1445,9 +1490,7 @@ Get DragController.
 
 **示例**
 
-```TypeScript
 完整示例请参考[DragController](./arkts-apis-uicontext-dragcontroller.md)中的示例。
-```
 
 ## getFilteredInspectorTree
 
@@ -1528,12 +1571,25 @@ struct ComponentPage {
 }
 ```
 
-```TypeScript
 当传入"content"过滤字段时，返回的JSON字符串结构如下：
-```
 
 ```TypeScript
+InsTree : {"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"Column","$ID":15,"type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{},"$children":[{"$type":"Button","$ID":16,"type":"build-in","$rect":"[293.00, 72.00],[427.00,132.00]","$debugLine":"","$attrs":{}},{"$type":"Button","$ID":18,"type":"build-in","$rect":"[237.00, 132.00],[484.00,192.00]","$debugLine":"","$attrs":{}}]}]}\
+InsTree -| type: root, ID: undefined
+InsTree --| type: Column, ID: 15
+InsTree ---| type: Button, ID: 16
+InsTree ---| type: Button, ID: 18
+```
+
 从API version 20开始，当传入"isLayoutInspector"过滤字段时，返回的JSON字符串结构新增外层结构"type"与"content"，其中"content"包含未增加该字段时的原有JSON字符串结构；同时，返回值结构中增添自定义组件。返回的JSON字符串结构如下：
+
+```TypeScript
+InsTree : {"type":"root","content":{"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"JsView","$ID":13,"type":"custom","state":{"observedPropertiesInfo":[],"viewInfo":{"componentName":"ComponentPage","id":14,"isV2":false,"isViewActive_":true}},"$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"{\"$line\":\"(0:0)\"}","viewTag":"ComponentPage","$attrs":{"viewKey":"13"},"$children":[{"$type":"Column","$ID":15, "type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{ ...
+InsTree -| type: root, ID: undefined
+InsTree --| type: JsView, ID: 13
+InsTree ---| type: Column, ID: 15
+InsTree ----| type: Button, ID: 16
+InsTree ----| type: Button, ID: 18
 ```
 
 ## getFilteredInspectorTreeById
@@ -1556,7 +1612,7 @@ get the filtered attributes of the component tree with the specified id and dept
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | ID of the target component. |
+| id | string | 是 | [ID](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) of the target component. |
 | depth | number | 是 | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of<br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
 | filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
@@ -1609,8 +1665,12 @@ struct ComponentPage {
 }
 ```
 
-```TypeScript
 返回的JSON字符串结构如下：
+
+```TypeScript
+result1: {"$type":"root","width":"1260.000000","height":"2720.000000","$resolution":"3.250000","$children":[{"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}]}
+result2: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
+result3: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
 ```
 
 ## getFocusController
@@ -1637,9 +1697,7 @@ getFocusController(): FocusController
 
 **示例**
 
-```TypeScript
 完整示例请参考[FocusController](arkts-apis-uicontext-focuscontroller.md)中的示例。
-```
 
 ## getFont
 
@@ -1665,9 +1723,7 @@ getFont(): Font
 
 **示例**
 
-```TypeScript
 完整示例请参考[Font](arkts-apis-uicontext-font.md)中的示例。
-```
 
 ## getFrameNodeById
 
@@ -1699,9 +1755,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 **示例**
 
-```TypeScript
 完整示例请参考获取根节点示例。
-```
 
 ## getFrameNodeByUniqueId
 
@@ -1871,8 +1925,22 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 **示例**
 
-```TypeScript
 完整示例请参考[示例4（设置键盘避让模式为压缩）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例4设置键盘避让模式为压缩)、[示例5（设置键盘避让模式为上抬）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例5设置键盘避让模式为上抬)以及[示例6（切换避让模式）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例6切换避让模式)。
+
+```TypeScript
+// EntryAbility.ets
+import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility{
+  onWindowStageCreate(windowStage: window.WindowStage) {
+
+      windowStage.loadContent('pages/Index', (err, data) => {
+        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
+        let currentKeyboardAvoidMode = uiContext.getKeyboardAvoidMode();
+        console.info("KeyboardAvoidMode:", JSON.stringify(currentKeyboardAvoidMode));
+      });
+    }
+}
 ```
 
 ## getLastFocusedUIContext
@@ -2005,9 +2073,7 @@ getMagnifier(): Magnifier
 
 **示例**
 
-```TypeScript
 参考[Magnifier](arkts-apis-uicontext-magnifier.md)的bind接口示例。
-```
 
 ## getMaxFontScale
 
@@ -2033,8 +2099,20 @@ Get the max font scale.
 
 **示例**
 
-```TypeScript
 参考[configuration标签](../../../quick-start/app-configuration-file.md#configuration标签)，配置fontSizeMaxScale的值为“1.75”。
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('getMaxFontScale').onClick(() => {
+        console.info('getMaxFontScale', this.getUIContext().getMaxFontScale().toFixed(2));
+      });
+    }
+  }
+}
 ```
 
 ## getMeasureUtils
@@ -2061,9 +2139,7 @@ getMeasureUtils(): MeasureUtils
 
 **示例**
 
-```TypeScript
 完整示例请参考[MeasureUtils](arkts-apis-uicontext-measureutils.md)中的示例。
-```
 
 ## getMediaQuery
 
@@ -2089,9 +2165,7 @@ get object mediaQuery.
 
 **示例**
 
-```TypeScript
 完整示例请参考mediaquery示例。
-```
 
 ## getNavigationInfoByUniqueId
 
@@ -2123,9 +2197,7 @@ Get navigation information of the frameNode with uniqueId.
 
 **示例**
 
-```TypeScript
 请参考[getPageInfoByUniqueId](#getpageinfobyuniqueid)的示例。
-```
 
 ## getOverlayManager
 
@@ -2151,9 +2223,7 @@ Obtains the OverlayManager object.
 
 **示例**
 
-```TypeScript
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-```
 
 ## getOverlayManagerOptions
 
@@ -2179,9 +2249,7 @@ Get object OverlayManagerOptions.
 
 **示例**
 
-```TypeScript
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-```
 
 ## getPageInfoByUniqueId
 
@@ -2476,9 +2544,7 @@ get object PromptAction.
 
 **示例**
 
-```TypeScript
 完整示例请参考[PromptAction](arkts-apis-uicontext-promptaction.md)中的示例。
-```
 
 ## getRouter
 
@@ -2504,9 +2570,7 @@ Obtains a Router object.
 
 **示例**
 
-```TypeScript
 完整示例请参考pushUrl。
-```
 
 ## getSharedLocalStorage
 
@@ -2597,9 +2661,7 @@ getSmartGestureController(): SmartGestureController
 
 **示例**
 
-```TypeScript
 参考智慧手势控制器示例1（启用智慧手势并自定义动作处理）。
-```
 
 ## getTextMenuController
 
@@ -2625,9 +2687,7 @@ getTextMenuController(): TextMenuController
 
 **示例**
 
-```TypeScript
 参考[TextMenuController](arkts-apis-uicontext-textmenucontroller.md)接口示例。
-```
 
 ## getUIInspector
 
@@ -2653,9 +2713,7 @@ getUIInspector(): UIInspector
 
 **示例**
 
-```TypeScript
 完整示例请参考[UIInspector](./arkts-apis-uicontext-uiinspector.md)中的示例。
-```
 
 ## getUIObserver
 
@@ -3102,8 +3160,20 @@ Checks whether current font scale follows the system.
 
 **示例**
 
-```TypeScript
 参考[configuration标签](../../../quick-start/app-configuration-file.md#configuration标签)，配置fontSizeScale的值为“followSystem”。
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('isFollowingSystemFontScale').onClick(() => {
+        console.info('isFollowingSystemFontScale', this.getUIContext().isFollowingSystemFontScale());
+      });
+    }
+  }
+}
 ```
 
 ## keyframeAnimateTo
@@ -3508,7 +3578,7 @@ px2fp(value: number): number
 
 像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
-字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
+字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../arkts-components/arkts-arkui-common-comp-configuration-i.md#fontscale)。
 
 > **说明：** 
 > 
@@ -4186,8 +4256,21 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 **示例**
 
-```TypeScript
 完整示例请参考[示例4（设置键盘避让模式为压缩）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例4设置键盘避让模式为压缩)、[示例5（设置键盘避让模式为上抬）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例5设置键盘避让模式为上抬)以及[示例6（切换避让模式）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例6切换避让模式)。
+
+```TypeScript
+// EntryAbility.ets
+import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility{
+  onWindowStageCreate(windowStage: window.WindowStage) {
+
+      windowStage.loadContent('pages/Index', (err, data) => {
+        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
+        uiContext.setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE);
+      });
+    }
+}
 ```
 
 ## setOverlayManagerOptions
@@ -4220,9 +4303,7 @@ Init OverlayManager.
 
 **示例**
 
-```TypeScript
 完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-```
 
 ## setPixelRoundMode
 
@@ -4343,31 +4424,6 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 | policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
 
 **示例**
-
-```TypeScript
-import { TextSelectionClearPolicy } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .fontSize(20)
-        .margin(10)
-        .copyOption(CopyOptions.LocalDevice)
-      Button('Set Clear Policy')
-        .onClick(() => {
-          this.getUIContext()?.setTextSelectionClearPolicy(TextSelectionClearPolicy.CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## showActionSheet
 
@@ -4777,9 +4833,7 @@ Unbind tabs from nested scrollable container components.
 
 **示例**
 
-```TypeScript
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
-```
 
 ## unbindTabsFromScrollable
 
@@ -4806,9 +4860,7 @@ Unbind tabs from scrollable container component.
 
 **示例**
 
-```TypeScript
 参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
-```
 
 ## updateBindSheet
 

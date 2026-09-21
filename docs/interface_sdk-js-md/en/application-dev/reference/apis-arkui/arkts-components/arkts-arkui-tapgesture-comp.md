@@ -98,16 +98,77 @@ Triggered when the tap gesture is recognized.
 
 ## Examples
 
-```TypeScript
 ### Example 1: Implementing Double-Tap Gesture Recognition
 
 This example demonstrates the recognition of a double-tap gesture using TapGesture.
 
 
-```
 
 ```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TapGestureExample {
+  @State value: string = '';
+
+  build() {
+    Column() {
+      // The gesture event is triggered by double-tapping.
+      Text('Click twice').fontSize(28)
+        .gesture(
+        TapGesture({ count: 2 })
+          .onAction((event: GestureEvent) => {
+            if (event) {
+              this.value = JSON.stringify(event.fingerList[0])
+            }
+          })
+        )
+      Text(this.value)
+    }
+    .height(300)
+    .width(300)
+    .padding(20)
+    .border({ width: 3 })
+    .margin(30)
+  }
+}
+```
+
 ### Example 2: Obtaining Coordinates of a Single-Tap Gesture
 
 This example demonstrates how to obtain the coordinates of a single-tap gesture using TapGesture.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TapGestureExample {
+
+  build() {
+    Column() {
+      Text('Click Once').fontSize(28)
+        .gesture(
+          TapGesture({ count: 1, fingers: 1 })
+            .onAction((event: GestureEvent | undefined) => {
+              if (event) {
+                console.info(`x = ${JSON.stringify(event.tapLocation?.x)}`)
+                console.info(`y = ${JSON.stringify(event.tapLocation?.y)}`)
+                console.info(`windowX = ${JSON.stringify(event.tapLocation?.windowX)}`)
+                console.info(`windowY = ${JSON.stringify(event.tapLocation?.windowY)}`)
+                console.info(`displayX = ${JSON.stringify(event.tapLocation?.displayX)}`)
+                console.info(`displayY = ${JSON.stringify(event.tapLocation?.displayY)}`)
+                // The globalDisplayX and globalDisplayY attributes are added since API version 23.
+                console.info(`globalDisplayX = ${JSON.stringify(event.tapLocation?.globalDisplayX)}`)
+                console.info(`globalDisplayY = ${JSON.stringify(event.tapLocation?.globalDisplayY)}`)
+              }
+            })
+        )
+    }
+    .height(200)
+    .width(300)
+    .padding(20)
+    .border({ width: 3 })
+    .margin(30)
+  }
+}
 ```

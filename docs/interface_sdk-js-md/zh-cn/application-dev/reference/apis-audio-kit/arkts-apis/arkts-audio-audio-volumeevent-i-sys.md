@@ -38,7 +38,7 @@ networkId: string
 percentage?: number
 ```
 
-音量百分比，取值范围为[0, 100]。取值限定为整数。
+音量百分比，为整数值，取值范围为[0, 100]。
 
 **类型：** number
 

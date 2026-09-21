@@ -31,9 +31,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 **Examples**
 
-```TypeScript
 See Scroll Event Example.
-```
 
 
 <a id="getevent-1"></a>
@@ -69,9 +67,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 **Examples**
 
-```TypeScript
 See Scroll Event Example.
-```
 
 
 <a id="getevent-2"></a>
@@ -107,9 +103,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 **Examples**
 
-```TypeScript
 See Scroll Event Example.
-```
 
 
 <a id="getevent-3"></a>
@@ -145,6 +139,4 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 **Examples**
 
-```TypeScript
 See Scroll Event Example.
-```

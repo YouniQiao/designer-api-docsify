@@ -90,7 +90,7 @@ fontFeature?: string
 
 例如，使用等宽时钟数字的输入格式为："ss01" on。
 
-Font Feature当前支持的属性见fontFeature属性列表。
+Font Feature当前支持的属性见[fontFeature](arkts-arkui-text-comp-attribute.md#fontfeature)属性列表。
 
 设置 Font Feature 属性，Font Feature 是 OpenType 字体的高级排版能力，如支持连字、数字等宽等特性，一般用在自定义字体中，其能力需要字体本身支持。
 

@@ -95,12 +95,148 @@ Creates a drag action object for initiating drag and drop operations. You need t
 
 **Examples**
 
-```TypeScript
 Obtain the UI context from EntryAbility.ets and save it to LocalStorage.
-```
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window, UIContext } from '@kit.ArkUI';
+
+let uiContext: UIContext;
+let localStorage: LocalStorage = new LocalStorage('uiContext');
+
+export default class EntryAbility extends UIAbility {
+  storage: LocalStorage = localStorage;
+
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+  }
+
+  onDestroy(): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    // Main window is created, set main page for this ability
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+
+    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
+        return;
+      }
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
+      windowStage.getMainWindow((err, data) => {
+        if (err.code) {
+          console.error(`Failed to obtain the main window. Cause:${err.message}`);
+          return;
+        }
+        let windowClass: window.Window = data;
+        uiContext = windowClass.getUIContext();
+        this.storage.setOrCreate<UIContext>('uiContext', uiContext);
+        // Obtain a UIContext instance.
+      });
+    });
+  }
+
+  onWindowStageDestroy(): void {
+    // Main window is destroyed, release UI related resources
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
+  }
+
+  onForeground(): void {
+    // Ability has brought to foreground
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
+  }
+
+  onBackground(): void {
+    // Ability has back to background
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
+  }
+}
+```
+
 Call this.getUIContext().getSharedLocalStorage() to obtain the context, and then obtain the DragController object to perform subsequent drag operations.
+
+```TypeScript
+import { dragController, UIContext } from '@kit.ArkUI';
+import { image } from '@kit.ImageKit';
+import { unifiedDataChannel } from '@kit.ArkData';
+
+@Entry()
+@Component
+struct DragControllerPage {
+  private dragAction: dragController.DragAction | null = null;
+  customBuilders: Array<CustomBuilder | DragItemInfo> = new Array<CustomBuilder | DragItemInfo>();
+  storages = this.getUIContext().getSharedLocalStorage();
+
+  @Builder
+  DraggingBuilder() {
+    Column() {
+      Text('DraggingBuilder')
+    }
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Blue)
+  }
+
+  build() {
+    Column() {
+      Button('Drag Multiple Objects').onTouch((event?: TouchEvent) => {
+        if (event) {
+          if (event.type == TouchType.Down) {
+            console.info('multi drag Down by listener');
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            this.customBuilders.push(() => {
+              this.DraggingBuilder()
+            });
+            let text = new unifiedDataChannel.Text();
+            let unifiedData = new unifiedDataChannel.UnifiedData(text);
+            let dragInfo: dragController.DragInfo = {
+              pointerId: 0,
+              data: unifiedData,
+              extraParams: ''
+            };
+            try {
+              this.dragAction = this.getUIContext().getDragController().createDragAction(this.customBuilders, dragInfo);
+              if (!this.dragAction) {
+                console.info('listener dragAction is null');
+                return;
+              }
+              this.dragAction.on('statusChange', (dragAndDropInfo) => {
+                if (dragAndDropInfo.status == dragController.DragStatus.STARTED) {
+                  console.info('drag has start');
+                } else if (dragAndDropInfo.status == dragController.DragStatus.ENDED) {
+                  console.info('drag has end');
+                  if (!this.dragAction) {
+                    return;
+                  }
+                  // After the drag operation is complete, clear the drag preview array and cancel the status listener.
+                  this.customBuilders.splice(0, this.customBuilders.length);
+                  this.dragAction.off('statusChange');
+                }
+              });
+              this.dragAction.startDrag().then(() => {
+              }).catch((err: BusinessError) => {
+                console.error(`Failed to start drag. Code: ${err.code}, message: ${err.message}`);
+              });
+            } catch (err) {
+              const error = err as BusinessError;
+              console.error(`Failed to create dragAction. Code: ${error.code}, message: ${error.message}`);
+            }
+          }
+        }
+      }).margin({ top: 20 })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 ## enableDropDisallowedBadge
@@ -127,14 +263,55 @@ Specifies whether to enable the display of a disallowed badge when dragged conte
 
 **Examples**
 
-```TypeScript
 This example demonstrates the function of displaying a drag-disallowed badge when a drag object passes over a target area where dropping is not allowed, implemented via the enableDropDisallowedBadge API.
 
 Call the enableDropDisallowedBadge API in EntryAbility.ets and set the enabled parameter to true.
-```
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window, UIContext } from '@kit.ArkUI';
+
+ export default class EntryAbility extends UIAbility {
+   onWindowStageCreate(windowStage: window.WindowStage): void {
+       windowStage.loadContent('pages/Index', (err, data) => {
+         if (err.code) {
+         return;
+       }
+       windowStage.getMainWindow((err, data) => {
+         if (err.code) {
+           return;
+         }
+         let windowClass: window.Window = data;
+         let uiContext: UIContext = windowClass.getUIContext();
+         uiContext.getDragController().enableDropDisallowedBadge(true);
+     });
+   });
+ }
+}
+```
+
 Drag the icon to the blank area below in Index.ets. The drag-disallowed badge is displayed.
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+  build() {
+    Column({ space: 20 }) {
+      // Replace $r('app.media.startIcon') with the image resource file you use.
+      Image($r('app.media.startIcon'))
+        .width(120)
+        .height(120)
+      Text ('Invalid drop zone.')
+      Column()
+        .width('100%')
+        .layoutWeight(1)
+        .allowDrop(null)
+        .onDrop(() => {
+        })
+    }.width('100%')
+  }
+}
 ```
 
 ## executeDrag
@@ -158,7 +335,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-common-comp-dragiteminfo-i.md) | Yes | Object to be dragged.<br> **NOTE:** <br>The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](../arkts-components/arkts-arkui-common-comp-dragiteminfo-i.md) | Yes | Object to be dragged.<br> **NOTE:** <br>The global builder is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) component is used in the builder, enable synchronous loading, that is, set the [syncLoad](../arkts-components/arkts-arkui-image-comp-attribute.md#syncload) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | [dragController.DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[dragController.DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result.<br>- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
@@ -378,9 +555,7 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 **Examples**
 
-```TypeScript
 See the example for animate.
-```
 
 ## notifyDragStartRequest
 

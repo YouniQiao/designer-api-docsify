@@ -50,7 +50,3 @@ constructor(node: FrameNode)
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 响应点击动作的目标节点。 |
 
 **示例**
-
-```TypeScript
-本示例实现了在智慧手势监听回调中，自定义智慧手势动作处理为智慧手势点击动作处理，完整示例请参考[示例1（启用智慧手势并自定义动作处理）](./arkts-apis-uicontext-smartgesturecontroller.md#示例1启用智慧手势并自定义动作处理)。
-```

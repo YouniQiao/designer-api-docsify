@@ -47,9 +47,7 @@ Sets the proxy configuration used by all Web instances in the app. URLs that mat
 
 **Examples**
 
-```TypeScript
 For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-```
 
 ## removeProxyOverride
 

@@ -585,7 +585,7 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
 getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming hapticUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call release method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming hapticUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
@@ -624,7 +624,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call release method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 

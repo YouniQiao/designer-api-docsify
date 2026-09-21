@@ -200,10 +200,40 @@ function inspectStatus(arg: number): number {
 }
 ```
 
-```TypeScript
 > 说明：
 > 
 > isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Concurrent
+function inspectStatus(arg: number): number {
+  // 第一次检查任务是否已经取消并作出响应
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled before 2s sleep.");
+    return arg + 2;
+  }
+  // 延时2s
+  let t: number = Date.now();
+  while (Date.now() - t < 2000) {
+    continue;
+  }
+  // 第二次检查任务是否已经取消并作出响应
+  if (taskpool.Task.isCanceled()) {
+    console.info("task has been canceled after 2s sleep.");
+    return arg + 3;
+  }
+  return arg + 1;
+}
+
+let task: taskpool.Task = new taskpool.Task(inspectStatus, 100); // 100: test number
+taskpool.execute(task).then((res: Object) => {
+  console.info("Succeeded in executing task, result: " + res);
+}).catch((e: BusinessError) => {
+  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
+});
+// 不调用cancel，isCanceled()默认返回false，task执行的结果为101
 ```
 
 ## isDone

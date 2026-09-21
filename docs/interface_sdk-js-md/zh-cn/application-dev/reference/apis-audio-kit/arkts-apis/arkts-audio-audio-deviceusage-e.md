@@ -6,8 +6,6 @@ enum DeviceUsage
 
 表示音频设备类型的枚举（根据用途分类）。
 
-@enum { int }
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

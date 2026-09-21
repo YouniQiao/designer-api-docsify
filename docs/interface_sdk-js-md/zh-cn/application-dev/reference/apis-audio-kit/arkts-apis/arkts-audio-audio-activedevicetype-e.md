@@ -10,8 +10,6 @@ enum ActiveDeviceType
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)替代。
 
-@enum { number }
-
 **起始版本：** 7
 
 **废弃版本：** 9

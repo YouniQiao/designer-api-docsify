@@ -124,16 +124,58 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 **示例**
 
-```TypeScript
 无参数Action。
-```
 
 ```TypeScript
+// 无参数Action示例：
+import { AccessibilityAction } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// Action描述中无明确要求的，均为无参数Action。
+rootElement.executeAction(AccessibilityAction.CLICK).then(() => {
+  console.info(`succeeded in performing action CLICK`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action CLICK. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 有参数Action（setSelection）。
-```
 
 ```TypeScript
+// 有参数Action示例：
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// selectTextBegin：表示选择起始位置。
+// selectTextEnd：表示选择结束位置。
+// selectTextInForWard：true表示为前光标，false表示为后光标。
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// setSelection示例代码。
+rootElement.executeAction(AccessibilityAction.SET_SELECTION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_SELECTION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_SELECTION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
 有参数Action（setCursorPosition）。
+
+```TypeScript
+// 有参数Action示例：
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// offset：表示光标的设置位置。
+let parameter : Parameter = { offset: '1' };
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// setCursorPosition示例代码。
+rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_CURSOR_POSITION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_CURSOR_POSITION. Code: ${err?.code}, message: ${err?.message}`);
+});
 ```
 
 ## findElement('textType')

@@ -2143,10 +2143,6 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 **示例**
 
-```TypeScript
-avcontroller.offSupportedLoopModesChange();
-```
-
 ## offSupportedPlaySpeedsChange
 
 ```TypeScript

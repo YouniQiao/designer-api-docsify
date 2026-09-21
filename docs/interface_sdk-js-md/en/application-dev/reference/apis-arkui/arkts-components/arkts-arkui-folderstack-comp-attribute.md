@@ -23,11 +23,11 @@ In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c
 alignContent(value: Alignment)
 ```
 
-Sets the alignment of child components in the container. After this attribute is set, child components are arranged in the container according to the specified alignment. When both this attribute and align are set, whichever is set last takes effect.
+Sets the alignment of child components in the container. After this attribute is set, child components are arranged in the container according to the specified alignment. When both this attribute and [align](arkts-arkui-common-comp-commonmethod-c.md#align) are set, whichever is set last takes effect.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -55,7 +55,7 @@ Typical usage: When the user has turned off the auto-rotate function in system s
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -81,7 +81,7 @@ Sets whether to use the default animation effect. After this attribute is set, t
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -109,7 +109,7 @@ Typical usage: Adjust the app layout based on the fold status, for example, disp
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -137,7 +137,7 @@ Typical usage: Adjust the app layout and interaction logic based on the hover st
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 

@@ -424,7 +424,7 @@ Pause screen capture. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not be permitted. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
@@ -599,7 +599,7 @@ Resume screen capture. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not be permitted. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 

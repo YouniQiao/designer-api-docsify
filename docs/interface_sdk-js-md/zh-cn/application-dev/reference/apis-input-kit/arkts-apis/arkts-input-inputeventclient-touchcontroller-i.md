@@ -144,9 +144,7 @@ touchMove(touch: TouchPoint): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[touchDown](#touchdown)示例。
-```
 
 ## touchUp
 
@@ -186,6 +184,4 @@ touchUp(touch: TouchPoint): Promise<void>
 
 **示例**
 
-```TypeScript
 参见[touchDown](#touchdown)示例。
-```

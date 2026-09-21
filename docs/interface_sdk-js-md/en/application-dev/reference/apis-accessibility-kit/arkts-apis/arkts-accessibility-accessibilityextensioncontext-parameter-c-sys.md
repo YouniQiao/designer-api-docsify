@@ -180,6 +180,10 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Examples**
 
-```TypeScript
 When selecting characters from index 0 to 7 in the text input box, the parameters set by the executeAction(AccessibilityAction.SET_SELECTION, parameter) method are as follows:
+
+```TypeScript
+import { Parameter } from '@kit.AccessibilityKit';
+
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
 ```

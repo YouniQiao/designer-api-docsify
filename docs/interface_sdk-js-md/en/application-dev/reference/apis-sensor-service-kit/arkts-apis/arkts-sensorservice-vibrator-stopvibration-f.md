@@ -41,12 +41,80 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
 Stop vibration of the specified duration.
-```
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Start vibration of the specified duration.
+  vibrator.startVibration({
+    type: 'time',
+    duration: 1000,
+  }, {
+    id: 0,
+    usage: 'alarm' // The switch control is subject to the selected type.
+  }).then(() => {
+    console.info('Succeed in starting vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // Stop vibration in VIBRATOR_STOP_MODE_TIME mode.
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_TIME).then(() => {
+    console.info('Succeed in stopping vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 Stop preset vibration.
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Start vibration based on a preset effect.
+  vibrator.startVibration({
+    type: 'preset',
+    effectId: 'haptic.notice.success',
+    count: 1,
+  }, {
+    id: 0,
+    usage: 'notification' // The switch control is subject to the selected type.
+  }).then(() => {
+    console.info('Succeed in starting vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
+    console.info('Succeed in stopping vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
 ```
 
 
@@ -82,12 +150,88 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Examples**
 
-```TypeScript
 Stop vibration of the specified duration.
-```
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Start vibration of the specified duration.
+  vibrator.startVibration({
+    type: 'time',
+    duration: 1000,
+  }, {
+    id: 0,
+    usage: 'alarm' // The switch control is subject to the selected type.
+  }, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in starting vibration');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // Stop vibration in VIBRATOR_STOP_MODE_TIME mode.
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_TIME, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in stopping vibration');
+  })
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 Stop preset vibration.
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Start vibration based on a preset effect.
+  vibrator.startVibration({
+    type: 'preset',
+    effectId: 'haptic.notice.success',
+    count: 1,
+  }, {
+    id: 0,
+    usage: 'notification' // The switch control is subject to the selected type.
+  }, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in starting vibration');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+
+try {
+  // Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
+  vibrator.stopVibration(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in stopping vibration');
+  })
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
 ```
 
 

@@ -169,10 +169,34 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.start()
 ```
 
-```TypeScript
 > NOTE
 > 
 > The start() API associates the DisplaySync object with a UI context and window. If [start](#start) is called on a non-UI page or in an asynchronous callback, an incorrect UI context may be obtained, causing the [start](#start) function to work abnormally. As a result, the callback function cannot be executed and the expected frame rate range cannot take effect.In this case, you can use [runScopedTask](../apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask) to specify the UI context and ensure that [start](#start) is executed in the correct context.
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+import { UIContext } from '@kit.ArkUI';
+
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  // Create a DisplaySync instance.
+  backDisplaySync: displaySync.DisplaySync = displaySync.create();
+
+  aboutToAppear() {
+    // Obtain a UIContext instance.
+    let uiContext: UIContext = this.getUIContext();
+    // Call start() in the current UI context.
+    uiContext?.runScopedTask(() => {
+      this.backDisplaySync?.start();
+    })
+  }
+
+  build() {
+    // ...
+  }
+}
 ```
 
 ## stop

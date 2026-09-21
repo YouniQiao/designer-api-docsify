@@ -22,6 +22,4 @@ Defines the callback for successful ability launches.
 
 **Examples**
 
-```TypeScript
 See [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md).
-```

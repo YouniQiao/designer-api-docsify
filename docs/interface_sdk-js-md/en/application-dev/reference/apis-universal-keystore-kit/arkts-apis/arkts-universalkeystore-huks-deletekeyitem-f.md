@@ -50,16 +50,36 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
 ArkTS sample code:
-```
 
 ```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+huks.deleteKeyItem(keyAlias, emptyOptions, (error) => {
+  if (error) {
+    console.error(`callback: deleteKeyItem failed`);
+  } else {
+    console.info(`callback: deleteKeyItem key success`);
+  }
+});
+```
+
 JS sample code:
 
 > NOTE
 > 
 > The JS sample code is used only for the lightweight devices.
+
+```TypeScript
+<stack class="container">
+    <input type="button" class="deleteBtn" @click="deleteKey">Delete Key</input>
+    <text class="result">{{result}}</text>
+</stack>
 ```
 
 ```TypeScript

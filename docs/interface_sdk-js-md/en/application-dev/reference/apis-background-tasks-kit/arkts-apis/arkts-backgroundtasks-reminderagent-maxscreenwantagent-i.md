@@ -34,7 +34,7 @@ Name of the ability that is automatically started when the reminder arrives and 
 
 **Deprecated since:** 9
 
-**Substitutes:** abilityName
+**Substitutes:** [abilityName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#abilityname)
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -52,6 +52,6 @@ Name of the HAP that is automatically started when the reminder arrives and the 
 
 **Deprecated since:** 9
 
-**Substitutes:** pkgName
+**Substitutes:** [pkgName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#pkgname)
 
 **System capability:** SystemCapability.Notification.ReminderAgent

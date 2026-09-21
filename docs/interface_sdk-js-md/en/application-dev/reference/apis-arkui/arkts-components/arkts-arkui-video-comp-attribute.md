@@ -20,11 +20,11 @@ In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md)
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
+Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 autoPlay(value: boolean)
 ```
 
-Sets whether to enable autoplay. This attribute can be dynamically set using attributeModifier.
+Sets whether to enable autoplay. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ Sets whether to enable autoplay. This attribute can be dynamically set using att
 controls(value: boolean)
 ```
 
-Sets whether to display the video playback control bar. This attribute can be dynamically set using attributeModifier.
+Sets whether to display the video playback control bar. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 > **NOTE:** 
 > 
@@ -97,15 +97,15 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
-This attribute cannot be used together with the overlay attribute. If both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in overlay becomes invalid.
+This attribute cannot be used together with the [overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay) attribute. If both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in [overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay) becomes invalid.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 > **NOTE:** 
 > 
@@ -125,7 +125,7 @@ This attribute cannot be used together with the overlay attribute. If both are s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI analysis function. <br>**true**: enables the AI analysis function; **false**: disables the AI analysis function. <br>Default value: **false** <br>**Note:** <br>This attribute cannot be used together with overlay. When both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in overlay does not take effect. |
+| enable | boolean | Yes | Whether to enable the AI analysis function. <br>**true**: enables the AI analysis function; **false**: disables the AI analysis function. <br>Default value: **false** <br>**Note:** <br>This attribute cannot be used together with [overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay). When both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in [overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay) does not take effect. |
 
 ## enableShortcutKey
 
@@ -133,7 +133,7 @@ This attribute cannot be used together with the overlay attribute. If both are s
 enableShortcutKey(enabled: boolean)
 ```
 
-Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using attributeModifier.
+Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
 
@@ -162,7 +162,7 @@ Currently, the component can respond to the following keys when it is in focus: 
 loop(value: boolean)
 ```
 
-Sets whether to loop the video. This attribute can be dynamically set using attributeModifier.
+Sets whether to loop the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -184,7 +184,7 @@ Sets whether to loop the video. This attribute can be dynamically set using attr
 muted(value: boolean)
 ```
 
-Sets whether to mute the video. This attribute can be dynamically set using attributeModifier.
+Sets whether to mute the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 > **NOTE:** 
 > 
@@ -211,7 +211,7 @@ Sets whether to mute the video. This attribute can be dynamically set using attr
 objectFit(value: ImageFit)
 ```
 
-Sets the fill mode for the video content. This attribute can be dynamically set using attributeModifier.
+Sets the fill mode for the video content. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -233,11 +233,11 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 ```
 
-Triggered when video playback fails. Dynamic property modification using attributeModifier is supported.
+Triggered when video playback fails. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 > **NOTE:** 
 > 
-> This API can be called within attributeModifier since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 7
 
@@ -259,7 +259,7 @@ Triggered when video playback fails. Dynamic property modification using attribu
 onFinish(event: VoidCallback)
 ```
 
-Triggered when video playback is finished. Dynamic property modification using attributeModifier is supported.
+Triggered when video playback is finished. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -281,7 +281,7 @@ Triggered when video playback is finished. Dynamic property modification using a
 onFullscreenChange(callback: Callback<FullscreenInfo>)
 ```
 
-Triggered when video playback is switched between full-screen mode and non-full-screen mode. Dynamic property modification using attributeModifier is supported.
+Triggered when video playback is switched between full-screen mode and non-full-screen mode. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -303,7 +303,7 @@ Triggered when video playback is switched between full-screen mode and non-full-
 onPause(event: VoidCallback)
 ```
 
-Triggered when video playback is paused. Dynamic property modification using attributeModifier is supported.
+Triggered when video playback is paused. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -325,7 +325,7 @@ Triggered when video playback is paused. Dynamic property modification using att
 onPrepared(callback: Callback<PreparedInfo>)
 ```
 
-Triggered when video preparation is complete. Dynamic property modification using attributeModifier is supported.
+Triggered when video preparation is complete. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -347,7 +347,7 @@ Triggered when video preparation is complete. Dynamic property modification usin
 onSeeked(callback: Callback<PlaybackInfo>)
 ```
 
-Triggered to report the time information while seeking is completed. Dynamic property modification using attributeModifier is supported.
+Triggered to report the time information while seeking is completed. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -369,7 +369,7 @@ Triggered to report the time information while seeking is completed. Dynamic pro
 onSeeking(callback: Callback<PlaybackInfo>)
 ```
 
-Triggered to report the time information while seeking is in progress (the progress bar is being dragged). Dynamic property modification using attributeModifier is supported.
+Triggered to report the time information while seeking is in progress (the progress bar is being dragged). Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 
@@ -391,7 +391,7 @@ Triggered to report the time information while seeking is in progress (the progr
 onStart(event: VoidCallback)
 ```
 
-Triggered when playback starts. This attribute supports dynamic setting through attributeModifier.
+Triggered when playback starts. This attribute supports dynamic setting through [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -413,7 +413,7 @@ Triggered when playback starts. This attribute supports dynamic setting through 
 onStop(event: Callback<void>)
 ```
 
-Triggered when the video playback is stopped (after **stop()** is called). Dynamic property modification using attributeModifier is supported.
+Triggered when the video playback is stopped (after **stop()** is called). Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 12
 
@@ -435,7 +435,7 @@ Triggered when the video playback is stopped (after **stop()** is called). Dynam
 onUpdate(callback: Callback<PlaybackInfo>)
 ```
 
-Triggered when playback progress changes. Dynamic property modification using attributeModifier is supported.
+Triggered when playback progress changes. Dynamic property modification using [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) is supported.
 
 **Since:** 7
 

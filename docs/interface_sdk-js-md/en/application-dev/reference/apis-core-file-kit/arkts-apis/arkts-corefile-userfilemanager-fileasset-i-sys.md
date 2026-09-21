@@ -49,8 +49,34 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    const fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let fd: number = await fileAsset.open('rw');
+    console.info('file fd', fd);
+    fileAsset.close(fd, (err) => {
+      if (err == undefined) {
+        console.info('asset close succeed.');
+      } else {
+        console.error('close failed, message = ' + err);
+      }
+    });
+  } catch (err) {
+    console.error('close failed, message = ' + err);
+  }
+}
 ```
 
 <a id="close-1"></a>
@@ -87,8 +113,29 @@ Closes this file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('closeDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let fd: number = await asset.open('rw');
+    console.info('file fd', fd);
+    await asset.close(fd);
+    console.info('asset close succeed.');
+  } catch (err) {
+    console.error('close failed, message = ' + err);
+  }
+}
 ```
 
 ## commitModify
@@ -119,8 +166,35 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
+  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
+  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
+  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
+  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
+  fileAsset.set(displayName, newFileAssetDisplayName);
+  fileAsset.commitModify((err) => {
+    if (err == undefined) {
+      let commitModifyDisplayName = fileAsset.get(displayName);
+      console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
+    } else {
+      console.error('commitModify failed, message =', err);
+    }
+  });
+}
 ```
 
 <a id="commitmodify-1"></a>
@@ -153,8 +227,34 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('commitModifyDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  let displayName = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
+  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
+  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
+  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
+  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
+  fileAsset.set(displayName, newFileAssetDisplayName);
+  try {
+    await fileAsset.commitModify();
+    let commitModifyDisplayName = fileAsset.get(displayName);
+    console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
+  } catch (err) {
+    console.error('commitModify failed. message = ', err);
+  }
+}
 ```
 
 ## favorite
@@ -186,8 +286,28 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('favoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  asset.favorite(true, (err) => {
+    if (err == undefined) {
+      console.info('favorite successfully');
+    } else {
+      console.error('favorite failed with error:' + err);
+    }
+  });
+}
 ```
 
 <a id="favorite-1"></a>
@@ -226,8 +346,27 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('favoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  asset.favorite(true).then(() => {
+    console.info('favorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error('favorite failed with error:' + err);
+  });
+}
 ```
 
 ## get
@@ -262,8 +401,28 @@ Obtains the value of a **FileAsset** parameter.
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('fileAssetGetDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: ['title'],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let title: userFileManager.ImageVideoKey = userFileManager.ImageVideoKey.TITLE;
+    let fileAssetTitle: userFileManager.MemberType = fileAsset.get(title.toString());
+    console.info('fileAsset Get fileAssetTitle = ', fileAssetTitle);
+  } catch (err) {
+    console.error('release failed. message = ', err);
+  }
+}
 ```
 
 ## getExif
@@ -346,8 +505,42 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('getExifDemo');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    predicates.isNotNull('all_exif')
+    let fetchOptions: userFileManager.FetchOptions = {
+      fetchColumns: ['all_exif', userFileManager.ImageVideoKey.USER_COMMENT.toString()],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    if (fileAsset === undefined) {
+      console.error('getExif fileAsset is undefined');
+      fetchResult.close();
+      return;
+    }
+    console.info('getExifDemo fileAsset displayName: ' + JSON.stringify(fileAsset.displayName));
+    let userCommentKey: string = 'UserComment';
+    fileAsset.getExif((err, exifMessage) => {
+      if (exifMessage != undefined) {
+        let userComment: string = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
+        console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
+      } else {
+        console.error('getExif failed, message = ', err);
+      }
+    });
+    fetchResult.close();
+  } catch (err) {
+    console.error('getExifDemoCallback failed with error: ' + err);
+  }
+}
 ```
 
 <a id="getexif-1"></a>
@@ -432,8 +625,32 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('getExifDemo');
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    predicates.isNotNull('all_exif')
+    let fetchOptions: userFileManager.FetchOptions = {
+      fetchColumns: ['all_exif', userFileManager.ImageVideoKey.USER_COMMENT.toString()],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    console.info('getExifDemo fileAsset displayName: ' + JSON.stringify(fileAsset.displayName));
+    let exifMessage: string = await fileAsset.getExif();
+    let userCommentKey: string = 'UserComment';
+    let userComment: string = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
+    console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
+    fetchResult.close();
+  } catch (err) {
+    console.error('getExifDemoCallback failed with error: ' + err);
+  }
+}
 ```
 
 ## getThumbnail
@@ -464,8 +681,29 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  console.info('asset displayName = ', asset.displayName);
+  asset.getThumbnail((err, pixelMap) => {
+    if (err == undefined) {
+      console.info('getThumbnail successful ' + pixelMap);
+    } else {
+      console.error('getThumbnail fail', err);
+    }
+  });
+}
 ```
 
 <a id="getthumbnail-1"></a>
@@ -499,8 +737,31 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let size: image.Size = { width: 720, height: 720 };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  console.info('asset displayName = ', asset.displayName);
+  asset.getThumbnail(size, (err, pixelMap) => {
+    if (err == undefined) {
+      console.info('getThumbnail successful ' + pixelMap);
+    } else {
+      console.error('getThumbnail fail', err);
+    }
+  });
+}
 ```
 
 <a id="getthumbnail-2"></a>
@@ -539,8 +800,30 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('getThumbnailDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let size: image.Size = { width: 720, height: 720 };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  console.info('asset displayName = ', asset.displayName);
+  asset.getThumbnail(size).then((pixelMap) => {
+    console.info('getThumbnail successful ' + pixelMap);
+  }).catch((err: BusinessError) => {
+    console.error('getThumbnail fail' + err);
+  });
+}
 ```
 
 ## open
@@ -577,8 +860,22 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('openDemo');
+   let testFileName: string = 'testFile' + Date.now() + '.jpg';
+  const fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
+  fileAsset.open('rw', (err, fd) => {
+    if (fd != undefined) {
+      console.info('File fd' + fd);
+      fileAsset.close(fd);
+    } else {
+      console.error('File err' + err);
+    }
+  });
+}
 ```
 
 <a id="open-1"></a>
@@ -622,8 +919,25 @@ Opens this file asset. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('openDemo');
+  try {
+    let testFileName: string = 'testFile' + Date.now() + '.jpg';
+    const fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
+    let fd: number = await fileAsset.open('rw');
+    if (fd != undefined) {
+      console.info('File fd' + fd);
+      fileAsset.close(fd);
+    } else {
+      console.error(' open File fail');
+    }
+  } catch (err) {
+    console.error('open Demo err' + err);
+  }
+}
 ```
 
 ## set
@@ -653,8 +967,27 @@ Sets a **FileAsset** parameter.
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('fileAssetSetDemo');
+  try {
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOption: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
+    fileAsset.set(displayName, 'newDisplayName1');
+  } catch (err) {
+    console.error('release failed. message = ', err);
+  }
+}
 ```
 
 ## setHidden
@@ -695,8 +1028,28 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  console.info('setHiddenDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  asset.setHidden(true, (err) => {
+    if (err == undefined) {
+      console.info('setHidden successfully');
+    } else {
+      console.error('setHidden failed with error:' + err);
+    }
+  });
+}
 ```
 
 <a id="sethidden-1"></a>
@@ -744,8 +1097,30 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  // Restore a file from a hidden album. Before the operation, ensure that the file exists in the hidden album.
+  console.info('setHiddenDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: userFileManager.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.HIDDEN);
+  const album: userFileManager.Album = await albumList.getFirstObject();
+  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
+  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+  asset.setHidden(false).then(() => {
+    console.info('setHidden successfully');
+  }).catch((err: BusinessError) => {
+    console.error('setHidden failed with error:' + err);
+  });
+}
 ```
 
 ## setUserComment
@@ -788,8 +1163,33 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('setUserCommentDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let userComment: string = 'test_set_user_comment';
+    fileAsset.setUserComment(userComment, (err) => {
+      if (err === undefined) {
+        console.info('setUserComment successfully');
+      } else {
+        console.error('setUserComment failed with error: ' + err);
+      }
+    });
+  } catch (err) {
+    console.error('setUserCommentDemoCallback failed with error: ' + err);
+  }
+}
 ```
 
 <a id="setusercomment-1"></a>
@@ -839,8 +1239,27 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+
+async function example(mgr: userFileManager.UserFileManager) {
+  try {
+    console.info('setUserCommentDemo')
+    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    let fetchOptions: userFileManager.FetchOptions = {
+      fetchColumns: [],
+      predicates: predicates
+    };
+    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
+    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
+    let userComment: string = 'test_set_user_comment';
+    await fileAsset.setUserComment(userComment);
+  } catch (err) {
+    console.error('setUserCommentDemoCallback failed with error: ' + err);
+  }
+}
 ```
 
 ## displayName
