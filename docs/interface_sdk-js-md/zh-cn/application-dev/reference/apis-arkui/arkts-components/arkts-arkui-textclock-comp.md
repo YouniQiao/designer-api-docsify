@@ -2,7 +2,7 @@
 
 TextClock组件通过文本将当前系统时间显示在设备上，支持不同时区的时间显示和时间格式自定义，最高精度到秒级。适用于需要在应用界面上实时展示系统时间、支持多时区显示的场景，可帮助开发者快速实现时间文本展示功能，无需手动计算和更新时间。
 
-组件不可见时，时间变动将停止。组件的可见状态基于[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)处理，可见阈值ratios大于0即视为可见状态。
+组件不可见时，时间变动将停止。组件的可见状态基于[onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange)处理，可见阈值ratios大于0即视为可见状态。
 
 ## 子组件
 
@@ -28,7 +28,7 @@ TextClock(options?: TextClockOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。不传入时使用默认配置，各属性默认值详见TextClockOptions。 |
+| options | [TextClockOptions](arkts-arkui-textclock-comp-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。不传入时使用默认配置，各属性默认值详见TextClockOptions。 |
 
 ## 汇总
 
@@ -36,8 +36,8 @@ TextClock(options?: TextClockOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
-| [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 用于构建TextClock组件的选项。 |
+| [TextClockConfiguration](arkts-arkui-textclock-comp-textclockconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
+| [TextClockOptions](arkts-arkui-textclock-comp-textclockoptions-i.md) | 用于构建TextClock组件的选项。 |
 
 ## 示例
 

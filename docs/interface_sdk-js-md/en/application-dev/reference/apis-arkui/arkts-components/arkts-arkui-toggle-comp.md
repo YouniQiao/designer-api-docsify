@@ -16,6 +16,8 @@ Toggle(options: ToggleOptions)
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -26,7 +28,7 @@ Toggle(options: ToggleOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Yes | Options of the toggle. |
+| options | [ToggleOptions](arkts-arkui-toggle-comp-toggleoptions-i.md) | Yes | Options of the toggle. |
 
 ## Summary
 
@@ -34,15 +36,15 @@ Toggle(options: ToggleOptions)
 
 | Name | Description |
 | --- | --- |
-| [SwitchStyle](arkts-arkui-switchstyle-i.md) | Sets the style for the component of the **Switch** type. |
-| [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. This API inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Options of the toggle. |
+| [SwitchStyle](arkts-arkui-toggle-comp-switchstyle-i.md) | Sets the style for the component of the **Switch** type. |
+| [ToggleConfiguration](arkts-arkui-toggle-comp-toggleconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. This API inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [ToggleOptions](arkts-arkui-toggle-comp-toggleoptions-i.md) | Options of the toggle. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ToggleType](arkts-arkui-toggletype-e.md) | Enumerates toggle types. |
+| [ToggleType](arkts-arkui-toggle-comp-toggletype-e.md) | Enumerates toggle types. |
 
 ## Examples
 

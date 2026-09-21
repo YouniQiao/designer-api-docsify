@@ -27,6 +27,8 @@ The key of the dataset element, used for matching against the privacy target.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
@@ -43,6 +45,8 @@ The value associated with the element key. This field is used in PIR protocol to
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
@@ -58,6 +62,8 @@ The hash algorithm used for hashing the element key. If not specified, the eleme
 **Type:** [HashAlg](arkts-dataprotection-privacycomputation-hashalg-e.md)
 
 **Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 

@@ -4,7 +4,7 @@
 declare class NodeAdapter
 ```
 
-Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality.
+Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach-comp.md#lazy_for_each) API functionality.
 
 > **NOTE:** 
 > 
@@ -359,7 +359,7 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 reloadAllItems(): void
 ```
 
-Reloads all items in this node. This API calls the [OnDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#ondatareloaded) API in **LazyForEach** to trigger component data refresh.
+Reloads all items in this node. This API calls the [OnDataReloaded](../arkts-components/arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatareloaded) API in **LazyForEach** to trigger component data refresh.
 
 **Since:** 12
 

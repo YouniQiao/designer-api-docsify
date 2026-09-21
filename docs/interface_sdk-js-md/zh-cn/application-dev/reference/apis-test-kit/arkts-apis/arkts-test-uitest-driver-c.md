@@ -174,6 +174,8 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -600,6 +602,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -654,6 +658,8 @@ dumpLayout(savePath: string, displayId?: number): Promise<boolean>
 Get the current layout information and save as file with json format.
 
 **起始版本：** 26.0.0
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
@@ -889,26 +895,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
-
 <a id="fling-1"></a>
 
 ## fling
@@ -949,7 +935,15 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 **示例**
 
-参见 [fling](#fling)
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
 
 <a id="fling-2"></a>
 
@@ -992,7 +986,15 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 **示例**
 
-参见 [fling](#fling)
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
 
 ## getDisplayDensity
 
@@ -1031,16 +1033,6 @@ import { Driver } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let density = await driver.getDisplayDensity();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
 }
 ```
 
@@ -1083,7 +1075,15 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 **示例**
 
-参见 [getDisplayDensity](#getdisplaydensity)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
 
 ## getDisplayRotation
 
@@ -1122,16 +1122,6 @@ import { DisplayRotation, Driver } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let rotation: DisplayRotation = await driver.getDisplayRotation();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
 }
 ```
 
@@ -1174,7 +1164,15 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 **示例**
 
-参见 [getDisplayRotation](#getdisplayrotation)
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
 
 ## getDisplaySize
 
@@ -1213,16 +1211,6 @@ import { Driver } from '@kit.TestKit';
 async function demo() {
   let driver: Driver = Driver.create();
   let size = await driver.getDisplaySize();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
 }
 ```
 
@@ -1265,7 +1253,15 @@ getDisplaySize(displayId: number): Promise<Point>
 
 **示例**
 
-参见 [getDisplaySize](#getdisplaysize)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
 
 ## injectKnucklePointerAction
 
@@ -1502,26 +1498,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '123', { paste: true, addition: false });
-}
-
-async function demoChinese() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '中文&', { paste: false, addition: true });
-  // 以复制粘贴方式输入中文、特殊符号，指定文本追加到指定坐标所在文本段的末尾。
-}
-```
-
 <a id="inputtext-1"></a>
 
 ## inputText
@@ -1563,22 +1539,6 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // 创建Driver对象。
-  let driver: Driver = Driver.create();
-  // 查找TextInput类型的目标控件。
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  // 获取控件中心点坐标。
-  let point = await text.getBoundsCenter();
-  // 在坐标点处输入文本'123'。
-  await driver.inputText(point, '123');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -1911,6 +1871,8 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -2103,16 +2065,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
-
 <a id="mousedrag-1"></a>
 
 ## mouseDrag
@@ -2155,7 +2107,15 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 **示例**
 
-参见 [mouseDrag](#mousedrag)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
 
 ## mouseDragWithOptions
 
@@ -2166,6 +2126,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 按住鼠标左键并在屏幕上的指定点之间拖动，具有可选的触摸和按键设置。
 
 **起始版本：** 26.0.0
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
@@ -2267,17 +2229,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
-
 <a id="mouselongclick-1"></a>
 
 ## mouseLongClick
@@ -2321,7 +2272,16 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 **示例**
 
-参见 [mouseLongClick](#mouselongclick)
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
 
 ## mouseMoveTo
 
@@ -2470,16 +2430,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
-
 <a id="mousescroll-1"></a>
 
 ## mouseScroll
@@ -2524,7 +2474,15 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 **示例**
 
-参见 [mouseScroll](#mousescroll)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
 
 ## penClick
 
@@ -2758,16 +2716,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
-
 <a id="pressback-1"></a>
 
 ## pressBack
@@ -2806,16 +2754,6 @@ pressBack(displayId: number): Promise<void>
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -2867,16 +2805,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
-
 <a id="presshome-1"></a>
 
 ## pressHome
@@ -2916,7 +2844,15 @@ pressHome(displayId: number): Promise<void>
 
 **示例**
 
-参见 [pressHome](#presshome)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
 
 ## screenCap
 
@@ -2965,16 +2901,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
-
 <a id="screencap-1"></a>
 
 ## screenCap
@@ -3014,16 +2940,6 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 **示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -3294,6 +3210,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -3489,16 +3407,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
-
 <a id="triggercombinekeys-1"></a>
 
 ## triggerCombineKeys
@@ -3541,7 +3449,15 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 **示例**
 
-参见 [triggerCombineKeys](#triggercombinekeys)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
 
 ## triggerKey
 
@@ -3588,17 +3504,6 @@ import { KeyCode } from '@kit.InputKit';
 async function demo() {
   let driver: Driver = Driver.create();
   await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
 }
 ```
 
@@ -3649,17 +3554,6 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
   await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
 }
 ```
@@ -3679,6 +3573,8 @@ Supported combinations:
 HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **起始版本：** 26.0.0
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 

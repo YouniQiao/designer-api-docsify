@@ -20,6 +20,8 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -122,20 +124,6 @@ export default {
 };
 ```
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then(() => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
-
 
 <a id="deletekeyitem-1"></a>
 
@@ -187,4 +175,16 @@ Deletes a key. This API uses a promise to return the result.
 
 **Examples**
 
-See [deleteKeyItem](#deletekeyitem)
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+huks.deleteKeyItem(keyAlias, emptyOptions)
+  .then(() => {
+    console.info(`promise: deleteKeyItem key success`);
+  });
+```

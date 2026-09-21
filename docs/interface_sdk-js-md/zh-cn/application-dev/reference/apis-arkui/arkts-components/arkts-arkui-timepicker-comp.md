@@ -20,6 +20,8 @@ TimePicker(options?: TimePickerOptions)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ TimePicker(options?: TimePickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | 否 | 配置时间选择组件的参数。当需要自定义初始选中时间、时间格式、时间范围等配置时传入此参数，不传入时使用默认配置（初始选中时间为当前系统时间，时间格式默认为小时和分钟，时间范围默认为00:00-23:59（默认结束时间为23:59:59））。 |
+| options | [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions-i.md) | 否 | 配置时间选择组件的参数。当需要自定义初始选中时间、时间格式、时间范围等配置时传入此参数，不传入时使用默认配置（初始选中时间为当前系统时间，时间格式默认为小时和分钟，时间范围默认为00:00-23:59（默认结束时间为23:59:59））。 |
 
 ## 汇总
 
@@ -36,22 +38,22 @@ TimePicker(options?: TimePickerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | 时间选择器弹窗选项。 |
-| [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | 时间选择器组件的参数说明。 |
-| [TimePickerResult](arkts-arkui-timepickerresult-i.md) | 返回选中的时间结果，hour取值0-23，与展示制式无关。 |
+| [TimePickerDialogOptions](arkts-arkui-timepicker-comp-timepickerdialogoptions-i.md) | 时间选择器弹窗选项。 |
+| [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions-i.md) | 时间选择器组件的参数说明。 |
+| [TimePickerResult](arkts-arkui-timepicker-comp-timepickerresult-i.md) | 返回选中的时间结果，hour取值0-23，与展示制式无关。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | 时间、日期格式化时可设置的配置项。 |
-| [OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md) | 选择时间时触发该事件。 |
+| [DateTimeOptions](arkts-arkui-timepicker-comp-datetimeoptions-t.md) | 时间、日期格式化时可设置的配置项。 |
+| [OnTimePickerChangeCallback](arkts-arkui-timepicker-comp-ontimepickerchangecallback-t.md) | 选择时间时触发该事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [TimePickerFormat](arkts-arkui-timepickerformat-e.md) | 时间选择器的数据格式。 |
+| [TimePickerFormat](arkts-arkui-timepicker-comp-timepickerformat-e.md) | 时间选择器的数据格式。 |
 
 ## 示例
 

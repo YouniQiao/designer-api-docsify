@@ -51,53 +51,6 @@ import { defaultAppManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { uniformTypeDescriptor } from '@kit.ArkData';
 
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-let userId = 100;
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-defaultAppManager.setDefaultApplication("image/png", {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-
-defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, userId).then((data) => {
-  console.info('Operation successful.');
-}).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
 let userId = 100;
 defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
   bundleName: "com.example.myapplication",
@@ -128,48 +81,6 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   moduleName: "module01",
   abilityName: "EntryAbility"
 }, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-```
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication("image/png", {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
-  bundleName: "com.example.myapplication",
-  moduleName: "module01",
-  abilityName: "EntryAbility"
-}, (err: BusinessError, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
     return;
@@ -219,7 +130,47 @@ function setDefaultApplication(type: string, elementName: ElementName, callback:
 
 **示例**
 
-参见 [setDefaultApplication](#setdefaultapplication)
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+
+defaultAppManager.setDefaultApplication("image/png", {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+
+defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+```
 
 
 <a id="setdefaultapplication-2"></a>
@@ -269,4 +220,49 @@ function setDefaultApplication(type: string, elementName: ElementName, userId?: 
 
 **示例**
 
-参见 [setDefaultApplication](#setdefaultapplication)
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}).then((data) => {
+  console.info('Operation successful.');
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+
+let userId = 100;
+defaultAppManager.setDefaultApplication(defaultAppManager.ApplicationType.BROWSER, {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, userId).then((data) => {
+  console.info('Operation successful.');
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+
+defaultAppManager.setDefaultApplication("image/png", {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, userId).then((data) => {
+  console.info('Operation successful.');
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+
+defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, {
+  bundleName: "com.example.myapplication",
+  moduleName: "module01",
+  abilityName: "EntryAbility"
+}, userId).then((data) => {
+  console.info('Operation successful.');
+}).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```

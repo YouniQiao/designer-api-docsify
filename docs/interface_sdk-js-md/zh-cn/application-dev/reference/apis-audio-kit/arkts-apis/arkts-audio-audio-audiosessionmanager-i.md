@@ -56,6 +56,23 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置音频会话并发模式为混音模式。
+let strategy: audio.AudioSessionStrategy = {
+  concurrencyMode: audio.AudioConcurrencyMode.CONCURRENCY_MIX_WITH_OTHERS
+};
+
+audioSessionManager.activateAudioSession(strategy).then(() => {
+  console.info('Succeeded in activating the audio session.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to activate the audio session. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## clearSelectedMediaInputDevice
 
 ```TypeScript
@@ -79,6 +96,18 @@ clearSelectedMediaInputDevice(): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.clearSelectedMediaInputDevice().then(() => {
+  console.info('Succeeded in clearing the selected media input device.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear the selected media input device. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## deactivateAudioSession
 
@@ -106,6 +135,18 @@ deactivateAudioSession(): Promise<void>
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.deactivateAudioSession().then(() => {
+  console.info('Succeeded in deactivating the audio session.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deactivate the audio session. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## enableMuteSuggestionWhenMixWithOthers
 
 ```TypeScript
@@ -132,6 +173,12 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Function is called without setting [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) or called after audio session activation. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, system internal error. |
+
+**示例**
+
+```TypeScript
+audioSessionManager.enableMuteSuggestionWhenMixWithOthers(true);
+```
 
 ## getAvailableDevices
 
@@ -164,6 +211,20 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_OUTPUT_DEVICES);
+  console.info(`Succeeded in obtaining available devices, audioDeviceDescriptors: ${JSON.stringify(data)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain available devices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
 ```TypeScript
@@ -187,6 +248,20 @@ getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredR
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let category: audio.BluetoothAndNearlinkPreferredRecordCategory = audioSessionManager.getBluetoothAndNearlinkPreferredRecordCategory();
+  console.info(`Succeeded in obtaining the bluetooth and nearlink preferred record category, category: ${category}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the bluetooth and nearlink preferred record category. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getDefaultOutputDevice
 
@@ -213,6 +288,12 @@ getDefaultOutputDevice(): DeviceType
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. Return by promise. |
 
+**示例**
+
+```TypeScript
+let deviceType = audioSessionManager.getDefaultOutputDevice();
+```
+
 ## getSelectedMediaInputDevice
 
 ```TypeScript
@@ -237,6 +318,20 @@ getSelectedMediaInputDevice(): AudioDeviceDescriptor
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let device: audio.AudioDeviceDescriptor = audioSessionManager.getSelectedMediaInputDevice();
+  console.info(`Succeeded in obtaining the selected media input device, audioDeviceDescriptor: ${JSON.stringify(device)}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the selected media input device. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## isAudioSessionActivated
 
 ```TypeScript
@@ -257,6 +352,12 @@ isAudioSessionActivated(): boolean
 | --- | --- |
 | boolean | 音频会话是否处于激活状态。true表示已激活，false表示已停用。 |
 
+**示例**
+
+```TypeScript
+let isActivated = audioSessionManager.isAudioSessionActivated();
+```
+
 ## isOtherMediaPlaying
 
 ```TypeScript
@@ -276,6 +377,12 @@ isOtherMediaPlaying(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否有其他应用正在播放媒体类型的音频。true表示有，false表示没有。 |
+
+**示例**
+
+```TypeScript
+let isExistence = audioSessionManager.isOtherMediaPlaying();
+```
 
 ## off('audioSessionDeactivated')
 
@@ -305,6 +412,22 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.off('audioSessionDeactivated');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let audioSessionDeactivatedCallback = (audioSessionDeactivatedEvent: audio.AudioSessionDeactivatedEvent) => {
+  console.info(`Audio session deactivated, audioSessionDeactivatedEvent: ${JSON.stringify(audioSessionDeactivatedEvent)}.`);
+};
+
+audioSessionManager.on('audioSessionDeactivated', audioSessionDeactivatedCallback);
+
+audioSessionManager.off('audioSessionDeactivated', audioSessionDeactivatedCallback);
+```
+
 ## off('audioSessionStateChanged')
 
 ```TypeScript
@@ -330,6 +453,22 @@ off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.off('audioSessionStateChanged');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let audioSessionStateChangedCallback = (audioSessionStateChangedEvent: audio.AudioSessionStateChangedEvent) => {
+  console.info(`Audio session state changed, audioSessionStateChangedEvent: ${JSON.stringify(audioSessionStateChangedEvent)}.`);
+};
+
+audioSessionManager.on('audioSessionStateChanged', audioSessionStateChangedCallback);
+
+audioSessionManager.off('audioSessionStateChanged', audioSessionStateChangedCallback);
+```
 
 ## off('currentOutputDeviceChanged')
 
@@ -357,6 +496,22 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.off('currentOutputDeviceChanged');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let currentOutputDeviceChangedCallback = (currentOutputDeviceChangedEvent: audio.CurrentOutputDeviceChangedEvent) => {
+  console.info(`Current output device changed, currentOutputDeviceChangedEvent: ${JSON.stringify(currentOutputDeviceChangedEvent)}.`);
+};
+
+audioSessionManager.on('currentOutputDeviceChanged', currentOutputDeviceChangedCallback);
+
+audioSessionManager.off('currentOutputDeviceChanged', currentOutputDeviceChangedCallback);
+```
+
 ## off('availableDeviceChange')
 
 ```TypeScript
@@ -382,6 +537,22 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.off('availableDeviceChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let availableDeviceChangeCallback = (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChanged)}.`);
+};
+
+audioSessionManager.on('availableDeviceChange', audio.DeviceUsage.MEDIA_INPUT_DEVICES, availableDeviceChangeCallback);
+
+audioSessionManager.off('availableDeviceChange', availableDeviceChangeCallback);
+```
+
 ## off('currentInputDeviceChanged')
 
 ```TypeScript
@@ -406,6 +577,22 @@ off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceCha
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSessionManager.off('currentInputDeviceChanged');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let currentInputDeviceChangedCallback = (currentInputDeviceChangedEvent: audio.CurrentInputDeviceChangedEvent) => {
+  console.info(`Current input device changed, currentInputDeviceChangedEvent: ${JSON.stringify(currentInputDeviceChangedEvent)}.`);
+};
+
+audioSessionManager.on('currentInputDeviceChanged', currentInputDeviceChangedCallback);
+
+audioSessionManager.off('currentInputDeviceChanged', currentInputDeviceChangedCallback);
+```
 
 ## on('audioSessionDeactivated')
 
@@ -435,6 +622,15 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+audioSessionManager.on('audioSessionDeactivated',
+  (audioSessionDeactivatedEvent: audio.AudioSessionDeactivatedEvent) => {
+  console.info(`Audio session deactivated, audioSessionDeactivatedEvent: ${JSON.stringify(audioSessionDeactivatedEvent)}.`);
+});
+```
+
 ## on('audioSessionStateChanged')
 
 ```TypeScript
@@ -461,6 +657,14 @@ on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChanged
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+audioSessionManager.on('audioSessionStateChanged', (audioSessionStateChangedEvent: audio.AudioSessionStateChangedEvent) => {
+  console.info(`Audio session state changed, audioSessionStateChangedEvent: ${JSON.stringify(audioSessionStateChangedEvent)}.`);
+});
+```
 
 ## on('currentOutputDeviceChanged')
 
@@ -489,6 +693,16 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 | [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+let currentOutputDeviceChangedCallback = (currentOutputDeviceChangedEvent: audio.CurrentOutputDeviceChangedEvent) => {
+  console.info(`Current output device changed, currentOutputDeviceChangedEvent: ${JSON.stringify(currentOutputDeviceChangedEvent)}.`);
+};
+
+audioSessionManager.on('currentOutputDeviceChanged', currentOutputDeviceChangedCallback);
+```
+
 ## on('availableDeviceChange')
 
 ```TypeScript
@@ -516,6 +730,14 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+audioSessionManager.on('availableDeviceChange', audio.DeviceUsage.MEDIA_INPUT_DEVICES, (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Available device changed, deviceChangeAction: ${JSON.stringify(deviceChanged)}.`);
+});
+```
+
 ## on('currentInputDeviceChanged')
 
 ```TypeScript
@@ -541,6 +763,16 @@ on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChang
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+let currentInputDeviceChangedCallback = (currentInputDeviceChangedEvent: audio.CurrentInputDeviceChangedEvent) => {
+  console.info(`Current input device changed, currentInputDeviceChangedEvent: ${JSON.stringify(currentInputDeviceChangedEvent)}.`);
+};
+
+audioSessionManager.on('currentInputDeviceChanged', currentInputDeviceChangedCallback);
+```
 
 ## selectMediaInputDevice
 
@@ -583,6 +815,30 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 获取可用音频输入设备列表，用于后续选择输入设备
+  let data: audio.AudioDeviceDescriptors = audioSessionManager.getAvailableDevices(audio.DeviceUsage.MEDIA_INPUT_DEVICES);
+  console.info(`Succeeded in obtaining available devices, audioDeviceDescriptors: ${JSON.stringify(data)}.`);
+
+  if (data[0]) {
+    // 选择第一个可用设备作为音频输入设备。
+    audioSessionManager.selectMediaInputDevice(data[0]).then(() => {
+      console.info('Succeeded in selecting the media input device.');
+    }).catch((selectErr: BusinessError) => {
+      console.error(`Failed to select the media input device. Code: ${selectErr.code}, message: ${selectErr.message}`);
+    });
+  }
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain available devices. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## setAudioSessionBehavior
 
 ```TypeScript
@@ -615,6 +871,14 @@ setAudioSessionBehavior(behavior: number): void
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted in the current state. |
 
+**示例**
+
+```TypeScript
+// 设置音频会话行为为被打断时静音，当音频被其他应用打断时自动静音。
+let behavior: number = audio.AudioSessionBehaviorFlags.MUTE_WHEN_INTERRUPTED;
+audioSessionManager.setAudioSessionBehavior(behavior);
+```
+
 ## setAudioSessionScene
 
 ```TypeScript
@@ -640,6 +904,12 @@ setAudioSessionScene(scene: AudioSessionScene): void
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+audioSessionManager.setAudioSessionScene(audio.AudioSessionScene.AUDIO_SESSION_SCENE_MEDIA);
+```
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
@@ -679,6 +949,21 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设置蓝牙和星闪录音偏好为低延迟模式，优先使用低延迟设备。
+let category = audio.BluetoothAndNearlinkPreferredRecordCategory.PREFERRED_LOW_LATENCY;
+
+audioSessionManager.setBluetoothAndNearlinkPreferredRecordCategory(category).then(() => {
+  console.info('Succeeded in setting the bluetooth and nearlink preferred record category.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the bluetooth and nearlink preferred record category. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setCapturerMuteHint
 
@@ -720,6 +1005,18 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, there is no audio capturer running. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.setCapturerMuteHint(true).then(() => {
+  console.info('Succeeded in setting the capturer mute hint.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the capturer mute hint. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setDefaultOutputDevice
 
 ```TypeScript
@@ -757,6 +1054,18 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 | [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.setDefaultOutputDevice(audio.DeviceType.SPEAKER).then(() => {
+  console.info('Succeeded in setting the default output device.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the default output device. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setMediaOutputDevice
 
@@ -798,3 +1107,15 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device type is not supported. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioSessionManager.setMediaOutputDevice(audio.DeviceType.SPEAKER).then(() => {
+  console.info('Succeeded in setting the media output device.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the media output device. Code: ${err.code}, message: ${err.message}`);
+});
+```

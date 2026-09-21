@@ -46,7 +46,7 @@ device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddat
 
 | Name | Description |
 | --- | --- |
-| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md) | Creates a **KVManager** instance to manage KV stores. This API uses an asynchronous callback to return the result. |
+| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) | Creates a **KVManager** instance to manage KV stores. This API uses an asynchronous callback to return the result. |
 | [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1) | Creates a **KVManager** instance to manage KV stores. This API uses a promise to return the result. |
 
 ### Classes

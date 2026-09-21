@@ -36,20 +36,6 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avImageGenerator: media.AVImageGenerator;
-media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info('Succeeded in creating AVImageGenerator');
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avImageGenerator: media.AVImageGenerator;
 media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
   if (generator) {
     avImageGenerator = generator;
@@ -91,4 +77,16 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 
 **示例**
 
-参见 [createAVImageGenerator](#createavimagegenerator)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avImageGenerator: media.AVImageGenerator;
+media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
+  if (generator) {
+    avImageGenerator = generator;
+    console.info('Succeeded in creating AVImageGenerator');
+  } else {
+    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
+  }
+});
+```

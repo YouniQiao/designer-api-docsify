@@ -25,7 +25,7 @@ import { browser } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getManagedBrowserPolicy](arkts-mdm-browser-getmanagedbrowserpolicy-f.md) | 通过应用包名获取指定浏览器的浏览器策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
-| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md) | 通过appid获取指定浏览器设置的策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
+| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync) | 通过appid获取指定浏览器设置的策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
 | [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync-1) | 通过appid获取指定浏览器设置的策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
 | [getSelfManagedBrowserPolicy](arkts-mdm-browser-getselfmanagedbrowserpolicy-f.md) | 获取当前设备浏览器策略。 |
 | [getSelfManagedBrowserPolicyVersion](arkts-mdm-browser-getselfmanagedbrowserpolicyversion-f.md) | 获取当前设备浏览器策略版本。 |
@@ -37,8 +37,8 @@ import { browser } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getPolicies](arkts-mdm-browser-getpolicies-f-sys.md) | 获取指定浏览器的策略，使用callback异步回调。 |
+| [getPolicies](arkts-mdm-browser-getpolicies-f-sys.md#getpolicies) | 获取指定浏览器的策略，使用callback异步回调。 |
 | [getPolicies](arkts-mdm-browser-getpolicies-f-sys.md#getpolicies-1) | 获取指定浏览器的策略，使用Promise异步回调。 |
-| [setPolicies](arkts-mdm-browser-setpolicies-f-sys.md) | 为指定的浏览器设置浏览策略，使用callback异步回调。 |
+| [setPolicies](arkts-mdm-browser-setpolicies-f-sys.md#setpolicies) | 为指定的浏览器设置浏览策略，使用callback异步回调。 |
 | [setPolicies](arkts-mdm-browser-setpolicies-f-sys.md#setpolicies-1) | 为指定的浏览器设置浏览策略，使用Promise异步回调。 |
 <!--DelEnd-->

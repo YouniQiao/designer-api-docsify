@@ -24,7 +24,7 @@ alignType: MenuAlignType
 
 Alignment type. Default value: **MenuAlignType.START**
 
-**Type:** [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md)
+**Type:** [MenuAlignType](../arkts-components/arkts-arkui-select-comp-menualigntype-e.md)
 
 **Since:** 18
 

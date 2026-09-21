@@ -24,7 +24,7 @@ Called when a indicator is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | No | indicator component controller. |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponent-comp-indicatorcomponentcontroller-c.md) | No | indicator component controller. |
 
 ## Summary
 
@@ -33,7 +33,7 @@ Called when a indicator is set.
 ```TypeScript
 ### Example 1: Using a Dot Indicator with a Swiper Component
 
-This example binds the same [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) object to both the [indicator](ts-container-swiper.md#indicator) API of the [Swiper](ts-container-swiper.md) component and the [IndicatorComponent](#indicatorcomponent) constructor, enabling interaction between the dot indicator and the Swiper component.
+This example binds the same [IndicatorComponentController](arkts-arkui-indicatorcomponent-comp-indicatorcomponentcontroller-c.md) object to both the [indicator](ts-container-swiper.md#indicator) API of the [Swiper](ts-container-swiper.md) component and the [IndicatorComponent](#indicatorcomponent) constructor, enabling interaction between the dot indicator and the Swiper component.
 
 
 ```
@@ -41,5 +41,5 @@ This example binds the same [IndicatorComponentController](arkts-arkui-indicator
 ```TypeScript
 ### Example 2: Using a Digit Indicator with a Swiper Component
 
-This example binds the same [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) object to both the [indicator](ts-container-swiper.md#indicator) API of the [Swiper](ts-container-swiper.md) component and the [IndicatorComponent](#indicatorcomponent) constructor, enabling interaction between the digit indicator and the Swiper component.
+This example binds the same [IndicatorComponentController](arkts-arkui-indicatorcomponent-comp-indicatorcomponentcontroller-c.md) object to both the [indicator](ts-container-swiper.md#indicator) API of the [Swiper](ts-container-swiper.md) component and the [IndicatorComponent](#indicatorcomponent) constructor, enabling interaction between the digit indicator and the Swiper component.
 ```

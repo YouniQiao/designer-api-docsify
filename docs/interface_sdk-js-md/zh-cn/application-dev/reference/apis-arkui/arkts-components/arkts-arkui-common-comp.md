@@ -12,6 +12,8 @@ Common()
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -71,292 +73,292 @@ Common()
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
-| [AlignRuleOption](arkts-arkui-alignruleoption-i.md) | Defines the align rule options of relative container. |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。 |
-| [AnimateParam](arkts-arkui-animateparam-i.md) | 动画效果相关参数。 |
-| [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md) | 区域变化相关的参数。 |
-| [AttributeModifier](arkts-arkui-attributemodifier-i.md) | Defines the attribute modifier. |
-| [AxisEvent](arkts-arkui-axisevent-i.md) | 轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
-| [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)。 |
-| [BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
-| [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | 背景效果参数。 |
-| [BackgroundImageOptions](arkts-arkui-backgroundimageoptions-i.md) | 定义背景图选项。 |
-| [BackgroundOptions](arkts-arkui-backgroundoptions-i.md) | background配置选项。 |
-| [BaseEvent](arkts-arkui-baseevent-i.md) | 基础事件类型。 |
-| [BindOptions](arkts-arkui-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
-| [BlurOptions](arkts-arkui-bluroptions-i.md) | 灰阶模糊参数。 |
-| [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md) | 模糊快照优化选项。设置该对象后，将开启模糊优化。 |
-| [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
-| [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Border image option |
-| [Callback](arkts-arkui-callback-i.md) | 定义基础的回调函数。 |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) | 光标相对输入框的位置信息。 |
-| [ClickEffect](arkts-arkui-clickeffect-i.md) | 定义点击回弹效果。 |
-| [ClickEvent](arkts-arkui-clickevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
-| [CommonConfiguration](arkts-arkui-commonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
-| [ComponentOptions](arkts-arkui-componentoptions-i.md) | 自定义组件参数，用于配置是否支持组件冻结和全局复用池，适用于需要优化自定义组件性能表现和提升组件复用效率的场景。 |
-| [Configuration](arkts-arkui-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-arkui-bindoptions-i.md)。 |
-| [ContentModifier](arkts-arkui-contentmodifier-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
-| [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) | 长按预览时显示的样式信息。 |
-| [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 菜单项的信息。 |
-| [CrownEvent](arkts-arkui-crownevent-i.md) | 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。 |
-| [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) | 弹出自定义气泡的信息。 |
-| [DateRange](arkts-arkui-daterange-i.md) | Defines a range of dates. |
-| [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。用于为组件设置空间效果参数。 |
-| [DepthVector3](arkts-arkui-depthvector3-i-sys.md) | 深度空间中的三维向量。用于为组件设置空间效果参数。 |
-| [DepthVector4](arkts-arkui-depthvector4-i-sys.md) | 深度空间中的4D向量。用于为组件设置空间效果参数。 |
-| [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md) |  |
-| [DismissPopupAction](arkts-arkui-dismisspopupaction-i.md) | 气泡关闭的信息。 |
-| [DismissSheetAction](arkts-arkui-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
-| [DragEvent](arkts-arkui-dragevent-i.md) | 拖拽事件信息。 |
-| [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | 设置拖拽过程中预览图浮起的交互模式。 |
-| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) | 定义拖拽过程中拖拽项的相关信息。 |
-| [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
-| [DropOptions](arkts-arkui-dropoptions-i.md) | 设置落入过程的参数。 |
-| [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | edgeEffect属性参数对象。 |
-| [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) | 定义边缘流光效果参数。 |
-| [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | List/Grid组件编辑模式选项属性参数对象。 |
-| [EntryOptions](arkts-arkui-entryoptions-i.md) | 页面入口配置选项，用于在\@Entry装饰页面时配置路由名称、状态存储和共享存储等参数。 |
-| [EventTarget](arkts-arkui-eventtarget-i.md) | [BaseEvent](arkts-arkui-baseevent-i.md)中参数target的类型。 |
-| [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md) | 设置动画期望的帧率。 |
-| [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | fadingEdge属性边缘渐隐参数对象。 |
-| [FocusAxisEvent](arkts-arkui-focusaxisevent-i.md) | 焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
-| [FocusMovement](arkts-arkui-focusmovement-i.md) | 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。 |
-| [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)，内容模糊样式选项。 |
-| [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md) | 前景效果参数，用于配置组件前景的模糊半径，控制前景内容的模糊程度。 |
-| [GeometryInfo](arkts-arkui-geometryinfo-i.md) | 父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md)。 |
-| [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) |  |
-| [GestureModifier](arkts-arkui-gesturemodifier-i.md) | 开发者需要自定义class实现GestureModifier接口。 |
-| [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
-| [HistoricalPoint](arkts-arkui-historicalpoint-i.md) | 历史点信息。 |
-| [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md) | 定义相对容器的水平对齐规则。 |
-| [HoverEvent](arkts-arkui-hoverevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
-| [ICurve](arkts-arkui-icurve-i.md) | 曲线对象。 |
-| [IMonitor](arkts-arkui-imonitor-i.md) | 当监听的状态变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型为IMonitor。 |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md) | @Monitor监听状态变量变化的具体信息，通过IMonitor的value接口获取。T为状态变量类型。 |
-| [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | 计数器的配置项。 |
-| [InputEventInterceptResult](arkts-arkui-inputeventinterceptresult-i.md) | 输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-inputeventlistener-t.md)返回是否拦截的决策。 |
-| [InputEventMonitor](arkts-arkui-inputeventmonitor-i.md) | 输入事件监听器标识对象。 |
-| [InvertOptions](arkts-arkui-invertoptions-i.md) | 前景智能取反色。基于灰度阈值区间决定反色取值，参见[invert](arkts-arkui-commonmethod-c.md#invert)中的详细机制说明。 |
-| [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | 定义拖拽事件 |
-| [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 拖拽点信息对象。 |
-| [KeyEvent](arkts-arkui-keyevent-i.md) | 按键事件信息。 |
-| [KeyframeAnimateParam](arkts-arkui-keyframeanimateparam-i.md) | 动画选项设置。 |
-| [KeyframeState](arkts-arkui-keyframestate-i.md) | 关键帧状态设置。 |
-| [Layoutable](arkts-arkui-layoutable-i.md) | 子组件布局信息。 |
-| [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md) | 子组件边框信息 |
-| [LayoutChild](arkts-arkui-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
-| [LayoutInfo](arkts-arkui-layoutinfo-i.md) | 子组件布局位置信息 |
-| [LightSource](arkts-arkui-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
-| [LinearGradient](arkts-arkui-lineargradient-i.md) | Linear Gradient Interface |
-| [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) |  |
-| [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md) | 线性渐变的参数。 |
-| [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
-| [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
-| [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
-| [Measurable](arkts-arkui-measurable-i.md) | 子组件位置信息。 |
-| [MeasureResult](arkts-arkui-measureresult-i.md) | Sub component MeasureResult info. |
-| [MenuElement](arkts-arkui-menuelement-i.md) | 菜单项的图标、文本和交互信息。 |
-| [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md) | 菜单栅格样式选项。 |
-| [MenuMaskType](arkts-arkui-menumasktype-i.md) | 设置蒙层样式。 |
-| [MenuOptions](arkts-arkui-menuoptions-i.md) | 配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。 |
-| [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | @Monitor装饰器的配置选项。 |
-| [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md) | 运动模糊锚点坐标。 |
-| [MotionBlurOptions](arkts-arkui-motionbluroptions-i.md) | 运动模糊选项。 |
-| [MotionPathOptions](arkts-arkui-motionpathoptions-i.md) | 路径动画的运动路径参数选项。 |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
-| [MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md) | 鼠标事件历史点信息。 |
-| [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) | 投影样式参数。 |
-| [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | nestedScroll属性参数对象。 |
-| [OverlayOffset](arkts-arkui-overlayoffset-i.md) | 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。 |
-| [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 浮层的定位。 |
-| [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
-| [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Provide an interface for the text style of picker |
-| [PixelMapMock](arkts-arkui-pixelmapmock-i-sys.md) | 带有release函数的像素图对象。 |
-| [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | 指定组件级像素取整的方向。 |
-| [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | 像素扩展属性集合，用于描述像素扩展的信息。 |
-| [PointLightStyle](arkts-arkui-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
-| [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md) | 弹出边框线性渐变色。 |
-| [PopupCommonOptions](arkts-arkui-popupcommonoptions-i.md) | 配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的[getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到[PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用[openPopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#openpopup)和[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)时传入的options参数。 |
-| [PopupMaskType](arkts-arkui-popupmasktype-i.md) | 设置遮罩层颜色。 |
-| [PopupMessageOptions](arkts-arkui-popupmessageoptions-i.md) | 气泡文本的样式。 |
-| [PopupOptions](arkts-arkui-popupoptions-i.md) | 基础气泡的信息。 |
-| [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | 气泡的显示状态。 |
-| [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | 配置自定义拖拽过程中的预览图样式。 |
-| [PreviewParams](arkts-arkui-previewparams-i.md) | @Preview参数对象。 |
-| [ProvideOptions](arkts-arkui-provideoptions-i.md) | ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOverride重写同名的\@Provide，适用于子组件需要覆盖父组件同名\@Provide值的场景，提高了跨层级状态管理的灵活性。具体例子可见[\@Provide支持allowOverride参数](../../../ui/state-management/arkts-provide-and-consume.md#provide支持allowoverride参数)。 |
-| [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | 径向渐变参数。 |
-| [Rectangle](arkts-arkui-rectangle-i.md) | 矩形区域类型。 |
-| [RectResult](arkts-arkui-rectresult-i.md) | 位置和尺寸类型，用于描述组件的位置和宽高。 |
-| [ResponseRegion](arkts-arkui-responseregion-i.md) | 由输入工具类型、触摸位置和大小组成的触摸热区。 |
-| [ReusableOptions](arkts-arkui-reusableoptions-i.md) | 可复用自定义组件的参数，用于配置内存优化策略，适用于需要降低可复用自定义组件内存使用量的场景。 |
-| [ReuseOptions](arkts-arkui-reuseoptions-i.md) | 复用选项，用于配置复用标识ID，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。 |
-| [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
-| [RotateOptions](arkts-arkui-rotateoptions-i.md) | 组件旋转参数。 |
-| [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 定义缩放选项。 |
-| [SelectionOptions](arkts-arkui-selectionoptions-i.md) | setTextSelection选中文字时的配置。 |
-| [ShadowOptions](arkts-arkui-shadowoptions-i.md) | 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
-| [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | 共享元素转场动效参数。 |
-| [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | 控制半模态的关闭。 |
-| [SheetOptions](arkts-arkui-sheetoptions-i.md) | 继承自[BindOptions](arkts-arkui-bindoptions-i.md)。 |
-| [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | 半模态面板的标题。 |
-| [SizeResult](arkts-arkui-sizeresult-i.md) | 组件尺寸信息。 |
-| [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | 智慧手势响应行为配置对象。 |
-| [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) | 空间效果选项。用于为组件设置空间效果参数。 |
-| [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | 三维空间中的空间角位置。用于为组件设置空间效果参数。 |
-| [SpringBackAction](arkts-arkui-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
-| [StateStyles](arkts-arkui-statestyles-i.md) | 组件不同状态下的样式。 |
-| [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | 角度渐变参数。 |
-| [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | 系统自适应调节参数，系统会默认开启根据芯片算力进行自适应效果调节的能力。 |
-| [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 用于设置输入框插入字符时的配置选项。 |
-| [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 文本装饰线的配置项。 |
-| [TipsOptions](arkts-arkui-tipsoptions-i.md) | 悬浮气泡自定义参数。 |
-| [TouchEvent](arkts-arkui-touchevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。 |
-| [TouchObject](arkts-arkui-touchobject-i.md) | 触摸事件类型。 |
-| [TransitionOptions](arkts-arkui-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
-| [TranslateOptions](arkts-arkui-translateoptions-i.md) | 定义平移选项。 |
-| [UICommonEvent](arkts-arkui-uicommonevent-i.md) | 用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。 |
-| [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | 用于设置组件绑定的手势。 |
-| [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md) | 用于设置滚动事件回调。 |
-| [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md) | 定义相对容器的垂直对齐规则。 |
-| [VisibleAreaEventOptions](arkts-arkui-visibleareaeventoptions-i.md) | 关于区域变化相关的参数。 |
+| [AccessibilityHoverEvent](arkts-arkui-common-comp-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
+| [AlignRuleOption](arkts-arkui-common-comp-alignruleoption-i.md) | Defines the align rule options of relative container. |
+| [AnimatableArithmetic](arkts-arkui-common-comp-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。 |
+| [AnimateParam](arkts-arkui-common-comp-animateparam-i.md) | 动画效果相关参数。 |
+| [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | 区域变化相关的参数。 |
+| [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md) | Defines the attribute modifier. |
+| [AxisEvent](arkts-arkui-common-comp-axisevent-i.md) | 轴事件的对象说明，继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
+| [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md)。 |
+| [BackgroundBrightnessOptions](arkts-arkui-common-comp-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
+| [BackgroundEffectOptions](arkts-arkui-common-comp-backgroundeffectoptions-i.md) | 背景效果参数。 |
+| [BackgroundImageOptions](arkts-arkui-common-comp-backgroundimageoptions-i.md) | 定义背景图选项。 |
+| [BackgroundOptions](arkts-arkui-common-comp-backgroundoptions-i.md) | background配置选项。 |
+| [BaseEvent](arkts-arkui-common-comp-baseevent-i.md) | 基础事件类型。 |
+| [BindOptions](arkts-arkui-common-comp-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
+| [BlurOptions](arkts-arkui-common-comp-bluroptions-i.md) | 灰阶模糊参数。 |
+| [BlurSnapshotOptions](arkts-arkui-common-comp-blursnapshotoptions-i-sys.md) | 模糊快照优化选项。设置该对象后，将开启模糊优化。 |
+| [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
+| [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | Border image option |
+| [Callback](arkts-arkui-common-comp-callback-i.md) | 定义基础的回调函数。 |
+| [CaretOffset](arkts-arkui-common-comp-caretoffset-i.md) | 光标相对输入框的位置信息。 |
+| [ClickEffect](arkts-arkui-common-comp-clickeffect-i.md) | 定义点击回弹效果。 |
+| [ClickEvent](arkts-arkui-common-comp-clickevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
+| [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
+| [ComponentOptions](arkts-arkui-common-comp-componentoptions-i.md) | 自定义组件参数，用于配置是否支持组件冻结和全局复用池，适用于需要优化自定义组件性能表现和提升组件复用效率的场景。 |
+| [Configuration](arkts-arkui-common-comp-configuration-i.md) | Defines the data type of the interface restriction. |
+| [ContentCoverOptions](arkts-arkui-common-comp-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-arkui-common-comp-bindoptions-i.md)。 |
+| [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
+| [ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md) | 长按预览时显示的样式信息。 |
+| [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 菜单项的信息。 |
+| [CrownEvent](arkts-arkui-common-comp-crownevent-i.md) | 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。 |
+| [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | 弹出自定义气泡的信息。 |
+| [DateRange](arkts-arkui-common-comp-daterange-i.md) | Defines a range of dates. |
+| [DepthColorRGB](arkts-arkui-common-comp-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。用于为组件设置空间效果参数。 |
+| [DepthVector3](arkts-arkui-common-comp-depthvector3-i-sys.md) | 深度空间中的三维向量。用于为组件设置空间效果参数。 |
+| [DepthVector4](arkts-arkui-common-comp-depthvector4-i-sys.md) | 深度空间中的4D向量。用于为组件设置空间效果参数。 |
+| [DismissContentCoverAction](arkts-arkui-common-comp-dismisscontentcoveraction-i.md) |  |
+| [DismissPopupAction](arkts-arkui-common-comp-dismisspopupaction-i.md) | 气泡关闭的信息。 |
+| [DismissSheetAction](arkts-arkui-common-comp-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
+| [DragEvent](arkts-arkui-common-comp-dragevent-i.md) | 拖拽事件信息。 |
+| [DragInteractionOptions](arkts-arkui-common-comp-draginteractionoptions-i.md) | 设置拖拽过程中预览图浮起的交互模式。 |
+| [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) | 定义拖拽过程中拖拽项的相关信息。 |
+| [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
+| [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | 设置落入过程的参数。 |
+| [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | edgeEffect属性参数对象。 |
+| [EdgeLightParams](arkts-arkui-common-comp-edgelightparams-i-sys.md) | 定义边缘流光效果参数。 |
+| [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | List/Grid组件编辑模式选项属性参数对象。 |
+| [EntryOptions](arkts-arkui-common-comp-entryoptions-i.md) | 页面入口配置选项，用于在\@Entry装饰页面时配置路由名称、状态存储和共享存储等参数。 |
+| [EventTarget](arkts-arkui-common-comp-eventtarget-i.md) | [BaseEvent](arkts-arkui-common-comp-baseevent-i.md)中参数target的类型。 |
+| [ExpectedFrameRateRange](arkts-arkui-common-comp-expectedframeraterange-i.md) | 设置动画期望的帧率。 |
+| [FadingEdgeOptions](arkts-arkui-common-comp-fadingedgeoptions-i.md) | fadingEdge属性边缘渐隐参数对象。 |
+| [FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md) | 焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
+| [FocusMovement](arkts-arkui-common-comp-focusmovement-i.md) | 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。 |
+| [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md)，内容模糊样式选项。 |
+| [ForegroundEffectOptions](arkts-arkui-common-comp-foregroundeffectoptions-i.md) | 前景效果参数，用于配置组件前景的模糊半径，控制前景内容的模糊程度。 |
+| [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | 父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-common-comp-sizeresult-i.md)。 |
+| [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) |  |
+| [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | 开发者需要自定义class实现GestureModifier接口。 |
+| [GravityCenterOptions](arkts-arkui-common-comp-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
+| [HistoricalPoint](arkts-arkui-common-comp-historicalpoint-i.md) | 历史点信息。 |
+| [HorizontalAlignParam](arkts-arkui-common-comp-horizontalalignparam-i.md) | 定义相对容器的水平对齐规则。 |
+| [HoverEvent](arkts-arkui-common-comp-hoverevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
+| [ICurve](arkts-arkui-common-comp-icurve-i.md) | 曲线对象。 |
+| [IMonitor](arkts-arkui-common-comp-imonitor-i.md) | 当监听的状态变量变化时，状态管理框架侧将回调开发者注册的函数，并传入变化信息。变化信息的类型为IMonitor。 |
+| [IMonitorValue](arkts-arkui-common-comp-imonitorvalue-i.md) | @Monitor监听状态变量变化的具体信息，通过IMonitor的value接口获取。T为状态变量类型。 |
+| [InputCounterOptions](arkts-arkui-common-comp-inputcounteroptions-i.md) | 计数器的配置项。 |
+| [InputEventInterceptResult](arkts-arkui-common-comp-inputeventinterceptresult-i.md) | 输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md)返回是否拦截的决策。 |
+| [InputEventMonitor](arkts-arkui-common-comp-inputeventmonitor-i.md) | 输入事件监听器标识对象。 |
+| [InvertOptions](arkts-arkui-common-comp-invertoptions-i.md) | 前景智能取反色。基于灰度阈值区间决定反色取值，参见[invert](arkts-arkui-common-comp-commonmethod-c.md#invert)中的详细机制说明。 |
+| [ItemDragEventHandler](arkts-arkui-common-comp-itemdrageventhandler-i.md) | 定义拖拽事件 |
+| [ItemDragInfo](arkts-arkui-common-comp-itemdraginfo-i.md) | 拖拽点信息对象。 |
+| [KeyEvent](arkts-arkui-common-comp-keyevent-i.md) | 按键事件信息。 |
+| [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | 动画选项设置。 |
+| [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | 关键帧状态设置。 |
+| [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | 子组件布局信息。 |
+| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息 |
+| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
+| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息 |
+| [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
+| [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
+| [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) |  |
+| [LinearGradientOptions](arkts-arkui-common-comp-lineargradientoptions-i.md) | 线性渐变的参数。 |
+| [LocalizedAlignRuleOptions](arkts-arkui-common-comp-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
+| [LocalizedHorizontalAlignParam](arkts-arkui-common-comp-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
+| [LocalizedVerticalAlignParam](arkts-arkui-common-comp-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
+| [Measurable](arkts-arkui-common-comp-measurable-i.md) | 子组件位置信息。 |
+| [MeasureResult](arkts-arkui-common-comp-measureresult-i.md) | Sub component MeasureResult info. |
+| [MenuElement](arkts-arkui-common-comp-menuelement-i.md) | 菜单项的图标、文本和交互信息。 |
+| [MenuGridStyleOptions](arkts-arkui-common-comp-menugridstyleoptions-i.md) | 菜单栅格样式选项。 |
+| [MenuMaskType](arkts-arkui-common-comp-menumasktype-i.md) | 设置蒙层样式。 |
+| [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | 配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)。 |
+| [MonitorDecoratorOptions](arkts-arkui-common-comp-monitordecoratoroptions-i.md) | @Monitor装饰器的配置选项。 |
+| [MotionBlurAnchor](arkts-arkui-common-comp-motionbluranchor-i.md) | 运动模糊锚点坐标。 |
+| [MotionBlurOptions](arkts-arkui-common-comp-motionbluroptions-i.md) | 运动模糊选项。 |
+| [MotionPathOptions](arkts-arkui-common-comp-motionpathoptions-i.md) | 路径动画的运动路径参数选项。 |
+| [MouseEvent](arkts-arkui-common-comp-mouseevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
+| [MouseHistoricalPoint](arkts-arkui-common-comp-mousehistoricalpoint-i.md) | 鼠标事件历史点信息。 |
+| [MultiShadowOptions](arkts-arkui-common-comp-multishadowoptions-i.md) | 投影样式参数。 |
+| [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | nestedScroll属性参数对象。 |
+| [OverlayOffset](arkts-arkui-common-comp-overlayoffset-i.md) | 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。 |
+| [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | 浮层的定位。 |
+| [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
+| [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Provide an interface for the text style of picker |
+| [PixelMapMock](arkts-arkui-common-comp-pixelmapmock-i-sys.md) | 带有release函数的像素图对象。 |
+| [PixelRoundPolicy](arkts-arkui-common-comp-pixelroundpolicy-i.md) | 指定组件级像素取整的方向。 |
+| [PixelStretchEffectOptions](arkts-arkui-common-comp-pixelstretcheffectoptions-i.md) | 像素扩展属性集合，用于描述像素扩展的信息。 |
+| [PointLightStyle](arkts-arkui-common-comp-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
+| [PopupBorderLinearGradient](arkts-arkui-common-comp-popupborderlineargradient-i.md) | 弹出边框线性渐变色。 |
+| [PopupCommonOptions](arkts-arkui-common-comp-popupcommonoptions-i.md) | 配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的[getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到[PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用[openPopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#openpopup)和[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)时传入的options参数。 |
+| [PopupMaskType](arkts-arkui-common-comp-popupmasktype-i.md) | 设置遮罩层颜色。 |
+| [PopupMessageOptions](arkts-arkui-common-comp-popupmessageoptions-i.md) | 气泡文本的样式。 |
+| [PopupOptions](arkts-arkui-common-comp-popupoptions-i.md) | 基础气泡的信息。 |
+| [PopupStateChangeParam](arkts-arkui-common-comp-popupstatechangeparam-i.md) | 气泡的显示状态。 |
+| [PreviewConfiguration](arkts-arkui-common-comp-previewconfiguration-i.md) | 配置自定义拖拽过程中的预览图样式。 |
+| [PreviewParams](arkts-arkui-common-comp-previewparams-i.md) | @Preview参数对象。 |
+| [ProvideOptions](arkts-arkui-common-comp-provideoptions-i.md) | ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOverride重写同名的\@Provide，适用于子组件需要覆盖父组件同名\@Provide值的场景，提高了跨层级状态管理的灵活性。具体例子可见[\@Provide支持allowOverride参数](../../../ui/state-management/arkts-provide-and-consume.md#provide支持allowoverride参数)。 |
+| [RadialGradientOptions](arkts-arkui-common-comp-radialgradientoptions-i.md) | 径向渐变参数。 |
+| [Rectangle](arkts-arkui-common-comp-rectangle-i.md) | 矩形区域类型。 |
+| [RectResult](arkts-arkui-common-comp-rectresult-i.md) | 位置和尺寸类型，用于描述组件的位置和宽高。 |
+| [ResponseRegion](arkts-arkui-common-comp-responseregion-i.md) | 由输入工具类型、触摸位置和大小组成的触摸热区。 |
+| [ReusableOptions](arkts-arkui-common-comp-reusableoptions-i.md) | 可复用自定义组件的参数，用于配置内存优化策略，适用于需要降低可复用自定义组件内存使用量的场景。 |
+| [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | 复用选项，用于配置复用标识ID，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。 |
+| [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
+| [RotateOptions](arkts-arkui-common-comp-rotateoptions-i.md) | 组件旋转参数。 |
+| [ScaleOptions](arkts-arkui-common-comp-scaleoptions-i.md) | 定义缩放选项。 |
+| [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | setTextSelection选中文字时的配置。 |
+| [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) | 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
+| [sharedTransitionOptions](arkts-arkui-common-comp-sharedtransitionoptions-i.md) | 共享元素转场动效参数。 |
+| [SheetDismiss](arkts-arkui-common-comp-sheetdismiss-i.md) | 控制半模态的关闭。 |
+| [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) | 继承自[BindOptions](arkts-arkui-common-comp-bindoptions-i.md)。 |
+| [SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md) | 半模态面板的标题。 |
+| [SizeResult](arkts-arkui-common-comp-sizeresult-i.md) | 组件尺寸信息。 |
+| [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md) | 智慧手势响应行为配置对象。 |
+| [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) | 空间效果选项。用于为组件设置空间效果参数。 |
+| [SpatialPosition](arkts-arkui-common-comp-spatialposition-i-sys.md) | 三维空间中的空间角位置。用于为组件设置空间效果参数。 |
+| [SpringBackAction](arkts-arkui-common-comp-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
+| [StateStyles](arkts-arkui-common-comp-statestyles-i.md) | 组件不同状态下的样式。 |
+| [SweepGradientOptions](arkts-arkui-common-comp-sweepgradientoptions-i.md) | 角度渐变参数。 |
+| [SystemAdaptiveOptions](arkts-arkui-common-comp-systemadaptiveoptions-i.md) | 系统自适应调节参数，系统会默认开启根据芯片算力进行自适应效果调节的能力。 |
+| [TextContentControllerOptions](arkts-arkui-common-comp-textcontentcontrolleroptions-i.md) | 用于设置输入框插入字符时的配置选项。 |
+| [TextDecorationOptions](arkts-arkui-common-comp-textdecorationoptions-i.md) | 文本装饰线的配置项。 |
+| [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | 悬浮气泡自定义参数。 |
+| [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。 |
+| [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | 触摸事件类型。 |
+| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
+| [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | 定义平移选项。 |
+| [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | 用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。 |
+| [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | 用于设置组件绑定的手势。 |
+| [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | 用于设置滚动事件回调。 |
+| [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | 定义相对容器的垂直对齐规则。 |
+| [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | 关于区域变化相关的参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | 定义onAccessibilityActionIntercept中使用的回调类型。 |
-| [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) | 提供开启无障碍模式后的无障碍悬浮回调事件类型。 |
-| [AccessibilityFocusCallback](arkts-arkui-accessibilityfocuscallback-t.md) | 定义onAccessibilityFocus中使用的回调类型。 |
-| [AccessibilityTransparentCallback](arkts-arkui-accessibilitytransparentcallback-t.md) | 提供开启朗读类辅助应用后未能被无障碍悬浮响应的触摸事件回调类型。 |
-| [AnimationRange](arkts-arkui-animationrange-t.md) | 动画开始和结束时相对预览原图缩放比例。 |
-| [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | 组件区域变化事件的回调类型。 |
-| [Blender](arkts-arkui-blender-t-sys.md) | [Blender](arkts-arkui-blender-t-sys.md) |
-| [BorderRadiusType](arkts-arkui-borderradiustype-t.md) | 圆角类型。 |
-| [BuilderCallback](arkts-arkui-buildercallback-t.md) | `BuilderCallback`是全局`@Builder`函数的类型别名，作为`mutableBuilder`函数的入参类型，用于指定待封装的全局`@Builder`函数。 |
-| [CircleShape](arkts-arkui-circleshape-t.md) | 导入CircleShape类型对象。 |
-| [ComponentContent](arkts-arkui-componentcontent-t.md) | 组件内容的实体封装。 |
-| [Context](arkts-arkui-context-t.md) | Get context. |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 定义CustomBuilder类型。 |
-| [CustomBuilderT](arkts-arkui-custombuildert-t.md) | 定义带参数的CustomBuilder类型 |
-| [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 落入操作时使用的数据加载参数。 |
-| [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 作为startDataLoading的入参对象。 |
-| [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | 定义拖拽的悬停检测配置参数的接口。 |
-| [DrawContext](arkts-arkui-drawcontext-t.md) | [DrawContext](arkts-arkui-drawcontext-t.md) |
-| [EllipseShape](arkts-arkui-ellipseshape-t.md) | 导入EllipseShape类型对象。 |
-| [EnvDecorator](arkts-arkui-envdecorator-t.md) | 定义EnvDecorator属性装饰器类型。 |
-| [Filter](arkts-arkui-filter-t.md) | 导入Filter类型对象。 |
-| [FractionStop](arkts-arkui-fractionstop-t.md) | 定义模糊段。 |
-| [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | 定义在[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept)中使用的回调类型。 |
-| [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | 自定义手势识别器判定回调类型。 |
-| [HoverCallback](arkts-arkui-hovercallback-t.md) | hover事件的回调类型。 |
-| [ImageModifier](arkts-arkui-imagemodifier-t.md) | [ImageModifier](arkts-arkui-imagemodifier-t.md) |
-| [InputEventListener](arkts-arkui-inputeventlistener-t.md) | 输入事件监听器回调函数类型。 |
-| [IntentionCode](arkts-arkui-intentioncode-t.md) | 按键对应的意图。 |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) | 为普通方法导入Matrix4Transit类型对象。@typedef { import('../api/@ohos.matrix4').default.Matrix4Transit } Matrix4Transit |
-| [MonitorDecorator](arkts-arkui-monitordecorator-t.md) | @Monitor装饰器的实际类型。 |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) | NavDestinationInfo实例对象。 |
-| [NavigationInfo](arkts-arkui-navigationinfo-t.md) | NavigationInfo实例对象。 |
-| [OnDidStopDraggingCallback](arkts-arkui-ondidstopdraggingcallback-t.md) | 滚动组件在结束拖拽时触发的回调。 |
-| [OnDragEventCallback](arkts-arkui-ondrageventcallback-t.md) | 拖拽事件的回调函数。 |
-| [OnGetPreviewBadgeCallback](arkts-arkui-ongetpreviewbadgecallback-t.md) | 即将启动多选长按聚拢动画时，触发用于获取选中数量的回调。 |
-| [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 开始拖拽列表或网格元素时触发的回调。 |
-| [OnMoveHandler](arkts-arkui-onmovehandler-t.md) | 定义数据源拖拽回调。 |
-| [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) | 当绑定该方法的组件判断是否需要键盘时，将触发此回调。前提条件：组件需可获焦，否则本接口不生效。 |
-| [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) | 滚动组件滑动时触发的回调。 |
-| [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) | 懒加载布局容器[LazyColumnLayout](../arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-con.md#lazycolumnlayout)、LazyVGridLayout、[LazyVWaterFlowLayout](../arkts-apis/arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#lazyvwaterflowlayout)所显示的子组件索引发生变化时的回调类型。 |
-| [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
-| [OnWillStopDraggingCallback](arkts-arkui-onwillstopdraggingcallback-t.md) | 滚动组件划动离手时触发的回调。 |
-| [Optional](arkts-arkui-optional-t.md) | 定义可选类型，其值可以是undefined。 |
-| [PathShape](arkts-arkui-pathshape-t.md) | 导入PathShape类型对象。 |
-| [PixelMap](arkts-arkui-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
-| [PointerStyle](arkts-arkui-pointerstyle-t.md) | 光标样式。 |
-| [PopupStateChangeCallback](arkts-arkui-popupstatechangecallback-t.md) | 气泡状态变化事件回调。 |
-| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) | 从promptAction导入弹出框控制器类型 |
-| [RectShape](arkts-arkui-rectshape-t.md) | 导入RectShape类型对象。 |
-| [ReuseIdCallback](arkts-arkui-reuseidcallback-t.md) | 获取复用标识ID的回调方法。 |
-| [ReusePoolOwnership](arkts-arkui-reusepoolownership-t.md) | 全局复用池的持有类型。 |
-| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) | RouterPageInfo实例对象。 |
-| [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-shouldbuiltinrecognizerparallelwithcallback-t.md) | 系统内置手势与响应链上其他组件的手势设置并行关系的回调事件类型。 |
-| [ShouldRecognizerParallelWithCallback](arkts-arkui-shouldrecognizerparallelwithcallback-t.md) | 手势与响应链上其他组件的手势设置并行关系的回调事件类型。 |
-| [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | 组件区域变化时的回调类型。 |
-| [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md) | 定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态。 |
-| [Summary](arkts-arkui-summary-t.md) | 拖拽相关数据的简介。 |
-| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | SymbolGlyphModifier类型，用于设置自定义图标小符号。 |
-| [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) | 系统材质对象基类。 |
-| [Theme](arkts-arkui-theme-t.md) | 主题对象。 |
-| [TipsMessageType](arkts-arkui-tipsmessagetype-t.md) | 悬浮气泡弹窗信息。 |
-| [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) | 动态指定手势识别器是否参与手势处理的回调事件类型，回调内参数的生命周期跟随回调本身，参数内的方法仅支持在回调内同步使用。 |
-| [TransitionEffects](arkts-arkui-transitioneffects-t.md) | 定义所有转场效果。 |
-| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | 定义组件转场动画结束回调的类型。 |
-| [UIContext](arkts-arkui-uicontext-t.md) | [UIContext](arkts-arkui-uicontext-t.md) |
-| [UnifiedData](arkts-arkui-unifieddata-t.md) | 拖拽相关的数据。 |
-| [UniformDataType](arkts-arkui-uniformdatatype-t.md) | 标准化数据类型。 |
-| [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | 组件可见区域变化事件的回调类型。 |
-| [VisualEffect](arkts-arkui-visualeffect-t.md) | 导入VisualEffect类型对象。 |
-| [window](arkts-arkui-window-t.md) |  |
+| [AccessibilityActionInterceptCallback](arkts-arkui-common-comp-accessibilityactioninterceptcallback-t.md) | 定义onAccessibilityActionIntercept中使用的回调类型。 |
+| [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | 提供开启无障碍模式后的无障碍悬浮回调事件类型。 |
+| [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | 定义onAccessibilityFocus中使用的回调类型。 |
+| [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | 提供开启朗读类辅助应用后未能被无障碍悬浮响应的触摸事件回调类型。 |
+| [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | 动画开始和结束时相对预览原图缩放比例。 |
+| [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | 组件区域变化事件的回调类型。 |
+| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | [Blender](arkts-arkui-common-comp-blender-t-sys.md) |
+| [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | 圆角类型。 |
+| [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | `BuilderCallback`是全局`@Builder`函数的类型别名，作为`mutableBuilder`函数的入参类型，用于指定待封装的全局`@Builder`函数。 |
+| [CircleShape](arkts-arkui-common-comp-circleshape-t.md) | 导入CircleShape类型对象。 |
+| [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | 组件内容的实体封装。 |
+| [Context](arkts-arkui-common-comp-context-t.md) | Get context. |
+| [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 定义CustomBuilder类型。 |
+| [CustomBuilderT](arkts-arkui-common-comp-custombuildert-t.md) | 定义带参数的CustomBuilder类型 |
+| [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | 落入操作时使用的数据加载参数。 |
+| [DataSyncOptions](arkts-arkui-common-comp-datasyncoptions-t.md) | 作为startDataLoading的入参对象。 |
+| [DragSpringLoadingConfiguration](arkts-arkui-common-comp-dragspringloadingconfiguration-t.md) | 定义拖拽的悬停检测配置参数的接口。 |
+| [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) | [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) |
+| [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) | 导入EllipseShape类型对象。 |
+| [EnvDecorator](arkts-arkui-common-comp-envdecorator-t.md) | 定义EnvDecorator属性装饰器类型。 |
+| [Filter](arkts-arkui-common-comp-filter-t.md) | 导入Filter类型对象。 |
+| [FractionStop](arkts-arkui-common-comp-fractionstop-t.md) | 定义模糊段。 |
+| [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | 定义在[onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept)中使用的回调类型。 |
+| [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | 自定义手势识别器判定回调类型。 |
+| [HoverCallback](arkts-arkui-common-comp-hovercallback-t.md) | hover事件的回调类型。 |
+| [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) | [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) |
+| [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) | 输入事件监听器回调函数类型。 |
+| [IntentionCode](arkts-arkui-common-comp-intentioncode-t.md) | 按键对应的意图。 |
+| [Matrix4Transit](arkts-arkui-common-comp-matrix4transit-t.md) | 为普通方法导入Matrix4Transit类型对象。@typedef { import('../api/@ohos.matrix4').default.Matrix4Transit } Matrix4Transit |
+| [MonitorDecorator](arkts-arkui-common-comp-monitordecorator-t.md) | @Monitor装饰器的实际类型。 |
+| [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) | NavDestinationInfo实例对象。 |
+| [NavigationInfo](arkts-arkui-common-comp-navigationinfo-t.md) | NavigationInfo实例对象。 |
+| [OnDidStopDraggingCallback](arkts-arkui-common-comp-ondidstopdraggingcallback-t.md) | 滚动组件在结束拖拽时触发的回调。 |
+| [OnDragEventCallback](arkts-arkui-common-comp-ondrageventcallback-t.md) | 拖拽事件的回调函数。 |
+| [OnGetPreviewBadgeCallback](arkts-arkui-common-comp-ongetpreviewbadgecallback-t.md) | 即将启动多选长按聚拢动画时，触发用于获取选中数量的回调。 |
+| [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | 开始拖拽列表或网格元素时触发的回调。 |
+| [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | 定义数据源拖拽回调。 |
+| [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | 当绑定该方法的组件判断是否需要键盘时，将触发此回调。前提条件：组件需可获焦，否则本接口不生效。 |
+| [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | 滚动组件滑动时触发的回调。 |
+| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | 懒加载布局容器[LazyColumnLayout](arkts-arkui-lazycolumnlayout-comp-attribute.md#lazycolumnlayout)、[LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md#lazy_grid_layout)、[LazyVWaterFlowLayout](arkts-arkui-lazyvwaterflowlayout-comp.md#lazyvwaterflowlayout)所显示的子组件索引发生变化时的回调类型。 |
+| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
+| [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | 滚动组件划动离手时触发的回调。 |
+| [Optional](arkts-arkui-common-comp-optional-t.md) | 定义可选类型，其值可以是undefined。 |
+| [PathShape](arkts-arkui-common-comp-pathshape-t.md) | 导入PathShape类型对象。 |
+| [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
+| [PointerStyle](arkts-arkui-common-comp-pointerstyle-t.md) | 光标样式。 |
+| [PopupStateChangeCallback](arkts-arkui-common-comp-popupstatechangecallback-t.md) | 气泡状态变化事件回调。 |
+| [PromptActionDialogController](arkts-arkui-common-comp-promptactiondialogcontroller-t.md) | 从promptAction导入弹出框控制器类型 |
+| [RectShape](arkts-arkui-common-comp-rectshape-t.md) | 导入RectShape类型对象。 |
+| [ReuseIdCallback](arkts-arkui-common-comp-reuseidcallback-t.md) | 获取复用标识ID的回调方法。 |
+| [ReusePoolOwnership](arkts-arkui-common-comp-reusepoolownership-t.md) | 全局复用池的持有类型。 |
+| [RouterPageInfo](arkts-arkui-common-comp-routerpageinfo-t.md) | RouterPageInfo实例对象。 |
+| [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldbuiltinrecognizerparallelwithcallback-t.md) | 系统内置手势与响应链上其他组件的手势设置并行关系的回调事件类型。 |
+| [ShouldRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldrecognizerparallelwithcallback-t.md) | 手势与响应链上其他组件的手势设置并行关系的回调事件类型。 |
+| [SizeChangeCallback](arkts-arkui-common-comp-sizechangecallback-t.md) | 组件区域变化时的回调类型。 |
+| [SpringLoadingContext](arkts-arkui-common-comp-springloadingcontext-t.md) | 定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态。 |
+| [Summary](arkts-arkui-common-comp-summary-t.md) | 拖拽相关数据的简介。 |
+| [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | SymbolGlyphModifier类型，用于设置自定义图标小符号。 |
+| [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md) | 系统材质对象基类。 |
+| [Theme](arkts-arkui-common-comp-theme-t.md) | 主题对象。 |
+| [TipsMessageType](arkts-arkui-common-comp-tipsmessagetype-t.md) | 悬浮气泡弹窗信息。 |
+| [TouchTestDoneCallback](arkts-arkui-common-comp-touchtestdonecallback-t.md) | 动态指定手势识别器是否参与手势处理的回调事件类型，回调内参数的生命周期跟随回调本身，参数内的方法仅支持在回调内同步使用。 |
+| [TransitionEffects](arkts-arkui-common-comp-transitioneffects-t.md) | 定义所有转场效果。 |
+| [TransitionFinishCallback](arkts-arkui-common-comp-transitionfinishcallback-t.md) | 定义组件转场动画结束回调的类型。 |
+| [UIContext](arkts-arkui-common-comp-uicontext-t.md) | [UIContext](arkts-arkui-common-comp-uicontext-t.md) |
+| [UnifiedData](arkts-arkui-common-comp-unifieddata-t.md) | 拖拽相关的数据。 |
+| [UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md) | 标准化数据类型。 |
+| [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) | 组件可见区域变化事件的回调类型。 |
+| [VisualEffect](arkts-arkui-common-comp-visualeffect-t.md) | 导入VisualEffect类型对象。 |
+| [window](arkts-arkui-common-comp-window-t.md) |  |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | 辅助功能操作类型的枚举@enum { number } |
-| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | intercept action的枚举@enum { number } |
-| [AccessibilityRoleType](arkts-arkui-accessibilityroletype-e.md) | 定义组件的屏幕朗读功能角色类型。@enum { number } |
-| [AccessibilitySamePageMode](arkts-arkui-accessibilitysamepagemode-e.md) | 当前跨进程嵌入式显示的组件和宿主应用的同page模式。@enum { number } |
-| [AdaptiveColor](arkts-arkui-adaptivecolor-e.md) | 取色模式。 |
-| [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md) | 配置组件主题跟随的颜色模式。 |
-| [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md) | 预览图宽高设置为百分比时的参考可布局区域大小。 |
-| [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 标识如何将指定的混合模式应用于视图的内容。 |
-| [BlendMode](arkts-arkui-blendmode-e.md) | 混合模式。 |
-| [BlurStyle](arkts-arkui-blurstyle-e.md) | 模糊样式类型。 |
-| [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md) | 定义背景模糊激活策略。 |
-| [ChainStyle](arkts-arkui-chainstyle-e.md) | 定义链的风格，支持attributeModifier动态设置属性方法。 |
-| [ContentClipMode](arkts-arkui-contentclipmode-e.md) | 表示滚动容器的内容裁剪模式。 |
-| [DismissReason](arkts-arkui-dismissreason-e.md) | 关闭原因类型。 |
-| [DistortionMode](arkts-arkui-distortionmode-e-sys.md) | 非线性形变动画模式的枚举。 |
-| [DragAnimationType](arkts-arkui-draganimationtype-e-sys.md) | 拖拽动画类型。 |
-| [DragBehavior](arkts-arkui-dragbehavior-e.md) | 当设置[DragResult](arkts-arkui-dragresult-e.md)为DROP_ENABLED后，可设置DragBehavior为复制（COPY）或剪切（MOVE）。当DragBehavior为复制（COPY）时，拖拽对象的角标会显示加号；为剪切（MOVE）时，拖拽对象的角标不会显示加号。DragBehavior用来向开发者描述数据的处理方式是复制（COPY）还是剪切（MOVE），但无法最终决定对数据的实际处理方式。DragBehavior会通过onDragEnd带回给数据拖出方，发起拖拽的一方可通过DragBehavior来区分做出的是复制（COPY）还是剪切（MOVE）数据的不同行为。 |
-| [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md) | 当一个节点上同时设置长按浮起预览（参考bindContextMenu）与拖拽时，使用该字段设置长按浮起预览图与拖拽预览图过渡动效方式。 |
-| [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) | 设置拖拽预览图的显示模式。 |
-| [DragResult](arkts-arkui-dragresult-e.md) | 定义拖拽操作的结果及组件的落入选定状态。 |
-| [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
-| [EffectEdge](arkts-arkui-effectedge-e.md) | 表示当前边缘效果要生效的边缘。 |
-| [EffectType](arkts-arkui-effecttype-e.md) | 效果模板类型的枚举值。效果模板为预设的视觉效果参数配置，包含模糊半径、饱和度、亮度和颜色等参数。 |
-| [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
-| [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md) | 菜单弹出时振动效果。 |
-| [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md) | 悬停态显示区域类型。 |
-| [KeyboardAvoidMode](arkts-arkui-keyboardavoidmode-e.md) | 气泡避让键盘时，避让模式的枚举类型。 |
-| [LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md) | 扩展安全区域的边缘。 |
-| [LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md) | 扩展布局安全区域的枚举类型。 |
-| [MenuGridPosition](arkts-arkui-menugridposition-e.md) | 栅格菜单在菜单中的位置枚举值。 |
-| [MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md) | 菜单避让软键盘的模式。 |
-| [MenuPolicy](arkts-arkui-menupolicy-e.md) | 菜单弹出的策略。 |
-| [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) | 菜单的预览样式。 |
-| [ModalMode](arkts-arkui-modalmode-e.md) | 子窗菜单的模态模式。 |
-| [ModalTransition](arkts-arkui-modaltransition-e.md) | 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。 |
-| [OutlineStyle](arkts-arkui-outlinestyle-e.md) | 外描边样式。 |
-| [PreDragStatus](arkts-arkui-predragstatus-e.md) | 定义拖拽手势触发前的各阶段状态。 |
-| [PreviewScaleMode](arkts-arkui-previewscalemode-e.md) | 预览图的缩放方式。 |
-| [RepeatMode](arkts-arkui-repeatmode-e.md) | 用于设置被切割的图片在边框上的重复方式。 |
-| [ReusableMemOptStrategy](arkts-arkui-reusablememoptstrategy-e.md) | 可复用自定义组件内存优化策略枚举。 |
-| [SafeAreaEdge](arkts-arkui-safeareaedge-e.md) | 扩展安全区域的边缘。 |
-| [SafeAreaType](arkts-arkui-safeareatype-e.md) | 扩展安全区域的枚举类型。 |
-| [ScrollSizeMode](arkts-arkui-scrollsizemode-e.md) | 半模态面板上下滑动时的内容更新方式。 |
-| [ShadowStyle](arkts-arkui-shadowstyle-e.md) | 组件阴影效果。 |
-| [ShadowType](arkts-arkui-shadowtype-e.md) | 阴影类型。 |
-| [SheetKeyboardAvoidMode](arkts-arkui-sheetkeyboardavoidmode-e.md) | 半模态激活输入法时对软键盘的避让方式。 |
-| [SheetMode](arkts-arkui-sheetmode-e.md) | 半模态的显示层级模式。 |
-| [SheetSize](arkts-arkui-sheetsize-e.md) | 指定半模态的高度。 |
-| [SheetType](arkts-arkui-sheettype-e.md) | 半模态弹窗的样式。 |
-| [SourceTool](arkts-arkui-sourcetool-e.md) | 定义输入源对应的工具类型。 |
-| [SourceType](arkts-arkui-sourcetype-e.md) | 定义输入源对应的设备类型。 |
-| [SystemProperties](arkts-arkui-systemproperties-e.md) | 定义系统环境变量枚举值 |
-| [ThemeColorMode](arkts-arkui-themecolormode-e.md) | 设置颜色模式。 |
-| [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md) | 事件派发策略。 |
-| [TransitionEdge](arkts-arkui-transitionedge-e.md) | 转场边缘类型。 |
-| [TransitionHierarchyStrategy](arkts-arkui-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。 |
+| [AccessibilityAction](arkts-arkui-common-comp-accessibilityaction-e.md) | 辅助功能操作类型的枚举@enum { number } |
+| [AccessibilityActionInterceptResult](arkts-arkui-common-comp-accessibilityactioninterceptresult-e.md) | intercept action的枚举@enum { number } |
+| [AccessibilityRoleType](arkts-arkui-common-comp-accessibilityroletype-e.md) | 定义组件的屏幕朗读功能角色类型。@enum { number } |
+| [AccessibilitySamePageMode](arkts-arkui-common-comp-accessibilitysamepagemode-e.md) | 当前跨进程嵌入式显示的组件和宿主应用的同page模式。@enum { number } |
+| [AdaptiveColor](arkts-arkui-common-comp-adaptivecolor-e.md) | 取色模式。 |
+| [AnchoredColorMode](arkts-arkui-common-comp-anchoredcolormode-e.md) | 配置组件主题跟随的颜色模式。 |
+| [AvailableLayoutArea](arkts-arkui-common-comp-availablelayoutarea-e.md) | 预览图宽高设置为百分比时的参考可布局区域大小。 |
+| [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | 标识如何将指定的混合模式应用于视图的内容。 |
+| [BlendMode](arkts-arkui-common-comp-blendmode-e.md) | 混合模式。 |
+| [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md) | 模糊样式类型。 |
+| [BlurStyleActivePolicy](arkts-arkui-common-comp-blurstyleactivepolicy-e.md) | 定义背景模糊激活策略。 |
+| [ChainStyle](arkts-arkui-common-comp-chainstyle-e.md) | 定义链的风格，支持attributeModifier动态设置属性方法。 |
+| [ContentClipMode](arkts-arkui-common-comp-contentclipmode-e.md) | 表示滚动容器的内容裁剪模式。 |
+| [DismissReason](arkts-arkui-common-comp-dismissreason-e.md) | 关闭原因类型。 |
+| [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | 非线性形变动画模式的枚举。 |
+| [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | 拖拽动画类型。 |
+| [DragBehavior](arkts-arkui-common-comp-dragbehavior-e.md) | 当设置[DragResult](arkts-arkui-common-comp-dragresult-e.md)为DROP_ENABLED后，可设置DragBehavior为复制（COPY）或剪切（MOVE）。当DragBehavior为复制（COPY）时，拖拽对象的角标会显示加号；为剪切（MOVE）时，拖拽对象的角标不会显示加号。DragBehavior用来向开发者描述数据的处理方式是复制（COPY）还是剪切（MOVE），但无法最终决定对数据的实际处理方式。DragBehavior会通过onDragEnd带回给数据拖出方，发起拖拽的一方可通过DragBehavior来区分做出的是复制（COPY）还是剪切（MOVE）数据的不同行为。 |
+| [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md) | 当一个节点上同时设置长按浮起预览（参考bindContextMenu）与拖拽时，使用该字段设置长按浮起预览图与拖拽预览图过渡动效方式。 |
+| [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) | 设置拖拽预览图的显示模式。 |
+| [DragResult](arkts-arkui-common-comp-dragresult-e.md) | 定义拖拽操作的结果及组件的落入选定状态。 |
+| [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
+| [EffectEdge](arkts-arkui-common-comp-effectedge-e.md) | 表示当前边缘效果要生效的边缘。 |
+| [EffectType](arkts-arkui-common-comp-effecttype-e.md) | 效果模板类型的枚举值。效果模板为预设的视觉效果参数配置，包含模糊半径、饱和度、亮度和颜色等参数。 |
+| [FinishCallbackType](arkts-arkui-common-comp-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
+| [HapticFeedbackMode](arkts-arkui-common-comp-hapticfeedbackmode-e.md) | 菜单弹出时振动效果。 |
+| [HoverModeAreaType](arkts-arkui-common-comp-hovermodeareatype-e.md) | 悬停态显示区域类型。 |
+| [KeyboardAvoidMode](arkts-arkui-common-comp-keyboardavoidmode-e.md) | 气泡避让键盘时，避让模式的枚举类型。 |
+| [LayoutSafeAreaEdge](arkts-arkui-common-comp-layoutsafeareaedge-e.md) | 扩展安全区域的边缘。 |
+| [LayoutSafeAreaType](arkts-arkui-common-comp-layoutsafeareatype-e.md) | 扩展布局安全区域的枚举类型。 |
+| [MenuGridPosition](arkts-arkui-common-comp-menugridposition-e.md) | 栅格菜单在菜单中的位置枚举值。 |
+| [MenuKeyboardAvoidMode](arkts-arkui-common-comp-menukeyboardavoidmode-e.md) | 菜单避让软键盘的模式。 |
+| [MenuPolicy](arkts-arkui-common-comp-menupolicy-e.md) | 菜单弹出的策略。 |
+| [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) | 菜单的预览样式。 |
+| [ModalMode](arkts-arkui-common-comp-modalmode-e.md) | 子窗菜单的模态模式。 |
+| [ModalTransition](arkts-arkui-common-comp-modaltransition-e.md) | 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。 |
+| [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) | 外描边样式。 |
+| [PreDragStatus](arkts-arkui-common-comp-predragstatus-e.md) | 定义拖拽手势触发前的各阶段状态。 |
+| [PreviewScaleMode](arkts-arkui-common-comp-previewscalemode-e.md) | 预览图的缩放方式。 |
+| [RepeatMode](arkts-arkui-common-comp-repeatmode-e.md) | 用于设置被切割的图片在边框上的重复方式。 |
+| [ReusableMemOptStrategy](arkts-arkui-common-comp-reusablememoptstrategy-e.md) | 可复用自定义组件内存优化策略枚举。 |
+| [SafeAreaEdge](arkts-arkui-common-comp-safeareaedge-e.md) | 扩展安全区域的边缘。 |
+| [SafeAreaType](arkts-arkui-common-comp-safeareatype-e.md) | 扩展安全区域的枚举类型。 |
+| [ScrollSizeMode](arkts-arkui-common-comp-scrollsizemode-e.md) | 半模态面板上下滑动时的内容更新方式。 |
+| [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md) | 组件阴影效果。 |
+| [ShadowType](arkts-arkui-common-comp-shadowtype-e.md) | 阴影类型。 |
+| [SheetKeyboardAvoidMode](arkts-arkui-common-comp-sheetkeyboardavoidmode-e.md) | 半模态激活输入法时对软键盘的避让方式。 |
+| [SheetMode](arkts-arkui-common-comp-sheetmode-e.md) | 半模态的显示层级模式。 |
+| [SheetSize](arkts-arkui-common-comp-sheetsize-e.md) | 指定半模态的高度。 |
+| [SheetType](arkts-arkui-common-comp-sheettype-e.md) | 半模态弹窗的样式。 |
+| [SourceTool](arkts-arkui-common-comp-sourcetool-e.md) | 定义输入源对应的工具类型。 |
+| [SourceType](arkts-arkui-common-comp-sourcetype-e.md) | 定义输入源对应的设备类型。 |
+| [SystemProperties](arkts-arkui-common-comp-systemproperties-e.md) | 定义系统环境变量枚举值 |
+| [ThemeColorMode](arkts-arkui-common-comp-themecolormode-e.md) | 设置颜色模式。 |
+| [TouchTestStrategy](arkts-arkui-common-comp-touchteststrategy-e.md) | 事件派发策略。 |
+| [TransitionEdge](arkts-arkui-common-comp-transitionedge-e.md) | 转场边缘类型。 |
+| [TransitionHierarchyStrategy](arkts-arkui-common-comp-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。 |
 
 ## 示例
 
@@ -369,7 +371,7 @@ Common()
 
 以下示例通过设置edgeLightMode属性开启边缘光效动画，同时使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的systemMaterial接口实现了半透明材质效果。
 
-从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增edgeLightMode属性。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增edgeLightMode属性。
 
 
 ```
@@ -379,7 +381,7 @@ Common()
 
 以下示例通过设置blurSnapshot属性开启模糊优化。当使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的systemMaterial接口设置材质效果或使用[SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions)中的blurStyle接口设置模糊时发现功耗明显增加时，可以尝试开启模糊优化。
 
-从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增blurSnapshot属性。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增blurSnapshot属性。
 ```
 
 ```TypeScript
@@ -389,9 +391,9 @@ Common()
 ```TypeScript
 ### 示例1（设置键盘接续）
 
-该示例通过[onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard)接口，设置按钮需要键盘。在从输入框拉起键盘后，点击按钮使焦点切换到按钮，此时键盘将不会收起，再次点击输入框可继续输入。
+该示例通过[onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard)接口，设置按钮需要键盘。在从输入框拉起键盘后，点击按钮使焦点切换到按钮，此时键盘将不会收起，再次点击输入框可继续输入。
 
-从API version 24开始，新增[onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard)接口。
+从API version 24开始，新增[onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard)接口。
 ```
 
 ```TypeScript
@@ -523,7 +525,7 @@ Common()
 ```TypeScript
 ### 示例1（设置组件获焦和走焦的效果）
 
-该示例通过配置[defaultFocus](#defaultfocus9)可以使绑定的组件成为[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)创建后首次获焦的焦点，配置[groupDefaultFocus](arkts-arkui-commonmethod-c.md#groupdefaultfocus)可以使绑定的组件成为tabIndex容器创建后首次获焦的焦点，配置[focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)可以使绑定的组件点击后立即获焦。
+该示例通过配置[defaultFocus](#defaultfocus9)可以使绑定的组件成为[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)创建后首次获焦的焦点，配置[groupDefaultFocus](arkts-arkui-common-comp-commonmethod-c.md#groupdefaultfocus)可以使绑定的组件成为tabIndex容器创建后首次获焦的焦点，配置[focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch)可以使绑定的组件点击后立即获焦。
 
 示意图：
 
@@ -581,7 +583,7 @@ Common()
 ```TypeScript
 ### 示例4（设置焦点组走焦）
 
-该示例通过配置[focusScopePriority](arkts-arkui-commonmethod-c.md#focusscopepriority)，可以使绑定的组件在所属容器首次获焦时成为焦点，配置[focusScopeId](arkts-arkui-commonmethod-c.md#focusscopeid)，可以使绑定的容器组件成为焦点组。
+该示例通过配置[focusScopePriority](arkts-arkui-common-comp-commonmethod-c.md#focusscopepriority)，可以使绑定的组件在所属容器首次获焦时成为焦点，配置[focusScopeId](arkts-arkui-common-comp-commonmethod-c.md#focusscopeid)，可以使绑定的容器组件成为焦点组。
 
 示意图：
 
@@ -609,7 +611,7 @@ Common()
 ```TypeScript
 ### 示例5（设置Tab走焦停留）
 
-该示例通过配置[tabStop](arkts-arkui-commonmethod-c.md#tabstop)实现使用Tab走焦停留在组件上。
+该示例通过配置[tabStop](arkts-arkui-common-comp-commonmethod-c.md#tabstop)实现使用Tab走焦停留在组件上。
 
 示意图：
 
@@ -637,9 +639,9 @@ Common()
 ```TypeScript
 ### 示例6（设置自定义走焦）
 
-从API version 18开始，该示例通过配置[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)实现自定义走焦规则。
+从API version 18开始，该示例通过配置[nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus)实现自定义走焦规则。
 
-如果不配置[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)，默认的按下Tab键的走焦顺序为：M->A->B->C->D->E->F；配置了[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)以后，走焦顺序变更为：M->D->F->B->C。
+如果不配置[nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus)，默认的按下Tab键的走焦顺序为：M->A->B->C->D->E->F；配置了[nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus)以后，走焦顺序变更为：M->D->F->B->C。
 ```
 
 ```TypeScript
@@ -657,15 +659,15 @@ Common()
 ```TypeScript
 ### 示例2（使用onAreaChange自定义间隔监听区域变化）
 
-该示例通过设置[expectedUpdateInterval](arkts-arkui-areachangeoptions-i.md)，当Text布局变化时可以触发[onAreaChange](#onareachange-1)事件，达到间隔回调的效果。
+该示例通过设置[expectedUpdateInterval](arkts-arkui-common-comp-areachangeoptions-i.md)，当Text布局变化时可以触发[onAreaChange](#onareachange-1)事件，达到间隔回调的效果。
 
-从API版本26.0.0开始，新增[onAreaChange](#onareachange-1)、[AreaChangeCallback](arkts-arkui-areachangecallback-t.md)和[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md)。
+从API版本26.0.0开始，新增[onAreaChange](#onareachange-1)、[AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md)和[AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md)。
 ```
 
 ```TypeScript
 ### 示例1（使用外描边属性）
 
-该示例主要演示如何通过[outline](arkts-arkui-commonmethod-c.md#outline)来实现组件外描边。
+该示例主要演示如何通过[outline](arkts-arkui-common-comp-commonmethod-c.md#outline)来实现组件外描边。
 
 
 ```
@@ -673,7 +675,7 @@ Common()
 ```TypeScript
 ### 示例2（使用LocalizedEdgeColors类型）
 
-该示例将[outline](arkts-arkui-commonmethod-c.md#outline)属性中的color属性值设置为[LocalizedEdgeColors](ts-types.md#localizededgecolors12)类型。
+该示例将[outline](arkts-arkui-common-comp-commonmethod-c.md#outline)属性中的color属性值设置为[LocalizedEdgeColors](ts-types.md#localizededgecolors12)类型。
 ```
 
 ```TypeScript
@@ -755,9 +757,9 @@ Common()
 ```TypeScript
 ### 示例9（组件绑定Modifier实现鼠标悬浮态效果）
 
-该示例通过Button绑定Modifier实现了鼠标悬浮态的效果。当鼠标移动到Button上时，Button的背景颜色变为红色，此时为悬浮态效果；当鼠标离开Button时，Button的背景颜色变为黑色，此时为普通态效果；同时通过[applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute)接口设置悬浮态样式。
+该示例通过Button绑定Modifier实现了鼠标悬浮态的效果。当鼠标移动到Button上时，Button的背景颜色变为红色，此时为悬浮态效果；当鼠标离开Button时，Button的背景颜色变为黑色，此时为普通态效果；同时通过[applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute)接口设置悬浮态样式。
 
-从API版本26.0.0开始，新增[applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute)接口。
+从API版本26.0.0开始，新增[applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute)接口。
 ```
 
 ```TypeScript
@@ -861,7 +863,7 @@ struct Example {
 ```TypeScript
 ### 示例2（使用onHoverMove）
 
-从API version 15开始，该示例设置了按钮的[onHoverMove](arkts-arkui-commonmethod-c.md#onhovermove)事件。当手写笔悬浮在按钮上时，UI会显示手写笔当前悬浮的位置。
+从API version 15开始，该示例设置了按钮的[onHoverMove](arkts-arkui-common-comp-commonmethod-c.md#onhovermove)事件。当手写笔悬浮在按钮上时，UI会显示手写笔当前悬浮的位置。
 ```
 
 ```TypeScript
@@ -877,9 +879,9 @@ struct Example {
 ```TypeScript
 ### 示例2（设置节点组剔除属性）
 
-该示例演示在组件的属性动画场景下，如何通过使用节点组剔除属性[excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup)，避免节点组缓存反复失效。
+该示例演示在组件的属性动画场景下，如何通过使用节点组剔除属性[excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup)，避免节点组缓存反复失效。
 
-从API version 22开始，新增[excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup)属性。
+从API version 22开始，新增[excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup)属性。
 
 
 ```
@@ -947,7 +949,7 @@ struct Example {
 ```TypeScript
 ### 示例1（自定义手势判定）
 
-该示例通过配置[onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin)实现了对长按、快滑、滑动、捏合和拖动手势的自定义判定。从API version 21开始，支持通过[BaseEvent](ts-universal-events-click.md#baseevent8)的axisPinch属性获取双指缩放比例。
+该示例通过配置[onGestureJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturejudgebegin)实现了对长按、快滑、滑动、捏合和拖动手势的自定义判定。从API version 21开始，支持通过[BaseEvent](ts-universal-events-click.md#baseevent8)的axisPinch属性获取双指缩放比例。
 
 
 ```
@@ -969,13 +971,13 @@ struct Example {
 ```TypeScript
 ### 示例1 (使用onVisibleAreaChange来监听区域变化)
 
-该示例对组件设置[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)事件，当组件完全显示或者完全消失时触发回调。
+该示例对组件设置[onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange)事件，当组件完全显示或者完全消失时触发回调。
 ```
 
 ```TypeScript
 ### 示例2 (使用onVisibleAreaApproximateChange来监听区域变化)
 
-从API version 17开始，该示例对组件设置[onVisibleAreaApproximateChange](arkts-arkui-commonmethod-c.md#onvisibleareaapproximatechange)事件，当组件完全显示或者完全消失时触发回调。
+从API version 17开始，该示例对组件设置[onVisibleAreaApproximateChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareaapproximatechange)事件，当组件完全显示或者完全消失时触发回调。
 
 
 ```
@@ -997,7 +999,7 @@ struct Example {
 ```TypeScript
 ### 示例1（使用自动内存优化策略）
 
-以下示例中，可复用自定义组件ReusableComponent通过[ReusableOptions](arkts-arkui-reusableoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。点击Recycle按钮，可触发ReusableComponent组件回收。之后应用退后台，可触发复用池缓存释放。
+以下示例中，可复用自定义组件ReusableComponent通过[ReusableOptions](arkts-arkui-common-comp-reusableoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。点击Recycle按钮，可触发ReusableComponent组件回收。之后应用退后台，可触发复用池缓存释放。
 
 从API版本26.0.0开始，新增ReusableOptions接口。
 ```
@@ -1063,7 +1065,7 @@ struct Index {
 ```TypeScript
 ### 示例1（使用不同裁剪属性）
 
-该示例通过[clipShape](arkts-arkui-commonmethod-c.md#clipshape)、[clip](#clip12)、[maskShape](arkts-arkui-commonmethod-c.md#maskshape)实现图片的裁剪和遮罩。
+该示例通过[clipShape](arkts-arkui-common-comp-commonmethod-c.md#clipshape)、[clip](#clip12)、[maskShape](arkts-arkui-common-comp-commonmethod-c.md#maskshape)实现图片的裁剪和遮罩。
 
 
 ```
@@ -1079,7 +1081,7 @@ struct Index {
 
 该示例通过配置enableClickSoundEffect属性，实现组件禁用默认点击音效，开发者可以在onClick回调中调用音频相关接口自定义发音。自定义发音可参考[SoundPool播放短音频指南](../../../media/media/using-soundpool-for-playback.md)。
 
-从API version 24开始，新增[enableClickSoundEffect](arkts-arkui-commonmethod-c.md#enableclicksoundeffect)属性。
+从API version 24开始，新增[enableClickSoundEffect](arkts-arkui-common-comp-commonmethod-c.md#enableclicksoundeffect)属性。
 ```
 
 ```TypeScript
@@ -1171,7 +1173,7 @@ struct Index {
 ```TypeScript
 ### 示例9（设置自定义无障碍操作）
 
-本示例主要演示如何使用[accessibilityCustomActions](arkts-arkui-commonmethod-c.md#accessibilitycustomactions)为组件设置自定义无障碍操作。开发者可以按操作名为组件进行自定义操作的回调绑定。
+本示例主要演示如何使用[accessibilityCustomActions](arkts-arkui-common-comp-commonmethod-c.md#accessibilitycustomactions)为组件设置自定义无障碍操作。开发者可以按操作名为组件进行自定义操作的回调绑定。
 
 从API版本26.0.0开始，新增accessibilityCustomActions。
 ```
@@ -1315,7 +1317,7 @@ ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
 
 该示例配图为高算力设备强档效果，组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
 
-从API版本26.0.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增systemMaterial属性。
+从API版本26.0.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增systemMaterial属性。
 
 
 ```
@@ -1325,7 +1327,7 @@ ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
 
 该示例通过closeButtonMaterial属性自定义半模态关闭按钮的材质效果，对比未设置（使用systemMaterial内置材质）、关闭材质、自定义材质三种状态。
 
-从API版本26.1.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增closeButtonMaterial属性。
+从API版本26.1.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增closeButtonMaterial属性。
 
 未设置closeButtonMaterial时，关闭按钮使用systemMaterial带来的内置材质效果。
 
@@ -1345,7 +1347,7 @@ ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
 
 该示例通过titleBarBackgroundBlur属性设置半模态标题栏背景渐变模糊效果。同时配合titleBarHoverMode设置为STACK堆叠模式，使标题栏悬浮于内容区上方时模糊效果可见。
 
-从API版本26.1.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增titleBarBackgroundBlur属性。
+从API版本26.1.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增titleBarBackgroundBlur属性。
 
 
 ```
@@ -1355,7 +1357,7 @@ ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
 
 该示例通过titleBarHoverMode属性设置半模态标题栏为STACK堆叠模式，标题栏悬浮在内容区上方。
 
-从API版本26.1.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增titleBarHoverMode属性。
+从API版本26.1.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增titleBarHoverMode属性。
 
 
 ```
@@ -1365,7 +1367,7 @@ ScrollSizeMode.CONTINUOUS持续更新内容适合detents多挡位切换场景。
 
 该示例通过scrollBarState属性设置半模态内容区滚动条的显示状态，点击按钮在[BarState](ts-appendix-enums.md#barstate)的Off、On、Auto和未设置之间切换。
 
-从API版本26.1.0开始，[SheetOptions](arkts-arkui-sheetoptions-i.md)新增scrollBarState属性。
+从API版本26.1.0开始，[SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md)新增scrollBarState属性。
 ```
 
 ```TypeScript
@@ -1391,7 +1393,7 @@ ListDataSource说明及完整代码参考[示例1（添加滚动事件）](./ts-
 ```TypeScript
 ### 示例3（设置裁剪区域）
 
-该示例通过设置[clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent)属性，改变组件的内容层裁剪区域。
+该示例通过设置[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性，改变组件的内容层裁剪区域。
 
 
 ```
@@ -1564,7 +1566,7 @@ PageTwo页面：
 ```TypeScript
 ### 示例1（获取轴事件相关参数）
 
-该示例中，对按钮设置轴事件，通过滚动鼠标滚轮可获取轴事件的相关参数。从API version 21开始，该示例通过[BaseEvent](./ts-universal-events-click.md#baseevent8)的属性和[getPinchAxisScaleValue](arkts-arkui-axisevent-i.md#getpinchaxisscalevalue)获取双指缩放比例；从API version 22开始，该示例通过[hasAxis](arkts-arkui-axisevent-i.md#hasaxis)判断轴事件是否包含指定的轴类型。
+该示例中，对按钮设置轴事件，通过滚动鼠标滚轮可获取轴事件的相关参数。从API version 21开始，该示例通过[BaseEvent](./ts-universal-events-click.md#baseevent8)的属性和[getPinchAxisScaleValue](arkts-arkui-common-comp-axisevent-i.md#getpinchaxisscalevalue)获取双指缩放比例；从API version 22开始，该示例通过[hasAxis](arkts-arkui-common-comp-axisevent-i.md#hasaxis)判断轴事件是否包含指定的轴类型。
 
 鼠标滚轮滚动时：
 
@@ -1640,7 +1642,7 @@ PageTwo页面：
 ```TypeScript
 ### 示例2（设置onAccessibilityFocus回调函数）
 
-从API version 18开始，当获焦、失焦状态发生变化时，触发该回调函数。本示例展示了[onAccessibilityFocus](arkts-arkui-commonmethod-c.md#onaccessibilityfocus)的基本用法，聚焦到"onAccessibilityFocus takes effect"时，会打印"[testingTag] isFocus current is true"，当聚焦到"onAccessibilityFocus takes effect"以外的位置时，会打印"[testingTag] isFocus current is false"。
+从API version 18开始，当获焦、失焦状态发生变化时，触发该回调函数。本示例展示了[onAccessibilityFocus](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityfocus)的基本用法，聚焦到"onAccessibilityFocus takes effect"时，会打印"[testingTag] isFocus current is true"，当聚焦到"onAccessibilityFocus takes effect"以外的位置时，会打印"[testingTag] isFocus current is false"。
 ```
 
 ```TypeScript
@@ -1852,7 +1854,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例1（允许拖拽和落入）
 
-示例1通过配置[allowDrop](arkts-arkui-commonmethod-c.md#allowdrop)设置组件是否可落入，通过配置[draggable](#draggable)设置组件是否可拖拽。
+示例1通过配置[allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop)设置组件是否可落入，通过配置[draggable](#draggable)设置组件是否可拖拽。
 
 
 ```
@@ -1876,7 +1878,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例4（设置多选拖拽）
 
-示例4通过配置[isMultiSelectionEnabled](arkts-arkui-draginteractionoptions-i.md)实现Grid组件的多选拖拽效果。
+示例4通过配置[isMultiSelectionEnabled](arkts-arkui-common-comp-draginteractionoptions-i.md)实现Grid组件的多选拖拽效果。
 
 
 ```
@@ -1884,7 +1886,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例5（设置默认点按效果）
 
-示例5通过配置[defaultAnimationBeforeLifting](arkts-arkui-draginteractionoptions-i.md)实现Grid组件的默认点按效果。
+示例5通过配置[defaultAnimationBeforeLifting](arkts-arkui-common-comp-draginteractionoptions-i.md)实现Grid组件的默认点按效果。
 
 
 ```
@@ -1892,7 +1894,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例6（自定义背板图样式）
 
-示例6通过配置[ImageModifier](arkts-arkui-imagemodifier-t.md)实现Image组件的自定义背板图样式。
+示例6通过配置[ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md)实现Image组件的自定义背板图样式。
 
 
 ```
@@ -1910,13 +1912,13 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例8（设置图片拖拽震动）
 
-从API version 18开始，示例8通过设置[enableHapticFeedback](arkts-arkui-draginteractionoptions-i.md)实现图片拖拽的震动效果。
+从API version 18开始，示例8通过设置[enableHapticFeedback](arkts-arkui-common-comp-draginteractionoptions-i.md)实现图片拖拽的震动效果。
 ```
 
 ```TypeScript
 ### 示例9（自定义预览图）
 
-从API version 15开始，示例9通过配置[onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15)实现自定义预览图，仅用于浮起效果以及配置[isLiftingDisabled](arkts-arkui-draginteractionoptions-i.md)实现禁用浮起效果。
+从API version 15开始，示例9通过配置[onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15)实现自定义预览图，仅用于浮起效果以及配置[isLiftingDisabled](arkts-arkui-common-comp-draginteractionoptions-i.md)实现禁用浮起效果。
 
 自定义预览图用于浮起效果。
 
@@ -1946,7 +1948,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例12（设置自定义组件落入）
 
-从API version 23开始，示例12通过组件的[onDragStart](ts-universal-events-drag-drop.md#ondragstart)接口传递其类型，并在目标组件的[allowDrop](arkts-arkui-commonmethod-c.md#allowdrop)属性中设置允许该类型落入，即可实现自定义组件的拖拽落入功能。
+从API version 23开始，示例12通过组件的[onDragStart](ts-universal-events-drag-drop.md#ondragstart)接口传递其类型，并在目标组件的[allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop)属性中设置允许该类型落入，即可实现自定义组件的拖拽落入功能。
 
 
 ```
@@ -1954,7 +1956,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例13（设置背板图材质效果）
 
-该示例通过配置[ImageModifier](arkts-arkui-imagemodifier-t.md)中的[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)属性，设置拖拽背板的材质效果。
+该示例通过配置[ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md)中的[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)属性，设置拖拽背板的材质效果。
 
 从API版本26.0.0开始，[DragPreviewOptions](#dragpreviewoptions11-1)接口中的modifier参数新增支持[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)属性。
 ```
@@ -2010,7 +2012,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例2（通过responseRegionList接口设置触摸热区）
 
-该示例通过[responseRegionList](arkts-arkui-commonmethod-c.md#responseregionlist)设置按钮的触摸热区以响应点击事件。
+该示例通过[responseRegionList](arkts-arkui-common-comp-commonmethod-c.md#responseregionlist)设置按钮的触摸热区以响应点击事件。
 
 从API version 22开始，新增responseRegionList接口。
 
@@ -2020,7 +2022,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例3（设置鼠标的触摸热区以响应点击事件）
 
-该示例通过[mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion)设置鼠标的触摸热区以响应点击事件。
+该示例通过[mouseResponseRegion](arkts-arkui-common-comp-commonmethod-c.md#mouseresponseregion)设置鼠标的触摸热区以响应点击事件。
 ```
 
 ```TypeScript
@@ -2066,7 +2068,7 @@ Stack容器子组件设置zIndex后的效果。
 ```TypeScript
 ### 示例4（通过transform3D实现图形变换）
 
-从API version 20开始，该示例通过设置[transform3D](arkts-arkui-commonmethod-c.md#transform3d)实现图形变换效果。
+从API version 20开始，该示例通过设置[transform3D](arkts-arkui-common-comp-commonmethod-c.md#transform3d)实现图形变换效果。
 
 
 ```
@@ -2192,7 +2194,7 @@ struct PageBExample {
 ```TypeScript
 ### 示例1（设置渐变色边框）
 
-通过[borderImage](arkts-arkui-commonmethod-c.md#borderimage)接口为组件设置渐变色边框。
+通过[borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage)接口为组件设置渐变色边框。
 
 
 ```
@@ -2200,7 +2202,7 @@ struct PageBExample {
 ```TypeScript
 ### 示例2（动态调整属性值）
 
-通过[Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md)接口动态调整[borderImage](arkts-arkui-commonmethod-c.md#borderimage)接口中属性值。
+通过[Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md)接口动态调整[borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage)接口中属性值。
 
 
 ```
@@ -2208,7 +2210,7 @@ struct PageBExample {
 ```TypeScript
 ### 示例3（使用LocalizedEdgeWidths类型值）
 
-通过[borderImage](arkts-arkui-commonmethod-c.md#borderimage)接口中的slice、width和outset属性值使用[LocalizedEdgeWidths](ts-types.md#localizededgewidths12)类型。
+通过[borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage)接口中的slice、width和outset属性值使用[LocalizedEdgeWidths](ts-types.md#localizededgewidths12)类型。
 ```
 
 ```TypeScript
@@ -2236,7 +2238,7 @@ struct PageBExample {
 
 该示例代码在无障碍模式下通过onAccessibilityHoverTransparent接口捕获无法无障碍聚焦的组件的触摸事件，最后再将事件信息显示在组件下方的文本中。
 
-从API version 20开始，新增了[onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent)接口。
+从API version 20开始，新增了[onAccessibilityHoverTransparent](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityhovertransparent)接口。
 ```
 
 ```TypeScript
@@ -2302,7 +2304,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例7（模糊效果对比）
 
-该示例对比了[backgroundEffect11+](#backgroundeffect11)、[backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur)和[backgroundBlurStyle9+](#backgroundblurstyle9)三种不同的模糊效果。
+该示例对比了[backgroundEffect11+](#backgroundeffect11)、[backdropBlur](arkts-arkui-common-comp-commonmethod-c.md#backdropblur)和[backgroundBlurStyle9+](#backgroundblurstyle9)三种不同的模糊效果。
 
 
 ```
@@ -2336,7 +2338,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例1（弹出普通菜单）
 
-该示例为bindMenu通过配置[MenuElement](arkts-arkui-menuelement-i.md)弹出普通菜单。
+该示例为bindMenu通过配置[MenuElement](arkts-arkui-common-comp-menuelement-i.md)弹出普通菜单。
 
 
 ```
@@ -2344,7 +2346,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例2（弹出自定义菜单）
 
-该示例为bindMenu通过配置CustomBuilder弹出自定义菜单。同时，从API version 18开始支持通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的hapticFeedbackMode属性实现菜单弹出时的振动效果。
+该示例为bindMenu通过配置CustomBuilder弹出自定义菜单。同时，从API version 18开始支持通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的hapticFeedbackMode属性实现菜单弹出时的振动效果。
 
 
 ```
@@ -2360,7 +2362,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例4（右键弹出指向型菜单）
 
-该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).RightClick和[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的enableArrow属性弹出指向型菜单。同时，从API version 18开始支持通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的hapticFeedbackMode属性实现菜单弹出时的振动效果。
+该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).RightClick和[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的enableArrow属性弹出指向型菜单。同时，从API version 18开始支持通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的hapticFeedbackMode属性实现菜单弹出时的振动效果。
 
 
 ```
@@ -2368,7 +2370,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例5（长按弹出菜单的截图预览样式）
 
-该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).LongPress和[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中preview属性的[MenuPreviewMode](arkts-arkui-menupreviewmode-e.md)类型弹出菜单预览样式。
+该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).LongPress和[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中preview属性的[MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md)类型弹出菜单预览样式。
 
 
 ```
@@ -2376,7 +2378,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例6（长按弹出菜单的自定义预览样式）
 
-该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).LongPress和[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中preview属性的[CustomBuilder](ts-types.md#custombuilder8)类型弹出菜单自定义预览样式。
+该示例为bindContextMenu通过配置[responseType](ts-appendix-enums.md#responsetype8).LongPress和[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中preview属性的[CustomBuilder](ts-types.md#custombuilder8)类型弹出菜单自定义预览样式。
 
 
 ```
@@ -2384,7 +2386,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例7（设置状态变量弹出菜单）
 
-该示例为[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)通过配置isShown弹出菜单预览样式。
+该示例为[bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu)通过配置isShown弹出菜单预览样式。
 
 
 ```
@@ -2392,7 +2394,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例8（设置菜单和预览的动效）
 
-该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的transition属性，实现自定义菜单以及菜单预览时的显示和退出动效。
+该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的transition属性，实现自定义菜单以及菜单预览时的显示和退出动效。
 
 
 ```
@@ -2400,7 +2402,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例9（设置symbol类型图标）
 
-该示例为bindMenu通过配置[MenuElement](arkts-arkui-menuelement-i.md)的symbolIcon弹出菜单。
+该示例为bindMenu通过配置[MenuElement](arkts-arkui-common-comp-menuelement-i.md)的symbolIcon弹出菜单。
 
 
 ```
@@ -2408,7 +2410,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例10（设置一镜到底动效）
 
-该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中previewAnimationOptions属性的hoverScale，实现组件截图到自定义预览图的一镜到底过渡动效。
+该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中previewAnimationOptions属性的hoverScale，实现组件截图到自定义预览图的一镜到底过渡动效。
 
 
 ```
@@ -2416,7 +2418,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例11（自定义背景模糊效果参数）
 
-该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的backgroundBlurStyleOptions属性，实现了自定义菜单背景模糊效果。
+该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的backgroundBlurStyleOptions属性，实现了自定义菜单背景模糊效果。
 
 从API version 18开始，在ContextMenuOptions中新增了backgroundBlurStyleOptions属性。
 
@@ -2426,7 +2428,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例12（自定义背景效果参数）
 
-该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的backgroundEffect属性，实现了自定义菜单背景效果。
+该示例为bindMenu通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的backgroundEffect属性，实现了自定义菜单背景效果。
 
 从API version 18开始，在ContextMenuOptions中新增了backgroundEffect属性。
 
@@ -2436,9 +2438,9 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例13（设置一镜到底动效支持抬手打断）
 
-该示例通过为bindContextMenu配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的previewAnimationOptions属性实现了一镜到底过渡动效的同时，再配置hoverScaleInterruption控制是否允许长按抬手取消菜单弹出。
+该示例通过为bindContextMenu配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的previewAnimationOptions属性实现了一镜到底过渡动效的同时，再配置hoverScaleInterruption控制是否允许长按抬手取消菜单弹出。
 
-从API version 20开始，在previewAnimationOptions的类型[ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)中新增了hoverScaleInterruption属性。
+从API version 20开始，在previewAnimationOptions的类型[ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md)中新增了hoverScaleInterruption属性。
 
 
 ```
@@ -2446,9 +2448,9 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例14（设置预览图边框圆角半径）
 
-该示例通过bindContextMenu配置[responseType](ts-appendix-enums.md#responsetype8).LongPress来实现功能。同时，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中配置preview属性的[MenuPreviewMode](arkts-arkui-menupreviewmode-e.md)类型来设置菜单预览样式。最后，通过设置previewBorderRadius来实现预览图边框的圆角半径。
+该示例通过bindContextMenu配置[responseType](ts-appendix-enums.md#responsetype8).LongPress来实现功能。同时，在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中配置preview属性的[MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md)类型来设置菜单预览样式。最后，通过设置previewBorderRadius来实现预览图边框的圆角半径。
 
-从API version 19开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了previewBorderRadius属性。
+从API version 19开始，在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增了previewBorderRadius属性。
 
 
 ```
@@ -2458,7 +2460,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 
 该示例为bindMenu11+配置生命周期回调。
 
-从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了onWillAppear、onDidAppear、onWillDisappear和onDidDisappear属性。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增了onWillAppear、onDidAppear、onWillDisappear和onDidDisappear属性。
 
 
 ```
@@ -2468,7 +2470,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 
 该示例为bindMenu通过配置mask属性设置菜单蒙层。
 
-从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了mask属性。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增了mask属性。
 
 
 ```
@@ -2478,7 +2480,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 
 该示例为bindMenu通过配置outlineWidth和outlineColor属性设置下拉菜单外描边样式。
 
-从API version 20开始，在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了outlineWidth和outlineColor属性。
+从API version 20开始，在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增了outlineWidth和outlineColor属性。
 
 
 ```
@@ -2494,7 +2496,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例19（根据触发方式弹出不同内容的菜单）
 
-该示例通过在[bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)中传入CustomBuilderT<ResponseType>给目标组件绑定菜单，组件会在UI函数中返回弹出菜单的触发方式，开发者可根据返回的触发方式实现差异化显示。
+该示例通过在[bindContextMenuWithResponse](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenuwithresponse)中传入CustomBuilderT<ResponseType>给目标组件绑定菜单，组件会在UI函数中返回弹出菜单的触发方式，开发者可根据返回的触发方式实现差异化显示。
 
 从API version 23开始，新增了bindContextMenuWithResponse的接口。
 
@@ -2506,7 +2508,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 
 该示例通过在bindMenu中配置keyboardAvoidMode设置菜单避让软键盘，通过minKeyboardAvoidDistance设置菜单避让软键盘的最小距离。
 
-从API version 23开始，[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增keyboardAvoidMode、minKeyboardAvoidDistance属性。
+从API version 23开始，[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增keyboardAvoidMode、minKeyboardAvoidDistance属性。
 
 
 ```
@@ -2514,7 +2516,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例21（设置菜单相对于绑定组件左上角的弹出位置）
 
-该示例通过设置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的anchorPosition属性，实现了菜单相对于绑定组件左上角弹出的效果。
+该示例通过设置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的anchorPosition属性，实现了菜单相对于绑定组件左上角弹出的效果。
 
 从API version 20开始，在ContextMenuOptions中新增了anchorPosition属性。
 
@@ -2524,7 +2526,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例22（设置菜单的最大高度）
 
-该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的maxHeight属性，设置菜单的最大高度。
+该示例为bindContextMenu通过配置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的maxHeight属性，设置菜单的最大高度。
 
 未设置maxHeight属性时，默认按照菜单的最大高度（可用高度的80%），可展示全部列表项，通过设置最大高度为窗口可用高度的50%时，仅能显示8个列表项。
 
@@ -2536,7 +2538,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例23（设置菜单与目标组件间距）
 
-该示例通过设置[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的targetSpace属性，介绍如何增加菜单与目标组件之间的间距。
+该示例通过设置[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的targetSpace属性，介绍如何增加菜单与目标组件之间的间距。
 
 从API版本26.0.0开始，在ContextMenuOptions中新增了targetSpace属性。
 
@@ -2546,7 +2548,7 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例24（设置菜单的沉浸光感）
 
-该示例通过[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中的systemMaterial属性设置组件的系统材质，实现了菜单的沉浸光感视效。设置系统材质后，Menu弹出过程中会有非线性形变和边缘流光。
+该示例通过[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中的systemMaterial属性设置组件的系统材质，实现了菜单的沉浸光感视效。设置系统材质后，Menu弹出过程中会有非线性形变和边缘流光。
 
 该示例配图为高算力设备强档效果，组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
 
@@ -2564,9 +2566,9 @@ rate和lightUpDegree参数值为0.5,0.5：
 ```TypeScript
 ### 示例25（使用gridStyle设置栅格菜单）
 
-该示例展示了如何在[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)中使用gridStyle设置栅格菜单样式。通过设置count、horizontalSize和position属性，可以自定义菜单的栅格布局。
+该示例展示了如何在[bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow)中使用gridStyle设置栅格菜单样式。通过设置count、horizontalSize和position属性，可以自定义菜单的栅格布局。
 
-从API版本26.0.0开始，新增了[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)的接口；在[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)中新增了gridStyle属性。
+从API版本26.0.0开始，新增了[bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow)的接口；在[ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md)中新增了gridStyle属性。
 ```
 
 ```TypeScript
@@ -2668,7 +2670,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例1（获取点击事件相关参数）
 
-该示例通过按钮设置点击事件[ClickEvent](arkts-arkui-clickevent-i.md)，点击按钮可获取点击事件的相关参数。
+该示例通过按钮设置点击事件[ClickEvent](arkts-arkui-common-comp-clickevent-i.md)，点击按钮可获取点击事件的相关参数。
 
 
 ```
@@ -2760,7 +2762,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例5（自定义手势识别器是否参与手势处理）
 
-从API version 20开始，该示例通过配置[onTouchTestDone](arkts-arkui-commonmethod-c.md#ontouchtestdone)指定手势识别器不参与后续手势处理，触发回调时，调用[preventBegin](./ts-gesture-common.md#preventbegin20)阻止手势识别器参与后续处理。点击Tap2和Tap1的重合区域，不调用preventBegin时，触发Tap2对应的手势；调用preventBegin阻止Tap2时，触发Tap1对应的手势。
+从API version 20开始，该示例通过配置[onTouchTestDone](arkts-arkui-common-comp-commonmethod-c.md#ontouchtestdone)指定手势识别器不参与后续手势处理，触发回调时，调用[preventBegin](./ts-gesture-common.md#preventbegin20)阻止手势识别器参与后续处理。点击Tap2和Tap1的重合区域，不调用preventBegin时，触发Tap2对应的手势；调用preventBegin阻止Tap2时，触发Tap1对应的手势。
 
 
 ```
@@ -2768,7 +2770,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例6（自定义干预事件和手势的收集结果）
 
-该示例通过配置[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept)指定手势识别器或者触摸识别器是否透传到其他节点。点击button2时，不透传触摸事件到Column。点击button1时，透传触摸事件到Column，Column变色。
+该示例通过配置[onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept)指定手势识别器或者触摸识别器是否透传到其他节点。点击button2时，不透传触摸事件到Column。点击button1时，透传触摸事件到Column，Column变色。
 
 从API版本26.0.0开始，新增onGestureCollectIntercept接口。
 ```
@@ -2782,7 +2784,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例7（非内置手势嵌套滚动）
 
-该示例通过[shouldRecognizerParallelWith](arkts-arkui-commonmethod-c.md#shouldrecognizerparallelwith)和[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin)实现了嵌套滚动的功能。内部组件优先响应滑动手势，当内部组件滑动至顶部或底部时，外部组件能够接替滑动。
+该示例通过[shouldRecognizerParallelWith](arkts-arkui-common-comp-commonmethod-c.md#shouldrecognizerparallelwith)和[onGestureRecognizerJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturerecognizerjudgebegin)实现了嵌套滚动的功能。内部组件优先响应滑动手势，当内部组件滑动至顶部或底部时，外部组件能够接替滑动。
 
 从API版本26.0.0开始，新增shouldRecognizerParallelWith接口。
 ```
@@ -2790,9 +2792,9 @@ struct TouchableExample {
 ```TypeScript
 ### 示例1（设置跟手变形拖拽动画）
 
-该示例通过设置[dragAnimationType](#属性)为FOLLOW_HAND_MORPH实现跟手变形拖拽动画效果，并在拖拽结束时通过[executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation)执行自定义落位动效。
+该示例通过设置[dragAnimationType](#属性)为FOLLOW_HAND_MORPH实现跟手变形拖拽动画效果，并在拖拽结束时通过[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)执行自定义落位动效。
 
-从API版本26.0.0开始，新增[dragAnimationType](#属性)属性、[executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation)方法、[interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation)方法。
+从API版本26.0.0开始，新增[dragAnimationType](#属性)属性、[executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation)方法、[interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation)方法。
 ```
 
 ```TypeScript
@@ -2822,7 +2824,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例2（颜色按旋转角度渐变）
 
-该示例通过[sweepGradient](arkts-arkui-commonmethod-c.md#sweepgradient)来实现组件颜色旋转角度渐变。
+该示例通过[sweepGradient](arkts-arkui-common-comp-commonmethod-c.md#sweepgradient)来实现组件颜色旋转角度渐变。
 
 
 ```
@@ -2830,7 +2832,7 @@ struct TouchableExample {
 ```TypeScript
 ### 示例3（颜色按径向渐变）
 
-该示例通过[radialGradient](arkts-arkui-commonmethod-c.md#radialgradient)来实现组件颜色径向渐变。
+该示例通过[radialGradient](arkts-arkui-common-comp-commonmethod-c.md#radialgradient)来实现组件颜色径向渐变。
 ```
 
 ```TypeScript
@@ -2911,7 +2913,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例2（设置组件线性渐变模糊效果）
 
-该示例主要演示通过[linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)设置组件的内容线性渐变模糊效果。
+该示例主要演示通过[linearGradientBlur](arkts-arkui-common-comp-commonmethod-c.md#lineargradientblur)设置组件的内容线性渐变模糊效果。
 
 
 ```
@@ -2919,7 +2921,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例3（设置离屏渲染效果）
 
-该示例主要演示通过[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)来设置组件是否先整体离屏渲染绘制后，再与父组件融合绘制。
+该示例主要演示通过[renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup)来设置组件是否先整体离屏渲染绘制后，再与父组件融合绘制。
 
 
 ```
@@ -2943,7 +2945,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例6（设置同层阴影不重叠效果）
 
-该示例主要通过[useShadowBatching](arkts-arkui-commonmethod-c.md#useshadowbatching)搭配[shadow](#shadow)实现同层阴影不重叠效果。
+该示例主要通过[useShadowBatching](arkts-arkui-common-comp-commonmethod-c.md#useshadowbatching)搭配[shadow](#shadow)实现同层阴影不重叠效果。
 
 
 ```
@@ -2951,7 +2953,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例7（设置组件图像球面效果）
 
-该示例主要演示通过[sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect)设置组件的图像球面效果。
+该示例主要演示通过[sphericalEffect](arkts-arkui-common-comp-commonmethod-c.md#sphericaleffect)设置组件的图像球面效果。
 
 效果图如下：
 
@@ -2965,7 +2967,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例8（设置组件图像渐亮效果）
 
-该示例主要演示通过[lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)设置组件的图像渐亮效果。
+该示例主要演示通过[lightUpEffect](arkts-arkui-common-comp-commonmethod-c.md#lightupeffect)设置组件的图像渐亮效果。
 
 效果图如下：
 
@@ -2983,7 +2985,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例9（设置组件图像边缘像素扩展效果）
 
-该示例主要演示通过[pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)设置组件的图像边缘像素扩展效果。
+该示例主要演示通过[pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect)设置组件的图像边缘像素扩展效果。
 
 效果图如下：
 
@@ -2997,7 +2999,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例10（系统导航条智能反色）
 
-该示例主要演示通过[systemBarEffect](arkts-arkui-commonmethod-c.md#systembareffect)来实现系统导航条智能反色。
+该示例主要演示通过[systemBarEffect](arkts-arkui-common-comp-commonmethod-c.md#systembareffect)来实现系统导航条智能反色。
 
 效果图如下：
 
@@ -3007,7 +3009,7 @@ struct ReusableV2Component {
 ```TypeScript
 ### 示例11（设置组件是否双面绘制）
 
-该示例主要演示通过[doubleSided](arkts-arkui-commonmethod-c.md#doublesided)来设置组件是否双面绘制。
+该示例主要演示通过[doubleSided](arkts-arkui-common-comp-commonmethod-c.md#doublesided)来设置组件是否双面绘制。
 
 从API版本26.0.0开始，新增doubleSided方法。
 ```
@@ -3065,7 +3067,7 @@ struct ComponentPage {
 ```TypeScript
 ### 示例2（自定义落位动效）
 
-从API version 18开始，示例2展示了通过[executeDropAnimation](arkts-arkui-dragevent-i.md#executedropanimation)接口，实现自定义落位动效。
+从API version 18开始，示例2展示了通过[executeDropAnimation](arkts-arkui-common-comp-dragevent-i.md#executedropanimation)接口，实现自定义落位动效。
 
 
 ```
@@ -3073,7 +3075,7 @@ struct ComponentPage {
 ```TypeScript
 ### 示例3（拖拽异步获取数据）
 
-从API version 15开始，示例3展示了通过[startDataLoading](arkts-arkui-dragevent-i.md#startdataloading)实现拖拽异步获取数据。
+从API version 15开始，示例3展示了通过[startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading)实现拖拽异步获取数据。
 ```
 
 ```TypeScript
@@ -3087,7 +3089,7 @@ struct ComponentPage {
 ```TypeScript
 ### 示例5（获取包名和是否是跨设备）
 
-从API version 20开始，示例5展示了通过onDragXXX接口获取拖拽事件，调用拖拽事件的[getDragSource](arkts-arkui-dragevent-i.md#getdragsource)接口获取包名，调用isRemote接口判断是否为跨设备拖拽。
+从API version 20开始，示例5展示了通过onDragXXX接口获取拖拽事件，调用拖拽事件的[getDragSource](arkts-arkui-common-comp-dragevent-i.md#getdragsource)接口获取包名，调用isRemote接口判断是否为跨设备拖拽。
 
 
 ```
@@ -3095,7 +3097,7 @@ struct ComponentPage {
 ```TypeScript
 ### 示例6（拖拽支持悬停检测）
 
-从API version 20开始，示例6展示了通过[onDragSpringLoading](arkts-arkui-commonmethod-c.md#ondragspringloading)接口注册回调，并通过回调中的[SpringLoadingContext](#springloadingcontext20)获取上下文信息（当前状态、通知序列）。
+从API version 20开始，示例6展示了通过[onDragSpringLoading](arkts-arkui-common-comp-commonmethod-c.md#ondragspringloading)接口注册回调，并通过回调中的[SpringLoadingContext](#springloadingcontext20)获取上下文信息（当前状态、通知序列）。
 
 
 ```
@@ -3103,7 +3105,7 @@ struct ComponentPage {
 ```TypeScript
 ### 示例7（拖起方延迟提供数据）
 
-从API version 20开始，示例7展示了在[onDragStart](#ondragstart)中调用[setDataLoadParams](arkts-arkui-dragevent-i.md#setdataloadparams)延迟提供数据接口，并在[onDrop](#ondrop)中调用[startDataLoading](arkts-arkui-dragevent-i.md#startdataloading)异步获取数据接口。
+从API version 20开始，示例7展示了在[onDragStart](#ondragstart)中调用[setDataLoadParams](arkts-arkui-common-comp-dragevent-i.md#setdataloadparams)延迟提供数据接口，并在[onDrop](#ondrop)中调用[startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading)异步获取数据接口。
 
 
 ```

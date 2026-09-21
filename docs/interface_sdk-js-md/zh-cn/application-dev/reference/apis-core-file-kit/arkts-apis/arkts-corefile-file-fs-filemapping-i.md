@@ -232,26 +232,6 @@ mapping.msync().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-mapping.write(50, buffer);
-
-mapping.msync(50, buffer.byteLength).then(() => {
-  console.info("Succeeded in msync.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  mapping.unmapSync();
-  fileIo.closeSync(file);
-});
-```
-
 <a id="msync-1"></a>
 
 ## msync
@@ -294,7 +274,25 @@ msync(position: number, length: number): Promise<void>
 
 **示例**
 
-参见 [msync](#msync)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(50, buffer);
+
+mapping.msync(50, buffer.byteLength).then(() => {
+  console.info("Succeeded in msync.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  mapping.unmapSync();
+  fileIo.closeSync(file);
+});
+```
 
 ## msyncSync
 
@@ -340,23 +338,6 @@ mapping.unmapSync();
 fileIo.closeSync(file);
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-mapping.write(50, buffer);
-
-mapping.msyncSync(50, buffer.byteLength);
-console.info("Succeeded in msync.");
-
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
 <a id="msyncsync-1"></a>
 
 ## msyncSync
@@ -393,7 +374,22 @@ msyncSync(position: number, length: number): void
 
 **示例**
 
-参见 [msyncSync](#msyncsync)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(50, buffer);
+
+mapping.msyncSync(50, buffer.byteLength);
+console.info("Succeeded in msync.");
+
+mapping.unmapSync();
+fileIo.closeSync(file);
+```
 
 ## read
 
@@ -447,19 +443,6 @@ mapping.unmapSync();
 fileIo.closeSync(file);
 ```
 
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(100);
-let bytesRead = mapping.read(50, buffer, 50);
-console.info(`Succeeded in reading data, size is: ${bytesRead}`);
-
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
 <a id="read-1"></a>
 
 ## read
@@ -501,19 +484,6 @@ read(position: number, buffer: ArrayBuffer, length?: number): number
 | 13900054 | Mmap buffer is inaccessible |
 
 **示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(100);
-let bytesRead = mapping.read(buffer);
-console.info(`Succeeded in reading data, size is: ${bytesRead}`);
-
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -787,20 +757,6 @@ mapping.unmapSync();
 fileIo.closeSync(file);
 ```
 
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-let bytesWritten = mapping.write(50, buffer);
-console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
-
-mapping.msyncSync();
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
 <a id="write-1"></a>
 
 ## write
@@ -843,20 +799,6 @@ write(position: number, data: ArrayBuffer, length?: number): number
 | 13900054 | Mmap buffer is inaccessible |
 
 **示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-let bytesWritten = mapping.write(buffer);
-console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
-
-mapping.msyncSync();
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";

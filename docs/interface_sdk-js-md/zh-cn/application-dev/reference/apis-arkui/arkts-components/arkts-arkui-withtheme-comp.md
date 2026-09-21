@@ -8,13 +8,13 @@ Defines WithTheme Logic Component.
 
 | 名称 | 说明 |
 | --- | --- |
-| [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | 设置WithTheme作用域内组件默认配色及深浅色模式。 |
+| [WithThemeOptions](arkts-arkui-withtheme-comp-withthemeoptions-i.md) | 设置WithTheme作用域内组件默认配色及深浅色模式。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [CustomTheme](arkts-arkui-customtheme-t.md) | 用于自定义WithTheme作用域内组件的配色方案，具体配色项通过CustomColors接口配置。 |
+| [CustomTheme](arkts-arkui-withtheme-comp-customtheme-t.md) | 用于自定义WithTheme作用域内组件的配色方案，具体配色项通过CustomColors接口配置。 |
 
 ## 示例
 

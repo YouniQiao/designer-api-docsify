@@ -92,4 +92,10 @@ function removePreferencesFromCacheSync(context: Context, options: Options): voi
 
 **示例**
 
-参见 [removePreferencesFromCacheSync](#removepreferencesfromcachesync)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

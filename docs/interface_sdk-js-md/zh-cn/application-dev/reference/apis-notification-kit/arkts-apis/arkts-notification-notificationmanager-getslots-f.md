@@ -59,16 +59,6 @@ let getSlotsCallback = (err: BusinessError, data: Array<notificationManager.Noti
 notificationManager.getSlots(getSlotsCallback);
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
-  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 <a id="getslots-1"></a>
 
@@ -110,4 +100,12 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 **示例**
 
-参见 [getSlots](#getslots)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
+  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
+});
+```

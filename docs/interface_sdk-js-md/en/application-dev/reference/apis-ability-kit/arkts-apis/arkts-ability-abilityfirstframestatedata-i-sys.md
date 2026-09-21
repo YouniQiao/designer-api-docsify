@@ -68,7 +68,7 @@ The bundle name.
 isColdStart: boolean
 ```
 
-The entry ability of application is cold-start return true, others false.
+Enabled status of cold start. **true** if the entry ability of the application is cold-started, **false** otherwise.
 
 **Type:** boolean
 

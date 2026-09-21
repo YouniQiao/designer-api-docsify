@@ -46,7 +46,7 @@ backgroundBlurStyle: BlurStyle
 
 默认值：BlurStyle.NONE。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **起始版本：** 18
 
@@ -188,7 +188,7 @@ onClick?: Callback<ClickEvent>
 
 弧形按钮点击动作触发该回调。
 
-**类型：** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
+**类型：** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-common-comp-clickevent-i.md)&gt;
 
 **起始版本：** 18
 
@@ -204,7 +204,7 @@ onTouch?: Callback<TouchEvent>
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** Callback&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
+**类型：** Callback&lt;[TouchEvent](../arkts-components/arkts-arkui-common-comp-touchevent-i.md)&gt;
 
 **起始版本：** 18
 

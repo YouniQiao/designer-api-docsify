@@ -28,6 +28,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -88,6 +90,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 **Since:** 10
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -141,6 +145,8 @@ Queries the permission status of the current app and returns the result synchron
 Applicable to scenarios such as before determining whether to request a permission, confirming the authorization result after a permission request, or re-querying after monitoring a permission status change.
 
 **Since:** 20
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -203,6 +209,8 @@ This API is usually used in conjunction with [on](arkts-ability-abilityaccessctr
 
 **Since:** 18
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -242,22 +250,6 @@ try {
 }
 ```
 
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-  let bundleInfo: bundleManager.BundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-  let tokenIDList: Array<number> = [bundleInfo.appInfo.accessTokenId];
-  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
-  atManager.off('permissionStateChange', tokenIDList, permissionList);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`catch errcode: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## on('selfPermissionStateChange')
 
 ```TypeScript
@@ -284,6 +276,8 @@ authorization of a security component, which is automatically reclaimed by the s
 This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off). When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -326,26 +320,6 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-  let bundleInfo: bundleManager.BundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-  let tokenIDList: Array<number> = [bundleInfo.appInfo.accessTokenId];
-  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
-
-  atManager.on('permissionStateChange', tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-    console.info('receive permission state change');
-    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
-    });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`catch errcode: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -597,7 +571,11 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Examples**
 
-See [requestPermissionsFromUser](#requestpermissionsfromuser)
+```TypeScript
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
+```
 
 ## verifyAccessToken
 
@@ -613,6 +591,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 > You are advised to use [checkAccessToken](#checkaccesstoken).
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -671,6 +651,8 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 **Substitutes:** [checkAccessToken](#checkaccesstoken)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **Parameters:**
@@ -688,7 +670,25 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 **Examples**
 
-See [verifyAccessToken](#verifyaccesstoken)
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a permission manager instance
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+// Obtain the bundleInfo of the app
+let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+// Obtain the TokenID of the app
+let tokenID: number = bundleInfo.appInfo.accessTokenId;
+// Set the permission name to be verified
+let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
+// Verify whether the app has been granted the permission
+atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
+  console.info(`verifyAccessToken success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## verifyAccessTokenSync
 
@@ -703,6 +703,8 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 It is recommended to use [checkAccessTokenSync](#checkaccesstokensync) instead.
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 

@@ -44,7 +44,7 @@ The following example implements a polyline animation effect.
 
 The following example enables the Edge Light Effect animation by setting the edgeLightMode attribute, and uses the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) to implement a semi-transparent material effect.
 
-Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md).
 
 
 ```
@@ -54,7 +54,7 @@ Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions]
 
 The following example enables blur optimization by setting the blurSnapshot attribute. When the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set a material effect, or the blurStyle API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set blur, and a significant increase in power consumption is observed, you can try enabling blur optimization.
 
-Since API version 26.0.0, [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the blurSnapshot attribute.
+Since API version 26.0.0, [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) adds the blurSnapshot attribute.
 ```
 
 ```TypeScript
@@ -66,7 +66,7 @@ This example demonstrates how to use the onAccessibilityActionIntercept event to
 ```TypeScript
 ### Example 2: Setting the onAccessibilityFocus Callback
 
-Since API version 18, the callback is triggered when the focus acquisition or blur state changes. This example demonstrates the basic usage of [onAccessibilityFocus](arkts-arkui-commonmethod-c.md#onaccessibilityfocus). When the focus moves to "onAccessibilityFocus takes effect", "[testingTag] isFocus current is true" is printed. When the focus moves to a position other than "onAccessibilityFocus takes effect", "[testingTag] isFocus current is false" is printed.
+Since API version 18, the callback is triggered when the focus acquisition or blur state changes. This example demonstrates the basic usage of [onAccessibilityFocus](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityfocus). When the focus moves to "onAccessibilityFocus takes effect", "[testingTag] isFocus current is true" is printed. When the focus moves to a position other than "onAccessibilityFocus takes effect", "[testingTag] isFocus current is false" is printed.
 ```
 
 ```TypeScript
@@ -110,7 +110,7 @@ struct ComponentPage {
 ```TypeScript
 ### Example 1: Setting a Gradient Border
 
-This example demonstrates how to set a gradient border for a component using the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API.
+This example demonstrates how to set a gradient border for a component using the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API.
 
 
 ```
@@ -118,7 +118,7 @@ This example demonstrates how to set a gradient border for a component using the
 ```TypeScript
 ### Example 2: Dynamically Adjusting Property Values
 
-Dynamically adjusts the property values in the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API via the [Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md) API.
+Dynamically adjusts the property values in the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API via the [Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md) API.
 
 
 ```
@@ -126,7 +126,7 @@ Dynamically adjusts the property values in the [borderImage](arkts-arkui-commonm
 ```TypeScript
 ### Example 3: Using LocalizedEdgeWidths Type Values
 
-This example demonstrates how to use the [LocalizedEdgeWidths](ts-types.md#localizededgewidths12) type for the slice, width, and outset properties in the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API.
+This example demonstrates how to use the [LocalizedEdgeWidths](ts-types.md#localizededgewidths12) type for the slice, width, and outset properties in the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API.
 ```
 
 ```TypeScript
@@ -176,7 +176,7 @@ This example demonstrates how to configure multiple tooltips to appear and disap
 ```TypeScript
 ### Example 3: Setting the Immersive Light-Sensing Visual Effect of a Floating Bubble
 
-This example sets the system material of a component through the systemMaterial attribute in [TipsOptions](arkts-arkui-tipsoptions-i.md), implementing the immersive light-sensing visual effect of bindTips.
+This example sets the system material of a component through the systemMaterial attribute in [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md), implementing the immersive light-sensing visual effect of bindTips.
 
 The immersive light-sensing effect of a component is adaptively adjusted based on the device computing power and the immersive light-sensing effect set by the user in the system, requiring no additional adaptation by developers.
 
@@ -225,7 +225,7 @@ This example demonstrates how to set a touch target for a button using responseR
 ```TypeScript
 ### Example 2: Setting a Touch Target via the responseRegionList API
 
-This example demonstrates how to set a touch target for a button using [responseRegionList](arkts-arkui-commonmethod-c.md#responseregionlist) to respond to click events.
+This example demonstrates how to set a touch target for a button using [responseRegionList](arkts-arkui-common-comp-commonmethod-c.md#responseregionlist) to respond to click events.
 
 The responseRegionList API is supported since API version 22.
 
@@ -235,7 +235,7 @@ The responseRegionList API is supported since API version 22.
 ```TypeScript
 ### Example 3: Setting the Mouse Touch Target to Respond to Click Events
 
-This example uses [mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion) to set the mouse touch target to respond to click events.
+This example uses [mouseResponseRegion](arkts-arkui-common-comp-commonmethod-c.md#mouseresponseregion) to set the mouse touch target to respond to click events.
 ```
 
 ```TypeScript
@@ -265,7 +265,7 @@ This example demonstrates how to display a basic menu by configuring [MenuElemen
 ```TypeScript
 ### Example 2: Displaying a Custom Menu
 
-This example shows how to use bindMenu with a custom builder to create a custom menu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
+This example shows how to use bindMenu with a custom builder to create a custom menu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
 
 
 ```
@@ -281,7 +281,7 @@ This example demonstrates how to display a menu by setting [responseType](ts-app
 ```TypeScript
 ### Example 4: Displaying a Menu with an Arrow on Right-Clicking
 
-This example demonstrates how to display a menu with an arrow by setting the enableArrow property in [responseType](ts-appendix-enums.md#responsetype8).RightClick and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
+This example demonstrates how to display a menu with an arrow by setting the enableArrow property in [responseType](ts-appendix-enums.md#responsetype8).RightClick and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
 
 
 ```
@@ -289,7 +289,7 @@ This example demonstrates how to display a menu with an arrow by setting the ena
 ```TypeScript
 ### Example 5: Displaying a Menu with a Screenshot Preview on Long Press
 
-This example demonstrates how to display a menu with a screenshot preview by setting [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to display a menu with a screenshot preview by setting [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -297,7 +297,7 @@ This example demonstrates how to display a menu with a screenshot preview by set
 ```TypeScript
 ### Example 6: Displaying a Menu with a Custom Preview on Long Press
 
-This example demonstrates how to display a menu with a custom preview by setting [CustomBuilder](ts-types.md#custombuilder8) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to display a menu with a custom preview by setting [CustomBuilder](ts-types.md#custombuilder8) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -305,7 +305,7 @@ This example demonstrates how to display a menu with a custom preview by setting
 ```TypeScript
 ### Example 7: Using a State Variable for Menu Visibility
 
-This example demonstrates how to use [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) with isShown to control the visibility of the menu.
+This example demonstrates how to use [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) with isShown to control the visibility of the menu.
 
 
 ```
@@ -313,7 +313,7 @@ This example demonstrates how to use [bindContextMenu](arkts-arkui-commonmethod-
 ```TypeScript
 ### Example 8: Using Custom Menu and Preview Animations
 
-This example demonstrates how implement custom entrance and exit animations for the menu and preview by setting the transition property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) of bindContextMenu.
+This example demonstrates how implement custom entrance and exit animations for the menu and preview by setting the transition property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) of bindContextMenu.
 
 
 ```
@@ -329,7 +329,7 @@ This example shows how to display a menu with symbol icons by setting symbolIcon
 ```TypeScript
 ### Example 10: Using Shared Element Transition
 
-This example demonstrates how to implement a shared element transition effect from the component screenshot to the custom preview by setting hoverScale of the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to implement a shared element transition effect from the component screenshot to the custom preview by setting hoverScale of the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -337,7 +337,7 @@ This example demonstrates how to implement a shared element transition effect fr
 ```TypeScript
 ### Example 11: Customizing the Background Blur Effect
 
-This example demonstrates how to customize the blur background effect of a menu by setting the backgroundBlurStyleOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
+This example demonstrates how to customize the blur background effect of a menu by setting the backgroundBlurStyleOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindMenu.
 
 The backgroundBlurStyleOptions property is added to ContextMenuOptions since API version 18.
 
@@ -347,7 +347,7 @@ The backgroundBlurStyleOptions property is added to ContextMenuOptions since API
 ```TypeScript
 ### Example 12: Customizing the Background Effect
 
-This example demonstrates how to customize the background effect of a menu by setting the backgroundEffect property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
+This example demonstrates how to customize the background effect of a menu by setting the backgroundEffect property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindMenu.
 
 The backgroundEffect property is added to ContextMenuOptions since API version 18.
 
@@ -357,9 +357,9 @@ The backgroundEffect property is added to ContextMenuOptions since API version 1
 ```TypeScript
 ### Example 13: Configuring Lift-Finger Interruption for a Shared Element Transition
 
-This example demonstrates how to implement a shared element transition by setting the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu and how to control whether lifting the finger after a long press can cancel the menu pop-up by setting hoverScaleInterruption.
+This example demonstrates how to implement a shared element transition by setting the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu and how to control whether lifting the finger after a long press can cancel the menu pop-up by setting hoverScaleInterruption.
 
-From API version 20, the hoverScaleInterruption property is added to the [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) type of previewAnimationOptions.
+From API version 20, the hoverScaleInterruption property is added to the [ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md) type of previewAnimationOptions.
 
 
 ```
@@ -367,9 +367,9 @@ From API version 20, the hoverScaleInterruption property is added to the [Contex
 ```TypeScript
 ### Example 14: Setting the Radius of the Rounded Corners of the Preview Image Border
 
-This example demonstrates how to implement the function using bindContextMenu with [responseType](ts-appendix-enums.md#responsetype8).LongPress set. In addition, the [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) type of the preview property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) is set to determine the menu preview mode. previewBorderRadius is set to implement the radius of the rounded corners of the preview image.
+This example demonstrates how to implement the function using bindContextMenu with [responseType](ts-appendix-enums.md#responsetype8).LongPress set. In addition, the [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) type of the preview property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) is set to determine the menu preview mode. previewBorderRadius is set to implement the radius of the rounded corners of the preview image.
 
-In API version 19, the previewBorderRadius property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 19, the previewBorderRadius property is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -379,7 +379,7 @@ In API version 19, the previewBorderRadius property is added to [ContextMenuOpti
 
 This sample shows how to configure lifecycle callbacks for bindMenu11+.
 
-From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDisappear properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDisappear properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
@@ -387,7 +387,7 @@ From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDi
 
 This example demonstrates how to implement the menu mask using bindMenu with the mask property.
 
-In API version 20, the mask property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 20, the mask property is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -397,7 +397,7 @@ In API version 20, the mask property is added to [ContextMenuOptions](arkts-arku
 
 This example demonstrates how to set the outline style of the drop-down menu by setting the outlineWidth and outlineColor properties of bindMenu.
 
-In API version 20, the outlineWidth and outlineColor properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 20, the outlineWidth and outlineColor properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -413,7 +413,7 @@ This example demonstrates how to configure the properties of a menu by passing a
 ```TypeScript
 ### Example 19: Displaying Different Menus Based on the Trigger Mode
 
-This example demonstrates how to bind a menu to the target component by passing CustomBuilderT<ResponseType> to [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse). The component returns the mode of triggering menu display in the UI function. You can implement differentiated display based on the returned trigger mode.
+This example demonstrates how to bind a menu to the target component by passing CustomBuilderT<ResponseType> to [bindContextMenuWithResponse](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenuwithresponse). The component returns the mode of triggering menu display in the UI function. You can implement differentiated display based on the returned trigger mode.
 
 The bindContextMenuWithResponse API is added since API version 23.
 
@@ -425,13 +425,13 @@ The bindContextMenuWithResponse API is added since API version 23.
 
 This example demonstrates how to configure the menu to avoid the soft keyboard by setting keyboardAvoidMode in bindMenu and set the minimum distance for avoiding the soft keyboard by setting minKeyboardAvoidDistance.
 
-Starting from API version 23, the** keyboardAvoidMode** and minKeyboardAvoidDistance properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+Starting from API version 23, the** keyboardAvoidMode** and minKeyboardAvoidDistance properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
 ### Example 21: Setting the Position of the Menu to Display Relative to the Upper Left Corner of the Bound Component
 
-This example shows how to set the anchorPosition property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to display the menu relative to the upper left corner of the bound component.
+This example shows how to set the anchorPosition property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to display the menu relative to the upper left corner of the bound component.
 
 The anchorPosition property is added to ContextMenuOptions since API version 20.
 
@@ -441,7 +441,7 @@ The anchorPosition property is added to ContextMenuOptions since API version 20.
 ```TypeScript
 ### Example 22: Setting the Maximum Height of a Menu
 
-This sample shows how to use the maxHeight attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the maximum height of a menu.
+This sample shows how to use the maxHeight attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to set the maximum height of a menu.
 
 If the maxHeight attribute is not set, the maximum height of the menu is 80% of the available height by default, and all list items can be displayed. If the maxHeight attribute is set to 50% of the available height, only eight list items can be displayed.
 
@@ -453,7 +453,7 @@ The maxHeight attribute is added to ContextMenuOptions as of API version 26.0.0.
 ```TypeScript
 ### Example 23: Setting the Spacing Between the Menu and Target Component
 
-This example describes how to increase the spacing between the menu and the target component by setting the targetSpace attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example describes how to increase the spacing between the menu and the target component by setting the targetSpace attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.0.
 ```
@@ -461,7 +461,7 @@ The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.
 ```TypeScript
 ### Example 24: Setting the System Material of a Menu
 
-This example uses the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the system material of the component, thereby achieving the immersive light effect for the menu.
+This example uses the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to set the system material of the component, thereby achieving the immersive light effect for the menu.
 
 The immersive light effect of the component will be automatically adjusted based on the device computing power and the immersive light effect set by the user in the system. You do not need to perform additional adaptation.
 
@@ -475,15 +475,15 @@ Menu with system material
 ```TypeScript
 ### Example 25: Setting a Grid Menu Using gridStyle
 
-This example shows how to use gridStyle to set the grid menu style in [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow). You can customize the grid layout of the menu by setting the count, horizontalSize, and position attributes.
+This example shows how to use gridStyle to set the grid menu style in [bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow). You can customize the grid layout of the menu by setting the count, horizontalSize, and position attributes.
 
-In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
 ### Example 1: Displaying Different Types of Popups
 
-This example shows how to configure the keyboardAvoidMode attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) to determine whether the popup avoids the soft keyboard.
+This example shows how to configure the keyboardAvoidMode attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) to determine whether the popup avoids the soft keyboard.
 
 The keyboardAvoidMode attribute is added to PopupOptions and CustomPopupOptions since API version 15.
 
@@ -509,7 +509,7 @@ This example sets the arrowHeight, arrowWidth, radius, shadow, and popupColor at
 ```TypeScript
 ### Example 4: Setting the Popup Animation
 
-This example shows how to configure the transition attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) to implement the entrance and exit animations on the popup.
+This example shows how to configure the transition attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) to implement the entrance and exit animations on the popup.
 
 
 ```
@@ -707,7 +707,7 @@ This example demonstrates how to implement a full-screen sheet. This feature is 
 
 This example sets the system material through the systemMaterial attribute of the half-modal.
 
-Since API version 26.0.0, the [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the systemMaterial attribute.
+Since API version 26.0.0, the [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) adds the systemMaterial attribute.
 ```
 
 ```TypeScript
@@ -759,7 +759,7 @@ Starting from API version 20, this example mainly demonstrates the content effec
 ```TypeScript
 ### Example 1: Using the Same TransitionEffect Configuration for Image Appearance and Disappearance
 
-This example primarily demonstrates how to use the same [TransitionEffect](arkts-arkui-transitioneffect-c.md) to achieve both the appearance and disappearance of an image, where the appearance and disappearance are inverse processes of each other.
+This example primarily demonstrates how to use the same [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md) to achieve both the appearance and disappearance of an image, where the appearance and disappearance are inverse processes of each other.
 
 Schematic diagram:
 ```
@@ -767,7 +767,7 @@ Schematic diagram:
 ```TypeScript
 ### Example 2: Using Different TransitionEffect Configurations for Image Appearance and Disappearance
 
-This example demonstrates how to use different [TransitionEffect](arkts-arkui-transitioneffect-c.md) configurations to implement the appearance and disappearance of an image.
+This example demonstrates how to use different [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md) configurations to implement the appearance and disappearance of an image.
 
 Schematic diagram:
 ```
@@ -873,7 +873,7 @@ AccessibilityActionOptions is available since API version 23.
 ```TypeScript
 ### Example 9 (Set Custom Accessibility Actions)
 
-This example demonstrates how to use [accessibilityCustomActions](arkts-arkui-commonmethod-c.md#accessibilitycustomactions) to set custom accessibility actions for a component. Developers can bind callbacks for custom actions by action name.
+This example demonstrates how to use [accessibilityCustomActions](arkts-arkui-common-comp-commonmethod-c.md#accessibilitycustomactions) to set custom accessibility actions for a component. Developers can bind callbacks for custom actions by action name.
 
 Since API version 26.0.0, accessibilityCustomActions is added.
 ```
@@ -897,7 +897,7 @@ This example shows how to set up a flex layout through the flexBasis, flexGrow, 
 ```TypeScript
 ### Example 1: Obtaining Click Event Parameters
 
-This example configures a click event [ClickEvent](arkts-arkui-clickevent-i.md) for a button. When the button is clicked, the relevant parameters of the click event can be obtained.
+This example configures a click event [ClickEvent](arkts-arkui-common-comp-clickevent-i.md) for a button. When the button is clicked, the relevant parameters of the click event can be obtained.
 
 
 ```
@@ -983,9 +983,9 @@ Below is how the component looks with the brightness effect applied:
 ```TypeScript
 ### Example 2: Setting the Render Group Exclusion Attribute
 
-This example demonstrates how to use the [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) to avoid repeated invalidations of the render group cache in scenarios involving attribute animations on the component.
+This example demonstrates how to use the [excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup) to avoid repeated invalidations of the render group cache in scenarios involving attribute animations on the component.
 
-The [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) attribute is supported since API version 22.
+The [excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup) attribute is supported since API version 22.
 
 
 ```
@@ -1017,7 +1017,7 @@ This example demonstrates how to use the visibility configuration to achieve dif
 ```TypeScript
 ### Example 1: Implementing Custom Gesture Judgment
 
-In this example, the [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin) event is configured to implement customized judgment of the press and hold, fast swipe, swipe, pinch, and drag gestures. From API version 21, the [BaseEvent](ts-universal-events-click.md#baseevent8) axisPinch attribute can be used to obtain the two-finger zoom ratio.
+In this example, the [onGestureJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturejudgebegin) event is configured to implement customized judgment of the press and hold, fast swipe, swipe, pinch, and drag gestures. From API version 21, the [BaseEvent](ts-universal-events-click.md#baseevent8) axisPinch attribute can be used to obtain the two-finger zoom ratio.
 
 
 ```
@@ -1125,23 +1125,23 @@ This example demonstrates how to implement a pressed state effect for a custom c
 ```TypeScript
 ### Example 9: Implementing the Mouse Hover Effect with a Modifier
 
-This example implements the mouse hover effect by binding a modifier to aButton. When the mouse moves over the Button, the background color of the Button changes to red, which is the hover effect; when the mouse leaves the Button, the background color changes to black, which is the normal state effect. The hover style is set through the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API.
+This example implements the mouse hover effect by binding a modifier to aButton. When the mouse moves over the Button, the background color of the Button changes to red, which is the hover effect; when the mouse leaves the Button, the background color changes to black, which is the normal state effect. The hover style is set through the [applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute) API.
 
-Since API version 26.0.0, the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added.
+Since API version 26.0.0, the [applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute) API is added.
 ```
 
 ```TypeScript
 ### Example 1: Setting the Follow-Hand Morph Drag Animation
 
-This example sets [dragAnimationType](#attributes) to FOLLOW_HAND_MORPH to implement the follow-hand morph drag animation effect, and executes a custom drop animation through [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) when the drag ends.
+This example sets [dragAnimationType](#attributes) to FOLLOW_HAND_MORPH to implement the follow-hand morph drag animation effect, and executes a custom drop animation through [executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation) when the drag ends.
 
-Since API version 26.0.0, the [dragAnimationType](#attributes) attribute, the [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) method, and the [interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation) method are added.
+Since API version 26.0.0, the [dragAnimationType](#attributes) attribute, the [executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation) method, and the [interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation) method are added.
 ```
 
 ```TypeScript
 ### Example 1: Setting Focus and Focus Traversal Effects for Components
 
-This example shows how to use [defaultFocus](#defaultfocus9), [groupDefaultFocus](arkts-arkui-commonmethod-c.md#groupdefaultfocus), and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch). defaultFocus sets the bound component as the initial focus after the [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts) is created. groupDefaultFocus sets the bound component as the initial focus after the container with the specified tabIndex is created. focusOnTouch sets the bound component to obtain focus upon being clicked.
+This example shows how to use [defaultFocus](#defaultfocus9), [groupDefaultFocus](arkts-arkui-common-comp-commonmethod-c.md#groupdefaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch). defaultFocus sets the bound component as the initial focus after the [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts) is created. groupDefaultFocus sets the bound component as the initial focus after the container with the specified tabIndex is created. focusOnTouch sets the bound component to obtain focus upon being clicked.
 
 Diagrams:
 
@@ -1199,7 +1199,7 @@ This example shows how to change the focus box style of a component by configuri
 ```TypeScript
 ### Example 4: Setting Focus Group Traversal
 
-This example demonstrates how to set a component as the initial focus when its container gains focus by configuring [focusScopePriority](arkts-arkui-commonmethod-c.md#focusscopepriority). Configuring [focusScopeId](arkts-arkui-commonmethod-c.md#focusscopeid) allows the bound container component to become a focus group.
+This example demonstrates how to set a component as the initial focus when its container gains focus by configuring [focusScopePriority](arkts-arkui-common-comp-commonmethod-c.md#focusscopepriority). Configuring [focusScopeId](arkts-arkui-common-comp-commonmethod-c.md#focusscopeid) allows the bound container component to become a focus group.
 
 Diagrams:
 
@@ -1227,7 +1227,7 @@ Continue pressing the Tab key, and the focus transfers to the component named Gr
 ```TypeScript
 ### Example 5: Setting Tab Focus Stay
 
-This example implements Tab key focus stay on a component by configuring [tabStop](arkts-arkui-commonmethod-c.md#tabstop).
+This example implements Tab key focus stay on a component by configuring [tabStop](arkts-arkui-common-comp-commonmethod-c.md#tabstop).
 
 Diagrams:
 
@@ -1255,9 +1255,9 @@ Press the Tab key again, and the focus cycles back to button1.
 ```TypeScript
 ### Example 6: Setting Custom Focus Movement
 
-This example demonstrates how to implement custom focus movement logic using the [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) API, available since API version 18.
+This example demonstrates how to implement custom focus movement logic using the [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) API, available since API version 18.
 
-If [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is not configured, the default focus navigation order when pressing the Tab key is: M->A->B->C->D->E->F. After [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is configured, the focus navigation order changes to: M->D->F->B->C.
+If [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) is not configured, the default focus navigation order when pressing the Tab key is: M->A->B->C->D->E->F. After [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) is configured, the focus navigation order changes to: M->D->F->B->C.
 ```
 
 ```TypeScript
@@ -1336,7 +1336,7 @@ This example shows how to achieve the same rotation effect by setting different 
 ```TypeScript
 ### Example 4: Implementing Graphical Transformation Through transform3D
 
-This example demonstrates how to implement image transformation by setting [transform3D](arkts-arkui-commonmethod-c.md#transform3d). This functionality is supported since API version 20.
+This example demonstrates how to implement image transformation by setting [transform3D](arkts-arkui-common-comp-commonmethod-c.md#transform3d). This functionality is supported since API version 20.
 
 
 ```
@@ -1344,7 +1344,7 @@ This example demonstrates how to implement image transformation by setting [tran
 ```TypeScript
 ### Example 5: Rotating an Image Based on Angles of Each Axis
 
-This example demonstrates how to implement rotation by setting the [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) parameter of rotate. This functionality is supported since API version 20.
+This example demonstrates how to implement rotation by setting the [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) parameter of rotate. This functionality is supported since API version 20.
 ```
 
 ```TypeScript
@@ -1540,7 +1540,7 @@ This example uses [blendMode](ts-universal-attributes-image-effect.md#blendmode1
 ```TypeScript
 ### Example 7: Comparing Blur Effects
 
-This example compares three different blur effects: [backgroundEffect11+](#backgroundeffect11), [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur), and [backgroundBlurStyle9+](#backgroundblurstyle9).
+This example compares three different blur effects: [backgroundEffect11+](#backgroundeffect11), [backdropBlur](arkts-arkui-common-comp-commonmethod-c.md#backdropblur), and [backgroundBlurStyle9+](#backgroundblurstyle9).
 
 
 ```
@@ -1762,7 +1762,7 @@ This example demonstrates how to use onGestureRecognizerJudgeBegin to implement 
 ```TypeScript
 ### Example 5: Customizing Gesture Recognizer Participation in Gesture Processing
 
-This example demonstrates how to use [onTouchTestDone](arkts-arkui-commonmethod-c.md#ontouchtestdone) to exclude a gesture recognizer from subsequent gesture processing, available from API version 20. When the callback is triggered, [preventBegin](./ts-gesture-common.md#preventbegin20) is called to prevent the recognizer from participating in further processing. Tapping the overlapping area of Tap2 and Tap1, if preventBegin is not called, triggers the gesture corresponding to Tap2. If preventBegin is called to block Tap2, the gesture corresponding to Tap1 is triggered.
+This example demonstrates how to use [onTouchTestDone](arkts-arkui-common-comp-commonmethod-c.md#ontouchtestdone) to exclude a gesture recognizer from subsequent gesture processing, available from API version 20. When the callback is triggered, [preventBegin](./ts-gesture-common.md#preventbegin20) is called to prevent the recognizer from participating in further processing. Tapping the overlapping area of Tap2 and Tap1, if preventBegin is not called, triggers the gesture corresponding to Tap2. If preventBegin is called to block Tap2, the gesture corresponding to Tap1 is triggered.
 
 
 ```
@@ -1770,7 +1770,7 @@ This example demonstrates how to use [onTouchTestDone](arkts-arkui-commonmethod-
 ```TypeScript
 ### Example 6: Customizing the Collection Results of Events and Gestures
 
-This example configures [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept) to specify whether a gesture recognizer or touch recognizer is passed through to other nodes. When button2 is tapped, the touch event is not passed through to Column. When button1 is tapped, the touch event is passed through to Column, and Column changes color.
+This example configures [onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept) to specify whether a gesture recognizer or touch recognizer is passed through to other nodes. When button2 is tapped, the touch event is not passed through to Column. When button1 is tapped, the touch event is passed through to Column, and Column changes color.
 
 The onGestureCollectIntercept API is added since API version 26.0.0.
 ```
@@ -1784,7 +1784,7 @@ The component tree corresponding to the example is shown in the following figure
 ```TypeScript
 ### Example 7: Nested Scrolling with Non-Built-in Gestures
 
-This example implements nested scrolling using [shouldRecognizerParallelWith](arkts-arkui-commonmethod-c.md#shouldrecognizerparallelwith) and [onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin). The inner component takes precedence in responding to the swipe gesture. When the inner component scrolls to the top or bottom, the outer component can take over the scrolling.
+This example implements nested scrolling using [shouldRecognizerParallelWith](arkts-arkui-common-comp-commonmethod-c.md#shouldrecognizerparallelwith) and [onGestureRecognizerJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturerecognizerjudgebegin). The inner component takes precedence in responding to the swipe gesture. When the inner component scrolls to the top or bottom, the outer component can take over the scrolling.
 
 The shouldRecognizerParallelWith API is added since API version 26.0.0.
 ```
@@ -1792,15 +1792,15 @@ The shouldRecognizerParallelWith API is added since API version 26.0.0.
 ```TypeScript
 ### Example 1: Enabling the Keyboard Continuation
 
-In this example, the [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
+In this example, the [onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
 
-The [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
+The [onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
 ```
 
 ```TypeScript
 ### Example 1: Using the Automatic Memory Optimization Strategy
 
-In the following example, the reusable custom component ReusableComponent uses the automatic memory optimization strategy through the memoryOptimizationStrategy attribute of [ReusableOptions](arkts-arkui-reusableoptions-i.md). Click the Recycle button to trigger the recycling of the ReusableComponent component. Then, when the app goes to the background, the reuse pool cache is released.
+In the following example, the reusable custom component ReusableComponent uses the automatic memory optimization strategy through the memoryOptimizationStrategy attribute of [ReusableOptions](arkts-arkui-common-comp-reusableoptions-i.md). Click the Recycle button to trigger the recycling of the ReusableComponent component. Then, when the app goes to the background, the reuse pool cache is released.
 
 The ReusableOptions API is added since API version 26.0.0.
 ```
@@ -1808,7 +1808,7 @@ The ReusableOptions API is added since API version 26.0.0.
 ```TypeScript
 ### Example 1: Allowing Drag and Drop
 
-This example demonstrates how to use [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop) to configure component drop targets and [draggable](#draggable) to enable component dragging.
+This example demonstrates how to use [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop) to configure component drop targets and [draggable](#draggable) to enable component dragging.
 
 
 ```
@@ -1832,7 +1832,7 @@ This example demonstrates how to configure the drag preview style using [dragPre
 ```TypeScript
 ### Example 4: Enabling the Multi-select Drag Functionality
 
-This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui-draginteractionoptions-i.md) to enable the multi-select drag functionality in the Grid component.
+This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui-common-comp-draginteractionoptions-i.md) to enable the multi-select drag functionality in the Grid component.
 
 
 ```
@@ -1840,7 +1840,7 @@ This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui
 ```TypeScript
 ### Example 5: Enabling the Default Pressed State Animation
 
-This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arkui-draginteractionoptions-i.md) to enable the default press animation effect in the Grid component.
+This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arkui-common-comp-draginteractionoptions-i.md) to enable the default press animation effect in the Grid component.
 
 
 ```
@@ -1848,7 +1848,7 @@ This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arku
 ```TypeScript
 ### Example 6: Customizing the Preview Style
 
-This example demonstrates customizing the Image component background by configuring [ImageModifier](arkts-arkui-imagemodifier-t.md).
+This example demonstrates customizing the Image component background by configuring [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md).
 
 
 ```
@@ -1866,13 +1866,13 @@ The ohos.permission.INTERNET permission is required for using online images. For
 ```TypeScript
 ### Example 8: Enabling Haptic Feedback for Dragging
 
-This example demonstrates enabling haptic feedback during image drag operations by configuring [enableHapticFeedback](arkts-arkui-draginteractionoptions-i.md), supported since API version 18.
+This example demonstrates enabling haptic feedback during image drag operations by configuring [enableHapticFeedback](arkts-arkui-common-comp-draginteractionoptions-i.md), supported since API version 18.
 ```
 
 ```TypeScript
 ### Example 9: Customizing the Drag Preview
 
-Starting from API version 15, this example configures [onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15) to create a custom preview image exclusively for the lift animation effect, and [isLiftingDisabled](arkts-arkui-draginteractionoptions-i.md) to disable the lift animation effect.
+Starting from API version 15, this example configures [onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15) to create a custom preview image exclusively for the lift animation effect, and [isLiftingDisabled](arkts-arkui-common-comp-draginteractionoptions-i.md) to disable the lift animation effect.
 
 Custom preview for the lifting effect only
 
@@ -1886,7 +1886,7 @@ Custom preview with the lifting effect disabled
 ```TypeScript
 ### Example 10: Implementing Touch Point Calculation Based on Initial Drag Preview Size
 
-Since API version 19, Example 10 implements the calculation of the follow-finger point position during the drag process based on the original size of the final drag preview image by configuring [DragPreviewMode](arkts-arkui-draginteractionoptions-i.md) to ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW. When [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT, this attribute does not take effect.
+Since API version 19, Example 10 implements the calculation of the follow-finger point position during the drag process based on the original size of the final drag preview image by configuring [DragPreviewMode](arkts-arkui-common-comp-draginteractionoptions-i.md) to ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW. When [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT, this attribute does not take effect.
 
 
 ```
@@ -1894,7 +1894,7 @@ Since API version 19, Example 10 implements the calculation of the follow-finger
 ```TypeScript
 ### Example 11: Implementing Transition Effects Between Floating Images and Drag Previews
 
-This example demonstrates how to implement different transition effects between floating images and drag previews by configuring [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md), supported since API version 19.
+This example demonstrates how to implement different transition effects between floating images and drag previews by configuring [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md), supported since API version 19.
 
 
 ```
@@ -1902,7 +1902,7 @@ This example demonstrates how to implement different transition effects between 
 ```TypeScript
 ### Example 12: Setting Dropping of a Custom Component
 
-In API version 23 and later, this example demonstrates how to implement the drag-and-drop function for a custom component by passing a type through the component's [onDragStart](ts-universal-events-drag-drop.md#ondragstart) API and setting the target component's [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop) attribute to allow dropping of that type.
+In API version 23 and later, this example demonstrates how to implement the drag-and-drop function for a custom component by passing a type through the component's [onDragStart](ts-universal-events-drag-drop.md#ondragstart) API and setting the target component's [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop) attribute to allow dropping of that type.
 
 
 ```
@@ -1910,9 +1910,9 @@ In API version 23 and later, this example demonstrates how to implement the drag
 ```TypeScript
 ### Example 13: Setting the Material Effect of the Drag Backdrop Image
 
-This example sets the material effect of the drag backdrop by configuring the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute in [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop).
+This example sets the material effect of the drag backdrop by configuring the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute in [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop).
 
-Since API version 26.0.0, the modifier parameter in the [DragPreviewOptions](arkts-arkui-imagemodifier-t.md) interface additionally supports the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute.
+Since API version 26.0.0, the modifier parameter in the [DragPreviewOptions](arkts-arkui-common-comp-imagemodifier-t.md) interface additionally supports the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute.
 ```
 
 ```TypeScript
@@ -2050,13 +2050,13 @@ This example sets the zIndex attribute for components in different containers. T
 ```TypeScript
 ### Example 1: Using onVisibleAreaChange to Listen for Visible Area Changes
 
-This example demonstrates how to set an [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event for a component, which triggers the callback when the component is fully displayed or completely hidden.
+This example demonstrates how to set an [onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange) event for a component, which triggers the callback when the component is fully displayed or completely hidden.
 ```
 
 ```TypeScript
 ### Example 2: Using onVisibleAreaApproximateChange to Listen for Visible Area Changes
 
-This example demonstrates how to set an [onVisibleAreaApproximateChange](arkts-arkui-commonmethod-c.md#onvisibleareaapproximatechange) event for a component, which triggers the callback when the component is fully displayed or completely hidden. This feature is supported from API version 17.
+This example demonstrates how to set an [onVisibleAreaApproximateChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareaapproximatechange) event for a component, which triggers the callback when the component is fully displayed or completely hidden. This feature is supported from API version 17.
 
 
 ```
@@ -2129,9 +2129,9 @@ This example demonstrates how to set an area change event for a Text component. 
 ```TypeScript
 ### Example 2: Using onAreaChange to Listen for Area Changes at a Custom Interval
 
-In this example, by setting [expectedUpdateInterval](arkts-arkui-areachangeoptions-i.md), the [onAreaChange](#onareachange-1) event can be triggered when the Text layout changes, achieving the effect of interval callbacks.
+In this example, by setting [expectedUpdateInterval](arkts-arkui-common-comp-areachangeoptions-i.md), the [onAreaChange](#onareachange-1) event can be triggered when the Text layout changes, achieving the effect of interval callbacks.
 
-Since API version 26.0.0, [onAreaChange](#onareachange-1), [AreaChangeCallback](arkts-arkui-areachangecallback-t.md), and [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md) are added.
+Since API version 26.0.0, [onAreaChange](#onareachange-1), [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md), and [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) are added.
 ```
 
 ```TypeScript
@@ -2173,7 +2173,7 @@ Sets image effects, including shadow, grayscale, highlight, saturation, contrast
 ```TypeScript
 ### Example 2: Applying a Linear Gradient Blur Effect
 
-This example demonstrates how to apply a linear gradient blur effect on a component using [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur).
+This example demonstrates how to apply a linear gradient blur effect on a component using [linearGradientBlur](arkts-arkui-common-comp-commonmethod-c.md#lineargradientblur).
 
 
 ```
@@ -2181,7 +2181,7 @@ This example demonstrates how to apply a linear gradient blur effect on a compon
 ```TypeScript
 ### Example 3: Setting Offscreen Rendering Effect
 
-This example demonstrates how to use [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) to set whether the component is rendered entirely offscreen and then composited with its parent component.
+This example demonstrates how to use [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup) to set whether the component is rendered entirely offscreen and then composited with its parent component.
 
 
 ```
@@ -2197,7 +2197,7 @@ This example demonstrates how to blend the current component content with the ca
 ```TypeScript
 ### Example 5: Inverting the Foreground Color
 
-This example demonstrates how to achieve intelligent foreground color inversion using [InvertOptions](arkts-arkui-invertoptions-i.md).
+This example demonstrates how to achieve intelligent foreground color inversion using [InvertOptions](arkts-arkui-common-comp-invertoptions-i.md).
 
 
 ```
@@ -2205,7 +2205,7 @@ This example demonstrates how to achieve intelligent foreground color inversion 
 ```TypeScript
 ### Example 6: Setting Non-Overlapping Same-Layer Shadows
 
-This example demonstrates how to implement non-overlapping shadow effect within the same layer using [useShadowBatching](arkts-arkui-commonmethod-c.md#useshadowbatching) in combination with [shadow](#shadow).
+This example demonstrates how to implement non-overlapping shadow effect within the same layer using [useShadowBatching](arkts-arkui-common-comp-commonmethod-c.md#useshadowbatching) in combination with [shadow](#shadow).
 
 
 ```
@@ -2213,7 +2213,7 @@ This example demonstrates how to implement non-overlapping shadow effect within 
 ```TypeScript
 ### Example 7: Applying a Spherical Effect to a Component
 
-This example demonstrates how to apply a spherical effect to a component using [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect).
+This example demonstrates how to apply a spherical effect to a component using [sphericalEffect](arkts-arkui-common-comp-commonmethod-c.md#sphericaleffect).
 
 Below is how the component looks with the spherical effect applied.
 
@@ -2227,7 +2227,7 @@ Below is how the component looks without the spherical effect applied.
 ```TypeScript
 ### Example 8: Applying a Light Up Effect to a Component
 
-This example demonstrates how to apply a light up effect to a component using [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect).
+This example demonstrates how to apply a light up effect to a component using [lightUpEffect](arkts-arkui-common-comp-commonmethod-c.md#lightupeffect).
 
 Below is how the component looks with the light up effect applied.
 
@@ -2245,7 +2245,7 @@ Below is how the component looks without the light up effect applied.
 ```TypeScript
 ### Example 9: Applying a Pixel Stretch Effect to a Component
 
-This example demonstrates how to apply a pixel stretch effect to a component using [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect).
+This example demonstrates how to apply a pixel stretch effect to a component using [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect).
 
 Below is how the component looks with the pixel stretch effect applied.
 
@@ -2259,7 +2259,7 @@ Below is how the component looks without the pixel stretch effect applied.
 ```TypeScript
 ### Example 10: Applying a System Bar Effect to a Component
 
-This example demonstrates how to apply a system bar effect to a component using [systemBarEffect](arkts-arkui-commonmethod-c.md#systembareffect).
+This example demonstrates how to apply a system bar effect to a component using [systemBarEffect](arkts-arkui-common-comp-commonmethod-c.md#systembareffect).
 
 Below is how the component looks with the system bar effect applied.
 
@@ -2269,7 +2269,7 @@ Below is how the component looks with the system bar effect applied.
 ```TypeScript
 ### Example 11: Setting Whether the Component Is Double-Sided
 
-This example demonstrates how to use [doubleSided](arkts-arkui-commonmethod-c.md#doublesided) to set whether the component is double-sided.
+This example demonstrates how to use [doubleSided](arkts-arkui-common-comp-commonmethod-c.md#doublesided) to set whether the component is double-sided.
 
 The doubleSided method is added since API version 26.0.0.
 ```
@@ -2297,7 +2297,7 @@ For details about ListDataSource and the complete code, see [Example 1: Adding a
 ```TypeScript
 ### Example 3: Setting the Clipping Region
 
-This example sets the [clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent) attribute to change the clipping area of the component's content layer.
+This example sets the [clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent) attribute to change the clipping area of the component's content layer.
 
 
 ```
@@ -2321,7 +2321,7 @@ This example demonstrates how to use the onAccessibilityHover event to configure
 
 This example shows how to capture touch events from a component that cannot receive focus in accessibility mode using the onAccessibilityHoverTransparent API and display event details in the text area below.
 
-Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter type AccessibilityTransparentCallback has been added.
+Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter type AccessibilityTransparentCallback has been added.
 ```
 
 ```TypeScript
@@ -2335,7 +2335,7 @@ Example 1 shows how to set the drag and drop area for some components (such as I
 ```TypeScript
 ### Example 2 (Custom Drop Animation)
 
-Since API version 18, Example 2 demonstrates how to implement a custom drop animation through the [executeDropAnimation](arkts-arkui-dragevent-i.md#executedropanimation) API.
+Since API version 18, Example 2 demonstrates how to implement a custom drop animation through the [executeDropAnimation](arkts-arkui-common-comp-dragevent-i.md#executedropanimation) API.
 
 
 ```
@@ -2343,7 +2343,7 @@ Since API version 18, Example 2 demonstrates how to implement a custom drop anim
 ```TypeScript
 ### Example 3 (Asynchronously Obtaining Data During Drag)
 
-Since API version 15, Example 3 demonstrates asynchronously obtaining data during drag through [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading).
+Since API version 15, Example 3 demonstrates asynchronously obtaining data during drag through [startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading).
 ```
 
 ```TypeScript
@@ -2357,7 +2357,7 @@ Since API version 20, Example 4 shows how to obtain the drag event through the o
 ```TypeScript
 ### Example 5 (Obtaining the Package Name and Checking Whether It Is a Cross-Device Drag)
 
-Starting from API version 20, Example 5 shows how to obtain a drag event through the onDragXXX API, call the [getDragSource](arkts-arkui-dragevent-i.md#getdragsource) API of the drag event to obtain the package name, and call the isRemote API to determine whether it is a cross-device drag.
+Starting from API version 20, Example 5 shows how to obtain a drag event through the onDragXXX API, call the [getDragSource](arkts-arkui-common-comp-dragevent-i.md#getdragsource) API of the drag event to obtain the package name, and call the isRemote API to determine whether it is a cross-device drag.
 
 
 ```
@@ -2365,7 +2365,7 @@ Starting from API version 20, Example 5 shows how to obtain a drag event through
 ```TypeScript
 ### Example 6 (Drag Supporting Hover Detection)
 
-Since API version 20, Example 6 demonstrates registering a callback through the [onDragSpringLoading](arkts-arkui-commonmethod-c.md#ondragspringloading) API and obtaining context information (current state and notification sequence) through [SpringLoadingContext](#springloadingcontext20) in the callback.
+Since API version 20, Example 6 demonstrates registering a callback through the [onDragSpringLoading](arkts-arkui-common-comp-commonmethod-c.md#ondragspringloading) API and obtaining context information (current state and notification sequence) through [SpringLoadingContext](#springloadingcontext20) in the callback.
 
 
 ```
@@ -2373,7 +2373,7 @@ Since API version 20, Example 6 demonstrates registering a callback through the 
 ```TypeScript
 ### Example 7 (Delayed Data Provision by the Drag Initiator)
 
-Starting from API version 20, Example 7 demonstrates calling [setDataLoadParams](arkts-arkui-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision, and calling [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to obtain data asynchronously.
+Starting from API version 20, Example 7 demonstrates calling [setDataLoadParams](arkts-arkui-common-comp-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision, and calling [startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to obtain data asynchronously.
 
 
 ```
@@ -2413,13 +2413,13 @@ The figure below shows how the button looks when a stylus hovers on it.
 ```TypeScript
 ### Example 2: Using onHoverMove
 
-Since API version 15, this example sets the [onHoverMove](arkts-arkui-commonmethod-c.md#onhovermove) event of the button. When a stylus hovers over the button, the UI displays the current hover position of the stylus.
+Since API version 15, this example sets the [onHoverMove](arkts-arkui-common-comp-commonmethod-c.md#onhovermove) event of the button. When a stylus hovers over the button, the UI displays the current hover position of the stylus.
 ```
 
 ```TypeScript
 ### Example 1: Creating Outlines
 
-This example demonstrates how to create component outlines using [outline](arkts-arkui-commonmethod-c.md#outline).
+This example demonstrates how to create component outlines using [outline](arkts-arkui-common-comp-commonmethod-c.md#outline).
 
 
 ```
@@ -2427,7 +2427,7 @@ This example demonstrates how to create component outlines using [outline](arkts
 ```TypeScript
 ### Example 2: Using the LocalizedEdgeColors Type
 
-This example demonstrates how to set the color attribute of the [outline](arkts-arkui-commonmethod-c.md#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
+This example demonstrates how to set the color attribute of the [outline](arkts-arkui-common-comp-commonmethod-c.md#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
 ```
 
 ```TypeScript
@@ -2549,7 +2549,7 @@ This example demonstrates how components gain and lose focus. The colors of the 
 ```TypeScript
 ### Example 1: Obtaining Axis Event Parameters
 
-This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel, the axis event parameters are captured. Starting from API version 21, this example uses the  attribute of [BaseEvent](./ts-universal-events-click.md#baseevent8) and [getPinchAxisScaleValue](arkts-arkui-axisevent-i.md#getpinchaxisscalevalue) to obtain the pinch scale value. Starting from API version 22, this example uses [hasAxis](arkts-arkui-axisevent-i.md#hasaxis) to check whether the axis event contains the specified axis type.
+This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel, the axis event parameters are captured. Starting from API version 21, this example uses the  attribute of [BaseEvent](./ts-universal-events-click.md#baseevent8) and [getPinchAxisScaleValue](arkts-arkui-common-comp-axisevent-i.md#getpinchaxisscalevalue) to obtain the pinch scale value. Starting from API version 22, this example uses [hasAxis](arkts-arkui-common-comp-axisevent-i.md#hasaxis) to check whether the axis event contains the specified axis type.
 
 The figure below shows the event parameters captured when the user scrolls the mouse wheel.
 
@@ -2567,7 +2567,7 @@ The getCurrentLocalPosition API is supported since API version 26.0.0.
 ```TypeScript
 ### Example 1: Using Different Clipping Attributes
 
-This example demonstrates how to clip and mask an image using [clipShape](arkts-arkui-commonmethod-c.md#clipshape), [clip](#clip12), and [maskShape](arkts-arkui-commonmethod-c.md#maskshape).
+This example demonstrates how to clip and mask an image using [clipShape](arkts-arkui-common-comp-commonmethod-c.md#clipshape), [clip](#clip12), and [maskShape](arkts-arkui-common-comp-commonmethod-c.md#maskshape).
 
 
 ```
@@ -2583,7 +2583,7 @@ This example demonstrates how to mask an image using [mask](#mask12).
 
 This example disables the default click sound effect by setting the enableClickSoundEffect attribute. You can call audio-related APIs in the onClick callback to customize the sound effect. For details, see [Using SoundPool to Play Short Sounds](../../../media/media/using-soundpool-for-playback.md).
 
-The [enableClickSoundEffect](arkts-arkui-commonmethod-c.md#enableclicksoundeffect) attribute is added since API version 24.
+The [enableClickSoundEffect](arkts-arkui-common-comp-commonmethod-c.md#enableclicksoundeffect) attribute is added since API version 24.
 ```
 
 ```TypeScript
@@ -2619,7 +2619,7 @@ This example demonstrates how to create a linear color gradient using [linearGra
 ```TypeScript
 ### Example 2: Creating a Sweep Gradient
 
-This example demonstrates how to create a sweep color gradient using [sweepGradient](arkts-arkui-commonmethod-c.md#sweepgradient).
+This example demonstrates how to create a sweep color gradient using [sweepGradient](arkts-arkui-common-comp-commonmethod-c.md#sweepgradient).
 
 
 ```
@@ -2627,7 +2627,7 @@ This example demonstrates how to create a sweep color gradient using [sweepGradi
 ```TypeScript
 ### Example 3: Creating a Radial Gradient
 
-This example demonstrates how to create a radial color gradient using [radialGradient](arkts-arkui-commonmethod-c.md#radialgradient).
+This example demonstrates how to create a radial color gradient using [radialGradient](arkts-arkui-common-comp-commonmethod-c.md#radialgradient).
 ```
 
 ```TypeScript

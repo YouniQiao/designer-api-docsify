@@ -36,13 +36,6 @@ A constructor used to create a **Readable** object.
 let readableStream = new stream.Readable();
 ```
 
-```TypeScript
-let option : stream.ReadableOptions = {
-  encoding : 'utf-8'
-};
-let readableStream = new stream.Readable(option);
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -66,10 +59,6 @@ A constructor used to create a **Readable** object.
 | options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes | Options in the **Readable** constructor. |
 
 **Examples**
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
 
 ```TypeScript
 let option : stream.ReadableOptions = {

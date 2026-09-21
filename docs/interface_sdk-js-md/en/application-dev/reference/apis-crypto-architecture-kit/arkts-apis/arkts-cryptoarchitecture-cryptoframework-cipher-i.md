@@ -132,10 +132,6 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 For more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption).
 ```
 
-```TypeScript
-In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.
-```
-
 <a id="dofinal-3"></a>
 
 ## doFinal
@@ -257,10 +253,6 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. The data is too long.<br>**Applicable version:** 22 and later |
 
 **Examples**
-
-```TypeScript
-For more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption).
-```
 
 ```TypeScript
 In addition, for more encryption and decryption examples, see Using an AES Symmetric Key (GCM Mode) for Encryption and Decryption.

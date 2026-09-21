@@ -49,41 +49,6 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getUserStorageStats((error: BusinessError, storageStats: storageStatistics.StorageStats) => {
-  if (error) {
-    console.error(`getUserStorageStats failed with err, code is: ${error.code}, message is: ${error.message}`);
-  } else {
-    // do something
-    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let userId: number = 100;
-storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatistics.StorageStats) => {
-  console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-}).catch((err: BusinessError) => {
-  console.error(`getUserStorageStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let userId: number = 100;
-storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStats: storageStatistics.StorageStats) => {
-  if (error) {
-    console.error(`getUserStorageStats failed with err, code is: ${error.code}, message is: ${error.message}`);
-  } else {
-    // do something
-    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
-  }
-});
-```
-
 
 <a id="getuserstoragestats-1"></a>
 
@@ -121,7 +86,17 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 
 **示例**
 
-参见 [getUserStorageStats](#getuserstoragestats)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getUserStorageStats((error: BusinessError, storageStats: storageStatistics.StorageStats) => {
+  if (error) {
+    console.error(`getUserStorageStats failed with err, code is: ${error.code}, message is: ${error.message}`);
+  } else {
+    // do something
+    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+  }
+});
+```
 
 
 <a id="getuserstoragestats-2"></a>
@@ -167,7 +142,15 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 
 **示例**
 
-参见 [getUserStorageStats](#getuserstoragestats)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let userId: number = 100;
+storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatistics.StorageStats) => {
+  console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+}).catch((err: BusinessError) => {
+  console.error(`getUserStorageStats failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
 
 
 <a id="getuserstoragestats-3"></a>
@@ -208,4 +191,15 @@ function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStat
 
 **示例**
 
-参见 [getUserStorageStats](#getuserstoragestats)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let userId: number = 100;
+storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStats: storageStatistics.StorageStats) => {
+  if (error) {
+    console.error(`getUserStorageStats failed with err, code is: ${error.code}, message is: ${error.message}`);
+  } else {
+    // do something
+    console.info("getUserStorageStats successfully:" + JSON.stringify(storageStats));
+  }
+});
+```

@@ -1,6 +1,6 @@
 # ImageSpan
 
-ImageSpan是Text、ContainerSpan组件的子组件，用于在文本中显示行内图片，支持设置图片对齐方式、缩放类型、加载占位图和颜色滤镜等，适用于需要在文本段落中嵌入图片实现图文混排的场景。
+ImageSpan是[Text](arkts-arkui-text-comp.md#text)、[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)组件的子组件，用于在文本中显示行内图片，支持设置图片对齐方式、缩放类型、加载占位图和颜色滤镜等，适用于需要在文本段落中嵌入图片实现图文混排的场景。
 
 ## 子组件
 
@@ -28,7 +28,7 @@ ImageSpan(value: ResourceStr | PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md) | 是 | 图片的数据源，支持本地图片和网络图片。<br>使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。<br>当使用相对路径引用图片资源时，例如`ImageSpan("common/test.jpg")`，不支持跨包/跨模块调用该ImageSpan组件，建议使用`$r`方式来管理需全局使用的图片资源。<br>- 支持的图片格式包括png、jpg、bmp、svg、gif、webp和heif。<br>- 支持`Base64`字符串。格式`data:image/[png&#124;jpeg&#124;bmp&#124;webp&#124;heif];base64,[base64 data]`，其中`[base64 data]`为`Base64`字符串数据。<br>- 支持file://data/storage路径前缀的字符串，用于读取本应用安装目录下file文件夹下的图片资源。需要保证应用安装目录路径下的文件有可读权限。 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | 是 | 图片的数据源，支持本地图片和网络图片。<br>使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。<br>当使用相对路径引用图片资源时，例如`ImageSpan("common/test.jpg")`，不支持跨包/跨模块调用该ImageSpan组件，建议使用`$r`方式来管理需全局使用的图片资源。<br>- 支持的图片格式包括png、jpg、bmp、svg、gif、webp和heif。<br>- 支持`Base64`字符串。格式`data:image/[png&#124;jpeg&#124;bmp&#124;webp&#124;heif];base64,[base64 data]`，其中`[base64 data]`为`Base64`字符串数据。<br>- 支持file://data/storage路径前缀的字符串，用于读取本应用安装目录下file文件夹下的图片资源。需要保证应用安装目录路径下的文件有可读权限。 |
 
 ## 汇总
 
@@ -36,13 +36,13 @@ ImageSpan(value: ResourceStr | PixelMap)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | 图片数据加载成功和解码成功触发回调时返回的对象。 |
+| [ImageLoadResult](arkts-arkui-imagespan-comp-imageloadresult-i.md) | 图片数据加载成功和解码成功触发回调时返回的对象。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md) | 图片加载成功和解码成功时均触发的回调。 |
+| [ImageCompleteCallback](arkts-arkui-imagespan-comp-imagecompletecallback-t.md) | 图片加载成功和解码成功时均触发的回调。 |
 
 ## 示例
 

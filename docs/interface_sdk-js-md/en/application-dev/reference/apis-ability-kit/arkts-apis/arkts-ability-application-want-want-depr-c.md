@@ -191,3 +191,35 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 **Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 **System capability:** SystemCapability.Ability.AbilityBase
+
+**Examples**
+
+```TypeScript
+Basic usage (called in a UIAbility object, where context in the example is the context object of the UIAbility).
+```
+
+```TypeScript
+Passes data through custom fields. The following are the currently supported types (called in a UIAbility object, where context in the example is the context object of the UIAbility).
+
+String
+```
+
+```TypeScript
+Number
+```
+
+```TypeScript
+Boolean
+```
+
+```TypeScript
+Object
+```
+
+```TypeScript
+Array
+```
+
+```TypeScript
+File descriptor (FD)
+```

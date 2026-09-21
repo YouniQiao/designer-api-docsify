@@ -24,7 +24,7 @@ rect: Rectangle
 
 Rectangle area for HDR composition.
 
-**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**Type:** [Rectangle](../arkts-components/arkts-arkui-common-comp-rectangle-i.md)
 
 **Since:** 26.0.0
 

@@ -22,7 +22,7 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | No | UnionEffectContainer constructor options. |
+| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-comp-unioneffectcontaineroptions-i-sys.md) | No | UnionEffectContainer constructor options. |
 
 ## Summary
 
@@ -30,13 +30,13 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | Name | Description |
 | --- | --- |
-| [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | Sets the construction options of **UnionEffectContainer**. |
+| [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-comp-unioneffectcontaineroptions-i-sys.md) | Sets the construction options of **UnionEffectContainer**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [UnionMode](arkts-arkui-unionmode-e-sys.md) | Enumerates the union modes. |
+| [UnionMode](arkts-arkui-unioneffectcontainer-comp-unionmode-e-sys.md) | Enumerates the union modes. |
 
 ## Examples
 

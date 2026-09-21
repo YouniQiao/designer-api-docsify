@@ -24,7 +24,7 @@ alignType: MenuAlignType
 
 对齐方式类型。默认值：`MenuAlignType.START`。
 
-**类型：** [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md)
+**类型：** [MenuAlignType](../arkts-components/arkts-arkui-select-comp-menualigntype-e.md)
 
 **起始版本：** 18
 

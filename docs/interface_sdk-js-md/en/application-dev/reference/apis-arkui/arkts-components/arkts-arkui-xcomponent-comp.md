@@ -74,7 +74,7 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Yes | Options of the **XComponent**. |
+| options | [XComponentOptions](arkts-arkui-xcomponent-comp-xcomponentoptions-i.md) | Yes | Options of the **XComponent**. |
 
 ## XComponent
 
@@ -96,7 +96,7 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
+| params | [NativeXComponentParameters](arkts-arkui-xcomponent-comp-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
 
 ## Summary
 
@@ -104,23 +104,23 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 | Name | Description |
 | --- | --- |
-| [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding FrameNode object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md). |
-| [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Describes whether the surface held by the **XComponent** is treated as opaque during rendering. |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) | Describes the rectangle of the surface held by the **XComponent**. |
-| [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Defines whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
-| [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Defines the options of the **XComponent**. |
+| [NativeXComponentParameters](arkts-arkui-xcomponent-comp-nativexcomponentparameters-i.md) | Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding [FrameNode](../arkts-apis/arkts-arkui-typenode-n.md) object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md). |
+| [SurfaceConfig](arkts-arkui-xcomponent-comp-surfaceconfig-i.md) | Describes whether the surface held by the **XComponent** is treated as opaque during rendering. |
+| [SurfaceRect](arkts-arkui-xcomponent-comp-surfacerect-i.md) | Describes the rectangle of the surface held by the **XComponent**. |
+| [SurfaceRotationOptions](arkts-arkui-xcomponent-comp-surfacerotationoptions-i.md) | Defines whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
+| [XComponentOptions](arkts-arkui-xcomponent-comp-xcomponentoptions-i.md) | Defines the options of the **XComponent**. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Triggered after the surface held by **XComponent** is created. |
+| [OnNativeLoadCallback](arkts-arkui-xcomponent-comp-onnativeloadcallback-t.md) | Triggered after the surface held by **XComponent** is created. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [HdrType](arkts-arkui-hdrtype-e.md) | Sets the HDR type of the XComponent. |
+| [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md) | Sets the HDR type of the XComponent. |
 
 ## Examples
 
@@ -149,7 +149,7 @@ Uses setXComponentSurfaceRotation to lock the Surface orientation during screen 
 ```TypeScript
 ### Example 3: Drawing Content on the XComponent Using a Canvas Object
 
-From API version 20, this example returns a canvas object by calling [lockCanvas](arkts-arkui-xcomponentcontroller-c.md#lockcanvas), calls the corresponding drawing API via the canvas object, and then calls [unlockCanvasAndPost](arkts-arkui-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
+From API version 20, this example returns a canvas object by calling [lockCanvas](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#lockcanvas), calls the corresponding drawing API via the canvas object, and then calls [unlockCanvasAndPost](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
 
 
 ```
@@ -165,7 +165,7 @@ From API version 20, the setXComponentSurfaceRect API is called to set the surfa
 ```TypeScript
 ### Example 5 (Setting Whether the Surface Held by XComponent Needs to Be Deemed Opaque During Rendering)
 
-From API version 22, this example calls the [setXComponentSurfaceConfig](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfaceconfig) API to set whether the surface held by the XComponent is considered opaque during rendering.
+From API version 22, this example calls the [setXComponentSurfaceConfig](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#setxcomponentsurfaceconfig) API to set whether the surface held by the XComponent is considered opaque during rendering.
 
 > NOTE
 > 

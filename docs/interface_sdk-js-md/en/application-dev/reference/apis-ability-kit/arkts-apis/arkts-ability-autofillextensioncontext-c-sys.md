@@ -20,7 +20,7 @@ The AutoFillExtensionContext module provides the context environment for the Aut
 reloadInModal(customData: CustomData): Promise<void>
 ```
 
-Reload autoFillExtension in modal window.
+Reloads the modal page. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -34,13 +34,13 @@ Reload autoFillExtension in modal window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customData | [CustomData](arkts-ability-customdata-i-sys.md) | Yes | User defined data. When the modal window of AutoFillExtension needs to be raised again, pass this parameter to the application framework. |
+| customData | [CustomData](arkts-ability-customdata-i-sys.md) | Yes | Custom information for raising the modal page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

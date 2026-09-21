@@ -200,6 +200,8 @@ Any additional attributes that can be represented as key-value pairs
 
 **Since:** 10
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## fdSrc

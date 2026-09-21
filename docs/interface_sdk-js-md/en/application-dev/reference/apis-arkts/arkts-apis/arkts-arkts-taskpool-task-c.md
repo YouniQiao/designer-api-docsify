@@ -116,18 +116,6 @@ function printArgs(args: number): number {
 let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
 ```
 
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -159,16 +147,6 @@ A constructor used to create a **Task** instance, with the task name specified.
 | [10200014](../errorcode-utils.md#10200014-non-concurrent-function-error) | The function is not marked as concurrent. |
 
 **Examples**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
-```
 
 ```TypeScript
 @Concurrent

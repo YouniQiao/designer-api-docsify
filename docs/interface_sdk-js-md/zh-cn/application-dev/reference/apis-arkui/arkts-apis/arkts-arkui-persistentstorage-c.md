@@ -28,6 +28,8 @@ static DeleteProp(key: string): void
 
 **替代接口：** [deleteProp](#deleteprop)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -81,6 +83,8 @@ static Keys(): Array<string>
 **废弃版本：** 10
 
 **替代接口：** [keys](#keys)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -145,6 +149,8 @@ static PersistProp<T>(key: string, defaultValue: T): void
 **废弃版本：** 10
 
 **替代接口：** [persistProp](#persistprop)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -216,6 +222,8 @@ static PersistProps(
 **废弃版本：** 10
 
 **替代接口：** [PersistProps](#persistprops)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

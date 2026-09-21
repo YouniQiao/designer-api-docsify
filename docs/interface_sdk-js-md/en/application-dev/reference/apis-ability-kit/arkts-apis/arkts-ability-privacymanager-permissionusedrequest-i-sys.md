@@ -32,6 +32,8 @@ Start time of the query. Unit: milliseconds. Default value: **0**, indicating no
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -49,6 +51,8 @@ Default value: queries all applications.
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -68,6 +72,8 @@ Default value: local device ID.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -86,6 +92,8 @@ End time of the query. It must not be earlier than beginTime; otherwise, error c
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -101,6 +109,8 @@ Used to specify the query mode. When set to **FLAG_PERMISSION_USAGE_SUMMARY**, s
 **Type:** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -122,6 +132,8 @@ Default value: **false**.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -137,6 +149,8 @@ Set of permissions to query. Default value: Empty string. Means querying usage r
 **Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -155,6 +169,8 @@ Default value: **0**, queries all applications.
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 

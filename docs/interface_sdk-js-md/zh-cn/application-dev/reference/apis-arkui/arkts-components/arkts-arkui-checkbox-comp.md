@@ -18,6 +18,8 @@ Checkbox(options?: CheckboxOptions)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -28,7 +30,7 @@ Checkbox(options?: CheckboxOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 否 | 配置多选框的参数。不传入该参数时，多选框使用默认配置。 |
+| options | [CheckboxOptions](arkts-arkui-checkbox-comp-checkboxoptions-i.md) | 否 | 配置多选框的参数。不传入该参数时，多选框使用默认配置。 |
 
 ## 汇总
 
@@ -36,14 +38,14 @@ Checkbox(options?: CheckboxOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 多选框的信息。 |
+| [CheckBoxConfiguration](arkts-arkui-checkbox-comp-checkboxconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [CheckboxOptions](arkts-arkui-checkbox-comp-checkboxoptions-i.md) | 多选框的信息。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 选中的状态。 |
+| [OnCheckboxChangeCallback](arkts-arkui-checkbox-comp-oncheckboxchangecallback-t.md) | 选中的状态。 |
 
 ## 示例
 

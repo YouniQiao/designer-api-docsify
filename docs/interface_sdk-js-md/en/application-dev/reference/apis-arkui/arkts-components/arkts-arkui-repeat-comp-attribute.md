@@ -97,8 +97,8 @@ Renders the corresponding template child component based on the template type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Current template type. |
-| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | Yes | Component generator. |
-| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | No | Current template configuration. |
+| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeat-comp-repeatitembuilder-t.md)&lt;T&gt; | Yes | Component generator. |
+| templateOptions | [TemplateOptions](arkts-arkui-repeat-comp-templateoptions-i.md) | No | Current template configuration. |
 
 ## templateId
 
@@ -124,7 +124,7 @@ Assigns a template type for this data item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typedFunc | [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md)&lt;T&gt; | Yes | Function that generates a template type for each data item. |
+| typedFunc | [TemplateTypedFunc](arkts-arkui-repeat-comp-templatetypedfunc-t.md)&lt;T&gt; | Yes | Function that generates a template type for each data item. |
 
 ## virtualScroll
 
@@ -150,4 +150,4 @@ Enables virtual scrolling for **Repeat**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | No | Virtual scrolling configuration. |
+| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-repeat-comp-virtualscrolloptions-i.md) | No | Virtual scrolling configuration. |

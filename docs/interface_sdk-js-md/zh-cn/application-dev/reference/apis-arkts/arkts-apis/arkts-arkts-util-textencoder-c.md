@@ -36,10 +36,6 @@ constructor()
 let textEncoder = new util.TextEncoder();
 ```
 
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -63,10 +59,6 @@ constructor(encoding?: string)
 | encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。 |
 
 **示例**
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
 
 ```TypeScript
 let textEncoder = new util.TextEncoder("utf-8");
@@ -176,15 +168,6 @@ console.info("result = " + result);
 // 输出结果: result = 237,160,128,194,165,194,165
 ```
 
-```TypeScript
-let textEncoder = new util.TextEncoder();
-let buffer = new ArrayBuffer(4);
-let uint8 = new Uint8Array(buffer);
-let result = textEncoder.encodeInto('abcd', uint8);
-console.info("uint8 = " + uint8);
-// 输出结果: uint8 = 97,98,99,100
-```
-
 <a id="encodeinto-1"></a>
 
 ## encodeInto
@@ -218,7 +201,14 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **示例**
 
-参见 [encodeInto](#encodeinto)
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// 输出结果: uint8 = 97,98,99,100
+```
 
 ## encodeIntoUint8Array
 

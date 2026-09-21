@@ -48,42 +48,6 @@ contact.selectContacts((err: BusinessError, data) => {
 });
 ```
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面
-let promise = contact.selectContacts();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面，支持选择一个联系人
-contact.selectContacts({
-  isMultiSelect:false
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面，支持选择一个联系人
-let promise = contact.selectContacts({isMultiSelect:false});
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
 
 <a id="selectcontacts-1"></a>
 
@@ -109,7 +73,15 @@ function selectContacts(): Promise<Array<Contact>>
 
 **示例**
 
-参见 [selectContacts](#selectcontacts)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面
+let promise = contact.selectContacts();
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="selectcontacts-2"></a>
@@ -143,7 +115,21 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 **示例**
 
-参见 [selectContacts](#selectcontacts)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面，支持选择一个联系人
+contact.selectContacts({
+  isMultiSelect:false
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="selectcontacts-3"></a>
@@ -182,4 +168,12 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 **示例**
 
-参见 [selectContacts](#selectcontacts)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 打开选择联系人UI界面，支持选择一个联系人
+let promise = contact.selectContacts({isMultiSelect:false});
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```

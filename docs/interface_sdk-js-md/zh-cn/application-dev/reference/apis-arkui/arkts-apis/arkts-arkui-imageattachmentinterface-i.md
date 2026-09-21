@@ -74,7 +74,7 @@ resizable?: ResizableOptions
 
 获取属性字符串的图片拉伸选项。
 
-**类型：** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+**类型：** [ResizableOptions](../arkts-components/arkts-arkui-image-comp-resizableoptions-i.md)
 
 **起始版本：** 26.0.1
 
@@ -112,7 +112,7 @@ value: PixelMap
 
 设置图片数据源。
 
-**类型：** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
+**类型：** [PixelMap](../arkts-components/arkts-arkui-common-comp-pixelmap-t.md)
 
 **起始版本：** 12
 

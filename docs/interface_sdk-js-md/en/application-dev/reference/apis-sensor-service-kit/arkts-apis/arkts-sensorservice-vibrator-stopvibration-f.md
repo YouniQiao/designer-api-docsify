@@ -49,76 +49,6 @@ Stop vibration of the specified duration.
 Stop preset vibration.
 ```
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Stop vibration in all modes.
-  vibrator.stopVibration((error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info('Succeed in stopping vibration');
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Stop vibration in all modes.
-  vibrator.stopVibration().then(() => {
-    console.info('Succeed in stopping vibration');
-  }, (error: BusinessError) => {
-    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function vibratorDemo() {
-  // Query information about all vibrators.
-  const vibratorInfoList: vibrator.VibratorInfo[] = vibrator.getVibratorInfoSync();
-  // Obtain the target vibrator based on the actual service logic. The following example shows how to obtain the local vibrator. You need to adjust the filtering logic as required.
-  const targetVibrator = vibratorInfoList.find((vibrator: vibrator.VibratorInfo) => {
-    return vibrator.isLocalVibrator;
-  });
-  if (!targetVibrator) {
-    return;
-  }
-  // Call vibrator.startVibration to start vibration.
-  // ...
-
-  // Use try catch to capture possible exceptions.
-  try {
-    // Stop the vibration based on the actual service scenario.
-    vibrator.stopVibration({ deviceId: targetVibrator.deviceId, vibratorId: targetVibrator.vibratorId }).then(() => {
-      console.info('Succeed in stopping vibration');
-    }, (error: BusinessError) => {
-      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
-    });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-  }
-}
-```
-
 
 <a id="stopvibration-1"></a>
 
@@ -152,7 +82,13 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Examples**
 
-See [stopVibration](#stopvibration)
+```TypeScript
+Stop vibration of the specified duration.
+```
+
+```TypeScript
+Stop preset vibration.
+```
 
 
 <a id="stopvibration-2"></a>
@@ -187,7 +123,25 @@ Stops vibration in all modes. This API uses an asynchronous callback to return t
 
 **Examples**
 
-See [stopVibration](#stopvibration)
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Stop vibration in all modes.
+  vibrator.stopVibration((error: BusinessError) => {
+    if (error) {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeed in stopping vibration');
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="stopvibration-3"></a>
@@ -222,7 +176,23 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 **Examples**
 
-See [stopVibration](#stopvibration)
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Stop vibration in all modes.
+  vibrator.stopVibration().then(() => {
+    console.info('Succeed in stopping vibration');
+  }, (error: BusinessError) => {
+    console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="stopvibration-4"></a>
@@ -262,4 +232,34 @@ Stops vibration based on the specified vibrator parameters. If no parameters are
 
 **Examples**
 
-See [stopVibration](#stopvibration)
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function vibratorDemo() {
+  // Query information about all vibrators.
+  const vibratorInfoList: vibrator.VibratorInfo[] = vibrator.getVibratorInfoSync();
+  // Obtain the target vibrator based on the actual service logic. The following example shows how to obtain the local vibrator. You need to adjust the filtering logic as required.
+  const targetVibrator = vibratorInfoList.find((vibrator: vibrator.VibratorInfo) => {
+    return vibrator.isLocalVibrator;
+  });
+  if (!targetVibrator) {
+    return;
+  }
+  // Call vibrator.startVibration to start vibration.
+  // ...
+
+  // Use try catch to capture possible exceptions.
+  try {
+    // Stop the vibration based on the actual service scenario.
+    vibrator.stopVibration({ deviceId: targetVibrator.deviceId, vibratorId: targetVibrator.vibratorId }).then(() => {
+      console.info('Succeed in stopping vibration');
+    }, (error: BusinessError) => {
+      console.error(`Failed to stop vibration. Code: ${error.code}, message: ${error.message}`);
+    });
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+  }
+}
+```

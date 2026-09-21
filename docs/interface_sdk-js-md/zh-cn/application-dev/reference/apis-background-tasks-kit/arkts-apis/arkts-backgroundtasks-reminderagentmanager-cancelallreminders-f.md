@@ -46,17 +46,6 @@ reminderAgentManager.cancelAllReminders((err: BusinessError) =>{
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.cancelAllReminders().then(() => {
-  console.info("cancelAllReminders promise")
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
 
 <a id="cancelallreminders-1"></a>
 
@@ -87,4 +76,13 @@ function cancelAllReminders(): Promise<void>
 
 **示例**
 
-参见 [cancelAllReminders](#cancelallreminders)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.cancelAllReminders().then(() => {
+  console.info("cancelAllReminders promise")
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```

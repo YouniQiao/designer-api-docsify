@@ -28,6 +28,8 @@ Unsubscribes from events indicating receiving of APDUs from the peer card reader
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -92,6 +94,8 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 **Since:** 8
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -227,6 +231,8 @@ Starts HCE, including enabling this application to run in the foreground prefere
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -351,6 +357,8 @@ Stops HCE, including canceling the subscription of APDU data, exiting this appli
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -466,6 +474,8 @@ Transmits an APDU to the peer card reader. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -525,6 +535,44 @@ hceService.transmit(responseData).then(() => {
 console.info("transmit Promise end.");
 ```
 
+<a id="transmit-1"></a>
+
+## transmit
+
+```TypeScript
+transmit(response: number[], callback: AsyncCallback<void>): void
+```
+
+Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via on. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+
+**Examples**
+
 ```TypeScript
 // Applicable to devices other than lite wearables
 import { cardEmulation } from '@kit.ConnectivityKit';
@@ -562,41 +610,3 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
-
-<a id="transmit-1"></a>
-
-## transmit
-
-```TypeScript
-transmit(response: number[], callback: AsyncCallback<void>): void
-```
-
-Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via on. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-
-**Examples**
-
-See [transmit](#transmit)

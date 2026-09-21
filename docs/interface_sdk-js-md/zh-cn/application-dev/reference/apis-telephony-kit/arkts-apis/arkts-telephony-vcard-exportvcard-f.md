@@ -64,49 +64,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-        let options: vcard.VCardBuilderOptions = {
-            cardType: vcard.VCardType.VERSION_21,
-            charset: "UTF-8"
-        };
-        vcard.exportVCard(this.context, predicates, options).then(() => {
-            console.info(`exportVCard success.`);
-        }).catch((err: BusinessError) => {
-            console.error(`exportVCard failed, promise: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-
-        vcard.exportVCard(this.context, predicates, (err: BusinessError, data: string) => {
-            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-        });
-    }
-}
-```
-
 
 <a id="exportvcard-1"></a>
 
@@ -151,7 +108,29 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 **示例**
 
-参见 [exportVCard](#exportvcard)
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+import { dataSharePredicates } from '@kit.ArkData';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let predicates = new dataSharePredicates.DataSharePredicates();
+        predicates.equalTo("NAME", "Rose");
+        let options: vcard.VCardBuilderOptions = {
+            cardType: vcard.VCardType.VERSION_21,
+            charset: "UTF-8"
+        };
+        vcard.exportVCard(this.context, predicates, options).then(() => {
+            console.info(`exportVCard success.`);
+        }).catch((err: BusinessError) => {
+            console.error(`exportVCard failed, promise: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
 
 
 <a id="exportvcard-2"></a>
@@ -191,4 +170,21 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 **示例**
 
-参见 [exportVCard](#exportvcard)
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+import { dataSharePredicates } from '@kit.ArkData';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let predicates = new dataSharePredicates.DataSharePredicates();
+        predicates.equalTo("NAME", "Rose");
+
+        vcard.exportVCard(this.context, predicates, (err: BusinessError, data: string) => {
+            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+        });
+    }
+}
+```

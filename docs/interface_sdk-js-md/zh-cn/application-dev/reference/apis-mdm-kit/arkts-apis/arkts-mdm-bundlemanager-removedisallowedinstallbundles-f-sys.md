@@ -69,47 +69,6 @@ bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, (err) => {
 });
 ```
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing disallowed install bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in removing disallowed install bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 <a id="removedisallowedinstallbundles-1"></a>
 
@@ -156,7 +115,26 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, user
 
 **示例**
 
-参见 [removeDisallowedInstallBundles](#removedisallowedinstallbundles)
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing disallowed install bundles');
+});
+```
 
 
 <a id="removedisallowedinstallbundles-2"></a>
@@ -209,4 +187,22 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, user
 
 **示例**
 
-参见 [removeDisallowedInstallBundles](#removedisallowedinstallbundles)
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in removing disallowed install bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```

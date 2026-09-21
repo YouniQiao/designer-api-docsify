@@ -46,18 +46,6 @@ Turn on the radio service.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-radio.turnOnRadio((err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let slotId: number = 0;
 radio.turnOnRadio(slotId, (err: BusinessError) => {
     if (err) {
@@ -65,17 +53,6 @@ radio.turnOnRadio(slotId, (err: BusinessError) => {
         return;
     }
     console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId).then(() => {
-    console.info(`turnOnRadio success.`);
-}).catch((err: BusinessError) => {
-    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -124,7 +101,16 @@ Turn on the radio service.
 
 **Examples**
 
-See [turnOnRadio](#turnonradio)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.turnOnRadio(slotId).then(() => {
+    console.info(`turnOnRadio success.`);
+}).catch((err: BusinessError) => {
+    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 <a id="turnonradio-2"></a>
@@ -165,4 +151,14 @@ Turn on the radio service.
 
 **Examples**
 
-See [turnOnRadio](#turnonradio)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.turnOnRadio((err: BusinessError) => {
+    if (err) {
+        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`turnOnRadio success.`);
+});
+```

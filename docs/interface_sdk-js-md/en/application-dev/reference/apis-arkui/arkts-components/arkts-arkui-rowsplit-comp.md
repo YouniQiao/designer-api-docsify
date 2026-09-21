@@ -11,7 +11,7 @@ The **RowSplit** component limits the width of its child components through divi
 > **NOTE:** 
 > 
 > After initialization, dynamically modifying the margin,
-> [border](arkts-arkui-commonmethod-c.md#border), or padding universal attributes may cause the
+> [border](arkts-arkui-common-comp-commonmethod-c.md#border), or padding universal attributes may cause the
 > width of a child component to be greater than the spacing between adjacent dividers. In this exceptional case,
 > dragging a divider to change the width of the child components is not supported. This is because the divider
 > positions are determined during initialization, and dynamically modifying attributes such as margin, border, and

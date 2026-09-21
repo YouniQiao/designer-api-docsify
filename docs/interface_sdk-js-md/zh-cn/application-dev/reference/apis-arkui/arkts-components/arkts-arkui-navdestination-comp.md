@@ -35,30 +35,30 @@ NavDestination()
 
 | 名称 | 说明 |
 | --- | --- |
-| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) | NavDestination通用标题。 |
-| [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) | NavDestination上下文信息。 |
-| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) | NavDestination自定义标题。 |
-| [NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md) | NavDestination自定义动画接口。 |
-| [NestedScrollInfo](arkts-arkui-nestedscrollinfo-i.md) | 嵌套可滚动容器组件信息。 |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) | 路由配置信息。 |
+| [NavDestinationCommonTitle](arkts-arkui-navdestination-comp-navdestinationcommontitle-i.md) | NavDestination通用标题。 |
+| [NavDestinationContext](arkts-arkui-navdestination-comp-navdestinationcontext-i.md) | NavDestination上下文信息。 |
+| [NavDestinationCustomTitle](arkts-arkui-navdestination-comp-navdestinationcustomtitle-i.md) | NavDestination自定义标题。 |
+| [NavDestinationTransition](arkts-arkui-navdestination-comp-navdestinationtransition-i.md) | NavDestination自定义动画接口。 |
+| [NestedScrollInfo](arkts-arkui-navdestination-comp-nestedscrollinfo-i.md) | 嵌套可滚动容器组件信息。 |
+| [RouteMapConfig](arkts-arkui-navdestination-comp-routemapconfig-i.md) | 路由配置信息。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | NavDestination自定义转场动画的代理函数。 |
-| [Orientation](arkts-arkui-orientation-t.md) | 页面显示方向的枚举类型。 |
-| [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md) | 自定义页面状态恢复回调。 |
-| [SaveStateCallback](arkts-arkui-savestatecallback-t.md) | 自定义页面状态保存回调。 |
+| [NavDestinationTransitionDelegate](arkts-arkui-navdestination-comp-navdestinationtransitiondelegate-t.md) | NavDestination自定义转场动画的代理函数。 |
+| [Orientation](arkts-arkui-navdestination-comp-orientation-t.md) | 页面显示方向的枚举类型。 |
+| [RestoreStateCallback](arkts-arkui-navdestination-comp-restorestatecallback-t.md) | 自定义页面状态恢复回调。 |
+| [SaveStateCallback](arkts-arkui-navdestination-comp-savestatecallback-t.md) | 自定义页面状态保存回调。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md) | NavDestination激活态或者非激活态变化的原因。 |
-| [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | NavDestination类型。 |
-| [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | 系统转场动画类型。 |
-| [VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md) | NavDestination可见性发生变化的原因。 |
+| [NavDestinationActiveReason](arkts-arkui-navdestination-comp-navdestinationactivereason-e.md) | NavDestination激活态或者非激活态变化的原因。 |
+| [NavDestinationMode](arkts-arkui-navdestination-comp-navdestinationmode-e.md) | NavDestination类型。 |
+| [NavigationSystemTransitionType](arkts-arkui-navdestination-comp-navigationsystemtransitiontype-e.md) | 系统转场动画类型。 |
+| [VisibilityChangeReason](arkts-arkui-navdestination-comp-visibilitychangereason-e.md) | NavDestination可见性发生变化的原因。 |
 
 ## 示例
 

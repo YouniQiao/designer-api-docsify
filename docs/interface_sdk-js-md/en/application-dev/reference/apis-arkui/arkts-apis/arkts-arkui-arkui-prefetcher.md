@@ -18,7 +18,7 @@ import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI
 
 | Name | Description |
 | --- | --- |
-| [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to provide a data source that can be prefetched. |
+| [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Extends the [IDataSource](../arkts-components/arkts-arkui-lazyforeach-comp-idatasource-i.md) API to provide a data source that can be prefetched. |
 | [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md) | Provides the prefetching capability. It works with **LazyForEach** to prefetch data items when users swipe through container components such as **List** and **Grid**, improving user browsing experience. |
 
 ## Examples

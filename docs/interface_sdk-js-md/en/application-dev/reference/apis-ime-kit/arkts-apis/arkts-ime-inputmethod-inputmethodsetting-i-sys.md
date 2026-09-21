@@ -85,16 +85,6 @@ function enableInputMethodSafely() {
 enableInputMethodSafely();
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
-  console.info('Succeeded in enabling input method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 <a id="enableinputmethod-1"></a>
 
 ## enableInputMethod
@@ -146,7 +136,15 @@ Change the enabled state of an input method of a specified user.
 
 **Examples**
 
-See [enableInputMethod](#enableinputmethod)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
+  console.info('Succeeded in enabling input method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 <a id="getallinputmethodssync-1"></a>
 
@@ -190,10 +188,6 @@ Get all input methods sync of a specified user.
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **Examples**
-
-```TypeScript
-let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -348,10 +342,6 @@ List enabled or disabled input methods sync of a specified user.
 **Examples**
 
 ```TypeScript
-let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -471,23 +461,6 @@ try {
 }
 ```
 
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-
-let displayId: number = 10;
-let info: PanelInfo = {
-  type: PanelType.SOFT_KEYBOARD,
-  flag: PanelFlag.FLAG_FIXED
-}
-
-try {
-  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
-  console.info('Succeeded in querying isPanelShown, result: ' + result);
-} catch (err) {
-  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 <a id="ispanelshown-1"></a>
 
 ## isPanelShown
@@ -528,7 +501,22 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 **Examples**
 
-See [isPanelShown](#ispanelshown)
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+
+let displayId: number = 10;
+let info: PanelInfo = {
+  type: PanelType.SOFT_KEYBOARD,
+  flag: PanelFlag.FLAG_FIXED
+}
+
+try {
+  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+  console.info('Succeeded in querying isPanelShown, result: ' + result);
+} catch (err) {
+  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## off('imeShow')
 
@@ -551,6 +539,12 @@ Unsubscribes from the soft keyboard show event of the [input method panel](arkts
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
+**Examples**
+
+```TypeScript
+inputMethod.getSetting().off('imeShow');
+```
+
 ## off('imeHide')
 
 ```TypeScript
@@ -571,6 +565,12 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 | --- | --- | --- | --- |
 | type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+
+**Examples**
+
+```TypeScript
+inputMethod.getSetting().off('imeHide');
+```
 
 ## offImeChangeWithUserId
 
@@ -633,6 +633,14 @@ Subscribes to the soft keyboard show event of the [input method panel](arkts-ime
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeShow event.');
+});
+```
+
 ## on('imeHide')
 
 ```TypeScript
@@ -659,6 +667,14 @@ Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeHide event.');
+});
+```
 
 ## onImeChangeWithUserId
 

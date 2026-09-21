@@ -42,7 +42,7 @@ Default value: **STANDARD**
 
 If the value is **undefined**, **null**, or not set, the default value is used. If an abnormal value is used, snapshot capture fails and the error code 160003 is returned.
 
-**Type:** [DynamicRangeMode](../arkts-components/arkts-arkui-dynamicrangemode-e.md)
+**Type:** [DynamicRangeMode](../arkts-components/arkts-arkui-image-comp-dynamicrangemode-e.md)
 
 **Since:** 23
 

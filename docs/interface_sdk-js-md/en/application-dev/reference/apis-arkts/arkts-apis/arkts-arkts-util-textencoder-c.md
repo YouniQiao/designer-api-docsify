@@ -36,10 +36,6 @@ A constructor used to create a **TextEncoder** object.
 let textEncoder = new util.TextEncoder();
 ```
 
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -63,10 +59,6 @@ A constructor used to create a **TextEncoder** object.
 | encoding | string | No | Encoding format. The default format is **'utf-8'**. |
 
 **Examples**
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
 
 ```TypeScript
 let textEncoder = new util.TextEncoder("utf-8");
@@ -176,15 +168,6 @@ console.info("result = " + result);
 // Output: result = 237,160,128,194,165,194,165
 ```
 
-```TypeScript
-let textEncoder = new util.TextEncoder();
-let buffer = new ArrayBuffer(4);
-let uint8 = new Uint8Array(buffer);
-let result = textEncoder.encodeInto('abcd', uint8);
-console.info("uint8 = " + uint8);
-// Output: uint8 = 97,98,99,100
-```
-
 <a id="encodeinto-1"></a>
 
 ## encodeInto
@@ -218,7 +201,14 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Examples**
 
-See [encodeInto](#encodeinto)
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// Output: uint8 = 97,98,99,100
+```
 
 ## encodeIntoUint8Array
 

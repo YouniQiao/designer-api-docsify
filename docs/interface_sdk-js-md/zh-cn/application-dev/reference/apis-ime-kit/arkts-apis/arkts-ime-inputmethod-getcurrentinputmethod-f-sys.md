@@ -49,10 +49,6 @@ function getCurrentInputMethod(userId?: number): InputMethodProperty
 **示例**
 
 ```TypeScript
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

@@ -115,18 +115,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 <a id="getphonebookaccessauthorization-1"></a>
 
 ## getPhoneBookAccessAuthorization
@@ -172,7 +160,17 @@ Get the phone book access authorization.
 
 **Examples**
 
-See [getPhoneBookAccessAuthorization](#getphonebookaccessauthorization)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
+        console.info('authorization ' + authorization);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## getShareType
 
@@ -217,18 +215,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let pbapServerProfile = pbap.createPbapServerProfile();
     pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX', (err, type) => {
-        console.info('getShareType ' + type);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
         console.info('getShareType ' + type);
     });
 } catch (err) {
@@ -281,7 +267,17 @@ Get the PBAP sharing type.
 
 **Examples**
 
-See [getShareType](#getsharetype)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
+        console.info('getShareType ' + type);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## setPhoneBookAccessAuthorization
 
@@ -338,18 +334,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setPhoneBookAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 <a id="setphonebookaccessauthorization-1"></a>
 
 ## setPhoneBookAccessAuthorization
@@ -396,7 +380,17 @@ Set the phone book access authorization.
 
 **Examples**
 
-See [setPhoneBookAccessAuthorization](#setphonebookaccessauthorization)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setPhoneBookAccessAuthorization');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## setShareType
 
@@ -449,18 +443,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setShareType');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 <a id="setsharetype-1"></a>
 
 ## setShareType
@@ -507,4 +489,14 @@ Set the PBAP sharing type.
 
 **Examples**
 
-See [setShareType](#setsharetype)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setShareType');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```

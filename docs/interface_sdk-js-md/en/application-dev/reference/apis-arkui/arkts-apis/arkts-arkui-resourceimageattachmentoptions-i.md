@@ -74,7 +74,7 @@ resizable?: ResizableOptions
 
 Resizable image options of the styled string.
 
-**Type:** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+**Type:** [ResizableOptions](../arkts-components/arkts-arkui-image-comp-resizableoptions-i.md)
 
 **Since:** 26.0.1
 
@@ -92,7 +92,7 @@ resourceValue: Optional<ResourceStr>
 
 Image data source.
 
-**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
+**Type:** [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **Since:** 15
 

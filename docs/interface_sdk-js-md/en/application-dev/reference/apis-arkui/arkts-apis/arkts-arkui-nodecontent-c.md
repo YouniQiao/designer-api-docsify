@@ -4,7 +4,7 @@
 export class NodeContent extends Content
 ```
 
-**NodeContent** is the ArkUI-provided manager for ContentSlot.
+**NodeContent** is the ArkUI-provided manager for [ContentSlot](../arkts-components/arkts-arkui-contentslot-comp.md#content_slot).
 
 > **NOTE:** 
 > 

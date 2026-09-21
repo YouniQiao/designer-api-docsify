@@ -27,7 +27,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md) | Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result. |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) | Creates a ColorPicker instance based on a pixel map. This API uses a promise to return the result. |
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-1) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result. |
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-2) | Creates a ColorPicker instance based on a pixel map. This API uses an asynchronous callback to return the result. |
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-3) | Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result. |

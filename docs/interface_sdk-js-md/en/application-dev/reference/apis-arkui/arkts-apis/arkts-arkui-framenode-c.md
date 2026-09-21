@@ -4,7 +4,7 @@
 export class FrameNode
 ```
 
-**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a [BuilderNode](arkts-arkui-buildernode-c.md) (that holds the FrameNode) to a [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-attribute.md#nodecontainerattribute) or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 > **NOTE:** 
 > 
@@ -16,7 +16,7 @@ export class FrameNode
 > 
 > - When the API of the [FrameNode](arkts-arkui-framenode-c.md) object is invoked in the scenario of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
 > 
-> - In the FrameNode APIs, only the mandatory parameters of the [Optional](../arkts-components/arkts-arkui-optional-t.md) type can be set to null or undefined.
+> - In the FrameNode APIs, only the mandatory parameters of the [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md) type can be set to null or undefined.
 
 **Since:** 11
 
@@ -89,6 +89,8 @@ adoptChild(child: FrameNode): void
 Adopts the target node as an affiliated node. The adopted node must not have an existing parent. This API is not used to add a node as a child node. Instead, it only allows the node to receive lifecycle callbacks of the corresponding child node.
 
 **Since:** 22
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -442,9 +444,9 @@ Creates a property animation for the FrameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | property | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | Yes | Animation property type. |
-| startValue | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number[]&gt; | Yes | Animation start value. The value can be **undefined** or an array. If the value is **undefined**, the animation uses the last set value of the property on the node as the starting value. If the value is an array, the length must match the property type requirements:<br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). <br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. <br>- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). <br>- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). <br>For the first animation of a property, **startValue** must be explicitly specified. For subsequent animations, it is recommended that you either omit **startValue** or set it to the previous animation's end value to avoid abrupt changes. |
+| startValue | [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;number[]&gt; | Yes | Animation start value. The value can be **undefined** or an array. If the value is **undefined**, the animation uses the last set value of the property on the node as the starting value. If the value is an array, the length must match the property type requirements:<br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). <br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. <br>- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). <br>- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). <br>For the first animation of a property, **startValue** must be explicitly specified. For subsequent animations, it is recommended that you either omit **startValue** or set it to the previous animation's end value to avoid abrupt changes. |
 | endValue | number[] | Yes | Animation end value. The value is an array. The array length must match the property type requirements:<br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). <br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. <br>- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). <br>- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation parameters, including the duration, animation curve, and end callback. |
+| param | [AnimateParam](../arkts-components/arkts-arkui-common-comp-animateparam-i.md) | Yes | Animation parameters, including the duration, animation curve, and end callback. |
 
 **Return value:**
 
@@ -862,10 +864,6 @@ Obtains the child node in the specified position of this node.
 See Example of Node Operations.
 ```
 
-```TypeScript
-See Example of Node Operations in the LazyForEach Scenario.
-```
-
 <a id="getchild-1"></a>
 
 ## getChild
@@ -899,7 +897,9 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 
 **Examples**
 
-See [getChild](#getchild)
+```TypeScript
+See Example of Node Operations in the LazyForEach Scenario.
+```
 
 ## getChildrenCount
 
@@ -928,6 +928,38 @@ Obtains the number of child nodes of this FrameNode.
 ```TypeScript
 See Example of Node Operations.
 ```
+
+<a id="getchildrencount-1"></a>
+
+## getChildrenCount
+
+```TypeScript
+getChildrenCount(countMode?: ChildrenCountMode): number
+```
+
+Obtains the number of child nodes of this FrameNode based on the specified counting mode.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Returns the number of children of the current FrameNode based on the count mode. |
+
+**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext, BuilderNode, ChildrenCountMode, LengthUnit } from '@kit.ArkUI';
@@ -1152,40 +1184,6 @@ struct Index {
 }
 ```
 
-<a id="getchildrencount-1"></a>
-
-## getChildrenCount
-
-```TypeScript
-getChildrenCount(countMode?: ChildrenCountMode): number
-```
-
-Obtains the number of child nodes of this FrameNode based on the specified counting mode.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Returns the number of children of the current FrameNode based on the count mode. |
-
-**Examples**
-
-See [getChildrenCount](#getchildrencount)
-
 ## getCrossLanguageOptions
 
 ```TypeScript
@@ -1324,7 +1322,7 @@ Searches for all child nodes layer by layer from the current node (which is used
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the child node to be queried, which is the same as the component ID. |
+| id | string | Yes | ID of the child node to be queried, which is the same as the [component ID](../arkts-components/arkts-arkui-common-comp.md#common). |
 
 **Return value:**
 
@@ -1505,7 +1503,7 @@ See Example of Node Operations.
 getId(): string
 ```
 
-Obtains the node ID set by the user, which is the same as the value of the component ID.
+Obtains the node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md#common).
 
 **Since:** 12
 
@@ -1519,7 +1517,7 @@ Obtains the node ID set by the user, which is the same as the value of the compo
 
 | Type | Description |
 | --- | --- |
-| string | Node ID set by the user, which is the same as the value of the component ID. |
+| string | Node ID set by the user, which is the same as the value of the [component ID](../arkts-components/arkts-arkui-common-comp.md#common). |
 
 **Examples**
 
@@ -1746,7 +1744,7 @@ See Example of Creating and Canceling an Animation.
 getNodeType(): string
 ```
 
-Obtains the type of the node. For built-in components, the node type corresponds to the component name. For example, the node type of the Button component is **Button**. For custom components that implement rendering, the node type is **__Common__**.
+Obtains the type of the node. For built-in components, the node type corresponds to the component name. For example, the node type of the [Button](../arkts-components/arkts-arkui-button-comp.md#button) component is **Button**. For custom components that implement rendering, the node type is **__Common__**.
 
 **Since:** 12
 
@@ -3517,8 +3515,8 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 > other node types.
 > 
 > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md) with root components of these types:
-> Stack, XComponent,
-> EmbeddedComponent. This API does not work for other
+> [Stack](../arkts-components/arkts-arkui-stack-comp.md#stack), [XComponent](../arkts-components/arkts-arkui-xcomponent-comp.md#xcomponent),
+> [EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent-comp.md#embedded_component). This API does not work for other
 > component types.
 
 **Since:** 18
@@ -3666,6 +3664,8 @@ removeAdoptedChild(child: FrameNode): void
 Removes a previously-adopted affiliated node.
 
 **Since:** 22
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -3907,14 +3907,14 @@ See Example of Customizing a Node.
 get commonAttribute(): CommonAttribute
 ```
 
-Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure universal attributes and universal events.
+Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure [universal attributes](../arkts-components/arkts-arkui-common-comp.md#common) and [universal events](../arkts-components/arkts-arkui-common-comp.md#common).
 
 Note that only the attributes of a custom node can be modified.
 
 > **NOTE:** 
 > 
 > The visual representation of the FrameNode is similar to that of a
-> Stack container that is aligned to the top start edge.
+> [Stack](../arkts-components/arkts-arkui-stack-comp.md#stack) container that is aligned to the top start edge.
 > 
 > For details about the supported attributes, see
 > [attributeModifier Support for Attributes and Events](../../../ui/arkts-user-defined-extension-attributeModifier.md#attributemodifier-support-for-attributes-and-events).
@@ -3945,7 +3945,7 @@ Obtains the **UICommonEvent** object held in this FrameNode to set basic events.
 
 In scenarios involving **LazyForEach**, where nodes may be destroyed and reconstructed, you need to reset or re- attach event listeners to the newly created nodes to ensure they respond to events correctly.
 
-**Type:** [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md)
+**Type:** [UICommonEvent](../arkts-components/arkts-arkui-common-comp-uicommonevent-i.md)
 
 **Since:** 12
 
@@ -3967,9 +3967,9 @@ See Basic Event Example and Example of Using Basic Events in the LazyForEach Sce
 get gestureEvent(): UIGestureEvent
 ```
 
-Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the gesture binding API. If both APIs are used to set gestures, the gesture binding API takes precedence.
+Obtains the **UIGestureEvent** object held by this FrameNode, which is used to set gesture events bound to the component. Gesture events set using the **gestureEvent** API will not override gestures bound using the [gesture binding API](../arkts-components/arkts-arkui-common-comp.md#common). If both APIs are used to set gestures, the gesture binding API takes precedence.
 
-**Type:** [UIGestureEvent](../arkts-components/arkts-arkui-uigestureevent-i.md)
+**Type:** [UIGestureEvent](../arkts-components/arkts-arkui-common-comp-uigestureevent-i.md)
 
 **Since:** 14
 

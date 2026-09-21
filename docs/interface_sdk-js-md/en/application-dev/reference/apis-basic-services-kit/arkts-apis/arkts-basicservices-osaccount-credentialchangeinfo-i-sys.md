@@ -30,6 +30,8 @@ OS account ID.
 
 **Since:** 23
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -45,6 +47,8 @@ Credential ID. An ID is returned when a credential is added or updated. The defa
 **Type:** Uint8Array
 
 **Since:** 23
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -62,6 +66,8 @@ Credential change type.
 
 **Since:** 23
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -77,6 +83,8 @@ Credential type.
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
 **Since:** 23
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -94,6 +102,8 @@ Credential ID. An ID is returned when a credential is deleted or updated. The de
 
 **Since:** 23
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -109,6 +119,8 @@ Whether the change is silent. A silent change is automatically initiated by the 
 **Type:** boolean
 
 **Since:** 23
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Account.OsAccount
 

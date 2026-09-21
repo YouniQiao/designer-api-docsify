@@ -28,7 +28,7 @@ Creates a calendar picker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | No | Parameters of the calendar picker. |
+| options | [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md) | No | Parameters of the calendar picker. |
 
 ## Summary
 
@@ -36,14 +36,14 @@ Creates a calendar picker.
 
 | Name | Description |
 | --- | --- |
-| [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | Defines the configuration options of the calendar picker dialog box. |
-| [CalendarOptions](arkts-arkui-calendaroptions-i.md) | Describes the parameters of the calendar picker. |
+| [CalendarDialogOptions](arkts-arkui-calendarpicker-comp-calendardialogoptions-i.md) | Defines the configuration options of the calendar picker dialog box. |
+| [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md) | Describes the parameters of the calendar picker. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CalendarAlign](arkts-arkui-calendaralign-e.md) | Enumerates alignment types. |
+| [CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md) | Enumerates alignment types. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ This example uses calendarPicker to implement the CalendarPicker component and p
 
 This example demonstrates how to set the start and end dates for the calendar picker using start and end.
 
-Since API version 18, the start and end attributes are added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Since API version 18, the start and end attributes are added to [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md).
 
 
 ```
@@ -70,5 +70,5 @@ Since API version 18, the start and end attributes are added to [CalendarOptions
 
 This example shows how to highlight the current system date using markToday and disable a specific date range using disabledDateRange.
 
-Since API version 19, the [markToday](#marktoday19) API is added, and the disabledDateRange attribute is added to [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Since API version 19, the [markToday](#marktoday19) API is added, and the disabledDateRange attribute is added to [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md).
 ```

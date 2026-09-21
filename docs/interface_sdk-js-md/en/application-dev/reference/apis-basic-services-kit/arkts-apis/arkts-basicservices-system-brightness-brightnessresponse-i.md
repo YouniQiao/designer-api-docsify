@@ -32,4 +32,6 @@ Screen brightness. The value ranges from **1** to **255**.
 
 **Deprecated since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite

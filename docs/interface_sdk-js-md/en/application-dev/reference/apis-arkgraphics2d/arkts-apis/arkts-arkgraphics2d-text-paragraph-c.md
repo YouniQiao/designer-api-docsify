@@ -555,10 +555,6 @@ Obtains an array of line measurement information.
 let arrLineMetric =  paragraph.getLineMetrics();
 ```
 
-```TypeScript
-let lineMetrics =  paragraph.getLineMetrics(0);
-```
-
 <a id="getlinemetrics-1"></a>
 
 ## getLineMetrics
@@ -589,7 +585,9 @@ Obtains the line measurement information of a line.
 
 **Examples**
 
-See [getLineMetrics](#getlinemetrics)
+```TypeScript
+let lineMetrics =  paragraph.getLineMetrics(0);
+```
 
 ## getLineWidth
 

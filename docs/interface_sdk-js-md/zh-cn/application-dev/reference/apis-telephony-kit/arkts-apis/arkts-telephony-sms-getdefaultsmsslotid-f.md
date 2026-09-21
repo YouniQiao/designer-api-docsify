@@ -39,17 +39,6 @@ sms.getDefaultSmsSlotId((err: BusinessError, data: number) => {
 });
 ```
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getDefaultSmsSlotId().then((data: number) => {
-    console.info(`getDefaultSmsSlotId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultSmsSlotId failed, promise: errCode${err.code},errMsg:${err.message}`);
-});
-```
-
 
 <a id="getdefaultsmsslotid-1"></a>
 
@@ -73,4 +62,13 @@ function getDefaultSmsSlotId(): Promise<number>
 
 **示例**
 
-参见 [getDefaultSmsSlotId](#getdefaultsmsslotid)
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getDefaultSmsSlotId().then((data: number) => {
+    console.info(`getDefaultSmsSlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSlotId failed, promise: errCode${err.code},errMsg:${err.message}`);
+});
+```

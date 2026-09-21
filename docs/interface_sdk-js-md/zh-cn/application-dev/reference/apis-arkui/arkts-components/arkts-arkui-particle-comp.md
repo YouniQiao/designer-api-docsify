@@ -32,7 +32,7 @@ Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| particles | [Particles](arkts-arkui-particles-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt; | 是 | Array of particles. |
+| particles | [Particles](arkts-arkui-particle-comp-particles-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt; | 是 | Array of particles. |
 
 ## 汇总
 
@@ -40,48 +40,48 @@ Anonymous Object Rectification.
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccelerationOptions](arkts-arkui-accelerationoptions-i.md) | 粒子加速度配置。 |
-| [DisturbanceFieldOptions](arkts-arkui-disturbancefieldoptions-i.md) | 设置粒子扰动场参数。 |
-| [EmitterOptions](arkts-arkui-emitteroptions-i.md) | 粒子发射器的配置。 |
-| [EmitterParticleOptions](arkts-arkui-emitterparticleoptions-i.md) | 粒子配置。 |
-| [EmitterProperty](arkts-arkui-emitterproperty-i.md) | 设置发射器属性。 |
-| [FieldRegion](arkts-arkui-fieldregion-i.md) | 用于设置粒子场的区域信息。 |
-| [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) | 设置图片选项。 |
-| [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md) | 用于设置环形发射器区域的配置信息。 |
-| [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md) | 颜色变化方式为随机变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。 |
-| [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md) | 设置粒子颜色属性更新器配置。 |
-| [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md) | 设置粒子颜色属性更新器的配置。 |
-| [ParticleColorUpdaterOptions](arkts-arkui-particlecolorupdateroptions-i.md) | 颜色属性变化配置。 |
-| [ParticleConfigs](arkts-arkui-particleconfigs-i.md) | 设置粒子配置项。 |
-| [ParticleOptions](arkts-arkui-particleoptions-i.md) | 设置粒子参数。 |
-| [ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md) | 设置粒子属性生命周期。 |
-| [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md) | 设置粒子属性选项。 |
-| [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md) | 设置粒子属性更新器配置。 |
-| [Particles](arkts-arkui-particles-i.md) | 粒子动画的集合。 |
-| [ParticleUpdaterOptions](arkts-arkui-particleupdateroptions-i.md) | 属性变化配置。 |
-| [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) | 设置粒子半径。 |
-| [RippleFieldOptions](arkts-arkui-ripplefieldoptions-i.md) | 用于描述粒子波动场信息的参数。 |
-| [VelocityFieldOptions](arkts-arkui-velocityfieldoptions-i.md) | 用于描述粒子速度场信息的参数。 |
-| [VelocityOptions](arkts-arkui-velocityoptions-i.md) | 粒子速度配置。 |
+| [AccelerationOptions](arkts-arkui-particle-comp-accelerationoptions-i.md) | 粒子加速度配置。 |
+| [DisturbanceFieldOptions](arkts-arkui-particle-comp-disturbancefieldoptions-i.md) | 设置粒子扰动场参数。 |
+| [EmitterOptions](arkts-arkui-particle-comp-emitteroptions-i.md) | 粒子发射器的配置。 |
+| [EmitterParticleOptions](arkts-arkui-particle-comp-emitterparticleoptions-i.md) | 粒子配置。 |
+| [EmitterProperty](arkts-arkui-particle-comp-emitterproperty-i.md) | 设置发射器属性。 |
+| [FieldRegion](arkts-arkui-particle-comp-fieldregion-i.md) | 用于设置粒子场的区域信息。 |
+| [ImageParticleParameters](arkts-arkui-particle-comp-imageparticleparameters-i.md) | 设置图片选项。 |
+| [ParticleAnnulusRegion](arkts-arkui-particle-comp-particleannulusregion-i.md) | 用于设置环形发射器区域的配置信息。 |
+| [ParticleColorOptions](arkts-arkui-particle-comp-particlecoloroptions-i.md) | 颜色变化方式为随机变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。 |
+| [ParticleColorPropertyOptions](arkts-arkui-particle-comp-particlecolorpropertyoptions-i.md) | 设置粒子颜色属性更新器配置。 |
+| [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particle-comp-particlecolorpropertyupdaterconfigs-i.md) | 设置粒子颜色属性更新器的配置。 |
+| [ParticleColorUpdaterOptions](arkts-arkui-particle-comp-particlecolorupdateroptions-i.md) | 颜色属性变化配置。 |
+| [ParticleConfigs](arkts-arkui-particle-comp-particleconfigs-i.md) | 设置粒子配置项。 |
+| [ParticleOptions](arkts-arkui-particle-comp-particleoptions-i.md) | 设置粒子参数。 |
+| [ParticlePropertyAnimation](arkts-arkui-particle-comp-particlepropertyanimation-i.md) | 设置粒子属性生命周期。 |
+| [ParticlePropertyOptions](arkts-arkui-particle-comp-particlepropertyoptions-i.md) | 设置粒子属性选项。 |
+| [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md) | 设置粒子属性更新器配置。 |
+| [Particles](arkts-arkui-particle-comp-particles-i.md) | 粒子动画的集合。 |
+| [ParticleUpdaterOptions](arkts-arkui-particle-comp-particleupdateroptions-i.md) | 属性变化配置。 |
+| [PointParticleParameters](arkts-arkui-particle-comp-pointparticleparameters-i.md) | 设置粒子半径。 |
+| [RippleFieldOptions](arkts-arkui-particle-comp-ripplefieldoptions-i.md) | 用于描述粒子波动场信息的参数。 |
+| [VelocityFieldOptions](arkts-arkui-particle-comp-velocityfieldoptions-i.md) | 用于描述粒子速度场信息的参数。 |
+| [VelocityOptions](arkts-arkui-particle-comp-velocityoptions-i.md) | 粒子速度配置。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ParticleTuple](arkts-arkui-particletuple-t.md) | 粒子元组，表示定义动画参数配置值对的类型。 |
-| [PositionT](arkts-arkui-positiont-t.md) | 用于设置或返回组件的位置。 |
-| [SizeT](arkts-arkui-sizet-t.md) | 定义Size类型。 |
-| [Vector2T](arkts-arkui-vector2t-t.md) | 定义Vector2T类型。其中Vector2T类型包含x和y两个属性值。 |
+| [ParticleTuple](arkts-arkui-particle-comp-particletuple-t.md) | 粒子元组，表示定义动画参数配置值对的类型。 |
+| [PositionT](arkts-arkui-particle-comp-positiont-t.md) | 用于设置或返回组件的位置。 |
+| [SizeT](arkts-arkui-particle-comp-sizet-t.md) | 定义Size类型。 |
+| [Vector2T](arkts-arkui-particle-comp-vector2t-t.md) | 定义Vector2T类型。其中Vector2T类型包含x和y两个属性值。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistributionType](arkts-arkui-distributiontype-e.md) | 初始颜色随机值分布类型。 |
-| [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md) | 扰动场形状。 |
-| [ParticleEmitterShape](arkts-arkui-particleemittershape-e.md) | 粒子发射器形状。 |
-| [ParticleType](arkts-arkui-particletype-e.md) | 粒子类型。 |
-| [ParticleUpdater](arkts-arkui-particleupdater-e.md) | 粒子变化类型。 |
+| [DistributionType](arkts-arkui-particle-comp-distributiontype-e.md) | 初始颜色随机值分布类型。 |
+| [DisturbanceFieldShape](arkts-arkui-particle-comp-disturbancefieldshape-e.md) | 扰动场形状。 |
+| [ParticleEmitterShape](arkts-arkui-particle-comp-particleemittershape-e.md) | 粒子发射器形状。 |
+| [ParticleType](arkts-arkui-particle-comp-particletype-e.md) | 粒子类型。 |
+| [ParticleUpdater](arkts-arkui-particle-comp-particleupdater-e.md) | 粒子变化类型。 |
 
 ## 示例
 

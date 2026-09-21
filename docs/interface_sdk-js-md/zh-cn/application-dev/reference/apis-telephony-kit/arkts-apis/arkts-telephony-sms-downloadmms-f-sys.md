@@ -98,4 +98,10 @@ function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>
 
 **示例**
 
-参见 [downloadMms](#downloadmms)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

@@ -4,7 +4,7 @@
 export interface WindowRect
 ```
 
-Defines the location attributes of a modal dialog box.
+Indicates the attributes of a modal dialog box.
 
 **Since:** 10
 

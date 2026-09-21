@@ -4,7 +4,7 @@
 
 > **说明：**
 
-> - 该组件从API version 11开始，支持安全区域避让特性，其[expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea)属性的默认值为expandSafeArea( > [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避 > 让。
+> - 该组件从API version 11开始，支持安全区域避让特性，其[expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea)属性的默认值为expandSafeArea( > [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避 > 让。
 
 ## 子组件
 
@@ -15,7 +15,7 @@
 > Tabs子组件设置了通用属性visibility的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
 > 
 > 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
-> 示例13。
+> [示例13](#tabs)。
 > 
 > Tabs设置height为auto时，可根据子组件高度自适应高度大小。设置
 > width为auto时，可根据子组件宽度自适应宽度大小。
@@ -38,7 +38,7 @@ Tabs(options?: TabsOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
+| options | [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
 
 ## 汇总
 
@@ -46,39 +46,39 @@ Tabs(options?: TabsOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [BarGridColumnOptions](arkts-arkui-bargridcolumnoptions-i.md) | TabBar栅格化方式设置的对象，包括栅格模式下的column边距和间隔，以及小、中、大屏下，页签占用的columns数量。 |
-| [DividerStyle](arkts-arkui-dividerstyle-i.md) | 分割线样式对象。 |
-| [FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md) | 提供浮动条模式选项的接口。 |
-| [FloatingTabBarWidth](arkts-arkui-floatingtabbarwidth-i.md) | 提供了一个接口，用于设置不同断点处的tab宽度的浮动栏宽度。 |
-| [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | Scrollable模式下的TabBar的布局样式对象。 |
-| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) | Tabs自定义切换动画相关信息。 |
-| [TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md) | Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画的起始和目标页面信息，同时，也可以通过调用该对象的finishTransition接口通知Tabs组件自定义动画已结束。 |
-| [TabsAnimationEvent](arkts-arkui-tabsanimationevent-i.md) | Tabs组件动画相关信息集合。 |
-| [TabsOptions](arkts-arkui-tabsoptions-i.md) | Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和页签栏（TabBar）的通用属性。 |
+| [BarGridColumnOptions](arkts-arkui-tabs-comp-bargridcolumnoptions-i.md) | TabBar栅格化方式设置的对象，包括栅格模式下的column边距和间隔，以及小、中、大屏下，页签占用的columns数量。 |
+| [DividerStyle](arkts-arkui-tabs-comp-dividerstyle-i.md) | 分割线样式对象。 |
+| [FloatingTabBarStyle](arkts-arkui-tabs-comp-floatingtabbarstyle-i.md) | 提供浮动条模式选项的接口。 |
+| [FloatingTabBarWidth](arkts-arkui-tabs-comp-floatingtabbarwidth-i.md) | 提供了一个接口，用于设置不同断点处的tab宽度的浮动栏宽度。 |
+| [ScrollableBarModeOptions](arkts-arkui-tabs-comp-scrollablebarmodeoptions-i.md) | Scrollable模式下的TabBar的布局样式对象。 |
+| [TabContentAnimatedTransition](arkts-arkui-tabs-comp-tabcontentanimatedtransition-i.md) | Tabs自定义切换动画相关信息。 |
+| [TabContentTransitionProxy](arkts-arkui-tabs-comp-tabcontenttransitionproxy-i.md) | Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画的起始和目标页面信息，同时，也可以通过调用该对象的finishTransition接口通知Tabs组件自定义动画已结束。 |
+| [TabsAnimationEvent](arkts-arkui-tabs-comp-tabsanimationevent-i.md) | Tabs组件动画相关信息集合。 |
+| [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) | Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和页签栏（TabBar）的通用属性。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [CommonModifier](arkts-arkui-commonmodifier-t.md) | CommonModifier类型用于设置Tabs组件参数。 |
-| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
-| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |
-| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) | Tabs滑动时触发的回调。 |
-| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | 自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。 |
-| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
-| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | 自定义Tabs页面切换动画开始时触发的回调。 |
-| [UIMaterial](arkts-arkui-uimaterial-t.md) | 材质 |
+| [CommonModifier](arkts-arkui-tabs-comp-commonmodifier-t.md) | CommonModifier类型用于设置Tabs组件参数。 |
+| [OnTabsAnimationEndCallback](arkts-arkui-tabs-comp-ontabsanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
+| [OnTabsAnimationStartCallback](arkts-arkui-tabs-comp-ontabsanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |
+| [OnTabsContentDidScrollCallback](arkts-arkui-tabs-comp-ontabscontentdidscrollcallback-t.md) | Tabs滑动时触发的回调。 |
+| [OnTabsContentWillChangeCallback](arkts-arkui-tabs-comp-ontabscontentwillchangecallback-t.md) | 自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。 |
+| [OnTabsGestureSwipeCallback](arkts-arkui-tabs-comp-ontabsgestureswipecallback-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
+| [TabsCustomContentTransitionCallback](arkts-arkui-tabs-comp-tabscustomcontenttransitioncallback-t.md) | 自定义Tabs页面切换动画开始时触发的回调。 |
+| [UIMaterial](arkts-arkui-tabs-comp-uimaterial-t.md) | 材质 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [AnimationMode](arkts-arkui-animationmode-e.md) | 点击[TabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar)页签时切换TabContent的动画形式枚举。 |
-| [BarMode](arkts-arkui-barmode-e.md) | TabBar布局模式枚举。 |
-| [BarPosition](arkts-arkui-barposition-e.md) | Tabs页签位置枚举。 |
-| [LayoutStyle](arkts-arkui-layoutstyle-e.md) | [Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode-2)模式下不滚动时的页签排布方式枚举。 |
-| [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | 子组件的缓存模式。 |
-| [TabsNestedScrollMode](arkts-arkui-tabsnestedscrollmode-e.md) | Tabs组件和父组件的嵌套滚动模式枚举。 |
+| [AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md) | 点击[TabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar)页签时切换TabContent的动画形式枚举。 |
+| [BarMode](arkts-arkui-tabs-comp-barmode-e.md) | TabBar布局模式枚举。 |
+| [BarPosition](arkts-arkui-tabs-comp-barposition-e.md) | Tabs页签位置枚举。 |
+| [LayoutStyle](arkts-arkui-tabs-comp-layoutstyle-e.md) | [Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode-2)模式下不滚动时的页签排布方式枚举。 |
+| [TabsCacheMode](arkts-arkui-tabs-comp-tabscachemode-e.md) | 子组件的缓存模式。 |
+| [TabsNestedScrollMode](arkts-arkui-tabs-comp-tabsnestedscrollmode-e.md) | Tabs组件和父组件的嵌套滚动模式枚举。 |
 
 ## 示例
 
@@ -188,7 +188,7 @@ export class CommonUtil {
 ```TypeScript
 ### 示例12（设置TabBar平移距离和不透明度）
 
-本示例通过[setTabBarTranslate](arkts-arkui-tabscontroller-c.md#settabbartranslate)、[setTabBarOpacity](arkts-arkui-tabscontroller-c.md#settabbaropacity)等接口设置了TabBar的平移距离和不透明度。
+本示例通过[setTabBarTranslate](arkts-arkui-tabs-comp-tabscontroller-c.md#settabbartranslate)、[setTabBarOpacity](arkts-arkui-tabs-comp-tabscontroller-c.md#settabbaropacity)等接口设置了TabBar的平移距离和不透明度。
 
 
 ```
@@ -212,7 +212,7 @@ export class CommonUtil {
 ```TypeScript
 ### 示例15（页签超出TabBar区域显示）
 
-该示例通过使用[TabsOptions](arkts-arkui-tabsoptions-i.md)中的barModifier设置tabBar的clip属性实现页签超出tabBar区域显示效果。
+该示例通过使用[TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md)中的barModifier设置tabBar的clip属性实现页签超出tabBar区域显示效果。
 
 从API version 15开始，在TabsOptions中新增了barModifier接口。
 
@@ -222,7 +222,7 @@ export class CommonUtil {
 ```TypeScript
 ### 示例16（页签对齐布局）
 
-本示例通过使用[TabsOptions](arkts-arkui-tabsoptions-i.md)中的barModifier设置tabBar的align属性实现页签对齐布局效果。
+本示例通过使用[TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md)中的barModifier设置tabBar的align属性实现页签对齐布局效果。
 
 从API version 15开始，在TabsOptions中新增了barModifier接口。
 

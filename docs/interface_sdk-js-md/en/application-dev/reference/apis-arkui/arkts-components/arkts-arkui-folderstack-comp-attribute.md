@@ -4,7 +4,7 @@
 declare class FolderStackAttribute extends CommonMethod<FolderStackAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 
 > 
@@ -123,7 +123,7 @@ Typical usage: Adjust the app layout based on the fold status, for example, disp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | Yes | Callback invoked when the fold state of the device changes.<br>**Since:** 18 |
+| callback | [OnFoldStatusChangeCallback](arkts-arkui-folderstack-comp-onfoldstatuschangecallback-t.md) | Yes | Callback invoked when the fold state of the device changes.<br>**Since:** 18 |
 
 ## onHoverStatusChange
 
@@ -151,4 +151,4 @@ Typical usage: Adjust the app layout and interaction logic based on the hover st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | Yes | Callback invoked when the hover state of the device changes.<br>**Since:** 18 |
+| handler | [OnHoverStatusChangeCallback](arkts-arkui-folderstack-comp-onhoverstatuschangecallback-t.md) | Yes | Callback invoked when the hover state of the device changes.<br>**Since:** 18 |

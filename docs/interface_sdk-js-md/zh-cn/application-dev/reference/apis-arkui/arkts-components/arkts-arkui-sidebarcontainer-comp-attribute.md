@@ -54,7 +54,7 @@ controlButton(value: ButtonStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 是 | 侧边栏控制按钮的样式，用于配置控制按钮的位置、大小和图标。 |
+| value | [ButtonStyle](arkts-arkui-sidebarcontainer-comp-buttonstyle-i.md) | 是 | 侧边栏控制按钮的样式，用于配置控制按钮的位置、大小和图标。 |
 
 ## divider
 
@@ -76,7 +76,7 @@ divider(value: DividerStyle | null)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) &#124; null | 是 | 分割线的样式。<br>默认为DividerStyle：显示分割线。<br>- null或undefined：行为不做处理，分割线样式保持默认值，不做任何改变。<br>**说明：** <br>API version 11及以下版本，null效果为不显示分割线。 |
+| value | [DividerStyle](arkts-arkui-sidebarcontainer-comp-dividerstyle-i.md) &#124; null | 是 | 分割线的样式。<br>默认为DividerStyle：显示分割线。<br>- null或undefined：行为不做处理，分割线样式保持默认值，不做任何改变。<br>**说明：** <br>API version 11及以下版本，null效果为不显示分割线。 |
 
 ## maxSideBarWidth
 
@@ -331,7 +331,7 @@ sideBarPosition(value: SideBarPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 | 侧边栏显示位置。<br>默认值：SideBarPosition.Start |
+| value | [SideBarPosition](arkts-arkui-sidebarcontainer-comp-sidebarposition-e.md) | 是 | 侧边栏显示位置。<br>默认值：SideBarPosition.Start |
 
 ## sideBarWidth
 

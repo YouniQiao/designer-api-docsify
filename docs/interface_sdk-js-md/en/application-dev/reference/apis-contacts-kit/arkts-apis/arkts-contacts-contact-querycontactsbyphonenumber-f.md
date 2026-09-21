@@ -34,12 +34,6 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 **Examples**
 
 ```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -49,91 +43,6 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', (err: BusinessError, data) => 
     console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// Query contacts by phone number 138xxxxxxxx and holderId.
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
   console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
 });
 ```
@@ -172,7 +81,11 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querycontactsbyphonenumber-2"></a>
@@ -205,7 +118,23 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// Query contacts by phone number 138xxxxxxxx and holderId.
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querycontactsbyphonenumber-3"></a>
@@ -242,7 +171,11 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querycontactsbyphonenumber-4"></a>
@@ -275,7 +208,20 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querycontactsbyphonenumber-5"></a>
@@ -312,7 +258,11 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querycontactsbyphonenumber-6"></a>
@@ -346,7 +296,24 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By PhoneNumber. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querycontactsbyphonenumber-7"></a>
@@ -385,7 +352,11 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querycontactsbyphonenumber-8"></a>
@@ -424,7 +395,20 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryContactsByPhoneNumber('138xxxxxxxx', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts By PhoneNumber. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querycontactsbyphonenumber-9"></a>
@@ -467,4 +451,8 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 **Examples**
 
-See [queryContactsByPhoneNumber](#querycontactsbyphonenumber)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```

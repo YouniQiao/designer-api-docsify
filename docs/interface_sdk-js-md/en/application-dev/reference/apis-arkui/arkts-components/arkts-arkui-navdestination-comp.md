@@ -35,30 +35,30 @@ Creates the root container for a subpage in Navigation.
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) | Defines a general title for the **NavDestination** component. |
-| [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) | Defines the context information for the **NavDestination** component. |
-| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) | Defines a custom title for the **NavDestination** component. |
-| [NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md) | Defines a custom transition animation for the **NavDestination** component. |
-| [NestedScrollInfo](arkts-arkui-nestedscrollinfo-i.md) | Provides the information about the nested scrollable containers. |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) | Defines the routing configuration. |
+| [NavDestinationCommonTitle](arkts-arkui-navdestination-comp-navdestinationcommontitle-i.md) | Defines a general title for the **NavDestination** component. |
+| [NavDestinationContext](arkts-arkui-navdestination-comp-navdestinationcontext-i.md) | Defines the context information for the **NavDestination** component. |
+| [NavDestinationCustomTitle](arkts-arkui-navdestination-comp-navdestinationcustomtitle-i.md) | Defines a custom title for the **NavDestination** component. |
+| [NavDestinationTransition](arkts-arkui-navdestination-comp-navdestinationtransition-i.md) | Defines a custom transition animation for the **NavDestination** component. |
+| [NestedScrollInfo](arkts-arkui-navdestination-comp-nestedscrollinfo-i.md) | Provides the information about the nested scrollable containers. |
+| [RouteMapConfig](arkts-arkui-navdestination-comp-routemapconfig-i.md) | Defines the routing configuration. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | Defines the delegate function for custom transition animations of the **NavDestination** component. |
-| [Orientation](arkts-arkui-orientation-t.md) | Defines an instance object of the Orientation type. |
-| [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md) | Custom page state restore callback. |
-| [SaveStateCallback](arkts-arkui-savestatecallback-t.md) | Custom page state save callback. |
+| [NavDestinationTransitionDelegate](arkts-arkui-navdestination-comp-navdestinationtransitiondelegate-t.md) | Defines the delegate function for custom transition animations of the **NavDestination** component. |
+| [Orientation](arkts-arkui-navdestination-comp-orientation-t.md) | Defines an instance object of the Orientation type. |
+| [RestoreStateCallback](arkts-arkui-navdestination-comp-restorestatecallback-t.md) | Custom page state restore callback. |
+| [SaveStateCallback](arkts-arkui-navdestination-comp-savestatecallback-t.md) | Custom page state save callback. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md) | Enumerates reasons for the activation state changes of the **NavDestination** component. |
-| [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | Mode of the **NavDestination** component. |
-| [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | Type of the system transition animation. |
-| [VisibilityChangeReason](arkts-arkui-visibilitychangereason-e.md) | Enumerates reasons for **NavDestination** visibility changes. |
+| [NavDestinationActiveReason](arkts-arkui-navdestination-comp-navdestinationactivereason-e.md) | Enumerates reasons for the activation state changes of the **NavDestination** component. |
+| [NavDestinationMode](arkts-arkui-navdestination-comp-navdestinationmode-e.md) | Mode of the **NavDestination** component. |
+| [NavigationSystemTransitionType](arkts-arkui-navdestination-comp-navigationsystemtransitiontype-e.md) | Type of the system transition animation. |
+| [VisibilityChangeReason](arkts-arkui-navdestination-comp-visibilitychangereason-e.md) | Enumerates reasons for **NavDestination** visibility changes. |
 
 ## Examples
 

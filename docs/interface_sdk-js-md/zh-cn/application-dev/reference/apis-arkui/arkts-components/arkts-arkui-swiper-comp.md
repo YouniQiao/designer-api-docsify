@@ -42,7 +42,7 @@ Swiper(controller?: SwiperController)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [SwiperController](arkts-arkui-swipercontroller-c.md) | 否 | 给组件绑定一个控制器，用来控制组件翻页或者预加载指定子节点。 |
+| controller | [SwiperController](arkts-arkui-swiper-comp-swipercontroller-c.md) | 否 | 给组件绑定一个控制器，用来控制组件翻页或者预加载指定子节点。 |
 
 ## 汇总
 
@@ -50,34 +50,34 @@ Swiper(controller?: SwiperController)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArrowStyle](arkts-arkui-arrowstyle-i.md) | 左右箭头属性。 |
-| [AutoPlayOptions](arkts-arkui-autoplayoptions-i.md) | 自动播放属性。 |
-| [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | 预加载子组件的配置选项。 |
-| [IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md) | 为指定的导航点索引设置的图标。 |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | 导航点样式。 |
-| [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Swiper组件动画相关信息集合。 |
-| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | 自适应属性。 |
-| [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | Swiper自定义切换动画相关信息。 |
-| [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md) | Swiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知Swiper组件页面自定义动画已结束。 |
-| [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | 滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
+| [ArrowStyle](arkts-arkui-swiper-comp-arrowstyle-i.md) | 左右箭头属性。 |
+| [AutoPlayOptions](arkts-arkui-swiper-comp-autoplayoptions-i.md) | 自动播放属性。 |
+| [CachedCountOptions](arkts-arkui-swiper-comp-cachedcountoptions-i.md) | 预加载子组件的配置选项。 |
+| [IndicatorIconInfo](arkts-arkui-swiper-comp-indicatoriconinfo-i.md) | 为指定的导航点索引设置的图标。 |
+| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | 导航点样式。 |
+| [SwiperAnimationEvent](arkts-arkui-swiper-comp-swiperanimationevent-i.md) | Swiper组件动画相关信息集合。 |
+| [SwiperAutoFill](arkts-arkui-swiper-comp-swiperautofill-i.md) | 自适应属性。 |
+| [SwiperContentAnimatedTransition](arkts-arkui-swiper-comp-swipercontentanimatedtransition-i.md) | Swiper自定义切换动画相关信息。 |
+| [SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md) | Swiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知Swiper组件页面自定义动画已结束。 |
+| [SwiperContentWillScrollResult](arkts-arkui-swiper-comp-swipercontentwillscrollresult-i.md) | 滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)中的说明。 |
-| [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) | Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动。 |
-| [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
-| [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |
-| [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
+| [ContentDidScrollCallback](arkts-arkui-swiper-comp-contentdidscrollcallback-t.md) | Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md)中的说明。 |
+| [ContentWillScrollCallback](arkts-arkui-swiper-comp-contentwillscrollcallback-t.md) | Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动。 |
+| [OnSwiperAnimationEndCallback](arkts-arkui-swiper-comp-onswiperanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
+| [OnSwiperAnimationStartCallback](arkts-arkui-swiper-comp-onswiperanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |
+| [OnSwiperGestureSwipeCallback](arkts-arkui-swiper-comp-onswipergestureswipecallback-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) | Swiper组件翻页至指定页面的动效模式。 |
-| [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Swiper在主轴上的尺寸大小模式枚举。 |
-| [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md) | Swiper组件和父组件的嵌套滚动模式枚举。 |
+| [SwiperAnimationMode](arkts-arkui-swiper-comp-swiperanimationmode-e.md) | Swiper组件翻页至指定页面的动效模式。 |
+| [SwiperDisplayMode](arkts-arkui-swiper-comp-swiperdisplaymode-e.md) | Swiper在主轴上的尺寸大小模式枚举。 |
+| [SwiperNestedScrollMode](arkts-arkui-swiper-comp-swipernestedscrollmode-e.md) | Swiper组件和父组件的嵌套滚动模式枚举。 |
 
 ## 示例
 
@@ -94,7 +94,7 @@ Swiper(controller?: SwiperController)
 ```TypeScript
 ### 示例2（设置数字指示器）
 
-该示例通过[DigitIndicator](arkts-arkui-digitindicator-c.md)接口，实现了数字指示器的效果和功能。
+该示例通过[DigitIndicator](arkts-arkui-swiper-comp-digitindicator-c.md)接口，实现了数字指示器的效果和功能。
 
 
 ```
@@ -137,7 +137,7 @@ export class CommonUtil {
 ```TypeScript
 ### 示例5（设置圆点导航点超长显示）
 
-该示例通过DotIndicator接口的[maxDisplayCount](arkts-arkui-dotindicator-c.md#maxdisplaycount)属性，实现了圆点导航点超长显示动画效果。
+该示例通过DotIndicator接口的[maxDisplayCount](arkts-arkui-swiper-comp-dotindicator-c.md#maxdisplaycount)属性，实现了圆点导航点超长显示动画效果。
 
 
 ```
@@ -193,7 +193,7 @@ Swiper宽度属于[md](../../../ui/arkts-layout-development-grid-layout.md#栅�
 
 该示例展示了Swiper组件如何实现模拟拖拽。在自身不响应拖拽事件的情况下，子组件Column通过触摸事件的信息调用Swiper接口，实现类似跟手拖拽的效果。
 
-从API version 23开始，新增[startFakeDrag](arkts-arkui-swipercontroller-c.md#startfakedrag)接口、[fakeDragBy](arkts-arkui-swipercontroller-c.md#fakedragby)接口、[stopFakeDrag](arkts-arkui-swipercontroller-c.md#stopfakedrag)接口、[isFakeDragging](arkts-arkui-swipercontroller-c.md#isfakedragging)接口，用于实现模拟拖拽。
+从API version 23开始，新增[startFakeDrag](arkts-arkui-swiper-comp-swipercontroller-c.md#startfakedrag)接口、[fakeDragBy](arkts-arkui-swiper-comp-swipercontroller-c.md#fakedragby)接口、[stopFakeDrag](arkts-arkui-swiper-comp-swipercontroller-c.md#stopfakedrag)接口、[isFakeDragging](arkts-arkui-swiper-comp-swipercontroller-c.md#isfakedragging)接口，用于实现模拟拖拽。
 
 
 ```
@@ -203,5 +203,5 @@ Swiper宽度属于[md](../../../ui/arkts-layout-development-grid-layout.md#栅�
 
 该示例通过设置indicatorIcon接口，展示了Swiper组件如何配置导航点图标。
 
-从API版本26.0.0开始，新增[indicatorIcon](arkts-arkui-dotindicator-c.md#indicatoricon)接口。
+从API版本26.0.0开始，新增[indicatorIcon](arkts-arkui-swiper-comp-dotindicator-c.md#indicatoricon)接口。
 ```

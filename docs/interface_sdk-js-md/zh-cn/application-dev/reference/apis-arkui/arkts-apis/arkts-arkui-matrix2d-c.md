@@ -4,7 +4,7 @@
 declare class Matrix2D
 ```
 
-用于画布绘制[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md)、[OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-offscreencanvasrenderingcontext2d-c.md)、CanvasPattern和[Path2D](../arkts-components/arkts-arkui-path2d-c.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md)、[OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-offscreencanvasrenderingcontext2d-c.md)、CanvasPattern和[Path2D](../arkts-components/arkts-arkui-canvas-comp-path2d-c.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
 
@@ -52,7 +52,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
 
 ## identity
 
@@ -63,6 +63,8 @@ identity(): Matrix2D
 创建单位矩阵。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -85,6 +87,8 @@ invert(): Matrix2D
 获取当前矩阵的逆矩阵。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -109,6 +113,8 @@ multiply(other?: Matrix2D): Matrix2D
 **起始版本：** 8
 
 **废弃版本：** 10
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -139,6 +145,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 **废弃版本：** 10
 
 **替代接口：** [rotate](#rotate)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -201,6 +209,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -229,6 +239,8 @@ translate(tx?: number, ty?: number): Matrix2D
 对当前矩阵进行左乘平移运算。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -261,6 +273,8 @@ rotateX?: number
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -278,6 +292,8 @@ rotateY?: number
 **类型：** number
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -297,6 +313,8 @@ scaleX?: number
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -314,6 +332,8 @@ scaleY?: number
 **类型：** number
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -333,6 +353,8 @@ translateX?: number
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -350,6 +372,8 @@ translateY?: number
 **类型：** number
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

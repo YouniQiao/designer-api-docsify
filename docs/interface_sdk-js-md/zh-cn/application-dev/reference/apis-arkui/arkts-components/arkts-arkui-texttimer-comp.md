@@ -28,7 +28,7 @@ TextTimer(options?: TextTimerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。当需要自定义计时器配置（如设置倒计时开关、计时时间、初始时间、控制器等）时传入此参数；不传入时使用TextTimerOptions的默认配置。<br>默认值继承[TextTimerOptions](arkts-arkui-texttimeroptions-i.md) 。 |
+| options | [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md) | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。当需要自定义计时器配置（如设置倒计时开关、计时时间、初始时间、控制器等）时传入此参数；不传入时使用TextTimerOptions的默认配置。<br>默认值继承[TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md) 。 |
 
 ## 汇总
 
@@ -36,8 +36,8 @@ TextTimer(options?: TextTimerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | ContentModifier接口使用的TextTimer配置。 |
-| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | 用于构建TextTimer组件的选项。 |
+| [TextTimerConfiguration](arkts-arkui-texttimer-comp-texttimerconfiguration-i.md) | ContentModifier接口使用的TextTimer配置。 |
+| [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md) | 用于构建TextTimer组件的选项。 |
 
 ## 示例
 

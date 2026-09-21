@@ -74,7 +74,7 @@ resizable?: ResizableOptions
 
 Resizable image options of the styled string.
 
-**Type:** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+**Type:** [ResizableOptions](../arkts-components/arkts-arkui-image-comp-resizableoptions-i.md)
 
 **Since:** 26.0.1
 
@@ -112,7 +112,7 @@ value: PixelMap
 
 Image data source.
 
-**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
+**Type:** [PixelMap](../arkts-components/arkts-arkui-common-comp-pixelmap-t.md)
 
 **Since:** 12
 

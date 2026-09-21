@@ -12,7 +12,7 @@ The ability to be started must be a UIExtensionAbility, an extension ability wit
 
 The width and height of the component must be explicitly set to non-zero valid values.
 
-The scenario where scrolling continues after the edge is reached is not supported. When both the **UIExtensionComponent** host and the UIExtensionAbility support content scrolling, gesture-based scrolling will cause simultaneous responses from both inside and outside the **UIExtensionComponent**. This includes, but is not limited to, scrollable containers such as Scroll, Swiper, List, and Grid. For details about how to avoid the simultaneous scrolling inside and outside the **UIExtensionComponent**, see [Example 2](../../../reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent).
+The scenario where scrolling continues after the edge is reached is not supported. When both the **UIExtensionComponent** host and the UIExtensionAbility support content scrolling, gesture-based scrolling will cause simultaneous responses from both inside and outside the **UIExtensionComponent**. This includes, but is not limited to, scrollable containers such as [Scroll](arkts-arkui-scroll-comp.md#scroll), [Swiper](arkts-arkui-swiper-comp.md#swiper), [List](arkts-arkui-list-comp.md#list), and [Grid](arkts-arkui-grid-comp.md#grid). For details about how to avoid the simultaneous scrolling inside and outside the **UIExtensionComponent**, see [Example 2](../../../reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent).
 
 ## Child Components
 
@@ -42,7 +42,7 @@ Construct the UIExtensionComponent.<br> Called when the UIExtensionComponent is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | import('../api/@ohos.app.ability.Want').default | Yes | Ability to start. |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No | Construction parameters. |
+| options | [UIExtensionOptions](arkts-arkui-uiextensioncomponent-comp-uiextensionoptions-i-sys.md) | No | Construction parameters. |
 
 ## Summary
 
@@ -50,22 +50,22 @@ Construct the UIExtensionComponent.<br> Called when the UIExtensionComponent is 
 
 | Name | Description |
 | --- | --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | Indicates the information when the provider of the embedded UI is terminated. |
-| [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | Describes the optional construction parameters during **UIExtensionComponent** construction. |
-| [UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md) | Implements a **UIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started UIExtensionAbility through the connection established between the two parties. |
+| [TerminationInfo](arkts-arkui-uiextensioncomponent-comp-terminationinfo-i-sys.md) | Indicates the information when the provider of the embedded UI is terminated. |
+| [UIExtensionOptions](arkts-arkui-uiextensioncomponent-comp-uiextensionoptions-i-sys.md) | Describes the optional construction parameters during **UIExtensionComponent** construction. |
+| [UIExtensionProxy](arkts-arkui-uiextensioncomponent-comp-uiextensionproxy-i-sys.md) | Implements a **UIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started UIExtensionAbility through the connection established between the two parties. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ReceiveCallback](arkts-arkui-receivecallback-t-sys.md) | Triggered to encapsulate the data sent by the started ability. |
+| [ReceiveCallback](arkts-arkui-uiextensioncomponent-comp-receivecallback-t-sys.md) | Triggered to encapsulate the data sent by the started ability. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md) | Enumeration of different types of DpiFollowStrategy. |
-| [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md) | Enumerates the following strategies of the window mode. |
+| [DpiFollowStrategy](arkts-arkui-uiextensioncomponent-comp-dpifollowstrategy-e-sys.md) | Enumeration of different types of DpiFollowStrategy. |
+| [WindowModeFollowStrategy](arkts-arkui-uiextensioncomponent-comp-windowmodefollowstrategy-e-sys.md) | Enumerates the following strategies of the window mode. |
 
 ## Examples
 

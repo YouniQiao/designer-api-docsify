@@ -20,7 +20,7 @@ SceneOptions used by constructor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneOptions | [SceneOptions](arkts-arkui-sceneoptions-i.md) | No | The 3D scene controller |
+| sceneOptions | [SceneOptions](arkts-arkui-component3d-comp-sceneoptions-i.md) | No | The 3D scene controller |
 
 ## Summary
 
@@ -28,19 +28,19 @@ SceneOptions used by constructor
 
 | Name | Description |
 | --- | --- |
-| [SceneOptions](arkts-arkui-sceneoptions-i.md) | Scene options used by 3D scene control |
+| [SceneOptions](arkts-arkui-component3d-comp-sceneoptions-i.md) | Scene options used by 3D scene control |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Scene](arkts-arkui-scene-t.md) | Provides methods for controlling the 3d scene |
+| [Scene](arkts-arkui-component3d-comp-scene-t.md) | Provides methods for controlling the 3d scene |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ModelType](arkts-arkui-modeltype-e.md) | The enum of model type @enum { number } |
+| [ModelType](arkts-arkui-component3d-comp-modeltype-e.md) | The enum of model type @enum { number } |
 
 ## Examples
 

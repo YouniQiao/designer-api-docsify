@@ -24,7 +24,7 @@ content?: RichEditorSelection
 
 选中的内容信息，包含选中的文本或图片片段（spans）及选择范围（selection）。
 
-**类型：** [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md)
+**类型：** [RichEditorSelection](../arkts-components/arkts-arkui-richeditor-comp-richeditorselection-i.md)
 
 **起始版本：** 11
 

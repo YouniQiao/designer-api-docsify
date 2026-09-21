@@ -18,6 +18,8 @@ Creates a radio button.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -28,7 +30,7 @@ Creates a radio button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RadioOptions](arkts-arkui-radiooptions-i.md) | Yes | Parameters of the radio button. |
+| options | [RadioOptions](arkts-arkui-radio-comp-radiooptions-i.md) | Yes | Parameters of the radio button. |
 
 ## Summary
 
@@ -36,21 +38,21 @@ Creates a radio button.
 
 | Name | Description |
 | --- | --- |
-| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [RadioOptions](arkts-arkui-radiooptions-i.md) | Radio button information. |
-| [RadioStyle](arkts-arkui-radiostyle-i.md) | Radio button color. |
+| [RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [RadioOptions](arkts-arkui-radio-comp-radiooptions-i.md) | Radio button information. |
+| [RadioStyle](arkts-arkui-radio-comp-radiostyle-i.md) | Radio button color. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | Defines the callback type for radio button selected state changes. |
+| [OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md) | Defines the callback type for radio button selected state changes. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | Radio button style. |
+| [RadioIndicatorType](arkts-arkui-radio-comp-radioindicatortype-e.md) | Radio button style. |
 
 ## Examples
 

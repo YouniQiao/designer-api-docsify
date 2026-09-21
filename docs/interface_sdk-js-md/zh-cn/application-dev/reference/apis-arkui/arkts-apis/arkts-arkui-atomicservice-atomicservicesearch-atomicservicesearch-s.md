@@ -30,7 +30,7 @@ controller?: SearchController
 
 Search组件控制器，用于设置输入光标的位置、退出编辑态等操作。默认值为undefined。
 
-**类型：** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
+**类型：** [SearchController](../arkts-components/arkts-arkui-search-comp-searchcontroller-c.md)
 
 **起始版本：** 18
 

@@ -88,7 +88,7 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.<br> **CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
+| options | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabcontent-comp-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.<br> **CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
 
 <a id="tabbar-1"></a>
 
@@ -102,9 +102,9 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 
 > **NOTE:** 
 > 
-> - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video,Digital) of information apps and level-2 navigation scenarios of functional modules.
+> - [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video,Digital) of information apps and level-2 navigation scenarios of functional modules.
 > 
-> - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set
+> - [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set
 > **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs
 > are displayed on the left.
 
@@ -118,7 +118,7 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | Yes | Content displayed on the tab bar.<br>**SubTabBarStyle**: subtab style.<br>**BottomTabBarStyle**: bottom and side tab style |
+| value | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md) | Yes | Content displayed on the tab bar.<br>**SubTabBarStyle**: subtab style.<br>**BottomTabBarStyle**: bottom and side tab style |
 
 <a id="tabbar-2"></a>
 
@@ -147,7 +147,7 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent &#124; [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.<br>**ComponentContent**: encapsulation of the component content, which can be customized.<br>**SubTabBarStyle**: subtab style.<br>**BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.<br>**string**: string type.<br>**Resource**: resource reference for importing strings from system or application resources.<br>**CustomBuilder**: builder that can take components as arguments.<br>**TabBarOptions**: options for configuring images and text content on the tabs. |
+| content | ComponentContent &#124; [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) &#124; [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [TabBarOptions](arkts-arkui-tabcontent-comp-tabbaroptions-i.md) | Yes | Content displayed on the tab bar.<br>**ComponentContent**: encapsulation of the component content, which can be customized.<br>**SubTabBarStyle**: subtab style.<br>**BottomTabBarStyle**: style of the bottom and side tabs. The bottom style does not have the underline effect.<br>**string**: string type.<br>**Resource**: resource reference for importing strings from system or application resources.<br>**CustomBuilder**: builder that can take components as arguments.<br>**TabBarOptions**: options for configuring images and text content on the tabs. |
 
 ## tabBarVisibility
 
@@ -176,5 +176,5 @@ Sets the default visibility of the tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visibility | [TabVisibility](arkts-arkui-tabvisibility-e.md) | Yes | Visibility of the tab.<br>Default value: **TabVisibility.VISIBLE**. |
-| displayMode | [TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md) | No | Display mode corresponding to the visibility.<br>When not set, **visibility** applies to both the sidebar and bottom tab bar.<br>When set to **TabBarDisplayMode.SIDEBAR**, **visibility** applies only to the sidebar.<br>When set to **TabBarDisplayMode.BOTTOM_TABBAR**, **visibility** applies only to the bottom tab bar. |
+| visibility | [TabVisibility](arkts-arkui-tabcontent-comp-tabvisibility-e.md) | Yes | Visibility of the tab.<br>Default value: **TabVisibility.VISIBLE**. |
+| displayMode | [TabBarDisplayMode](arkts-arkui-tabs-comp-tabbardisplaymode-e.md) | No | Display mode corresponding to the visibility.<br>When not set, **visibility** applies to both the sidebar and bottom tab bar.<br>When set to **TabBarDisplayMode.SIDEBAR**, **visibility** applies only to the sidebar.<br>When set to **TabBarDisplayMode.BOTTOM_TABBAR**, **visibility** applies only to the bottom tab bar. |

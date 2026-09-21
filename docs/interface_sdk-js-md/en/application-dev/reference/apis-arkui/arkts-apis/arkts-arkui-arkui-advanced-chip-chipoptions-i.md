@@ -195,7 +195,7 @@ If the value is **undefined**, the default value is used. If an invalid value is
 activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component in the activated state. It is suitable for interactive scenarios where the material effect needs to be maintained or switched in the activated state, such as tag selection and state switching. Different materials have different effects and can affect visual attributes such as backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow of the component.
+System material style of the component in the activated state. It is suitable for interactive scenarios where the material effect needs to be maintained or switched in the activated state, such as tag selection and state switching. Different materials have different effects and can affect visual attributes such as backgroundColor, [border](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#border), and shadow of the component.
 
 Default value: **undefined**
 
@@ -267,7 +267,7 @@ If the value is **undefined**, the default value is used. If an invalid value is
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. It is suitable for scenarios such as immersive background effects and semi- transparent frosted glass effects. Different materials have different effects and can affect visual attributes such as backgroundColor, [border](../arkts-components/arkts-arkui-commonmethod-c.md#border), and shadow of the component.
+System material style of the component. It is suitable for scenarios such as immersive background effects and semi- transparent frosted glass effects. Different materials have different effects and can affect visual attributes such as backgroundColor, [border](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#border), and shadow of the component.
 
 Default value: **undefined**
 

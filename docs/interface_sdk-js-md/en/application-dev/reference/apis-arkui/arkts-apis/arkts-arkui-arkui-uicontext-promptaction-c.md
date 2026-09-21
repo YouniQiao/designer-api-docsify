@@ -62,6 +62,12 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
+**Examples**
+
+```TypeScript
+This example shows how to close a custom dialog box corresponding to dialogContent using closeCustomDialog.
+```
+
 <a id="closecustomdialog-1"></a>
 
 ## closeCustomDialog
@@ -92,6 +98,64 @@ Closes the specified custom dialog box.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+  private customDialogComponentId: number = 0;
+
+  @Builder
+  customDialogComponent() {
+    Column() {
+      Text('Dialog box').fontSize(30)
+      Row({ space: 50 }) {
+        Button("OK").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+        Button("Cancel").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            this.promptAction.openCustomDialog({
+              builder: () => {
+                this.customDialogComponent()
+              },
+              onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
+                console.info(`reason ${dismissDialogAction.reason}`);
+                console.info('dialog onWillDismiss');
+                if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
+                  dismissDialogAction.dismiss();
+                }
+                if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
+                  dismissDialogAction.dismiss();
+                }
+              }
+            }).then((dialogId: number) => {
+              this.customDialogComponentId = dialogId;
+            })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## closeMenu
 
@@ -129,6 +193,12 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to close a menu using closeMenu.
+```
+
 ## closePopup
 
 ```TypeScript
@@ -165,6 +235,12 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
+**Examples**
+
+```TypeScript
+See the example for [openPopup](#openpopup).
+```
+
 ## closeToast
 
 ```TypeScript
@@ -195,6 +271,12 @@ Closes the specified toast.
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
+**Examples**
+
+```TypeScript
+See the example for [openToast18](#opentoast).
+```
+
 ## getBottomOrder
 
 ```TypeScript
@@ -216,6 +298,12 @@ This API returns the order of the dialog box currently at the bottom layer. This
 | Type | Description |
 | --- | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
+
+**Examples**
+
+```TypeScript
+This example shows how to use getBottomOrder to obtain the order of the dialog box currently at the bottom layer.
+```
 
 ## getTopOrder
 
@@ -240,6 +328,12 @@ This API returns the order of the dialog box currently at the top layer. This in
 | Type | Description |
 | --- | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Order of the topmost dialog box. |
+
+**Examples**
+
+```TypeScript
+This example shows how to use getTopOrder to obtain the order of the dialog box currently at the top layer.
+```
 
 ## openCustomDialog
 
@@ -277,6 +371,12 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to listen for changes in [system environment information](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) (such as system language and color mode) and update a custom dialog box using the [update](arkts-arkui-arkui-uicontext-dialogpresenter-c.md#update) and updateConfiguration APIs of ComponentContent<T>.
+```
 
 <a id="opencustomdialog-1"></a>
 
@@ -316,6 +416,81 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private customDialogComponentId: number = 0;
+
+  @Builder
+  customDialogComponent() {
+    Column() {
+      Text('A dialog box is open').fontSize(20)
+      Row({ space: 10 }) {
+        Button('Cancel').onClick(() => {
+          try {
+            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
+          }
+        }).width(100).backgroundColor('#d5d5d5').fontColor('#707070')
+        Button('OK').onClick(() => {
+          try {
+            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
+          }
+        }).width(100)
+      }
+    }.height(150).padding(20).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column({ space: 20 }) {
+        Button('Click Me')
+          .fontSize(30)
+          .onClick(() => {
+            this.getUIContext()
+              .getPromptAction()
+              .openCustomDialog({
+                builder: () => {
+                  this.customDialogComponent()
+                },
+                onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
+                  console.info('reason' + JSON.stringify(dismissDialogAction.reason));
+                  console.info('dialog onWillDismiss');
+                  if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
+                    dismissDialogAction.dismiss();
+                  }
+                  if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
+                    dismissDialogAction.dismiss();
+                  }
+                }
+              })
+              .then((dialogId: number) => {
+                this.customDialogComponentId = dialogId;
+              })
+              .catch((error: BusinessError) => {
+                console.error(`openCustomDialog error code is ${error.code}, message is ${error.message}`);
+              })
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## openCustomDialogWithController
 
@@ -358,6 +533,12 @@ The dialog box displayed through this API has its content fully following style 
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to create a custom dialog box with an external controller binding using openCustomDialog.
+```
+
 ## openMenu
 
 ```TypeScript
@@ -372,7 +553,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 > 
 > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and [closeMenu](#closemenu) rely to identify the target menu.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-arkui-advanced-popup.md) or [Chip](arkts-arkui-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 > 
 > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has
@@ -392,7 +573,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.<br>**NOTE:** <br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | No | Style of the menu.<br>**NOTE:** <br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
 
@@ -410,6 +591,12 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-node-specified-by-targetid-not-mounted-on-the-component-tree) | The node of targetId is not in the component tree. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to create and display a menu using openMenu.
+```
+
 ## openPopup
 
 ```TypeScript
@@ -424,7 +611,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 > 
 > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and [closePopup](#closepopup) rely to identify the target popup.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-arkui-advanced-popup.md) or [Chip](arkts-arkui-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
@@ -441,7 +628,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No | Style of the popup. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-common-comp-popupcommonoptions-i.md) | No | Style of the popup. |
 
 **Return value:**
 
@@ -458,6 +645,12 @@ Creates and displays a popup with the specified content. This API uses a promise
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-node-specified-by-targetid-not-mounted-on-the-component-tree) | The node of targetId is not in the component tree. |
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to display, update, and close a popup using the openPopup, updatePopup, and closePopup APIs.
+```
 
 ## openToast
 
@@ -494,6 +687,12 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to display and close a toast by calling openToast and closeToast.
+```
+
 ## presentCustomDialog
 
 ```TypeScript
@@ -517,7 +716,7 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | No | Controller of the custom dialog box. |
 | options | [promptAction.DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
@@ -533,6 +732,84 @@ The dialog box ID can be included in the dialog box content for related operatio
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { PromptAction, promptAction } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local message: string = "hello";
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private dialogController: promptAction.DialogController = new promptAction.DialogController();
+
+  private customDialogComponentId: number = 0;
+  @Builder customDialogComponent() {
+    Column() {
+      Text(this.message).fontSize(30)
+      Row({ space: 10 }) {
+        Button("Close by DialogId").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+        Button("Close by DialogController").onClick(() => {
+          this.dialogController.close();
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  @Builder customDialogComponentWithId(dialogId: number) {
+    Column() {
+      Text(this.message).fontSize(30)
+      Row({ space: 10 }) {
+        Button("Close by DialogId").onClick(() => {
+          this.promptAction.closeCustomDialog(dialogId);
+        })
+        Button("Close by DialogController").onClick(() => {
+          this.dialogController.close();
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('presentCustomDialog')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.presentCustomDialog(() => {
+              this.customDialogComponent()
+            }, this.dialogController)
+              .then((dialogId: number) => {
+                this.customDialogComponentId = dialogId;
+              })
+              .catch((err: BusinessError) => {
+                console.error("presentCustomDialog error: " + err.code + " " + err.message);
+              })
+          })
+        Button('presentCustomDialog with id')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.presentCustomDialog((dialogId: number) => {
+              this.customDialogComponentWithId(dialogId)
+            }, this.dialogController)
+              .catch((err: BusinessError) => {
+                console.error("presentCustomDialog with id error: " + err.code + " " + err.message);
+              })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## showActionMenu
 
@@ -566,6 +843,60 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+import { PromptAction, promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showActionMenu')
+        .onClick(() => {
+          try {
+            this.promptAction.showActionMenu({
+              title: 'Title Info',
+              buttons: [
+                {
+                  text: 'item1',
+                  color: '#666666'
+                },
+                {
+                  text: 'item2',
+                  color: '#000000'
+                }
+              ]
+            }, (err: BusinessError, data: promptAction.ActionMenuSuccessResponse) => {
+              if (err) {
+                console.error('showActionMenu err: ' + err);
+                return;
+              }
+              console.info('showActionMenu success callback, click button: ' + data.index);
+            });
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`showActionMenu args error code is ${code}, message is ${message}`);
+          };
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+This example demonstrates how to display an action menu and return the action menu response result through a promise using the showActionMenu API.
+```
+
+```TypeScript
+This example demonstrates how to display an action menu and return the action menu response result using the showActionMenu API.
+```
+
 <a id="showactionmenu-1"></a>
 
 ## showActionMenu
@@ -597,6 +928,10 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+See [showActionMenu](#showactionmenu)
 
 <a id="showactionmenu-2"></a>
 
@@ -635,6 +970,12 @@ Creates and displays an action menu. This API uses a promise to return the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to display an action menu and return the action menu response result through a promise using the showActionMenu API.
+```
+
 ## showDialog
 
 ```TypeScript
@@ -664,6 +1005,12 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to display a dialog box and return the dialog box response result using the showDialog API.
+```
 
 <a id="showdialog-1"></a>
 
@@ -702,6 +1049,12 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to display a dialog box and return the dialog box response result through a promise using the showDialog API.
+```
+
 ## showToast
 
 ```TypeScript
@@ -730,6 +1083,12 @@ Creates and displays a toast.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to display a toast by calling showToast.
+```
 
 ## updateCustomDialog
 
@@ -768,6 +1127,12 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
+**Examples**
+
+```TypeScript
+This example demonstrates how to dynamically adjust the position of an open custom dialog using updateCustomDialog.
+```
+
 ## updateMenu
 
 ```TypeScript
@@ -782,7 +1147,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
 > **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
 > 
-> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value.
+> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value.
 
 **Since:** 18
 
@@ -797,7 +1162,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE:** <br>1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | Yes | Style of the menu.<br>**NOTE:** <br>1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.<br>2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
 | partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.<br> **NOTE:** <br>1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
 **Return value:**
@@ -813,6 +1178,12 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to update the arrow style of a menu using updateMenu.
+```
 
 ## updatePopup
 
@@ -839,7 +1210,7 @@ Updates the style of the popup corresponding to the provided **content**. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.<br> **NOTE:** <br> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-common-comp-popupcommonoptions-i.md) | Yes | Style of the popup.<br> **NOTE:** <br> Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
 | partialUpdate | boolean | No | Whether to update the popup in incremental mode.<br> Default value: **false**<br> **NOTE:** <br> **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.<br> **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
 
 **Return value:**
@@ -855,3 +1226,9 @@ Updates the style of the popup corresponding to the provided **content**. This A
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
+
+**Examples**
+
+```TypeScript
+See the example for [openPopup](#openpopup).
+```

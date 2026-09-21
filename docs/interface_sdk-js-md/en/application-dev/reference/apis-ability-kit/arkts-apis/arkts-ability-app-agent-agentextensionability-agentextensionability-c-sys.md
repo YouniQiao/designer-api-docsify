@@ -26,7 +26,7 @@ import { AgentExtensionAbility } from '@kit.AbilityKit';
 onAgentInvoked(agentId: string): void
 ```
 
-Called back when a LOW_CODE agent is invoked.
+Triggered when a [LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype) agent is successfully invoked, used for initialization operations (such as downloading resources from the cloud and loading configurations).
 
 **Since:** 26.0.0
 

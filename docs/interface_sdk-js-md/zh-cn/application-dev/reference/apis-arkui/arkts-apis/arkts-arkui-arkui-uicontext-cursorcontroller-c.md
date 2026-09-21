@@ -45,6 +45,12 @@ restoreDefault(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+当光标移出绿框时，通过CursorController的restoreDefault方法恢复默认光标样式。
+```
+
 ## setCursor
 
 ```TypeScript
@@ -70,6 +76,12 @@ setCursor(value: PointerStyle): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 是 | 光标样式。 |
+
+**示例**
+
+```TypeScript
+当光标进入蓝色框时，通过CursorController的setCursor方法修改光标样式为PointerStyle.WEST。
+```
 
 ## setCustomCursor
 
@@ -99,3 +111,9 @@ setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 | value | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 自定义鼠标光标样式的像素图。最大尺寸为256*256px，超过该尺寸时设置自定义鼠标光标样式不生效。 |
 | focusX | number | 否 | 自定义光标焦点的X坐标。以光标图片左上角为原点，向右为正方向。该焦点将在显示时与系统鼠标指针的屏幕坐标对齐，鼠标的点击、拖拽等操作均以此点为准。<br>默认值：0<br>单位：px<br>取值范围：[0, 图片宽度]，超出取值范围时按默认值处理。 |
 | focusY | number | 否 | 自定义光标焦点的Y坐标。以光标图片左上角为原点，向下为正方向。结合focusX共同确定图像内代表实际交互位置的点。<br>默认值：0<br>单位：px<br>取值范围：[0, 图片高度]，超出取值范围时按默认值处理。 |
+
+**示例**
+
+```TypeScript
+当光标进入蓝框且自定义光标图片加载完成后，通过调用[setCustomCursor](#setcustomcursor)接口，设置自定义鼠标光标样式。
+```

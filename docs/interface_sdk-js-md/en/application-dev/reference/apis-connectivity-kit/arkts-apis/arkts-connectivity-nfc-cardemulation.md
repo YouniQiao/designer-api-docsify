@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## HCE and AID Declaration

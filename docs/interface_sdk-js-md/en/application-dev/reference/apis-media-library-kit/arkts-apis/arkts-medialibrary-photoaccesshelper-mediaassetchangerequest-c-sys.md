@@ -571,6 +571,8 @@ Saves the camera edited data of an asset.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -913,6 +915,8 @@ setMovingPhotoVersion(version: number): void
 Saves MovingPhoto version which is used to determine what special efficacy is supported.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -77,6 +77,8 @@ Sets the gap between columns.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -100,6 +102,8 @@ For example, **'1fr 1fr 2fr'** indicates three columns, with the first column ta
 You can use **columnsTemplate('repeat(auto-fill,track-size)')** to automatically calculate the number of columns based on the specified column width **track-size**. **repeat** and **auto-fill** are keywords. The units for **track-size** can be px, vp (default), %, or a valid number. For details, see [Example 2](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#example-2-implementing-automatic-column-count-calculation).
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -165,7 +169,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-comp-scroller-c.md).<br>Default value: **true** |
 
 ## friction
 
@@ -199,6 +203,8 @@ Sets the size constraints of the child components during layout. For details abo
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -218,6 +224,8 @@ layoutDirection(value: FlexDirection)
 Sets the main axis direction of the layout.
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -249,7 +257,7 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
+| value | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
 
 ## onReachEnd
 
@@ -260,6 +268,8 @@ onReachEnd(event: () => void)
 Triggered when the **WaterFlow** content reaches the end position.
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -280,6 +290,8 @@ onReachStart(event: () => void)
 Triggered when the **WaterFlow** content reaches the start position.
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -323,7 +335,7 @@ This event is not triggered in the following scenarios:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
+| event | [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md) | Yes | Callback triggered when each frame scrolling starts.<br>**Since:** 20 |
 
 ## onScrollIndex
 
@@ -357,6 +369,8 @@ Sets the gap between rows.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -381,6 +395,8 @@ You can use **rowsTemplate('repeat(auto-fill,track-size)')** to automatically ca
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -401,9 +417,9 @@ Defines whether the **WaterFlow** component supports the generation of empty bra
 
 > **NOTE:** 
 > 
-> When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,
-> or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the
-> [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless
+> When [WaterFlowSections](arkts-arkui-waterflow-comp-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md) parameter,
+> or when the [SLIDING_WINDOW](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) layout mode is set using the
+> [layoutMode](arkts-arkui-waterflow-comp-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless
 > of the **supportEmptyBranchInLazyLoading** setting.
 
 **Since:** 26.0.0
@@ -440,4 +456,4 @@ Sets whether to synchronously load all child components in the **WaterFlow** com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br> **true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE:** <br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br> **true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE:** <br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroll-comp-scroller-c.md#scrolltoindex) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |

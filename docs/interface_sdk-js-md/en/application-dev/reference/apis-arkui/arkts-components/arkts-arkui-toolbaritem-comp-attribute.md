@@ -4,7 +4,7 @@
 declare class ToolBarItemAttribute
 ```
 
-The universal attributes are not supported.
+The [universal attributes](arkts-arkui-common-comp.md#common) are not supported.
 
 **Since:** 20
 

@@ -20,6 +20,8 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 
 **Required permissions:** ohos.permission.PERMISSION_RECORD_TOGGLE
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -55,18 +57,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Set permission usage record switch status
 privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
-privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
   console.info('setPermissionUsedRecordToggleStatus success');
 }).catch((err: BusinessError): void => {
   console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
@@ -123,4 +113,14 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 
 **Examples**
 
-See [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```

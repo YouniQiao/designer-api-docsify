@@ -24,7 +24,7 @@ request: WebResourceRequest
 
 Web resource request of event.
 
-**Type:** [WebResourceRequest](../../apis-arkweb/arkts-components/arkts-arkweb-webresourcerequest-c.md)
+**Type:** [WebResourceRequest](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ response: WebResourceResponse
 
 Web resource response of event.
 
-**Type:** [WebResourceResponse](../../apis-arkweb/arkts-components/arkts-arkweb-webresourceresponse-c.md)
+**Type:** [WebResourceResponse](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp-webresourceresponse-c.md)
 
 **Since:** 12
 

@@ -33,12 +33,6 @@ function queryHolders(callback: AsyncCallback<Array<Holder>>): void
 **示例**
 
 ```TypeScript
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -47,15 +41,6 @@ contact.queryHolders((err: BusinessError, data) => {
     console.error(`Failed to query Holders. Code: ${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryHolders();
-promise.then((data) => {
   console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
 });
 ```
@@ -93,7 +78,11 @@ function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>):
 
 **示例**
 
-参见 [queryHolders](#queryholders)
+```TypeScript
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```
 
 
 <a id="queryholders-2"></a>
@@ -124,7 +113,14 @@ function queryHolders(): Promise<Array<Holder>>
 
 **示例**
 
-参见 [queryHolders](#queryholders)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryHolders();
+promise.then((data) => {
+  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="queryholders-3"></a>
@@ -164,4 +160,8 @@ function queryHolders(context: Context): Promise<Array<Holder>>
 
 **示例**
 
-参见 [queryHolders](#queryholders)
+```TypeScript
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```

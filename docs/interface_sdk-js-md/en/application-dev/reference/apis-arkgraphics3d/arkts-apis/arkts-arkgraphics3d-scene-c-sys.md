@@ -44,14 +44,6 @@ Create a new scene from a SceneLoadParams.
 **Examples**
 
 ```TypeScript
-Example 1: Load resources via rawfile (a relative path).
-```
-
-```TypeScript
-Example 2: Load via an absolute path (from /data/storage/el2/base/files in the application sandbox directory).
-```
-
-```TypeScript
 import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
 
 function loadModelWithParams(): Promise<Scene> {

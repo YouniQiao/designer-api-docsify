@@ -128,7 +128,7 @@ previewOptions?: DragPreviewOptions
 
 设置拖拽过程中背板图处理模式及数量角标的显示。
 
-**类型：** [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md)
+**类型：** [DragPreviewOptions](../arkts-components/arkts-arkui-common-comp-dragpreviewoptions-i.md)
 
 **起始版本：** 11
 

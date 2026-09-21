@@ -2,7 +2,7 @@
 
 The **Video** component is used to play a video and control its playback state. It supports playback, pause, progress control, playback speed, full-screen switching, and other functions.
 
-> **NOTE** > > > The **Video** component provides only simple video playback and cannot support complex video playback control > scenarios. For complex development scenarios, you are advised to use the > [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the > XComponent component. > <br> > > When the **Video** component uses [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) to expand the safe area, the > video display content area of the component cannot be expanded.
+> **NOTE** > > > The **Video** component provides only simple video playback and cannot support complex video playback control > scenarios. For complex development scenarios, you are advised to use the > [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the > [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent) component. > <br> > > When the **Video** component uses [expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea) to expand the safe area, the > video display content area of the component cannot be expanded.
 
 ## Required Permissions
 
@@ -20,6 +20,8 @@ Video(value: VideoOptions)
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ Video(value: VideoOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](arkts-arkui-videooptions-i.md) | Yes | Video information. |
+| value | [VideoOptions](arkts-arkui-video-comp-videooptions-i.md) | Yes | Video information. |
 
 ## Summary
 
@@ -36,18 +38,18 @@ Video(value: VideoOptions)
 
 | Name | Description |
 | --- | --- |
-| [FullscreenInfo](arkts-arkui-fullscreeninfo-i.md) | Describes whether the video is in full-screen playback mode. |
-| [PlaybackInfo](arkts-arkui-playbackinfo-i.md) | Describes the current progress of video playback. |
-| [PosterOptions](arkts-arkui-posteroptions-i.md) | Defines display options for the first frame of the video. |
-| [PreparedInfo](arkts-arkui-preparedinfo-i.md) | Describes the duration of the video. |
-| [VideoOptions](arkts-arkui-videooptions-i.md) | Defines the options of the **Video** component. |
+| [FullscreenInfo](arkts-arkui-video-comp-fullscreeninfo-i.md) | Describes whether the video is in full-screen playback mode. |
+| [PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md) | Describes the current progress of video playback. |
+| [PosterOptions](arkts-arkui-video-comp-posteroptions-i.md) | Defines display options for the first frame of the video. |
+| [PreparedInfo](arkts-arkui-video-comp-preparedinfo-i.md) | Describes the duration of the video. |
+| [VideoOptions](arkts-arkui-video-comp-videooptions-i.md) | Defines the options of the **Video** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md) | Enumerates video playback speed options. |
-| [SeekMode](arkts-arkui-seekmode-e.md) | Enumerates video seek modes. |
+| [PlaybackSpeed](arkts-arkui-video-comp-playbackspeed-e.md) | Enumerates video playback speed options. |
+| [SeekMode](arkts-arkui-video-comp-seekmode-e.md) | Enumerates video seek modes. |
 
 ## Examples
 

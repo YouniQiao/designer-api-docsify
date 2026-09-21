@@ -40,7 +40,7 @@ Create a **Tabs** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | No | Options of the **Tabs** component. |
+| options | [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) | No | Options of the **Tabs** component. |
 
 ## Summary
 
@@ -48,44 +48,44 @@ Create a **Tabs** container.
 
 | Name | Description |
 | --- | --- |
-| [BarGridColumnOptions](arkts-arkui-bargridcolumnoptions-i.md) | Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen sizes. |
-| [DividerStyle](arkts-arkui-dividerstyle-i.md) | Describes the divider style. |
-| [FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md) | Provides an interface for the options for the floating bar mode. |
-| [FloatingTabBarWidth](arkts-arkui-floatingtabbarwidth-i.md) | Provides an interface for the options for the floating bar width of the tab width at different breakpoints. |
-| [ScrollableBarModeOptions](arkts-arkui-scrollablebarmodeoptions-i.md) | Implements a **ScrollableBarModeOptions** object. |
-| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) | Provides the information about the custom tab switching animation. |
-| [TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom switching animation of the **Tabs** component. You can use this object to obtain the start and target pages for the custom tab switching animation. In addition, you can call the **finishTransition** API of this object to notify the **Tabs** component of the ending of the custom animation. |
-| [TabsAnimationEvent](arkts-arkui-tabsanimationevent-i.md) | Describes the animation information of the **Tabs** component. |
-| [TabsBreakpointType](arkts-arkui-tabsbreakpointtype-i.md) | Defines the value type for different Tabs container sizes. |
-| [TabsOptions](arkts-arkui-tabsoptions-i.md) | Provides parameters for configuring the **Tabs** component, including tab positions, the current index of the displayed tab, the **Tabs** controller, and universal attributes for the **TabBar**. |
-| [TabsSidebarSearchableOptions](arkts-arkui-tabssidebarsearchableoptions-i.md) | Defines the options for the searchable sidebar tab bar. |
+| [BarGridColumnOptions](arkts-arkui-tabs-comp-bargridcolumnoptions-i.md) | Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen sizes. |
+| [DividerStyle](arkts-arkui-tabs-comp-dividerstyle-i.md) | Describes the divider style. |
+| [FloatingTabBarStyle](arkts-arkui-tabs-comp-floatingtabbarstyle-i.md) | Provides an interface for the options for the floating bar mode. |
+| [FloatingTabBarWidth](arkts-arkui-tabs-comp-floatingtabbarwidth-i.md) | Provides an interface for the options for the floating bar width of the tab width at different breakpoints. |
+| [ScrollableBarModeOptions](arkts-arkui-tabs-comp-scrollablebarmodeoptions-i.md) | Implements a **ScrollableBarModeOptions** object. |
+| [TabContentAnimatedTransition](arkts-arkui-tabs-comp-tabcontentanimatedtransition-i.md) | Provides the information about the custom tab switching animation. |
+| [TabContentTransitionProxy](arkts-arkui-tabs-comp-tabcontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom switching animation of the **Tabs** component. You can use this object to obtain the start and target pages for the custom tab switching animation. In addition, you can call the **finishTransition** API of this object to notify the **Tabs** component of the ending of the custom animation. |
+| [TabsAnimationEvent](arkts-arkui-tabs-comp-tabsanimationevent-i.md) | Describes the animation information of the **Tabs** component. |
+| [TabsBreakpointType](arkts-arkui-tabs-comp-tabsbreakpointtype-i.md) | Defines the value type for different Tabs container sizes. |
+| [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) | Provides parameters for configuring the **Tabs** component, including tab positions, the current index of the displayed tab, the **Tabs** controller, and universal attributes for the **TabBar**. |
+| [TabsSidebarSearchableOptions](arkts-arkui-tabs-comp-tabssidebarsearchableoptions-i.md) | Defines the options for the searchable sidebar tab bar. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CommonModifier](arkts-arkui-commonmodifier-t.md) | Defines a parameter object for the **Tabs** component. |
-| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | Defines the callback triggered when the tab switching animation ends. |
-| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | Defines the callback triggered when the tab switching animation starts. |
-| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) | Defines the callback triggered when content in the **Tabs** component scrolls. |
-| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | Defines the callback invoked when a new page is about to be displayed. |
-| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn. |
-| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | Defines the callback invoked when the custom tab transition animation starts. |
-| [TabsSidebarSearchFilterCallback](arkts-arkui-tabssidebarsearchfiltercallback-t.md) | Search filter callback. |
-| [UIMaterial](arkts-arkui-uimaterial-t.md) | [UIMaterial](arkts-arkui-uimaterial-t.md) |
+| [CommonModifier](arkts-arkui-tabs-comp-commonmodifier-t.md) | Defines a parameter object for the **Tabs** component. |
+| [OnTabsAnimationEndCallback](arkts-arkui-tabs-comp-ontabsanimationendcallback-t.md) | Defines the callback triggered when the tab switching animation ends. |
+| [OnTabsAnimationStartCallback](arkts-arkui-tabs-comp-ontabsanimationstartcallback-t.md) | Defines the callback triggered when the tab switching animation starts. |
+| [OnTabsContentDidScrollCallback](arkts-arkui-tabs-comp-ontabscontentdidscrollcallback-t.md) | Defines the callback triggered when content in the **Tabs** component scrolls. |
+| [OnTabsContentWillChangeCallback](arkts-arkui-tabs-comp-ontabscontentwillchangecallback-t.md) | Defines the callback invoked when a new page is about to be displayed. |
+| [OnTabsGestureSwipeCallback](arkts-arkui-tabs-comp-ontabsgestureswipecallback-t.md) | Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn. |
+| [TabsCustomContentTransitionCallback](arkts-arkui-tabs-comp-tabscustomcontenttransitioncallback-t.md) | Defines the callback invoked when the custom tab transition animation starts. |
+| [TabsSidebarSearchFilterCallback](arkts-arkui-tabs-comp-tabssidebarsearchfiltercallback-t.md) | Search filter callback. |
+| [UIMaterial](arkts-arkui-tabs-comp-uimaterial-t.md) | [UIMaterial](arkts-arkui-tabs-comp-uimaterial-t.md) |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AnimationMode](arkts-arkui-animationmode-e.md) | Enumerates the animation modes for switching between tabs. |
-| [BarMode](arkts-arkui-barmode-e.md) | Enumerates layout modes of the tab bar. |
-| [BarPosition](arkts-arkui-barposition-e.md) | Enumerates the positions of the **Tabs** component. |
-| [LayoutStyle](arkts-arkui-layoutstyle-e.md) | Enumerates the tab layout styles of the tab bar when not scrolling in scrollable mode. |
-| [TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md) | Enumerates the actual display modes of the tab bar under different Tabs container sizes. This enum is used in [barDisplayModeBreakpoint](arkts-arkui-tabs-comp-attribute.md#bardisplaymodebreakpoint) to specify the display mode for different breakpoint sizes. It is only meaningful when **TabBarStyle** is set to **SIDEBAR_ADAPTABLE** or **SIDEBAR**. |
-| [TabBarStyle](arkts-arkui-tabbarstyle-e.md) | Enumerates the display styles of the tab bar. |
-| [TabsCacheMode](arkts-arkui-tabscachemode-e.md) | Enumerates the caching modes for child components. |
-| [TabsNestedScrollMode](arkts-arkui-tabsnestedscrollmode-e.md) | Enumerates the nested scrolling modes of the **Tabs** component and its parent container. |
+| [AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md) | Enumerates the animation modes for switching between tabs. |
+| [BarMode](arkts-arkui-tabs-comp-barmode-e.md) | Enumerates layout modes of the tab bar. |
+| [BarPosition](arkts-arkui-tabs-comp-barposition-e.md) | Enumerates the positions of the **Tabs** component. |
+| [LayoutStyle](arkts-arkui-tabs-comp-layoutstyle-e.md) | Enumerates the tab layout styles of the tab bar when not scrolling in scrollable mode. |
+| [TabBarDisplayMode](arkts-arkui-tabs-comp-tabbardisplaymode-e.md) | Enumerates the actual display modes of the tab bar under different Tabs container sizes. This enum is used in [barDisplayModeBreakpoint](arkts-arkui-tabs-comp-attribute.md#bardisplaymodebreakpoint) to specify the display mode for different breakpoint sizes. It is only meaningful when **TabBarStyle** is set to **SIDEBAR_ADAPTABLE** or **SIDEBAR**. |
+| [TabBarStyle](arkts-arkui-tabs-comp-tabbarstyle-e.md) | Enumerates the display styles of the tab bar. |
+| [TabsCacheMode](arkts-arkui-tabs-comp-tabscachemode-e.md) | Enumerates the caching modes for child components. |
+| [TabsNestedScrollMode](arkts-arkui-tabs-comp-tabsnestedscrollmode-e.md) | Enumerates the nested scrolling modes of the **Tabs** component and its parent container. |
 
 ## Examples
 
@@ -195,7 +195,7 @@ This example demonstrates how to use the [preloadItems](#preloaditems12) API to 
 ```TypeScript
 ### Example 12: Setting Tab Bar Translation and Opacity
 
-This example sets the translation distance and opacity of the tab bar through APIs such as [setTabBarTranslate](arkts-arkui-tabscontroller-c.md#settabbartranslate) and [setTabBarOpacity](arkts-arkui-tabscontroller-c.md#settabbaropacity).
+This example sets the translation distance and opacity of the tab bar through APIs such as [setTabBarTranslate](arkts-arkui-tabs-comp-tabscontroller-c.md#settabbartranslate) and [setTabBarOpacity](arkts-arkui-tabs-comp-tabscontroller-c.md#settabbaropacity).
 
 
 ```
@@ -219,7 +219,7 @@ This example sets the [animationMode](#animationmode12) attribute to implement t
 ```TypeScript
 ### Example 15: Enabling Tabs to Exceed the Tab Bar Area
 
-This example uses the barModifier in [TabsOptions](arkts-arkui-tabsoptions-i.md) to set the clip attribute of the TabBar to display tabs beyond the tab bar area.
+This example uses the barModifier in [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) to set the clip attribute of the TabBar to display tabs beyond the tab bar area.
 
 Since API version 15, the barModifier API has been added to TabsOptions.
 
@@ -229,7 +229,7 @@ Since API version 15, the barModifier API has been added to TabsOptions.
 ```TypeScript
 ### Example 16: Aligning Tabs
 
-This example uses the barModifier in [TabsOptions](arkts-arkui-tabsoptions-i.md) to set the align attribute of the TabBar to implement the tab alignment layout effect.
+This example uses the barModifier in [TabsOptions](arkts-arkui-tabs-comp-tabsoptions-i.md) to set the align attribute of the TabBar to implement the tab alignment layout effect.
 
 Since API version 15, the barModifier API is added to TabsOptions.
 

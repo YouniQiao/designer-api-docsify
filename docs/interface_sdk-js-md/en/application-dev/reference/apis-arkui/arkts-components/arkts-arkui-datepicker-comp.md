@@ -20,6 +20,8 @@ Creates a date picker in the given date range.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ Creates a date picker in the given date range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | No | Parameters of the date picker. |
+| options | [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions-i.md) | No | Parameters of the date picker. |
 
 ## Summary
 
@@ -36,16 +38,16 @@ Creates a date picker in the given date range.
 
 | Name | Description |
 | --- | --- |
-| [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | Defines the configuration options of the date picker dialog box. |
-| [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | Describes the parameters of the date picker. |
-| [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Defines the time format returned by the date picker. |
-| [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md) | Defines the style of the lunar calendar switch in the **DatePickerDialog** component. |
+| [DatePickerDialogOptions](arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) | Defines the configuration options of the date picker dialog box. |
+| [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions-i.md) | Describes the parameters of the date picker. |
+| [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | Defines the time format returned by the date picker. |
+| [LunarSwitchStyle](arkts-arkui-datepicker-comp-lunarswitchstyle-i.md) | Defines the style of the lunar calendar switch in the **DatePickerDialog** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DatePickerMode](arkts-arkui-datepickermode-e.md) | Enumerates date display modes. |
+| [DatePickerMode](arkts-arkui-datepicker-comp-datepickermode-e.md) | Enumerates date display modes. |
 
 ## Examples
 
@@ -70,7 +72,7 @@ This example shows how to customize the text style using [disappearTextStyle](#d
 
 This example demonstrates how to display year and month, or month and day columns using mode.
 
-The mode attribute of [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) is added since API version 18.
+The mode attribute of [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions-i.md) is added since API version 18.
 
 
 ```

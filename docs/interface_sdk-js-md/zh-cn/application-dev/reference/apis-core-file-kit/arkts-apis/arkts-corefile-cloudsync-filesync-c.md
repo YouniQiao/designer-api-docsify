@@ -40,10 +40,6 @@ constructor()
 let fileSync = new cloudSync.FileSync()
 ```
 
-```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
 ## getLastSyncTime
 
 ```TypeScript
@@ -84,21 +80,6 @@ fileSync.getLastSyncTime().then((timeStamp: number) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
-  if (err) {
-    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    let date = new Date(timeStamp);
-    console.info("get last sync time successfully: "+ date);
-  }
-});
-```
-
 <a id="getlastsynctime-1"></a>
 
 ## getLastSyncTime
@@ -128,7 +109,20 @@ getLastSyncTime(callback: AsyncCallback<number>): void
 
 **示例**
 
-参见 [getLastSyncTime](#getlastsynctime)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
+  if (err) {
+    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    let date = new Date(timeStamp);
+    console.info("get last sync time successfully: "+ date);
+  }
+});
+```
 
 ## off
 
@@ -156,6 +150,20 @@ off(event: 'progress', callback?: Callback<SyncProgress>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+**示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+
+let callback = (pg: cloudSync.SyncProgress) => {
+  console.info(`file sync state: ${pg.state}, error type: ${pg.error}`);
+}
+
+fileSync.on('progress', callback);
+
+fileSync.off('progress', callback);
+```
+
 ## on
 
 ```TypeScript
@@ -181,6 +189,17 @@ on(event: 'progress', callback: Callback<SyncProgress>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+**示例**
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress) => {
+  console.info(`file sync state: ${pg.state}, error type: ${pg.error}`);
+}
+
+fileSync.on('progress', callback);
+```
 
 ## start
 
@@ -230,20 +249,6 @@ fileSync.start().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.start((err: BusinessError) => {
-  if (err) {
-    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
-
 <a id="start-1"></a>
 
 ## start
@@ -275,24 +280,6 @@ start(callback: AsyncCallback<void>): void
 | 22400003 | Low battery level. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type: " + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -349,20 +336,6 @@ fileSync.stop().then(() => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop((err: BusinessError) => {
-  if (err) {
-    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
-
 <a id="stop-1"></a>
 
 ## stop
@@ -393,18 +366,6 @@ stop(callback: AsyncCallback<void>): void
 | 13600001 | IPC error. |
 
 **示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

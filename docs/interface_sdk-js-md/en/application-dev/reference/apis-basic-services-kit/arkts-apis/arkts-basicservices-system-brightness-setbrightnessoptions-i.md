@@ -30,6 +30,8 @@ Called when an API call is complete.
 
 **Deprecated since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## fail
@@ -43,6 +45,8 @@ Called when an API call has failed. **data** indicates the error information, an
 **Since:** 3
 
 **Deprecated since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -65,6 +69,8 @@ Called when an API call is successful.
 
 **Deprecated since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 ## value
@@ -85,5 +91,7 @@ Screen brightness. The value is an integer ranging from **1** to **255**.
 **Since:** 3
 
 **Deprecated since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite

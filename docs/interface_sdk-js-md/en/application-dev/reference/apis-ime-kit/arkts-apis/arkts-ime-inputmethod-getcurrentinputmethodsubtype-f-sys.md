@@ -50,12 +50,6 @@ Get the current input method subtype of a specified user.
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
-
-let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-```
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

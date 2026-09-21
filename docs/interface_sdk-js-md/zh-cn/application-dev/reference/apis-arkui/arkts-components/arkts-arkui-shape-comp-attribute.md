@@ -4,7 +4,7 @@
 declare class ShapeAttribute extends CommonMethod<ShapeAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
 
 **继承/实现关系：** ShapeAttribute extends CommonMethod<ShapeAttribute>
 
@@ -21,6 +21,8 @@ antiAlias(value: boolean)
 设置是否开启抗锯齿效果，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -44,6 +46,8 @@ fill(value: ResourceColor)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -65,6 +69,8 @@ fillOpacity(value: number | string | Resource)
 设置填充区域透明度，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -96,6 +102,8 @@ mesh(value: Array<any>, column: number, row: number)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -120,6 +128,8 @@ stroke(value: ResourceColor)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -141,6 +151,8 @@ strokeDashArray(value: Array<any>)
 设置边框间隙，支持attributeModifier动态设置属性方法。取值范围为≥0，异常值按照默认值处理。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -164,6 +176,8 @@ strokeDashOffset(value: Length)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -186,6 +200,8 @@ strokeLineCap(value: LineCapStyle)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -207,6 +223,8 @@ strokeLineJoin(value: LineJoinStyle)
 设置边框拐角绘制样式，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -232,6 +250,8 @@ strokeMiterLimit(value: Length)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -254,6 +274,8 @@ strokeOpacity(value: number | string | Resource)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -275,6 +297,8 @@ strokeWidth(value: Length)
 设置边框宽度，支持attributeModifier动态设置属性方法。该属性若为string类型，暂不支持百分比，百分比按照1px处理。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -300,6 +324,8 @@ viewPort(value: ViewportRect)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -310,4 +336,4 @@ viewPort(value: ViewportRect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。<br>默认值：{x: 0, y: 0, width: 0, height: 0} <br>异常值undefined和null按照默认值处理。<br>**适用版本：** 18 |
+| value | [ViewportRect](arkts-arkui-shape-comp-viewportrect-i.md) | 是 | Viewport绘制属性。<br>默认值：{x: 0, y: 0, width: 0, height: 0} <br>异常值undefined和null按照默认值处理。<br>**适用版本：** 18 |

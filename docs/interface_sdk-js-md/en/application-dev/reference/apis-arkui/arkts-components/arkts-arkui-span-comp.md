@@ -1,8 +1,8 @@
 # Span
 
-As a child of the Text and ContainerSpan components, the **Span** component is used to display inline text.
+As a child of the [Text](arkts-arkui-text-comp.md#text) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute) components, the **Span** component is used to display inline text.
 
-> **NOTE** > > This component is supported since API version 10. It can inherit attribute settings from its parent component > **Text**. This means that, if an attribute is not set in this component, it takes the value (if any) of the > attribute from its parent component. Only the following attributes can be inherited: **fontColor**, **fontSize**, > **fontStyle**, **fontWeight**, **decoration**, **letterSpacing**, **textCase**, **fontFamily**, and **textShadow**. > > The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not > supported. To set universal attributes, use Text for configuration or use > [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) in the Styled String for custom drawing. > > Among [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), only > onClick click events and > onHover hover events are supported.
+> **NOTE** > > This component is supported since API version 10. It can inherit attribute settings from its parent component > **Text**. This means that, if an attribute is not set in this component, it takes the value (if any) of the > attribute from its parent component. Only the following attributes can be inherited: **fontColor**, **fontSize**, > **fontStyle**, **fontWeight**, **decoration**, **letterSpacing**, **textCase**, **fontFamily**, and **textShadow**. > > The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not > supported. To set universal attributes, use [Text](arkts-arkui-text-comp.md#text) for configuration or use > [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) in the [Styled String](../arkts-apis/arkts-arkui-styled_string.md) for custom drawing. > > Among [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), only > onClick click events and > onHover hover events are supported.
 
 ## Child Components
 
@@ -36,7 +36,7 @@ Defines the constructor of Span.
 
 | Name | Description |
 | --- | --- |
-| [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Define the background style of span. |
+| [TextBackgroundStyle](arkts-arkui-span-comp-textbackgroundstyle-i.md) | Define the background style of span. |
 
 ## Examples
 

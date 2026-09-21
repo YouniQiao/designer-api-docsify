@@ -39,7 +39,7 @@ Default value: true If the value of isLoop is undefined, the default value is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether loop scrolling is enabled. |
+| isLoop | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether loop scrolling is enabled. |
 
 ## displayedItemCount
 
@@ -61,7 +61,7 @@ Sets the total number of visible items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | The total number of visible items. |
+| count | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number&gt; | Yes | The total number of visible items. |
 
 ## enableHapticFeedback
 
@@ -90,7 +90,7 @@ Default value: true If the value of enable is undefined, the default value is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback. |
+| enable | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback. |
 
 ## itemHeight
 
@@ -112,7 +112,7 @@ Sets the height of each item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Height of each item. |
+| height | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;LengthMetrics&gt; | Yes | Height of each item. |
 
 ## onChange
 
@@ -142,7 +142,7 @@ NOTE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the selected item changes. |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-uipickercomponent-comp-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the selected item changes. |
 
 ## onScrollStop
 
@@ -166,7 +166,7 @@ If callback is set to undefined, the callback is not used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the picker scrolling stops. |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-uipickercomponent-comp-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the picker scrolling stops. |
 
 ## selectionIndicator
 
@@ -190,4 +190,4 @@ Default value: { type: PickerIndicatorType.BACKGROUND, borderRadius: { value:12,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | Yes | Style of the selected item indicator. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-uipickercomponent-comp-pickerindicatorstyle-i.md)&gt; | Yes | Style of the selected item indicator. |

@@ -2,7 +2,7 @@
 
 The **Rect** component is used to draw a rectangle. It supports setting attributes such as fill color, stroke style, and rounded corners.
 
-> **NOTE** > > Since API version 20, this component supports using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class to update constructor parameters.
+> **NOTE** > > Since API version 20, this component supports using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class to update constructor parameters.
 
 ## Child Components
 
@@ -20,6 +20,8 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -30,7 +32,7 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No | Drawing attributes of the rectangle, including the width, height, and rounded corners. If this parameter is not set, the rectangle is drawn with the default values of the attributes (the width, height, and rounded corners are all 0).<br>The abnormal values **undefined** and **null** are treated as invalid values, and the setting does not take effect. |
+| options | [RectOptions](arkts-arkui-rect-comp-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-rect-comp-roundedrectoptions-i.md) | No | Drawing attributes of the rectangle, including the width, height, and rounded corners. If this parameter is not set, the rectangle is drawn with the default values of the attributes (the width, height, and rounded corners are all 0).<br>The abnormal values **undefined** and **null** are treated as invalid values, and the setting does not take effect. |
 
 ## Rect
 
@@ -44,6 +46,8 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -54,7 +58,7 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No | Rect drawing attributes, including the width, height, and rounded corner configurations. If this parameter is not passed, the rectangle is drawn with the default values of the attributes (the width, height, and rounded corners are all 0).<br>The abnormal values **undefined** and **null** are treated as invalid values, and this setting does not take effect. |
+| options | [RectOptions](arkts-arkui-rect-comp-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-rect-comp-roundedrectoptions-i.md) | No | Rect drawing attributes, including the width, height, and rounded corner configurations. If this parameter is not passed, the rectangle is drawn with the default values of the attributes (the width, height, and rounded corners are all 0).<br>The abnormal values **undefined** and **null** are treated as invalid values, and this setting does not take effect. |
 
 ## Summary
 
@@ -62,8 +66,8 @@ Draws a rectangle. After being called, it creates a **Rect** object, for which a
 
 | Name | Description |
 | --- | --- |
-| [RectOptions](arkts-arkui-rectoptions-i.md) | Describes the drawing attributes of the **Rect** component. |
-| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | Describes the drawing attributes of the rounded rectangle component. |
+| [RectOptions](arkts-arkui-rect-comp-rectoptions-i.md) | Describes the drawing attributes of the **Rect** component. |
+| [RoundedRectOptions](arkts-arkui-rect-comp-roundedrectoptions-i.md) | Describes the drawing attributes of the rounded rectangle component. |
 
 ## Examples
 

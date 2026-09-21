@@ -4,9 +4,9 @@
 declare class VideoAttribute extends CommonMethod<VideoAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)外，还支持以下属性：
 
-除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件：
+除支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)外，还支持以下事件：
 
 **继承/实现关系：** VideoAttribute extends CommonMethod<VideoAttribute>
 
@@ -50,6 +50,8 @@ autoPlay(value: boolean)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -69,6 +71,8 @@ controls(value: boolean)
 设置控制视频播放的控制栏是否显示，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -90,7 +94,7 @@ enableAnalyzer(enable: boolean)
 
 启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。
 
-不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。
+不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)属性会失效。
 
 > **说明：** 
 > 
@@ -108,7 +112,7 @@ enableAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用AI分析功能。<br>true：开启AI分析功能；false：关闭AI分析功能。<br>默认值：false <br>**说明：** <br>不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。 |
+| enable | boolean | 是 | 是否启用AI分析功能。<br>true：开启AI分析功能；false：关闭AI分析功能。<br>默认值：false <br>**说明：** <br>不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)属性会失效。 |
 
 ## enableShortcutKey
 
@@ -144,6 +148,8 @@ loop(value: boolean)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -164,6 +170,8 @@ muted(value: boolean)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -183,6 +191,8 @@ objectFit(value: ImageFit)
 设置视频的填充模式，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -208,6 +218,8 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -227,6 +239,8 @@ onFinish(event: VoidCallback)
 播放结束时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -248,6 +262,8 @@ onFullscreenChange(callback: Callback<FullscreenInfo>)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -256,7 +272,7 @@ onFullscreenChange(callback: Callback<FullscreenInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[FullscreenInfo](arkts-arkui-fullscreeninfo-i.md)&gt; | 是 | 在全屏播放与非全屏播放状态之间切换时的回调函数。<br>**适用版本：** 18 |
+| callback | Callback&lt;[FullscreenInfo](arkts-arkui-video-comp-fullscreeninfo-i.md)&gt; | 是 | 在全屏播放与非全屏播放状态之间切换时的回调函数。<br>**适用版本：** 18 |
 
 ## onPause
 
@@ -267,6 +283,8 @@ onPause(event: VoidCallback)
 暂停时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -288,6 +306,8 @@ onPrepared(callback: Callback<PreparedInfo>)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -296,7 +316,7 @@ onPrepared(callback: Callback<PreparedInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PreparedInfo](arkts-arkui-preparedinfo-i.md)&gt; | 是 | 视频准备完成时的回调函数。<br>**适用版本：** 18 |
+| callback | Callback&lt;[PreparedInfo](arkts-arkui-video-comp-preparedinfo-i.md)&gt; | 是 | 视频准备完成时的回调函数。<br>**适用版本：** 18 |
 
 ## onSeeked
 
@@ -308,6 +328,8 @@ onSeeked(callback: Callback<PlaybackInfo>)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -316,7 +338,7 @@ onSeeked(callback: Callback<PlaybackInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | 是 | 操作进度条完成后的回调函数。<br>**适用版本：** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | 是 | 操作进度条完成后的回调函数。<br>**适用版本：** 18 |
 
 ## onSeeking
 
@@ -328,6 +350,8 @@ onSeeking(callback: Callback<PlaybackInfo>)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -336,7 +360,7 @@ onSeeking(callback: Callback<PlaybackInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | 是 | 操作进度条过程时的回调函数。<br>**适用版本：** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | 是 | 操作进度条过程时的回调函数。<br>**适用版本：** 18 |
 
 ## onStart
 
@@ -347,6 +371,8 @@ onStart(event: VoidCallback)
 开始播放时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -390,6 +416,8 @@ onUpdate(callback: Callback<PlaybackInfo>)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -398,4 +426,4 @@ onUpdate(callback: Callback<PlaybackInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | 是 | 播放进度变化时的回调函数。<br>**适用版本：** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | 是 | 播放进度变化时的回调函数。<br>**适用版本：** 18 |

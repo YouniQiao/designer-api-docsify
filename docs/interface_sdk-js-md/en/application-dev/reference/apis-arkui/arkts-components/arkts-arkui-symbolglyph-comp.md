@@ -38,12 +38,12 @@ Defines the constructor of SymbolGlyph.
 
 | Name | Description |
 | --- | --- |
-| [EffectDirection](arkts-arkui-effectdirection-e.md) | The direction type of symbol effect. |
-| [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | The fill style of symbol effect. |
-| [EffectScope](arkts-arkui-effectscope-e.md) | The scope type of the symbol effect. |
-| [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | The replace effect type of symbol. |
-| [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Enumerates symbol effect types. Once applied, the symbol effect becomes active instantly, eliminating the need for triggering. |
-| [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | The symbol rendering strategy. |
+| [EffectDirection](arkts-arkui-symbolglyph-comp-effectdirection-e.md) | The direction type of symbol effect. |
+| [EffectFillStyle](arkts-arkui-symbolglyph-comp-effectfillstyle-e.md) | The fill style of symbol effect. |
+| [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | The scope type of the symbol effect. |
+| [ReplaceEffectType](arkts-arkui-symbolglyph-comp-replaceeffecttype-e.md) | The replace effect type of symbol. |
+| [SymbolEffectStrategy](arkts-arkui-symbolglyph-comp-symboleffectstrategy-e.md) | Enumerates symbol effect types. Once applied, the symbol effect becomes active instantly, eliminating the need for triggering. |
+| [SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md) | The symbol rendering strategy. |
 
 ## Examples
 

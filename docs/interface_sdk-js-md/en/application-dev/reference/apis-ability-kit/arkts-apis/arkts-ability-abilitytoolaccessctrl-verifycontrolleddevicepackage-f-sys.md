@@ -17,6 +17,8 @@ Verifies the authorization package from the controlled device. This function ver
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.

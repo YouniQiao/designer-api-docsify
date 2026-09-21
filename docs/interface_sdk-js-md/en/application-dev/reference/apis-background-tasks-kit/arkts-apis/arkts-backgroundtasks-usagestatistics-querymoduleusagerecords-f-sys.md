@@ -47,54 +47,6 @@ Queries recently module usage records with maxNum.
 **Examples**
 
 ```TypeScript
-// Invocation when maxNum is not passed
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords().then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords((err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords(1000).then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
@@ -159,7 +111,20 @@ Queries recently module usage records with maxNum.
 
 **Examples**
 
-See [queryModuleUsageRecords](#querymoduleusagerecords)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryModuleUsageRecords(1000).then((res: Array<usageStatistics.HapModuleInfo>) => {
+  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
 
 
 <a id="querymoduleusagerecords-2"></a>
@@ -203,7 +168,22 @@ Queries recently module usage records.
 
 **Examples**
 
-See [queryModuleUsageRecords](#querymoduleusagerecords)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryModuleUsageRecords((err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
+  } else {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
+    for (let i = 0; i < res.length; i++) {
+      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
+      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
+    }
+  }
+});
+```
 
 
 <a id="querymoduleusagerecords-3"></a>
@@ -247,4 +227,18 @@ Queries recently module usage records.
 
 **Examples**
 
-See [queryModuleUsageRecords](#querymoduleusagerecords)
+```TypeScript
+// Invocation when maxNum is not passed
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryModuleUsageRecords().then((res: Array<usageStatistics.HapModuleInfo>) => {
+  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
+  for (let i = 0; i < res.length; i++) {
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
+    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
+  }
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```

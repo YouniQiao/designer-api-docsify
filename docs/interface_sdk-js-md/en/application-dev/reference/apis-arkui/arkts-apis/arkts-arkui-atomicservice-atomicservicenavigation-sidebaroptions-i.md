@@ -56,7 +56,7 @@ sideBarIcon?: Resource | SymbolGlyphModifier
 
 Side bar icon.
 
-**Type:** [Resource](arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** [Resource](arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **Default:** $r('sys.symbol.open_sidebar')
 

@@ -40,7 +40,7 @@ reason: DismissReason
 
 触发弹出框关闭操作的原因类型。
 
-**类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**类型：** [DismissReason](../arkts-components/arkts-arkui-common-comp-dismissreason-e.md)
 
 **起始版本：** 26.0.1
 

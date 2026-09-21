@@ -57,17 +57,6 @@ dataPreferences.clear((err: BusinessError) =>{
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="clear-1"></a>
 
 ## clear
@@ -98,7 +87,16 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 **Examples**
 
-See [clear](#clear)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## clearSync
 
@@ -162,17 +160,6 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deleteStartupPromise = dataPreferences.delete('startup');
-deleteStartupPromise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
-})
-```
-
 <a id="delete-1"></a>
 
 ## delete
@@ -210,7 +197,16 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 **Examples**
 
-See [delete](#delete)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deleteStartupPromise = dataPreferences.delete('startup');
+deleteStartupPromise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
+})
+```
 
 ## deleteSync
 
@@ -286,17 +282,6 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let flushResult = dataPreferences.flush();
-flushResult.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="flush-1"></a>
 
 ## flush
@@ -327,7 +312,16 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 **Examples**
 
-See [flush](#flush)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let flushResult = dataPreferences.flush();
+flushResult.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## flushSync
 
@@ -398,17 +392,6 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let data = dataPreferences.get('startup', 'default');
-data.then((data: preferences.ValueType) => {
-  console.info("Succeeded in getting value of 'startup'. Data: " + data);
-}).catch((err: BusinessError) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="get-1"></a>
 
 ## get
@@ -447,7 +430,16 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 **Examples**
 
-See [get](#get)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let data = dataPreferences.get('startup', 'default');
+data.then((data: preferences.ValueType) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err: BusinessError) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## getAll
 
@@ -499,26 +491,6 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// There is no Object.keys in ArkTS, and the for..in... syntax cannot be used.
-// If an error is reported, extract this API to a .ts file and expose it. Then import the API to the .ets file when required.
-function getObjKeys(obj: Object): string[] {
-  let keys = Object.keys(obj);
-  return keys;
-}
-
-let allData = dataPreferences.getAll();
-allData.then((value: Object) => {
-  let allKeys = getObjKeys(value);
-  console.info('getAll keys = ' + allKeys);
-  console.info("getAll object = " + JSON.stringify(value));
-}).catch((err: BusinessError) => {
-  console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="getall-1"></a>
 
 ## getAll
@@ -549,7 +521,25 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Examples**
 
-See [getAll](#getall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// There is no Object.keys in ArkTS, and the for..in... syntax cannot be used.
+// If an error is reported, extract this API to a .ts file and expose it. Then import the API to the .ets file when required.
+function getObjKeys(obj: Object): string[] {
+  let keys = Object.keys(obj);
+  return keys;
+}
+
+let allData = dataPreferences.getAll();
+allData.then((value: Object) => {
+  let allKeys = getObjKeys(value);
+  console.info('getAll keys = ' + allKeys);
+  console.info("getAll object = " + JSON.stringify(value));
+}).catch((err: BusinessError) => {
+  console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## getAllSync
 
@@ -679,21 +669,6 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isStartupSet = dataPreferences.has('startup');
-isStartupSet.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="has-1"></a>
 
 ## has
@@ -731,7 +706,20 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **Examples**
 
-See [has](#has)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isStartupSet = dataPreferences.has('startup');
+isStartupSet.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## hasSync
 
@@ -805,6 +793,26 @@ Unsubscribes from data changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('change', observer);
+dataPreferences.putSync('startup', 'auto');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.off('change', observer);
+```
+
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -832,6 +840,26 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('multiProcessChange', observer);
+dataPreferences.putSync('startup', 'auto');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.off('multiProcessChange', observer);
+```
 
 ## off('dataChange')
 
@@ -862,6 +890,31 @@ Unsubscribes from changes of specific data.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (data: Record<string, preferences.ValueType>) => {
+  for (const keyValue of Object.entries(data)) {
+    console.info(`observer : ${keyValue}`);
+  }
+  console.info("The observer called.");
+}
+let keys = ['name', 'age'];
+dataPreferences.on('dataChange', keys, observer);
+dataPreferences.putSync('name', 'xiaohong');
+dataPreferences.putSync('weight', 125);
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.off('dataChange', keys, observer);
+```
+
 ## on('change')
 
 ```TypeScript
@@ -889,6 +942,25 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('change', observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
 
 ## on('multiProcessChange')
 
@@ -919,6 +991,25 @@ Subscribes to data changes between processes. When multiple processes hold the s
 | [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.on('multiProcessChange', observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
 ## on('dataChange')
 
 ```TypeScript
@@ -947,6 +1038,30 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (data: Record<string, preferences.ValueType>) => {
+  for (const keyValue of Object.entries(data)) {
+    console.info(`observer : ${keyValue}`);
+  }
+  console.info("The observer called.");
+}
+let keys = ['name', 'age'];
+dataPreferences.on('dataChange', keys, observer);
+dataPreferences.putSync('name', 'xiaohong');
+dataPreferences.putSync('weight', 125);
+dataPreferences.flush((err: BusinessError) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
 
 ## put
 
@@ -991,17 +1106,6 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let putStartupPref = dataPreferences.put('startup', 'auto');
-putStartupPref.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
-
 <a id="put-1"></a>
 
 ## put
@@ -1040,7 +1144,16 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 **Examples**
 
-See [put](#put)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let putStartupPref = dataPreferences.put('startup', 'auto');
+putStartupPref.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
 
 ## putSync
 

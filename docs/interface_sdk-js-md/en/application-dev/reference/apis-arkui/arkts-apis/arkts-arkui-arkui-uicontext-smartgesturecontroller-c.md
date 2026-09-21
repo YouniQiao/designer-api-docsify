@@ -40,6 +40,12 @@ Clears all monitoring callbacks registered for the current **UIContext**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+This example shows how to clear all callbacks for listening to smart gestures using the clearMonitors API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```
+
 ## clearSelected
 
 ```TypeScript
@@ -56,6 +62,12 @@ Clears the currently selected node of smart gestures.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+This example shows how to request the component to be selected and the selected state to be automatically cleared in 5,000 ms using the requestSelected and clearSelected APIs. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```
+
 ## enableSmartTapAndSlideGestures
 
 ```TypeScript
@@ -68,7 +80,7 @@ Sets whether to enable the tap and slide operations of smart gestures.
 > 
 > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture.
 > 
-> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut)attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
+> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut)attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
 
 **Since:** 26.0.0
 
@@ -83,6 +95,12 @@ Sets whether to enable the tap and slide operations of smart gestures.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Whether to enable the tap and slide smart gesture handling. The value **true** means to enable it, and **false** means to disable it. |
+
+**Examples**
+
+```TypeScript
+This example shows how to enable and disable smart gestures using the enableSmartTapAndSlideGestures API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```
 
 ## registerMonitor
 
@@ -118,6 +136,12 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 | --- | --- | --- | --- |
 | monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Smart gesture monitoring callback. The callback parameter is the default action handling provided by the system, and the return value is used to declare whether to consume the current smart gesture and whether to replace the default action handling. |
 
+**Examples**
+
+```TypeScript
+This example shows how to register a callback for listening to smart gestures using the registerMonitor API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```
+
 ## requestSelected
 
 ```TypeScript
@@ -130,7 +154,7 @@ Requests to set the specified component as the current smart gesture selected no
 > 
 > - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an onClick event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
 > 
-> - Whether a component can respond to smart gestures is determined by **enabled** in [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut).
+> - Whether a component can respond to smart gestures is determined by **enabled** in [smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut).
 
 **Since:** 26.0.0
 
@@ -145,6 +169,12 @@ Requests to set the specified component as the current smart gesture selected no
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Component id. |
+
+**Examples**
+
+```TypeScript
+This example shows how to request the component to be selected and the selected state to be automatically cleared in 5,000 ms using the requestSelected and clearSelected APIs. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```
 
 ## unregisterMonitor
 
@@ -167,3 +197,9 @@ Unregisters a smart gesture monitoring callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | The smart gesture monitoring callback to unregister. |
+
+**Examples**
+
+```TypeScript
+This example shows how to unregister a callback for listening to smart gestures using the unregisterMonitor API. For details, see Example 1: Enabling Smart Gestures and Customizing Action Handling.
+```

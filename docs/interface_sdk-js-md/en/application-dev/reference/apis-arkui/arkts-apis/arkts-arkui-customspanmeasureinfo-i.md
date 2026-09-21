@@ -42,7 +42,7 @@ Width layout policy of the parent component of the custom span.
 
 When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 
-**Type:** [LayoutPolicy](../arkts-components/arkts-arkui-layoutpolicy-c.md)
+**Type:** [LayoutPolicy](../arkts-components/arkts-arkui-common-comp-layoutpolicy-c.md)
 
 **Since:** 26.0.0
 

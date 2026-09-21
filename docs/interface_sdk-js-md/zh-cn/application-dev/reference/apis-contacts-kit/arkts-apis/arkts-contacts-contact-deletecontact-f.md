@@ -34,12 +34,6 @@ function deleteContact(key: string, callback: AsyncCallback<void>): void
 **示例**
 
 ```TypeScript
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -54,19 +48,6 @@ contact.selectContacts().then((data) => {
       return;
     }
     console.info('Succeeded in deleting Contact.');
-  });
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 通过selectContacts接口选择联系人。
-contact.selectContacts().then((data) => {
-  // 第一个参数传入选择联系人的key
-  let promise = contact.deleteContact(data[0].key);
-  promise.then(() => {
-    console.info(`Succeeded in deleting Contact.`);
   });
 });
 ```
@@ -105,7 +86,11 @@ function deleteContact(context: Context, key: string, callback: AsyncCallback<vo
 
 **示例**
 
-参见 [deleteContact](#deletecontact)
+```TypeScript
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```
 
 
 <a id="deletecontact-2"></a>
@@ -142,7 +127,18 @@ function deleteContact(key: string): Promise<void>
 
 **示例**
 
-参见 [deleteContact](#deletecontact)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// 通过selectContacts接口选择联系人。
+contact.selectContacts().then((data) => {
+  // 第一个参数传入选择联系人的key
+  let promise = contact.deleteContact(data[0].key);
+  promise.then(() => {
+    console.info(`Succeeded in deleting Contact.`);
+  });
+});
+```
 
 
 <a id="deletecontact-3"></a>
@@ -183,4 +179,8 @@ function deleteContact(context: Context, key: string): Promise<void>
 
 **示例**
 
-参见 [deleteContact](#deletecontact)
+```TypeScript
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```

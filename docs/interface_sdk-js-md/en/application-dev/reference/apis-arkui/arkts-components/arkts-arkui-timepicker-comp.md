@@ -23,6 +23,8 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -31,7 +33,7 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No | Parameters of the time picker. |
+| options | [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions-i.md) | No | Parameters of the time picker. |
 
 ## Summary
 
@@ -39,22 +41,22 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 | Name | Description |
 | --- | --- |
-| [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | Defines the configuration options of the time picker dialog box. |
-| [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | Describes the parameters of the time picker. |
-| [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Describes a time in 24-hour format. |
+| [TimePickerDialogOptions](arkts-arkui-timepicker-comp-timepickerdialogoptions-i.md) | Defines the configuration options of the time picker dialog box. |
+| [TimePickerOptions](arkts-arkui-timepicker-comp-timepickeroptions-i.md) | Describes the parameters of the time picker. |
+| [TimePickerResult](arkts-arkui-timepicker-comp-timepickerresult-i.md) | Describes a time in 24-hour format. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Defines the options for a **DateTimeOptions** object. |
-| [OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md) | Triggered when a time is selected. |
+| [DateTimeOptions](arkts-arkui-timepicker-comp-datetimeoptions-t.md) | Defines the options for a **DateTimeOptions** object. |
+| [OnTimePickerChangeCallback](arkts-arkui-timepicker-comp-ontimepickerchangecallback-t.md) | Triggered when a time is selected. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [TimePickerFormat](arkts-arkui-timepickerformat-e.md) | Enumerates time display formats of the time picker. |
+| [TimePickerFormat](arkts-arkui-timepicker-comp-timepickerformat-e.md) | Enumerates time display formats of the time picker. |
 
 ## Examples
 

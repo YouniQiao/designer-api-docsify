@@ -50,16 +50,6 @@ policy.setBackgroundAllowed(true, (error: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setBackgroundAllowed(true).then(() => {
-  console.info("setBackgroundAllowed success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 <a id="setbackgroundallowed-1"></a>
 
@@ -104,4 +94,12 @@ Sets whether background applications are allowed to access the network. This API
 
 **Examples**
 
-See [setBackgroundAllowed](#setbackgroundallowed)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.setBackgroundAllowed(true).then(() => {
+  console.info("setBackgroundAllowed success");
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```

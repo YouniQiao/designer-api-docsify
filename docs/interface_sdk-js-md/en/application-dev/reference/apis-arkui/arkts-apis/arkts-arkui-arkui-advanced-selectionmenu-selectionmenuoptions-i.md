@@ -158,7 +158,7 @@ If this parameter is left empty, the expanded drop-down menu is not displayed.
 
 The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
-**Type:** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
+**Type:** [RichEditorController](../arkts-components/arkts-arkui-richeditor-comp-richeditorcontroller-c.md)
 
 **Since:** 11
 

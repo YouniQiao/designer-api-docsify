@@ -22,6 +22,8 @@ HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 
 **Since:** 10
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -37,6 +39,8 @@ HUKS_RSA_PSS_SALT_LEN_MAX = 1
 **salt_len** is set to the maximum length.
 
 **Since:** 10
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

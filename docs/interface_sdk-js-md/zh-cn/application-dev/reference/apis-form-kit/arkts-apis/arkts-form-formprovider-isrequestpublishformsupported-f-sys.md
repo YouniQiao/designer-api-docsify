@@ -75,40 +75,6 @@ try {
 }
 ```
 
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.isRequestPublishFormSupported().then((isSupported: boolean) => {
-    if (isSupported) {
-      let want: Want = {
-        abilityName: 'FormAbility',
-        parameters: {
-          'ohos.extra.param.key.form_dimension': 2,
-          'ohos.extra.param.key.form_name': 'widget',
-          'ohos.extra.param.key.module_name': 'entry'
-        }
-      };
-      try {
-        formProvider.requestPublishForm(want).then((data: string) => {
-          console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-        }).catch((error: BusinessError) => {
-          console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-        });
-      } catch (error) {
-        console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-      }
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 <a id="isrequestpublishformsupported-1"></a>
 
@@ -142,4 +108,36 @@ function isRequestPublishFormSupported(): Promise<boolean>
 
 **示例**
 
-参见 [isRequestPublishFormSupported](#isrequestpublishformsupported)
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  formProvider.isRequestPublishFormSupported().then((isSupported: boolean) => {
+    if (isSupported) {
+      let want: Want = {
+        abilityName: 'FormAbility',
+        parameters: {
+          'ohos.extra.param.key.form_dimension': 2,
+          'ohos.extra.param.key.form_name': 'widget',
+          'ohos.extra.param.key.module_name': 'entry'
+        }
+      };
+      try {
+        formProvider.requestPublishForm(want).then((data: string) => {
+          console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
+        }).catch((error: BusinessError) => {
+          console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+      }
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

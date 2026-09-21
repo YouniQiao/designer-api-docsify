@@ -38,6 +38,8 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Substitutes:** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
@@ -55,5 +57,7 @@ Title of the text to display.
 **Deprecated since:** 9
 
 **Substitutes:** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

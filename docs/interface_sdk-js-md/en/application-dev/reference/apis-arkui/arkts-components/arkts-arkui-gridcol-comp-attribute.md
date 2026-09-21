@@ -4,9 +4,9 @@
 declare class GridColAttribute extends CommonMethod<GridColAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** GridColAttribute extends CommonMethod<GridColAttribute>
 
@@ -34,7 +34,7 @@ Sets the number of columns by which the grid child component is offset relative 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of columns offset relative to the original position. A value of **0** for **gridColOffset** indicates no offset. <br>The value is a non-negative integer, with a default value of **0**. <br>Illegal value: processed as the default value. <br>**Note:** This attribute has breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcoloptions-i.md). |
+| value | number &#124; [GridColColumnOption](arkts-arkui-gridcol-comp-gridcolcolumnoption-i.md) | Yes | Number of columns offset relative to the original position. A value of **0** for **gridColOffset** indicates no offset. <br>The value is a non-negative integer, with a default value of **0**. <br>Illegal value: processed as the default value. <br>**Note:** This attribute has breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcol-comp-gridcoloptions-i.md). |
 
 ## order
 
@@ -56,7 +56,7 @@ Sets the display order of the grid child component. Grid child components are so
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Element order number, sorted in ascending order based on the order numbers of grid child components. <br>The value is a non-negative integer. The default value is **0**. <br>Illegal value: handled as the default value. <br>**Note:** This attribute supports breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcoloptions-i.md). |
+| value | number &#124; [GridColColumnOption](arkts-arkui-gridcol-comp-gridcolcolumnoption-i.md) | Yes | Element order number, sorted in ascending order based on the order numbers of grid child components. <br>The value is a non-negative integer. The default value is **0**. <br>Illegal value: handled as the default value. <br>**Note:** This attribute supports breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcol-comp-gridcoloptions-i.md). |
 
 ## span
 
@@ -78,4 +78,4 @@ Sets the number of columns occupied by the grid child component. After the call 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Yes | Number of occupied columns. If **span** is **0**, the element does not participate in layout calculation and is not rendered. <br>The value is a non-negative integer, and the default value is **1**. <br>Illegal value: processed as the default value. <br>**Note:** This attribute has breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcoloptions-i.md). Since API version 20, the default value inheritance rule has changed. For details, see [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md). |
+| value | number &#124; [GridColColumnOption](arkts-arkui-gridcol-comp-gridcolcolumnoption-i.md) | Yes | Number of occupied columns. If **span** is **0**, the element does not participate in layout calculation and is not rendered. <br>The value is a non-negative integer, and the default value is **1**. <br>Illegal value: processed as the default value. <br>**Note:** This attribute has breakpoint inheritance. For details, see [GridColOptions](arkts-arkui-gridcol-comp-gridcoloptions-i.md). Since API version 20, the default value inheritance rule has changed. For details, see [GridColColumnOption](arkts-arkui-gridcol-comp-gridcolcolumnoption-i.md). |

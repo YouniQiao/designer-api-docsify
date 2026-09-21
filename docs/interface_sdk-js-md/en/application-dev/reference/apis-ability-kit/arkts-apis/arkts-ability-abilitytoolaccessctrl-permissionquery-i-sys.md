@@ -29,6 +29,8 @@ Caller token ID. Value range: (-∞,+∞).
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -44,6 +46,8 @@ Domain ID.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -61,6 +65,8 @@ Whether a ticket is required.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -76,6 +82,8 @@ Operation information list.
 **Type:** [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)[]
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -93,6 +101,8 @@ Remote device information.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -108,6 +118,8 @@ Ticket expiration time in milliseconds. Unit: milliseconds. The value must be gr
 **Type:** number
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.Asset
 

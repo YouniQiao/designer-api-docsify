@@ -32,4 +32,6 @@ The value **0** indicates the manual adjustment mode, and the value **1** indica
 
 **Deprecated since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite

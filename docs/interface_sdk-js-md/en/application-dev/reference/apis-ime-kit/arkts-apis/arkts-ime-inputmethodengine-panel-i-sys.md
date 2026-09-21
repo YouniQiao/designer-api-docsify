@@ -40,6 +40,16 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
+**Examples**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
+});
+```
+
 ## on('sizeUpdate')
 
 ```TypeScript
@@ -63,6 +73,17 @@ Listens for the panel size change. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height. |
+
+**Examples**
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
+    `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
+});
+```
 
 ## setShadow
 

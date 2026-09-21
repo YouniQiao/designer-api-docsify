@@ -2,7 +2,7 @@
 
 The **DataPanel** component is used to display proportions in a chart.
 
-> **NOTE** > > - This component supports WithTheme since API version 26.0.0
+> **NOTE** > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0
 
 ## Child Components
 
@@ -28,7 +28,7 @@ Creates a data panel component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Yes | Parameters of the data panel. |
+| options | [DataPanelOptions](arkts-arkui-datapanel-comp-datapaneloptions-i.md) | Yes | Parameters of the data panel. |
 
 ## Summary
 
@@ -36,23 +36,23 @@ Creates a data panel component.
 
 | Name | Description |
 | --- | --- |
-| [ColorStop](arkts-arkui-colorstop-i.md) | Describes the gradient color stop. |
-| [DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Defines data panel configuration options. |
-| [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**. |
+| [ColorStop](arkts-arkui-datapanel-comp-colorstop-i.md) | Describes the gradient color stop. |
+| [DataPanelConfiguration](arkts-arkui-datapanel-comp-datapanelconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [DataPanelOptions](arkts-arkui-datapanel-comp-datapaneloptions-i.md) | Defines data panel configuration options. |
+| [DataPanelShadowOptions](arkts-arkui-datapanel-comp-datapanelshadowoptions-i.md) | Inherits from [MultiShadowOptions](arkts-arkui-common-comp-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DataPanelType](arkts-arkui-datapaneltype-e.md) | Enumerates data panel types. |
+| [DataPanelType](arkts-arkui-datapanel-comp-datapaneltype-e.md) | Enumerates data panel types. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Setting Data Panel Types
 
-This example shows how to set the data panel type using the type attribute of [DataPanelOptions](arkts-arkui-datapaneloptions-i.md).
+This example shows how to set the data panel type using the type attribute of [DataPanelOptions](arkts-arkui-datapanel-comp-datapaneloptions-i.md).
 
 
 ```

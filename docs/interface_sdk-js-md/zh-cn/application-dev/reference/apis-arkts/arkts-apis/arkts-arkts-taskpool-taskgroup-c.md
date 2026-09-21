@@ -56,18 +56,6 @@ let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
 taskGroup.addTask(printArgs, 100); // 100: test number
 ```
 
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-taskGroup.addTask(task);
-```
-
 <a id="addtask-1"></a>
 
 ## addTask
@@ -100,7 +88,17 @@ addTask(task: Task): void
 
 **示例**
 
-参见 [addTask](#addtask)
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+taskGroup.addTask(task);
+```
 
 ## constructor
 
@@ -120,12 +118,6 @@ TaskGroup的构造函数。
 
 ```TypeScript
 let taskGroup = new taskpool.TaskGroup();
-```
-
-```TypeScript
-let taskGroupName: string = "groupName";
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
-let name: string = taskGroup.name;
 ```
 
 <a id="constructor-1"></a>
@@ -151,10 +143,6 @@ TaskGroup的构造函数，支持指定任务组名称。
 | name | string | 是 | 任务组名称。 |
 
 **示例**
-
-```TypeScript
-let taskGroup = new taskpool.TaskGroup();
-```
 
 ```TypeScript
 let taskGroupName: string = "groupName";

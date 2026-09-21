@@ -174,6 +174,8 @@ Click on the specified location on the screen, with optional touch options.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -600,6 +602,8 @@ Drag on the screen between the specified points with optional settings.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -654,6 +658,8 @@ dumpLayout(savePath: string, displayId?: number): Promise<boolean>
 Dumps the current layout information and saves it as a JSON file. This method is applicable to test scenarios where you need to analyze the hierarchy of UI controls or debug controls to locate issues. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -889,26 +895,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
-
 <a id="fling-1"></a>
 
 ## fling
@@ -949,7 +935,15 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 **Examples**
 
-See [fling](#fling)
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
 
 <a id="fling-2"></a>
 
@@ -992,7 +986,15 @@ Simulates a fling operation on a specified display with the specified direction 
 
 **Examples**
 
-See [fling](#fling)
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
 
 ## getDisplayDensity
 
@@ -1039,16 +1041,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
-}
-```
-
 <a id="getdisplaydensity-1"></a>
 
 ## getDisplayDensity
@@ -1088,7 +1080,15 @@ Obtains the density of the specified display of the current device. This API use
 
 **Examples**
 
-See [getDisplayDensity](#getdisplaydensity)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
 
 ## getDisplayRotation
 
@@ -1135,16 +1135,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
-}
-```
-
 <a id="getdisplayrotation-1"></a>
 
 ## getDisplayRotation
@@ -1184,7 +1174,15 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 **Examples**
 
-See [getDisplayRotation](#getdisplayrotation)
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
 
 ## getDisplaySize
 
@@ -1231,16 +1229,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
-}
-```
-
 <a id="getdisplaysize-1"></a>
 
 ## getDisplaySize
@@ -1280,7 +1268,15 @@ Obtains the size of the specified display on the current device. This API uses a
 
 **Examples**
 
-See [getDisplaySize](#getdisplaysize)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
 
 ## injectKnucklePointerAction
 
@@ -1517,26 +1513,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '123', { paste: true, addition: false });
-}
-
-async function demoChinese() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, 'Chinese&', { paste: false, addition: true });
-  // Copy and paste Chinese and a special character to the end of the specified text.
-}
-```
-
 <a id="inputtext-1"></a>
 
 ## inputText
@@ -1578,22 +1554,6 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Search for the target TextInput component.
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  // Obtain the coordinates of the component center point.
-  let point = await text.getBoundsCenter();
-  // Enter the text '123' at the coordinate point.
-  await driver.inputText(point, '123');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -1926,6 +1886,8 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -2118,16 +2080,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
-
 <a id="mousedrag-1"></a>
 
 ## mouseDrag
@@ -2170,7 +2122,15 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 **Examples**
 
-See [mouseDrag](#mousedrag)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
 
 ## mouseDragWithOptions
 
@@ -2181,6 +2141,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 Hold down the left mouse button and drag on the screen between the specified points, with optional touch and key settings.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2282,17 +2244,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  // If the key code value is 2072, the Ctrl button is pressed with the long-click for 2,000 ms.
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
-
 <a id="mouselongclick-1"></a>
 
 ## mouseLongClick
@@ -2336,7 +2287,16 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 **Examples**
 
-See [mouseLongClick](#mouselongclick)
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // If the key code value is 2072, the Ctrl button is pressed with the long-click for 2,000 ms.
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
 
 ## mouseMoveTo
 
@@ -2485,16 +2445,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
-
 <a id="mousescroll-1"></a>
 
 ## mouseScroll
@@ -2539,7 +2489,15 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **Examples**
 
-See [mouseScroll](#mousescroll)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
 
 ## penClick
 
@@ -2778,16 +2736,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
-
 <a id="pressback-1"></a>
 
 ## pressBack
@@ -2826,16 +2774,6 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -2887,16 +2825,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
-
 <a id="presshome-1"></a>
 
 ## pressHome
@@ -2936,7 +2864,15 @@ Injects an operation of returning to the home screen on the specified display. T
 
 **Examples**
 
-See [pressHome](#presshome)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
 
 ## screenCap
 
@@ -2985,16 +2921,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
-
 <a id="screencap-1"></a>
 
 ## screenCap
@@ -3034,16 +2960,6 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -3314,6 +3230,8 @@ Swipe on the screen between the specified points with optional touch options.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -3509,16 +3427,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
-
 <a id="triggercombinekeys-1"></a>
 
 ## triggerCombineKeys
@@ -3561,7 +3469,15 @@ Triggers a combination key event based on the specified key code values on the s
 
 **Examples**
 
-See [triggerCombineKeys](#triggercombinekeys)
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
 
 ## triggerKey
 
@@ -3608,17 +3524,6 @@ import { KeyCode } from '@kit.InputKit';
 async function demo() {
   let driver: Driver = Driver.create();
   await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
 }
 ```
 
@@ -3669,17 +3574,6 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
   await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
 }
 ```
@@ -3699,6 +3593,8 @@ Supported combinations:
 HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

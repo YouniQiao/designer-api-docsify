@@ -74,7 +74,7 @@ resizable?: ResizableOptions
 
 获取属性字符串的图片拉伸选项。
 
-**类型：** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+**类型：** [ResizableOptions](../arkts-components/arkts-arkui-image-comp-resizableoptions-i.md)
 
 **起始版本：** 26.0.1
 
@@ -92,7 +92,7 @@ resourceValue: Optional<ResourceStr>
 
 设置图片数据源。
 
-**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
+**类型：** [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **起始版本：** 15
 
@@ -128,7 +128,7 @@ size的默认值与objectFit的值有关，不同的objectFit的值对应size的
 supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启SVG标签解析能力增强功能。
+获取属性字符串是否开启[SVG标签解析能力增强功能](../arkts-components/arkts-arkui-image-comp.md#image)。
 
 true：支持SVG解析新能力；false：保持原有SVG解析能力。
 

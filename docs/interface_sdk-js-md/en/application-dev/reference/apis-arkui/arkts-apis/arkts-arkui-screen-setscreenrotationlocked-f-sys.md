@@ -41,18 +41,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let isLocked: boolean = false;
 // Set auto rotate to unlocked.
-screen.setScreenRotationLocked(isLocked).then(() => {
-  console.info('Succeeded in unlocking auto rotate');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-// Set auto rotate to unlocked.
 screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
@@ -101,4 +89,14 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 **Examples**
 
-See [setScreenRotationLocked](#setscreenrotationlocked)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isLocked: boolean = false;
+// Set auto rotate to unlocked.
+screen.setScreenRotationLocked(isLocked).then(() => {
+  console.info('Succeeded in unlocking auto rotate');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock auto rotate. Code: ${err.code}, message: ${err.message}`);
+});
+```

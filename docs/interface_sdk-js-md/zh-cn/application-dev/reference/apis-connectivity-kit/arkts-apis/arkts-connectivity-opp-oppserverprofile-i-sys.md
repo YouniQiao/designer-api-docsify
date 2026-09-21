@@ -163,6 +163,21 @@ off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): v
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { opp } from '@kit.ConnectivityKit';
+// 创建fileHolders
+try {
+    let oppProfile = opp.createOppServerProfile();
+    oppProfile.off("transferStateChange");
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## off('receiveIncomingFile')
 
 ```TypeScript
@@ -200,6 +215,20 @@ off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): v
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { opp } from '@kit.ConnectivityKit';
+// 创建fileHolders
+try {
+    let oppProfile = opp.createOppServerProfile();
+    oppProfile.off("receiveIncomingFile");
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## on('transferStateChange')
 
@@ -242,6 +271,29 @@ on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): voi
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { opp } from '@kit.ConnectivityKit';
+// 创建fileHolders
+try {
+    let oppProfile = opp.createOppServerProfile();
+    oppProfile.on("transferStateChange", (data: opp.OppTransferInformation) => {
+        if (data.status == opp.TransferStatus.PENDING) {
+          console.info("[opp_js] waiting to transfer : " + data.remoteDeviceName);
+        } else if (data.status == opp.TransferStatus.RUNNING){
+          console.info("[opp_js] running data.currentBytes " + data.currentBytes + " data.totalBytes" + data.totalBytes);
+        } else if (data.status == opp.TransferStatus.FINISH){
+          console.info("[opp_js] transfer finished, result is " + data.result);
+        }
+      });
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## on('receiveIncomingFile')
 
 ```TypeScript
@@ -282,6 +334,29 @@ on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): voi
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { opp } from '@kit.ConnectivityKit';
+// 创建fileHolders
+try {
+    let oppProfile = opp.createOppServerProfile();
+    oppProfile.on("receiveIncomingFile", (data: opp.OppTransferInformation) => {
+        if (data.status == opp.TransferStatus.PENDING) {
+          console.info("[opp_js] received file waiting to confirm : " + data.remoteDeviceName);
+        } else if (data.status == opp.TransferStatus.RUNNING){
+          console.info("[opp_js] running data.currentBytes " + data.currentBytes + " data.totalBytes" + data.totalBytes);
+        } else if (data.status == opp.TransferStatus.FINISH){
+          console.info("[opp_js] transfer finished, result is " + data.result);
+        }
+      });
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ## sendFile
 

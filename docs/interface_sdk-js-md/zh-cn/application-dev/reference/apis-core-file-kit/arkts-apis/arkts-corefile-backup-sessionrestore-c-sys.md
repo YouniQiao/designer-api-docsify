@@ -117,77 +117,6 @@ async function appendBundles() {
     let restoreApps: Array<string> = [
       "com.example.hiworld",
     ];
-    sessionRestore.appendBundles(fileData.fd, restoreApps, (err: BusinessError) => {
-      if (err) {
-        console.error(`appendBundles failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('appendBundles success');
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-  } finally {
-    fileIo.closeSync(fileData.fd);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
-async function appendBundles() {
-  let fileData : backup.FileData = {
-    fd : -1
-  }
-  try {
-    fileData = await backup.getLocalCapabilities();
-    console.info('getLocalCapabilities success');
-    let restoreApps: Array<string> = [
-      "com.example.hiworld",
-    ];
     await sessionRestore.appendBundles(fileData.fd, restoreApps);
     console.info('appendBundles success');
     // 携带扩展参数的调用
@@ -326,97 +255,6 @@ async function appendBundles() {
       }
       console.info('appendBundles success');
     });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-  } finally {
-    fileIo.closeSync(fileData.fd);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
-async function appendBundles() {
-  let fileData : backup.FileData = {
-    fd : -1
-  }
-  try {
-    fileData = await backup.getLocalCapabilities();
-    console.info('getLocalCapabilities success');
-    let restoreApps: Array<string> = [
-      "com.example.hiworld",
-    ];
-    await sessionRestore.appendBundles(fileData.fd, restoreApps);
-    console.info('appendBundles success');
-    // 携带扩展参数的调用
-    let infos: Array<string> = [
-      `
-       {
-        "infos":[
-          {
-            "details": [
-              {
-                "detail": [
-                  {
-                    "source": "com.example.hiworld", // 应用旧系统包名
-                    "target": "com.example.helloworld" // 应用新系统包名
-                  }
-                ],
-                "type": "app_mapping_relation"
-              }
-            ],
-            "type":"broadcast"
-          }
-        ]
-       }
-      `
-    ]
-    await sessionRestore.appendBundles(fileData.fd, restoreApps, infos);
-    console.info('appendBundles success');
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
@@ -996,63 +834,6 @@ let generalCallbacks: backup.GeneralCallbacks = {
   }
 };
 let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
-let fileMeta: backup.FileMeta = {
-  bundleName: 'com.example.hiworld',
-  uri: "test.txt"
-}
-sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
-  if (err) {
-    console.error(`getFileHandle failed. Code: ${err.code}, message: ${err.message}`);
-  }
-  console.info('getFileHandle success');
-});
-```
-
-```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
 async function getFileHandle() {
   try {
     let fileMeta: backup.FileMeta = {
@@ -1104,7 +885,62 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 **示例**
 
-参见 [getFileHandle](#getfilehandle)
+```TypeScript
+import { fileIo, backup} from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let generalCallbacks: backup.GeneralCallbacks = {
+  onFileReady: (err: BusinessError, file: backup.File) => {
+    if (err) {
+      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onFileReady success');
+    fileIo.closeSync(file.fd);
+  },
+  onBundleBegin: (err: BusinessError, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleBegin success');
+  },
+  onBundleEnd: (err: BusinessError, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleEnd success');
+  },
+  onAllBundlesEnd: (err: BusinessError) => {
+    if (err) {
+      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onAllBundlesEnd success');
+  },
+  onBackupServiceDied: () => {
+    console.info('service died');
+  },
+  onResultReport: (bundleName: string, result: string) => {
+    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+  },
+  onProcess: (bundleName: string, process: string) => {
+    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+  }
+};
+let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
+let fileMeta: backup.FileMeta = {
+  bundleName: 'com.example.hiworld',
+  uri: "test.txt"
+}
+sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
+  if (err) {
+    console.error(`getFileHandle failed. Code: ${err.code}, message: ${err.message}`);
+  }
+  console.info('getFileHandle success');
+});
+```
 
 ## getFileHandles
 
@@ -1534,80 +1370,6 @@ let testBundleName = 'com.example.myapplication'; // 测试包名
 initMap.set(testBundleName, testFileNum);
 let countMap = new Map<string, number>();
 countMap.set(testBundleName, 0); // 实际写入文件个数初始化
-function createSessionRestore() {
-  let generalCallbacks: backup.GeneralCallbacks = {
-    onFileReady: (err: BusinessError, file: backup.File) => {
-      if (err) {
-        console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onFileReady success');
-      fileIo.closeSync(file.fd);
-      let cnt = countMap.get(file.bundleName) || 0;
-      countMap.set(file.bundleName, cnt + 1); // 实际写入文件个数更新
-      // 恢复所需文件个数与实际写入文件个数相等时调用，保证数据的一致性和完整性
-      if (countMap.get(file.bundleName) == initMap.get(file.bundleName)) { // 每个包的所有文件收到后触发publishFile
-        let fileMeta: backup.FileMeta = {
-          bundleName: file.bundleName,
-          uri: ''
-        }
-        g_session.publishFile(fileMeta, (err: BusinessError) => {
-          if (err) {
-            console.error(`publishFile failed. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('publishFile success');
-        });
-      }
-    },
-    onBundleBegin: (err: BusinessError, bundleName: string) => {
-      if (err) {
-        console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onBundleBegin success');
-    },
-    onBundleEnd: (err: BusinessError, bundleName: string) => {
-      if (err) {
-        console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onBundleEnd success');
-    },
-    onAllBundlesEnd: (err: BusinessError) => {
-      if (err) {
-        console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onAllBundlesEnd success');
-    },
-    onBackupServiceDied: () => {
-      console.info('service died');
-    },
-    onResultReport: (bundleName: string, result: string) => {
-      console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-    },
-    onProcess: (bundleName: string, process: string) => {
-     console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-    }
-  };
-  let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
-  return sessionRestore;
-}
-g_session = createSessionRestore();
-```
-
-```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let g_session: backup.SessionRestore;
-let initMap = new Map<string, number>();
-let testFileNum = 123; // 123: 恢复所需文件个数示例
-let testBundleName = 'com.example.myapplication'; // 测试包名
-initMap.set(testBundleName, testFileNum);
-let countMap = new Map<string, number>();
-countMap.set(testBundleName, 0); // 实际写入文件个数初始化
 async function publishFile(file: backup.FileMeta) {
   let fileMeta: backup.FileMeta = {
     bundleName: file.bundleName,
@@ -1705,7 +1467,79 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 **示例**
 
-参见 [publishFile](#publishfile)
+```TypeScript
+import { fileIo, backup} from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let g_session: backup.SessionRestore;
+let initMap = new Map<string, number>();
+let testFileNum = 123; // 123: 恢复所需文件个数示例
+let testBundleName = 'com.example.myapplication'; // 测试包名
+initMap.set(testBundleName, testFileNum);
+let countMap = new Map<string, number>();
+countMap.set(testBundleName, 0); // 实际写入文件个数初始化
+function createSessionRestore() {
+  let generalCallbacks: backup.GeneralCallbacks = {
+    onFileReady: (err: BusinessError, file: backup.File) => {
+      if (err) {
+        console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onFileReady success');
+      fileIo.closeSync(file.fd);
+      let cnt = countMap.get(file.bundleName) || 0;
+      countMap.set(file.bundleName, cnt + 1); // 实际写入文件个数更新
+      // 恢复所需文件个数与实际写入文件个数相等时调用，保证数据的一致性和完整性
+      if (countMap.get(file.bundleName) == initMap.get(file.bundleName)) { // 每个包的所有文件收到后触发publishFile
+        let fileMeta: backup.FileMeta = {
+          bundleName: file.bundleName,
+          uri: ''
+        }
+        g_session.publishFile(fileMeta, (err: BusinessError) => {
+          if (err) {
+            console.error(`publishFile failed. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('publishFile success');
+        });
+      }
+    },
+    onBundleBegin: (err: BusinessError, bundleName: string) => {
+      if (err) {
+        console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onBundleBegin success');
+    },
+    onBundleEnd: (err: BusinessError, bundleName: string) => {
+      if (err) {
+        console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onBundleEnd success');
+    },
+    onAllBundlesEnd: (err: BusinessError) => {
+      if (err) {
+        console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onAllBundlesEnd success');
+    },
+    onBackupServiceDied: () => {
+      console.info('service died');
+    },
+    onResultReport: (bundleName: string, result: string) => {
+      console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+    },
+    onProcess: (bundleName: string, process: string) => {
+     console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+    }
+  };
+  let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
+  return sessionRestore;
+}
+g_session = createSessionRestore();
+```
 
 ## release
 

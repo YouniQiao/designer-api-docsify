@@ -4,14 +4,14 @@
 declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 
 > 
 > The **margin** attribute of a child component in **RelativeContainer** has special effective conditions. For
 > details, see the description above.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>
 
@@ -39,7 +39,7 @@ Sets the [barriers](../../../ui/arkts-layout-development-relative-layout.md#sett
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[BarrierStyle](arkts-arkui-barrierstyle-i.md)&gt; | Yes | Barrier in the **RelativeContainer** container, used to define the ID, direction, and dependent components of the barrier. Child components can use the barrier as an anchor for alignment and positioning. |
+| value | Array&lt;[BarrierStyle](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)&gt; | Yes | Barrier in the **RelativeContainer** container, used to define the ID, direction, and dependent components of the barrier. Child components can use the barrier as an anchor for alignment and positioning. |
 
 <a id="barrier-1"></a>
 
@@ -63,7 +63,7 @@ Sets barriers in the **RelativeContainer**. Child components can use a barrier a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md)&gt; | Yes | Barrier in the **RelativeContainer** container, which supports defining barrier lines in mirror mode. |
+| barrierStyle | Array&lt;[LocalizedBarrierStyle](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)&gt; | Yes | Barrier in the **RelativeContainer** container, which supports defining barrier lines in mirror mode. |
 
 ## guideLine
 
@@ -85,4 +85,4 @@ Sets the [guidelines](../../../ui/arkts-layout-development-relative-layout.md#po
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[GuideLineStyle](arkts-arkui-guidelinestyle-i.md)&gt; | Yes | Guideline inside the **RelativeContainer**, which defines the ID, direction, and position of the **guideLine** and is used to assist in positioning child components. |
+| value | Array&lt;[GuideLineStyle](arkts-arkui-relativecontainer-comp-guidelinestyle-i.md)&gt; | Yes | Guideline inside the **RelativeContainer**, which defines the ID, direction, and position of the **guideLine** and is used to assist in positioning child components. |

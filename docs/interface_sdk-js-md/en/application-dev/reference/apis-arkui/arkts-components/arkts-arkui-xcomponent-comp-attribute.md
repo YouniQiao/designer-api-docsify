@@ -6,7 +6,7 @@ declare class XComponentAttribute extends CommonMethod<XComponentAttribute>
 
 In addition to universal attributes, the following attributes are supported.
 
-Since API version 12, the universal events are supported when **type** is set to **SURFACE** or **TEXTURE**.
+Since API version 12, the [universal events](arkts-arkui-common-comp.md#common) are supported when **type** is set to **SURFACE** or **TEXTURE**.
 
 **Inheritance/Implementation:** XComponentAttribute extends CommonMethod<XComponentAttribute>
 
@@ -22,7 +22,7 @@ enableAnalyzer(enable: boolean)
 
 Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
 
-For the settings to take effect, this attribute must be used together with [StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer) and [StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer) of **XComponentController**.
+For the settings to take effect, this attribute must be used together with [StartImageAnalyzer](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#startimageanalyzer) and [StopImageAnalyzer](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#stopimageanalyzer) of **XComponentController**.
 
 This feature cannot be used together with the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
 
@@ -107,7 +107,7 @@ Set hdrBrightness for XComponent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | number | Yes | control the brightness of HDR video. |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | No | the HDR type of the XComponent. |
+| type | [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md) | No | the HDR type of the XComponent. |
 
 ## onDestroy
 
@@ -147,4 +147,4 @@ Triggered when the plugin is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes | Callback triggered after the surface held by **XComponent** is created.<br>**Since:** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-xcomponent-comp-onnativeloadcallback-t.md) | Yes | Callback triggered after the surface held by **XComponent** is created.<br>**Since:** 18 |

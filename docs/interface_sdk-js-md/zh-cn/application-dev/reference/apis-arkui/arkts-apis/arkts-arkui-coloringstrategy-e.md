@@ -16,7 +16,7 @@ declare enum ColoringStrategy
 INVERT = 'invert'
 ```
 
-设置前景色为控件背景色的反色。仅支持在[foregroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#foregroundcolor)中设置该枚举。
+设置前景色为控件背景色的反色。仅支持在[foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor)中设置该枚举。
 
 **起始版本：** 10
 

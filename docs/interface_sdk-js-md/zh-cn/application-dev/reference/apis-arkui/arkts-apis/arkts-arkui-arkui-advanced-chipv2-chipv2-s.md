@@ -10,7 +10,7 @@ ChipV2是提供丰富样式和交互能力的操作块组件，支持前缀图�
 
 > **说明：** 
 > 
-> - 如果ChipV2设置[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ChipV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ChipV2设置通用属性和通用事件。
+> - 如果ChipV2设置[通用属性](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)或[通用事件](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ChipV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ChipV2设置通用属性和通用事件。
 
 **起始版本：** 26.0.0
 

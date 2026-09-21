@@ -79,13 +79,6 @@ pasteData.addRecord(textRecord);
 pasteData.addRecord(htmlRecord);
 ```
 
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// Create ArrayBuffer data.
-let dataXml = new ArrayBuffer(256);
-pasteData.addRecord('app/xml', dataXml);
-```
-
 <a id="addrecord-1"></a>
 
 ## addRecord
@@ -118,7 +111,12 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 
 **Examples**
 
-See [addRecord](#addrecord)
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+// Create ArrayBuffer data.
+let dataXml = new ArrayBuffer(256);
+pasteData.addRecord('app/xml', dataXml);
+```
 
 ## addTextRecord
 

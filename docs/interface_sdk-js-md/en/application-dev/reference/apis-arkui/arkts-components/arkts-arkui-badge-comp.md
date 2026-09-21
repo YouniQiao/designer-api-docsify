@@ -8,7 +8,7 @@ This component supports only one child component.
 
 > **NOTE:** 
 > 
-> - Allowed child component types: built-in and custom components, including rendering control types ([if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), ForEach, and LazyForEach).
+> - Allowed child component types: built-in and custom components, including rendering control types ([if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](arkts-arkui-foreach-comp-attribute.md#foreachattribute), and [LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each)).
 > 
 > - A custom component defaults to a width and height of 0. You must explicitly set its width and height; otherwise,the **Badge** component will not be displayed.
 > 
@@ -36,7 +36,7 @@ Creates a badge with the given numerical value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Yes | Options of the numeric badge. |
+| value | [BadgeParamWithNumber](arkts-arkui-badge-comp-badgeparamwithnumber-i.md) | Yes | Options of the numeric badge. |
 
 ## Badge
 
@@ -58,7 +58,7 @@ Creates a badge with the given string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Yes | Options of the string-type badge. |
+| value | [BadgeParamWithString](arkts-arkui-badge-comp-badgeparamwithstring-i.md) | Yes | Options of the string-type badge. |
 
 ## Summary
 
@@ -66,23 +66,23 @@ Creates a badge with the given string.
 
 | Name | Description |
 | --- | --- |
-| [BadgeParam](arkts-arkui-badgeparam-i.md) | Provides basic parameters for creating a badge. |
-| [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
-| [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**. |
-| [BadgeStyle](arkts-arkui-badgestyle-i.md) | Describes the badge style. It includes the font color, font size, badge color, badge size, etc. |
+| [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) | Provides basic parameters for creating a badge. |
+| [BadgeParamWithNumber](arkts-arkui-badge-comp-badgeparamwithnumber-i.md) | Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all attributes of **BadgeParam**. |
+| [BadgeParamWithString](arkts-arkui-badge-comp-badgeparamwithstring-i.md) | Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all attributes of **BadgeParam**. |
+| [BadgeStyle](arkts-arkui-badge-comp-badgestyle-i.md) | Describes the badge style. It includes the font color, font size, badge color, badge size, etc. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BadgePosition](arkts-arkui-badgeposition-e.md) | Enumerates the display positions of a badge. |
+| [BadgePosition](arkts-arkui-badge-comp-badgeposition-e.md) | Enumerates the display positions of a badge. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Setting Badge Component Content
 
-This example uses the input parameter count of [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) and the input parameter value of [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) to display different effects of the badge component when null, a character, or a number is passed in.
+This example uses the input parameter count of [BadgeParamWithNumber](arkts-arkui-badge-comp-badgeparamwithnumber-i.md) and the input parameter value of [BadgeParamWithString](arkts-arkui-badge-comp-badgeparamwithstring-i.md) to display different effects of the badge component when null, a character, or a number is passed in.
 
 
 ```

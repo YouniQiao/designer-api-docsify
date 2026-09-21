@@ -4,7 +4,7 @@
 declare class PathAttribute extends CommonShapeMethod<PathAttribute>
 ```
 
-In addition to the universal attributes and universal drawing attributes, the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp.md#common) and [universal drawing attributes](arkts-arkui-common-comp.md#common), the following attributes are supported:
 
 **Inheritance/Implementation:** PathAttribute extends CommonShapeMethod<PathAttribute>
 
@@ -18,7 +18,7 @@ In addition to the universal attributes and universal drawing attributes, the fo
 commands(value: ResourceStr)
 ```
 
-Sets the command string that complies with the [SVG path syntax](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax), in px. The command string determines the drawing shape and trajectory of the path. This attribute can be dynamically set using attributeModifier. For details about the pixel unit conversion method, see Pixel Units.
+Sets the command string that complies with the [SVG path syntax](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax), in px. The command string determines the drawing shape and trajectory of the path. This attribute can be dynamically set using attributeModifier. For details about the pixel unit conversion method, see [Pixel Units](arkts-arkui-common-comp.md#common).
 
 **Since:** 7
 

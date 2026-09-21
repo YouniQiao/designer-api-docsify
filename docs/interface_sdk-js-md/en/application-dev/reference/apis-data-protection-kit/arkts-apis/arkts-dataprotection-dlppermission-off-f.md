@@ -36,3 +36,13 @@ This API is usually called to release resources when the page is destroyed or th
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Examples**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.off('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
+  console.info('openDlpFile event', info.uri, info.lastOpenTime);
+}); // Unsubscribe from the DLP file open event.
+```

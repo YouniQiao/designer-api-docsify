@@ -38,6 +38,8 @@ Defines the color of button.
 
 **Substitutes:** [color](arkts-arkui-promptaction-button-i.md#color)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
@@ -55,5 +57,7 @@ Defines the button info.
 **Deprecated since:** 9
 
 **Substitutes:** [text](arkts-arkui-promptaction-button-i.md#text)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

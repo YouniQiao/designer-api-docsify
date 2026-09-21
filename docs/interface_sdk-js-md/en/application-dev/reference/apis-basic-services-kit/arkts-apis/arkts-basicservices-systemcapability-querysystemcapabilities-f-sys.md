@@ -41,18 +41,6 @@ try {
 }
 ```
 
-```TypeScript
-try {
-    systemCapability.querySystemCapabilities().then((value:string) => {
-        console.info("get system capabilities: " + value);
-    }).catch((err:Error) => {
-        console.error("get system capabilities error: " + err);
-    });
-}catch(e){
-    console.error("get unexpected error: " + e);
-}
-```
-
 
 <a id="querysystemcapabilities-1"></a>
 
@@ -78,4 +66,14 @@ Get System Capability.
 
 **Examples**
 
-See [querySystemCapabilities](#querysystemcapabilities)
+```TypeScript
+try {
+    systemCapability.querySystemCapabilities().then((value:string) => {
+        console.info("get system capabilities: " + value);
+    }).catch((err:Error) => {
+        console.error("get system capabilities error: " + err);
+    });
+}catch(e){
+    console.error("get unexpected error: " + e);
+}
+```

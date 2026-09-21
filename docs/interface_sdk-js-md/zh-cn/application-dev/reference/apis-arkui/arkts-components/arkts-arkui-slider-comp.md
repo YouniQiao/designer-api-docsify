@@ -16,6 +16,8 @@ Slider(options?: SliderOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -26,7 +28,7 @@ Slider(options?: SliderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | 否 | 配置滑动条的参数。若不传入，则使用SliderOptions中各属性的默认值。 |
+| options | [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md) | 否 | 配置滑动条的参数。若不传入，则使用SliderOptions中各属性的默认值。 |
 
 ## 汇总
 
@@ -34,31 +36,31 @@ Slider(options?: SliderOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md) | 线性渐变颜色断点类型，用于描述渐进色颜色断点。 |
-| [SlideRange](arkts-arkui-sliderange-i.md) | 定义有效滑动区间。 |
-| [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Slider组件滑块形状参数。 |
-| [SliderConfiguration](arkts-arkui-sliderconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md) | Slider前后缀组件无障碍信息参数。 |
-| [SliderOptions](arkts-arkui-slideroptions-i.md) | 滑动条的信息。 |
-| [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | Slider前缀组件无障碍信息参数。 |
-| [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | Slider刻度点的无障碍文本信息映射集。 |
-| [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md) | Slider刻度点的无障碍文本信息。 |
-| [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | Slider后缀组件无障碍信息参数。 |
+| [ColorMetricsStop](arkts-arkui-slider-comp-colormetricsstop-i.md) | 线性渐变颜色断点类型，用于描述渐进色颜色断点。 |
+| [SlideRange](arkts-arkui-slider-comp-sliderange-i.md) | 定义有效滑动区间。 |
+| [SliderBlockStyle](arkts-arkui-slider-comp-sliderblockstyle-i.md) | Slider组件滑块形状参数。 |
+| [SliderConfiguration](arkts-arkui-slider-comp-sliderconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [SliderCustomContentOptions](arkts-arkui-slider-comp-slidercustomcontentoptions-i.md) | Slider前后缀组件无障碍信息参数。 |
+| [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md) | 滑动条的信息。 |
+| [SliderPrefixOptions](arkts-arkui-slider-comp-sliderprefixoptions-i.md) | Slider前缀组件无障碍信息参数。 |
+| [SliderShowStepOptions](arkts-arkui-slider-comp-slidershowstepoptions-i.md) | Slider刻度点的无障碍文本信息映射集。 |
+| [SliderStepItemAccessibility](arkts-arkui-slider-comp-sliderstepitemaccessibility-i.md) | Slider刻度点的无障碍文本信息。 |
+| [SliderSuffixOptions](arkts-arkui-slider-comp-slidersuffixoptions-i.md) | Slider后缀组件无障碍信息参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [SliderTriggerChangeCallback](arkts-arkui-slidertriggerchangecallback-t.md) | 定义SliderConfiguration中使用的回调类型。 |
+| [SliderTriggerChangeCallback](arkts-arkui-slider-comp-slidertriggerchangecallback-t.md) | 定义SliderConfiguration中使用的回调类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SliderBlockType](arkts-arkui-sliderblocktype-e.md) | Slider组件滑块形状枚举。 |
-| [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | 滑块状态值，包括按下、拖动、离开、点击滑动条使滑块移动时。 |
-| [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | 用户与滑动条组件交互方式。 |
-| [SliderStyle](arkts-arkui-sliderstyle-e.md) | 滑动条滑块在滑轨上显示的样式，样式说明请参考[Slider组件滑块与滑轨是如何对齐的](../../../ui/arkts-select-component-faq.md#slider组件滑块与滑轨是如何对齐的)。 |
+| [SliderBlockType](arkts-arkui-slider-comp-sliderblocktype-e.md) | Slider组件滑块形状枚举。 |
+| [SliderChangeMode](arkts-arkui-slider-comp-sliderchangemode-e.md) | 滑块状态值，包括按下、拖动、离开、点击滑动条使滑块移动时。 |
+| [SliderInteraction](arkts-arkui-slider-comp-sliderinteraction-e.md) | 用户与滑动条组件交互方式。 |
+| [SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md) | 滑动条滑块在滑轨上显示的样式，样式说明请参考[Slider组件滑块与滑轨是如何对齐的](../../../ui/arkts-select-component-faq.md#slider组件滑块与滑轨是如何对齐的)。 |
 
 ## 示例
 

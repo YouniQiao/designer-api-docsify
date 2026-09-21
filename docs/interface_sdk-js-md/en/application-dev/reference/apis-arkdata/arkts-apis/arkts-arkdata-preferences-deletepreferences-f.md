@@ -84,7 +84,13 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-See [deletePreferences](#deletepreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="deletepreferences-2"></a>
@@ -126,7 +132,13 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-See [deletePreferences](#deletepreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="deletepreferences-3"></a>
@@ -171,4 +183,10 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-See [deletePreferences](#deletepreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

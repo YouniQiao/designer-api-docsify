@@ -66,25 +66,6 @@ adminManager.authorizeAdmin(wantTemp, bundleName, (err) => {
 });
 ```
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
 
 <a id="authorizeadmin-1"></a>
 
@@ -132,4 +113,21 @@ Authorizes the administrator permission to a specified application. This API use
 
 **Examples**
 
-See [authorizeAdmin](#authorizeadmin)
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = "com.example.application";
+
+adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
+}).catch((err: BusinessError) => {
+  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
+})
+```

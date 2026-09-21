@@ -18,6 +18,8 @@ A system application can call this API to obtain the current user's permission u
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -51,18 +53,6 @@ privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
   } else {
     console.info('get status is FALSE');
   }
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
-privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
-  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
 }).catch((err: BusinessError): void => {
   console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
@@ -113,4 +103,14 @@ A system application can call this API to obtain the permission usage record tog
 
 **Examples**
 
-See [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
+privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
+  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```

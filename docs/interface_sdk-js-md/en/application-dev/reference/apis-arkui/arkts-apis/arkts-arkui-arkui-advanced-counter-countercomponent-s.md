@@ -12,7 +12,7 @@ The **Counter** component is used for precise numerical value adjustment. It sup
 > 
 > - The APIs of this module can be used only in the stage model.
 > 
-> - If the **Counter** component has [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) and [universal events](../arkts-components/arkts-arkui-commonmethod-c.md) set, the compilation toolchain generates an additional node \_\_Common\_\_ and attaches the universal attributes or events to \_\_Common\_\_ instead of directly applying them to the **Counter** component. This may cause the universal attributes or events to not take effect or behave unexpectedly. Therefore, setting universal attributes and events for the **Counter** component is not recommended.
+> - If the **Counter** component has [universal attributes](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md) and [universal events](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md) set, the compilation toolchain generates an additional node \_\_Common\_\_ and attaches the universal attributes or events to \_\_Common\_\_ instead of directly applying them to the **Counter** component. This may cause the universal attributes or events to not take effect or behave unexpectedly. Therefore, setting universal attributes and events for the **Counter** component is not recommended.
 
 **Since:** 11
 

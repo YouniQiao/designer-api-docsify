@@ -22,7 +22,7 @@ import { securityManager } from '@kit.MDMKit';
 additionalDescription?: string
 ```
 
-Password complexity description, for example, "The password must contain 8 to 30 characters consisting of letters, digits, and special characters".
+Password complexity description, for example, "The password must contain 8 to 30 characters consisting ofletters, digits, and special characters".
 
 **Type:** string
 

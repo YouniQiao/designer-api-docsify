@@ -57,45 +57,6 @@ adminManager.isAdminEnabled(wantTemp, (err, result) => {
 });
 ```
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to query admin is enabled. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 <a id="isadminenabled-1"></a>
 
@@ -132,7 +93,25 @@ Checks whether a device administrator application of the specified user is enabl
 
 **Examples**
 
-See [isAdminEnabled](#isadminenabled)
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to query admin is enabled. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
+});
+```
 
 
 <a id="isadminenabled-2"></a>
@@ -175,4 +154,21 @@ Checks whether a device administrator application of the current or specified us
 
 **Examples**
 
-See [isAdminEnabled](#isadminenabled)
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
+});
+```

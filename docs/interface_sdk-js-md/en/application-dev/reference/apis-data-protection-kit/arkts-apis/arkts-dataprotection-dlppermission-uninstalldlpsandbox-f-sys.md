@@ -66,25 +66,6 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 }); // Uninstall the DLP sandbox that has been installed.
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
-  console.info('dlpSandboxInfo: ', JSON.stringify(dlpSandboxInfo));
-  dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
-    if (err) {
-      console.error(`Failed to uninstall DLPSandbox. Code: ${err.code}, message: ${err.message}`); 
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Uninstall a DLP sandbox.
-}).catch((error: BusinessError)=> {
-  console.error(`Failed to install or uninstall DLPSandbox. Code: ${error.code}, message: ${error.message}`);
-}); // Uninstall the DLP sandbox that has been installed.
-```
-
 
 <a id="uninstalldlpsandbox-1"></a>
 
@@ -130,4 +111,21 @@ This API can be called only after a DLP sandbox is installed by calling [install
 
 **Examples**
 
-See [uninstallDLPSandbox](#uninstalldlpsandbox)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
+  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
+  console.info('dlpSandboxInfo: ', JSON.stringify(dlpSandboxInfo));
+  dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
+    if (err) {
+      console.error(`Failed to uninstall DLPSandbox. Code: ${err.code}, message: ${err.message}`); 
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Uninstall a DLP sandbox.
+}).catch((error: BusinessError)=> {
+  console.error(`Failed to install or uninstall DLPSandbox. Code: ${error.code}, message: ${error.message}`);
+}); // Uninstall the DLP sandbox that has been installed.
+```

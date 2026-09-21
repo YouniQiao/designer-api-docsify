@@ -16,6 +16,8 @@ Get the privacy search result and the final search outcome. Decrypts the search 
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset

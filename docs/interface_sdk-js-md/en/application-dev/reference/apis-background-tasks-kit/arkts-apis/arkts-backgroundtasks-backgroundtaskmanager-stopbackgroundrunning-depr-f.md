@@ -38,10 +38,6 @@ FA model (JS code is required for development):
 Stage model:
 ```
 
-```TypeScript
-FA model:
-```
-
 
 <a id="stopbackgroundrunning-1"></a>
 
@@ -75,4 +71,10 @@ Requests to cancel a continuous task. This API uses a promise to return the resu
 
 **Examples**
 
-See [stopBackgroundRunning](#stopbackgroundrunning)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

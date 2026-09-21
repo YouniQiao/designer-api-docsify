@@ -66,6 +66,8 @@ Creates a list container.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -76,7 +78,7 @@ Creates a list container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListOptions](arkts-arkui-listoptions-i.md) | No | Options of the **List** component. |
+| options | [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | No | Options of the **List** component. |
 
 ## Summary
 
@@ -84,32 +86,32 @@ Creates a list container.
 
 | Name | Description |
 | --- | --- |
-| [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md) | Defines the chain animation options. |
-| [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | Implements the callbacks and events for the ListItem in the [expanded](arkts-arkui-swipeactionstate-e.md) state. |
-| [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) | Defines the system back button behavior of the **List** component. |
-| [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) | Defines the divider style of the list or list item group. |
-| [ListOptions](arkts-arkui-listoptions-i.md) | Defines the options of the **List** component. |
-| [UIListEvent](arkts-arkui-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1) method in **frameNode**, which can be used to set scroll events for a **List** node. |
-| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Describes the details of the child components in the visible area of a list. |
+| [ChainAnimationOptions](arkts-arkui-list-comp-chainanimationoptions-i-sys.md) | Defines the chain animation options. |
+| [CloseSwipeActionOptions](arkts-arkui-list-comp-closeswipeactionoptions-i.md) | Implements the callbacks and events for the ListItem in the [expanded](arkts-arkui-listitem-comp-swipeactionstate-e.md) state. |
+| [ListBackPressBehavior](arkts-arkui-list-comp-listbackpressbehavior-i.md) | Defines the system back button behavior of the **List** component. |
+| [ListDividerOptions](arkts-arkui-list-comp-listdivideroptions-i.md) | Defines the divider style of the list or list item group. |
+| [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | Defines the options of the **List** component. |
+| [UIListEvent](arkts-arkui-list-comp-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1) method in **frameNode**, which can be used to set scroll events for a **List** node. |
+| [VisibleListContentInfo](arkts-arkui-list-comp-visiblelistcontentinfo-i.md) | Describes the details of the child components in the visible area of a list. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **List** component. |
-| [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | Triggered when a child component enters or leaves the list display area. |
+| [OnListScrollIndexCallback](arkts-arkui-list-comp-onlistscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **List** component. |
+| [OnScrollVisibleContentChangeCallback](arkts-arkui-list-comp-onscrollvisiblecontentchangecallback-t.md) | Triggered when a child component enters or leaves the list display area. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md) | Declare edge effect of chain animation. |
-| [ListItemAlign](arkts-arkui-listitemalign-e.md) | Sets the alignment mode of child components in the cross-axis direction of the list. |
-| [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md) | Enumerates the areas of **ListItemGroup**. |
-| [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Enumerates the alignment modes of list items when scrolling ends. |
-| [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Enumerates the speeds of the snap animation for list scrolling. |
-| [ScrollState](arkts-arkui-scrollstate-e.md) | Enumerates the scrolling states. |
-| [StickyStyle](arkts-arkui-stickystyle-e.md) | Enumerates the sticky styles. |
+| [ChainEdgeEffect](arkts-arkui-list-comp-chainedgeeffect-e-sys.md) | Declare edge effect of chain animation. |
+| [ListItemAlign](arkts-arkui-list-comp-listitemalign-e.md) | Sets the alignment mode of child components in the cross-axis direction of the list. |
+| [ListItemGroupArea](arkts-arkui-list-comp-listitemgrouparea-e.md) | Enumerates the areas of **ListItemGroup**. |
+| [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) | Enumerates the alignment modes of list items when scrolling ends. |
+| [ScrollSnapAnimationSpeed](arkts-arkui-list-comp-scrollsnapanimationspeed-e.md) | Enumerates the speeds of the snap animation for list scrolling. |
+| [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | Enumerates the scrolling states. |
+| [StickyStyle](arkts-arkui-list-comp-stickystyle-e.md) | Enumerates the sticky styles. |
 
 ## Examples
 
@@ -268,7 +270,7 @@ This example implements the dragging effect of ListItem between two List compone
 ```TypeScript
 ### Example 16: Centering the Clicked Item in ListItemGroup
 
-This example uses the [scrollToItemInGroup](arkts-arkui-listscroller-c.md#scrolltoitemingroup) API to implement the effect of centering the [ListItem](./ts-container-listitem.md) component in the [ListItemGroup](./ts-container-listitemgroup.md) when the ListItem is clicked.
+This example uses the [scrollToItemInGroup](arkts-arkui-list-comp-listscroller-c.md#scrolltoitemingroup) API to implement the effect of centering the [ListItem](./ts-container-listitem.md) component in the [ListItemGroup](./ts-container-listitemgroup.md) when the ListItem is clicked.
 
 
 ```

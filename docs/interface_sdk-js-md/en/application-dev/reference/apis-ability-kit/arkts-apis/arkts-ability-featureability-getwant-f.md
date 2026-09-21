@@ -41,15 +41,6 @@ featureAbility.getWant((error, data) => {
 });
 ```
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-// Obtain the Want corresponding to the Ability to be started.
-featureAbility.getWant().then((data) => {
-  console.info(`getWant data: ${JSON.stringify(data)}`);
-});
-```
-
 
 <a id="getwant-1"></a>
 
@@ -75,4 +66,11 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 **Examples**
 
-See [getWant](#getwant)
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+
+// Obtain the Want corresponding to the Ability to be started.
+featureAbility.getWant().then((data) => {
+  console.info(`getWant data: ${JSON.stringify(data)}`);
+});
+```

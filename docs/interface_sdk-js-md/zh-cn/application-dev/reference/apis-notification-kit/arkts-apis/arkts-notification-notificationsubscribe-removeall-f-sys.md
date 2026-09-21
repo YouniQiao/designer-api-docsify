@@ -59,56 +59,6 @@ let bundle: notificationSubscribe.BundleOption = {
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('removeAll success');
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 不指定应用时，删除所有通知
-notificationSubscribe.removeAll().then(() => {
-  console.info('removeAll success');
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('removeAll success');
-  }
-}
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info('removeAll success');
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 <a id="removeall-1"></a>
 
@@ -147,7 +97,18 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **示例**
 
-参见 [removeAll](#removeall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+    if (err) {
+        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info('removeAll success');
+    }
+}
+notificationSubscribe.removeAll(removeAllCallback);
+```
 
 
 <a id="removeall-2"></a>
@@ -189,7 +150,20 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **示例**
 
-参见 [removeAll](#removeall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('removeAll success');
+  }
+}
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 1;
+notificationSubscribe.removeAll(userId, removeAllCallback);
+```
 
 
 <a id="removeall-3"></a>
@@ -236,7 +210,16 @@ function removeAll(userId: number): Promise<void>
 
 **示例**
 
-参见 [removeAll](#removeall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 1;
+notificationSubscribe.removeAll(userId).then(() => {
+  console.info('removeAll success');
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 
 <a id="removeall-4"></a>
@@ -283,4 +266,13 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **示例**
 
-参见 [removeAll](#removeall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 不指定应用时，删除所有通知
+notificationSubscribe.removeAll().then(() => {
+  console.info('removeAll success');
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```

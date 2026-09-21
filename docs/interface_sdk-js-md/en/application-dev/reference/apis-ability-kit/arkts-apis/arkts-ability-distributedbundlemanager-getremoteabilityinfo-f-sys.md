@@ -68,194 +68,6 @@ try {
 }
 ```
 
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ]).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
 
 <a id="getremoteabilityinfo-1"></a>
 
@@ -302,7 +114,27 @@ Obtains information about the remote ability that matches the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: BusinessError) => {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-2"></a>
@@ -345,7 +177,36 @@ Obtains information about the remote abilities that match the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        [
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application1',
+                abilityName: 'EntryAbility1'
+            },
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application2',
+                abilityName: 'EntryAbility'
+            }
+        ], (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
+          if (err) {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-3"></a>
@@ -393,7 +254,34 @@ Obtains information about the remote abilities that match the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        [
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application',
+                abilityName: 'EntryAbility'
+            },
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application2',
+                abilityName: 'EntryAbility'
+            }
+        ]).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: BusinessError) => {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-4"></a>
@@ -437,7 +325,29 @@ Obtains information about the remote ability that matches the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }, 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
+          if (err) {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-5"></a>
@@ -486,7 +396,27 @@ Obtains information about the remote ability that matches the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: BusinessError) => {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-6"></a>
@@ -530,7 +460,36 @@ Obtains information about the remote abilities that match the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        [
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application1',
+                abilityName: 'EntryAbility1'
+            },
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application2',
+                abilityName: 'EntryAbility'
+            }
+        ], 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
+          if (err) {
+           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
 
 
 <a id="getremoteabilityinfo-7"></a>
@@ -579,4 +538,31 @@ Obtains information about the remote abilities that match the given element name
 
 **Examples**
 
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        [
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application',
+                abilityName: 'EntryAbility'
+            },
+            {
+                deviceId: '1',
+                bundleName: 'com.example.application2',
+                abilityName: 'EntryAbility'
+            }
+        ], 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: BusinessError) => {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```

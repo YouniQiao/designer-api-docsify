@@ -47,6 +47,12 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 <a id="getassets-1"></a>
 
 ## getAssets
@@ -86,6 +92,12 @@ Obtains image and video assets. This API uses a promise to return the result.
 | 13900012 | Permission denied<br>**Applicable version:** 10 - 19 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## albumName
 

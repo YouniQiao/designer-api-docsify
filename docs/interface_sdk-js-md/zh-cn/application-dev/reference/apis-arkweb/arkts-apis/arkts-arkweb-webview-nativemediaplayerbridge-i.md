@@ -30,6 +30,12 @@ enterFullscreen(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## exitFullscreen
 
 ```TypeScript
@@ -43,6 +49,12 @@ exitFullscreen(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
 
 ## pause
 
@@ -58,6 +70,12 @@ pause(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## play
 
 ```TypeScript
@@ -71,6 +89,12 @@ play(): void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
 
 ## release
 
@@ -86,6 +110,12 @@ release(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## resumePlayer
 
 ```TypeScript
@@ -97,6 +127,12 @@ resumePlayer?(): void
 **起始版本：** 12
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
 
 ## seek
 
@@ -118,6 +154,12 @@ seek(targetTime: number): void
 | --- | --- | --- | --- |
 | targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。<br>单位：秒。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## setMuted
 
 ```TypeScript
@@ -137,6 +179,12 @@ setMuted(muted: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | muted | boolean | 是 | 是否静音。<br>true表示静音，false表示未静音。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
 
 ## setPlaybackRate
 
@@ -158,6 +206,12 @@ setPlaybackRate(playbackRate: number): void
 | --- | --- | --- | --- |
 | playbackRate | number | 是 | 播放速率。<br>取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## setVolume
 
 ```TypeScript
@@ -178,6 +232,12 @@ setVolume(volume: number): void
 | --- | --- | --- | --- |
 | volume | number | 是 | 播放器的音量。<br>取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
+
 ## suspendPlayer
 
 ```TypeScript
@@ -195,6 +255,12 @@ suspendPlayer?(type: SuspendType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | 是 | 播放器挂起类型，用于指定播放器挂起的方式。不同 SuspendType 取值对应不同的挂起场景。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```
 
 ## updateRect
 
@@ -218,3 +284,9 @@ updateRect(x: number, y: number, width: number, height: number): void
 | y | number | 是 | surface相对于Web组件的y坐标信息。<br>单位：px。 |
 | width | number | 是 | surface的宽度。<br>单位：px。 |
 | height | number | 是 | surface的高度。<br>单位：px。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+```

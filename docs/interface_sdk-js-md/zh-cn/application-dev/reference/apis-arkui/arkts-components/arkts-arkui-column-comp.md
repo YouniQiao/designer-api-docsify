@@ -32,7 +32,7 @@ Column(options?: ColumnOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。<br> |
+| options | [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。<br> |
 
 ## Column
 
@@ -60,7 +60,7 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
+| options | [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-column-comp-columnoptionsv2-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
 
 ## 汇总
 
@@ -68,14 +68,14 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColumnOptions](arkts-arkui-columnoptions-i.md) | 设置Column组件的子组件间距属性。 |
-| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | 设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
+| [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) | 设置Column组件的子组件间距属性。 |
+| [ColumnOptionsV2](arkts-arkui-column-comp-columnoptionsv2-i.md) | 设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [SpaceType](arkts-arkui-spacetype-t.md) | Column组件构造函数中space支持的数据类型，取值类型为下表类型中的并集。 |
+| [SpaceType](arkts-arkui-column-comp-spacetype-t.md) | Column组件构造函数中space支持的数据类型，取值类型为下表类型中的并集。 |
 
 ## 示例
 

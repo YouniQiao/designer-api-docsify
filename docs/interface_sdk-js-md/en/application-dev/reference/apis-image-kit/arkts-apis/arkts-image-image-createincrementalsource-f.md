@@ -65,30 +65,6 @@ async function CreateIncrementalImageSource(context : Context) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreateIncrementalImageSource(context : Context) {
-  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // Obtain the image resource.
-  // 'app.media.startIcon' is only an example. Replace it with the actual one in use. Otherwise, the imageArray instance fails to be created, and subsequent operations cannot be performed.
-  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // Image slice.
-  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
-
-  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
-  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
-    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
-      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
-      console.info('Succeeded in creating pixelMap');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
 
 <a id="createincrementalsource-1"></a>
 
@@ -121,4 +97,26 @@ The capabilities supported by the ImageSource instance created by this API are t
 
 **Examples**
 
-See [CreateIncrementalSource](#createincrementalsource)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateIncrementalImageSource(context : Context) {
+  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // Obtain the image resource.
+  // 'app.media.startIcon' is only an example. Replace it with the actual one in use. Otherwise, the imageArray instance fails to be created, and subsequent operations cannot be performed.
+  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // Image slice.
+  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
+
+  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
+  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
+    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
+      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
+      console.info('Succeeded in creating pixelMap');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+    })
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+  })
+}
+```

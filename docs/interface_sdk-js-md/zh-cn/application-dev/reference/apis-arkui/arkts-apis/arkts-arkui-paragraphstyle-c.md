@@ -48,7 +48,7 @@ readonly leadingMargin?: number | LeadingMarginPlaceholder
 
 返回为number类型时，单位为vp。
 
-**类型：** number &#124; [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
+**类型：** number &#124; [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-richeditor-comp-leadingmarginplaceholder-i.md)
 
 **起始版本：** 12
 

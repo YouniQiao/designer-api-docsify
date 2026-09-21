@@ -59,10 +59,6 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 Activate OS account 100.
 ```
 
-```TypeScript
-Activate the OS account 100 on the logical screen 0.
-```
-
 <a id="activateosaccount-1"></a>
 
 ## activateOsAccount
@@ -109,7 +105,9 @@ Activates an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-See [activateOsAccount](#activateosaccount)
+```TypeScript
+Activate OS account 100.
+```
 
 <a id="activateosaccount-2"></a>
 
@@ -161,7 +159,9 @@ Currently, cross-logical-display activation is not supported. That is, you canno
 
 **Examples**
 
-See [activateOsAccount](#activateosaccount)
+```TypeScript
+Activate the OS account 100 on the logical screen 0.
+```
 
 ## bindDomainAccount
 
@@ -288,28 +288,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let options: osAccount.CreateOsAccountOptions = {
-  shortName: 'myShortName',
-  disallowedPreinstalledBundles: [],
-  allowedPreinstalledBundles: [],
-}
-try {
-  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="createosaccount-1"></a>
 
 ## createOsAccount
@@ -360,7 +338,27 @@ Creates an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-See [createOsAccount](#createosaccount)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let options: osAccount.CreateOsAccountOptions = {
+  shortName: 'myShortName',
+  disallowedPreinstalledBundles: [],
+  allowedPreinstalledBundles: [],
+}
+try {
+  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## createOsAccountForDomain
 
@@ -429,28 +427,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'testAccountName'};
-let options: osAccount.CreateOsAccountForDomainOptions = {
-  shortName: 'myShortName'
-}
-try {
-  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="createosaccountfordomain-1"></a>
 
 ## createOsAccountForDomain
@@ -502,7 +478,27 @@ Creates an OS account and associates it with the specified domain account. This 
 
 **Examples**
 
-See [createOsAccountForDomain](#createosaccountfordomain)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName'
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## deactivateOsAccount
 
@@ -602,23 +598,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let testUid: number = 1000000;
-try {
-  accountManager.getBundleIdForUid(testUid).then((result: number) => {
-    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="getbundleidforuid-1"></a>
 
 ## getBundleIdForUid
@@ -658,7 +637,22 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 
 **Examples**
 
-See [getBundleIdForUid](#getbundleidforuid)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let testUid: number = 1000000;
+try {
+  accountManager.getBundleIdForUid(testUid).then((result: number) => {
+    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getBundleIdForUidSync
 
@@ -855,22 +849,6 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getForegroundOsAccountLocalId().then((localId: number) => {
-    console.info('getForegroundOsAccountLocalId, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getForegroundOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getForegroundOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let displayId: number = 0;
 try {
   accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
@@ -940,23 +918,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
-    (result: osAccount.ConstraintSourceTypeInfo[]) => {
-    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="getosaccountconstraintsourcetypes-1"></a>
 
 ## getOsAccountConstraintSourceTypes
@@ -1001,7 +962,22 @@ Obtains the constraint source information of an OS account. This API uses a prom
 
 **Examples**
 
-See [getOsAccountConstraintSourceTypes](#getosaccountconstraintsourcetypes)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getOsAccountProfilePhoto
 
@@ -1086,7 +1062,9 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 **Examples**
 
-See [getOsAccountProfilePhoto](#getosaccountprofilephoto)
+```TypeScript
+Obtain the profile photo of OS account 100.
+```
 
 <a id="getosaccounttype-2"></a>
 
@@ -1129,40 +1107,6 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountType((err: BusinessError, accountType: osAccount.OsAccountType) => {
-    if (err) {
-      console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getOsAccountType accountType: ' + accountType);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
-    console.info('getOsAccountType, accountType: ' + accountType);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1232,22 +1176,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.isMainOsAccount().then((result: boolean) => {
-    console.info('isMainOsAccount result:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="ismainosaccount-1"></a>
 
 ## isMainOsAccount
@@ -1282,7 +1210,21 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 **Examples**
 
-See [isMainOsAccount](#ismainosaccount)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isMainOsAccount().then((result: boolean) => {
+    console.info('isMainOsAccount result:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## isOsAccountActivated
 
@@ -1372,10 +1314,6 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 **Examples**
 
 ```TypeScript
-Check whether the current OS account is forbidden to use Wi-Fi.
-```
-
-```TypeScript
 Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
 
@@ -1420,22 +1358,6 @@ Checks whether an OS account has been unlocked. This API uses a promise to retur
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
-    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
-}
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1507,30 +1429,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switching');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switched');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## off('switching')
 
 ```TypeScript
@@ -1567,7 +1465,17 @@ Unsubscribes from the switchover between a foreground OS account and a backgroun
 
 **Examples**
 
-See off
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## off('switched')
 
@@ -1605,7 +1513,17 @@ Unsubscribes from the end of a switchover between a foreground OS account and a 
 
 **Examples**
 
-See off
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switched');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## offConstraintChanged
 
@@ -1713,40 +1631,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switching', onSwitchingCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switched', onSwitchedCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## on('switching')
 
 ```TypeScript
@@ -1783,7 +1667,22 @@ Subscribes to the switchover between a foreground OS account and a background OS
 
 **Examples**
 
-See on
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switching', onSwitchingCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## on('switched')
 
@@ -1821,7 +1720,22 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 
 **Examples**
 
-See on
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switched', onSwitchedCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## onConstraintChanged
 
@@ -1922,22 +1836,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
-    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
-  }).catch((err: BusinessError) => {
-    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="queryallcreatedosaccounts-1"></a>
 
 ## queryAllCreatedOsAccounts
@@ -1972,7 +1870,21 @@ Queries information about all the OS accounts created. This API uses a promise t
 
 **Examples**
 
-See [queryAllCreatedOsAccounts](#queryallcreatedosaccounts)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
+    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((err: BusinessError) => {
+    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -2067,22 +1979,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
-    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
-  }).catch((err: BusinessError) => {
-    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="querymaxosaccountnumber-1"></a>
 
 ## queryMaxOsAccountNumber
@@ -2114,7 +2010,21 @@ Queries the maximum number of OS accounts that can be created. This API uses a p
 
 **Examples**
 
-See [queryMaxOsAccountNumber](#querymaxosaccountnumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
+    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
+  }).catch((err: BusinessError) => {
+    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryOsAccount
 
@@ -2247,7 +2157,9 @@ Queries information about the OS account of the given ID. This API uses a promis
 
 **Examples**
 
-See [queryOsAccountById](#queryosaccountbyid)
+```TypeScript
+Query information about OS account 100.
+```
 
 ## removeOsAccount
 
@@ -2309,50 +2221,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-let token: Uint8Array = new Uint8Array([0]);
-let options: osAccount.RemoveOsAccountOptions = {
-  token: token,
-}
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="removeosaccount-1"></a>
 
 ## removeOsAccount
@@ -2398,7 +2266,25 @@ Removes an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-See [removeOsAccount](#removeosaccount)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 <a id="removeosaccount-2"></a>
 
@@ -2446,7 +2332,29 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 **Examples**
 
-See [removeOsAccount](#removeosaccount)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+let token: Uint8Array = new Uint8Array([0]);
+let options: osAccount.RemoveOsAccountOptions = {
+  token: token,
+}
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setOsAccountConstraints
 
@@ -2489,10 +2397,6 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 
 ```TypeScript
 Disable Wi-Fi for OS account 100.
-```
-
-```TypeScript
-Remove the constraint on the use of Wi-Fi for OS account 100.
 ```
 
 <a id="setosaccountconstraints-1"></a>
@@ -2541,7 +2445,9 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 
 **Examples**
 
-See [setOsAccountConstraints](#setosaccountconstraints)
+```TypeScript
+Remove the constraint on the use of Wi-Fi for OS account 100.
+```
 
 ## setOsAccountName
 
@@ -2630,7 +2536,9 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 **Examples**
 
-See [setOsAccountName](#setosaccountname)
+```TypeScript
+Set the name of OS account 100 to demoName.
+```
 
 ## setOsAccountProfilePhoto
 
@@ -2719,7 +2627,9 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 **Examples**
 
-See [setOsAccountProfilePhoto](#setosaccountprofilephoto)
+```TypeScript
+Set a profile photo for OS account 100.
+```
 
 ## setOsAccountType
 

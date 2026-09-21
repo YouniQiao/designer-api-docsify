@@ -55,6 +55,8 @@ Creates a **Grid** component.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -63,8 +65,8 @@ Creates a **Grid** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroller-c.md) | No | Controller, which can be bound to scrollable components.<br>**NOTE:** <br>It cannot be bound to the same scrolling control object as other scrollable components, such as ArcList, List, Grid, Scroll, and WaterFlow. |
-| layoutOptions | [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | No | Grid layout options. |
+| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller, which can be bound to scrollable components.<br>**NOTE:** <br>It cannot be bound to the same scrolling control object as other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), List, Grid, Scroll, and WaterFlow. |
+| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) | No | Grid layout options. |
 
 ## Summary
 
@@ -72,32 +74,32 @@ Creates a **Grid** component.
 
 | Name | Description |
 | --- | --- |
-| [ComputedBarAttribute](arkts-arkui-computedbarattribute-i.md) | Provides information about the position and length of the scrollbar. |
-| [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns). On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout). |
-| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | Define start line info used in GridLayoutOptions. |
-| [UIGridEvent](arkts-arkui-uigridevent-i.md) | Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-3) method in **frameNode**, which can be used to set scroll events for a **Grid** node. |
+| [ComputedBarAttribute](arkts-arkui-grid-comp-computedbarattribute-i.md) | Provides information about the position and length of the scrollbar. |
+| [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) | Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns). On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout). |
+| [StartLineInfo](arkts-arkui-grid-comp-startlineinfo-i-sys.md) | Define start line info used in GridLayoutOptions. |
+| [UIGridEvent](arkts-arkui-grid-comp-uigridevent-i.md) | Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-3) method in **frameNode**, which can be used to set scroll events for a **Grid** node. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions. |
-| [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions. |
-| [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **Grid** component. |
+| [OnGetStartIndexByIndexCallback](arkts-arkui-grid-comp-ongetstartindexbyindexcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions. |
+| [OnGetStartIndexByOffsetCallback](arkts-arkui-grid-comp-ongetstartindexbyoffsetcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions. |
+| [OnGridScrollIndexCallback](arkts-arkui-grid-comp-ongridscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **Grid** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [GridDirection](arkts-arkui-griddirection-e.md) | Enumerates the main axis layout directions. |
-| [GridItemAlignment](arkts-arkui-griditemalignment-e.md) | Enumerates the alignment modes of grid items. |
+| [GridDirection](arkts-arkui-grid-comp-griddirection-e.md) | Enumerates the main axis layout directions. |
+| [GridItemAlignment](arkts-arkui-grid-comp-griditemalignment-e.md) | Enumerates the alignment modes of grid items. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Creating a Fixed Row and Column Grid Layout
 
-You can use the onGetRectByIndex function in the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) to specify the position and size of a grid item.
+You can use the onGetRectByIndex function in the [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) to specify the position and size of a grid item.
 ```
 
 ```TypeScript
@@ -115,7 +117,7 @@ GridDataSource implements the LazyForEach data source API [IDataSource](ts-rende
 ```TypeScript
 ### Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns
 
-[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md): irregularIndexes and onGetIrregularSizeByIndex.
+[GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md): irregularIndexes and onGetIrregularSizeByIndex.
 
 For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
 
@@ -239,7 +241,7 @@ In API version 20 and later versions, this example uses the [focusWrapMode](#foc
 ```TypeScript
 ### Example 13: Setting Scrolling Events
 
-This example obtains a [UIGridEvent](arkts-arkui-uigridevent-i.md) instance via getEvent('Grid') on a FrameNode and sets scroll event callbacks for a Grid component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
+This example obtains a [UIGridEvent](arkts-arkui-grid-comp-uigridevent-i.md) instance via getEvent('Grid') on a FrameNode and sets scroll event callbacks for a Grid component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
 
 The UIGridEvent API is added since API version 19.
 ```

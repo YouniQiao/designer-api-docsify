@@ -4,7 +4,7 @@
 declare class FolderStackAttribute extends CommonMethod<FolderStackAttribute>
 ```
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md), the following events are supported.
 
 **继承/实现关系：** FolderStackAttribute extends CommonMethod<FolderStackAttribute>
 
@@ -118,7 +118,7 @@ onFolderStateChange(callback: OnFoldStatusChangeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 是 | 当前设备的折叠状态改变时触发的回调。<br>**适用版本：** 18 |
+| callback | [OnFoldStatusChangeCallback](arkts-arkui-folderstack-comp-onfoldstatuschangecallback-t.md) | 是 | 当前设备的折叠状态改变时触发的回调。<br>**适用版本：** 18 |
 
 ## onHoverStatusChange
 
@@ -146,4 +146,4 @@ onHoverStatusChange(handler: OnHoverStatusChangeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 是 | 当前设备的悬停状态改变时触发的回调。<br>**适用版本：** 18 |
+| handler | [OnHoverStatusChangeCallback](arkts-arkui-folderstack-comp-onhoverstatuschangecallback-t.md) | 是 | 当前设备的悬停状态改变时触发的回调。<br>**适用版本：** 18 |

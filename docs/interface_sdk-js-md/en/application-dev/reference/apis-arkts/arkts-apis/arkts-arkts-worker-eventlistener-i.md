@@ -41,3 +41,15 @@ Specifies the callback to invoke.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | evt | [Event](arkts-arkts-worker-event-i.md) | Yes | evt evt Event class for the callback to invoke. |
+
+**Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+workerInstance.addEventListener("alert", ()=>{
+    console.info("alert listener callback");
+})
+```

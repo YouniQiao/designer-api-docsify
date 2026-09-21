@@ -28,6 +28,8 @@ Performs the reverse operation of [PersistProp](#persistprop). Specifically, thi
 
 **Substitutes:** [deleteProp](#deleteprop)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -81,6 +83,8 @@ Returns an array of all persisted property names.
 **Deprecated since:** 10
 
 **Substitutes:** [keys](#keys)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -148,6 +152,8 @@ According to the preceding initialization process, if the property exists in App
 **Deprecated since:** 10
 
 **Substitutes:** [persistProp](#persistprop)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -222,6 +228,8 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 **Deprecated since:** 10
 
 **Substitutes:** [PersistProps](#persistprops)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

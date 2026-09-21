@@ -47,18 +47,6 @@ dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // Obtain the 
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
-  if (err) {
-    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('accessRecords', JSON.stringify(accessRecords));
-  }
-}); // Obtain the list of recently accessed DLP files.
-```
-
 
 <a id="getdlpfileaccessrecords-1"></a>
 
@@ -94,4 +82,14 @@ This API is used to obtain the list of DLP files that are accessed recently, whi
 
 **Examples**
 
-See [getDLPFileAccessRecords](#getdlpfileaccessrecords)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
+  if (err) {
+    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('accessRecords', JSON.stringify(accessRecords));
+  }
+}); // Obtain the list of recently accessed DLP files.
+```

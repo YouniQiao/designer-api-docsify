@@ -85,16 +85,6 @@ function enableInputMethodSafely() {
 enableInputMethodSafely();
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
-  console.info('Succeeded in enabling input method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 <a id="enableinputmethod-1"></a>
 
 ## enableInputMethod
@@ -146,7 +136,15 @@ enableInputMethod(
 
 **示例**
 
-参见 [enableInputMethod](#enableinputmethod)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
+  console.info('Succeeded in enabling input method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 <a id="getallinputmethodssync-1"></a>
 
@@ -190,10 +188,6 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
 **示例**
-
-```TypeScript
-let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -353,10 +347,6 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 **示例**
 
 ```TypeScript
-let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
@@ -476,23 +466,6 @@ try {
 }
 ```
 
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-
-let displayId: number = 10;
-let info: PanelInfo = {
-  type: PanelType.SOFT_KEYBOARD,
-  flag: PanelFlag.FLAG_FIXED
-}
-
-try {
-  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
-  console.info('Succeeded in querying isPanelShown, result: ' + result);
-} catch (err) {
-  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 <a id="ispanelshown-1"></a>
 
 ## isPanelShown
@@ -533,7 +506,22 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 
 **示例**
 
-参见 [isPanelShown](#ispanelshown)
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+
+let displayId: number = 10;
+let info: PanelInfo = {
+  type: PanelType.SOFT_KEYBOARD,
+  flag: PanelFlag.FLAG_FIXED
+}
+
+try {
+  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+  console.info('Succeeded in querying isPanelShown, result: ' + result);
+} catch (err) {
+  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## off('imeShow')
 
@@ -556,6 +544,12 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | type | 'imeShow' | 是 | 设置监听类型，固定取值'imeShow'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+inputMethod.getSetting().off('imeShow');
+```
+
 ## off('imeHide')
 
 ```TypeScript
@@ -576,6 +570,12 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | --- | --- | --- | --- |
 | type | 'imeHide' | 是 | 设置监听类型，固定取值'imeHide'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethod.getSetting().off('imeHide');
+```
 
 ## offImeChangeWithUserId
 
@@ -638,6 +638,14 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
+**示例**
+
+```TypeScript
+inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeShow event.');
+});
+```
+
 ## on('imeHide')
 
 ```TypeScript
@@ -664,6 +672,14 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+
+**示例**
+
+```TypeScript
+inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeHide event.');
+});
+```
 
 ## onImeChangeWithUserId
 

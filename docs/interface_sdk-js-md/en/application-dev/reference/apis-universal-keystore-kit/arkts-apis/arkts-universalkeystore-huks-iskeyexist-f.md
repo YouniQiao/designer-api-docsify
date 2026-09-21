@@ -44,17 +44,6 @@ huks.isKeyExist(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.isKeyExist(keyAlias, emptyOptions);
-```
-
 
 <a id="iskeyexist-1"></a>
 
@@ -89,4 +78,13 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Examples**
 
-See [isKeyExist](#iskeyexist)
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.isKeyExist(keyAlias, emptyOptions);
+```

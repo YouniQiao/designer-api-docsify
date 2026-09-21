@@ -4,13 +4,13 @@
 declare class ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>
 ```
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
 
 > **NOTE:** 
 > 
 > The default value of shape clipping of the **ColumnSplit** component is **true**.
 
-The universal events are supported.
+The [universal events](arkts-arkui-common-comp.md#common) are supported.
 
 **Inheritance/Implementation:** ColumnSplitAttribute extends CommonMethod<ColumnSplitAttribute>
 
@@ -38,7 +38,7 @@ Sets the distance between the divider and the child components.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) &#124; null | Yes | Margin of the divider, which sets the distance between the divider and child components. The object properties include: **startMargin** (distance between the child component and the divider above) and **endMargin** (distance between the child component and the divider below).<br>Default value: **null**. When set to **null**, the distance between the divider and child components is 0 vp. <br>Illegal value: The default value is used. |
+| value | [ColumnSplitDividerStyle](arkts-arkui-columnsplit-comp-columnsplitdividerstyle-i.md) &#124; null | Yes | Margin of the divider, which sets the distance between the divider and child components. The object properties include: **startMargin** (distance between the child component and the divider above) and **endMargin** (distance between the child component and the divider below).<br>Default value: **null**. When set to **null**, the distance between the divider and child components is 0 vp. <br>Illegal value: The default value is used. |
 
 ## resizeable
 
@@ -51,7 +51,7 @@ Sets whether the divider can be dragged. When set to **true**, the user can drag
 > **NOTE:** 
 > 
 > After initialization, when dynamic modification of the margin,
-> [border](arkts-arkui-commonmethod-c.md#border), or padding universal attributes causes a child
+> [border](arkts-arkui-common-comp-commonmethod-c.md#border), or padding universal attributes causes a child
 > component size to exceed the spacing between adjacent dividers, dragging the divider to change the child
 > component height is not supported.
 

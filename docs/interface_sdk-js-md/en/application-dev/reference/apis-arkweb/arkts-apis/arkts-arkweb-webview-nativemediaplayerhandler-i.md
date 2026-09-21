@@ -36,6 +36,12 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 | --- | --- | --- | --- |
 | bufferedEndTime | number | Yes | Duration of the buffered media.<br>Unit: second. Value range: [0, duration]. If the value is out of range, the ArkWeb kernel will not execute. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleDurationChanged
 
 ```TypeScript
@@ -56,6 +62,12 @@ Called to notify the ArkWeb engine of the total duration of the media.
 | --- | --- | --- | --- |
 | duration | number | Yes | Total duration of the media.<br>Unit: second. Value range: [0, +∞). If a negative number is passed in, the ArkWeb kernel will not execute. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleEnded
 
 ```TypeScript
@@ -69,6 +81,12 @@ When media playback ends, this method is called to notify the ArkWeb kernel of t
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
 
 ## handleError
 
@@ -91,6 +109,12 @@ When an error occurs in the player, this method is called to notify the ArkWeb k
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Yes | Error object type. |
 | errorMessage | string | Yes | Error message. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleFullscreenChanged
 
 ```TypeScript
@@ -110,6 +134,12 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fullscreen | boolean | Yes | Whether the player is in full screen.<br>The value **true** means that the player is in full screen, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
 
 ## handleMutedChanged
 
@@ -131,6 +161,12 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 | --- | --- | --- | --- |
 | muted | boolean | Yes | Whether the player is muted.<br>The value **true** indicates that the player is muted, and **false** indicates the opposite. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleNetworkStateChanged
 
 ```TypeScript
@@ -150,6 +186,12 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | Yes | Network status of the player. |
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
 
 ## handlePlaybackRateChanged
 
@@ -171,6 +213,12 @@ When the playback rate of the player changes, this method is called to notify th
 | --- | --- | --- | --- |
 | playbackRate | number | Yes | Playback rate. The value range is [0, +∞). If a negative number is passed in, the ArkWeb kernel will not execute it. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleReadyStateChanged
 
 ```TypeScript
@@ -191,6 +239,12 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 | --- | --- | --- | --- |
 | state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Yes | Cache status of the player. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleSeekFinished
 
 ```TypeScript
@@ -205,6 +259,12 @@ When the player completes seeking, this method is called to notify the ArkWeb ke
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleSeeking
 
 ```TypeScript
@@ -218,6 +278,12 @@ When the player enters the seek state, this method is called to notify the ArkWe
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
 
 ## handleStatusChanged
 
@@ -239,6 +305,12 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 | --- | --- | --- | --- |
 | status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Yes | Player status. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleTimeUpdate
 
 ```TypeScript
@@ -258,6 +330,12 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | currentPlayTime | number | Yes | Current playback time.<br>Unit: second. Value range: [0, duration]. If the value is out of range, the ArkWeb kernel will not execute it. |
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
 
 ## handleVideoSizeChanged
 
@@ -280,6 +358,12 @@ When the player parses the video dimensions, this method is called to notify the
 | width | number | Yes | Width of the video, in pixels. Value range: [0, +∞). If a negative number is passed in, the ArkWeb kernel ignores this value. |
 | height | number | Yes | Height of the video, in pixels. Value range: [0, +∞). If a negative number is passed in, the ArkWeb kernel ignores this value. |
 
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```
+
 ## handleVolumeChanged
 
 ```TypeScript
@@ -299,3 +383,9 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volume | number | Yes | Volume of the player. Value range: [0, 1.0]. If the value is out of range, the ArkWeb kernel will not execute it. |
+
+**Examples**
+
+```TypeScript
+For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+```

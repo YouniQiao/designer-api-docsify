@@ -186,7 +186,9 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **示例**
 
-参见 [getDeviceInfo](#getdeviceinfo)
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## getLocalDeviceInfo
 
@@ -263,7 +265,9 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **示例**
 
-参见 [getLocalDeviceInfo](#getlocaldeviceinfo)
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## getLocalDeviceInfoSync
 
@@ -380,7 +384,9 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **示例**
 
-参见 [getTrustedDeviceList](#gettrusteddevicelist)
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## getTrustedDeviceListSync
 
@@ -465,7 +471,9 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 **示例**
 
-参见 [getTrustedDeviceListSync](#gettrusteddevicelistsync)
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## importCredential
 
@@ -539,6 +547,12 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## off('deviceStateChange')
 
 ```TypeScript
@@ -572,6 +586,12 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## off('deviceFound')
 
@@ -607,6 +627,12 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## off('discoverFail')
 
 ```TypeScript
@@ -641,6 +667,12 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## off('publishSuccess')
 
 ```TypeScript
@@ -673,6 +705,12 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## off('publishFail')
 
 ```TypeScript
@@ -704,6 +742,12 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## off('serviceDie')
 
@@ -739,6 +783,12 @@ off(type: 'serviceDie', callback?: () => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## on('uiStateChange')
 
 ```TypeScript
@@ -772,6 +822,12 @@ ui状态变更回调。
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## on('deviceStateChange')
 
@@ -807,6 +863,12 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## on('deviceFound')
 
 ```TypeScript
@@ -840,6 +902,12 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## on('discoverFail')
 
@@ -875,6 +943,12 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## on('publishSuccess')
 
 ```TypeScript
@@ -907,6 +981,12 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
+
 ## on('publishFail')
 
 ```TypeScript
@@ -938,6 +1018,12 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## on('serviceDie')
 
@@ -972,6 +1058,12 @@ on(type: 'serviceDie', callback: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+**示例**
+
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## publishDeviceDiscovery
 
@@ -1209,7 +1301,9 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 **示例**
 
-参见 [startDeviceDiscovery](#startdevicediscovery)
+```TypeScript
+示例中的初始化请参见deviceManager.createDeviceManager。
+```
 
 ## stopDeviceDiscovery
 

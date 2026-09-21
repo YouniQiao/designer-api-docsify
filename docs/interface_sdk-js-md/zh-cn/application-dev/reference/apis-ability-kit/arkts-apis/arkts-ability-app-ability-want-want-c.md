@@ -232,3 +232,78 @@ uri?: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
+
+**示例**
+
+```TypeScript
+基础用法：在UIAbility对象中调用，示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```
+
+```TypeScript
+目前支持的数据类型有：字符串、数字、布尔、对象、数组和文件描述符等。
+
+字符串（String）
+```
+
+```TypeScript
+数字（Number）
+```
+
+```TypeScript
+布尔（Boolean）
+```
+
+```TypeScript
+对象（Object）
+```
+
+```TypeScript
+数组（Array）
+```
+
+```TypeScript
+文件描述符（FD）
+```
+
+```TypeScript
+// 被拉起方：通过want.fds获取拉起方传入的文件描述符
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+export default class FuncAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let fd: number = -1;
+    // 从want.fds中获取拉起方传入的文件描述符，keyFd需与拉起方传入时使用的key保持一致
+    const fds = want.fds;
+    if (fds && fds.keyFd !== undefined) {
+      fd = fds.keyFd;
+    }
+    // 校验文件描述符是否有效（非负整数表示有效），若无效则记录错误并立即退出，避免后续使用非法fd导致崩溃
+    if (fd < 0) {
+      console.error(`Failed to get fd from want.fds`);
+      return;
+    }
+    // ...
+    fileIo.closeSync(fd); // 使用完毕后关闭文件描述符，避免文件描述符泄漏
+  }
+}
+```
+
+```TypeScript
+parameters参数用法：parameters携带开发者自定义参数，由UIAbilityA传递给UIAbilityB，并在UIAbilityB中进行获取。
+```
+
+```TypeScript
+// (2) 以UIAbilityB实例首次启动为例，会进入到UIAbilityB的onCreate生命周期
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+class UIAbilityB extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info(`onCreate, want parameters: ${want.parameters?.developerParameters}`);
+  }
+}
+```
+
+```TypeScript
+parameters参数中[wantConstant](arkts-ability-app-ability-wantconstant.md)的Key的使用方法。
+```

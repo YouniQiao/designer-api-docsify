@@ -33,6 +33,8 @@ static Clear(): boolean
 
 **替代接口：** [clear](#clear)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -94,6 +96,8 @@ static Delete(propName: string): boolean
 **废弃版本：** 10
 
 **替代接口：** [delete](#delete)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -185,6 +189,8 @@ static Get<T>(propName: string): T | undefined
 
 **替代接口：** [get](#get)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -252,6 +258,8 @@ static Has(propName: string): boolean
 **废弃版本：** 10
 
 **替代接口：** [has](#has)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -321,6 +329,8 @@ static IsMutable(propName: string): boolean
 
 **废弃版本：** 10
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -355,6 +365,8 @@ static Keys(): IterableIterator<string>
 **废弃版本：** 10
 
 **替代接口：** [keys](#keys)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -415,6 +427,8 @@ static Link(propName: string): any
 **废弃版本：** 10
 
 **替代接口：** [link](#link)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -493,6 +507,8 @@ static Prop(propName: string): any
 **废弃版本：** 10
 
 **替代接口：** [prop](#prop)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -603,6 +619,8 @@ static Set<T>(propName: string, newValue: T): boolean
 
 **替代接口：** [set](#set)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -675,6 +693,8 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 **替代接口：** [setAndLink](#setandlink)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -746,6 +766,8 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 **废弃版本：** 10
 
 **替代接口：** [setAndProp](#setandprop)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -854,6 +876,8 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 
 **替代接口：** [setOrCreate](#setorcreate)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -912,6 +936,8 @@ static Size(): number
 
 **替代接口：** [size](#size)
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **返回值：**
@@ -967,6 +993,8 @@ static staticClear(): boolean
 **废弃版本：** 9
 
 **替代接口：** [Clear](#clear)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

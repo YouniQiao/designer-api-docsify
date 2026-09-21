@@ -94,39 +94,6 @@ async function exampleFunction() {
 exampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-  
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-    if (err) {
-      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Add a link file.
-}
-
-ExampleFunction();
-```
-
 <a id="adddlplinkfile-1"></a>
 
 ## addDLPLinkFile
@@ -170,7 +137,38 @@ This API is called when a DLP application needs to access a DLP file using a sta
 
 **Examples**
 
-See [addDLPLinkFile](#adddlplinkfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+  
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
+    if (err) {
+      console.error(`Failed to add DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Add a link file.
+}
+
+ExampleFunction();
+```
 
 ## closeDLPFile
 
@@ -244,38 +242,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
-    if (err) {
-      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
-
 <a id="closedlpfile-1"></a>
 
 ## closeDLPFile
@@ -322,7 +288,37 @@ This API is used when the file owner decides to close a DLP file.
 
 **Examples**
 
-See [closeDLPFile](#closedlpfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
+    if (err) {
+      console.error(`Failed to close DLPFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## deleteDLPLinkFile
 
@@ -401,40 +397,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
-    if (err) {
-      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
-
 <a id="deletedlplinkfile-1"></a>
 
 ## deleteDLPLinkFile
@@ -478,7 +440,39 @@ This API is used to clear the link file mapping after DLP file access is complet
 
 **Examples**
 
-See [deleteDLPLinkFile](#deletedlplinkfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
+    if (err) {
+      console.error(`Failed to delete DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## recoverDLPFile
 
@@ -564,42 +558,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let destFile: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('destUri').fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
-    if (err) {
-      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-    fileIo.closeSync(destFile);
-  });
-}
-
-ExampleFunction();
-```
-
 <a id="recoverdlpfile-1"></a>
 
 ## recoverDLPFile
@@ -647,7 +605,41 @@ This API is used when the file owner decides to disable the DLP protection for a
 
 **Examples**
 
-See [recoverDLPFile](#recoverdlpfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let destFile: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  destFile = fileIo.openSync('destUri').fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
+    if (err) {
+      console.error(`Failed to recover DLPFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+    fileIo.closeSync(destFile);
+  });
+}
+
+ExampleFunction();
+```
 
 ## replaceDLPLinkFile
 
@@ -726,42 +718,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
-    if (err) {
-      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-      await dlpFile?.resumeFuseLink(); // Resume the read and write on the link file.
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  });
-}
-
-ExampleFunction();
-```
-
 <a id="replacedlplinkfile-1"></a>
 
 ## replaceDLPLinkFile
@@ -803,7 +759,41 @@ When you need to access a different DLP file, you can replace the link file. Bef
 
 **Examples**
 
-See [replaceDLPLinkFile](#replacedlplinkfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
+    if (err) {
+      console.error(`Failed to replace DLPLinkFile. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+      await dlpFile?.resumeFuseLink(); // Resume the read and write on the link file.
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  });
+}
+
+ExampleFunction();
+```
 
 ## resumeFuseLink
 
@@ -876,41 +866,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  dlpFile.resumeFuseLink(async (err, res) => {
-    if (err) {
-      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Resume read/write on the link file.
-}
-
-ExampleFunction();
-```
-
 <a id="resumefuselink-1"></a>
 
 ## resumeFuseLink
@@ -953,7 +908,40 @@ After the link file is replaced, the read and write need to be resumed.
 
 **Examples**
 
-See [resumeFuseLink](#resumefuselink)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  dlpFile.resumeFuseLink(async (err, res) => {
+    if (err) {
+      console.error(`Failed to resume FuseLink. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Resume read/write on the link file.
+}
+
+ExampleFunction();
+```
 
 ## stopFuseLink
 
@@ -1024,40 +1012,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  dlpFile.stopFuseLink(async (err, res) => {
-    if (err) {
-      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Stop read/write on the link file.
-}
-
-ExampleFunction();
-```
-
 <a id="stopfuselink-1"></a>
 
 ## stopFuseLink
@@ -1100,7 +1054,39 @@ Before deleting a link file, stop the read and write.
 
 **Examples**
 
-See [stopFuseLink](#stopfuselink)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+async function ExampleFunction() {
+  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+  let file: number | undefined = undefined;
+  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+  let appId = '';
+  let bundleName = 'com.ohos.note';
+  let userId = 100;
+  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
+
+  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+  appId = data.signatureInfo.appId;
+
+  file = fileIo.openSync(uri).fd;
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  dlpFile.stopFuseLink(async (err, res) => {
+    if (err) {
+      console.error(`Failed to stop FuseLink. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    fileIo.closeSync(file);
+  }); // Stop read/write on the link file.
+}
+
+ExampleFunction();
+```
 
 ## dlpProperty
 

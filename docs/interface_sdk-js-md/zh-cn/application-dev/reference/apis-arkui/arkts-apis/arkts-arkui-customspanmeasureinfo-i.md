@@ -42,7 +42,7 @@ layoutPolicy?: LayoutPolicy
 
 当值为null或undefined时，表示父组件没有设置宽度布局策略。
 
-**类型：** [LayoutPolicy](../arkts-components/arkts-arkui-layoutpolicy-c.md)
+**类型：** [LayoutPolicy](../arkts-components/arkts-arkui-common-comp-layoutpolicy-c.md)
 
 **起始版本：** 26.0.0
 

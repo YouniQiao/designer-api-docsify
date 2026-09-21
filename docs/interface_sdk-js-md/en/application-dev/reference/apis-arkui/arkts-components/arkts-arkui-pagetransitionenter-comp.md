@@ -20,7 +20,7 @@ Sets the page entrance animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Yes | pageTransition options |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | Yes | pageTransition options |
 
 ## PageTransitionEnter
 
@@ -40,7 +40,7 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1. |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitionenter-comp-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1. |
 
 ## Summary
 
@@ -48,21 +48,21 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 | Name | Description |
 | --- | --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | Provide an interface to set transition style when a page exits. |
-| [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Parameters of the exit or entrance animation. |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-comp-pagetransitionexitinterface-i.md) | Provide an interface to set transition style when a page exits. |
+| [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | Parameters of the exit or entrance animation. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Represents the callback for page transition events. |
+| [PageTransitionCallback](arkts-arkui-pagetransitionenter-comp-pagetransitioncallback-t.md) | Represents the callback for page transition events. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RouteType](arkts-arkui-routetype-e.md) | Sets the type of page transition. |
-| [SlideEffect](arkts-arkui-slideeffect-e.md) | Slide-in and slide-out effects for page transitions. |
+| [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md) | Sets the type of page transition. |
+| [SlideEffect](arkts-arkui-pagetransitionenter-comp-slideeffect-e.md) | Slide-in and slide-out effects for page transitions. |
 
 ## Examples
 

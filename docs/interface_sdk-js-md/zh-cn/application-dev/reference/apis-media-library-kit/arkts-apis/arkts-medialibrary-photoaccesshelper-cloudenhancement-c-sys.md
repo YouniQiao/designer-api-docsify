@@ -386,7 +386,9 @@ submitCloudEnhancementTasks(
 
 **示例**
 
-参见 [submitCloudEnhancementTasks](#submitcloudenhancementtasks)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## syncCloudEnhancementTaskStatus
 

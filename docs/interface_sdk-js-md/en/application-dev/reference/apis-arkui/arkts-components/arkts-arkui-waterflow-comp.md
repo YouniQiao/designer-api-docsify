@@ -42,6 +42,8 @@ Creates a **WaterFlow** component.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -50,7 +52,7 @@ Creates a **WaterFlow** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | No | Parameters of the **WaterFlow** component. |
+| options | [WaterFlowOptions](arkts-arkui-waterflow-comp-waterflowoptions-i.md) | No | Parameters of the **WaterFlow** component. |
 
 ## Summary
 
@@ -58,21 +60,21 @@ Creates a **WaterFlow** component.
 
 | Name | Description |
 | --- | --- |
-| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-2) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node. |
-| [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | Provides parameters of the **WaterFlow** component. |
+| [UIWaterFlowEvent](arkts-arkui-waterflow-comp-uiwaterflowevent-i.md) | Represents the return value of the [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-2) method in **frameNode**, which can be used to set scroll events for a **WaterFlow** node. |
+| [WaterFlowOptions](arkts-arkui-waterflow-comp-waterflowoptions-i.md) | Provides parameters of the **WaterFlow** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) | Obtains the main axis size of a specified water flow item based on its index. |
-| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **WaterFlow** component. |
+| [GetItemMainSizeByIndex](arkts-arkui-waterflow-comp-getitemmainsizebyindex-t.md) | Obtains the main axis size of a specified water flow item based on its index. |
+| [OnWaterFlowScrollIndexCallback](arkts-arkui-waterflow-comp-onwaterflowscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **WaterFlow** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md) | Enumerates the layout modes of the **WaterFlow** component. |
+| [WaterFlowLayoutMode](arkts-arkui-waterflow-comp-waterflowlayoutmode-e.md) | Enumerates the layout modes of the **WaterFlow** component. |
 
 ## Examples
 
@@ -145,7 +147,7 @@ For details about WaterFlowDataSource and the complete code, see [Example 1: Usi
 ```TypeScript
 ### Example 7: Setting and Changing the Footer Component in the WaterFlow Component
 
-In API version 18 and later versions, this example demonstrates how to set the footer component in the WaterFlow component using the footerContent API of [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md). The footer component is updated using the update function of ComponentContent.
+In API version 18 and later versions, this example demonstrates how to set the footer component in the WaterFlow component using the footerContent API of [WaterFlowOptions](arkts-arkui-waterflow-comp-waterflowoptions-i.md). The footer component is updated using the update function of ComponentContent.
 
 For details about WaterFlowDataSource and the complete code, see [Example 1: Using a Basic WaterFlow Component](#example-1-using-a-basic-waterflow-component).
 
@@ -193,7 +195,7 @@ For details about WaterFlowDataSource and the complete code, see [Example 1: Usi
 ```TypeScript
 ### Example 11: Setting a Scrolling Event
 
-This example obtains a [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) instance via getEvent('WaterFlow') on a FrameNode and sets scroll event callbacks for a WaterFlow component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
+This example obtains a [UIWaterFlowEvent](arkts-arkui-waterflow-comp-uiwaterflowevent-i.md) instance via getEvent('WaterFlow') on a FrameNode and sets scroll event callbacks for a WaterFlow component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
 
 The UIWaterFlowEvent API is added since API version 19.
 ```

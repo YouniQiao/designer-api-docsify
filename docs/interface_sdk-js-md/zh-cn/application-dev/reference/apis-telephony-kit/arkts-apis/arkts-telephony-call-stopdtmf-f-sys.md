@@ -55,16 +55,6 @@ call.stopDTMF(1, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.stopDTMF(1).then(() => {
-    console.info(`stopDTMF success.`);
-}).catch((err: BusinessError) => {
-    console.error(`stopDTMF fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 <a id="stopdtmf-1"></a>
 
@@ -110,4 +100,12 @@ function stopDTMF(callId: number): Promise<void>
 
 **示例**
 
-参见 [stopDTMF](#stopdtmf)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.stopDTMF(1).then(() => {
+    console.info(`stopDTMF success.`);
+}).catch((err: BusinessError) => {
+    console.error(`stopDTMF fail, promise: err->${JSON.stringify(err)}`);
+});
+```

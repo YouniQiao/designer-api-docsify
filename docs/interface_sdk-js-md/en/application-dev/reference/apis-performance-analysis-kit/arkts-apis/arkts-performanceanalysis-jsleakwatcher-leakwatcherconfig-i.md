@@ -32,6 +32,8 @@ The default threshold is **1**.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## checkInterval
@@ -52,6 +54,8 @@ Currently, the performance overhead of JSLeakWatcher is high, which may cause ap
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## dumpHeapWaitTimeMs
@@ -71,6 +75,8 @@ By default, the dump is performed 5 seconds after the GC ends.
 **Type:** number
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -94,6 +100,8 @@ The default value is an empty array.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## fgLeakCountThreshold
@@ -112,6 +120,8 @@ The default threshold is **5**.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## maxStoredHeapDumps
@@ -128,6 +138,8 @@ By default, 10 .rawheap files and 10 .jsleaklist files are saved.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## monitorObjectTypes
@@ -143,6 +155,8 @@ By default, all component types are monitored.
 **Type:** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -163,5 +177,7 @@ The default value is an empty array.
 **Type:** Array&lt;number&gt;
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker

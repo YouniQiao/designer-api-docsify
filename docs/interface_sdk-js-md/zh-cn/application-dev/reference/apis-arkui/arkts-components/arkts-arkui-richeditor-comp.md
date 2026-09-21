@@ -2,7 +2,7 @@
 
 支持图文混排和文本交互式编辑的组件。
 
-> **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
+> **说明：** > > - 该组件从API版本26.0.0开始支持[WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component)。
 
 ## 子组件
 
@@ -28,7 +28,7 @@ RichEditor(value: RichEditorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | 是 | 富文本组件初始化选项。 |
+| value | [RichEditorOptions](arkts-arkui-richeditor-comp-richeditoroptions-i.md) | 是 | 富文本组件初始化选项。 |
 
 ## RichEditor
 
@@ -50,7 +50,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | 是 | 富文本组件初始化选项。 |
+| options | [RichEditorStyledStringOptions](arkts-arkui-richeditor-comp-richeditorstyledstringoptions-i.md) | 是 | 富文本组件初始化选项。 |
 
 ## 汇总
 
@@ -58,75 +58,75 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) | 定义**RichEditor**中BuilderSpan的身份与位置信息。 |
-| [CopyEvent](arkts-arkui-copyevent-i.md) | 定义用户复制事件。 |
-| [CutEvent](arkts-arkui-cutevent-i.md) | 定义用户剪切事件。 |
-| [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 设置自定义键盘是否支持避让功能。 |
-| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md) | 前导边距占位符，用于表示文本段落左侧与组件边缘之间的距离。 |
-| [PasteEvent](arkts-arkui-pasteevent-i.md) | 定义用户粘贴事件。 |
-| [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | 设置提示文本的字体样式。 |
-| [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md) | 预览菜单的选项。 |
-| [RichEditorBuilderSpan](arkts-arkui-richeditorbuilderspan-i.md) | 定义**RichEditor**的BuilderSpan对象，提供身份识别与生命周期感知能力。 |
-| [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | 设置builder插入的偏移位置和样式。 |
-| [RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md) | 图文变化信息。 |
-| [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) | 删除操作和被删除内容的信息。 |
-| [RichEditorGesture](arkts-arkui-richeditorgesture-i.md) | 用户手势事件。 |
-| [RichEditorImageSpan](arkts-arkui-richeditorimagespan-i.md) | 图片Span信息。 |
-| [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 设置图片的偏移位置和图片样式信息。 |
-| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) | 后端返回的图片信息。 |
-| [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md) | 图片样式。 |
-| [RichEditorImageSpanStyleResult](arkts-arkui-richeditorimagespanstyleresult-i.md) | 后端返回的图片样式信息。 |
-| [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md) | 插入文本的信息。 |
-| [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md) | 图片布局信息。 |
-| [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | RichEditor初始化参数。 |
-| [RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md) | 后端返回的段落信息。 |
-| [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | 段落样式。 |
-| [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | 段落样式选项。 |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 定义RichEditor的范围。 |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中内容信息。 |
-| [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md) | Span位置信息。 |
-| [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md) | 文本样式选项。 |
-| [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | RichEditor初始化参数。 |
-| [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | 设置SymbolSpan组件的偏移位置和样式。 |
-| [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md) | 组件SymbolSpan样式信息。 |
-| [RichEditorSymbolSpanStyleResult](arkts-arkui-richeditorsymbolspanstyleresult-i.md) | 后端返回的SymbolSpan样式信息。 |
-| [RichEditorTextSpan](arkts-arkui-richeditortextspan-i.md) | 文本Span信息。 |
-| [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | 添加文本的偏移位置和文本样式信息。 |
-| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) | 文本Span信息。 |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 文本样式信息。 |
-| [RichEditorTextStyleResult](arkts-arkui-richeditortextstyleresult-i.md) | 后端返回的文本样式信息。 |
-| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) | 图片的样式选项。 |
-| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | SymbolSpan样式选项。 |
-| [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) | 文本样式选项。 |
-| [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md) | Url信息。 |
-| [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 菜单的选项。 |
+| [BuilderSpanInfo](arkts-arkui-richeditor-comp-builderspaninfo-i.md) | 定义**RichEditor**中BuilderSpan的身份与位置信息。 |
+| [CopyEvent](arkts-arkui-richeditor-comp-copyevent-i.md) | 定义用户复制事件。 |
+| [CutEvent](arkts-arkui-richeditor-comp-cutevent-i.md) | 定义用户剪切事件。 |
+| [KeyboardOptions](arkts-arkui-richeditor-comp-keyboardoptions-i.md) | 设置自定义键盘是否支持避让功能。 |
+| [LeadingMarginPlaceholder](arkts-arkui-richeditor-comp-leadingmarginplaceholder-i.md) | 前导边距占位符，用于表示文本段落左侧与组件边缘之间的距离。 |
+| [PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md) | 定义用户粘贴事件。 |
+| [PlaceholderStyle](arkts-arkui-richeditor-comp-placeholderstyle-i.md) | 设置提示文本的字体样式。 |
+| [PreviewMenuOptions](arkts-arkui-richeditor-comp-previewmenuoptions-i.md) | 预览菜单的选项。 |
+| [RichEditorBuilderSpan](arkts-arkui-richeditor-comp-richeditorbuilderspan-i.md) | 定义**RichEditor**的BuilderSpan对象，提供身份识别与生命周期感知能力。 |
+| [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-comp-richeditorbuilderspanoptions-i.md) | 设置builder插入的偏移位置和样式。 |
+| [RichEditorChangeValue](arkts-arkui-richeditor-comp-richeditorchangevalue-i.md) | 图文变化信息。 |
+| [RichEditorDeleteValue](arkts-arkui-richeditor-comp-richeditordeletevalue-i.md) | 删除操作和被删除内容的信息。 |
+| [RichEditorGesture](arkts-arkui-richeditor-comp-richeditorgesture-i.md) | 用户手势事件。 |
+| [RichEditorImageSpan](arkts-arkui-richeditor-comp-richeditorimagespan-i.md) | 图片Span信息。 |
+| [RichEditorImageSpanOptions](arkts-arkui-richeditor-comp-richeditorimagespanoptions-i.md) | 设置图片的偏移位置和图片样式信息。 |
+| [RichEditorImageSpanResult](arkts-arkui-richeditor-comp-richeditorimagespanresult-i.md) | 后端返回的图片信息。 |
+| [RichEditorImageSpanStyle](arkts-arkui-richeditor-comp-richeditorimagespanstyle-i.md) | 图片样式。 |
+| [RichEditorImageSpanStyleResult](arkts-arkui-richeditor-comp-richeditorimagespanstyleresult-i.md) | 后端返回的图片样式信息。 |
+| [RichEditorInsertValue](arkts-arkui-richeditor-comp-richeditorinsertvalue-i.md) | 插入文本的信息。 |
+| [RichEditorLayoutStyle](arkts-arkui-richeditor-comp-richeditorlayoutstyle-i.md) | 图片布局信息。 |
+| [RichEditorOptions](arkts-arkui-richeditor-comp-richeditoroptions-i.md) | RichEditor初始化参数。 |
+| [RichEditorParagraphResult](arkts-arkui-richeditor-comp-richeditorparagraphresult-i.md) | 后端返回的段落信息。 |
+| [RichEditorParagraphStyle](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md) | 段落样式。 |
+| [RichEditorParagraphStyleOptions](arkts-arkui-richeditor-comp-richeditorparagraphstyleoptions-i.md) | 段落样式选项。 |
+| [RichEditorRange](arkts-arkui-richeditor-comp-richeditorrange-i.md) | 定义RichEditor的范围。 |
+| [RichEditorSelection](arkts-arkui-richeditor-comp-richeditorselection-i.md) | 选中内容信息。 |
+| [RichEditorSpanPosition](arkts-arkui-richeditor-comp-richeditorspanposition-i.md) | Span位置信息。 |
+| [RichEditorSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorspanstyleoptions-i.md) | 文本样式选项。 |
+| [RichEditorStyledStringOptions](arkts-arkui-richeditor-comp-richeditorstyledstringoptions-i.md) | RichEditor初始化参数。 |
+| [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-comp-richeditorsymbolspanoptions-i.md) | 设置SymbolSpan组件的偏移位置和样式。 |
+| [RichEditorSymbolSpanStyle](arkts-arkui-richeditor-comp-richeditorsymbolspanstyle-i.md) | 组件SymbolSpan样式信息。 |
+| [RichEditorSymbolSpanStyleResult](arkts-arkui-richeditor-comp-richeditorsymbolspanstyleresult-i.md) | 后端返回的SymbolSpan样式信息。 |
+| [RichEditorTextSpan](arkts-arkui-richeditor-comp-richeditortextspan-i.md) | 文本Span信息。 |
+| [RichEditorTextSpanOptions](arkts-arkui-richeditor-comp-richeditortextspanoptions-i.md) | 添加文本的偏移位置和文本样式信息。 |
+| [RichEditorTextSpanResult](arkts-arkui-richeditor-comp-richeditortextspanresult-i.md) | 文本Span信息。 |
+| [RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md) | 文本样式信息。 |
+| [RichEditorTextStyleResult](arkts-arkui-richeditor-comp-richeditortextstyleresult-i.md) | 后端返回的文本样式信息。 |
+| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdateimagespanstyleoptions-i.md) | 图片的样式选项。 |
+| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdatesymbolspanstyleoptions-i.md) | SymbolSpan样式选项。 |
+| [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdatetextspanstyleoptions-i.md) | 文本样式选项。 |
+| [RichEditorUrlStyle](arkts-arkui-richeditor-comp-richeditorurlstyle-i.md) | Url信息。 |
+| [SelectionMenuOptions](arkts-arkui-richeditor-comp-selectionmenuoptions-i.md) | 菜单的选项。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuCallback](arkts-arkui-menucallback-t.md) | 自定义选择菜单显示或隐藏时触发的回调事件。 |
-| [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md) | 自定义选择菜单弹出时触发的回调事件。 |
-| [OnHoverCallback](arkts-arkui-onhovercallback-t.md) | 鼠标悬浮触发回调。 |
-| [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | 粘贴完成前，触发回调。 |
-| [RichEditorSpan](arkts-arkui-richeditorspan-t.md) | RichEditor span信息。 |
-| [SubmitCallback](arkts-arkui-submitcallback-t.md) | 软键盘按下回车键时的回调事件。 |
+| [MenuCallback](arkts-arkui-richeditor-comp-menucallback-t.md) | 自定义选择菜单显示或隐藏时触发的回调事件。 |
+| [MenuOnAppearCallback](arkts-arkui-richeditor-comp-menuonappearcallback-t.md) | 自定义选择菜单弹出时触发的回调事件。 |
+| [OnHoverCallback](arkts-arkui-richeditor-comp-onhovercallback-t.md) | 鼠标悬浮触发回调。 |
+| [PasteEventCallback](arkts-arkui-richeditor-comp-pasteeventcallback-t.md) | 粘贴完成前，触发回调。 |
+| [RichEditorSpan](arkts-arkui-richeditor-comp-richeditorspan-t.md) | RichEditor span信息。 |
+| [SubmitCallback](arkts-arkui-richeditor-comp-submitcallback-t.md) | 软键盘按下回车键时的回调事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [RichEditorDeleteDirection](arkts-arkui-richeditordeletedirection-e.md) | 删除方向。 |
-| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 菜单的响应类型。 |
-| [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Span类型信息。 |
-| [UndoStyle](arkts-arkui-undostyle-e.md) | 撤销还原是否保留原样式选项。 |
+| [RichEditorDeleteDirection](arkts-arkui-richeditor-comp-richeditordeletedirection-e.md) | 删除方向。 |
+| [RichEditorResponseType](arkts-arkui-richeditor-comp-richeditorresponsetype-e.md) | 菜单的响应类型。 |
+| [RichEditorSpanType](arkts-arkui-richeditor-comp-richeditorspantype-e.md) | Span类型信息。 |
+| [UndoStyle](arkts-arkui-richeditor-comp-undostyle-e.md) | 撤销还原是否保留原样式选项。 |
 
 ## 示例
 
 ```TypeScript
 ### 示例1（更新文本样式）
 
-通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)接口更新已有文本样式，更改样式后，使用[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans)获取文本新的样式信息。
+通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口更新已有文本样式，更改样式后，使用[getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans)获取文本新的样式信息。
 
 
 ```
@@ -156,7 +156,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例4（更新图片样式）
 
-通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)接口更新图片样式。
+通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口更新图片样式。
 
 
 ```
@@ -164,7 +164,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例5（Span绑定手势事件）
 
-为Span绑定[gesture](arkts-arkui-richeditorgesture-i.md)回调。
+为Span绑定[gesture](arkts-arkui-richeditor-comp-richeditorgesture-i.md)回调。
 
 
 ```
@@ -172,7 +172,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例6（更新和获取段落样式）
 
-通过[updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle)接口更新段落样式，通过[getParagraphs](#getparagraphs11)接口获取指定范围段落的信息。
+通过[updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle)接口更新段落样式，通过[getParagraphs](#getparagraphs11)接口获取指定范围段落的信息。
 
 
 ```
@@ -180,7 +180,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例7（更新预设样式与缩进）
 
-通过[setTypingStyle](arkts-arkui-richeditorbasecontroller-c.md#settypingstyle)接口更新文本预设样式，通过[updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle)接口设置段落缩进。
+通过[setTypingStyle](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#settypingstyle)接口更新文本预设样式，通过[updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle)接口设置段落缩进。
 
 
 ```
@@ -188,7 +188,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例8（设置文本字重与阴影）
 
-通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)接口设置文本字重与阴影。
+通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口设置文本字重与阴影。
 
 
 ```
@@ -196,7 +196,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例9（添加用户自定义布局Span）
 
-通过[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)接口添加用户自定义布局Span。
+通过[addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan)接口添加用户自定义布局Span。
 
 
 ```
@@ -204,7 +204,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例10（使用和管理组件内的BuilderSpan）
 
-通过[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)接口添加的自定义布局Span，[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans)、[onWillChange](#onwillchange12)等API不会返回BuilderSpan内部的信息。开发者需要自行维护BuilderSpan的状态，并且在组件内容发生变化时同步更新。
+通过[addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan)接口添加的自定义布局Span，[getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans)、[onWillChange](#onwillchange12)等API不会返回BuilderSpan内部的信息。开发者需要自行维护BuilderSpan的状态，并且在组件内容发生变化时同步更新。
 
 
 ```
@@ -226,7 +226,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例13（设置行高和字符间距）
 
-通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)接口配置文本行高（[lineHeight](arkts-arkui-richeditortextstyle-i.md)）和字符间距（[letterSpacing](arkts-arkui-richeditortextstyle-i.md)）。
+通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口配置文本行高（[lineHeight](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)）和字符间距（[letterSpacing](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)）。
 
 
 ```
@@ -234,7 +234,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例14（自定义粘贴事件）
 
-为组件添加[onPaste](#onpaste11)事件，通过[PasteEvent](arkts-arkui-pasteevent-i.md)自定义用户粘贴事件。
+为组件添加[onPaste](#onpaste11)事件，通过[PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md)自定义用户粘贴事件。
 
 
 ```
@@ -242,9 +242,9 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例15（配置文字特性效果）
 
-该示例通过[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan)接口设置文字特性效果（[fontFeature](arkts-arkui-richeditortextstyle-i.md)）。当添加“ss01”特性的FontFeature属性时，数字“0”由原来的椭圆形改变为带有倒圆角形。同时通过[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的strokeJoinStyle接口设置文本描边拐角样式。
+该示例通过[addTextSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addtextspan)接口设置文字特性效果（[fontFeature](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)）。当添加“ss01”特性的FontFeature属性时，数字“0”由原来的椭圆形改变为带有倒圆角形。同时通过[RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)的strokeJoinStyle接口设置文本描边拐角样式。
 
-从API版本26.0.0开始，[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)新增strokeJoinStyle接口。
+从API版本26.0.0开始，[RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)新增strokeJoinStyle接口。
 
 
 ```
@@ -252,7 +252,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例16（自定义键盘避让）
 
-通过[customKeyboard](#customkeyboard)属性绑定自定义键盘，通过参数[KeyboardOptions](arkts-arkui-keyboardoptions-i.md)设置自定义键盘是否支持避让功能。
+通过[customKeyboard](#customkeyboard)属性绑定自定义键盘，通过参数[KeyboardOptions](arkts-arkui-richeditor-comp-keyboardoptions-i.md)设置自定义键盘是否支持避让功能。
 
 
 ```
@@ -284,7 +284,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例20（设置段落折行规则）
 
-通过[updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle)接口设置折行类型（[lineBreakStrategy](arkts-arkui-richeditorparagraphstyle-i.md)），通过[getParagraphs](#getparagraphs11)接口获取当前段落的折行类型。
+通过[updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle)接口设置折行类型（[lineBreakStrategy](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md)），通过[getParagraphs](#getparagraphs11)接口获取当前段落的折行类型。
 
 
 ```
@@ -292,7 +292,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例21（属性字符串基本功能）
 
-从API version 20开始，该示例中[属性字符串](./ts-universal-styled-string.md)通过[RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md)中的[setStyledString](#setstyledstring12)方法与RichEditor组件绑定。通过[getStyledString](#getstyledstring12)接口获取富文本组件显示的属性字符串。
+从API version 20开始，该示例中[属性字符串](./ts-universal-styled-string.md)通过[RichEditorStyledStringController](arkts-arkui-richeditor-comp-richeditorstyledstringcontroller-c.md)中的[setStyledString](#setstyledstring12)方法与RichEditor组件绑定。通过[getStyledString](#getstyledstring12)接口获取富文本组件显示的属性字符串。
 
 
 ```
@@ -324,7 +324,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例25（获取光标相对组件位置的矩形）
 
-从API version 18开始，该示例通过RichEditorBaseController的[getCaretRect](arkts-arkui-richeditorbasecontroller-c.md#getcaretrect)方法来获取当前光标相对于组件位置的Rect。
+从API version 18开始，该示例通过RichEditorBaseController的[getCaretRect](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#getcaretrect)方法来获取当前光标相对于组件位置的Rect。
 
 
 ```
@@ -340,7 +340,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例27（文本设置Url样式）
 
-从API version 19开始，该示例通过在addTextSpan和UpdateSpanStyle接口中加入[UrlStyle](arkts-arkui-richeditorurlstyle-i.md)，来实现文本点击时跳转到指定链接的功能。
+从API version 19开始，该示例通过在addTextSpan和UpdateSpanStyle接口中加入[UrlStyle](arkts-arkui-richeditor-comp-richeditorurlstyle-i.md)，来实现文本点击时跳转到指定链接的功能。
 
 
 ```
@@ -356,7 +356,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例29（文本设置预设段落样式）
 
-从API version 20开始，该示例通过[setTypingParagraphStyle](arkts-arkui-richeditorbasecontroller-c.md#settypingparagraphstyle)接口设置预设段落样式。
+从API version 20开始，该示例通过[setTypingParagraphStyle](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#settypingparagraphstyle)接口设置预设段落样式。
 
 
 ```
@@ -476,7 +476,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例42（设置文本着色器效果）
 
-该示例通过[RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)中shaderStyle接口实现文本着色效果。
+该示例通过[RichEditorParagraphStyle](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md)中shaderStyle接口实现文本着色效果。
 
 从API版本26.0.0开始，RichEditorParagraphStyle新增shaderStyle接口。
 
@@ -496,7 +496,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 ```TypeScript
 ### 示例44（设置图片拉伸）
 
-该示例通过设置[RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)的resizable属性，对图片不同方向进行拉伸。
+该示例通过设置[RichEditorImageSpanStyle](arkts-arkui-richeditor-comp-richeditorimagespanstyle-i.md)的resizable属性，对图片不同方向进行拉伸。
 
 从API版本26.1.0开始，RichEditorImageSpanStyle新增resizable属性。
 ```

@@ -39,14 +39,6 @@ reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
 })
 ```
 
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.cancelAllReminders().then(() => {
-    console.info("cancelAllReminders promise")
-})
-```
-
 
 <a id="cancelallreminders-1"></a>
 
@@ -74,4 +66,10 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Examples**
 
-See [cancelAllReminders](#cancelallreminders)
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelAllReminders().then(() => {
+    console.info("cancelAllReminders promise")
+})
+```

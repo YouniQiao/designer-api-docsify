@@ -24,7 +24,7 @@ Init FormLink component with options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FormLinkOptions](arkts-arkui-formlinkoptions-i.md) | Yes | Widget information. |
+| options | [FormLinkOptions](arkts-arkui-formlink-comp-formlinkoptions-i.md) | Yes | Widget information. |
 
 ## Summary
 
@@ -32,7 +32,7 @@ Init FormLink component with options.
 
 | Name | Description |
 | --- | --- |
-| [FormLinkOptions](arkts-arkui-formlinkoptions-i.md) | Defines the FormLink options. |
+| [FormLinkOptions](arkts-arkui-formlink-comp-formlinkoptions-i.md) | Defines the FormLink options. |
 
 ## Examples
 

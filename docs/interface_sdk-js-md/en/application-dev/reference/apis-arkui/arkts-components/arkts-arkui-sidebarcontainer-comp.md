@@ -38,7 +38,7 @@ Creates a sidebar container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | No | Display type of the sidebar.<br>Default value: **SideBarContainerType.Embed** |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainer-comp-sidebarcontainertype-e.md) | No | Display type of the sidebar.<br>Default value: **SideBarContainerType.Embed** |
 
 ## Summary
 
@@ -46,16 +46,16 @@ Creates a sidebar container.
 
 | Name | Description |
 | --- | --- |
-| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. |
-| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Describes the style of the sidebar control button. |
-| [DividerStyle](arkts-arkui-dividerstyle-i.md) | Sets the divider style. |
+| [ButtonIconOptions](arkts-arkui-sidebarcontainer-comp-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. |
+| [ButtonStyle](arkts-arkui-sidebarcontainer-comp-buttonstyle-i.md) | Describes the style of the sidebar control button. |
+| [DividerStyle](arkts-arkui-sidebarcontainer-comp-dividerstyle-i.md) | Sets the divider style. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | Enumerates the types of sidebar containers. |
-| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Enumerates the positions of the sidebar. |
+| [SideBarContainerType](arkts-arkui-sidebarcontainer-comp-sidebarcontainertype-e.md) | Enumerates the types of sidebar containers. |
+| [SideBarPosition](arkts-arkui-sidebarcontainer-comp-sidebarposition-e.md) | Enumerates the positions of the sidebar. |
 
 ## Examples
 

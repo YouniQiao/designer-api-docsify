@@ -4,7 +4,7 @@
 declare interface TextDataDetectorConfig
 ```
 
-This configuration is only available for the Text and RichEditor components.
+This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md#text) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor) components.
 
 **Since:** 11
 
@@ -92,7 +92,7 @@ onDetectResultUpdate?: Callback<string>
 
 Callback invoked when text recognition succeeds.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 11
 

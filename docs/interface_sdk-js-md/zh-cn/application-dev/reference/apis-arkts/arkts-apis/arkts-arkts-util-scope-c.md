@@ -193,38 +193,6 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-let tempLess = new Temperature(20);
-let tempMore = new Temperature(45);
-let rangeSec = new util.Scope(tempLess, tempMore);
-let result = range.contains(rangeSec);
-console.info("result = " + result);
-// 输出结果：result = false
-```
-
 <a id="contains-1"></a>
 
 ## contains
@@ -256,36 +224,6 @@ contains(range: Scope): boolean
 | boolean | 检查结果。如果范围在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
 
 **示例**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.contains(tempMiDF);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -381,68 +319,6 @@ console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
 
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let range = new util.Scope(tempLower, tempUpper);
-let rangeFir = new util.Scope(tempMiDF, tempMidS);
-let result = range.expand(rangeFir);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.expand(tempMiDF);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
 <a id="expand-1"></a>
 
 ## expand
@@ -501,69 +377,8 @@ let tempUpper = new Temperature(40);
 let tempMiDF = new Temperature(35);
 let tempMidS = new Temperature(39);
 let range = new util.Scope(tempLower, tempUpper);
-let result = range.expand(tempMiDF, tempMidS);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let range = new util.Scope(tempLower, tempUpper);
 let rangeFir = new util.Scope(tempMiDF, tempMidS);
 let result = range.expand(rangeFir);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.expand(tempMiDF);
 console.info("result = " + result);
 // 输出结果：result = [30, 40]
 ```
@@ -599,69 +414,6 @@ expand(value: ScopeType): Scope
 | [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定值的并集。 |
 
 **示例**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.expand(tempMiDF, tempMidS);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let range = new util.Scope(tempLower, tempUpper);
-let rangeFir = new util.Scope(tempMiDF, tempMidS);
-let result = range.expand(rangeFir);
-console.info("result = " + result);
-// 输出结果：result = [30, 40]
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {
@@ -861,37 +613,6 @@ console.info("result = " + result);
   // 输出结果：result = [35, 39]
 ```
 
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let range = new util.Scope(tempLower, tempUpper);
-let result = range.intersect(tempMiDF, tempMidS);
-console.info("result = " + result);
-// 输出结果：result = [35, 39]
-```
-
 <a id="intersect-1"></a>
 
 ## intersect
@@ -924,38 +645,6 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 | [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的交集。 |
 
 **示例**
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-let tempMiDF = new Temperature(35);
-let tempMidS = new Temperature(39);
-let rangeFir = new util.Scope(tempMiDF, tempMidS);
-let result = range.intersect(rangeFir );
-console.info("result = " + result);
-  // 输出结果：result = [35, 39]
-```
 
 ```TypeScript
 class Temperature implements util.ScopeComparable {

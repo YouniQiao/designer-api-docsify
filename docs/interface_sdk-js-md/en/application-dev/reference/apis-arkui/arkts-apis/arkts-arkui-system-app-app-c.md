@@ -28,6 +28,8 @@ This API is deprecated since API version 9. You are advised to use [bundleManage
 
 **Since:** 3
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -192,6 +194,8 @@ Set image cache capacity of decoded image count. if not set, the application wil
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -241,6 +245,8 @@ Set image file cache size in bytes on disk before decode. if not set, the applic
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -278,6 +284,8 @@ static setImageRawDataCacheSize(value: number): void
 Set image cache capacity of raw image data size in bytes before decode. if not set, the application will not cache any raw image data.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -329,6 +337,8 @@ Terminates the current ability. In the stage model, this API has no effect.
 This API is deprecated since API version 7. You are advised to use [@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-ability-featureability.md) instead.
 
 **Since:** 3
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

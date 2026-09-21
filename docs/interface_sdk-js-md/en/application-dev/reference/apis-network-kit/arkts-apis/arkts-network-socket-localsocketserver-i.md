@@ -263,6 +263,23 @@ Unsubscribes from **connect** events of the **LocalSocketServer** object. This A
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let callback = (connection: socket.LocalSocketConnection) => {
+  if (connection) {
+    console.info('accept a client')
+  }
+}
+server.on('connect', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+server.off('connect', callback);
+server.off('connect');
+```
+
 ## off('error')
 
 ```TypeScript
@@ -287,6 +304,21 @@ Unsubscribes from **error** events of the **LocalSocketServer** object. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+let callback = (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+server.on('error', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+server.off('error', callback);
+server.off('error');
+```
 
 ## on('connect')
 
@@ -317,6 +349,19 @@ Subscribes to **connect** events of the **LocalSocketServer** object. This API u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+server.on('connect', (connection: socket.LocalSocketConnection) => {
+  if (connection) {
+    console.info('accept a client')
+  }
+});
+```
+
 ## on('error')
 
 ```TypeScript
@@ -345,6 +390,17 @@ Subscribes to **error** events of the **LocalSocketServer** object. This API use
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
+server.on('error', (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
+```
 
 ## setExtraOptions
 

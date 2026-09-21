@@ -84,24 +84,6 @@ httpRequest.request("EXAMPLE_URL").then(data => {
 });
 ```
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete().then(() => {
-    console.info("success");
-  }).catch((err: BusinessError) => {
-    console.error("fail");
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
-```
-
 <a id="delete-1"></a>
 
 ## delete
@@ -126,7 +108,23 @@ delete(): Promise<void>
 
 **示例**
 
-参见 [delete](#delete)
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.request("EXAMPLE_URL").then(data => {
+  const httpResponseCache = http.createHttpResponseCache();
+  httpResponseCache.delete().then(() => {
+    console.info("success");
+  }).catch((err: BusinessError) => {
+    console.error("fail");
+  });
+  httpRequest.destroy();
+}).catch((error: BusinessError) => {
+  console.error("errcode" + JSON.stringify(error));
+});
+```
 
 ## flush
 
@@ -173,25 +171,6 @@ httpRequest.request("EXAMPLE_URL", (err: BusinessError, data: http.HttpResponse)
 });
 ```
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let httpResponseCache = http.createHttpResponseCache();
-let promise = httpRequest.request("EXAMPLE_URL");
-
-promise.then((data: http.HttpResponse) => {
-  httpResponseCache.flush().then(() => {
-    console.info('flush success');
-  }).catch((err: BusinessError) => {
-    console.error('flush fail');
-  });
-}).catch((err: Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
 <a id="flush-1"></a>
 
 ## flush
@@ -216,4 +195,21 @@ flush(): Promise<void>
 
 **示例**
 
-参见 [flush](#flush)
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+let httpResponseCache = http.createHttpResponseCache();
+let promise = httpRequest.request("EXAMPLE_URL");
+
+promise.then((data: http.HttpResponse) => {
+  httpResponseCache.flush().then(() => {
+    console.info('flush success');
+  }).catch((err: BusinessError) => {
+    console.error('flush fail');
+  });
+}).catch((err: Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
+```

@@ -24,7 +24,7 @@ content?: RichEditorSelection
 
 Information about the selected content.
 
-**Type:** [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md)
+**Type:** [RichEditorSelection](../arkts-components/arkts-arkui-richeditor-comp-richeditorselection-i.md)
 
 **Since:** 11
 

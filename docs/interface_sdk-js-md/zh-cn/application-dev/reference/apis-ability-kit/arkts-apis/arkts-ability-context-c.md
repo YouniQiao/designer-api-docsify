@@ -182,23 +182,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## getApplicationContext
 
 ```TypeScript
@@ -286,27 +269,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onCreate() {
     console.info('MyAbility onCreate');
-    let groupId = '1';
-    let getGroupDirContext: common.Context = this.context;
-    try {
-      // 通过Group ID获取共享目录（Promise方式）
-      getGroupDirContext.getGroupDir(groupId).then(data => {
-        console.info('getGroupDir result:' + data);
-      })
-    } catch (error) {
-      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
     let getGroupDirContext: common.Context = this.context;
 
     // 通过Group ID获取共享目录（callback方式）
@@ -360,7 +322,26 @@ getGroupDir(dataGroupID: string): Promise<string>
 
 **示例**
 
-参见 [getGroupDir](#getgroupdir)
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = '1';
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      // 通过Group ID获取共享目录（Promise方式）
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info('getGroupDir result:' + data);
+      })
+    } catch (error) {
+      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 

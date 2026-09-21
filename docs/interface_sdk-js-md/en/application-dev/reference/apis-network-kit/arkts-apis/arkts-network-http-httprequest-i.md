@@ -119,6 +119,24 @@ Unregisters the observer for HTTP Response Header events.
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
+**Examples**
+
+```TypeScript
+### off("headerReceive")
+
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
+
+Unregisters the observer for HTTP Response Header events.
+
+> NOTE
+> 
+> This API is supported since API version 6 and deprecated since API version 8. You are advised to use [off("headersReceive")](#offheadersreceive) instead.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## off("headersReceive")
 
 ```TypeScript
@@ -139,6 +157,22 @@ Unregisters the observer for HTTP Response Header events.
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+
+**Examples**
+
+```TypeScript
+### off("headersReceive")
+
+off(type: "headersReceive", callback?: Callback<Object>): void
+
+Unregisters the observer for HTTP Response Header events.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
 
 ## off("dataReceive")
 
@@ -161,6 +195,22 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
+**Examples**
+
+```TypeScript
+### off("dataReceive")
+
+off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
+
+Unregisters the observer for events indicating receiving of HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## off("dataEnd")
 
 ```TypeScript
@@ -181,6 +231,22 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+
+**Examples**
+
+```TypeScript
+### off("dataEnd")
+
+off(type: "dataEnd", callback?: Callback<void>): void
+
+Unregisters the observer for events indicating completion of receiving HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
 
 ## off('dataReceiveProgress')
 
@@ -203,6 +269,22 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
+**Examples**
+
+```TypeScript
+### off('dataReceiveProgress')
+
+off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
+
+Unregisters the observer for events indicating progress of receiving HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## off('dataSendProgress')
 
 ```TypeScript
@@ -223,6 +305,42 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+
+**Examples**
+
+```TypeScript
+### off('dataSendProgress')
+
+off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
+
+Unregisters the observer for events indicating progress of sending HTTP requests.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
+```TypeScript
+### off('dataSendProgress')
+
+off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
+
+Unregisters the observer for events indicating progress of sending HTTP requests.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Defines the data sending progress information.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+```
 
 ## on("headerReceive")
 
@@ -247,6 +365,22 @@ Registers an observer for HTTP Response Header events.
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
 
+**Examples**
+
+```TypeScript
+### on("headerReceive")
+
+on(type: "headerReceive", callback: AsyncCallback<Object>): void
+
+Registers an observer for HTTP Response Header events.
+
+> NOTEThis API is supported since API version 6 and deprecated since API version 8. You are advised to use [on("headersReceive")](#onheadersreceive) instead.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## on("headersReceive")
 
 ```TypeScript
@@ -267,6 +401,22 @@ Registers an observer for HTTP Response Header events.
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+
+**Examples**
+
+```TypeScript
+### on("headersReceive")
+
+on(type: "headersReceive", callback: Callback<Object>): void
+
+Registers an observer for HTTP Response Header events.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
 
 ## on("dataReceive")
 
@@ -289,6 +439,22 @@ Registers an observer for events indicating receiving of HTTP streaming response
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
 
+**Examples**
+
+```TypeScript
+### on("dataReceive")
+
+on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
+
+Registers an observer for events indicating receiving of HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## on("dataEnd")
 
 ```TypeScript
@@ -309,6 +475,22 @@ Registers an observer for events indicating completion of receiving HTTP streami
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
+
+**Examples**
+
+```TypeScript
+### on("dataEnd")
+
+on(type: "dataEnd", callback: Callback<void>): void
+
+Registers an observer for events indicating completion of receiving HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
 
 ## on('dataReceiveProgress')
 
@@ -331,6 +513,22 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
 
+**Examples**
+
+```TypeScript
+### on('dataReceiveProgress')
+
+on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
+
+Registers an observer for events indicating progress of receiving HTTP streaming responses.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## on('dataSendProgress')
 
 ```TypeScript
@@ -352,6 +550,22 @@ Registers an observer for events indicating progress of sending HTTP requests.
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
 
+**Examples**
+
+```TypeScript
+### on('dataSendProgress')
+
+on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
+
+Registers an observer for events indicating progress of sending HTTP requests.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
+
 ## once("headersReceive")
 
 ```TypeScript
@@ -372,6 +586,22 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+
+**Examples**
+
+```TypeScript
+### once("headersReceive")
+
+once(type: "headersReceive", callback: Callback<Object>): void
+
+Registers a one-time observer for HTTP Response Header events. Once triggered, the observer will be removed. This API uses an asynchronous callback to return the result.
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+```
 
 ## request
 
@@ -475,56 +705,6 @@ Error codes
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 ```
 
-```TypeScript
-### request
-
-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>):void
-
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
-
-> NOTE
-> 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set maxLimit to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call [requestInStream](#requestinstream) to initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold will fail to be received.(2) If you need to pass in cookies, add them to the options parameter.(3) If the URL contains non-English characters, call encodeURL(url) to encode the URL before initiating an HTTP request.
-
-Required permissions: ohos.permission.INTERNET
-
-Atomic service API: This API can be used in atomic services since API version 11.
-
-System capability: SystemCapability.Communication.NetStack
-
-Parameters
-
-Error codes
-
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
-```
-
-```TypeScript
-### request
-
-request(url: string, options? : HttpRequestOptions): Promise<HttpResponse>
-
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
-
-> NOTE
-> 
-> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set maxLimit to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call [requestInStream](#requestinstream) to initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold will fail to be received.(2) If you need to pass in cookies, add them to the options parameter.(3) If the URL contains non-English characters, call encodeURL(url) to encode the URL before initiating an HTTP request.
-
-Required permissions: ohos.permission.INTERNET
-
-Atomic service API: This API can be used in atomic services since API version 11.
-
-System capability: SystemCapability.Communication.NetStack
-
-Parameters
-
-Return value
-
-Error codes
-
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
-```
-
 <a id="request-1"></a>
 
 ## request
@@ -606,7 +786,29 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-See [request](#request)
+```TypeScript
+### request
+
+request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>):void
+
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
+
+> NOTE
+> 
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set maxLimit to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call [requestInStream](#requestinstream) to initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold will fail to be received.(2) If you need to pass in cookies, add them to the options parameter.(3) If the URL contains non-English characters, call encodeURL(url) to encode the URL before initiating an HTTP request.
+
+Required permissions: ohos.permission.INTERNET
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Error codes
+
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+```
 
 <a id="request-2"></a>
 
@@ -694,7 +896,31 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-See [request](#request)
+```TypeScript
+### request
+
+request(url: string, options? : HttpRequestOptions): Promise<HttpResponse>
+
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
+
+> NOTE
+> 
+> (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set maxLimit to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call [requestInStream](#requestinstream) to initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold will fail to be received.(2) If you need to pass in cookies, add them to the options parameter.(3) If the URL contains non-English characters, call encodeURL(url) to encode the URL before initiating an HTTP request.
+
+Required permissions: ohos.permission.INTERNET
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Return value
+
+Error codes
+
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+```
 
 ## requestInStream
 
@@ -780,48 +1006,6 @@ Error codes
 For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
 ```
 
-```TypeScript
-### requestInStream
-
-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
-
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
-
-Required permissions: ohos.permission.INTERNET
-
-Atomic service API: This API can be used in atomic services since API version 15.
-
-System capability: SystemCapability.Communication.NetStack
-
-Parameters
-
-Error codes
-
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
-```
-
-```TypeScript
-### requestInStream
-
-requestInStream(url: string, options? : HttpRequestOptions): Promise<number>
-
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
-
-Required permissions: ohos.permission.INTERNET
-
-Atomic service API: This API can be used in atomic services since API version 15.
-
-System capability: SystemCapability.Communication.NetStack
-
-Parameters
-
-Return value
-
-Error codes
-
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
-```
-
 <a id="requestinstream-1"></a>
 
 ## requestInStream
@@ -889,7 +1073,25 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-See [requestInStream](#requestinstream)
+```TypeScript
+### requestInStream
+
+requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
+
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
+
+Required permissions: ohos.permission.INTERNET
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Error codes
+
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+```
 
 <a id="requestinstream-2"></a>
 
@@ -963,7 +1165,27 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
-See [requestInStream](#requestinstream)
+```TypeScript
+### requestInStream
+
+requestInStream(url: string, options? : HttpRequestOptions): Promise<number>
+
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
+
+Required permissions: ohos.permission.INTERNET
+
+Atomic service API: This API can be used in atomic services since API version 15.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Return value
+
+Error codes
+
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+```
 
 ## requestSync
 

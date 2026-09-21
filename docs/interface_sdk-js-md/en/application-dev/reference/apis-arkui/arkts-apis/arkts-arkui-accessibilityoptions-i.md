@@ -70,7 +70,7 @@ Specific types in cross-process embedded components are not supported, such as w
 
 Default value: no specified component
 
-**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md)
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ Specific types in cross-process embedded components are not supported, such as w
 
 Default value: no specified component
 
-**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md)
 
 **Since:** 23
 

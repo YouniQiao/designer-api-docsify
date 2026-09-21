@@ -53,6 +53,16 @@ off(
 | type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .off('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
+      console.info('delete inputStart notification.');
+    });
+```
+
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -78,6 +88,13 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | 是 | 要取消监听的输入法软键盘事件类型。<br>-'keyboardShow'表示显示输入法软键盘。<br>-'keyboardHide'表示隐藏输入法软键盘。 |
 | callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().off('keyboardShow');
+inputMethodEngine.getInputMethodEngine().off('keyboardHide');
+```
 
 ## on('inputStart')
 
@@ -108,6 +125,16 @@ on(
 | type | 'inputStart' | 是 | 设置监听类型，固定取值为'inputStart'。 |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 是 | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .on('inputStart',
+    (keyboardController: inputMethodEngine.KeyboardController, textInputClient: inputMethodEngine.TextInputClient) => {
+      // 使用kbController和textClient进行相关操作
+    });
+```
+
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -133,3 +160,14 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | 是 | 设置监听类型。<br>-'keyboardShow'表示显示输入法软键盘。<br>-'keyboardHide'表示隐藏输入法软键盘。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```

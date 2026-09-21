@@ -32,7 +32,7 @@ Whether the system is in kiosk mode. **true** if in kiosk mode, **false** otherw
 kioskBundleName: string
 ```
 
-Bundle name of the application in kiosk mode.
+Bundle name of the application that entered kiosk mode.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ Bundle name of the application in kiosk mode.
 kioskBundleUid: number
 ```
 
-UID of the application in kiosk mode.
+UID of the application that entered kiosk mode, assigned by the system. It is a positive integer.
 
 **Type:** number
 

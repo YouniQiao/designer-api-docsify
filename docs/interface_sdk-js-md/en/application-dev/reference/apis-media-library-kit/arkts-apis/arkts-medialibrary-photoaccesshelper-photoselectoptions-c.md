@@ -60,7 +60,7 @@ When the selection process is complete, the PhotoPicker returns **contextRecover
 isDestroyedWithNavigation?: boolean
 ```
 
-Whether destruction with Navigation is supported. **true** if supported, **false** otherwise. The default value is **false**.
+Whether destruction with [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-comp.md#navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 

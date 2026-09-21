@@ -87,4 +87,10 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 **示例**
 
-参见 [getAccessibilityExtensionList](#getaccessibilityextensionlist)
+```TypeScript
+查询所有已安装的辅助应用。
+```
+
+```TypeScript
+查询所有已启用的具有语音反馈的辅助应用。
+```

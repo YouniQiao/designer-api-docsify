@@ -33,7 +33,7 @@ Prints assertion information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | No | Result value. If value is false or left blank, the output starting with "Assertion failed" is printed. If value is true, no information is printed. |
+| value | Object | No | Result value. If value is false or left blank, the output starting with "Assertionfailed" is printed. If value is true, no information is printed. |
 | arguments | Object[] | Yes | Other information to be printed when value is false. If this parameter is left blank, other information is not printed. |
 
 **Error codes:**

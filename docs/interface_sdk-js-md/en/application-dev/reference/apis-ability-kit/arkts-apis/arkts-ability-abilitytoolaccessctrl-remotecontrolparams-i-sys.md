@@ -29,6 +29,8 @@ Anti-replay challenge.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -44,6 +46,8 @@ Device name of controlled device.
 **Type:** string
 
 **Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -61,6 +65,8 @@ Device name of controller device.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -77,6 +83,8 @@ Remote control ticket for trusted devices.
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -92,6 +100,8 @@ Extra message required for signature verification.
 **Type:** string
 
 **Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.Asset
 

@@ -18,7 +18,7 @@ Describes the width and height of the auto-fill pop-up.
 height: number
 ```
 
-Height of the auto-fill pop-up.
+Height of the auto-fill pop-up. The unit is px.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Height of the auto-fill pop-up.
 width: number
 ```
 
-Width of the auto-fill pop-up.
+Width of the auto-fill pop-up. The unit is px.
 
 **Type:** number
 

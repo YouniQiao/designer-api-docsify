@@ -40,7 +40,7 @@ reason: DismissReason
 
 Types of reasons triggering the dialog box close action.
 
-**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**Type:** [DismissReason](../arkts-components/arkts-arkui-common-comp-dismissreason-e.md)
 
 **Since:** 26.0.1
 

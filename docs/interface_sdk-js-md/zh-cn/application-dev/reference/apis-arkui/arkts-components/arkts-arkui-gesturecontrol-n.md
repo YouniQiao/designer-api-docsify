@@ -18,7 +18,7 @@ declare namespace GestureControl
 
 | 名称 | 说明 |
 | --- | --- |
-| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | 定义手势类型。 |
+| [GestureType](arkts-arkui-tapgesture-comp-gesturetype-e.md) | 定义手势类型。 |
 
 ## 示例
 

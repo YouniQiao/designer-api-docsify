@@ -70,10 +70,6 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 **Examples**
 
 ```TypeScript
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-```
-
-```TypeScript
 For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 ```
 
@@ -131,7 +127,9 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-See [createAsset](#createasset)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
+```
 
 ## getHiddenAlbums
 

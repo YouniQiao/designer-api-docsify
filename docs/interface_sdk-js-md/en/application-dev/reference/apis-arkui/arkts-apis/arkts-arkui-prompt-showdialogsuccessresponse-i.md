@@ -38,4 +38,6 @@ Defines the index of data.
 
 **Substitutes:** [index](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#index)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

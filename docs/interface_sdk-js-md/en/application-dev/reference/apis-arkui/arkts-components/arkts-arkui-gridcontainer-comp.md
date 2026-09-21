@@ -2,7 +2,7 @@
 
 A vertical grid layout container, used only in grid layout scenarios. The grid layout implements responsive layout by dividing the container width into a specified number of columns, allowing child components to occupy different numbers of columns and offsets. It is suitable for responsive page layouts, multi-column content display, dashboard layouts, and other scenarios.
 
-> **NOTE** > > This component is deprecated since API version 9. You are advised to use the new components > GridCol and GridRow instead. > > This component is supported since API version 7. New APIs added in later versions are marked with superscripts to > indicate their starting version.
+> **NOTE** > > This component is deprecated since API version 9. You are advised to use the new components > [GridCol](arkts-arkui-gridcol-comp.md#grid_col) and [GridRow](arkts-arkui-gridrow-comp.md#grid_row) instead. > > This component is supported since API version 7. New APIs added in later versions are marked with superscripts to > indicate their starting version.
 
 ## Child Components
 
@@ -28,7 +28,7 @@ Creates a vertical grid layout container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md) | No | Configuration parameter of **GridContainer**, used to set the number of columns, device width type, gutter, and margin of the grid layout. If not passed, the default configuration is used. |
+| value | [GridContainerOptions](arkts-arkui-gridcontainer-comp-gridcontaineroptions-i.md) | No | Configuration parameter of **GridContainer**, used to set the number of columns, device width type, gutter, and margin of the grid layout. If not passed, the default configuration is used. |
 
 ## Summary
 
@@ -36,13 +36,13 @@ Creates a vertical grid layout container.
 
 | Name | Description |
 | --- | --- |
-| [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md) | Defines the grid layout container configuration parameter object, used to set the number of columns, device width type, gutter, and margin for the **GridContainer** component. |
+| [GridContainerOptions](arkts-arkui-gridcontainer-comp-gridcontaineroptions-i.md) | Defines the grid layout container configuration parameter object, used to set the number of columns, device width type, gutter, and margin for the **GridContainer** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SizeType](arkts-arkui-sizetype-e.md) | Enumerates device width types, used to distinguish device types of different widths in the grid layout to implement responsive layout. |
+| [SizeType](arkts-arkui-gridcontainer-comp-sizetype-e.md) | Enumerates device width types, used to distinguish device types of different widths in the grid layout to implement responsive layout. |
 
 ## Examples
 

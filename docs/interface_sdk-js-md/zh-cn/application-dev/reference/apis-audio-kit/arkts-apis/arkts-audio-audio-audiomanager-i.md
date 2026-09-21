@@ -41,6 +41,20 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 | key | string | 是 | 待获取的音频参数的键。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取指定音频参数值成功，err为undefined，data为获取到的指定音频参数值；否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getAudioParameter('key_example', (err: BusinessError, value: string) => {
+  if (err) {
+    console.error(`Failed to obtain the audio parameter. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the audio parameter, value: ${value}.`);
+});
+```
+
 <a id="getaudioparameter-1"></a>
 
 ## getAudioParameter
@@ -73,6 +87,18 @@ getAudioParameter(key: string): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回获取的音频参数值。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getAudioParameter('key_example').then((value: string) => {
+  console.info(`Succeeded in obtaining the audio parameter, value: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the audio parameter. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getAudioScene
 
 ```TypeScript
@@ -90,6 +116,20 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 是 | 回调函数。当获取音频场景模式成功，err为undefined，data为获取到的音频场景模式；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getAudioScene((err: BusinessError, value: audio.AudioScene) => {
+  if (err) {
+    console.error(`Failed to obtain the audio scene mode. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
+});
+```
 
 <a id="getaudioscene-1"></a>
 
@@ -111,6 +151,18 @@ getAudioScene(): Promise<AudioScene>
 | --- | --- |
 | Promise&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Promise对象，返回音频场景模式。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getAudioScene().then((value: audio.AudioScene) => {
+  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the audio scene mode. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getAudioSceneSync
 
 ```TypeScript
@@ -128,6 +180,20 @@ getAudioSceneSync(): AudioScene
 | 类型 | 说明 |
 | --- | --- |
 | [AudioScene](arkts-audio-audio-audioscene-e.md) | 音频场景模式。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: audio.AudioScene = audioManager.getAudioSceneSync();
+  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the audio scene mode. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getDebuggingManager
 
@@ -149,6 +215,12 @@ getDebuggingManager(): AudioDebuggingManager
 | --- | --- |
 | [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) | 返回AudioDebuggingManager实例。 |
 
+**示例**
+
+```TypeScript
+let debugManager: audio.AudioDebuggingManager = audioManager.getDebuggingManager();
+```
+
 ## getDeviceEnhanceManager
 
 ```TypeScript
@@ -168,6 +240,12 @@ getDeviceEnhanceManager(): AudioDeviceEnhanceManager
 | 类型 | 说明 |
 | --- | --- |
 | [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | 返回一个AudioDeviceEnhanceManager实例。 |
+
+**示例**
+
+```TypeScript
+let audioDeviceEnhanceManager: audio.AudioDeviceEnhanceManager = audioManager.getDeviceEnhanceManager();
+```
 
 ## getDevices
 
@@ -197,6 +275,20 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 | --- | --- | --- | --- |
 | deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | 是 | 音频设备类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调函数。当获取音频设备列表成功，err为undefined，data为获取到的音频设备列表；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, value: audio.AudioDeviceDescriptors) => {
+  if (err) {
+    console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(value)}.`);
+});
+```
 
 <a id="getdevices-1"></a>
 
@@ -234,6 +326,18 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 | --- | --- |
 | Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Promise对象，返回设备列表。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data: audio.AudioDeviceDescriptors) => {
+  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(data)}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getMaxVolume
 
 ```TypeScript
@@ -263,6 +367,20 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${value}.`);
+});
+```
 
 <a id="getmaxvolume-1"></a>
 
@@ -301,6 +419,18 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回最大音量等级。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA).then((data: number) => {
+  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${data}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getMinVolume
 
 ```TypeScript
@@ -330,6 +460,20 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMinVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${value}.`);
+});
+```
 
 <a id="getminvolume-1"></a>
 
@@ -368,6 +512,18 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回最小音量等级。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getRingerMode
 
 ```TypeScript
@@ -395,6 +551,20 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getRingerMode((err: BusinessError, value: audio.AudioRingMode) => {
+  if (err) {
+    console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${value}.`);
+});
+```
 
 <a id="getringermode-1"></a>
 
@@ -426,6 +596,18 @@ getRingerMode(): Promise<AudioRingMode>
 | --- | --- |
 | Promise&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Promise对象，返回系统的铃声模式。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getRingerMode().then((value: audio.AudioRingMode) => {
+  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getRoutingManager
 
 ```TypeScript
@@ -443,6 +625,12 @@ getRoutingManager(): AudioRoutingManager
 | 类型 | 说明 |
 | --- | --- |
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | AudioRoutingManager实例。 |
+
+**示例**
+
+```TypeScript
+let audioRoutingManager: audio.AudioRoutingManager = audioManager.getRoutingManager();
+```
 
 ## getSessionManager
 
@@ -464,6 +652,12 @@ getSessionManager(): AudioSessionManager
 | --- | --- |
 | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | AudioSessionManager实例。 |
 
+**示例**
+
+```TypeScript
+let audioSessionManager: audio.AudioSessionManager = audioManager.getSessionManager();
+```
+
 ## getSpatializationManager
 
 ```TypeScript
@@ -482,6 +676,12 @@ getSpatializationManager(): AudioSpatializationManager
 | --- | --- |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | AudioSpatializationManager实例。 |
 
+**示例**
+
+```TypeScript
+let audioSpatializationManager: audio.AudioSpatializationManager = audioManager.getSpatializationManager();
+```
+
 ## getStreamManager
 
 ```TypeScript
@@ -499,6 +699,12 @@ getStreamManager(): AudioStreamManager
 | 类型 | 说明 |
 | --- | --- |
 | [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | AudioStreamManager实例。 |
+
+**示例**
+
+```TypeScript
+let audioStreamManager: audio.AudioStreamManager = audioManager.getStreamManager();
+```
 
 ## getVolume
 
@@ -529,6 +735,20 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
+  if (err) {
+    console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
+});
+```
 
 <a id="getvolume-1"></a>
 
@@ -567,6 +787,18 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
+  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getVolumeManager
 
 ```TypeScript
@@ -586,6 +818,12 @@ getVolumeManager(): AudioVolumeManager
 | 类型 | 说明 |
 | --- | --- |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | AudioVolumeManager实例。 |
+
+**示例**
+
+```TypeScript
+let audioVolumeManager: audio.AudioVolumeManager = audioManager.getVolumeManager();
+```
 
 ## isActive
 
@@ -616,6 +854,20 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流的活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+});
+```
 
 <a id="isactive-1"></a>
 
@@ -654,6 +906,18 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示流状态为活跃；返回false表示流状态不活跃。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## isDeviceActive
 
 ```TypeScript
@@ -682,6 +946,20 @@ isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): 
 | --- | --- | --- | --- |
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 是 | 活跃音频设备类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定设备的激活状态成功，err为undefined，data为true表示激活，false表示未激活；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isDeviceActive(audio.ActiveDeviceType.SPEAKER, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the device is active. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the device is active, isActive: ${value}.`);
+});
+```
 
 <a id="isdeviceactive-1"></a>
 
@@ -719,6 +997,18 @@ isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示设备已激活；返回false表示设备未激活。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isDeviceActive(audio.ActiveDeviceType.SPEAKER).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the device is active, isActive: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the device is active. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## isMicrophoneMute
 
 ```TypeScript
@@ -748,6 +1038,20 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMicrophoneMute((err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${value}.`);
+});
+```
 
 <a id="ismicrophonemute-1"></a>
 
@@ -781,6 +1085,18 @@ isMicrophoneMute(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示麦克风被静音；返回false表示麦克风未被静音。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMicrophoneMute().then((value: boolean) => {
+  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## isMute
 
 ```TypeScript
@@ -810,6 +1126,20 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音量流的静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+  if (err) {
+    console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${value}.`);
+});
+```
 
 <a id="ismute-1"></a>
 
@@ -848,6 +1178,18 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示静音；返回false表示非静音。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.isMute(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${value}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## mute
 
 ```TypeScript
@@ -876,6 +1218,20 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | mute | boolean | 是 | 是否设置指定音量流为静音状态。true表示静音，false表示非静音。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定音量流静音成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in muting the stream.');
+});
+```
 
 <a id="mute-1"></a>
 
@@ -913,6 +1269,18 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
+  console.info('Succeeded in muting the stream.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## off('audioSceneChange')
 
 ```TypeScript
@@ -931,6 +1299,22 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'，当取消监听当前音频场景变化事件时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数，返回当前音频场景模式。 |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioManager.off('audioSceneChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let audioSceneChangeCallback = (audioScene: audio.AudioScene) => {
+  console.info(`Audio scene changed, audioScene: ${audioScene}.`);
+};
+
+audioManager.on('audioSceneChange', audioSceneChangeCallback);
+
+audioManager.off('audioSceneChange', audioSceneChangeCallback);
+```
 
 ## off('deviceChange')
 
@@ -959,6 +1343,22 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当取消监听音频设备连接变化事件时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数，返回设备更新详情。 |
+
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioManager.off('deviceChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let deviceChangeCallback = (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Device changed, deviceChanged: ${JSON.stringify(deviceChanged)}.`);
+};
+
+audioManager.on('deviceChange', deviceChangeCallback);
+
+audioManager.off('deviceChange', deviceChangeCallback);
+```
 
 ## off('interrupt')
 
@@ -989,6 +1389,30 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 | 音频打断事件类型的参数。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数，返回打断事件信息。 |
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let interAudioInterrupt: audio.AudioInterrupt = {
+  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
+  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
+  pauseWhenDucked: true
+};
+
+// 取消该事件的所有监听。
+audioManager.off('interrupt', interAudioInterrupt);
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let interruptCallback = (interruptAction: audio.InterruptAction) => {
+  console.info(`Interrupt changed, interruptAction: ${JSON.stringify(interruptAction)}.`);
+};
+
+audioManager.on('interrupt', interAudioInterrupt, interruptCallback);
+
+audioManager.off('interrupt', interAudioInterrupt, interruptCallback);
+```
+
 ## on('audioSceneChange')
 
 ```TypeScript
@@ -1007,6 +1431,14 @@ on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'，当音频场景模式发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 是 | 回调函数，返回当前音频场景模式。 |
+
+**示例**
+
+```TypeScript
+audioManager.on('audioSceneChange', (audioScene: audio.AudioScene) => {
+  console.info(`Audio scene changed, audioScene: ${audioScene}.`);
+});
+```
 
 ## on('deviceChange')
 
@@ -1035,6 +1467,14 @@ on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'，当音频设备连接状态发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 是 | 回调函数，返回设备更新详情。 |
+
+**示例**
+
+```TypeScript
+audioManager.on('deviceChange', (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`Device changed, deviceChanged: ${JSON.stringify(deviceChanged)}.`);
+});
+```
 
 ## on('interrupt')
 
@@ -1065,6 +1505,22 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 | 音频打断事件类型的参数。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 是 | 回调函数，返回打断事件信息。 |
 
+**示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let interAudioInterrupt: audio.AudioInterrupt = {
+  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
+  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
+  pauseWhenDucked: true
+};
+
+audioManager.on('interrupt', interAudioInterrupt, (interruptAction: audio.InterruptAction) => {
+  console.info(`Interrupt changed, interruptAction: ${JSON.stringify(interruptAction)}.`);
+});
+```
+
 ## setAudioParameter
 
 ```TypeScript
@@ -1092,6 +1548,20 @@ setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): vo
 | key | string | 是 | 被设置的音频参数的键。 |
 | value | string | 是 | 被设置的音频参数的值。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当音频参数设置成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setAudioParameter('key_example', 'value_example', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the audio parameter. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the audio parameter.');
+});
+```
 
 <a id="setaudioparameter-1"></a>
 
@@ -1128,6 +1598,18 @@ setAudioParameter(key: string, value: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setAudioParameter('key_example', 'value_example').then(() => {
+  console.info('Succeeded in setting the audio parameter.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the audio parameter. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setDeviceActive
 
 ```TypeScript
@@ -1157,6 +1639,20 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCa
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 是 | 活跃音频设备类型。 |
 | active | boolean | 是 | 是否设置设备为激活状态。true表示已激活，false表示未激活。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置设备激活状态成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setDeviceActive(audio.ActiveDeviceType.SPEAKER, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the active status of the device. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the active status of the device.');
+});
+```
 
 <a id="setdeviceactive-1"></a>
 
@@ -1195,6 +1691,18 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setDeviceActive(audio.ActiveDeviceType.SPEAKER, true).then(() => {
+  console.info('Succeeded in setting the active status of the device.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the active status of the device. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setMicrophoneMute
 
 ```TypeScript
@@ -1221,6 +1729,20 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | mute | boolean | 是 | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setMicrophoneMute(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in muting the microphone.');
+});
+```
 
 <a id="setmicrophonemute-1"></a>
 
@@ -1256,6 +1778,18 @@ setMicrophoneMute(mute: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setMicrophoneMute(true).then(() => {
+  console.info('Succeeded in muting the microphone.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setRingerMode
 
 ```TypeScript
@@ -1282,6 +1816,20 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | 音频铃声模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置铃声模式成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the ringer mode.');
+});
+```
 
 <a id="setringermode-1"></a>
 
@@ -1317,6 +1865,18 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
+  console.info('Succeeded in setting the ringer mode.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setVolume
 
 ```TypeScript
@@ -1347,6 +1907,20 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型。 |
 | volume | number | 是 | 音量等级，可设置范围通过[getMinVolume](#getminvolume)和[getMaxVolume](#getmaxvolume)获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定流的音量成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the volume.');
+});
+```
 
 <a id="setvolume-1"></a>
 
@@ -1385,3 +1959,15 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Succeeded in setting the volume.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
+});
+```

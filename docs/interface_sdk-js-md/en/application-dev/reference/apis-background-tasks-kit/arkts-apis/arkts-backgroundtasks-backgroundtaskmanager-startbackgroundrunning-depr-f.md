@@ -42,10 +42,6 @@ FA model:
 Stage model:
 ```
 
-```TypeScript
-FA model (JS code is required for development):
-```
-
 
 <a id="startbackgroundrunning-1"></a>
 
@@ -83,4 +79,10 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Examples**
 
-See [startBackgroundRunning](#startbackgroundrunning)
+```TypeScript
+FA model (JS code is required for development):
+```
+
+```TypeScript
+Stage model:
+```

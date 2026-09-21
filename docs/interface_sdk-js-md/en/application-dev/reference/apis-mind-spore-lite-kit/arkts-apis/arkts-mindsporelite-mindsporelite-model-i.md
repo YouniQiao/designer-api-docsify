@@ -283,6 +283,36 @@ globalContext.getApplicationContext()
   });
 ```
 
+<a id="predict-1"></a>
+
+## predict
+
+```TypeScript
+predict(inputs: MSTensor[]): Promise<MSTensor[]>
+```
+
+Infer model
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.AI.MindSporeLite
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | the promise returned by the function. |
+
+**Examples**
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
@@ -329,38 +359,6 @@ globalContext.getApplicationContext()
     console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
-
-<a id="predict-1"></a>
-
-## predict
-
-```TypeScript
-predict(inputs: MSTensor[]): Promise<MSTensor[]>
-```
-
-Infer model
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.AI.MindSporeLite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | the promise returned by the function. |
-
-**Examples**
-
-See [predict](#predict)
 
 ## resize
 

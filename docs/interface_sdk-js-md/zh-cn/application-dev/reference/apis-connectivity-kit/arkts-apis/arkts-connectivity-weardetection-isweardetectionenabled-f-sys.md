@@ -53,16 +53,6 @@ try {
 }
 ```
 
-```TypeScript
-try {
-    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX').then((enabled) => {
-        console.info('device enable wear detection ' + enabled);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
 
 <a id="isweardetectionenabled-1"></a>
 
@@ -108,4 +98,12 @@ function isWearDetectionEnabled(deviceId: string): Promise<boolean>
 
 **示例**
 
-参见 [isWearDetectionEnabled](#isweardetectionenabled)
+```TypeScript
+try {
+    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX').then((enabled) => {
+        console.info('device enable wear detection ' + enabled);
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```

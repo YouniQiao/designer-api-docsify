@@ -30,6 +30,8 @@ static getMode(options?: GetBrightnessModeOptions): void
 
 **废弃版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
@@ -101,6 +103,8 @@ static getValue(options?: GetBrightnessOptions): void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -182,6 +186,8 @@ static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 
 **替代接口：** setWindowKeepScreenOn
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **参数：**
@@ -253,6 +259,8 @@ static setMode(options?: SetBrightnessModeOptions): void
 **起始版本：** 3
 
 **废弃版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -327,6 +335,8 @@ static setValue(options?: SetBrightnessOptions): void
 **废弃版本：** 7
 
 **替代接口：** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md)
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

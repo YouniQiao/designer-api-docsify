@@ -35,6 +35,8 @@ buttons: [
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -217,7 +219,7 @@ systemMaterial?: SystemUiMaterial
 
 设置弹窗的系统材质。<br>默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
 
-**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
+**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-common-comp-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -238,6 +240,8 @@ title?: string | Resource
 **类型：** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 9
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

@@ -32,7 +32,7 @@ Creates an attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-comp-attribute.md)&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
+| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-comp-attribute.md)&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
 
 ## textBackgroundStyle
 
@@ -54,4 +54,4 @@ Span background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | Yes | The background style of span. |
+| style | [TextBackgroundStyle](arkts-arkui-span-comp-textbackgroundstyle-i.md) | Yes | The background style of span. |

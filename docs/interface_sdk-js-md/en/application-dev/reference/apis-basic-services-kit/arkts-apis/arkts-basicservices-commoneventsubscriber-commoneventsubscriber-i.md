@@ -53,19 +53,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.abortCommonEvent().then(() => {
-  console.info(`Succeeded in aborting common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="abortcommonevent-1"></a>
 
 ## abortCommonEvent
@@ -88,7 +75,18 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](#finis
 
 **Examples**
 
-See [abortCommonEvent](#abortcommonevent)
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## abortCommonEventSync
 
@@ -156,19 +154,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.clearAbortCommonEvent().then(() => {
-  console.info(`Succeeded in clearing abort common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="clearabortcommonevent-1"></a>
 
 ## clearAbortCommonEvent
@@ -191,7 +176,18 @@ Clears the abort state of this ordered common event. Use this API together with 
 
 **Examples**
 
-See [clearAbortCommonEvent](#clearabortcommonevent)
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEventSync
 
@@ -252,14 +248,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="finishcommonevent-1"></a>
 
 ## finishCommonEvent
@@ -282,7 +270,13 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 **Examples**
 
-See [finishCommonEvent](#finishcommonevent)
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -320,14 +314,6 @@ subscriber.getAbortCommonEvent((err: BusinessError, abortEvent: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getabortcommonevent-1"></a>
 
 ## getAbortCommonEvent
@@ -350,7 +336,13 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 **Examples**
 
-See [getAbortCommonEvent](#getabortcommonevent)
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEventSync
 
@@ -415,14 +407,6 @@ subscriber.getCode((err: BusinessError, code: number) => {
 });
 ```
 
-```TypeScript
-subscriber.getCode().then((code: number) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getcode-1"></a>
 
 ## getCode
@@ -447,7 +431,13 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 
 **Examples**
 
-See [getCode](#getcode)
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getCodeSync
 
@@ -515,14 +505,6 @@ subscriber.getData((err: BusinessError, data: string) => {
 });
 ```
 
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getdata-1"></a>
 
 ## getData
@@ -547,7 +529,13 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 
 **Examples**
 
-See [getData](#getdata)
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getDataSync
 
@@ -614,14 +602,6 @@ subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManag
 });
 ```
 
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getsubscribeinfo-2"></a>
 
 ## getSubscribeInfo
@@ -646,7 +626,13 @@ Obtains the subscriber information. This API uses a promise to return the result
 
 **Examples**
 
-See [getSubscribeInfo](#getsubscribeinfo)
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getSubscribeInfoSync
 
@@ -711,14 +697,6 @@ subscriber.isOrderedCommonEvent((err: BusinessError, isOrdered: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="isorderedcommonevent-1"></a>
 
 ## isOrderedCommonEvent
@@ -741,7 +719,13 @@ Checks whether the current common event is an ordered common event. This API use
 
 **Examples**
 
-See [isOrderedCommonEvent](#isorderedcommonevent)
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isOrderedCommonEventSync
 
@@ -804,14 +788,6 @@ subscriber.isStickyCommonEvent((err: BusinessError, isSticky: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="isstickycommonevent-1"></a>
 
 ## isStickyCommonEvent
@@ -834,7 +810,13 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 **Examples**
 
-See [isStickyCommonEvent](#isstickycommonevent)
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isStickyCommonEventSync
 
@@ -900,14 +882,6 @@ subscriber.setCode(1, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setcode-1"></a>
 
 ## setCode
@@ -944,7 +918,13 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 **Examples**
 
-See [setCode](#setcode)
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndData
 
@@ -986,14 +966,6 @@ subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setcodeanddata-1"></a>
 
 ## setCodeAndData
@@ -1031,7 +1003,13 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 **Examples**
 
-See [setCodeAndData](#setcodeanddata)
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndDataSync
 
@@ -1147,14 +1125,6 @@ subscriber.setData('publish_data_changed', (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setdata-1"></a>
 
 ## setData
@@ -1191,7 +1161,13 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 **Examples**
 
-See [setData](#setdata)
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setDataSync
 

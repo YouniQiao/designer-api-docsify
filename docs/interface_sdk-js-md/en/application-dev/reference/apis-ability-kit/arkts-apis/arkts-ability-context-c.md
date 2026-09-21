@@ -186,23 +186,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## getApplicationContext
 
 ```TypeScript
@@ -290,27 +273,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onCreate() {
     console.info('MyAbility onCreate');
-    let groupId = '1';
-    let getGroupDirContext: common.Context = this.context;
-    try {
-      // Obtain the shared directory by group ID (Promise mode).
-      getGroupDirContext.getGroupDir(groupId).then(data => {
-        console.info('getGroupDir result:' + data);
-      })
-    } catch (error) {
-      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
     let getGroupDirContext: common.Context = this.context;
 
     // Obtain the shared directory by group ID (callback mode).
@@ -364,7 +326,26 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 **Examples**
 
-See [getGroupDir](#getgroupdir)
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = '1';
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      // Obtain the shared directory by group ID (Promise mode).
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info('getGroupDir result:' + data);
+      })
+    } catch (error) {
+      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 

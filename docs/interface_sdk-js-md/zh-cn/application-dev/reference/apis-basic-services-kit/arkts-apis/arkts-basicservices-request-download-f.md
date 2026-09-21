@@ -44,16 +44,6 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 ```TypeScript
 let downloadTask: request.DownloadTask;
 // 需要手动将url替换为真实服务器的HTTP协议地址
-request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-  downloadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
-```TypeScript
-let downloadTask: request.DownloadTask;
-// 需要手动将url替换为真实服务器的HTTP协议地址
 request.download({ url: 'https://xxxx/xxxxx.hap', 
 filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => {
   if (err) {
@@ -107,4 +97,12 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 **示例**
 
-参见 [download](#download)
+```TypeScript
+let downloadTask: request.DownloadTask;
+// 需要手动将url替换为真实服务器的HTTP协议地址
+request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+  downloadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+})
+```

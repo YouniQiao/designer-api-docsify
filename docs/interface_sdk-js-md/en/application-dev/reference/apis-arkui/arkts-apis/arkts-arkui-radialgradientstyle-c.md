@@ -32,7 +32,7 @@ A constructor used to create a **RadialGradientOptions** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes | Options for displaying a radial gradient. |
+| options | [RadialGradientOptions](../arkts-components/arkts-arkui-common-comp-radialgradientoptions-i.md) | Yes | Options for displaying a radial gradient. |
 
 ## options
 
@@ -42,7 +42,7 @@ options: RadialGradientOptions
 
 Options for displaying a radial gradient.
 
-**Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
+**Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-common-comp-radialgradientoptions-i.md)
 
 **Since:** 20
 

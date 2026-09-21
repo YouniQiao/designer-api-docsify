@@ -424,16 +424,6 @@ static load(uri? : ResourceStr): Promise<Scene>
 示例2：通过绝对路径加载（从应用沙盒目录/data/storage/el2/base/files加载模型）
 ```
 
-```TypeScript
-import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
-
-function loadModelWithParams(): Promise<Scene> {
-  let loadParams: SceneLoadParams = { offset: 0 };
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
-  return scene;
-}
-```
-
 ## renderFrame
 
 ```TypeScript

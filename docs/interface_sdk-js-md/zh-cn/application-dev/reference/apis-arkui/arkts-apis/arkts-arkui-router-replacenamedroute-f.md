@@ -52,31 +52,6 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.info(`replaceNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
 class RouterParams {
   data1: string;
 
@@ -95,54 +70,6 @@ router.replaceNamedRoute({
   }
   console.info('replaceNamedRoute success');
 })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`replaceNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceNamedRoute success');
-});
 ```
 
 
@@ -196,7 +123,30 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 **示例**
 
-参见 [replaceNamedRoute](#replacenamedroute)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+})
+  .then(() => {
+    console.info(`replaceNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
 
 
 <a id="replacenamedroute-2"></a>
@@ -245,7 +195,28 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 **示例**
 
-参见 [replaceNamedRoute](#replacenamedroute)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard, (err) => {
+  if (err) {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('replaceNamedRoute success');
+});
+```
 
 
 <a id="replacenamedroute-3"></a>
@@ -299,4 +270,27 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 **示例**
 
-参见 [replaceNamedRoute](#replacenamedroute)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`replaceNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```

@@ -63,18 +63,6 @@ try {
 }
 ```
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = applicationManager.getAllowedRunningBundles(null, 100);
-  console.info(`Succeeded in getting allowed running bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 <a id="getallowedrunningbundles-1"></a>
 
@@ -117,4 +105,14 @@ function getAllowedRunningBundles(admin: Want | null, accountId: number): Array<
 
 **示例**
 
-参见 [getAllowedRunningBundles](#getallowedrunningbundles)
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: Array<string> = applicationManager.getAllowedRunningBundles(null, 100);
+  console.info(`Succeeded in getting allowed running bundles, result : ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get allowed running bundles. Code is ${err.code}, message is ${err.message}`);
+}
+```

@@ -26,7 +26,7 @@ Create TextTimer component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | No | Parameters of the **TextTimer** component. The default value is inherited from [TextTimerOptions](arkts-arkui-texttimeroptions-i.md). |
+| options | [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md) | No | Parameters of the **TextTimer** component. The default value is inherited from [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md). |
 
 ## Summary
 
@@ -34,8 +34,8 @@ Create TextTimer component.
 
 | Name | Description |
 | --- | --- |
-| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | Defines the **TextTimer** configuration used by the **ContentModifier** API. |
-| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | Sets the options used to build the **TextTimer** component. |
+| [TextTimerConfiguration](arkts-arkui-texttimer-comp-texttimerconfiguration-i.md) | Defines the **TextTimer** configuration used by the **ContentModifier** API. |
+| [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md) | Sets the options used to build the **TextTimer** component. |
 
 ## Examples
 
@@ -84,7 +84,7 @@ This example shows text effects in different styles using the [fontColor](#fontc
 ```TypeScript
 ### Example 6: Setting the Initial Timing Time
 
-This example sets the initial timing time of the timer through the startTime attribute of [TextTimerOptions](arkts-arkui-texttimeroptions-i.md).
+This example sets the initial timing time of the timer through the startTime attribute of [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md).
 
-Since API version 26.0.0, the startTime attribute has been added to [TextTimerOptions](arkts-arkui-texttimeroptions-i.md).
+Since API version 26.0.0, the startTime attribute has been added to [TextTimerOptions](arkts-arkui-texttimer-comp-texttimeroptions-i.md).
 ```

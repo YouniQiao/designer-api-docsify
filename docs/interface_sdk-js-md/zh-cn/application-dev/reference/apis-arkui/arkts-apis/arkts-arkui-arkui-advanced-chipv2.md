@@ -89,7 +89,7 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 ```TypeScript
 ### 示例4（监听ChipV2Options内对象类型属性的内部属性变化）
 
-ChipV2Options使用了@ObservedV2装饰器，[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)组件通过@Param接收ChipV2Options对象。对于@Trace装饰的基本类型属性，@Param已能观测到属性变化并触发UI刷新。但对于对象类型属性（如padding、label的labelMargin等）的内部属性（如padding的start、end），这些对象类型本身未被@ObservedV2装饰。因此其内部属性变化无法被@Param感知，修改内部属性时UI不会自动刷新。使用makeObserved对对象类型属性（如padding）进行包裹，可为其内部属性补充深度观察能力。这样修改内部属性（如start、end）时，框架能监听到变化并触发UI刷新。makeObserved接口的详细说明请参考[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
+ChipV2Options使用了@ObservedV2装饰器，[ChipV2](arkts-arkui-arkui-advanced-chipv2-chipv2-s.md)组件通过@Param接收ChipV2Options对象。对于@Trace装饰的基本类型属性，@Param已能观测到属性变化并触发UI刷新。但对于对象类型属性（如padding、label的labelMargin等）的内部属性（如padding的start、end），这些对象类型本身未被@ObservedV2装饰。因此其内部属性变化无法被@Param感知，修改内部属性时UI不会自动刷新。使用[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)对对象类型属性（如padding）进行包裹，可为其内部属性补充深度观察能力。这样修改内部属性（如start、end）时，框架能监听到变化并触发UI刷新。makeObserved接口的详细说明请参考[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
 
 以下示例使用makeObserved包裹padding，并通过Button修改padding的start和end属性，验证对象类型属性内部属性变化能够触发ChipV2的UI刷新。
 

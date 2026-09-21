@@ -4,7 +4,7 @@
 export class ReactiveBuilderNode<Args extends Object[]>
 ```
 
-**ReactiveBuilderNode** uses the stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) to generate a component tree and holds the root node of the component tree. A ReactiveBuilderNode cannot be defined as a state variable. FrameNode held in **ReactiveBuilderNode** is used only to mount the ReactiveBuilderNode as a child node to another FrameNode. Undefined behavior may occur if you set attributes or perform operations on subnodes of the FrameNode held by the ReactiveBuilderNode. Therefore, after you have obtained a RenderNode through the [getFrameNode](arkts-arkui-buildernode-c.md#getframenode) method of the ReactiveBuilderNode and the [getRenderNode](arkts-arkui-framenode-c.md#getrendernode) method of the FrameNode, avoid setting the attributes or operating the subnodes through APIs of [RenderNode](arkts-arkui-rendernode-c.md).
+**ReactiveBuilderNode** uses the stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) to generate a component tree and holds the root node of the component tree. A ReactiveBuilderNode cannot be defined as a state variable. [FrameNode](arkts-arkui-typenode-n.md) held in **ReactiveBuilderNode** is used only to mount the ReactiveBuilderNode as a child node to another FrameNode. Undefined behavior may occur if you set attributes or perform operations on subnodes of the FrameNode held by the ReactiveBuilderNode. Therefore, after you have obtained a RenderNode through the [getFrameNode](arkts-arkui-buildernode-c.md#getframenode) method of the ReactiveBuilderNode and the [getRenderNode](arkts-arkui-framenode-c.md#getrendernode) method of the [FrameNode](arkts-arkui-typenode-n.md), avoid setting the attributes or operating the subnodes through APIs of [RenderNode](arkts-arkui-rendernode-c.md).
 
 **Since:** 22
 
@@ -37,7 +37,7 @@ Custom components are allowed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; | Yes | Stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) required for creating a component tree. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-comp-wrappedbuilder-c.md)&lt;Args&gt; | Yes | Stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) required for creating a component tree. |
 | config | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | Args | Yes | Input arguments of the builder, which are used to construct the **builder** function encapsulated by the **WrappedBuilder** object. Multiple arguments are supported. The default value is **undefined**. |
 
@@ -127,7 +127,7 @@ The following example demonstrates how to use the flushState API in V1 and V2 de
 getFrameNode(): FrameNode | null
 ```
 
-Obtains the FrameNode from the ReactiveBuilderNode. The FrameNode is generated only after the ReactiveBuilderNode executes the build operation.
+Obtains the [FrameNode](arkts-arkui-typenode-n.md) from the ReactiveBuilderNode. The FrameNode is generated only after the ReactiveBuilderNode executes the build operation.
 
 **Since:** 22
 
@@ -222,7 +222,7 @@ postInputEvent(event: InputEventType): boolean
 
 Posts the input event to the target node managed by the **ReactiveBuilderNode**.
 
-**offsetA** indicates the **BuilderNode**'s offset relative to its parent component, **offsetB** the hit position's offset relative to the **BuilderNode**, **offsetC** the composite offset (offsetA + offsetB) passed to the **postInputEvent**.
+**offsetA** indicates the **BuilderNode**'s offset relative to its parent component, **offsetB** the hit position'soffset relative to the **BuilderNode**, **offsetC** the composite offset (offsetA + offsetB) passed to the **postInputEvent**.
 
 ![API coordinate conversion example](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
 
@@ -236,8 +236,8 @@ Posts the input event to the target node managed by the **ReactiveBuilderNode**.
 > change during the event conversion. For details about the specifications, see
 > onTouch.
 > 
-> When an [axis event](../arkts-components/arkts-arkui-axisevent-i.md) event is injected, it cannot trigger
-> rotation gestures, because the axis event does not include rotation
+> When an [axis event](../arkts-components/arkts-arkui-common-comp-axisevent-i.md) event is injected, it cannot trigger
+> [rotation gestures](../arkts-components/arkts-arkui-gesturecontrol-n.md), because the axis event does not include rotation
 > axis information.
 > 
 > A forwarded event undergoes touch testing in the target component's subtree and triggers corresponding gestures.
@@ -302,7 +302,7 @@ Before calling this API, you need to convert the value of **event** to the corre
 > 
 > - When processing a mouse left-click event, the system converts the event to a touch event. When forwarding the event, do not bind the touch event and mouse event at the outer layer at the same time, as this may cause coordinate offsets. This is because [TouchType](arkts-arkui-touchtype-e.md) does not change during the event conversion. For details about the specifications, see onTouch.
 > 
-> - When an [axis event](../arkts-components/arkts-arkui-axisevent-i.md) event is injected, it cannot trigger rotation gestures, because the axis event does not include rotation axis information.
+> - When an [axis event](../arkts-components/arkts-arkui-common-comp-axisevent-i.md) event is injected, it cannot trigger [rotation gestures](../arkts-components/arkts-arkui-gesturecontrol-n.md), because the axis event does not include rotation axis information.
 > 
 > - The forwarded event is posted to the target component and its child components for processing, and triggers the corresponding gesture. You can use input parameters to control whether the gestures of the current component and the target component are in a competitive relationship.
 > 
@@ -368,7 +368,7 @@ Posts a raw touch event to the FrameNode created by a ReactiveBuilderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | Touch event. |
+| event | [TouchEvent](../arkts-components/arkts-arkui-common-comp-touchevent-i.md) | Yes | Touch event. |
 
 **Return value:**
 

@@ -4,9 +4,9 @@
 declare class UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>
 ```
 
-The universal attributes are supported.
+The [universal attributes](arkts-arkui-common-comp.md#common) are supported.
 
-Universal events, such as the click event, are not supported.
+Universal events, such as the [click event](arkts-arkui-common-comp.md#common), are not supported.
 
 The events are passed to the remote UIExtensionAbility for processing after coordinate conversion.
 

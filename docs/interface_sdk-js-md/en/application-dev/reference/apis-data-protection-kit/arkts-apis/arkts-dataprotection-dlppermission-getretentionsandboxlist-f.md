@@ -54,30 +54,6 @@ dlpPermission.getRetentionSandboxList().then((sandboxList) => { // Obtain the sa
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sandboxList', JSON.stringify(sandboxList));
-  }
-}); // Obtain the sandbox retention information.
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
-  }
-}); // Obtain the sandbox retention information.
-```
-
 
 <a id="getretentionsandboxlist-1"></a>
 
@@ -114,7 +90,17 @@ This API is used to query the sandbox retention information of a specified appli
 
 **Examples**
 
-See [getRetentionSandboxList](#getretentionsandboxlist)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('sandboxList', JSON.stringify(sandboxList));
+  }
+}); // Obtain the sandbox retention information.
+```
 
 
 <a id="getretentionsandboxlist-2"></a>
@@ -151,4 +137,14 @@ This API is used to query the sandbox retention information of the current appli
 
 **Examples**
 
-See [getRetentionSandboxList](#getretentionsandboxlist)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
+  }
+}); // Obtain the sandbox retention information.
+```

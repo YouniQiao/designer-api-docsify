@@ -355,6 +355,8 @@
   - [FillRequestCallback(系统接口)](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FillResponse(系统接口)](arkts-ability-autofillmanager-fillresponse-t-sys.md)<!--DelEnd-->
+  - [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md)
+  - [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md)
   <!--Del-->
   - [PageNodeInfo(系统接口)](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->

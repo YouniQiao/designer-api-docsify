@@ -26,7 +26,7 @@ Progress(options: ProgressOptions<Type>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)&gt; | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
+| options | [ProgressOptions](arkts-arkui-progress-comp-progressoptions-i.md)&lt;[Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)&gt; | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
 
 ## 汇总
 
@@ -34,25 +34,25 @@ Progress(options: ProgressOptions<Type>)
 
 | 名称 | 说明 |
 | --- | --- |
-| [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) | 胶囊样式选项。 |
-| [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md) | 进度条通用样式选项。 |
-| [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) | 圆形样式选项。圆形样式的显示类似月圆月缺的进度展示效果，从月牙逐渐变化至满月。 |
-| [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) | 线性样式选项。 |
-| [ProgressConfiguration](arkts-arkui-progressconfiguration-i.md) | 进度条配置。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [ProgressOptions](arkts-arkui-progressoptions-i.md) | 进度条选项。 |
-| [ProgressStyleMap](arkts-arkui-progressstylemap-i.md) | 进度条类型和样式的映射表。 |
-| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md) | 进度条样式选项。 |
-| [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) | 环形无刻度样式选项。 |
-| [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) | 环形有刻度样式选项。 |
-| [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) | 扫光效果选项。 |
+| [CapsuleStyleOptions](arkts-arkui-progress-comp-capsulestyleoptions-i.md) | 胶囊样式选项。 |
+| [CommonProgressStyleOptions](arkts-arkui-progress-comp-commonprogressstyleoptions-i.md) | 进度条通用样式选项。 |
+| [EclipseStyleOptions](arkts-arkui-progress-comp-eclipsestyleoptions-i.md) | 圆形样式选项。圆形样式的显示类似月圆月缺的进度展示效果，从月牙逐渐变化至满月。 |
+| [LinearStyleOptions](arkts-arkui-progress-comp-linearstyleoptions-i.md) | 线性样式选项。 |
+| [ProgressConfiguration](arkts-arkui-progress-comp-progressconfiguration-i.md) | 进度条配置。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [ProgressOptions](arkts-arkui-progress-comp-progressoptions-i.md) | 进度条选项。 |
+| [ProgressStyleMap](arkts-arkui-progress-comp-progressstylemap-i.md) | 进度条类型和样式的映射表。 |
+| [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md) | 进度条样式选项。 |
+| [RingStyleOptions](arkts-arkui-progress-comp-ringstyleoptions-i.md) | 环形无刻度样式选项。 |
+| [ScaleRingStyleOptions](arkts-arkui-progress-comp-scaleringstyleoptions-i.md) | 环形有刻度样式选项。 |
+| [ScanEffectOptions](arkts-arkui-progress-comp-scaneffectoptions-i.md) | 扫光效果选项。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ProgressStatus](arkts-arkui-progressstatus-e.md) | 进度条的当前状态。 |
-| [ProgressStyle](arkts-arkui-progressstyle-e.md) | 进度条样式。 |
-| [ProgressType](arkts-arkui-progresstype-e.md) | 进度条类型。 |
+| [ProgressStatus](arkts-arkui-progress-comp-progressstatus-e.md) | 进度条的当前状态。 |
+| [ProgressStyle](arkts-arkui-progress-comp-progressstyle-e.md) | 进度条样式。 |
+| [ProgressType](arkts-arkui-progress-comp-progresstype-e.md) | 进度条类型。 |
 
 ## 示例
 
@@ -115,7 +115,7 @@ Progress(options: ProgressOptions<Type>)
 ```TypeScript
 ### 示例8（设置Capsule进度条圆角半径）
 
-该示例通过[CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md)的入参borderRadius，实现了Capsule类型进度条圆角半径设置。
+该示例通过[CapsuleStyleOptions](arkts-arkui-progress-comp-capsulestyleoptions-i.md)的入参borderRadius，实现了Capsule类型进度条圆角半径设置。
 
 从API version 18开始，新增borderRadius属性。
 

@@ -913,6 +913,18 @@ console.info('result = ', arrayList.length); // result = 4
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
+**示例**
+
+```TypeScript
+let arrayList = new ArrayList<number>();
+arrayList.add(2);
+arrayList.add(4);
+arrayList.add(5);
+arrayList.add(4);
+let result: number = arrayList[2];
+console.info('result = ', result); // result =  5
+```
+
 ## length
 
 ```TypeScript

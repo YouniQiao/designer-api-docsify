@@ -20,6 +20,8 @@ RSA.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -35,6 +37,8 @@ HUKS_ALG_ECC = 2
 ECC.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,6 +56,8 @@ DSA&lt;!--RP5--&gt;&lt;!--RP5End--&gt;.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -68,6 +74,8 @@ AES.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -81,6 +89,8 @@ HUKS_ALG_HMAC = 50
 HMAC.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,6 +108,8 @@ HKDF.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -113,6 +125,8 @@ HUKS_ALG_PBKDF2 = 52
 PBKDF2.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,6 +144,8 @@ ECDH.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -145,6 +161,8 @@ HUKS_ALG_X25519 = 101
 X25519.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,6 +180,8 @@ Ed25519.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -177,6 +197,8 @@ HUKS_ALG_DH = 103
 DH.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,6 +216,8 @@ SM2.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -209,6 +233,8 @@ HUKS_ALG_SM3 = 151
 SM3
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,6 +252,8 @@ SM4.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -242,6 +270,8 @@ DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since 
 
 **Since:** 12
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -255,6 +285,8 @@ HUKS_ALG_3DES = 161
 3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -270,6 +302,8 @@ CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since
 
 **Since:** 12
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -284,6 +318,8 @@ ML-KEM.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -297,6 +333,8 @@ HUKS_ALG_ML_DSA = 201
 ML-DSA.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

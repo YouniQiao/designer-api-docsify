@@ -98,4 +98,10 @@ Downloads an MMS message. This API uses a promise to return the result.
 
 **Examples**
 
-See [downloadMms](#downloadmms)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

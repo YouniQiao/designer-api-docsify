@@ -52,6 +52,12 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 <a id="addassets-1"></a>
 
 ## addAssets
@@ -93,6 +99,12 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## commitModify
 
 ```TypeScript
@@ -121,6 +133,12 @@ Commits the modification on the album attributes to the database. This API uses 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="commitmodify-1"></a>
 
@@ -152,6 +170,12 @@ Commits the modification on the album attributes to the database. This API uses 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## removeAssets
 
@@ -186,6 +210,12 @@ Removes image and video assets from a user album. The album and file resources m
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="removeassets-1"></a>
 
@@ -227,6 +257,12 @@ Removes image and video assets from a user album. The album and file resources m
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## imageCount
 

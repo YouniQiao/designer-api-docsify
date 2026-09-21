@@ -85,6 +85,48 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+const valueBucket3: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucket4: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucket5: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets = new Array(valueBucket3, valueBucket4, valueBucket5);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = await transaction.batchInsert('EMPLOYEE', valueBuckets);
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertSync
 
 ```TypeScript
@@ -139,6 +181,48 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 | [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+const valueBucket6: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucket7: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucket8: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets2 = new Array(valueBucket6, valueBucket7, valueBucket8);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let insertNum: number = (transaction as relationalStore.Transaction).batchInsertSync('EMPLOYEE', valueBuckets2);
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## batchInsertWithConflictResolution
 
@@ -207,6 +291,53 @@ batchInsertWithConflictResolution(
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+const valueBucket9: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucketA: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucketB: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets3 = new Array(valueBucket9, valueBucketA, valueBucketB);
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = await transaction.batchInsertWithConflictResolution(
+        'EMPLOYEE',
+        valueBuckets3,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertWithConflictResolutionSync
 
 ```TypeScript
@@ -271,6 +402,52 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+const valueBucketC: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+const valueBucketD: relationalStore.ValuesBucket = {
+  NAME: 'Jack',
+  AGE: 19,
+  SALARY: 101.5,
+  CODES: new Uint8Array([6, 7, 8, 9, 10])
+};
+const valueBucketE: relationalStore.ValuesBucket = {
+  NAME: 'Tom',
+  AGE: 20,
+  SALARY: 102.5,
+  CODES: new Uint8Array([11, 12, 13, 14, 15])
+};
+
+let valueBuckets4 = new Array(valueBucketC, valueBucketD, valueBucketE);
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const insertNum = transaction.batchInsertWithConflictResolutionSync(
+        'EMPLOYEE',
+        valueBuckets4,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`batchInsert is successful, the number of values that were inserted = ${insertNum}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`batchInsert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## batchInsertWithReturning
 
 ```TypeScript
@@ -332,6 +509,28 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+async function transBatchInsertWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = await trans.batchInsertWithReturning("EMPLOYEE", valueBuckets, config);
+    console.info(`transBatchInsertWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transBatchInsertWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transBatchInsertWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
 
 ## batchInsertWithReturningSync
 
@@ -395,6 +594,28 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+function transBatchInsertWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 20 };
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  const valueBuckets = new Array(valueBucket1, valueBucket2);
+  try {
+    let results = trans.batchInsertWithReturningSync("EMPLOYEE", valueBuckets, config);
+    console.info(`transBatchInsertWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transBatchInsertWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transBatchInsertWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -426,6 +647,27 @@ commit(): Promise<void>
 | [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+
+**示例**
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      await transaction.execute('CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, age INTEGER, salary REAL)');
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## delete
 
@@ -471,6 +713,31 @@ delete(predicates: RdbPredicates): Promise<number>
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+let predicates2 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates2.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rows = await transaction.delete(predicates2);
+      await transaction.commit();
+      console.info(`Delete rows: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## deleteSync
 
 ```TypeScript
@@ -515,6 +782,30 @@ deleteSync(predicates: RdbPredicates): number
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+let predicates3 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates3.equalTo('NAME', 'Lisa');
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rows = transaction.deleteSync(predicates3);
+      await transaction.commit();
+      console.info(`Delete rows: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Delete failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## deleteWithReturning
 
 ```TypeScript
@@ -558,6 +849,29 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+async function transDeleteWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = await trans.deleteWithReturning(predicates, config);
+    console.info(`transDeleteWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transDeleteWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transDeleteWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## deleteWithReturningSync
 
 ```TypeScript
@@ -600,6 +914,29 @@ deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Res
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+function transDeleteWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'zhangsan', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    let results = trans.deleteWithReturningSync(predicates, config);
+    console.info(`transDeleteWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transDeleteWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transDeleteWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
 
 ## execute
 
@@ -655,6 +992,30 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      // 删除表中所有数据
+      const SQL_DELETE_TABLE = 'DELETE FROM EMPLOYEE';
+      const data = await transaction.execute(SQL_DELETE_TABLE);
+      await transaction.commit();
+      console.info(`delete result: ${data}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## executeSync
 
 ```TypeScript
@@ -709,6 +1070,30 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+// 删除表中所有数据
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const SQL_DELETE_TABLE = 'DELETE FROM EMPLOYEE';
+      let data = transaction.executeSync(SQL_DELETE_TABLE);
+      await transaction.commit();
+      console.info(`delete result: ${data}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`delete failed, code is ${err.code}, message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## insert
 
 ```TypeScript
@@ -762,6 +1147,35 @@ insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Prom
 | [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+const valueBucket1: relationalStore.ValuesBucket = {
+  NAME: 'Lisa',
+  AGE: 18,
+  SALARY: 100.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rowId = await transaction.insert('EMPLOYEE', valueBucket1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Insert is successful, rowId = ${rowId}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Insert is failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## insertSync
 
@@ -818,6 +1232,42 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+let value5 = 'Lisa';
+let value6 = 18;
+let value7 = 100.5;
+let value8 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket2: relationalStore.ValuesBucket = {
+  NAME: value5,
+  AGE: value6,
+  SALARY: value7,
+  CODES: value8
+};
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rowId: number = transaction.insertSync(
+        'EMPLOYEE',
+        valueBucket2,
+        relationalStore.ConflictResolution.ON_CONFLICT_REPLACE
+      );
+      await transaction.commit();
+      console.info(`Insert is successful, rowId = ${rowId}`);
+    } catch (e) {
+      await transaction.rollback();
+      console.error(`Insert is failed, code is ${e.code},message is ${e.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## query
 
 ```TypeScript
@@ -857,6 +1307,41 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 | [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+let predicates4 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates4.equalTo('NAME', 'Rose');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const resultSet = await transaction.query(predicates4, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## querySql
 
@@ -899,6 +1384,38 @@ querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const resultSet = await transaction.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'");
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## querySqlSync
 
 ```TypeScript
@@ -940,6 +1457,38 @@ querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let resultSet = transaction.querySqlSync("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'");
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## querySqlWithoutRowCount
 
 ```TypeScript
@@ -974,6 +1523,44 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
+**示例**
+
+```TypeScript
+async function querySqlWithoutRowCountExample(store : relationalStore.RdbStore) {
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = await transaction.querySqlWithoutRowCount('select * from EMPLOYEE where name = ?', ["Rose"]);
+        if (resultSet != undefined) {
+          // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
+
 ## querySqlWithoutRowCountSync
 
 ```TypeScript
@@ -1007,6 +1594,44 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+
+**示例**
+
+```TypeScript
+async function querySqlWithoutRowCountSyncExample(store : relationalStore.RdbStore) {
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = transaction.querySqlWithoutRowCountSync('select * from EMPLOYEE where name = ?', ["Rose"]);
+        if (resultSet != undefined) {
+          // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
 
 ## querySync
 
@@ -1049,6 +1674,41 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+let predicates5 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates5.equalTo('NAME', 'Rose');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let resultSet = transaction.querySync(predicates5, ['ID', 'NAME', 'AGE', 'SALARY', 'CODES']);
+      console.info(`ResultSet column names: ${resultSet.columnNames}, column count: ${resultSet.columnCount}`);
+      // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+      while (resultSet.goToNextRow()) {
+        const id = resultSet.getLong(resultSet.getColumnIndex('ID'));
+        const name = resultSet.getString(resultSet.getColumnIndex('NAME'));
+        const age = resultSet.getLong(resultSet.getColumnIndex('AGE'));
+        const salary = resultSet.getDouble(resultSet.getColumnIndex('SALARY'));
+        console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+      }
+      // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+      resultSet.close();
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Query failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## queryWithoutRowCount
 
 ```TypeScript
@@ -1081,6 +1741,46 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+
+**示例**
+
+```TypeScript
+async function queryWithoutRowCountExample(store : relationalStore.RdbStore) {
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", "Rose");
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = await transaction.queryWithoutRowCount(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+        if (resultSet != undefined) {
+          // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
 
 ## queryWithoutRowCountSync
 
@@ -1115,6 +1815,46 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
+**示例**
+
+```TypeScript
+async function queryWithoutRowCountSyncExample(store : relationalStore.RdbStore) {
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo("NAME", "Rose");
+  if (store != undefined) {
+    try {
+      const transaction = await store.createTransaction();
+      let resultSet: relationalStore.LiteResultSet | undefined;
+      try {
+        resultSet = transaction.queryWithoutRowCountSync(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+        if (resultSet != undefined) {
+          // resultSet是一个数据集合的游标，默认指向第-1个记录，有效的数据从0开始。
+          while (resultSet.goToNextRow()) {
+            const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+            const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+            const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+            const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+            console.info(`id=${id}, name=${name}, age=${age}, salary=${salary}`);
+          }
+          // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+          resultSet.close();
+        }
+        await transaction.commit();
+      } catch (err) {
+        console.error(`Query failed, code is ${err.code}, message is ${err.message}`);
+        // 释放数据集的内存，若不释放可能会引起fd泄漏与内存泄漏
+        if (resultSet != undefined) {
+          resultSet.close();
+        }
+        await transaction.rollback();
+      }
+    } catch (err) {
+      console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+    }
+  }
+}
+```
+
 ## rollback
 
 ```TypeScript
@@ -1146,6 +1886,27 @@ rollback(): Promise<void>
 | [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+
+**示例**
+
+```TypeScript
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      await transaction.execute('DELETE FROM TEST WHERE age = ? OR age = ?', ['18', '20']);
+      await transaction.commit();
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`execute sql failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## update
 
@@ -1201,6 +1962,37 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResol
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+const valueBucketF: relationalStore.ValuesBucket = {
+  NAME: 'Rose',
+  AGE: 22,
+  SALARY: 200.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+let predicates = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      const rows = await transaction.update(valueBucketF, predicates, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Updated row count: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
+
 ## updateSync
 
 ```TypeScript
@@ -1254,6 +2046,37 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 | [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+const valueBucketG: relationalStore.ValuesBucket = {
+  NAME: 'Rose',
+  AGE: 22,
+  SALARY: 200.5,
+  CODES: new Uint8Array([1, 2, 3, 4, 5])
+};
+let predicates1 = new relationalStore.RdbPredicates('EMPLOYEE');
+predicates1.equalTo('NAME', 'Lisa');
+
+if (store != undefined) {
+  try {
+    const transaction = await store.createTransaction();
+    try {
+      let rows = transaction.updateSync(valueBucketG, predicates1, relationalStore.ConflictResolution.ON_CONFLICT_REPLACE);
+      await transaction.commit();
+      console.info(`Updated row count: ${rows}`);
+    } catch (error) {
+      const err = error as BusinessError;
+      await transaction.rollback();
+      console.error(`Updated failed, code is ${err.code},message is ${err.message}`);
+    }
+  } catch (error) {
+    const err = error as BusinessError;
+    console.error(`createTransaction failed, code is ${err.code},message is ${err.message}`);
+  }
+}
+```
 
 ## updateWithReturning
 
@@ -1311,6 +2134,32 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
 
+**示例**
+
+```TypeScript
+async function transUpdateWithReturningExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = await trans.updateWithReturning(valueBucket1, predicates, config);
+    console.info(`transUpdateWithReturningExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transUpdateWithReturningExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transUpdateWithReturningExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```
+
 ## updateWithReturningSync
 
 ```TypeScript
@@ -1366,3 +2215,29 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit. |
+
+**示例**
+
+```TypeScript
+function transUpdateWithReturningSyncExample(trans: relationalStore.Transaction)
+{
+  const valueBucket1: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 21 };
+  const valueBucket2: relationalStore.ValuesBucket = { 'NAME': 'lisi', 'AGE': 18 };
+  let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
+  predicates.equalTo('NAME', 'lisi');
+  const config: relationalStore.ReturningConfig = { columns: ['NAME', 'AGE'] };
+  try {
+    trans.batchInsertWithReturningSync("EMPLOYEE", [valueBucket1, valueBucket2], config);
+    valueBucket1['NAME'] = "zhangsan";
+    valueBucket1['AGE'] = 18;
+    let results = trans.updateWithReturningSync(valueBucket1, predicates, config);
+    console.info(`transUpdateWithReturningSyncExample is successful, changed is ${results.changed}`);
+    while(results.resultSet.goToNextRow()) {
+      const row = results.resultSet.getRow();
+      console.info(`transUpdateWithReturningSyncExample, name is ${row['NAME']}, age is ${row['AGE']}`);
+    }
+  } catch (e) {
+    console.error(`transUpdateWithReturningSyncExample failed. code is ${e.code}, message is ${e.message}`);
+  }
+}
+```

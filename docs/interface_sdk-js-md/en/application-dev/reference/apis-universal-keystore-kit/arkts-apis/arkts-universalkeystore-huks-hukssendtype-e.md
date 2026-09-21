@@ -22,6 +22,8 @@ The tag is sent asynchronously.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -37,6 +39,8 @@ HUKS_SEND_TYPE_SYNC = 1
 The tag is sent synchronously.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

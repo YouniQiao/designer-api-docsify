@@ -51,6 +51,12 @@ bind(id: string): void
 | --- | --- | --- | --- |
 | id | string | 是 | 组件id，可通过通用属性id或key设置。当组件id为空字符串或未找到匹配id的组件时，不显示放大镜。 |
 
+**示例**
+
+```TypeScript
+该示例通过监听onTouch事件控制放大镜对图片进行放大显示。
+```
+
 ## show
 
 ```TypeScript
@@ -82,6 +88,12 @@ show(x: number, y: number): void
 | x | number | 是 | 放大镜显示的组件内容相对于组件左上角的水平方向坐标，单位为vp。当坐标值大于组件宽度或小于0时不显示放大镜；传入undefined时不生效，保持放大镜当前的显示状态。 |
 | y | number | 是 | 放大镜显示的组件内容相对于组件左上角的垂直方向坐标，单位为vp。当坐标值大于组件高度或小于0时不显示放大镜；传入undefined时不生效，保持放大镜当前的显示状态。 |
 
+**示例**
+
+```TypeScript
+请参考[bind](#bind)示例。
+```
+
 ## unbind
 
 ```TypeScript
@@ -97,3 +109,9 @@ unbind(): void
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+请参考[bind](#bind)示例。
+```

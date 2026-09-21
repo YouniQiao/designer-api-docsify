@@ -63,6 +63,12 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
+**示例**
+
+```TypeScript
+该示例通过调用closeCustomDialog接口，关闭已弹出的dialogContent对应的自定义弹窗。
+```
+
 <a id="closecustomdialog-1"></a>
 
 ## closeCustomDialog
@@ -93,6 +99,64 @@ closeCustomDialog(dialogId: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { PromptAction } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+  private customDialogComponentId: number = 0;
+
+  @Builder
+  customDialogComponent() {
+    Column() {
+      Text('弹窗').fontSize(30)
+      Row({ space: 50 }) {
+        Button("确认").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+        Button("取消").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Button("click me")
+          .onClick(() => {
+            this.promptAction.openCustomDialog({
+              builder: () => {
+                this.customDialogComponent()
+              },
+              onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
+                console.info(`reason ${dismissDialogAction.reason}`);
+                console.info('dialog onWillDismiss');
+                if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
+                  dismissDialogAction.dismiss();
+                }
+                if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
+                  dismissDialogAction.dismiss();
+                }
+              }
+            }).then((dialogId: number) => {
+              this.customDialogComponentId = dialogId;
+            })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## closeMenu
 
@@ -130,6 +194,12 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
 
+**示例**
+
+```TypeScript
+该示例通过调用closeMenu接口，展示了关闭Menu的功能。
+```
+
 ## closePopup
 
 ```TypeScript
@@ -166,6 +236,12 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
 
+**示例**
+
+```TypeScript
+请参考[openPopup](#openpopup)示例。
+```
+
 ## closeToast
 
 ```TypeScript
@@ -196,6 +272,12 @@ closeToast(toastId: number): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) | Cannot find the toast. |
 
+**示例**
+
+```TypeScript
+请参考[openToast18+](#opentoast)的示例。
+```
+
 ## getBottomOrder
 
 ```TypeScript
@@ -217,6 +299,12 @@ getBottomOrder(): LevelOrder
 | 类型 | 说明 |
 | --- | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+
+**示例**
+
+```TypeScript
+获取最底层显示的弹窗层级值。
+```
 
 ## getTopOrder
 
@@ -241,6 +329,12 @@ getTopOrder(): LevelOrder
 | 类型 | 说明 |
 | --- | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+
+**示例**
+
+```TypeScript
+获取最顶层显示的弹窗层级值。
+```
 
 ## openCustomDialog
 
@@ -279,6 +373,12 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
 
+**示例**
+
+```TypeScript
+该示例通过监听[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)（系统语言、深浅色等）的变化，调用ComponentContent<T> 的[update](arkts-arkui-arkui-uicontext-dialogpresenter-c.md#update)和updateConfiguration实现自定义弹窗的数据更新及节点的全量刷新。
+```
+
 <a id="opencustomdialog-1"></a>
 
 ## openCustomDialog
@@ -315,6 +415,81 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  private customDialogComponentId: number = 0;
+
+  @Builder
+  customDialogComponent() {
+    Column() {
+      Text('打开了一个弹窗').fontSize(20)
+      Row({ space: 10 }) {
+        Button('取消').onClick(() => {
+          try {
+            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
+          }
+        }).width(100).backgroundColor('#d5d5d5').fontColor('#707070')
+        Button('确定').onClick(() => {
+          try {
+            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
+          }
+        }).width(100)
+      }
+    }.height(150).padding(20).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column({ space: 20 }) {
+        Button('Click Me')
+          .fontSize(30)
+          .onClick(() => {
+            this.getUIContext()
+              .getPromptAction()
+              .openCustomDialog({
+                builder: () => {
+                  this.customDialogComponent()
+                },
+                onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
+                  console.info('reason' + JSON.stringify(dismissDialogAction.reason));
+                  console.info('dialog onWillDismiss');
+                  if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
+                    dismissDialogAction.dismiss();
+                  }
+                  if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
+                    dismissDialogAction.dismiss();
+                  }
+                }
+              })
+              .then((dialogId: number) => {
+                this.customDialogComponentId = dialogId;
+              })
+              .catch((error: BusinessError) => {
+                console.error(`openCustomDialog error code is ${error.code}, message is ${error.message}`);
+              })
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## openCustomDialogWithController
 
@@ -357,6 +532,12 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
 
+**示例**
+
+```TypeScript
+通过openCustomDialogWithController接口传入弹窗控制器并与自定义弹窗绑定。
+```
+
 ## openMenu
 
 ```TypeScript
@@ -371,7 +552,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 > 
 > - 由于[updateMenu](#updatemenu)和[closeMenu](#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。
 > 
-> - 如果在wrapBuilder中包含其他组件（例如：Popup、 Chip组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-arkui-advanced-popup.md)、 [Chip](arkts-arkui-arkui-advanced-chip.md)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 > 
 > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
 
@@ -389,7 +570,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 | menu弹窗样式。<br> **说明：** <br> title属性不生效。<br> preview参数仅支持设置MenuPreviewMode类型。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | 否 | menu弹窗样式。<br> **说明：** <br> title属性不生效。<br> preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
 
@@ -406,6 +587,12 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
+
+**示例**
+
+```TypeScript
+该示例通过调用openMenu接口，展示了弹出Menu的功能。
+```
 
 ## openPopup
 
@@ -421,7 +608,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 > 
 > - 由于[updatePopup](#updatepopup)和[closePopup](#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。
 > 
-> - 如果在wrapBuilder中包含其他组件（例如：Popup、Chip组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-arkui-advanced-popup.md)、[Chip](arkts-arkui-arkui-advanced-chip.md)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 
 **起始版本：** 18
 
@@ -437,7 +624,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-common-comp-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
 
 **返回值：**
 
@@ -454,6 +641,12 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
+
+**示例**
+
+```TypeScript
+该示例通过调用openPopup、updatePopup和closePopup接口，展示了弹出、更新以及关闭Popup的功能。
+```
 
 ## openToast
 
@@ -490,6 +683,12 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
+**示例**
+
+```TypeScript
+该示例通过调用openToast和closeToast接口，展示了弹出以及关闭Toast的功能。
+```
+
 ## presentCustomDialog
 
 ```TypeScript
@@ -513,7 +712,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md) &#124; [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
 | controller | [promptAction.DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 否 | 自定义弹窗的控制器。<br>**适用版本：** 26.0.0 |
 | options | [promptAction.DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md)与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md)同时设置为true，则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**适用版本：** 26.0.0 |
 
@@ -529,6 +728,84 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { PromptAction, promptAction } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local message: string = "hello";
+  private ctx: UIContext = this.getUIContext();
+  private promptAction: PromptAction = this.ctx.getPromptAction();
+  private dialogController: promptAction.DialogController = new promptAction.DialogController();
+
+  private customDialogComponentId: number = 0;
+  @Builder customDialogComponent() {
+    Column() {
+      Text(this.message).fontSize(30)
+      Row({ space: 10 }) {
+        Button("通过DialogId关闭").onClick(() => {
+          this.promptAction.closeCustomDialog(this.customDialogComponentId);
+        })
+        Button("通过DialogController关闭").onClick(() => {
+          this.dialogController.close();
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  @Builder customDialogComponentWithId(dialogId: number) {
+    Column() {
+      Text(this.message).fontSize(30)
+      Row({ space: 10 }) {
+        Button("通过DialogId关闭").onClick(() => {
+          this.promptAction.closeCustomDialog(dialogId);
+        })
+        Button("通过DialogController关闭").onClick(() => {
+          this.dialogController.close();
+        })
+      }
+    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
+  }
+
+  build() {
+    Row() {
+      Column({ space: 10 }) {
+        Button('presentCustomDialog')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.presentCustomDialog(() => {
+              this.customDialogComponent()
+            }, this.dialogController)
+              .then((dialogId: number) => {
+                this.customDialogComponentId = dialogId;
+              })
+              .catch((err: BusinessError) => {
+                console.error("presentCustomDialog error: " + err.code + " " + err.message);
+              })
+          })
+        Button('presentCustomDialog with id')
+          .fontSize(20)
+          .onClick(() => {
+            this.promptAction.presentCustomDialog((dialogId: number) => {
+              this.customDialogComponentWithId(dialogId)
+            }, this.dialogController)
+              .catch((err: BusinessError) => {
+                console.error("presentCustomDialog with id error: " + err.code + " " + err.message);
+              })
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## showActionMenu
 
@@ -559,6 +836,60 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+import { PromptAction, promptAction } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  promptAction: PromptAction = this.getUIContext().getPromptAction();
+
+  build() {
+    Column() {
+      Button('showActionMenu')
+        .onClick(() => {
+          try {
+            this.promptAction.showActionMenu({
+              title: 'Title Info',
+              buttons: [
+                {
+                  text: 'item1',
+                  color: '#666666'
+                },
+                {
+                  text: 'item2',
+                  color: '#000000'
+                }
+              ]
+            }, (err: BusinessError, data: promptAction.ActionMenuSuccessResponse) => {
+              if (err) {
+                console.error('showActionMenu err: ' + err);
+                return;
+              }
+              console.info('showActionMenu success callback, click button: ' + data.index);
+            });
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`showActionMenu args error code is ${code}, message is ${message}`);
+          };
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+该示例通过调用showActionMenu接口，展示了弹出操作菜单以及通过Promise获取响应结果的功能。
+```
+
+```TypeScript
+该示例通过调用showActionMenu接口，展示了弹出操作菜单以及返回菜单响应结果的功能。
+```
 
 <a id="showactionmenu-1"></a>
 
@@ -591,6 +922,10 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+参见 [showActionMenu](#showactionmenu)
 
 <a id="showactionmenu-2"></a>
 
@@ -629,6 +964,12 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
+**示例**
+
+```TypeScript
+该示例通过调用showActionMenu接口，展示了弹出操作菜单以及通过Promise获取响应结果的功能。
+```
+
 ## showDialog
 
 ```TypeScript
@@ -658,6 +999,12 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+该示例通过调用showDialog接口，展示了弹出对话框并返回对话框响应结果的功能。
+```
 
 <a id="showdialog-1"></a>
 
@@ -696,6 +1043,12 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
+**示例**
+
+```TypeScript
+该示例通过调用showDialog接口，展示了弹出对话框并通过Promise获取对话框响应结果的功能。
+```
+
 ## showToast
 
 ```TypeScript
@@ -724,6 +1077,16 @@ showToast(options: promptAction.ShowToastOptions): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+该示例通过options参数中的systemMaterial属性设置组件的系统材质，实现了Toast的沉浸光感效果。
+
+该示例配图为高算力设备强档效果，组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+
+从API版本26.0.0开始，参数options的类型promptAction.ShowToastOptions中新增了systemMaterial属性。
+```
 
 ## updateCustomDialog
 
@@ -762,6 +1125,12 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
+**示例**
+
+```TypeScript
+该示例通过调用updateCustomDialog接口，动态调整已弹出自定义弹窗的位置。
+```
+
 ## updateMenu
 
 ```TypeScript
@@ -774,7 +1143,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 > 
 > - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
 > 
-> - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
+> - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 
 **起始版本：** 18
 
@@ -789,7 +1158,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 是 | menu弹窗样式。<br> **说明：** <br> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br> 2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | 是 | menu弹窗样式。<br> **说明：** <br> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br> 2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
 | partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。<br> **说明：** <br> 1. true为增量更新，保留当前值，更新options中的指定属性。 <br> 2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
@@ -805,6 +1174,12 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
+
+**示例**
+
+```TypeScript
+该示例通过调用updateMenu接口，展示了更新Menu箭头样式的功能。
+```
 
 ## updatePopup
 
@@ -831,7 +1206,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 是 | popup弹窗样式。<br> **说明：** <br>不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-common-comp-popupcommonoptions-i.md) | 是 | popup弹窗样式。<br> **说明：** <br>不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。 |
 | partialUpdate | boolean | 否 | popup弹窗更新方式，默认值为false。<br> **说明：** <br> true：增量更新，此时更新options中的指定属性，其它属性保留当前值。options中传入的属性为异常值或undefined时，不会对该属性进行更新。false：全量更新，此时更新options中的指定属性，并且其他属性恢复默认值。 |
 
 **返回值：**
@@ -847,3 +1222,9 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | The ComponentContent cannot be found. |
+
+**示例**
+
+```TypeScript
+请参考[openPopup](#openpopup)示例。
+```

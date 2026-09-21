@@ -26,7 +26,7 @@ Creates a progress indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
+| options | [ProgressOptions](arkts-arkui-progress-comp-progressoptions-i.md)&lt;[Type](../arkts-apis/arkts-arkui-arkui-statemanagement-type-d.md)&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
 
 ## Summary
 
@@ -34,32 +34,32 @@ Creates a progress indicator.
 
 | Name | Description |
 | --- | --- |
-| [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) | Capsule style options. |
-| [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md) | Provides common style configuration options for the progress indicator. |
-| [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) | Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full. |
-| [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) | Linear style options. |
-| [ProgressConfiguration](arkts-arkui-progressconfiguration-i.md) | Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [ProgressOptions](arkts-arkui-progressoptions-i.md) | Defines progress bar options. |
-| [ProgressStyleMap](arkts-arkui-progressstylemap-i.md) | Defines the mapping between progress indicators and styles. |
-| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md) | Defines the progress bar style options. |
-| [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) | Options of the ring style without scales. |
-| [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) | Options of the ring style with scales. |
-| [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) | Defines the scan effect options. |
+| [CapsuleStyleOptions](arkts-arkui-progress-comp-capsulestyleoptions-i.md) | Capsule style options. |
+| [CommonProgressStyleOptions](arkts-arkui-progress-comp-commonprogressstyleoptions-i.md) | Provides common style configuration options for the progress indicator. |
+| [EclipseStyleOptions](arkts-arkui-progress-comp-eclipsestyleoptions-i.md) | Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full. |
+| [LinearStyleOptions](arkts-arkui-progress-comp-linearstyleoptions-i.md) | Linear style options. |
+| [ProgressConfiguration](arkts-arkui-progress-comp-progressconfiguration-i.md) | Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [ProgressOptions](arkts-arkui-progress-comp-progressoptions-i.md) | Defines progress bar options. |
+| [ProgressStyleMap](arkts-arkui-progress-comp-progressstylemap-i.md) | Defines the mapping between progress indicators and styles. |
+| [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md) | Defines the progress bar style options. |
+| [RingStyleOptions](arkts-arkui-progress-comp-ringstyleoptions-i.md) | Options of the ring style without scales. |
+| [ScaleRingStyleOptions](arkts-arkui-progress-comp-scaleringstyleoptions-i.md) | Options of the ring style with scales. |
+| [ScanEffectOptions](arkts-arkui-progress-comp-scaneffectoptions-i.md) | Defines the scan effect options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ProgressStatus](arkts-arkui-progressstatus-e.md) | Current state of the progress indicator. |
-| [ProgressStyle](arkts-arkui-progressstyle-e.md) | Enumerates progress indicator styles. |
-| [ProgressType](arkts-arkui-progresstype-e.md) | Enumerates progress indicator types. |
+| [ProgressStatus](arkts-arkui-progress-comp-progressstatus-e.md) | Current state of the progress indicator. |
+| [ProgressStyle](arkts-arkui-progress-comp-progressstyle-e.md) | Enumerates progress indicator styles. |
+| [ProgressType](arkts-arkui-progress-comp-progresstype-e.md) | Enumerates progress indicator types. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Setting Progress Indicator Types
 
-This example demonstrates how to set the progress indicator type using the input parameter type of [ProgressOptions](arkts-arkui-progressoptions-i.md).
+This example demonstrates how to set the progress indicator type using the input parameter type of [ProgressOptions](arkts-arkui-progress-comp-progressoptions-i.md).
 
 
 ```
@@ -115,7 +115,7 @@ This example illustrates how to secure sensitive information using the [privacyS
 ```TypeScript
 ### Example 8: Setting Capsule Progress Indicator Border Radius
 
-This example demonstrates how to set the border radius of the capsule progress indicator using the input parameter borderRadius of [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md).
+This example demonstrates how to set the border radius of the capsule progress indicator using the input parameter borderRadius of [CapsuleStyleOptions](arkts-arkui-progress-comp-capsulestyleoptions-i.md).
 
 The borderRadius attribute is supported since API version 18.
 

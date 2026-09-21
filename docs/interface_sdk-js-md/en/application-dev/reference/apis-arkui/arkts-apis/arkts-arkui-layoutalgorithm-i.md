@@ -4,7 +4,7 @@
 export interface LayoutAlgorithm
 ```
 
-Basic layout algorithm of the DynamicLayout container.
+Basic layout algorithm of the [DynamicLayout](../arkts-components/arkts-arkui-dynamiclayout-comp-attribute.md#dynamiclayoutattribute) container.
 
 > **NOTE:** 
 > 

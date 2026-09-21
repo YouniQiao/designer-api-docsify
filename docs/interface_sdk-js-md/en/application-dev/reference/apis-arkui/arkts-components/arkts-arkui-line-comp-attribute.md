@@ -4,7 +4,7 @@
 declare class LineAttribute extends CommonShapeMethod<LineAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [common attributes for drawing components](arkts-arkui-commonmethod-c.md), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [common attributes for drawing components](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** LineAttribute extends CommonShapeMethod<LineAttribute>
 
@@ -21,6 +21,8 @@ endPoint(value: Array<any>)
 Sets the coordinates of the line end point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports attributeModifier for dynamic setting of the attribute method. Abnormal values are processed as the default value.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,6 +45,8 @@ startPoint(value: Array<any>)
 Sets the coordinates of the line start point (relative to the origin at the upper left corner of the **Line** component drawing area). This attribute supports attributeModifier for dynamic setting of the attribute method. Abnormal values are processed as the default value.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

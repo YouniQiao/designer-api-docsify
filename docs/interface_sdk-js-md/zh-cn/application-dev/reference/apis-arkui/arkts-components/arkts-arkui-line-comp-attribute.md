@@ -4,7 +4,7 @@
 declare class LineAttribute extends CommonShapeMethod<LineAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
+除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
 
 **继承/实现关系：** LineAttribute extends CommonShapeMethod<LineAttribute>
 
@@ -21,6 +21,8 @@ endPoint(value: Array<any>)
 设置直线终点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -43,6 +45,8 @@ startPoint(value: Array<any>)
 设置直线起点坐标点（相对于Line组件绘制区域的左上角原点），支持attributeModifier动态设置属性方法，异常值按照默认值处理。
 
 **起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

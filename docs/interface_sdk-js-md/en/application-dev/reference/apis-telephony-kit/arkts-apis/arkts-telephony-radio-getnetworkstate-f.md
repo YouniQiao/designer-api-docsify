@@ -45,18 +45,6 @@ Obtains the network status of the SIM card in the specified slot. This API uses 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
-    if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let slotId: number = 0;
 radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => {
     if (err) {
@@ -64,17 +52,6 @@ radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => 
         return;
     }
     console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
-    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -122,7 +99,16 @@ Obtains the network status of the SIM card in the specified slot. This API uses 
 
 **Examples**
 
-See [getNetworkState](#getnetworkstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
+    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 <a id="getnetworkstate-2"></a>
@@ -162,4 +148,14 @@ Obtains the network status. This API uses an asynchronous callback to return the
 
 **Examples**
 
-See [getNetworkState](#getnetworkstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
+    if (err) {
+        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
+});
+```

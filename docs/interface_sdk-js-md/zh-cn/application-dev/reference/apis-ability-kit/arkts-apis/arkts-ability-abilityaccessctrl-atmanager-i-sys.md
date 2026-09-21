@@ -28,6 +28,8 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS or ohos.permission.GRANT_SENSITIVE_PERMISSIONS or ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -85,6 +87,8 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -128,20 +132,6 @@ atManager.getPermissionRequestToggleStatus(permission).then((res: abilityAccessC
   } else {
     console.info('getPermissionRequestToggleStatus: The toggle status is open');
   }
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
-  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
 }).catch((err: BusinessError): void => {
   console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
@@ -196,7 +186,19 @@ getPermissionRequestToggleStatus(
 
 **示例**
 
-参见 [getPermissionRequestToggleStatus](#getpermissionrequesttogglestatus)
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
+  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getPermissionsStatus
 
@@ -209,6 +211,8 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 **起始版本：** 12
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -263,6 +267,8 @@ getVersion(): Promise<number>
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -305,6 +311,8 @@ grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: n
 **起始版本：** 21
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -367,6 +375,8 @@ grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permiss
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -414,22 +424,6 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
-```
-
 <a id="grantusergrantedpermission-1"></a>
 
 ## grantUserGrantedPermission
@@ -448,6 +442,8 @@ grantUserGrantedPermission(
 **起始版本：** 8
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -477,7 +473,21 @@ grantUserGrantedPermission(
 
 **示例**
 
-参见 [grantUserGrantedPermission](#grantusergrantedpermission)
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
 
 ## off('permissionStateChange')
 
@@ -500,6 +510,8 @@ off(
 **起始版本：** 9
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -525,23 +537,6 @@ off(
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 **示例**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 创建权限管理实例
-  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-  // 设置需要取消订阅的权限列表
-  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
-  // 取消订阅权限状态变化
-  atManager.off('selfPermissionStateChange', permissionList);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -582,6 +577,8 @@ on(
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -608,26 +605,6 @@ on(
 | [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 创建权限管理实例
-  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-  // 设置需要订阅的权限列表
-  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
-  // 订阅权限状态变化
-  atManager.on('selfPermissionStateChange', permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
-    console.info('receive permission state change');
-    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -885,6 +862,8 @@ revokePermission(
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -956,6 +935,8 @@ revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permis
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -1003,22 +984,6 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
-
 <a id="revokeusergrantedpermission-1"></a>
 
 ## revokeUserGrantedPermission
@@ -1037,6 +1002,8 @@ revokeUserGrantedPermission(
 **起始版本：** 8
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -1066,7 +1033,21 @@ revokeUserGrantedPermission(
 
 **示例**
 
-参见 [revokeUserGrantedPermission](#revokeusergrantedpermission)
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
 
 ## setPermissionRequestToggleStatus
 
@@ -1079,6 +1060,8 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 **起始版本：** 12
 
 **需要权限：** ohos.permission.DISABLE_PERMISSION_DIALOG
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -1121,20 +1104,6 @@ let permission: Permissions = 'ohos.permission.CAMERA';
 
 atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED).then(() => {
   console.info('setPermissionRequestToggleStatus: set closed successful');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
-  console.info('setPermissionRequestToggleStatus success');
 }).catch((err: BusinessError): void => {
   console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
@@ -1192,4 +1161,16 @@ setPermissionRequestToggleStatus(
 
 **示例**
 
-参见 [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus)
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
+  console.info('setPermissionRequestToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```

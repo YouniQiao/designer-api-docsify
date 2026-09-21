@@ -66,24 +66,6 @@ dateTimeManager.isModifyDateTimeDisallowed(wantTemp, (err, result) => {
 })
 ```
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.isModifyDateTimeDisallowed(wantTemp).then((result) => {
-  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 <a id="ismodifydatetimedisallowed-1"></a>
 
@@ -133,4 +115,20 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 
 **示例**
 
-参见 [isModifyDateTimeDisallowed](#ismodifydatetimedisallowed)
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+dateTimeManager.isModifyDateTimeDisallowed(wantTemp).then((result) => {
+  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
+})
+```

@@ -146,7 +146,9 @@ commitEditedAsset(editData: string, uri: string): Promise<void>
 
 **示例**
 
-参见 [commitEditedAsset](#commiteditedasset)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## convertImageFormat
 
@@ -436,7 +438,9 @@ getExif(): Promise<string>
 
 **示例**
 
-参见 [getExif](#getexif)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## getKeyFrameThumbnail
 
@@ -493,6 +497,8 @@ getReadOnlyFdWithCached(): Promise<number>
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -652,7 +658,9 @@ isEdited(): Promise<boolean>
 
 **示例**
 
-参见 [isEdited](#isedited)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## open
 
@@ -755,7 +763,9 @@ open(mode: string): Promise<number>
 
 **示例**
 
-参见 [open](#open)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## requestEditData
 
@@ -833,7 +843,9 @@ requestEditData(): Promise<string>
 
 **示例**
 
-参见 [requestEditData](#requesteditdata)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## requestPhoto
 
@@ -922,7 +934,9 @@ requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMa
 
 **示例**
 
-参见 [requestPhoto](#requestphoto)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## requestSource
 
@@ -996,7 +1010,9 @@ requestSource(): Promise<number>
 
 **示例**
 
-参见 [requestSource](#requestsource)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## revertToOriginal
 
@@ -1078,7 +1094,9 @@ revertToOriginal(): Promise<void>
 
 **示例**
 
-参见 [revertToOriginal](#reverttooriginal)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## setFavorite
 
@@ -1361,7 +1379,9 @@ setPending(pendingState: boolean): Promise<void>
 
 **示例**
 
-参见 [setPending](#setpending)
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 ## setUserComment
 

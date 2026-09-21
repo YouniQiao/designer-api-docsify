@@ -47,30 +47,6 @@ formHost.releaseForm(formId, (error: Base.BusinessError) => {
 });
 ```
 
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.releaseForm(formId, true, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost releaseForm, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info('formHost releaseForm success');
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.releaseForm(formId, true).then(() => {
-  console.info('formHost releaseForm success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost releaseForm, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 <a id="releaseform-1"></a>
 
@@ -104,7 +80,18 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 
 **示例**
 
-参见 [releaseForm](#releaseform)
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.releaseForm(formId, true, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost releaseForm, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info('formHost releaseForm success');
+  }
+});
+```
 
 
 <a id="releaseform-2"></a>
@@ -144,4 +131,13 @@ function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 
 **示例**
 
-参见 [releaseForm](#releaseform)
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.releaseForm(formId, true).then(() => {
+  console.info('formHost releaseForm success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost releaseForm, error: ${JSON.stringify(error)}`);
+});
+```

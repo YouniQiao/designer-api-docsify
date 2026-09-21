@@ -40,7 +40,7 @@ Constructs a **ChipGroupV2IconGroupSuffix** component.
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialfilter) effect.
+System material style of the component. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter) effect.
 
 Default value: **undefined**, meaning no material style is applied.
 

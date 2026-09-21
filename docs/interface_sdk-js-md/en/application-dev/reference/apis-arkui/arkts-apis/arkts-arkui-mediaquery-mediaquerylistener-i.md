@@ -43,6 +43,23 @@ Unregisters a media query listener, so that no callback is triggered when the me
 | type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. |
 
+**Examples**
+
+```TypeScript
+import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // Listen for landscape events.
+function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
+  if (mediaQueryResult.matches) {
+    // do something here
+  } else {
+    // do something here
+  }
+}
+listener.on('change', onPortrait) // Register the media query listener.
+listener.off('change', onPortrait) // Unregister the callback.
+```
+
 ## on('change')
 
 ```TypeScript
@@ -69,3 +86,9 @@ Registers a media query listener. The callback is triggered when the media attri
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Listener type. The value is fixed at **'change'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes | Callback registered with media query. |
+
+**Examples**
+
+```TypeScript
+For details, see [off('change')](#offchange).
+```

@@ -36,7 +36,7 @@ Sets the size information of the child components of a **ListItemGroup** compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
+| value | [ChildrenMainSize](arkts-arkui-common-comp-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
 
 ## divider
 
@@ -54,6 +54,8 @@ When a list item has polymorphic styles applied, the dividers above and below th
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -62,4 +64,4 @@ When a list item has polymorphic styles applied, the dividers above and below th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) &#124; null | Yes | <br>**Since:** 18 |
+| value | [ListDividerOptions](arkts-arkui-list-comp-listdivideroptions-i.md) &#124; null | Yes | <br>**Since:** 18 |

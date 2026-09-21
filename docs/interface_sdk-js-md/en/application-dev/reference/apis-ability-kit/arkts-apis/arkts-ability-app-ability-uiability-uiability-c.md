@@ -824,7 +824,7 @@ export default class EntryAbility extends UIAbility {
 onWindowStageCreate(windowStage: window.WindowStage): void
 ```
 
-Called when a [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md) instance is created. You can load a page through the WindowStage instance in this callback.
+The system triggers this callback after a [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md) instance is created. Developers can load pages through the WindowStage instance in this callback.
 
 **Since:** 9
 

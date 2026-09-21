@@ -4,7 +4,7 @@ Navigation组件是路由导航的根视图容器，一般作为Page页面的根
 
 > **说明：**
 
-> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea( > [SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重 > 写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea)属性实现安全区避让。 > > - [NavBar](arkts-arkui-navbar-t.md)嵌套使用Navigation时，内层NavDestination的生命周期不和外层NavDestination以及全模态的生命周期进行联动。 > > - Navigation未设置主副标题（[title](arkts-arkui-navigation-comp-attribute.md#title)或[subTitle](arkts-arkui-navigation-comp-attribute.md#subtitle)）且 > [hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton)属性设置为true时，不显示标题栏。 > > - Navigation的子页面切换时，新页面会主动请求焦点。 > > - 不建议在aboutToAppear中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea( > [SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重 > 写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea)属性实现安全区避让。 > > - [NavBar](arkts-arkui-navigation-comp-navbar-t.md)嵌套使用Navigation时，内层NavDestination的生命周期不和外层NavDestination以及全模态的生命周期进行联动。 > > - Navigation未设置主副标题（[title](arkts-arkui-navigation-comp-attribute.md#title)或[subTitle](arkts-arkui-navigation-comp-attribute.md#subtitle)）且 > [hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton)属性设置为true时，不显示标题栏。 > > - Navigation的子页面切换时，新页面会主动请求焦点。 > > - 不建议在aboutToAppear中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 ## 子组件
 
@@ -12,7 +12,7 @@ Navigation组件是路由导航的根视图容器，一般作为Page页面的根
 
 从API version 9开始，推荐与NavRouter组件搭配使用。
 
-从API version 10开始，推荐使用[NavPathStack](arkts-arkui-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性进行页面路由。
+从API version 10开始，推荐使用[NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性进行页面路由。
 
 ## Navigation
 
@@ -34,7 +34,7 @@ Navigation()
 Navigation(pathInfos: NavPathStack)
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack](arkts-arkui-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性进行页面路由。
+绑定导航控制器到Navigation组件，适用于使用[NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性进行页面路由。
 
 **起始版本：** 10
 
@@ -48,7 +48,7 @@ Navigation(pathInfos: NavPathStack)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | 是 | 导航控制器对象。 |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) | 是 | 导航控制器对象。 |
 
 ## Navigation
 
@@ -56,7 +56,7 @@ Navigation(pathInfos: NavPathStack)
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack](arkts-arkui-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性或者系统路由表进行页面路由。使用示例参考示例16（Navigation使用NavDestination作为导航页）。
+绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md)配合[navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination)属性或者系统路由表进行页面路由。使用示例参考[示例16（Navigation使用NavDestination作为导航页）](arkts-arkui-navdestination-comp.md#nav_destination)。
 
 **起始版本：** 20
 
@@ -70,8 +70,8 @@ Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | 是 | 路由栈信息。 |
-| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | 是 | 主页NavDestination信息。 |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) | 是 | 路由栈信息。 |
+| homeDestination | [HomePathInfo](arkts-arkui-navigation-comp-homepathinfo-i.md) | 是 | 主页NavDestination信息。 |
 
 ## 汇总
 
@@ -79,48 +79,48 @@ Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 
 | 名称 | 说明 |
 | --- | --- |
-| [HomePathInfo](arkts-arkui-homepathinfo-i.md) | 主页NavDestination的信息。 |
-| [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md) | 更多图标的菜单选项。设置后，可自定义更多按钮的背景模糊样式、背景效果等。 |
-| [NavContentInfo](arkts-arkui-navcontentinfo-i.md) | 跳转Destination信息。 |
-| [NavigationAnimatedTransition](arkts-arkui-navigationanimatedtransition-i.md) | 自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。 |
-| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) | Navigation通用标题。 |
-| [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) | 导航配置选项。 |
-| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Navigation自定义标题。 |
-| [NavigationDividerStyle](arkts-arkui-navigationdividerstyle-i.md) | Navigation分割线颜色及上下边距。 |
-| [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Navigation跳转拦截对象。 |
-| [NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md) | 导航菜单项，包括菜单图标和菜单信息。 |
-| [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | 页面右上角菜单选项。 |
-| [NavigationOptions](arkts-arkui-navigationoptions-i.md) | 路由栈操作选项。 |
-| [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | 标题栏选项。 |
-| [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | 工具栏选项。 |
-| [NavigationTransitionProxy](arkts-arkui-navigationtransitionproxy-i.md) | 自定义转场动画代理对象。 |
-| [PopInfo](arkts-arkui-popinfo-i.md) | 下一个页面返回的回调信息载体。 |
-| [ScrollEffectOptions](arkts-arkui-scrolleffectoptions-i.md) | 定义标题栏的滑动模糊效果选项。 |
-| [ToolbarItem](arkts-arkui-toolbaritem-i.md) | 工具栏可配置参数。 |
+| [HomePathInfo](arkts-arkui-navigation-comp-homepathinfo-i.md) | 主页NavDestination的信息。 |
+| [MoreButtonOptions](arkts-arkui-navigation-comp-morebuttonoptions-i.md) | 更多图标的菜单选项。设置后，可自定义更多按钮的背景模糊样式、背景效果等。 |
+| [NavContentInfo](arkts-arkui-navigation-comp-navcontentinfo-i.md) | 跳转Destination信息。 |
+| [NavigationAnimatedTransition](arkts-arkui-navigation-comp-navigationanimatedtransition-i.md) | 自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。 |
+| [NavigationCommonTitle](arkts-arkui-navigation-comp-navigationcommontitle-i.md) | Navigation通用标题。 |
+| [NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md) | 导航配置选项。 |
+| [NavigationCustomTitle](arkts-arkui-navigation-comp-navigationcustomtitle-i.md) | Navigation自定义标题。 |
+| [NavigationDividerStyle](arkts-arkui-navigation-comp-navigationdividerstyle-i.md) | Navigation分割线颜色及上下边距。 |
+| [NavigationInterception](arkts-arkui-navigation-comp-navigationinterception-i.md) | Navigation跳转拦截对象。 |
+| [NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md) | 导航菜单项，包括菜单图标和菜单信息。 |
+| [NavigationMenuOptions](arkts-arkui-navigation-comp-navigationmenuoptions-i.md) | 页面右上角菜单选项。 |
+| [NavigationOptions](arkts-arkui-navigation-comp-navigationoptions-i.md) | 路由栈操作选项。 |
+| [NavigationTitleOptions](arkts-arkui-navigation-comp-navigationtitleoptions-i.md) | 标题栏选项。 |
+| [NavigationToolbarOptions](arkts-arkui-navigation-comp-navigationtoolbaroptions-i.md) | 工具栏选项。 |
+| [NavigationTransitionProxy](arkts-arkui-navigation-comp-navigationtransitionproxy-i.md) | 自定义转场动画代理对象。 |
+| [PopInfo](arkts-arkui-navigation-comp-popinfo-i.md) | 下一个页面返回的回调信息载体。 |
+| [ScrollEffectOptions](arkts-arkui-navigation-comp-scrolleffectoptions-i.md) | 定义标题栏的滑动模糊效果选项。 |
+| [ToolbarItem](arkts-arkui-navigation-comp-toolbaritem-i.md) | 工具栏可配置参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [InterceptionCallback](arkts-arkui-interceptioncallback-t.md) | Navigation页面跳转前的拦截回调。 |
-| [InterceptionModeCallback](arkts-arkui-interceptionmodecallback-t.md) | Navigation单双栏显示状态发生变更时的拦截回调。 |
-| [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md) | Navigation页面跳转前和页面跳转后的拦截回调。 |
-| [Material](arkts-arkui-material-t.md) | 导入用于Navigation组件的材质类型。 |
-| [NavBar](arkts-arkui-navbar-t.md) | Navigation首页名字。 |
-| [SystemBarStyle](arkts-arkui-systembarstyle-t.md) | 状态栏的属性。在设置页面级状态栏属性时使用。 |
+| [InterceptionCallback](arkts-arkui-navigation-comp-interceptioncallback-t.md) | Navigation页面跳转前的拦截回调。 |
+| [InterceptionModeCallback](arkts-arkui-navigation-comp-interceptionmodecallback-t.md) | Navigation单双栏显示状态发生变更时的拦截回调。 |
+| [InterceptionShowCallback](arkts-arkui-navigation-comp-interceptionshowcallback-t.md) | Navigation页面跳转前和页面跳转后的拦截回调。 |
+| [Material](arkts-arkui-navigation-comp-material-t.md) | 导入用于Navigation组件的材质类型。 |
+| [NavBar](arkts-arkui-navigation-comp-navbar-t.md) | Navigation首页名字。 |
+| [SystemBarStyle](arkts-arkui-navigation-comp-systembarstyle-t.md) | 状态栏的属性。在设置页面级状态栏属性时使用。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [BarStyle](arkts-arkui-barstyle-e.md) | 标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。 |
-| [LaunchMode](arkts-arkui-launchmode-e.md) | 路由栈操作模式。 |
-| [NavBarPosition](arkts-arkui-navbarposition-e.md) | 导航页位置。 |
-| [NavigationMode](arkts-arkui-navigationmode-e.md) | 导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。 |
-| [NavigationOperation](arkts-arkui-navigationoperation-e.md) | 页面跳转类型。 |
-| [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | 标题栏显示模式。 |
-| [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md) | 滑动模糊效果类型。 |
-| [ToolbarItemStatus](arkts-arkui-toolbaritemstatus-e.md) | 工具栏单个选项的状态。 |
+| [BarStyle](arkts-arkui-navigation-comp-barstyle-e.md) | 标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。 |
+| [LaunchMode](arkts-arkui-navigation-comp-launchmode-e.md) | 路由栈操作模式。 |
+| [NavBarPosition](arkts-arkui-navigation-comp-navbarposition-e.md) | 导航页位置。 |
+| [NavigationMode](arkts-arkui-navigation-comp-navigationmode-e.md) | 导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。 |
+| [NavigationOperation](arkts-arkui-navigation-comp-navigationoperation-e.md) | 页面跳转类型。 |
+| [NavigationTitleMode](arkts-arkui-navigation-comp-navigationtitlemode-e.md) | 标题栏显示模式。 |
+| [ScrollEffectType](arkts-arkui-navigation-comp-scrolleffecttype-e.md) | 滑动模糊效果类型。 |
+| [ToolbarItemStatus](arkts-arkui-navigation-comp-toolbaritemstatus-e.md) | 工具栏单个选项的状态。 |
 
 ## 示例
 
@@ -1099,7 +1099,7 @@ export function PageOneBuilder(name: string) {
 
 [NavPathStack](#navpathstack10)无需声明为状态变量，也可以实现路由栈操作功能。
 
-[NavDestination](ts-basic-components-navdestination.md)通过[onReady](ts-basic-components-navdestination.md#onready11)事件能够拿到对应的[NavPathInfo](arkts-arkui-navpathinfo-c.md)和所属的[NavPathStack](#navpathstack10)。
+[NavDestination](ts-basic-components-navdestination.md)通过[onReady](ts-basic-components-navdestination.md#onready11)事件能够拿到对应的[NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md)和所属的[NavPathStack](#navpathstack10)。
 ```
 
 ```TypeScript
@@ -1561,9 +1561,9 @@ export class CustomTransition {
 ```TypeScript
 ### 示例17（使用新增导航控制器方法）
 
-该示例通过设置[setInterception](arkts-arkui-navpathstack-c.md#setinterception)方法来实现路由拦截功能，并在[NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11)中获取mode。
+该示例通过设置[setInterception](arkts-arkui-navigation-comp-navpathstack-c.md#setinterception)方法来实现路由拦截功能，并在[NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11)中获取mode。
 
-从API version 22开始，在setInterception的参数类型[NavigationInterception](arkts-arkui-navigationinterception-i.md)中新增了interception接口。
+从API version 22开始，在setInterception的参数类型[NavigationInterception](arkts-arkui-navigation-comp-navigationinterception-i.md)中新增了interception接口。
 ```
 
 ```TypeScript
@@ -1828,7 +1828,7 @@ export struct NavigationMenu {
 
 该示例演示如何通过systemMaterial属性设置组件的系统材质，开启标题栏沉浸光感效果。
 
-从API版本26.0.0开始，[NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md)新增了systemMaterial属性。
+从API版本26.0.0开始，[NavigationTitleOptions](arkts-arkui-navigation-comp-navigationtitleoptions-i.md)新增了systemMaterial属性。
 
 
 ```
@@ -1838,5 +1838,5 @@ export struct NavigationMenu {
 
 该示例演示如何使用clearContentStackOnPrimaryNavigation属性，开启Navigation左起右清栈效果。
 
-从API版本26.1.0开始，[NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md)新增了clearContentStackOnPrimaryNavigation属性。
+从API版本26.1.0开始，[NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md)新增了clearContentStackOnPrimaryNavigation属性。
 ```

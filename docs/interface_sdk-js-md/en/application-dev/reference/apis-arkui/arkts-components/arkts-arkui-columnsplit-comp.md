@@ -8,7 +8,7 @@ Supported
 
 **ColumnSplit** limits the height of child components through dividers. During initialization, the divider positions are calculated based on the heights of the child components. After initialization, dynamically modifying the height of child components does not take effect, and the divider positions remain unchanged. After **resizeable** is set to **true**, the height of child components can be changed by dragging adjacent dividers.
 
-After initialization, when dynamic modification of the margin, [border](arkts-arkui-commonmethod-c.md#border), or padding universal attributes causes a child component size to exceed the spacing between adjacent dividers, dragging the divider to change the child component height is not supported.
+After initialization, when dynamic modification of the margin, [border](arkts-arkui-common-comp-commonmethod-c.md#border), or padding universal attributes causes a child component size to exceed the spacing between adjacent dividers, dragging the divider to change the child component height is not supported.
 
 ## ColumnSplit
 
@@ -30,7 +30,7 @@ Creates a vertical split layout container with dividers between child components
 
 | Name | Description |
 | --- | --- |
-| [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) | Sets the distance between the child component and the upper and lower dividers. |
+| [ColumnSplitDividerStyle](arkts-arkui-columnsplit-comp-columnsplitdividerstyle-i.md) | Sets the distance between the child component and the upper and lower dividers. |
 
 ## Examples
 

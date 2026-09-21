@@ -67,24 +67,6 @@ restrictions.setHdcDisabled(wantTemp, true, (err) => {
 })
 ```
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.setHdcDisabled(wantTemp, true).then(() => {
-  console.info('Succeeded in setting hdc disabled');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set hdc disabled. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 <a id="sethdcdisabled-1"></a>
 
@@ -135,4 +117,20 @@ function setHdcDisabled(admin: Want, disabled: boolean): Promise<void>
 
 **示例**
 
-参见 [setHdcDisabled](#sethdcdisabled)
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.setHdcDisabled(wantTemp, true).then(() => {
+  console.info('Succeeded in setting hdc disabled');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set hdc disabled. Code is ${err.code}, message is ${err.message}`);
+})
+```

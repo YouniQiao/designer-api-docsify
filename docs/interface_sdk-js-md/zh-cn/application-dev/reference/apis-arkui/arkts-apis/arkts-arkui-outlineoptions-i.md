@@ -66,7 +66,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 默认值：OutlineStyle.SOLID
 
-**类型：** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
+**类型：** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-common-comp-outlinestyle-e.md)
 
 **起始版本：** 11
 

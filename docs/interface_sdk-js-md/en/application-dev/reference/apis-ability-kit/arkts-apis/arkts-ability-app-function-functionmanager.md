@@ -1,6 +1,8 @@
 # @ohos.app.function.functionManager
 
-The module provides the capability to manage and invoke functions in the system.
+A Function is a business logic unit defined in an application package. It can receive structured data provided by a large model to complete application-defined functions, such as querying real-time weather information or opening a specified application page.
+
+This module provides the capability to manage and invoke Functions, including querying available Function information and invoking a specified Function to execute business logic.
 
 @namespace functionManager
 
@@ -36,6 +38,6 @@ import { functionManager, FunctionHook, InvokeFunctionParam, FunctionResultWrap 
 
 | Name | Description |
 | --- | --- |
-| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Invoke options for function execution. |
+| [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | Optional parameters for Function invocation. Contains the application context information for the Function invocation. |
 | [InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md) | Encapsulates the success or failure status of function invocation. |
 <!--DelEnd-->

@@ -20,6 +20,8 @@ DatePicker(options?: DatePickerOptions)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ DatePicker(options?: DatePickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 否 | 配置日期选择器组件的参数。不传该参数时使用默认配置（start默认为Date('1970-01-01')，end默认为Date('2100-12-31')，selected默认为当前系统日期）。 |
+| options | [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions-i.md) | 否 | 配置日期选择器组件的参数。不传该参数时使用默认配置（start默认为Date('1970-01-01')，end默认为Date('2100-12-31')，selected默认为当前系统日期）。 |
 
 ## 汇总
 
@@ -36,16 +38,16 @@ DatePicker(options?: DatePickerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | 日期选择器弹窗选项。 |
-| [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 日期选择器组件的参数说明。 |
-| [DatePickerResult](arkts-arkui-datepickerresult-i.md) | 日期选择器返回的时间格式。 |
-| [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md) | 定义了DatePickerDialog组件中农历切换开关的样式。 |
+| [DatePickerDialogOptions](arkts-arkui-datepicker-comp-datepickerdialogoptions-i.md) | 日期选择器弹窗选项。 |
+| [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions-i.md) | 日期选择器组件的参数说明。 |
+| [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | 日期选择器返回的时间格式。 |
+| [LunarSwitchStyle](arkts-arkui-datepicker-comp-lunarswitchstyle-i.md) | 定义了DatePickerDialog组件中农历切换开关的样式。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [DatePickerMode](arkts-arkui-datepickermode-e.md) | 设置日期展示模式。 |
+| [DatePickerMode](arkts-arkui-datepicker-comp-datepickermode-e.md) | 设置日期展示模式。 |
 
 ## 示例
 

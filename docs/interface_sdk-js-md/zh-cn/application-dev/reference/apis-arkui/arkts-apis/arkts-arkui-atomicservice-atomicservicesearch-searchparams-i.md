@@ -146,7 +146,7 @@ decoration?: TextDecorationOptions
 
 文本装饰线对象。默认值：`{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}`。
 
-**类型：** [TextDecorationOptions](../arkts-components/arkts-arkui-textdecorationoptions-i.md)
+**类型：** [TextDecorationOptions](../arkts-components/arkts-arkui-common-comp-textdecorationoptions-i.md)
 
 **起始版本：** 18
 
@@ -228,7 +228,7 @@ enterKeyType?: EnterKeyType
 
 输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**类型：** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
+**类型：** [EnterKeyType](../arkts-components/arkts-arkui-textinput-comp-enterkeytype-e.md)
 
 **起始版本：** 18
 
@@ -466,7 +466,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**类型：** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
+**类型：** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-search-comp-searchsubmitcallback-t.md)
 
 **起始版本：** 18
 
@@ -586,7 +586,7 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
-**类型：** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **起始版本：** 18
 
@@ -682,7 +682,7 @@ type?: SearchType
 
 输入框类型。默认值：`SearchType.Normal`。
 
-**类型：** [SearchType](../arkts-components/arkts-arkui-searchtype-e.md)
+**类型：** [SearchType](../arkts-components/arkts-arkui-search-comp-searchtype-e.md)
 
 **起始版本：** 18
 

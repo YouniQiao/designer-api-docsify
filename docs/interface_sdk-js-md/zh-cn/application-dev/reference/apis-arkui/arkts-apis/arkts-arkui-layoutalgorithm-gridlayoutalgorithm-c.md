@@ -8,7 +8,7 @@ export class GridLayoutAlgorithm implements LayoutAlgorithm
 
 > **说明：** 
 > 
-> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件的入
+> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../arkts-components/arkts-arkui-dynamiclayout-comp-attribute.md)组件的入
 > 参指定布局算法。
 
 **继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)

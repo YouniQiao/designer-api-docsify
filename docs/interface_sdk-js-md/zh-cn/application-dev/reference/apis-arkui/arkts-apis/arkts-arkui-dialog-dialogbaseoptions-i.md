@@ -126,7 +126,7 @@ backgroundBlurStyle?: BlurStyle
 
 对话框的背景模糊样式。<br>设置为BlurStyle.NONE将禁用背景模糊。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -146,7 +146,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 带选项的背景模糊样式。
 
-**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 26.0.1
 
@@ -184,7 +184,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 带选项的背景效果。
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.1
 
@@ -300,7 +300,7 @@ dialogTransition?: TransitionEffect
 
 用于打开/关闭对话框内容区域的对话框过渡动效参数。
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-common-comp-transitioneffect-c.md)
 
 **起始版本：** 26.0.1
 
@@ -396,7 +396,7 @@ hoverModeArea?: HoverModeAreaType
 
 悬停模式下对话框的显示区域。
 
-**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-common-comp-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -570,7 +570,7 @@ maskRect?: Rectangle
 
 对话框的蒙层区域。
 
-**类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**类型：** [Rectangle](../arkts-components/arkts-arkui-common-comp-rectangle-i.md)
 
 **默认值：** { x: 0, y: 0, width: '100%', height: '100%' }
 
@@ -590,7 +590,7 @@ maskTransition?: TransitionEffect
 
 用于打开/关闭遮罩的蒙层过渡动效参数。
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-common-comp-transitioneffect-c.md)
 
 **起始版本：** 26.0.1
 
@@ -644,7 +644,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 对话框的阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-common-comp-shadowstyle-e.md)
 
 **起始版本：** 26.0.1
 
@@ -682,7 +682,7 @@ systemMaterial?: SystemUiMaterial
 
 为对话框设置系统样式材质。不同的材料有不同的效果，会影响背景色、边框、阴影和对话框的其他视觉属性。
 
-**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
+**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-common-comp-systemuimaterial-t.md)
 
 **起始版本：** 26.0.1
 

@@ -61,37 +61,6 @@ featureAbility.disconnectAbility(connectId, (error) => {
 });
 ```
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let connectId = featureAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
-    },
-  },
-);
-
-// Disconnect from the ServiceAbility.
-featureAbility.disconnectAbility(connectId).then(() => {
-  console.info('disconnectAbility success');
-}).catch((error: BusinessError)=>{
-  console.error(`featureAbilityTest result errCode : ${error.code}`);
-});
-```
-
 
 <a id="disconnectability-1"></a>
 
@@ -123,4 +92,33 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 **Examples**
 
-See [disconnectAbility](#disconnectability)
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let connectId = featureAbility.connectAbility(
+  {
+    bundleName: 'com.ix.ServiceAbility',
+    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
+  },
+  {
+    onConnect: (element, remote) => {
+      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
+    },
+    onDisconnect: (element) => {
+      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
+    },
+    onFailed: (code) => {
+      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
+    },
+  },
+);
+
+// Disconnect from the ServiceAbility.
+featureAbility.disconnectAbility(connectId).then(() => {
+  console.info('disconnectAbility success');
+}).catch((error: BusinessError)=>{
+  console.error(`featureAbilityTest result errCode : ${error.code}`);
+});
+```

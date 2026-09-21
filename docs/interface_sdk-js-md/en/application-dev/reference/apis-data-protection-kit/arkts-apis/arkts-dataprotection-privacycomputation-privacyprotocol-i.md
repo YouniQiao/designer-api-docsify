@@ -27,6 +27,8 @@ The data set size for the privacy protocol. Determines the number of comparisons
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
@@ -42,6 +44,8 @@ The protocol type for the privacy computation. Determines the privacy-preserving
 **Type:** [ProtocolType](arkts-dataprotection-privacycomputation-protocoltype-e.md)
 
 **Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 

@@ -4,7 +4,7 @@
 declare class PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 
@@ -21,6 +21,8 @@ points(value: Array<any>)
 Sets the list of coordinate points that the polyline passes through. This attribute supports attributeModifier for dynamic setting of the attribute.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

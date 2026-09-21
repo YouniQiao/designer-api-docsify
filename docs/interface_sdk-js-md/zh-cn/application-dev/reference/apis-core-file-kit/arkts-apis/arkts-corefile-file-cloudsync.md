@@ -27,7 +27,7 @@ import { cloudSync } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | 异步方法获取文件同步状态。使用Promise异步回调。 |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate) | 异步方法获取文件同步状态。使用Promise异步回调。 |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-1) | 异步方法获取文件同步状态。使用callback异步回调。 |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-2) | 获取文件同步状态。 |
 | [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md) | 优化图库已同步云空间的本地资源，按照本地剩余空间执行自动老化策略。使用Promise异步回调。 |

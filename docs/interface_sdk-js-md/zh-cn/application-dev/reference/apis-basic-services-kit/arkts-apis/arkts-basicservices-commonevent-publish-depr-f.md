@@ -46,30 +46,6 @@ let publishCallBack = (err: Base.BusinessError) => {
 commonEvent.publish("event", publishCallBack);
 ```
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// 公共事件相关信息
-let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // 公共事件的初始代码
-    data: "initial data", // 公共事件的初始数据
-    isOrdered: true  // 有序公共事件
-};
-
-// 发布公共事件回调
-let publishCallBack = (err: Base.BusinessError) => {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// 发布公共事件
-commonEvent.publish("event", options, publishCallBack);
-```
-
 
 <a id="publish-1"></a>
 
@@ -99,4 +75,26 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 **示例**
 
-参见 [publish](#publish)
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// 公共事件相关信息
+let options:CommonEventManager.CommonEventPublishData = {
+    code: 0,             // 公共事件的初始代码
+    data: "initial data", // 公共事件的初始数据
+    isOrdered: true  // 有序公共事件
+};
+
+// 发布公共事件回调
+let publishCallBack = (err: Base.BusinessError) => {
+    if (err.code) {
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("publish");
+    }
+}
+
+// 发布公共事件
+commonEvent.publish("event", options, publishCallBack);
+```

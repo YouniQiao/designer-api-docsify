@@ -271,28 +271,6 @@ try {
 }
 ```
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// Initialize seChannel before using it.
-let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
-try {
-    seChannel.transmit(cmdData, (error, response) => {
-        if (error) {
-            hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
-        } else {
-            // If the chip captures an exception, an all zero value is returned for response.
-            hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
-        }
-    });
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
-}
-```
-
 <a id="transmit-1"></a>
 
 ## transmit
@@ -326,4 +304,24 @@ Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses an asynchrono
 
 **Examples**
 
-See [transmit](#transmit)
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// Initialize seChannel before using it.
+let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+try {
+    seChannel.transmit(cmdData, (error, response) => {
+        if (error) {
+            hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
+        } else {
+            // If the chip captures an exception, an all zero value is returned for response.
+            hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+        }
+    });
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
+}
+```

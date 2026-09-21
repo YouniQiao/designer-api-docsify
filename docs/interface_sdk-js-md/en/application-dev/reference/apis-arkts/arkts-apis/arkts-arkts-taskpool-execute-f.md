@@ -56,105 +56,6 @@ taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
 });
 ```
 
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
-  console.info("taskpool result: " + value); // "taskpool result: 100"
-});
-
-taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: test"
-});
-
-taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
-taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup1.addTask(printArgs, 10); // 10: test number
-taskGroup1.addTask(printArgs, 20); // 20: test number
-taskGroup1.addTask(printArgs, 30); // 30: test number
-
-let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskGroup2.addTask(task1);
-taskGroup2.addTask(task2);
-taskGroup2.addTask(task3);
-taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
-});
-taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
-});
-```
-
 
 <a id="execute-1"></a>
 
@@ -197,18 +98,6 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 ```TypeScript
 @Concurrent
 function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
-  console.info("taskpool result: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
   console.info("printArgs: " + args);
   return args;
 }
@@ -233,75 +122,6 @@ taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "te
 
 taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
   console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
-taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup1.addTask(printArgs, 10); // 10: test number
-taskGroup1.addTask(printArgs, 20); // 20: test number
-taskGroup1.addTask(printArgs, 30); // 30: test number
-
-let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskGroup2.addTask(task1);
-taskGroup2.addTask(task2);
-taskGroup2.addTask(task3);
-taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
-});
-taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
 });
 ```
 
@@ -355,48 +175,6 @@ function printArgs(args: number): number {
     return args;
 }
 
-taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
-  console.info("taskpool result: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
-  console.info("taskpool result: " + value); // "taskpool result: 100"
-});
-
-taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: test"
-});
-
-taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
 let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
 let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
 let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
@@ -408,54 +186,6 @@ taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
 });
 taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
   console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
-taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup1.addTask(printArgs, 10); // 10: test number
-taskGroup1.addTask(printArgs, 20); // 20: test number
-taskGroup1.addTask(printArgs, 30); // 30: test number
-
-let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskGroup2.addTask(task1);
-taskGroup2.addTask(task2);
-taskGroup2.addTask(task3);
-taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
-});
-taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
 });
 ```
 
@@ -507,69 +237,6 @@ function printArgs(args: number): number {
     return args;
 }
 
-taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
-  console.info("taskpool result: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
-  console.info("taskpool result: " + value); // "taskpool result: 100"
-});
-
-taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: test"
-});
-
-taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
 let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
 let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
 let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
@@ -581,33 +248,6 @@ taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value:
 });
 taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
   console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup1.addTask(printArgs, 10); // 10: test number
-taskGroup1.addTask(printArgs, 20); // 20: test number
-taskGroup1.addTask(printArgs, 30); // 30: test number
-
-let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskGroup2.addTask(task1);
-taskGroup2.addTask(task2);
-taskGroup2.addTask(task3);
-taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
-});
-taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-  console.info("taskpool execute res is:" + res);
 });
 ```
 
@@ -649,90 +289,6 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
 
 **Examples**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
-  console.info("taskpool result: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-taskpool.execute<[number], number>(printArgs, 100).then((value: number) => { // 100: test number
-  console.info("taskpool result: " + value); // "taskpool result: 100"
-});
-
-taskpool.execute<[number, string, number], string>(testWithThreeParams, 100, "test", 100).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: test"
-});
-
-taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then((value: string) => {
-  console.info("taskpool result: " + value); // "taskpool result: success"
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.Task(printArgs, 300); // 300: test number
-taskpool.execute(task1, taskpool.Priority.LOW).then((value: Object) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute(task2, taskpool.Priority.MEDIUM).then((value: Object) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
-  console.info("taskpool result3: " + value);
-});
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-    console.info("printArgs: " + args);
-    return args;
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 100); // 100: test number
-let task2: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 200); // 200: test number
-let task3: taskpool.Task = new taskpool.GenericsTask<[number], number>(printArgs, 300); // 300: test number
-taskpool.execute<[number], number>(task1, taskpool.Priority.LOW).then((value: number) => {
-  console.info("taskpool result1: " + value);
-});
-taskpool.execute<[number], number>(task2, taskpool.Priority.MEDIUM).then((value: number) => {
-  console.info("taskpool result2: " + value);
-});
-taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: number) => {
-  console.info("taskpool result3: " + value);
-});
-```
 
 ```TypeScript
 @Concurrent

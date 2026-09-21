@@ -50,14 +50,6 @@ statistics.getAllTxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllTxBytes().then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
 
 <a id="getalltxbytes-1"></a>
 
@@ -92,4 +84,10 @@ function getAllTxBytes(): Promise<number>
 
 **示例**
 
-参见 [getAllTxBytes](#getalltxbytes)
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllTxBytes().then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```

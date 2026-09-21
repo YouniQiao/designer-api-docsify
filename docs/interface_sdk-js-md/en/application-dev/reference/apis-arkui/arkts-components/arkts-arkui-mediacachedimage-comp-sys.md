@@ -22,7 +22,7 @@ Image resource to be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; DrawableDescriptor &#124; [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |  |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; DrawableDescriptor &#124; [ASTCResource](arkts-arkui-mediacachedimage-comp-astcresource-i-sys.md) | Yes |  |
 
 ## Summary
 
@@ -30,7 +30,7 @@ Image resource to be obtained.
 
 | Name | Description |
 | --- | --- |
-| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Defines the resource which can use ASTC. |
+| [ASTCResource](arkts-arkui-mediacachedimage-comp-astcresource-i-sys.md) | Defines the resource which can use ASTC. |
 
 ## Examples
 

@@ -12,6 +12,8 @@ Constructor
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -70,298 +72,298 @@ Constructor
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
-| [AlignRuleOption](arkts-arkui-alignruleoption-i.md) | Defines the align rule options of relative container. |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md) | The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\&lt;T\&gt;** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\&lt;T\&gt;** API. |
-| [AnimateParam](arkts-arkui-animateparam-i.md) | Defines parameters related to animation effects. |
-| [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md) | Defines the options for the AreaChangeEvent. |
-| [AttributeModifier](arkts-arkui-attributemodifier-i.md) | Defines the attribute modifier. |
-| [AxisEvent](arkts-arkui-axisevent-i.md) | Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle |
-| [BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md) | Provides background brightness options. |
-| [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | Defines the options of BackgroundEffect |
-| [BackgroundImageOptions](arkts-arkui-backgroundimageoptions-i.md) | Define the options for background image. |
-| [BackgroundOptions](arkts-arkui-backgroundoptions-i.md) | Defines background options. |
-| [BaseEvent](arkts-arkui-baseevent-i.md) | Basic event type. |
-| [BindOptions](arkts-arkui-bindoptions-i.md) | Overlay module options |
-| [BlurOptions](arkts-arkui-bluroptions-i.md) | Grayscale blur parameters. |
-| [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md) | Defines the options for blur snapshot optimization. Setting this object enables blur optimization. |
-| [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) | Defines the options of blurStyle |
-| [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Border image option |
-| [Callback](arkts-arkui-callback-i.md) | Defines the basic callback. |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) | Describes the position of the caret relative to the text box. |
-| [ClickEffect](arkts-arkui-clickeffect-i.md) | Defines the click effect. |
-| [ClickEvent](arkts-arkui-clickevent-i.md) | Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [CommonConfiguration](arkts-arkui-commonconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. |
-| [ComponentOptions](arkts-arkui-componentoptions-i.md) | Defines the options of Component ClassDecorator. |
-| [Configuration](arkts-arkui-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | Inherited from [BindOptions](arkts-arkui-bindoptions-i.md). |
-| [ContentModifier](arkts-arkui-contentmodifier-i.md) | Defines the content modifier. |
-| [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) | Defines the style for displaying a long-press preview. |
-| [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | Configures menu item information. |
-| [CrownEvent](arkts-arkui-crownevent-i.md) | Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity, rotation angle, crown action, and event propagation disabling. |
-| [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) | Provides information for displaying a custom popup. |
-| [DateRange](arkts-arkui-daterange-i.md) | Defines a range of dates. |
-| [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md) | RGB color in depth space. |
-| [DepthVector3](arkts-arkui-depthvector3-i-sys.md) | 3D vector in depth space. |
-| [DepthVector4](arkts-arkui-depthvector4-i-sys.md) | 4D vector in depth space. |
-| [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md) | Component content cover dismiss |
-| [DismissPopupAction](arkts-arkui-dismisspopupaction-i.md) | Provides information about the dismissal of the popup. |
-| [DismissSheetAction](arkts-arkui-dismisssheetaction-i.md) | Component sheet dismiss |
-| [DragEvent](arkts-arkui-dragevent-i.md) | Provides information about the drag event. |
-| [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | Interaction behavior for the floating preview image |
-| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) | Defines the information about the dragged item during drag. |
-| [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | Preview image processing mode and badge count during dragging. |
-| [DropOptions](arkts-arkui-dropoptions-i.md) | Sets parameters for the drop process. |
-| [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | Define EdgeEffect Options. |
-| [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) | Defines the parameters of the edge light effect. |
-| [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | Define edit mode options. |
-| [EntryOptions](arkts-arkui-entryoptions-i.md) | Defines the options of Entry ClassDecorator. |
-| [EventTarget](arkts-arkui-eventtarget-i.md) | Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md) | Sets the expected frame rate range for an animation. |
-| [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
-| [FocusAxisEvent](arkts-arkui-focusaxisevent-i.md) | Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [FocusMovement](arkts-arkui-focusmovement-i.md) | Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies. |
-| [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define the foreground blur options. |
-| [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md) | Describes the foreground effect. |
-| [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components. |
-| [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
-| [GestureModifier](arkts-arkui-gesturemodifier-i.md) | You need a custom class to implement the **GestureModifier** API. |
-| [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | Defines the parameters of the center of gravity. |
-| [HistoricalPoint](arkts-arkui-historicalpoint-i.md) | Provides historical touch point information. |
-| [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md) | Defines the horizontal align rule of relative container. |
-| [HoverEvent](arkts-arkui-hoverevent-i.md) | Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [ICurve](arkts-arkui-icurve-i.md) | Interface for curve object. |
-| [IMonitor](arkts-arkui-imonitor-i.md) | Define IMonitor interface |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md) | Define IMonitorValue interface |
-| [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | Provides configuration options for the character counter. |
-| [InputEventInterceptResult](arkts-arkui-inputeventinterceptresult-i.md) | Input event interception result interface, used by the listener callback [InputEventListener](arkts-arkui-inputeventlistener-t.md) to return the interception decision. |
-| [InputEventMonitor](arkts-arkui-inputeventmonitor-i.md) | Input event monitor identity object. |
-| [InvertOptions](arkts-arkui-invertoptions-i.md) | Describes the options for inverting the foreground color. |
-| [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | Define item drag event handler. |
-| [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | ItemDragInfo object description |
-| [KeyEvent](arkts-arkui-keyevent-i.md) | KeyEvent object description. |
-| [KeyframeAnimateParam](arkts-arkui-keyframeanimateparam-i.md) | Provides animation configuration options. |
-| [KeyframeState](arkts-arkui-keyframestate-i.md) | Provides keyframe configuration options. |
-| [Layoutable](arkts-arkui-layoutable-i.md) | Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation. |
-| [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md) | Provides the border information of the child component. |
-| [LayoutChild](arkts-arkui-layoutchild-i.md) | Provides the child component layout information. |
-| [LayoutInfo](arkts-arkui-layoutinfo-i.md) | Provides the child component layout information. |
-| [LightSource](arkts-arkui-lightsource-i-sys.md) | Each component allows for one light source. |
-| [LinearGradient](arkts-arkui-lineargradient-i.md) | Linear Gradient Interface |
-| [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) | Linear Gradient Blur Interface |
-| [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md) | Defines the linear gradient parameters. |
-| [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
-| [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
-| [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
-| [Measurable](arkts-arkui-measurable-i.md) | Provides measurement information of a child component. The **Measurable** object is created and passed in by the ArkUI framework when **onMeasureSize** is called, and is used in the measurement phase. Unlike **Layoutable** (used in the layout phase), Measurable is mainly used to measure the size of a child component. Developers set constraint conditions and obtain measurement results through the **measure** method. **Measurable** and **Layoutable** are two representations of the same child component in different layout phases. |
-| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-sizeresult-i.md). |
-| [MenuElement](arkts-arkui-menuelement-i.md) | Configures icon, text, and interaction information of a menu item. |
-| [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md) | Defines the grid style of menu. |
-| [MenuMaskType](arkts-arkui-menumasktype-i.md) | Sets the mask type. |
-| [MenuOptions](arkts-arkui-menuoptions-i.md) | Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md). |
-| [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | Defines MonitorDecoratorOptions interface |
-| [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md) | Describes the coordinates of the motion blur anchor. |
-| [MotionBlurOptions](arkts-arkui-motionbluroptions-i.md) | Defines motion blur options. |
-| [MotionPathOptions](arkts-arkui-motionpathoptions-i.md) | Defines motion path configuration options of the component. |
-| [MouseEvent](arkts-arkui-mouseevent-i.md) | Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). |
-| [MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md) | Mouse event historical point information. |
-| [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) | Defines shadow style properties. |
-| [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Define nested scroll options |
-| [OverlayOffset](arkts-arkui-overlayoffset-i.md) | Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component. |
-| [OverlayOptions](arkts-arkui-overlayoptions-i.md) |  |
-| [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
-| [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Provide an interface for the text style of picker |
-| [PixelMapMock](arkts-arkui-pixelmapmock-i-sys.md) | pixelmap object with release function. |
-| [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | Rounding strategy for the boundary of the current component. |
-| [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | Describes the pixel stretch effect options. |
-| [PointLightStyle](arkts-arkui-pointlightstyle-i-sys.md) | You apply a point light style by setting the light source that emits illumination and the components to be illuminated. |
-| [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md) | Sets the color and direction of the linear gradient for the outlines. |
-| [PopupCommonOptions](arkts-arkui-popupcommonoptions-i.md) | Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) is called. |
-| [PopupMaskType](arkts-arkui-popupmasktype-i.md) | Sets the color of the mask. |
-| [PopupMessageOptions](arkts-arkui-popupmessageoptions-i.md) | Describes the popup message text style. |
-| [PopupOptions](arkts-arkui-popupoptions-i.md) | Provides the configuration options for the popup. |
-| [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | Display state of the popup. |
-| [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | Configures the style of the preview image during custom drag operations. |
-| [PreviewParams](arkts-arkui-previewparams-i.md) | Implements a configuration object for @Preview parameters. Defines preview device attributes such as device type and screen state. |
-| [ProvideOptions](arkts-arkui-provideoptions-i.md) | Defines the options of Provide PropertyDecorator. |
-| [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | Defines the radial gradient parameters. |
-| [Rectangle](arkts-arkui-rectangle-i.md) | The data type used to describe a rectangular area. |
-| [RectResult](arkts-arkui-rectresult-i.md) | Describes the position, width, and height of a component. |
-| [ResponseRegion](arkts-arkui-responseregion-i.md) | Defines a touch target consisting of an input tool type, touch position, and size. |
-| [ReusableOptions](arkts-arkui-reusableoptions-i.md) | Defines the options for Reusable ClassDecorator. |
-| [ReuseOptions](arkts-arkui-reuseoptions-i.md) | Defining the reusable configuration parameters. |
-| [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) | Rotation parameter option of the rotation angle on each axis. |
-| [RotateOptions](arkts-arkui-rotateoptions-i.md) | Defines component rotation parameters. |
-| [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Defines the options of scale. |
-| [SelectionOptions](arkts-arkui-selectionoptions-i.md) | Defines the selection options. |
-| [ShadowOptions](arkts-arkui-shadowoptions-i.md) | Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis. |
-| [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | Parameters of the shared element transition animation. |
-| [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | Component sheet dismiss |
-| [SheetOptions](arkts-arkui-sheetoptions-i.md) | Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md). |
-| [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
-| [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | Component sheet title options |
-| [SizeResult](arkts-arkui-sizeresult-i.md) | Provides the component size information. |
-| [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | Smart gesture response behavior configuration object. |
-| [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) | Spatial effect params. |
-| [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
-| [SpringBackAction](arkts-arkui-springbackaction-i.md) | Defines sheet spring back action |
-| [StateStyles](arkts-arkui-statestyles-i.md) | State-specific styles for the component. |
-| [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | Defines the sweep gradient parameters. |
-| [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | Provides parameters for system adaptive adjustments. By default, the system performs adaptive adjustments based on chip performance. |
-| [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | Provides configuration options for text insertion operations in text input components. |
-| [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Provides text decoration options. |
-| [TipsOptions](arkts-arkui-tipsoptions-i.md) | Defines the parameters of the tooltip. |
-| [TouchEvent](arkts-arkui-touchevent-i.md) | Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**. |
-| [TouchObject](arkts-arkui-touchobject-i.md) | Type of the touch event. |
-| [TransitionOptions](arkts-arkui-transitionoptions-i.md) | Defines the transition effect by setting parameters in the struct. |
-| [TranslateOptions](arkts-arkui-translateoptions-i.md) | Defines the options of translate. |
-| [UICommonEvent](arkts-arkui-uicommonevent-i.md) | Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback. |
-| [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Provides APIs for configuring gestures bound to a component. |
-| [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
-| [VersionCondition](arkts-arkui-versioncondition-i.md) | Defines VersionCondition interface |
-| [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
-| [VisibleAreaEventOptions](arkts-arkui-visibleareaeventoptions-i.md) | Describes visible area change configuration options. |
+| [AccessibilityHoverEvent](arkts-arkui-common-comp-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
+| [AlignRuleOption](arkts-arkui-common-comp-alignruleoption-i.md) | Defines the align rule options of relative container. |
+| [AnimatableArithmetic](arkts-arkui-common-comp-animatablearithmetic-i.md) | The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\&lt;T\&gt;** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\&lt;T\&gt;** API. |
+| [AnimateParam](arkts-arkui-common-comp-animateparam-i.md) | Defines parameters related to animation effects. |
+| [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | Defines the options for the AreaChangeEvent. |
+| [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md) | Defines the attribute modifier. |
+| [AxisEvent](arkts-arkui-common-comp-axisevent-i.md) | Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle |
+| [BackgroundBrightnessOptions](arkts-arkui-common-comp-backgroundbrightnessoptions-i.md) | Provides background brightness options. |
+| [BackgroundEffectOptions](arkts-arkui-common-comp-backgroundeffectoptions-i.md) | Defines the options of BackgroundEffect |
+| [BackgroundImageOptions](arkts-arkui-common-comp-backgroundimageoptions-i.md) | Define the options for background image. |
+| [BackgroundOptions](arkts-arkui-common-comp-backgroundoptions-i.md) | Defines background options. |
+| [BaseEvent](arkts-arkui-common-comp-baseevent-i.md) | Basic event type. |
+| [BindOptions](arkts-arkui-common-comp-bindoptions-i.md) | Overlay module options |
+| [BlurOptions](arkts-arkui-common-comp-bluroptions-i.md) | Grayscale blur parameters. |
+| [BlurSnapshotOptions](arkts-arkui-common-comp-blursnapshotoptions-i-sys.md) | Defines the options for blur snapshot optimization. Setting this object enables blur optimization. |
+| [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) | Defines the options of blurStyle |
+| [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | Border image option |
+| [Callback](arkts-arkui-common-comp-callback-i.md) | Defines the basic callback. |
+| [CaretOffset](arkts-arkui-common-comp-caretoffset-i.md) | Describes the position of the caret relative to the text box. |
+| [ClickEffect](arkts-arkui-common-comp-clickeffect-i.md) | Defines the click effect. |
+| [ClickEvent](arkts-arkui-common-comp-clickevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. |
+| [ComponentOptions](arkts-arkui-common-comp-componentoptions-i.md) | Defines the options of Component ClassDecorator. |
+| [Configuration](arkts-arkui-common-comp-configuration-i.md) | Defines the data type of the interface restriction. |
+| [ContentCoverOptions](arkts-arkui-common-comp-contentcoveroptions-i.md) | Inherited from [BindOptions](arkts-arkui-common-comp-bindoptions-i.md). |
+| [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md) | Defines the content modifier. |
+| [ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md) | Defines the style for displaying a long-press preview. |
+| [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | Configures menu item information. |
+| [CrownEvent](arkts-arkui-common-comp-crownevent-i.md) | Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity, rotation angle, crown action, and event propagation disabling. |
+| [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | Provides information for displaying a custom popup. |
+| [DateRange](arkts-arkui-common-comp-daterange-i.md) | Defines a range of dates. |
+| [DepthColorRGB](arkts-arkui-common-comp-depthcolorrgb-i-sys.md) | RGB color in depth space. |
+| [DepthVector3](arkts-arkui-common-comp-depthvector3-i-sys.md) | 3D vector in depth space. |
+| [DepthVector4](arkts-arkui-common-comp-depthvector4-i-sys.md) | 4D vector in depth space. |
+| [DismissContentCoverAction](arkts-arkui-common-comp-dismisscontentcoveraction-i.md) | Component content cover dismiss |
+| [DismissPopupAction](arkts-arkui-common-comp-dismisspopupaction-i.md) | Provides information about the dismissal of the popup. |
+| [DismissSheetAction](arkts-arkui-common-comp-dismisssheetaction-i.md) | Component sheet dismiss |
+| [DragEvent](arkts-arkui-common-comp-dragevent-i.md) | Provides information about the drag event. |
+| [DragInteractionOptions](arkts-arkui-common-comp-draginteractionoptions-i.md) | Interaction behavior for the floating preview image |
+| [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) | Defines the information about the dragged item during drag. |
+| [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | Preview image processing mode and badge count during dragging. |
+| [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | Sets parameters for the drop process. |
+| [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | Define EdgeEffect Options. |
+| [EdgeLightParams](arkts-arkui-common-comp-edgelightparams-i-sys.md) | Defines the parameters of the edge light effect. |
+| [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | Define edit mode options. |
+| [EntryOptions](arkts-arkui-common-comp-entryoptions-i.md) | Defines the options of Entry ClassDecorator. |
+| [EventTarget](arkts-arkui-common-comp-eventtarget-i.md) | Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [ExpectedFrameRateRange](arkts-arkui-common-comp-expectedframeraterange-i.md) | Sets the expected frame rate range for an animation. |
+| [FadingEdgeOptions](arkts-arkui-common-comp-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
+| [FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md) | Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [FocusMovement](arkts-arkui-common-comp-focusmovement-i.md) | Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies. |
+| [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | Inherits from [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) to define the foreground blur options. |
+| [ForegroundEffectOptions](arkts-arkui-common-comp-foregroundeffectoptions-i.md) | Describes the foreground effect. |
+| [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-common-comp-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components. |
+| [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
+| [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | You need a custom class to implement the **GestureModifier** API. |
+| [GravityCenterOptions](arkts-arkui-common-comp-gravitycenteroptions-i-sys.md) | Defines the parameters of the center of gravity. |
+| [HistoricalPoint](arkts-arkui-common-comp-historicalpoint-i.md) | Provides historical touch point information. |
+| [HorizontalAlignParam](arkts-arkui-common-comp-horizontalalignparam-i.md) | Defines the horizontal align rule of relative container. |
+| [HoverEvent](arkts-arkui-common-comp-hoverevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [ICurve](arkts-arkui-common-comp-icurve-i.md) | Interface for curve object. |
+| [IMonitor](arkts-arkui-common-comp-imonitor-i.md) | Define IMonitor interface |
+| [IMonitorValue](arkts-arkui-common-comp-imonitorvalue-i.md) | Define IMonitorValue interface |
+| [InputCounterOptions](arkts-arkui-common-comp-inputcounteroptions-i.md) | Provides configuration options for the character counter. |
+| [InputEventInterceptResult](arkts-arkui-common-comp-inputeventinterceptresult-i.md) | Input event interception result interface, used by the listener callback [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) to return the interception decision. |
+| [InputEventMonitor](arkts-arkui-common-comp-inputeventmonitor-i.md) | Input event monitor identity object. |
+| [InvertOptions](arkts-arkui-common-comp-invertoptions-i.md) | Describes the options for inverting the foreground color. |
+| [ItemDragEventHandler](arkts-arkui-common-comp-itemdrageventhandler-i.md) | Define item drag event handler. |
+| [ItemDragInfo](arkts-arkui-common-comp-itemdraginfo-i.md) | ItemDragInfo object description |
+| [KeyEvent](arkts-arkui-common-comp-keyevent-i.md) | KeyEvent object description. |
+| [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | Provides animation configuration options. |
+| [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | Provides keyframe configuration options. |
+| [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation. |
+| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | Provides the border information of the child component. |
+| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | Provides the child component layout information. |
+| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | Provides the child component layout information. |
+| [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | Each component allows for one light source. |
+| [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
+| [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) | Linear Gradient Blur Interface |
+| [LinearGradientOptions](arkts-arkui-common-comp-lineargradientoptions-i.md) | Defines the linear gradient parameters. |
+| [LocalizedAlignRuleOptions](arkts-arkui-common-comp-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
+| [LocalizedHorizontalAlignParam](arkts-arkui-common-comp-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
+| [LocalizedVerticalAlignParam](arkts-arkui-common-comp-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
+| [Measurable](arkts-arkui-common-comp-measurable-i.md) | Provides measurement information of a child component. The **Measurable** object is created and passed in by the ArkUI framework when **onMeasureSize** is called, and is used in the measurement phase. Unlike **Layoutable** (used in the layout phase), Measurable is mainly used to measure the size of a child component. Developers set constraint conditions and obtain measurement results through the **measure** method. **Measurable** and **Layoutable** are two representations of the same child component in different layout phases. |
+| [MeasureResult](arkts-arkui-common-comp-measureresult-i.md) | Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-common-comp-sizeresult-i.md). |
+| [MenuElement](arkts-arkui-common-comp-menuelement-i.md) | Configures icon, text, and interaction information of a menu item. |
+| [MenuGridStyleOptions](arkts-arkui-common-comp-menugridstyleoptions-i.md) | Defines the grid style of menu. |
+| [MenuMaskType](arkts-arkui-common-comp-menumasktype-i.md) | Sets the mask type. |
+| [MenuOptions](arkts-arkui-common-comp-menuoptions-i.md) | Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md). |
+| [MonitorDecoratorOptions](arkts-arkui-common-comp-monitordecoratoroptions-i.md) | Defines MonitorDecoratorOptions interface |
+| [MotionBlurAnchor](arkts-arkui-common-comp-motionbluranchor-i.md) | Describes the coordinates of the motion blur anchor. |
+| [MotionBlurOptions](arkts-arkui-common-comp-motionbluroptions-i.md) | Defines motion blur options. |
+| [MotionPathOptions](arkts-arkui-common-comp-motionpathoptions-i.md) | Defines motion path configuration options of the component. |
+| [MouseEvent](arkts-arkui-common-comp-mouseevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
+| [MouseHistoricalPoint](arkts-arkui-common-comp-mousehistoricalpoint-i.md) | Mouse event historical point information. |
+| [MultiShadowOptions](arkts-arkui-common-comp-multishadowoptions-i.md) | Defines shadow style properties. |
+| [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Define nested scroll options |
+| [OverlayOffset](arkts-arkui-common-comp-overlayoffset-i.md) | Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component. |
+| [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) |  |
+| [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
+| [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Provide an interface for the text style of picker |
+| [PixelMapMock](arkts-arkui-common-comp-pixelmapmock-i-sys.md) | pixelmap object with release function. |
+| [PixelRoundPolicy](arkts-arkui-common-comp-pixelroundpolicy-i.md) | Rounding strategy for the boundary of the current component. |
+| [PixelStretchEffectOptions](arkts-arkui-common-comp-pixelstretcheffectoptions-i.md) | Describes the pixel stretch effect options. |
+| [PointLightStyle](arkts-arkui-common-comp-pointlightstyle-i-sys.md) | You apply a point light style by setting the light source that emits illumination and the components to be illuminated. |
+| [PopupBorderLinearGradient](arkts-arkui-common-comp-popupborderlineargradient-i.md) | Sets the color and direction of the linear gradient for the outlines. |
+| [PopupCommonOptions](arkts-arkui-common-comp-popupcommonoptions-i.md) | Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) is called. |
+| [PopupMaskType](arkts-arkui-common-comp-popupmasktype-i.md) | Sets the color of the mask. |
+| [PopupMessageOptions](arkts-arkui-common-comp-popupmessageoptions-i.md) | Describes the popup message text style. |
+| [PopupOptions](arkts-arkui-common-comp-popupoptions-i.md) | Provides the configuration options for the popup. |
+| [PopupStateChangeParam](arkts-arkui-common-comp-popupstatechangeparam-i.md) | Display state of the popup. |
+| [PreviewConfiguration](arkts-arkui-common-comp-previewconfiguration-i.md) | Configures the style of the preview image during custom drag operations. |
+| [PreviewParams](arkts-arkui-common-comp-previewparams-i.md) | Implements a configuration object for @Preview parameters. Defines preview device attributes such as device type and screen state. |
+| [ProvideOptions](arkts-arkui-common-comp-provideoptions-i.md) | Defines the options of Provide PropertyDecorator. |
+| [RadialGradientOptions](arkts-arkui-common-comp-radialgradientoptions-i.md) | Defines the radial gradient parameters. |
+| [Rectangle](arkts-arkui-common-comp-rectangle-i.md) | The data type used to describe a rectangular area. |
+| [RectResult](arkts-arkui-common-comp-rectresult-i.md) | Describes the position, width, and height of a component. |
+| [ResponseRegion](arkts-arkui-common-comp-responseregion-i.md) | Defines a touch target consisting of an input tool type, touch position, and size. |
+| [ReusableOptions](arkts-arkui-common-comp-reusableoptions-i.md) | Defines the options for Reusable ClassDecorator. |
+| [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | Defining the reusable configuration parameters. |
+| [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) | Rotation parameter option of the rotation angle on each axis. |
+| [RotateOptions](arkts-arkui-common-comp-rotateoptions-i.md) | Defines component rotation parameters. |
+| [ScaleOptions](arkts-arkui-common-comp-scaleoptions-i.md) | Defines the options of scale. |
+| [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | Defines the selection options. |
+| [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) | Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis. |
+| [sharedTransitionOptions](arkts-arkui-common-comp-sharedtransitionoptions-i.md) | Parameters of the shared element transition animation. |
+| [SheetDismiss](arkts-arkui-common-comp-sheetdismiss-i.md) | Component sheet dismiss |
+| [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) | Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-common-comp-bindoptions-i.md). |
+| [SheetTitleBarBackgroundBlurOptions](arkts-arkui-common-comp-sheettitlebarbackgroundbluroptions-i-sys.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
+| [SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md) | Component sheet title options |
+| [SizeResult](arkts-arkui-common-comp-sizeresult-i.md) | Provides the component size information. |
+| [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md) | Smart gesture response behavior configuration object. |
+| [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) | Spatial effect params. |
+| [SpatialPosition](arkts-arkui-common-comp-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
+| [SpringBackAction](arkts-arkui-common-comp-springbackaction-i.md) | Defines sheet spring back action |
+| [StateStyles](arkts-arkui-common-comp-statestyles-i.md) | State-specific styles for the component. |
+| [SweepGradientOptions](arkts-arkui-common-comp-sweepgradientoptions-i.md) | Defines the sweep gradient parameters. |
+| [SystemAdaptiveOptions](arkts-arkui-common-comp-systemadaptiveoptions-i.md) | Provides parameters for system adaptive adjustments. By default, the system performs adaptive adjustments based on chip performance. |
+| [TextContentControllerOptions](arkts-arkui-common-comp-textcontentcontrolleroptions-i.md) | Provides configuration options for text insertion operations in text input components. |
+| [TextDecorationOptions](arkts-arkui-common-comp-textdecorationoptions-i.md) | Provides text decoration options. |
+| [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | Defines the parameters of the tooltip. |
+| [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**. |
+| [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | Type of the touch event. |
+| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | Defines the transition effect by setting parameters in the struct. |
+| [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | Defines the options of translate. |
+| [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback. |
+| [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | Provides APIs for configuring gestures bound to a component. |
+| [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
+| [VersionCondition](arkts-arkui-common-comp-versioncondition-i.md) | Defines VersionCondition interface |
+| [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
+| [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Describes visible area change configuration options. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | Defines the callback type used in accessibility action intercept. The value of action indicates the accessibility action type. |
-| [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) | Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent. |
-| [AccessibilityFocusCallback](arkts-arkui-accessibilityfocuscallback-t.md) | Defines the callback type used in accessibility focus. The value of isFocus indicates whether the current component is focused |
-| [AccessibilityTransparentCallback](arkts-arkui-accessibilitytransparentcallback-t.md) | Defines the callback type used in accessibility hover transparent event. |
-| [AnimationRange](arkts-arkui-animationrange-t.md) | Sets the relative scale ratio at the start and end of the animation compared to the original preview image. |
-| [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | Callback type for the component area change event. |
-| [Blender](arkts-arkui-blender-t-sys.md) | [Blender](arkts-arkui-blender-t-sys.md) |
-| [BorderRadiusType](arkts-arkui-borderradiustype-t.md) | Enumerates the border corner radius types. |
-| [BuilderCallback](arkts-arkui-buildercallback-t.md) | Defines the callback type used in mutableBuilder. |
-| [CircleShape](arkts-arkui-circleshape-t.md) | Defines the CircleShape type. |
-| [ComponentContent](arkts-arkui-componentcontent-t.md) | Represents a constructor used to create a **ComponentContent** object. |
-| [Context](arkts-arkui-context-t.md) | Get context. |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Defines the CustomBuilder Type. |
-| [CustomBuilderT](arkts-arkui-custombuildert-t.md) | Defines the CustomBuilder type with parameter. |
-| [DataLoadParams](arkts-arkui-dataloadparams-t.md) | Defines the data loading parameters used during a drop operation. |
-| [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Defines the input parameter object for **startDataLoading**. |
-| [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | Defines the configuration parameters for drag hover detection. |
-| [DrawContext](arkts-arkui-drawcontext-t.md) | [DrawContext](arkts-arkui-drawcontext-t.md) |
-| [EllipseShape](arkts-arkui-ellipseshape-t.md) | Defines the EllipseShape type. |
-| [EnvDecorator](arkts-arkui-envdecorator-t.md) | Define Env Decorator type |
-| [Filter](arkts-arkui-filter-t.md) | Represents a filter object. |
-| [FractionStop](arkts-arkui-fractionstop-t.md) | Defines a gradient blur stop. |
-| [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept). |
-| [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Represents a custom gesture recognizer judgment callback type. |
-| [HoverCallback](arkts-arkui-hovercallback-t.md) | Defines the callback type for hover events. |
-| [ImageModifier](arkts-arkui-imagemodifier-t.md) | [ImageModifier](arkts-arkui-imagemodifier-t.md) |
-| [InputEventListener](arkts-arkui-inputeventlistener-t.md) | Input event listener callback type. |
-| [IntentionCode](arkts-arkui-intentioncode-t.md) | Intention corresponding to the key. |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) | Import the Matrix4Transit type object for common method. |
-| [MonitorDecorator](arkts-arkui-monitordecorator-t.md) | Defines Monitor Decorator type |
-| [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) | The navigation destination information. |
-| [NavigationInfo](arkts-arkui-navigationinfo-t.md) | The navigation information. |
-| [OnDidStopDraggingCallback](arkts-arkui-ondidstopdraggingcallback-t.md) | On scroll callback using in scrollable onDidStopDragging. |
-| [OnDragEventCallback](arkts-arkui-ondrageventcallback-t.md) | Defines a callback for drag events. |
-| [OnGetPreviewBadgeCallback](arkts-arkui-ongetpreviewbadgecallback-t.md) | Defines the callback type used in onGetPreviewBadge of EditModeOptions. |
-| [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Defines the callback type used in onItemDragStart. |
-| [OnMoveHandler](arkts-arkui-onmovehandler-t.md) | Defines the onMove callback. |
-| [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) | Defines the callback type used in onNeedSoftkeyboard. Called when component is focused, the return value indicates whether keyboard is needed. |
-| [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) | On scroll callback using in scrollable onDidScroll. |
-| [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) | Defines the callback type used in OnVisibleIndexesChange. |
-| [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
-| [OnWillStopDraggingCallback](arkts-arkui-onwillstopdraggingcallback-t.md) | On scroll callback using in scrollable onWillStopDragging. |
-| [Optional](arkts-arkui-optional-t.md) | Defines the Optional type. The value can be **undefined**. |
-| [PathShape](arkts-arkui-pathshape-t.md) | Defines the PathShape type. |
-| [PixelMap](arkts-arkui-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
-| [PointerStyle](arkts-arkui-pointerstyle-t.md) | Defines the pointer style. |
-| [PopupStateChangeCallback](arkts-arkui-popupstatechangecallback-t.md) | Represents the callback invoked when the popup state changes. |
-| [PromptActionDialogController](arkts-arkui-promptactiondialogcontroller-t.md) | Import the DialogController type from promptAction. |
-| [RectShape](arkts-arkui-rectshape-t.md) | Defines the RectShape type. |
-| [ReuseIdCallback](arkts-arkui-reuseidcallback-t.md) | ReuseId callback type. It is used to compute reuseId. |
-| [ReusePoolOwnership](arkts-arkui-reusepoolownership-t.md) | Defining the reuse type of a custom component. |
-| [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) | The router page information. |
-| [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-shouldbuiltinrecognizerparallelwithcallback-t.md) | Represents the callback used to set the parallel relationship between built-in gestures and gestures of other components in the response chain. |
-| [ShouldRecognizerParallelWithCallback](arkts-arkui-shouldrecognizerparallelwithcallback-t.md) | Represents the callback used to set the parallel relationship between gestures of the current component and gestures of other components in the response chain. |
-| [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | Defines the callback type used in onSizeChange. The value of oldValue is last size of the component. The value of newValue is new size of the component. |
-| [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md) | Defines callback context information, which is passed to the application in the hover detection callback to allow the application to access the drag status. |
-| [StylesVersionDecorator](arkts-arkui-stylesversiondecorator-t.md) | Define Styles Decorator type with version control. |
-| [Summary](arkts-arkui-summary-t.md) | Provides a summary of drag-related data. |
-| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Defines custom icon symbol configurations. |
-| [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) | Base class for system material objects. |
-| [Theme](arkts-arkui-theme-t.md) | Theme. |
-| [TipsMessageType](arkts-arkui-tipsmessagetype-t.md) | Provides information about the tooltip. |
-| [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) | Represents the callback type for dynamically specifying gesture recognizer participation in gesture processing. |
-| [TransitionEffects](arkts-arkui-transitioneffects-t.md) | Defines all transition effects. |
-| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | Represents the type of callback for the end of a component's transition animation. |
-| [UIContext](arkts-arkui-uicontext-t.md) | [UIContext](arkts-arkui-uicontext-t.md) |
-| [UnifiedData](arkts-arkui-unifieddata-t.md) | Defines drag-related data. |
-| [UniformDataType](arkts-arkui-uniformdatatype-t.md) | Import the UniformDataType type object for ui component. |
-| [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Represents a callback for visible area changes of the component. |
-| [VisualEffect](arkts-arkui-visualeffect-t.md) | Represents a visual effect configuration object. |
-| [window](arkts-arkui-window-t.md) | The type for window. |
+| [AccessibilityActionInterceptCallback](arkts-arkui-common-comp-accessibilityactioninterceptcallback-t.md) | Defines the callback type used in accessibility action intercept. The value of action indicates the accessibility action type. |
+| [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent. |
+| [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | Defines the callback type used in accessibility focus. The value of isFocus indicates whether the current component is focused |
+| [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | Defines the callback type used in accessibility hover transparent event. |
+| [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | Sets the relative scale ratio at the start and end of the animation compared to the original preview image. |
+| [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | Callback type for the component area change event. |
+| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | [Blender](arkts-arkui-common-comp-blender-t-sys.md) |
+| [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | Enumerates the border corner radius types. |
+| [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | Defines the callback type used in mutableBuilder. |
+| [CircleShape](arkts-arkui-common-comp-circleshape-t.md) | Defines the CircleShape type. |
+| [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | Represents a constructor used to create a **ComponentContent** object. |
+| [Context](arkts-arkui-common-comp-context-t.md) | Get context. |
+| [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Defines the CustomBuilder Type. |
+| [CustomBuilderT](arkts-arkui-common-comp-custombuildert-t.md) | Defines the CustomBuilder type with parameter. |
+| [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | Defines the data loading parameters used during a drop operation. |
+| [DataSyncOptions](arkts-arkui-common-comp-datasyncoptions-t.md) | Defines the input parameter object for **startDataLoading**. |
+| [DragSpringLoadingConfiguration](arkts-arkui-common-comp-dragspringloadingconfiguration-t.md) | Defines the configuration parameters for drag hover detection. |
+| [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) | [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) |
+| [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) | Defines the EllipseShape type. |
+| [EnvDecorator](arkts-arkui-common-comp-envdecorator-t.md) | Define Env Decorator type |
+| [Filter](arkts-arkui-common-comp-filter-t.md) | Represents a filter object. |
+| [FractionStop](arkts-arkui-common-comp-fractionstop-t.md) | Defines a gradient blur stop. |
+| [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept). |
+| [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Represents a custom gesture recognizer judgment callback type. |
+| [HoverCallback](arkts-arkui-common-comp-hovercallback-t.md) | Defines the callback type for hover events. |
+| [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) | [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) |
+| [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) | Input event listener callback type. |
+| [IntentionCode](arkts-arkui-common-comp-intentioncode-t.md) | Intention corresponding to the key. |
+| [Matrix4Transit](arkts-arkui-common-comp-matrix4transit-t.md) | Import the Matrix4Transit type object for common method. |
+| [MonitorDecorator](arkts-arkui-common-comp-monitordecorator-t.md) | Defines Monitor Decorator type |
+| [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) | The navigation destination information. |
+| [NavigationInfo](arkts-arkui-common-comp-navigationinfo-t.md) | The navigation information. |
+| [OnDidStopDraggingCallback](arkts-arkui-common-comp-ondidstopdraggingcallback-t.md) | On scroll callback using in scrollable onDidStopDragging. |
+| [OnDragEventCallback](arkts-arkui-common-comp-ondrageventcallback-t.md) | Defines a callback for drag events. |
+| [OnGetPreviewBadgeCallback](arkts-arkui-common-comp-ongetpreviewbadgecallback-t.md) | Defines the callback type used in onGetPreviewBadge of EditModeOptions. |
+| [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | Defines the callback type used in onItemDragStart. |
+| [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | Defines the onMove callback. |
+| [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | Defines the callback type used in onNeedSoftkeyboard. Called when component is focused, the return value indicates whether keyboard is needed. |
+| [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | On scroll callback using in scrollable onDidScroll. |
+| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | Defines the callback type used in OnVisibleIndexesChange. |
+| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
+| [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | On scroll callback using in scrollable onWillStopDragging. |
+| [Optional](arkts-arkui-common-comp-optional-t.md) | Defines the Optional type. The value can be **undefined**. |
+| [PathShape](arkts-arkui-common-comp-pathshape-t.md) | Defines the PathShape type. |
+| [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
+| [PointerStyle](arkts-arkui-common-comp-pointerstyle-t.md) | Defines the pointer style. |
+| [PopupStateChangeCallback](arkts-arkui-common-comp-popupstatechangecallback-t.md) | Represents the callback invoked when the popup state changes. |
+| [PromptActionDialogController](arkts-arkui-common-comp-promptactiondialogcontroller-t.md) | Import the DialogController type from promptAction. |
+| [RectShape](arkts-arkui-common-comp-rectshape-t.md) | Defines the RectShape type. |
+| [ReuseIdCallback](arkts-arkui-common-comp-reuseidcallback-t.md) | ReuseId callback type. It is used to compute reuseId. |
+| [ReusePoolOwnership](arkts-arkui-common-comp-reusepoolownership-t.md) | Defining the reuse type of a custom component. |
+| [RouterPageInfo](arkts-arkui-common-comp-routerpageinfo-t.md) | The router page information. |
+| [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldbuiltinrecognizerparallelwithcallback-t.md) | Represents the callback used to set the parallel relationship between built-in gestures and gestures of other components in the response chain. |
+| [ShouldRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldrecognizerparallelwithcallback-t.md) | Represents the callback used to set the parallel relationship between gestures of the current component and gestures of other components in the response chain. |
+| [SizeChangeCallback](arkts-arkui-common-comp-sizechangecallback-t.md) | Defines the callback type used in onSizeChange. The value of oldValue is last size of the component. The value of newValue is new size of the component. |
+| [SpringLoadingContext](arkts-arkui-common-comp-springloadingcontext-t.md) | Defines callback context information, which is passed to the application in the hover detection callback to allow the application to access the drag status. |
+| [StylesVersionDecorator](arkts-arkui-common-comp-stylesversiondecorator-t.md) | Define Styles Decorator type with version control. |
+| [Summary](arkts-arkui-common-comp-summary-t.md) | Provides a summary of drag-related data. |
+| [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Defines custom icon symbol configurations. |
+| [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md) | Base class for system material objects. |
+| [Theme](arkts-arkui-common-comp-theme-t.md) | Theme. |
+| [TipsMessageType](arkts-arkui-common-comp-tipsmessagetype-t.md) | Provides information about the tooltip. |
+| [TouchTestDoneCallback](arkts-arkui-common-comp-touchtestdonecallback-t.md) | Represents the callback type for dynamically specifying gesture recognizer participation in gesture processing. |
+| [TransitionEffects](arkts-arkui-common-comp-transitioneffects-t.md) | Defines all transition effects. |
+| [TransitionFinishCallback](arkts-arkui-common-comp-transitionfinishcallback-t.md) | Represents the type of callback for the end of a component's transition animation. |
+| [UIContext](arkts-arkui-common-comp-uicontext-t.md) | [UIContext](arkts-arkui-common-comp-uicontext-t.md) |
+| [UnifiedData](arkts-arkui-common-comp-unifieddata-t.md) | Defines drag-related data. |
+| [UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md) | Import the UniformDataType type object for ui component. |
+| [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) | Represents a callback for visible area changes of the component. |
+| [VisualEffect](arkts-arkui-common-comp-visualeffect-t.md) | Represents a visual effect configuration object. |
+| [window](arkts-arkui-common-comp-window-t.md) | The type for window. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | Enum for accessibility action type |
-| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function |
-| [AccessibilityRoleType](arkts-arkui-accessibilityroletype-e.md) | Enumerates the component role types used by screen readers. @enum { number } |
-| [AccessibilitySamePageMode](arkts-arkui-accessibilitysamepagemode-e.md) | Enumerates the same-page modes for cross-process embedded components and their host applications. @enum { number } |
-| [AdaptiveColor](arkts-arkui-adaptivecolor-e.md) | Enumerates the adaptive color modes used for the background blur effect. |
-| [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md) | @enum { number } |
-| [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md) | Enumerates the reference sizes of the available layout area when the preview image width and height are set to percentages. |
-| [BlendApplyType](arkts-arkui-blendapplytype-e.md) | Defines how to apply the specified blend mode to the content of a view. |
-| [BlendMode](arkts-arkui-blendmode-e.md) | Blend mode. |
-| [BlurStyle](arkts-arkui-blurstyle-e.md) | Enumerates blur styles. |
-| [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style. |
-| [ChainStyle](arkts-arkui-chainstyle-e.md) | Enumerates the chain styles in relative container. |
-| [ContentClipMode](arkts-arkui-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
-| [DismissReason](arkts-arkui-dismissreason-e.md) | Enumerates the reasons for popup dismissal. |
-| [DistortionMode](arkts-arkui-distortionmode-e-sys.md) | Enum for distortion animation mode. |
-| [DragAnimationType](arkts-arkui-draganimationtype-e-sys.md) | Enumerates drag animation types. |
-| [DragBehavior](arkts-arkui-dragbehavior-e.md) | Describes the drag behavior. When [DragResult](arkts-arkui-dragresult-e.md) is set to **DROP_ENABLED**, you can define **DragBehavior** as either **COPY** or **MOVE**. When **DragBehavior** is set to **COPY**, a plus sign will be displayed in the badge of the dragged object. When **DragBehavior** is set to **MOVE**, the plus sign will not be displayed. **DragBehavior** is used to indicate the intended way of handling data (either copy or move) without governing the actual data processing. This behavior is reported back to the drag source through **onDragEnd**, enabling the drag initiator to distinguish whether the operation results in a copy or a move of the data. |
-| [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md) | Enumerates the transition effects for switching between the floating image (set through [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu-1)) and the drag preview when both are configured on a component. |
-| [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) | Sets the display mode of the drag preview. |
-| [DragResult](arkts-arkui-dragresult-e.md) | Defines the result of a drag operation and the drop-selection state of a component. |
-| [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md) | Edge light animation mode enumeration. |
-| [EffectEdge](arkts-arkui-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
-| [EffectType](arkts-arkui-effecttype-e.md) | Enum of using the effects template mode. |
-| [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md) | Defines the type of the **onFinish** callback. |
-| [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md) | Enumerates the haptic feedback modes used when the menu is displayed. |
-| [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md) | Enumerates the type of area in hover mode. |
-| [KeyboardAvoidMode](arkts-arkui-keyboardavoidmode-e.md) | Enumerates modes in which a popup responds when the keyboard is displayed. |
-| [LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout. |
-| [LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
-| [MenuGridPosition](arkts-arkui-menugridposition-e.md) | The position of grid in menu. |
-| [MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md) | Enumerates the modes in which the menu avoids the soft keyboard. |
-| [MenuPolicy](arkts-arkui-menupolicy-e.md) | Enumerates menu display policies. |
-| [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) | Defines the preview style of a menu. |
-| [ModalMode](arkts-arkui-modalmode-e.md) | Enumerates modal modes of the sub-window menu. |
-| [ModalTransition](arkts-arkui-modaltransition-e.md) | Defines modal transition type. |
-| [OutlineStyle](arkts-arkui-outlinestyle-e.md) | Enumerates outline styles. |
-| [PreDragStatus](arkts-arkui-predragstatus-e.md) | Defines the states before the drag gesture is triggered. |
-| [PreviewScaleMode](arkts-arkui-previewscalemode-e.md) | Enumerates the scale modes of the preview image. |
-| [RepeatMode](arkts-arkui-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
-| [ReusableMemOptStrategy](arkts-arkui-reusablememoptstrategy-e.md) | Defines a type for memory optimization strategy. |
-| [SafeAreaEdge](arkts-arkui-safeareaedge-e.md) | Edge of the safe area for expanding the layout. |
-| [SafeAreaType](arkts-arkui-safeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
-| [ScrollSizeMode](arkts-arkui-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
-| [ShadowStyle](arkts-arkui-shadowstyle-e.md) | enum Shadow style |
-| [ShadowType](arkts-arkui-shadowtype-e.md) | Define the type of shadow |
-| [SheetKeyboardAvoidMode](arkts-arkui-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard. |
-| [SheetMode](arkts-arkui-sheetmode-e.md) | Define the display mode of the sheet. |
-| [SheetSize](arkts-arkui-sheetsize-e.md) | Defines sheet size type. |
-| [SheetTitleBarBackgroundBlur](arkts-arkui-sheettitlebarbackgroundblur-e.md) | Enum of title bar background blur styles. |
-| [SheetTitleBarHoverMode](arkts-arkui-sheettitlebarhovermode-e.md) | Enum of title bar hover modes. |
-| [SheetType](arkts-arkui-sheettype-e.md) | Defines the sheet type. |
-| [SourceTool](arkts-arkui-sourcetool-e.md) | Enumerates the input source tool types. |
-| [SourceType](arkts-arkui-sourcetype-e.md) | Enumerates the input source device types. |
-| [SpatialPositionMode](arkts-arkui-spatialpositionmode-e-sys.md) | Spatial position mode. Indicates the coordinate system used by the corner positions. |
-| [SystemProperties](arkts-arkui-systemproperties-e.md) | Defining Environment variable enumeration value. |
-| [ThemeColorMode](arkts-arkui-themecolormode-e.md) | Enumerates the color modes. |
-| [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md) | Event dispatch strategy. |
-| [TransitionEdge](arkts-arkui-transitionedge-e.md) | Enumerates the transition edge types. |
-| [TransitionHierarchyStrategy](arkts-arkui-transitionhierarchystrategy-e-sys.md) | Enumerates the strategies for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. |
+| [AccessibilityAction](arkts-arkui-common-comp-accessibilityaction-e.md) | Enum for accessibility action type |
+| [AccessibilityActionInterceptResult](arkts-arkui-common-comp-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function |
+| [AccessibilityRoleType](arkts-arkui-common-comp-accessibilityroletype-e.md) | Enumerates the component role types used by screen readers. @enum { number } |
+| [AccessibilitySamePageMode](arkts-arkui-common-comp-accessibilitysamepagemode-e.md) | Enumerates the same-page modes for cross-process embedded components and their host applications. @enum { number } |
+| [AdaptiveColor](arkts-arkui-common-comp-adaptivecolor-e.md) | Enumerates the adaptive color modes used for the background blur effect. |
+| [AnchoredColorMode](arkts-arkui-common-comp-anchoredcolormode-e.md) | @enum { number } |
+| [AvailableLayoutArea](arkts-arkui-common-comp-availablelayoutarea-e.md) | Enumerates the reference sizes of the available layout area when the preview image width and height are set to percentages. |
+| [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | Defines how to apply the specified blend mode to the content of a view. |
+| [BlendMode](arkts-arkui-common-comp-blendmode-e.md) | Blend mode. |
+| [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md) | Enumerates blur styles. |
+| [BlurStyleActivePolicy](arkts-arkui-common-comp-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style. |
+| [ChainStyle](arkts-arkui-common-comp-chainstyle-e.md) | Enumerates the chain styles in relative container. |
+| [ContentClipMode](arkts-arkui-common-comp-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
+| [DismissReason](arkts-arkui-common-comp-dismissreason-e.md) | Enumerates the reasons for popup dismissal. |
+| [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | Enum for distortion animation mode. |
+| [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | Enumerates drag animation types. |
+| [DragBehavior](arkts-arkui-common-comp-dragbehavior-e.md) | Describes the drag behavior. When [DragResult](arkts-arkui-common-comp-dragresult-e.md) is set to **DROP_ENABLED**, you can define **DragBehavior** as either **COPY** or **MOVE**. When **DragBehavior** is set to **COPY**, a plus sign will be displayed in the badge of the dragged object. When **DragBehavior** is set to **MOVE**, the plus sign will not be displayed. **DragBehavior** is used to indicate the intended way of handling data (either copy or move) without governing the actual data processing. This behavior is reported back to the drag source through **onDragEnd**, enabling the drag initiator to distinguish whether the operation results in a copy or a move of the data. |
+| [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md) | Enumerates the transition effects for switching between the floating image (set through [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1)) and the drag preview when both are configured on a component. |
+| [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) | Sets the display mode of the drag preview. |
+| [DragResult](arkts-arkui-common-comp-dragresult-e.md) | Defines the result of a drag operation and the drop-selection state of a component. |
+| [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | Edge light animation mode enumeration. |
+| [EffectEdge](arkts-arkui-common-comp-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
+| [EffectType](arkts-arkui-common-comp-effecttype-e.md) | Enum of using the effects template mode. |
+| [FinishCallbackType](arkts-arkui-common-comp-finishcallbacktype-e.md) | Defines the type of the **onFinish** callback. |
+| [HapticFeedbackMode](arkts-arkui-common-comp-hapticfeedbackmode-e.md) | Enumerates the haptic feedback modes used when the menu is displayed. |
+| [HoverModeAreaType](arkts-arkui-common-comp-hovermodeareatype-e.md) | Enumerates the type of area in hover mode. |
+| [KeyboardAvoidMode](arkts-arkui-common-comp-keyboardavoidmode-e.md) | Enumerates modes in which a popup responds when the keyboard is displayed. |
+| [LayoutSafeAreaEdge](arkts-arkui-common-comp-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout. |
+| [LayoutSafeAreaType](arkts-arkui-common-comp-layoutsafeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
+| [MenuGridPosition](arkts-arkui-common-comp-menugridposition-e.md) | The position of grid in menu. |
+| [MenuKeyboardAvoidMode](arkts-arkui-common-comp-menukeyboardavoidmode-e.md) | Enumerates the modes in which the menu avoids the soft keyboard. |
+| [MenuPolicy](arkts-arkui-common-comp-menupolicy-e.md) | Enumerates menu display policies. |
+| [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) | Defines the preview style of a menu. |
+| [ModalMode](arkts-arkui-common-comp-modalmode-e.md) | Enumerates modal modes of the sub-window menu. |
+| [ModalTransition](arkts-arkui-common-comp-modaltransition-e.md) | Defines modal transition type. |
+| [OutlineStyle](arkts-arkui-common-comp-outlinestyle-e.md) | Enumerates outline styles. |
+| [PreDragStatus](arkts-arkui-common-comp-predragstatus-e.md) | Defines the states before the drag gesture is triggered. |
+| [PreviewScaleMode](arkts-arkui-common-comp-previewscalemode-e.md) | Enumerates the scale modes of the preview image. |
+| [RepeatMode](arkts-arkui-common-comp-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
+| [ReusableMemOptStrategy](arkts-arkui-common-comp-reusablememoptstrategy-e.md) | Defines a type for memory optimization strategy. |
+| [SafeAreaEdge](arkts-arkui-common-comp-safeareaedge-e.md) | Edge of the safe area for expanding the layout. |
+| [SafeAreaType](arkts-arkui-common-comp-safeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
+| [ScrollSizeMode](arkts-arkui-common-comp-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
+| [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md) | enum Shadow style |
+| [ShadowType](arkts-arkui-common-comp-shadowtype-e.md) | Define the type of shadow |
+| [SheetKeyboardAvoidMode](arkts-arkui-common-comp-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard. |
+| [SheetMode](arkts-arkui-common-comp-sheetmode-e.md) | Define the display mode of the sheet. |
+| [SheetSize](arkts-arkui-common-comp-sheetsize-e.md) | Defines sheet size type. |
+| [SheetTitleBarBackgroundBlur](arkts-arkui-common-comp-sheettitlebarbackgroundblur-e.md) | Enum of title bar background blur styles. |
+| [SheetTitleBarHoverMode](arkts-arkui-common-comp-sheettitlebarhovermode-e.md) | Enum of title bar hover modes. |
+| [SheetType](arkts-arkui-common-comp-sheettype-e.md) | Defines the sheet type. |
+| [SourceTool](arkts-arkui-common-comp-sourcetool-e.md) | Enumerates the input source tool types. |
+| [SourceType](arkts-arkui-common-comp-sourcetype-e.md) | Enumerates the input source device types. |
+| [SpatialPositionMode](arkts-arkui-common-comp-spatialpositionmode-e-sys.md) | Spatial position mode. Indicates the coordinate system used by the corner positions. |
+| [SystemProperties](arkts-arkui-common-comp-systemproperties-e.md) | Defining Environment variable enumeration value. |
+| [ThemeColorMode](arkts-arkui-common-comp-themecolormode-e.md) | Enumerates the color modes. |
+| [TouchTestStrategy](arkts-arkui-common-comp-touchteststrategy-e.md) | Event dispatch strategy. |
+| [TransitionEdge](arkts-arkui-common-comp-transitionedge-e.md) | Enumerates the transition edge types. |
+| [TransitionHierarchyStrategy](arkts-arkui-common-comp-transitionhierarchystrategy-e-sys.md) | Enumerates the strategies for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. |
 
 ## Examples
 
@@ -388,7 +390,7 @@ The following example implements a polyline animation effect.
 
 The following example enables the Edge Light Effect animation by setting the edgeLightMode attribute, and uses the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) to implement a semi-transparent material effect.
 
-Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md).
 
 
 ```
@@ -398,7 +400,7 @@ Since API version 26.0.0, the edgeLightMode attribute is added to [SheetOptions]
 
 The following example enables blur optimization by setting the blurSnapshot attribute. When the systemMaterial API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set a material effect, or the blurStyle API in [SheetOptions](ts-universal-attributes-sheet-transition.md#sheetoptions) is used to set blur, and a significant increase in power consumption is observed, you can try enabling blur optimization.
 
-Since API version 26.0.0, [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the blurSnapshot attribute.
+Since API version 26.0.0, [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) adds the blurSnapshot attribute.
 ```
 
 ```TypeScript
@@ -410,7 +412,7 @@ This example demonstrates how to use the onAccessibilityActionIntercept event to
 ```TypeScript
 ### Example 2: Setting the onAccessibilityFocus Callback
 
-Since API version 18, the callback is triggered when the focus acquisition or blur state changes. This example demonstrates the basic usage of [onAccessibilityFocus](arkts-arkui-commonmethod-c.md#onaccessibilityfocus). When the focus moves to "onAccessibilityFocus takes effect", "[testingTag] isFocus current is true" is printed. When the focus moves to a position other than "onAccessibilityFocus takes effect", "[testingTag] isFocus current is false" is printed.
+Since API version 18, the callback is triggered when the focus acquisition or blur state changes. This example demonstrates the basic usage of [onAccessibilityFocus](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityfocus). When the focus moves to "onAccessibilityFocus takes effect", "[testingTag] isFocus current is true" is printed. When the focus moves to a position other than "onAccessibilityFocus takes effect", "[testingTag] isFocus current is false" is printed.
 ```
 
 ```TypeScript
@@ -454,7 +456,7 @@ struct ComponentPage {
 ```TypeScript
 ### Example 1: Setting a Gradient Border
 
-This example demonstrates how to set a gradient border for a component using the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API.
+This example demonstrates how to set a gradient border for a component using the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API.
 
 
 ```
@@ -462,7 +464,7 @@ This example demonstrates how to set a gradient border for a component using the
 ```TypeScript
 ### Example 2: Dynamically Adjusting Property Values
 
-Dynamically adjusts the property values in the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API via the [Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md) API.
+Dynamically adjusts the property values in the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API via the [Slider](../../apis-arkui/arkui-js/js-components-basic-slider.md) API.
 
 
 ```
@@ -470,7 +472,7 @@ Dynamically adjusts the property values in the [borderImage](arkts-arkui-commonm
 ```TypeScript
 ### Example 3: Using LocalizedEdgeWidths Type Values
 
-This example demonstrates how to use the [LocalizedEdgeWidths](ts-types.md#localizededgewidths12) type for the slice, width, and outset properties in the [borderImage](arkts-arkui-commonmethod-c.md#borderimage) API.
+This example demonstrates how to use the [LocalizedEdgeWidths](ts-types.md#localizededgewidths12) type for the slice, width, and outset properties in the [borderImage](arkts-arkui-common-comp-commonmethod-c.md#borderimage) API.
 ```
 
 ```TypeScript
@@ -520,7 +522,7 @@ This example demonstrates how to configure multiple tooltips to appear and disap
 ```TypeScript
 ### Example 3: Setting the Immersive Light-Sensing Visual Effect of a Floating Bubble
 
-This example sets the system material of a component through the systemMaterial attribute in [TipsOptions](arkts-arkui-tipsoptions-i.md), implementing the immersive light-sensing visual effect of bindTips.
+This example sets the system material of a component through the systemMaterial attribute in [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md), implementing the immersive light-sensing visual effect of bindTips.
 
 The immersive light-sensing effect of a component is adaptively adjusted based on the device computing power and the immersive light-sensing effect set by the user in the system, requiring no additional adaptation by developers.
 
@@ -569,7 +571,7 @@ This example demonstrates how to set a touch target for a button using responseR
 ```TypeScript
 ### Example 2: Setting a Touch Target via the responseRegionList API
 
-This example demonstrates how to set a touch target for a button using [responseRegionList](arkts-arkui-commonmethod-c.md#responseregionlist) to respond to click events.
+This example demonstrates how to set a touch target for a button using [responseRegionList](arkts-arkui-common-comp-commonmethod-c.md#responseregionlist) to respond to click events.
 
 The responseRegionList API is supported since API version 22.
 
@@ -579,7 +581,7 @@ The responseRegionList API is supported since API version 22.
 ```TypeScript
 ### Example 3: Setting the Mouse Touch Target to Respond to Click Events
 
-This example uses [mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion) to set the mouse touch target to respond to click events.
+This example uses [mouseResponseRegion](arkts-arkui-common-comp-commonmethod-c.md#mouseresponseregion) to set the mouse touch target to respond to click events.
 ```
 
 ```TypeScript
@@ -609,7 +611,7 @@ This example demonstrates how to display a basic menu by configuring [MenuElemen
 ```TypeScript
 ### Example 2: Displaying a Custom Menu
 
-This example shows how to use bindMenu with a custom builder to create a custom menu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
+This example shows how to use bindMenu with a custom builder to create a custom menu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
 
 
 ```
@@ -625,7 +627,7 @@ This example demonstrates how to display a menu by setting [responseType](ts-app
 ```TypeScript
 ### Example 4: Displaying a Menu with an Arrow on Right-Clicking
 
-This example demonstrates how to display a menu with an arrow by setting the enableArrow property in [responseType](ts-appendix-enums.md#responsetype8).RightClick and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
+This example demonstrates how to display a menu with an arrow by setting the enableArrow property in [responseType](ts-appendix-enums.md#responsetype8).RightClick and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu. In addition, starting from API version 18, the hapticFeedbackMode property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) can be configured to implement the haptic feedback effect when the menu is displayed.
 
 
 ```
@@ -633,7 +635,7 @@ This example demonstrates how to display a menu with an arrow by setting the ena
 ```TypeScript
 ### Example 5: Displaying a Menu with a Screenshot Preview on Long Press
 
-This example demonstrates how to display a menu with a screenshot preview by setting [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to display a menu with a screenshot preview by setting [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -641,7 +643,7 @@ This example demonstrates how to display a menu with a screenshot preview by set
 ```TypeScript
 ### Example 6: Displaying a Menu with a Custom Preview on Long Press
 
-This example demonstrates how to display a menu with a custom preview by setting [CustomBuilder](ts-types.md#custombuilder8) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to display a menu with a custom preview by setting [CustomBuilder](ts-types.md#custombuilder8) of the preview property in [responseType](ts-appendix-enums.md#responsetype8).LongPress and [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -649,7 +651,7 @@ This example demonstrates how to display a menu with a custom preview by setting
 ```TypeScript
 ### Example 7: Using a State Variable for Menu Visibility
 
-This example demonstrates how to use [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) with isShown to control the visibility of the menu.
+This example demonstrates how to use [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) with isShown to control the visibility of the menu.
 
 
 ```
@@ -657,7 +659,7 @@ This example demonstrates how to use [bindContextMenu](arkts-arkui-commonmethod-
 ```TypeScript
 ### Example 8: Using Custom Menu and Preview Animations
 
-This example demonstrates how implement custom entrance and exit animations for the menu and preview by setting the transition property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) of bindContextMenu.
+This example demonstrates how implement custom entrance and exit animations for the menu and preview by setting the transition property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) of bindContextMenu.
 
 
 ```
@@ -673,7 +675,7 @@ This example shows how to display a menu with symbol icons by setting symbolIcon
 ```TypeScript
 ### Example 10: Using Shared Element Transition
 
-This example demonstrates how to implement a shared element transition effect from the component screenshot to the custom preview by setting hoverScale of the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu.
+This example demonstrates how to implement a shared element transition effect from the component screenshot to the custom preview by setting hoverScale of the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu.
 
 
 ```
@@ -681,7 +683,7 @@ This example demonstrates how to implement a shared element transition effect fr
 ```TypeScript
 ### Example 11: Customizing the Background Blur Effect
 
-This example demonstrates how to customize the blur background effect of a menu by setting the backgroundBlurStyleOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
+This example demonstrates how to customize the blur background effect of a menu by setting the backgroundBlurStyleOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindMenu.
 
 The backgroundBlurStyleOptions property is added to ContextMenuOptions since API version 18.
 
@@ -691,7 +693,7 @@ The backgroundBlurStyleOptions property is added to ContextMenuOptions since API
 ```TypeScript
 ### Example 12: Customizing the Background Effect
 
-This example demonstrates how to customize the background effect of a menu by setting the backgroundEffect property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
+This example demonstrates how to customize the background effect of a menu by setting the backgroundEffect property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindMenu.
 
 The backgroundEffect property is added to ContextMenuOptions since API version 18.
 
@@ -701,9 +703,9 @@ The backgroundEffect property is added to ContextMenuOptions since API version 1
 ```TypeScript
 ### Example 13: Configuring Lift-Finger Interruption for a Shared Element Transition
 
-This example demonstrates how to implement a shared element transition by setting the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu and how to control whether lifting the finger after a long press can cancel the menu pop-up by setting hoverScaleInterruption.
+This example demonstrates how to implement a shared element transition by setting the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) for bindContextMenu and how to control whether lifting the finger after a long press can cancel the menu pop-up by setting hoverScaleInterruption.
 
-From API version 20, the hoverScaleInterruption property is added to the [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) type of previewAnimationOptions.
+From API version 20, the hoverScaleInterruption property is added to the [ContextMenuAnimationOptions](arkts-arkui-common-comp-contextmenuanimationoptions-i.md) type of previewAnimationOptions.
 
 
 ```
@@ -711,9 +713,9 @@ From API version 20, the hoverScaleInterruption property is added to the [Contex
 ```TypeScript
 ### Example 14: Setting the Radius of the Rounded Corners of the Preview Image Border
 
-This example demonstrates how to implement the function using bindContextMenu with [responseType](ts-appendix-enums.md#responsetype8).LongPress set. In addition, the [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) type of the preview property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) is set to determine the menu preview mode. previewBorderRadius is set to implement the radius of the rounded corners of the preview image.
+This example demonstrates how to implement the function using bindContextMenu with [responseType](ts-appendix-enums.md#responsetype8).LongPress set. In addition, the [MenuPreviewMode](arkts-arkui-common-comp-menupreviewmode-e.md) type of the preview property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) is set to determine the menu preview mode. previewBorderRadius is set to implement the radius of the rounded corners of the preview image.
 
-In API version 19, the previewBorderRadius property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 19, the previewBorderRadius property is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -723,7 +725,7 @@ In API version 19, the previewBorderRadius property is added to [ContextMenuOpti
 
 This sample shows how to configure lifecycle callbacks for bindMenu11+.
 
-From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDisappear properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDisappear properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
@@ -731,7 +733,7 @@ From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDi
 
 This example demonstrates how to implement the menu mask using bindMenu with the mask property.
 
-In API version 20, the mask property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 20, the mask property is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -741,7 +743,7 @@ In API version 20, the mask property is added to [ContextMenuOptions](arkts-arku
 
 This example demonstrates how to set the outline style of the drop-down menu by setting the outlineWidth and outlineColor properties of bindMenu.
 
-In API version 20, the outlineWidth and outlineColor properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 20, the outlineWidth and outlineColor properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 
 ```
@@ -757,7 +759,7 @@ This example demonstrates how to configure the properties of a menu by passing a
 ```TypeScript
 ### Example 19: Displaying Different Menus Based on the Trigger Mode
 
-This example demonstrates how to bind a menu to the target component by passing CustomBuilderT<ResponseType> to [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse). The component returns the mode of triggering menu display in the UI function. You can implement differentiated display based on the returned trigger mode.
+This example demonstrates how to bind a menu to the target component by passing CustomBuilderT<ResponseType> to [bindContextMenuWithResponse](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenuwithresponse). The component returns the mode of triggering menu display in the UI function. You can implement differentiated display based on the returned trigger mode.
 
 The bindContextMenuWithResponse API is added since API version 23.
 
@@ -769,13 +771,13 @@ The bindContextMenuWithResponse API is added since API version 23.
 
 This example demonstrates how to configure the menu to avoid the soft keyboard by setting keyboardAvoidMode in bindMenu and set the minimum distance for avoiding the soft keyboard by setting minKeyboardAvoidDistance.
 
-Starting from API version 23, the** keyboardAvoidMode** and minKeyboardAvoidDistance properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+Starting from API version 23, the** keyboardAvoidMode** and minKeyboardAvoidDistance properties are added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
 ### Example 21: Setting the Position of the Menu to Display Relative to the Upper Left Corner of the Bound Component
 
-This example shows how to set the anchorPosition property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to display the menu relative to the upper left corner of the bound component.
+This example shows how to set the anchorPosition property in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to display the menu relative to the upper left corner of the bound component.
 
 The anchorPosition property is added to ContextMenuOptions since API version 20.
 
@@ -785,7 +787,7 @@ The anchorPosition property is added to ContextMenuOptions since API version 20.
 ```TypeScript
 ### Example 22: Setting the Maximum Height of a Menu
 
-This sample shows how to use the maxHeight attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the maximum height of a menu.
+This sample shows how to use the maxHeight attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to set the maximum height of a menu.
 
 If the maxHeight attribute is not set, the maximum height of the menu is 80% of the available height by default, and all list items can be displayed. If the maxHeight attribute is set to 50% of the available height, only eight list items can be displayed.
 
@@ -797,7 +799,7 @@ The maxHeight attribute is added to ContextMenuOptions as of API version 26.0.0.
 ```TypeScript
 ### Example 23: Setting the Spacing Between the Menu and Target Component
 
-This example describes how to increase the spacing between the menu and the target component by setting the targetSpace attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example describes how to increase the spacing between the menu and the target component by setting the targetSpace attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 
 The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.0.
 ```
@@ -805,7 +807,7 @@ The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.
 ```TypeScript
 ### Example 24: Setting the System Material of a Menu
 
-This example uses the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the system material of the component, thereby achieving the immersive light effect for the menu.
+This example uses the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) to set the system material of the component, thereby achieving the immersive light effect for the menu.
 
 The immersive light effect of the component will be automatically adjusted based on the device computing power and the immersive light effect set by the user in the system. You do not need to perform additional adaptation.
 
@@ -819,15 +821,15 @@ Menu with system material
 ```TypeScript
 ### Example 25: Setting a Grid Menu Using gridStyle
 
-This example shows how to use gridStyle to set the grid menu style in [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow). You can customize the grid layout of the menu by setting the count, horizontalSize, and position attributes.
+This example shows how to use gridStyle to set the grid menu style in [bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow). You can customize the grid layout of the menu by setting the count, horizontalSize, and position attributes.
 
-In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md).
 ```
 
 ```TypeScript
 ### Example 1: Displaying Different Types of Popups
 
-This example shows how to configure the keyboardAvoidMode attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) to determine whether the popup avoids the soft keyboard.
+This example shows how to configure the keyboardAvoidMode attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) to determine whether the popup avoids the soft keyboard.
 
 The keyboardAvoidMode attribute is added to PopupOptions and CustomPopupOptions since API version 15.
 
@@ -853,7 +855,7 @@ This example sets the arrowHeight, arrowWidth, radius, shadow, and popupColor at
 ```TypeScript
 ### Example 4: Setting the Popup Animation
 
-This example shows how to configure the transition attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) to implement the entrance and exit animations on the popup.
+This example shows how to configure the transition attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) to implement the entrance and exit animations on the popup.
 
 
 ```
@@ -1051,7 +1053,7 @@ This example demonstrates how to implement a full-screen sheet. This feature is 
 
 This example sets the system material through the systemMaterial attribute of the half-modal.
 
-Since API version 26.0.0, the [SheetOptions](arkts-arkui-sheetoptions-i.md) adds the systemMaterial attribute.
+Since API version 26.0.0, the [SheetOptions](arkts-arkui-common-comp-sheetoptions-i.md) adds the systemMaterial attribute.
 ```
 
 ```TypeScript
@@ -1103,7 +1105,7 @@ Starting from API version 20, this example mainly demonstrates the content effec
 ```TypeScript
 ### Example 1: Using the Same TransitionEffect Configuration for Image Appearance and Disappearance
 
-This example primarily demonstrates how to use the same [TransitionEffect](arkts-arkui-transitioneffect-c.md) to achieve both the appearance and disappearance of an image, where the appearance and disappearance are inverse processes of each other.
+This example primarily demonstrates how to use the same [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md) to achieve both the appearance and disappearance of an image, where the appearance and disappearance are inverse processes of each other.
 
 Schematic diagram:
 ```
@@ -1111,7 +1113,7 @@ Schematic diagram:
 ```TypeScript
 ### Example 2: Using Different TransitionEffect Configurations for Image Appearance and Disappearance
 
-This example demonstrates how to use different [TransitionEffect](arkts-arkui-transitioneffect-c.md) configurations to implement the appearance and disappearance of an image.
+This example demonstrates how to use different [TransitionEffect](arkts-arkui-common-comp-transitioneffect-c.md) configurations to implement the appearance and disappearance of an image.
 
 Schematic diagram:
 ```
@@ -1217,7 +1219,7 @@ AccessibilityActionOptions is available since API version 23.
 ```TypeScript
 ### Example 9 (Set Custom Accessibility Actions)
 
-This example demonstrates how to use [accessibilityCustomActions](arkts-arkui-commonmethod-c.md#accessibilitycustomactions) to set custom accessibility actions for a component. Developers can bind callbacks for custom actions by action name.
+This example demonstrates how to use [accessibilityCustomActions](arkts-arkui-common-comp-commonmethod-c.md#accessibilitycustomactions) to set custom accessibility actions for a component. Developers can bind callbacks for custom actions by action name.
 
 Since API version 26.0.0, accessibilityCustomActions is added.
 ```
@@ -1241,7 +1243,7 @@ This example shows how to set up a flex layout through the flexBasis, flexGrow, 
 ```TypeScript
 ### Example 1: Obtaining Click Event Parameters
 
-This example configures a click event [ClickEvent](arkts-arkui-clickevent-i.md) for a button. When the button is clicked, the relevant parameters of the click event can be obtained.
+This example configures a click event [ClickEvent](arkts-arkui-common-comp-clickevent-i.md) for a button. When the button is clicked, the relevant parameters of the click event can be obtained.
 
 
 ```
@@ -1327,9 +1329,9 @@ Below is how the component looks with the brightness effect applied:
 ```TypeScript
 ### Example 2: Setting the Render Group Exclusion Attribute
 
-This example demonstrates how to use the [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) to avoid repeated invalidations of the render group cache in scenarios involving attribute animations on the component.
+This example demonstrates how to use the [excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup) to avoid repeated invalidations of the render group cache in scenarios involving attribute animations on the component.
 
-The [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) attribute is supported since API version 22.
+The [excludeFromRenderGroup](arkts-arkui-common-comp-commonmethod-c-sys.md#excludefromrendergroup) attribute is supported since API version 22.
 
 
 ```
@@ -1361,7 +1363,7 @@ This example demonstrates how to use the visibility configuration to achieve dif
 ```TypeScript
 ### Example 1: Implementing Custom Gesture Judgment
 
-In this example, the [onGestureJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturejudgebegin) event is configured to implement customized judgment of the press and hold, fast swipe, swipe, pinch, and drag gestures. From API version 21, the [BaseEvent](ts-universal-events-click.md#baseevent8) axisPinch attribute can be used to obtain the two-finger zoom ratio.
+In this example, the [onGestureJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturejudgebegin) event is configured to implement customized judgment of the press and hold, fast swipe, swipe, pinch, and drag gestures. From API version 21, the [BaseEvent](ts-universal-events-click.md#baseevent8) axisPinch attribute can be used to obtain the two-finger zoom ratio.
 
 
 ```
@@ -1469,23 +1471,23 @@ This example demonstrates how to implement a pressed state effect for a custom c
 ```TypeScript
 ### Example 9: Implementing the Mouse Hover Effect with a Modifier
 
-This example implements the mouse hover effect by binding a modifier to aButton. When the mouse moves over the Button, the background color of the Button changes to red, which is the hover effect; when the mouse leaves the Button, the background color changes to black, which is the normal state effect. The hover style is set through the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API.
+This example implements the mouse hover effect by binding a modifier to aButton. When the mouse moves over the Button, the background color of the Button changes to red, which is the hover effect; when the mouse leaves the Button, the background color changes to black, which is the normal state effect. The hover style is set through the [applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute) API.
 
-Since API version 26.0.0, the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added.
+Since API version 26.0.0, the [applyHoveredAttribute](arkts-arkui-common-comp-attributemodifier-i.md#applyhoveredattribute) API is added.
 ```
 
 ```TypeScript
 ### Example 1: Setting the Follow-Hand Morph Drag Animation
 
-This example sets [dragAnimationType](#attributes) to FOLLOW_HAND_MORPH to implement the follow-hand morph drag animation effect, and executes a custom drop animation through [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) when the drag ends.
+This example sets [dragAnimationType](#attributes) to FOLLOW_HAND_MORPH to implement the follow-hand morph drag animation effect, and executes a custom drop animation through [executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation) when the drag ends.
 
-Since API version 26.0.0, the [dragAnimationType](#attributes) attribute, the [executeFollowHandMorphDropAnimation](arkts-arkui-dragevent-i-sys.md#executefollowhandmorphdropanimation) method, and the [interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation) method are added.
+Since API version 26.0.0, the [dragAnimationType](#attributes) attribute, the [executeFollowHandMorphDropAnimation](arkts-arkui-common-comp-dragevent-i-sys.md#executefollowhandmorphdropanimation) method, and the [interruptFollowHandMorphDropAnimation](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md#interruptfollowhandmorphdropanimation) method are added.
 ```
 
 ```TypeScript
 ### Example 1: Setting Focus and Focus Traversal Effects for Components
 
-This example shows how to use [defaultFocus](#defaultfocus9), [groupDefaultFocus](arkts-arkui-commonmethod-c.md#groupdefaultfocus), and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch). defaultFocus sets the bound component as the initial focus after the [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts) is created. groupDefaultFocus sets the bound component as the initial focus after the container with the specified tabIndex is created. focusOnTouch sets the bound component to obtain focus upon being clicked.
+This example shows how to use [defaultFocus](#defaultfocus9), [groupDefaultFocus](arkts-arkui-common-comp-commonmethod-c.md#groupdefaultfocus), and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch). defaultFocus sets the bound component as the initial focus after the [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts) is created. groupDefaultFocus sets the bound component as the initial focus after the container with the specified tabIndex is created. focusOnTouch sets the bound component to obtain focus upon being clicked.
 
 Diagrams:
 
@@ -1543,7 +1545,7 @@ This example shows how to change the focus box style of a component by configuri
 ```TypeScript
 ### Example 4: Setting Focus Group Traversal
 
-This example demonstrates how to set a component as the initial focus when its container gains focus by configuring [focusScopePriority](arkts-arkui-commonmethod-c.md#focusscopepriority). Configuring [focusScopeId](arkts-arkui-commonmethod-c.md#focusscopeid) allows the bound container component to become a focus group.
+This example demonstrates how to set a component as the initial focus when its container gains focus by configuring [focusScopePriority](arkts-arkui-common-comp-commonmethod-c.md#focusscopepriority). Configuring [focusScopeId](arkts-arkui-common-comp-commonmethod-c.md#focusscopeid) allows the bound container component to become a focus group.
 
 Diagrams:
 
@@ -1571,7 +1573,7 @@ Continue pressing the Tab key, and the focus transfers to the component named Gr
 ```TypeScript
 ### Example 5: Setting Tab Focus Stay
 
-This example implements Tab key focus stay on a component by configuring [tabStop](arkts-arkui-commonmethod-c.md#tabstop).
+This example implements Tab key focus stay on a component by configuring [tabStop](arkts-arkui-common-comp-commonmethod-c.md#tabstop).
 
 Diagrams:
 
@@ -1599,9 +1601,9 @@ Press the Tab key again, and the focus cycles back to button1.
 ```TypeScript
 ### Example 6: Setting Custom Focus Movement
 
-This example demonstrates how to implement custom focus movement logic using the [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) API, available since API version 18.
+This example demonstrates how to implement custom focus movement logic using the [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) API, available since API version 18.
 
-If [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is not configured, the default focus navigation order when pressing the Tab key is: M->A->B->C->D->E->F. After [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is configured, the focus navigation order changes to: M->D->F->B->C.
+If [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) is not configured, the default focus navigation order when pressing the Tab key is: M->A->B->C->D->E->F. After [nextFocus](arkts-arkui-common-comp-commonmethod-c.md#nextfocus) is configured, the focus navigation order changes to: M->D->F->B->C.
 ```
 
 ```TypeScript
@@ -1680,7 +1682,7 @@ This example shows how to achieve the same rotation effect by setting different 
 ```TypeScript
 ### Example 4: Implementing Graphical Transformation Through transform3D
 
-This example demonstrates how to implement image transformation by setting [transform3D](arkts-arkui-commonmethod-c.md#transform3d). This functionality is supported since API version 20.
+This example demonstrates how to implement image transformation by setting [transform3D](arkts-arkui-common-comp-commonmethod-c.md#transform3d). This functionality is supported since API version 20.
 
 
 ```
@@ -1688,7 +1690,7 @@ This example demonstrates how to implement image transformation by setting [tran
 ```TypeScript
 ### Example 5: Rotating an Image Based on Angles of Each Axis
 
-This example demonstrates how to implement rotation by setting the [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) parameter of rotate. This functionality is supported since API version 20.
+This example demonstrates how to implement rotation by setting the [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) parameter of rotate. This functionality is supported since API version 20.
 ```
 
 ```TypeScript
@@ -1884,7 +1886,7 @@ This example uses [blendMode](ts-universal-attributes-image-effect.md#blendmode1
 ```TypeScript
 ### Example 7: Comparing Blur Effects
 
-This example compares three different blur effects: [backgroundEffect11+](#backgroundeffect11), [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur), and [backgroundBlurStyle9+](#backgroundblurstyle9).
+This example compares three different blur effects: [backgroundEffect11+](#backgroundeffect11), [backdropBlur](arkts-arkui-common-comp-commonmethod-c.md#backdropblur), and [backgroundBlurStyle9+](#backgroundblurstyle9).
 
 
 ```
@@ -2106,7 +2108,7 @@ This example demonstrates how to use onGestureRecognizerJudgeBegin to implement 
 ```TypeScript
 ### Example 5: Customizing Gesture Recognizer Participation in Gesture Processing
 
-This example demonstrates how to use [onTouchTestDone](arkts-arkui-commonmethod-c.md#ontouchtestdone) to exclude a gesture recognizer from subsequent gesture processing, available from API version 20. When the callback is triggered, [preventBegin](./ts-gesture-common.md#preventbegin20) is called to prevent the recognizer from participating in further processing. Tapping the overlapping area of Tap2 and Tap1, if preventBegin is not called, triggers the gesture corresponding to Tap2. If preventBegin is called to block Tap2, the gesture corresponding to Tap1 is triggered.
+This example demonstrates how to use [onTouchTestDone](arkts-arkui-common-comp-commonmethod-c.md#ontouchtestdone) to exclude a gesture recognizer from subsequent gesture processing, available from API version 20. When the callback is triggered, [preventBegin](./ts-gesture-common.md#preventbegin20) is called to prevent the recognizer from participating in further processing. Tapping the overlapping area of Tap2 and Tap1, if preventBegin is not called, triggers the gesture corresponding to Tap2. If preventBegin is called to block Tap2, the gesture corresponding to Tap1 is triggered.
 
 
 ```
@@ -2114,7 +2116,7 @@ This example demonstrates how to use [onTouchTestDone](arkts-arkui-commonmethod-
 ```TypeScript
 ### Example 6: Customizing the Collection Results of Events and Gestures
 
-This example configures [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept) to specify whether a gesture recognizer or touch recognizer is passed through to other nodes. When button2 is tapped, the touch event is not passed through to Column. When button1 is tapped, the touch event is passed through to Column, and Column changes color.
+This example configures [onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept) to specify whether a gesture recognizer or touch recognizer is passed through to other nodes. When button2 is tapped, the touch event is not passed through to Column. When button1 is tapped, the touch event is passed through to Column, and Column changes color.
 
 The onGestureCollectIntercept API is added since API version 26.0.0.
 ```
@@ -2128,7 +2130,7 @@ The component tree corresponding to the example is shown in the following figure
 ```TypeScript
 ### Example 7: Nested Scrolling with Non-Built-in Gestures
 
-This example implements nested scrolling using [shouldRecognizerParallelWith](arkts-arkui-commonmethod-c.md#shouldrecognizerparallelwith) and [onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin). The inner component takes precedence in responding to the swipe gesture. When the inner component scrolls to the top or bottom, the outer component can take over the scrolling.
+This example implements nested scrolling using [shouldRecognizerParallelWith](arkts-arkui-common-comp-commonmethod-c.md#shouldrecognizerparallelwith) and [onGestureRecognizerJudgeBegin](arkts-arkui-common-comp-commonmethod-c.md#ongesturerecognizerjudgebegin). The inner component takes precedence in responding to the swipe gesture. When the inner component scrolls to the top or bottom, the outer component can take over the scrolling.
 
 The shouldRecognizerParallelWith API is added since API version 26.0.0.
 ```
@@ -2136,15 +2138,15 @@ The shouldRecognizerParallelWith API is added since API version 26.0.0.
 ```TypeScript
 ### Example 1: Enabling the Keyboard Continuation
 
-In this example, the [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
+In this example, the [onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
 
-The [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
+The [onNeedSoftkeyboard](arkts-arkui-common-comp-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
 ```
 
 ```TypeScript
 ### Example 1: Using the Automatic Memory Optimization Strategy
 
-In the following example, the reusable custom component ReusableComponent uses the automatic memory optimization strategy through the memoryOptimizationStrategy attribute of [ReusableOptions](arkts-arkui-reusableoptions-i.md). Click the Recycle button to trigger the recycling of the ReusableComponent component. Then, when the app goes to the background, the reuse pool cache is released.
+In the following example, the reusable custom component ReusableComponent uses the automatic memory optimization strategy through the memoryOptimizationStrategy attribute of [ReusableOptions](arkts-arkui-common-comp-reusableoptions-i.md). Click the Recycle button to trigger the recycling of the ReusableComponent component. Then, when the app goes to the background, the reuse pool cache is released.
 
 The ReusableOptions API is added since API version 26.0.0.
 ```
@@ -2152,7 +2154,7 @@ The ReusableOptions API is added since API version 26.0.0.
 ```TypeScript
 ### Example 1: Allowing Drag and Drop
 
-This example demonstrates how to use [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop) to configure component drop targets and [draggable](#draggable) to enable component dragging.
+This example demonstrates how to use [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop) to configure component drop targets and [draggable](#draggable) to enable component dragging.
 
 
 ```
@@ -2176,7 +2178,7 @@ This example demonstrates how to configure the drag preview style using [dragPre
 ```TypeScript
 ### Example 4: Enabling the Multi-select Drag Functionality
 
-This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui-draginteractionoptions-i.md) to enable the multi-select drag functionality in the Grid component.
+This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui-common-comp-draginteractionoptions-i.md) to enable the multi-select drag functionality in the Grid component.
 
 
 ```
@@ -2184,7 +2186,7 @@ This example demonstrates how to configure [isMultiSelectionEnabled](arkts-arkui
 ```TypeScript
 ### Example 5: Enabling the Default Pressed State Animation
 
-This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arkui-draginteractionoptions-i.md) to enable the default press animation effect in the Grid component.
+This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arkui-common-comp-draginteractionoptions-i.md) to enable the default press animation effect in the Grid component.
 
 
 ```
@@ -2192,7 +2194,7 @@ This example demonstrates configuring [defaultAnimationBeforeLifting](arkts-arku
 ```TypeScript
 ### Example 6: Customizing the Preview Style
 
-This example demonstrates customizing the Image component background by configuring [ImageModifier](arkts-arkui-imagemodifier-t.md).
+This example demonstrates customizing the Image component background by configuring [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md).
 
 
 ```
@@ -2210,13 +2212,13 @@ The ohos.permission.INTERNET permission is required for using online images. For
 ```TypeScript
 ### Example 8: Enabling Haptic Feedback for Dragging
 
-This example demonstrates enabling haptic feedback during image drag operations by configuring [enableHapticFeedback](arkts-arkui-draginteractionoptions-i.md), supported since API version 18.
+This example demonstrates enabling haptic feedback during image drag operations by configuring [enableHapticFeedback](arkts-arkui-common-comp-draginteractionoptions-i.md), supported since API version 18.
 ```
 
 ```TypeScript
 ### Example 9: Customizing the Drag Preview
 
-Starting from API version 15, this example configures [onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15) to create a custom preview image exclusively for the lift animation effect, and [isLiftingDisabled](arkts-arkui-draginteractionoptions-i.md) to disable the lift animation effect.
+Starting from API version 15, this example configures [onlyForLifting](./ts-universal-events-drag-drop.md#previewconfiguration15) to create a custom preview image exclusively for the lift animation effect, and [isLiftingDisabled](arkts-arkui-common-comp-draginteractionoptions-i.md) to disable the lift animation effect.
 
 Custom preview for the lifting effect only
 
@@ -2230,7 +2232,7 @@ Custom preview with the lifting effect disabled
 ```TypeScript
 ### Example 10: Implementing Touch Point Calculation Based on Initial Drag Preview Size
 
-Since API version 19, Example 10 implements the calculation of the follow-finger point position during the drag process based on the original size of the final drag preview image by configuring [DragPreviewMode](arkts-arkui-draginteractionoptions-i.md) to ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW. When [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT, this attribute does not take effect.
+Since API version 19, Example 10 implements the calculation of the follow-finger point position during the drag process based on the original size of the final drag preview image by configuring [DragPreviewMode](arkts-arkui-common-comp-draginteractionoptions-i.md) to ENABLE_TOUCH_POINT_CALCULATION_BASED_ON_FINAL_PREVIEW. When [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) is set to ENABLE_MULTI_TILE_EFFECT, this attribute does not take effect.
 
 
 ```
@@ -2238,7 +2240,7 @@ Since API version 19, Example 10 implements the calculation of the follow-finger
 ```TypeScript
 ### Example 11: Implementing Transition Effects Between Floating Images and Drag Previews
 
-This example demonstrates how to implement different transition effects between floating images and drag previews by configuring [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md), supported since API version 19.
+This example demonstrates how to implement different transition effects between floating images and drag previews by configuring [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md), supported since API version 19.
 
 
 ```
@@ -2246,7 +2248,7 @@ This example demonstrates how to implement different transition effects between 
 ```TypeScript
 ### Example 12: Setting Dropping of a Custom Component
 
-In API version 23 and later, this example demonstrates how to implement the drag-and-drop function for a custom component by passing a type through the component's [onDragStart](ts-universal-events-drag-drop.md#ondragstart) API and setting the target component's [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop) attribute to allow dropping of that type.
+In API version 23 and later, this example demonstrates how to implement the drag-and-drop function for a custom component by passing a type through the component's [onDragStart](ts-universal-events-drag-drop.md#ondragstart) API and setting the target component's [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop) attribute to allow dropping of that type.
 
 
 ```
@@ -2254,9 +2256,9 @@ In API version 23 and later, this example demonstrates how to implement the drag
 ```TypeScript
 ### Example 13: Setting the Material Effect of the Drag Backdrop Image
 
-This example sets the material effect of the drag backdrop by configuring the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute in [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop).
+This example sets the material effect of the drag backdrop by configuring the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute in [allowDrop](arkts-arkui-common-comp-commonmethod-c.md#allowdrop).
 
-Since API version 26.0.0, the modifier parameter in the [DragPreviewOptions](arkts-arkui-imagemodifier-t.md) interface additionally supports the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute.
+Since API version 26.0.0, the modifier parameter in the [DragPreviewOptions](arkts-arkui-common-comp-imagemodifier-t.md) interface additionally supports the [systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial) attribute.
 ```
 
 ```TypeScript
@@ -2394,13 +2396,13 @@ This example sets the zIndex attribute for components in different containers. T
 ```TypeScript
 ### Example 1: Using onVisibleAreaChange to Listen for Visible Area Changes
 
-This example demonstrates how to set an [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event for a component, which triggers the callback when the component is fully displayed or completely hidden.
+This example demonstrates how to set an [onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange) event for a component, which triggers the callback when the component is fully displayed or completely hidden.
 ```
 
 ```TypeScript
 ### Example 2: Using onVisibleAreaApproximateChange to Listen for Visible Area Changes
 
-This example demonstrates how to set an [onVisibleAreaApproximateChange](arkts-arkui-commonmethod-c.md#onvisibleareaapproximatechange) event for a component, which triggers the callback when the component is fully displayed or completely hidden. This feature is supported from API version 17.
+This example demonstrates how to set an [onVisibleAreaApproximateChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareaapproximatechange) event for a component, which triggers the callback when the component is fully displayed or completely hidden. This feature is supported from API version 17.
 
 
 ```
@@ -2473,9 +2475,9 @@ This example demonstrates how to set an area change event for a Text component. 
 ```TypeScript
 ### Example 2: Using onAreaChange to Listen for Area Changes at a Custom Interval
 
-In this example, by setting [expectedUpdateInterval](arkts-arkui-areachangeoptions-i.md), the [onAreaChange](#onareachange-1) event can be triggered when the Text layout changes, achieving the effect of interval callbacks.
+In this example, by setting [expectedUpdateInterval](arkts-arkui-common-comp-areachangeoptions-i.md), the [onAreaChange](#onareachange-1) event can be triggered when the Text layout changes, achieving the effect of interval callbacks.
 
-Since API version 26.0.0, [onAreaChange](#onareachange-1), [AreaChangeCallback](arkts-arkui-areachangecallback-t.md), and [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md) are added.
+Since API version 26.0.0, [onAreaChange](#onareachange-1), [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md), and [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) are added.
 ```
 
 ```TypeScript
@@ -2517,7 +2519,7 @@ Sets image effects, including shadow, grayscale, highlight, saturation, contrast
 ```TypeScript
 ### Example 2: Applying a Linear Gradient Blur Effect
 
-This example demonstrates how to apply a linear gradient blur effect on a component using [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur).
+This example demonstrates how to apply a linear gradient blur effect on a component using [linearGradientBlur](arkts-arkui-common-comp-commonmethod-c.md#lineargradientblur).
 
 
 ```
@@ -2525,7 +2527,7 @@ This example demonstrates how to apply a linear gradient blur effect on a compon
 ```TypeScript
 ### Example 3: Setting Offscreen Rendering Effect
 
-This example demonstrates how to use [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) to set whether the component is rendered entirely offscreen and then composited with its parent component.
+This example demonstrates how to use [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup) to set whether the component is rendered entirely offscreen and then composited with its parent component.
 
 
 ```
@@ -2541,7 +2543,7 @@ This example demonstrates how to blend the current component content with the ca
 ```TypeScript
 ### Example 5: Inverting the Foreground Color
 
-This example demonstrates how to achieve intelligent foreground color inversion using [InvertOptions](arkts-arkui-invertoptions-i.md).
+This example demonstrates how to achieve intelligent foreground color inversion using [InvertOptions](arkts-arkui-common-comp-invertoptions-i.md).
 
 
 ```
@@ -2549,7 +2551,7 @@ This example demonstrates how to achieve intelligent foreground color inversion 
 ```TypeScript
 ### Example 6: Setting Non-Overlapping Same-Layer Shadows
 
-This example demonstrates how to implement non-overlapping shadow effect within the same layer using [useShadowBatching](arkts-arkui-commonmethod-c.md#useshadowbatching) in combination with [shadow](#shadow).
+This example demonstrates how to implement non-overlapping shadow effect within the same layer using [useShadowBatching](arkts-arkui-common-comp-commonmethod-c.md#useshadowbatching) in combination with [shadow](#shadow).
 
 
 ```
@@ -2557,7 +2559,7 @@ This example demonstrates how to implement non-overlapping shadow effect within 
 ```TypeScript
 ### Example 7: Applying a Spherical Effect to a Component
 
-This example demonstrates how to apply a spherical effect to a component using [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect).
+This example demonstrates how to apply a spherical effect to a component using [sphericalEffect](arkts-arkui-common-comp-commonmethod-c.md#sphericaleffect).
 
 Below is how the component looks with the spherical effect applied.
 
@@ -2571,7 +2573,7 @@ Below is how the component looks without the spherical effect applied.
 ```TypeScript
 ### Example 8: Applying a Light Up Effect to a Component
 
-This example demonstrates how to apply a light up effect to a component using [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect).
+This example demonstrates how to apply a light up effect to a component using [lightUpEffect](arkts-arkui-common-comp-commonmethod-c.md#lightupeffect).
 
 Below is how the component looks with the light up effect applied.
 
@@ -2589,7 +2591,7 @@ Below is how the component looks without the light up effect applied.
 ```TypeScript
 ### Example 9: Applying a Pixel Stretch Effect to a Component
 
-This example demonstrates how to apply a pixel stretch effect to a component using [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect).
+This example demonstrates how to apply a pixel stretch effect to a component using [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect).
 
 Below is how the component looks with the pixel stretch effect applied.
 
@@ -2603,7 +2605,7 @@ Below is how the component looks without the pixel stretch effect applied.
 ```TypeScript
 ### Example 10: Applying a System Bar Effect to a Component
 
-This example demonstrates how to apply a system bar effect to a component using [systemBarEffect](arkts-arkui-commonmethod-c.md#systembareffect).
+This example demonstrates how to apply a system bar effect to a component using [systemBarEffect](arkts-arkui-common-comp-commonmethod-c.md#systembareffect).
 
 Below is how the component looks with the system bar effect applied.
 
@@ -2613,7 +2615,7 @@ Below is how the component looks with the system bar effect applied.
 ```TypeScript
 ### Example 11: Setting Whether the Component Is Double-Sided
 
-This example demonstrates how to use [doubleSided](arkts-arkui-commonmethod-c.md#doublesided) to set whether the component is double-sided.
+This example demonstrates how to use [doubleSided](arkts-arkui-common-comp-commonmethod-c.md#doublesided) to set whether the component is double-sided.
 
 The doubleSided method is added since API version 26.0.0.
 ```
@@ -2641,7 +2643,7 @@ For details about ListDataSource and the complete code, see [Example 1: Adding a
 ```TypeScript
 ### Example 3: Setting the Clipping Region
 
-This example sets the [clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent) attribute to change the clipping area of the component's content layer.
+This example sets the [clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent) attribute to change the clipping area of the component's content layer.
 
 
 ```
@@ -2665,7 +2667,7 @@ This example demonstrates how to use the onAccessibilityHover event to configure
 
 This example shows how to capture touch events from a component that cannot receive focus in accessibility mode using the onAccessibilityHoverTransparent API and display event details in the text area below.
 
-Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter type AccessibilityTransparentCallback has been added.
+Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-common-comp-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter type AccessibilityTransparentCallback has been added.
 ```
 
 ```TypeScript
@@ -2679,7 +2681,7 @@ Example 1 shows how to set the drag and drop area for some components (such as I
 ```TypeScript
 ### Example 2 (Custom Drop Animation)
 
-Since API version 18, Example 2 demonstrates how to implement a custom drop animation through the [executeDropAnimation](arkts-arkui-dragevent-i.md#executedropanimation) API.
+Since API version 18, Example 2 demonstrates how to implement a custom drop animation through the [executeDropAnimation](arkts-arkui-common-comp-dragevent-i.md#executedropanimation) API.
 
 
 ```
@@ -2687,7 +2689,7 @@ Since API version 18, Example 2 demonstrates how to implement a custom drop anim
 ```TypeScript
 ### Example 3 (Asynchronously Obtaining Data During Drag)
 
-Since API version 15, Example 3 demonstrates asynchronously obtaining data during drag through [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading).
+Since API version 15, Example 3 demonstrates asynchronously obtaining data during drag through [startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading).
 ```
 
 ```TypeScript
@@ -2701,7 +2703,7 @@ Since API version 20, Example 4 shows how to obtain the drag event through the o
 ```TypeScript
 ### Example 5 (Obtaining the Package Name and Checking Whether It Is a Cross-Device Drag)
 
-Starting from API version 20, Example 5 shows how to obtain a drag event through the onDragXXX API, call the [getDragSource](arkts-arkui-dragevent-i.md#getdragsource) API of the drag event to obtain the package name, and call the isRemote API to determine whether it is a cross-device drag.
+Starting from API version 20, Example 5 shows how to obtain a drag event through the onDragXXX API, call the [getDragSource](arkts-arkui-common-comp-dragevent-i.md#getdragsource) API of the drag event to obtain the package name, and call the isRemote API to determine whether it is a cross-device drag.
 
 
 ```
@@ -2709,7 +2711,7 @@ Starting from API version 20, Example 5 shows how to obtain a drag event through
 ```TypeScript
 ### Example 6 (Drag Supporting Hover Detection)
 
-Since API version 20, Example 6 demonstrates registering a callback through the [onDragSpringLoading](arkts-arkui-commonmethod-c.md#ondragspringloading) API and obtaining context information (current state and notification sequence) through [SpringLoadingContext](#springloadingcontext20) in the callback.
+Since API version 20, Example 6 demonstrates registering a callback through the [onDragSpringLoading](arkts-arkui-common-comp-commonmethod-c.md#ondragspringloading) API and obtaining context information (current state and notification sequence) through [SpringLoadingContext](#springloadingcontext20) in the callback.
 
 
 ```
@@ -2717,7 +2719,7 @@ Since API version 20, Example 6 demonstrates registering a callback through the 
 ```TypeScript
 ### Example 7 (Delayed Data Provision by the Drag Initiator)
 
-Starting from API version 20, Example 7 demonstrates calling [setDataLoadParams](arkts-arkui-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision, and calling [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to obtain data asynchronously.
+Starting from API version 20, Example 7 demonstrates calling [setDataLoadParams](arkts-arkui-common-comp-dragevent-i.md#setdataloadparams) in [onDragStart](#ondragstart) to delay data provision, and calling [startDataLoading](arkts-arkui-common-comp-dragevent-i.md#startdataloading) in [onDrop](#ondrop) to obtain data asynchronously.
 
 
 ```
@@ -2757,13 +2759,13 @@ The figure below shows how the button looks when a stylus hovers on it.
 ```TypeScript
 ### Example 2: Using onHoverMove
 
-Since API version 15, this example sets the [onHoverMove](arkts-arkui-commonmethod-c.md#onhovermove) event of the button. When a stylus hovers over the button, the UI displays the current hover position of the stylus.
+Since API version 15, this example sets the [onHoverMove](arkts-arkui-common-comp-commonmethod-c.md#onhovermove) event of the button. When a stylus hovers over the button, the UI displays the current hover position of the stylus.
 ```
 
 ```TypeScript
 ### Example 1: Creating Outlines
 
-This example demonstrates how to create component outlines using [outline](arkts-arkui-commonmethod-c.md#outline).
+This example demonstrates how to create component outlines using [outline](arkts-arkui-common-comp-commonmethod-c.md#outline).
 
 
 ```
@@ -2771,7 +2773,7 @@ This example demonstrates how to create component outlines using [outline](arkts
 ```TypeScript
 ### Example 2: Using the LocalizedEdgeColors Type
 
-This example demonstrates how to set the color attribute of the [outline](arkts-arkui-commonmethod-c.md#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
+This example demonstrates how to set the color attribute of the [outline](arkts-arkui-common-comp-commonmethod-c.md#outline) attribute to the [LocalizedEdgeColors](ts-types.md#localizededgecolors12) type.
 ```
 
 ```TypeScript
@@ -2893,7 +2895,7 @@ This example demonstrates how components gain and lose focus. The colors of the 
 ```TypeScript
 ### Example 1: Obtaining Axis Event Parameters
 
-This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel, the axis event parameters are captured. Starting from API version 21, this example uses the  attribute of [BaseEvent](./ts-universal-events-click.md#baseevent8) and [getPinchAxisScaleValue](arkts-arkui-axisevent-i.md#getpinchaxisscalevalue) to obtain the pinch scale value. Starting from API version 22, this example uses [hasAxis](arkts-arkui-axisevent-i.md#hasaxis) to check whether the axis event contains the specified axis type.
+This example shows how to set up an axis event on a button. When the user scrolls the mouse wheel, the axis event parameters are captured. Starting from API version 21, this example uses the  attribute of [BaseEvent](./ts-universal-events-click.md#baseevent8) and [getPinchAxisScaleValue](arkts-arkui-common-comp-axisevent-i.md#getpinchaxisscalevalue) to obtain the pinch scale value. Starting from API version 22, this example uses [hasAxis](arkts-arkui-common-comp-axisevent-i.md#hasaxis) to check whether the axis event contains the specified axis type.
 
 The figure below shows the event parameters captured when the user scrolls the mouse wheel.
 
@@ -2911,7 +2913,7 @@ The getCurrentLocalPosition API is supported since API version 26.0.0.
 ```TypeScript
 ### Example 1: Using Different Clipping Attributes
 
-This example demonstrates how to clip and mask an image using [clipShape](arkts-arkui-commonmethod-c.md#clipshape), [clip](#clip12), and [maskShape](arkts-arkui-commonmethod-c.md#maskshape).
+This example demonstrates how to clip and mask an image using [clipShape](arkts-arkui-common-comp-commonmethod-c.md#clipshape), [clip](#clip12), and [maskShape](arkts-arkui-common-comp-commonmethod-c.md#maskshape).
 
 
 ```
@@ -2927,7 +2929,7 @@ This example demonstrates how to mask an image using [mask](#mask12).
 
 This example disables the default click sound effect by setting the enableClickSoundEffect attribute. You can call audio-related APIs in the onClick callback to customize the sound effect. For details, see [Using SoundPool to Play Short Sounds](../../../media/media/using-soundpool-for-playback.md).
 
-The [enableClickSoundEffect](arkts-arkui-commonmethod-c.md#enableclicksoundeffect) attribute is added since API version 24.
+The [enableClickSoundEffect](arkts-arkui-common-comp-commonmethod-c.md#enableclicksoundeffect) attribute is added since API version 24.
 ```
 
 ```TypeScript
@@ -2963,7 +2965,7 @@ This example demonstrates how to create a linear color gradient using [linearGra
 ```TypeScript
 ### Example 2: Creating a Sweep Gradient
 
-This example demonstrates how to create a sweep color gradient using [sweepGradient](arkts-arkui-commonmethod-c.md#sweepgradient).
+This example demonstrates how to create a sweep color gradient using [sweepGradient](arkts-arkui-common-comp-commonmethod-c.md#sweepgradient).
 
 
 ```
@@ -2971,7 +2973,7 @@ This example demonstrates how to create a sweep color gradient using [sweepGradi
 ```TypeScript
 ### Example 3: Creating a Radial Gradient
 
-This example demonstrates how to create a radial color gradient using [radialGradient](arkts-arkui-commonmethod-c.md#radialgradient).
+This example demonstrates how to create a radial color gradient using [radialGradient](arkts-arkui-common-comp-commonmethod-c.md#radialgradient).
 ```
 
 ```TypeScript

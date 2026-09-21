@@ -49,10 +49,6 @@ Get the current input method of a specified user.
 **Examples**
 
 ```TypeScript
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

@@ -77,13 +77,6 @@ import { intl } from '@kit.LocalizationKit';
 let collator = new intl.Collator();
 ```
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用zh-CN区域ID创建Collator对象，localeMatcher设置为lookup，usage设置为sort
-let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -108,13 +101,6 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 | options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// 使用系统区域创建Collator对象
-let collator = new intl.Collator();
-```
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

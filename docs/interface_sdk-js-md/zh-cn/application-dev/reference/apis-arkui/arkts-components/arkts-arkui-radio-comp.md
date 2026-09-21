@@ -20,6 +20,8 @@ Radio(options: RadioOptions)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -30,7 +32,7 @@ Radio(options: RadioOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RadioOptions](arkts-arkui-radiooptions-i.md) | 是 | 配置单选框的参数。 |
+| options | [RadioOptions](arkts-arkui-radio-comp-radiooptions-i.md) | 是 | 配置单选框的参数。 |
 
 ## 汇总
 
@@ -38,21 +40,21 @@ Radio(options: RadioOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [RadioOptions](arkts-arkui-radiooptions-i.md) | 单选框的信息。 |
-| [RadioStyle](arkts-arkui-radiostyle-i.md) | 单选框的样式。 |
+| [RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [RadioOptions](arkts-arkui-radio-comp-radiooptions-i.md) | 单选框的信息。 |
+| [RadioStyle](arkts-arkui-radio-comp-radiostyle-i.md) | 单选框的样式。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | 单选框选中状态改变时触发的回调函数类型定义。 |
+| [OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md) | 单选框选中状态改变时触发的回调函数类型定义。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | 单选框的样式。 |
+| [RadioIndicatorType](arkts-arkui-radio-comp-radioindicatortype-e.md) | 单选框的样式。 |
 
 ## 示例
 

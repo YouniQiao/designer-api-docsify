@@ -770,6 +770,39 @@ struct CompV2 {
 }
 ```
 
+<a id="makebinding-1"></a>
+
+## makeBinding
+
+```TypeScript
+static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
+```
+
+Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding** type in the \@Builder function.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | Yes | Callback used to obtain the value. Each value access triggers this function to obtain the latest value. |
+| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | Yes | Callback used to update the value. Each modification to **.value** triggers this function. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
+
+**Examples**
+
 ```TypeScript
 import { MutableBinding, UIUtils } from '@kit.ArkUI';
 
@@ -814,41 +847,6 @@ struct CompV2 {
   }
 }
 ```
-
-<a id="makebinding-1"></a>
-
-## makeBinding
-
-```TypeScript
-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
-```
-
-Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding** type in the \@Builder function.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | Yes | Callback used to obtain the value. Each value access triggers this function to obtain the latest value. |
-| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | Yes | Callback used to update the value. Each modification to **.value** triggers this function. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
-
-**Examples**
-
-See [makeBinding](#makebinding)
 
 ## makeObserved
 

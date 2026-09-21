@@ -20,6 +20,8 @@ Callback when the sheet is selected.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,6 +39,8 @@ The string type can be used to load local images and, more frequently, online im
 **Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,6 +61,8 @@ If the text is too long to display, a scrollbar is displayed.
 **Type:** string &#124; [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

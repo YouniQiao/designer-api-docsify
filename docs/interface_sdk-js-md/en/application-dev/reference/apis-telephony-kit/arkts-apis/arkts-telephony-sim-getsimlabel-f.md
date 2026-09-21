@@ -48,17 +48,6 @@ sim.getSimLabel(0, (err: BusinessError, data: sim.SimLabel) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimLabel(0).then((data: sim.SimLabel) => {
-  console.info(`getSimLabel success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 <a id="getsimlabel-1"></a>
 
@@ -97,4 +86,13 @@ Obtains the SIM card label. This API uses a promise to return the result.
 
 **Examples**
 
-See [getSimLabel](#getsimlabel)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimLabel(0).then((data: sim.SimLabel) => {
+  console.info(`getSimLabel success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getSimState failed, promise: err->${JSON.stringify(err)}`);
+});
+```

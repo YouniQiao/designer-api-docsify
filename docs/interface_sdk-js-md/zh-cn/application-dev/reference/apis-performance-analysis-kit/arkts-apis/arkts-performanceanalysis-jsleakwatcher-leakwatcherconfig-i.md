@@ -32,6 +32,8 @@ GC/Dump阶段，大于等于1时触发Dump。
 
 **起始版本：** 24
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## checkInterval
@@ -54,6 +56,8 @@ checkInterval?: number
 
 **起始版本：** 24
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## dumpHeapWaitTimeMs
@@ -73,6 +77,8 @@ GC结束后默认延迟5秒执行dump。
 **类型：** number
 
 **起始版本：** 24
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -96,6 +102,8 @@ exclusionList?: Array<string>
 
 **起始版本：** 24
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## fgLeakCountThreshold
@@ -114,6 +122,8 @@ GC/Dump阶段，大于等于5时触发Dump。
 
 **起始版本：** 24
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## maxStoredHeapDumps
@@ -130,6 +140,8 @@ maxStoredHeapDumps?: number
 
 **起始版本：** 24
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## monitorObjectTypes
@@ -145,6 +157,8 @@ monitorObjectTypes: MonitorObjectType
 **类型：** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
 **起始版本：** 24
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -165,5 +179,7 @@ objectUniqueIDs?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 24
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker

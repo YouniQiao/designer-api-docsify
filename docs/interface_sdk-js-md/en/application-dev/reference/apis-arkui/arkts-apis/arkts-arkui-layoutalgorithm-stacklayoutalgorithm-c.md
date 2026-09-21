@@ -9,7 +9,7 @@ A stack layout algorithm class, which is used to implement stacked arrangement o
 > **NOTE:** 
 > 
 > The object of the **StackLayoutAlgorithm** class can be used as the input parameter of the
-> DynamicLayout component to specify a layout algorithm.
+> [DynamicLayout](../arkts-components/arkts-arkui-dynamiclayout-comp-attribute.md#dynamiclayoutattribute) component to specify a layout algorithm.
 
 **Inheritance/Implementation:** StackLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 

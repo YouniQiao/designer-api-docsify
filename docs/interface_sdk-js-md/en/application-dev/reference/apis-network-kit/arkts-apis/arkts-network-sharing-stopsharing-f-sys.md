@@ -56,21 +56,6 @@ sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .stopSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('stop wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('stop wifi sharing failed');
-  });
-```
-
 
 <a id="stopsharing-1"></a>
 
@@ -119,4 +104,17 @@ Disables sharing of a specified type. This API uses a promise to return the resu
 
 **Examples**
 
-See [stopSharing](#stopsharing)
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_WIFI = 0;
+sharing
+  .stopSharing(SHARING_WIFI)
+  .then(() => {
+    console.info('stop wifi sharing successful');
+  })
+  .catch((error: BusinessError) => {
+    console.error('stop wifi sharing failed');
+  });
+```

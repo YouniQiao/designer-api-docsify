@@ -30,6 +30,8 @@ static getStatus(options?: GetStatusOptions): void
 
 **废弃版本：** 6
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
 **参数：**

@@ -36,6 +36,12 @@ getArchitecture(): string
 | --- | --- |
 | string | 平台架构类型。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## getBitness
 
 ```TypeScript
@@ -55,6 +61,12 @@ getBitness(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 平台位数。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## getBrandVersionList
 
@@ -76,6 +88,12 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 | --- | --- |
 | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 品牌和版本信息列表。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## getFormFactors
 
 ```TypeScript
@@ -95,6 +113,12 @@ getFormFactors(): Array<UserAgentFormFactor>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 设备形态信息。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## getFullVersion
 
@@ -116,6 +140,12 @@ getFullVersion(): string
 | --- | --- |
 | string | 完整版本号。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## getMobile
 
 ```TypeScript
@@ -135,6 +165,12 @@ getMobile(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 是否为移动设备，true为移动设备，false为不是移动设备。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## getModel
 
@@ -156,6 +192,12 @@ getModel(): string
 | --- | --- |
 | string | 设备型号。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## getPlatform
 
 ```TypeScript
@@ -175,6 +217,12 @@ getPlatform(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 操作系统名称。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## getPlatformVersion
 
@@ -196,6 +244,12 @@ getPlatformVersion(): string
 | --- | --- |
 | string | 操作系统版本号。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## getWow64
 
 ```TypeScript
@@ -215,6 +269,12 @@ getWow64(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 表示二进制文件是否在64位Windows上以32位模式运行。true为是，false为不是。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## setArchitecture
 
@@ -236,6 +296,12 @@ setArchitecture(arch: string): void
 | --- | --- | --- | --- |
 | arch | string | 是 | 对应请求标头的Sec-CH-UA-Arch。空代表使用ArkWeb默认值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## setBitness
 
 ```TypeScript
@@ -255,6 +321,12 @@ setBitness(bitness: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bitness | string | 是 | 对应请求标头的Sec-CH-UA-Bitness。空代表使用ArkWeb默认值。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## setBrandVersionList
 
@@ -276,6 +348,12 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 | --- | --- | --- | --- |
 | brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Full-Version-List。空代表使用ArkWeb默认值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## setFormFactors
 
 ```TypeScript
@@ -295,6 +373,12 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 是 | 对应请求标头的Sec-CH-UA-Form-Factor。空代表使用ArkWeb默认值。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## setFullVersion
 
@@ -316,6 +400,12 @@ setFullVersion(fullVersion: string): void
 | --- | --- | --- | --- |
 | fullVersion | string | 是 | 对应请求标头的Sec-CH-UA-Full-Version。空代表使用ArkWeb默认值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## setMobile
 
 ```TypeScript
@@ -335,6 +425,12 @@ setMobile(isMobile: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isMobile | boolean | 是 | 对应请求标头的Sec-CH-UA-Mobile。表示设备是否为移动设备。true为是移动设备，false为不是移动设备。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## setModel
 
@@ -356,6 +452,12 @@ setModel(model: string): void
 | --- | --- | --- | --- |
 | model | string | 是 | 对应请求标头的Sec-CH-UA-Model。 空代表使用ArkWeb默认值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## setPlatform
 
 ```TypeScript
@@ -375,6 +477,12 @@ setPlatform(platform: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | platform | string | 是 | 对应请求标头的Sec-CH-UA-Platform。空代表使用ArkWeb默认值。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
 
 ## setPlatformVersion
 
@@ -396,6 +504,12 @@ setPlatformVersion(platformVersion: string): void
 | --- | --- | --- | --- |
 | platformVersion | string | 是 | 对应请求标头的Sec-CH-UA-Platform-Version。空代表使用ArkWeb默认值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```
+
 ## setWow64
 
 ```TypeScript
@@ -415,3 +529,9 @@ setWow64(isWow64: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isWow64 | boolean | 是 | 对应请求标头的Sec-CH-UA-WoW64。表示二进制文件是否在64位Windows上以32位模式运行。true为是，false为不是。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
+```

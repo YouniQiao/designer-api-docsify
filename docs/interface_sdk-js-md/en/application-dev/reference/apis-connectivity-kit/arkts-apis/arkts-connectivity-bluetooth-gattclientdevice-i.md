@@ -153,14 +153,6 @@ let deviceName : void = gattClient.getDeviceName((err : BusinessError, data : st
 })
 ```
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getDeviceName().then((data) => {
-    console.info('device name' + JSON.stringify(data));
-})
-```
-
 <a id="getdevicename-1"></a>
 
 ## getDeviceName
@@ -189,7 +181,13 @@ Obtains the name of BLE peripheral device.
 
 **Examples**
 
-See [getDeviceName](#getdevicename)
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getDeviceName().then((data) => {
+    console.info('device name' + JSON.stringify(data));
+})
+```
 
 ## getRssiValue
 
@@ -228,14 +226,6 @@ gattClient.getRssiValue((err : BusinessError, data : number)=> {
 })
 ```
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getRssiValue().then((data : number) => {
-    console.info('rssi' + JSON.stringify(data));
-})
-```
-
 <a id="getrssivalue-1"></a>
 
 ## getRssiValue
@@ -264,7 +254,13 @@ Get the RSSI value of this BLE peripheral device.
 
 **Examples**
 
-See [getRssiValue](#getrssivalue)
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getRssiValue().then((data : number) => {
+    console.info('rssi' + JSON.stringify(data));
+})
+```
 
 ## getServices
 
@@ -311,15 +307,6 @@ device.connect();
 device.getServices(getServices);
 ```
 
-```TypeScript
-// Promise
-let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.connect();
-device.getServices().then((result : Array<bluetooth.GattService>) => {
-    console.info("getServices successfully:" + JSON.stringify(result));
-});
-```
-
 <a id="getservices-1"></a>
 
 ## getServices
@@ -348,7 +335,14 @@ Starts discovering services.
 
 **Examples**
 
-See [getServices](#getservices)
+```TypeScript
+// Promise
+let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.connect();
+device.getServices().then((result : Array<bluetooth.GattService>) => {
+    console.info("getServices successfully:" + JSON.stringify(result));
+});
+```
 
 ## off('BLECharacteristicChange')
 
@@ -375,6 +369,13 @@ Unsubscribe characteristic value changed event.
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | No | Callback used to listen for the characteristic value changed event. |
 
+**Examples**
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.off('BLECharacteristicChange');
+```
+
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -399,6 +400,13 @@ Unsubscribe client connection state changed event.
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | No | Callback used to listen for the connection state changed event. |
+
+**Examples**
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.off('BLEConnectionStateChange');
+```
 
 ## on('BLECharacteristicChange')
 
@@ -425,6 +433,18 @@ Subscribe characteristic value changed event.
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
+**Examples**
+
+```TypeScript
+function CharacteristicChange(CharacteristicChangeReq : bluetooth.BLECharacteristic) {
+  let serviceUuid : string = CharacteristicChangeReq.serviceUuid;
+  let characteristicUuid : string = CharacteristicChangeReq.characteristicUuid;
+  let value = new Uint8Array(CharacteristicChangeReq.characteristicValue);
+}
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.on('BLECharacteristicChange', CharacteristicChange);
+```
+
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -449,6 +469,17 @@ Subscribe client connection state changed event.
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | Yes | Callback used to listen for the connection state changed event. |
+
+**Examples**
+
+```TypeScript
+function ConnectStateChanged(state : bluetooth.BLEConnectChangedState) {
+  console.info('bluetooth connect state changed');
+  let connectState : bluetooth.ProfileConnectionState = state.state;
+}
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.on('BLEConnectionStateChange', ConnectStateChanged);
+```
 
 ## readCharacteristicValue
 
@@ -507,27 +538,6 @@ characteristicValue: bufferCCC, descriptors:descriptors};
 device.readCharacteristicValue(characteristic, readCcc);
 ```
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let descriptors : Array<bluetooth.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-characteristicValue: bufferCCC, descriptors:descriptors};
-
-device.readCharacteristicValue(characteristic);
-```
-
 <a id="readcharacteristicvalue-1"></a>
 
 ## readCharacteristicValue
@@ -562,7 +572,26 @@ Reads the characteristic of a BLE peripheral device.
 
 **Examples**
 
-See [readCharacteristicValue](#readcharacteristicvalue)
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+device.readCharacteristicValue(characteristic);
+```
 
 ## readDescriptorValue
 
@@ -611,17 +640,6 @@ let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-800
 device.readDescriptorValue(descriptor, readDesc);
 ```
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-device.readDescriptorValue(descriptor);
-```
-
 <a id="readdescriptorvalue-1"></a>
 
 ## readDescriptorValue
@@ -656,7 +674,16 @@ Reads the descriptor of a BLE peripheral device.
 
 **Examples**
 
-See [readDescriptorValue](#readdescriptorvalue)
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+device.readDescriptorValue(descriptor);
+```
 
 ## setBLEMtuSize
 

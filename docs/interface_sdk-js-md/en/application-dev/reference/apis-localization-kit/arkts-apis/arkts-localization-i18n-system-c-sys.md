@@ -163,7 +163,7 @@ Gets numbering systems supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample. If the map is empty, there is no local digit for given locale. |
+| Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample.If the map is empty, there is no local digit for given locale. |
 
 **Error codes:**
 

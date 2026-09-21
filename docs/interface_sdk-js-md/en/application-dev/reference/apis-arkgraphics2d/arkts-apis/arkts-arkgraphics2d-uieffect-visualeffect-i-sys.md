@@ -242,7 +242,7 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | Yes | The parameters of the nonlinear deformation effect. |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortioncomponent-comp-distortionparam-i-sys.md) | Yes | The parameters of the nonlinear deformation effect. |
 
 **Return value:**
 

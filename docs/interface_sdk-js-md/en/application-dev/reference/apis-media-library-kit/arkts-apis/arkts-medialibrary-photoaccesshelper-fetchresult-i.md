@@ -37,6 +37,12 @@ Closes this FetchResult instance to invalidate it. After this instance is releas
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## contains
 
 ```TypeScript
@@ -65,6 +71,12 @@ Checks whether the specified file asset is contained in the result set. This API
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. **true** indicates that the specified file asset is contained in the result set, and **false** indicates the opposite. |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getAllObjects
 
 ```TypeScript
@@ -91,6 +103,12 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="getallobjects-1"></a>
 
@@ -121,6 +139,12 @@ Obtains all the file assets in the result set. This API uses a promise to return
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getCount
 
 ```TypeScript
@@ -148,6 +172,12 @@ Obtains the total number of files in the result set.
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getFirstObject
 
 ```TypeScript
@@ -174,6 +204,12 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="getfirstobject-1"></a>
 
@@ -204,6 +240,12 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getIndex
 
 ```TypeScript
@@ -232,6 +274,12 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the result. If the object exists in the result set, the corresponding index is returned. Otherwise, **-1** is returned. |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getLastObject
 
 ```TypeScript
@@ -258,6 +306,12 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="getlastobject-1"></a>
 
@@ -288,6 +342,12 @@ Obtains the last file asset in the result set. This API uses a promise to return
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getNextObject
 
 ```TypeScript
@@ -316,6 +376,12 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="getnextobject-1"></a>
 
@@ -348,6 +414,12 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getObjectByPosition
 
 ```TypeScript
@@ -375,6 +447,12 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 <a id="getobjectbyposition-1"></a>
 
@@ -411,6 +489,12 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getObjectsByIndexSet
 
 ```TypeScript
@@ -445,6 +529,12 @@ Obtains the file asset array corresponding to the specified index set in the res
 | --- | --- |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1.The indexSet is null, undefined or empty. <br>2.The indexSet length is bigger than 500. <br>3.The max value of indexSet is equal or bigger than the fetch result length. <br>4.The min value of indexSet is less than 0. |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## getRangeObjects
 
 ```TypeScript
@@ -478,6 +568,12 @@ Obtains the file asset array of a specified length (second parameter) from the s
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails.<br>Possible causes: index or offset validity check failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. |
 
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
+
 ## isAfterLast
 
 ```TypeScript
@@ -504,3 +600,9 @@ Checks whether the cursor is in the last row of the result set.
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**Examples**
+
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```

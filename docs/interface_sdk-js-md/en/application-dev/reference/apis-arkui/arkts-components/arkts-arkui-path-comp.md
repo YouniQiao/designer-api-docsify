@@ -2,7 +2,7 @@
 
 The **Path** component generates a closed custom shape based on the drawing path, and supports defining complex geometric shapes through the SVG path syntax.
 
-> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class.
+> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class.
 
 ## Child Components
 
@@ -54,7 +54,7 @@ Creates a **Path** object instance, which is used to generate a closed custom sh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | No | Configuration object of the drawing attributes of the **Path** component.<br>If this parameter is not set, no drawing attribute is set, and the component is displayed at the default size. The default width and height are automatically calculated based on the path content. <br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, the PathOptions parameter must be used in the stage model. |
+| options | [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | No | Configuration object of the drawing attributes of the **Path** component.<br>If this parameter is not set, no drawing attribute is set, and the component is displayed at the default size. The default width and height are automatically calculated based on the path content. <br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, the PathOptions parameter must be used in the stage model. |
 
 ## Path
 
@@ -76,7 +76,7 @@ Creates a **Path** component, which is used to generate a closed custom shape ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | No | Configuration object of the **Path** component drawing attributes.<br>If this parameter is omitted, no drawing attribute is set, and the component is displayed at the default size. The default width and height are automatically calculated based on the path content. <br>Abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, when the **PathOptions** parameter is used, it can be used only in the stage model. |
+| options | [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | No | Configuration object of the **Path** component drawing attributes.<br>If this parameter is omitted, no drawing attribute is set, and the component is displayed at the default size. The default width and height are automatically calculated based on the path content. <br>Abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, when the **PathOptions** parameter is used, it can be used only in the stage model. |
 
 ## Summary
 
@@ -84,7 +84,7 @@ Creates a **Path** component, which is used to generate a closed custom shape ba
 
 | Name | Description |
 | --- | --- |
-| [PathOptions](arkts-arkui-pathoptions-i.md) | Describes the options of the path. |
+| [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | Describes the options of the path. |
 
 ## Examples
 

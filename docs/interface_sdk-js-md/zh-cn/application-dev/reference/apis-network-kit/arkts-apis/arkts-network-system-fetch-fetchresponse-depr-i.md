@@ -62,3 +62,71 @@ headers: Object
 **起始版本：** 3
 
 **系统能力：** SystemCapability.Communication.NetStack
+
+**示例**
+
+```TypeScript
+ArkTS示例：
+```
+
+```TypeScript
+JS示例：
+```
+
+```TypeScript
+/* index.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// index.js
+import fetch from '@system.fetch';
+
+export default {
+    data: {
+        fontColor: '#FFF',
+        result: '',
+    },
+    usingFetch: function() {
+        const that = this;
+        fetch.fetch({
+            url: 'test_url',
+            success: function(response) {
+                that.fontColor = '#00FF00';
+                that.result = 'SUCCESS';
+                console.info('fetch success');
+                console.info(JSON.stringify(response));
+            },
+            fail: function(data, code) {
+                that.fontColor = '#FF0000';
+                that.result = 'FAILED code ' + code;
+                console.error('fetch failed');
+            }
+        });
+    }
+};
+```
+
+```TypeScript
+> 说明：默认支持https，如果要支持http，需要在config.json里增加network标签，属性标识 "cleartextTraffic":  true。
+```

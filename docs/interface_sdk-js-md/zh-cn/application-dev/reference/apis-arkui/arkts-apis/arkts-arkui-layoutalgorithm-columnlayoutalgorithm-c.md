@@ -8,7 +8,7 @@ export class ColumnLayoutAlgorithm implements LayoutAlgorithm
 
 > **说明：** 
 > 
-> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件
+> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../arkts-components/arkts-arkui-dynamiclayout-comp-attribute.md)组件
 > 的入参指定布局算法。
 
 **继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)

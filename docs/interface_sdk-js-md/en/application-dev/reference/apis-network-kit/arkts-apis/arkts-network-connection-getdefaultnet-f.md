@@ -65,14 +65,6 @@ connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
 });
 ```
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
 
 <a id="getdefaultnet-1"></a>
 
@@ -121,4 +113,10 @@ Obtains the network handle used by the system by default, including the network 
 
 **Examples**
 
-See [getDefaultNet](#getdefaultnet)
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```

@@ -53,8 +53,6 @@
   <!--Del-->
   - [AVRecorderConfig(system api)](arkts-media-media-avrecorderconfig-i-sys.md)<!--DelEnd-->
   - [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
-  <!--Del-->
-  - [AVRecorderProfile(system api)](arkts-media-media-avrecorderprofile-i-sys.md)<!--DelEnd-->
   - [AVScreenCaptureRecordConfig](arkts-media-media-avscreencapturerecordconfig-i.md)
   - [AVScreenCaptureRecorder](arkts-media-media-avscreencapturerecorder-i.md)
   - [AVScreenCaptureStrategy](arkts-media-media-avscreencapturestrategy-i.md)

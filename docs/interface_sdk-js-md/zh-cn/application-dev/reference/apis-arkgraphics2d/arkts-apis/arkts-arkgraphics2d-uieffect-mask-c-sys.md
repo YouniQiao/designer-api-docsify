@@ -216,6 +216,42 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
+<a id="createpixelmapmask-1"></a>
+
+## createPixelMapMask
+
+```TypeScript
+static createPixelMapMask(pixelMap: image.PixelMap): Mask
+```
+
+通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
+
+**起始版本：** 22
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有pixelMap的Mask。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+
+**示例**
+
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 import { image } from '@kit.ImageKit';
@@ -304,44 +340,6 @@ struct Index {
   }
 }
 ```
-
-<a id="createpixelmapmask-1"></a>
-
-## createPixelMapMask
-
-```TypeScript
-static createPixelMapMask(pixelMap: image.PixelMap): Mask
-```
-
-通过输入的pixelMap创建Mask实例。该接口不会对传入的pixelMap进行缩放处理。
-
-**起始版本：** 22
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回具有pixelMap的Mask。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
-
-**示例**
-
-参见 [createPixelMapMask](#createpixelmapmask)
 
 ## createRadialGradientMask
 

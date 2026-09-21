@@ -40,7 +40,7 @@ import { media } from '@kit.MediaKit';
 | [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) | Creates a media source for streaming media to be pre-downloaded. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md) | Creates a SoundPool instance. This API uses an asynchronous callback to return the result. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool-2) | Creates a SoundPool instance. This API uses a promise to return the result. |
-| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md) | Creates a **VideoPlayer** instance. This API uses an asynchronous callback to return the result. |
+| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer) | Creates a **VideoPlayer** instance. This API uses an asynchronous callback to return the result. |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer-1) | Creates a VideoPlayer instance. This API uses a promise to return the result. |
 
 <!--Del-->
@@ -111,7 +111,6 @@ import { media } from '@kit.MediaKit';
 | [AVPlayer](arkts-media-media-avplayer-i-sys.md) | AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use [createAVPlayer()](arkts-media-media-createavplayer-f.md) to create an AVPlayer instance. |
 | [AVRecorder](arkts-media-media-avrecorder-i-sys.md) | AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance. |
 | [AVRecorderConfig](arkts-media-media-avrecorderconfig-i-sys.md) | Describes the audio and video recording parameters. |
-| [AVRecorderProfile](arkts-media-media-avrecorderprofile-i-sys.md) | Describes the audio and video recording profile. |
 | [AVScreenCaptureStrategy](arkts-media-media-avscreencapturestrategy-i-sys.md) | Provides the media AVScreenCaptureStrategy definition. |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i-sys.md) | Defines the format parameters of the video thumbnail to be obtained. |
 | [PlaybackStrategy](arkts-media-media-playbackstrategy-i-sys.md) | Provides preferred playback settings for player. |

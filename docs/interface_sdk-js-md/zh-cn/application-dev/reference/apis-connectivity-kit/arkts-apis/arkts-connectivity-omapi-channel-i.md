@@ -271,28 +271,6 @@ try {
 }
 ```
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-let cmdData = [0x01, 0x02, 0x03, 0x04]; // 请更改为正确的data
-try {
-    seChannel.transmit(cmdData, (error, response) => {
-        if (error) {
-            hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
-        } else {
-            // 若芯片捕获异常则response返回全0
-            hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
-        }
-    });
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
-}
-```
-
 <a id="transmit-1"></a>
 
 ## transmit
@@ -326,4 +304,24 @@ transmit(command: number[], callback: AsyncCallback<number[]>): void
 
 **示例**
 
-参见 [transmit](#transmit)
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seChannel : omapi.Channel;
+
+// 在使用seChannel之前，需要对seChannel进行初始化
+let cmdData = [0x01, 0x02, 0x03, 0x04]; // 请更改为正确的data
+try {
+    seChannel.transmit(cmdData, (error, response) => {
+        if (error) {
+            hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
+        } else {
+            // 若芯片捕获异常则response返回全0
+            hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+        }
+    });
+} catch (exception) {
+    hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));
+}
+```

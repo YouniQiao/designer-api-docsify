@@ -169,6 +169,23 @@ Searches for all node elements based on the accessibility text type configured i
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// The content of condition must be consistent with the type field value of the target component's accessibilityTextHint attribute.
+let condition = 'location'; 
+
+// rootElement is an instance of AccessibilityElement. Obtain it through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## findElement('elementId')
 
 ```TypeScript
@@ -203,6 +220,23 @@ This method and [findElementById](#findelementbyid) both find a node element by 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// elementId is 10.
+let condition = 10;
+
+// rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByContent
 
@@ -339,6 +373,49 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementbyfocusdirection-1"></a>
+
+## findElementByFocusDirection
+
+```TypeScript
+findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
+```
+
+Searches for an element based on the focus direction and focus rule type. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus rule type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element that matches the focus rule type in the specified focus direction. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+**Examples**
+
 ```TypeScript
 // Page.ets
 // Click "Secondary Heading 1" to make it the accessibility focus element. The next focus type is a heading focus element, which is "Secondary Heading 2".
@@ -389,51 +466,6 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-<a id="findelementbyfocusdirection-1"></a>
-
-## findElementByFocusDirection
-
-```TypeScript
-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
-```
-
-Searches for an element based on the focus direction and focus rule type. This API uses a promise to return the result.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus rule type. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element that matches the focus rule type in the specified focus direction. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
-
-**Examples**
-
-See [findElementByFocusDirection](#findelementbyfocusdirection)
 
 ## findElementById
 
@@ -631,6 +663,49 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<a id="findelementsbycondition-1"></a>
+
+## findElementsByCondition
+
+```TypeScript
+findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
+```
+
+Searches for focusable nodes of the target type based on the rule and query condition. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Method for querying focusable nodes. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the query result object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
 ```TypeScript
 // Page.ets
   build() {
@@ -681,51 +756,6 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-<a id="findelementsbycondition-1"></a>
-
-## findElementsByCondition
-
-```TypeScript
-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
-```
-
-Searches for focusable nodes of the target type based on the rule and query condition. This API uses a promise to return the result.
-
-**Since:** 26.0.0
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Method for querying focusable nodes. |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus type. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the query result object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
-See [findElementsByCondition](#findelementsbycondition)
 
 ## getChildren
 
@@ -800,17 +830,6 @@ Obtains the cursor position in a text component. This API uses an asynchronous c
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// rootElement is an instance of AccessibilityElement. Obtain it through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
-rootElement.getCursorPosition().then((data: number) => {
-  console.info(`succeeded in getting cursor position, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 // rootElement is an instance of AccessibilityElement, which must be obtained through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
 rootElement.getCursorPosition((err: BusinessError, data: number) => {
   if (err && err.code) {
@@ -845,7 +864,16 @@ Obtains the cursor position in a text component. This API uses a promise to retu
 
 **Examples**
 
-See [getCursorPosition](#getcursorposition)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement. Obtain it through AccessibilityExtensionContext.getAccessibilityFocusedElement() or getRootInActiveWindow().
+rootElement.getCursorPosition().then((data: number) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getParent
 
@@ -1354,7 +1382,7 @@ List of custom actions supported by the element.
 customComponentType?: string
 ```
 
-Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md) type of the element.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md) type of the element.
 
 **Type:** string
 

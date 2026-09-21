@@ -46,29 +46,6 @@ function isDistributedEnabled(deviceType: string): Promise<boolean>
 **示例**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isDistributedEnabledCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isDistributedEnabled success ${JSON.stringify(data)}`);
-  }
-};
-notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isDistributedEnabled().then((data: boolean) => {
-  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 

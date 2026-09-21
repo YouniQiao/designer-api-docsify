@@ -2,7 +2,7 @@
 
 **RichEditor** is a component that supports interactive text editing and mixture of text and imagery.
 
-> **NOTE** > > - This component is supported since API version 10. Newly added content in later versions is marked with a > superscript to indicate the version in which it was introduced. > > - This component supports WithTheme since API version 26.0.0.
+> **NOTE** > > - This component is supported since API version 10. Newly added content in later versions is marked with a > superscript to indicate the version in which it was introduced. > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
 
 ## Child Components
 
@@ -28,7 +28,7 @@ Called when create RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Yes | Options for initializing the component. |
+| value | [RichEditorOptions](arkts-arkui-richeditor-comp-richeditoroptions-i.md) | Yes | Options for initializing the component. |
 
 ## RichEditor
 
@@ -50,7 +50,7 @@ Called when create RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component. |
+| options | [RichEditorStyledStringOptions](arkts-arkui-richeditor-comp-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component. |
 
 ## Summary
 
@@ -58,75 +58,75 @@ Called when create RichEditor.
 
 | Name | Description |
 | --- | --- |
-| [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) | Defines the identity and position information of a BuilderSpan in **RichEditor**. |
-| [CopyEvent](arkts-arkui-copyevent-i.md) | User copy event. |
-| [CutEvent](arkts-arkui-cutevent-i.md) | Defines a custom cut event. |
-| [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | Whether to support keyboard avoidance. |
-| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md) | Describes the leading margin placeholder, which dictates the distance between the left edges of the paragraph and the component. |
-| [PasteEvent](arkts-arkui-pasteevent-i.md) | Defines a user paste event. |
-| [PlaceholderStyle](arkts-arkui-placeholderstyle-i.md) | Sets the style of the placeholder text. |
-| [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md) | Defines the options of the preview menu. |
-| [RichEditorBuilderSpan](arkts-arkui-richeditorbuilderspan-i.md) | Defines the BuilderSpan object of **RichEditor**, providing identity recognition and lifecycle awareness capabilities. |
-| [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | Sets the offset position and style of the inserted builder. |
-| [RichEditorChangeValue](arkts-arkui-richeditorchangevalue-i.md) | Defines image and text change information. |
-| [RichEditorDeleteValue](arkts-arkui-richeditordeletevalue-i.md) | Defines information about the deletion operation and the content to be deleted. |
-| [RichEditorGesture](arkts-arkui-richeditorgesture-i.md) | Defines a user gesture event. |
-| [RichEditorImageSpan](arkts-arkui-richeditorimagespan-i.md) | Image span information. |
-| [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | Sets the offset and style of an image span. |
-| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) | Provides the image information returned by the backend. |
-| [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md) | Image style. |
-| [RichEditorImageSpanStyleResult](arkts-arkui-richeditorimagespanstyleresult-i.md) | Provides the image span style information returned by the backend. |
-| [RichEditorInsertValue](arkts-arkui-richeditorinsertvalue-i.md) | Defines information about the text to be inserted. |
-| [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md) | Defines image layout information. |
-| [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Defines the options for initializing the **RichEditor** component. |
-| [RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md) | Describes the returned paragraph information. |
-| [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Defines the paragraph style. |
-| [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Defines the paragraph style options. |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Defines the range of the **RichEditor**. |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Defines information about the selected content. |
-| [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md) | Defines span position information. |
-| [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md) | Defines the text span style options. |
-| [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | Defines the options for initializing the **RichEditor** component. |
-| [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | Sets the offset and style of the **SymbolSpan** component. |
-| [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md) | Sets the symbol span style. |
-| [RichEditorSymbolSpanStyleResult](arkts-arkui-richeditorsymbolspanstyleresult-i.md) | Provides the symbol span style information returned by the backend. |
-| [RichEditorTextSpan](arkts-arkui-richeditortextspan-i.md) | Defines text span information. |
-| [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | Defines the options for adding a text span. |
-| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) | Defines text span information. |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Provides text style information. |
-| [RichEditorTextStyleResult](arkts-arkui-richeditortextstyleresult-i.md) | Provides the text span style information returned by the backend. |
-| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) | Defines the image span style options. |
-| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | Defines the symbol span style options. |
-| [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) | Defines the text span style options. |
-| [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md) | URL information. |
-| [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | Sets menu options. |
+| [BuilderSpanInfo](arkts-arkui-richeditor-comp-builderspaninfo-i.md) | Defines the identity and position information of a BuilderSpan in **RichEditor**. |
+| [CopyEvent](arkts-arkui-richeditor-comp-copyevent-i.md) | User copy event. |
+| [CutEvent](arkts-arkui-richeditor-comp-cutevent-i.md) | Defines a custom cut event. |
+| [KeyboardOptions](arkts-arkui-richeditor-comp-keyboardoptions-i.md) | Whether to support keyboard avoidance. |
+| [LeadingMarginPlaceholder](arkts-arkui-richeditor-comp-leadingmarginplaceholder-i.md) | Describes the leading margin placeholder, which dictates the distance between the left edges of the paragraph and the component. |
+| [PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md) | Defines a user paste event. |
+| [PlaceholderStyle](arkts-arkui-richeditor-comp-placeholderstyle-i.md) | Sets the style of the placeholder text. |
+| [PreviewMenuOptions](arkts-arkui-richeditor-comp-previewmenuoptions-i.md) | Defines the options of the preview menu. |
+| [RichEditorBuilderSpan](arkts-arkui-richeditor-comp-richeditorbuilderspan-i.md) | Defines the BuilderSpan object of **RichEditor**, providing identity recognition and lifecycle awareness capabilities. |
+| [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-comp-richeditorbuilderspanoptions-i.md) | Sets the offset position and style of the inserted builder. |
+| [RichEditorChangeValue](arkts-arkui-richeditor-comp-richeditorchangevalue-i.md) | Defines image and text change information. |
+| [RichEditorDeleteValue](arkts-arkui-richeditor-comp-richeditordeletevalue-i.md) | Defines information about the deletion operation and the content to be deleted. |
+| [RichEditorGesture](arkts-arkui-richeditor-comp-richeditorgesture-i.md) | Defines a user gesture event. |
+| [RichEditorImageSpan](arkts-arkui-richeditor-comp-richeditorimagespan-i.md) | Image span information. |
+| [RichEditorImageSpanOptions](arkts-arkui-richeditor-comp-richeditorimagespanoptions-i.md) | Sets the offset and style of an image span. |
+| [RichEditorImageSpanResult](arkts-arkui-richeditor-comp-richeditorimagespanresult-i.md) | Provides the image information returned by the backend. |
+| [RichEditorImageSpanStyle](arkts-arkui-richeditor-comp-richeditorimagespanstyle-i.md) | Image style. |
+| [RichEditorImageSpanStyleResult](arkts-arkui-richeditor-comp-richeditorimagespanstyleresult-i.md) | Provides the image span style information returned by the backend. |
+| [RichEditorInsertValue](arkts-arkui-richeditor-comp-richeditorinsertvalue-i.md) | Defines information about the text to be inserted. |
+| [RichEditorLayoutStyle](arkts-arkui-richeditor-comp-richeditorlayoutstyle-i.md) | Defines image layout information. |
+| [RichEditorOptions](arkts-arkui-richeditor-comp-richeditoroptions-i.md) | Defines the options for initializing the **RichEditor** component. |
+| [RichEditorParagraphResult](arkts-arkui-richeditor-comp-richeditorparagraphresult-i.md) | Describes the returned paragraph information. |
+| [RichEditorParagraphStyle](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md) | Defines the paragraph style. |
+| [RichEditorParagraphStyleOptions](arkts-arkui-richeditor-comp-richeditorparagraphstyleoptions-i.md) | Defines the paragraph style options. |
+| [RichEditorRange](arkts-arkui-richeditor-comp-richeditorrange-i.md) | Defines the range of the **RichEditor**. |
+| [RichEditorSelection](arkts-arkui-richeditor-comp-richeditorselection-i.md) | Defines information about the selected content. |
+| [RichEditorSpanPosition](arkts-arkui-richeditor-comp-richeditorspanposition-i.md) | Defines span position information. |
+| [RichEditorSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorspanstyleoptions-i.md) | Defines the text span style options. |
+| [RichEditorStyledStringOptions](arkts-arkui-richeditor-comp-richeditorstyledstringoptions-i.md) | Defines the options for initializing the **RichEditor** component. |
+| [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-comp-richeditorsymbolspanoptions-i.md) | Sets the offset and style of the **SymbolSpan** component. |
+| [RichEditorSymbolSpanStyle](arkts-arkui-richeditor-comp-richeditorsymbolspanstyle-i.md) | Sets the symbol span style. |
+| [RichEditorSymbolSpanStyleResult](arkts-arkui-richeditor-comp-richeditorsymbolspanstyleresult-i.md) | Provides the symbol span style information returned by the backend. |
+| [RichEditorTextSpan](arkts-arkui-richeditor-comp-richeditortextspan-i.md) | Defines text span information. |
+| [RichEditorTextSpanOptions](arkts-arkui-richeditor-comp-richeditortextspanoptions-i.md) | Defines the options for adding a text span. |
+| [RichEditorTextSpanResult](arkts-arkui-richeditor-comp-richeditortextspanresult-i.md) | Defines text span information. |
+| [RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md) | Provides text style information. |
+| [RichEditorTextStyleResult](arkts-arkui-richeditor-comp-richeditortextstyleresult-i.md) | Provides the text span style information returned by the backend. |
+| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdateimagespanstyleoptions-i.md) | Defines the image span style options. |
+| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdatesymbolspanstyleoptions-i.md) | Defines the symbol span style options. |
+| [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditor-comp-richeditorupdatetextspanstyleoptions-i.md) | Defines the text span style options. |
+| [RichEditorUrlStyle](arkts-arkui-richeditor-comp-richeditorurlstyle-i.md) | URL information. |
+| [SelectionMenuOptions](arkts-arkui-richeditor-comp-selectionmenuoptions-i.md) | Sets menu options. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [MenuCallback](arkts-arkui-menucallback-t.md) | Represents the callback invoked when the custom context menu on selection is shown or hidden. |
-| [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md) | Represents the callback invoked when the custom context menu on selection appears. |
-| [OnHoverCallback](arkts-arkui-onhovercallback-t.md) | Defines the callback triggered on hover. |
-| [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) | Represents the callback invoked when a paste operation is about to complete. |
-| [RichEditorSpan](arkts-arkui-richeditorspan-t.md) | Provides the span information of the **RichEditor** component. |
-| [SubmitCallback](arkts-arkui-submitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
+| [MenuCallback](arkts-arkui-richeditor-comp-menucallback-t.md) | Represents the callback invoked when the custom context menu on selection is shown or hidden. |
+| [MenuOnAppearCallback](arkts-arkui-richeditor-comp-menuonappearcallback-t.md) | Represents the callback invoked when the custom context menu on selection appears. |
+| [OnHoverCallback](arkts-arkui-richeditor-comp-onhovercallback-t.md) | Defines the callback triggered on hover. |
+| [PasteEventCallback](arkts-arkui-richeditor-comp-pasteeventcallback-t.md) | Represents the callback invoked when a paste operation is about to complete. |
+| [RichEditorSpan](arkts-arkui-richeditor-comp-richeditorspan-t.md) | Provides the span information of the **RichEditor** component. |
+| [SubmitCallback](arkts-arkui-richeditor-comp-submitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RichEditorDeleteDirection](arkts-arkui-richeditordeletedirection-e.md) | Defines the deletion direction. |
-| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Enumerates the response types of the menu. |
-| [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Enumerates span types. |
-| [UndoStyle](arkts-arkui-undostyle-e.md) | Enumerates the options for whether to retain the original style upon undo operations. |
+| [RichEditorDeleteDirection](arkts-arkui-richeditor-comp-richeditordeletedirection-e.md) | Defines the deletion direction. |
+| [RichEditorResponseType](arkts-arkui-richeditor-comp-richeditorresponsetype-e.md) | Enumerates the response types of the menu. |
+| [RichEditorSpanType](arkts-arkui-richeditor-comp-richeditorspantype-e.md) | Enumerates span types. |
+| [UndoStyle](arkts-arkui-richeditor-comp-undostyle-e.md) | Enumerates the options for whether to retain the original style upon undo operations. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Updating the Text Style
 
-This example demonstrates how to update the text style using the [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) API. After modifying the style, you can use [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans) to obtain the updated style information of the text.
+This example demonstrates how to update the text style using the [updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle) API. After modifying the style, you can use [getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans) to obtain the updated style information of the text.
 
 
 ```
@@ -156,7 +156,7 @@ The paste menu item in this example involves reading pasteboard data. Therefore,
 ```TypeScript
 ### Example 4: Updating the Image Style
 
-This example demonstrates how to update the image style using the [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) API.
+This example demonstrates how to update the image style using the [updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle) API.
 
 
 ```
@@ -164,7 +164,7 @@ This example demonstrates how to update the image style using the [updateSpanSty
 ```TypeScript
 ### Example 5: Binding a Gesture Event to a Span
 
-This example shows how to bind a [gesture](arkts-arkui-richeditorgesture-i.md) callback to a span.
+This example shows how to bind a [gesture](arkts-arkui-richeditor-comp-richeditorgesture-i.md) callback to a span.
 
 
 ```
@@ -172,7 +172,7 @@ This example shows how to bind a [gesture](arkts-arkui-richeditorgesture-i.md) c
 ```TypeScript
 ### Example 6: Updating and Obtaining Paragraph Styles
 
-This example demonstrates how to update paragraph styles using the [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle) API and obtain paragraph information within a specified range using the [getParagraphs](#getparagraphs11) API.
+This example demonstrates how to update paragraph styles using the [updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle) API and obtain paragraph information within a specified range using the [getParagraphs](#getparagraphs11) API.
 
 
 ```
@@ -180,7 +180,7 @@ This example demonstrates how to update paragraph styles using the [updateParagr
 ```TypeScript
 ### Example 7: Updating the Preset Style and Indent
 
-This example demonstrates how to update the preset text style using the [setTypingStyle](arkts-arkui-richeditorbasecontroller-c.md#settypingstyle) API and set paragraph indents using the [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle) API.
+This example demonstrates how to update the preset text style using the [setTypingStyle](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#settypingstyle) API and set paragraph indents using the [updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle) API.
 
 
 ```
@@ -188,7 +188,7 @@ This example demonstrates how to update the preset text style using the [setTypi
 ```TypeScript
 ### Example 8: Setting Text Weight and Shadow
 
-Sets the font weight and shadow of the text through the [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) API.
+Sets the font weight and shadow of the text through the [updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle) API.
 
 
 ```
@@ -196,7 +196,7 @@ Sets the font weight and shadow of the text through the [updateSpanStyle](arkts-
 ```TypeScript
 ### Example 9: Adding Custom Layout Spans
 
-This example shows how to add custom layout spans using the [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan) API.
+This example shows how to add custom layout spans using the [addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan) API.
 
 
 ```
@@ -204,7 +204,7 @@ This example shows how to add custom layout spans using the [addBuilderSpan](ark
 ```TypeScript
 ### Example 10: Using and Managing BuilderSpan in a Component
 
-This example demonstrates how to add a custom layout span using the [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan) API. APIs, such as [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans) and [onWillChange](#onwillchange12), do not return the internal information of BuilderSpan. You need to manage the BuilderSpan state and update it when the component content changes.
+This example demonstrates how to add a custom layout span using the [addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan) API. APIs, such as [getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans) and [onWillChange](#onwillchange12), do not return the internal information of BuilderSpan. You need to manage the BuilderSpan state and update it when the component content changes.
 
 
 ```
@@ -226,7 +226,7 @@ Sets the cursor and handle colors of the input box through the [caretColor](#car
 ```TypeScript
 ### Example 13: Setting Line Height and Letter Spacing
 
-This example demonstrates how to configure text line height ([lineHeight](arkts-arkui-richeditortextstyle-i.md)) and letter spacing ([letterSpacing](arkts-arkui-richeditortextstyle-i.md)) using the [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) API.
+This example demonstrates how to configure text line height ([lineHeight](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)) and letter spacing ([letterSpacing](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)) using the [updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle) API.
 
 
 ```
@@ -234,7 +234,7 @@ This example demonstrates how to configure text line height ([lineHeight](arkts-
 ```TypeScript
 ### Example 14: Adding a Custom Paste Event
 
-This example shows how to add a custom paste event to the component using the [onPaste](#onpaste11) event and customize user paste behavior using the [PasteEvent](arkts-arkui-pasteevent-i.md) API.
+This example shows how to add a custom paste event to the component using the [onPaste](#onpaste11) event and customize user paste behavior using the [PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md) API.
 
 
 ```
@@ -242,9 +242,9 @@ This example shows how to add a custom paste event to the component using the [o
 ```TypeScript
 ### Example 15: Setting Text Feature Effects
 
-This example sets the font feature effect ([fontFeature](arkts-arkui-richeditortextstyle-i.md)) through the [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan) API. When the FontFeature attribute with the "ss01" feature is added, the number "0" changes from the original oval shape to a shape with rounded corners. In addition, the stroke join style of the text is set through the strokeJoinStyle API of [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
+This example sets the font feature effect ([fontFeature](arkts-arkui-richeditor-comp-richeditortextstyle-i.md)) through the [addTextSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addtextspan) API. When the FontFeature attribute with the "ss01" feature is added, the number "0" changes from the original oval shape to a shape with rounded corners. In addition, the stroke join style of the text is set through the strokeJoinStyle API of [RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md).
 
-Since API version 26.0.0, the strokeJoinStyle API is added to [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md).
+Since API version 26.0.0, the strokeJoinStyle API is added to [RichEditorTextStyle](arkts-arkui-richeditor-comp-richeditortextstyle-i.md).
 
 
 ```
@@ -252,7 +252,7 @@ Since API version 26.0.0, the strokeJoinStyle API is added to [RichEditorTextSty
 ```TypeScript
 ### Example 16: Setting Custom Keyboard Avoidance
 
-This example shows how to bind a custom keyboard using the [customKeyboard](#customkeyboard) attribute and configure whether the custom keyboard supports keyboard avoidance using the [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) parameter.
+This example shows how to bind a custom keyboard using the [customKeyboard](#customkeyboard) attribute and configure whether the custom keyboard supports keyboard avoidance using the [KeyboardOptions](arkts-arkui-richeditor-comp-keyboardoptions-i.md) parameter.
 
 
 ```
@@ -284,7 +284,7 @@ This example demonstrates how to set the Enter key type of the soft keyboard usi
 ```TypeScript
 ### Example 20: Setting the Paragraph Line Break Rule
 
-This example shows how to set the line break rule ([lineBreakStrategy](arkts-arkui-richeditorparagraphstyle-i.md)) using the [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle) API and obtain the current line break rule using the [getParagraphs](#getparagraphs11) API.
+This example shows how to set the line break rule ([lineBreakStrategy](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md)) using the [updateParagraphStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updateparagraphstyle) API and obtain the current line break rule using the [getParagraphs](#getparagraphs11) API.
 
 
 ```
@@ -292,7 +292,7 @@ This example shows how to set the line break rule ([lineBreakStrategy](arkts-ark
 ```TypeScript
 ### Example 21: Using Basic Functionality of Styled Strings
 
-This example demonstrates how to bind a [styled string](./ts-universal-styled-string.md) to a RichEditor component using the [setStyledString](#setstyledstring12) API in [RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md). This feature is available since API version 20. The [getStyledString](#getstyledstring12) API can be used to obtain the styled string displayed by the RichEditor component.
+This example demonstrates how to bind a [styled string](./ts-universal-styled-string.md) to a RichEditor component using the [setStyledString](#setstyledstring12) API in [RichEditorStyledStringController](arkts-arkui-richeditor-comp-richeditorstyledstringcontroller-c.md). This feature is available since API version 20. The [getStyledString](#getstyledstring12) API can be used to obtain the styled string displayed by the RichEditor component.
 
 
 ```
@@ -324,7 +324,7 @@ Since API version 18, this example uses the [barState](#barstate13) attribute to
 ```TypeScript
 ### Example 25: Obtaining the Caret's Relative Position Rectangle in the Component
 
-This example shows how to obtain the caret's relative position rectangle in the component using the [getCaretRect](arkts-arkui-richeditorbasecontroller-c.md#getcaretrect) method of RichEditorBaseController, available since API version 18.
+This example shows how to obtain the caret's relative position rectangle in the component using the [getCaretRect](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#getcaretrect) method of RichEditorBaseController, available since API version 18.
 
 
 ```
@@ -340,7 +340,7 @@ This example shows how to set the maximum number of characters using [maxLength]
 ```TypeScript
 ### Example 27: Setting the URL Style for Text
 
-This example demonstrates how to implement text hyperlink using [UrlStyle](arkts-arkui-richeditorurlstyle-i.md), which is supported by the addTextSpan and updateSpanStyle APIs. When users tap the formatted text, the app navigates to the specified URL. This feature is available since API version 19.
+This example demonstrates how to implement text hyperlink using [UrlStyle](arkts-arkui-richeditor-comp-richeditorurlstyle-i.md), which is supported by the addTextSpan and updateSpanStyle APIs. When users tap the formatted text, the app navigates to the specified URL. This feature is available since API version 19.
 
 
 ```
@@ -356,7 +356,7 @@ This example demonstrates how to retain original content styles upon undo operat
 ```TypeScript
 ### Example 29: Setting the Preset Paragraph Style
 
-This example demonstrates how to set the preset paragraph style using the [setTypingParagraphStyle](arkts-arkui-richeditorbasecontroller-c.md#settypingparagraphstyle) API, available since API version 20.
+This example demonstrates how to set the preset paragraph style using the [setTypingParagraphStyle](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md#settypingparagraphstyle) API, available since API version 20.
 
 
 ```
@@ -476,7 +476,7 @@ The horizontalScrolling API is added since API version 26.0.0.
 ```TypeScript
 ### Example 42 (Setting a Text Shader Effect)
 
-This example implements a text shader effect through the shaderStyle API in [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md).
+This example implements a text shader effect through the shaderStyle API in [RichEditorParagraphStyle](arkts-arkui-richeditor-comp-richeditorparagraphstyle-i.md).
 
 Since API version 26.0.0, RichEditorParagraphStyle adds the shaderStyle API.
 
@@ -496,7 +496,7 @@ Since API version 26.0.0, the scrollToVisible API is added.
 ```TypeScript
 ### Example 44 (Setting Image Stretching)
 
-This example stretches an image in different directions by setting the resizable attribute of [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md).
+This example stretches an image in different directions by setting the resizable attribute of [RichEditorImageSpanStyle](arkts-arkui-richeditor-comp-richeditorimagespanstyle-i.md).
 
 Since API version 26.1.0, the resizable attribute is added to RichEditorImageSpanStyle.
 ```

@@ -4,7 +4,7 @@ The **Flex** component is a container that uses the flexible box model for layou
 
 For details, see [Flex Layout](../../../ui/arkts-layout-development-flex-layout.md).
 
-> **NOTE** > > - The **Flex** component involves a secondary layout process during rendering. Therefore, in scenarios with strict > performance requirements, you are advised to use Column or Row instead. For best > practices, see the layout optimization guide - Proper Use of Layout Components. > > - When the main axis length of the **Flex** component is not set, it fills the parent container by default. If a > child component with position set is included, the **Flex** component will not fill > the parent container. When the main axis length of the Column or Row component is > not set, it follows the child node size by default. > > - When the **Flex**, **Column**, or **Row** component has no child nodes and no width or height is set, the default > width and height are **-1**. > > - The main axis length can be set to **auto** to make the **Flex** component adapt to the child component layout. > During adaptation, the **Flex** length is constrained by the constraintSize > attribute and the maximum and minimum lengths passed by the parent container, with the **constraintSize** attribute > taking higher priority.
+> **NOTE** > > - The **Flex** component involves a secondary layout process during rendering. Therefore, in scenarios with strict > performance requirements, you are advised to use [Column](arkts-arkui-column-comp.md#column) or [Row](arkts-arkui-row-comp.md#row) instead. For best > practices, see the layout optimization guide - Proper Use of Layout Components. > > - When the main axis length of the **Flex** component is not set, it fills the parent container by default. If a > child component with position set is included, the **Flex** component will not fill > the parent container. When the main axis length of the [Column](arkts-arkui-column-comp.md#column) or [Row](arkts-arkui-row-comp.md#row) component is > not set, it follows the child node size by default. > > - When the **Flex**, **Column**, or **Row** component has no child nodes and no width or height is set, the default > width and height are **-1**. > > - The main axis length can be set to **auto** to make the **Flex** component adapt to the child component layout. > During adaptation, the **Flex** length is constrained by the constraintSize > attribute and the maximum and minimum lengths passed by the parent container, with the **constraintSize** attribute > taking higher priority.
 
 ## Child Components
 
@@ -30,7 +30,7 @@ Creates a **Flex** layout container for arranging and aligning child components 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No | Configuration options of the **Flex** container, used to set the layout direction, wrapping mode, alignment, and spacing of child components. If not passed, the default configuration is used. For details about the default values of each attribute, see [FlexOptions](arkts-arkui-flexoptions-i.md). |
+| value | [FlexOptions](arkts-arkui-flex-comp-flexoptions-i.md) | No | Configuration options of the **Flex** container, used to set the layout direction, wrapping mode, alignment, and spacing of child components. If not passed, the default configuration is used. For details about the default values of each attribute, see [FlexOptions](arkts-arkui-flex-comp-flexoptions-i.md). |
 
 ## Summary
 
@@ -38,8 +38,8 @@ Creates a **Flex** layout container for arranging and aligning child components 
 
 | Name | Description |
 | --- | --- |
-| [FlexOptions](arkts-arkui-flexoptions-i.md) | Describes the layout and alignment of child components within the **Flex** component. |
-| [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md) | Sets the spacing between child components along the main axis or cross axis of the **Flex** component. |
+| [FlexOptions](arkts-arkui-flex-comp-flexoptions-i.md) | Describes the layout and alignment of child components within the **Flex** component. |
+| [FlexSpaceOptions](arkts-arkui-flex-comp-flexspaceoptions-i.md) | Sets the spacing between child components along the main axis or cross axis of the **Flex** component. |
 
 ## Examples
 

@@ -54,16 +54,6 @@ call.isInEmergencyCall((err: BusinessError, data: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isInEmergencyCall().then((data: boolean) => {
-    console.info(`isInEmergencyCall success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isInEmergencyCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 <a id="isinemergencycall-1"></a>
 
@@ -101,4 +91,12 @@ Checks whether a call is an emergency call. This API uses a promise to return th
 
 **Examples**
 
-See [isInEmergencyCall](#isinemergencycall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isInEmergencyCall().then((data: boolean) => {
+    console.info(`isInEmergencyCall success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isInEmergencyCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```

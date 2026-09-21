@@ -473,7 +473,7 @@ Certificate authority (CA), which is used to verify the identity of a remote ser
 resumeFrom?: number
 ```
 
-Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 723 3, servers are allowed to ignore range requests.
+Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 7233, servers are allowed to ignore range requests.
 
 - If the HTTP PUT method is used, do not use this option because it may conflict with other options.  
 - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not  

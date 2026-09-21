@@ -56,6 +56,12 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 | --- | --- |
 | Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | 根据文本布局选项转换后得到的[Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md)对象数组，用于后续的文本布局计算。 |
 
+**示例**
+
+```TypeScript
+通过MeasureUtils的getParagraphs方法测算文本，当内容超出最大显示行数的时候，截断文本显示并展示“...全文”的效果。
+```
+
 ## measureText
 
 ```TypeScript
@@ -89,6 +95,12 @@ measureText(options: MeasureOptions): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 文本宽度。<br>**说明：** <br>浮点数会向上取整。<br>单位：px |
+
+**示例**
+
+```TypeScript
+通过MeasureUtils的measureText方法获取"Hello World"文字的宽度。
+```
 
 ## measureTextSize
 

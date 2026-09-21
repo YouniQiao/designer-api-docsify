@@ -8,7 +8,7 @@
 PageTransitionEnter(value: PageTransitionOptions)
 ```
 
-设置当前页面的自定义入场动效，需在pageTransition()函数中配置，继承自[CommonTransition](arkts-arkui-commontransition-c.md)。
+设置当前页面的自定义入场动效，需在pageTransition()函数中配置，继承自[CommonTransition](arkts-arkui-pagetransitionenter-comp-commontransition-c.md)。
 
 **起始版本：** 7
 
@@ -20,7 +20,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数，包含页面转场效果的路由类型(type)、动画时长(duration)、动画曲线(curve)、动画延迟时长(delay)配置项。 |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数，包含页面转场效果的路由类型(type)、动画时长(duration)、动画曲线(curve)、动画延迟时长(delay)配置项。 |
 
 ## PageTransitionEnter
 
@@ -40,7 +40,7 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 是 | 入场动画的逐帧回调，直到动画结束，progress从0变化到1。该回调仅在配置的type与实际路由类型匹配时触发。 |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitionenter-comp-pagetransitioncallback-t.md) | 是 | 入场动画的逐帧回调，直到动画结束，progress从0变化到1。该回调仅在配置的type与实际路由类型匹配时触发。 |
 
 ## 汇总
 
@@ -48,21 +48,21 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | 当前页面的自定义退场动效。 |
-| [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 退场/入场动效的参数。 |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-comp-pagetransitionexitinterface-i.md) | 当前页面的自定义退场动效。 |
+| [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | 退场/入场动效的参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | 页面转场事件回调。 |
+| [PageTransitionCallback](arkts-arkui-pagetransitionenter-comp-pagetransitioncallback-t.md) | 页面转场事件回调。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [RouteType](arkts-arkui-routetype-e.md) | 页面转场类型。 |
-| [SlideEffect](arkts-arkui-slideeffect-e.md) | 页面转场时的滑入滑出效果。 |
+| [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md) | 页面转场类型。 |
+| [SlideEffect](arkts-arkui-pagetransitionenter-comp-slideeffect-e.md) | 页面转场时的滑入滑出效果。 |
 
 ## 示例
 

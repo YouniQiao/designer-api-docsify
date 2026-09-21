@@ -52,27 +52,6 @@ commonEventManager.setStaticSubscriberState(true, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
-
 
 <a id="setstaticsubscriberstate-1"></a>
 
@@ -115,7 +94,15 @@ Enables or disables static subscription for an app. This API uses a promise to r
 
 **Examples**
 
-See [setStaticSubscriberState](#setstaticsubscriberstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```
 
 
 <a id="setstaticsubscriberstate-2"></a>
@@ -160,4 +147,13 @@ Enables or disables static subscription to a common event for the current app. T
 
 **Examples**
 
-See [setStaticSubscriberState](#setstaticsubscriberstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```

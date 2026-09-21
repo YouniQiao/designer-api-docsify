@@ -34,7 +34,7 @@ Sets the background circle style for the dots in a grid when they are in the act
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | Yes | Background circle style of the dots in the activated state. |
+| options | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-patternlock-comp-circlestyleoptions-i.md)&gt; | Yes | Background circle style of the dots in the activated state. |
 
 ## activeColor
 
@@ -258,7 +258,7 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 > **NOTE:** 
 > 
-> When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio) set
+> When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio) set
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
 > drawn as a square, which exceeds the component's bounds.
 

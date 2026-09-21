@@ -322,10 +322,6 @@ struct AnimatorTest {
 }
 ```
 
-```TypeScript
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-```
-
 <a id="reset-1"></a>
 
 ## reset
@@ -359,7 +355,9 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 **示例**
 
-参见 [reset](#reset)
+```TypeScript
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+```
 
 ## reverse
 
@@ -401,7 +399,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-common-comp-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
 
 **示例**
 

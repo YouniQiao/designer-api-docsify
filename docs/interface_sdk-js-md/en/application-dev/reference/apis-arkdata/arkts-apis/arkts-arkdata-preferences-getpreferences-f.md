@@ -82,7 +82,13 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 **Examples**
 
-See [getPreferences](#getpreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="getpreferences-2"></a>
@@ -123,7 +129,13 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 
 **Examples**
 
-See [getPreferences](#getpreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="getpreferences-3"></a>
@@ -167,4 +179,10 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 
 **Examples**
 
-See [getPreferences](#getpreferences)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

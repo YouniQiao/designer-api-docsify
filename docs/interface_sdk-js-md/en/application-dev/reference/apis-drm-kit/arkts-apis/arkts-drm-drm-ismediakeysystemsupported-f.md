@@ -47,20 +47,6 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 ```TypeScript
 import { drm } from '@kit.DrmKit';
 
-let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm');
-console.info("isMediaKeySystemSupported: ", supported);
-```
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
-let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm', 'video/avc');
-console.info("isMediaKeySystemSupported: ", supported);
-```
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
 let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm', 'video/avc', drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
 console.info("isMediaKeySystemSupported: ", supported);
 ```
@@ -105,7 +91,12 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 **Examples**
 
-See [isMediaKeySystemSupported](#ismediakeysystemsupported)
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm', 'video/avc');
+console.info("isMediaKeySystemSupported: ", supported);
+```
 
 
 <a id="ismediakeysystemsupported-2"></a>
@@ -146,4 +137,9 @@ Checks whether the device supports the specified DRM solution.
 
 **Examples**
 
-See [isMediaKeySystemSupported](#ismediakeysystemsupported)
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let supported: boolean = drm.isMediaKeySystemSupported('com.clearplay.drm');
+console.info("isMediaKeySystemSupported: ", supported);
+```

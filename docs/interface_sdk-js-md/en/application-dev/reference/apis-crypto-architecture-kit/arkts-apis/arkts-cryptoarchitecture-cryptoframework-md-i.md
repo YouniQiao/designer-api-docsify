@@ -69,6 +69,42 @@ function mdByCallback() {
 }
 ```
 
+<a id="digest-1"></a>
+
+## digest
+
+```TypeScript
+digest(): Promise<DataBlob>
+```
+
+Generates a message digest. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the message digest generated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call. XOF digest algorithms, such as SHAKE128 and SHAKE256, do not support this API.<br>**Applicable version:** 26.2.0 and later |
+
+**Examples**
+
 ```TypeScript
 ArkTS example:
 ```
@@ -152,44 +188,6 @@ export default {
 };
 ```
 
-<a id="digest-1"></a>
-
-## digest
-
-```TypeScript
-digest(): Promise<DataBlob>
-```
-
-Generates a message digest. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API versions 9 to 11: SystemCapability.Security.CryptoFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the message digest generated. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call. XOF digest algorithms, such as SHAKE128 and SHAKE256, do not support this API.<br>**Applicable version:** 26.2.0 and later |
-
-**Examples**
-
-See [digest](#digest)
-
 ## digestSync
 
 ```TypeScript
@@ -201,6 +199,8 @@ Generates a message digest. This API returns the result synchronously.
 <br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [digest](#digest). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -526,6 +526,8 @@ Updates the message digest status. This API returns the result synchronously. **
 <br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

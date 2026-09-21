@@ -58,67 +58,8 @@ let initializationOptions: image.InitializationOptions = {
 image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
   console.info('Succeeded in creating pixelmap.');
   try {
-    window.setWaterMarkImage(pixelMap, enable, (err: BusinessError) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in showing watermark image.');
-    });
-  } catch (exception) {
-    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-let color: ArrayBuffer = new ArrayBuffer(40000);
-let initializationOptions: image.InitializationOptions = {
-  size: {
-    height: 100,
-    width: 100
-  }
-};
-image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelmap.');
-  try {
     let promise = window.setWaterMarkImage(pixelMap, enable);
     promise.then(() => {
-      console.info('Succeeded in showing watermark image.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  } catch (exception) {
-    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-let color: ArrayBuffer = new ArrayBuffer(40000);
-let initializationOptions: image.InitializationOptions = {
-  size: {
-    height: 100,
-    width: 100
-  }
-};
-image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelmap.');
-  try {
-    window.setWaterMarkImage(pixelMap, enable, 0).then(() => {
       console.info('Succeeded in showing watermark image.');
     }).catch((err: BusinessError) => {
       console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
@@ -174,7 +115,33 @@ Set watermark image.
 
 **Examples**
 
-See [setWaterMarkImage](#setwatermarkimage)
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+let color: ArrayBuffer = new ArrayBuffer(40000);
+let initializationOptions: image.InitializationOptions = {
+  size: {
+    height: 100,
+    width: 100
+  }
+};
+image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
+  console.info('Succeeded in creating pixelmap.');
+  try {
+    window.setWaterMarkImage(pixelMap, enable, 0).then(() => {
+      console.info('Succeeded in showing watermark image.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (exception) {
+    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 <a id="setwatermarkimage-2"></a>
@@ -211,4 +178,33 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 **Examples**
 
-See [setWaterMarkImage](#setwatermarkimage)
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+let color: ArrayBuffer = new ArrayBuffer(40000);
+let initializationOptions: image.InitializationOptions = {
+  size: {
+    height: 100,
+    width: 100
+  }
+};
+image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
+  console.info('Succeeded in creating pixelmap.');
+  try {
+    window.setWaterMarkImage(pixelMap, enable, (err: BusinessError) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in showing watermark image.');
+    });
+  } catch (exception) {
+    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
+});
+```

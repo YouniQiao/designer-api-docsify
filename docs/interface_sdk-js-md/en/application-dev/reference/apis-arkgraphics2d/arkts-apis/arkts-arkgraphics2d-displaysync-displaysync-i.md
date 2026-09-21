@@ -37,6 +37,21 @@ Unsubscribes from change events of each frame.
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
+**Examples**
+
+```TypeScript
+// Define the callback function.
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// Register the callback function.
+backDisplaySync?.on("frame", callback)
+
+// Unregister the callback function.
+backDisplaySync?.off("frame", callback)
+```
+
 ## on('frame')
 
 ```TypeScript
@@ -57,6 +72,21 @@ Subscribes to change events of each frame.
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+
+**Examples**
+
+```TypeScript
+// Define the callback function.
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// Register the callback function.
+backDisplaySync?.on("frame", callback)
+
+// Enable the callback function.
+backDisplaySync?.start()
+```
 
 ## setExpectedFrameRateRange
 

@@ -44,7 +44,7 @@ customPicker?: CustomBuilder
 
 自定义样式。建议开发者自定义组件样式，可有效提升组件渲染性能。
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
 **起始版本：** 20
 

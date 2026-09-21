@@ -57,6 +57,12 @@ Converts a styled string into an array of corresponding [Paragraph](../../apis-a
 | --- | --- |
 | Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | Array of [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) objects. |
 
+**Examples**
+
+```TypeScript
+The following example demonstrates how to use the getParagraphs API from MeasureUtils to measure text. When the content exceeds the maximum number of display lines, the text is truncated and displays a "... Full Text" indicator.
+```
+
 ## measureText
 
 ```TypeScript
@@ -90,6 +96,12 @@ Measures the single-line display width of the specified text. For multi-line tex
 | Type | Description |
 | --- | --- |
 | number | Text width.<br>**NOTE:** <br>Floating-point results are rounded up. <br>Unit: px. |
+
+**Examples**
+
+```TypeScript
+This example uses the measureText API of MeasureUtils to obtain the width of the "Hello World" text.
+```
 
 ## measureTextSize
 

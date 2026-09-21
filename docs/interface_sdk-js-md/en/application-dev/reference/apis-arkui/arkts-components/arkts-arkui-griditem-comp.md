@@ -2,7 +2,7 @@
 
 The **GridItem** component provides a single item in a grid.
 
-> **NOTE** > > * > > * This component can be used only as a child of Grid. > > * When this component is used with > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are > created when it is created. When this component is used with > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is > **Grid**, its child components are created when it is laid out. > > * If a **Grid** component contains a large number of **GridItem** components, using > [columnStart](arkts-arkui-griditem-comp-attribute.md#columnstart)/[columnEnd](arkts-arkui-griditem-comp-attribute.md#columnend) or > [rowStart](arkts-arkui-griditem-comp-attribute.md#rowstart)/[rowEnd](arkts-arkui-griditem-comp-attribute.md#rowend) to set the size of > **GridItem** components can lead to performance issues, especially when **scrollToIndex** is used to scroll to a > specific index. This is because **Grid** will traverse all **GridItem** nodes sequentially to find the specified > index, which can be time-consuming. To address this issue, it is recommended that you use > [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) for layout, which significantly improves the efficiency of finding the > position of **GridItem** components. For best practices, see > [Optimizing Frame Loss for Grid Component Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve_grid_performance).
+> **NOTE** > > * > > * This component can be used only as a child of Grid. > > * When this component is used with > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are > created when it is created. When this component is used with > [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is > **Grid**, its child components are created when it is laid out. > > * If a **Grid** component contains a large number of **GridItem** components, using > [columnStart](arkts-arkui-griditem-comp-attribute.md#columnstart)/[columnEnd](arkts-arkui-griditem-comp-attribute.md#columnend) or > [rowStart](arkts-arkui-griditem-comp-attribute.md#rowstart)/[rowEnd](arkts-arkui-griditem-comp-attribute.md#rowend) to set the size of > **GridItem** components can lead to performance issues, especially when **scrollToIndex** is used to scroll to a > specific index. This is because **Grid** will traverse all **GridItem** nodes sequentially to find the specified > index, which can be time-consuming. To address this issue, it is recommended that you use > [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) for layout, which significantly improves the efficiency of finding the > position of **GridItem** components. For best practices, see > [Optimizing Frame Loss for Grid Component Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve_grid_performance).
 
 ## Child Components
 
@@ -18,6 +18,8 @@ Creates a **GridItem** component.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,7 +28,7 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditemstyle-e.md) enum type. |
+| value | [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) enum type. |
 
 ## Summary
 
@@ -34,13 +36,13 @@ Creates a **GridItem** component.
 
 | Name | Description |
 | --- | --- |
-| [GridItemOptions](arkts-arkui-griditemoptions-i.md) | Defines the style of a grid item. |
+| [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | Defines the style of a grid item. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [GridItemStyle](arkts-arkui-griditemstyle-e.md) | Enumerates styles of grid items. |
+| [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) | Enumerates styles of grid items. |
 
 ## Examples
 

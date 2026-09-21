@@ -48,6 +48,14 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+function unregisterSessionError(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('error');
+}
+```
+
 ## off('focusStateChange')
 
 ```TypeScript
@@ -74,6 +82,14 @@ Unsubscribes from focus state change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+function unregisterFocusStateChange(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('focusStateChange');
+}
+```
 
 ## off('smoothZoomInfoAvailable')
 
@@ -102,6 +118,14 @@ Unsubscribes from smooth zoom state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+function unregisterSmoothZoomInfo(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('smoothZoomInfoAvailable');
+}
+```
+
 ## off('isoInfoChange')
 
 ```TypeScript
@@ -128,6 +152,14 @@ Unsubscribes from automatic ISO change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+function unregisterIsoInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('isoInfoChange');
+}
+```
 
 ## off('exposureInfoChange')
 
@@ -156,6 +188,14 @@ Unsubscribes from exposure information change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+function unregisterExposureInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('exposureInfoChange');
+}
+```
+
 ## off('apertureInfoChange')
 
 ```TypeScript
@@ -182,6 +222,14 @@ Unsubscribes from aperture change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+function unregisterApertureInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('apertureInfoChange');
+}
+```
 
 ## off('luminationInfoChange')
 
@@ -210,6 +258,14 @@ Unsubscribes from illumination change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+function unregisterLuminationInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.off('luminationInfoChange');
+}
+```
+
 ## on('error')
 
 ```TypeScript
@@ -236,6 +292,20 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Professional photo session error code: ${err.code}`);
+}
+
+function registerSessionError(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('error', callback);
+}
+```
 
 ## on('focusStateChange')
 
@@ -264,6 +334,24 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, focusState: camera.FocusState): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Focus state: ${focusState}`);
+}
+
+function registerFocusStateChange(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('focusStateChange', callback);
+}
+```
+
 ## on('smoothZoomInfoAvailable')
 
 ```TypeScript
@@ -290,6 +378,24 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, smoothZoomInfo: camera.SmoothZoomInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`The duration of smooth zoom: ${smoothZoomInfo.duration}`);
+}
+
+function registerSmoothZoomInfo(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('smoothZoomInfoAvailable', callback);
+}
+```
 
 ## on('isoInfoChange')
 
@@ -318,6 +424,24 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isoInfoCallback(err: BusinessError, info: camera.IsoInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`ISO value: ${info.iso}`);
+}
+
+function registerIsoInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('isoInfoChange', isoInfoCallback);
+}
+```
+
 ## on('exposureInfoChange')
 
 ```TypeScript
@@ -344,6 +468,24 @@ Subscribes to exposure information change events to obtain the exposure informat
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function exposureInfoCallback(err: BusinessError, info: camera.ExposureInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`exposureTimeValue: ${info.exposureTime}`);
+}
+
+function registerExposureInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('exposureInfoChange', exposureInfoCallback);
+}
+```
 
 ## on('apertureInfoChange')
 
@@ -372,6 +514,24 @@ Subscribes to aperture change events to obtain the real-time aperture informatio
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function apertureInfoCallback(err: BusinessError, info: camera.ApertureInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Aperture value: ${info.aperture}`);
+}
+
+function registerApertureInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('apertureInfoChange', apertureInfoCallback);
+}
+```
+
 ## on('luminationInfoChange')
 
 ```TypeScript
@@ -398,3 +558,21 @@ Subscribes to illumination change events to obtain real-time illumination inform
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function luminationInfoCallback(err: BusinessError, info: camera.LuminationInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Lumination: ${info.lumination}`);
+}
+
+function registerLuminationInfoEvent(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
+  professionalPhotoSession.on('luminationInfoChange', luminationInfoCallback);
+}
+```

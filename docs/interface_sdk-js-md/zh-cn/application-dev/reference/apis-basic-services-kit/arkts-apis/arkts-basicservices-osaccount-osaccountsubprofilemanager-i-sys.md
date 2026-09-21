@@ -163,10 +163,6 @@ try {
 }
 ```
 
-```TypeScript
-获取ID为100的系统账号的前台子身份资料标识符。
-```
-
 <a id="getosaccountforegroundsubprofileid-1"></a>
 
 ## getOsAccountForegroundSubProfileId
@@ -208,7 +204,9 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 **示例**
 
-参见 [getOsAccountForegroundSubProfileId](#getosaccountforegroundsubprofileid)
+```TypeScript
+获取ID为100的系统账号的前台子身份资料标识符。
+```
 
 ## getOsAccountLocalIdForSubProfile
 
@@ -297,10 +295,6 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 获取ID为100001的子身份资料对象信息。
 ```
 
-```TypeScript
-获取ID为100的系统账号中ID为100001的子身份资料对象信息。
-```
-
 <a id="getosaccountsubprofile-1"></a>
 
 ## getOsAccountSubProfile
@@ -345,7 +339,9 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 **示例**
 
-参见 [getOsAccountSubProfile](#getosaccountsubprofile)
+```TypeScript
+获取ID为100的系统账号中ID为100001的子身份资料对象信息。
+```
 
 ## getOsAccountSubProfileIds
 
@@ -397,10 +393,6 @@ try {
 }
 ```
 
-```TypeScript
-获取ID为100的系统账号的子身份资料标识符列表。
-```
-
 <a id="getosaccountsubprofileids-1"></a>
 
 ## getOsAccountSubProfileIds
@@ -444,7 +436,9 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 **示例**
 
-参见 [getOsAccountSubProfileIds](#getosaccountsubprofileids)
+```TypeScript
+获取ID为100的系统账号的子身份资料标识符列表。
+```
 
 ## offOsAccountSubProfileEvent
 

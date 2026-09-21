@@ -22,6 +22,8 @@ ADD_CREDENTIAL = 1
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -36,6 +38,8 @@ UPDATE_CREDENTIAL = 2
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +53,8 @@ DELETE_CREDENTIAL = 3
 表示删除凭据的变更类型。
 
 **起始版本：** 23
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

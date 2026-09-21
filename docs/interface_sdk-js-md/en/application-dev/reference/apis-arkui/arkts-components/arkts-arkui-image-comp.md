@@ -1,10 +1,10 @@
 # Image
 
-The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
+The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
 
 > **NOTE**
 
-> - This component supports the TIFF image format since API version 23. > > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused > state. For instructions on how to set focus, see > [Setting Whether a Component Is Focusable] > (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable). > By default, the **Image** component is not focusable. To enable it to gain focus, set both the > focusable and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to > **true**. > > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags. > > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image** > component. When the component is visible, the animation is started through the callback. When the component is > invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the > > [onVisibleAreaChange] > [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) > event. If the value of **ratios** is greater than 0, the component is visible. > > - For details about how to resolve white block issues during image loading, see > [Solution to White Image Blocks] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). > For details about how to address slow image loading, see > [Optimizing Preset Image Loading] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve- > performance#section91526132216). >
+> - This component supports the TIFF image format since API version 23. > > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused > state. For instructions on how to set focus, see > [Setting Whether a Component Is Focusable] > (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable). > By default, the **Image** component is not focusable. To enable it to gain focus, set both the > focusable and [focusOnTouch](arkts-arkui-common-comp-commonmethod-c.md#focusontouch) attributes to > **true**. > > - The **Image** component supports SVG image sources. For details about SVG tags, see [SVG Tags](arkts-arkui-common-comp.md#common). > > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image** > component. When the component is visible, the animation is started through the callback. When the component is > invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the > > [onVisibleAreaChange] > [onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange) > event. If the value of **ratios** is greater than 0, the component is visible. > > - For details about how to resolve white block issues during image loading, see > [Solution to White Image Blocks] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). > For details about how to address slow image loading, see > [Optimizing Preset Image Loading] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve- > performance#section91526132216). >
 
 Required Permissions
 
@@ -62,6 +62,8 @@ If the **Image** component does not have its width and height set, its size adap
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -72,7 +74,7 @@ If the **Image** component does not have its width and height set, its size adap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>1. **PixelMap**: a pixel map storing graphical information, commonly used for image editing scenarios.<br>2. **ResourceStr**: a string or a Resource object.<br>The string type can be used to load local images and, more frequently, online images. When [using a local image referenced using a relative path](../../../reference/apis-arkui/arkui-ts/ts-basic-compon ents-image.md#example-25-displaying-an-image-using-a-relative-path), the **Image** component cannot be called across bundles or modules. If an image needs to be used globally, you are advised to use the Resource format.<br>Since DevEco Studio 6.0.0 Beta2, resources in non-**resource** directories are not packaged by default for new projects or modules. To enable packaging, go to **buildOption**   > **resOptions** > **copyCodeResource** to set **enable** to **true** in the module's **build-profile.json5** file. For details, see [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build- profile#table1476161719356). <br>- Base64 strings are supported.<br>- When providing an HTTPS network image URL, refer to [Example 2: Downloading and Displaying Static Online Images](../../../reference/apis-arkui/arkui-ts/ts-basic- components-image.md#example-2-downloading-and-displaying-static-online-images) for implementation guidance.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>The Resource format allows for access across bundles and modules. It is recommended for accessing local images. For details, see [Cross-HAP/HSP Resources](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources).<br> 3. **DrawableDescriptor**: an object created when the passed resource ID or name belongs to a common image. The [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) type can be passed to play animations from a **PixelMap** array.<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>1. **PixelMap**: a pixel map storing graphical information, commonly used for image editing scenarios.<br>2. **ResourceStr**: a string or a Resource object.<br>The string type can be used to load local images and, more frequently, online images. When [using a local image referenced using a relative path](../../../reference/apis-arkui/arkui-ts/ts-basic-compon ents-image.md#example-25-displaying-an-image-using-a-relative-path), the **Image** component cannot be called across bundles or modules. If an image needs to be used globally, you are advised to use the Resource format.<br>Since DevEco Studio 6.0.0 Beta2, resources in non-**resource** directories are not packaged by default for new projects or modules. To enable packaging, go to **buildOption**   > **resOptions** > **copyCodeResource** to set **enable** to **true** in the module's **build-profile.json5** file. For details, see [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build- profile#table1476161719356). <br>- Base64 strings are supported.<br>- When providing an HTTPS network image URL, refer to [Example 2: Downloading and Displaying Static Online Images](../../../reference/apis-arkui/arkui-ts/ts-basic- components-image.md#example-2-downloading-and-displaying-static-online-images) for implementation guidance.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>The Resource format allows for access across bundles and modules. It is recommended for accessing local images. For details, see [Cross-HAP/HSP Resources](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources).<br> 3. **DrawableDescriptor**: an object created when the passed resource ID or name belongs to a common image. The [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) type can be passed to play animations from a **PixelMap** array.<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
 
 ## Image
 
@@ -80,7 +82,7 @@ If the **Image** component does not have its width and height set, its size adap
 Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent)
 ```
 
-Obtains an image. The [ImageContent](arkts-arkui-imagecontent-e.md) type allows you to specify the image content.
+Obtains an image. The [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) type allows you to specify the image content.
 
 **Since:** 12
 
@@ -96,7 +98,7 @@ Obtains an image. The [ImageContent](arkts-arkui-imagecontent-e.md) type allows 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-imagecontent-e.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>For details about how to use **PixelMap**, **ResourceStr**, and **DrawableDescriptor**, see the **src** parameter description of [Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1).<br> [ImageContent](arkts-arkui-imagecontent-e.md): image content.<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>For details about how to use **PixelMap**, **ResourceStr**, and **DrawableDescriptor**, see the **src** parameter description of [Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1).<br> [ImageContent](arkts-arkui-image-comp-imagecontent-e.md): image content.<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
 
 ## Image
 
@@ -120,7 +122,7 @@ Set src to obtain images
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-imagecontent-e.md) | Yes |  |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) | Yes |  |
 | reloadKey | string | No |  |
 
 ## Image
@@ -143,7 +145,7 @@ Obtains an image. The [imageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>For details about how to use **PixelMap**, **ResourceStr**, and **DrawableDescriptor**, see the **src** parameter description of [Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1).<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | Yes | Data source of the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).<br>For details about how to use **PixelMap**, **ResourceStr**, and **DrawableDescriptor**, see the **src** parameter description of [Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1).<br>**NOTE:** <br>- ArkTS widgets support GIF animations, but the animations only play once on display.<br>- ArkTS widgets do not support the strings with the **http://** or **file://** prefix. |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes | AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter. |
 
 ## Image
@@ -167,7 +169,7 @@ Set src and ai options to obtain images
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |  |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | Yes |  |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | No |  |
 | reloadKey | string | No |  |
 
@@ -177,33 +179,33 @@ Set src and ai options to obtain images
 
 | Name | Description |
 | --- | --- |
-| [ImageAlt](arkts-arkui-imagealt-i.md) | Sets the placeholder image. |
-| [ImageError](arkts-arkui-imageerror-i.md) | Describes the object returned by the image loading error callback. |
-| [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | Defines source size of image. |
-| [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Defines the resizable image options. |
+| [ImageAlt](arkts-arkui-image-comp-imagealt-i.md) | Sets the placeholder image. |
+| [ImageError](arkts-arkui-image-comp-imageerror-i.md) | Describes the object returned by the image loading error callback. |
+| [ImageSourceSize](arkts-arkui-image-comp-imagesourcesize-i.md) | Defines source size of image. |
+| [ResizableOptions](arkts-arkui-image-comp-resizableoptions-i.md) | Defines the resizable image options. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [BusinessError](arkts-arkui-businesserror-t.md) | Represents the error information returned when an error occurs during image loading. |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Represents a parameter object for the **Image** component. |
-| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Represents a color filter object. |
-| [DrawingLattice](arkts-arkui-drawinglattice-t.md) | Represents a matrix grid object that divides an image into a rectangular grid. |
-| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Triggered when an error occurs during image loading. |
-| [ImageMatrix](arkts-arkui-imagematrix-t.md) | Represents the current matrix object. |
-| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) | Describes the download information when an online image fails to load or encounters an exception. This object contains resource information, network information, and performance statistics of the download task, which can be used to locate the cause of the loading exception. |
-| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) | Enumerates all the levels available for the image resolution quality. |
+| [BusinessError](arkts-arkui-image-comp-businesserror-t.md) | Represents the error information returned when an error occurs during image loading. |
+| [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | Represents a parameter object for the **Image** component. |
+| [DrawingColorFilter](arkts-arkui-image-comp-drawingcolorfilter-t.md) | Represents a color filter object. |
+| [DrawingLattice](arkts-arkui-image-comp-drawinglattice-t.md) | Represents a matrix grid object that divides an image into a rectangular grid. |
+| [ImageErrorCallback](arkts-arkui-image-comp-imageerrorcallback-t.md) | Triggered when an error occurs during image loading. |
+| [ImageMatrix](arkts-arkui-image-comp-imagematrix-t.md) | Represents the current matrix object. |
+| [RequestDownloadInfo](arkts-arkui-image-comp-requestdownloadinfo-t.md) | Describes the download information when an online image fails to load or encounters an exception. This object contains resource information, network information, and performance statistics of the download task, which can be used to locate the cause of the loading exception. |
+| [ResolutionQuality](arkts-arkui-image-comp-resolutionquality-t-sys.md) | Enumerates all the levels available for the image resolution quality. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Describes the dynamic range of the image to be displayed. |
-| [ImageContent](arkts-arkui-imagecontent-e.md) | Defines the image content. |
-| [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | Interpolation effect of the image. |
-| [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Interpolation effect of the image. |
-| [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | Describes the desired display orientation for image content. |
+| [DynamicRangeMode](arkts-arkui-image-comp-dynamicrangemode-e.md) | Describes the dynamic range of the image to be displayed. |
+| [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) | Defines the image content. |
+| [ImageInterpolation](arkts-arkui-image-comp-imageinterpolation-e.md) | Interpolation effect of the image. |
+| [ImageRenderMode](arkts-arkui-image-comp-imagerendermode-e.md) | Interpolation effect of the image. |
+| [ImageRotateOrientation](arkts-arkui-image-comp-imagerotateorientation-e.md) | Describes the desired display orientation for image content. |
 
 ## Examples
 
@@ -268,7 +270,7 @@ This example demonstrates how to stretch an image using the lattice option of th
 ```TypeScript
 ### Example 8: Playing a PixelMap Array Animation
 
-This example demonstrates how to play an animation using a PixelMap array through an AnimatedDrawableDescriptor object.
+This example demonstrates how to play an animation using a PixelMap array through an [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) object.
 
 
 ```
@@ -292,7 +294,7 @@ This example shows how to use the [objectFit](#objectfit) attribute to specify h
 ```TypeScript
 ### Example 11: Switching Between Different Types of Images
 
-This example demonstrates the effect of displaying images with [ResourceStr](ts-types.md#resourcestr) and [ImageContent](arkts-arkui-imagecontent-e.md) as types of data sources.
+This example demonstrates the effect of displaying images with [ResourceStr](ts-types.md#resourcestr) and [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) as types of data sources.
 
 
 ```
@@ -440,7 +442,7 @@ This example demonstrates how to display specified images during image loading a
 ```TypeScript
 ### Example 29 Listening to Online Image Loading Exceptions Using onError
 
-This example demonstrates how to obtain detailed download information ([ImageError](arkts-arkui-imageerror-i.md)) when an online image fails to load via the [onError](#onerror9) callback. When image loading fails, you can obtain detailed online image download information through the downloadInfo attribute in ImageError, including download resource information, network request information, and performance statistics. This helps quickly identify the cause of network exceptions or resource errors.
+This example demonstrates how to obtain detailed download information ([ImageError](arkts-arkui-image-comp-imageerror-i.md)) when an online image fails to load via the [onError](#onerror9) callback. When image loading fails, you can obtain detailed online image download information through the downloadInfo attribute in ImageError, including download resource information, network request information, and performance statistics. This helps quickly identify the cause of network exceptions or resource errors.
 
 The downloadInfo attribute is added to ImageError since API version 23.
 ```

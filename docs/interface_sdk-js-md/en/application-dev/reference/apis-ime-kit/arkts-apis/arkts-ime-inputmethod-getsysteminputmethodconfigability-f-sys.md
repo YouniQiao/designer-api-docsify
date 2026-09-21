@@ -50,12 +50,6 @@ Get the system input method config ability of a specified user.
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-
-let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

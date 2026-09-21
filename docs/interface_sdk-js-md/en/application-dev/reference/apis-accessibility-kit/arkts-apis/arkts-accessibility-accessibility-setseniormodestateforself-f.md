@@ -25,7 +25,7 @@ Sets whether the app has "senior mode" enabled. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Whether to enable "senior mode" for the app. The value **true** indicates that "senior mode" is enabled, and **false** indicates that "senior mode" is disabled. |
+| state | boolean | Yes | Whether to enable "senior mode" for the app. The value **true** indicates that "seniormode" is enabled, and **false** indicates that "senior mode" is disabled. |
 
 **Return value:**
 

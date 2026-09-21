@@ -20,6 +20,8 @@ columnEnd(value: number)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ columnEnd(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点列号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的示例1（固定行列Grid）和示例3（可滚动Grid设置跨行跨列节点）。<br>取值范围：[0, 总列数-1] |
+| value | number | 是 | 当前元素终点列号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](arkts-arkui-grid-comp.md#grid)和[示例3（可滚动Grid设置跨行跨列节点）](arkts-arkui-grid-comp.md#grid)。<br>取值范围：[0, 总列数-1] |
 
 ## columnStart
 
@@ -40,6 +42,8 @@ columnStart(value: number)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -48,7 +52,7 @@ columnStart(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始列号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的示例1（固定行列Grid）和示例3（可滚动Grid设置跨行跨列节点）。<br>取值范围：[0, 总列数-1] |
+| value | number | 是 | 当前元素起始列号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](arkts-arkui-grid-comp.md#grid)和[示例3（可滚动Grid设置跨行跨列节点）](arkts-arkui-grid-comp.md#grid)。<br>取值范围：[0, 总列数-1] |
 
 ## forceRebuild
 
@@ -65,6 +69,8 @@ forceRebuild(value: boolean)
 **起始版本：** 7
 
 **废弃版本：** 9
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -83,6 +89,8 @@ onSelect(event: (isSelected: boolean) => void)
 GridItem元素被鼠标框选的状态改变时触发回调。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -104,6 +112,8 @@ rowEnd(value: number)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -112,7 +122,7 @@ rowEnd(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点行号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的示例1（固定行列Grid）和示例3（可滚动Grid设置跨行跨列节点）。<br>取值范围：[0, 总行数-1] |
+| value | number | 是 | 当前元素终点行号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](arkts-arkui-grid-comp.md#grid)和[示例3（可滚动Grid设置跨行跨列节点）](arkts-arkui-grid-comp.md#grid)。<br>取值范围：[0, 总行数-1] |
 
 ## rowStart
 
@@ -124,6 +134,8 @@ rowStart(value: number)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -132,7 +144,7 @@ rowStart(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始行号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的示例1（固定行列Grid）和示例3（可滚动Grid设置跨行跨列节点）。<br>取值范围：[0, 总行数-1] |
+| value | number | 是 | 当前元素起始行号。<br>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](arkts-arkui-grid-comp.md#grid)和[示例3（可滚动Grid设置跨行跨列节点）](arkts-arkui-grid-comp.md#grid)。<br>取值范围：[0, 总行数-1] |
 
 ## selectable
 
@@ -142,9 +154,11 @@ selectable(value: boolean)
 
 设置当前GridItem元素是否可以被鼠标框选。外层Grid容器的鼠标框选开启时，GridItem的框选才生效。
 
-该属性需要在设置多态样式前使用才能生效选中态样式。
+该属性需要在设置[多态样式](arkts-arkui-common-comp.md#common)前使用才能生效选中态样式。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -164,7 +178,7 @@ selected(value: boolean)
 
 设置当前GridItem选中状态。该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-该属性需要在设置多态样式前使用才能生效选中态样式。
+该属性需要在设置[多态样式](arkts-arkui-common-comp.md#common)前使用才能生效选中态样式。
 
 **起始版本：** 10
 

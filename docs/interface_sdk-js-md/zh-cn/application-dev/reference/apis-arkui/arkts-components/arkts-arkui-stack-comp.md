@@ -35,7 +35,7 @@ Stack(options?: StackOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [StackOptions](arkts-arkui-stackoptions-i.md) | 否 | 设置子组件在容器内的对齐方式。当需要将子组件对齐到特定位置（如顶部、底部、左上角等）而非默认居中时传入此参数；如果不传入此参数，则使用StackOptions的默认配置，其中alignContent默认为Alignment.Center。 |
+| options | [StackOptions](arkts-arkui-stack-comp-stackoptions-i.md) | 否 | 设置子组件在容器内的对齐方式。当需要将子组件对齐到特定位置（如顶部、底部、左上角等）而非默认居中时传入此参数；如果不传入此参数，则使用StackOptions的默认配置，其中alignContent默认为Alignment.Center。 |
 
 ## 汇总
 
@@ -43,7 +43,7 @@ Stack(options?: StackOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [StackOptions](arkts-arkui-stackoptions-i.md) | 设置堆叠容器的子组件对齐方式。 |
+| [StackOptions](arkts-arkui-stack-comp-stackoptions-i.md) | 设置堆叠容器的子组件对齐方式。 |
 
 ## 示例
 

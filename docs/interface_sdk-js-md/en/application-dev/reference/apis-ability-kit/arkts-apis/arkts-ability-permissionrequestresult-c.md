@@ -46,7 +46,7 @@ Indicates whether an authorization dialog was actually shown for each permission
 - false: The system did not show a dialog, usually because the current permission state, permission type, or system  
 policy does not allow proceeding with the dialog authorization path.
 
-When authResults is -1, combining it with this field can further distinguish between "rejected by the user this time" and "dialog is no longer shown currently". If this field is not returned, it means this result does not include the authorization dialog display status.
+When authResults is -1, combining it with this field can further distinguish between "rejected by the user thistime" and "dialog is no longer shown currently". If this field is not returned, it means this result does notinclude the authorization dialog display status.
 
 **Type:** Array&lt;boolean&gt;
 

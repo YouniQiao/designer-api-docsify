@@ -18,6 +18,8 @@ If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 **Parameters:**
@@ -124,20 +126,6 @@ export default {
 };
 ```
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
-  console.info(`keyAlias:${keyAlias} is existed!`);
-});
-```
-
 
 <a id="iskeyitemexist-1"></a>
 
@@ -184,4 +172,16 @@ If the key does not exist, the error code 12000011 is returned.
 
 **Examples**
 
-See [isKeyItemExist](#iskeyitemexist)
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
+  console.info(`keyAlias:${keyAlias} is existed!`);
+});
+```

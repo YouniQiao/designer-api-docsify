@@ -116,10 +116,6 @@ constructor(numerator: number, denominator: number)
 **示例**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
 
@@ -143,10 +139,6 @@ constructor()
 
 ```TypeScript
 let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
 ```
 
 ## createRationalFromString

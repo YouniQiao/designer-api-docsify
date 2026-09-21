@@ -22,7 +22,7 @@ cachedCount is set, in addition to creating and laying out child components with
 
 > **NOTE**
 
-> - This component can be used only as a child of List. > > - The **ListItemGroup** component does not support the universal attribute > [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio). > > - If the parent **List** component of **ListItemGroup** has its [listDirection](arkts-arkui-list-comp-attribute.md#listdirection) > attribute set to **Axis.Vertical**, setting the > universal attribute height has no effect. In this case, the height of > the **ListItemGroup** component is fixed at the sum of the component's header height, footer height, and total > height of the list items. > > - If the parent **List** component of **ListItemGroup** has its **listDirection** attribute set to > **Axis.Horizontal**, setting the universal attribute width has no > effect. In this case, the width of the **ListItemGroup** component is fixed at the sum of the component's header > width, footer width, and total width of the list items. > > - The list items in the **ListItemGroup** component cannot be edited or dragged. This means that their > editable attribute does not take effect. > > - The **ListItemGroup** ignores the **direction** attribute for setting the layout direction; instead, it adopts > the layout direction of its parent **List** component.
+> - This component can be used only as a child of List. > > - The **ListItemGroup** component does not support the universal attribute > [aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio). > > - If the parent **List** component of **ListItemGroup** has its [listDirection](arkts-arkui-list-comp-attribute.md#listdirection) > attribute set to **Axis.Vertical**, setting the > universal attribute height has no effect. In this case, the height of > the **ListItemGroup** component is fixed at the sum of the component's header height, footer height, and total > height of the list items. > > - If the parent **List** component of **ListItemGroup** has its **listDirection** attribute set to > **Axis.Horizontal**, setting the universal attribute width has no > effect. In this case, the width of the **ListItemGroup** component is fixed at the sum of the component's header > width, footer width, and total width of the list items. > > - The list items in the **ListItemGroup** component cannot be edited or dragged. This means that their > editable attribute does not take effect. > > - The **ListItemGroup** ignores the **direction** attribute for setting the layout direction; instead, it adopts > the layout direction of its parent **List** component.
 
 ## Child Components
 
@@ -38,6 +38,8 @@ Creates a **ListItemGroup** component.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -46,7 +48,7 @@ Creates a **ListItemGroup** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | No | Parameters of the list item group. |
+| options | [ListItemGroupOptions](arkts-arkui-listitemgroup-comp-listitemgroupoptions-i.md) | No | Parameters of the list item group. |
 
 ## Summary
 
@@ -54,14 +56,14 @@ Creates a **ListItemGroup** component.
 
 | Name | Description |
 | --- | --- |
-| [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | Describes the **ListItemGroup** component parameter. |
+| [ListItemGroupOptions](arkts-arkui-listitemgroup-comp-listitemgroupoptions-i.md) | Describes the **ListItemGroup** component parameter. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md) | Enumerates the header and footer styles of **ListItemGroup**. |
-| [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md) | Enumerates the card styles of the **ListItemGroup** component. |
+| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-comp-listitemgroupheaderfooterstyle-e.md) | Enumerates the header and footer styles of **ListItemGroup**. |
+| [ListItemGroupStyle](arkts-arkui-listitemgroup-comp-listitemgroupstyle-e.md) | Enumerates the card styles of the **ListItemGroup** component. |
 
 ## Examples
 
@@ -108,5 +110,5 @@ For details about ListDataSource and the complete code, see [Example 1: Setting 
 ```TypeScript
 ### Example 5: Setting Floating State
 
-This example sets the [headerStyle](arkts-arkui-listitemgroupoptions-i.md) of ListItemGroup to [ListItemGroupHeaderFooterStyle.FLOATING](arkts-arkui-listitemgroupheaderfooterstyle-e.md) to implement the floating display effect of the group header during scrolling.
+This example sets the [headerStyle](arkts-arkui-listitemgroup-comp-listitemgroupoptions-i.md) of ListItemGroup to [ListItemGroupHeaderFooterStyle.FLOATING](arkts-arkui-listitemgroup-comp-listitemgroupheaderfooterstyle-e.md) to implement the floating display effect of the group header during scrolling.
 ```

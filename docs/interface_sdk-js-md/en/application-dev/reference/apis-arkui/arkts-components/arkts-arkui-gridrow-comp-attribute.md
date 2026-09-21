@@ -4,9 +4,9 @@
 declare class GridRowAttribute extends CommonMethod<GridRowAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** GridRowAttribute extends CommonMethod<GridRowAttribute>
 
@@ -48,7 +48,7 @@ Triggered when the breakpoint changes. The **breakpoints** parameter received by
 
 > **NOTE:** 
 > 
-> - When [breakpointsreference](arkts-arkui-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, do not dynamically modify the padding or margin attribute of the **GridRow** component in the **onBreakpointChange** callback. Otherwise, it may cause cyclic triggering of component size calculation, layout jitter, or rendering performance degradation.
+> - When [breakpointsreference](arkts-arkui-gridrow-comp-breakpointsreference-e.md) is set to **BreakpointsReference.ComponentSize**, do not dynamically modify the padding or margin attribute of the **GridRow** component in the **onBreakpointChange** callback. Otherwise, it may cause cyclic triggering of component size calculation, layout jitter, or rendering performance degradation.
 
 **Since:** 9
 

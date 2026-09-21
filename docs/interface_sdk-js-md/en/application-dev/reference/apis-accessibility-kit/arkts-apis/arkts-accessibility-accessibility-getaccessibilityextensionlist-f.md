@@ -94,4 +94,10 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Examples**
 
-See [getAccessibilityExtensionList](#getaccessibilityextensionlist)
+```TypeScript
+Query all installed accessibility applications.
+```
+
+```TypeScript
+Query all enabled accessibility applications with voice feedback.
+```

@@ -41,18 +41,6 @@ Checks whether the called number is an emergency number based on the phone numbe
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let options: call.EmergencyNumberOptions = {slotId: 1}
 call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) => {
     if (err) {
@@ -60,17 +48,6 @@ call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) 
     } else {
         console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
     }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1}
-call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
-    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isEmergencyPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -114,7 +91,16 @@ Checks whether the called number is an emergency number based on the phone numbe
 
 **Examples**
 
-See [isEmergencyPhoneNumber](#isemergencyphonenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: call.EmergencyNumberOptions = {slotId: 1}
+call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
+    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isEmergencyPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 <a id="isemergencyphonenumber-2"></a>
@@ -150,4 +136,14 @@ Checks whether the called number is an emergency number. This API uses an asynch
 
 **Examples**
 
-See [isEmergencyPhoneNumber](#isemergencyphonenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`isEmergencyPhoneNumber fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
+    }
+});
+```

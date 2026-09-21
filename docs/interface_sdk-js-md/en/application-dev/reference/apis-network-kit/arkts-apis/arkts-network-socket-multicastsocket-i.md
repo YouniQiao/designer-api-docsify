@@ -75,21 +75,6 @@ multicast.addMembership(addr, (err: Object) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr).then(() => {
-  console.info('addMembership success');
-}).catch((err: Object) => {
-  console.error('addMembership fail');
-});
-```
-
 <a id="addmembership-1"></a>
 
 ## addMembership
@@ -136,7 +121,20 @@ Adds a member to a multicast group. This API uses a promise to return the result
 
 **Examples**
 
-See [addMembership](#addmembership)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.addMembership(addr).then(() => {
+  console.info('addMembership success');
+}).catch((err: Object) => {
+  console.error('addMembership fail');
+});
+```
 
 ## dropMembership
 
@@ -194,21 +192,6 @@ multicast.dropMembership(addr, (err: Object) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr).then(() => {
-  console.info('drop membership success');
-}).catch((err: Object) => {
-  console.error('drop membership fail');
-});
-```
-
 <a id="dropmembership-1"></a>
 
 ## dropMembership
@@ -255,7 +238,20 @@ Drops a member from a multicast group. This API uses a promise to return the res
 
 **Examples**
 
-See [dropMembership](#dropmembership)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+let addr: socket.NetAddress = {
+  address: '239.255.0.1',
+  port: 8080
+}
+multicast.dropMembership(addr).then(() => {
+  console.info('drop membership success');
+}).catch((err: Object) => {
+  console.error('drop membership fail');
+});
+```
 
 ## getLoopbackMode
 
@@ -308,17 +304,6 @@ multicast.getLoopbackMode((err: Object, value: Boolean) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode().then((value: Boolean) => {
-  console.info('loopback mode: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('get loopback mode failed');
-});
-```
-
 <a id="getloopbackmode-1"></a>
 
 ## getLoopbackMode
@@ -359,7 +344,16 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 
 **Examples**
 
-See [getLoopbackMode](#getloopbackmode)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getLoopbackMode().then((value: Boolean) => {
+  console.info('loopback mode: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('get loopback mode failed');
+});
+```
 
 ## getMulticastTTL
 
@@ -414,17 +408,6 @@ multicast.getMulticastTTL((err: Object, value: Number) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL().then((value: Number) => {
-  console.info('ttl: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 <a id="getmulticastttl-1"></a>
 
 ## getMulticastTTL
@@ -467,7 +450,16 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 
 **Examples**
 
-See [getMulticastTTL](#getmulticastttl)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.getMulticastTTL().then((value: Number) => {
+  console.info('ttl: ', JSON.stringify(value));
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
+```
 
 ## getSocketFd
 
@@ -581,17 +573,6 @@ multicast.setLoopbackMode(false, (err: Object) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false).then(() => {
-  console.info('set loopback mode success');
-}).catch((err: Object) => {
-  console.error('set loopback mode failed');
-});
-```
-
 <a id="setloopbackmode-1"></a>
 
 ## setLoopbackMode
@@ -638,7 +619,16 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 
 **Examples**
 
-See [setLoopbackMode](#setloopbackmode)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setLoopbackMode(false).then(() => {
+  console.info('set loopback mode success');
+}).catch((err: Object) => {
+  console.error('set loopback mode failed');
+});
+```
 
 ## setMulticastTTL
 
@@ -696,17 +686,6 @@ multicast.setMulticastTTL(ttl, (err: Object) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setMulticastTTL(8).then(() => {
-  console.info('set ttl success');
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 <a id="setmulticastttl-1"></a>
 
 ## setMulticastTTL
@@ -756,7 +735,16 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 
 **Examples**
 
-See [setMulticastTTL](#setmulticastttl)
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
+multicast.setMulticastTTL(8).then(() => {
+  console.info('set ttl success');
+}).catch((err: Object) => {
+  console.error('set ttl failed');
+});
+```
 
 ## setReuseAddress
 

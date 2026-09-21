@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 Mode of the **NavDestination** component. Default value: NavDestinationMode.Standard.
 
-**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestination-comp-navdestinationmode-e.md)
 
 **Since:** 15
 

@@ -4,7 +4,7 @@
 declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>
 ```
 
-支持通用属性。
+支持[通用属性](arkts-arkui-common-comp.md#common)。
 
 支持以下事件：
 

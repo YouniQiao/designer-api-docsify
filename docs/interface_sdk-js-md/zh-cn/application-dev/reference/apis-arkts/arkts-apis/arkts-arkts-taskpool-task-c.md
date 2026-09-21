@@ -116,18 +116,6 @@ function printArgs(args: string): string {
 let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
 ```
 
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -159,16 +147,6 @@ Task的构造函数用于创建任务，并可指定任务名称。
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 **示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
-```
 
 ```TypeScript
 @Concurrent

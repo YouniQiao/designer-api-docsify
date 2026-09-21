@@ -2,7 +2,7 @@
 
 The **Line** component is used to draw a straight line in the app UI. It supports customizing the start point, end point, color, width, opacity, dash style, and cap style of the line. It is suitable for drawing separators, decorative lines, coordinate axes or connecting lines in charts, and custom graphic borders.
 
-> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class. > > - The **Line** component cannot form a closed area, so the **fill** and **fillOpacity** attributes do not take > effect. > > - The **Line** component does not support corners, so the **strokeLineJoin** and **strokeMiterLimit** attributes do > not take effect.
+> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class. > > - The **Line** component cannot form a closed area, so the **fill** and **fillOpacity** attributes do not take > effect. > > - The **Line** component does not support corners, so the **strokeLineJoin** and **strokeMiterLimit** attributes do > not take effect.
 
 ## Child Components
 
@@ -18,6 +18,8 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -28,7 +30,7 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the **Line** component are processed according to the default logic of their respective attributes (see the **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
+| options | [LineOptions](arkts-arkui-line-comp-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the **Line** component are processed according to the default logic of their respective attributes (see the **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Line
 
@@ -40,6 +42,8 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -50,7 +54,7 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the Line component are processed based on their respective default logic (see **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
+| options | [LineOptions](arkts-arkui-line-comp-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the Line component are processed based on their respective default logic (see **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Summary
 
@@ -58,7 +62,7 @@ Draws a straight line. The **Line** component draws the line within the rectangu
 
 | Name | Description |
 | --- | --- |
-| [LineOptions](arkts-arkui-lineoptions-i.md) | Describes the options of the line. |
+| [LineOptions](arkts-arkui-line-comp-lineoptions-i.md) | Describes the options of the line. |
 
 ## Examples
 

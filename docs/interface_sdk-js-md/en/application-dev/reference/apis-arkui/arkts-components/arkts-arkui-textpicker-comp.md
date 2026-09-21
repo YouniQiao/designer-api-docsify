@@ -20,6 +20,8 @@ Creates a text picker based on the specified data list.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ Creates a text picker based on the specified data list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) | No | Parameters of the text picker. |
+| options | [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md) | No | Parameters of the text picker. |
 
 ## Summary
 
@@ -36,23 +38,23 @@ Creates a text picker based on the specified data list.
 
 | Name | Description |
 | --- | --- |
-| [DividerOptions](arkts-arkui-divideroptions-i.md) | Define the divider configuration options. |
-| [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md) | Defines the background style configuration for selected picker items. |
-| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md) | Defines the content for multi-column picker options. |
-| [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | Defines the TextPickerDialogOptions for Text Picker Dialog. |
-| [TextPickerDialogOptionsExt](arkts-arkui-textpickerdialogoptionsext-i.md) | Defines the TextPickerDialogOptionsExt for Text Picker Dialog. |
-| [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) | Defines the configuration options of the text picker. |
-| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md) | Defines the content for single-column picker options. |
-| [TextPickerResult](arkts-arkui-textpickerresult-i.md) | Defines the struct of TextPickerResult. |
-| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-pickertextstyle-i.md). |
+| [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) | Define the divider configuration options. |
+| [PickerBackgroundStyle](arkts-arkui-textpicker-comp-pickerbackgroundstyle-i.md) | Defines the background style configuration for selected picker items. |
+| [TextCascadePickerRangeContent](arkts-arkui-textpicker-comp-textcascadepickerrangecontent-i.md) | Defines the content for multi-column picker options. |
+| [TextPickerDialogOptions](arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) | Defines the TextPickerDialogOptions for Text Picker Dialog. |
+| [TextPickerDialogOptionsExt](arkts-arkui-textpicker-comp-textpickerdialogoptionsext-i.md) | Defines the TextPickerDialogOptionsExt for Text Picker Dialog. |
+| [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md) | Defines the configuration options of the text picker. |
+| [TextPickerRangeContent](arkts-arkui-textpicker-comp-textpickerrangecontent-i.md) | Defines the content for single-column picker options. |
+| [TextPickerResult](arkts-arkui-textpicker-comp-textpickerresult-i.md) | Defines the struct of TextPickerResult. |
+| [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) | Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md). |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md) | Defines the **onChange** event callback signature. |
-| [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpickerenterselectedareacallback-t.md) | Defines the **onEnterSelectedArea** event callback signature. |
-| [TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md) | Defines the **onScrollStop** event callback signature. |
+| [OnTextPickerChangeCallback](arkts-arkui-textpicker-comp-ontextpickerchangecallback-t.md) | Defines the **onChange** event callback signature. |
+| [TextPickerEnterSelectedAreaCallback](arkts-arkui-textpicker-comp-textpickerenterselectedareacallback-t.md) | Defines the **onEnterSelectedArea** event callback signature. |
+| [TextPickerScrollStopCallback](arkts-arkui-textpicker-comp-textpickerscrollstopcallback-t.md) | Defines the **onScrollStop** event callback signature. |
 
 ## Examples
 
@@ -61,7 +63,7 @@ Creates a text picker based on the specified data list.
 
 This example demonstrates how to configure single-column and multi-column text pickers by setting range and customizing the width of each column using columnWidths.
 
-The columnWidths attribute of [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is added since API version 18.
+The columnWidths attribute of [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md) is added since API version 18.
 
 
 ```

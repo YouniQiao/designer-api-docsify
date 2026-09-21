@@ -29,7 +29,7 @@ import { router } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [back](arkts-arkui-router-back-f.md) | Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. |
+| [back](arkts-arkui-router-back-f.md#back) | Returns to the previous page or a specified page, which deletes all pages between the current page and the target page. |
 | [back](arkts-arkui-router-back-f.md#back-1) | Returns to the specified page, which deletes all pages between the current page and the target page. |
 | [clear](arkts-arkui-router-clear-f.md) | Clears all historical pages in the stack and retains only the current page at the top of the stack. |
 | [disableAlertBeforeBackPage](arkts-arkui-router-disablealertbeforebackpage-f.md) | Disables the display of a confirm dialog box before returning to the previous page. |
@@ -41,20 +41,20 @@ import { router } from '@kit.ArkUI';
 | [getStateByUrl](arkts-arkui-router-getstatebyurl-f.md) | Obtains the status information about a page by its URL. |
 | [hideAlertBeforeBackPage](arkts-arkui-router-hidealertbeforebackpage-f.md) | Disables the display of a confirm dialog box before returning to the previous page. |
 | [push](arkts-arkui-router-push-f.md) | Navigates to a specified page in the application. |
-| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md) | Navigates to a page using the named route. This API uses a promise to return the result. |
+| [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md#pushnamedroute) | Navigates to a page using the named route. This API uses a promise to return the result. |
 | [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md#pushnamedroute-1) | Navigates to a page using the named route. This API uses a promise to return the result. |
 | [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md#pushnamedroute-2) | Navigates to a page using the named route. This API uses a promise to return the result. |
 | [pushNamedRoute](arkts-arkui-router-pushnamedroute-f.md#pushnamedroute-3) | Navigates to a page using the named route. This API uses a promise to return the result. |
-| [pushUrl](arkts-arkui-router-pushurl-f.md) | Navigates to a specified page in the application. |
+| [pushUrl](arkts-arkui-router-pushurl-f.md#pushurl) | Navigates to a specified page in the application. |
 | [pushUrl](arkts-arkui-router-pushurl-f.md#pushurl-1) | Navigates to a specified page in the application. |
 | [pushUrl](arkts-arkui-router-pushurl-f.md#pushurl-2) | Navigates to a specified page in the application. |
 | [pushUrl](arkts-arkui-router-pushurl-f.md#pushurl-3) | Navigates to a specified page in the application. |
 | [replace](arkts-arkui-router-replace-f.md) | Replaces the current page with another one in the application and destroys the current page. |
-| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md) | Replaces the current page with another one using the named route and destroys the current page. |
+| [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md#replacenamedroute) | Replaces the current page with another one using the named route and destroys the current page. |
 | [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md#replacenamedroute-1) | Replaces the current page with another one using the named route and destroys the current page. |
 | [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md#replacenamedroute-2) | Replaces the current page with another one using the named route and destroys the current page. |
 | [replaceNamedRoute](arkts-arkui-router-replacenamedroute-f.md#replacenamedroute-3) | Replaces the current page with another one using the named route and destroys the current page. |
-| [replaceUrl](arkts-arkui-router-replaceurl-f.md) | Replaces the current page with another one in the application and destroys the current page. |
+| [replaceUrl](arkts-arkui-router-replaceurl-f.md#replaceurl) | Replaces the current page with another one in the application and destroys the current page. |
 | [replaceUrl](arkts-arkui-router-replaceurl-f.md#replaceurl-1) | Replaces the current page with another one in the application and destroys the current page. This API cannot be used to configure page transition effects. To configure page transition effects, use the [Navigation](../../../ui/arkts-navigation-architecture.md) component. |
 | [replaceUrl](arkts-arkui-router-replaceurl-f.md#replaceurl-2) | Replaces the current page with another one in the application and destroys the current page. |
 | [replaceUrl](arkts-arkui-router-replaceurl-f.md#replaceurl-3) | Replaces the current page with another one in the application and destroys the current page. |

@@ -80,7 +80,7 @@ Process name.
 startTime: number
 ```
 
-Ability start time.
+Ability start time, in ms.
 
 **Type:** number
 

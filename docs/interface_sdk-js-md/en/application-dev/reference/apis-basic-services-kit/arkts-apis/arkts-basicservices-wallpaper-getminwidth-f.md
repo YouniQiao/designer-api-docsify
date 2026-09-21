@@ -40,16 +40,6 @@ wallpaper.getMinWidth((error: BusinessError, data: Number) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinWidth().then((data: Number) => {
-    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
-});
-```
-
 
 <a id="getminwidth-1"></a>
 
@@ -75,4 +65,12 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Examples**
 
-See [getMinWidth](#getminwidth)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getMinWidth().then((data: Number) => {
+    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
+});
+```

@@ -53,19 +53,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.abortCommonEvent().then(() => {
-  console.info(`Succeeded in aborting common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="abortcommonevent-1"></a>
 
 ## abortCommonEvent
@@ -88,7 +75,18 @@ abortCommonEvent(): Promise<void>
 
 **示例**
 
-参见 [abortCommonEvent](#abortcommonevent)
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## abortCommonEventSync
 
@@ -156,19 +154,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.clearAbortCommonEvent().then(() => {
-  console.info(`Succeeded in clearing abort common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="clearabortcommonevent-1"></a>
 
 ## clearAbortCommonEvent
@@ -191,7 +176,18 @@ clearAbortCommonEvent(): Promise<void>
 
 **示例**
 
-参见 [clearAbortCommonEvent](#clearabortcommonevent)
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEventSync
 
@@ -252,14 +248,6 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.finishCommonEvent().then(() => {
-  console.info(`Succeeded in finishing common event.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="finishcommonevent-1"></a>
 
 ## finishCommonEvent
@@ -282,7 +270,13 @@ finishCommonEvent(): Promise<void>
 
 **示例**
 
-参见 [finishCommonEvent](#finishcommonevent)
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -320,14 +314,6 @@ subscriber.getAbortCommonEvent((err: BusinessError, abortEvent: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
-  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getabortcommonevent-1"></a>
 
 ## getAbortCommonEvent
@@ -350,7 +336,13 @@ getAbortCommonEvent(): Promise<boolean>
 
 **示例**
 
-参见 [getAbortCommonEvent](#getabortcommonevent)
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEventSync
 
@@ -415,14 +407,6 @@ subscriber.getCode((err: BusinessError, code: number) => {
 });
 ```
 
-```TypeScript
-subscriber.getCode().then((code: number) => {
-  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getcode-1"></a>
 
 ## getCode
@@ -447,7 +431,13 @@ getCode(): Promise<number>
 
 **示例**
 
-参见 [getCode](#getcode)
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getCodeSync
 
@@ -515,14 +505,6 @@ subscriber.getData((err: BusinessError, data: string) => {
 });
 ```
 
-```TypeScript
-subscriber.getData().then((data: string) => {
-  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getdata-1"></a>
 
 ## getData
@@ -547,7 +529,13 @@ getData(): Promise<string>
 
 **示例**
 
-参见 [getData](#getdata)
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getDataSync
 
@@ -614,14 +602,6 @@ subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManag
 });
 ```
 
-```TypeScript
-subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
-  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="getsubscribeinfo-2"></a>
 
 ## getSubscribeInfo
@@ -646,7 +626,13 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 **示例**
 
-参见 [getSubscribeInfo](#getsubscribeinfo)
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getSubscribeInfoSync
 
@@ -711,14 +697,6 @@ subscriber.isOrderedCommonEvent((err: BusinessError, isOrdered: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
-  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="isorderedcommonevent-1"></a>
 
 ## isOrderedCommonEvent
@@ -741,7 +719,13 @@ isOrderedCommonEvent(): Promise<boolean>
 
 **示例**
 
-参见 [isOrderedCommonEvent](#isorderedcommonevent)
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isOrderedCommonEventSync
 
@@ -804,14 +788,6 @@ subscriber.isStickyCommonEvent((err: BusinessError, isSticky: boolean) => {
 });
 ```
 
-```TypeScript
-subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
-  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="isstickycommonevent-1"></a>
 
 ## isStickyCommonEvent
@@ -834,7 +810,13 @@ isStickyCommonEvent(): Promise<boolean>
 
 **示例**
 
-参见 [isStickyCommonEvent](#isstickycommonevent)
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isStickyCommonEventSync
 
@@ -900,14 +882,6 @@ subscriber.setCode(1, (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setCode(1).then(() => {
-  console.info(`Succeeded in setting code.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setcode-1"></a>
 
 ## setCode
@@ -944,7 +918,13 @@ setCode(code: number): Promise<void>
 
 **示例**
 
-参见 [setCode](#setcode)
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndData
 
@@ -986,14 +966,6 @@ subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
-  console.info(`Succeeded in setting code and data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setcodeanddata-1"></a>
 
 ## setCodeAndData
@@ -1031,7 +1003,13 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 **示例**
 
-参见 [setCodeAndData](#setcodeanddata)
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndDataSync
 
@@ -1147,14 +1125,6 @@ subscriber.setData('publish_data_changed', (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-subscriber.setData('publish_data_changed').then(() => {
-  console.info(`Succeeded in setting data.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="setdata-1"></a>
 
 ## setData
@@ -1191,7 +1161,13 @@ setData(data: string): Promise<void>
 
 **示例**
 
-参见 [setData](#setdata)
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setDataSync
 

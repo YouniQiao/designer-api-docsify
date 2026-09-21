@@ -52,41 +52,6 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, true)
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, 'wlan0')
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 <a id="isuidnetallowed-1"></a>
 
@@ -132,7 +97,18 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 
 **示例**
 
-参见 [isUidNetAllowed](#isuidnetallowed)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, true)
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
 
 
 <a id="isuidnetallowed-2"></a>
@@ -174,7 +150,14 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 
 **示例**
 
-参见 [isUidNetAllowed](#isuidnetallowed)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
 
 
 <a id="isuidnetallowed-3"></a>
@@ -221,4 +204,15 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 
 **示例**
 
-参见 [isUidNetAllowed](#isuidnetallowed)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, 'wlan0')
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```

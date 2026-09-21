@@ -20,6 +20,8 @@ All component types are monitored.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## CUSTOM_COMPONENT
@@ -31,6 +33,8 @@ CUSTOM_COMPONENT = 1 << 0
 Custom component types are monitored.
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -44,6 +48,8 @@ The **Window** component type is monitored.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## NODE_CONTAINER
@@ -55,6 +61,8 @@ NODE_CONTAINER = 1 << 2
 The **NodeContainer** component type is monitored.
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -68,6 +76,8 @@ The **XComponent** component type is monitored.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## ABILITY
@@ -79,5 +89,7 @@ ABILITY = 1 << 4
 The **Ability** component type is monitored.
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker

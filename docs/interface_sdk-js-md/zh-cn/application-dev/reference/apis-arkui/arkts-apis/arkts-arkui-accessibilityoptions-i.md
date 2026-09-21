@@ -70,7 +70,7 @@ actionControllerRoleType?: AccessibilityRoleType
 
 默认值：无指定组件
 
-**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md)
 
 **起始版本：** 23
 
@@ -114,7 +114,7 @@ stateControllerRoleType?: AccessibilityRoleType
 
 默认值：无指定组件
 
-**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md)
 
 **起始版本：** 23
 

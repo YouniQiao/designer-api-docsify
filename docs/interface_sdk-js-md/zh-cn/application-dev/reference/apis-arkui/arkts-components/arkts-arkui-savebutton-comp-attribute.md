@@ -4,7 +4,7 @@
 declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 ```
 
-不支持通用属性，除了继承安全控件通用属性，还支持以下属性。不支持通用事件，仅支持以下事件。
+不支持通用属性，除了继承[安全控件通用属性](../arkts-apis/arkts-arkui-security_component.md)，还支持以下属性。不支持通用事件，仅支持以下事件。
 
 **继承/实现关系：** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 
@@ -64,7 +64,7 @@ iconSize(size: Dimension | SizeOptions)
 onClick(event: SaveButtonCallback)
 ```
 
-点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见SaveButton构造函数说明）；点击拒绝或关闭弹窗则授权失败。
+点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](arkts-arkui-savebutton-comp.md#savebutton)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
 
 **起始版本：** 10
 
@@ -78,7 +78,7 @@ onClick(event: SaveButtonCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | 是 | 点击事件的回调对象，包含点击事件信息、授权结果和错误信息。<br>从APIversion 18开始，统一使用SaveButtonCallback，可额外获取error信息。<br>**适用版本：** 18 |
+| event | [SaveButtonCallback](arkts-arkui-savebutton-comp-savebuttoncallback-t.md) | 是 | 点击事件的回调对象，包含点击事件信息、授权结果和错误信息。<br>从APIversion 18开始，统一使用SaveButtonCallback，可额外获取error信息。<br>**适用版本：** 18 |
 
 ## setIcon
 
@@ -233,7 +233,7 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 是 | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。<br>默认值：SymbolRenderingStrategy.SINGLE。<br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md) | 是 | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。<br>默认值：SymbolRenderingStrategy.SINGLE。<br>若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## userCancelEvent
 

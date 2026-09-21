@@ -4,14 +4,14 @@
 declare class RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
 > **NOTE:** 
 > 
 > The default value of shape clipping of the **RowSplit** component is
 > **true**.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 

@@ -50,31 +50,6 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
 class RouterParams {
   data1: string;
 
@@ -93,54 +68,6 @@ router.replaceUrl({
   }
   console.info('replaceUrl success');
 })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-});
 ```
 
 
@@ -192,7 +119,30 @@ function replaceUrl(options: RouterOptions): Promise<void>
 
 **示例**
 
-参见 [replaceUrl](#replaceurl)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+})
+  .then(() => {
+    console.info(`replaceUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
 
 
 <a id="replaceurl-2"></a>
@@ -239,7 +189,28 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 
 **示例**
 
-参见 [replaceUrl](#replaceurl)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard, (err) => {
+  if (err) {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('replaceUrl success');
+});
+```
 
 
 <a id="replaceurl-3"></a>
@@ -291,4 +262,27 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 **示例**
 
-参见 [replaceUrl](#replaceurl)
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`replaceUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```

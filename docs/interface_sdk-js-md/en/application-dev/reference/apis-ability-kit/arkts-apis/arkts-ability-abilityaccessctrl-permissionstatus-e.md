@@ -20,6 +20,8 @@ The permission is not granted.
 
 **Since:** 20
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -33,6 +35,8 @@ GRANTED = 0
 The permission is granted.
 
 **Since:** 20
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -48,6 +52,8 @@ Indicates not operated. The app declares a [user authorization permission](arkts
 
 **Since:** 20
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -62,6 +68,8 @@ The permission is invalid. The application does not [declare permissions](../../
 
 **Since:** 20
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -75,6 +83,8 @@ RESTRICTED = 3
 Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. &lt;!--RP2End--&gt;
 
 **Since:** 20
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -4,7 +4,7 @@
 declare class RepeatAttribute<T> extends DynamicNode<RepeatAttribute<T>>
 ```
 
-除支持拖拽排序属性外，还支持以下属性。
+除支持[拖拽排序](arkts-arkui-common-comp.md#common)属性外，还支持以下属性。
 
 **继承/实现关系：** RepeatAttribute extends DynamicNode<RepeatAttribute<T>>
 
@@ -99,8 +99,8 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 当前模板类型标识，需与templateId()的返回值相匹配，用于确定数据项使用哪个模板进行渲染。 |
-| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | 是 | 组件生成函数，用于渲染当前template对应的子组件。repeatItem为携带item（数据项）与index（索引）的组合状态变量，请勿将`RepeatItem`参数拆开使用。 |
-| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | 否 | 当前模板配置项。当需要自定义模板配置（如设置模板缓存池中可缓存子组件节点的最大数量cachedCount等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认模板配置。 |
+| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeat-comp-repeatitembuilder-t.md)&lt;T&gt; | 是 | 组件生成函数，用于渲染当前template对应的子组件。repeatItem为携带item（数据项）与index（索引）的组合状态变量，请勿将`RepeatItem`参数拆开使用。 |
+| templateOptions | [TemplateOptions](arkts-arkui-repeat-comp-templateoptions-i.md) | 否 | 当前模板配置项。当需要自定义模板配置（如设置模板缓存池中可缓存子组件节点的最大数量cachedCount等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认模板配置。 |
 
 ## templateId
 
@@ -126,7 +126,7 @@ templateId(typedFunc: TemplateTypedFunc<T>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typedFunc | [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md)&lt;T&gt; | 是 | 生成当前数据项对应的template type。 |
+| typedFunc | [TemplateTypedFunc](arkts-arkui-repeat-comp-templatetypedfunc-t.md)&lt;T&gt; | 是 | 生成当前数据项对应的template type。 |
 
 ## virtualScroll
 
@@ -152,4 +152,4 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 否 | 虚拟滚动配置项。当需要自定义虚拟滚动配置（如设置期望加载的数据项总数、复用功能、内存优化策略等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认配置（totalCount取数据源长度、reusable默认为true等）。 |
+| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-repeat-comp-virtualscrolloptions-i.md) | 否 | 虚拟滚动配置项。当需要自定义虚拟滚动配置（如设置期望加载的数据项总数、复用功能、内存优化策略等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认配置（totalCount取数据源长度、reusable默认为true等）。 |

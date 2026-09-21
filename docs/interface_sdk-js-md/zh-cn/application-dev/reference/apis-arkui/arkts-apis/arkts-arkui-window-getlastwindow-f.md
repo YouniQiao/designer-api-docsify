@@ -82,47 +82,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.loadContent('pages/Index', (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to load content for main window. Cause code: ${err.code}, message: ${err.message}`);
-      }
-      windowStage.createSubWindow('TestSubWindow').then((subWindow) => {
-        let storage: LocalStorage = new LocalStorage();
-        subWindow.loadContent('pages/Index', storage, (err: BusinessError) => {
-          if (err.code) {
-            console.error(`Failed to load content for sub window. Cause code: ${err.code}, message: ${err.message}`);
-          }
-          subWindow.showWindow().then(() => {
-            try {
-              window.getLastWindow(this.context).then((topWindow) => {
-                windowClass = topWindow;
-                console.info(`Succeeded in obtaining the top window. Window id: ${topWindow.getWindowProperties().id}`);
-              }).catch((err: BusinessError) => {
-                console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-              });
-            } catch (exception) {
-              console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`);
-            }
-          });
-        });
-      });
-    });
-  }
-  // ...
-}
-```
-
 
 <a id="getlastwindow-1"></a>
 
@@ -164,4 +123,43 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 **示例**
 
-参见 [getLastWindow](#getlastwindow)
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.loadContent('pages/Index', (err: BusinessError) => {
+      if (err.code) {
+        console.error(`Failed to load content for main window. Cause code: ${err.code}, message: ${err.message}`);
+      }
+      windowStage.createSubWindow('TestSubWindow').then((subWindow) => {
+        let storage: LocalStorage = new LocalStorage();
+        subWindow.loadContent('pages/Index', storage, (err: BusinessError) => {
+          if (err.code) {
+            console.error(`Failed to load content for sub window. Cause code: ${err.code}, message: ${err.message}`);
+          }
+          subWindow.showWindow().then(() => {
+            try {
+              window.getLastWindow(this.context).then((topWindow) => {
+                windowClass = topWindow;
+                console.info(`Succeeded in obtaining the top window. Window id: ${topWindow.getWindowProperties().id}`);
+              }).catch((err: BusinessError) => {
+                console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+              });
+            } catch (exception) {
+              console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`);
+            }
+          });
+        });
+      });
+    });
+  }
+  // ...
+}
+```

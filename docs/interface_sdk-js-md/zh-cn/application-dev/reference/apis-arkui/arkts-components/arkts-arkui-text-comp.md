@@ -4,11 +4,11 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 
 ## 子组件
 
-可以包含Span、ImageSpan、SymbolSpan和ContainerSpan子组件。
+可以包含[Span](arkts-arkui-span-comp.md#span)、[ImageSpan](arkts-arkui-imagespan-comp.md#image_span)、[SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md)和[ContainerSpan](arkts-arkui-containerspan-comp-attribute.md)子组件。
 
 > **说明：** 
 > 
-> 使用子组件实现
+> 使用[子组件](#text)实现
 > [图文混排](../../../ui/arkts-text-image-layout.md)场景。
 
 ## Text
@@ -31,8 +31,8 @@ Text(content?: string | Resource, value?: TextOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件Span或设置了属性字符串时，该参数不生效。<br>默认值：' '<br>**说明：** <br>显示内容的优先级：属性字符串&gt;Span&gt;Text的文本内容。 |
-| value | [TextOptions](arkts-arkui-textoptions-i.md) | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。<br>默认值：不设置时，不使用文本控制器。<br> |
+| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span](arkts-arkui-span-comp.md#span)或设置了[属性字符串](../arkts-apis/arkts-arkui-styled_string.md)时，该参数不生效。<br>默认值：' '<br>**说明：** <br>显示内容的优先级：属性字符串&gt;Span&gt;Text的文本内容。 |
+| value | [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。<br>默认值：不设置时，不使用文本控制器。<br> |
 
 ## 汇总
 
@@ -40,19 +40,19 @@ Text(content?: string | Resource, value?: TextOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md) | Marquee初始化参数。 |
-| [TextOptions](arkts-arkui-textoptions-i.md) | Text初始化参数。 |
-| [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | 文本超长显示方式对象。 |
+| [TextMarqueeOptions](arkts-arkui-text-comp-textmarqueeoptions-i.md) | Marquee初始化参数。 |
+| [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | Text初始化参数。 |
+| [TextOverflowOptions](arkts-arkui-text-comp-textoverflowoptions-i.md) | 文本超长显示方式对象。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md) | Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。 |
-| [MarqueeState](arkts-arkui-marqueestate-e.md) | Marquee状态回调的返回值。 |
-| [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md) | 跑马灯组件属性更新后，跑马灯的滚动策略。 |
-| [TextResponseType](arkts-arkui-textresponsetype-e.md) | 选择菜单的响应类型。 |
-| [TextSpanType](arkts-arkui-textspantype-e.md) | Span类型信息。 |
+| [MarqueeStartPolicy](arkts-arkui-text-comp-marqueestartpolicy-e.md) | Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。 |
+| [MarqueeState](arkts-arkui-text-comp-marqueestate-e.md) | Marquee状态回调的返回值。 |
+| [MarqueeUpdatePolicy](arkts-arkui-text-comp-marqueeupdatepolicy-e.md) | 跑马灯组件属性更新后，跑马灯的滚动策略。 |
+| [TextResponseType](arkts-arkui-text-comp-textresponsetype-e.md) | 选择菜单的响应类型。 |
+| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | [Span](arkts-arkui-span-comp.md#span)类型信息。 |
 
 ## 示例
 
@@ -235,7 +235,7 @@ Text(content?: string | Resource, value?: TextOptions)
 ```TypeScript
 ### 示例22（设置文本选择区域并高亮显示）
 
-从API version 23开始，该示例使用[TextController](arkts-arkui-textcontroller-c.md)中的[setTextSelection](#settextselection23)设置文本选择区域并高亮显示。
+从API version 23开始，该示例使用[TextController](arkts-arkui-text-comp-textcontroller-c.md)中的[setTextSelection](#settextselection23)设置文本选择区域并高亮显示。
 
 
 ```

@@ -4,9 +4,9 @@
 declare class VideoAttribute extends CommonMethod<VideoAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** VideoAttribute extends CommonMethod<VideoAttribute>
 
@@ -50,6 +50,8 @@ Sets whether to enable autoplay. This attribute can be dynamically set using att
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -76,6 +78,8 @@ Sets whether to display the video playback control bar. This attribute can be dy
 > [Video Playback](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/VideoPlay).
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,6 +166,8 @@ Sets whether to loop the video. This attribute can be dynamically set using attr
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -187,6 +193,8 @@ Sets whether to mute the video. This attribute can be dynamically set using attr
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -206,6 +214,8 @@ objectFit(value: ImageFit)
 Sets the fill mode for the video content. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -231,6 +241,8 @@ Triggered when video playback fails. Dynamic property modification using attribu
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -250,6 +262,8 @@ onFinish(event: VoidCallback)
 Triggered when video playback is finished. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -271,6 +285,8 @@ Triggered when video playback is switched between full-screen mode and non-full-
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -279,7 +295,7 @@ Triggered when video playback is switched between full-screen mode and non-full-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[FullscreenInfo](arkts-arkui-fullscreeninfo-i.md)&gt; | Yes | Callback invoked when switching between full-screen playback and non -full-screen playback states.<br>**Since:** 18 |
+| callback | Callback&lt;[FullscreenInfo](arkts-arkui-video-comp-fullscreeninfo-i.md)&gt; | Yes | Callback invoked when switching between full-screen playback and non -full-screen playback states.<br>**Since:** 18 |
 
 ## onPause
 
@@ -290,6 +306,8 @@ onPause(event: VoidCallback)
 Triggered when video playback is paused. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -311,6 +329,8 @@ Triggered when video preparation is complete. Dynamic property modification usin
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -319,7 +339,7 @@ Triggered when video preparation is complete. Dynamic property modification usin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PreparedInfo](arkts-arkui-preparedinfo-i.md)&gt; | Yes | Callback invoked when video preparation is complete.<br>**Since:** 18 |
+| callback | Callback&lt;[PreparedInfo](arkts-arkui-video-comp-preparedinfo-i.md)&gt; | Yes | Callback invoked when video preparation is complete.<br>**Since:** 18 |
 
 ## onSeeked
 
@@ -331,6 +351,8 @@ Triggered to report the time information while seeking is completed. Dynamic pro
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -339,7 +361,7 @@ Triggered to report the time information while seeking is completed. Dynamic pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the operation progress bar is completed.<br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | Yes | Callback invoked when the operation progress bar is completed.<br>**Since:** 18 |
 
 ## onSeeking
 
@@ -351,6 +373,8 @@ Triggered to report the time information while seeking is in progress (the progr
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -359,7 +383,7 @@ Triggered to report the time information while seeking is in progress (the progr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the progress bar is operated.<br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | Yes | Callback invoked when the progress bar is operated.<br>**Since:** 18 |
 
 ## onStart
 
@@ -370,6 +394,8 @@ onStart(event: VoidCallback)
 Triggered when playback starts. This attribute supports dynamic setting through attributeModifier.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -413,6 +439,8 @@ Triggered when playback progress changes. Dynamic property modification using at
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -421,4 +449,4 @@ Triggered when playback progress changes. Dynamic property modification using at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the playback progress changes.<br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md)&gt; | Yes | Callback invoked when the playback progress changes.<br>**Since:** 18 |

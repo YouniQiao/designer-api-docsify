@@ -44,13 +44,6 @@ geolocation.isLocationEnabled((err, data) => {
 });
 ```
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isLocationEnabled().then((result) => {
-    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
-});
-```
-
 
 <a id="islocationenabled-1"></a>
 
@@ -80,4 +73,9 @@ function isLocationEnabled(): Promise<boolean>
 
 **示例**
 
-参见 [isLocationEnabled](#islocationenabled)
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isLocationEnabled().then((result) => {
+    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
+});
+```

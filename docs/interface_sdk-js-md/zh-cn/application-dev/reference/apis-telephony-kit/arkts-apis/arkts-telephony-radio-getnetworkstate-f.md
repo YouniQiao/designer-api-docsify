@@ -43,18 +43,6 @@ function getNetworkState(slotId: number, callback: AsyncCallback<NetworkState>):
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
-    if (err) {
-        console.error(`getNetworkState failed, callback: err code: ${err.code}, message: ${err.message}`);
-        return;
-    }
-    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 let slotId: number = 0;
 radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => {
     if (err) {
@@ -62,19 +50,6 @@ radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => 
         return;
     }
     console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 指定卡槽ID，0表示卡槽1
-let slotId: number = 0;
-// 获取网络状态，使用Promise异步回调
-radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
-    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkState failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -120,7 +95,18 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 
 **示例**
 
-参见 [getNetworkState](#getnetworkstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 指定卡槽ID，0表示卡槽1
+let slotId: number = 0;
+// 获取网络状态，使用Promise异步回调
+radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
+    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkState failed, promise: err code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 <a id="getnetworkstate-2"></a>
@@ -158,4 +144,14 @@ function getNetworkState(callback: AsyncCallback<NetworkState>): void
 
 **示例**
 
-参见 [getNetworkState](#getnetworkstate)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
+    if (err) {
+        console.error(`getNetworkState failed, callback: err code: ${err.code}, message: ${err.message}`);
+        return;
+    }
+    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
+});
+```

@@ -105,7 +105,9 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Examples**
 
-See [addPhotoAssets](#addphotoassets)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## commitModify
 
@@ -264,7 +266,9 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Examples**
 
-See [deletePhotoAssets](#deletephotoassets)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## recoverPhotoAssets
 
@@ -347,7 +351,9 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Examples**
 
-See [recoverPhotoAssets](#recoverphotoassets)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## removePhotoAssets
 
@@ -430,4 +436,6 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Examples**
 
-See [removePhotoAssets](#removephotoassets)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```

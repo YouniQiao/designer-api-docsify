@@ -40,14 +40,6 @@ reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
 });
 ```
 
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.cancelReminder(1).then(() => {
-    console.info("cancelReminder promise");
-});
-```
-
 
 <a id="cancelreminder-1"></a>
 
@@ -81,4 +73,10 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Examples**
 
-See [cancelReminder](#cancelreminder)
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelReminder(1).then(() => {
+    console.info("cancelReminder promise");
+});
+```

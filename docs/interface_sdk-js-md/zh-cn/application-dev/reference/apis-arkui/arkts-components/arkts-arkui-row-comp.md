@@ -32,7 +32,7 @@ Row(options?: RowOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number或string类型的值。当需要自定义子组件间距时传入此参数；不传入时默认间距为0。<br> <br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 |
+| options | [RowOptions](arkts-arkui-row-comp-rowoptions-i.md) | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number或string类型的值。当需要自定义子组件间距时传入此参数；不传入时默认间距为0。<br> <br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 |
 
 ## Row
 
@@ -60,7 +60,7 @@ Row(options?: RowOptions | RowOptionsV2)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) &#124; [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number、string或Resource类型的值。不传入时默认间距为0。<br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 |
+| options | [RowOptions](arkts-arkui-row-comp-rowoptions-i.md) &#124; [RowOptionsV2](arkts-arkui-row-comp-rowoptionsv2-i.md) | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number、string或Resource类型的值。不传入时默认间距为0。<br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。 |
 
 ## 汇总
 
@@ -68,8 +68,8 @@ Row(options?: RowOptions | RowOptionsV2)
 
 | 名称 | 说明 |
 | --- | --- |
-| [RowOptions](arkts-arkui-rowoptions-i.md) | 设置Row组件的子组件间距属性。 |
-| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | 设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
+| [RowOptions](arkts-arkui-row-comp-rowoptions-i.md) | 设置Row组件的子组件间距属性。 |
+| [RowOptionsV2](arkts-arkui-row-comp-rowoptionsv2-i.md) | 设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
 
 ## 示例
 

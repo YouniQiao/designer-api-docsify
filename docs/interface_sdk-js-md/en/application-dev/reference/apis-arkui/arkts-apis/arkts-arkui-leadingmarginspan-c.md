@@ -52,5 +52,5 @@ Draws a custom pattern. This API is triggered once for each line of text in a pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](../arkts-components/arkts-arkui-drawcontext-t.md) | Yes | Drawing context.<br>The **canvas** method of **DrawContext** obtains the canvas of the component. As such, the custom span does not extend beyond the area of the component. |
+| context | DrawContext | Yes | Drawing context.<br>The **canvas** method of **DrawContext** obtains the canvas of the component. As such, the custom span does not extend beyond the area of the component. |
 | drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | Yes | Custom drawing information. |

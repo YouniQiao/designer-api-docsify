@@ -160,7 +160,7 @@ expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起�
 
 controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
-**类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
+**类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditor-comp-richeditorcontroller-c.md)
 
 **起始版本：** 11
 

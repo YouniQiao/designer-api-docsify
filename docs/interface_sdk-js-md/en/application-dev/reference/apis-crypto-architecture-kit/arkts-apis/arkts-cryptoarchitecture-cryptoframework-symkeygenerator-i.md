@@ -80,31 +80,6 @@ function testConvertKey() {
 }
 ```
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function genKeyMaterialBlob(): cryptoFramework.DataBlob {
-  let arr = [
-    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
-    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
-    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
-  let keyMaterial = new Uint8Array(arr);
-  return { data: keyMaterial };
-}
-
-function testConvertKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-  let keyMaterialBlob = genKeyMaterialBlob();
-  symKeyGenerator.convertKey(keyMaterialBlob)
-    .then(symKey => {
-      console.info('Convert symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Convert symKey failed, ${error.code}, ${error.message}`);
-    });
-}
-```
-
 <a id="convertkey-1"></a>
 
 ## convertKey
@@ -145,27 +120,6 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function genKeyMaterialBlob(): cryptoFramework.DataBlob {
-  let arr = [
-    0xba, 0x3d, 0xc2, 0x71, 0x21, 0x1e, 0x30, 0x56,
-    0xad, 0x47, 0xfc, 0x5a, 0x46, 0x39, 0xee, 0x7c,
-    0xba, 0x3b, 0xc2, 0x71, 0xab, 0xa0, 0x30, 0x72]; // keyLen = 192 (24 bytes)
-  let keyMaterial = new Uint8Array(arr);
-  return { data: keyMaterial };
-}
-
-function testConvertKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-  let keyMaterialBlob = genKeyMaterialBlob();
-  symKeyGenerator.convertKey(keyMaterialBlob, (err, symKey) => {
-    console.info('Convert symKey result: success, algName: ' + symKey.algName);
-  });
-}
-```
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -304,19 +258,6 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
   });
 ```
 
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.generateSymKey()
-    .then(symKey => {
-      console.info('Generate symKey result: success, algName: ' + symKey.algName);
-    }).catch((error: BusinessError) => {
-      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
-    });
-```
-
 <a id="generatesymkey-1"></a>
 
 ## generateSymKey
@@ -351,7 +292,18 @@ Generates a random key using this symmetric key generator. This API uses a promi
 
 **Examples**
 
-See [generateSymKey](#generatesymkey)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
+  symKeyGenerator.generateSymKey()
+    .then(symKey => {
+      console.info('Generate symKey result: success, algName: ' + symKey.algName);
+    }).catch((error: BusinessError) => {
+      console.error(`Generate symKey failed, ${error.code}, ${error.message}`);
+    });
+```
 
 ## generateSymKeySync
 

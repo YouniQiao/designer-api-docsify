@@ -128,4 +128,10 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 **Examples**
 
-See [getRdbStore](#getrdbstore)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

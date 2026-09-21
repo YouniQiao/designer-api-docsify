@@ -22,6 +22,8 @@ Indicates the rtt is disable.
 
 **Since:** 22
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -35,6 +37,8 @@ RTT_STATE_YES = 1
 Indicates the rtt is enable.
 
 **Since:** 22
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -50,6 +54,8 @@ Indicates the rtt is tty state.
 
 **Since:** 22
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ RTT_STATE_REMOTE_NOT_SUPPORT = 3
 Indicates the rtt is not support.
 
 **Since:** 22
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

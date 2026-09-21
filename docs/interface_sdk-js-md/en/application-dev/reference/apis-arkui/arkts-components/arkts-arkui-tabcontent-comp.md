@@ -37,26 +37,26 @@ Creates the **TabContent** component, which represents the content associated wi
 
 | Name | Description |
 | --- | --- |
-| [BoardStyle](arkts-arkui-boardstyle-i.md) | Represents a board style object. |
-| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Uses an image resource as the indicator. |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Represents an indicator style object. |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | Represents a style object for the label text and font. |
-| [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Represents a label icon style object. |
-| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. |
+| [BoardStyle](arkts-arkui-tabcontent-comp-boardstyle-i.md) | Represents a board style object. |
+| [DrawableTabBarIndicator](arkts-arkui-tabcontent-comp-drawabletabbarindicator-i.md) | Uses an image resource as the indicator. |
+| [IndicatorStyle](arkts-arkui-tabcontent-comp-indicatorstyle-i.md) | Represents an indicator style object. |
+| [LabelStyle](arkts-arkui-tabcontent-comp-labelstyle-i.md) | Represents a style object for the label text and font. |
+| [TabBarIconStyle](arkts-arkui-tabcontent-comp-tabbariconstyle-i.md) | Represents a label icon style object. |
+| [TabBarOptions](arkts-arkui-tabcontent-comp-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Defines the input parameter object of the **drawable** attribute in the **DrawableTabBarIndicator** object. |
+| [DrawableDescriptor](arkts-arkui-tabcontent-comp-drawabledescriptor-t.md) | Defines the input parameter object of the **drawable** attribute in the **DrawableTabBarIndicator** object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LayoutMode](arkts-arkui-layoutmode-e.md) | Enumerates the layout modes of the images and texts on the bottom tabs. |
-| [SelectedMode](arkts-arkui-selectedmode-e.md) | Enumerates the display modes of selected subtabs. |
-| [TabVisibility](arkts-arkui-tabvisibility-e.md) | Enumerates the visibility of the tab. |
+| [LayoutMode](arkts-arkui-tabcontent-comp-layoutmode-e.md) | Enumerates the layout modes of the images and texts on the bottom tabs. |
+| [SelectedMode](arkts-arkui-tabcontent-comp-selectedmode-e.md) | Enumerates the display modes of selected subtabs. |
+| [TabVisibility](arkts-arkui-tabcontent-comp-tabvisibility-e.md) | Enumerates the visibility of the tab. |
 
 ## Examples
 
@@ -87,7 +87,7 @@ This example demonstrates how to create side tabs using [vertical](./ts-containe
 ```TypeScript
 ### Example 3: Implementing Different Styles of Tabs
 
-This example demonstrates how to create subtabs, bottom tabs, and side tabs using [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) and [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md).
+This example demonstrates how to create subtabs, bottom tabs, and side tabs using [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) and [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md).
 
 
 ```
@@ -111,7 +111,7 @@ This example demonstrates how to achieve adaptive height for subtab text using [
 ```TypeScript
 ### Example 6: Setting Basic Attributes for Bottom Tabs
 
-This example demonstrates how to set basic attributes for bottom tabs using [padding](#padding10), [verticalAlign](#verticalalign10), [layoutMode](#layoutmode10), and [symmetricExtensible](arkts-arkui-bottomtabbarstyle-c.md#symmetricextensible).
+This example demonstrates how to set basic attributes for bottom tabs using [padding](#padding10), [verticalAlign](#verticalalign10), [layoutMode](#layoutmode10), and [symmetricExtensible](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md#symmetricextensible).
 
 
 ```
@@ -133,7 +133,7 @@ how to change the icon color of bottom tabs using unselectedColor and selectedCo
 ```TypeScript
 ### Example 8: Using Symbol Icons for Bottom Tabs
 
-This example shows how to use symbols as icons in [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md).
+This example shows how to use symbols as icons in [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md).
 
 
 ```

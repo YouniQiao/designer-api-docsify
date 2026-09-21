@@ -2,7 +2,7 @@
 
 ListItem用于展示列表中的具体列表项，支持设置划出菜单、选中状态、鼠标框选和卡片样式等能力，必须配合List组件使用，适用于需要在列表中展示内容并对单个列表项进行交互操作（如滑动删除、选中标记）的场景。
 
-> **说明：** > > - 该组件的父组件只能是List或者ListItemGroup。 > > - 当ListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，ListItem子组件在 > ListItem创建时创建。配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或父组件为List/ListItemGroup时，ListItem子组 > 件在ListItem布局时创建。
+> **说明：** > > - 该组件的父组件只能是[List](arkts-arkui-list-comp.md#list)或者[ListItemGroup](arkts-arkui-listitemgroup-comp.md#list_item_group)。 > > - 当ListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，ListItem子组件在 > ListItem创建时创建。配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或父组件为List/ListItemGroup时，ListItem子组 > 件在ListItem布局时创建。
 
 ## 子组件
 
@@ -30,7 +30,7 @@ ListItem(value?: ListItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemOptions](arkts-arkui-listitemoptions-i.md) | 否 |  |
+| value | [ListItemOptions](arkts-arkui-listitem-comp-listitemoptions-i.md) | 否 |  |
 
 ## ListItem
 
@@ -50,6 +50,8 @@ ListItem(value?: string)
 
 **替代接口：** listItem/ListItemInterface
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -66,20 +68,20 @@ ListItem(value?: string)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ListItemOptions](arkts-arkui-listitemoptions-i.md) | ListItem组件参数。 |
-| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md) | SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。 |
-| [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | start和end对应的@builder函数中顶层必须是单个组件（如果顶层是if/else、ForEach等渲染控制语句，则必须保证其仅能生成单个组件），否则会引发未定义行为。 |
+| [ListItemOptions](arkts-arkui-listitem-comp-listitemoptions-i.md) | ListItem组件参数。 |
+| [SwipeActionItem](arkts-arkui-listitem-comp-swipeactionitem-i.md) | SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-listitem-comp-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。 |
+| [SwipeActionOptions](arkts-arkui-listitem-comp-swipeactionoptions-i.md) | start和end对应的@builder函数中顶层必须是单个组件（如果顶层是if/else、ForEach等渲染控制语句，则必须保证其仅能生成单个组件），否则会引发未定义行为。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [EditMode](arkts-arkui-editmode-e.md) | ListItem元素编辑模式枚举。 |
-| [ListItemStyle](arkts-arkui-listitemstyle-e.md) | ListItem组件卡片样式枚举。 |
-| [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | ListItem划出菜单的展开方向。 |
-| [Sticky](arkts-arkui-sticky-e.md) | ListItem吸顶效果枚举。 |
-| [SwipeActionState](arkts-arkui-swipeactionstate-e.md) | 列表项滑动状态枚举。 |
-| [SwipeEdgeEffect](arkts-arkui-swipeedgeeffect-e.md) | 滑动效果枚举。 |
+| [EditMode](arkts-arkui-listitem-comp-editmode-e.md) | ListItem元素编辑模式枚举。 |
+| [ListItemStyle](arkts-arkui-listitem-comp-listitemstyle-e.md) | ListItem组件卡片样式枚举。 |
+| [ListItemSwipeActionDirection](arkts-arkui-listitem-comp-listitemswipeactiondirection-e.md) | ListItem划出菜单的展开方向。 |
+| [Sticky](arkts-arkui-listitem-comp-sticky-e.md) | ListItem吸顶效果枚举。 |
+| [SwipeActionState](arkts-arkui-listitem-comp-swipeactionstate-e.md) | 列表项滑动状态枚举。 |
+| [SwipeEdgeEffect](arkts-arkui-listitem-comp-swipeedgeeffect-e.md) | 滑动效果枚举。 |
 
 ## 示例
 
@@ -118,5 +120,5 @@ ListItem(value?: string)
 ```TypeScript
 ### 示例5（通过ListItemSwipeActionManager管理划出菜单）
 
-从API version 21开始，该示例通过[ListItemSwipeActionManager](arkts-arkui-listitemswipeactionmanager-c.md)管理ListItem的划出菜单。
+从API version 21开始，该示例通过[ListItemSwipeActionManager](arkts-arkui-listitem-comp-listitemswipeactionmanager-c.md)管理ListItem的划出菜单。
 ```

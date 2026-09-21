@@ -60,15 +60,6 @@ statistics.getUidTxBytes(uid, (error: BusinessError, stats: number) => {
 });
 ```
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let uid = 123456789;  // uid示例，请传入正确的uid
-statistics.getUidTxBytes(uid).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
-
 
 <a id="getuidtxbytes-1"></a>
 
@@ -117,4 +108,11 @@ function getUidTxBytes(uid: number): Promise<number>
 
 **示例**
 
-参见 [getUidTxBytes](#getuidtxbytes)
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let uid = 123456789;  // uid示例，请传入正确的uid
+statistics.getUidTxBytes(uid).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```

@@ -4,7 +4,7 @@
 declare interface TextDataDetectorConfig
 ```
 
-该配置只支持Text组件和RichEditor组件。
+该配置只支持[Text](../arkts-components/arkts-arkui-text-comp.md#text)组件和[RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor)组件。
 
 **起始版本：** 11
 
@@ -94,7 +94,7 @@ onDetectResultUpdate?: Callback<string>
 
 默认值：undefined，不触发回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 11
 

@@ -46,18 +46,6 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // Obtain the fil
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
-  if (err) {
-    console.error(`Failed to get DLP supported file types. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('fileTypes', JSON.stringify(fileTypes));
-  }
-}); // Obtain the file types that support DLP.
-```
-
 
 <a id="getdlpsupportedfiletypes-1"></a>
 
@@ -92,4 +80,14 @@ This API is used to obtain the types of files that can be used to generate DLP f
 
 **Examples**
 
-See [getDLPSupportedFileTypes](#getdlpsupportedfiletypes)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
+  if (err) {
+    console.error(`Failed to get DLP supported file types. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('fileTypes', JSON.stringify(fileTypes));
+  }
+}); // Obtain the file types that support DLP.
+```

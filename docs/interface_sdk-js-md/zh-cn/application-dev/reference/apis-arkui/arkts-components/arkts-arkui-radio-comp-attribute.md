@@ -28,6 +28,8 @@ checked(value: boolean)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -66,7 +68,7 @@ checked(isChecked: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 单选框的选中状态。<br>当isChecked的值为undefined时取默认值false。<br>值为true时，单选框被选中。值为false时，单选框不被选中。 |
+| isChecked | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | 是 | 单选框的选中状态。<br>当isChecked的值为undefined时取默认值false。<br>值为true时，单选框被选中。值为false时，单选框不被选中。 |
 
 ## contentModifier
 
@@ -88,7 +90,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | 是 | 在Radio组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md)&gt; | 是 | 在Radio组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 <a id="contentmodifier-1"></a>
 
@@ -112,7 +114,7 @@ contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | 是 | 在Radio组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。<br>当modifier的值为undefined时，不使用内容修改器。 |
+| modifier | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md)&gt;&gt; | 是 | 在Radio组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。<br>当modifier的值为undefined时，不使用内容修改器。 |
 
 ## onChange
 
@@ -123,6 +125,8 @@ onChange(callback: (isChecked: boolean) => void)
 单选框选中状态改变时触发的回调。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -160,7 +164,7 @@ onChange(callback: Optional<OnRadioChangeCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | 是 | 单选框选中状态改变时触发该回调。<br>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md)&gt; | 是 | 单选框选中状态改变时触发该回调。<br>当callback的值为undefined时，不使用回调函数。 |
 
 ## radioStyle
 
@@ -184,4 +188,4 @@ radioStyle(value?: RadioStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。<br> 未设置时，则按照RadioStyle中各参数的默认值配置。 |
+| value | [RadioStyle](arkts-arkui-radio-comp-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。<br> 未设置时，则按照RadioStyle中各参数的默认值配置。 |

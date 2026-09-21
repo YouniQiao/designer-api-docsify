@@ -53,19 +53,6 @@ quickFixManager.revokeQuickFix(bundleName, (err) => {
 });
 ```
 
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName).then(() => {
-  console.info(`revokeQuickFix ${bundleName} success.`);
-}).catch((err: BusinessError) => {
-  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
-
 
 <a id="revokequickfix-1"></a>
 
@@ -109,4 +96,15 @@ Revokes quick fix. This API uses a promise to return the result.
 
 **Examples**
 
-See [revokeQuickFix](#revokequickfix)
+```TypeScript
+import { quickFixManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.example.myapplication';
+
+quickFixManager.revokeQuickFix(bundleName).then(() => {
+  console.info(`revokeQuickFix ${bundleName} success.`);
+}).catch((err: BusinessError) => {
+  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```

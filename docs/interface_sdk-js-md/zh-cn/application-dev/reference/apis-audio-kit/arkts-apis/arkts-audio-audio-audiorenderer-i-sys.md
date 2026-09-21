@@ -130,18 +130,3 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
   console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetParams: audio.AudioRendererTargetParams = {
-  uid: 20010041, // 应用ID。
-  streamId: 100001 // 音频流ID。
-}
-
-audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE, targetParams).then(() => {
-  console.info('Succeeded in setting target.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
-});
-```

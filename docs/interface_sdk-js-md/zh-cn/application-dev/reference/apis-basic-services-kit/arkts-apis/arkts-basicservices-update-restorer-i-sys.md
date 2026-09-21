@@ -179,23 +179,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 执行恢复出厂设置
-  factoryRestorer.factoryReset().then(() => {
-    console.info(`factoryReset success`);
-  }).catch((resetError: BusinessError) => {
-    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get factoryRestorer: ${error}`);
-}
-```
-
 <a id="factoryreset-1"></a>
 
 ## factoryReset
@@ -244,7 +227,22 @@ factoryReset(): Promise<void>
 
 **示例**
 
-参见 [factoryReset](#factoryreset)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 获取恢复出厂设置对象
+  let factoryRestorer = update.getRestorer();
+  // 执行恢复出厂设置
+  factoryRestorer.factoryReset().then(() => {
+    console.info(`factoryReset success`);
+  }).catch((resetError: BusinessError) => {
+    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get factoryRestorer: ${error}`);
+}
+```
 
 ## forceFactoryReset
 

@@ -50,23 +50,6 @@ try {
 }
 ```
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
-try {
-  geoLocationManager.sendCommand(requestInfo).then(() => {
-    console.info('promise, sendCommand success');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, sendCommand: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 <a id="sendcommand-1"></a>
 
@@ -104,4 +87,19 @@ Send extended commands to location subsystem.
 
 **Examples**
 
-See [sendCommand](#sendcommand)
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
+try {
+  geoLocationManager.sendCommand(requestInfo).then(() => {
+    console.info('promise, sendCommand success');
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, sendCommand: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```

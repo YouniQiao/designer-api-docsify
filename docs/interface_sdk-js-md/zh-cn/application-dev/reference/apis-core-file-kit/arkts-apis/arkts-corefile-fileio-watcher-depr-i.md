@@ -53,16 +53,6 @@ watcher.stop().then(() => {
 });
 ```
 
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-watcher.stop(() => {
-  console.info("close watcher succeed");
-})
-```
-
 <a id="stop-1"></a>
 
 ## stop
@@ -89,4 +79,12 @@ stop(callback: AsyncCallback<void>): void
 
 **示例**
 
-参见 [stop](#stop)
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+watcher.stop(() => {
+  console.info("close watcher succeed");
+})
+```

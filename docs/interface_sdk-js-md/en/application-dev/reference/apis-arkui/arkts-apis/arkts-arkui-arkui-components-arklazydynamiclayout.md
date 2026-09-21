@@ -33,7 +33,7 @@ import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
 
 A custom lazy-loading list layout is implemented through the [List](ts-container-list.md) and LazyDynamicLayout components, and the index is called back through onVisibleIndexesChange when the visible area changes.
 
-LazyListLayout implements a custom lazy loading list layout algorithm. In the layout algorithm, the setAdjustedOffset API is used to ensure that the position of the first child component in the visible area remains unchanged when the spacing between child components changes.
+LazyListLayout implements a custom lazy loading list layout algorithm. In the layout algorithm, the [setAdjustedOffset](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md#setadjustedoffset) API is used to ensure that the position of the first child component in the visible area remains unchanged when the spacing between child components changes.
 
 MyDataSource implements the [LazyForEach](ts-rendering-control-lazyforeach.md) data source API [IDataSource](ts-rendering-control-lazyforeach.md#idatasource), which is used to provide child components to LazyDynamicLayout through LazyForEach.
 

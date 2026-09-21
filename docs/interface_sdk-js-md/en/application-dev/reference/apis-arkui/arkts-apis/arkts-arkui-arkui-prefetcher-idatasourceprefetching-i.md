@@ -4,9 +4,9 @@
 export interface IDataSourcePrefetching extends IDataSource
 ```
 
-Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to provide a data source that can be prefetched.
+Extends the [IDataSource](../arkts-components/arkts-arkui-lazyforeach-comp-idatasource-i.md) API to provide a data source that can be prefetched.
 
-**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)
+**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-lazyforeach-comp-idatasource-i.md)
 
 **Since:** 12
 

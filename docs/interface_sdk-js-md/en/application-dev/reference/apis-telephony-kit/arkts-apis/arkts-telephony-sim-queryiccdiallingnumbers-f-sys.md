@@ -55,17 +55,6 @@ sim.queryIccDiallingNumbers(0, 1, (err: BusinessError, data: Array<sim.DiallingN
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.queryIccDiallingNumbers(0, 1).then((data:  Array<sim.DiallingNumbersInfo>) => {
-    console.info(`queryIccDiallingNumbers success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`queryIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 <a id="queryiccdiallingnumbers-1"></a>
 
@@ -114,4 +103,13 @@ Query dialing number information on SIM card.
 
 **Examples**
 
-See [queryIccDiallingNumbers](#queryiccdiallingnumbers)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.queryIccDiallingNumbers(0, 1).then((data:  Array<sim.DiallingNumbersInfo>) => {
+    console.info(`queryIccDiallingNumbers success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`queryIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
+});
+```

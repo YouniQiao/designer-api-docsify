@@ -34,7 +34,7 @@ Creates an attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-comp-attribute.md)&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
+| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-comp-attribute.md)&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
 
 ## effectStrategy
 
@@ -62,7 +62,7 @@ Sets the symbol effect of the symbol span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Symbol effect of the symbol span.<br>Default value: **SymbolEffectStrategy.NONE** |
+| value | [SymbolEffectStrategy](arkts-arkui-symbolglyph-comp-symboleffectstrategy-e.md) | Yes | Symbol effect of the symbol span.<br>Default value: **SymbolEffectStrategy.NONE** |
 
 ## fontColor
 
@@ -203,4 +203,4 @@ Sets the rendering strategy of the symbol span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the symbol span.<br>Default value: **SymbolRenderingStrategy.SINGLE** |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md) | Yes | Rendering strategy of the symbol span.<br>Default value: **SymbolRenderingStrategy.SINGLE** |

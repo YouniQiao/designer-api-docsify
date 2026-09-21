@@ -28,6 +28,8 @@ Called when the execution is completed.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## fail
@@ -41,6 +43,8 @@ Called when the device information fails to be obtained.
 **Since:** 3
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -62,6 +66,8 @@ Called when the device information is obtained.
 **Since:** 3
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 

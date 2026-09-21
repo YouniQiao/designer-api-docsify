@@ -116,7 +116,7 @@ options: SelectOption[]
 
 Sets the options of the SubHeaderV2SelectOptions.
 
-**Type:** [SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)[]
+**Type:** [SelectOption](../arkts-components/arkts-arkui-select-comp-selectoption-i.md)[]
 
 **Since:** 18
 

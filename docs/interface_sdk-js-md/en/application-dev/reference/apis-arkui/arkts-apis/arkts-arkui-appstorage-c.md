@@ -26,6 +26,8 @@ For details about the subscriber, see [delete](#delete).
 
 **Substitutes:** [clear](#clear)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -87,6 +89,8 @@ Subscribers include properties bound using [Link](#link) and [Prop](#prop) APIs,
 **Deprecated since:** 10
 
 **Substitutes:** [delete](#delete)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -182,6 +186,8 @@ Obtains the value of the property corresponding to **propName** from [AppStorage
 
 **Substitutes:** [get](#get)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -250,6 +256,8 @@ Checks whether the property corresponding to **propName** exists in [AppStorage]
 
 **Substitutes:** [has](#has)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -314,6 +322,8 @@ Checks whether the property corresponding to **propName** in [AppStorage](../../
 
 **Deprecated since:** 10
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -348,6 +358,8 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 **Deprecated since:** 10
 
 **Substitutes:** [keys](#keys)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -408,6 +420,8 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 **Deprecated since:** 10
 
 **Substitutes:** [link](#link)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -488,6 +502,8 @@ Establishes a one-way data binding with the property corresponding to **propName
 **Deprecated since:** 10
 
 **Substitutes:** [prop](#prop)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -598,6 +614,8 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 
 **Substitutes:** [set](#set)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -679,6 +697,8 @@ Similar to the [Link](#link) API, establishes a two-way data binding with the pr
 
 **Substitutes:** [setAndLink](#setandlink)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -759,6 +779,8 @@ Similar to the [Prop](#prop) API, establishes a one-way data binding with the pr
 **Deprecated since:** 10
 
 **Substitutes:** [setAndProp](#setandprop)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -887,6 +909,8 @@ The value of **newValue** cannot be **null** or **undefined**.
 
 **Substitutes:** [setOrCreate](#setorcreate)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -954,6 +978,8 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 
 **Substitutes:** [size](#size)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -1009,6 +1035,8 @@ Deletes all properties.
 **Deprecated since:** 9
 
 **Substitutes:** [Clear](#clear)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

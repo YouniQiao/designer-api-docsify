@@ -172,40 +172,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// commRemote为onConnect回调内返回的remote对象，此处定义为null无任何实际意义，仅作示例
-let commRemote: rpc.IRemoteObject | null = null;
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onFormEvent(formId: string, message: string) {
-    // 实际使用时，connection为connectServiceExtensionAbility中的返回值，此处定义为1无任何实际意义，仅作示例
-    let connection: number = 1;
-
-    try {
-      this.context.disconnectServiceExtensionAbility(connection)
-        .then(() => {
-          commRemote = null;
-          // 执行正常业务
-          console.info('disconnectServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          commRemote = null;
-          // 处理业务逻辑错误
-          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      commRemote = null;
-      // 处理入参错误异常
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-};
-```
-
 <a id="disconnectserviceextensionability-1"></a>
 
 ## disconnectServiceExtensionAbility
@@ -246,7 +212,39 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 **示例**
 
-参见 [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// commRemote为onConnect回调内返回的remote对象，此处定义为null无任何实际意义，仅作示例
+let commRemote: rpc.IRemoteObject | null = null;
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onFormEvent(formId: string, message: string) {
+    // 实际使用时，connection为connectServiceExtensionAbility中的返回值，此处定义为1无任何实际意义，仅作示例
+    let connection: number = 1;
+
+    try {
+      this.context.disconnectServiceExtensionAbility(connection)
+        .then(() => {
+          commRemote = null;
+          // 执行正常业务
+          console.info('disconnectServiceExtensionAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          commRemote = null;
+          // 处理业务逻辑错误
+          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      commRemote = null;
+      // 处理入参错误异常
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+};
+```
 
 ## startAbility
 
@@ -312,32 +310,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onFormEvent(formId: string, message: string) {
-    // 当触发卡片message事件时，执行startAbility
-    console.info(`FormExtensionAbility onFormEvent, formId:${formId}, message:${message}`);
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.formstartability',
-      abilityName: 'EntryAbility',
-      parameters: {
-        'message': message
-      }
-    };
-    this.context.startAbility(want).then(() => {
-      console.info('StartAbility Success');
-    }).catch((error: BusinessError) => {
-      console.error(`StartAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-};
-```
-
 <a id="startability-1"></a>
 
 ## startAbility
@@ -381,4 +353,28 @@ startAbility(want: Want): Promise<void>
 
 **示例**
 
-参见 [startAbility](#startability)
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onFormEvent(formId: string, message: string) {
+    // 当触发卡片message事件时，执行startAbility
+    console.info(`FormExtensionAbility onFormEvent, formId:${formId}, message:${message}`);
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.formstartability',
+      abilityName: 'EntryAbility',
+      parameters: {
+        'message': message
+      }
+    };
+    this.context.startAbility(want).then(() => {
+      console.info('StartAbility Success');
+    }).catch((error: BusinessError) => {
+      console.error(`StartAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  }
+};
+```

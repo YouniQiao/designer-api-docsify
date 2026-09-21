@@ -66,7 +66,7 @@ targetBuilder: CustomBuilder
 
 跟手弹出框基于的目标组件。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
 **起始版本：** 18
 

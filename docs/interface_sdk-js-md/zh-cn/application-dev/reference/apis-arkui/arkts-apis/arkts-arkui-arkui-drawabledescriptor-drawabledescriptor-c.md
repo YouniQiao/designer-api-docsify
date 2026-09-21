@@ -36,7 +36,7 @@ getPixelMap(): image.PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | [PixelMap](../arkts-components/arkts-arkui-common-comp-pixelmap-t.md) |
 
 **错误码：**
 

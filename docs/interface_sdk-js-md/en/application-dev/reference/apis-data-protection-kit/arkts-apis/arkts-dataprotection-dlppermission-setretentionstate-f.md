@@ -55,25 +55,6 @@ dlpPermission.isInSandbox().then(async (inSandbox) => {
 }); // Whether the application is running in a sandbox.
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
-  if (inSandbox) {
-    dlpPermission.setRetentionState([uri], (err) => {
-      if (err) {
-        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('setRetentionState success');
-      }
-    }); // Set the sandbox retention state.
-  }
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 <a id="setretentionstate-1"></a>
 
@@ -108,4 +89,21 @@ Sets the retention state for sandbox applications. By default, when a DLP file i
 
 **Examples**
 
-See [setRetentionState](#setretentionstate)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
+  if (inSandbox) {
+    dlpPermission.setRetentionState([uri], (err) => {
+      if (err) {
+        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('setRetentionState success');
+      }
+    }); // Set the sandbox retention state.
+  }
+}).catch((error: BusinessError)=> {
+  console.error(JSON.stringify(error));
+});
+```

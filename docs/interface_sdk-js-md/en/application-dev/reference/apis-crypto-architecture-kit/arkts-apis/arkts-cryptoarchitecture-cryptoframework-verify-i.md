@@ -445,7 +445,15 @@ Sets the specified parameter for the Verify instance.
 
 **Examples**
 
-See [setVerifySpec](#setverifyspec)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify('RSA2048|PSS|SHA256|MGF1_SHA256');
+  let setN = 20;
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
+}
+```
 
 <a id="setverifyspec-2"></a>
 
@@ -489,7 +497,14 @@ Sets the specified parameter for the Verify instance.
 
 **Examples**
 
-See [setVerifySpec](#setverifyspec)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetVerifySpec() {
+  let verifier = cryptoFramework.createVerify('ML-DSA');
+  verifier.setVerifySpec(cryptoFramework.SignSpecItem.ML_DSA_MU_BOOL, false);
+}
+```
 
 ## update
 

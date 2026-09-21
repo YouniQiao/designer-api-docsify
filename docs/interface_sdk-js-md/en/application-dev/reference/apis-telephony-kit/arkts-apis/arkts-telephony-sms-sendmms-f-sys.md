@@ -98,4 +98,10 @@ Sends an MMS message. This API uses a promise to return the result.
 
 **Examples**
 
-See [sendMms](#sendmms)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

@@ -748,7 +748,7 @@ Removes an element at the specified position from this LightWeightMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -869,7 +869,7 @@ Sets a value for an element at the specified position in this LightWeightMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 | newValue | V | Yes | Value of the target element to set. |
 
 **Return value:**

@@ -186,7 +186,9 @@ Obtains the information about a specific device based on the network ID. This AP
 
 **Examples**
 
-See [getDeviceInfo](#getdeviceinfo)
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## getLocalDeviceInfo
 
@@ -263,7 +265,9 @@ Obtains local device information. This API uses a promise to return the result.
 
 **Examples**
 
-See [getLocalDeviceInfo](#getlocaldeviceinfo)
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## getLocalDeviceInfoSync
 
@@ -380,7 +384,9 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Examples**
 
-See [getTrustedDeviceList](#gettrusteddevicelist)
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## getTrustedDeviceListSync
 
@@ -465,7 +471,9 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 
 **Examples**
 
-See [getTrustedDeviceListSync](#gettrusteddevicelistsync)
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## importCredential
 
@@ -539,6 +547,12 @@ Unsubscribes from UI status changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## off('deviceStateChange')
 
 ```TypeScript
@@ -572,6 +586,12 @@ Unsubscribes from changes in the device state.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## off('deviceFound')
 
@@ -607,6 +627,12 @@ Unsubscribes from device discovery events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## off('discoverFail')
 
 ```TypeScript
@@ -641,6 +667,12 @@ Unsubscribes from device discovery failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## off('publishSuccess')
 
 ```TypeScript
@@ -673,6 +705,12 @@ Unsubscribes from device information publication success events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## off('publishFail')
 
 ```TypeScript
@@ -704,6 +742,12 @@ Unsubscribes from device information publication failures.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## off('serviceDie')
 
@@ -739,6 +783,12 @@ Unsubscribes from dead events of the **DeviceManager** service.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## on('uiStateChange')
 
 ```TypeScript
@@ -772,6 +822,12 @@ Subscribes to UI status changes.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## on('deviceStateChange')
 
@@ -807,6 +863,12 @@ Subscribes to changes in the device state.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## on('deviceFound')
 
 ```TypeScript
@@ -840,6 +902,12 @@ Subscribes to device discovery events.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## on('discoverFail')
 
@@ -875,6 +943,12 @@ Subscribes to device discovery failures.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## on('publishSuccess')
 
 ```TypeScript
@@ -907,6 +981,12 @@ Subscribes to device information publication success events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
+
 ## on('publishFail')
 
 ```TypeScript
@@ -938,6 +1018,12 @@ Subscribes to device information publication failures.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## on('serviceDie')
 
@@ -972,6 +1058,12 @@ Subscribes to dead events of the **DeviceManager** service.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## publishDeviceDiscovery
 
@@ -1209,7 +1301,9 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Examples**
 
-See [startDeviceDiscovery](#startdevicediscovery)
+```TypeScript
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+```
 
 ## stopDeviceDiscovery
 

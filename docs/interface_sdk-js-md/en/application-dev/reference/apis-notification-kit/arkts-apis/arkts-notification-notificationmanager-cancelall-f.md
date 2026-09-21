@@ -57,16 +57,6 @@ let cancelAllCallback = (err: BusinessError): void => {
 notificationManager.cancelAll(cancelAllCallback);
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancelAll().then(() => {
-  console.info(`Succeeded in canceling all notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 <a id="cancelall-1"></a>
 
@@ -106,4 +96,12 @@ After cancellation, all notifications of the current application will be removed
 
 **Examples**
 
-See [cancelAll](#cancelall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancelAll().then(() => {
+  console.info(`Succeeded in canceling all notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
+});
+```

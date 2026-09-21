@@ -34,12 +34,6 @@ Checks whether a contact is included in my card. This API uses an asynchronous c
 **Examples**
 
 ```TypeScript
-> NOTE
-> 
-> In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -49,22 +43,6 @@ contact.isMyCard(1, (err: BusinessError, data) => {
     console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Check whether the contact with ID 1 is "my card".
-let promise = contact.isMyCard(1);
-promise.then((data) => {
   console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
 });
 ```
@@ -103,7 +81,11 @@ Checks whether a contact is included in my card. This API uses an asynchronous c
 
 **Examples**
 
-See [isMyCard](#ismycard)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="ismycard-2"></a>
@@ -140,7 +122,15 @@ Checks whether a contact is included in my card. This API uses a promise to retu
 
 **Examples**
 
-See [isMyCard](#ismycard)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Check whether the contact with ID 1 is "my card".
+let promise = contact.isMyCard(1);
+promise.then((data) => {
+  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="ismycard-3"></a>
@@ -181,4 +171,8 @@ Checks whether a contact is included in my card. This API uses a promise to retu
 
 **Examples**
 
-See [isMyCard](#ismycard)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```

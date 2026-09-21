@@ -10,7 +10,7 @@ If Internet access is required, you must apply for the **ohos.permission.INTERNE
 
 ## Child Components
 
-This component can contain the Image child component.
+This component can contain the [Image](arkts-arkui-image-comp.md#image) child component.
 
 ## Hyperlink
 

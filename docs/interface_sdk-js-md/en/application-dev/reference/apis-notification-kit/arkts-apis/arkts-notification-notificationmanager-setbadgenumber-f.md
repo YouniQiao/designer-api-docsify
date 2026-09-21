@@ -22,9 +22,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **System capability:** SystemCapability.Notification.Notification
 
-**See also:**
-
-[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of active notifications of this application.
+**See also:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of active notifications of this application.
 
 **Parameters:**
 
@@ -45,17 +43,6 @@ This API can be properly called on devices other than wearables. If it is called
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badgeNumber: number = 10;
-notificationManager.setBadgeNumber(badgeNumber).then(() => {
-  console.info(`Succeeded in setting badge number.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,9 +77,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **System capability:** SystemCapability.Notification.Notification
 
-**See also:**
-
-[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of active notifications of this application.
+**See also:** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of active notifications of this application.
 
 **Parameters:**
 
@@ -119,4 +104,13 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Examples**
 
-See [setBadgeNumber](#setbadgenumber)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let badgeNumber: number = 10;
+notificationManager.setBadgeNumber(badgeNumber).then(() => {
+  console.info(`Succeeded in setting badge number.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
+});
+```

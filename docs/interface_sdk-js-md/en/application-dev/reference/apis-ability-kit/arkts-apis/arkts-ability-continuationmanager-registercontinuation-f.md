@@ -61,48 +61,6 @@ try {
 }
 ```
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    },
-    (err, data) => {
-      if (err.code != 0) {
-        console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    }).then((data) => {
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-    }).catch((err: BusinessError) => {
-      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 <a id="registercontinuation-1"></a>
 
@@ -144,7 +102,27 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Examples**
 
-See [registerContinuation](#registercontinuation)
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+try {
+  continuationManager.registerContinuation(
+    {
+      deviceType: ["00E"]
+    },
+    (err, data) => {
+      if (err.code != 0) {
+        console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('registerContinuation finished, ' + JSON.stringify(data));
+      token = data;
+  });
+} catch (err) {
+  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
+}
+```
 
 
 <a id="registercontinuation-2"></a>
@@ -192,4 +170,22 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Examples**
 
-See [registerContinuation](#registercontinuation)
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+try {
+  continuationManager.registerContinuation(
+    {
+      deviceType: ["00E"]
+    }).then((data) => {
+      console.info('registerContinuation finished, ' + JSON.stringify(data));
+      token = data;
+    }).catch((err: BusinessError) => {
+      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
+}
+```

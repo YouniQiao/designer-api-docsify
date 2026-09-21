@@ -4,7 +4,7 @@
 export declare class NavPushPathHelper
 ```
 
-On the initial launch, the atomic service only downloads and installs the main package and its dependencies. Therefore, if the NavDestination resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable Navigation to support dynamic loading of the HSP subpackage before the navigation occurs.
+On the initial launch, the atomic service only downloads and installs the main package and its dependencies. Therefore, if the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation) to support dynamic loading of the HSP subpackage before the navigation occurs.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create a **NavPushPathHelper** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes | Navigation stack. |
+| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navigation-comp-navpathstack-c.md) | Yes | [Navigation](../arkts-components/arkts-arkui-navigation-comp.md#navigation) stack. |
 
 ## pushDestination
 
@@ -42,7 +42,7 @@ A constructor used to create a **NavPushPathHelper** object.
 pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -54,8 +54,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -82,7 +82,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
@@ -96,9 +96,9 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigation-comp-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -122,7 +122,7 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -134,9 +134,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | Yes | Settings of the NavDestination page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -164,7 +164,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -176,10 +176,10 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | Yes | Settings of the NavDestination page. |
-| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -204,7 +204,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -216,8 +216,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -240,7 +240,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
@@ -254,9 +254,9 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the NavDestination page. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigation-comp-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -276,7 +276,7 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -288,9 +288,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | Yes | Settings of the NavDestination page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -314,7 +314,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -326,10 +326,10 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | Yes | Settings of the NavDestination page. |
-| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to receive the result. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to receive the result. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -350,7 +350,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the NavDestination page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -362,8 +362,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -400,9 +400,9 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigation-comp-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -434,9 +434,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
-| name | string | Yes | Name of the NavDestination page. |
-| param | Object | Yes | Settings of the NavDestination page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**

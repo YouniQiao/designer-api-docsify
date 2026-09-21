@@ -4,9 +4,9 @@
 declare class SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 ```
 
-不支持[通用属性](arkts-arkui-commonmethod-c.md)，支持以下属性。
+不支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)，支持以下属性。
 
-不支持[通用事件](arkts-arkui-commonmethod-c.md)。
+不支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
 
 **继承/实现关系：** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
@@ -34,7 +34,7 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-comp-attribute.md)&gt; | 是 | 动态设置组件的属性。 |
+| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-comp-attribute.md)&gt; | 是 | 动态设置组件的属性。 |
 
 ## effectStrategy
 
@@ -66,7 +66,7 @@ NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。 |
+| value | [SymbolEffectStrategy](arkts-arkui-symbolglyph-comp-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。 |
 
 ## fontColor
 
@@ -74,7 +74,7 @@ NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动�
 fontColor(value: Array<ResourceColor>)
 ```
 
-设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。
+设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](#renderingstrategy)变化，单色渲染策略（SINGLE）下默认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md)。
 
 > **说明：** 
 > 
@@ -94,7 +94,7 @@ fontColor(value: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | SymbolSpan组件颜色。具体颜色渲染模式及其说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。 |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 | SymbolSpan组件颜色。具体颜色渲染模式及其说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md)。 |
 
 ## fontSize
 
@@ -211,4 +211,4 @@ SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MU
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。 |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。 |

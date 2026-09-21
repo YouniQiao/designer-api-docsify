@@ -36,7 +36,7 @@ SideBarContainer(type?: SideBarContainerType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。<br>默认值：SideBarContainerType.Embed |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainer-comp-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。<br>默认值：SideBarContainerType.Embed |
 
 ## 汇总
 
@@ -44,16 +44,16 @@ SideBarContainer(type?: SideBarContainerType)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | 设置侧边栏控制按钮的图标。 |
-| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 设置侧边栏控制按钮的样式。 |
-| [DividerStyle](arkts-arkui-dividerstyle-i.md) | 设置分割线的样式。 |
+| [ButtonIconOptions](arkts-arkui-sidebarcontainer-comp-buttoniconoptions-i.md) | 设置侧边栏控制按钮的图标。 |
+| [ButtonStyle](arkts-arkui-sidebarcontainer-comp-buttonstyle-i.md) | 设置侧边栏控制按钮的样式。 |
+| [DividerStyle](arkts-arkui-sidebarcontainer-comp-dividerstyle-i.md) | 设置分割线的样式。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 容器内侧边栏样式枚举。 |
-| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 侧边栏显示位置。 |
+| [SideBarContainerType](arkts-arkui-sidebarcontainer-comp-sidebarcontainertype-e.md) | 容器内侧边栏样式枚举。 |
+| [SideBarPosition](arkts-arkui-sidebarcontainer-comp-sidebarposition-e.md) | 侧边栏显示位置。 |
 
 ## 示例
 

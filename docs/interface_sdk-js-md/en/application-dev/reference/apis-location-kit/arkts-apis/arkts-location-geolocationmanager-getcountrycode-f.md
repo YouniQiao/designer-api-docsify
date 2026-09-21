@@ -52,23 +52,6 @@ try {
 }
 ```
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.getCountryCode()
-    .then((result) => {
-      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
-    })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 <a id="getcountrycode-1"></a>
 
@@ -100,4 +83,19 @@ Obtain the current country code.
 
 **Examples**
 
-See [getCountryCode](#getcountrycode)
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.getCountryCode()
+    .then((result) => {
+      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
+    })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```

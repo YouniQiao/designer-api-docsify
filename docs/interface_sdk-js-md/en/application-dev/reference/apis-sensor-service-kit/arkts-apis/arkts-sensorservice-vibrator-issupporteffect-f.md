@@ -75,42 +75,6 @@ try {
 }
 ```
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Check whether 'haptic.notice.success' is supported.
-  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
-    console.info(`The query result is ${state}`);
-    if (state) {
-      try {
-        vibrator.startVibration({
-          type: 'preset',
-          effectId: 'haptic.notice.success',
-          count: 1,
-        }, {
-          usage: 'unknown' // The switch control is subject to the selected type.
-        }).then(() => {
-          console.info('Succeed in starting vibration');
-        }).catch((error: BusinessError) => {
-          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-        });
-      } catch (error) {
-        let e: BusinessError = error as BusinessError;
-        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-      }
-    }
-  }, (error: BusinessError) => {
-    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 <a id="issupporteffect-1"></a>
 
@@ -147,4 +111,38 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 **Examples**
 
-See [isSupportEffect](#issupporteffect)
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  // Check whether 'haptic.notice.success' is supported.
+  vibrator.isSupportEffect('haptic.notice.success').then((state: boolean) => {
+    console.info(`The query result is ${state}`);
+    if (state) {
+      try {
+        vibrator.startVibration({
+          type: 'preset',
+          effectId: 'haptic.notice.success',
+          count: 1,
+        }, {
+          usage: 'unknown' // The switch control is subject to the selected type.
+        }).then(() => {
+          console.info('Succeed in starting vibration');
+        }).catch((error: BusinessError) => {
+          console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
+        });
+      } catch (error) {
+        let e: BusinessError = error as BusinessError;
+        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+      }
+    }
+  }, (error: BusinessError) => {
+    console.error(`Failed to query effect. Code: ${error.code}, message: ${error.message}`);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

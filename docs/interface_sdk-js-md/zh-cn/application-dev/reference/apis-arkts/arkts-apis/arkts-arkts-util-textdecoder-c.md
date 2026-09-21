@@ -39,10 +39,6 @@ console.info('retStr = ' + retStr);
 // 输出结果：retStr = utf-8
 ```
 
-```TypeScript
-let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -69,13 +65,6 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 | options | { fatal?: boolean; ignoreBOM?: boolean } | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。此参数不填时，对应各属性取其默认值 **false**。 |
 
 **示例**
-
-```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});

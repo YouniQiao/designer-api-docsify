@@ -16,6 +16,8 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -26,7 +28,7 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
+| value | [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Circle
 
@@ -38,6 +40,8 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -48,7 +52,7 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are treated as invalid values, and this setting does not take effect. |
+| value | [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are treated as invalid values, and this setting does not take effect. |
 
 ## Summary
 
@@ -56,7 +60,7 @@ Creates a circle. After the call, a **Circle** object is created, and its width 
 
 | Name | Description |
 | --- | --- |
-| [CircleOptions](arkts-arkui-circleoptions-i.md) | Describes the drawing attributes of the **Circle** component. |
+| [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | Describes the drawing attributes of the **Circle** component. |
 
 ## Examples
 

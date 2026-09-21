@@ -96,4 +96,14 @@ Starts vibration based on a specified effect and attribute. This API uses a prom
 
 **Examples**
 
-See [startVibration](#startvibration)
+```TypeScript
+Trigger vibration based on a preset effect.
+```
+
+```TypeScript
+Trigger vibration based on a custom vibration configuration file.
+```
+
+```TypeScript
+Trigger vibration based on a specified duration.
+```

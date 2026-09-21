@@ -52,17 +52,6 @@ wallpaper.getImage(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErr
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getImage(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
-  console.info(`success to getImage: ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to getImage. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
 
 <a id="getimage-1"></a>
 
@@ -104,4 +93,13 @@ function getImage(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 **示例**
 
-参见 [getImage](#getimage)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+wallpaper.getImage(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
+  console.info(`success to getImage: ${JSON.stringify(data.getImageInfoSync())}`);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getImage. Code: ${error.code}, Message: ${error.message}`);
+});
+```

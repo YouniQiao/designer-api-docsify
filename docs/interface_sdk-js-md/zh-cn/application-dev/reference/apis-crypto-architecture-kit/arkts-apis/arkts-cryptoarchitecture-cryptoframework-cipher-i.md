@@ -126,10 +126,6 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 ```
 
-```TypeScript
-此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
-```
-
 <a id="dofinal-3"></a>
 
 ## doFinal
@@ -239,10 +235,6 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The data is too long.<br>**适用版本：** 22+ |
 
 **示例**
-
-```TypeScript
-更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
-```
 
 ```TypeScript
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。

@@ -39,7 +39,7 @@ Defines a stack container where child components are successively stacked and th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StackOptions](arkts-arkui-stackoptions-i.md) | No | Alignment of child components in the container. Pass this parameter when child components need to be aligned to a specific position (such as top, bottom, or top-left corner) instead of being centered by default. If this parameter is not passed, the default configuration of **StackOptions** is used, in which **alignContent** defaults to **Alignment.Center**. |
+| options | [StackOptions](arkts-arkui-stack-comp-stackoptions-i.md) | No | Alignment of child components in the container. Pass this parameter when child components need to be aligned to a specific position (such as top, bottom, or top-left corner) instead of being centered by default. If this parameter is not passed, the default configuration of **StackOptions** is used, in which **alignContent** defaults to **Alignment.Center**. |
 
 ## Summary
 
@@ -47,7 +47,7 @@ Defines a stack container where child components are successively stacked and th
 
 | Name | Description |
 | --- | --- |
-| [StackOptions](arkts-arkui-stackoptions-i.md) | Sets the alignment method of the child component in the stack container. |
+| [StackOptions](arkts-arkui-stack-comp-stackoptions-i.md) | Sets the alignment method of the child component in the stack container. |
 
 ## Examples
 

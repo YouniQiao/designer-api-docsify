@@ -76,7 +76,7 @@ controller?: TabsController
 
 Provide methods for switching tabs.
 
-**Type:** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
+**Type:** [TabsController](../arkts-components/arkts-arkui-tabs-comp-tabscontroller-c.md)
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ layoutMode?: LayoutMode
 
 Sets the layout mode of the bottom tab bar
 
-**Type:** [LayoutMode](../arkts-components/arkts-arkui-layoutmode-e.md)
+**Type:** [LayoutMode](../arkts-components/arkts-arkui-tabcontent-comp-layoutmode-e.md)
 
 **Since:** 18
 

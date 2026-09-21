@@ -50,22 +50,6 @@ let uploadConfig: request.UploadConfig = {
   files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
   data: [{ name: "name123", value: "123" }],
 };
-request.upload(uploadConfig).then((data: request.UploadTask) => {
-  uploadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
-  data: [{ name: "name123", value: "123" }],
-};
 request.upload(uploadConfig, (err: BusinessError, data: request.UploadTask) => {
   if (err) {
     console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
@@ -118,4 +102,18 @@ Uploads a file. This API uses a promise to return the result.
 
 **Examples**
 
-See [upload](#upload)
+```TypeScript
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
+  data: [{ name: "name123", value: "123" }],
+};
+request.upload(uploadConfig).then((data: request.UploadTask) => {
+  uploadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+})
+```

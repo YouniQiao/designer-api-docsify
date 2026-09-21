@@ -64,7 +64,7 @@ contentBuilder: CustomBuilder
 
 Sets the CustomContentDialogV2 content.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
 **Since:** 18
 

@@ -56,18 +56,6 @@ let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
 taskGroup.addTask(printArgs, 100); // 100: test number
 ```
 
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-taskGroup.addTask(task);
-```
-
 <a id="addtask-1"></a>
 
 ## addTask
@@ -100,7 +88,17 @@ Adds a created task to this task group. Before using this API, you must create a
 
 **Examples**
 
-See [addTask](#addtask)
+```TypeScript
+@Concurrent
+function printArgs(args: number): number {
+  console.info("printArgs: " + args);
+  return args;
+}
+
+let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
+let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
+taskGroup.addTask(task);
+```
 
 ## constructor
 
@@ -120,12 +118,6 @@ Constructor used to create a **TaskGroup** instance.
 
 ```TypeScript
 let taskGroup = new taskpool.TaskGroup();
-```
-
-```TypeScript
-let taskGroupName: string = "groupName";
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
-let name: string = taskGroup.name;
 ```
 
 <a id="constructor-1"></a>
@@ -151,10 +143,6 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 | name | string | Yes | Task group name. |
 
 **Examples**
-
-```TypeScript
-let taskGroup = new taskpool.TaskGroup();
-```
 
 ```TypeScript
 let taskGroupName: string = "groupName";

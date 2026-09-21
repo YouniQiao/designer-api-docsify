@@ -16,7 +16,7 @@ The type of an AgentCard.
 LOW_CODE = 2
 ```
 
-LOW_CODE agent card.
+Low-code-type agent card, available only for system applications. It is applicable to the intelligent agent capability provided by system applications for rapid building and deployment. It supports creating agents quickly through visual configuration or simple scripts without writing complete code, lowering the barrier for agent development.
 
 **Since:** 26.0.0
 

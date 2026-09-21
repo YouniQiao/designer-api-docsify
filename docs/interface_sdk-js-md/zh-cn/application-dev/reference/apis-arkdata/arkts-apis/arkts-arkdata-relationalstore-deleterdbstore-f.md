@@ -87,7 +87,13 @@ function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCa
 
 **示例**
 
-参见 [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="deleterdbstore-2"></a>
@@ -131,7 +137,13 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 **示例**
 
-参见 [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="deleterdbstore-3"></a>
@@ -178,4 +190,10 @@ function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 
 **示例**
 
-参见 [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

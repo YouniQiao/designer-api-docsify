@@ -51,6 +51,12 @@ Binds the magnifier to the component with the specified ID.
 | --- | --- | --- | --- |
 | id | string | Yes | Component ID, which can be set through the universal attribute id or key. If the component ID is an empty string or no component is found based on the specified ID, the magnifier is not displayed. |
 
+**Examples**
+
+```TypeScript
+This example listens to the onTouch event to control the magnifier to zoom in on an image.
+```
+
 ## show
 
 ```TypeScript
@@ -79,6 +85,12 @@ Sets the position of the component content displayed by the magnifier relative t
 | x | number | Yes | Horizontal coordinate of the component content displayed by the magnifier, relative to the component itself, in vp. If the coordinate value is greater than the component width or less than 0, the magnifier is not displayed. If the value is **undefined**, the current display status of the magnifier is retained. |
 | y | number | Yes | Vertical coordinate of the component content displayed by the magnifier, relative to the component itself, in vp. If the coordinate value is greater than the component height or less than 0, the magnifier is not displayed. If the value is **undefined**, the current display status of the magnifier is retained. |
 
+**Examples**
+
+```TypeScript
+For details, see the [bind](#bind) example.
+```
+
 ## unbind
 
 ```TypeScript
@@ -94,3 +106,9 @@ Unbinds the magnifier from the current component.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+For details, see the [bind](#bind) example.
+```

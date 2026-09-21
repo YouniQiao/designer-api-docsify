@@ -20,7 +20,7 @@ Called when the remote window interface is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md) | Yes |  |
+| target | [WindowAnimationTarget](arkts-arkui-remotewindow-comp-windowanimationtarget-i-sys.md) | Yes |  |
 
 ## Summary
 
@@ -28,8 +28,8 @@ Called when the remote window interface is used.
 
 | Name | Description |
 | --- | --- |
-| [RRect](arkts-arkui-rrect-i-sys.md) | Round rect. |
-| [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md) | Window animation target. |
+| [RRect](arkts-arkui-remotewindow-comp-rrect-i-sys.md) | Round rect. |
+| [WindowAnimationTarget](arkts-arkui-remotewindow-comp-windowanimationtarget-i-sys.md) | Window animation target. |
 
 ## Examples
 

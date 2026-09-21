@@ -48,6 +48,8 @@ CLOSED = 0
 
 **起始版本：** 12
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -61,6 +63,8 @@ OPEN = 1
 表示开启指定权限的弹窗开关。应用调用[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)等接口请求该权限时，会正常弹出权限弹窗。
 
 **起始版本：** 12
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

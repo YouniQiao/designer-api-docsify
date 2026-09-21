@@ -304,7 +304,7 @@ removeService(serviceUuid: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| serviceUuid | string | 是 | 星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-00000000123 4，表示一个128位标识符。 不允许使用星闪标准UUID。 |
+| serviceUuid | string | 是 | 星闪服务UUID，个字符，由32个十六进制数字和4个连字符（-）组成，例如： FFFFFFFF-1234-5678-ABCD-000000001234，表示一个128位标识符。 不允许使用星闪标准UUID。 |
 
 **错误码：**
 

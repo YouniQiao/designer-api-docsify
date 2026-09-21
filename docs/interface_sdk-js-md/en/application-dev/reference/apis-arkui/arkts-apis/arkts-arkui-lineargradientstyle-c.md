@@ -32,7 +32,7 @@ A constructor used to create a **LinearGradientStyle** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-common-comp-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. |
 
 ## options
 
@@ -42,7 +42,7 @@ options: LinearGradientOptions
 
 Options for displaying a linear gradient.
 
-**Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
+**Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-common-comp-lineargradientoptions-i.md)
 
 **Since:** 20
 

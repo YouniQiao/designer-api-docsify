@@ -2,7 +2,7 @@
 
 The **Polyline** component is used to draw a polyline.
 
-> **NOTE** > > This component is supported since API version 7. Updates to new APIs in later versions are marked with a > superscript to indicate their earliest API version. > > This component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class since API version 20.
+> **NOTE** > > This component is supported since API version 7. Updates to new APIs in later versions are marked with a > superscript to indicate their earliest API version. > > This component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class since API version 20.
 
 ## Child Components
 
@@ -18,6 +18,8 @@ Creates a polyline.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -28,7 +30,7 @@ Creates a polyline.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Drawing area of the polyline, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the polyline needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
+| options | [PolylineOptions](arkts-arkui-polyline-comp-polylineoptions-i.md) | No | Drawing area of the polyline, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the polyline needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Polyline
 
@@ -40,6 +42,8 @@ Creates a polyline.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -50,7 +54,7 @@ Creates a polyline.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Drawing area of the **Polyline**, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the **Polyline** needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
+| options | [PolylineOptions](arkts-arkui-polyline-comp-polylineoptions-i.md) | No | Drawing area of the **Polyline**, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the **Polyline** needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Summary
 
@@ -58,7 +62,7 @@ Creates a polyline.
 
 | Name | Description |
 | --- | --- |
-| [PolylineOptions](arkts-arkui-polylineoptions-i.md) | Describes the options of the polyline. |
+| [PolylineOptions](arkts-arkui-polyline-comp-polylineoptions-i.md) | Describes the options of the polyline. |
 
 ## Examples
 

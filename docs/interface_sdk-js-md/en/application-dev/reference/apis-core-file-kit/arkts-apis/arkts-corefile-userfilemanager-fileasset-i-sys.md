@@ -226,7 +226,9 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Examples**
 
-See [favorite](#favorite)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## get
 
@@ -302,7 +304,7 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 | RecommendedExposureIndex | Recommended exposure index.|
 | ApertureValue | Aperture value.|
 | MeteringMode | Metering mode.|
-| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.|
+| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-common-comp-lightsource-i-sys.md) | Light source.|
 | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
 | FocalLength | Focal length.|
 | UserComment | User comments.|
@@ -388,7 +390,7 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 | RecommendedExposureIndex | Recommended exposure index.|
 | ApertureValue | Aperture value.|
 | MeteringMode | Metering mode.|
-| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.|
+| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-common-comp-lightsource-i-sys.md) | Light source.|
 | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
 | FocalLength | Focal length.|
 | UserComment | User comments.|
@@ -430,7 +432,9 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 **Examples**
 
-See [getExif](#getexif)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## getThumbnail
 
@@ -495,7 +499,9 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 **Examples**
 
-See [getThumbnail](#getthumbnail)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 <a id="getthumbnail-2"></a>
 
@@ -533,7 +539,9 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Examples**
 
-See [getThumbnail](#getthumbnail)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## open
 
@@ -614,7 +622,9 @@ Opens this file asset. This API uses a promise to return the result.
 
 **Examples**
 
-See [open](#open)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## set
 
@@ -734,7 +744,9 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Examples**
 
-See [setHidden](#sethidden)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## setUserComment
 
@@ -827,7 +839,9 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Examples**
 
-See [setUserComment](#setusercomment)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## displayName
 

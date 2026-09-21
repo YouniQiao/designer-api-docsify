@@ -18,6 +18,8 @@ Creates a check box.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -28,7 +30,7 @@ Creates a check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | No | Check box parameters. |
+| options | [CheckboxOptions](arkts-arkui-checkbox-comp-checkboxoptions-i.md) | No | Check box parameters. |
 
 ## Summary
 
@@ -36,14 +38,14 @@ Creates a check box.
 
 | Name | Description |
 | --- | --- |
-| [CheckBoxConfiguration](arkts-arkui-checkboxconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | Provides information about the check box. |
+| [CheckBoxConfiguration](arkts-arkui-checkbox-comp-checkboxconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [CheckboxOptions](arkts-arkui-checkbox-comp-checkboxoptions-i.md) | Provides information about the check box. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | Represents the callback invoked when the selected state of the check box changes. |
+| [OnCheckboxChangeCallback](arkts-arkui-checkbox-comp-oncheckboxchangecallback-t.md) | Represents the callback invoked when the selected state of the check box changes. |
 
 ## Examples
 

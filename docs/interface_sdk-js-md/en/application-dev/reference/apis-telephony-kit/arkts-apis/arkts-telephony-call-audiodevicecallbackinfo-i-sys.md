@@ -65,6 +65,8 @@ Whether to disable the microphone.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.

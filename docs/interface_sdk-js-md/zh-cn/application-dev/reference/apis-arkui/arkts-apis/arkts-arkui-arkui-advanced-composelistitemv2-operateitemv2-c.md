@@ -208,7 +208,7 @@ public symbolStyle?: SymbolGlyphModifier
 
 默认不设置或设置为undefined，列表项右侧Symbol图标不显示。
 
-**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 

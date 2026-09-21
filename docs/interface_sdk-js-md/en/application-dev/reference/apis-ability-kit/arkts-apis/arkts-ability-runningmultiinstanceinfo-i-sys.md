@@ -59,3 +59,21 @@ UID of the application.
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+**Examples**
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = 'ohos.samples.etsclock';
+  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
+      console.info(`getRunningMultiAppInfo success`);
+    }).catch((err: BusinessError) => {
+      console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+    });
+} catch (err: BusinessError) {
+  console.error(`getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
+}
+```

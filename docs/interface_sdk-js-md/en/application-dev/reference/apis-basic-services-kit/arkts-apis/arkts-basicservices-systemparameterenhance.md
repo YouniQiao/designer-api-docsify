@@ -27,11 +27,11 @@ import { systemParameterEnhance } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
+| [get](arkts-basicservices-systemparameterenhance-get-f-sys.md#get) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
 | [get](arkts-basicservices-systemparameterenhance-get-f-sys.md#get-1) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
 | [get](arkts-basicservices-systemparameterenhance-get-f-sys.md#get-2) | Obtains a value of the specified key. This API uses a promise to return the result. |
 | [getSync](arkts-basicservices-systemparameterenhance-getsync-f-sys.md) | Obtains a value of the specified key. This API uses a promise to return the result. |
-| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md) | Sets a value of the specified key. This API uses an asynchronous callback to return the result. |
+| [set](arkts-basicservices-systemparameterenhance-set-f-sys.md#set) | Sets a value of the specified key. This API uses an asynchronous callback to return the result. |
 | [set](arkts-basicservices-systemparameterenhance-set-f-sys.md#set-1) | Sets a value of the specified key. This API uses a promise to return the result. |
 | [setSync](arkts-basicservices-systemparameterenhance-setsync-f-sys.md) | Sets a value for the specified key. This API uses a promise to return the result. |
 <!--DelEnd-->

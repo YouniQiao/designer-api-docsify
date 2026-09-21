@@ -42,10 +42,6 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 ```
 
-```TypeScript
-let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -76,10 +72,6 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 | priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例**
-
-```TypeScript
-let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
-```
 
 ```TypeScript
 let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);

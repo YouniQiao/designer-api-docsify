@@ -58,21 +58,6 @@ intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor, (err: Busi
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
-intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor).then((data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
-  enrollIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
-
 
 <a id="createenrollintelligentvoiceengine-1"></a>
 
@@ -116,4 +101,17 @@ Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-e
 
 **Examples**
 
-See [createEnrollIntelligentVoiceEngine](#createenrollintelligentvoiceengine)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let engineDescriptor: intelligentVoice.EnrollIntelligentVoiceEngineDescriptor = {
+  wakeupPhrase: 'Xiaohua Xiaohua',
+}
+let enrollIntelligentVoiceEngine: intelligentVoice.EnrollIntelligentVoiceEngine | null = null;
+intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor).then((data: intelligentVoice.EnrollIntelligentVoiceEngine) => {
+  enrollIntelligentVoiceEngine = data;
+  console.info(`Succeeded in creating enrollIntelligentVoice engine.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+});
+```

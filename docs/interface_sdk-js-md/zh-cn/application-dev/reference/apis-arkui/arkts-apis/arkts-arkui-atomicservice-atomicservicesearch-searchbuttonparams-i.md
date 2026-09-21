@@ -24,7 +24,7 @@ options?: SearchButtonOptions
 
 配置搜索框文本样式。默认值：`{fontSize: '16fp',fontColor: '#ff3f97e9'}`。
 
-**类型：** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
+**类型：** [SearchButtonOptions](../arkts-components/arkts-arkui-search-comp-searchbuttonoptions-i.md)
 
 **起始版本：** 18
 

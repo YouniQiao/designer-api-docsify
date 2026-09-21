@@ -12,7 +12,7 @@ Declare navigator properties.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation
+**Substitutes:** [Navigation](arkts-arkui-navigation-comp.md#navigation)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,7 +28,7 @@ Sets whether the **Navigator** component is activated. If the component is activ
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation
+**Substitutes:** [Navigation](arkts-arkui-navigation-comp.md#navigation)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,7 +76,7 @@ Sets the path of the target page to be redirected to. The target page must be ad
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation
+**Substitutes:** [Navigation](arkts-arkui-navigation-comp.md#navigation)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,7 +100,7 @@ Sets the navigation type.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation
+**Substitutes:** [Navigation](arkts-arkui-navigation-comp.md#navigation)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,4 +110,4 @@ Sets the navigation type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push** |
+| value | [NavigationType](arkts-arkui-navigator-comp-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push** |

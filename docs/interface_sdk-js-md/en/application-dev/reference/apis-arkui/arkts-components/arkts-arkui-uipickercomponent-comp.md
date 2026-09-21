@@ -68,7 +68,7 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | No | Parameters of the **UIPickerComponent** container. If the parameter is left empty, the component is a placeholder but the content is empty. |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponent-comp-uipickercomponentoptions-i.md) | No | Parameters of the **UIPickerComponent** container. If the parameter is left empty, the component is a placeholder but the content is empty. |
 
 ## Summary
 
@@ -76,20 +76,20 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 | Name | Description |
 | --- | --- |
-| [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md) | Sets parameters of the selected item indicator style. |
-| [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | Describes the parameters of the **UIPickerComponent** container. |
+| [PickerIndicatorStyle](arkts-arkui-uipickercomponent-comp-pickerindicatorstyle-i.md) | Sets parameters of the selected item indicator style. |
+| [UIPickerComponentOptions](arkts-arkui-uipickercomponent-comp-uipickercomponentoptions-i.md) | Describes the parameters of the **UIPickerComponent** container. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md) | Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-comp-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-comp-attribute.md#onscrollstop) events. |
+| [OnUIPickerComponentCallback](arkts-arkui-uipickercomponent-comp-onuipickercomponentcallback-t.md) | Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-comp-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-comp-attribute.md#onscrollstop) events. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md) | Enumerates the types of the selected item indicator. |
+| [PickerIndicatorType](arkts-arkui-uipickercomponent-comp-pickerindicatortype-e.md) | Enumerates the types of the selected item indicator. |
 
 ## Examples
 
@@ -118,7 +118,7 @@ Since API version 22, this example implements setting the selected item index of
 ```TypeScript
 ### Example 4: Setting the Selected Item Indicator
 
-Since API version 22, this example implements setting the selected item indicator of the UIPickerComponent container. Specifically, when a background indicator is used, set backgroundColor and borderRadius of [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md); when a divider indicator is used, set strokeWidth, dividerColor, startMargin, and endMargin of [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md).
+Since API version 22, this example implements setting the selected item indicator of the UIPickerComponent container. Specifically, when a background indicator is used, set backgroundColor and borderRadius of [PickerIndicatorStyle](arkts-arkui-uipickercomponent-comp-pickerindicatorstyle-i.md); when a divider indicator is used, set strokeWidth, dividerColor, startMargin, and endMargin of [PickerIndicatorStyle](arkts-arkui-uipickercomponent-comp-pickerindicatorstyle-i.md).
 
 
 ```

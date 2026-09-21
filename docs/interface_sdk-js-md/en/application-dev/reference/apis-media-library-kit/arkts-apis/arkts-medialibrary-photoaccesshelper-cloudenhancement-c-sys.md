@@ -388,7 +388,9 @@ Submits cloud enhancement tasks. You can select the trigger mode of the cloud en
 
 **Examples**
 
-See [submitCloudEnhancementTasks](#submitcloudenhancementtasks)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## syncCloudEnhancementTaskStatus
 

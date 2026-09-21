@@ -28,6 +28,8 @@ Called when the dialog box is closed.
 
 **Since:** 11
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,6 +43,8 @@ fail?: (errMsg: string) => void
 Called when the operation is cancelled.
 
 **Since:** 11
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -61,6 +65,8 @@ success?: (tapIndex: number, errMsg: string) => void
 Called when the dialog box is displayed.
 
 **Since:** 11
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,6 +91,8 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 
 **Since:** 11
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -100,6 +108,8 @@ Title of the text to display.
 **Type:** string
 
 **Since:** 11
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

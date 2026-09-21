@@ -50,19 +50,6 @@ window.find('test', (err: BusinessError, data) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.find('test');
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 <a id="find-1"></a>
 
@@ -100,4 +87,15 @@ function find(id: string): Promise<Window>
 
 **示例**
 
-参见 [find](#find)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.find('test');
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```

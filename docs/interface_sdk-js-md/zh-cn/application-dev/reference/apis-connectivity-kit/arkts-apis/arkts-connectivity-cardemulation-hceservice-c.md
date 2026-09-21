@@ -28,6 +28,8 @@ off(type: 'hceCmd', callback?: AsyncCallback<number[]>): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
@@ -92,6 +94,8 @@ on(type: 'hceCmd', callback: AsyncCallback<number[]>): void
 **起始版本：** 8
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -222,6 +226,8 @@ start(elementName: ElementName, aidList: string[]): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
@@ -341,6 +347,8 @@ stop(elementName: ElementName): void
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
@@ -451,6 +459,8 @@ transmit(response: number[]): Promise<void>
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
@@ -510,6 +520,44 @@ hceService.transmit(responseData).then(() => {
 console.info("transmit Promise end.");
 ```
 
+<a id="transmit-1"></a>
+
+## transmit
+
+```TypeScript
+transmit(response: number[], callback: AsyncCallback<void>): void
+```
+
+发送APDU数据到对端读卡设备，应用程序必须在on收到读卡设备发送的APDU数据后，才调用该接口响应数据。使用Callback异步回调。
+
+**起始版本：** 9
+
+**需要权限：** ohos.permission.NFC_CARD_EMULATION
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Communication.NFC.CardEmulation
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| response | number[] | 是 | 发送到对端读卡设备的符合APDU协议的数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发送APDU数据成功时，err为undefined，否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-nfc卡模拟状态异常) | Card emulation running state is abnormal in service. |
+
+**示例**
+
 ```TypeScript
 // 适用于除轻量级智能穿戴产品之外其他设备
 import { cardEmulation } from '@kit.ConnectivityKit';
@@ -547,41 +595,3 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
-
-<a id="transmit-1"></a>
-
-## transmit
-
-```TypeScript
-transmit(response: number[], callback: AsyncCallback<void>): void
-```
-
-发送APDU数据到对端读卡设备，应用程序必须在on收到读卡设备发送的APDU数据后，才调用该接口响应数据。使用Callback异步回调。
-
-**起始版本：** 9
-
-**需要权限：** ohos.permission.NFC_CARD_EMULATION
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Communication.NFC.CardEmulation
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| response | number[] | 是 | 发送到对端读卡设备的符合APDU协议的数据，每个number十六进制表示，范围是0x00~0xFF。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发送APDU数据成功时，err为undefined，否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-nfc卡模拟状态异常) | Card emulation running state is abnormal in service. |
-
-**示例**
-
-参见 [transmit](#transmit)

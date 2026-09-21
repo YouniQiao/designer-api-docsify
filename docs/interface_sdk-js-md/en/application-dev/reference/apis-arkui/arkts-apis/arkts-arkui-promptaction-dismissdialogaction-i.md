@@ -42,7 +42,7 @@ reason: DismissReason
 
 Reason why the dialog box cannot be dismissed. You must specify whether to close the dialog box for each of the listed actions.
 
-**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**Type:** [DismissReason](../arkts-components/arkts-arkui-common-comp-dismissreason-e.md)
 
 **Since:** 12
 

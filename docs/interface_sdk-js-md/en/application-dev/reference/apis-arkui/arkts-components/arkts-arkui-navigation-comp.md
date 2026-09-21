@@ -4,7 +4,7 @@ The **Navigation** component is the root view container for navigation. It typic
 
 > **NOTE**
 
-> - Since API version 11, this component supports the safe area attribute by default, with the default attribute > value being > **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. > You can override this attribute to change the default behavior. In earlier versions, you need to use the > [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) attribute to implement the safe area feature. > > - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner > **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a > modal. > > - If the [title](arkts-arkui-navigation-comp-attribute.md#title) and [subTitle](arkts-arkui-navigation-comp-attribute.md#subtitle) are not set > and [hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed. > > - During subpage navigation within **Navigation**, the new page actively requests focus. > > - You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
+> - Since API version 11, this component supports the safe area attribute by default, with the default attribute > value being > **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. > You can override this attribute to change the default behavior. In earlier versions, you need to use the > [expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea) attribute to implement the safe area feature. > > - When [NavBar](arkts-arkui-navigation-comp-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner > **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a > modal. > > - If the [title](arkts-arkui-navigation-comp-attribute.md#title) and [subTitle](arkts-arkui-navigation-comp-attribute.md#subtitle) are not set > and [hideBackButton](arkts-arkui-navigation-comp-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed. > > - During subpage navigation within **Navigation**, the new page actively requests focus. > > - You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
 
 ## Child Components
 
@@ -12,7 +12,7 @@ Supported
 
 Since API version 9, it is recommended that this component be used together with the NavRouter component.
 
-Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute for page routing.
+Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute for page routing.
 
 ## Navigation
 
@@ -34,7 +34,7 @@ Creates a root view container for route navigation, suitable for page routing us
 Navigation(pathInfos: NavPathStack)
 ```
 
-Binds a navigation controller to the **Navigation** component, suitable for page routing using [NavPathStack](arkts-arkui-navpathstack-c.md) with the [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute.
+Binds a navigation controller to the **Navigation** component, suitable for page routing using [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) with the [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Navigation controller object. |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) | Yes | Navigation controller object. |
 
 ## Navigation
 
@@ -56,7 +56,7 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-Binds a routing stack to the **Navigation** component and specifies a **NavDestination** component as the navigation page (home page) for **Navigation**. This is suitable for page routing using [NavPathStack](arkts-arkui-navpathstack-c.md) with the [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute or the system routing table. For the usage example, see [Example 16: Using NavDestination as a Navigation Page in Navigation](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-16-using-navdestination-as-a-navigation-page-in-navigation).
+Binds a routing stack to the **Navigation** component and specifies a **NavDestination** component as the navigation page (home page) for **Navigation**. This is suitable for page routing using [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) with the [navDestination](arkts-arkui-navigation-comp-attribute.md#navdestination) attribute or the system routing table. For the usage example, see [Example 16: Using NavDestination as a Navigation Page in Navigation](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-16-using-navdestination-as-a-navigation-page-in-navigation).
 
 **Since:** 20
 
@@ -70,8 +70,8 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Information about the routing stack. |
-| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) | Yes | Information about the routing stack. |
+| homeDestination | [HomePathInfo](arkts-arkui-navigation-comp-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
 
 ## Summary
 
@@ -79,49 +79,49 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 | Name | Description |
 | --- | --- |
-| [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Defines the home page **NavDestination** information. |
-| [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md) | Defines the options for the more button menu. |
-| [NavContentInfo](arkts-arkui-navcontentinfo-i.md) | Provides the destination information. |
-| [NavigationAnimatedTransition](arkts-arkui-navigationanimatedtransition-i.md) | Defines the custom transition animation protocol. You need to implement this protocol to define the redirection animation of the navigation route. |
-| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) | Defines a general title for the **Navigation** component. |
-| [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) | Navigation configuration options. |
-| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Defines a custom title for the **Navigation** component. |
-| [NavigationDividerStyle](arkts-arkui-navigationdividerstyle-i.md) | Color of the navigation divider and the upper and lower margins of the **Navigation** component. |
-| [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Describes the object to be intercepted during navigation redirection. |
-| [NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md) | Defines the navigation menu item, including the menu icon and menu information. |
-| [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | Defines options for menu items in the upper right corner of the page. |
-| [NavigationOptions](arkts-arkui-navigationoptions-i.md) | Defines the routing stack operation options. |
-| [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | Defines the title bar options. |
-| [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | Defines the toolbar options. |
-| [NavigationTransitionProxy](arkts-arkui-navigationtransitionproxy-i.md) | Implements a custom transition animation proxy. |
-| [PopInfo](arkts-arkui-popinfo-i.md) | Provides the callback information returned when a page is popped out of the routing stack. |
-| [PreloadOptions](arkts-arkui-preloadoptions-i.md) | Indicates options for preloading a page. |
-| [ScrollEffectOptions](arkts-arkui-scrolleffectoptions-i.md) | Defines the scroll effect options for the title bar. |
-| [ToolbarItem](arkts-arkui-toolbaritem-i.md) | Provides customizable parameters of the toolbar. |
+| [HomePathInfo](arkts-arkui-navigation-comp-homepathinfo-i.md) | Defines the home page **NavDestination** information. |
+| [MoreButtonOptions](arkts-arkui-navigation-comp-morebuttonoptions-i.md) | Defines the options for the more button menu. |
+| [NavContentInfo](arkts-arkui-navigation-comp-navcontentinfo-i.md) | Provides the destination information. |
+| [NavigationAnimatedTransition](arkts-arkui-navigation-comp-navigationanimatedtransition-i.md) | Defines the custom transition animation protocol. You need to implement this protocol to define the redirection animation of the navigation route. |
+| [NavigationCommonTitle](arkts-arkui-navigation-comp-navigationcommontitle-i.md) | Defines a general title for the **Navigation** component. |
+| [NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md) | Navigation configuration options. |
+| [NavigationCustomTitle](arkts-arkui-navigation-comp-navigationcustomtitle-i.md) | Defines a custom title for the **Navigation** component. |
+| [NavigationDividerStyle](arkts-arkui-navigation-comp-navigationdividerstyle-i.md) | Color of the navigation divider and the upper and lower margins of the **Navigation** component. |
+| [NavigationInterception](arkts-arkui-navigation-comp-navigationinterception-i.md) | Describes the object to be intercepted during navigation redirection. |
+| [NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md) | Defines the navigation menu item, including the menu icon and menu information. |
+| [NavigationMenuOptions](arkts-arkui-navigation-comp-navigationmenuoptions-i.md) | Defines options for menu items in the upper right corner of the page. |
+| [NavigationOptions](arkts-arkui-navigation-comp-navigationoptions-i.md) | Defines the routing stack operation options. |
+| [NavigationTitleOptions](arkts-arkui-navigation-comp-navigationtitleoptions-i.md) | Defines the title bar options. |
+| [NavigationToolbarOptions](arkts-arkui-navigation-comp-navigationtoolbaroptions-i.md) | Defines the toolbar options. |
+| [NavigationTransitionProxy](arkts-arkui-navigation-comp-navigationtransitionproxy-i.md) | Implements a custom transition animation proxy. |
+| [PopInfo](arkts-arkui-navigation-comp-popinfo-i.md) | Provides the callback information returned when a page is popped out of the routing stack. |
+| [PreloadOptions](arkts-arkui-navigation-comp-preloadoptions-i.md) | Indicates options for preloading a page. |
+| [ScrollEffectOptions](arkts-arkui-navigation-comp-scrolleffectoptions-i.md) | Defines the scroll effect options for the title bar. |
+| [ToolbarItem](arkts-arkui-navigation-comp-toolbaritem-i.md) | Provides customizable parameters of the toolbar. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [InterceptionCallback](arkts-arkui-interceptioncallback-t.md) | Defines the callback triggered before a navigation page is redirected. |
-| [InterceptionModeCallback](arkts-arkui-interceptionmodecallback-t.md) | Implements an interception callback invoked when the display mode of the **Navigation** component switches between single-column and split-column. |
-| [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md) | Represents the interception callback invoked before and after page redirection. |
-| [Material](arkts-arkui-material-t.md) | Import the Material type for Navigation. |
-| [NavBar](arkts-arkui-navbar-t.md) | Defines the name of the navigation home page. |
-| [SystemBarStyle](arkts-arkui-systembarstyle-t.md) | Describes the properties of the status bar. These properties are valid for the page-level status bar. |
+| [InterceptionCallback](arkts-arkui-navigation-comp-interceptioncallback-t.md) | Defines the callback triggered before a navigation page is redirected. |
+| [InterceptionModeCallback](arkts-arkui-navigation-comp-interceptionmodecallback-t.md) | Implements an interception callback invoked when the display mode of the **Navigation** component switches between single-column and split-column. |
+| [InterceptionShowCallback](arkts-arkui-navigation-comp-interceptionshowcallback-t.md) | Represents the interception callback invoked before and after page redirection. |
+| [Material](arkts-arkui-navigation-comp-material-t.md) | Import the Material type for Navigation. |
+| [NavBar](arkts-arkui-navigation-comp-navbar-t.md) | Defines the name of the navigation home page. |
+| [SystemBarStyle](arkts-arkui-navigation-comp-systembarstyle-t.md) | Describes the properties of the status bar. These properties are valid for the page-level status bar. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BarStyle](arkts-arkui-barstyle-e.md) | Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in **NavDestination**. |
-| [LaunchMode](arkts-arkui-launchmode-e.md) | Enumerates the operation modes for the routing stack. |
-| [NavBarPosition](arkts-arkui-navbarposition-e.md) | Position of the navigation page. |
-| [NavigationMode](arkts-arkui-navigationmode-e.md) | Display mode of the navigation page. When **Navigation** is displayed in split-column mode, a divider is displayed between the navigation page and the content area. |
-| [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Enumerates the page redirection types. |
-| [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Enumerates the display modes of the title bar. |
-| [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md) | Enumerates the scroll effect types. |
-| [ToolbarItemStatus](arkts-arkui-toolbaritemstatus-e.md) | Enumerates the toolbar item states. |
+| [BarStyle](arkts-arkui-navigation-comp-barstyle-e.md) | Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in **NavDestination**. |
+| [LaunchMode](arkts-arkui-navigation-comp-launchmode-e.md) | Enumerates the operation modes for the routing stack. |
+| [NavBarPosition](arkts-arkui-navigation-comp-navbarposition-e.md) | Position of the navigation page. |
+| [NavigationMode](arkts-arkui-navigation-comp-navigationmode-e.md) | Display mode of the navigation page. When **Navigation** is displayed in split-column mode, a divider is displayed between the navigation page and the content area. |
+| [NavigationOperation](arkts-arkui-navigation-comp-navigationoperation-e.md) | Enumerates the page redirection types. |
+| [NavigationTitleMode](arkts-arkui-navigation-comp-navigationtitlemode-e.md) | Enumerates the display modes of the title bar. |
+| [ScrollEffectType](arkts-arkui-navigation-comp-scrolleffecttype-e.md) | Enumerates the scroll effect types. |
+| [ToolbarItemStatus](arkts-arkui-navigation-comp-toolbaritemstatus-e.md) | Enumerates the toolbar item states. |
 
 ## Examples
 
@@ -1100,7 +1100,7 @@ This example demonstrates the following:
 
 The routing stack operation can be conducted even when [NavPathStack](#navpathstack10) is not declared as a state variable.
 
-[NavDestination](ts-basic-components-navdestination.md) can obtain the corresponding [NavPathInfo](arkts-arkui-navpathinfo-c.md) and its belonging [NavPathStack](#navpathstack10) via the [onReady](ts-basic-components-navdestination.md#onready11) event.
+[NavDestination](ts-basic-components-navdestination.md) can obtain the corresponding [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) and its belonging [NavPathStack](#navpathstack10) via the [onReady](ts-basic-components-navdestination.md#onready11) event.
 ```
 
 ```TypeScript
@@ -1562,9 +1562,9 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
 ```TypeScript
 ### Example 17: Using New Navigation Controller APIs
 
-This example demonstrates how to implement route interception by setting the [setInterception](arkts-arkui-navpathstack-c.md#setinterception) method and obtain mode using the [NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11) object.
+This example demonstrates how to implement route interception by setting the [setInterception](arkts-arkui-navigation-comp-navpathstack-c.md#setinterception) method and obtain mode using the [NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11) object.
 
-The interception API is added to the [NavigationInterception](arkts-arkui-navigationinterception-i.md) parameter type of setInterception since API version 22.
+The interception API is added to the [NavigationInterception](arkts-arkui-navigation-comp-navigationinterception-i.md) parameter type of setInterception since API version 22.
 ```
 
 ```TypeScript
@@ -1829,7 +1829,7 @@ Since API version 26.0.0, the [scrollEffectOptions](#scrolleffectoptions) attrib
 
 This example demonstrates how to use the systemMaterial attribute to set the system material of the component and enable the immersive light effect for the title bar.
 
-The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) since API version 26.0.0.
+The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-navigation-comp-navigationtitleoptions-i.md) since API version 26.0.0.
 
 
 ```
@@ -1839,5 +1839,5 @@ The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-na
 
 This example demonstrates how to use the clearContentStackOnPrimaryNavigation attribute to enable the stack clearing effect from left to right on the navigation page.
 
-The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) since API version 26.1.0.
+The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md) since API version 26.1.0.
 ```

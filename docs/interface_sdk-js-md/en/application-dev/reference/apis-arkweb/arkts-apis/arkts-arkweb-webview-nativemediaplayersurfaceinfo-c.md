@@ -24,7 +24,7 @@ id: string
 
 ID of the surface, which is the surfaceId of the NativeImage used for same-layer rendering.
 
-For details, see [NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md).
+For details, see [NativeEmbedDataInfo](../arkts-components/arkts-arkweb-web-comp-nativeembeddatainfo-i.md).
 
 **Type:** string
 

@@ -40,21 +40,6 @@ avSession.startCastDeviceDiscovery(() => {
 });
 ```
 
-```TypeScript
-let filter = 2;
-avSession.startCastDeviceDiscovery(filter, () => {
-    console.info('Succeeded in starting cast device discovery.');
-});
-```
-
-```TypeScript
-let filter = 2;
-let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
-avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('Succeeded in starting cast device discovery.');
-});
-```
-
 
 <a id="startcastdevicediscovery-1"></a>
 
@@ -88,7 +73,12 @@ Start device discovery.
 
 **Examples**
 
-See [startCastDeviceDiscovery](#startcastdevicediscovery)
+```TypeScript
+let filter = 2;
+avSession.startCastDeviceDiscovery(filter, () => {
+    console.info('Succeeded in starting cast device discovery.');
+});
+```
 
 
 <a id="startcastdevicediscovery-2"></a>
@@ -129,4 +119,10 @@ Start device discovery.
 
 **Examples**
 
-See [startCastDeviceDiscovery](#startcastdevicediscovery)
+```TypeScript
+let filter = 2;
+let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
+avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
+  console.info('Succeeded in starting cast device discovery.');
+});
+```

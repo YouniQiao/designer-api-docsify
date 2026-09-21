@@ -6,7 +6,7 @@ declare class IsolatedComponentAttribute extends CommonMethod<IsolatedComponentA
 
 Only the width, height, and backgroundColor universal attributes are supported.
 
-The universal events are not supported.
+The [universal events](arkts-arkui-common-comp.md#common) are not supported.
 
 Events are asynchronously passed to the restricted Worker thread after coordinate conversion.
 

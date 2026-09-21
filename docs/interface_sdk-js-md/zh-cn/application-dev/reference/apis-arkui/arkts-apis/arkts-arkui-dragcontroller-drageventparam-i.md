@@ -24,7 +24,7 @@ event: DragEvent
 
 拖拽事件信息，仅包括拖拽结果。
 
-**类型：** [DragEvent](../arkts-components/arkts-arkui-dragevent-i.md)
+**类型：** [DragEvent](../arkts-components/arkts-arkui-common-comp-dragevent-i.md)
 
 **起始版本：** 10
 

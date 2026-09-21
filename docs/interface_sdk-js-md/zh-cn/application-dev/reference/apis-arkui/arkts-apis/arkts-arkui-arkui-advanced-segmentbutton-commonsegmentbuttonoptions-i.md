@@ -28,7 +28,7 @@ backgroundBlurStyle?: BlurStyle
 
 值为undefined时，按默认值处理。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **起始版本：** 11
 

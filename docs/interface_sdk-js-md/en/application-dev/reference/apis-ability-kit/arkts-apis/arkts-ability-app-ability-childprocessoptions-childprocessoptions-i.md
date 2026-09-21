@@ -47,3 +47,13 @@ Whether the child process uses an independent UID. **true** if the child process
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Examples**
+
+```TypeScript
+Sample code for the child process:
+```
+
+```TypeScript
+Sample code for the main process:
+```

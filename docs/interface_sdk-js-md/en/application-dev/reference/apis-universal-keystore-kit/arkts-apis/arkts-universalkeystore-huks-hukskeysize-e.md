@@ -20,6 +20,8 @@ Rivest-Shamir-Adleman (RSA) key of 512 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -35,6 +37,8 @@ HUKS_RSA_KEY_SIZE_768 = 768
 RSA key of 768 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,6 +56,8 @@ RSA key of 1024 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -67,6 +73,8 @@ HUKS_RSA_KEY_SIZE_2048 = 2048
 RSA key of 2048 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,6 +92,8 @@ RSA key of 3072 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -99,6 +109,8 @@ HUKS_RSA_KEY_SIZE_4096 = 4096
 RSA key of 4096 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,6 +128,8 @@ Elliptic Curve Cryptography (ECC) key of 224 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -131,6 +145,8 @@ HUKS_ECC_KEY_SIZE_256 = 256
 ECC key of 256 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -148,6 +164,8 @@ ECC key of 384 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -163,6 +181,8 @@ HUKS_ECC_KEY_SIZE_521 = 521
 ECC key of 521 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -180,6 +200,8 @@ Advanced Encryption Standard (AES) key of 128 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -194,6 +216,8 @@ AES key of 192 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -207,6 +231,8 @@ HUKS_AES_KEY_SIZE_256 = 256
 AES key of 256 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,6 +252,8 @@ Note: This parameter is supported since API version 8 and deprecated since API v
 
 **Deprecated since:** 11
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_CURVE25519_KEY_SIZE_256
@@ -237,6 +265,8 @@ HUKS_CURVE25519_KEY_SIZE_256 = 256
 Curve25519 key of 256 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -254,6 +284,8 @@ Diffie-Hellman (DH) key of 2048 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -269,6 +301,8 @@ HUKS_DH_KEY_SIZE_3072 = 3072
 DH key of 3072 bits.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -286,6 +320,8 @@ DH key of 4096 bits.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -301,6 +337,8 @@ HUKS_SM2_KEY_SIZE_256 = 256
 ShangMi2 (SM2) key of 256 bits.
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -318,6 +356,8 @@ ShangMi4 (SM4) key of 128 bits.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -334,6 +374,8 @@ DES key of 64 bits.
 
 **Since:** 12
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -347,6 +389,8 @@ HUKS_3DES_KEY_SIZE_128 = 128
 3DES key of 128 bits.
 
 **Since:** 12
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -362,6 +406,8 @@ HUKS_3DES_KEY_SIZE_192 = 192
 
 **Since:** 12
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -375,6 +421,8 @@ HUKS_ML_DSA_KEY_PARAM_SET_44 = 44
 ML-DSA-44 parameter set.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -390,6 +438,8 @@ ML-DSA-65 parameter set.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -403,6 +453,8 @@ HUKS_ML_DSA_KEY_PARAM_SET_87 = 87
 ML-DSA-87 parameter set.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -418,6 +470,8 @@ ML-KEM-768 parameter set.
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -431,6 +485,8 @@ HUKS_ML_KEM_KEY_PARAM_SET_1024 = 1024
 ML-KEM-1024 parameter set.
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

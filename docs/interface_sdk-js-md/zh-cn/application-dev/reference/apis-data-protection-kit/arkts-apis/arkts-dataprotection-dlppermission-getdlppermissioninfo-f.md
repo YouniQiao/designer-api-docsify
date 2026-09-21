@@ -53,22 +53,6 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // 是否在沙箱内。
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
-  if (inSandbox) {
-    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
-      if (err) {
-        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('permissionInfo', JSON.stringify(permissionInfo));
-      }
-    }); // 获取当前权限信息。
-  }
-});
-```
-
 
 <a id="getdlppermissioninfo-1"></a>
 
@@ -104,4 +88,18 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 **示例**
 
-参见 [getDLPPermissionInfo](#getdlppermissioninfo)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.isInSandbox().then((inSandbox) => { // 是否在沙箱内。
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
+      if (err) {
+        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('permissionInfo', JSON.stringify(permissionInfo));
+      }
+    }); // 获取当前权限信息。
+  }
+});
+```

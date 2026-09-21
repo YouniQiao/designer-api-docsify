@@ -44,7 +44,7 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。. |
-| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如{title: 'testPhoto'}。<br>文件名中不允许出现非法英文字符。<br>API18开始，非法字符包括： \ / : * ? " &lt; &gt; &#124; <br>API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
+| options | [photoAccessHelper.CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，例如{title: 'testPhoto'}。<br>文件名中不允许出现非法英文字符。<br>API18开始，非法字符包括： \ / : * ? " &lt; &gt; &#124;<br>API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; &#124; { } [ ] |
 
 **返回值：**
 
@@ -64,10 +64,6 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 
 ```TypeScript
 phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-```
-
-```TypeScript
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
 ```
 
 ## getAlbums
@@ -158,7 +154,9 @@ getAlbums(
 
 **示例**
 
-参见 [getAlbums](#getalbums)
+```TypeScript
+phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
+```
 
 ## getAssets
 

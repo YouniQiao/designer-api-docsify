@@ -145,3 +145,19 @@ Haptics in notification scenario.
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
+
+## ALARM
+
+```TypeScript
+ALARM = 41
+```
+
+Haptics in alarm scenario. Used to configure vibration feedback for alarm tones. This type can be used with getToneHapticsSettings and setToneHapticsSettings to read or modify the vibration settings for alarm scenarios. Value: 41 represents the alarm scenario identifier for haptic feedback configuration.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.

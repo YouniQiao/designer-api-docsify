@@ -16,7 +16,7 @@ Enumerates the coloring strategies.
 INVERT = 'invert'
 ```
 
-The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the [foregroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#foregroundcolor) attribute.
+The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the [foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor) attribute.
 
 **Since:** 10
 

@@ -4,7 +4,7 @@
 export declare struct AtomicServiceNavigation
 ```
 
-作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示NavDestination的子组件，首页和非首页通过路由进行切换。
+作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示[NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination)的子组件，首页和非首页通过路由进行切换。
 
 > **说明：** 
 > 
@@ -82,7 +82,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) &#124; Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
+**类型：** [CustomBuilder](../arkts-components/arkts-arkui-common-comp-custombuilder-t.md) &#124; Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt;
 
 **起始版本：** 18
 
@@ -118,7 +118,7 @@ mode?: NavigationMode
 
 设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
 
-**类型：** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
+**类型：** [NavigationMode](../arkts-components/arkts-arkui-navigation-comp-navigationmode-e.md)
 
 **起始版本：** 12
 
@@ -136,7 +136,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 当Navigation首次显示或者单双栏状态发生变化时触发该回调。默认值为空。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavigationMode](../arkts-components/arkts-arkui-navigation-comp-navigationmode-e.md)&gt;
 
 **起始版本：** 12
 
@@ -209,7 +209,7 @@ navPathStack?: NavPathStack
 
 路由栈信息。默认值为new NavPathStack()。
 
-**类型：** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
+**类型：** [NavPathStack](../arkts-components/arkts-arkui-navigation-comp-navpathstack-c.md)
 
 **起始版本：** 12
 

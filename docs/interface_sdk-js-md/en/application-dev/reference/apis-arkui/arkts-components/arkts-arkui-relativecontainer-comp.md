@@ -32,17 +32,17 @@ The **RelativeContainer** component is a container component used for relative l
 
 | Name | Description |
 | --- | --- |
-| [BarrierStyle](arkts-arkui-barrierstyle-i.md) | Defines the style of a barrier, which is used to define the ID, direction, and dependent components of a barrier. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
-| [GuideLinePosition](arkts-arkui-guidelineposition-i.md) | Defines the position of a guideline. |
-| [GuideLineStyle](arkts-arkui-guidelinestyle-i.md) | Defines the style of a guideline, which used to define the ID, direction, and position of a guideline, helping child components to be positioned and aligned in the **RelativeContainer**. |
-| [LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md) | Defines the style of a localized barrier, which is used to define the ID, direction, and dependent components of a barrier that supports mirror mode. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
+| [BarrierStyle](arkts-arkui-relativecontainer-comp-barrierstyle-i.md) | Defines the style of a barrier, which is used to define the ID, direction, and dependent components of a barrier. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
+| [GuideLinePosition](arkts-arkui-relativecontainer-comp-guidelineposition-i.md) | Defines the position of a guideline. |
+| [GuideLineStyle](arkts-arkui-relativecontainer-comp-guidelinestyle-i.md) | Defines the style of a guideline, which used to define the ID, direction, and position of a guideline, helping child components to be positioned and aligned in the **RelativeContainer**. |
+| [LocalizedBarrierStyle](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md) | Defines the style of a localized barrier, which is used to define the ID, direction, and dependent components of a barrier that supports mirror mode. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BarrierDirection](arkts-arkui-barrierdirection-e.md) | Defines the direction of a barrier. |
-| [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md) | Enumerates the directions of barriers with mirror mode support. |
+| [BarrierDirection](arkts-arkui-relativecontainer-comp-barrierdirection-e.md) | Defines the direction of a barrier. |
+| [LocalizedBarrierDirection](arkts-arkui-relativecontainer-comp-localizedbarrierdirection-e.md) | Enumerates the directions of barriers with mirror mode support. |
 
 ## Examples
 
@@ -113,7 +113,7 @@ This example uses the [chainMode](ts-universal-attributes-location.md#chainmode1
 ```TypeScript
 ### Example 9: Implementing a Mirror Effect
 
-This example demonstrates how to use [LocalizedAlignRuleOptions](ts-universal-attributes-location.md#localizedalignruleoptions12) and [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md) for alignment when using barriers as anchors in mirror mode (direction set to Direction.Rtl).
+This example demonstrates how to use [LocalizedAlignRuleOptions](ts-universal-attributes-location.md#localizedalignruleoptions12) and [LocalizedBarrierDirection](arkts-arkui-relativecontainer-comp-localizedbarrierdirection-e.md) for alignment when using barriers as anchors in mirror mode (direction set to Direction.Rtl).
 
 
 ```

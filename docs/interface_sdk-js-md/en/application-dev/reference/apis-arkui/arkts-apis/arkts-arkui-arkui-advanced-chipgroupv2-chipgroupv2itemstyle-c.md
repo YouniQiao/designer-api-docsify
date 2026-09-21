@@ -72,7 +72,7 @@ Decorator: **@Trace**
 public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialfilter) effect.
+System material style of the component. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter) effect.
 
 Default value: **undefined**, no material style is applied.
 
@@ -148,7 +148,7 @@ Decorator: **@Trace**
 public selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-System material style of the component in the selected state. After this attribute is set, when the **ChipV2** is selected, this material style is applied, replacing the **backgroundSystemMaterial** in the unselected state. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialfilter) effect.
+System material style of the component in the selected state. After this attribute is set, when the **ChipV2** is selected, this material style is applied, replacing the **backgroundSystemMaterial** in the unselected state. Different materials have different effects, which can affect the component's backgroundColor, borderColor, borderWidth, shadow effect, and [materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter) effect.
 
 Default value: **undefined**, no material style is applied.
 

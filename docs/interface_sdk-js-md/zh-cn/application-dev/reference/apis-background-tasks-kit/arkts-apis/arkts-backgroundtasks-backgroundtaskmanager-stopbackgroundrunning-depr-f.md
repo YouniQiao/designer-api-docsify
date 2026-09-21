@@ -38,10 +38,6 @@ FA模型示例（需使用js代码开发）：
 Stage模型示例：
 ```
 
-```TypeScript
-FA模型示例：
-```
-
 
 <a id="stopbackgroundrunning-1"></a>
 
@@ -75,4 +71,10 @@ function stopBackgroundRunning(context: Context): Promise<void>
 
 **示例**
 
-参见 [stopBackgroundRunning](#stopbackgroundrunning)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

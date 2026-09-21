@@ -52,18 +52,6 @@ dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.Gathe
 }); // 获取沙箱聚合策略。
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err) {
-    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('gatheringPolicy：', JSON.stringify(gatheringPolicy));
-  }
-}); // 获取沙箱聚合策略。
-```
-
 
 <a id="getdlpgatheringpolicy-1"></a>
 
@@ -104,4 +92,14 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 **示例**
 
-参见 [getDLPGatheringPolicy](#getdlpgatheringpolicy)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
+  if (err) {
+    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('gatheringPolicy：', JSON.stringify(gatheringPolicy));
+  }
+}); // 获取沙箱聚合策略。
+```

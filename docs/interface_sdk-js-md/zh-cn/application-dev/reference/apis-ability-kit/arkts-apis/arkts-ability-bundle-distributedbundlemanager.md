@@ -25,7 +25,7 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | 获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。 |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo) | 获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。 |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-1) | 获取由elementName指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。 |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-2) | 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。 |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-3) | 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。 |

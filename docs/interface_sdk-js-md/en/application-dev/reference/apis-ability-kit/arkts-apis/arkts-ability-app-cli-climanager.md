@@ -1,6 +1,6 @@
 # @ohos.app.cli.cliManager
 
-The module provides the capability to interact with cli tools in the system.
+This module provides the capability to interact with system command-line interface (CLI) tools, including querying tool information, invoking and executing CLI commands, and managing sessions. A session is created when the execTool API is called, and is used to track the execution status and result of the CLI tool.
 
 @namespace cliManager
 

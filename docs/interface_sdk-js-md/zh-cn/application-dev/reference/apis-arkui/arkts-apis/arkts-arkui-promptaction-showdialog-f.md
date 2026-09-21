@@ -26,6 +26,8 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **替代接口：** showDialog
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -45,30 +47,6 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 **示例**
-
-```TypeScript
-showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
-
-创建并显示对话框，对话框通过Promise返回结果。
-
-> 说明：
-> 
-> 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
-> 
-> 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
-
-原子化服务API： 从API version 11开始，该接口支持在原子化服务中使用。
-
-系统能力：  SystemCapability.ArkUI.ArkUI.Full
-
-参数：
-
-返回值：
-
-错误码：
-
-以下错误码的详细介绍请参见[通用错误码](../../errorcode-universal.md)和[接口调用异常错误码](../errorcode-internal.md)。
-```
 
 ```TypeScript
 showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>):void
@@ -127,6 +105,8 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **替代接口：** showDialog
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -152,4 +132,26 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **示例**
 
-参见 [showDialog](#showdialog)
+```TypeScript
+showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
+
+创建并显示对话框，对话框通过Promise返回结果。
+
+> 说明：
+> 
+> 从API version 9开始支持，从API version 18开始废弃，建议使用showDialog替代。showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showDialog可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> 
+> 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+
+原子化服务API： 从API version 11开始，该接口支持在原子化服务中使用。
+
+系统能力：  SystemCapability.ArkUI.ArkUI.Full
+
+参数：
+
+返回值：
+
+错误码：
+
+以下错误码的详细介绍请参见[通用错误码](../../errorcode-universal.md)和[接口调用异常错误码](../errorcode-internal.md)。
+```

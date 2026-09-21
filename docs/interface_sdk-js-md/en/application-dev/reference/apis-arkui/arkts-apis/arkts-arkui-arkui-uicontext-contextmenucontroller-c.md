@@ -41,3 +41,9 @@ Closes this context menu.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Examples**
+
+```TypeScript
+This example demonstrates how to trigger the close() API of ContextMenuController via a timer to close the menu automatically after a specified delay.
+```

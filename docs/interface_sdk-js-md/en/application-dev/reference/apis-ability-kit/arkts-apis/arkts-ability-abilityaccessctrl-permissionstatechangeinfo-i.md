@@ -28,6 +28,8 @@ Operation that triggers the permission state change.
 
 **Since:** 18
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -44,6 +46,8 @@ Permissions whose authorization state changes. For details about the permissions
 
 **Since:** 18
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -59,6 +63,8 @@ ID of the subscribed application, which can be obtained through the [accessToken
 **Type:** number
 
 **Since:** 18
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -30,6 +30,8 @@ Obtains the screen brightness adjustment mode.
 
 **Deprecated since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
@@ -101,6 +103,8 @@ Obtains the current screen brightness.
 **Since:** 3
 
 **Deprecated since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -183,6 +187,8 @@ timeout (automatic). It cannot prevent screen-off caused by user actions (such a
 
 **Substitutes:** setWindowKeepScreenOn
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
 **Parameters:**
@@ -254,6 +260,8 @@ Sets the screen brightness adjustment mode.
 **Since:** 3
 
 **Deprecated since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
@@ -328,6 +336,8 @@ Sets the screen brightness.
 **Deprecated since:** 7
 
 **Substitutes:** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 

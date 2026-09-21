@@ -12,7 +12,7 @@ declare interface LayoutManager
 
 ## 导入对象
 
-以Text组件为例，完整示例请参考Text组件的示例10（获取文本信息）。
+以Text组件为例，完整示例请参考Text组件的[示例10（获取文本信息）](../arkts-components/arkts-arkui-text-comp.md#text)。
 
 ```ts
 controller: TextController = new TextController();

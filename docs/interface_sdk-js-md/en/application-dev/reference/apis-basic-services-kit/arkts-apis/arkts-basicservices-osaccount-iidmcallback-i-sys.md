@@ -40,6 +40,22 @@ Called to acquire IDM information.
 | acquire | number | Yes |  |
 | extraInfo | Uint8Array | Yes |  |
 
+**Examples**
+
+```TypeScript
+let idmCallback: osAccount.IIdmCallback = {
+  onResult: (result: number, extraInfo: Object) => {
+    console.info('callback result = ' + result)
+    console.info('callback onResult = ' + JSON.stringify(extraInfo));
+  },
+  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
+    console.info('callback module = ' + module);
+    console.info('callback acquire = ' + acquire);
+    console.info('callback onacquireinfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
+
 ## onResult
 
 ```TypeScript

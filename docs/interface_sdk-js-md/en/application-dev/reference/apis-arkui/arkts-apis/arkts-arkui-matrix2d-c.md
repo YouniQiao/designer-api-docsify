@@ -9,7 +9,7 @@ A matrix object used for graphic transformation in CanvasRenderingContext2D, Off
 **Matrix2D** is used in the following scenarios:
 
 1. In CanvasRenderingContext2D and
-OffscreenCanvasRenderingContext2D, call [getTransform](../arkts-components/arkts-arkui-canvasrenderer-c.md#gettransform) to obtain the canvas graphic transformation **Matrix2D** object, and call setTransform to apply the graphic transformation corresponding to the **Matrix2D** object to subsequent drawing content.
+OffscreenCanvasRenderingContext2D, call [getTransform](../arkts-components/arkts-arkui-canvas-comp-canvasrenderer-c.md#gettransform) to obtain the canvas graphic transformation **Matrix2D** object, and call setTransform to apply the graphic transformation corresponding to the **Matrix2D** object to subsequent drawing content.
 2. In CanvasPattern, call
 setTransform to apply the graphic transformation corresponding to the **Matrix2D** object to the CanvasPattern object.
 3. In Path2D, call
@@ -79,6 +79,8 @@ Creates an identity matrix. It is commonly used to reset the transformation matr
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -100,6 +102,8 @@ invert(): Matrix2D
 Obtains the inverse of the current matrix. It is commonly used to undo previous transformation operations or calculate reverse transformations, enabling reverse mapping of the coordinate system.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,6 +130,8 @@ This API is deprecated since API version 10 and has no actual drawing effect, so
 **Since:** 8
 
 **Deprecated since:** 10
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -156,6 +162,8 @@ Performs a rotation operation on the current matrix. This API is an empty API an
 **Deprecated since:** 10
 
 **Substitutes:** [rotate](#rotate)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -218,6 +226,8 @@ Performs a left-multiply scaling operation on the current matrix. It is commonly
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -246,6 +256,8 @@ translate(tx?: number, ty?: number): Matrix2D
 Performs a left-multiply translation operation on the current matrix. It is commonly used in scenarios such as adjusting graphic positions, implementing displacement animations, or offsetting the canvas coordinate system.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -282,6 +294,8 @@ The value **undefined** is treated as invalid. **NaN** and **Infinity** cause **
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -303,6 +317,8 @@ The value **undefined** is treated as invalid. **NaN** and **Infinity** cause **
 **Type:** number
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -326,6 +342,8 @@ The value **undefined** is treated as invalid. **NaN** and **Infinity** cause **
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -347,6 +365,8 @@ The value **undefined** is treated as invalid. **NaN** and **Infinity** cause **
 **Type:** number
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -372,6 +392,8 @@ Default unit: vp
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -395,6 +417,8 @@ Default unit: vp
 **Type:** number
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

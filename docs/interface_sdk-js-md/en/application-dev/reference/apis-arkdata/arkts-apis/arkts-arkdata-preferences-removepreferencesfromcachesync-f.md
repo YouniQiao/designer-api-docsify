@@ -80,4 +80,10 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 
 **Examples**
 
-See [removePreferencesFromCacheSync](#removepreferencesfromcachesync)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

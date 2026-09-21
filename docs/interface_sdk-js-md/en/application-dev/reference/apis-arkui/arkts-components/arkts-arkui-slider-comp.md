@@ -16,6 +16,8 @@ Slider(options?: SliderOptions)
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -26,7 +28,7 @@ Slider(options?: SliderOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | No | Parameters of the slider. |
+| options | [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md) | No | Parameters of the slider. |
 
 ## Summary
 
@@ -34,31 +36,31 @@ Slider(options?: SliderOptions)
 
 | Name | Description |
 | --- | --- |
-| [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md) | Describes the breakpoint of the gradient color. |
-| [SlideRange](arkts-arkui-sliderange-i.md) | Defines the callback type used in **SlideRange**. |
-| [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Describes the style of the slider in the block direction. |
-| [SliderConfiguration](arkts-arkui-sliderconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md) | Provides accessibility configuration of the slider prefix and suffix. |
-| [SliderOptions](arkts-arkui-slideroptions-i.md) | Provides information about the slider. |
-| [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | Provides accessibility configuration of the slider prefix. |
-| [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | Provides accessibility text mapping for the slider step markers. |
-| [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md) | Provides accessibility configuration of the slider step markers. |
-| [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | Provides accessibility configuration of the slider suffix. |
+| [ColorMetricsStop](arkts-arkui-slider-comp-colormetricsstop-i.md) | Describes the breakpoint of the gradient color. |
+| [SlideRange](arkts-arkui-slider-comp-sliderange-i.md) | Defines the callback type used in **SlideRange**. |
+| [SliderBlockStyle](arkts-arkui-slider-comp-sliderblockstyle-i.md) | Describes the style of the slider in the block direction. |
+| [SliderConfiguration](arkts-arkui-slider-comp-sliderconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [SliderCustomContentOptions](arkts-arkui-slider-comp-slidercustomcontentoptions-i.md) | Provides accessibility configuration of the slider prefix and suffix. |
+| [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md) | Provides information about the slider. |
+| [SliderPrefixOptions](arkts-arkui-slider-comp-sliderprefixoptions-i.md) | Provides accessibility configuration of the slider prefix. |
+| [SliderShowStepOptions](arkts-arkui-slider-comp-slidershowstepoptions-i.md) | Provides accessibility text mapping for the slider step markers. |
+| [SliderStepItemAccessibility](arkts-arkui-slider-comp-sliderstepitemaccessibility-i.md) | Provides accessibility configuration of the slider step markers. |
+| [SliderSuffixOptions](arkts-arkui-slider-comp-slidersuffixoptions-i.md) | Provides accessibility configuration of the slider suffix. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SliderTriggerChangeCallback](arkts-arkui-slidertriggerchangecallback-t.md) | Defines the callback type used in **SliderConfiguration**. |
+| [SliderTriggerChangeCallback](arkts-arkui-slider-comp-slidertriggerchangecallback-t.md) | Defines the callback type used in **SliderConfiguration**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SliderBlockType](arkts-arkui-sliderblocktype-e.md) | Enumerates the types of the slider in the block direction. |
-| [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | Enumerates the slider states. |
-| [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Interaction mode between the user and the slider. |
-| [SliderStyle](arkts-arkui-sliderstyle-e.md) | Enumerates the display styles of the slider thumb relative to the track. For details, see [How Are the Slider Thumb and Track of the Slider Component Aligned?](../../../ui/arkts-select-component-faq.md#how-are-the-slider-thumb-and-track-of-the-slider-component-aligned). |
+| [SliderBlockType](arkts-arkui-slider-comp-sliderblocktype-e.md) | Enumerates the types of the slider in the block direction. |
+| [SliderChangeMode](arkts-arkui-slider-comp-sliderchangemode-e.md) | Enumerates the slider states. |
+| [SliderInteraction](arkts-arkui-slider-comp-sliderinteraction-e.md) | Interaction mode between the user and the slider. |
+| [SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md) | Enumerates the display styles of the slider thumb relative to the track. For details, see [How Are the Slider Thumb and Track of the Slider Component Aligned?](../../../ui/arkts-select-component-faq.md#how-are-the-slider-thumb-and-track-of-the-slider-component-aligned). |
 
 ## Examples
 
@@ -113,7 +115,7 @@ This example demonstrates how to set accessibility text for step markers using [
 ```TypeScript
 ### Example 7: Setting Two-Way Binding for the Slider
 
-This example shows how to implement data synchronization by binding the value property of [SliderOptions](arkts-arkui-slideroptions-i.md) to a variable using the [$$](../../../ui/state-management/arkts-two-way-sync.md) two-way binding operator, available since API version 11.
+This example shows how to implement data synchronization by binding the value property of [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md) to a variable using the [$$](../../../ui/state-management/arkts-two-way-sync.md) two-way binding operator, available since API version 11.
 
 
 ```

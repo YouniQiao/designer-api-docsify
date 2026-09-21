@@ -110,6 +110,8 @@ onChange(callback: (selected: boolean) => void)
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -134,6 +136,8 @@ selected(value: boolean)
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -154,6 +158,8 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -162,7 +168,7 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 菜单项被选中时的图标显示方式。<br>true：显示默认的对勾图标；false：不显示图标。<br>ResourceStr：显示指定的图标。<br>SymbolGlyphModifier：显示指定的HMSymbol图标。<br>默认值：false<br>**适用版本：** 12 |
+| value | boolean &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | 是 | 菜单项被选中时的图标显示方式。<br>true：显示默认的对勾图标；false：不显示图标。<br>ResourceStr：显示指定的图标。<br>SymbolGlyphModifier：显示指定的HMSymbol图标。<br>默认值：false<br>**适用版本：** 12 |
 
 ## subMenuBuilder
 
@@ -184,4 +190,4 @@ Create the submenu for custom menu item.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | Indicates the builder function for submenu. |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | Indicates the builder function for submenu. |

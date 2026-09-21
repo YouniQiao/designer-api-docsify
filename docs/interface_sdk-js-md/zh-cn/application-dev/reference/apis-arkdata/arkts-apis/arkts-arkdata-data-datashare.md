@@ -30,7 +30,7 @@ import { dataShare } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例。使用callback异步回调。<br> |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper) | 创建DataShareHelper实例。使用callback异步回调。<br> |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-1) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br> |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-2) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br> |
 | [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | 关闭静默访问。使用Promise异步回调。<br> <br>使用规则： |

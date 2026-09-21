@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 NavDestination类型。默认值：NavDestinationMode.Standard。
 
-**类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestination-comp-navdestinationmode-e.md)
 
 **起始版本：** 15
 

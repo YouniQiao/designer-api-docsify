@@ -163,10 +163,6 @@ try {
 }
 ```
 
-```TypeScript
-Obtain the foreground sub-profile ID of OS account 100.
-```
-
 <a id="getosaccountforegroundsubprofileid-1"></a>
 
 ## getOsAccountForegroundSubProfileId
@@ -208,7 +204,9 @@ Obtains the foreground sub-profile ID of the specified OS account. This API uses
 
 **Examples**
 
-See [getOsAccountForegroundSubProfileId](#getosaccountforegroundsubprofileid)
+```TypeScript
+Obtain the foreground sub-profile ID of OS account 100.
+```
 
 ## getOsAccountLocalIdForSubProfile
 
@@ -297,10 +295,6 @@ Obtains the sub-profile of the OS account of the caller. This API uses a promise
 Obtains the sub-profile whose ID is 100001.
 ```
 
-```TypeScript
-Obtain the sub-profile whose ID is 100001 of OS account 100.
-```
-
 <a id="getosaccountsubprofile-1"></a>
 
 ## getOsAccountSubProfile
@@ -345,7 +339,9 @@ Obtains the sub-profile of the specified OS account. This API uses a promise to 
 
 **Examples**
 
-See [getOsAccountSubProfile](#getosaccountsubprofile)
+```TypeScript
+Obtain the sub-profile whose ID is 100001 of OS account 100.
+```
 
 ## getOsAccountSubProfileIds
 
@@ -397,10 +393,6 @@ try {
 }
 ```
 
-```TypeScript
-Obtain the sub-profile IDs of OS account 100.
-```
-
 <a id="getosaccountsubprofileids-1"></a>
 
 ## getOsAccountSubProfileIds
@@ -444,7 +436,9 @@ Obtains the sub-profile IDs of the specified OS account. This API uses a promise
 
 **Examples**
 
-See [getOsAccountSubProfileIds](#getosaccountsubprofileids)
+```TypeScript
+Obtain the sub-profile IDs of OS account 100.
+```
 
 ## offOsAccountSubProfileEvent
 

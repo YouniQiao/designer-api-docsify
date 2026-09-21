@@ -38,16 +38,6 @@ call.hasCall((err: BusinessError, data: boolean) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hasCall().then(() => {
-    console.info(`hasCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`hasCall fail, promise: err->Code${err.code}, message:${err.message}`);
-});
-```
-
 
 <a id="hascall-1"></a>
 
@@ -71,4 +61,12 @@ function hasCall(): Promise<boolean>
 
 **示例**
 
-参见 [hasCall](#hascall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.hasCall().then(() => {
+    console.info(`hasCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`hasCall fail, promise: err->Code${err.code}, message:${err.message}`);
+});
+```

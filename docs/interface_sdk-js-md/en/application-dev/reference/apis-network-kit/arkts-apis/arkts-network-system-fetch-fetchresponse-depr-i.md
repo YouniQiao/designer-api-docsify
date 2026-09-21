@@ -62,3 +62,71 @@ All headers in the response from the server.
 **Since:** 3
 
 **System capability:** SystemCapability.Communication.NetStack
+
+**Examples**
+
+```TypeScript
+ArkTS example:
+```
+
+```TypeScript
+JS example:
+```
+
+```TypeScript
+/* index.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// index.js
+import fetch from '@system.fetch';
+
+export default {
+    data: {
+        fontColor: '#FFF',
+        result: '',
+    },
+    usingFetch: function() {
+        const that = this;
+        fetch.fetch({
+            url: 'test_url',
+            success: function(response) {
+                that.fontColor = '#00FF00';
+                that.result = 'SUCCESS';
+                console.info('fetch success');
+                console.info(JSON.stringify(response));
+            },
+            fail: function() {
+                that.fontColor = '#FF0000';
+                that.result = 'FAILED';
+                console.error('fetch failed');
+            }
+        });
+    }
+};
+```
+
+```TypeScript
+> NOTEHTTPS is supported by default. To support HTTP, you need to add "network" to the config.json file, and set the attribute "cleartextTraffic" to true.
+```

@@ -241,40 +241,6 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 }
 ```
 
-```TypeScript
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo', // 此处仅为示例，开发者在实际使用中需替换为真实包名
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      await this.context.startAbility(want);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
-```
-
 <a id="startability-1"></a>
 
 ## startAbility
@@ -327,7 +293,39 @@ startAbility(want: Want): Promise<void>
 
 **示例**
 
-参见 [startAbility](#startability)
+```TypeScript
+import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
+    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
+    let want: Want = {
+      bundleName: 'com.ohos.intentExecuteDemo', // 此处仅为示例，开发者在实际使用中需替换为真实包名
+      moduleName: 'entry',
+      abilityName: 'AnotherAbility',
+    };
+
+    try {
+      await this.context.startAbility(want);
+      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
+    }
+
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        message: 'Execute insight intent succeed.',
+      }
+    };
+    return result;
+  }
+}
+```
 
 ## instanceId
 

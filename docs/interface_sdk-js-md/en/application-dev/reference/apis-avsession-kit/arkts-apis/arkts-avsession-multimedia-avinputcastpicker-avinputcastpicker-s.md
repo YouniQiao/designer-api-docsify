@@ -40,7 +40,7 @@ customPicker?: CustomBuilder
 
 Custom picker.
 
-**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-common-comp-custombuilder-t.md)
 
 **Since:** 20
 

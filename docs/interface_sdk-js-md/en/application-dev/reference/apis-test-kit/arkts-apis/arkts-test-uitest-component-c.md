@@ -639,17 +639,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function mode_demo() {
-  let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  await text.inputText('123', { paste: true, addition: false });
-}
-```
-
 <a id="inputtext-1"></a>
 
 ## inputText
@@ -691,20 +680,6 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Search for the component whose text is 'hello world'.
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  // Clear the original text and enter '123'.
-  await text.inputText('123');
-}
-```
 
 ```TypeScript
 // xxx.test.ets
@@ -1277,17 +1252,6 @@ async function demo() {
 }
 ```
 
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-}
-```
-
 <a id="scrollsearch-1"></a>
 
 ## scrollSearch
@@ -1329,20 +1293,6 @@ Scrolls on this component to search for the target component. This API is applic
 | [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  // Create a Driver object.
-  let driver: Driver = Driver.create();
-  // Obtain the scrollable Scroll component.
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  // Scroll on the Scroll component to search for the component whose text is 'next page'.
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-}
-```
 
 ```TypeScript
 // xxx.test.ets

@@ -32,6 +32,50 @@ Response的构造函数。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview, WebNetErrorList } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('response').onClick(() => {
+        let response = new webview.WebSchemeHandlerResponse();
+        try {
+          response.setUrl("http://www.example.com")
+          response.setStatus(200)
+          response.setStatusText("OK")
+          response.setMimeType("text/html")
+          response.setEncoding("utf-8")
+          response.setHeaderByName("header1", "value1", false)
+          response.setNetErrorCode(WebNetErrorList.NET_OK)
+          response.setCustomErrorCode(1001)
+          console.info("[schemeHandler] getUrl:" + response.getUrl())
+          console.info("[schemeHandler] getStatus:" + response.getStatus())
+          console.info("[schemeHandler] getStatusText:" + response.getStatusText())
+          console.info("[schemeHandler] getMimeType:" + response.getMimeType())
+          console.info("[schemeHandler] getEncoding:" + response.getEncoding())
+          console.info("[schemeHandler] getHeaderByName:" + response.getHeaderByName("header1"))
+          console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
+          console.info("[schemeHandler] getCustomErrorCode:" + response.getCustomErrorCode())
+
+        } catch (error) {
+          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+        }
+      })
+      Web({ src: 'https://www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## getCustomErrorCode
 
 ```TypeScript
@@ -52,6 +96,12 @@ getCustomErrorCode(): number
 | --- | --- |
 | number | 当前Response的自定义错误码。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## getEncoding
 
 ```TypeScript
@@ -71,6 +121,12 @@ getEncoding(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回响应内容的字符编码格式，如'utf-8'、'gbk'等。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## getHeaderByName
 
@@ -98,6 +154,12 @@ getHeaderByName(name: string): string
 | --- | --- |
 | string | 指定名称的响应头字段对应的值。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## getMimeType
 
 ```TypeScript
@@ -117,6 +179,12 @@ getMimeType(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回响应内容的MIME类型字符串，如'text/html'、'application/json'等。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## getNetErrorCode
 
@@ -138,6 +206,12 @@ getNetErrorCode(): WebNetErrorList
 | --- | --- |
 | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 返回Response的网络错误码。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## getStatus
 
 ```TypeScript
@@ -158,6 +232,12 @@ getStatus(): number
 | --- | --- |
 | number | 返回Response的HTTP状态码。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## getStatusText
 
 ```TypeScript
@@ -177,6 +257,12 @@ getStatusText(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 状态文本。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## getUrl
 
@@ -200,6 +286,12 @@ getUrl(): string
 | --- | --- |
 | string | 获取经过重定向或因HSTS而更改后的URL。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## setCustomErrorCode
 
 ```TypeScript
@@ -219,6 +311,12 @@ setCustomErrorCode(customErrorCode: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | customErrorCode | number | 是 | 该响应的自定义错误码。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## setEncoding
 
@@ -246,6 +344,12 @@ setEncoding(encoding: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## setHeaderByName
 
 ```TypeScript
@@ -264,8 +368,8 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 头部（header）的名称，指定要设置的HTTP响应头字段名。常见值包括'Content-Type'（内容类型）、'Authorization'（授权信息）、'Cache- Control'（缓存控制）等。 |
-| value | string | 是 | 头部（header）的值，指定HTTP响应头字段的具体内容。需要与name参数对应的头部字段匹配，如name为'Content-Type'时，value可以是'text/ html; charset=utf-8'。 |
+| name | string | 是 | 头部（header）的名称，指定要设置的HTTP响应头字段名。常见值包括'Content-Type'（内容类型）、'Authorization'（授权信息）、'Cache-Control'（缓存控制）等。 |
+| value | string | 是 | 头部（header）的值，指定HTTP响应头字段的具体内容。需要与name参数对应的头部字段匹配，如name为'Content-Type'时，value可以是'text/html; charset=utf-8'。 |
 | overwrite | boolean | 是 | 如果为true，将覆盖现有的头部，否则不覆盖。 |
 
 **错误码：**
@@ -273,6 +377,12 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## setMimeType
 
@@ -300,6 +410,12 @@ setMimeType(type: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## setNetErrorCode
 
 ```TypeScript
@@ -325,6 +441,12 @@ setNetErrorCode(code: WebNetErrorList): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
 
 ## setStatus
 
@@ -352,6 +474,12 @@ setStatus(code: number): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## setStatusText
 
 ```TypeScript
@@ -378,6 +506,12 @@ setStatusText(text: string): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```
+
 ## setUrl
 
 ```TypeScript
@@ -403,3 +537,9 @@ setUrl(url: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[constructor](#constructor)。
+```

@@ -4,9 +4,9 @@
 declare class RowAttribute extends CommonMethod<RowAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** RowAttribute extends CommonMethod<RowAttribute>
 
@@ -46,7 +46,7 @@ Sets the alignment format of child components in the horizontal direction. After
 
 > **NOTE:** 
 > 
-> In a Row layout, if child components do not have [flexShrink](arkts-arkui-commonmethod-c.md#flexshrink) set, they are not
+> In a Row layout, if child components do not have [flexShrink](arkts-arkui-common-comp-commonmethod-c.md#flexshrink) set, they are not
 > shrunk by default. That is, the sum of the main axis sizes of all child components may exceed the main axis of
 > the container. In this case, the alignment behavior of **FlexAlign.Center** and **FlexAlign.End** changes, and
 > the start position of child components is the same as that of **FlexAlign.Start**.
@@ -97,4 +97,4 @@ Sets whether to reverse the arrangement order of child components in the horizon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isReversed | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the arrangement order of child components in the horizontal direction is reversed.<br>The value **true** means that the child components are arranged in reverse order in the horizontal direction (from right to left), and the value **false** means that the child components are arranged in normal order in the horizontal direction (from left to right). If the parameter value is **undefined**, it is treated as **true**, and the main axis direction is reversed. |
+| isReversed | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether the arrangement order of child components in the horizontal direction is reversed.<br>The value **true** means that the child components are arranged in reverse order in the horizontal direction (from right to left), and the value **false** means that the child components are arranged in normal order in the horizontal direction (from left to right). If the parameter value is **undefined**, it is treated as **true**, and the main axis direction is reversed. |

@@ -35,7 +35,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | No | Spacing configuration options of the **Column** component. It sets the vertical spacing between elements in the column layout through the **space** attribute. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set.<br> |
+| options | [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) | No | Spacing configuration options of the **Column** component. It sets the vertical spacing between elements in the column layout through the **space** attribute. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set.<br> |
 
 ## Column
 
@@ -66,7 +66,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | No | Spacing configuration options of the **Column** component. The **space** attribute sets the vertical spacing between elements in the column layout. **space** supports settings of the number, string, or Resource type. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set. |
+| options | [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-column-comp-columnoptionsv2-i.md) | No | Spacing configuration options of the **Column** component. The **space** attribute sets the vertical spacing between elements in the column layout. **space** supports settings of the number, string, or Resource type. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set. |
 
 ## Summary
 
@@ -74,14 +74,14 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Description |
 | --- | --- |
-| [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. |
-| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. The spacing type **SpaceType** can be number, string, or Resource. |
+| [ColumnOptions](arkts-arkui-column-comp-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. |
+| [ColumnOptionsV2](arkts-arkui-column-comp-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. The spacing type **SpaceType** can be number, string, or Resource. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SpaceType](arkts-arkui-spacetype-t.md) | Describes the supported data types for the **space** parameter in the constructors of the **Column** component. The type is a union of the following types. |
+| [SpaceType](arkts-arkui-column-comp-spacetype-t.md) | Describes the supported data types for the **space** parameter in the constructors of the **Column** component. The type is a union of the following types. |
 
 ## Examples
 

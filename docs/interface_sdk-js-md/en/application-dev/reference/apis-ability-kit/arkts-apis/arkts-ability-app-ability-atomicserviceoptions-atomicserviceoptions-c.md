@@ -24,7 +24,7 @@ import { AtomicServiceOptions } from '@kit.AbilityKit';
 completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 ```
 
-Operation class for receiving the result of opening an atomic service.
+Operation class for the result of opening an atomic service, used to receive the result of opening an atomic service.
 
 **Type:** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 

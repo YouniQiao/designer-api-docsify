@@ -29,6 +29,8 @@ challenge: string
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +47,8 @@ remoteMessage: string
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -60,6 +64,8 @@ ticket: string
 **类型：** string
 
 **起始版本：** 26.0.1
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.Asset
 

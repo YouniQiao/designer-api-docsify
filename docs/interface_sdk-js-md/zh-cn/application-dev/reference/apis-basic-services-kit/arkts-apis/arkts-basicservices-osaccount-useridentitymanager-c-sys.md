@@ -370,61 +370,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN,
-    (err: BusinessError, result: osAccount.EnrolledCredInfo[]) => {
-    if (err) {
-      console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getAuthInfo result = ' + JSON.stringify(result));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-try {
-  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let options: osAccount.GetAuthInfoOptions = {
-  authType: osAccount.AuthType.PIN,
-  accountId: 100,
-};
-try {
-  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
-    console.info('getAuthInfo result = ' + JSON.stringify(result))
-  }).catch((err: BusinessError) => {
-    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="getauthinfo-1"></a>
 
 ## getAuthInfo
@@ -462,7 +407,24 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 **示例**
 
-参见 [getAuthInfo](#getauthinfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN,
+    (err: BusinessError, result: osAccount.EnrolledCredInfo[]) => {
+    if (err) {
+      console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAuthInfo result = ' + JSON.stringify(result));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 <a id="getauthinfo-2"></a>
 
@@ -506,7 +468,21 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 **示例**
 
-参见 [getAuthInfo](#getauthinfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 <a id="getauthinfo-3"></a>
 
@@ -551,7 +527,25 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 **示例**
 
-参见 [getAuthInfo](#getauthinfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let options: osAccount.GetAuthInfoOptions = {
+  authType: osAccount.AuthType.PIN,
+  accountId: 100,
+};
+try {
+  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((err: BusinessError) => {
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getEnrolledId
 
@@ -789,23 +783,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userIDM = new osAccount.UserIdentityManager();
-let accountId = 100;
-try {
-  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
-    console.info('openSession challenge = ' + JSON.stringify(challenge));
-  }).catch((err: BusinessError) => {
-    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
-}
-```
-
 <a id="opensession-1"></a>
 
 ## openSession
@@ -848,7 +825,22 @@ openSession(accountId?: number): Promise<Uint8Array>
 
 **示例**
 
-参见 [openSession](#opensession)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let accountId = 100;
+try {
+  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
+    console.info('openSession challenge = ' + JSON.stringify(challenge));
+  }).catch((err: BusinessError) => {
+    console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## updateCredential
 

@@ -28,7 +28,7 @@ Default value: **BlurStyle.NONE**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **Since:** 11
 

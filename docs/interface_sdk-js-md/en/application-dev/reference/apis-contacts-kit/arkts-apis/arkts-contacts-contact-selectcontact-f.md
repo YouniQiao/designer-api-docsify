@@ -44,16 +44,6 @@ contact.selectContact((err: BusinessError, data) => {
 });
 ```
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Open the contact selection UI.
-let promise = contact.selectContact();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contact. data->${JSON.stringify(data)}`);
-});
-```
-
 
 <a id="selectcontact-1"></a>
 
@@ -81,4 +71,12 @@ Selects a contact. This API uses a promise to return the result.
 
 **Examples**
 
-See [selectContact](#selectcontact)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Open the contact selection UI.
+let promise = contact.selectContact();
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contact. data->${JSON.stringify(data)}`);
+});
+```

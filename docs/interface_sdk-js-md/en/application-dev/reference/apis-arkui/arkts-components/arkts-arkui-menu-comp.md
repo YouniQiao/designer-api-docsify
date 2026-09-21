@@ -2,7 +2,7 @@
 
 The **Menu** component is a vertical list of items presented to the user.
 
-> **NOTE** > > - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their > > - The **Menu** component must be used together with the > [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) or > [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) > method. It does not work when used alone.
+> **NOTE** > > - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their > > - The **Menu** component must be used together with the > [bindMenu](arkts-arkui-common-comp-commonmethod-c.md#bindmenu) or > [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) > method. It does not work when used alone.
 
 ## Child Components
 
@@ -42,6 +42,8 @@ Creates a fixed container for a menu. This API does not have any parameters.
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -52,7 +54,7 @@ Creates a fixed container for a menu. This API does not have any parameters.
 
 | Name | Description |
 | --- | --- |
-| [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Enumerates the submenu expanding modes. |
+| [SubMenuExpandingMode](arkts-arkui-menu-comp-submenuexpandingmode-e.md) | Enumerates the submenu expanding modes. |
 
 ## Examples
 

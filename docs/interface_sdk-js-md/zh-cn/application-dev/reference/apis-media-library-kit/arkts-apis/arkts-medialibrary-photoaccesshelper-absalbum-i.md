@@ -47,6 +47,12 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
+```
+
 <a id="getassets-1"></a>
 
 ## getAssets
@@ -86,6 +92,12 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 | 13900012 | Permission denied<br>**适用版本：** 10 - 19 |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
+```
 
 ## albumName
 

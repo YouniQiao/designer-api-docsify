@@ -35,6 +35,25 @@ Obtains data of the acceleration sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-1"></a>
 
@@ -67,6 +86,28 @@ Obtains data of the uncalibrated acceleration sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-2"></a>
 
@@ -95,6 +136,23 @@ Obtains data of the ambient light sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.AMBIENT_LIGHT, (data: sensor.LightResponse) => {
+    console.info('Succeeded in invoking once. the ambient light intensity: ' + data.intensity);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-3"></a>
@@ -125,6 +183,23 @@ Obtains data of the temperature sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
+    console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-4"></a>
 
@@ -154,6 +229,23 @@ Obtains data of the barometer sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.BAROMETER, (data: sensor.BarometerResponse) => {
+    console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-5"></a>
 
@@ -182,6 +274,25 @@ Obtains data of the gravity sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-6"></a>
@@ -215,6 +326,25 @@ Obtains data of the gyroscope sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GYROSCOPE, (data: sensor.GyroscopeResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-7"></a>
 
@@ -247,6 +377,28 @@ Obtains data of the uncalibrated gyroscope sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-8"></a>
 
@@ -275,6 +427,23 @@ Obtains data of the Hall effect sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HALL, (data: sensor.HallResponse) => {
+    console.info('Succeeded in invoking once. Status: ' + data.status);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-9"></a>
@@ -308,6 +477,23 @@ Obtains data of the heart rate sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HEART_RATE, (data: sensor.HeartRateResponse) => {
+    console.info('Succeeded in invoking once. Heart rate: ' + data.heartRate);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-10"></a>
 
@@ -336,6 +522,23 @@ Obtains data of the humidity sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HUMIDITY, (data: sensor.HumidityResponse) => {
+    console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-11"></a>
@@ -369,6 +572,25 @@ Obtains data of the linear acceleration sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.LINEAR_ACCELEROMETER, (data: sensor.LinearAccelerometerResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-12"></a>
 
@@ -397,6 +619,25 @@ Obtains data of the magnetic field sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-13"></a>
@@ -427,6 +668,28 @@ Obtains data of the uncalibrated magnetic field sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-14"></a>
 
@@ -455,6 +718,25 @@ Obtains data of the orientation sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ORIENTATION, (data: sensor.OrientationResponse) => {
+    console.info('Succeeded in the device rotating at an angle around the X axis: ' + data.beta);
+    console.info('Succeeded in the device rotating at an angle around the Y axis: ' + data.gamma);
+    console.info('Succeeded in the device rotating at an angle around the Z axis: ' + data.alpha);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-15"></a>
@@ -488,6 +770,23 @@ Obtains data of the pedometer sensor once. The step counter sensor's data report
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PEDOMETER, (data: sensor.PedometerResponse) => {
+    console.info('Succeeded in invoking once. Step count: ' + data.steps);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-16"></a>
 
@@ -520,6 +819,23 @@ Obtains data of the pedometer sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
+    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-17"></a>
 
@@ -548,6 +864,23 @@ Obtains data of the proximity sensor once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PROXIMITY, (data: sensor.ProximityResponse) => {
+    console.info('Succeeded in invoking once. Distance: ' + data.distance);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-18"></a>
@@ -578,6 +911,26 @@ Obtains data of the rotation vector sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-19"></a>
 
@@ -606,6 +959,23 @@ Obtains the significant motion sensor data once.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
+    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 <a id="once-20"></a>
@@ -636,6 +1006,23 @@ Obtains data of the wear detection sensor once.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
+    console.info('Succeeded in invoking once. Wear status: ' + data.value);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 <a id="once-21"></a>
 
@@ -663,6 +1050,18 @@ Subscribes to only one data change of the acceleration sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_ACCELEROMETER](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ACCELEROMETER**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)&gt; | Yes | One-shot callback used to return the acceleration sensor data. The reported data type in the callback is **AccelerometerResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
 
 
 <a id="once-22"></a>
@@ -692,6 +1091,21 @@ Subscribes to only one data change of the uncalibrated acceleration sensor.
 | type | [SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | Yes | One-shot callback used to return the uncalibrated acceleration sensor data. The reported data type in the callback is **AccelerometerUncalibratedResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
+
 
 <a id="once-23"></a>
 
@@ -717,6 +1131,16 @@ Subscribes to only one data change of the ambient light sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_AMBIENT_LIGHT**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)&gt; | Yes | One-shot callback used to return the ambient light sensor data. The reported data type in the callback is **LightResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightResponse) => {
+  console.info('Succeeded in invoking once. Illumination: ' + data.intensity);
+});
+```
 
 
 <a id="once-24"></a>
@@ -744,6 +1168,16 @@ Subscribes to only one data change of the ambient temperature sensor.
 | type | [SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_AMBIENT_TEMPERATURE**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | Yes | One-shot callback used to return the ambient temperature sensor data. The reported data type in the callback is **AmbientTemperatureResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
+  console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
+});
+```
+
 
 <a id="once-25"></a>
 
@@ -770,6 +1204,16 @@ Subscribes to only one data change of the barometer sensor.
 | type | [SensorType.SENSOR_TYPE_ID_BAROMETER](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_BAROMETER**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)&gt; | Yes | One-shot callback used to return the barometer sensor data. The reported data type in the callback is **BarometerResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerResponse) => {
+  console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
+});
+```
+
 
 <a id="once-26"></a>
 
@@ -795,6 +1239,18 @@ Subscribes to only one data change of the gravity sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_GRAVITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GRAVITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | Yes | One-shot callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+```
 
 
 <a id="once-27"></a>
@@ -824,6 +1280,18 @@ Subscribes to only one data change of the gyroscope sensor.
 | type | [SensorType.SENSOR_TYPE_ID_GYROSCOPE](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GYROSCOPE**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)&gt; | Yes | One-shot callback used to return the gyroscope sensor data. The reported data type in the callback is **GyroscopeResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
+
 
 <a id="once-28"></a>
 
@@ -852,6 +1320,21 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor.
 | type | [SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | Yes | One-shot callback used to return the uncalibrated gyroscope sensor data. The reported data type in the callback is **GyroscopeUncalibratedResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
+
 
 <a id="once-29"></a>
 
@@ -877,6 +1360,16 @@ Subscribes to only one data change of the Hall effect sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_HALL](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HALL**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | Yes | One-shot callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) => {
+  console.info('Succeeded in invoking once. Status: ' + data.status);
+});
+```
 
 
 <a id="once-30"></a>
@@ -906,6 +1399,16 @@ Subscribes to only one data change of the heart rate sensor.
 | type | [SensorType.SENSOR_TYPE_ID_HEART_RATE](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HEART_RATE**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md)&gt; | Yes | One-shot callback used to return the heart rate sensor data. The reported data type in the callback is **HeartRateResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRateResponse) => {
+  console.info("Succeeded in invoking once. Heart rate: " + data.heartRate);
+});
+```
+
 
 <a id="once-31"></a>
 
@@ -931,6 +1434,16 @@ Subscribes to only one data change of the humidity sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_HUMIDITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_HUMIDITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | Yes | One-shot callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityResponse) => {
+  console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
+});
+```
 
 
 <a id="once-32"></a>
@@ -986,6 +1499,18 @@ Subscribes to only one data change of the magnetic field sensor.
 | type | [SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | Yes | One-shot callback used to return the magnetic field sensor data. The reported data type in the callback is **MagneticFieldResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
+
 
 <a id="once-34"></a>
 
@@ -1012,6 +1537,21 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor.
 | type | [SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | Yes | One-shot callback used to return the uncalibrated magnetic field sensor data. The reported data type in the callback is **MagneticFieldUncalibratedResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
+
 
 <a id="once-35"></a>
 
@@ -1037,6 +1577,18 @@ Subscribes to only one data change of the orientation sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_ORIENTATION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ORIENTATION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes | One-shot callback used to return the orientation sensor data. The reported data type in the callback is **OrientationResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.OrientationResponse) => {
+  console.info('Succeeded in invoking the device rotating at an angle around the X axis: ' + data.beta);
+  console.info('Succeeded in invoking the device rotating at an angle around the Y axis: ' + data.gamma);
+  console.info('Succeeded in invoking the device rotating at an angle around the Z axis: ' + data.alpha);
+});
+```
 
 
 <a id="once-36"></a>
@@ -1066,6 +1618,16 @@ Subscribes to only one data change of the pedometer sensor.
 | type | [SensorType.SENSOR_TYPE_ID_PEDOMETER](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PEDOMETER**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | Yes | One-shot callback used to return the pedometer sensor data. The reported data type in the callback is **PedometerResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerResponse) => {
+  console.info('Succeeded in invoking once. Steps: ' + data.steps);
+});
+```
+
 
 <a id="once-37"></a>
 
@@ -1094,6 +1656,16 @@ Subscribes to only one data change of the pedometer detection sensor.
 | type | [SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PEDOMETER_DETECTION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | Yes | One-shot callback used to return the pedometer detection sensor data. The reported data type in the callback is **PedometerDetectionResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
+  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+});
+```
+
 
 <a id="once-38"></a>
 
@@ -1119,6 +1691,17 @@ Subscribes to only one data change of the proximity sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_PROXIMITY](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_PROXIMITY**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)&gt; | Yes | One-shot callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityResponse) => {
+  console.info('Succeeded in invoking once. Distance: ' + data.distance);
+}
+);
+```
 
 
 <a id="once-39"></a>
@@ -1146,6 +1729,19 @@ Subscribes to only one data change of the rotation vector sensor.
 | type | [SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_ROTATION_VECTOR**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | Yes | One-shot callback used to return the rotation vector sensor data. The reported data type in the callback is **RotationVectorResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
+});
+```
+
 
 <a id="once-40"></a>
 
@@ -1172,6 +1768,16 @@ Subscribes to only one data change of the significant motion sensor.
 | type | [SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_SIGNIFICANT_MOTION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | Yes | One-shot callback used to return the significant motion sensor data. The reported data type in the callback is **SignificantMotionResponse**. |
 
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
+  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+});
+```
+
 
 <a id="once-41"></a>
 
@@ -1197,3 +1803,13 @@ Subscribes to only one data change of the wear detection sensor.
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-sensortype-e.md) | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_WEAR_DETECTION**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | Yes | One-shot callback used to return the wear detection sensor data. The reported data type in the callback is **WearDetectionResponse**. |
+
+**Examples**
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
+  console.info("Succeeded in invoking once. Wear status: " + data.value);
+});
+```

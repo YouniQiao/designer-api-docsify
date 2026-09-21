@@ -44,7 +44,7 @@ abilityType: number
 appCloneIndex?: number
 ```
 
-Index of an [application clone](../../../quick-start/app-clone.md).
+Index of an [application clone](../../../quick-start/app-clone.md). The value **0** indicates the main instance, and **1** or above indicates a clone instance. If not returned, the default value is the main instance.
 
 **Type:** number
 

@@ -101,7 +101,13 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 **Examples**
 
-See [generateSecret](#generatesecret)
+```TypeScript
+PBKDF2
+```
+
+```TypeScript
+HKDF
+```
 
 ## generateSecretSync
 

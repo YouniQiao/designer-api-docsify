@@ -424,16 +424,6 @@ Example 1: Load resources via rawfile (a relative path).
 Example 2: Load via an absolute path (from /data/storage/el2/base/files in the application sandbox directory).
 ```
 
-```TypeScript
-import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
-
-function loadModelWithParams(): Promise<Scene> {
-  let loadParams: SceneLoadParams = { offset: 0 };
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
-  return scene;
-}
-```
-
 ## renderFrame
 
 ```TypeScript

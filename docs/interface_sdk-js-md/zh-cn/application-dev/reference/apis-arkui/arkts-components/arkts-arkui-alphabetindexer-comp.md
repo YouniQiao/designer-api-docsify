@@ -26,7 +26,7 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | 是 | 设置索引条组件参数。 |
+| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-comp-alphabetindexeroptions-i.md) | 是 | 设置索引条组件参数。 |
 
 ## 汇总
 
@@ -34,21 +34,21 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | 用于设置索引条参数。 |
+| [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-comp-alphabetindexeroptions-i.md) | 用于设置索引条参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 提示弹窗二级索引项被选中时触发的事件。 |
-| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | [usingPopup](arkts-arkui-alphabetindexer-comp-attribute.md#usingpopup)设置值为true，索引项被选中时触发的事件。 |
-| [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | 索引项被选中时触发的事件。 |
+| [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerpopupselectcallback-t.md) | 提示弹窗二级索引项被选中时触发的事件。 |
+| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerrequestpopupdatacallback-t.md) | [usingPopup](arkts-arkui-alphabetindexer-comp-attribute.md#usingpopup)设置值为true，索引项被选中时触发的事件。 |
+| [OnAlphabetIndexerSelectCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerselectcallback-t.md) | 索引项被选中时触发的事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [IndexerAlign](arkts-arkui-indexeralign-e.md) | 索引条提示弹窗的对齐样式枚举。 |
+| [IndexerAlign](arkts-arkui-alphabetindexer-comp-indexeralign-e.md) | 索引条提示弹窗的对齐样式枚举。 |
 
 ## 示例
 

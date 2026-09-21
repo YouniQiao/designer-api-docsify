@@ -2,7 +2,7 @@
 
 The **TextInput** component provides single-line text input.
 
-> **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
+> **NOTE** > > This component supports plain text only. For rich text, use the [RichEditor](arkts-arkui-richeditor-comp.md#rich_editor) component.
 
 ## Child Components
 
@@ -26,7 +26,7 @@ Defines the constructor of TextInput.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No | Parameters of the **TextInput** component. |
+| value | [TextInputOptions](arkts-arkui-textinput-comp-textinputoptions-i.md) | No | Parameters of the **TextInput** component. |
 
 ## Summary
 
@@ -34,35 +34,35 @@ Defines the constructor of TextInput.
 
 | Name | Description |
 | --- | --- |
-| [PasswordIcon](arkts-arkui-passwordicon-i.md) | PasswordIcon object. |
-| [SubmitEvent](arkts-arkui-submitevent-i.md) | Defines the user submission event. |
-| [TextInputOptions](arkts-arkui-textinputoptions-i.md) | **TextInput** initialization parameters. |
-| [UnderlineColor](arkts-arkui-underlinecolor-i.md) | Defines the underline color width property. |
+| [PasswordIcon](arkts-arkui-textinput-comp-passwordicon-i.md) | PasswordIcon object. |
+| [SubmitEvent](arkts-arkui-textinput-comp-submitevent-i.md) | Defines the user submission event. |
+| [TextInputOptions](arkts-arkui-textinput-comp-textinputoptions-i.md) | **TextInput** initialization parameters. |
+| [UnderlineColor](arkts-arkui-textinput-comp-underlinecolor-i.md) | Defines the underline color width property. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Defines the callback for text content scrolling. |
-| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Defines the callback used to return the pasted text content. |
-| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) | Defines the callback for submission. |
-| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Defines the callback for text selection changes or caret position changes. |
+| [OnContentScrollCallback](arkts-arkui-textinput-comp-oncontentscrollcallback-t.md) | Defines the callback for text content scrolling. |
+| [OnPasteCallback](arkts-arkui-textinput-comp-onpastecallback-t.md) | Defines the callback used to return the pasted text content. |
+| [OnSubmitCallback](arkts-arkui-textinput-comp-onsubmitcallback-t.md) | Defines the callback for submission. |
+| [OnTextSelectionChangeCallback](arkts-arkui-textinput-comp-ontextselectionchangecallback-t.md) | Defines the callback for text selection changes or caret position changes. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ContentType](arkts-arkui-contenttype-e.md) | Enumerates the content types for autofill. |
-| [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Type of the Enter key. |
-| [InputType](arkts-arkui-inputtype-e.md) | Sets the single-line text box type. |
-| [TextInputStyle](arkts-arkui-textinputstyle-e.md) | Text input style. |
+| [ContentType](arkts-arkui-textinput-comp-contenttype-e.md) | Enumerates the content types for autofill. |
+| [EnterKeyType](arkts-arkui-textinput-comp-enterkeytype-e.md) | Type of the Enter key. |
+| [InputType](arkts-arkui-textinput-comp-inputtype-e.md) | Sets the single-line text box type. |
+| [TextInputStyle](arkts-arkui-textinput-comp-textinputstyle-e.md) | Text input style. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1 (Setting and Obtaining the Cursor Position)
 
-Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-textinputcontroller-c.md). In addition, the two-way data binding of the text parameter can be implemented using !! (since API version 18).
+Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-textinput-comp-textinputcontroller-c.md). In addition, the two-way data binding of the text parameter can be implemented using !! (since API version 18).
 
 
 ```

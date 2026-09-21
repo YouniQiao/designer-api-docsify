@@ -25,7 +25,7 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) | Obtains information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result. |
+| [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo) | Obtains information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-1) | Obtains information about the remote ability that matches the given element name. This API uses a promise to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-2) | Obtains information about the remote abilities that match the given element names. This API uses an asynchronous callback to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo-3) | Obtains information about the remote abilities that match the given element names. This API uses a promise to return the result. |

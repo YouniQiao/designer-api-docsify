@@ -55,16 +55,6 @@ radio.getNetworkSearchInformation(0, (err: BusinessError, data: radio.NetworkSea
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getNetworkSearchInformation(0).then((data: radio.NetworkSearchResult) => {
-    console.info(`getNetworkSearchInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkSearchInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 <a id="getnetworksearchinformation-1"></a>
 
@@ -110,4 +100,12 @@ Get network search information.
 
 **Examples**
 
-See [getNetworkSearchInformation](#getnetworksearchinformation)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getNetworkSearchInformation(0).then((data: radio.NetworkSearchResult) => {
+    console.info(`getNetworkSearchInformation success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkSearchInformation failed, promise: err->${JSON.stringify(err)}`);
+});
+```

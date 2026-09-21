@@ -34,6 +34,8 @@ The AI enhancement generates an additional image. Together with the original ima
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.

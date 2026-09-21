@@ -34,6 +34,18 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+let callback: Callback<number> = (data: number) => {
+  console.info(`Succeeded in unregistering the callback for screen changes. Data: ${data}`);
+};
+// 关闭传入的callback监听
+screen.off('connect', callback);
+// 如果通过on注册多个callback，同时关闭所有callback监听
+screen.off('connect');
+```
+
 
 <a id="off-1"></a>
 
@@ -65,6 +77,10 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+**示例**
+
+参见 [off](#off)
+
 
 <a id="off-2"></a>
 
@@ -95,3 +111,7 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
+
+**示例**
+
+参见 [off](#off)

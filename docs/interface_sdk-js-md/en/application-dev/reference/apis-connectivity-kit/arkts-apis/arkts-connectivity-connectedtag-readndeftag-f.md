@@ -48,18 +48,6 @@ connectedTag.readNdefTag().then((data) => {
 });
 ```
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.readNdefTag((err, data)=> {
-    if (err) {
-        console.error("connectedTag readNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag readNdefTag AsyncCallback data: " + data);
-    }
-});
-```
-
 
 <a id="readndeftag-1"></a>
 
@@ -94,4 +82,14 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 **Examples**
 
-See [readNdefTag](#readndeftag)
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+connectedTag.readNdefTag((err, data)=> {
+    if (err) {
+        console.error("connectedTag readNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag readNdefTag AsyncCallback data: " + data);
+    }
+});
+```

@@ -116,10 +116,6 @@ A constructor used to create a **RationalNumber** object.
 **Examples**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
 
@@ -143,10 +139,6 @@ A constructor used to create a **RationalNumber** object.
 
 ```TypeScript
 let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
 ```
 
 ## createRationalFromString

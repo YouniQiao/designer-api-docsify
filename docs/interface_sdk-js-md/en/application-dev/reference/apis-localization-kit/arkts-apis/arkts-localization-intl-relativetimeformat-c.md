@@ -47,17 +47,6 @@ import { intl } from '@kit.LocalizationKit';
 let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 ```
 
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Use locale ID zh-CN to create a RelativeTimeFormat object with the localeMatcher set to lookup, numeric set to always, and style set to long.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
-  localeMatcher: 'lookup',
-  numeric: 'always',
-  style: 'long'
-});
-```
-
 <a id="constructor-1"></a>
 
 ## constructor
@@ -86,13 +75,6 @@ Creates a **RelativeTimeFormat** object.
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | Options for creating a **RelativeTimeFormat** object. |
 
 **Examples**
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a RelativeTimeFormat object using the current system locale ID.
-let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
-```
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

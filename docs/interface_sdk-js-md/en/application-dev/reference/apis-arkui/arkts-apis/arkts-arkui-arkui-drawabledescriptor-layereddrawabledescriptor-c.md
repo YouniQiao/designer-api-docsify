@@ -364,3 +364,13 @@ struct Index {
   }
 }
 ```
+
+**Examples**
+
+```TypeScript
+This example creates a LayeredDrawableDescriptor object using a JSON file.
+```
+
+```TypeScript
+This example creates a LayeredDrawableDescriptor object using a PixelMapDrawableDescriptor object.
+```

@@ -6,7 +6,7 @@ declare class IsolatedComponentAttribute extends CommonMethod<IsolatedComponentA
 
 仅支持width、height和backgroundColor通用属性。
 
-不支持通用事件。
+不支持[通用事件](arkts-arkui-common-comp.md#common)。
 
 事件经过坐标转换后异步传递给受限Worker线程处理。不支持线程之间的事件冒泡，线程之间的UI交互存在事件冲突现象。
 

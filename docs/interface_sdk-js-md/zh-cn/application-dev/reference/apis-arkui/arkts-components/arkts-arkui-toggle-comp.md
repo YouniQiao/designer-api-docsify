@@ -4,7 +4,7 @@
 
 > **说明：**
 
-> - 从API版本26.0.0开始，Toggle组件支持新材质效果。Toggle组件使用通用新材质属性systemMaterial时，不同 > [ToggleType](arkts-arkui-toggletype-e.md)类型的效果不同： > > - ToggleType.Checkbox：当前未适配系统材质效果，设置系统材质不会出现系统材质相关的动效和视觉效果。 > > - ToggleType.Switch：传入材质参数时，使用组件内部预设的视觉参数，传入的材质参数仅作为开启新材质的开关标记，不影响实际视觉效果。主要影响Toggle的滑块大小、滑块样式、阴影等视觉属性。设置 > [switchPointColor](arkts-arkui-toggle-comp-attribute.md#switchpointcolor)后会出现点光源效果，点光源颜色跟随switchPointColor的设置。传入undefined时，新材质不生效， > 表现为原先的Toggle样式。 > > - ToggleType.Button：设置系统材质的效果与Button组件设置系统材质的效果相同，主要影响背景颜色、边框、阴影等视觉属性。
+> - 从API版本26.0.0开始，Toggle组件支持新材质效果。Toggle组件使用通用新材质属性systemMaterial时，不同 > [ToggleType](arkts-arkui-toggle-comp-toggletype-e.md)类型的效果不同： > > - ToggleType.Checkbox：当前未适配系统材质效果，设置系统材质不会出现系统材质相关的动效和视觉效果。 > > - ToggleType.Switch：传入材质参数时，使用组件内部预设的视觉参数，传入的材质参数仅作为开启新材质的开关标记，不影响实际视觉效果。主要影响Toggle的滑块大小、滑块样式、阴影等视觉属性。设置 > [switchPointColor](arkts-arkui-toggle-comp-attribute.md#switchpointcolor)后会出现点光源效果，点光源颜色跟随switchPointColor的设置。传入undefined时，新材质不生效， > 表现为原先的Toggle样式。 > > - ToggleType.Button：设置系统材质的效果与Button组件设置系统材质的效果相同，主要影响背景颜色、边框、阴影等视觉属性。
 
 ## 子组件
 
@@ -18,6 +18,8 @@ Toggle(options: ToggleOptions)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -28,7 +30,7 @@ Toggle(options: ToggleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToggleOptions](arkts-arkui-toggleoptions-i.md) | 是 | Toggle组件的配置选项，用于配置开关的样式类型和初始状态。 |
+| options | [ToggleOptions](arkts-arkui-toggle-comp-toggleoptions-i.md) | 是 | Toggle组件的配置选项，用于配置开关的样式类型和初始状态。 |
 
 ## 汇总
 
@@ -36,15 +38,15 @@ Toggle(options: ToggleOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [SwitchStyle](arkts-arkui-switchstyle-i.md) | Switch类型的样式。 |
-| [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Toggle组件的配置信息。 |
+| [SwitchStyle](arkts-arkui-toggle-comp-switchstyle-i.md) | Switch类型的样式。 |
+| [ToggleConfiguration](arkts-arkui-toggle-comp-toggleconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [ToggleOptions](arkts-arkui-toggle-comp-toggleoptions-i.md) | Toggle组件的配置信息。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ToggleType](arkts-arkui-toggletype-e.md) | Toggle的样式。 |
+| [ToggleType](arkts-arkui-toggle-comp-toggletype-e.md) | Toggle的样式。 |
 
 ## 示例
 

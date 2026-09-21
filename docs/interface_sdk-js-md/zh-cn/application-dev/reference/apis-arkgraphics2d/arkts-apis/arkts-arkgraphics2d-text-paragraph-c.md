@@ -555,10 +555,6 @@ getLineMetrics(): Array<LineMetrics>
 let arrLineMetric =  paragraph.getLineMetrics();
 ```
 
-```TypeScript
-let lineMetrics =  paragraph.getLineMetrics(0);
-```
-
 <a id="getlinemetrics-1"></a>
 
 ## getLineMetrics
@@ -589,7 +585,9 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 **示例**
 
-参见 [getLineMetrics](#getlinemetrics)
+```TypeScript
+let lineMetrics =  paragraph.getLineMetrics(0);
+```
 
 ## getLineWidth
 

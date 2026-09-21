@@ -66,30 +66,6 @@ async function CreateIncrementalImageSource(context : Context) {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreateIncrementalImageSource(context : Context) {
-  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // 获取图像资源。
-  // 此处'app.media.startIcon'仅作示例，请开发者自行替换，否则imageArray创建失败会导致后续无法正常执行。
-  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // 分片。
-  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
-  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
-
-  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
-  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
-    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
-      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
-      console.info('Succeeded in creating pixelMap');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
 
 <a id="createincrementalsource-1"></a>
 
@@ -124,4 +100,26 @@ function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): Ima
 
 **示例**
 
-参见 [CreateIncrementalSource](#createincrementalsource)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function CreateIncrementalImageSource(context : Context) {
+  let imageArray = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id); // 获取图像资源。
+  // 此处'app.media.startIcon'仅作示例，请开发者自行替换，否则imageArray创建失败会导致后续无法正常执行。
+  let splitBuff1 = imageArray.slice(0, imageArray.byteLength / 2);  // 分片。
+  let splitBuff2 = imageArray.slice(imageArray.byteLength / 2);
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120};
+
+  const imageSourceIncrementalSApi: image.ImageSource = image.CreateIncrementalSource(new ArrayBuffer(imageArray.byteLength), sourceOptions);
+  imageSourceIncrementalSApi.updateData(splitBuff1, false, 0, splitBuff1.byteLength).then(() => {
+    imageSourceIncrementalSApi.updateData(splitBuff2, true, 0, splitBuff2.byteLength).then(() => {
+      let pixelMap = imageSourceIncrementalSApi.createPixelMapSync();
+      console.info('Succeeded in creating pixelMap');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+    })
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to updateData error code is ${error.code}, message is ${error.message}`);
+  })
+}
+```

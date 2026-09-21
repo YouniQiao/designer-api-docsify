@@ -114,34 +114,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 检查新版本
-  onlineUpdater.checkNewVersion().then((result: update.CheckResult) => {
-    console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
-    // 版本摘要信息
-    console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
-    }).catch((checkNewVersionError: BusinessError) => {
-      console.error(`checkNewVersion promise error, code:${checkNewVersionError.code}, message:${checkNewVersionError.message}.`);
-    });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 <a id="checknewversion-1"></a>
 
 ## checkNewVersion
@@ -198,7 +170,33 @@ checkNewVersion(): Promise<CheckResult>
 
 **示例**
 
-参见 [checkNewVersion](#checknewversion)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 检查新版本
+  onlineUpdater.checkNewVersion().then((result: update.CheckResult) => {
+    console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
+    // 版本摘要信息
+    console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
+    }).catch((checkNewVersionError: BusinessError) => {
+      console.error(`checkNewVersion promise error, code:${checkNewVersionError.code}, message:${checkNewVersionError.message}.`);
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## clearError
 
@@ -291,41 +289,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 清除选项
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 清除异常状态 
-  onlineUpdater.clearError(versionDigestInfo, clearOptions).then(() => {
-    console.info(`clearError execute success`);
-  }).catch((clearFailError: BusinessError) => {
-    console.error(`clearError execute error. code:${clearFailError.code}, message:${clearFailError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="clearerror-1"></a>
 
 ## clearError
@@ -385,7 +348,40 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 
 **示例**
 
-参见 [clearError](#clearerror)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 清除选项
+const clearOptions: update.ClearOptions = {
+  status: update.UpgradeStatus.UPGRADE_FAIL,
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 清除异常状态 
+  onlineUpdater.clearError(versionDigestInfo, clearOptions).then(() => {
+    console.info(`clearError execute success`);
+  }).catch((clearFailError: BusinessError) => {
+    console.error(`clearError execute error. code:${clearFailError.code}, message:${clearFailError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## download
 
@@ -487,42 +483,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 下载选项
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-  order: update.Order.DOWNLOAD // 下载
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 下载升级包
-  onlineUpdater.download(versionDigestInfo, downloadOptions).then(() => {
-    console.info(`download start`);
-  }).catch((downloadError: BusinessError) => {
-    console.error(`download error. code:${downloadError.code}, message:${downloadError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="download-1"></a>
 
 ## download
@@ -588,7 +548,41 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 
 **示例**
 
-参见 [download](#download)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 下载选项
+const downloadOptions: update.DownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+  order: update.Order.DOWNLOAD // 下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 下载升级包
+  onlineUpdater.download(versionDigestInfo, downloadOptions).then(() => {
+    console.info(`download start`);
+  }).catch((downloadError: BusinessError) => {
+    console.error(`download error. code:${downloadError.code}, message:${downloadError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionDescription
 
@@ -673,36 +667,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: 'zh-cn' // 中文
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-
-  // 获取当前版本描述信息
-  onlineUpdater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
-    console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
-  }).catch((descriptionError: BusinessError) => {
-    console.error(`getCurrentVersionDescription error, code:${descriptionError.code}, message:${descriptionError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="getcurrentversiondescription-1"></a>
 
 ## getCurrentVersionDescription
@@ -756,7 +720,35 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 
 **示例**
 
-参见 [getCurrentVersionDescription](#getcurrentversiondescription)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取当前版本描述信息
+  onlineUpdater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
+    console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
+  }).catch((descriptionError: BusinessError) => {
+    console.error(`getCurrentVersionDescription error, code:${descriptionError.code}, message:${descriptionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getCurrentVersionInfo
 
@@ -827,32 +819,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 获取当前版本信息
-  onlineUpdater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
-    console.info(`info osVersion = ${info.osVersion}`);
-    console.info(`info deviceName = ${info.deviceName}`);
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-  }).catch((currentVersionInfoError: BusinessError) => {
-    console.error(`getCurrentVersionInfo error, code:${currentVersionInfoError.code}, message:${currentVersionInfoError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```
-
 <a id="getcurrentversioninfo-1"></a>
 
 ## getCurrentVersionInfo
@@ -893,7 +859,31 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 
 **示例**
 
-参见 [getCurrentVersionInfo](#getcurrentversioninfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取当前版本信息
+  onlineUpdater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
+    console.info(`info osVersion = ${info.osVersion}`);
+    console.info(`info deviceName = ${info.deviceName}`);
+    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+  }).catch((currentVersionInfoError: BusinessError) => {
+    console.error(`getCurrentVersionInfo error, code:${currentVersionInfoError.code}, message:${currentVersionInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
+```
 
 ## getNewVersionDescription
 
@@ -983,45 +973,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 描述文件选项
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // 标准格式
-  language: 'zh-cn' // 中文
-};
-
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-
-  // 获取新版本描述信息
-  onlineUpdater.getNewVersionDescription(versionDigestInfo, descriptionOptions)
-    .then((info: Array<update.ComponentDescription>) => {
-    console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
-  }).catch((descriptionError: BusinessError) => {
-    console.error(`getNewVersionDescription promise error, code:${descriptionError.code}, message:${descriptionError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="getnewversiondescription-1"></a>
 
 ## getNewVersionDescription
@@ -1078,7 +1029,44 @@ getNewVersionDescription(
 
 **示例**
 
-参见 [getNewVersionDescription](#getnewversiondescription)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 描述文件选项
+const descriptionOptions: update.DescriptionOptions = {
+  format: update.DescriptionFormat.STANDARD, // 标准格式
+  language: 'zh-cn' // 中文
+};
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+
+  // 获取新版本描述信息
+  onlineUpdater.getNewVersionDescription(versionDigestInfo, descriptionOptions)
+    .then((info: Array<update.ComponentDescription>) => {
+    console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
+  }).catch((descriptionError: BusinessError) => {
+    console.error(`getNewVersionDescription promise error, code:${descriptionError.code}, message:${descriptionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getNewVersionInfo
 
@@ -1164,31 +1152,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 获取新版本信息
-  onlineUpdater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
-  }).catch((getNewVersionInfoError: BusinessError) => {
-    console.error(`getNewVersionInfo promise error, code:${getNewVersionInfoError.code}, message:${getNewVersionInfoError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="getnewversioninfo-1"></a>
 
 ## getNewVersionInfo
@@ -1248,7 +1211,30 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 
 **示例**
 
-参见 [getNewVersionInfo](#getnewversioninfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取新版本信息
+  onlineUpdater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
+    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
+    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
+  }).catch((getNewVersionInfoError: BusinessError) => {
+    console.error(`getNewVersionInfo promise error, code:${getNewVersionInfoError.code}, message:${getNewVersionInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getTaskInfo
 
@@ -1329,32 +1315,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 获取升级任务信息
-  onlineUpdater.getTaskInfo().then((info: update.TaskInfo) => {
-    console.info(`getTaskInfo existTask= ${info.existTask}`);
-  }).catch((taskInfoError: BusinessError) => {
-    // 处理获取任务信息失败的情况
-    console.error(`Failed to get task info. code:${taskInfoError.code}, message:${taskInfoError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="gettaskinfo-1"></a>
 
 ## getTaskInfo
@@ -1408,7 +1368,31 @@ getTaskInfo(): Promise<TaskInfo>
 
 **示例**
 
-参见 [getTaskInfo](#gettaskinfo)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取升级任务信息
+  onlineUpdater.getTaskInfo().then((info: update.TaskInfo) => {
+    console.info(`getTaskInfo existTask= ${info.existTask}`);
+  }).catch((taskInfoError: BusinessError) => {
+    // 处理获取任务信息失败的情况
+    console.error(`Failed to get task info. code:${taskInfoError.code}, message:${taskInfoError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## getUpgradePolicy
 
@@ -1475,31 +1459,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 获取升级策略
-  onlineUpdater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
-    console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
-    console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
-  }).catch((upgradePolicyError: BusinessError) => {
-    console.error(`getUpgradePolicy error. code:${upgradePolicyError.code}, message:${upgradePolicyError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="getupgradepolicy-1"></a>
 
 ## getUpgradePolicy
@@ -1540,7 +1499,30 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 
 **示例**
 
-参见 [getUpgradePolicy](#getupgradepolicy)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 获取升级策略
+  onlineUpdater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
+    console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
+    console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
+  }).catch((upgradePolicyError: BusinessError) => {
+    console.error(`getUpgradePolicy error. code:${upgradePolicyError.code}, message:${upgradePolicyError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## off
 
@@ -1776,42 +1758,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 暂停下载选项
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // 允许自动恢复下载
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 暂停下载升级包
-  onlineUpdater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
-    console.info(`pauseDownload`);
-  }).catch((pauseDownloadError: BusinessError) => {
-    console.error(`pauseDownload error. code:${pauseDownloadError.code}, message:${pauseDownloadError.message}.`);
-    
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="pausedownload-1"></a>
 
 ## pauseDownload
@@ -1870,7 +1816,41 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 
 **示例**
 
-参见 [pauseDownload](#pausedownload)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 暂停下载选项
+const pauseDownloadOptions: update.PauseDownloadOptions = {
+  isAllowAutoResume: true // 允许自动恢复下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 暂停下载升级包
+  onlineUpdater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
+    console.info(`pauseDownload`);
+  }).catch((pauseDownloadError: BusinessError) => {
+    console.error(`pauseDownload error. code:${pauseDownloadError.code}, message:${pauseDownloadError.message}.`);
+    
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## resumeDownload
 
@@ -1960,41 +1940,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 恢复下载选项
-const resumeDownloadOptions: update.ResumeDownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 恢复下载升级包
-  onlineUpdater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
-    console.info(`resumeDownload start`);
-  }).catch((resumeDownloadError: BusinessError) => {
-    console.error(`resumeDownload error. code:${resumeDownloadError.code}, message:${resumeDownloadError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="resumedownload-1"></a>
 
 ## resumeDownload
@@ -2048,7 +1993,40 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 
 **示例**
 
-参见 [resumeDownload](#resumedownload)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 恢复下载选项
+const resumeDownloadOptions: update.ResumeDownloadOptions = {
+  allowNetwork: update.NetType.CELLULAR, // 允许数据网络下载
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 恢复下载升级包
+  onlineUpdater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
+    console.info(`resumeDownload start`);
+  }).catch((resumeDownloadError: BusinessError) => {
+    console.error(`resumeDownload error. code:${resumeDownloadError.code}, message:${resumeDownloadError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## setUpgradePolicy
 
@@ -2123,36 +2101,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradePolicy: update.UpgradePolicy = {
-  downloadStrategy: false, // 禁止自动下载 
-  autoUpgradeStrategy: false, // 禁止自动升级
-  autoUpgradePeriods: [{ start: 120, end: 240 }] // 自动升级时间段，用分钟表示
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 设置升级策略 
-  onlineUpdater.setUpgradePolicy(upgradePolicy).then(() => {
-    console.info(`setUpgradePolicy success`);
-  }).catch((setUpgradePolicyError: BusinessError) => {
-    console.error(`setUpgradePolicy promise error, code:${setUpgradePolicyError.code}, message:${setUpgradePolicyError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="setupgradepolicy-1"></a>
 
 ## setUpgradePolicy
@@ -2201,7 +2149,35 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 
 **示例**
 
-参见 [setUpgradePolicy](#setupgradepolicy)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradePolicy: update.UpgradePolicy = {
+  downloadStrategy: false, // 禁止自动下载 
+  autoUpgradeStrategy: false, // 禁止自动升级
+  autoUpgradePeriods: [{ start: 120, end: 240 }] // 自动升级时间段，用分钟表示
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 设置升级策略 
+  onlineUpdater.setUpgradePolicy(upgradePolicy).then(() => {
+    console.info(`setUpgradePolicy success`);
+  }).catch((setUpgradePolicyError: BusinessError) => {
+    console.error(`setUpgradePolicy promise error, code:${setUpgradePolicyError.code}, message:${setUpgradePolicyError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## terminateUpgrade
 
@@ -2280,30 +2256,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 终止升级任务
-  onlineUpdater.terminateUpgrade().then(() => {
-    console.info(`terminateUpgrade success`);
-  }).catch((terminateUpgradeError: BusinessError) => {
-    console.error(`terminateUpgrade error, code:${terminateUpgradeError.code}, message:${terminateUpgradeError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="terminateupgrade-1"></a>
 
 ## terminateUpgrade
@@ -2357,7 +2309,29 @@ terminateUpgrade(): Promise<void>
 
 **示例**
 
-参见 [terminateUpgrade](#terminateupgrade)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 终止升级任务
+  onlineUpdater.terminateUpgrade().then(() => {
+    console.info(`terminateUpgrade success`);
+  }).catch((terminateUpgradeError: BusinessError) => {
+    console.error(`terminateUpgrade error, code:${terminateUpgradeError.code}, message:${terminateUpgradeError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```
 
 ## upgrade
 
@@ -2455,41 +2429,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
-// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
-};
-
-// 安装选项
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // 安装指令
-};
-try {
-  // 定义升级信息对象
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
-    }
-  };
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
-  // 安装升级包
-  onlineUpdater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
-    console.info(`upgrade start`);
-  }).catch((upgradeError: BusinessError) => {
-    console.error(`upgrade error. code:${upgradeError.code}, message:${upgradeError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get onlineUpdater error: ${error}`);
-}
-```
-
 <a id="upgrade-1"></a>
 
 ## upgrade
@@ -2556,4 +2495,37 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 
 **示例**
 
-参见 [upgrade](#upgrade)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 版本摘要信息（需先调用checkNewVersion检查新版本并确认isExistNewVersion为true，
+// 从返回结果的newVersionInfo.versionDigestInfo字段获取）
+const versionDigestInfo: update.VersionDigestInfo = {
+  versionDigest: 'versionDigest' // 实际值需通过checkNewVersion接口获取
+};
+
+// 安装选项
+const upgradeOptions: update.UpgradeOptions = {
+  order: update.Order.INSTALL // 安装指令
+};
+try {
+  // 定义升级信息对象
+  const upgradeInfo: update.UpgradeInfo = {
+    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    businessType: {
+      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
+      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+    }
+  };
+  // 获取在线升级对象
+  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  // 安装升级包
+  onlineUpdater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
+    console.info(`upgrade start`);
+  }).catch((upgradeError: BusinessError) => {
+    console.error(`upgrade error. code:${upgradeError.code}, message:${upgradeError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get onlineUpdater error: ${error}`);
+}
+```

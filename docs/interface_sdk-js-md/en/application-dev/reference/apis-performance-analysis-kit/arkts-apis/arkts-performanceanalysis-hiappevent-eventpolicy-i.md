@@ -28,6 +28,8 @@ ADDRESS_SANITIZER event configuration policy.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -44,6 +46,8 @@ APP_CRASH event configuration policy.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -59,6 +63,8 @@ APP_FREEZE event configuration policy.
 **Type:** [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md)
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -107,6 +113,8 @@ RESOURCE_OVERLIMIT event configuration policy.
 **Type:** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

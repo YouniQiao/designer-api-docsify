@@ -28,6 +28,8 @@ Rating(options?: RatingOptions)
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -38,7 +40,7 @@ Rating(options?: RatingOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | No | Rating bar options.<br> The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
+| options | [RatingOptions](arkts-arkui-rating-comp-ratingoptions-i.md) | No | Rating bar options.<br> The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
 
 ## Summary
 
@@ -46,15 +48,15 @@ Rating(options?: RatingOptions)
 
 | Name | Description |
 | --- | --- |
-| [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [RatingOptions](arkts-arkui-ratingoptions-i.md) | Provides configuration options for the **Rating** component. |
-| [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component. |
+| [RatingConfiguration](arkts-arkui-rating-comp-ratingconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [RatingOptions](arkts-arkui-rating-comp-ratingoptions-i.md) | Provides configuration options for the **Rating** component. |
+| [StarStyleOptions](arkts-arkui-rating-comp-starstyleoptions-i.md) | Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) | Defines the callback triggered when the rating value changes. |
+| [OnRatingChangeCallback](arkts-arkui-rating-comp-onratingchangecallback-t.md) | Defines the callback triggered when the rating value changes. |
 
 ## Examples
 

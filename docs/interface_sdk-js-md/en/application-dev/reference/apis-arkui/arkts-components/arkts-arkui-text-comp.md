@@ -4,7 +4,7 @@ The **Text** component is used to display a piece of textual information.
 
 ## Child Components
 
-This component can contain the Span, ImageSpan, SymbolSpan, and ContainerSpan child components.
+This component can contain the [Span](arkts-arkui-span-comp.md#span), [ImageSpan](arkts-arkui-imagespan-comp.md#image_span), [SymbolSpan](arkts-arkui-symbolspan-comp-attribute.md#symbolspanattribute), and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute) child components.
 
 > **NOTE:** 
 > 
@@ -31,8 +31,8 @@ Defines the constructor of Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set.<br>Default value: **' '**<br>**NOTE:** <br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
-| value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
+| content | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | No | Plain text. This parameter takes effect when the child component [Span](arkts-arkui-span-comp.md#span) is not included and [styled string](../arkts-apis/arkts-arkui-styled_string.md) is not set.<br>Default value: **' '**<br>**NOTE:** <br>Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
+| value | [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary
 
@@ -40,19 +40,19 @@ Defines the constructor of Text.
 
 | Name | Description |
 | --- | --- |
-| [TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. |
-| [TextOptions](arkts-arkui-textoptions-i.md) | Describes the initialization options of the **Text** component. |
-| [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Defines the configuration object for text overflow behavior. |
+| [TextMarqueeOptions](arkts-arkui-text-comp-textmarqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. |
+| [TextOptions](arkts-arkui-text-comp-textoptions-i.md) | Describes the initialization options of the **Text** component. |
+| [TextOverflowOptions](arkts-arkui-text-comp-textoverflowoptions-i.md) | Defines the configuration object for text overflow behavior. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md) | Enumerates the marquee scrolling modes. |
-| [MarqueeState](arkts-arkui-marqueestate-e.md) | Enumerates the return values of the marquee state callback. |
-| [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md) | Sets the scrolling policy of the marquee after its attributes are updated. |
-| [TextResponseType](arkts-arkui-textresponsetype-e.md) | Response type of the menu. |
-| [TextSpanType](arkts-arkui-textspantype-e.md) | Provides the span type information. |
+| [MarqueeStartPolicy](arkts-arkui-text-comp-marqueestartpolicy-e.md) | Enumerates the marquee scrolling modes. |
+| [MarqueeState](arkts-arkui-text-comp-marqueestate-e.md) | Enumerates the return values of the marquee state callback. |
+| [MarqueeUpdatePolicy](arkts-arkui-text-comp-marqueeupdatepolicy-e.md) | Sets the scrolling policy of the marquee after its attributes are updated. |
+| [TextResponseType](arkts-arkui-text-comp-textresponsetype-e.md) | Response type of the menu. |
+| [TextSpanType](arkts-arkui-text-comp-textspantype-e.md) | Provides the [span](arkts-arkui-span-comp.md#span) type information. |
 
 ## Examples
 
@@ -235,7 +235,7 @@ This example demonstrates how to set the minimum number of lines using the [minL
 ```TypeScript
 ### Example 22: Setting and Highlighting the Text Selection Range
 
-This example demonstrates how to set and highlight the text selection range using [setTextSelection](#settextselection23) in [TextController](arkts-arkui-textcontroller-c.md), available since API version 23.
+This example demonstrates how to set and highlight the text selection range using [setTextSelection](#settextselection23) in [TextController](arkts-arkui-text-comp-textcontroller-c.md), available since API version 23.
 
 
 ```

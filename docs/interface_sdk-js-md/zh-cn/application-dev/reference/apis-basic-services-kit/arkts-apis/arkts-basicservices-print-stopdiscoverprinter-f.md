@@ -50,17 +50,6 @@ print.stopDiscoverPrinter((error: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.stopDiscoverPrinter().then(() => {
-    console.info('stop Discovery success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
-})
-```
-
 
 <a id="stopdiscoverprinter-1"></a>
 
@@ -95,4 +84,13 @@ function stopDiscoverPrinter(): Promise<void>
 
 **示例**
 
-参见 [stopDiscoverPrinter](#stopdiscoverprinter)
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.stopDiscoverPrinter().then(() => {
+    console.info('stop Discovery success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+})
+```

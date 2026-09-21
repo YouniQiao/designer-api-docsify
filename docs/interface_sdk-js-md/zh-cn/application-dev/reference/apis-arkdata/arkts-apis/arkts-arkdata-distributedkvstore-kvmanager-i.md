@@ -86,45 +86,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvStore: distributedKVStore.SingleKVStore | null = null;
-
-const options: distributedKVStore.Options = {
-  createIfMissing: true,
-  encrypt: false,
-  backup: false,
-  autoSync: false,
-  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-  schema: undefined,
-  securityLevel: distributedKVStore.SecurityLevel.S3,
-  // 从API version 24开始，可使用rootDir指定数据库存储路径
-  rootDir: "/data/storage/el2/database/entry"
-}
-try {
-  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
-    console.info('Succeeded in getting KVStore');
-    kvStore = store;
-    kvStore = null;
-    store = null;
-    if (kvManager != undefined) {
-      // appId为createKVManager中的appId, 如果options中没有配置rootDir，closeKVStore不需要options参数
-      kvManager.closeKVStore(appId, 'storeId', options).then(() => {
-        console.info('Succeeded in closing KVStore');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to close KVStore. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 <a id="closekvstore-1"></a>
 
 ## closeKVStore
@@ -163,7 +124,44 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 **示例**
 
-参见 [closeKVStore](#closekvstore)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3,
+  // 从API version 24开始，可使用rootDir指定数据库存储路径
+  rootDir: "/data/storage/el2/database/entry"
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId为createKVManager中的appId, 如果options中没有配置rootDir，closeKVStore不需要options参数
+      kvManager.closeKVStore(appId, 'storeId', options).then(() => {
+        console.info('Succeeded in closing KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close KVStore. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## deleteKVStore
 
@@ -237,45 +235,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvStore: distributedKVStore.SingleKVStore | null = null;
-
-const options: distributedKVStore.Options = {
-  createIfMissing: true,
-  encrypt: false,
-  backup: false,
-  autoSync: false,
-  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-  schema: undefined,
-  securityLevel: distributedKVStore.SecurityLevel.S3,
-  // 从API version 24开始，可使用rootDir指定数据库存储路径
-  rootDir: "/data/storage/el2/database/entry"
-}
-try {
-  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
-    console.info('Succeeded in getting KVStore');
-    kvStore = store;
-    kvStore = null;
-    store = null;
-    if (kvManager != undefined) {
-      // appId为createKVManager中的appId, 如果options中没有配置rootDir，deleteKVStore不需要options参数
-      kvManager.deleteKVStore(appId, 'storeId', options).then(() => {
-        console.info('Succeeded in deleting KVStore');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to delete KVStore. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to delete KVStore. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 <a id="deletekvstore-1"></a>
 
 ## deleteKVStore
@@ -315,7 +274,44 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 **示例**
 
-参见 [deleteKVStore](#deletekvstore)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3,
+  // 从API version 24开始，可使用rootDir指定数据库存储路径
+  rootDir: "/data/storage/el2/database/entry"
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId为createKVManager中的appId, 如果options中没有配置rootDir，deleteKVStore不需要options参数
+      kvManager.deleteKVStore(appId, 'storeId', options).then(() => {
+        console.info('Succeeded in deleting KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to delete KVStore. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to delete KVStore. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getAllKVStoreId
 
@@ -365,24 +361,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // appId为createKVManager中的appId
-  console.info('GetAllKVStoreId');
-  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
-    console.info('Succeeded in getting AllKVStoreId');
-    console.info(`GetAllKVStoreId size = ${data.length}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 <a id="getallkvstoreid-1"></a>
 
 ## getAllKVStoreId
@@ -419,7 +397,23 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 **示例**
 
-参见 [getAllKVStoreId](#getallkvstoreid)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // appId为createKVManager中的appId
+  console.info('GetAllKVStoreId');
+  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
+    console.info('Succeeded in getting AllKVStoreId');
+    console.info(`GetAllKVStoreId size = ${data.length}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getKVStore
 
@@ -489,33 +483,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvStore: distributedKVStore.SingleKVStore | null = null;
-try {
-  const options: distributedKVStore.Options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-    securityLevel: distributedKVStore.SecurityLevel.S3,
-    // 从API version 24开始，可使用rootDir指定数据库存储路径
-    rootDir: "/data/storage/el2/database/entry"
-  };
-  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
-    console.info('Succeeded in getting KVStore');
-    kvStore = store;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 <a id="getkvstore-1"></a>
 
 ## getKVStore
@@ -560,7 +527,32 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 **示例**
 
-参见 [getKVStore](#getkvstore)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+try {
+  const options: distributedKVStore.Options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+    securityLevel: distributedKVStore.SecurityLevel.S3,
+    // 从API version 24开始，可使用rootDir指定数据库存储路径
+    rootDir: "/data/storage/el2/database/entry"
+  };
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## off
 
@@ -587,6 +579,23 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  console.info('KVManagerOff');
+  const deathCallback = () => {
+    console.info('death callback call');
+  }
+  kvManager.off('distributedDataServiceDie', deathCallback);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## on
 
 ```TypeScript
@@ -611,3 +620,20 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  console.info('KVManagerOn');
+  const deathCallback = () => {
+    console.info('death callback call');
+  }
+  kvManager.on('distributedDataServiceDie', deathCallback);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```

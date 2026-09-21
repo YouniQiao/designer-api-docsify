@@ -16,6 +16,8 @@ Select(options: Array<SelectOption>)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,7 @@ Select(options: Array<SelectOption>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | 是 | 设置下拉选项。 |
+| options | Array&lt;[SelectOption](arkts-arkui-select-comp-selectoption-i.md)&gt; | 是 | 设置下拉选项。 |
 
 ## 汇总
 
@@ -32,23 +34,23 @@ Select(options: Array<SelectOption>)
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 下拉菜单框的外描边参数对象。 |
-| [SelectOption](arkts-arkui-selectoption-i.md) | 下拉菜单项的信息。 |
+| [MenuItemConfiguration](arkts-arkui-select-comp-menuitemconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [MenuOutlineOptions](arkts-arkui-select-comp-menuoutlineoptions-i.md) | 下拉菜单框的外描边参数对象。 |
+| [SelectOption](arkts-arkui-select-comp-selectoption-i.md) | 下拉菜单项的信息。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | 下拉菜单选中某一项时触发的回调函数类型定义。 |
+| [OnSelectCallback](arkts-arkui-select-comp-onselectcallback-t.md) | 下拉菜单选中某一项时触发的回调函数类型定义。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArrowPosition](arkts-arkui-arrowposition-e.md) | 箭头的位置。 |
-| [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 下拉菜单避让模式的枚举选项。 |
-| [MenuAlignType](arkts-arkui-menualigntype-e.md) | 下拉菜单的对齐方式。 |
+| [ArrowPosition](arkts-arkui-select-comp-arrowposition-e.md) | 箭头的位置。 |
+| [AvoidanceMode](arkts-arkui-select-comp-avoidancemode-e.md) | 下拉菜单避让模式的枚举选项。 |
+| [MenuAlignType](arkts-arkui-select-comp-menualigntype-e.md) | 下拉菜单的对齐方式。 |
 
 ## 示例
 

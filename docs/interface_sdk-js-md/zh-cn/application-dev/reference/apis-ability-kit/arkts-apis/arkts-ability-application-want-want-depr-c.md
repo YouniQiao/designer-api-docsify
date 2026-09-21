@@ -190,3 +190,35 @@ uri?: string
 **替代接口：** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 **系统能力：** SystemCapability.Ability.AbilityBase
+
+**示例**
+
+```TypeScript
+基础用法（在UIAbility对象中调用，其中示例中的context为UIAbility的上下文对象）。
+```
+
+```TypeScript
+通过自定义字段传递数据，以下为当前支持类型（在UIAbility对象中调用，其中示例中的context为UIAbility的上下文对象）。
+
+字符串（String）
+```
+
+```TypeScript
+数字（Number）
+```
+
+```TypeScript
+布尔（Boolean）
+```
+
+```TypeScript
+对象（Object）
+```
+
+```TypeScript
+数组（Array）
+```
+
+```TypeScript
+文件描述符（FD）
+```

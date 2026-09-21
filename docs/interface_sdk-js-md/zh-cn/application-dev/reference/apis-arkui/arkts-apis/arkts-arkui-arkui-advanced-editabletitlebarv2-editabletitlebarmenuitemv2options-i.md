@@ -180,7 +180,7 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol图标样式修饰器，优先级大于value。
 
-**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 

@@ -73,79 +73,6 @@ let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveRea
 notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason, removeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCode: string = 'hashCode';
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1', 'hashCode2'];
-let removeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason, removeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashCodes: string[] = ['hashCode1','hashCode2'];
-let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
-notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info("remove success");
-}).catch((err: BusinessError) => {
-  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 <a id="remove-1"></a>
 
@@ -194,7 +121,24 @@ Removes a notification based on the bundle information and notification key. Thi
 
 **Examples**
 
-See [remove](#remove)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationManager } from '@kit.NotificationKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+  id: 0,
+  label: "label",
+};
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 
 <a id="remove-2"></a>
@@ -237,7 +181,20 @@ Removes a notification based on the specified unique notification ID. This API u
 
 **Examples**
 
-See [remove](#remove)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("remove success");
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason, removeCallback);
+```
 
 
 <a id="remove-3"></a>
@@ -279,7 +236,20 @@ Removes specified notifications. This API uses an asynchronous callback to retur
 
 **Examples**
 
-See [remove](#remove)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1', 'hashCode2'];
+let removeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("remove success");
+  }
+}
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason, removeCallback);
+```
 
 
 <a id="remove-4"></a>
@@ -327,7 +297,17 @@ Removes a notification based on the specified unique notification ID. This API u
 
 **Examples**
 
-See [remove](#remove)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCode: string = 'hashCode';
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCode, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 
 <a id="remove-5"></a>
@@ -374,4 +354,14 @@ Removes specified notifications. This API uses a promise to return the result.
 
 **Examples**
 
-See [remove](#remove)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hashCodes: string[] = ['hashCode1','hashCode2'];
+let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
+notificationSubscribe.remove(hashCodes, reason).then(() => {
+  console.info("remove success");
+}).catch((err: BusinessError) => {
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
+});
+```

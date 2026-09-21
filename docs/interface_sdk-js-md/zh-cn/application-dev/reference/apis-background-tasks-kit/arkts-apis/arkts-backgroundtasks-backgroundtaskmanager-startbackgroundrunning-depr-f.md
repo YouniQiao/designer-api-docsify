@@ -42,10 +42,6 @@ FA模型示例：
 Stage模型示例：
 ```
 
-```TypeScript
-FA模型示例（需使用js代码开发）：
-```
-
 
 <a id="startbackgroundrunning-1"></a>
 
@@ -83,4 +79,10 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **示例**
 
-参见 [startBackgroundRunning](#startbackgroundrunning)
+```TypeScript
+FA模型示例（需使用js代码开发）：
+```
+
+```TypeScript
+Stage模型示例：
+```

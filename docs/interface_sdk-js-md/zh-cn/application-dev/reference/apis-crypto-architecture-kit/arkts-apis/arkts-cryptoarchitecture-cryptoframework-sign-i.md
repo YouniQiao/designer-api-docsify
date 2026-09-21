@@ -289,7 +289,15 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 **示例**
 
-参见 [setSignSpec](#setsignspec)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetSignSpec() {
+  let signer = cryptoFramework.createSign('RSA|PSS|SHA256|MGF1_SHA256');
+  let setN = 20;
+  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
+}
+```
 
 <a id="setsignspec-2"></a>
 
@@ -331,7 +339,14 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): v
 
 **示例**
 
-参见 [setSignSpec](#setsignspec)
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function testSetSignSpec() {
+  let signer = cryptoFramework.createSign('ML-DSA');
+  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
+}
+```
 
 ## sign
 

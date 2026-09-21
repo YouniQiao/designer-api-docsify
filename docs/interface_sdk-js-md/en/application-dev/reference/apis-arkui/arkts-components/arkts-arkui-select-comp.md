@@ -16,6 +16,8 @@ Select(options: Array<SelectOption>)
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,7 @@ Select(options: Array<SelectOption>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | Yes | Options of the drop-down menu. |
+| options | Array&lt;[SelectOption](arkts-arkui-select-comp-selectoption-i.md)&gt; | Yes | Options of the drop-down menu. |
 
 ## Summary
 
@@ -32,30 +34,30 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
-| [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Defines the outline of the drop-down menu. |
-| [SelectOption](arkts-arkui-selectoption-i.md) | Provides information about the drop-down menu options. |
+| [MenuItemConfiguration](arkts-arkui-select-comp-menuitemconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [MenuOutlineOptions](arkts-arkui-select-comp-menuoutlineoptions-i.md) | Defines the outline of the drop-down menu. |
+| [SelectOption](arkts-arkui-select-comp-selectoption-i.md) | Provides information about the drop-down menu options. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback invoked when a drop-down menu option is selected. |
+| [OnSelectCallback](arkts-arkui-select-comp-onselectcallback-t.md) | Defines the callback invoked when a drop-down menu option is selected. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArrowPosition](arkts-arkui-arrowposition-e.md) | Enumerates arrow positions. |
-| [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Enumerates the drop-down menu avoidance modes. |
-| [MenuAlignType](arkts-arkui-menualigntype-e.md) | Enumerates drop-down menu alignment modes. |
+| [ArrowPosition](arkts-arkui-select-comp-arrowposition-e.md) | Enumerates arrow positions. |
+| [AvoidanceMode](arkts-arkui-select-comp-avoidancemode-e.md) | Enumerates the drop-down menu avoidance modes. |
+| [MenuAlignType](arkts-arkui-select-comp-menualigntype-e.md) | Enumerates drop-down menu alignment modes. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Creating a Drop-down Menu
 
-This example demonstrates how to create a drop-down menu by configuring [SelectOption](arkts-arkui-selectoption-i.md) and how to implement menu avoidance using the [avoidance](arkts-arkui-select-comp-attribute.md#avoidance) attribute, available since API version 19.
+This example demonstrates how to create a drop-down menu by configuring [SelectOption](arkts-arkui-select-comp-selectoption-i.md) and how to implement menu avoidance using the [avoidance](arkts-arkui-select-comp-attribute.md#avoidance) attribute, available since API version 19.
 
 
 ```

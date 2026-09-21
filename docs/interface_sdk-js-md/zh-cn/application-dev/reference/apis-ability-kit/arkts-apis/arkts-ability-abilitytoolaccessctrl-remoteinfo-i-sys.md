@@ -29,6 +29,8 @@ domainId: string
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -44,6 +46,8 @@ remoteControlParams?: RemoteControlParams
 **类型：** [RemoteControlParams](arkts-ability-abilitytoolaccessctrl-remotecontrolparams-i-sys.md)
 
 **起始版本：** 26.0.1
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -61,6 +65,8 @@ remoteId: string
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -76,6 +82,8 @@ role: Role
 **类型：** [Role](arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
 **起始版本：** 26.0.1
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Security.Asset
 

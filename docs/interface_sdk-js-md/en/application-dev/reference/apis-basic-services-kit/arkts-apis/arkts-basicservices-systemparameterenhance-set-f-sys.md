@@ -55,21 +55,6 @@ try {
 }
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise: Promise<void> = systemParameterEnhance.set('test.parameter.key', 'testValue');
-  promise.then((value: void) => {
-    console.info('set test.parameter.key success: ' + value);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set test.parameter.key. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('set unexpected error: ' + e);
-}
-```
-
 
 <a id="set-1"></a>
 
@@ -111,4 +96,17 @@ Sets a value of the specified key. This API uses a promise to return the result.
 
 **Examples**
 
-See [set](#set)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise: Promise<void> = systemParameterEnhance.set('test.parameter.key', 'testValue');
+  promise.then((value: void) => {
+    console.info('set test.parameter.key success: ' + value);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set test.parameter.key. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
+}
+```

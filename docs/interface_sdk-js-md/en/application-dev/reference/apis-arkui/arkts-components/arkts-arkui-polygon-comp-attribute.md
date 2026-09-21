@@ -4,7 +4,7 @@
 declare class PolygonAttribute extends CommonShapeMethod<PolygonAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [common attributes of drawing components](arkts-arkui-commonmethod-c.md), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [common attributes of drawing components](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** PolygonAttribute extends CommonShapeMethod<PolygonAttribute>
 
@@ -21,6 +21,8 @@ points(value: Array<any>)
 Sets the vertex coordinates of the polygon. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

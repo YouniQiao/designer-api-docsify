@@ -4,6 +4,8 @@ The namespace of privacyComputation, providing privacy-preserving computation ca
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.Asset
 
 ## Modules to Import

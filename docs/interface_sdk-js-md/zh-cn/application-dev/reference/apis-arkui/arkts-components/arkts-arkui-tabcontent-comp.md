@@ -40,25 +40,25 @@ TabContent()
 
 | 名称 | 说明 |
 | --- | --- |
-| [BoardStyle](arkts-arkui-boardstyle-i.md) | 背板风格对象。 |
-| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | 使用图片资源作为下划线的对象。 |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | 下划线风格对象。 |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | label文本和字体的样式对象。 |
-| [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Label图标样式对象。 |
-| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 设置页签内的图片和文字内容。 |
+| [BoardStyle](arkts-arkui-tabcontent-comp-boardstyle-i.md) | 背板风格对象。 |
+| [DrawableTabBarIndicator](arkts-arkui-tabcontent-comp-drawabletabbarindicator-i.md) | 使用图片资源作为下划线的对象。 |
+| [IndicatorStyle](arkts-arkui-tabcontent-comp-indicatorstyle-i.md) | 下划线风格对象。 |
+| [LabelStyle](arkts-arkui-tabcontent-comp-labelstyle-i.md) | label文本和字体的样式对象。 |
+| [TabBarIconStyle](arkts-arkui-tabcontent-comp-tabbariconstyle-i.md) | Label图标样式对象。 |
+| [TabBarOptions](arkts-arkui-tabcontent-comp-tabbaroptions-i.md) | 设置页签内的图片和文字内容。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 作为DrawableTabBarIndicator对象中drawable属性的入参对象。 |
+| [DrawableDescriptor](arkts-arkui-tabcontent-comp-drawabledescriptor-t.md) | 作为DrawableTabBarIndicator对象中drawable属性的入参对象。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [LayoutMode](arkts-arkui-layoutmode-e.md) | 页签内容排布方式枚举。 |
-| [SelectedMode](arkts-arkui-selectedmode-e.md) | 选中子页签的显示模式枚举。 |
+| [LayoutMode](arkts-arkui-tabcontent-comp-layoutmode-e.md) | 页签内容排布方式枚举。 |
+| [SelectedMode](arkts-arkui-tabcontent-comp-selectedmode-e.md) | 选中子页签的显示模式枚举。 |
 
 ## 示例
 
@@ -89,7 +89,7 @@ TabContent()
 ```TypeScript
 ### 示例3（子页签/底部页签/侧边页签样式对比）
 
-本示例使用了[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)、[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)实现了子页签、底部页签和侧边页签。
+本示例使用了[SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md)、[BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md)实现了子页签、底部页签和侧边页签。
 
 
 ```
@@ -113,7 +113,7 @@ TabContent()
 ```TypeScript
 ### 示例6（设置底部页签基本属性）
 
-本示例通过[padding](#padding10)、[verticalAlign](#verticalalign10)、[layoutMode](#layoutmode10)、[symmetricExtensible](arkts-arkui-bottomtabbarstyle-c.md#symmetricextensible)实现了底部页签基本属性的展示。
+本示例通过[padding](#padding10)、[verticalAlign](#verticalalign10)、[layoutMode](#layoutmode10)、[symmetricExtensible](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md#symmetricextensible)实现了底部页签基本属性的展示。
 
 
 ```
@@ -135,7 +135,7 @@ TabContent()
 ```TypeScript
 ### 示例8（设置底部页签使用symbol图标）
 
-该示例实现了[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)图片传入Symbol。
+该示例实现了[BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md)图片传入Symbol。
 
 
 ```

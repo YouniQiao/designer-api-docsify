@@ -87,7 +87,13 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 **Examples**
 
-See [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="deleterdbstore-2"></a>
@@ -131,7 +137,13 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 **Examples**
 
-See [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="deleterdbstore-3"></a>
@@ -178,4 +190,10 @@ Before calling **deleteRdbStore**, ensure that the **RdbStore** and **ResultSet*
 
 **Examples**
 
-See [deleteRdbStore](#deleterdbstore)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

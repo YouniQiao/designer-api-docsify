@@ -36,6 +36,14 @@ isSpatializationEnabledForCurrentDevice(): boolean
 | --- | --- |
 | boolean | 当前设备空间音频渲染是否开启。true表示开启，false表示未开启。 |
 
+**示例**
+
+```TypeScript
+let isSpatializationEnabledForCurrentDevice: boolean = audioSpatializationManager.isSpatializationEnabledForCurrentDevice();
+
+console.info(`Succeeded in checking whether spatialization is enabled for the current device, isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}.`);
+```
+
 ## off('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript
@@ -61,6 +69,22 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例**
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChangeForCurrentDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeForCurrentDeviceCallback = (enabled: boolean) => {
+  console.info(`Spatialization enabled for current device changed, enabled: ${enabled}.`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChangeForCurrentDevice', spatializationEnabledChangeForCurrentDeviceCallback);
+
+audioSpatializationManager.off('spatializationEnabledChangeForCurrentDevice', spatializationEnabledChangeForCurrentDeviceCallback);
+```
+
 ## on('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript
@@ -85,3 +109,11 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+audioSpatializationManager.on('spatializationEnabledChangeForCurrentDevice', (isSpatializationEnabledForCurrentDevice: boolean) => {
+  console.info(`Spatialization enabled for current device changed, isSpatializationEnabledForCurrentDevice: ${isSpatializationEnabledForCurrentDevice}.`);
+});
+```

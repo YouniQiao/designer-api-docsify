@@ -20,6 +20,8 @@ If the animation is not executed, no style is applied to the target. After the a
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -35,6 +37,8 @@ Forwards = 1
 The target component retains the state set by the last keyframe encountered during execution of the animation.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,6 +56,8 @@ The animation applies the values defined in the first relevant keyframe once it 
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -67,6 +73,8 @@ Both = 3
 The animation follows the rules for both **Forwards** and **Backwards**, extending the animation attributes in both directions.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

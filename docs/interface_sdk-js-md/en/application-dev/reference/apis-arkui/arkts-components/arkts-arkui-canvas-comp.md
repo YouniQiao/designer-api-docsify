@@ -14,6 +14,8 @@ The **Canvas** component created using this API does not respond to drawing inst
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -24,7 +26,7 @@ The **Canvas** component created using this API does not respond to drawing inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | No | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-canvas-comp-drawingrenderingcontext-c.md) | No | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-canvas-comp-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
 
 ## Canvas
 
@@ -48,7 +50,7 @@ The **Canvas** component created using this API does not respond to drawing inst
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-canvas-comp-drawingrenderingcontext-c.md) | Yes | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvas-comp-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-canvas-comp-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes | AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.<br>If the value is **null** or **undefined**, the default value of **ImageAIOptions** is used. The default value is **{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }**, indicating that subject recognition and text recognition are enabled. |
 
 ## Canvas
@@ -61,7 +63,7 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 > **NOTE:** 
 > 
-> * The **Canvas** component created using this API returns a [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) object in the input parameter of the [onReady](arkts-arkui-canvas-comp-attribute.md#onready) callback, which can be used for drawing on the **Canvas** component.
+> * The **Canvas** component created using this API returns a [DrawingRenderingContext](arkts-arkui-canvas-comp-drawingrenderingcontext-c.md) object in the input parameter of the [onReady](arkts-arkui-canvas-comp-attribute.md#onready) callback, which can be used for drawing on the **Canvas** component.
 > 
 > * The **Canvas** component created using this API does not respond to drawing instructions when the component is invisible.
 > 
@@ -79,7 +81,7 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [CanvasParams](arkts-arkui-canvasparams-i.md) | Yes | Construction parameters of the **Canvas** component, used to create a **Canvas** component that does not cache drawing instructions. For details about the configuration parameters, see [CanvasParams](arkts-arkui-canvasparams-i.md). |
+| params | [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md) | Yes | Construction parameters of the **Canvas** component, used to create a **Canvas** component that does not cache drawing instructions. For details about the configuration parameters, see [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md). |
 
 ## Summary
 
@@ -87,25 +89,25 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 | Name | Description |
 | --- | --- |
-| [CanvasParams](arkts-arkui-canvasparams-i.md) | Defines the parameters of the **Canvas** component. |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency. |
-| [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | Defines the specific configuration parameters for the rendering context. |
-| [Size](arkts-arkui-size-i.md) | Provides size information of the **DrawingRenderingContext** object. |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) | Size information of the text. |
+| [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md) | Defines the parameters of the **Canvas** component. |
+| [CanvasPattern](arkts-arkui-canvas-comp-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency. |
+| [RenderingContextOptions](arkts-arkui-canvas-comp-renderingcontextoptions-i.md) | Defines the specific configuration parameters for the rendering context. |
+| [Size](arkts-arkui-canvas-comp-size-i.md) | Provides size information of the **DrawingRenderingContext** object. |
+| [TextMetrics](arkts-arkui-canvas-comp-textmetrics-i.md) | Size information of the text. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CanvasDirection](arkts-arkui-canvasdirection-t.md) | Defines the current text direction. The value type is a union of the types listed in the table below. |
-| [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | Defines the fill pattern algorithm used to determine whether a point is inside or outside a path. The value type is a union of the types listed in the table below. |
-| [CanvasLineCap](arkts-arkui-canvaslinecap-t.md) | Specifies the attribute of drawing the end of each line segment. |
-| [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md) | Defines the type of join between two non-zero-length segments (lines, arcs, and curves). The value type is a union of the types listed in the table below. |
-| [CanvasTextAlign](arkts-arkui-canvastextalign-t.md) | Defines the type of text alignment. The value type is a union of the types listed in the table below. |
-| [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md) | Defines the text baseline type. The value type is a union of the types listed in the table below. |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Defines a canvas object for drawing content on the **XComponent** component. |
-| [FrameNode](arkts-arkui-framenode-t.md) | Import the frame node type object for Canvas. |
-| [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md) | Sets the image smoothness attribute. |
+| [CanvasDirection](arkts-arkui-canvas-comp-canvasdirection-t.md) | Defines the current text direction. The value type is a union of the types listed in the table below. |
+| [CanvasFillRule](arkts-arkui-canvas-comp-canvasfillrule-t.md) | Defines the fill pattern algorithm used to determine whether a point is inside or outside a path. The value type is a union of the types listed in the table below. |
+| [CanvasLineCap](arkts-arkui-canvas-comp-canvaslinecap-t.md) | Specifies the attribute of drawing the end of each line segment. |
+| [CanvasLineJoin](arkts-arkui-canvas-comp-canvaslinejoin-t.md) | Defines the type of join between two non-zero-length segments (lines, arcs, and curves). The value type is a union of the types listed in the table below. |
+| [CanvasTextAlign](arkts-arkui-canvas-comp-canvastextalign-t.md) | Defines the type of text alignment. The value type is a union of the types listed in the table below. |
+| [CanvasTextBaseline](arkts-arkui-canvas-comp-canvastextbaseline-t.md) | Defines the text baseline type. The value type is a union of the types listed in the table below. |
+| [DrawingCanvas](arkts-arkui-canvas-comp-drawingcanvas-t.md) | Defines a canvas object for drawing content on the **XComponent** component. |
+| [FrameNode](arkts-arkui-canvas-comp-framenode-t.md) | Import the frame node type object for Canvas. |
+| [ImageSmoothingQuality](arkts-arkui-canvas-comp-imagesmoothingquality-t.md) | Sets the image smoothness attribute. |
 
 ## Examples
 
@@ -140,7 +142,7 @@ This example demonstrates how to use [attributeModifier](ts-universal-attributes
 ```TypeScript
 ### Example 4: Creating a Canvas Component That Does Not Cache Commands for Drawing
 
-This example demonstrates how to use [CanvasParams](arkts-arkui-canvasparams-i.md) to create a Canvas component that does not cache commands for drawing.
+This example demonstrates how to use [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md) to create a Canvas component that does not cache commands for drawing.
 
 The CanvasParams API is supported since API version 23.
 ```

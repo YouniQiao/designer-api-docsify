@@ -42,7 +42,7 @@ Creates a **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [SwiperController](arkts-arkui-swipercontroller-c.md) | No | Controller to bind to the component to manage page switching and preload specific child components. |
+| controller | [SwiperController](arkts-arkui-swiper-comp-swipercontroller-c.md) | No | Controller to bind to the component to manage page switching and preload specific child components. |
 
 ## Summary
 
@@ -50,41 +50,41 @@ Creates a **Swiper** component.
 
 | Name | Description |
 | --- | --- |
-| [ArrowStyle](arkts-arkui-arrowstyle-i.md) | Describes the left and right arrow attributes. |
-| [AutoPlayOptions](arkts-arkui-autoplayoptions-i.md) | Defines the properties for controlling the automatic playback behavior. |
-| [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | Describes the configuration options for child components to be preloaded. |
-| [IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md) | Set the indicator item's icon for a specified index. |
-| [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Defines the style of the navigation indicator. |
-| [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Describes the animation information of the **Swiper** component. |
-| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | Describes the auto-fill attribute. |
-| [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | Provides the information about the custom page transition animation. |
-| [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing. |
-| [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action. |
+| [ArrowStyle](arkts-arkui-swiper-comp-arrowstyle-i.md) | Describes the left and right arrow attributes. |
+| [AutoPlayOptions](arkts-arkui-swiper-comp-autoplayoptions-i.md) | Defines the properties for controlling the automatic playback behavior. |
+| [CachedCountOptions](arkts-arkui-swiper-comp-cachedcountoptions-i.md) | Describes the configuration options for child components to be preloaded. |
+| [IndicatorIconInfo](arkts-arkui-swiper-comp-indicatoriconinfo-i.md) | Set the indicator item's icon for a specified index. |
+| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | Defines the style of the navigation indicator. |
+| [SwiperAnimationEvent](arkts-arkui-swiper-comp-swiperanimationevent-i.md) | Describes the animation information of the **Swiper** component. |
+| [SwiperAutoFill](arkts-arkui-swiper-comp-swiperautofill-i.md) | Describes the auto-fill attribute. |
+| [SwiperContentAnimatedTransition](arkts-arkui-swiper-comp-swipercontentanimatedtransition-i.md) | Provides the information about the custom page transition animation. |
+| [SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing. |
+| [SwiperContentWillScrollResult](arkts-arkui-swiper-comp-swipercontentwillscrollresult-i.md) | Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | Triggered during the swipe action of the **Swiper** component. For details about the parameters, see [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md). |
-| [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) | Defines the callback triggered when the **Swiper** component is about to scroll. The return value indicates whether the scroll action is allowed. |
-| [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | Defines the callback triggered when the page transition animation ends. |
-| [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | Defines the callback triggered when the page transition animation starts. |
-| [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | Defines the callback triggered on a frame-by-frame basis when the page is turned by a swipe. |
+| [ContentDidScrollCallback](arkts-arkui-swiper-comp-contentdidscrollcallback-t.md) | Triggered during the swipe action of the **Swiper** component. For details about the parameters, see [SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md). |
+| [ContentWillScrollCallback](arkts-arkui-swiper-comp-contentwillscrollcallback-t.md) | Defines the callback triggered when the **Swiper** component is about to scroll. The return value indicates whether the scroll action is allowed. |
+| [OnSwiperAnimationEndCallback](arkts-arkui-swiper-comp-onswiperanimationendcallback-t.md) | Defines the callback triggered when the page transition animation ends. |
+| [OnSwiperAnimationStartCallback](arkts-arkui-swiper-comp-onswiperanimationstartcallback-t.md) | Defines the callback triggered when the page transition animation starts. |
+| [OnSwiperGestureSwipeCallback](arkts-arkui-swiper-comp-onswipergestureswipecallback-t.md) | Defines the callback triggered on a frame-by-frame basis when the page is turned by a swipe. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) | Enumerates the animation mode for moving to a specific page in the **Swiper** component. |
-| [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Enumerates the modes in which elements are displayed along the main axis. |
-| [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md) | Enumerates the nested scrolling modes of the **Swiper** component and its parent container. |
+| [SwiperAnimationMode](arkts-arkui-swiper-comp-swiperanimationmode-e.md) | Enumerates the animation mode for moving to a specific page in the **Swiper** component. |
+| [SwiperDisplayMode](arkts-arkui-swiper-comp-swiperdisplaymode-e.md) | Enumerates the modes in which elements are displayed along the main axis. |
+| [SwiperNestedScrollMode](arkts-arkui-swiper-comp-swipernestedscrollmode-e.md) | Enumerates the nested scrolling modes of the **Swiper** component and its parent container. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1: Setting the Navigation Indicator Interaction and Page Turning Effect
 
-In this example, the [changeIndex](#changeindex15) API is used to set the [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) animation effect to jump to a specified page, and the [onScrollStateChanged](arkts-arkui-swiper-comp-attribute.md#onscrollstatechanged) callback is used to listen for the scrolling state changes.
+In this example, the [changeIndex](#changeindex15) API is used to set the [SwiperAnimationMode](arkts-arkui-swiper-comp-swiperanimationmode-e.md) animation effect to jump to a specified page, and the [onScrollStateChanged](arkts-arkui-swiper-comp-attribute.md#onscrollstatechanged) callback is used to listen for the scrolling state changes.
 
 The onScrollStateChanged event is supported since API version 20.
 
@@ -94,7 +94,7 @@ The onScrollStateChanged event is supported since API version 20.
 ```TypeScript
 ### Example 2: Implementing a Digit Indicator
 
-This example uses the [DigitIndicator](arkts-arkui-digitindicator-c.md) API to implement a digit-style indicator.
+This example uses the [DigitIndicator](arkts-arkui-swiper-comp-digitindicator-c.md) API to implement a digit-style indicator.
 
 
 ```
@@ -104,7 +104,7 @@ This example uses the [DigitIndicator](arkts-arkui-digitindicator-c.md) API to i
 
 This example demonstrates how to implement the group-based page turning effect using the [displayCount](arkts-arkui-swiper-comp-attribute.md#displaycount) attribute.
 
-Since API version 24, the [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) parameter is added to decouple the number of cached nodes from the number of nodes displayed by group in the displayCount attribute.
+Since API version 24, the [CachedCountOptions](arkts-arkui-swiper-comp-cachedcountoptions-i.md) parameter is added to decouple the number of cached nodes from the number of nodes displayed by group in the displayCount attribute.
 
 
 ```
@@ -137,7 +137,7 @@ export class CommonUtil {
 ```TypeScript
 ### Example 5: Configuring Overflow for the Dot-Style Indicator
 
-This example demonstrates how to implement an animation for the overflow effect when the number of navigation dots exceeds the limit set through the [maxDisplayCount](arkts-arkui-dotindicator-c.md#maxdisplaycount) property of the DotIndicator API.
+This example demonstrates how to implement an animation for the overflow effect when the number of navigation dots exceeds the limit set through the [maxDisplayCount](arkts-arkui-swiper-comp-dotindicator-c.md#maxdisplaycount) property of the DotIndicator API.
 
 
 ```
@@ -193,7 +193,7 @@ When the Swiper width falls within the [md](../../../ui/arkts-layout-development
 
 This example shows how to implement drag simulation using the Swiper component. If the component itself does not respond to the drag event, the child component Column invokes the Swiper API based on the touch event information to implement a similar effect to that of dragging.
 
-Since API version 23, the [startFakeDrag](arkts-arkui-swipercontroller-c.md#startfakedrag), [fakeDragBy](arkts-arkui-swipercontroller-c.md#fakedragby), [stopFakeDrag](arkts-arkui-swipercontroller-c.md#stopfakedrag), and [isFakeDragging](arkts-arkui-swipercontroller-c.md#isfakedragging) APIs are added to implement drag simulation.
+Since API version 23, the [startFakeDrag](arkts-arkui-swiper-comp-swipercontroller-c.md#startfakedrag), [fakeDragBy](arkts-arkui-swiper-comp-swipercontroller-c.md#fakedragby), [stopFakeDrag](arkts-arkui-swiper-comp-swipercontroller-c.md#stopfakedrag), and [isFakeDragging](arkts-arkui-swiper-comp-swipercontroller-c.md#isfakedragging) APIs are added to implement drag simulation.
 
 
 ```
@@ -203,5 +203,5 @@ Since API version 23, the [startFakeDrag](arkts-arkui-swipercontroller-c.md#star
 
 This example shows how to configure the navigation dot icon of the Swiper component by setting the indicatorIcon API.
 
-Since API version 26.0.0, the [indicatorIcon](arkts-arkui-dotindicator-c.md#indicatoricon) API is added.
+Since API version 26.0.0, the [indicatorIcon](arkts-arkui-swiper-comp-dotindicator-c.md#indicatoricon) API is added.
 ```

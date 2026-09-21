@@ -40,7 +40,7 @@ barStyle?: BarStyle
 
 设置标题栏样式。
 
-**类型：** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**类型：** [BarStyle](../arkts-components/arkts-arkui-navigation-comp-barstyle-e.md)
 
 **默认值：** BarStyle.STANDARD
 
@@ -94,7 +94,7 @@ titleIcon?: Resource | SymbolGlyphModifier
 
 设置标题栏的图标。
 
-**类型：** [Resource](arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**类型：** [Resource](arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **默认值：** atomicservice icon
 

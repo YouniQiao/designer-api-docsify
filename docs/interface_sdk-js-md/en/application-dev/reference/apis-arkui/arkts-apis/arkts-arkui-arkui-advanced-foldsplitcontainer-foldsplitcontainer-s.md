@@ -48,7 +48,7 @@ Parameters for setting animation effects. The value **null** indicates that anim
 
 Default value: **null**
 
-**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) &#124; null
+**Type:** [AnimateParam](../arkts-components/arkts-arkui-common-comp-animateparam-i.md) &#124; null
 
 **Since:** 12
 

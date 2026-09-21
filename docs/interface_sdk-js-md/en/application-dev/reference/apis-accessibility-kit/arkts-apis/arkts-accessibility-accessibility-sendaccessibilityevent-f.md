@@ -48,23 +48,6 @@ let eventInfo: accessibility.EventInfo = ({
   triggerAction: 'click',
 });
 
-accessibility.sendAccessibilityEvent(eventInfo).then(() => {
-  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send event. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-
 accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
   if (err) {
     console.error(`Failed to send event. Code:${err.code}, message:${err.message}`);
@@ -141,4 +124,19 @@ Sends an accessibility event. The event will be distributed to registered access
 
 **Examples**
 
-See [sendAccessibilityEvent](#sendaccessibilityevent)
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventInfo: accessibility.EventInfo = ({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+
+accessibility.sendAccessibilityEvent(eventInfo).then(() => {
+  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send event. Code: ${err.code}, message: ${err.message}`);
+});
+```

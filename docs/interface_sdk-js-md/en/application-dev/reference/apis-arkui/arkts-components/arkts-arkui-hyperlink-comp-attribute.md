@@ -32,4 +32,4 @@ Sets the color of the hyperlink text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Color of the hyperlink text<br>&lt;!--RP1--&gt;Default value: '#ff0 07dff', indicating blue.&lt;!--RP1End--&gt; |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Color of the hyperlink text<br>&lt;!--RP1--&gt;Default value: '#ff007dff', indicating blue.&lt;!--RP1End--&gt; |

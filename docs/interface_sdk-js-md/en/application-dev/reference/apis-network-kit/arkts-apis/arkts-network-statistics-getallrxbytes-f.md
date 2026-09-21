@@ -50,16 +50,6 @@ statistics.getAllRxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllRxBytes().then((stats: number) => {
-  console.info('getAllRxBytes success', JSON.stringify(stats));
-}).catch((error: Error) => {
-   console.error('getAllRxBytes error', JSON.stringify(error));
-});
-```
-
 
 <a id="getallrxbytes-1"></a>
 
@@ -94,4 +84,12 @@ Obtains the total downlink traffic (in bytes) of all NICs from the last startup 
 
 **Examples**
 
-See [getAllRxBytes](#getallrxbytes)
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllRxBytes().then((stats: number) => {
+  console.info('getAllRxBytes success', JSON.stringify(stats));
+}).catch((error: Error) => {
+   console.error('getAllRxBytes error', JSON.stringify(error));
+});
+```

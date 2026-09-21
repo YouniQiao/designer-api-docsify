@@ -30,6 +30,8 @@ Bundle name of the application using the permission. In local scenarios, it can 
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -45,6 +47,8 @@ ID of the device where the application using the permission is located. Mainly u
 **Type:** string
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -62,6 +66,8 @@ Name of the device where the application using the permission is located, used o
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -77,6 +83,8 @@ Whether it is an access record in a distributed scenario. false indicates a loca
 **Type:** boolean
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -94,6 +102,8 @@ Collection of permission usage records under the current application or device. 
 
 **Since:** 9
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -109,6 +119,8 @@ Application identity identifier for using the permission. This field is invalid 
 **Type:** number
 
 **Since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Security.AccessToken
 

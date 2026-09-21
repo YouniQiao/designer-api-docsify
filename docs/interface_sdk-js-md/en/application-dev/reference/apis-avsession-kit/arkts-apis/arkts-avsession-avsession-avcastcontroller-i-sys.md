@@ -57,24 +57,6 @@ media.createAVRecorder().then((avRecorder) => {
     surfaceID = surfaceId;
     if (surfaceID) {
       // Obtain the avCastController instance through avSession.getAVCastController.
-      avCastController.setDisplaySurface(surfaceID).then(() => {
-        console.info('Succeeded in setting display surface.');
-      });
-    }
-  });
-})
-```
-
-```TypeScript
-import { media } from '@kit.MediaKit';
-
-let surfaceID: string = '';
-media.createAVRecorder().then((avRecorder) => {
-  avRecorder.getInputSurface((surfaceId: string) => {
-    console.info('Succeeded in getting input surface.');
-    surfaceID = surfaceId;
-    if (surfaceID) {
-      // Obtain the avCastController instance through avSession.getAVCastController.
       avCastController.setDisplaySurface(surfaceID, () => {
           console.info('Succeeded in setting display surface.');
       });
@@ -121,4 +103,20 @@ Set a surface instance to display playing view, used at sink side.
 
 **Examples**
 
-See [setDisplaySurface](#setdisplaysurface)
+```TypeScript
+import { media } from '@kit.MediaKit';
+
+let surfaceID: string = '';
+media.createAVRecorder().then((avRecorder) => {
+  avRecorder.getInputSurface((surfaceId: string) => {
+    console.info('Succeeded in getting input surface.');
+    surfaceID = surfaceId;
+    if (surfaceID) {
+      // Obtain the avCastController instance through avSession.getAVCastController.
+      avCastController.setDisplaySurface(surfaceID).then(() => {
+        console.info('Succeeded in setting display surface.');
+      });
+    }
+  });
+})
+```

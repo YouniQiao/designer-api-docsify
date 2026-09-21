@@ -8,7 +8,7 @@
 
 > **说明：** 
 > 
-> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、ForEach和LazyForEach）。
+> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](arkts-arkui-foreach-comp-attribute.md)和[LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each)）。
 > 
 > - 自定义组件宽高默认为0，需要给其设置宽高，否则标记组件将不显示。
 > 
@@ -36,7 +36,7 @@ Badge(value: BadgeParamWithNumber)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数，用于配置根据数字创建的Badge组件，包含消息数、显示位置和样式等属性。 |
+| value | [BadgeParamWithNumber](arkts-arkui-badge-comp-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数，用于配置根据数字创建的Badge组件，包含消息数、显示位置和样式等属性。 |
 
 ## Badge
 
@@ -58,7 +58,7 @@ Badge(value: BadgeParamWithString)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | 是 | 字符串标记组件参数。 |
+| value | [BadgeParamWithString](arkts-arkui-badge-comp-badgeparamwithstring-i.md) | 是 | 字符串标记组件参数。 |
 
 ## 汇总
 
@@ -66,16 +66,16 @@ Badge(value: BadgeParamWithString)
 
 | 名称 | 说明 |
 | --- | --- |
-| [BadgeParam](arkts-arkui-badgeparam-i.md) | 包含用于创建Badge组件的基础参数。 |
-| [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。 |
-| [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。 |
-| [BadgeStyle](arkts-arkui-badgestyle-i.md) | Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。 |
+| [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) | 包含用于创建Badge组件的基础参数。 |
+| [BadgeParamWithNumber](arkts-arkui-badge-comp-badgeparamwithnumber-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md)，具有BadgeParam的全部属性。 |
+| [BadgeParamWithString](arkts-arkui-badge-comp-badgeparamwithstring-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md)，具有BadgeParam的全部属性。 |
+| [BadgeStyle](arkts-arkui-badge-comp-badgestyle-i.md) | Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [BadgePosition](arkts-arkui-badgeposition-e.md) | 标记显示位置。 |
+| [BadgePosition](arkts-arkui-badge-comp-badgeposition-e.md) | 标记显示位置。 |
 
 ## 示例
 

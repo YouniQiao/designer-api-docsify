@@ -34,7 +34,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggle-comp-toggleconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## onChange
 
@@ -45,6 +45,8 @@ onChange(callback: (isOn: boolean) => void)
 Triggered when the toggle status changes.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,6 +70,8 @@ Sets the background color of the component when it is turned on.
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -89,6 +93,8 @@ switchPointColor(color: ResourceColor)
 Sets the color of the circular slider when the component is of the **Switch** type. This attribute is valid only when **type** is set to **ToggleType.Switch**.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,4 +128,4 @@ Sets the style for the component of the **Switch** type. This attribute is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |
+| value | [SwitchStyle](arkts-arkui-toggle-comp-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |

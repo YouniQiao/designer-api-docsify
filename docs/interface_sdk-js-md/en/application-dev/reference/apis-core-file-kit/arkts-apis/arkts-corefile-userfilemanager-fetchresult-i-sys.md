@@ -104,7 +104,9 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Examples**
 
-See [getAllObject](#getallobject)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## getCount
 
@@ -194,7 +196,9 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Examples**
 
-See [getFirstObject](#getfirstobject)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## getLastObject
 
@@ -254,7 +258,9 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Examples**
 
-See [getLastObject](#getlastobject)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## getNextObject
 
@@ -318,7 +324,9 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 **Examples**
 
-See [getNextObject](#getnextobject)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## getPositionObject
 
@@ -397,7 +405,9 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Examples**
 
-See [getPositionObject](#getpositionobject)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```
 
 ## isAfterLast
 

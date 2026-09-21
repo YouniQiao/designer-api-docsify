@@ -4,7 +4,7 @@
 interface InvokeOptions
 ```
 
-Invoke options for function execution.
+Optional parameters for Function invocation. Contains the application context information for the Function invocation.
 
 **Since:** 26.0.0
 

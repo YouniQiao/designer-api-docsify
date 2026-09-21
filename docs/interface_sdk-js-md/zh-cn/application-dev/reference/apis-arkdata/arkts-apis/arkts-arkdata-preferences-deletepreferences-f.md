@@ -92,7 +92,13 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 
 **示例**
 
-参见 [deletePreferences](#deletepreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="deletepreferences-2"></a>
@@ -138,7 +144,13 @@ function deletePreferences(context: Context, name: string): Promise<void>
 
 **示例**
 
-参见 [deletePreferences](#deletepreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="deletepreferences-3"></a>
@@ -187,4 +199,10 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 
 **示例**
 
-参见 [deletePreferences](#deletepreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

@@ -26,7 +26,7 @@ Defines the constructor of TextArea.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | No | Parameters of the **TextArea** component. |
+| value | [TextAreaOptions](arkts-arkui-textarea-comp-textareaoptions-i.md) | No | Parameters of the **TextArea** component. |
 
 ## Summary
 
@@ -34,26 +34,26 @@ Defines the constructor of TextArea.
 
 | Name | Description |
 | --- | --- |
-| [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | Describes the initialization options of the **TextArea** component. |
+| [TextAreaOptions](arkts-arkui-textarea-comp-textareaoptions-i.md) | Describes the initialization options of the **TextArea** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
+| [TextAreaSubmitCallback](arkts-arkui-textarea-comp-textareasubmitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [TextAreaType](arkts-arkui-textareatype-e.md) | Multi-line text input box type. |
+| [TextAreaType](arkts-arkui-textarea-comp-textareatype-e.md) | Multi-line text input box type. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1 (Setting and Obtaining the Cursor Position)
 
-Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-textareacontroller-c.md).
+Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-textarea-comp-textareacontroller-c.md).
 
 
 ```

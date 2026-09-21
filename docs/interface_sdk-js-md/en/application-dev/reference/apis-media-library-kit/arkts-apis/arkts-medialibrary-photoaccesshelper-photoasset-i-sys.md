@@ -146,7 +146,9 @@ The edited file is transferred to the media library based on the URI, which is *
 
 **Examples**
 
-See [commitEditedAsset](#commiteditedasset)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## convertImageFormat
 
@@ -436,7 +438,9 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 
 **Examples**
 
-See [getExif](#getexif)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## getKeyFrameThumbnail
 
@@ -493,6 +497,8 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 **Since:** 26.0.1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -646,7 +652,9 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 **Examples**
 
-See [isEdited](#isedited)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## open
 
@@ -751,7 +759,9 @@ The returned FD must be closed when it is not required.
 
 **Examples**
 
-See [open](#open)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## requestEditData
 
@@ -829,7 +839,9 @@ If the asset has never been edited, an empty string is returned.
 
 **Examples**
 
-See [requestEditData](#requesteditdata)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## requestPhoto
 
@@ -918,7 +930,9 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 **Examples**
 
-See [requestPhoto](#requestphoto)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## requestSource
 
@@ -992,7 +1006,9 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Examples**
 
-See [requestSource](#requestsource)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## revertToOriginal
 
@@ -1076,7 +1092,9 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 **Examples**
 
-See [revertToOriginal](#reverttooriginal)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## setFavorite
 
@@ -1361,7 +1379,9 @@ The pending state can be removed only through **setPending(false)**. You can use
 
 **Examples**
 
-See [setPending](#setpending)
+```TypeScript
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+```
 
 ## setUserComment
 

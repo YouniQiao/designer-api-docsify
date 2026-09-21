@@ -69,6 +69,42 @@ function mdByCallback() {
 }
 ```
 
+<a id="digest-1"></a>
+
+## digest
+
+```TypeScript
+digest(): Promise<DataBlob>
+```
+
+生成消息摘要。使用Promise异步回调。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回摘要计算结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call. XOF digest algorithms, such as SHAKE128 and SHAKE256, do not support this API.<br>**适用版本：** 26.2.0+ |
+
+**示例**
+
 ```TypeScript
 ArkTS示例：
 ```
@@ -152,44 +188,6 @@ export default {
 };
 ```
 
-<a id="digest-1"></a>
-
-## digest
-
-```TypeScript
-digest(): Promise<DataBlob>
-```
-
-生成消息摘要。使用Promise异步回调。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回摘要计算结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call. XOF digest algorithms, such as SHAKE128 and SHAKE256, do not support this API.<br>**适用版本：** 26.2.0+ |
-
-**示例**
-
-参见 [digest](#digest)
-
 ## digestSync
 
 ```TypeScript
@@ -201,6 +199,8 @@ digestSync(): DataBlob
 <br><br>**说明：** <br>建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -523,6 +523,8 @@ updateSync(input: DataBlob): void
 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 

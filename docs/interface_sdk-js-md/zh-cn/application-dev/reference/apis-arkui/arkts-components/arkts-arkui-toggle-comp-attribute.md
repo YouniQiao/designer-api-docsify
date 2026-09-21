@@ -34,7 +34,7 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | 是 | 在Toggle组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggle-comp-toggleconfiguration-i.md)&gt; | 是 | 在Toggle组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## onChange
 
@@ -45,6 +45,8 @@ onChange(callback: (isOn: boolean) => void)
 开关状态切换时触发该事件。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -68,6 +70,8 @@ selectedColor(value: ResourceColor)
 
 **起始版本：** 8
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -89,6 +93,8 @@ switchPointColor(color: ResourceColor)
 设置Switch类型的圆形滑块颜色。仅当type为ToggleType.Switch生效。
 
 **起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -122,4 +128,4 @@ switchStyle(value: SwitchStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | 是 | Switch样式风格。 |
+| value | [SwitchStyle](arkts-arkui-toggle-comp-switchstyle-i.md) | 是 | Switch样式风格。 |

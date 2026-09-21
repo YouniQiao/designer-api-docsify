@@ -44,6 +44,18 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
+  if (err) {
+    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting AV playback state.');
+});
+```
+
 <a id="getavplaybackstate-1"></a>
 
 ## getAVPlaybackState
@@ -72,6 +84,16 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
+  console.info('Succeeded in getting AV playback state.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getCurrentItem
 
 ```TypeScript
@@ -95,6 +117,18 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.getCurrentItem((err: BusinessError, value: avSession.AVQueueItem) => {
+  if (err) {
+    console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting current item.');
+});
+```
 
 <a id="getcurrentitem-1"></a>
 
@@ -123,6 +157,16 @@ getCurrentItem(): Promise<AVQueueItem>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.getCurrentItem().then((value: avSession.AVQueueItem) => {
+  console.info('Succeeded in getting current item.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getRecommendedResolutionLevel
 
@@ -156,6 +200,17 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+let decoderType = avSession.DecoderType.OH_AVCODEC_MIMETYPE_VIDEO_AVC;
+avCastController.getRecommendedResolutionLevel(decoderType).then((resolutionLevel: avSession.ResolutionLevel) => {
+  console.info('Succeeded in getting recommended resolution level.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get recommended resolution level, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getSupportedDecoders
 
 ```TypeScript
@@ -181,6 +236,19 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.getSupportedDecoders().then((decoderTypes: avSession.DecoderType[]) => {
+  console.info(`Succeeded in getting supported decoders, length: ${decoderTypes.length}`);
+  if (decoderTypes.length > 0 ) {
+    console.info(`Succeeded in getting supported decoder: ${decoderTypes[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get supported decoders, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getSupportedHdrCapabilities
 
@@ -208,6 +276,21 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+import { type hdrCapability } from '@kit.ArkGraphics2D';
+
+avCastController.getSupportedHdrCapabilities().then((hdrFormats: hdrCapability.HDRFormat[]) => {
+  console.info(`Succeeded in getting supported HDR capabilities, length: ${hdrFormats.length}`);
+  if (hdrFormats.length > 0 ) {
+    console.info(`Succeeded in getting supported HDR capability: ${hdrFormats[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get supported HDR capabilities, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -234,6 +317,19 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
+  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
+  if (nums.length > 0 ) {
+    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getValidCommands
 
 ```TypeScript
@@ -257,6 +353,18 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+**示例**
+
+```TypeScript
+avCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
+  if (err) {
+    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting valid commands.');
+});
+```
 
 <a id="getvalidcommands-1"></a>
 
@@ -283,6 +391,16 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+**示例**
+
+```TypeScript
+avCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
+  console.info('Succeeded in getting valid commands.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('playbackStateChange')
 
@@ -312,6 +430,12 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('playbackStateChange');
+```
+
 ## off('mediaItemChange')
 
 ```TypeScript
@@ -338,6 +462,12 @@ off(type: 'mediaItemChange'): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.off('mediaItemChange');
+```
 
 ## off('playNext')
 
@@ -366,6 +496,12 @@ off(type: 'playNext'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('playNext');
+```
+
 ## off('playPrevious')
 
 ```TypeScript
@@ -393,6 +529,12 @@ off(type: 'playPrevious'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('playPrevious');
+```
+
 ## off('requestPlay')
 
 ```TypeScript
@@ -419,6 +561,12 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('requestPlay');
+```
+
 ## off('endOfStream')
 
 ```TypeScript
@@ -444,6 +592,12 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.off('endOfStream');
+```
 
 ## off('seekDone')
 
@@ -472,6 +626,12 @@ off(type: 'seekDone'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('seekDone');
+```
+
 ## off('validCommandChange')
 
 ```TypeScript
@@ -481,6 +641,8 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 取消会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 11
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -498,6 +660,12 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.off('validCommandChange');
+```
 
 ## off('videoSizeChange')
 
@@ -523,6 +691,12 @@ off(type: 'videoSizeChange'): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.off('videoSizeChange');
+```
 
 ## off('error')
 
@@ -557,6 +731,12 @@ off(type: 'error'): void
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('error')
+```
+
 ## off('castControlGenericError')
 
 ```TypeScript
@@ -583,6 +763,12 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+avCastController.off('castControlGenericError');
+```
 
 ## off('castControlIoError')
 
@@ -611,6 +797,12 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+avCastController.off('castControlIoError');
+```
+
 ## off('castControlParsingError')
 
 ```TypeScript
@@ -637,6 +829,12 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+avCastController.off('castControlParsingError');
+```
 
 ## off('castControlDecodingError')
 
@@ -665,6 +863,12 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+avCastController.off('castControlDecodingError');
+```
+
 ## off('castControlAudioRendererError')
 
 ```TypeScript
@@ -692,6 +896,12 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
+**示例**
+
+```TypeScript
+avCastController.off('castControlAudioRendererError');
+```
+
 ## off('castControlDrmError')
 
 ```TypeScript
@@ -718,6 +928,12 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+avCastController.off('castControlDrmError');
+```
 
 ## off('keyRequest')
 
@@ -747,6 +963,12 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('keyRequest');
+```
+
 ## off('customDataChange')
 
 ```TypeScript
@@ -774,6 +996,12 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.off('customDataChange');
+```
+
 ## on('playbackStateChange')
 
 ```TypeScript
@@ -785,6 +1013,8 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -804,6 +1034,19 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.on('playbackStateChange', 'all', (playbackState: avSession.AVPlaybackState) => {
+  console.info(`on playbackStateChange state : ${playbackState.state}`);
+});
+
+let playbackFilter: Array<keyof avSession.AVPlaybackState> = ['state', 'speed', 'loopMode'];
+avCastController.on('playbackStateChange', playbackFilter, (playbackState: avSession.AVPlaybackState) => {
+  console.info(`on playbackStateChange state : ${playbackState.state}`);
+});
+```
 
 ## on('mediaItemChange')
 
@@ -835,6 +1078,14 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.on('mediaItemChange', (item: avSession.AVQueueItem) => {
+  console.info(`on mediaItemChange state : ${item.itemId}`);
+});
+```
+
 ## on('playNext')
 
 ```TypeScript
@@ -864,6 +1115,14 @@ on(type: 'playNext', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.on('playNext', () => {
+  console.info('on playNext');
+});
+```
 
 ## on('playPrevious')
 
@@ -895,6 +1154,14 @@ on(type: 'playPrevious', callback: Callback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.on('playPrevious', () => {
+  console.info('on playPrevious');
+});
+```
+
 ## on('requestPlay')
 
 ```TypeScript
@@ -923,6 +1190,14 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.on('requestPlay', (item: avSession.AVQueueItem) => {
+  console.info(`on requestPlay state : ${item.itemId}`);
+});
+```
+
 ## on('endOfStream')
 
 ```TypeScript
@@ -950,6 +1225,14 @@ on(type: 'endOfStream', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.on('endOfStream', () => {
+  console.info('on endOfStream');
+});
+```
 
 ## on('seekDone')
 
@@ -981,6 +1264,14 @@ on(type: 'seekDone', callback: Callback<number>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.on('seekDone', (pos: number) => {
+  console.info(`on seekDone pos：${pos} `);
+});
+```
+
 ## on('validCommandChange')
 
 ```TypeScript
@@ -992,6 +1283,8 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1009,6 +1302,15 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+**示例**
+
+```TypeScript
+avCastController.on('validCommandChange', (validCommands: avSession.AVCastControlCommandType[]) => {
+  console.info(`Succeeded in valid command change, size: ${validCommands.length}`);
+  console.info(`Succeeded in valid command change, validCommands: ${validCommands.values()}`);
+});
+```
 
 ## on('videoSizeChange')
 
@@ -1037,6 +1339,22 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+avCastController.on('videoSizeChange', (width: number, height: number) => {
+  console.info(`Succeeded in video size change, size: ${width}, ${height}`);
+});
+```
+
+```TypeScript
+// 需先通过avSession.getAVCastController获取avCastController实例。
+avCastController.on('videoSizeChange', (width: number, height: number) => {
+  console.info(`width ：${width} `);
+  console.info(`height：${height} `);
+});
+```
 
 ## on('error')
 
@@ -1073,6 +1391,16 @@ on(type: 'error', callback: ErrorCallback): void
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('error', (error: BusinessError) => {
+  console.error(`error happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
 
 ## on('castControlGenericError')
 
@@ -1116,6 +1444,16 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 | [6611106](../errorcode-avsession.md#6611106-传入非法参数) | The parameter is invalid, for example, the url is illegal to play. |
 | [6611107](../errorcode-avsession.md#6611107-内存分配失败) | Allocation of memory failed. |
 | [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) | Operation is not allowed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlGenericError', (error: BusinessError) => {
+  console.error(`castControlGenericError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
 
 ## on('castControlIoError')
 
@@ -1163,6 +1501,16 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 | [6612106](../errorcode-avsession.md#6612106-资源使用频繁) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
 | [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) | An error occurs when sending packet from source device to sink device. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlIoError', (error: BusinessError) => {
+  console.error(`castControlIoError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
+
 ## on('castControlParsingError')
 
 ```TypeScript
@@ -1196,6 +1544,16 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 | [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) | Parsing error associated with the media manifest. |
 | [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 | [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) | Unsupported feature in the media manifest. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlParsingError', (error: BusinessError) => {
+  console.error(`castControlParsingError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
 
 ## on('castControlDecodingError')
 
@@ -1232,6 +1590,16 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 | [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) | The format of the content to decode exceeds the capabilities of the device. |
 | [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) | The format of the content to decode is not supported. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlDecodingError', (error: BusinessError) => {
+  console.error(`castControlDecodingError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
+
 ## on('castControlAudioRendererError')
 
 ```TypeScript
@@ -1263,6 +1631,16 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 | [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) | Unspecified errors related to the audio renderer. |
 | [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) | Initializing the audio renderer failed. |
 | [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) | The audio renderer fails to write data. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlAudioRendererError', (error: BusinessError) => {
+  console.error(`castControlAudioRendererError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
 
 ## on('castControlDrmError')
 
@@ -1303,6 +1681,16 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 | [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) | The DRM license being loaded into the open DRM session has expired. |
 | [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) | An error occurs when the DRM processes the key response. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avCastController.on('castControlDrmError', (error: BusinessError) => {
+  console.error(`castControlDrmError happened, error code: ${error.code}, error message : ${error.message}.`)
+})
+```
+
 ## on('keyRequest')
 
 ```TypeScript
@@ -1333,6 +1721,15 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
+  console.info(`Succeeded in keyRequestCallback. assetId: ${assetId}, requestData: ${requestData}`);
+}
+avCastController.on('keyRequest', keyRequestCallback);
+```
+
 ## on('customDataChange')
 
 ```TypeScript
@@ -1360,6 +1757,14 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+avCastController.on('customDataChange', (data: Record<string, Object>) => {
+    console.info(`Caught customDataChange event, the new data is: ${JSON.stringify(data)}`);
+});
+```
+
 ## prepare
 
 ```TypeScript
@@ -1386,6 +1791,36 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+**示例**
+
+```TypeScript
+// 设置播放参数，开始播放。
+let playItem: avSession.AVQueueItem = {
+  itemId: 0,
+  description: {
+    assetId: '12345',
+    mediaType: 'AUDIO',
+    mediaUri: 'http://resource1_address',
+    mediaSize: 12345,
+    startPosition: 0,
+    duration: 0,
+    artist: 'mysong',
+    albumTitle: 'song1_title',
+    albumCoverUri: 'http://resource1_album_address',
+    lyricUri: 'http://resource1_lyric_address',
+    appName: 'MyMusic'
+  }
+};
+// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
+avCastController.prepare(playItem, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in preparing.');
+});
+```
 
 <a id="prepare-1"></a>
 
@@ -1423,6 +1858,34 @@ prepare(item: AVQueueItem): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
+**示例**
+
+```TypeScript
+// 设置播放参数，开始播放。
+let playItem: avSession.AVQueueItem = {
+  itemId: 0,
+  description: {
+    assetId: '12345',
+    mediaType: 'AUDIO',
+    mediaUri: 'http://resource1_address',
+    mediaSize: 12345,
+    startPosition: 0,
+    duration: 0,
+    artist: 'mysong',
+    albumTitle: 'song1_title',
+    albumCoverUri: 'http://resource1_album_address',
+    lyricUri: 'http://resource1_lyric_address',
+    appName: 'MyMusic'
+  }
+};
+// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
+avCastController.prepare(playItem).then(() => {
+  console.info('Succeeded in preparing.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -1457,6 +1920,23 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
+**示例**
+
+```TypeScript
+let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
+  // 根据assetId获取对应的DRM url。
+  let drmUrl = 'http://license.xxx.xxx.com:8080/drmproxy/getLicense';
+  // 从服务器获取许可证，需要开发者根据实际情况进行赋值。
+  let licenseResponseData: Uint8Array = new Uint8Array();
+  console.info(`Succeeded in get license by ${drmUrl}.`);
+  avCastController.processMediaKeyResponse(assetId, licenseResponseData).then(() => {
+    console.info('Succeeded in processing media key response.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to process media key response, code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## release
 
 ```TypeScript
@@ -1480,6 +1960,18 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+**示例**
+
+```TypeScript
+avCastController.release((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in releasing.');
+});
+```
 
 <a id="release-1"></a>
 
@@ -1509,6 +2001,16 @@ release(): Promise<void>
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+**示例**
+
+```TypeScript
+avCastController.release().then(() => {
+  console.info('Succeeded in releasing.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## sendControlCommand
 
 ```TypeScript
@@ -1536,6 +2038,19 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+**示例**
+
+```TypeScript
+let avCommand: avSession.AVCastControlCommand = {command: 'play'};
+avCastController.sendControlCommand(avCommand, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in sending control command.');
+});
+```
 
 <a id="sendcontrolcommand-1"></a>
 
@@ -1574,6 +2089,17 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
 
+**示例**
+
+```TypeScript
+let avCommand: avSession.AVCastControlCommand = {command: 'play'};
+avCastController.sendControlCommand(avCommand).then(() => {
+  console.info('Succeeded in sending control command.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## sendCustomData
 
 ```TypeScript
@@ -1605,6 +2131,16 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+
+**示例**
+
+```TypeScript
+avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
+  console.info('Succeeded in sending custom data.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## start
 
@@ -1638,6 +2174,37 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+**示例**
+
+```TypeScript
+// 设置播放参数，开始播放。
+let playItem: avSession.AVQueueItem = {
+  itemId: 0,
+  description: {
+    assetId: '12345',
+    mediaType: 'AUDIO',
+    mediaUri: 'http://resource1_address',
+    mediaSize: 12345,
+    startPosition: 0,
+    duration: 0,
+    artist: 'mysong',
+    albumTitle: 'song1_title',
+    albumCoverUri: 'http://resource1_album_address',
+    lyricUri: 'http://resource1_lyric_address',
+    appName: 'MyMusic'
+  }
+};
+
+// 启动播放。
+avCastController.start(playItem, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in starting.');
+});
+```
 
 <a id="start-1"></a>
 
@@ -1680,6 +2247,34 @@ start(item: AVQueueItem): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+
+**示例**
+
+```TypeScript
+// 设置播放参数，开始播放。
+let playItem: avSession.AVQueueItem = {
+  itemId: 0,
+  description: {
+    assetId: '12345',
+    mediaType: 'AUDIO',
+    mediaUri: 'http://resource1_address',
+    mediaSize: 12345,
+    startPosition: 0,
+    duration: 0,
+    artist: 'mysong',
+    albumTitle: 'song1_title',
+    albumCoverUri: 'http://resource1_album_address',
+    lyricUri: 'http://resource1_lyric_address',
+    appName: 'MyMusic'
+  }
+};
+// 启动播放。
+avCastController.start(playItem).then(() => {
+  console.info('Succeeded in starting.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## update
 

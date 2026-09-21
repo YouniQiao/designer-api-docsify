@@ -55,16 +55,6 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.exitCurrentInputType().then(() => {
-  console.info('Succeeded in exiting current input type.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
-});
-```
-
 <a id="exitcurrentinputtype-1"></a>
 
 ## exitCurrentInputType
@@ -94,7 +84,15 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 **Examples**
 
-See [exitCurrentInputType](#exitcurrentinputtype)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.exitCurrentInputType().then(() => {
+  console.info('Succeeded in exiting current input type.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
+});
+```
 
 ## hide
 
@@ -134,16 +132,6 @@ keyboardController.hide((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-});
-```
-
 <a id="hide-1"></a>
 
 ## hide
@@ -171,18 +159,6 @@ Hides the keyboard. This API uses a promise to return the result.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hide((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to hide. Code:${err.code}, message:${err.message}`);
-    return;
-  }
-  console.info('Succeeded in hiding keyboard.');
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -230,16 +206,6 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-keyboardController.hideKeyboard().then(() => {
-  console.info('Succeeded in hiding keyboard.');
-}).catch((err: BusinessError) => {
-  console.info(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 <a id="hidekeyboard-1"></a>
 
 ## hideKeyboard
@@ -266,4 +232,12 @@ Hides the keyboard. This API uses a promise to return the result.
 
 **Examples**
 
-See [hideKeyboard](#hidekeyboard)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+keyboardController.hideKeyboard().then(() => {
+  console.info('Succeeded in hiding keyboard.');
+}).catch((err: BusinessError) => {
+  console.info(`Failed to hideKeyboard. Code is ${err.code}, message is ${err.message}`);
+});
+```

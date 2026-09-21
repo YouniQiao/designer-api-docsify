@@ -95,6 +95,12 @@ A constructor used to create a **FileVersion** instance.
 | --- | --- |
 | 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
+**Examples**
+
+```TypeScript
+let fileVersion = new cloudSync.FileVersion();
+```
+
 ## downloadHistoryVersion
 
 ```TypeScript

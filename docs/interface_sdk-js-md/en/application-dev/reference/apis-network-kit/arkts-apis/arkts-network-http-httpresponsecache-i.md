@@ -83,6 +83,30 @@ System capability: SystemCapability.Communication.NetStack
 Parameters
 ```
 
+<a id="delete-1"></a>
+
+## delete
+
+```TypeScript
+delete(): Promise<void>
+```
+
+Disables the cache and deletes the data in it. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
 ```TypeScript
 ### delete
 
@@ -125,32 +149,6 @@ System capability: SystemCapability.Communication.NetStack
 ### Attributes
 ```
 
-<a id="delete-1"></a>
-
-## delete
-
-```TypeScript
-delete(): Promise<void>
-```
-
-Disables the cache and deletes the data in it. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-See [delete](#delete)
-
 ## flush
 
 ```TypeScript
@@ -187,20 +185,6 @@ System capability: SystemCapability.Communication.NetStack
 Parameters
 ```
 
-```TypeScript
-### flush
-
-flush(): Promise<void>
-
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
-
-Atomic service API: This API can be used in atomic services since API version 11.
-
-System capability: SystemCapability.Communication.NetStack
-
-Return value
-```
-
 <a id="flush-1"></a>
 
 ## flush
@@ -225,4 +209,16 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 **Examples**
 
-See [flush](#flush)
+```TypeScript
+### flush
+
+flush(): Promise<void>
+
+Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Return value
+```

@@ -48,7 +48,7 @@ Indent of the text paragraph.
 
 If the return value is of the number type, the unit is vp.
 
-**Type:** number &#124; [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
+**Type:** number &#124; [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-richeditor-comp-leadingmarginplaceholder-i.md)
 
 **Since:** 12
 

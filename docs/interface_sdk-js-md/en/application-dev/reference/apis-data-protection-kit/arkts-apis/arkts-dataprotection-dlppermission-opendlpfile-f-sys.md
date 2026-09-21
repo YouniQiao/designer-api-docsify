@@ -90,35 +90,6 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let file: number | undefined = undefined;
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-let appId = '';
-let bundleName = 'com.ohos.note';
-let userId = 100;
-
-let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-appId = data.signatureInfo.appId; // The app ID is obtained from the application package.
-
-file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
-dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
-  if (err) {
-    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-  await res?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
-  }
-});
-```
-
 
 <a id="opendlpfile-1"></a>
 
@@ -168,4 +139,31 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 
 **Examples**
 
-See [openDLPFile](#opendlpfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+let file: number | undefined = undefined;
+let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
+let appId = '';
+let bundleName = 'com.ohos.note';
+let userId = 100;
+
+let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+appId = data.signatureInfo.appId; // The app ID is obtained from the application package.
+
+file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
+dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
+  if (err) {
+    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  await res?.closeDLPFile(); // Close the DLP object.
+  if (file) {
+    fileIo.closeSync(file);
+  }
+});
+```

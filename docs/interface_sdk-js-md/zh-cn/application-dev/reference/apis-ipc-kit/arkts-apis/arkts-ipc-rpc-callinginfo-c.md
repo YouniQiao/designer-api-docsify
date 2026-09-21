@@ -30,6 +30,8 @@ readonly callerPid: number
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## callerTokenId
@@ -45,6 +47,8 @@ readonly callerTokenId: number
 **默认值：** -1
 
 **起始版本：** 23
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -62,6 +66,8 @@ readonly callerUid: number
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## isLocalCalling
@@ -78,6 +84,8 @@ readonly isLocalCalling: boolean
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## localDeviceId
@@ -92,6 +100,8 @@ readonly localDeviceId: string
 
 **起始版本：** 23
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## remoteDeviceId
@@ -105,5 +115,7 @@ readonly remoteDeviceId: string
 **类型：** string
 
 **起始版本：** 23
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

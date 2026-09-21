@@ -176,4 +176,6 @@ This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userf
 
 **Examples**
 
-See [recover](#recover)
+```TypeScript
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
+```

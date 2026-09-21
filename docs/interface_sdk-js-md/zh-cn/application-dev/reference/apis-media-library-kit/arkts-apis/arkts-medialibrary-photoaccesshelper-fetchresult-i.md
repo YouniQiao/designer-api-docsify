@@ -37,6 +37,12 @@ close(): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## contains
 
 ```TypeScript
@@ -65,6 +71,12 @@ contains(object: T): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象。返回true表示指定的文件资产在文件检索结果中；返回false表示指定的文件资产不在文件检索结果中。 |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getAllObjects
 
 ```TypeScript
@@ -91,6 +103,12 @@ getAllObjects(callback: AsyncCallback<Array<T>>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 <a id="getallobjects-1"></a>
 
@@ -121,6 +139,12 @@ getAllObjects(): Promise<Array<T>>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getCount
 
 ```TypeScript
@@ -148,6 +172,12 @@ getCount(): number
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getFirstObject
 
 ```TypeScript
@@ -174,6 +204,12 @@ getFirstObject(callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 <a id="getfirstobject-1"></a>
 
@@ -204,6 +240,12 @@ getFirstObject(): Promise<T>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getIndex
 
 ```TypeScript
@@ -232,6 +274,12 @@ getIndex(object: T): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回查询结果。如果对象在文件检索结果中则返回对应的索引，不存在则返回-1。 |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getLastObject
 
 ```TypeScript
@@ -258,6 +306,12 @@ getLastObject(callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 <a id="getlastobject-1"></a>
 
@@ -288,6 +342,12 @@ getLastObject(): Promise<T>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getNextObject
 
 ```TypeScript
@@ -316,6 +376,12 @@ getNextObject(callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 <a id="getnextobject-1"></a>
 
@@ -348,6 +414,12 @@ getNextObject(): Promise<T>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getObjectByPosition
 
 ```TypeScript
@@ -375,6 +447,12 @@ getObjectByPosition(index: number, callback: AsyncCallback<T>): void
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
 
 <a id="getobjectbyposition-1"></a>
 
@@ -411,6 +489,12 @@ getObjectByPosition(index: number): Promise<T>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getObjectsByIndexSet
 
 ```TypeScript
@@ -445,6 +529,12 @@ getObjectsByIndexSet(indexSet: number[]): Promise<T[]>
 | --- | --- |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1.The indexSet is null, undefined or empty. <br>2.The indexSet length is bigger than 500. <br>3.The max value of indexSet is equal or bigger than the fetch result length. <br>4.The min value of indexSet is less than 0. |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## getRangeObjects
 
 ```TypeScript
@@ -478,6 +568,12 @@ getRangeObjects(index: number, offset: number): Promise<T[]>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: index or offset validity check failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. |
 
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```
+
 ## isAfterLast
 
 ```TypeScript
@@ -504,3 +600,9 @@ isAfterLast(): boolean
 | --- | --- |
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
+
+**示例**
+
+```TypeScript
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+```

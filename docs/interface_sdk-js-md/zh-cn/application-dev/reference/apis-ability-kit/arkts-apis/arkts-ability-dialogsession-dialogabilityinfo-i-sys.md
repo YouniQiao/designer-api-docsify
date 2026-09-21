@@ -78,7 +78,7 @@ abilityName: string
 appIndex: number
 ```
 
-表示应用的分身索引。
+表示应用的分身索引。取值从0开始，0表示主应用实例，1及以上表示分身实例。
 
 **类型：** number
 

@@ -50,14 +50,6 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 **Examples**
 
 ```TypeScript
-uploadTask.delete().then((result: boolean) => {
-  console.info('Succeeded in deleting the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
 uploadTask.delete((err: BusinessError, result: boolean) => {
   if (err) {
     console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
@@ -110,16 +102,6 @@ uploadTask.delete().then((result: boolean) => {
 });
 ```
 
-```TypeScript
-uploadTask.delete((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in deleting the upload task.');
-});
-```
-
 ## off('progress')
 
 ```TypeScript
@@ -144,6 +126,23 @@ Unsubscribes from upload progress events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+let upProgressCallback2 = (uploadedSize: number, totalSize: number) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+uploadTask.on('progress', upProgressCallback1);
+uploadTask.on('progress', upProgressCallback2);
+// Unsubscribe from upProgressCallback1.
+uploadTask.off('progress', upProgressCallback1);
+// Unsubscribe from all callbacks of upload progress events.
+uploadTask.off('progress');
+```
 
 ## off('headerReceive')
 
@@ -170,6 +169,23 @@ Unsubscribes from HTTP response events for the upload task.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+let headerCallback1 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
+};
+let headerCallback2 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
+};
+uploadTask.on('headerReceive', headerCallback1);
+uploadTask.on('headerReceive', headerCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('headerReceive', headerCallback1);
+// Unsubscribe from all callbacks of the HTTP header events for the upload task.
+uploadTask.off('headerReceive');
+```
+
 ## off('complete' | 'fail')
 
 ```TypeScript
@@ -194,6 +210,48 @@ Unsubscribes from upload completion or failure events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('complete', upCompleteCallback1);
+uploadTask.on('complete', upCompleteCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('complete', upCompleteCallback1);
+// Unsubscribe from all callbacks of the upload completion events.
+uploadTask.off('complete');
+
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback1);
+uploadTask.on('fail', upFailCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('fail', upFailCallback1);
+// Unsubscribe from all callbacks of the upload failure events.
+uploadTask.off('fail');
+```
 
 ## on('progress')
 
@@ -225,6 +283,15 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+let upProgressCallback = (uploadedSize: number, totalSize: number) => {
+  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+};
+uploadTask.on('progress', upProgressCallback);
+```
+
 ## on('headerReceive')
 
 ```TypeScript
@@ -250,6 +317,15 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+let headerCallback = (headers: object) => {
+  console.info("upOnHeader headers:" + JSON.stringify(headers));
+};
+uploadTask.on('headerReceive', headerCallback);
+```
+
 ## on('complete' | 'fail')
 
 ```TypeScript
@@ -274,6 +350,24 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('complete', upCompleteCallback);
+
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback);
+```
 
 ## remove
 
@@ -306,14 +400,6 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 **Examples**
-
-```TypeScript
-uploadTask.remove().then((result: boolean) => {
-  console.info('Succeeded in removing the upload task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ```TypeScript
 uploadTask.remove((err: BusinessError, result: boolean) => {
@@ -366,17 +452,5 @@ uploadTask.remove().then((result: boolean) => {
   console.info('Succeeded in removing the upload task.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-uploadTask.remove((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to remove the upload task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in removing the upload task.');
-  }
 });
 ```

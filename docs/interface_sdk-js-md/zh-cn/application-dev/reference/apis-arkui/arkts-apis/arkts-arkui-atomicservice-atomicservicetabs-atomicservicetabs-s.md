@@ -80,7 +80,7 @@ controller?: TabsController
 
 Tabs组件的控制器，用于控制页签切换。默认值为new TabsController()。
 
-**类型：** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
+**类型：** [TabsController](../arkts-components/arkts-arkui-tabs-comp-tabscontroller-c.md)
 
 **起始版本：** 12
 
@@ -114,7 +114,7 @@ layoutMode?: LayoutMode
 
 设置底部页签的图片、文字排布的方式，默认值为LayoutMode.VERTICAL。
 
-**类型：** [LayoutMode](../arkts-components/arkts-arkui-layoutmode-e.md)
+**类型：** [LayoutMode](../arkts-components/arkts-arkui-tabcontent-comp-layoutmode-e.md)
 
 **起始版本：** 18
 

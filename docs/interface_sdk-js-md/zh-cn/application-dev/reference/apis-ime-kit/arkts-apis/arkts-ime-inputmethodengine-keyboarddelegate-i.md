@@ -35,6 +35,19 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 | type | 'keyDown' &#124; 'keyUp' | 是 | 设置监听类型。<br>- 'keyDown'表示键盘按下。<br>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 否 | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
+  console.info('delete keyUp notification.');
+  return true;
+});
+inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
+  console.info('delete keyDown notification.');
+  return true;
+});
+```
+
 ## off('keyEvent')
 
 ```TypeScript
@@ -54,6 +67,18 @@ off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
 | callback | (event: InputKeyEvent) =&gt; boolean | 否 | 取消订阅的回调函数，用于取消特定的键盘事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+import type { KeyEvent } from '@kit.InputKit';
+
+inputMethodEngine.getKeyboardDelegate().off('keyEvent', (keyEvent: KeyEvent) => {
+  console.info('This is a callback function which will be deregistered.');
+  return true;
+});
+inputMethodEngine.getKeyboardDelegate().off('keyEvent');
+```
+
 ## off('cursorContextChange')
 
 ```TypeScript
@@ -72,6 +97,12 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 | --- | --- | --- | --- |
 | type | 'cursorContextChange' | 是 | 光标变化事件，固定取值为'cursorContextChange'。 |
 | callback | (x: number, y: number, height: number) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('cursorContextChange');
+```
 
 ## off('selectionChange')
 
@@ -95,6 +126,15 @@ off(
 | type | 'selectionChange' | 是 | 文本选择变化事件，固定取值为'selectionChange'。 |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate()
+  .off('selectionChange', (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => {
+    console.info('delete selectionChange notification.');
+  });
+```
+
 ## off('textChange')
 
 ```TypeScript
@@ -113,6 +153,14 @@ off(type: 'textChange', callback?: (text: string) => void): void
 | --- | --- | --- | --- |
 | type | 'textChange' | 是 | 文本变化事件，固定取值为'textChange'。 |
 | callback | (text: string) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
+  console.info('delete textChange notification. text:' + text);
+});
+```
 
 ## off('editorAttributeChanged')
 
@@ -133,6 +181,12 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 | type | 'editorAttributeChanged' | 是 | 编辑框属性变化事件，固定取值为'editorAttributeChanged'。 |
 | callback | (attr: EditorAttribute) =&gt; void | 否 | 所要取消订阅的回调处理函数。参数不填写时，默认取消订阅type对应的所有回调事件。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
+```
+
 ## on('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -151,6 +205,21 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 | --- | --- | --- | --- |
 | type | 'keyDown' &#124; 'keyUp' | 是 | 设置监听类型。<br>- 'keyDown'表示键盘按下。<br>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
+  console.info(`inputMethodEngine keyCode.(keyUp): ${keyEvent.keyCode}`);
+  console.info(`inputMethodEngine keyAction.(keyUp): ${keyEvent.keyAction}`);
+  return true;
+});
+inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
+  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
+  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+  return true;
+});
+```
 
 ## on('keyEvent')
 
@@ -171,6 +240,20 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
 | callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br>- 入参按键事件信息的数据类型为[InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)。<br>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
+**示例**
+
+```TypeScript
+import type { KeyEvent } from '@kit.InputKit';
+
+inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
+  console.info(`inputMethodEngine keyEvent.action:${ keyEvent.action}`);
+  console.info(`inputMethodEngine keyEvent.key.code: ${keyEvent.key.code}`);
+  console.info(`inputMethodEngine keyEvent.ctrlKey: ${keyEvent.ctrlKey}`);
+  console.info(`inputMethodEngine keyEvent.unicodeChar: ${keyEvent.unicodeChar}`);
+  return true;
+});
+```
+
 ## on('cursorContextChange')
 
 ```TypeScript
@@ -189,6 +272,16 @@ on(type: 'cursorContextChange', callback: (x: number, y: number, height: number)
 | --- | --- | --- | --- |
 | type | 'cursorContextChange' | 是 | 光标变化事件，固定取值为'cursorContextChange'。 |
 | callback | (x: number, y: number, height: number) =&gt; void | 是 | 回调函数，返回光标信息。<br>- x为光标上端的x坐标值，单位：px，y为光标上端的y坐标值，单位：px，height为光标的高度值，单位：px。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
+  console.info('inputMethodEngine cursorContextChange x:' + x);
+  console.info('inputMethodEngine cursorContextChange y:' + y);
+  console.info('inputMethodEngine cursorContextChange height:' + height);
+});
+```
 
 ## on('selectionChange')
 
@@ -212,6 +305,18 @@ on(
 | type | 'selectionChange' | 是 | 文本选择变化事件，固定取值为'selectionChange'。 |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 是 | 回调函数，返回文本选择信息。<br>- oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。<br>- newBegin为变化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate()
+  .on('selectionChange', (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => {
+    console.info('selectionChange oldBegin:' + oldBegin);
+    console.info('selectionChange oldEnd:' + oldEnd);
+    console.info('selectionChange newBegin:' + newBegin);
+    console.info('selectionChange newEnd:' + newEnd);
+  });
+```
+
 ## on('textChange')
 
 ```TypeScript
@@ -231,6 +336,14 @@ on(type: 'textChange', callback: (text: string) => void): void
 | type | 'textChange' | 是 | 文本变化事件，固定取值为'textChange'。 |
 | callback | (text: string) =&gt; void | 是 | 回调函数，返回订阅的文本内容。 |
 
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
+  console.info('inputMethodEngine textChange. text:' + text);
+});
+```
+
 ## on('editorAttributeChanged')
 
 ```TypeScript
@@ -249,3 +362,12 @@ on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): v
 | --- | --- | --- | --- |
 | type | 'editorAttributeChanged' | 是 | 编辑框属性变化事件，固定取值为'editorAttributeChanged'。 |
 | callback | (attr: EditorAttribute) =&gt; void | 是 | 回调函数，返回变化的编辑框属性。 |
+
+**示例**
+
+```TypeScript
+inputMethodEngine.getKeyboardDelegate()
+  .on('editorAttributeChanged', (editorAttribute: inputMethodEngine.EditorAttribute) => {
+    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${editorAttribute.inputPattern}, enterKeyType = ${editorAttribute.enterKeyType}`);
+  });
+```

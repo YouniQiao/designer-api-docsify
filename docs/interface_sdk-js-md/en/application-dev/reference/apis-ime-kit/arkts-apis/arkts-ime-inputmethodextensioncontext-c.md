@@ -65,26 +65,6 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 }
 ```
 
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    console.info('onCreate, want:' + want.abilityName);
-  }
-
-  onDestroy() {
-    this.context.destroy().then(() => {
-      console.info('Succeeded in destroying context.');
-    }).catch((err: BusinessError)=>{
-      console.error(`Failed to destroy context, err code = ${err.code}`);
-    });
-  }
-}
-```
-
 <a id="destroy-1"></a>
 
 ## destroy
@@ -109,7 +89,25 @@ Destroys this input method. This API uses a promise to return the result.
 
 **Examples**
 
-See [destroy](#destroy)
+```TypeScript
+import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InputMethodExtAbility extends InputMethodExtensionAbility {
+  onCreate(want: Want): void {
+    console.info('onCreate, want:' + want.abilityName);
+  }
+
+  onDestroy() {
+    this.context.destroy().then(() => {
+      console.info('Succeeded in destroying context.');
+    }).catch((err: BusinessError)=>{
+      console.error(`Failed to destroy context, err code = ${err.code}`);
+    });
+  }
+}
+```
 
 ## startAbility
 

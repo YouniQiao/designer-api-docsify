@@ -62,30 +62,6 @@ import { calendarMgr } from '../entryability/EntryAbility';
 import { calendarManager } from '@kit.CalendarKit';
 
 const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'CreateMyCalendarByCallBack',
-  type: calendarManager.CalendarType.LOCAL
-};
-try {
-  calendarMgr?.createCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-    }
-  });
-} catch (error) {
-  // Check whether the permission is granted or whether the parameters are correct.
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
-const calendarAccount: calendarManager.CalendarAccount = {
   name: 'CreateMyCalendarByPromise',
   type: calendarManager.CalendarType.LOCAL,
   displayName : 'MyApplication'
@@ -134,7 +110,29 @@ Creates a Calendar object based on the calendar account information. This API us
 
 **Examples**
 
-See [createCalendar](#createcalendar)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'CreateMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+try {
+  calendarMgr?.createCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to create calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+    }
+  });
+} catch (error) {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## deleteCalendar
 
@@ -174,39 +172,6 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
-const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'DeleteMyCalendarByCallBack',
-  type: calendarManager.CalendarType.LOCAL
-};
-calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
-  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-      calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
-        if (err1) {
-          // Check whether the parameters are correct.
-          console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
-        } else {
-          console.info('Succeeded in deleting calendar');
-        }
-      });
-    }
-  });
-}).catch((error: BusinessError) => {
-  // Check whether the permission is granted or whether the parameters are correct.
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-})
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -274,7 +239,38 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 **Examples**
 
-See [deleteCalendar](#deletecalendar)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'DeleteMyCalendarByCallBack',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+      calendarMgr?.deleteCalendar(data, (err1: BusinessError) => {
+        if (err1) {
+          // Check whether the parameters are correct.
+          console.error(`Failed to delete calendar. Code: ${err1.code}, message: ${err1.message}`);
+        } else {
+          console.info('Succeeded in deleting calendar');
+        }
+      });
+    }
+  });
+}).catch((error: BusinessError) => {
+  // Check whether the permission is granted or whether the parameters are correct.
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+})
+```
 
 ## editEvent
 
@@ -362,25 +358,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
 import { calendarManager } from '@kit.CalendarKit';
 
-calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
-  if (err) {
-    console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
-    data.forEach((calendar) => {
-      const account = calendar.getAccount();
-      console.info(`account -> ${JSON.stringify(account)}`);
-    })
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
 calendarMgr?.getAllCalendars().then((data: calendarManager.Calendar[]) => {
   console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
   data.forEach((calendar) => {
@@ -429,7 +406,24 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 **Examples**
 
-See [getAllCalendars](#getallcalendars)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getAllCalendars((err: BusinessError, data: calendarManager.Calendar[]) => {
+  if (err) {
+    console.error(`Failed to get all calendars. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting all calendars, data -> ${JSON.stringify(data)}`);
+    data.forEach((calendar) => {
+      const account = calendar.getAccount();
+      console.info(`account -> ${JSON.stringify(account)}`);
+    })
+  }
+});
+```
 
 ## getCalendar
 
@@ -472,48 +466,6 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 | [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes:<br>1. dataShare database execution error; <br>2. null pointer error; <br>3. Data parsing error.<br>**Applicable version:** 23 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
-calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
-  if (err) {
-    // Check whether the permission is granted or whether the parameters are correct.
-    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
-const calendarAccount: calendarManager.CalendarAccount = {
-  name: 'MyCalendar',
-  type: calendarManager.CalendarType.LOCAL
-};
-calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
-  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
-  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
-      // Check whether the permission is granted or whether the parameters are correct.
-    } else {
-      console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
-    }
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
-  // Check whether the permission is granted or whether the parameters are correct.
-})
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -568,7 +520,31 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 **Examples**
 
-See [getCalendar](#getcalendar)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+const calendarAccount: calendarManager.CalendarAccount = {
+  name: 'MyCalendar',
+  type: calendarManager.CalendarType.LOCAL
+};
+calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calendar) => {
+  console.info(`Succeeded in creating calendar, data -> ${JSON.stringify(data)}`);
+  calendarMgr?.getCalendar(calendarAccount, (err: BusinessError, data: calendarManager.Calendar) => {
+    if (err) {
+      console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+      // Check whether the permission is granted or whether the parameters are correct.
+    } else {
+      console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
+    }
+  });
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create calendar. Code: ${error.code}, message: ${error.message}`);
+  // Check whether the permission is granted or whether the parameters are correct.
+})
+```
 
 <a id="getcalendar-2"></a>
 
@@ -607,4 +583,18 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 **Examples**
 
-See [getCalendar](#getcalendar)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
+import { calendarMgr } from '../entryability/EntryAbility';
+import { calendarManager } from '@kit.CalendarKit';
+
+calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
+  if (err) {
+    // Check whether the permission is granted or whether the parameters are correct.
+    console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
+  }
+});
+```

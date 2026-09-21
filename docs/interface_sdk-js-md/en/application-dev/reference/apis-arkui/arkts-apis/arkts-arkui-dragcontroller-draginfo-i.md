@@ -128,7 +128,7 @@ previewOptions?: DragPreviewOptions
 
 Processing mode of the drag preview and the display of the number badge during dragging.
 
-**Type:** [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md)
+**Type:** [DragPreviewOptions](../arkts-components/arkts-arkui-common-comp-dragpreviewoptions-i.md)
 
 **Since:** 11
 

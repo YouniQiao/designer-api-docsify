@@ -75,22 +75,6 @@ tcp.bind(bindAddr, (err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tcp.bind(bindAddr).then(() => {
-  console.info('bind success');
-}).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
-
 <a id="bind-1"></a>
 
 ## bind
@@ -138,24 +122,6 @@ Binds an IP address and a port number. The port number can be customized or rand
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tcp.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-})
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -216,19 +182,6 @@ tcp.close((err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-
-tcp.close().then(() => {
-  console.info('close success');
-}).catch((err: BusinessError) => {
-  console.error('close fail');
-});
-```
-
 <a id="close-1"></a>
 
 ## close
@@ -258,21 +211,6 @@ Closes a TCP socket connection. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-
-tcp.close((err: BusinessError) => {
-  if (err) {
-    console.error('close fail');
-    return;
-  }
-  console.info('close success');
-})
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -355,26 +293,6 @@ tcp.connect(tcpconnectoptions, (err: BusinessError) => {
 Example (with socket proxy):
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions).then(() => {
-  console.info('connect success')
-}).catch((err: BusinessError) => {
-  console.error('connect fail');
-});
-```
-
 <a id="connect-1"></a>
 
 ## connect
@@ -437,37 +355,15 @@ let tcpconnectoptions: socket.TCPConnectOptions = {
   address: netAddress,
   timeout: 6000
 }
-tcp.connect(tcpconnectoptions, (err: BusinessError) => {
-  if (err) {
-    console.error('connect fail');
-    return;
-  }
-  console.info('connect success');
-})
-```
-
-```TypeScript
-Example (with socket proxy):
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
 tcp.connect(tcpconnectoptions).then(() => {
   console.info('connect success')
 }).catch((err: BusinessError) => {
   console.error('connect fail');
 });
+```
+
+```TypeScript
+Example (with socket proxy):
 ```
 
 ## getLocalAddress
@@ -580,31 +476,6 @@ tcp.connect(tcpconnectoptions, () => {
 });
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions).then(() => {
-  console.info('connect success');
-  tcp.getRemoteAddress().then(() => {
-    console.info('getRemoteAddress success');
-  }).catch((err: BusinessError) => {
-    console.error('getRemoteAddressfail');
-  });
-}).catch((err: BusinessError) => {
-  console.error('connect fail');
-});
-```
-
 <a id="getremoteaddress-1"></a>
 
 ## getRemoteAddress
@@ -638,31 +509,6 @@ Obtains the remote address of a socket connection. This API uses a promise to re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  tcp.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
-    if (err) {
-      console.error('getRemoteAddressfail');
-      return;
-    }
-    console.info('getRemoteAddresssuccess:' + JSON.stringify(data));
-  })
-});
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -740,30 +586,6 @@ tcp.getSocketFd((err: BusinessError, data: number) => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-  // Bind the specified network API.
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd().then((data: number) => {
-  console.info("socketFd: " + data);
-})
-```
-
 <a id="getsocketfd-1"></a>
 
 ## getSocketFd
@@ -791,31 +613,6 @@ Obtains the file descriptor of the **TCPSocket** object. This API uses a promise
 | Promise&lt;number&gt; | Promise used to return the result. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  // Bind the specified network API.
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd((err: BusinessError, data: number) => {
-  console.error("getSocketFd failed: " + err);
-  console.info("socketFd: " + data);
-})
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -898,31 +695,6 @@ tcp.connect(tcpconnectoptions, () => {
 });
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions).then(() => {
-  console.info('connect success');
-  tcp.getState().then(() => {
-    console.info('getState success');
-  }).catch((err: BusinessError) => {
-    console.error('getState fail');
-  });
-}).catch((err: BusinessError) => {
-  console.error('connect fail');
-});
-```
-
 <a id="getstate-1"></a>
 
 ## getState
@@ -970,31 +742,6 @@ let tcpconnectoptions: socket.TCPConnectOptions = {
   address: netAddress,
   timeout: 6000
 }
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  tcp.getState((err: BusinessError, data: socket.SocketStateBase) => {
-    if (err) {
-      console.error('getState fail');
-      return;
-    }
-    console.info('getState success:' + JSON.stringify(data));
-  });
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
 tcp.connect(tcpconnectoptions).then(() => {
   console.info('connect success');
   tcp.getState().then(() => {
@@ -1026,6 +773,30 @@ Unsubscribes from **message** events of the **TCPSocket** object. This API uses 
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let messageView = '';
+let callback = (value: socket.SocketMessageInfo) => {
+  for (let i: number = 0; i < value.message.byteLength; i++) {
+    let uint8Array = new Uint8Array(value.message) 
+    let messages = uint8Array[i]
+    let message = String.fromCharCode(messages);
+    messageView += message;
+  }
+  console.info('on message message: ' + JSON.stringify(messageView));
+  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
+}
+tcp.on('message', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tcp.off('message', callback);
+tcp.off('message');
+```
+
 ## off('connect' | 'close')
 
 ```TypeScript
@@ -1044,6 +815,29 @@ Unsubscribes from **connect** or **close** events of the **TCPSocket** object. T
 | --- | --- | --- | --- |
 | type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let callback1 = () => {
+  console.info("on connect success");
+}
+tcp.on('connect', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tcp.off('connect', callback1);
+tcp.off('connect');
+let callback2 = () => {
+  console.info("on close success");
+}
+tcp.on('close', callback2);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tcp.off('close', callback2);
+tcp.off('close');
+```
 
 ## off('error')
 
@@ -1064,6 +858,22 @@ Unsubscribes from **error** events of the **TCPSocket** object. This API uses an
 | type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+let callback = (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+tcp.on('error', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tcp.off('error', callback);
+tcp.off('error');
+```
+
 ## on('message')
 
 ```TypeScript
@@ -1082,6 +892,26 @@ Subscribes to **message** events of the **TCPSocket** object. This API uses an a
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+tcp.on('message', (value: socket.SocketMessageInfo) => {
+  let messageView = '';
+  let uint8Array = new Uint8Array(value.message); 
+  for (let i: number = 0; i < value.message.byteLength; i++) {
+    let messages = uint8Array[i];
+    let message = String.fromCharCode(messages);
+    messageView += message;
+  }
+  console.info('on message message: ' + JSON.stringify(messageView));
+  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
+});
+```
 
 ## on('connect' | 'close')
 
@@ -1102,6 +932,21 @@ Subscribes to **connect** or **close** events of the **TCPSocket** object. This 
 | type | 'connect' &#124; 'close' | Yes | Event type.<br> <br>- **connect**: connection event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+tcp.on('connect', () => {
+  console.info("on connect success")
+});
+tcp.on('close', () => {
+  console.info("on close success")
+});
+```
+
 ## on('error')
 
 ```TypeScript
@@ -1120,6 +965,18 @@ Subscribes to **error** events of the **TCPSocket** object. This API uses an asy
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
+tcp.on('error', (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
+```
 
 ## send
 
@@ -1184,32 +1041,6 @@ tcp.connect(tcpconnectoptions, () => {
 })
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  let tcpSendOptions: socket.TCPSendOptions = {
-    data: 'Hello, server!'
-  }
-  tcp.send(tcpSendOptions).then(() => {
-    console.info('send success');
-  }).catch((err: BusinessError) => {
-    console.error('send fail');
-  });
-})
-```
-
 <a id="send-1"></a>
 
 ## send
@@ -1251,34 +1082,6 @@ Sends data over a TCP socket connection. This API uses a promise to return the r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  let tcpSendOptions: socket.TCPSendOptions = {
-    data: 'Hello, server!'
-  }
-  tcp.send(tcpSendOptions, (err: BusinessError) => {
-    if (err) {
-      console.error('send fail');
-      return;
-    }
-    console.info('send success');
-  })
-})
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -1382,46 +1185,6 @@ tcp.connect(tcpconnectoptions, () => {
 });
 ```
 
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-
-interface SocketLinger {
-  on: boolean;
-  linger: number;
-}
-
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  let tcpExtraOptions: socket.TCPExtraOptions = {
-    keepAlive: true,
-    OOBInline: true,
-    TCPNoDelay: true,
-    socketLinger: { on: true, linger: 10 } as SocketLinger,
-    receiveBufferSize: 8192,
-    sendBufferSize: 8192,
-    reuseAddress: true,
-    socketTimeout: 3000,
-    tcpFastOpen: false
-  }
-  tcp.setExtraOptions(tcpExtraOptions).then(() => {
-    console.info('setExtraOptions success');
-  }).catch((err: BusinessError) => {
-    console.error('setExtraOptions fail');
-  });
-});
-```
-
 <a id="setextraoptions-1"></a>
 
 ## setExtraOptions
@@ -1462,48 +1225,6 @@ Sets other properties of the **TCPSocket** object. This API uses a promise to re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-
-interface SocketLinger {
-  on: boolean;
-  linger: number;
-}
-
-tcp.connect(tcpconnectoptions, () => {
-  console.info('connect success');
-  let tcpExtraOptions: socket.TCPExtraOptions = {
-    keepAlive: true,
-    OOBInline: true,
-    TCPNoDelay: true,
-    socketLinger: { on: true, linger: 10 } as SocketLinger,
-    receiveBufferSize: 8192,
-    sendBufferSize: 8192,
-    reuseAddress: true,
-    socketTimeout: 3000,
-    tcpFastOpen: false
-  }
-  tcp.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
-    if (err) {
-      console.error('setExtraOptions fail');
-      return;
-    }
-    console.info('setExtraOptions success');
-  });
-});
-```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

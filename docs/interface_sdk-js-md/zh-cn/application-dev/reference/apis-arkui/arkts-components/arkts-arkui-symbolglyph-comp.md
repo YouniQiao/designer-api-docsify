@@ -36,12 +36,12 @@ SymbolGlyph(value?: Resource)
 
 | 名称 | 说明 |
 | --- | --- |
-| [EffectDirection](arkts-arkui-effectdirection-e.md) | 符号动效方向的枚举值。 |
-| [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | EffectFillStyle的枚举值。 |
-| [EffectScope](arkts-arkui-effectscope-e.md) | EffectScope的枚举值。 |
-| [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | 替换动效类型的枚举值。 |
-| [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 动效类型的枚举值。设置动效后，动效启动即生效，无需触发。 |
-| [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 渲染模式的枚举值。 |
+| [EffectDirection](arkts-arkui-symbolglyph-comp-effectdirection-e.md) | 符号动效方向的枚举值。 |
+| [EffectFillStyle](arkts-arkui-symbolglyph-comp-effectfillstyle-e.md) | EffectFillStyle的枚举值。 |
+| [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | EffectScope的枚举值。 |
+| [ReplaceEffectType](arkts-arkui-symbolglyph-comp-replaceeffecttype-e.md) | 替换动效类型的枚举值。 |
+| [SymbolEffectStrategy](arkts-arkui-symbolglyph-comp-symboleffectstrategy-e.md) | 动效类型的枚举值。设置动效后，动效启动即生效，无需触发。 |
+| [SymbolRenderingStrategy](arkts-arkui-symbolglyph-comp-symbolrenderingstrategy-e.md) | 渲染模式的枚举值。 |
 
 ## 示例
 

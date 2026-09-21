@@ -66,37 +66,6 @@ reminderAgentManager.getValidReminders((err: BusinessError, reminders: Array<rem
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
-  console.info("promise, getValidReminders length = " + reminders.length);
-  for (let i = 0; i < reminders.length; i++) {
-    console.info("getValidReminders = " + reminders[i]);
-    console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
-    const actionButton = reminders[i].actionButton || [];
-    for (let j = 0; j < actionButton.length; j++) {
-      console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
-      console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
-    }
-    console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
-    console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
-    console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
-    console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
-    console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
-    console.info("getValidReminders, title = " + reminders[i].title);
-    console.info("getValidReminders, content = " + reminders[i].content);
-    console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
-    console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
-    console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
-    console.info("getValidReminders, slotType = " + reminders[i].slotType);
-  }
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
 
 <a id="getvalidreminders-1"></a>
 
@@ -127,4 +96,33 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 **Examples**
 
-See [getValidReminders](#getvalidreminders)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
+  console.info("promise, getValidReminders length = " + reminders.length);
+  for (let i = 0; i < reminders.length; i++) {
+    console.info("getValidReminders = " + reminders[i]);
+    console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
+    const actionButton = reminders[i].actionButton || [];
+    for (let j = 0; j < actionButton.length; j++) {
+      console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
+      console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
+    }
+    console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
+    console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
+    console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
+    console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
+    console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
+    console.info("getValidReminders, title = " + reminders[i].title);
+    console.info("getValidReminders, content = " + reminders[i].content);
+    console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
+    console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
+    console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
+    console.info("getValidReminders, slotType = " + reminders[i].slotType);
+  }
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```

@@ -34,12 +34,6 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 **Examples**
 
 ```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import { contact } from '@kit.ContactsKit';
@@ -58,30 +52,6 @@ contact.addContact(context, {
     console.error(`Failed to add Contact. Code:${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a UI page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Returns the data after the contact is added successfully.
-let promise = contact.addContact({
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxxxx'
-  }]
-});
-// Callback invoked when the promise is resolved.
-promise.then((data) => {
   console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
 });
 ```
@@ -122,7 +92,11 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-See [addContact](#addcontact)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="addcontact-2"></a>
@@ -159,7 +133,23 @@ Adds a contact. This API uses a promise to return the result.
 
 **Examples**
 
-See [addContact](#addcontact)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Returns the data after the contact is added successfully.
+let promise = contact.addContact({
+  name: {
+    fullName: 'xxx'
+  },
+  phoneNumbers: [{
+    phoneNumber: '138xxxxxxxx'
+  }]
+});
+// Callback invoked when the promise is resolved.
+promise.then((data) => {
+  console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="addcontact-3"></a>
@@ -202,4 +192,8 @@ Adds a contact. This API uses a promise to return the result.
 
 **Examples**
 
-See [addContact](#addcontact)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a UI page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```

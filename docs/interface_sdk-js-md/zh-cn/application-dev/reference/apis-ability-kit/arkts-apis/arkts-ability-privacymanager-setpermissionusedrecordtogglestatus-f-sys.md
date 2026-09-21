@@ -20,6 +20,8 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 
 **需要权限：** ohos.permission.PERMISSION_RECORD_TOGGLE
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -55,18 +57,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // 设置权限使用记录开关状态
 privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
   console.info('setPermissionUsedRecordToggleStatus success');
 }).catch((err: BusinessError): void => {
   console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
@@ -123,4 +113,14 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 
 **示例**
 
-参见 [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```

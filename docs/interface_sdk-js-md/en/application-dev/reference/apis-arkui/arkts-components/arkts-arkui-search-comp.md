@@ -2,7 +2,7 @@
 
 The **Search** component provides an area for users to enter search queries.
 
-> **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
+> **NOTE** > > This component supports plain text only. For rich text, use the [RichEditor](arkts-arkui-richeditor-comp.md#rich_editor) component.
 
 ## Child Components
 
@@ -26,7 +26,7 @@ Defines the constructor of Search.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | Initialization options of the **Search** component. |
+| options | [SearchOptions](arkts-arkui-search-comp-searchoptions-i.md) | No | Initialization options of the **Search** component. |
 
 ## Summary
 
@@ -34,31 +34,31 @@ Defines the constructor of Search.
 
 | Name | Description |
 | --- | --- |
-| [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Defines the CancelButton options. |
-| [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | Defines the CancelButton symbol options. |
-| [IconOptions](arkts-arkui-iconoptions-i.md) | Defines the icon options. |
-| [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | Defines the SearchButton options. |
-| [SearchOptions](arkts-arkui-searchoptions-i.md) | Describes the initialization options of the **Search** component. |
+| [CancelButtonOptions](arkts-arkui-search-comp-cancelbuttonoptions-i.md) | Defines the CancelButton options. |
+| [CancelButtonSymbolOptions](arkts-arkui-search-comp-cancelbuttonsymboloptions-i.md) | Defines the CancelButton symbol options. |
+| [IconOptions](arkts-arkui-search-comp-iconoptions-i.md) | Defines the icon options. |
+| [SearchButtonOptions](arkts-arkui-search-comp-searchbuttonoptions-i.md) | Defines the SearchButton options. |
+| [SearchOptions](arkts-arkui-search-comp-searchoptions-i.md) | Describes the initialization options of the **Search** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SearchSubmitCallback](arkts-arkui-searchsubmitcallback-t.md) | Called when the search icon, search button, or soft keyboard search button is clicked. |
+| [SearchSubmitCallback](arkts-arkui-search-comp-searchsubmitcallback-t.md) | Called when the search icon, search button, or soft keyboard search button is clicked. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md) | Enum for the style of cancel button. |
-| [SearchType](arkts-arkui-searchtype-e.md) | Enumerates the text input types of a search box. |
+| [CancelButtonStyle](arkts-arkui-search-comp-cancelbuttonstyle-e.md) | Enum for the style of cancel button. |
+| [SearchType](arkts-arkui-search-comp-searchtype-e.md) | Enumerates the text input types of a search box. |
 
 ## Examples
 
 ```TypeScript
 ### Example 1 (Setting and Obtaining the Cursor Position)
 
-Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-searchcontroller-c.md).
+Since API version 8, this example implements the setting and obtaining of the cursor position through [controller](arkts-arkui-search-comp-searchcontroller-c.md).
 
 
 ```

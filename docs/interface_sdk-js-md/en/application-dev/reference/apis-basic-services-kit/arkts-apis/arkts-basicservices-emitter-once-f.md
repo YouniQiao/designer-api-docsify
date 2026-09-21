@@ -43,40 +43,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter.once(innerEvent, callback);
 ```
 
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
-
 
 <a id="once-1"></a>
 
@@ -106,46 +72,8 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
-let innerEvent: emitter.InnerEvent = {
-  eventId: 1
-};
-
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose ID is 1.
-emitter.once(innerEvent, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
 };
 // Execute the callback after receiving the event whose event ID is eventId.
 emitter.once('eventId', callback);
@@ -176,30 +104,6 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let innerEvent: emitter.InnerEvent = {
-  eventId: 1
-};
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose ID is 1.
-emitter.once(innerEvent, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose event ID is eventId.
-emitter.once('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

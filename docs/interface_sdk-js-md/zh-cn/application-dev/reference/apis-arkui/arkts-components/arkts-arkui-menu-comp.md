@@ -4,7 +4,7 @@
 
 > **说明：**
 
-> - Menu组件需和 > [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)或 > [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) > 方法配合使用，不支持作为普通组件单独使用。
+> - Menu组件需和 > [bindMenu](arkts-arkui-common-comp-commonmethod-c.md#bindmenu)或 > [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) > 方法配合使用，不支持作为普通组件单独使用。
 
 ## 子组件
 
@@ -42,6 +42,8 @@ Menu()
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -52,7 +54,7 @@ Menu()
 
 | 名称 | 说明 |
 | --- | --- |
-| [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Menu子菜单展开样式枚举。 |
+| [SubMenuExpandingMode](arkts-arkui-menu-comp-submenuexpandingmode-e.md) | Menu子菜单展开样式枚举。 |
 
 ## 示例
 

@@ -72,6 +72,8 @@ Sets the size of all text within the menu.
 
 **Substitutes:** [font](#font)
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -168,7 +170,7 @@ Sets the submenu expanding mode of the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Yes | Submenu expanding mode of the menu.<br>Default value: **SubMenuExpandingMode.SIDE_EXPAND** |
+| mode | [SubMenuExpandingMode](arkts-arkui-menu-comp-submenuexpandingmode-e.md) | Yes | Submenu expanding mode of the menu.<br>Default value: **SubMenuExpandingMode.SIDE_EXPAND** |
 
 ## subMenuExpandSymbol
 
@@ -190,4 +192,4 @@ Sets the submenu expand symbol of the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Submenu expand symbol of the menu.<br>1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed.<br>2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_down').fontSize('24vp')**<br>3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')** |
+| symbol | [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | Submenu expand symbol of the menu.<br>1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed.<br>2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_down').fontSize('24vp')**<br>3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')** |

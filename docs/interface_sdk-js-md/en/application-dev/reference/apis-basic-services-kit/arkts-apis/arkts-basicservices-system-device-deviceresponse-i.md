@@ -30,6 +30,8 @@ API version.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## brand
@@ -45,6 +47,8 @@ Brand.
 **Since:** 3
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -62,6 +66,8 @@ Device type. The options are as follows: phone: smartphone tablet: tablet tv: sm
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## language
@@ -77,6 +83,8 @@ System language.
 **Since:** 4
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -94,6 +102,8 @@ Manufacturer.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## model
@@ -109,6 +119,8 @@ Model.
 **Since:** 3
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -126,6 +138,8 @@ Product number.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## region
@@ -141,6 +155,8 @@ System region.
 **Since:** 4
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -158,6 +174,8 @@ Screen density, unit dpi.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## screenShape
@@ -173,6 +191,8 @@ Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle
 **Since:** 4
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
@@ -226,6 +246,8 @@ Window Height, unit px.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## windowWidth
@@ -241,5 +263,7 @@ Window width, unit px.
 **Since:** 3
 
 **Deprecated since:** 6
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite

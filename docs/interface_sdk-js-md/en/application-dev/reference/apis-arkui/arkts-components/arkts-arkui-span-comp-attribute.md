@@ -4,7 +4,7 @@
 declare class SpanAttribute extends BaseSpan<SpanAttribute>
 ```
 
-Inherited from [BaseSpan](arkts-arkui-basespan-c.md).
+Inherited from [BaseSpan](arkts-arkui-span-comp-basespan-c.md).
 
 Among universal events, only onClick click events and onHover hover events are supported.
 
@@ -332,4 +332,4 @@ Text shadow. It supports input parameters in an array to implement multiple text
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) &#124; Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes | Text shadow. |
+| value | [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) &#124; Array&lt;[ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md)&gt; | Yes | Text shadow. |

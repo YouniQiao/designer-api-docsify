@@ -28,6 +28,8 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -66,7 +68,7 @@ This attribute supports two-way binding through [$$](../../../ui/state-managemen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether the radio button is selected.<br>If **isChecked** is set to **undefined**, the default value **false** is used.<br>**true**: The radio button is selected. **false**: The radio button is not selected. |
+| isChecked | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether the radio button is selected.<br>If **isChecked** is set to **undefined**, the default value **false** is used.<br>**true**: The radio button is selected. **false**: The radio button is not selected. |
 
 ## contentModifier
 
@@ -88,7 +90,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md)&gt; | Yes | Content modifier to apply to the current component.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 <a id="contentmodifier-1"></a>
 
@@ -112,7 +114,7 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. <br>If **modifier** is set to **undefined**, no content modifier is used. |
+| modifier | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ContentModifier](arkts-arkui-common-comp-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md)&gt;&gt; | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. <br>If **modifier** is set to **undefined**, no content modifier is used. |
 
 ## onChange
 
@@ -123,6 +125,8 @@ onChange(callback: (isChecked: boolean) => void)
 Triggered when the selected state of the radio button changes.
 
 **Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,7 +164,7 @@ Triggered when the selected state of the radio button changes. Compared with [on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | Yes | Callback for radio button selection state changes.<br>If **callback** is set to **undefined**, the callback function is not used. |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md)&gt; | Yes | Callback for radio button selection state changes.<br>If **callback** is set to **undefined**, the callback function is not used. |
 
 ## radioStyle
 
@@ -184,4 +188,4 @@ Since API version 10, this API is supported in ArkTS widgets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | No | Style of the radio button in selected or deselected state. |
+| value | [RadioStyle](arkts-arkui-radio-comp-radiostyle-i.md) | No | Style of the radio button in selected or deselected state. |

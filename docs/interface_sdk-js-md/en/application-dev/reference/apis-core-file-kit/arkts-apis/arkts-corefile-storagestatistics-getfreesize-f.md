@@ -42,15 +42,6 @@ Obtains the available space (in bytes) of the built-in storage. This API uses an
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize().then((number: number) => {
-  console.info("getFreeSize successfully:" + JSON.stringify(number));
-}).catch((err: BusinessError) => {
-  console.error("getFreeSize failed with error:" + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getFreeSize((error: BusinessError, number: number) => {
   if (error) {
     console.error("getFreeSize failed with error:" + JSON.stringify(error));
@@ -97,4 +88,11 @@ Obtains the available space (in bytes) of the built-in storage. This API uses a 
 
 **Examples**
 
-See [getFreeSize](#getfreesize)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getFreeSize().then((number: number) => {
+  console.info("getFreeSize successfully:" + JSON.stringify(number));
+}).catch((err: BusinessError) => {
+  console.error("getFreeSize failed with error:" + JSON.stringify(err));
+});
+```

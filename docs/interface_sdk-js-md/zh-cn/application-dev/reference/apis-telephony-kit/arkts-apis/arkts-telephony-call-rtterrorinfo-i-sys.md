@@ -30,6 +30,8 @@ rtt通话id
 
 **起始版本：** 22
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -45,6 +47,8 @@ rtt失败原因值
 **类型：** number
 
 **起始版本：** 22
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -62,6 +66,8 @@ rtt操作类型
 
 **起始版本：** 22
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -77,6 +83,8 @@ rtt失败原因
 **类型：** string
 
 **起始版本：** 22
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

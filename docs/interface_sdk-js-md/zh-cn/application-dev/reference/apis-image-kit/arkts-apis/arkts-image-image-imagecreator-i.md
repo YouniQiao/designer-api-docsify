@@ -42,6 +42,22 @@ dequeueImage(callback: AsyncCallback<Image>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Image](arkts-image-image-image-i.md)&gt; | 是 | 回调函数，当获取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function DequeueImage(creator : image.ImageCreator) {
+  creator.dequeueImage((err: BusinessError, img: image.Image) => {
+    if (err) {
+      console.error(`Failed to dequeue the Image.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in dequeuing the Image.');
+    }
+  });
+}
+```
+
 <a id="dequeueimage-1"></a>
 
 ## dequeueImage
@@ -62,6 +78,20 @@ dequeueImage(): Promise<Image>
 | --- | --- |
 | Promise&lt;[Image](arkts-image-image-image-i.md)&gt; | Promise对象，返回最新图片。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function DequeueImage(creator : image.ImageCreator) {
+  creator.dequeueImage().then((img: image.Image) => {
+    console.info('Succeeded in dequeuing the Image.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to dequeue the Image.code ${error.code},message is ${error.message}`);
+  })
+}
+```
+
 ## off('imageRelease')
 
 ```TypeScript
@@ -80,6 +110,18 @@ off(type: 'imageRelease', callback?: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'imageRelease' | 是 | 监听事件类型，如'imageRelease'。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数。当移除注册成功时，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+async function Off(creator : image.ImageCreator) {
+  let callbackFunc = ()=>{
+      // 实现回调函数逻辑。
+  }
+  creator.on('imageRelease', callbackFunc)
+  creator.off('imageRelease', callbackFunc)
+}
+```
 
 ## on('imageRelease')
 
@@ -100,6 +142,22 @@ on(type: 'imageRelease', callback: AsyncCallback<void>): void
 | type | 'imageRelease' | 是 | 监听事件类型，如'imageRelease'。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当监听事件触发成功，err为undefined，否则为错误对象。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function On(creator : image.ImageCreator) {
+  creator.on('imageRelease', (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to get the imageRelease callback.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in getting imageRelease callback.');
+    }
+  })
+}
+```
+
 ## queueImage
 
 ```TypeScript
@@ -118,6 +176,34 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | image | [Image](arkts-image-image-image-i.md) | 是 | 绘制好的buffer图像。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当将图片放入队列成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function QueueImage(creator : image.ImageCreator) {
+  creator.dequeueImage().then((img: image.Image) => {
+    // 绘制图片。
+    img.getComponent(4).then((component : image.Component) => {
+      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 0; // B
+        bufferArr[i + 1] = 0; // G
+        bufferArr[i + 2] = 255; // R
+        bufferArr[i + 3] = 255; // A
+      }
+    })
+    creator.queueImage(img, (err: BusinessError) => {
+      if (err) {
+        console.error(`Failed to queue the Image.code ${err.code},message is ${err.message}`);
+      } else {
+        console.info('Succeeded in queuing the Image.');
+      }
+    })
+  })
+}
+```
 
 <a id="queueimage-1"></a>
 
@@ -145,6 +231,32 @@ queueImage(image: Image): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function QueueImage(creator : image.ImageCreator) {
+  creator.dequeueImage().then((img: image.Image) => {
+    // 绘制图片。
+    img.getComponent(4).then((component: image.Component) => {
+      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 0; // B
+        bufferArr[i + 1] = 0; // G
+        bufferArr[i + 2] = 255; // R
+        bufferArr[i + 3] = 255; // A
+      }
+    })
+    creator.queueImage(img).then(() => {
+      console.info('Succeeded in queuing the Image.');
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to queue the Image.code ${error.code},message is ${error.message}`);
+    })
+  })
+}
+```
+
 ## release
 
 ```TypeScript
@@ -166,6 +278,22 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
+    } else {
+      console.info('Succeeded in releasing creator.');
+    }
+  });
+}
+```
 
 <a id="release-1"></a>
 
@@ -190,6 +318,20 @@ release(): Promise<void>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Release(creator : image.ImageCreator) {
+  creator.release().then(() => {
+    console.info('Succeeded in releasing creator.');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
+  })
+}
+```
 
 ## capacity
 

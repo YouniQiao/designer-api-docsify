@@ -37,7 +37,7 @@ import { access } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md) | 恢复蓝牙出厂设置。使用Callback异步回调。 |
+| [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryreset) | 恢复蓝牙出厂设置。使用Callback异步回调。 |
 | [factoryReset](arkts-connectivity-access-factoryreset-f-sys.md#factoryreset-1) | 恢复蓝牙出厂设置。使用Promise异步回调。 |
 | [getLocalAddress](arkts-connectivity-access-getlocaladdress-f-sys.md) | 获取本端设备的蓝牙地址。 |
 | [notifyDialogResult](arkts-connectivity-access-notifydialogresult-f-sys.md) | 将用户操作蓝牙对话框的行为通知给蓝牙服务。使用Promise异步回调。 |

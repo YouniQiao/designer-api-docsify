@@ -8,7 +8,7 @@ The segment button component includes tab-style segment buttons and capsule-styl
 
 > **NOTE:** 
 > 
-> - The segment button does not support [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md). The segment button uses the maximum available width in the current area as the component width, and evenly distributes the width among the buttons based on the number of buttons. The segment button height automatically adapts to the button content (text and images), with a minimum height of 28 vp.
+> - The segment button does not support [universal attributes](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md). The segment button uses the maximum available width in the current area as the component width, and evenly distributes the width among the buttons based on the number of buttons. The segment button height automatically adapts to the button content (text and images), with a minimum height of 28 vp.
 > 
 > - Attributes decorated by **@Prop** are optional parameters. They must be passed during construction only when used together with the **@Require** decorator.
 

@@ -18,6 +18,6 @@
 | --- | --- |
 | [ColumnLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-columnlayoutalgorithmoptions-i.md) | Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the vertical linear layout algorithm. |
 | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | Sets the column count template, column spacing, and row spacing of the grid layout algorithm. |
-| [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Basic layout algorithm of the DynamicLayout container. |
+| [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Basic layout algorithm of the [DynamicLayout](../arkts-components/arkts-arkui-dynamiclayout-comp-attribute.md#dynamiclayoutattribute) container. |
 | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm. |
 | [StackLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-stacklayoutalgorithmoptions-i.md) | Sets the alignment method of the stack layout algorithm. |

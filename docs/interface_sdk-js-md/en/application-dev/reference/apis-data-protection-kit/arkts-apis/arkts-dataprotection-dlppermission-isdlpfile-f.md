@@ -61,23 +61,6 @@ dlpPermission.isDLPFile(file).then((isDLPFile: boolean) => {
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-let file: number | undefined = undefined;
-file = fileIo.openSync(uri).fd;
-dlpPermission.isDLPFile(file, (err, isDLPFile) => {
- if (err) {
-    console.error(`Failed to check if file is DLP file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('isDLPFile:', isDLPFile);
-  }
-  fileIo.closeSync(file);
-});
-```
-
 
 <a id="isdlpfile-1"></a>
 
@@ -113,4 +96,19 @@ During file processing, the system checks whether the file is a DLP file and the
 
 **Examples**
 
-See [isDLPFile](#isdlpfile)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+let file: number | undefined = undefined;
+file = fileIo.openSync(uri).fd;
+dlpPermission.isDLPFile(file, (err, isDLPFile) => {
+ if (err) {
+    console.error(`Failed to check if file is DLP file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('isDLPFile:', isDLPFile);
+  }
+  fileIo.closeSync(file);
+});
+```

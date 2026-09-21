@@ -18,6 +18,8 @@ Button()
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -34,6 +36,8 @@ Button(options: ButtonOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -44,7 +48,7 @@ Button(options: ButtonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | 是 | 配置按钮的显示样式。 |
+| options | [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | 是 | 配置按钮的显示样式。 |
 
 ## Button
 
@@ -58,6 +62,8 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -69,7 +75,7 @@ Button(label: ResourceStr, options?: ButtonOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 按钮文本内容。<br>**说明：** 当文本字符的长度超过按钮本身的宽度时，文本将会被截断。 |
-| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | 否 | 配置按钮的显示样式。<br> 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
+| options | [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | 否 | 配置按钮的显示样式。<br> 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
 
 ## 汇总
 
@@ -77,24 +83,24 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
-| [ButtonOptions](arkts-arkui-buttonoptions-i.md) | 按钮的样式。 |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | Button组件的label文本及其字体样式。 |
+| [ButtonConfiguration](arkts-arkui-button-comp-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。 |
+| [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | 按钮的样式。 |
+| [LabelStyle](arkts-arkui-button-comp-labelstyle-i.md) | Button组件的label文本及其字体样式。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) | 定义ButtonConfiguration中使用的回调类型。 |
+| [ButtonTriggerClickCallback](arkts-arkui-button-comp-buttontriggerclickcallback-t.md) | 定义ButtonConfiguration中使用的回调类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ButtonRole](arkts-arkui-buttonrole-e.md) | 按钮的角色。 |
-| [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 按钮的重要程度。 |
-| [ButtonType](arkts-arkui-buttontype-e.md) | 按钮的类型。 |
-| [ControlSize](arkts-arkui-controlsize-e.md) | 按钮的尺寸。 |
+| [ButtonRole](arkts-arkui-button-comp-buttonrole-e.md) | 按钮的角色。 |
+| [ButtonStyleMode](arkts-arkui-button-comp-buttonstylemode-e.md) | 按钮的重要程度。 |
+| [ButtonType](arkts-arkui-button-comp-buttontype-e.md) | 按钮的类型。 |
+| [ControlSize](arkts-arkui-button-comp-controlsize-e.md) | 按钮的尺寸。 |
 
 ## 示例
 

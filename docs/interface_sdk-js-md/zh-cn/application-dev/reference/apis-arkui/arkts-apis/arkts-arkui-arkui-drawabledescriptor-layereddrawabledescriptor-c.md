@@ -364,3 +364,13 @@ struct Index {
   }
 }
 ```
+
+**示例**
+
+```TypeScript
+使用json文件创建LayeredDrawableDescriptor，示例代码如下。
+```
+
+```TypeScript
+使用PixelMapDrawableDescriptor创建LayeredDrawableDescriptor，示例代码如下。
+```

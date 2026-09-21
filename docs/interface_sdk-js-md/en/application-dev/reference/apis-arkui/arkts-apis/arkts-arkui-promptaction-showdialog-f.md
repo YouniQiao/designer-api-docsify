@@ -26,6 +26,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 **Substitutes:** showDialog
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -45,30 +47,6 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
-
-```TypeScript
-showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
-
-Creates and displays a dialog box in the given settings. This API uses a promise to return the result.
-
-> NOTE
-> 
-> This API is supported since API version 9 and deprecated since API version 18. You are advised to use showDialog instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using showDialog can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
-> 
-> Since API version 10, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
-
-Atomic service API: This API can be used in atomic services since API version 11.
-
-System capability: SystemCapability.ArkUI.ArkUI.Full
-
-Parameters
-
-Return value
-
-Error codes
-
-For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
-```
 
 ```TypeScript
 showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>):void
@@ -127,6 +105,8 @@ Creates and displays a dialog box in the given settings. This API uses a promise
 
 **Substitutes:** showDialog
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -152,4 +132,26 @@ Creates and displays a dialog box in the given settings. This API uses a promise
 
 **Examples**
 
-See [showDialog](#showdialog)
+```TypeScript
+showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
+
+Creates and displays a dialog box in the given settings. This API uses a promise to return the result.
+
+> NOTE
+> 
+> This API is supported since API version 9 and deprecated since API version 18. You are advised to use showDialog instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using showDialog can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context).
+> 
+> Since API version 10, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.ArkUI.ArkUI.Full
+
+Parameters
+
+Return value
+
+Error codes
+
+For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [API Call Error Codes](../errorcode-internal.md).
+```

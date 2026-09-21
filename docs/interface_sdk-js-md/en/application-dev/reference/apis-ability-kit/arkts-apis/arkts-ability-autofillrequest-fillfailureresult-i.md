@@ -16,7 +16,7 @@ Fill fail result.
 errCode: number
 ```
 
-errcode. The value should be an integer.
+Error code of the auto-fill failure. The value should be an integer.
 
 **Type:** number
 

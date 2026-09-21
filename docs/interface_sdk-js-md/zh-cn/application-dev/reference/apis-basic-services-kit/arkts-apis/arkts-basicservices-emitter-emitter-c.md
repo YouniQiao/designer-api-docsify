@@ -75,67 +75,6 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', eventData);
 ```
 
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', options, eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', options, eventData);
-```
-
 <a id="emit-1"></a>
 
 ## emit
@@ -166,18 +105,6 @@ emit<T>(eventId: string, data?: GenericEventData<T>): void
 **示例**
 
 ```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
 @Sendable
 class Sample {
   constructor() {
@@ -196,46 +123,6 @@ let eventData: emitter.GenericEventData<Sample> = {
 };
 
 emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', options, eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', options, eventData);
 ```
 
 <a id="emit-2"></a>
@@ -270,39 +157,6 @@ emit(eventId: string, options: Options, data?: EventData): void
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
@@ -312,30 +166,6 @@ let eventData: emitter.EventData = {
     "content": "content",
     "id": 1,
   }
-};
-
-emitter1.emit('eventId', options, eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
 };
 
 emitter1.emit('eventId', options, eventData);
@@ -370,55 +200,6 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
 **示例**
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let eventData: emitter.GenericEventData<Sample> = {
-  data: new Sample()
-};
-
-emitter1.emit('eventId', eventData);
-```
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let options: emitter.Options = {
-  priority: emitter.EventPriority.HIGH
-};
-let eventData: emitter.EventData = {
-  data: {
-    "content": "content",
-    "id": 1,
-  }
-};
-
-emitter1.emit('eventId', options, eventData);
-```
 
 ```TypeScript
 @Sendable
@@ -507,44 +288,6 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emitter1.off('eventId');
 ```
 
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.off('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-
-emitter1.off('eventId', callback);
-```
-
 <a id="off-1"></a>
 
 ## off
@@ -573,44 +316,12 @@ off(eventId: string, callback: Callback<EventData>): void
 **示例**
 
 ```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-emitter1.off('eventId');
-```
-
-```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.off('eventId', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
 };
 
 emitter1.off('eventId', callback);
@@ -642,24 +353,6 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数。 |
 
 **示例**
-
-```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-emitter1.off('eventId');
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.off('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -722,32 +415,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.on('eventId', callback);
 ```
 
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-
-emitter1.on('eventId', callback);
-```
-
 <a id="on-1"></a>
 
 ## on
@@ -772,18 +439,6 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
 **示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.on('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -846,32 +501,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.once('eventId', callback);
 ```
 
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-
-emitter1.once('eventId', callback);
-```
-
 <a id="once-1"></a>
 
 ## once
@@ -896,18 +525,6 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，在接收到该事件时被调用。 |
 
 **示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-
-emitter1.once('eventId', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

@@ -66,6 +66,12 @@ back(options?: router.RouterOptions): void
 | --- | --- | --- | --- |
 | options | [router.RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | 返回页面描述信息。当需要返回到指定的页面时传入此参数（通过url指定目标页面）；当只需返回上一页时可以不传入此参数。url指定返回的目标页面：若页面栈中存在该url，则返回至index最大的同名页面；若不存在则不响应操作。若url未设置，则返回上一页（页面不会重新构建，出栈后会被回收）。 |
 
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
+
 <a id="back-1"></a>
 
 ## back
@@ -91,6 +97,12 @@ back(index: number, params?: Object): void
 | index | number | 是 | 返回目标页面的索引值，从0开始计数（注意：与[getStateByIndex](#getstatebyindex)的index参数不同，后者从1开始计数）。<br>取值范围：[0, +∞)。如果index超出页面栈范围或不存在对应页面，则不响应用户操作。 |
 | params | Object | 否 | 页面返回时携带的参数。不传入时不携带参数。 |
 
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
+
 ## clear
 
 ```TypeScript
@@ -112,6 +124,12 @@ clear(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
 
 ## getLength
 
@@ -143,6 +161,12 @@ getLength(): string
 | --- | --- |
 | string | 页面数量，页面栈支持最大数值是32。 |
 
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
+
 ## getParams
 
 ```TypeScript
@@ -164,6 +188,12 @@ getParams(): Object
 | 类型 | 说明 |
 | --- | --- |
 | Object | 发起跳转的页面往当前页传入的参数。 |
+
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
 
 ## getStackSize
 
@@ -187,6 +217,32 @@ getStackSize(): number
 | --- | --- |
 | number | 页面数量，页面栈支持最大数值是32。 |
 
+**示例**
+
+```TypeScript
+@Entry
+@Component
+struct Index {
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('stack size')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        console.info(`get stack size: ${this.getUIContext().getRouter().getStackSize()}`)
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## getState
 
 ```TypeScript
@@ -208,6 +264,12 @@ getState(): router.RouterState
 | 类型 | 说明 |
 | --- | --- |
 | [router.RouterState](arkts-arkui-router-routerstate-i.md) | 页面状态信息。 |
+
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
 
 ## getStateByIndex
 
@@ -237,6 +299,12 @@ getStateByIndex(index: number): router.RouterState | undefined
 | --- | --- |
 | [router.RouterState](arkts-arkui-router-routerstate-i.md) &#124; undefined | 返回页面状态信息。索引不存在时返回undefined。 |
 
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
+
 ## getStateByUrl
 
 ```TypeScript
@@ -265,6 +333,12 @@ getStateByUrl(url: string): Array<router.RouterState>
 | --- | --- |
 | Array&lt;[router.RouterState](arkts-arkui-router-routerstate-i.md)&gt; | 页面状态信息。 |
 
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
+
 ## hideAlertBeforeBackPage
 
 ```TypeScript
@@ -280,6 +354,12 @@ hideAlertBeforeBackPage(): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```
 
 ## pushNamedRoute
 
@@ -312,6 +392,53 @@ pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().pushNamedRoute({
+      name: 'myPage',
+      params: {
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+        }
+      }
+    }, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`pushNamedRoute failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('pushNamedRoute success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="pushnamedroute-1"></a>
 
@@ -352,6 +479,52 @@ pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    // 调用pushNamedRoute接口跳转到命名路由页面
+    this.getUIContext().getRouter().pushNamedRoute({
+        name: 'myPage',  // 命名路由名称
+        params: {  // 传递的页面参数
+          data1: 'message',
+          data2: {
+            data3: [123, 456, 789]
+          }
+        }
+      })
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`pushNamedRoute failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 <a id="pushnamedroute-2"></a>
 
 ## pushNamedRoute
@@ -386,6 +559,60 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().pushNamedRoute({
+      name: 'myPage',
+      params: {
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+        }
+      }
+    }, rtm.Standard, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`pushNamedRoute failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('pushNamedRoute success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="pushnamedroute-3"></a>
 
@@ -427,6 +654,57 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Pro
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp{
+  Standard:router.RouterMode = router.RouterMode.Standard;
+}
+let rtm:RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().pushNamedRoute({
+      name: 'myPage',
+      params: {  // 传递的页面参数
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+          }
+        }
+      }, rtm.Standard)
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`pushNamedRoute failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## pushUrl
 
 ```TypeScript
@@ -458,6 +736,54 @@ pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    // 调用pushUrl接口进行页面跳转
+    this.getUIContext().getRouter().pushUrl({
+      url: 'pages/routerpage2',  // 跳转目标页面路径
+      params: {  // 传递的页面参数
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+        }
+      }
+    }, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`pushUrl failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('pushUrl success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="pushurl-1"></a>
 
@@ -502,6 +828,116 @@ pushUrl(options: router.RouterOptions): Promise<void>
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义传递参数的内部类
+class InnerParams {
+  array: number[];
+
+  constructor(tuple: number[]) {
+    this.array = tuple;
+  }
+}
+
+// 定义路由参数类
+class RouterParams {
+  data: InnerParams;
+
+  constructor(tuple: number[]) {
+    this.data = new InnerParams(tuple);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    let options: router.RouterOptions = {
+      url: 'pages/second',  // 跳转目标页面路径
+      params: new RouterParams([12, 45, 78])  // 传递的页面参数
+    }
+    this.getUIContext()
+      .getRouter()
+      .pushUrl(options)
+      .then(() => {
+        console.info('pushUrl success');
+      })
+      .catch((err: ESObject) => {
+        console.error(`pushUrl failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Text('First Page')
+      Button('Next page')
+        .type(ButtonType.Capsule)
+        .margin({ top: 20 })
+        .onClick(() => {
+          this.routePage()
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// 在second页面中接收传递过来的参数
+class InnerParams {
+  array: number[];
+
+  constructor(tuple: number[]) {
+    this.array = tuple;
+  }
+}
+
+class RouterParams {
+  data: InnerParams;
+
+  constructor(tuple: number[]) {
+    this.data = new InnerParams(tuple);
+  }
+}
+
+@Entry
+@Component
+struct Second {
+  @State data: object = (this.getUIContext().getRouter().getParams() as RouterParams).data;
+  @State secondData: string = '';
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Text('Second Page')
+      Button('Back')
+        .fontSize(30)
+        .onClick(() => {
+          try {
+            // 开启返回询问对话框
+            this.getUIContext().getRouter().showAlertBeforeBackPage({ message: 'Are you sure to return?' })
+          } catch (error) {
+            // TODO: Implement error handling.
+          }
+          this.getUIContext().getRouter().back()
+        })
+        .margin({ top: 20 })
+      Button(`The value on the first page：${this.secondData}`)
+        .margin({ top: 20 })
+        .onClick(()=> {
+          this.secondData = (this.data['array'][1]).toString();
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 <a id="pushurl-2"></a>
 
 ## pushUrl
@@ -536,6 +972,60 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().pushUrl({
+      url: 'pages/routerpage2',
+      params: {
+        data1: 'message',
+        data2: {
+          data3: [123, 456, 789]
+        }
+      }
+    }, rtm.Standard, (err) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`pushUrl failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('pushUrl success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="pushurl-3"></a>
 
@@ -577,6 +1067,59 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
 
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义路由模式类
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;  // 标准路由模式
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().pushUrl({
+        url: 'pages/routerpage2',
+        params: {  // 传递的页面参数
+          data1: 'message',
+          data2: {
+            data3: [123, 456, 789]
+          }
+        }
+      }, rtm.Standard)  // 使用标准路由模式
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`pushUrl failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -607,6 +1150,50 @@ replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<vo
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceNamedRoute({
+      name: 'myPage',
+      params: {  // 传递的页面参数
+        data1: 'message'
+      }
+    }, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`replaceNamedRoute failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('replaceNamedRoute success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="replacenamedroute-1"></a>
 
@@ -646,6 +1233,49 @@ replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    // 调用replaceNamedRoute接口替换命名路由页面
+    this.getUIContext().getRouter().replaceNamedRoute({
+        name: 'myPage',
+        params: {  // 传递的页面参数
+          data1: 'message'
+        }
+      })
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`replaceNamedRoute failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 <a id="replacenamedroute-2"></a>
 
 ## replaceNamedRoute
@@ -679,6 +1309,57 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 | [401](../../errorcode-universal.md#401-参数检查失败) | if the number of parameters is less than 1 or the type of the url parameter is not string. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceNamedRoute({
+      name: 'myPage',
+      params: {
+        data1: 'message'
+      }
+    }, rtm.Standard, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`replaceNamedRoute failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('replaceNamedRoute success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="replacenamedroute-3"></a>
 
@@ -719,6 +1400,55 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): 
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Failed to get the delegate. This error code is thrown only in the standard system. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceNamedRoute({
+        name: 'myPage',
+        params: {
+          data1: 'message'
+        }
+      }, rtm.Standard)
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`replaceNamedRoute failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## replaceUrl
 
 ```TypeScript
@@ -749,6 +1479,50 @@ replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceUrl({
+      url: 'pages/detail',
+      params: {  // 传递的页面参数
+        data1: 'message'
+      }
+    }, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`replaceUrl failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('replaceUrl success');
+    })
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="replaceurl-1"></a>
 
@@ -793,6 +1567,49 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    // 调用replaceUrl接口进行页面替换
+    this.getUIContext().getRouter().replaceUrl({
+        url: 'pages/detail',  // 替换的目标页面路径
+        params: {  // 传递的页面参数
+          data1: 'message'
+        }
+      })
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`replaceUrl failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 <a id="replaceurl-2"></a>
 
 ## replaceUrl
@@ -826,6 +1643,57 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The UI execution context is not found. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
+
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceUrl({
+      url: 'pages/detail',
+      params: {
+        data1: 'message'
+      }
+    }, rtm.Standard, (err: Error) => {
+      if (err) {
+        let message = (err as BusinessError).message;
+        let code = (err as BusinessError).code;
+        console.error(`replaceUrl failed, code is ${code}, message is ${message}`);
+        return;
+      }
+      console.info('replaceUrl success');
+    });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
 
 <a id="replaceurl-3"></a>
 
@@ -866,6 +1734,55 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Failed to get the delegate. This error code is thrown only in the standard system. |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
+**示例**
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterTmp {
+  Standard: router.RouterMode = router.RouterMode.Standard;
+}
+
+let rtm: RouterTmp = new RouterTmp();
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    this.getUIContext().getRouter().replaceUrl({
+        url: 'pages/detail',
+        params: {
+          data1: 'message'
+        }
+      }, rtm.Standard)
+      .then(() => {
+        console.info('succeeded');
+      })
+      .catch((error: BusinessError) => {
+        console.error(`replaceUrl failed, code is ${error.code}, message is ${error.message}`);
+      });
+  }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage();
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## showAlertBeforeBackPage
 
 ```TypeScript
@@ -894,3 +1811,9 @@ showAlertBeforeBackPage(options: router.EnableAlertOptions): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+```TypeScript
+完整示例请参考[PushUrl](#pushurl)中的示例。
+```

@@ -38,6 +38,12 @@ getSchemeFilter(): ProxySchemeFilter
 | --- | --- |
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
 
+**示例**
+
+```TypeScript
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+```
+
 ## getUrl
 
 ```TypeScript
@@ -57,3 +63,9 @@ getUrl(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 代理规则中代理的URL信息。 |
+
+**示例**
+
+```TypeScript
+完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
+```

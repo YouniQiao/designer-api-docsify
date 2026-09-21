@@ -30,6 +30,8 @@ Obtains the current charging state and battery level.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
 
 **Parameters:**

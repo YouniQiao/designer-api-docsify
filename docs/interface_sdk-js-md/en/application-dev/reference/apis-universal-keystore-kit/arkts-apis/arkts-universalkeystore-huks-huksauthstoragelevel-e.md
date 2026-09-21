@@ -29,6 +29,8 @@ The key can be accessed only after the device is started.
 
 **Since:** 11
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -45,6 +47,8 @@ The key can be accessed only after the first unlock of the device.
 
 **Since:** 11
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -60,6 +64,8 @@ HUKS_AUTH_STORAGE_LEVEL_ECE = 2
 The key can be accessed only when the device is unlocked.
 
 **Since:** 11
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

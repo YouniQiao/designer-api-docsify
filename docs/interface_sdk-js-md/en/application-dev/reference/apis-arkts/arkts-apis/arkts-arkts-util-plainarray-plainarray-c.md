@@ -86,7 +86,7 @@ Adds an element to this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | Key of the target element. The value must be less than or equal to int32_max, that is, 2147483 647. |
+| key | number | Yes | Key of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 | value | T | Yes | Value of the target element. |
 
 **Error codes:**
@@ -637,7 +637,7 @@ Removes elements within the specified range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Start position of the elements to remove. The value must be less than or equal to int32_max, that is, 2147483647. |
-| size | number | Yes | Number of elements to remove. The value must be less than or equal to int32_max, that is, 214 7483647. |
+| size | number | Yes | Number of elements to remove. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 

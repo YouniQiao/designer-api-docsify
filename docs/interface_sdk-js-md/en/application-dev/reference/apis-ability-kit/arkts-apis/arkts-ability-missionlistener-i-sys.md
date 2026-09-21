@@ -216,7 +216,7 @@ For details, see [onMissionClosed](#onmissionclosed).
 onMissionSnapshotChanged(mission: number): void
 ```
 
-Called when the system updates the snapshot of a mission.
+This callback is triggered when the system updates the task thumbnail of a mission.
 
 **Since:** 8
 
@@ -228,7 +228,7 @@ Called when the system updates the snapshot of a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | number | Yes | Mission ID. |
+| mission | number | Yes | Indicates the mission ID. |
 
 **Examples**
 

@@ -49,10 +49,6 @@ function getDefaultInputMethod(userId?: number): InputMethodProperty
 **示例**
 
 ```TypeScript
-let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

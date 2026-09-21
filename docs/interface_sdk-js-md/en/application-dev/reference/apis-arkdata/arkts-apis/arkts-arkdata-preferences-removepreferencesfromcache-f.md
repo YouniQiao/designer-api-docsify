@@ -82,7 +82,13 @@ Removes a **Preferences** instance from the cache. This API uses an asynchronous
 
 **Examples**
 
-See [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="removepreferencesfromcache-2"></a>
@@ -123,7 +129,13 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 **Examples**
 
-See [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```
 
 
 <a id="removepreferencesfromcache-3"></a>
@@ -167,4 +179,10 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 **Examples**
 
-See [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA model:
+```
+
+```TypeScript
+Stage model:
+```

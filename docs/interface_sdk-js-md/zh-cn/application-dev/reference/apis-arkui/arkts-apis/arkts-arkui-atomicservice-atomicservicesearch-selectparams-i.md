@@ -38,7 +38,7 @@ arrowPosition?: ArrowPosition
 
 下拉菜单项的文本与箭头之间的对齐方式。默认值：ArrowPosition.END。
 
-**类型：** [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md)
+**类型：** [ArrowPosition](../arkts-components/arkts-arkui-select-comp-arrowposition-e.md)
 
 **起始版本：** 18
 
@@ -54,7 +54,7 @@ divider?: Optional<DividerOptions> | null
 
 1.设置DividerOptions，则按设置的样式显示分割线。默认值：{strokeWidth: '1px', color: '#33182431'}。当设置了menuItemContentModifier属性时，本属性不生效。2.设置为null时，不显示分割线。3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。
 
-**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; &#124; null
+**类型：** [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-textpicker-comp-divideroptions-i.md)&gt; &#124; null
 
 **起始版本：** 18
 
@@ -118,7 +118,7 @@ menuBackgroundBlurStyle?: BlurStyle
 
 下拉菜单的背景模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **起始版本：** 18
 
@@ -150,7 +150,7 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 在Select组件上，定制下拉菜单项内容区的方法。在应用了该属性后，下拉菜单的内容将完全由开发者自定义，此时为选择区设置的下拉菜单分割线、背景色及字体样式等属性将不再生效。modifier: 内容修改器，开发者需要自定义class实现ContentModifier接口。默认值为undefined。
 
-**类型：** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-menuitemconfiguration-i.md)&gt;
+**类型：** [ContentModifier](../arkts-components/arkts-arkui-common-comp-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-select-comp-menuitemconfiguration-i.md)&gt;
 
 **起始版本：** 18
 
@@ -230,7 +230,7 @@ options?: Array<SelectOption>
 
 下拉选项内容。默认值为undefined。
 
-**类型：** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
+**类型：** Array&lt;[SelectOption](../arkts-components/arkts-arkui-select-comp-selectoption-i.md)&gt;
 
 **起始版本：** 18
 

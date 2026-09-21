@@ -4,7 +4,7 @@
 
 Supported
 
-Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) for page routing.
+Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navigation-comp-navpathstack-c.md) for page routing.
 
 ## Modules to Import
 
@@ -18,7 +18,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of NavDestination) and non-home page content through routing. |
+| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of [NavDestination](../arkts-components/arkts-arkui-navdestination-comp.md#nav_destination)) and non-home page content through routing. |
 
 ### Interfaces
 

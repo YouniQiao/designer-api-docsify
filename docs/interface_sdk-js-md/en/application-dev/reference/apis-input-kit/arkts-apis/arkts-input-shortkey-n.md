@@ -26,6 +26,6 @@ import { FingerprintEvent } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
 | [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-1) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
 <!--DelEnd-->

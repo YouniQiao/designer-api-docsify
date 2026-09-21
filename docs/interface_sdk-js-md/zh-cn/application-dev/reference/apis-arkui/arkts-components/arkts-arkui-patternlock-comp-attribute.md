@@ -4,9 +4,9 @@
 declare class PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)外，还支持以下属性。
 
-除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
+除支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
@@ -34,7 +34,7 @@ activateCircleStyle(options: Optional<CircleStyleOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | 是 | 宫格圆点在“激活”状态的背景圆环样式。 |
+| options | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-patternlock-comp-circlestyleoptions-i.md)&gt; | 是 | 宫格圆点在“激活”状态的背景圆环样式。 |
 
 ## activeColor
 
@@ -261,7 +261,7 @@ sideLength(value: Length)
 
 > **说明：** 
 > 
-> PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
+> PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 
 **起始版本：** 9
 

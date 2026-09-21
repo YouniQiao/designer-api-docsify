@@ -94,7 +94,13 @@ function removePreferencesFromCache(context: Context, options: Options, callback
 
 **示例**
 
-参见 [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="removepreferencesfromcache-2"></a>
@@ -141,7 +147,13 @@ function removePreferencesFromCache(context: Context, name: string): Promise<voi
 
 **示例**
 
-参见 [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="removepreferencesfromcache-3"></a>
@@ -191,4 +203,10 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 **示例**
 
-参见 [removePreferencesFromCache](#removepreferencesfromcache)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

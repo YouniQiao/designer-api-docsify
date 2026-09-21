@@ -1,6 +1,6 @@
 # ImageSpan
 
-As a child of the Text and ContainerSpan components, the **ImageSpan** component is used to display inline images.
+As a child of the [Text](arkts-arkui-text-comp.md#text) and [ContainerSpan](arkts-arkui-containerspan-comp-attribute.md#containerspanattribute) components, the **ImageSpan** component is used to display inline images.
 
 ## Child Components
 
@@ -28,7 +28,7 @@ Defines the constructor of ImageSpan.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image source. Both local and network images are supported.<br>When using an image referenced using a relative path, for example, **ImageSpan("common/test.jpg")**, the **ImageSpan** component cannot be called across bundles or modules. Therefore, you are advised to use **$r** to reference image resources that need to be used globally.<br>- The supported formats include PNG, JPG, BMP, SVG, GIF, and HEIF.<br>- Base64 strings are supported. The value format is data:image/[png&#124;jpeg&#124;bmp&#124;webp&#124;heif];base64, [base64 data], where *[base64 data]* is a Base64 string.<br>- Character string prefixed with file://data/ storage, which is used to read image resources in the file folder in the application installation directory. Ensure that the application has the read permission to the files in the specified path. |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Yes | Image source. Both local and network images are supported.<br>When using an image referenced using a relative path, for example, **ImageSpan("common/test.jpg")**, the **ImageSpan** component cannot be called across bundles or modules. Therefore, you are advised to use **$r** to reference image resources that need to be used globally.<br>- The supported formats include PNG, JPG, BMP, SVG, GIF, and HEIF.<br>- Base64 strings are supported. The value format is data:image/[png&#124;jpeg&#124;bmp&#124;webp&#124;heif];base64, [base64 data], where *[base64 data]* is a Base64 string.<br>- Character string prefixed with file://data/ storage, which is used to read image resources in the file folder in the application installation directory. Ensure that the application has the read permission to the files in the specified path. |
 
 ## Summary
 
@@ -36,13 +36,13 @@ Defines the constructor of ImageSpan.
 
 | Name | Description |
 | --- | --- |
-| [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Describes the object returned after the callback is triggered when an image is successfully loaded or decoded. |
+| [ImageLoadResult](arkts-arkui-imagespan-comp-imageloadresult-i.md) | Describes the object returned after the callback is triggered when an image is successfully loaded or decoded. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ImageCompleteCallback](arkts-arkui-imagecompletecallback-t.md) | Defines the callback triggered when the image is successfully loaded or decoded. |
+| [ImageCompleteCallback](arkts-arkui-imagespan-comp-imagecompletecallback-t.md) | Defines the callback triggered when the image is successfully loaded or decoded. |
 
 ## Examples
 

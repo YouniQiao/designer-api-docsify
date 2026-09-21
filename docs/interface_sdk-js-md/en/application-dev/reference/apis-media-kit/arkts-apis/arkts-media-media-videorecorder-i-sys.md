@@ -64,19 +64,6 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-let surfaceID: string; // Surface ID passed to the external system.
-videoRecorder.getInputSurface().then((surfaceId: string) => {
-  console.info('getInputSurface success');
-  surfaceID = surfaceId;
-}).catch((err: BusinessError) => {
-  console.error('getInputSurface failed and catch error is ' + err.message);
-});
-```
-
 <a id="getinputsurface-2"></a>
 
 ## getInputSurface
@@ -109,21 +96,6 @@ get input surface. it must be called between prepare completed and start.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-let surfaceID: string; // Surface ID passed to the external system.
-videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
-  if (err == null) {
-    console.info('getInputSurface success');
-    surfaceID = surfaceId;
-  } else {
-    console.error('getInputSurface failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -167,6 +139,17 @@ Listens for video recording error events.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// This event is reported when an error occurs during the retrieval of videoRecordState.
+videoRecorder.on('error', (error: BusinessError) => { // Set the 'error' event callback.
+  console.error(`audio error called, error: ${error}`);
+})
+```
 
 ## pause
 
@@ -212,17 +195,6 @@ videoRecorder.pause((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.pause().then(() => {
-  console.info('pause videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('pause videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="pause-1"></a>
 
 ## pause
@@ -255,19 +227,6 @@ Pauses video recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.pause((err: BusinessError) => {
-  if (err == null) {
-    console.info('pause videorecorder success');
-  } else {
-    console.error('pause videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -351,40 +310,6 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
 })
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Configure the parameters based on those supported by the hardware device.
-let videoProfile: media.VideoRecorderProfile = {
-  audioBitrate : 48000,
-  audioChannels : 2,
-  audioCodec : media.CodecMimeType.AUDIO_AAC,
-  audioSampleRate : 48000,
-  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
-  videoBitrate : 2000000,
-  videoCodec : media.CodecMimeType.VIDEO_AVC,
-  videoFrameWidth : 640,
-  videoFrameHeight : 480,
-  videoFrameRate : 30
-}
-
-let videoConfig: media.VideoRecorderConfig = {
-  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
-  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
-  profile : videoProfile,
-  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
-  rotation : 0,
-  location : { latitude : 30, longitude : 130 }
-}
-
-// promise.
-videoRecorder.prepare(videoConfig).then(() => {
-  console.info('prepare success');
-}).catch((err: BusinessError) => {
-  console.error('prepare failed and catch error is ' + err.message);
-});
-```
-
 <a id="prepare-1"></a>
 
 ## prepare
@@ -426,42 +351,6 @@ Prepares for recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Configure the parameters based on those supported by the hardware device.
-let videoProfile: media.VideoRecorderProfile = {
-  audioBitrate : 48000,
-  audioChannels : 2,
-  audioCodec : media.CodecMimeType.AUDIO_AAC,
-  audioSampleRate : 48000,
-  fileFormat : media.ContainerFormatType.CFT_MPEG_4,
-  videoBitrate : 2000000,
-  videoCodec : media.CodecMimeType.VIDEO_AVC,
-  videoFrameWidth : 640,
-  videoFrameHeight : 480,
-  videoFrameRate : 30
-}
-
-let videoConfig: media.VideoRecorderConfig = {
-  audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
-  videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
-  profile : videoProfile,
-  url : 'fd://xx', // The file must be created by the caller and granted with proper permissions.
-  rotation : 0,
-  location : { latitude : 30, longitude : 130 }
-}
-
-// asyncallback.
-videoRecorder.prepare(videoConfig, (err: BusinessError) => {
-  if (err == null) {
-    console.info('prepare success');
-  } else {
-    console.error('prepare failed and error is ' + err.message);
-  }
-})
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -539,17 +428,6 @@ videoRecorder.release((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.release().then(() => {
-  console.info('release videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('release videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="release-1"></a>
 
 ## release
@@ -580,19 +458,6 @@ Releases resources used for video recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.release((err: BusinessError) => {
-  if (err == null) {
-    console.info('release videorecorder success');
-  } else {
-    console.error('release videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -648,17 +513,6 @@ videoRecorder.reset((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.reset().then(() => {
-  console.info('reset videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('reset videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="reset-1"></a>
 
 ## reset
@@ -690,19 +544,6 @@ Resets video recording. Before resetting video recording, you must call stop() t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.reset((err: BusinessError) => {
-  if (err == null) {
-    console.info('reset videorecorder success');
-  } else {
-    console.error('reset videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -759,17 +600,6 @@ videoRecorder.resume((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.resume().then(() => {
-  console.info('resume videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('resume videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="resume-1"></a>
 
 ## resume
@@ -802,19 +632,6 @@ Resumes video recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.resume((err: BusinessError) => {
-  if (err == null) {
-    console.info('resume videorecorder success');
-  } else {
-    console.error('resume videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -871,17 +688,6 @@ videoRecorder.start((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.start().then(() => {
-  console.info('start videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('start videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="start-1"></a>
 
 ## start
@@ -914,19 +720,6 @@ Starts video recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.start((err: BusinessError) => {
-  if (err == null) {
-    console.info('start videorecorder success');
-  } else {
-    console.error('start videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -983,17 +776,6 @@ videoRecorder.stop((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// promise.
-videoRecorder.stop().then(() => {
-  console.info('stop videorecorder success');
-}).catch((err: BusinessError) => {
-  console.error('stop videorecorder failed and catch error is ' + err.message);
-});
-```
-
 <a id="stop-1"></a>
 
 ## stop
@@ -1026,19 +808,6 @@ Stops video recording.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 **Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// asyncallback.
-videoRecorder.stop((err: BusinessError) => {
-  if (err == null) {
-    console.info('stop videorecorder success');
-  } else {
-    console.error('stop videorecorder failed and error is ' + err.message);
-  }
-});
-```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

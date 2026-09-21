@@ -61,18 +61,6 @@ usageStatistics.queryBundleStatsInfos(0, 20000000000000, (err: BusinessError, re
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryBundleStatsInfos(0, 20000000000000).then((res:usageStatistics.BundleStatsMap) => {
-  console.info('BUNDLE_ACTIVE queryBundleStatsInfos promise success.');
-  console.info('BUNDLE_ACTIVE queryBundleStatsInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStatsInfos promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 <a id="querybundlestatsinfos-1"></a>
 
@@ -122,4 +110,14 @@ function queryBundleStatsInfos(begin: number, end: number): Promise<BundleStatsM
 
 **示例**
 
-参见 [queryBundleStatsInfos](#querybundlestatsinfos)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+usageStatistics.queryBundleStatsInfos(0, 20000000000000).then((res:usageStatistics.BundleStatsMap) => {
+  console.info('BUNDLE_ACTIVE queryBundleStatsInfos promise success.');
+  console.info('BUNDLE_ACTIVE queryBundleStatsInfos promise result ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE queryBundleStatsInfos promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```

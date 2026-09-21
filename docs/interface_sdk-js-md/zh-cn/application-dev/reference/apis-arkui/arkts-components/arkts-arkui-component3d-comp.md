@@ -20,7 +20,7 @@ Component3D(sceneOptions?: SceneOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sceneOptions | [SceneOptions](arkts-arkui-sceneoptions-i.md) | 否 | 3D场景控制器 |
+| sceneOptions | [SceneOptions](arkts-arkui-component3d-comp-sceneoptions-i.md) | 否 | 3D场景控制器 |
 
 ## 汇总
 
@@ -28,19 +28,19 @@ Component3D(sceneOptions?: SceneOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [SceneOptions](arkts-arkui-sceneoptions-i.md) | 3D场景控制使用的场景选项 |
+| [SceneOptions](arkts-arkui-component3d-comp-sceneoptions-i.md) | 3D场景控制使用的场景选项 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [Scene](arkts-arkui-scene-t.md) | 提供控制3D场景的方法 |
+| [Scene](arkts-arkui-component3d-comp-scene-t.md) | 提供控制3D场景的方法 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ModelType](arkts-arkui-modeltype-e.md) | 模型类型枚举@enum { number } |
+| [ModelType](arkts-arkui-component3d-comp-modeltype-e.md) | 模型类型枚举@enum { number } |
 
 ## 示例
 

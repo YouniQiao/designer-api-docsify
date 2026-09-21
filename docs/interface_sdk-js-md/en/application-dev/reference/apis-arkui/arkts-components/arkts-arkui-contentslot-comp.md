@@ -24,7 +24,7 @@ Called when content is added to a placeholder component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [Content](arkts-arkui-content-t.md) | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the native side, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as manage the child components of **ContentSlot**. |
+| content | [Content](arkts-arkui-contentslot-comp-content-t.md) | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the native side, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as manage the child components of **ContentSlot**. |
 
 ## Summary
 
@@ -32,7 +32,7 @@ Called when content is added to a placeholder component
 
 | Name | Description |
 | --- | --- |
-| [Content](arkts-arkui-content-t.md) | Defines a base class for **ComponentContent** and **NodeContent**. |
+| [Content](arkts-arkui-contentslot-comp-content-t.md) | Defines a base class for **ComponentContent** and **NodeContent**. |
 
 ## Examples
 

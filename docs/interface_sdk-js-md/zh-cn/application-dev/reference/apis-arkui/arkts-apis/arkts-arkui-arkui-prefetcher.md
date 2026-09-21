@@ -18,7 +18,7 @@ import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI
 
 | 名称 | 说明 |
 | --- | --- |
-| [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 继承自[IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)。实现该接口，提供具备预取能力的数据源。 |
+| [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 继承自[IDataSource](../arkts-components/arkts-arkui-lazyforeach-comp-idatasource-i.md)。实现该接口，提供具备预取能力的数据源。 |
 | [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md) | 实现此接口以提供预取能力，配合LazyForEach在List、Grid等容器组件滑动浏览时预取数据项，提升用户浏览体验。 |
 
 ## 示例

@@ -42,15 +42,6 @@ Get the system size.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getSystemSize().then((number: number) => {
-  console.info("getSystemSize successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getSystemSize failed with error:" + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getSystemSize((error: BusinessError, number: number) => {
   if (error) {
     console.error("getSystemSize failed with error:" + JSON.stringify(error));
@@ -98,4 +89,11 @@ Get the system size.
 
 **Examples**
 
-See [getSystemSize](#getsystemsize)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getSystemSize().then((number: number) => {
+  console.info("getSystemSize successfully:" + number);
+}).catch((err: BusinessError) => {
+  console.error("getSystemSize failed with error:" + JSON.stringify(err));
+});
+```

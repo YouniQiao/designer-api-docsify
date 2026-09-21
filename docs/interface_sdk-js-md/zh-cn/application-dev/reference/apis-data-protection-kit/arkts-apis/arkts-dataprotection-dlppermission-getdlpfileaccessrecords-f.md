@@ -47,18 +47,6 @@ dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // 获取DLP�
 });
 ```
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
-  if (err) {
-    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('accessRecords', JSON.stringify(accessRecords));
-  }
-}); // 获取DLP访问列表。
-```
-
 
 <a id="getdlpfileaccessrecords-1"></a>
 
@@ -94,4 +82,14 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 
 **示例**
 
-参见 [getDLPFileAccessRecords](#getdlpfileaccessrecords)
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
+  if (err) {
+    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('accessRecords', JSON.stringify(accessRecords));
+  }
+}); // 获取DLP访问列表。
+```

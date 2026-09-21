@@ -46,30 +46,6 @@ let publishCallBack = (err: Base.BusinessError) => {
 commonEvent.publish("event", publishCallBack);
 ```
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// Information of a common event.
-let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // Initial code of the common event.
-    data: "initial data", // Initial data of the common event.
-    isOrdered: true  // The common event is an ordered one.
-};
-
-// Callback for common event publication.
-let publishCallBack = (err: Base.BusinessError) => {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// Publish a common event.
-commonEvent.publish("event", options, publishCallBack);
-```
-
 
 <a id="publish-1"></a>
 
@@ -99,4 +75,26 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 **Examples**
 
-See [publish](#publish)
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+// Information of a common event.
+let options:CommonEventManager.CommonEventPublishData = {
+    code: 0,             // Initial code of the common event.
+    data: "initial data", // Initial data of the common event.
+    isOrdered: true  // The common event is an ordered one.
+};
+
+// Callback for common event publication.
+let publishCallBack = (err: Base.BusinessError) => {
+    if (err.code) {
+        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("publish");
+    }
+}
+
+// Publish a common event.
+commonEvent.publish("event", options, publishCallBack);
+```

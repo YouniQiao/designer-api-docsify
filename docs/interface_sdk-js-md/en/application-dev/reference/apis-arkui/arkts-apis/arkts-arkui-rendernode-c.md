@@ -8,7 +8,7 @@ The **RenderNode** module provides APIs for creating a RenderNode in custom draw
 
 > **NOTE:** 
 > 
-> - Avoid modifying RenderNodes in BuilderNode. The FrameNode associated with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior,including display, event handling, and stability issues.
+> - Avoid modifying RenderNodes in [BuilderNode](arkts-arkui-buildernode-c.md). The [FrameNode](arkts-arkui-typenode-n.md) associated with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior,including display, event handling, and stability issues.
 > 
 > - RenderNode objects do not support JSON serialization.
 
@@ -42,7 +42,7 @@ Appends a child node to this RenderNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNodecannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 
@@ -731,7 +731,7 @@ Inserts a child node after the specified child node of this RenderNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted."<br>**Applicable version:** 22 and later |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNodecannot be adopted."<br>**Applicable version:** 22 and later |
 
 **Examples**
 

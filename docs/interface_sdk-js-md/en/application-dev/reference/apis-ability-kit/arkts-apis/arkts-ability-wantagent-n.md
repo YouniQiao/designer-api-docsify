@@ -24,18 +24,18 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md) | Obtains the bundle name of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename) | Obtains the bundle name of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename-1) | Obtains the bundle name of a WantAgent object. This API uses a promise to return the result. |
-| [getUid](arkts-ability-wantagent-getuid-f.md) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getuid) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getUid](arkts-ability-wantagent-getuid-f.md#getuid-1) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
-| [cancel](arkts-ability-wantagent-cancel-f.md) | Cancels a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-f.md#cancel) | Cancels a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [cancel](arkts-ability-wantagent-cancel-f.md#cancel-1) | Cancels a WantAgent object. This API uses a promise to return the result. |
 | [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
-| [equal](arkts-ability-wantagent-equal-f.md) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-f.md#equal) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md#equal-1) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent-1) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype-1) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
 
 <!--Del-->
@@ -43,7 +43,7 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-1) | Obtains the Want in a WantAgent object. This API uses a promise to return the result. |
 | [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
 | [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | Enables or disables the WantAgent multithreading feature. |

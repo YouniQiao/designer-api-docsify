@@ -128,4 +128,10 @@ getRdbStore支持多线程并发操作。
 
 **示例**
 
-参见 [getRdbStore](#getrdbstore)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

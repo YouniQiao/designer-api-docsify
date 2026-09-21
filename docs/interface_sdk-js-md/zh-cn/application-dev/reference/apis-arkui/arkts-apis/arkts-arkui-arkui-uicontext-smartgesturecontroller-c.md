@@ -40,6 +40,12 @@ clearMonitors(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+本示例通过clearMonitors接口实现了清空智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```
+
 ## clearSelected
 
 ```TypeScript
@@ -56,6 +62,12 @@ clearSelected(): void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**示例**
+
+```TypeScript
+本示例通过requestSelected接口和clearSelected接口实现了请求组件选中并在5000ms后自动清除选中，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```
+
 ## enableSmartTapAndSlideGestures
 
 ```TypeScript
@@ -68,7 +80,7 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 > 
 > - 该接口仅影响智慧手势的敲一敲和划一划手势，不影响翻腕手势。
 > 
-> - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
+> - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
 
 **起始版本：** 26.0.0
 
@@ -83,6 +95,12 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 是否启用智慧手势的敲一敲和划一划手势处理。true表示启用，false表示关闭。 |
+
+**示例**
+
+```TypeScript
+本示例通过enableSmartTapAndSlideGestures接口实现了启用和关闭智慧手势，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```
 
 ## registerMonitor
 
@@ -118,6 +136,12 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 | --- | --- | --- | --- |
 | monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 智慧手势监听回调。回调参数为系统给出的默认动作处理，返回值用于声明是否消费当前智慧手势以及是否替换默认动作处理。 |
 
+**示例**
+
+```TypeScript
+本示例通过registerMonitor接口实现了注册智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```
+
 ## requestSelected
 
 ```TypeScript
@@ -130,7 +154,7 @@ requestSelected(id: string): void
 > 
 > - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了onClick或绑定了单击手势[TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture)。
 > 
-> - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut)中的enabled决定。
+> - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut)中的enabled决定。
 
 **起始版本：** 26.0.0
 
@@ -145,6 +169,12 @@ requestSelected(id: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | 组件的id。 |
+
+**示例**
+
+```TypeScript
+本示例通过requestSelected接口和clearSelected接口实现了请求组件选中并在5000ms后自动清除选中，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```
 
 ## unregisterMonitor
 
@@ -167,3 +197,9 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 | 需要注销的智慧手势监听回调。 |
+
+**示例**
+
+```TypeScript
+本示例通过unregisterMonitor接口实现了注销智慧手势监听回调，完整示例请参考示例1（启用智慧手势并自定义动作处理）。
+```

@@ -24,4 +24,4 @@ declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => 
 
 | 类型 | 说明 |
 | --- | --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; | `WrappedBuilder&lt;Args&gt;`的实例，用于在组件之间复用或传递全局`@Builder`函数。该实例封装了指定的全局`@Builder`函数，可通过其`builder`属性调用被封装的构建函数，便于在组件间作为参数传递或赋值给变量。 |
+| [WrappedBuilder](arkts-arkui-common-comp-wrappedbuilder-c.md)&lt;Args&gt; | `WrappedBuilder&lt;Args&gt;`的实例，用于在组件之间复用或传递全局`@Builder`函数。该实例封装了指定的全局`@Builder`函数，可通过其`builder`属性调用被封装的构建函数，便于在组件间作为参数传递或赋值给变量。 |

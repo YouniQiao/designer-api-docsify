@@ -41,16 +41,6 @@ wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError,
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Number) => {
-    console.info(`success to getId: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getId because: ${JSON.stringify(error)}`);
-});
-```
-
 
 <a id="getid-1"></a>
 
@@ -82,4 +72,12 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 
 **Examples**
 
-See [getId](#getid)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: Number) => {
+    console.info(`success to getId: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to getId because: ${JSON.stringify(error)}`);
+});
+```

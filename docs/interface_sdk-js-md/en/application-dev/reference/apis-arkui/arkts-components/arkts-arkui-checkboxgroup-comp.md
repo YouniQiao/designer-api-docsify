@@ -20,6 +20,8 @@ When this API is used with components that come with the caching mechanism, such
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -30,7 +32,7 @@ When this API is used with components that come with the caching mechanism, such
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | No | Check box group parameters. |
+| options | [CheckboxGroupOptions](arkts-arkui-checkboxgroup-comp-checkboxgroupoptions-i.md) | No | Check box group parameters. |
 
 ## Summary
 
@@ -38,21 +40,21 @@ When this API is used with components that come with the caching mechanism, such
 
 | Name | Description |
 | --- | --- |
-| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md) | You must customize this class to implement the ContentModifier interface. For details, see [contentModifier](arkts-arkui-checkboxgroup-comp-attribute.md#contentmodifier). |
-| [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | Information about the check box group. |
-| [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | Name and status of a check box group. |
+| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-comp-checkboxgroupconfiguration-i.md) | You must customize this class to implement the ContentModifier interface. For details, see [contentModifier](arkts-arkui-checkboxgroup-comp-attribute.md#contentmodifier). |
+| [CheckboxGroupOptions](arkts-arkui-checkboxgroup-comp-checkboxgroupoptions-i.md) | Information about the check box group. |
+| [CheckboxGroupResult](arkts-arkui-checkboxgroup-comp-checkboxgroupresult-i.md) | Name and status of a check box group. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Information about the check box group. |
+| [OnCheckboxGroupChangeCallback](arkts-arkui-checkboxgroup-comp-oncheckboxgroupchangecallback-t.md) | Information about the check box group. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectStatus](arkts-arkui-selectstatus-e.md) | Enumerates the selection states of check boxes in the check box group. |
+| [SelectStatus](arkts-arkui-checkboxgroup-comp-selectstatus-e.md) | Enumerates the selection states of check boxes in the check box group. |
 
 ## Examples
 

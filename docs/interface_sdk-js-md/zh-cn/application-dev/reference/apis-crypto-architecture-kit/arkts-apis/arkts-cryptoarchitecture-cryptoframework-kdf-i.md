@@ -101,7 +101,13 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 **示例**
 
-参见 [generateSecret](#generatesecret)
+```TypeScript
+PBKDF2算法
+```
+
+```TypeScript
+HKDF算法
+```
 
 ## generateSecretSync
 

@@ -40,16 +40,6 @@ screenLock.unlockScreen((err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.unlockScreen().then(() => {
-  console.info('Succeeded unlocking the screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 <a id="unlockscreen-1"></a>
 
@@ -75,4 +65,12 @@ Unlock the screen.
 
 **Examples**
 
-See [unlockScreen](#unlockscreen)
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.unlockScreen().then(() => {
+  console.info('Succeeded unlocking the screen.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
+});
+```

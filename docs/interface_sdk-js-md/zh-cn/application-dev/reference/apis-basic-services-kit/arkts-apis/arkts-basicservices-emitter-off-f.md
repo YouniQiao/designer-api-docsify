@@ -35,58 +35,6 @@ function off(eventId: number): void
 emitter.off(1);
 ```
 
-```TypeScript
-// 取消eventId为"eventId1"的所有事件回调处理函数
-emitter.off('eventId1');
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为1的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off(1, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
-
 
 <a id="off-1"></a>
 
@@ -115,60 +63,8 @@ function off(eventId: string): void
 **示例**
 
 ```TypeScript
-// 取消eventId为1的所有事件回调处理函数
-emitter.off(1);
-```
-
-```TypeScript
 // 取消eventId为"eventId1"的所有事件回调处理函数
 emitter.off('eventId1');
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为1的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off(1, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
 ```
 
 
@@ -200,16 +96,6 @@ function off(eventId: number, callback: Callback<EventData>): void
 **示例**
 
 ```TypeScript
-// 取消eventId为1的所有事件回调处理函数
-emitter.off(1);
-```
-
-```TypeScript
-// 取消eventId为"eventId1"的所有事件回调处理函数
-emitter.off('eventId1');
-```
-
-```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
@@ -218,42 +104,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 // 取消eventId为1的事件回调处理函数，callback对象应使用订阅时的对象
 // 如果该回调处理函数没有被订阅，则不做任何处理
 emitter.off(1, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
 ```
 
 
@@ -285,56 +135,10 @@ function off(eventId: string, callback: Callback<EventData>): void
 **示例**
 
 ```TypeScript
-// 取消eventId为1的所有事件回调处理函数
-emitter.off(1);
-```
-
-```TypeScript
-// 取消eventId为"eventId1"的所有事件回调处理函数
-emitter.off('eventId1');
-```
-
-```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为1的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off(1, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
 };
 // 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
 // 如果该回调处理函数没有被订阅，则不做任何处理
@@ -368,38 +172,6 @@ function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的callback一致。 |
 
 **示例**
-
-```TypeScript
-// 取消eventId为1的所有事件回调处理函数
-emitter.off(1);
-```
-
-```TypeScript
-// 取消eventId为"eventId1"的所有事件回调处理函数
-emitter.off('eventId1');
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为1的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off(1, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
-// 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off('eventId1', callback);
-```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

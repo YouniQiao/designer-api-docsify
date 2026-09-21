@@ -27,7 +27,7 @@ import { cloudSync } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md) | Obtains the file sync state. This API uses a promise to return the result. |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate) | Obtains the file sync state. This API uses a promise to return the result. |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-1) | Obtains the file sync state. This API uses an asynchronous callback to return the result. |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-2) | Obtains the file sync state. |
 | [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |

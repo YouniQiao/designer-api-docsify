@@ -4,7 +4,7 @@
 declare class DynamicComponentAttribute extends CommonMethod<DynamicComponentAttribute>
 ```
 
-The universal attributes are supported.
+The [universal attributes](arkts-arkui-common-comp.md#common) are supported.
 
 The following events are supported:
 

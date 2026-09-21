@@ -238,7 +238,7 @@ backgroundEffect、brightness、blur等需要截屏的接口无法截取到正�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortioncomponent-comp-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
 
 **返回值：**
 

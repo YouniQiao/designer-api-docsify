@@ -18,6 +18,8 @@ Creates an empty button.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -34,6 +36,8 @@ Creates a button that can contain a single child component.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -44,7 +48,7 @@ Creates a button that can contain a single child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | Yes | Button settings. |
+| options | [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | Yes | Button settings. |
 
 ## Button
 
@@ -58,6 +62,8 @@ By default, the text content is displayed in a one line.
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -69,7 +75,7 @@ By default, the text content is displayed in a one line.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Button text.<br>Note: If the text is longer than the width of the button, it is truncated. |
-| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | No | Button settings. |
+| options | [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | No | Button settings. |
 
 ## Summary
 
@@ -77,24 +83,24 @@ By default, the text content is displayed in a one line.
 
 | Name | Description |
 | --- | --- |
-| [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [ButtonOptions](arkts-arkui-buttonoptions-i.md) | Describes the button style. |
-| [LabelStyle](arkts-arkui-labelstyle-i.md) | Label text and font style of the button. |
+| [ButtonConfiguration](arkts-arkui-button-comp-buttonconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [ButtonOptions](arkts-arkui-button-comp-buttonoptions-i.md) | Describes the button style. |
+| [LabelStyle](arkts-arkui-button-comp-labelstyle-i.md) | Label text and font style of the button. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) | Defines the callback type used in **ButtonConfiguration**. |
+| [ButtonTriggerClickCallback](arkts-arkui-button-comp-buttontriggerclickcallback-t.md) | Defines the callback type used in **ButtonConfiguration**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ButtonRole](arkts-arkui-buttonrole-e.md) | Role of the button. |
-| [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Enumerates the button importance levels. |
-| [ButtonType](arkts-arkui-buttontype-e.md) | Enumerates the button types. |
-| [ControlSize](arkts-arkui-controlsize-e.md) | Button size. |
+| [ButtonRole](arkts-arkui-button-comp-buttonrole-e.md) | Role of the button. |
+| [ButtonStyleMode](arkts-arkui-button-comp-buttonstylemode-e.md) | Enumerates the button importance levels. |
+| [ButtonType](arkts-arkui-button-comp-buttontype-e.md) | Enumerates the button types. |
+| [ControlSize](arkts-arkui-button-comp-controlsize-e.md) | Button size. |
 
 ## Examples
 

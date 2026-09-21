@@ -20,7 +20,7 @@ public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): n
 
 将当前LiveFormExtensionAbility客户端连接到一个[ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)服务端。
 
-调用该接口前，必须实现ConnectOptions接口。
+调用该接口前，必须实现[ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md)接口。
 
 通过本接口连接成功后，LiveFormExtensionAbility可以通过ConnectOptions返回的[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。
 

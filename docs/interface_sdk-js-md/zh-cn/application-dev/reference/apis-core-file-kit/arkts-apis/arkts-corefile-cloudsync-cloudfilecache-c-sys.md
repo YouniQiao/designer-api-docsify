@@ -100,10 +100,6 @@ A constructor used to create a CloudFileCache object.
 **示例**
 
 ```TypeScript
-let fileCache = new cloudSync.CloudFileCache();
-```
-
-```TypeScript
 let fileCache = new cloudSync.CloudFileCache("com.ohos.demo");
 ```
 

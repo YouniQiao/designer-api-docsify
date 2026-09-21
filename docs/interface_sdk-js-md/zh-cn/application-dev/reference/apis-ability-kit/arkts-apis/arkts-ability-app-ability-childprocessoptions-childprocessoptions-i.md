@@ -47,3 +47,13 @@ isolationUid?: boolean
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**示例**
+
+```TypeScript
+子进程部分：
+```
+
+```TypeScript
+主进程部分：
+```

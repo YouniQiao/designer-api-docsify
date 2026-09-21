@@ -26,7 +26,7 @@ TextArea(value?: TextAreaOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | 否 | TextArea组件参数。默认值：详见TextAreaOptions。 |
+| value | [TextAreaOptions](arkts-arkui-textarea-comp-textareaoptions-i.md) | 否 | TextArea组件参数。默认值：详见TextAreaOptions。 |
 
 ## 汇总
 
@@ -34,26 +34,26 @@ TextArea(value?: TextAreaOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | TextArea初始化参数。 |
+| [TextAreaOptions](arkts-arkui-textarea-comp-textareaoptions-i.md) | TextArea初始化参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) | 软键盘按下回车键时的回调事件。 |
+| [TextAreaSubmitCallback](arkts-arkui-textarea-comp-textareasubmitcallback-t.md) | 软键盘按下回车键时的回调事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [TextAreaType](arkts-arkui-textareatype-e.md) | 多行文本输入框类型。 |
+| [TextAreaType](arkts-arkui-textarea-comp-textareatype-e.md) | 多行文本输入框类型。 |
 
 ## 示例
 
 ```TypeScript
 ### 示例1（设置与获取光标位置）
 
-从API version 8开始，该示例通过[controller](arkts-arkui-textareacontroller-c.md)实现了光标位置的设置与获取。
+从API version 8开始，该示例通过[controller](arkts-arkui-textarea-comp-textareacontroller-c.md)实现了光标位置的设置与获取。
 
 
 ```

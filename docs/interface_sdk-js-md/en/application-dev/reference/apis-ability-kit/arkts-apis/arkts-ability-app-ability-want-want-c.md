@@ -235,3 +235,78 @@ URI, which is used with **type** to specify the data type to be processed in the
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
+
+**Examples**
+
+```TypeScript
+Basic usage: called in a UIAbility object, as shown in the example below. For details about how to obtain the context, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+Currently, the following data types are supported: string, number, Boolean, object, array, and file descriptor (FD).
+
+String
+```
+
+```TypeScript
+Number
+```
+
+```TypeScript
+Boolean
+```
+
+```TypeScript
+Object
+```
+
+```TypeScript
+Array
+```
+
+```TypeScript
+FD
+```
+
+```TypeScript
+// Launched party: Obtain the file descriptor passed by the launcher through want.fds.
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+export default class FuncAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let fd: number = -1;
+    // Obtain the file descriptor passed by the launcher from want.fds. The keyFd must be consistent with the key used by the launcher when passing it.
+    const fds = want.fds;
+    if (fds && fds.keyFd !== undefined) {
+      fd = fds.keyFd;
+    }
+    // Check whether the file descriptor is valid (a non-negative integer indicates validity). If it is invalid, log an error and exit immediately to avoid a crash caused by using an invalid fd later.
+    if (fd < 0) {
+      console.error(`Failed to get fd from want.fds`);
+      return;
+    }
+    // ...
+    fileIo.closeSync(fd); // Close the file descriptor after use to avoid file descriptor leakage.
+  }
+}
+```
+
+```TypeScript
+parameters usage: parameters carries custom parameters. It is transferred by UIAbilityA to UIAbilityB and obtained from UIAbilityB.
+```
+
+```TypeScript
+// (2) If the UIAbilityB instance is started for the first time, it enters the onCreate lifecycle.
+import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
+
+class UIAbilityB extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info(`onCreate, want parameters: ${want.parameters?.developerParameters}`);
+  }
+}
+```
+
+```TypeScript
+Usage of the keys of [wantConstant](arkts-ability-app-ability-wantconstant.md) in parameters.
+```

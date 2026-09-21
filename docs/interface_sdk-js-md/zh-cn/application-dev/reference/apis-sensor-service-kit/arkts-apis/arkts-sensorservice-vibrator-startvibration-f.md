@@ -96,4 +96,14 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Pro
 
 **示例**
 
-参见 [startVibration](#startvibration)
+```TypeScript
+按照预置振动效果触发马达振动：
+```
+
+```TypeScript
+按照自定义振动配置文件触发马达振动：
+```
+
+```TypeScript
+按照指定时长触发马达振动：
+```

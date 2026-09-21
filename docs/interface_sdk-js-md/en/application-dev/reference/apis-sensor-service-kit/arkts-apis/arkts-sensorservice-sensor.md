@@ -18,43 +18,43 @@ import { sensor } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md) | Converts a rotation vector into a quaternion. This API uses an asynchronous callback to return the result. |
+| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion) | Converts a rotation vector into a quaternion. This API uses an asynchronous callback to return the result. |
 | [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion-1) | Converts a rotation vector into a quaternion. This API uses a promise to return the result. |
-| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md) | Converts a rotation vector into a rotation matrix. This API uses an asynchronous callback to return the result. |
+| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix) | Converts a rotation vector into a rotation matrix. This API uses an asynchronous callback to return the result. |
 | [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-1) | Converts a rotation vector into a rotation matrix. This API uses a promise to return the result. |
 | [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-2) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result. |
 | [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-3) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result. |
-| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md) | Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result. |
+| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude) | Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result. |
 | [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude-1) | Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses a promise to return the result. |
-| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
+| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
 | [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify-1) | Obtains the angle change between two rotation matrices. This API uses a promise to return the result. |
-| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
+| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
 | [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation-1) | Obtains the angle change between two rotation matrices. This API uses a promise to return the result. |
-| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md) | Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result. |
+| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude) | Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result. |
 | [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude-1) | Obtains the altitude based on the atmospheric pressure. This API uses a promise to return the result. |
-| [getDirection](arkts-sensorservice-sensor-getdirection-f.md) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
+| [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
 | [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection-1) | Obtains the device direction based on the rotation matrix. This API uses a promise to return the result. |
-| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
 | [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip-1) | Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result. |
-| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md) | Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield) | Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result. |
 | [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield-1) | Obtains the geomagnetic field of a geographic location. This API uses a promise to return the result. |
-| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md) | Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo) | Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result. |
 | [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo-1) | Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result. |
-| [getInclination](arkts-sensorservice-sensor-getinclination-f.md) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
+| [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
 | [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination-1) | Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result. |
-| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
+| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
 | [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation-1) | Obtains the device direction based on the rotation matrix. This API uses a promise to return the result. |
-| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md) | Obtains the quaternion from a rotation vector. This API uses an asynchronous callback to return the result. |
+| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion) | Obtains the quaternion from a rotation vector. This API uses an asynchronous callback to return the result. |
 | [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion-1) | Obtains the quaternion from a rotation vector. This API uses a promise to return the result. |
-| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md) | Obtains the rotation matrix from a rotation vector. This API uses an asynchronous callback to return the result. |
+| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix) | Obtains the rotation matrix from a rotation vector. This API uses an asynchronous callback to return the result. |
 | [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-1) | Obtains the rotation matrix from a rotation vector. This API uses a promise to return the result. |
 | [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-2) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result. |
 | [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-3) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result. |
-| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) | Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result. |
+| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) | Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result. |
 | [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist-1) | Obtains information about all sensors on the device. This API uses a promise to return the result. |
 | [getSensorListByDeviceSync](arkts-sensorservice-sensor-getsensorlistbydevicesync-f.md) | Obtains the information about all sensors on the device. |
 | [getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md) | Obtains information about all sensors on the device. This API returns the result synchronously. |
-| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md) | Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result. |
+| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor) | Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result. |
 | [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor-1) | Obtains information about the sensor of a specific type. This API uses a promise to return the result. |
 | [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md) | Obtains information about the sensor of a specific type. |
 | [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md) | Obtains information about the sensor of a specific type. This API returns the result synchronously. |
@@ -167,7 +167,7 @@ import { sensor } from '@kit.SensorServiceKit';
 | [on](arkts-sensorservice-sensor-on-f.md#on-43) | Subscribes to data changes of the significant motion sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on](arkts-sensorservice-sensor-on-f.md#on-44) | Subscribes to data changes of the wear detection sensor. If this API is called multiple times for the same application, the last call takes effect. |
 | [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) | Enables listening for sensor status changes. This API asynchronously returns the result through a callback. |
-| [once](arkts-sensorservice-sensor-once-f.md) | Obtains data of the acceleration sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once) | Obtains data of the acceleration sensor once. |
 | [once](arkts-sensorservice-sensor-once-f.md#once-1) | Obtains data of the uncalibrated acceleration sensor once. |
 | [once](arkts-sensorservice-sensor-once-f.md#once-2) | Obtains data of the ambient light sensor once. |
 | [once](arkts-sensorservice-sensor-once-f.md#once-3) | Obtains data of the temperature sensor once. |
@@ -209,9 +209,9 @@ import { sensor } from '@kit.SensorServiceKit';
 | [once](arkts-sensorservice-sensor-once-f.md#once-39) | Subscribes to only one data change of the rotation vector sensor. |
 | [once](arkts-sensorservice-sensor-once-f.md#once-40) | Subscribes to only one data change of the significant motion sensor. |
 | [once](arkts-sensorservice-sensor-once-f.md#once-41) | Subscribes to only one data change of the wear detection sensor. |
-| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses an asynchronous callback to return the result. |
+| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses an asynchronous callback to return the result. |
 | [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem-1) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses a promise to return the result. |
-| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md) | Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the result. |
+| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix) | Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the result. |
 | [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix-1) | Transforms a rotation vector based on the coordinate system. This API uses a promise to return the result. |
 
 <!--Del-->
@@ -219,11 +219,11 @@ import { sensor } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-sensorservice-sensor-off-f-sys.md) | Unsubscribes from data of the color sensor. |
+| [off](arkts-sensorservice-sensor-off-f-sys.md#off) | Unsubscribes from data of the color sensor. |
 | [off](arkts-sensorservice-sensor-off-f-sys.md#off-1) | Unsubscribes from data of the color sensor. |
 | [off](arkts-sensorservice-sensor-off-f-sys.md#off-2) | Unsubscribes from data of the SAR sensor. |
 | [off](arkts-sensorservice-sensor-off-f-sys.md#off-3) | Unsubscribes from data of the SAR sensor. |
-| [on](arkts-sensorservice-sensor-on-f-sys.md) | Subscribes to data of the color sensor. |
+| [on](arkts-sensorservice-sensor-on-f-sys.md#on) | Subscribes to data of the color sensor. |
 | [on](arkts-sensorservice-sensor-on-f-sys.md#on-1) | Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor. |
 <!--DelEnd-->
 

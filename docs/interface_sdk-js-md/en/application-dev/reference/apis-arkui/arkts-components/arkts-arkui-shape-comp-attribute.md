@@ -4,7 +4,7 @@
 declare class ShapeAttribute extends CommonMethod<ShapeAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** ShapeAttribute extends CommonMethod<ShapeAttribute>
 
@@ -21,6 +21,8 @@ antiAlias(value: boolean)
 Sets whether to enable anti-aliasing. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,6 +46,8 @@ Sets the color of the fill area. This attribute can be dynamically set using att
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -65,6 +69,8 @@ fillOpacity(value: number | string | Resource)
 Sets the opacity of the fill area. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +104,8 @@ The coordinate array is stored in row-major order. After the original image is e
 
 **Since:** 8
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -122,6 +130,8 @@ Sets the stroke color. This attribute can be dynamically set using attributeModi
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -143,6 +153,8 @@ strokeDashArray(value: Array<any>)
 Sets the stroke dashes. This attribute can be dynamically set using attributeModifier. The value must be greater than or equal to 0. Invalid values are treated as the default value.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -166,6 +178,8 @@ Sets the offset of the start point for drawing the stroke. This attribute can be
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -188,6 +202,8 @@ Sets the cap style of the stroke. This attribute can be dynamically set using at
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -209,6 +225,8 @@ strokeLineJoin(value: LineJoinStyle)
 Sets the join style of the stroke. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -234,6 +252,8 @@ The value must be greater than or equal to 1.0. If the value is in the [0, 1) ra
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -256,6 +276,8 @@ Sets the stroke opacity. This attribute can be dynamically set using attributeMo
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -277,6 +299,8 @@ strokeWidth(value: Length)
 Sets the stroke width. This attribute can be dynamically set using attributeModifier. If this attribute is of the string type, percentage values are not supported and will be treated as 1 px.
 
 **Since:** 7
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -302,6 +326,8 @@ The viewport defines the coordinate system and display area of the drawing conte
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -312,4 +338,4 @@ The viewport defines the coordinate system and display area of the drawing conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | Yes | Viewport drawing attribute.<br>Default value: **{x: 0, y: 0, width: 0, height: 0}** <br>The abnormal values **undefined** and **null** are processed as the default value.<br>**Since:** 18 |
+| value | [ViewportRect](arkts-arkui-shape-comp-viewportrect-i.md) | Yes | Viewport drawing attribute.<br>Default value: **{x: 0, y: 0, width: 0, height: 0}** <br>The abnormal values **undefined** and **null** are processed as the default value.<br>**Since:** 18 |

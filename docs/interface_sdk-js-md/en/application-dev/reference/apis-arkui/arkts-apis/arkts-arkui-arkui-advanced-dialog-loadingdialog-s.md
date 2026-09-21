@@ -80,7 +80,7 @@ themeColorMode?: ThemeColorMode
 
 Sets the LoadingDialog dark or light Mode.
 
-**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
+**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-common-comp-themecolormode-e.md)
 
 **Since:** 12
 

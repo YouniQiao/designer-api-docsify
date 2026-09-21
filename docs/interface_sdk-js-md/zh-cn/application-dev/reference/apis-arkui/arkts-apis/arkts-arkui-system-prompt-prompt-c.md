@@ -30,6 +30,8 @@ static showActionMenu(options: ShowActionMenuOptions): void
 
 **起始版本：** 6
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -50,6 +52,8 @@ static showDialog(options: ShowDialogOptions): void
 
 **起始版本：** 3
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -69,6 +73,8 @@ static showToast(options: ShowToastOptions): void
 显示文本弹窗。
 
 **起始版本：** 3
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

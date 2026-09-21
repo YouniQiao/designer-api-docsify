@@ -16,6 +16,8 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -26,7 +28,7 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, the **EllipseOptions** parameter must be used in the stage model. |
+| options | [EllipseOptions](arkts-arkui-ellipse-comp-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, the **EllipseOptions** parameter must be used in the stage model. |
 
 ## Ellipse
 
@@ -38,6 +40,8 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 
 **Since:** 7
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -48,7 +52,7 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and the setting does not take effect. <br>**Note:** Since API version 18, the EllipseOptions parameter must be used in the stage model. |
+| options | [EllipseOptions](arkts-arkui-ellipse-comp-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and the setting does not take effect. <br>**Note:** Since API version 18, the EllipseOptions parameter must be used in the stage model. |
 
 ## Summary
 
@@ -56,7 +60,7 @@ Constructor used to draw an ellipse. After being called, it creates an **Ellipse
 
 | Name | Description |
 | --- | --- |
-| [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | Describes the options of the ellipse. |
+| [EllipseOptions](arkts-arkui-ellipse-comp-ellipseoptions-i.md) | Describes the options of the ellipse. |
 
 ## Examples
 

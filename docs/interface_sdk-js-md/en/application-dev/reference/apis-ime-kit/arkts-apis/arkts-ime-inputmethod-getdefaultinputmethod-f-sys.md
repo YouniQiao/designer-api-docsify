@@ -49,10 +49,6 @@ Get the default input method of a specified user.
 **Examples**
 
 ```TypeScript
-let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

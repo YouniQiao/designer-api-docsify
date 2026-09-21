@@ -34,12 +34,6 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 **Examples**
 
 ```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -48,42 +42,6 @@ contact.queryKey(1, (err: BusinessError, data) => {
     console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
     return;
   }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryKey(1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryKey(1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
   console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
 });
 ```
@@ -122,7 +80,11 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 **Examples**
 
-See [queryKey](#querykey)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querykey-2"></a>
@@ -155,7 +117,22 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-See [queryKey](#querykey)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryKey(1, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querykey-3"></a>
@@ -192,7 +169,11 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-See [queryKey](#querykey)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
 
 
 <a id="querykey-4"></a>
@@ -230,7 +211,18 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-See [queryKey](#querykey)
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryKey(1, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
+});
+```
 
 
 <a id="querykey-5"></a>
@@ -272,4 +264,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-See [queryKey](#querykey)
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```

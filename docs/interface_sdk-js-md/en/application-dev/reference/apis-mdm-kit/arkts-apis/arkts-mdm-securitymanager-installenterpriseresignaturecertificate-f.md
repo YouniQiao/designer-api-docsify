@@ -34,7 +34,7 @@ installed.
 2. After a new enterprise signing certificate is installed for an installed enterprise app, if the installed app
 needs to be updated, you can directly overwrite the original app without uninstalling it.
 3. In enterprise scenarios (especially those involving information security), enterprises need to ensure that only
-designated internal software and tools are installed and run on employees' mobile devices. The enterprise application re-signing certificate, in conjunction with the system's application management and permission control mechanisms (via a unified application ID), supports silent installation of enterprise applications, controlled invocation of system capabilities, and restriction of application running scopes. This enables admission control and security governance for enterprise software on managed devices.
+designated internal software and tools are installed and run on employees' mobile devices. The enterpriseapplication re-signing certificate, in conjunction with the system's application management and permission control mechanisms (via a unified application ID), supports silent installation of enterprise applications, controlled invocation of system capabilities, and restriction of application running scopes. This enables admission control and security governance for enterprise software on managed devices.
 
 **Since:** 24
 

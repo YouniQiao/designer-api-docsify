@@ -30,6 +30,8 @@ Obtains the device information.
 
 **Deprecated since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 **Parameters:**

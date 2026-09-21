@@ -18,6 +18,8 @@ use new function to set the value.
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -28,7 +30,7 @@ use new function to set the value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | 否 |  |
+| value | [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | 否 |  |
 
 ## Circle
 
@@ -40,6 +42,8 @@ Circle(value?: CircleOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -50,7 +54,7 @@ Circle(value?: CircleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | 否 | 设置圆形尺寸。当需要自定义圆形大小时传入此参数，不传入时width和height默认为0。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| value | [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | 否 | 设置圆形尺寸。当需要自定义圆形大小时传入此参数，不传入时width和height默认为0。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
@@ -58,7 +62,7 @@ Circle(value?: CircleOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [CircleOptions](arkts-arkui-circleoptions-i.md) | 用于描述Circle组件绘制属性。 |
+| [CircleOptions](arkts-arkui-circle-comp-circleoptions-i.md) | 用于描述Circle组件绘制属性。 |
 
 ## 示例
 

@@ -461,13 +461,6 @@ let date: Date = new Date(2021, 10, 7, 8, 0, 0); // The date and time is 2021.11
 calendar.setTime(date);
 ```
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
-calendar.setTime(10540800000);
-```
-
 <a id="settime-1"></a>
 
 ## setTime
@@ -492,7 +485,12 @@ Sets the date and time for a **Calendar** object based on the input timestamp.
 
 **Examples**
 
-See [setTime](#settime)
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+calendar.setTime(10540800000);
+```
 
 ## setTimeZone
 

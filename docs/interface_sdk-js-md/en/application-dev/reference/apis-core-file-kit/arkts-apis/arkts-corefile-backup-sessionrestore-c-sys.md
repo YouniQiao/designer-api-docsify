@@ -117,77 +117,6 @@ async function appendBundles() {
     let restoreApps: Array<string> = [
       "com.example.hiworld",
     ];
-    sessionRestore.appendBundles(fileData.fd, restoreApps, (err: BusinessError) => {
-      if (err) {
-        console.error(`appendBundles failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('appendBundles success');
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-  } finally {
-    fileIo.closeSync(fileData.fd);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
-async function appendBundles() {
-  let fileData : backup.FileData = {
-    fd : -1
-  }
-  try {
-    fileData = await backup.getLocalCapabilities();
-    console.info('getLocalCapabilities success');
-    let restoreApps: Array<string> = [
-      "com.example.hiworld",
-    ];
     await sessionRestore.appendBundles(fileData.fd, restoreApps);
     console.info('appendBundles success');
     // Information of the applications to restore.
@@ -326,97 +255,6 @@ async function appendBundles() {
       }
       console.info('appendBundles success');
     });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
-  } finally {
-    fileIo.closeSync(fileData.fd);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
-async function appendBundles() {
-  let fileData : backup.FileData = {
-    fd : -1
-  }
-  try {
-    fileData = await backup.getLocalCapabilities();
-    console.info('getLocalCapabilities success');
-    let restoreApps: Array<string> = [
-      "com.example.hiworld",
-    ];
-    await sessionRestore.appendBundles(fileData.fd, restoreApps);
-    console.info('appendBundles success');
-    // Information of the applications to restore.
-    let infos: Array<string> = [
-      `
-       {
-        "infos":[
-          {
-            "details": [
-              {
-                "detail": [
-                  {
-                    "source": "com.example.hiworld", // Old bundle name of the application.
-                    "target": "com.example.helloworld" // New bundle name of the application.
-                  }
-                ],
-                "type": "app_mapping_relation"
-              }
-            ],
-            "type":"broadcast"
-          }
-        ]
-       }
-      `
-    ]
-    await sessionRestore.appendBundles(fileData.fd, restoreApps, infos);
-    console.info('appendBundles success');
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
@@ -920,63 +758,6 @@ let generalCallbacks: backup.GeneralCallbacks = {
   }
 };
 let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
-let fileMeta: backup.FileMeta = {
-  bundleName: "com.example.hiworld",
-  uri: "test.txt"
-}
-sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
-  if (err) {
-    console.error(`getFileHandle failed. Code: ${err.code}, message: ${err.message}`);
-  }
-  console.info('getFileHandle success');
-});
-```
-
-```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let generalCallbacks: backup.GeneralCallbacks = {
-  onFileReady: (err: BusinessError, file: backup.File) => {
-    if (err) {
-      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
-  },
-  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleBegin success');
-  },
-  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
-    if (err) {
-      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onBundleEnd success');
-  },
-  onAllBundlesEnd: (err: BusinessError) => {
-    if (err) {
-      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('onAllBundlesEnd success');
-  },
-  onBackupServiceDied: () => {
-    console.info('service died');
-  },
-  onResultReport: (bundleName: string, result: string) => {
-    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-  },
-  onProcess: (bundleName: string, process: string) => {
-    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-  }
-};
-let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
 async function getFileHandle() {
   try {
     let fileMeta: backup.FileMeta = {
@@ -1028,7 +809,62 @@ Request to get a shared file from the service. This interface is part of the zer
 
 **Examples**
 
-See [getFileHandle](#getfilehandle)
+```TypeScript
+import { fileIo, backup} from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let generalCallbacks: backup.GeneralCallbacks = {
+  onFileReady: (err: BusinessError, file: backup.File) => {
+    if (err) {
+      console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onFileReady success');
+    fileIo.closeSync(file.fd);
+  },
+  onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleBegin success');
+  },
+  onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
+    if (err) {
+      console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onBundleEnd success');
+  },
+  onAllBundlesEnd: (err: BusinessError) => {
+    if (err) {
+      console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('onAllBundlesEnd success');
+  },
+  onBackupServiceDied: () => {
+    console.info('service died');
+  },
+  onResultReport: (bundleName: string, result: string) => {
+    console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+  },
+  onProcess: (bundleName: string, process: string) => {
+    console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+  }
+};
+let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
+let fileMeta: backup.FileMeta = {
+  bundleName: "com.example.hiworld",
+  uri: "test.txt"
+}
+sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
+  if (err) {
+    console.error(`getFileHandle failed. Code: ${err.code}, message: ${err.message}`);
+  }
+  console.info('getFileHandle success');
+});
+```
 
 ## getFileHandles
 
@@ -1306,80 +1142,6 @@ let testBundleName = 'com.example.myapplication'; // Test bundle name.
 initMap.set(testBundleName, testFileNum);
 let countMap = new Map<string, number>();
 countMap.set(testBundleName, 0); // Initialize the number of files written.
-function createSessionRestore() {
-  let generalCallbacks: backup.GeneralCallbacks = {
-    onFileReady: (err: BusinessError, file: backup.File) => {
-      if (err) {
-        console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onFileReady success');
-      fileIo.closeSync(file.fd);
-      let cnt = countMap.get(file.bundleName) || 0;
-      countMap.set(file.bundleName, cnt + 1); // Update the number of written files.
-      // Called only when the number of files to be restored is the same as the number of files actually written. This ensures data consistency and integrity.
-      if (countMap.get(file.bundleName) == initMap.get(file.bundleName)) { // Trigger publishFile after all files are received.
-        let fileMeta: backup.FileMeta = {
-          bundleName: file.bundleName,
-          uri: ''
-        }
-        g_session.publishFile(fileMeta, (err: BusinessError) => {
-          if (err) {
-            console.error(`publishFile failed. Code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('publishFile success');
-        });
-      }
-    },
-    onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
-      if (err) {
-        console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onBundleBegin success');
-    },
-    onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
-      if (err) {
-        console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onBundleEnd success');
-    },
-    onAllBundlesEnd: (err: BusinessError) => {
-      if (err) {
-        console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('onAllBundlesEnd success');
-    },
-    onBackupServiceDied: () => {
-      console.info('service died');
-    },
-    onResultReport: (bundleName: string, result: string) => {
-      console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
-    },
-    onProcess: (bundleName: string, process: string) => {
-     console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
-    }
-  };
-  let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
-  return sessionRestore;
-}
-g_session = createSessionRestore();
-```
-
-```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let g_session: backup.SessionRestore;
-let initMap = new Map<string, number>();
-let testFileNum = 123; // Number of files required for the restore.
-let testBundleName = 'com.example.myapplication'; // Test bundle name.
-initMap.set(testBundleName, testFileNum);
-let countMap = new Map<string, number>();
-countMap.set(testBundleName, 0); // Initialize the number of files written.
 async function publishFile(file: backup.FileMeta) {
   let fileMeta: backup.FileMeta = {
     bundleName: file.bundleName,
@@ -1477,7 +1239,79 @@ Publish the file handle to the backup service to make the service aware that the
 
 **Examples**
 
-See [publishFile](#publishfile)
+```TypeScript
+import { fileIo, backup} from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let g_session: backup.SessionRestore;
+let initMap = new Map<string, number>();
+let testFileNum = 123; // Number of files required for the restore.
+let testBundleName = 'com.example.myapplication'; // Test bundle name.
+initMap.set(testBundleName, testFileNum);
+let countMap = new Map<string, number>();
+countMap.set(testBundleName, 0); // Initialize the number of files written.
+function createSessionRestore() {
+  let generalCallbacks: backup.GeneralCallbacks = {
+    onFileReady: (err: BusinessError, file: backup.File) => {
+      if (err) {
+        console.error(`onFileReady failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onFileReady success');
+      fileIo.closeSync(file.fd);
+      let cnt = countMap.get(file.bundleName) || 0;
+      countMap.set(file.bundleName, cnt + 1); // Update the number of written files.
+      // Called only when the number of files to be restored is the same as the number of files actually written. This ensures data consistency and integrity.
+      if (countMap.get(file.bundleName) == initMap.get(file.bundleName)) { // Trigger publishFile after all files are received.
+        let fileMeta: backup.FileMeta = {
+          bundleName: file.bundleName,
+          uri: ''
+        }
+        g_session.publishFile(fileMeta, (err: BusinessError) => {
+          if (err) {
+            console.error(`publishFile failed. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('publishFile success');
+        });
+      }
+    },
+    onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
+      if (err) {
+        console.error(`onBundleBegin failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onBundleBegin success');
+    },
+    onBundleEnd: (err: BusinessError<string|void>, bundleName: string) => {
+      if (err) {
+        console.error(`onBundleEnd failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onBundleEnd success');
+    },
+    onAllBundlesEnd: (err: BusinessError) => {
+      if (err) {
+        console.error(`onAllBundlesEnd failed. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('onAllBundlesEnd success');
+    },
+    onBackupServiceDied: () => {
+      console.info('service died');
+    },
+    onResultReport: (bundleName: string, result: string) => {
+      console.info(`onResultReport success, bundleName: ${bundleName}, result: ${result}`);
+    },
+    onProcess: (bundleName: string, process: string) => {
+     console.info(`onProcess success, bundleName: ${bundleName}, process: ${process}`);
+    }
+  };
+  let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a restore process.
+  return sessionRestore;
+}
+g_session = createSessionRestore();
+```
 
 ## release
 

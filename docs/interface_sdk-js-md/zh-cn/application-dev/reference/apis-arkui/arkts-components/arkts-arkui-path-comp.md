@@ -2,7 +2,7 @@
 
 路径绘制组件，根据绘制路径生成封闭的自定义形状，支持通过SVG路径描述规范定义复杂的几何形状。
 
-> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用[AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md)类的 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
 ## 子组件
 
@@ -25,7 +25,7 @@ SVG路径描述规范支持的命令如下：
 | S | smooth curveto | x2：第二个控制点参数的x坐标值。<br> y2：第二个控制点参数的y坐标值。<br> x：终点参数的x坐标值。<br> y：终点参数的y坐标值。 |使用(x2, y2)作为曲线终点的控制点，从当前点到(x, y)绘制三次贝塞尔曲线。若前一个命令是C或S，则起点控制点是上一个命令的终点控制点相对于当前点的映射。例如，`C100 100 250 100 250 200 S400 300 400 200`第二段贝塞尔曲线的起点控制点为(250, 300)。如果没有前一个命令或者前一个命令不是 C或S，则第一个控制点与当前点重合。
 
 |  
-| Q | quadratic Bezier curve | x1：第一个控制点参数的x坐标值。<br> y1：第一个控制点参数的y坐标值。<br> x：终点参数的x坐标值。<br> y：终点参数的y坐标值。 | 使用(x1, y1)作为控制点，从当前点到(x, y)绘制二次贝塞尔曲线。例如，`Q400 50 600 300 `表示绘制当前点到(600, 3 00)点的二次贝塞尔曲线，并将(600, 300)点作为新子路径的起始点。 |
+| Q | quadratic Bezier curve | x1：第一个控制点参数的x坐标值。<br> y1：第一个控制点参数的y坐标值。<br> x：终点参数的x坐标值。<br> y：终点参数的y坐标值。 | 使用(x1, y1)作为控制点，从当前点到(x, y)绘制二次贝塞尔曲线。例如，`Q400 50 600 300 `表示绘制当前点到(600, 300)点的二次贝塞尔曲线，并将(600, 300)点作为新子路径的起始点。 |
 
 | T | smooth quadratic Bezier curveto | x：终点参数的x坐标值。<br> y：终点参数的y坐标值。 | 从当前点到(x, y)绘制二次贝塞尔曲线。若前一个命令是Q或T，则控制点是上一个命令的终点控制点相对于当前点的映射。 例如，`Q400 50 600 300 T1000 300`第二段贝塞尔曲线的控制点为(800, 550)。 如果没有前一个命令或者前一个命令不是Q或T，则第一个控制点与当前点重合。 |
 
@@ -55,7 +55,7 @@ Use new to create Path. Annonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | path options |
+| options | [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | 否 | path options |
 
 ## Path
 
@@ -77,7 +77,7 @@ Path(options?: PathOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | Path组件绘制属性的配置对象。<br>省略时不设置绘制属性，组件按默认尺寸显示。默认尺寸根据路径内容自动计算宽度和高度。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | 否 | Path组件绘制属性的配置对象。<br>省略时不设置绘制属性，组件按默认尺寸显示。默认尺寸根据路径内容自动计算宽度和高度。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
@@ -85,7 +85,7 @@ Path(options?: PathOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PathOptions](arkts-arkui-pathoptions-i.md) | 用于描述Path组件绘制属性。 |
+| [PathOptions](arkts-arkui-path-comp-pathoptions-i.md) | 用于描述Path组件绘制属性。 |
 
 ## 示例
 

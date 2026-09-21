@@ -53,15 +53,6 @@ storage.clear(function (err) {
 })
 ```
 
-```TypeScript
-let promiseclear = storage.clear();
-promiseclear.then(() => {
-    console.info("Succeeded in clearing the storage.");
-}).catch((err) => {
-    console.info("Failed to clear the storage with err: " + err);
-})
-```
-
 <a id="clear-1"></a>
 
 ## clear
@@ -86,7 +77,14 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 **Examples**
 
-See [clear](#clear)
+```TypeScript
+let promiseclear = storage.clear();
+promiseclear.then(() => {
+    console.info("Succeeded in clearing the storage.");
+}).catch((err) => {
+    console.info("Failed to clear the storage with err: " + err);
+})
+```
 
 ## clearSync
 
@@ -141,15 +139,6 @@ storage.delete('startup', function (err) {
 })
 ```
 
-```TypeScript
-let promisedel = storage.delete('startup')
-promisedel.then(() => {
-    console.info("Succeeded in deleting startup key.");
-}).catch((err) => {
-    console.info("Failed to delete startup key failed err: " + err);
-})
-```
-
 <a id="delete-1"></a>
 
 ## delete
@@ -180,7 +169,14 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 **Examples**
 
-See [delete](#delete)
+```TypeScript
+let promisedel = storage.delete('startup')
+promisedel.then(() => {
+    console.info("Succeeded in deleting startup key.");
+}).catch((err) => {
+    console.info("Failed to delete startup key failed err: " + err);
+})
+```
 
 ## deleteSync
 
@@ -240,15 +236,6 @@ storage.flush(function (err) {
 })
 ```
 
-```TypeScript
-let promiseflush = storage.flush();
-promiseflush.then(() => {
-    console.info("Succeeded in flushing to file.");
-}).catch((err) => {
-    console.info("Failed to flush to file with err: " + err);
-})
-```
-
 <a id="flush-1"></a>
 
 ## flush
@@ -273,7 +260,14 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 **Examples**
 
-See [flush](#flush)
+```TypeScript
+let promiseflush = storage.flush();
+promiseflush.then(() => {
+    console.info("Succeeded in flushing to file.");
+}).catch((err) => {
+    console.info("Failed to flush to file with err: " + err);
+})
+```
 
 ## flushSync
 
@@ -329,15 +323,6 @@ storage.get('startup', 'default', function(err, value) {
 })
 ```
 
-```TypeScript
-let promiseget = storage.get('startup', 'default');
-promiseget.then((value) => {
-    console.info("The value of startup is " + value)
-}).catch((err) => {
-    console.info("Failed to get the value of startup with err: " + err);
-})
-```
-
 <a id="get-1"></a>
 
 ## get
@@ -369,7 +354,14 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 **Examples**
 
-See [get](#get)
+```TypeScript
+let promiseget = storage.get('startup', 'default');
+promiseget.then((value) => {
+    console.info("The value of startup is " + value)
+}).catch((err) => {
+    console.info("Failed to get the value of startup with err: " + err);
+})
+```
 
 ## getSync
 
@@ -446,17 +438,6 @@ storage.has('startup', function (err, isExist) {
 })
 ```
 
-```TypeScript
-let promisehas = storage.has('startup')
-promisehas.then((isExist) => {
-    if (isExist) {
-        console.info("The key of startup is contained.");
-    }
-}).catch((err) => {
-    console.info("Failed to check the key of startup with err: " + err);
-})
-```
-
 <a id="has-1"></a>
 
 ## has
@@ -487,7 +468,16 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 **Examples**
 
-See [has](#has)
+```TypeScript
+let promisehas = storage.has('startup')
+promisehas.then((isExist) => {
+    if (isExist) {
+        console.info("The key of startup is contained.");
+    }
+}).catch((err) => {
+    console.info("Failed to check the key of startup with err: " + err);
+})
+```
 
 ## hasSync
 
@@ -545,6 +535,15 @@ Unsubscribes from data changes.
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback for the data change. |
 
+**Examples**
+
+```TypeScript
+let observer = function (key) {
+    console.info("The key of " + key + " changed.");
+}
+storage.off('change', observer);
+```
+
 ## on('change')
 
 ```TypeScript
@@ -565,6 +564,17 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+let observer = function (key) {
+    console.info("The key of " + key + " changed.");
+}
+storage.on('change', observer);
+storage.putSync('startup', 'auto');
+storage.flushSync();  // observer will be called.
+```
 
 ## put
 
@@ -600,15 +610,6 @@ storage.put('startup', 'auto', function (err) {
 })
 ```
 
-```TypeScript
-let promiseput = storage.put('startup', 'auto');
-promiseput.then(() => {
-    console.info("Succeeded in putting the value of startup.");
-}).catch((err) => {
-    console.info("Failed to put the value of startup with err: " + err);
-})
-```
-
 <a id="put-1"></a>
 
 ## put
@@ -640,7 +641,14 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 **Examples**
 
-See [put](#put)
+```TypeScript
+let promiseput = storage.put('startup', 'auto');
+promiseput.then(() => {
+    console.info("Succeeded in putting the value of startup.");
+}).catch((err) => {
+    console.info("Failed to put the value of startup with err: " + err);
+})
+```
 
 ## putSync
 

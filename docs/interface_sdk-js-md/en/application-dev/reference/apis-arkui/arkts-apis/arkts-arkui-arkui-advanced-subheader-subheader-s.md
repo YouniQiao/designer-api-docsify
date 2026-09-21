@@ -10,7 +10,7 @@ The **SubHeader** component is positioned at the top of list items or content se
 > 
 > - This component can be used only in the stage model.
 > 
-> - If the **SubHeader** component has universal attributes and universal events configured, the compiler toolchain automatically generates an additional **__Common__** node and mounts the universal attributes and universal events on this node rather than the **SubHeader** component itself. As a result, the configured universal attributes and universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events with the **SubHeader** component.
+> - If the **SubHeader** component has [universal attributes](../arkts-components/arkts-arkui-common-comp.md#common) and [universal events](../arkts-components/arkts-arkui-common-comp.md#common) configured, the compiler toolchain automatically generates an additional **__Common__** node and mounts the universal attributes and universal events on this node rather than the **SubHeader** component itself. As a result, the configured universal attributes and universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events with the **SubHeader** component.
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ End icon of the title. The **endIcon** attribute takes effect only when the **pr
 endIconSymbolOptions?: SymbolOptions
 ```
 
-End icon symbol options. This parameter is available when **endIcon** is set to a symbol glyph.
+End icon symbol options. This parameter is available when **endIcon** is set to a [symbol glyph](../arkts-components/arkts-arkui-symbolglyph-comp.md#symbolglyph).
 
 Default value: **undefined**, indicating that no end icon symbol style is set.
 
@@ -174,7 +174,7 @@ The **icon** attribute takes effect only when the **secondaryTitle** attribute i
 iconSymbolOptions?: SymbolOptions
 ```
 
-Icon symbol options. This parameter is available when **icon** is set to a symbol glyph.
+Icon symbol options. This parameter is available when **icon** is set to a [symbol glyph](../arkts-components/arkts-arkui-symbolglyph-comp.md#symbolglyph).
 
 Default value: **undefined**, indicating that no icon is displayed.
 
@@ -216,7 +216,7 @@ operationSymbolOptions?: Array<SymbolOptions>
 
 Icon symbol options.
 
-This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of symbol glyphs.
+This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of [symbol glyphs](../arkts-components/arkts-arkui-symbolglyph-comp.md#symbolglyph).
 
 Default value: **undefined**, indicating that no symbol icon is set.
 

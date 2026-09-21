@@ -320,10 +320,6 @@ struct AnimatorTest {
 }
 ```
 
-```TypeScript
-See ArkTS-based Declarative Development Paradigm.
-```
-
 <a id="reset-1"></a>
 
 ## reset
@@ -357,7 +353,9 @@ Resets the animation parameters of this animator. Compared with [reset](#reset),
 
 **Examples**
 
-See [reset](#reset)
+```TypeScript
+See ArkTS-based Declarative Development Paradigm.
+```
 
 ## reverse
 
@@ -399,7 +397,7 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-common-comp-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
 
 **Examples**
 

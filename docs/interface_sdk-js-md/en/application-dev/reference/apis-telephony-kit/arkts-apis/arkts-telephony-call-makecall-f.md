@@ -51,37 +51,6 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
 });
 ```
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall("138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-
-// Set whether to return to the current application after the call ends.
-let makeOptions: call.MakeCallOptions = {
-  isHideDialScreen: true
-}
-
-call.makeCall("138xxxxxxxx", makeOptions).then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-> NOTE
-> 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-```
-
 
 <a id="makecall-1"></a>
 
@@ -123,7 +92,15 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-See [makeCall](#makecall)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// The tel URI format is supported since API version 15, for example, tel:13xxxx.
+call.makeCall("138xxxxxxxx").then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 <a id="makecall-2"></a>
@@ -137,6 +114,8 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 24
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -166,7 +145,20 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-See [makeCall](#makecall)
+```TypeScript
+import { call } from '@kit.TelephonyKit';
+
+// Set whether to return to the current application after the call ends.
+let makeOptions: call.MakeCallOptions = {
+  isHideDialScreen: true
+}
+
+call.makeCall("138xxxxxxxx", makeOptions).then(() => {
+    console.info(`makeCall success`);
+}).catch((err: BusinessError) => {
+    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+});
+```
 
 
 <a id="makecall-3"></a>
@@ -208,4 +200,8 @@ Launches the call screen and displays the dialed number. This API uses a promise
 
 **Examples**
 
-See [makeCall](#makecall)
+```TypeScript
+> NOTE
+> 
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```

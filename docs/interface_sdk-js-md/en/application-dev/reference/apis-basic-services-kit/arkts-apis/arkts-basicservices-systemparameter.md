@@ -35,11 +35,11 @@ import { systemParameter } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [get](arkts-basicservices-systemparameter-get-f-sys.md) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
+| [get](arkts-basicservices-systemparameter-get-f-sys.md#get) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
 | [get](arkts-basicservices-systemparameter-get-f-sys.md#get-1) | Obtains a value of the specified key. This API uses an asynchronous callback to return the result. |
 | [get](arkts-basicservices-systemparameter-get-f-sys.md#get-2) | Obtains a value of the specified key. This API uses a promise to return the result. |
 | [getSync](arkts-basicservices-systemparameter-getsync-f-sys.md) | Obtains a value of the specified key. |
-| [set](arkts-basicservices-systemparameter-set-f-sys.md) | Sets a value for the specified key. This API uses an asynchronous callback to return the result. |
+| [set](arkts-basicservices-systemparameter-set-f-sys.md#set) | Sets a value for the specified key. This API uses an asynchronous callback to return the result. |
 | [set](arkts-basicservices-systemparameter-set-f-sys.md#set-1) | Sets a value for the specified key. This API uses a promise to return the result. |
 | [setSync](arkts-basicservices-systemparameter-setsync-f-sys.md) | Sets a value for the specified key. |
 <!--DelEnd-->

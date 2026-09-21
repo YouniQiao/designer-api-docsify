@@ -40,16 +40,6 @@ Queries the participants of the specified shared data. This API uses an asynchro
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.queryParticipants('sharing_resource_test').then((result) => {
-  console.info(`query participants succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 cloudData.sharing.queryParticipants('sharing_resource_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
@@ -98,4 +88,12 @@ Queries the participants of the specified shared data. This API uses a promise t
 
 **Examples**
 
-See [queryParticipants](#queryparticipants)
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.queryParticipants('sharing_resource_test').then((result) => {
+  console.info(`query participants succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
+});
+```

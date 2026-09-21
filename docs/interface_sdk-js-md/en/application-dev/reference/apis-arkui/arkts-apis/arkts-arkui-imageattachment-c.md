@@ -54,7 +54,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md). |
+| attachment | [Optional](../arkts-components/arkts-arkui-common-comp-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md). |
 
 ## colorFilter
 
@@ -118,7 +118,7 @@ readonly resizable?: ResizableOptions
 
 Resizable image options of the styled string.
 
-**Type:** [ResizableOptions](../arkts-components/arkts-arkui-resizableoptions-i.md)
+**Type:** [ResizableOptions](../arkts-components/arkts-arkui-image-comp-resizableoptions-i.md)
 
 **Since:** 26.0.1
 
@@ -200,7 +200,7 @@ readonly value: PixelMap
 
 Image data source of the styled string.
 
-**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
+**Type:** [PixelMap](../arkts-components/arkts-arkui-common-comp-pixelmap-t.md)
 
 **Since:** 12
 

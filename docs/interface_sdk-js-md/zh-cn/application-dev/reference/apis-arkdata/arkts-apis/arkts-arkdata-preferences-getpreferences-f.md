@@ -86,7 +86,13 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 **示例**
 
-参见 [getPreferences](#getpreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="getpreferences-2"></a>
@@ -129,7 +135,13 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 **示例**
 
-参见 [getPreferences](#getpreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```
 
 
 <a id="getpreferences-3"></a>
@@ -175,4 +187,10 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 **示例**
 
-参见 [getPreferences](#getpreferences)
+```TypeScript
+FA模型示例：
+```
+
+```TypeScript
+Stage模型示例：
+```

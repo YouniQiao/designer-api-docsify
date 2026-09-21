@@ -70,7 +70,7 @@ Type of application to filter. The options are as follows:
 
 - **0**: Do not listen for any application type.  
 - A bitwise OR combination of the enumerated values of [FilterBundleType](arkts-ability-appmanager-filterbundletype-e-sys.md), for example, "  
-appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" listens for lifecycle change events for both applications and atomic services.  
+appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" listens for lifecycle change eventsfor both applications and atomic services.  
 - If this parameter is not set, all application types are listened for by default.
 
 **Type:** number
@@ -91,7 +91,7 @@ Callback to filter. The options are as follows:
 
 - **0**: Do not listen for any callback.  
 - A bitwise OR combination of the enumerated values of [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md), for example, "  
-appManager.FilterCallback.ON_ABILITY_STATE_CHANGED | appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" listens for both [ApplicationStateObserver.onAbilityStateChanged](arkts-ability-applicationstateobserver-c.md#onabilitystatechanged) and [ApplicationStateObserver.onProcessStateChanged](arkts-ability-applicationstateobserver-c.md#onprocessstatechanged).  
+appManager.FilterCallback.ON_ABILITY_STATE_CHANGED | appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" listensfor both [ApplicationStateObserver.onAbilityStateChanged](arkts-ability-applicationstateobserver-c.md#onabilitystatechanged) and [ApplicationStateObserver.onProcessStateChanged](arkts-ability-applicationstateobserver-c.md#onprocessstatechanged).  
 - If this parameter is not set, all callbacks enumerated in [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md) are listened for  
 by default.
 

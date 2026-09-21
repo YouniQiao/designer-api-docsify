@@ -2,7 +2,7 @@
 
 The **Gauge** component represents a gauge that displays data in a circular format.
 
-> **NOTE** > > - This component supports WithTheme since API version 26.0.0.
+> **NOTE** > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
 
 ## Child Components
 
@@ -10,7 +10,7 @@ This component can contain only one child component.
 
 > **NOTE:** 
 > 
-> - Supported child component types: built-in and custom components, including [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding ForEach and LazyForEach.
+> - Supported child component types: built-in and custom components, including [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) but excluding [ForEach](arkts-arkui-foreach-comp-attribute.md#foreachattribute) and [LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each).
 > 
 > - You are advised to use the **Text** component to build the current value and auxiliary text.
 > 
@@ -36,7 +36,7 @@ Creates a gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | Yes | Settings of the gauge. |
+| options | [GaugeOptions](arkts-arkui-gauge-comp-gaugeoptions-i.md) | Yes | Settings of the gauge. |
 
 ## Summary
 
@@ -44,10 +44,10 @@ Creates a gauge.
 
 | Name | Description |
 | --- | --- |
-| [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
-| [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Provides gauge indicator options. |
-| [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | Provides gauge options. |
-| [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**. |
+| [GaugeConfiguration](arkts-arkui-gauge-comp-gaugeconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
+| [GaugeIndicatorOptions](arkts-arkui-gauge-comp-gaugeindicatoroptions-i.md) | Provides gauge indicator options. |
+| [GaugeOptions](arkts-arkui-gauge-comp-gaugeoptions-i.md) | Provides gauge options. |
+| [GaugeShadowOptions](arkts-arkui-gauge-comp-gaugeshadowoptions-i.md) | Inherits from [MultiShadowOptions](arkts-arkui-common-comp-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**. |
 
 ## Examples
 
@@ -86,7 +86,7 @@ This example demonstrates how to configure the auxiliary area by setting child c
 ```TypeScript
 ### Example 5: Setting the Minimum and Maximum Values
 
-This example shows how to set the minimum and maximum values of the gauge by configuring min and max in [GaugeOptions](arkts-arkui-gaugeoptions-i.md).
+This example shows how to set the minimum and maximum values of the gauge by configuring min and max in [GaugeOptions](arkts-arkui-gauge-comp-gaugeoptions-i.md).
 
 
 ```

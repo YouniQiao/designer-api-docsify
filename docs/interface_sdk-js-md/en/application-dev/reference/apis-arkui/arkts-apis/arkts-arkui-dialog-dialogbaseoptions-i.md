@@ -126,7 +126,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box. <br>Setting this parameter to BlurStyle.NONE disables the background blur.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -146,7 +146,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Background blur style with options.
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.0.1
 
@@ -184,7 +184,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Background effect with options.
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
 **Since:** 26.0.1
 
@@ -300,7 +300,7 @@ dialogTransition?: TransitionEffect
 
 Dialog transition parameters for opening/closing the dialog content area.
 
-**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**Type:** [TransitionEffect](../arkts-components/arkts-arkui-common-comp-transitioneffect-c.md)
 
 **Since:** 26.0.1
 
@@ -396,7 +396,7 @@ hoverModeArea?: HoverModeAreaType
 
 Display area of the dialog box in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-common-comp-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -570,7 +570,7 @@ maskRect?: Rectangle
 
 Mask area of the dialog box. Events outside the mask area are transparently transmitted.
 
-**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**Type:** [Rectangle](../arkts-components/arkts-arkui-common-comp-rectangle-i.md)
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' }
 
@@ -590,7 +590,7 @@ maskTransition?: TransitionEffect
 
 Mask transition parameters for opening/closing the mask.
 
-**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**Type:** [TransitionEffect](../arkts-components/arkts-arkui-common-comp-transitioneffect-c.md)
 
 **Since:** 26.0.1
 
@@ -644,7 +644,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-common-comp-shadowstyle-e.md)
 
 **Since:** 26.0.1
 
@@ -682,7 +682,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-common-comp-systemuimaterial-t.md)
 
 **Since:** 26.0.1
 

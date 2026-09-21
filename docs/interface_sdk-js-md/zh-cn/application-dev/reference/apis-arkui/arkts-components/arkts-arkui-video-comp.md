@@ -2,7 +2,7 @@
 
 Video组件用于播放视频文件并控制其播放状态，支持播放、暂停、进度控制、倍速播放、全屏切换等功能。
 
-> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > <br> > > Video组件只提供简单的视频播放功能，无法支撑复杂的视频播控场景。复杂开发场景推荐使用[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)播控API和 > XComponent组件开发。 > <br> > > Video组件在使用[expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea)扩展安全区域时，组件视频显示内容区域不支持扩展。
+> **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > <br> > > Video组件只提供简单的视频播放功能，无法支撑复杂的视频播控场景。复杂开发场景推荐使用[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)播控API和 > [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent)组件开发。 > <br> > > Video组件在使用[expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea)扩展安全区域时，组件视频显示内容区域不支持扩展。
 
 ## 权限列表
 
@@ -20,6 +20,8 @@ Video(value: VideoOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +30,7 @@ Video(value: VideoOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VideoOptions](arkts-arkui-videooptions-i.md) | 是 | 视频信息。 |
+| value | [VideoOptions](arkts-arkui-video-comp-videooptions-i.md) | 是 | 视频信息。 |
 
 ## 汇总
 
@@ -36,18 +38,18 @@ Video(value: VideoOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [FullscreenInfo](arkts-arkui-fullscreeninfo-i.md) | 用于描述当前视频是否进入全屏播放状态。 |
-| [PlaybackInfo](arkts-arkui-playbackinfo-i.md) | 用于描述当前视频播放的进度。 |
-| [PosterOptions](arkts-arkui-posteroptions-i.md) | 用于描述当前视频是否配置首帧送显。 |
-| [PreparedInfo](arkts-arkui-preparedinfo-i.md) | 用于描述当前视频的时长。 |
-| [VideoOptions](arkts-arkui-videooptions-i.md) | 定义Video的具体配置参数。 |
+| [FullscreenInfo](arkts-arkui-video-comp-fullscreeninfo-i.md) | 用于描述当前视频是否进入全屏播放状态。 |
+| [PlaybackInfo](arkts-arkui-video-comp-playbackinfo-i.md) | 用于描述当前视频播放的进度。 |
+| [PosterOptions](arkts-arkui-video-comp-posteroptions-i.md) | 用于描述当前视频是否配置首帧送显。 |
+| [PreparedInfo](arkts-arkui-video-comp-preparedinfo-i.md) | 用于描述当前视频的时长。 |
+| [VideoOptions](arkts-arkui-video-comp-videooptions-i.md) | 定义Video的具体配置参数。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md) | 视频播放倍速选项。 |
-| [SeekMode](arkts-arkui-seekmode-e.md) | 视频跳转模式选项。 |
+| [PlaybackSpeed](arkts-arkui-video-comp-playbackspeed-e.md) | 视频播放倍速选项。 |
+| [SeekMode](arkts-arkui-video-comp-seekmode-e.md) | 视频跳转模式选项。 |
 
 ## 示例
 

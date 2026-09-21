@@ -58,28 +58,6 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
 });
 ```
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Start vibration based on the specified effect ID.
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-// Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
-vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in stopping');
-  }
-})
-```
-
 
 <a id="stop-1"></a>
 
@@ -110,4 +88,24 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Examples**
 
-See [stop](#stop)
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Start vibration based on the specified effect ID.
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in vibrating');
+  }
+})
+// Stop vibration in VIBRATOR_STOP_MODE_PRESET mode.
+vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in stopping');
+  }
+})
+```

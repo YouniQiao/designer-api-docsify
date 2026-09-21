@@ -9,7 +9,7 @@ List的懒加载是指组件按需加载显示区域内的子组件。相比全�
 - 当List和带[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll)的Repeat结合，它的懒加载行为和LazyForEach一致。当List和不带virtualScroll的
 Repeat结合，它的懒加载行为和ForEach一致。
 
-如果可滚动组件嵌套List组件，并且滚动方向相同，List组件又没有设置主轴尺寸时，List组件会全量加载子组件，导致懒加载失效。该场景推荐使用List嵌套ListItemGroup组件以优化性能。
+如果可滚动组件嵌套List组件，并且滚动方向相同，List组件又没有设置主轴尺寸时，List组件会全量加载子组件，导致懒加载失效。该场景推荐使用List嵌套[ListItemGroup](arkts-arkui-listitemgroup-comp.md#list_item_group)组件以优化性能。
 
 List的预加载是指除了加载显示区域内可见的子组件外，还支持在空闲时隙提前加载部分显示区域外不可见的子组件。使用预加载可以减少滚动丢帧，提升流畅性。预加载需要结合懒加载才会生效。List支持通过[cachedCount](arkts-arkui-list-comp-attribute.md#cachedcount)设置预加载的数量。默认会预加载显示区域上下各一屏子组件（最大预加载16行子组件）。List和[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，预加载能力存在差异：
 
@@ -18,11 +18,11 @@ List的预加载是指除了加载显示区域内可见的子组件外，还支�
 - 当List和带[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll)的Repeat结合，它的预加载行为和LazyForEach一致。当List和不带virtualScroll的
 Repeat结合，它的预加载行为和ForEach一致。
 
-> **说明：** > > 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考手势拦截增强进行处理。
+> **说明：** > > 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强](arkts-arkui-common-comp.md#common)进行处理。
 
 ## 子组件
 
-仅支持ListItem、ListItemGroup子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
+仅支持[ListItem](arkts-arkui-listitem-comp.md#list_item)、[ListItemGroup](arkts-arkui-listitemgroup-comp.md#list_item_group)子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
 
 支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
@@ -56,6 +56,8 @@ List(options?: ListOptions)
 
 **起始版本：** 7
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -66,7 +68,7 @@ List(options?: ListOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListOptions](arkts-arkui-listoptions-i.md) | 否 | 设置List组件参数。不传入时使用默认配置。 |
+| options | [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | 否 | 设置List组件参数。不传入时使用默认配置。 |
 
 ## 汇总
 
@@ -74,32 +76,32 @@ List(options?: ListOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md) | 链式联动动效属性集合，用于设置List最大间距、最小间距、动效强度、传导系数、边缘效果、刚度和阻尼。当列表需要精细控制链式联动弹性效果时，可通过调整本对象中的参数实现不同动效手感。 |
-| [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态ListItem回调事件集合，用于设置收起动画完成后回调事件。 |
-| [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) | 定义List组件的系统返回键行为。 |
-| [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) | 用于设置List或ListItemGroup组件的分割线样式。 |
-| [ListOptions](arkts-arkui-listoptions-i.md) | 用于设置List组件参数。 |
-| [UIListEvent](arkts-arkui-uilistevent-i.md) | frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1)方法的返回值，可用于给List节点设置滚动事件。 |
-| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 用于表示List可见内容区子组件的详细信息。 |
+| [ChainAnimationOptions](arkts-arkui-list-comp-chainanimationoptions-i-sys.md) | 链式联动动效属性集合，用于设置List最大间距、最小间距、动效强度、传导系数、边缘效果、刚度和阻尼。当列表需要精细控制链式联动弹性效果时，可通过调整本对象中的参数实现不同动效手感。 |
+| [CloseSwipeActionOptions](arkts-arkui-list-comp-closeswipeactionoptions-i.md) | 收起[EXPANDED](arkts-arkui-listitem-comp-swipeactionstate-e.md)状态[ListItem](arkts-arkui-listitem-comp.md#list_item)回调事件集合，用于设置收起动画完成后回调事件。 |
+| [ListBackPressBehavior](arkts-arkui-list-comp-listbackpressbehavior-i.md) | 定义List组件的系统返回键行为。 |
+| [ListDividerOptions](arkts-arkui-list-comp-listdivideroptions-i.md) | 用于设置List或ListItemGroup组件的分割线样式。 |
+| [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | 用于设置List组件参数。 |
+| [UIListEvent](arkts-arkui-list-comp-uilistevent-i.md) | frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1)方法的返回值，可用于给List节点设置滚动事件。 |
+| [VisibleListContentInfo](arkts-arkui-list-comp-visiblelistcontentinfo-i.md) | 用于表示List可见内容区子组件的详细信息。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) | List组件可见区域item变化事件的回调类型。 |
-| [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | 有子组件划入或划出List显示区域时触发。 |
+| [OnListScrollIndexCallback](arkts-arkui-list-comp-onlistscrollindexcallback-t.md) | List组件可见区域item变化事件的回调类型。 |
+| [OnScrollVisibleContentChangeCallback](arkts-arkui-list-comp-onscrollvisiblecontentchangecallback-t.md) | 有子组件划入或划出List显示区域时触发。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md) | 设置链式动效的边缘效果，用于决定列表滚动到边缘后继续拖动时列表项间距的变化方式。 |
-| [ListItemAlign](arkts-arkui-listitemalign-e.md) | 设置子组件在List交叉轴方向的对齐方式。 |
-| [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md) | 枚举了ListItemGroup各个区域。 |
-| [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | 设置列表项滚动结束对齐效果。 |
-| [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | 设置列表项滚动限位动画速度。 |
-| [ScrollState](arkts-arkui-scrollstate-e.md) | 滑动状态枚举。 |
-| [StickyStyle](arkts-arkui-stickystyle-e.md) | ListItemGroup吸顶或吸底效果枚举。 |
+| [ChainEdgeEffect](arkts-arkui-list-comp-chainedgeeffect-e-sys.md) | 设置链式动效的边缘效果，用于决定列表滚动到边缘后继续拖动时列表项间距的变化方式。 |
+| [ListItemAlign](arkts-arkui-list-comp-listitemalign-e.md) | 设置子组件在List交叉轴方向的对齐方式。 |
+| [ListItemGroupArea](arkts-arkui-list-comp-listitemgrouparea-e.md) | 枚举了ListItemGroup各个区域。 |
+| [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) | 设置列表项滚动结束对齐效果。 |
+| [ScrollSnapAnimationSpeed](arkts-arkui-list-comp-scrollsnapanimationspeed-e.md) | 设置列表项滚动限位动画速度。 |
+| [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | 滑动状态枚举。 |
+| [StickyStyle](arkts-arkui-list-comp-stickystyle-e.md) | ListItemGroup吸顶或吸底效果枚举。 |
 
 ## 示例
 
@@ -258,7 +260,7 @@ List宽度属于lg及更大的断点区间时显示5列。
 ```TypeScript
 ### 示例16（实现ListItemGroup中点击项的居中效果）
 
-该示例使用[scrollToItemInGroup](arkts-arkui-listscroller-c.md#scrolltoitemingroup)接口，实现了点击[ListItemGroup](./ts-container-listitemgroup.md)中的[ListItem](./ts-container-listitem.md)时将其居中的效果。
+该示例使用[scrollToItemInGroup](arkts-arkui-list-comp-listscroller-c.md#scrolltoitemingroup)接口，实现了点击[ListItemGroup](./ts-container-listitemgroup.md)中的[ListItem](./ts-container-listitem.md)时将其居中的效果。
 
 
 ```

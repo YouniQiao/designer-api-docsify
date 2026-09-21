@@ -656,7 +656,7 @@ Removes the element at the specified position from this LightWeightSet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 

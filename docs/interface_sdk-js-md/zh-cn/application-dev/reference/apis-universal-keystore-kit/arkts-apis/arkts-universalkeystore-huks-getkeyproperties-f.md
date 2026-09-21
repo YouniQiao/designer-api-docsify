@@ -50,17 +50,6 @@ huks.getKeyProperties(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getKeyProperties(keyAlias, emptyOptions);
-```
-
 
 <a id="getkeyproperties-1"></a>
 
@@ -101,4 +90,13 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 
 **示例**
 
-参见 [getKeyProperties](#getkeyproperties)
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.getKeyProperties(keyAlias, emptyOptions);
+```

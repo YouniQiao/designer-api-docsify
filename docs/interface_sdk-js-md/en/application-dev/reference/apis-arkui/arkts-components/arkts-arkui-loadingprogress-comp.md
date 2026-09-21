@@ -2,9 +2,9 @@
 
 The **LoadingProgress** component is used to create a loading progress animation.
 
-The loading progress animation stops when the component is invisible. The component's visibility is determined by the value of **ratios** in the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event callback: If the value is greater than 0, the component is visible.
+The loading progress animation stops when the component is invisible. The component's visibility is determined by the value of **ratios** in the [onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange) event callback: If the value is greater than 0, the component is visible.
 
-> **NOTE** > > - This component supports WithTheme since API version 26.0.0.
+> **NOTE** > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
 
 ## Child Components
 
@@ -32,13 +32,13 @@ Creates a loading progress component.
 
 | Name | Description |
 | --- | --- |
-| [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [LoadingProgressConfiguration](arkts-arkui-loadingprogress-comp-loadingprogressconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md). |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LoadingProgressStyle](arkts-arkui-loadingprogressstyle-e.md) | Enumerates style types of **LoadingProgress**. This API is not recommended for use. |
+| [LoadingProgressStyle](arkts-arkui-loadingprogress-comp-loadingprogressstyle-e.md) | Enumerates style types of **LoadingProgress**. This API is not recommended for use. |
 
 ## Examples
 
@@ -53,5 +53,5 @@ This example demonstrates how to set the color of the loading progress bar using
 ```TypeScript
 ### Example 2: Setting the Custom Content Area
 
-This example demonstrates how to customize the content area using the [contentModifier](#contentmodifier12) API, and how to toggle the display of the custom content based on the [enableLoading](#enableloading10) attribute of [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md).
+This example demonstrates how to customize the content area using the [contentModifier](#contentmodifier12) API, and how to toggle the display of the custom content based on the [enableLoading](#enableloading10) attribute of [LoadingProgressConfiguration](arkts-arkui-loadingprogress-comp-loadingprogressconfiguration-i.md).
 ```

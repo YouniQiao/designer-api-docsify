@@ -1,6 +1,6 @@
 # ListItemGroup
 
-该组件用来展示列表项分组，支持自定义分组头部和尾部区域、卡片样式、分割线、懒加载与预加载等能力，适用于需要对列表项进行逻辑分组展示的场景。宽度默认充满List组件，必须配合List组件来使用。
+该组件用来展示列表项分组，支持自定义分组头部和尾部区域、卡片样式、分割线、懒加载与预加载等能力，适用于需要对列表项进行逻辑分组展示的场景。宽度默认充满[List](arkts-arkui-list-comp.md#list)组件，必须配合List组件来使用。
 
 ListItemGroup的懒加载是指组件按需加载可见区域内的子组件。相比全量加载，使用懒加载可以提升应用启动速度，减少内存消耗。ListItemGroup和[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，懒加载能力存在差异：
 
@@ -18,11 +18,11 @@ ListItemGroup的预加载是指除了加载显示区域内的子组件外，还�
 - 当ListItemGroup和带[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll)的Repeat结合，它的预加载行为和LazyForEach一致。当ListItemGroup和
 不带virtualScroll的Repeat结合，它的预加载行为和ForEach一致。
 
-> **说明：** > > - 该组件的父组件只能是List。 > > - ListItemGroup组件不支持设置[通用属性aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)。 > > - 当ListItemGroup的父组件List的[listDirection](arkts-arkui-list-comp-attribute.md#listdirection)属性为Axis.Vertical时，设置 > 通用属性height不生效。ListItemGroup的高度为header高度、footer高度和所有ListItem布局后总高度之和。 > > - 当父组件List的listDirection属性为Axis.Horizontal时，设置通用属性width不生效。ListItemGroup > 的宽度为header宽度、footer宽度和所有ListItem布局后总宽度之和。 > > - ListItemGroup使用direction属性设置布局方向不生效，ListItemGroup组件布局方向跟随父容器List组件的布局方向。
+> **说明：** > > - 该组件的父组件只能是[List](arkts-arkui-list-comp.md#list)。 > > - ListItemGroup组件不支持设置[通用属性aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio)。 > > - 当ListItemGroup的父组件List的[listDirection](arkts-arkui-list-comp-attribute.md#listdirection)属性为Axis.Vertical时，设置 > 通用属性height不生效。ListItemGroup的高度为header高度、footer高度和所有ListItem布局后总高度之和。 > > - 当父组件List的listDirection属性为Axis.Horizontal时，设置通用属性width不生效。ListItemGroup > 的宽度为header宽度、footer宽度和所有ListItem布局后总宽度之和。 > > - ListItemGroup使用direction属性设置布局方向不生效，ListItemGroup组件布局方向跟随父容器List组件的布局方向。
 
 ## 子组件
 
-包含ListItem子组件。支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+包含[ListItem](arkts-arkui-listitem-comp.md#list_item)子组件。支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
 ## ListItemGroup
 
@@ -34,6 +34,8 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 **起始版本：** 9
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,7 +44,7 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为0，无卡片样式）。 |
+| options | [ListItemGroupOptions](arkts-arkui-listitemgroup-comp-listitemgroupoptions-i.md) | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为0，无卡片样式）。 |
 
 ## 汇总
 
@@ -50,14 +52,14 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | ListItemGroup组件参数。 |
+| [ListItemGroupOptions](arkts-arkui-listitemgroup-comp-listitemgroupoptions-i.md) | ListItemGroup组件参数。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md) | ListItemGroup头部和尾部样式枚举。 |
-| [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md) | ListItemGroup组件卡片样式枚举。 |
+| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-comp-listitemgroupheaderfooterstyle-e.md) | ListItemGroup头部和尾部样式枚举。 |
+| [ListItemGroupStyle](arkts-arkui-listitemgroup-comp-listitemgroupstyle-e.md) | ListItemGroup组件卡片样式枚举。 |
 
 ## 示例
 
@@ -104,5 +106,5 @@ ListDataSource说明及完整代码参考[示例1（设置吸顶/吸底）](#示
 ```TypeScript
 ### 示例5（设置悬浮态）
 
-该示例通过将ListItemGroup的[headerStyle](#listitemgroupoptions对象说明)设置为[ListItemGroupHeaderFooterStyle.FLOATING](arkts-arkui-listitemgroupheaderfooterstyle-e.md)，实现分组头部在滚动时悬浮显示的效果。
+该示例通过将ListItemGroup的[headerStyle](#listitemgroupoptions对象说明)设置为[ListItemGroupHeaderFooterStyle.FLOATING](arkts-arkui-listitemgroup-comp-listitemgroupheaderfooterstyle-e.md)，实现分组头部在滚动时悬浮显示的效果。
 ```

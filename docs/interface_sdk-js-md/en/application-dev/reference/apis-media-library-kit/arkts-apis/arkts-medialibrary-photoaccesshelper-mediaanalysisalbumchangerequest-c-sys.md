@@ -319,7 +319,7 @@ The supported relationship names include:
 | younger_brother | Younger brother|
 | younger_sister | Younger sister|
 | relative | Relative|
-| other | [Other](../../apis-arkweb/arkts-components/arkts-arkweb-contextmenuinputfieldtype-e.md) |
+| other | [Other](../../apis-arkweb/arkts-components/arkts-arkweb-web-comp-contextmenuinputfieldtype-e.md) |
 
 **Since:** 21
 

@@ -66,7 +66,7 @@ readonly itemBackgroundBlurStyle?: BlurStyle
 
 该成员只读，不支持更改。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-common-comp-blurstyle-e.md)
 
 **起始版本：** 18
 
@@ -88,7 +88,7 @@ readonly itemBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 该成员只读，不支持更改。
 
-**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 18
 
@@ -134,7 +134,7 @@ readonly itemBackgroundEffect?: BackgroundEffectOptions
 
 该成员只读，不支持更改。
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
 **起始版本：** 18
 

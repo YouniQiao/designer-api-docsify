@@ -26,7 +26,7 @@ Creates an **AlphabetIndexer** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
+| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-comp-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
 
 ## Summary
 
@@ -34,21 +34,21 @@ Creates an **AlphabetIndexer** component.
 
 | Name | Description |
 | --- | --- |
-| [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | Defines the options of the **AlphabetIndexer** component. |
+| [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-comp-alphabetindexeroptions-i.md) | Defines the options of the **AlphabetIndexer** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Represents the callback invoked when a secondary index item in the pop-up window is selected. |
-| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Represents the callback invoked when an index item is selected and [usingPopup](arkts-arkui-alphabetindexer-comp-attribute.md#usingpopup) is set to **true**. |
-| [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | Represents the callback invoked when an index item is selected. |
+| [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerpopupselectcallback-t.md) | Represents the callback invoked when a secondary index item in the pop-up window is selected. |
+| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerrequestpopupdatacallback-t.md) | Represents the callback invoked when an index item is selected and [usingPopup](arkts-arkui-alphabetindexer-comp-attribute.md#usingpopup) is set to **true**. |
+| [OnAlphabetIndexerSelectCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerselectcallback-t.md) | Represents the callback invoked when an index item is selected. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [IndexerAlign](arkts-arkui-indexeralign-e.md) | Enumerates the alignment styles of the indexer pop-up window. |
+| [IndexerAlign](arkts-arkui-alphabetindexer-comp-indexeralign-e.md) | Enumerates the alignment styles of the indexer pop-up window. |
 
 ## Examples
 

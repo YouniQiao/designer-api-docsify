@@ -146,7 +146,7 @@ decoration?: TextDecorationOptions
 
 Text decorative line options. Default value: **{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}**.
 
-**Type:** [TextDecorationOptions](../arkts-components/arkts-arkui-textdecorationoptions-i.md)
+**Type:** [TextDecorationOptions](../arkts-components/arkts-arkui-common-comp-textdecorationoptions-i.md)
 
 **Since:** 18
 
@@ -228,7 +228,7 @@ enterKeyType?: EnterKeyType
 
 Type of the Enter key. Default value: **EnterKeyType.Search**.
 
-**Type:** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
+**Type:** [EnterKeyType](../arkts-components/arkts-arkui-textinput-comp-enterkeytype-e.md)
 
 **Since:** 18
 
@@ -465,7 +465,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
 
-**Type:** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
+**Type:** Callback&lt;string&gt; &#124; [SearchSubmitCallback](../arkts-components/arkts-arkui-search-comp-searchsubmitcallback-t.md)
 
 **Since:** 18
 
@@ -584,7 +584,7 @@ Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
 
 Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
+**Type:** IconOptions &#124; [SymbolGlyphModifier](../arkts-components/arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
 **Since:** 18
 
@@ -680,7 +680,7 @@ type?: SearchType
 
 Text box type. Default value: **SearchType.Normal**.
 
-**Type:** [SearchType](../arkts-components/arkts-arkui-searchtype-e.md)
+**Type:** [SearchType](../arkts-components/arkts-arkui-search-comp-searchtype-e.md)
 
 **Since:** 18
 

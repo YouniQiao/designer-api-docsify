@@ -42,6 +42,12 @@ Restores the default cursor style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Examples**
+
+```TypeScript
+In this example, the restoreDefault API of CursorController is used to restore the cursor style when the cursor moves out of the green frame.
+```
+
 ## setCursor
 
 ```TypeScript
@@ -67,6 +73,12 @@ Sets the cursor style.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
+
+**Examples**
+
+```TypeScript
+When the cursor enters the blue box, the cursor style is changed to PointerStyle.WEST through the setCursor method of CursorController.
+```
 
 ## setCustomCursor
 
@@ -95,3 +107,9 @@ Sets the custom cursor style.
 | value | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Pixel map of the custom mouse cursor style. |
 | focusX | number | No | X coordinate of the custom cursor's hotspot. The hotspot refers to the actual location where the click occurs.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
 | focusY | number | No | Y coordinate of the custom cursor's hotspot.<br>Default value: **0**<br>Unit: px<br>Value range: [0, +∞) |
+
+**Examples**
+
+```TypeScript
+When the cursor enters the blue box and the custom cursor image is loaded, the custom mouse cursor style is set via the [setCustomCursor](#setcustomcursor) API.
+```

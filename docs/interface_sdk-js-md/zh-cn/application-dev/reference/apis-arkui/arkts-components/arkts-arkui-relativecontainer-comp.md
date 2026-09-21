@@ -32,17 +32,17 @@ RelativeContainer()
 
 | 名称 | 说明 |
 | --- | --- |
-| [BarrierStyle](arkts-arkui-barrierstyle-i.md) | barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。 |
-| [GuideLinePosition](arkts-arkui-guidelineposition-i.md) | guideLine位置参数，用于定义guideLine的位置。 |
-| [GuideLineStyle](arkts-arkui-guidelinestyle-i.md) | guideLine参数，用于定义一条guideLine的id、方向和位置，辅助子组件在RelativeContainer中进行定位和对齐。 |
-| [LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md) | barrier参数，用于定义一条支持镜像模式的barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。 |
+| [BarrierStyle](arkts-arkui-relativecontainer-comp-barrierstyle-i.md) | barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。 |
+| [GuideLinePosition](arkts-arkui-relativecontainer-comp-guidelineposition-i.md) | guideLine位置参数，用于定义guideLine的位置。 |
+| [GuideLineStyle](arkts-arkui-relativecontainer-comp-guidelinestyle-i.md) | guideLine参数，用于定义一条guideLine的id、方向和位置，辅助子组件在RelativeContainer中进行定位和对齐。 |
+| [LocalizedBarrierStyle](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md) | barrier参数，用于定义一条支持镜像模式的barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [BarrierDirection](arkts-arkui-barrierdirection-e.md) | 定义屏障线的方向。 |
-| [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md) | 定义支持镜像模式的屏障线的方向。 |
+| [BarrierDirection](arkts-arkui-relativecontainer-comp-barrierdirection-e.md) | 定义屏障线的方向。 |
+| [LocalizedBarrierDirection](arkts-arkui-relativecontainer-comp-localizedbarrierdirection-e.md) | 定义支持镜像模式的屏障线的方向。 |
 
 ## 示例
 

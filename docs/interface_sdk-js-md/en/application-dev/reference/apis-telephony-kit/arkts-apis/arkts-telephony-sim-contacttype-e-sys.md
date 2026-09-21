@@ -50,6 +50,8 @@ Service dialing number.
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.

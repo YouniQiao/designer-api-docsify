@@ -32,9 +32,9 @@ This API can detect the ArkTS object memory leak, which is simpler than the meth
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled-parameter) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config-parameter) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback-parameter) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 **Examples**
 
@@ -43,25 +43,6 @@ let config: Array<string> = ['XComponent'];
 // Monitor the memory leak of the ArkTS object XComponent.
 // If an empty array is passed, all objects are monitored.
 jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
-    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
-    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
-});
-```
-
-```TypeScript
-// Detect memory leaks of the ArkTS objects CustomComponent and Window.
-// If the value of an object type is null or false, the default value is used.
-let config: jsLeakWatcher.LeakWatcherConfig = {
-    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
-    objectUniqueIDs: [],
-    checkInterval: 10000,
-    fgLeakCountThreshold: 5,
-    bgLeakCountThreshold: 3,
-    maxStoredHeapDumps: 5,
-    dumpHeapWaitTimeMs: 5000,
-    exclusionList: []
-};
-jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
     console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
     console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
 });
@@ -82,6 +63,8 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 
 **Since:** 24
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**
@@ -96,10 +79,27 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled-parameter) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config-parameter) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback-parameter) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 **Examples**
 
-See [enableLeakWatcher](#enableleakwatcher)
+```TypeScript
+// Detect memory leaks of the ArkTS objects CustomComponent and Window.
+// If the value of an object type is null or false, the default value is used.
+let config: jsLeakWatcher.LeakWatcherConfig = {
+    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
+    objectUniqueIDs: [],
+    checkInterval: 10000,
+    fgLeakCountThreshold: 5,
+    bgLeakCountThreshold: 3,
+    maxStoredHeapDumps: 5,
+    dumpHeapWaitTimeMs: 5000,
+    exclusionList: []
+};
+jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
+    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
+    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
+});
+```

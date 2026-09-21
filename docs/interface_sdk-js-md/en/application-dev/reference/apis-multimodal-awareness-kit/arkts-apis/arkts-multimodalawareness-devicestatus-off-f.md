@@ -32,3 +32,13 @@ Unsubscribes from steady standing state events.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited<br> device capabilities. |
 | [32500001](../errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
 | [32500003](../errorcode-deviceStatus.md#32500003-unsubscription-failed) | Unsubscription failed. |
+
+**Examples**
+
+```TypeScript
+Example 1: Unsubscribe from all callbacks of steady standing state change events.
+```
+
+```TypeScript
+Example 2: Unsubscribe from a specific callback of steady standing state change events.
+```

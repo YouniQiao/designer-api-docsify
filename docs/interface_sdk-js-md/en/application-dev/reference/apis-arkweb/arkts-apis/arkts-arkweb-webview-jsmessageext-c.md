@@ -112,7 +112,7 @@ Obtains the error information about the JavaScript execution. For details about 
 
 | Type | Description |
 | --- | --- |
-| string &#124; null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: &lt;{exception &#124; object}&gt;". The string length does not exceed 2048 characters, and the excess part will be truncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
+| string &#124; null | If an exception occurs during JavaScript script execution, or the return value is of the object type, the system formats the exception information or object into the string "Not support type: &lt;{exception &#124; object}&gt;". The string length does not exceed 2048 characters, and the excess part will betruncated. If the object contains members of the callback type, they will be automatically ignored during serialization. In all other cases, the interface returns null. |
 
 ## getNumber
 

@@ -94,7 +94,7 @@ options: Array<SelectOption>
 
 Options of an item in the drop-down list box.
 
-**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-select-comp-selectoption-i.md)&gt;
 
 **Since:** 10
 
