@@ -1,4 +1,4 @@
-# @ohos.app.ability.CompletionHandlerForAbilityStartCallback
+# @ohos.app.ability.CompletionHandlerForAbilityStartCallback(拉起应用结果回调的操作类)
 
 ## 导入模块
 

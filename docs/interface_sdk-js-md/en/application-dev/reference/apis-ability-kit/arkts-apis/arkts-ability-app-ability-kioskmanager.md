@@ -1,4 +1,4 @@
-# @ohos.app.ability.kioskManager
+# @ohos.app.ability.kioskManager(Kiosk Mode Management)
 
 The KioskManager module provides APIs to manage kiosk mode, including entering/exiting kiosk mode and querying the kiosk mode status.
 

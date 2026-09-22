@@ -1,4 +1,4 @@
-# @ohos.app.ability.autoFillManager
+# @ohos.app.ability.autoFillManager(Auto Fill Framework)
 
 The autoFillManager module provides applications with the auto-fill capability for user information such as accounts, passwords, addresses, and phone numbers.
 

@@ -1,4 +1,4 @@
-# @ohos.application.uriPermissionManager
+# @ohos.application.uriPermissionManager(URI Permission Manager)
 
 The **uriPermissionManager** module provides capabilities for granting the permission on a file to another application and revoking the granted permissions. The file is identified by a uniform resource identifier (URI).
 

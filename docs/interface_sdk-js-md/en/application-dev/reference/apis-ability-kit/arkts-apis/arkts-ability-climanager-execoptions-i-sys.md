@@ -44,7 +44,7 @@ Indicates whether the tool is executed in the background.
 timeout?: number
 ```
 
-Indicates the maximum execution time of the tool, in seconds.
+Indicates the maximum execution time of the tool, in seconds. The value should be a long.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ Indicates the maximum execution time of the tool, in seconds.
 yieldMs?: number
 ```
 
-Indicates the foreground waiting timeout in milliseconds.
+Indicates the foreground waiting timeout in milliseconds. The value should be a long.
 
 **Type:** number
 

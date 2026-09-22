@@ -1,4 +1,4 @@
-# ExecResult（系统接口）
+# ExecResult
 
 ```TypeScript
 interface ExecResult
@@ -6,11 +6,9 @@ interface ExecResult
 
 CLI工具执行的结果。包含CLI工具的退出码、标准输出、标准错误输出、终止信号、是否超时及执行时长。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -28,13 +26,11 @@ errorText?: string
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## executionTime
 
@@ -46,13 +42,11 @@ executionTime: number
 
 **类型：** number
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## exitCode
 
@@ -64,13 +58,11 @@ exitCode?: number
 
 **类型：** number
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## outputText
 
@@ -82,13 +74,11 @@ outputText?: string
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## signalNumber
 
@@ -100,13 +90,11 @@ signalNumber?: number
 
 **类型：** number
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## timeOut
 
@@ -118,10 +106,8 @@ timeOut: boolean
 
 **类型：** boolean
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。

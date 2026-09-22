@@ -1,4 +1,4 @@
-# @ohos.app.agent.agentConstant
+# @ohos.app.agent.agentConstant(Agent Constants)
 
 This module provides constants for agent.
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.missionManager
+# @ohos.app.ability.missionManager(missionManager)
 
 The missionManager module provides APIs to lock, unlock, and clear missions, and switch a mission to the foreground.
 

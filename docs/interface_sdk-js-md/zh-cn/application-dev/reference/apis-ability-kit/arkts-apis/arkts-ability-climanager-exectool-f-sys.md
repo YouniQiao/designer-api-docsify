@@ -39,7 +39,7 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; | 执行结果。 |
+| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i.md)&gt; | 执行结果。 |
 
 **错误码：**
 

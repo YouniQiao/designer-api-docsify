@@ -1,4 +1,4 @@
-# @ohos.app.agent.agentManager
+# @ohos.app.agent.agentManager(Agent Manager)
 
 The agentManager module provides agent management capabilities, supporting operations such as connecting to and disconnecting from AgentExtensionAbility, lifecycle management of LOW_CODE agents, connection management between AgentExtensionAbility and ServiceExtensionAbility, and obtaining AgentCard information on the device.
 

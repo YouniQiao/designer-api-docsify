@@ -1,4 +1,4 @@
-# CliSessionInfo（系统接口）
+# CliSessionInfo
 
 ```TypeScript
 interface CliSessionInfo
@@ -6,11 +6,9 @@ interface CliSessionInfo
 
 执行CLI工具时，系统会为调用方和CLI工具建立一个会话，此字段描述会话信息的格式。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -26,15 +24,13 @@ result?: ExecResult
 
 工具执行结果。默认值：undefined。
 
-**类型：** [ExecResult](arkts-ability-climanager-execresult-i-sys.md)
+**类型：** [ExecResult](arkts-ability-climanager-execresult-i.md)
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## sessionId
 
@@ -46,13 +42,11 @@ sessionId: string
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## status
 
@@ -62,15 +56,13 @@ status: SessionStatus
 
 会话状态。
 
-**类型：** [SessionStatus](arkts-ability-climanager-sessionstatus-e-sys.md)
+**类型：** [SessionStatus](arkts-ability-climanager-sessionstatus-e.md)
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## toolName
 
@@ -82,10 +74,8 @@ toolName: string
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**系统接口：** 此接口为系统接口。

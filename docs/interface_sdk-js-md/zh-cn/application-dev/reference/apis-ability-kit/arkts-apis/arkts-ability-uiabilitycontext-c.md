@@ -1346,7 +1346,7 @@ restartApp(want: Want): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server error. |
-| [16000063](../errorcode-ability.md#16000063-重启应用指定组件无效) | The target to restart does not belong to the caller or is not a UIAbility. |
+| [16000063](../errorcode-ability.md#16000063-重启应用指定组件无效) | The target to restart does not belong to the current application or is not a UIAbility. |
 | [16000064](../errorcode-ability.md#16000064-重启应用频繁) | Restart too frequently. |
 | [16000065](../errorcode-ability.md#16000065-接口只支持ability在前台时调用) | The API can be called only when the ability is focused. |
 

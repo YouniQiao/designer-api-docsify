@@ -1,16 +1,14 @@
-# ExecResult (System API)
+# ExecResult
 
 ```TypeScript
 interface ExecResult
 ```
 
-Execute result of a tool execution.
+Describes the execution result of a tool or command.
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -24,17 +22,17 @@ import { cliManager, CliHook, ExecToolParam, ExecCmdParam, ExecResultWrap } from
 errorText?: string
 ```
 
-Indicates the error output of the tool.
+Indicates the error output (stderr) content of the tool.
+
+This field captures all text written by the tool to its standard error stream during execution. Note that some tools write diagnostic information to stderr even when execution succeeds.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## executionTime
 
@@ -42,17 +40,15 @@ Indicates the error output of the tool.
 executionTime: number
 ```
 
-Indicates the execution duration in milliseconds.
+Indicates the execution duration in milliseconds. The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## exitCode
 
@@ -60,17 +56,15 @@ Indicates the execution duration in milliseconds.
 exitCode?: number
 ```
 
-Indicates the exit code, 0 means success.
+Indicates the exit code, 0 means success. The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## outputText
 
@@ -78,17 +72,17 @@ Indicates the exit code, 0 means success.
 outputText?: string
 ```
 
-Indicates the standard output of the tool.
+Indicates the standard output (stdout) content of the tool.
+
+This field captures all text written by the tool or command to its standard output stream during execution.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## signalNumber
 
@@ -96,17 +90,15 @@ Indicates the standard output of the tool.
 signalNumber?: number
 ```
 
-Indicates the termination signal (if the tool process was terminated by a signal).
+Indicates the termination signal (if the tool process was terminated by a signal). The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## timeOut
 
@@ -114,14 +106,14 @@ Indicates the termination signal (if the tool process was terminated by a signal
 timeOut: boolean
 ```
 
-Indicates whether it timed out. true means timeout occurred, false means no timeout.
+Indicates whether it timed out.
+
+When **true**, the tool process was forcibly terminated because it exceeded the maximum execution timeout. When **false**, the tool finished within the allowed time.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

@@ -1356,7 +1356,7 @@ Called by a focused UIAbility to restart its own process and launch a specified 
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server error. |
-| [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the caller or is not a UIAbility. |
+| [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the current application or is not a UIAbility. |
 | [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. |
 | [16000065](../errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) | The API can be called only when the ability is focused. |
 

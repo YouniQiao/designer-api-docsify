@@ -1,4 +1,4 @@
-# @ohos.app.ability.AbilityConstant
+# @ohos.app.ability.AbilityConstant(Ability Constants)
 
 AbilityConstant provides enums related to abilities, including the window mode.
 

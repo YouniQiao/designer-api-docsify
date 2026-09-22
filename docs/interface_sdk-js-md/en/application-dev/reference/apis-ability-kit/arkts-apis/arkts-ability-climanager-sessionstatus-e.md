@@ -1,16 +1,14 @@
-# SessionStatus (System API)
+# SessionStatus
 
 ```TypeScript
 enum SessionStatus
 ```
 
-Enum for session status.
+Enumerates the status values of a CLI tool or commad execution session.
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## RUNNING
 
@@ -18,15 +16,13 @@ Enum for session status.
 RUNNING = 'running'
 ```
 
-Indicates that the status is running.
+The session is running. The tool process has been created and is currently executing.
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## COMPLETED
 
@@ -34,15 +30,13 @@ Indicates that the status is running.
 COMPLETED = 'completed'
 ```
 
-Indicates that the status is completed.
+The session has completed. The tool process exited normally, and the execution result is available in [result](arkts-ability-climanager-clisessioninfo-i.md#result).
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.
 
 ## FAILED
 
@@ -50,12 +44,10 @@ Indicates that the status is completed.
 FAILED = 'failed'
 ```
 
-Indicates that the status is failed.
+The session has failed. The tool process encountered an error or was forcibly terminated. The failure details are available in [result](arkts-ability-climanager-clisessioninfo-i.md#result).
 
-**Since:** 26.0.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**System API:** This is a system API.

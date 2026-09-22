@@ -1,4 +1,4 @@
-# @ohos.app.function.functionManager
+# @ohos.app.function.functionManager(Function Manager)
 
 A Function is a business logic unit defined in an application package. It can receive structured data provided by a large model to complete application-defined functions, such as querying real-time weather information or opening a specified application page.
 

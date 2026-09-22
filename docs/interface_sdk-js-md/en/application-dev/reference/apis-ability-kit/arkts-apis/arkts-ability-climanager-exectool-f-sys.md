@@ -39,7 +39,7 @@ Execute a CLI command
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; | execute result. |
+| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i.md)&gt; | execute result. |
 
 **Error codes:**
 

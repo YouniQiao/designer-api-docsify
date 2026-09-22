@@ -14,7 +14,7 @@ function getBundleExtensionPolicyInfo(bundleName: string, userId: number): Bundl
 
 获取指定应用的包扩展策略信息。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 

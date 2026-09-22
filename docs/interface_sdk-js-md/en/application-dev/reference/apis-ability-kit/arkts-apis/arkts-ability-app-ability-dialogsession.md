@@ -1,4 +1,4 @@
-# @ohos.app.ability.dialogSession
+# @ohos.app.ability.dialogSession(dialogSession)
 
 The dialogSession module provides APIs related to the dialog box.
 

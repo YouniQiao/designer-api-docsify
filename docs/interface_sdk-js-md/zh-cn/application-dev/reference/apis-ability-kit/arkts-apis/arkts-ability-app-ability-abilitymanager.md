@@ -1,4 +1,4 @@
-# @ohos.app.ability.abilityManager
+# @ohos.app.ability.abilityManager(Ability信息管理)
 
 AbilityManager模块提供获取、新增、修改Ability相关信息和运行状态信息的能力。
 

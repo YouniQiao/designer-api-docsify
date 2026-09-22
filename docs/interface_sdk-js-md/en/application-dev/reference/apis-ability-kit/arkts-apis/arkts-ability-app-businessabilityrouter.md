@@ -1,4 +1,4 @@
-# @ohos.app.businessAbilityRouter
+# @ohos.app.businessAbilityRouter(Business Ability Router)
 
 This module is used to obtain business ability information of various applications installed on the current device.
 

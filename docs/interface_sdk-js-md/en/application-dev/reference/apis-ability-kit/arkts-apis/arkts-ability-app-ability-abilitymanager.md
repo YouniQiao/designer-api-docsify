@@ -1,4 +1,4 @@
-# @ohos.app.ability.abilityManager
+# @ohos.app.ability.abilityManager(Ability Information Management)
 
 The AbilityManager module provides APIs for obtaining, adding, and updating ability information and running status information.
 
