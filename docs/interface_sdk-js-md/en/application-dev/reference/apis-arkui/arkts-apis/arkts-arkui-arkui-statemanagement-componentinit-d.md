@@ -4,7 +4,7 @@
 export declare const ComponentInit: MethodDecorator
 ```
 
-Decorates a function that is called when the initialization of a custom component is about to complete. You can register a listener at this time.
+The function decorated by **\@ComponentInit** is executed when the initialization of a custom component is about to complete, and is triggered before **\@ComponentAppear**. You can register lifecycle listeners and modify state variables at this time. The difference from **\@ComponentAppear** is that **\@ComponentInit** focuses on preparation operations in the initialization phase (such as listener registration), while **\@ComponentAppear** focuses on state changes before the component is about to be displayed. The two can be used together to respectively assume the responsibilities of initialization and pre-display.
 
 **Since:** 23
 

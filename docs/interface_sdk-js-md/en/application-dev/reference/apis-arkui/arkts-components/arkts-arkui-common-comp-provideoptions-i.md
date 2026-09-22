@@ -4,7 +4,7 @@
 declare interface ProvideOptions
 ```
 
-Defines the options of Provide PropertyDecorator.
+Options of the **@Provide** decorator. You can use **allowOverride** to override the alias of an @Provide decorated variable with the same name in the same component tree. It is suitable for scenarios where a child component needs to override the alias of the **@Provide** decorated variable with the same name in the parent component, improving the flexibility of cross-level state management. For details, see [Support for the allowOverride Parameter](../../../ui/state-management/arkts-provide-and-consume.md).
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the options of Provide PropertyDecorator.
 allowOverride?: string
 ```
 
-Override the @Provide of any parent or parent of parent @Component.@Provide({allowOverride: "name"}) is also allowed to be used even when there is no ancestor @Component whose @Provide would be overridden.
+Alias of an **@Provide** decorated variable that can be overridden. In detail, you can use this property to override the alias of an @Provide decorated variable with the same name in the same component tree. <br> If the property is not specified, the alias of an **@Provide** decorated variable cannot be overridden. If you define an **@Provide** decorated variable with the same name without setting **allowOverride**, an error will be reported at runtime.
 
 **Type:** string
 

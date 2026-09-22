@@ -22,7 +22,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 enableWildcard?: boolean
 ```
 
-Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and **false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
+Whether to enable the wildcard capability for the current **addMonitor**. The value **true** indicates to enable, and **false** indicates the opposite. The default value is **false**, which means to disable the capability. When the wildcard capability is disabled but the path contains a wildcard, the path is considered invalid.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ Whether to enable the wildcard capability for this **addMonitor**. **true** to e
 isSynchronous?: boolean
 ```
 
-Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback. **false** (default value): The current callback is an asynchronous callback.
+Whether the current callback is a synchronous callback. The value **true** indicates a synchronous callback. The default value is **false**, which indicates an asynchronous callback.
 
 **Type:** boolean
 

@@ -18,7 +18,9 @@ Defines the text style options for the text picker. Inherits from [PickerTextSty
 maxFontSize?: number | string | Resource
 ```
 
-Maximum font size for the text. For details, see [maxFontSize](arkts-arkui-text-comp-attribute.md#maxfontsize).
+Sets the maximum font size of the text, used together with minFontSize. Pass this parameter when you need to limit the maximum display size of the text to prevent it from being too large or to implement font size adaptation.
+
+**Note:** When minFontSize and maxFontSize are set, the size in font does not take effect. For details, see the [maxFontSize](arkts-arkui-text-comp-attribute.md#maxfontsize) attribute of the Text component.
 
 **Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -36,7 +38,9 @@ Maximum font size for the text. For details, see [maxFontSize](arkts-arkui-text-
 minFontSize?: number | string | Resource
 ```
 
-Minimum font size for the text. Used with **maxFontSize** to enable font scaling. When both **minFontSize** and **maxFontSize** are set, the **size** property in **font** is ignored. By default, the maximum number of lines is 1, with the **MIN_FONT_SIZE_FIRST** adaptation strategy. For details, see [minFontSize](arkts-arkui-text-comp-attribute.md#minfontsize).
+Sets the minimum font size of the text, used together with maxFontSize. Pass this parameter when you need to limit the minimum display size of the text to prevent it from being too small or to implement font size adaptation.
+
+**Note:** When minFontSize and maxFontSize are set, the size in font does not take effect. The default maximum number of lines is 1, and the adaptive height mode is MIN_FONT_SIZE_FIRST. For details, see the [minFontSize](arkts-arkui-text-comp-attribute.md#minfontsize) attribute of the Text component.
 
 **Type:** number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

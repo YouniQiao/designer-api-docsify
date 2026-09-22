@@ -4,7 +4,7 @@
 declare interface ImageAIOptions
 ```
 
-Provides the AI image analysis options.
+Provides the image AI analysis options.
 
 > **NOTE:** 
 > 
@@ -26,7 +26,7 @@ Provides the AI image analysis options.
 aiController?: ImageAnalyzerController
 ```
 
-AI image analysis controller.
+Image AI analysis controller.
 
 **Type:** [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md)
 
@@ -44,7 +44,7 @@ AI image analysis controller.
 types?: ImageAnalyzerType[]
 ```
 
-AI image analysis types.
+Image AI analysis type.
 
 **Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 

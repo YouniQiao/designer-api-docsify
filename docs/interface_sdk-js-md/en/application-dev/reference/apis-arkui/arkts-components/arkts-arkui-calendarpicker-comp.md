@@ -1,10 +1,10 @@
 # CalendarPicker
 
-The **CalendarPicker** component provides a drop-down calendar for users to select a date.
+The **CalendarPicker** component provides a drop-down calendar window for users to quickly select a date. It is applicable to scenarios where users need to select a specific date, such as reservation, schedule arrangements, and date filtering, and provides an intuitive calendar view to improve user experience in date input.
 
-> **NOTE**
+> **NOTE** > > - This component is supported since API version 10. Newly added APIs will be marked with a superscript to indicate > their > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
 
-Child Components
+## Child Components
 
 Not supported
 
@@ -28,7 +28,7 @@ Creates a calendar picker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md) | No | Parameters of the calendar picker. |
+| options | [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md) | No | Parameters of the calendar picker. If this parameter is not set, the default configuration is used. |
 
 ## Summary
 

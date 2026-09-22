@@ -14,7 +14,7 @@ function unregisterTask(taskInfo: TaskInfo): void
 
 Unregister background load task.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

@@ -4,7 +4,7 @@
 declare const Require: PropertyDecorator
 ```
 
-Defining Require PropertyDecorator.
+The **\@Require** decorator validates whether [\@Prop](../../../ui/state-management/arkts-prop.md), [\@State](../../../ui/state-management/arkts-state.md), [\@Provide](../../../ui/state-management/arkts-provide-and-consume.md), [\@BuilderParam](../../../ui/state-management/arkts-builderparam.md), [\
 
 **Since:** 11
 

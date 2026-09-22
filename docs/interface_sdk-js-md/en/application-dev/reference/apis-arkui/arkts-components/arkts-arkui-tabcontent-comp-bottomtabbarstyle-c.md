@@ -10,6 +10,34 @@ Implements the bottom and side tab style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## badge
+
+```TypeScript
+badge(badgeStyle:TabBarBadgeStyle): BottomTabBarStyle
+```
+
+Sets the badge style of the bottom tab. If this parameter is not set, no badge is displayed.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| badgeStyle | [TabBarBadgeStyle](arkts-arkui-tabcontent-comp-tabbarbadgestyle-i.md) | Yes | Badge style of the bottom tab. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
+
 ## constructor
 
 ```TypeScript

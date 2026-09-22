@@ -247,7 +247,7 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -335,7 +335,7 @@ auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -496,7 +496,7 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -557,7 +557,7 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -608,7 +608,7 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -664,7 +664,7 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -805,7 +805,7 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -863,7 +863,7 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -912,8 +912,8 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -969,8 +969,8 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1117,7 +1117,7 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
@@ -1168,7 +1168,7 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or options. |
 | [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
@@ -1229,7 +1229,7 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or options. |
 | [12300004](../errorcode-account.md#12300004-账号已存在) | Account already exists. |
@@ -1280,7 +1280,7 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner. |
 | [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
@@ -1359,7 +1359,7 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
 | [12300007](../errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
@@ -1529,7 +1529,7 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1588,7 +1588,7 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1635,7 +1635,7 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1691,7 +1691,7 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2384,7 +2384,7 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 **示例**
@@ -2571,7 +2571,7 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2627,7 +2627,7 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2859,7 +2859,7 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
 | [12300108](../errorcode-account.md#12300108-认证会话不存在) | Session not found. |
@@ -2929,7 +2929,7 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
 | [12300108](../errorcode-account.md#12300108-认证会话不存在) | Session not found. |
@@ -3197,7 +3197,7 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3253,7 +3253,7 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3301,7 +3301,7 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3359,7 +3359,7 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3406,7 +3406,7 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3462,7 +3462,7 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3509,7 +3509,7 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or key. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3565,7 +3565,7 @@ getCustomData(name: string, key: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or key. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3617,7 +3617,7 @@ getCustomDataSync(name: string, key: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or key. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3896,7 +3896,7 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
@@ -4038,7 +4038,7 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
@@ -4093,7 +4093,7 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner. |
 | [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
@@ -4139,7 +4139,7 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -4193,7 +4193,7 @@ removeAccount(name: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -4238,7 +4238,7 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid options. |
 | [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
@@ -4298,7 +4298,7 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid options. |
 | [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
@@ -4829,7 +4829,7 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner. |
 | [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
@@ -4884,7 +4884,7 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
 | [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
@@ -4941,7 +4941,7 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -4998,7 +4998,7 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5163,7 +5163,7 @@ setCredential(name: string, credentialType: string, credential: string,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5219,7 +5219,7 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5266,7 +5266,7 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5323,7 +5323,7 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5372,8 +5372,8 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5426,8 +5426,8 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5671,7 +5671,7 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -5728,7 +5728,7 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |

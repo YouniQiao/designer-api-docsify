@@ -50,7 +50,7 @@ MONTH_AND_DAY = 2
 
 Two-column display: month and day.
 
-In this mode, the year value remains fixed.
+In this mode, the year remains unchanged and takes the value specified by the **selected** parameter. If **selected** is not specified, the current system year is used. When scrolling the month causes the date to exceed the valid range, the date is automatically adjusted to the last day of the month.
 
 **Since:** 18
 

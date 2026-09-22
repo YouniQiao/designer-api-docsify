@@ -38,7 +38,7 @@ Default value: **$r('sys.color.ohos_id_color_text_primary_actived')**
 strokeColor?: ResourceColor
 ```
 
-Color of the icon inside the switch.
+Color of the inner icon of the switch.
 
 Default value: **Color.White**
 

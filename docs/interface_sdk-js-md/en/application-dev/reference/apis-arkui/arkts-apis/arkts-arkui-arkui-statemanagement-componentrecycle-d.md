@@ -4,7 +4,7 @@
 export declare const ComponentRecycle: MethodDecorator
 ```
 
-Decorates a function that is called when the necessary recycling operations defined in the application are performed. That is, this function is triggered when the component status changes from **CustomComponentLifecycleState.BUILT** to **CustomComponentLifecycleState.RECYCLED**. At last, the function decorated by **@ComponentRecycle** recursively traverses all child components, and the **@ComponentRecycle** decorated function in each recycled child component will be called.
+After a component is recycled, the recycling operations such as resource release defined in the app are performed first. After the recycling is complete, the function decorated by **\@ComponentRecycle** is called, that is, it is triggered in the stage from **[CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md).BUILT** to **[CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md).RECYCLED**. Then the component is frozen to avoid UI updates while the component is in the reuse pool. Finally, recycling recursively traverses all child components, and for each child component that completes recycling, the function decorated by **\@ComponentRecycle** in the child component is called.
 
 **Since:** 23
 

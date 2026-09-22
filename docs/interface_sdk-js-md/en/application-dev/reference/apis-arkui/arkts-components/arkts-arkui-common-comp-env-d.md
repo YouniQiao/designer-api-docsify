@@ -4,7 +4,11 @@
 declare function Env<T>(key: SystemEnvKey<T> | SystemProperties): PropertyDecorator
 ```
 
-Defining Env PropertyDecorator. On API 26.0.0 and above, the parameter also supports the SystemEnvKey&lt;T&gt; type.
+The **\@Env** decorator is used to obtain system environment variables, helping you sense system environment changes and dynamically adjust the UI display.
+
+Obtains system environment variables. Before API version 26.0.0, only the **SystemProperties** enum can be passed in. Since API version 26.0.0, the [SystemEnvKey&lt;T&gt;](arkts-arkui-common-comp-systemenvkey-c.md) class or the [SystemProperties](arkts-arkui-common-comp-systemproperties-e.md) enum can be passed in as the parameter.
+
+For details about the developer guide, see [\@Env Developer Guide](../../../ui/arkts-env-system-property.md).
 
 **Since:** 22
 

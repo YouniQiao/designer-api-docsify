@@ -4,7 +4,7 @@
 export declare const Type: TypeDecorator
 ```
 
-Define Type PropertyDecorator, adds type information to an object.
+**\
 
 **Since:** 12
 

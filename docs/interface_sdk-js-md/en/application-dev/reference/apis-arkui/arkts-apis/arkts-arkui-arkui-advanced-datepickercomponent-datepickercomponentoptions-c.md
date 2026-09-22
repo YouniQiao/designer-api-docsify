@@ -4,7 +4,7 @@
 export declare class DatePickerComponentOptions
 ```
 
-DatePickerComponentOptions defines options for the date time picker component.
+Defines the options of the date and time picker component.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,16 @@ displayMode?: DisplayMode
 
 Display mode of the picker.
 
-Default value: DisplayMode.DATE
+Default value: **DisplayMode.DATE**
+
+**NOTE:** 
+
+- **DATE**: Displays only the date using **dateOptions**. This value is applicable to scenarios where only the date  
+needs to be selected, such as birthday selection and schedule date setting.  
+- **TIME**: Displays only the time using **timeOptions**. This value is applicable to scenarios where only the time  
+needs to be selected, such as alarm setting and reminder time setting.  
+- **DATE_TIME**: Displays both the date and time, with **dateOptions** and **timeOptions** taking effect  
+simultaneously. This value is applicable to scenarios where both the date and time need to be selected, such as event scheduling and meeting time setting.
 
 **Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 

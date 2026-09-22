@@ -32,7 +32,7 @@ Initial.
 APPEARED = 1
 ```
 
-To build.
+Appeared.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ Recycled.
 DISAPPEARED = 4
 ```
 
-Deleted.
+Disappeared.
 
 **Since:** 23
 

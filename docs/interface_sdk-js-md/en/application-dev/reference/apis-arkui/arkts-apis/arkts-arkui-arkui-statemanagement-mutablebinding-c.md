@@ -22,7 +22,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 get value(): T
 ```
 
-Obtains a bound value.
+Provides a **get** accessor to obtain the current bound value.
 
 **Type:** T
 

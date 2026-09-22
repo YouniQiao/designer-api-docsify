@@ -4,7 +4,9 @@
 declare const Observed: ClassDecorator
 ```
 
-Defining Observed ClassDecorator.
+**\@Observed** is a class decorator used in [state management V1](../../../ui/state-management/arkts-state-management-overview.md) to observe property changes of nested class objects.
+
+For details, see [@Observed and @ObjectLink Decorators: Observing Property Changes in Nested Class Objects](../../../ui/state-management/arkts-observed-and-objectlink.md).
 
 **Since:** 7
 

@@ -4,7 +4,7 @@
 declare interface TextPickerResult
 ```
 
-Defines the struct of TextPickerResult.
+Represents the selection result of a **TextPicker** component.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Defines the struct of TextPickerResult.
 index: number[]
 ```
 
-The subscript of the current selection.
+Index of the selected item in the range. The index is zero-based. (For a multi-column picker, **index** is of the array type.)
 
 **Type:** number[]
 
@@ -34,7 +34,15 @@ The subscript of the current selection.
 value: string[]
 ```
 
-The currently selected value. Only valid when only text is displayed.When picture or picture plus text is displayed, the value of value is "".
+Text of the selected item.
+
+**NOTE:** 
+
+When the picker contains text only or both text and imagery, **value** indicates the text value of the selected item. (For a multi-column picker, **value** is of the array type.)
+
+For an image list, **value** is empty.
+
+The value must be within the range defined by the **range** attribute and cannot contain the escape character ().
 
 **Type:** string[]
 

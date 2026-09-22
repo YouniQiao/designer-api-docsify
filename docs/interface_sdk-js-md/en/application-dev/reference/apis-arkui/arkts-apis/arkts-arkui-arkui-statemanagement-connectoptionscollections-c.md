@@ -26,7 +26,7 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-Persists container data. **defaultSubCreator** should be provided together with **defaultCreator**; otherwise, the container data cannot be persisted. The collection item type **S** must be the same as the return type of **defaultSubCreator**. If **defaultSubCreator** is provided but **defaultCreator** is not, the persistence fails.
+Persists container data. **defaultSubCreator** should be provided together with **defaultCreator**; otherwise, the container data cannot be persisted. The collection item type **S** must be the same as the return type of **defaultSubCreator**.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Persists container data. **defaultSubCreator** should be provided together with 
 defaultSubCreator?: StorageDefaultCreator<S>
 ```
 
-Persists container data. If the return value of **defaultSubCreator** is **undefined** or **null**, the persistence fails. When a user-defined class collection (such as **Array&lt;ClassA&gt;**) is persisted, the generic type **T** in **defaultCreator** is **Array&lt;ClassA&gt;**, and **S** in **defaultSubCreator** is **ClassA**.
+Default constructor function of the collection item, which is used to persist container data. When this parameter is used, **defaultCreator** must also be provided; otherwise, persistence will fail. When container data is persisted, if this parameter is not passed in, or if **defaultSubCreator** returns **undefined** or **null**, the persistence operation will fail. When a collection of user-defined classes (such as **Array&lt;ClassA&gt;**) is persisted, the generic type **T** in **defaultCreator** is **Array&lt;ClassA&gt;**, and **S** in **defaultSubCreator** is **ClassA**.
 
 **Since:** 23
 

@@ -4,7 +4,7 @@
 declare interface TimePickerResult
 ```
 
-Describes a time in 24-hour format.
+Returns the selected time result, where hour ranges from 0 to 23, regardless of the display format.
 
 **Since:** 8
 
@@ -16,9 +16,9 @@ Describes a time in 24-hour format.
 hour: number
 ```
 
-Hour portion of the selected time.
+Hour of the selected time.
 
-Value range: [0-23]
+Value range: [0-23], independent of the display format.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Value range: [0-23]
 minute: number
 ```
 
-Minute portion of the selected time.
+Minute of the selected time.
 
 Value range: [0-59]
 
@@ -56,7 +56,7 @@ Value range: [0-59]
 second: number
 ```
 
-Second portion of the selected time.
+Second of the selected time.
 
 Value range: [0-59]
 

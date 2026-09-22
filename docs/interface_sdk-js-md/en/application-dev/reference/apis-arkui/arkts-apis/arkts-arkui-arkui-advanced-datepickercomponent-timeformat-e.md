@@ -4,7 +4,7 @@
 export declare enum TimeFormat
 ```
 
-TimeFormat enum defines the format of the time picker.
+Enumerates the formats of the time picker.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ TimeFormat enum defines the format of the time picker.
 HOUR_MINUTE = 0
 ```
 
-Displays hour and minute.
+Hours and minutes.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Displays hour and minute.
 HOUR_MINUTE_SECOND = 1
 ```
 
-Displays hour, minute, and second.
+Hours, minutes, and seconds.
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 declare type EnvDecorator = (value: SystemProperties) => PropertyDecorator
 ```
 
-Define Env Decorator type
+Defines the **EnvDecorator** property decorator type.
 
 **Since:** 22
 
@@ -18,10 +18,10 @@ Define Env Decorator type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SystemProperties](arkts-arkui-common-comp-systemproperties-e.md) | Yes | key value input by the user |
+| value | [SystemProperties](arkts-arkui-common-comp-systemproperties-e.md) | Yes | Environment variable attribute name, used to specify the system environment variable to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Env decorator |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Property decorator. You do not need to pay attention to this return value. |

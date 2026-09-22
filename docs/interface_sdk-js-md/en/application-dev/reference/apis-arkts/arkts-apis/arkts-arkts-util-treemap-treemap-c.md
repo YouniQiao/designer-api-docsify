@@ -377,7 +377,7 @@ console.info("result:", result); // result: sparrow
 getHigherKey(key: K): K
 ```
 
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+Returns the least element greater than the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
@@ -458,7 +458,7 @@ console.info("result:", result); // result: squirrel
 getLowerKey(key: K): K
 ```
 
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+Returns the greatest element smaller than the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 

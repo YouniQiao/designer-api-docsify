@@ -4,7 +4,7 @@
 declare const Param: PropertyDecorator
 ```
 
-Defining Param PropertyDecorator.
+**
 
 **Since:** 12
 

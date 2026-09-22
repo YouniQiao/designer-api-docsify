@@ -4,7 +4,7 @@
 declare class CalendarPickerDialog
 ```
 
-A calendar picker dialog box is a dialog box that allows users to select a date from a calendar picker.
+Tapping a date opens a calendar picker dialog, where you can select a date. It is suitable for scenarios requiring date selection within an app, such as schedule management, booking systems, and form filling.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ A calendar picker dialog box is a dialog box that allows users to select a date 
 static show(options?: CalendarDialogOptions): void
 ```
 
-Defines a calendar picker dialog box.
+Displays a calendar picker dialog box for the user to select a date.
 
 **Since:** 10
 
@@ -30,4 +30,4 @@ Defines a calendar picker dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendarpicker-comp-calendardialogoptions-i.md) | No | Parameters of the calendar picker dialog box. |
+| options | [CalendarDialogOptions](arkts-arkui-calendarpicker-comp-calendardialogoptions-i.md) | No | Parameters for configuring the calendar picker dialog box. If this parameter is not set, the dialog box cannot be displayed. |

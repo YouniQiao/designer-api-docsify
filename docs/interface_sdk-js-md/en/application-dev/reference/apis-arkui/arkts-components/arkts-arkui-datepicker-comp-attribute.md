@@ -36,7 +36,7 @@ Sets whether to enable cyclic scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable cyclic scrolling.<br>- **true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.<br>- **false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.<br>Default value: **true**.<br>If the value of **isLoop** is **undefined**, the default value is used. |
+| isLoop | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable cyclic scrolling. <br>- **true**: enable cyclic scrolling. The year increments/decrements in a linked manner as the month scrolls cyclically, and the month increments/decrements in a linked manner as the day scrolls cyclically. <br>- **false**: disable cyclic scrolling. The year, month, and day stop scrolling when they reach the top or bottom of their respective columns, and they remain independent of each other without linked increment/ decrement. <br>Default value: **true** <br>If the value of **isLoop** is undefined, the default value is used. <br>**Note:** <br>When [start](arkts-arkui-datepicker-comp-datepickeroptions-i.md) or [end](arkts-arkui-datepicker-comp-datepickeroptions-i.md) is set to a non-default value, **canLoop** does not take effect. This is because after a date range limit is set, cyclic scrolling may cause the date to exceed the valid range. To ensure the accuracy of date selection, the non-cyclic mode is forcibly used. |
 
 ## digitalCrownSensitivity
 
@@ -58,7 +58,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity to the digital crown rotation.<br>Default value: **CrownSensitivity.MEDIUM** |
+| sensitivity | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Crown response sensitivity.<br>Default value: **CrownSensitivity.MEDIUM**, indicating a moderate response speed. |
 
 ## disappearTextStyle
 
@@ -80,7 +80,7 @@ Sets the text style for edge items (the second item above or below the selected 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Text color, font size, and font weight of the edge items.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 <a id="disappeartextstyle-1"></a>
 
@@ -104,7 +104,7 @@ Sets the text style for edge items (the second item above or below the selected 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the edge items.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>} <br>If the value of **style** is **undefined**, the default value is used. |
 
 ## enableHapticFeedback
 
@@ -126,7 +126,7 @@ Sets whether to enable haptic feedback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.<br>- **true**: Enable haptic feedback.<br>   - **false**: Disable haptic feedback.<br>Default value: **true**.<br>Whether this parameter takes effect after   being set to **true** depends on hardware support.<br>If the value of **enable** is **undefined**, the default value is used. |
+| enable | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.<br>- **true**: enable haptic feedback. <br>- **false**: disable haptic feedback. <br>Default value: **true** <br>After this parameter is set to **true**, whether it takes effect depends on whether the system hardware supports it. <br>If the value of **enable** is **undefined**, the default value is used. |
 
 ## lunar
 
@@ -135,6 +135,11 @@ lunar(value: boolean)
 ```
 
 Sets whether to display dates in lunar calendar format.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only for Simplified Chinese and Traditional Chinese. In other languages, setting this
+> attribute has no effect.
 
 **Since:** 8
 
@@ -148,7 +153,7 @@ Sets whether to display dates in lunar calendar format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format.<br>- **false**: Do not display dates in lunar calendar format.<br>Default value: **false** |
+| value | boolean | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format. <br>- **false**: Do not display dates in lunar calendar format. <br>Default value: **false** |
 
 <a id="lunar-1"></a>
 
@@ -158,7 +163,12 @@ Sets whether to display dates in lunar calendar format.
 lunar(isLunar: Optional<boolean>)
 ```
 
-Sets whether to display dates in lunar calendar format. Compared to [lunar](#lunar), the **isLunar** parameter supports the **undefined** type.
+Sets whether to display dates in lunar calendar format. Compared with [lunar](#lunar), the **isLunar** parameter supports the **undefined** type.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only for Simplified Chinese and Traditional Chinese. In other languages, setting this
+> attribute has no effect.
 
 **Since:** 18
 
@@ -172,7 +182,7 @@ Sets whether to display dates in lunar calendar format. Compared to [lunar](#lun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLunar | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format.<br>- **false**: Do not display dates in lunar calendar format.<br>Default value: **false**<br>If the value of **isLunar** is **undefined**, the default value is used. |
+| isLunar | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format. <br>- **false**: Do not display dates in lunar calendar format. <br>Default value: **false** <br>If the value of **isLunar** is **undefined**, the default value is used. |
 
 ## onChange
 
@@ -198,7 +208,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: DatePickerResult) =&gt; void | Yes | Selected time. |
+| callback | (value: DatePickerResult) =&gt; void | Yes | Callback used to return the selected time, including the year, month, and day fields. |
 
 ## onDateChange
 
@@ -206,7 +216,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 onDateChange(callback: Callback<Date>)
 ```
 
-Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
+Triggered when the options are completely settled at the selected position after the text content of the **DatePicker** is swiped. Settling means that the scrolling animation ends and the options stop stably at the selected position. It cannot be triggered by two-way bound state variables, but can respond to the user's swipe operation.
 
 **Since:** 10
 
@@ -220,7 +230,7 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Date&gt; | Yes | Selected date, where the year, month, and day portions are subject to the selection, the hour and minute portions are subject to the current system time, and the second portion is always **00**.<br>**Since:** 18 |
+| callback | Callback&lt;Date&gt; | Yes | Callback used to return the selected time. The year, month, and day are the selected date; the hour and minute depend on the hour and minute of the current system time; and the second is always 00. This is applicable to scenarios where the selected date needs to be obtained, the UI needs to be updated, or service logic needs to be executed after the user confirms the date selection.<br>**Since:** 18 |
 
 <a id="ondatechange-1"></a>
 
@@ -248,7 +258,7 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes | Selected date, where the year, month, and day portions are subject to the selection, the hour and minute portions are subject to the current system time, and the second portion is always **00**.<br>If **callback** is set to **undefined**, the callback function is not used. |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes | Callback used to return the selected time. The year, month, and day are the selected date; the hour and minute depend on the hour and minute of the current system time; and the second is always 00. This is applicable to scenarios where the selected date needs to be obtained, the UI needs to be updated, or service logic needs to be executed after the user confirms the date selection.<br>If the value of **callback** is **undefined**, the callback is not used. |
 
 ## selectedTextStyle
 
@@ -270,7 +280,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Font color, font size, and font weight of the selected item.<br>Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Text color, font size, and font weight of the selected item.<br>Default value: <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} |
 
 <a id="selectedtextstyle-1"></a>
 
@@ -294,7 +304,7 @@ Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Font color, font size, and font weight of the selected item.<br> Default value:<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the selected item.<br>Default value: <br>{<br>color: '#ff007dff', <br>font: {<br>size: '20fp', <br>weight: FontWeight.Medium <br>} <br>} <br>If the value of **style** is undefined, the default value is used. |
 
 ## textStyle
 
@@ -316,7 +326,7 @@ Sets the text style for candidate items (the first item immediately above or bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Text color, font size, and font weight of the candidate items.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 <a id="textstyle-1"></a>
 
@@ -340,4 +350,4 @@ Sets the text style for candidate items (the first item immediately above or bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight for candidate items.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the candidate items.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>If the value of **style** is undefined, the default value is used. |

@@ -20,11 +20,11 @@ Inherited from [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions
 onAccept?: (value: DatePickerResult) => void
 ```
 
-Callback invoked when the OK button in the dialog box is clicked.
+Triggered when the "OK" button in the dialog box is tapped. The callback parameter value is the currently selected date, including the year, month, and day.
 
 **NOTE:** 
 
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateAccept** instead.
+Supported since API version 8 and deprecated since API version 10. Use **onDateAccept** instead.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 onCancel?: VoidCallback
 ```
 
-Callback invoked when the Cancel button in the dialog box is clicked.
+Triggered when the "Cancel" button in the dialog box is tapped. Callback signature: () =&gt; void, with no parameters and no return value.
 
 **Since:** 8
 
@@ -64,11 +64,11 @@ Callback invoked when the Cancel button in the dialog box is clicked.
 onChange?: (value: DatePickerResult) => void
 ```
 
-Callback invoked when the selected item in the picker changes.
+Triggered when the current selected item changes as the sliding picker in the dialog box is swiped. The callback parameter value is the currently selected date, including the year, month, and day.
 
 **NOTE:** 
 
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateChange** instead.
+Supported since API version 8 and deprecated since API version 10. Use onDateChange instead.
 
 **Since:** 8
 
@@ -92,17 +92,20 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 onDidAppear?: VoidCallback
 ```
 
-Event callback after the dialog box appears.
+Event callback after the dialog box is displayed.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
-onWillDisappear &gt; onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
-The settings take effect next time the dialog box appears.
-3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is
-invoked before **onDidAppear**.
-4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;>
+(**onDateAccept**\/**onCancel**\/**onDateChange**) &gt;  
+> **onWillDisappear** &gt;
+> **onDidDisappear**.
+2. Callback events that change the display effect of the dialog box set in **onDidAppear** take effect the next
+time **showDatePickerDialog** is called.
+3. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may take
+effect before **onDidAppear**.
+4. When the dialog box is closed before its entrance animation is complete, this callback is not triggered.
 
 **Since:** 12
 
@@ -122,8 +125,15 @@ Event callback after the dialog box disappears.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
-onWillDisappear &gt; onDidDisappear.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onDateAccept/onCancel/onDateChange)
+> 
+> **onWillDisappear** &gt;
+> **onDidDisappear**.
+2. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may take
+effect before **onDidAppear**.
+3. When the dialog box is closed before its entrance animation is complete, this callback is not triggered.
 
 **Since:** 12
 
@@ -139,14 +149,22 @@ onWillDisappear &gt; onDidDisappear.
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear.
+Event callback before the dialog box display animation.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
-onWillDisappear &gt; onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.
-The settings take effect next time the dialog box appears.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onDateAccept/onCancel/onDateChange)
+> 
+> **onWillDisappear** &gt;
+> **onDidDisappear**.
+2. Callback events that change the display effect of the dialog box set in **onWillAppear** take effect the next
+time **showDatePickerDialog** is called.
+3. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may take
+effect before **onDidAppear**.
+4. When the dialog box is closed before its entrance animation is complete, **onDidAppear** and subsequent
+callbacks are not triggered.
 
 **Since:** 12
 
@@ -162,13 +180,19 @@ The settings take effect next time the dialog box appears.
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear.
+Event callback before the dialog box exit animation.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt;
-onWillDisappear &gt; onDidDisappear.
-2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onDateAccept/onCancel/onDateChange)
+> 
+> **onWillDisappear** &gt;
+> **onDidDisappear**.
+2. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may take
+effect before **onDidAppear**.
+3. When the dialog box is closed before its entrance animation is complete, this callback is not triggered.
 
 **Since:** 12
 
@@ -184,14 +208,14 @@ onWillDisappear &gt; onDidDisappear.
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button.
+Display style, importance, role, background color, corner radius, text color, font size, font weight, font style, font list, and whether the button responds to the Enter key by default for the confirm button. Pass this parameter when you need to customize the appearance or behavior of the confirm button. If not passed, the system default button style is used.
 
 **NOTE:** 
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。
-If both are set to **true**, the **primary** field will remain at the default value of **false**.
-2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.
-In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
+1. At most one of **acceptButtonStyle** and **cancelButtonStyle** can have the **primary** field set to **true**.
+If both are set to **true**, the **primary** field does not take effect and remains at the default value **false**.
+2. The button height is 40 vp by default and does not change in the care mode - large font scenario. Even if the
+button style is set to the rounded rectangle ROUNDED_RECTANGLE, the button is still displayed as a capsule button Capsule.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -209,7 +233,7 @@ In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
+Alignment of the dialog box in the vertical direction.
 
 Default value: **DialogAlignment.Default**
 
@@ -232,13 +256,13 @@ Default value: **DialogAlignment.Default**
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
+Background blur material of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **NOTE:** 
 
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Set this parameter to **BlurStyle.NONE** to disable the background blur. When **backgroundBlurStyle** is set to a value other than NONE, do not set **backgroundColor**. Otherwise, the displayed color will not meet the expected effect.
 
 **Type:** [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md)
 
@@ -258,7 +282,11 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for customizing the background blur style.
+Background blur effect parameters, used to customize the display style of the dialog box background blur. It supports configuring attributes such as the color mode, adaptive color, and scale ratio to achieve different background blur visual effects. For the default value, see the **BackgroundBlurStyleOptions** type description.
+
+**NOTE:** 
+
+When not set, the default effect of **backgroundBlurStyle (BlurStyle.COMPONENT_ULTRA_THICK)** is used.
 
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
@@ -276,13 +304,13 @@ Options for customizing the background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Backplane color of the dialog box.
+Background color of the dialog box.
 
 Default value: **Color.Transparent**
 
 **NOTE:** 
 
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**. Otherwise, the displayed color will not meet the expected effect.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -302,7 +330,11 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Options for customizing the background effect.
+Background effect parameters, used to customize the display effect of the dialog box background. It supports configuring attributes such as the blur radius, saturation, brightness, and color to achieve different background visual effects. For the default value, see the **BackgroundEffectOptions** type description.
+
+**NOTE:** 
+
+When not set, this parameter does not take effect, and the dialog box background blur effect is determined by **backgroundBlurStyle**. When set, it overrides the effect of **backgroundBlurStyle**. Since API version 26.0.0, after **systemMaterial** is set, neither **backgroundEffect** nor **backgroundBlurStyle** takes effect.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
@@ -320,14 +352,14 @@ Options for customizing the background effect.
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button.
+Display style, importance, role, background color, corner radius, text color, font size, font weight, font style, font list, and whether the button responds to the Enter key by default for the cancel button. Pass this parameter when you need to customize the appearance or behavior of the cancel button. If not passed, the system default button style is used.
 
 **NOTE:** 
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**.
-If both are set to **true**, the **primary** field will remain at the default value of **false**.
-2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.
-In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
+1. At most one of **acceptButtonStyle** and **cancelButtonStyle** can have the **primary** field set to **true**.
+If both are set to **true**, the **primary** field does not take effect and remains at the default value **false**.
+2. The button height is 40 vp by default and does not change in the care mode - large font scenario. Even if the
+button style is set to the rounded rectangle ROUNDED_RECTANGLE, the button is still displayed as a capsule button Capsule.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -345,15 +377,14 @@ In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed
 canLoop?: boolean
 ```
 
-Whether to enable cyclic scrolling.
+Whether cyclic scrolling is supported.
+
+- **true**: cyclic scrolling is supported. The year is linked and incremented or decremented as the month scrolls  
+cyclically, and the month is linked and incremented or decremented as the day scrolls cyclically.  
+- **false**: cyclic scrolling is not supported. When the year, month, or day reaches the top or bottom of its  
+column, it can no longer be scrolled, and the year, month, and day can no longer be linked and incremented or decremented.
 
 Default value: **true**
-
-**NOTE:** 
-
-**true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.
-
-**false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.
 
 **Type:** boolean
 
@@ -373,13 +404,13 @@ Default value: **true**
 dateTimeOptions?: DateTimeOptions
 ```
 
-Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and **minute** parameters is supported.
+Whether the hour and minute are displayed with a leading zero. Currently, only the hour and minute parameters are supported, and this parameter takes effect only when **showTime** is **true**.
 
 Default value:
 
-**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.
+**hour**: The default value is "2-digit" in the 24-hour format. Sets whether the hour is displayed as two digits. If the actual value is less than 10, a leading zero is added and displayed, that is, "0X". The default value is "numeric" in the 12-hour format, that is, no leading zero. The optional values are "numeric" or "2-digit". Ifanother value is passed, the default value is used.
 
-**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
+**minute**: The default value is "2-digit". Sets whether the minute is displayed as two digits. If the actual value is less than 10, a leading zero is added and displayed, that is, "0X". The optional values are "numeric" or "2- digit". If another value is passed, the default value is used.
 
 **Type:** [DateTimeOptions](arkts-arkui-timepicker-comp-datetimeoptions-t.md)
 
@@ -399,9 +430,23 @@ Default value:
 disappearTextStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of edge items (the second item above or below the selected item).
+The text color, font size, and font weight of the edge items (the second item above or below the selected item).
 
-Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
+Default value:
+
+**{
+
+color: '#ff182431',
+
+font: {
+
+size: '14fp',
+
+weight: FontWeight.Regular
+
+}
+
+}**
 
 **Type:** [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)
 
@@ -422,18 +467,20 @@ Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Re
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback.
+Whether to enable touch feedback.
 
-- **true**: Enable haptic feedback.  
-- **false**: Disable haptic feedback.
+- **true**: enable touch feedback (select this when you need to provide operation feedback to users).  
+- **false**: disable touch feedback (select this when touch feedback is not needed or the device does not support  
+it).
 
 Default value: **true**
 
 **NOTE:** 
 
-1. Whether this parameter takes effect after being set to **true** depends on hardware support.
-2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module**
-in **src/main/module.json5** of the project:
+1. After this parameter is set to **true**, whether it takes effect depends on whether the system hardware
+supports it.
+2. To enable touch feedback, configure the **requestPermissions** field in the "module" of the  
+**src/main/module.json5** file of the project to enable the vibration permission. The configuration is as follows:
 
 "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
@@ -455,10 +502,10 @@ in **src/main/module.json5** of the project:
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
+Whether to respond to the hover state. The hover state refers to the interaction mode when devices such as foldable devices are in the hover folded state, rather than mouse hover.
 
-- **true**: Respond when the device is in semi-folded mode.  
-- **false**: Do not respond when the device is in semi-folded mode.
+- true: respond to the hover state.  
+- **false**: do not respond to the hover state.
 
 Default value: **false**
 
@@ -480,7 +527,7 @@ Default value: **false**
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box when the device is in semi-folded mode.
+Default display area of the dialog box in the hover state. This parameter takes effect only when **enableHoverMode** is **true**.
 
 Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
@@ -502,16 +549,16 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 lunar?: boolean
 ```
 
-Whether to display dates in lunar calendar format.
+Whether the date is displayed in the lunar calendar.
 
-- **true**: Display dates in lunar calendar format.  
-- **false**: Do not display dates in lunar calendar format.
+- **true**: displayed in the lunar calendar.  
+- **false**: not displayed in the lunar calendar.
 
 Default value: **false**
 
 **NOTE:** 
 
-This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
+This attribute takes effect only in the Simplified Chinese and Traditional Chinese language environments. In other language environments, setting this attribute has no effect.
 
 **Type:** boolean
 
@@ -532,16 +579,16 @@ This attribute takes effect only in Simplified Chinese and Traditional Chinese l
 lunarSwitch?: boolean
 ```
 
-Whether to display the lunar calendar switch.
+Whether to display the switch for switching to the lunar calendar.
 
-- **true**: Display the lunar calendar switch.  
-- **false**: Do not display the lunar calendar switch.
+- **true**: display the switch for switching to the lunar calendar.  
+- **false**: do not display the switch for switching to the lunar calendar.
 
 Default value: **false**
 
 **NOTE:** 
 
-After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
+After the switch is turned on, it takes effect only in the Simplified Chinese and Traditional Chinese environments. In other language environments, the lunar calendar does not take effect. Therefore, it is recommended that the switch not be displayed in other language environments.
 
 **Type:** boolean
 
@@ -562,9 +609,9 @@ After being enabled, this attribute takes effect only in Simplified Chinese and 
 lunarSwitchStyle?: LunarSwitchStyle
 ```
 
-Style of the lunar calendar switch.
+Color style of the lunar calendar switch. This parameter takes effect only when **lunarSwitch** is **true**.
 
-Default value: {
+Default value: **{
 
 selectedColor: `$r('sys.color.ohos_id_color_text_primary_actived')`,
 
@@ -572,7 +619,7 @@ unselectedColor: `$r('sys.color.ohos_id_color_switch_outline_off')`,
 
 strokeColor: Color.White
 
-}
+}**
 
 **Type:** [LunarSwitchStyle](arkts-arkui-datepicker-comp-lunarswitchstyle-i.md)
 
@@ -592,7 +639,7 @@ strokeColor: Color.White
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
+Mask area of the dialog box. Events within the mask area are not passed through, while events outside the mask area are passed through.
 
 Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
@@ -615,7 +662,7 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 offset?: Offset
 ```
 
-Offset of the dialog box based on the **alignment** settings.
+Offset of the dialog box relative to the position specified by alignment. Set this parameter when you need to fine- tune the position of the dialog box (for example, to achieve precise position control together with alignment). If not set, the dialog box is displayed at the position aligned by alignment.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
@@ -638,11 +685,11 @@ Default value: **{ dx: 0 , dy: 0 }**
 onDateAccept?: Callback<Date>
 ```
 
-Callback invoked when the OK button in the dialog box is clicked.
+Triggered when the "OK" button in the dialog box is tapped. Callback signature: **(value: Date) =&gt; void**, where **value** is the date selected by the user, including the year, month, and day. When **showTime** is true, it also includes the hour and minute. Developers can save the date selected by the user or execute subsequent business logic in this callback.
 
 **NOTE:** 
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+When **showTime** is set to **true**, the hour and minute in **value** are those selected by the picker. Otherwise, the hour and minute in **value** are those of the system time.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -660,11 +707,11 @@ When **showTime** is set to **true**, the hour and minute in the value returned 
 onDateChange?: Callback<Date>
 ```
 
-Callback triggered when date selection changes through scrolling in the dialog box.
+Triggered when the current selected item changes as the date in the dialog box is swiped. Callback signature: **(value: Date) =&gt; void**, where **value** is the currently selected date, including the year, month, and day. When **showTime** is **true**, it also includes the hour and minute. This callback is triggered in real time while the user swipes the picker, which differs from **onDateAccept**, which is triggered only after the OK button is tapped.
 
 **NOTE:** 
 
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+When **showTime** is set to **true**, the hour and minute in value are those selected by the picker. Otherwise, the hour and minute in value are those of the system time.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -684,7 +731,21 @@ selectedTextStyle?: PickerTextStyle
 
 Text color, font size, and font weight of the selected item.
 
-Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
+Default value:
+
+**{
+
+color: '#ff007dff',
+
+font: {
+
+size: '20fp',
+
+weight: FontWeight.Medium
+
+}
+
+}**
 
 **Type:** [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)
 
@@ -705,9 +766,9 @@ Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Me
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
+Shadow of the dialog box background.
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
+On 2-in-1 devices, in the default scenario, the focused shadow value is **ShadowStyle.OUTER_FLOATING_MD**, and the unfocused shadow value is **ShadowStyle.OUTER_FLOATING_SM**. Other devices have no shadow by default.
 
 **Type:** [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md)
 
@@ -727,16 +788,17 @@ showTime?: boolean
 
 Whether to display the time picker in the dialog box.
 
-- **true**: Display the time picker.  
-- **false**: Do not display the time picker.
+- **true**: display the time picker.  
+- **false**: do not display the time picker.
 
 Default value: **false**
 
 **NOTE:** 
 
-1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.
-2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month,
-and day columns.
+1. When **showTime** is true, tapping the title date of the dialog box switches between the "date picker" and
+"date picker + time picker" pages.
+2. When **showTime** is **true**, the mode parameter does not take effect, and the date-only page always displays
+the year, month, and day columns.
 
 **Type:** boolean
 
@@ -757,7 +819,13 @@ and day columns.
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+System material of the dialog box.
+
+**NOTE:** 
+
+- The default value is an **ImmersiveMaterial** object whose style of **ImmersiveOptions** is  
+**ImmersiveStyle.ULTRA_THICK**. When set to **undefined**, it is consistent with the default value. Different materials have different effects. For details about **ImmersiveMaterial**, see the [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md) type definition.  
+- This interface affects the background color [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), background blur [backgroundBlurStyle](arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle), background blur effect [backgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md), background effect [backgroundEffect](arkts-arkui-common-comp-commonmethod-c.md#backgroundeffect), border color [borderColor](arkts-arkui-common-comp-commonmethod-c.md#bordercolor), border width [borderWidth](arkts-arkui-common-comp-commonmethod-c.md#borderwidth), and shadow [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow). When the system material is set, the preceding interfaces do not take effect.
 
 **Type:** [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md)
 
@@ -775,9 +843,23 @@ Set system-styled materials for dialog. Different materials have different effec
 textStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).
+Text color, font size, and font weight of the candidate items (the first item above or below the selected item).
 
-Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
+Default value:
+
+**{
+
+color: '#ff182431',
+
+font: {
+
+size: '16fp',
+
+weight: FontWeight.Regular
+
+}
+
+}**
 
 **Type:** [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)
 
@@ -798,16 +880,16 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 useMilitaryTime?: boolean
 ```
 
-Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is **true**.
+Whether the time picker displayed in the dialog box uses the 24-hour format. This parameter takes effect only when **showTime** is **true**.
 
-- **true**: 24-hour format.  
-- **false**: 12-hour format.
+- true: display the 24-hour format.  
+- false: display the 12-hour format.
 
 Default value: **false**
 
 **NOTE:** 
 
-When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
+When the displayed time picker uses the 12-hour format, the AM and PM indicators do not switch automatically based on the hour.
 
 **Type:** boolean
 

@@ -26,7 +26,7 @@ Inherits from [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-
 onCancel?: VoidCallback
 ```
 
-Triggered when the Cancel button in the dialog box is clicked.
+Callback invoked when the **Cancel** button in the dialog box is tapped.
 
 **Since:** 10
 
@@ -42,17 +42,30 @@ Triggered when the Cancel button in the dialog box is clicked.
 onDidAppear?: VoidCallback
 ```
 
-Event callback after the dialog box appears.
+Event callback after the dialog box is shown.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows:
-onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
-The settings take effect next time the dialog box appears.
-3. If the user dismisses the dialog box immediately after it appears,  
-**onWillDisappear** is invoked before **onDidAppear**.
-4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onAccept/onCancel/onChange) &gt;>
+**onWillDisappear** &gt;  
+> **onDidDisappear**.
+2. Callback events that change the display effect set in **onDidAppear** take effect when **show** is called
+again.
+3. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may
+take effect before **onDidAppear**.
+4. When the dialog box is closed before its entrance animation is complete, this callback is not triggered.
+
+**Selection guidance:**
+
+- **onWillAppear**: suitable for preparing data and resetting the state before the dialog box is displayed.  
+- **onDidAppear**: suitable for performing animations, initiating network requests, and setting focus after the  
+dialog box is fully displayed, that is, operations that require the dialog box to be visible.  
+- **onWillDisappear**: suitable for saving data, cleaning up resources, and canceling network requests before the  
+dialog box disappears.  
+- **onDidDisappear**: suitable for performing cleanup, resetting the state, and restoring other UI after the dialog  
+box fully disappears.
 
 **Since:** 12
 
@@ -72,8 +85,11 @@ Event callback after the dialog box disappears.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows:
-onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onAccept/onCancel/onChange) &gt;>
+**onWillDisappear** &gt;  
+> **onDidDisappear**.
 
 **Since:** 12
 
@@ -89,14 +105,17 @@ onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisap
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear.
+Event callback before the dialog box display animation.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows:
-onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.
-The settings take effect next time the dialog box appears.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;
+> (onAccept/onCancel/onChange) &gt;>
+**onWillDisappear** &gt;  
+> **onDidDisappear**.
+2. Callback events that change the dialog box display effect set in **onWillAppear** take effect when the
+dialog box is shown again.
 
 **Since:** 12
 
@@ -112,14 +131,17 @@ The settings take effect next time the dialog box appears.
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear.
+Event callback before the dialog box exit animation.
 
 **NOTE:** 
 
-1. The normal timing sequence is as follows:
-onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
-2. If the user closes the dialog box immediately after it appears,  
-**onWillDisappear** is invoked before **onDidAppear**.
+1. The normal timing sequence is: **onWillAppear** &gt;  
+> **onDidAppear** &gt;>
+(**onAccept**\/**onCancel**\/**onChange**) &gt;  
+> **onWillDisappear** &gt;
+> **onDidDisappear**.
+2. When the dialog box is rapidly and consecutively triggered to pop up and close, **onWillDisappear** may
+take effect before **onDidAppear**.
 
 **Since:** 12
 
@@ -135,11 +157,14 @@ onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisap
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button.
+Display style, importance, role, background color, corner radius, text color, font size, font weight, font style, font list, and whether the button responds to the Enter key by default for the confirm button.
 
 **NOTE:** 
 
-In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
+1. At most one of **acceptButtonStyle** and **cancelButtonStyle** can have the **primary** field set to **true**.
+If both are set to **true**, neither takes effect.
+2. The button height is 40 vp by default and does not change in the care mode - large font scenario. Even if
+the button style is set to the rounded rectangle ROUNDED_RECTANGLE, in the care mode - large font scenario the button is still displayed as a capsule button Capsule.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -157,13 +182,13 @@ In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one 
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
+Background blur material of the dialog box.
 
 Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **NOTE:** 
 
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Set this parameter to **BlurStyle.NONE** to disable the background blur. When **backgroundBlurStyle** is set to a value other than NONE, do not set **backgroundColor**. Otherwise, the displayed background color will not meet the expected effect. When **backgroundEffect** is set, it overrides the effect of this attribute.
 
 **Type:** [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md)
 
@@ -183,7 +208,11 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for customizing the background blur style.
+Background blur effect parameters, used to customize the display style of the dialog box background blur. It supports configuring attributes such as the color mode, adaptive color, and scale ratio to achieve different background blur visual effects. For the default value, see the **BackgroundBlurStyleOptions** type description.
+
+**NOTE:** 
+
+When not set, the default effect of **backgroundBlurStyle (BlurStyle.COMPONENT_ULTRA_THICK)** is used.
 
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
@@ -201,13 +230,13 @@ Options for customizing the background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Backplane color of the dialog box.
+Background color of the dialog box.
 
 Default value: **Color.Transparent**
 
 **NOTE:** 
 
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**. Otherwise, the displayed background color will not meet the expected effect.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -227,7 +256,11 @@ When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyl
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Options for customizing the background effect.
+Background effect parameters, used to customize the display effect of the dialog box background. It supports configuring attributes such as the blur radius, saturation, brightness, and color to achieve different background visual effects. For the default value, see the **BackgroundEffectOptions** type description.
+
+**NOTE:** 
+
+When not set, this parameter does not take effect, and the dialog box background blur effect is determined by **backgroundBlurStyle**. When set, it overrides the effect of **backgroundBlurStyle**. Since API version 26.0.0, after **systemMaterial** is set, neither **backgroundEffect** nor **backgroundBlurStyle** takes effect.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
@@ -245,11 +278,14 @@ Options for customizing the background effect.
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button.
+Display style, importance, role, background color, corner radius, text color, font size, font weight, font style, font list, and whether the button responds to the Enter key by default for the cancel button.
 
 **NOTE:** 
 
-In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
+1. At most one of **acceptButtonStyle** and **cancelButtonStyle** can have the **primary** field set to **true**.
+If both are set to **true**, neither takes effect.
+2. The button height is 40 vp by default and does not change in the care mode - large font scenario. Even if
+the button style is set to the rounded rectangle ROUNDED_RECTANGLE, in the care mode - large font scenario the button is still displayed as a capsule button Capsule.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -267,12 +303,14 @@ In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one 
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
+Whether the dialog box responds to the hover mode. This parameter applies to devices that support the hover mode, such as foldable devices.
 
-- **true**: Respond when the device is in semi-folded mode.  
-- **false**: Do not respond when the device is in semi-folded mode.
+- **true**: The dialog box responds to the hover mode. In the hover mode of foldable devices, the layout area is  
+adaptively adjusted to provide a better multitasking experience.  
+- **false**: The dialog box does not respond to the hover mode, and the default layout is retained in the hover  
+mode.
 
-Default value: **false**.
+Default value: **false**
 
 **Type:** boolean
 
@@ -292,7 +330,7 @@ Default value: **false**.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box when the device is in semi-folded mode.
+Default display area of the dialog box in the hover mode. This parameter takes effect only when **enableHoverMode** is **true**. Different area values correspond to different layout positions of the dialog box in the hover mode of foldable devices (for example, **BOTTOM_SCREEN** indicates that the dialog box is displayed in the lower half of the screen, and **TOP_SCREEN** indicates that the dialog box is displayed in the upper half of the screen).
 
 Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
@@ -314,12 +352,12 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 markToday?: boolean
 ```
 
-Whether to highlight the current system date.
+Whether the current system date remains highlighted in the calendar picker dialog box.
 
-- **true**: Highlight the current system date.  
-- **false**: Do not highlight the current system date.
+- **true**: The current system date remains highlighted in the calendar picker dialog box.  
+- **false**: The current system date is not highlighted in the calendar picker dialog box.
 
-Default value: **false**.
+Default value: **false**
 
 **Type:** boolean
 
@@ -339,9 +377,9 @@ Default value: **false**.
 onAccept?: Callback<Date>
 ```
 
-Triggered when the OK button in the dialog box is clicked.
+Callback invoked when the **OK** button in the dialog box is tapped.
 
-The callback parameter represents the selected date value.
+The parameter of the callback indicates the selected date.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -359,9 +397,9 @@ The callback parameter represents the selected date value.
 onChange?: Callback<Date>
 ```
 
-Triggered when the selection in the picker changes the selected date.
+Callback invoked when the selected date in the dialog box changes.
 
-The callback parameter represents the selected date value.
+The parameter of the callback indicates the selected date.
 
 **Type:** Callback&lt;Date&gt;
 
@@ -379,9 +417,9 @@ The callback parameter represents the selected date value.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
+Shadow of the dialog box background.
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
+On 2-in-1 devices, in the default scenario, the focused shadow value is **ShadowStyle.OUTER_FLOATING_MD**, and the unfocused shadow value is **ShadowStyle.OUTER_FLOATING_SM**.
 
 **Type:** [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md)
 
@@ -399,7 +437,14 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+System material of the dialog box.
+
+**NOTE:** 
+
+- Default value: the [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)  
+object whose [ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md) style is **ImmersiveStyle.ULTRA_THICK**. When set to **undefined**, it is consistent with the default value.  
+- Different materials have different visual effects, including differences in background transparency, blur degree,  
+and shadow style. This API affects the background color [backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), background blur [backgroundBlurStyle](arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle), background effect [backgroundEffect](arkts-arkui-common-comp-commonmethod-c.md#backgroundeffect), border color [borderColor](arkts-arkui-common-comp-commonmethod-c.md#bordercolor), border width [borderWidth](arkts-arkui-common-comp-commonmethod-c.md#borderwidth), and shadow [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow). When the system material is set, the preceding APIs do not take effect.
 
 **Type:** [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md)
 

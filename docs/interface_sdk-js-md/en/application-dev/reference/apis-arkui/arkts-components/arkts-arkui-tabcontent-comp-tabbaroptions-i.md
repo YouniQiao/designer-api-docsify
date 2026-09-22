@@ -16,6 +16,24 @@ Defines the options for configuring images and text content on the tabs.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## badge
+
+```TypeScript
+badge?: TabBarBadgeStyle
+```
+
+Badge style of the tab. If this parameter is not set, no badge is displayed.
+
+**Type:** [TabBarBadgeStyle](arkts-arkui-tabcontent-comp-tabbarbadgestyle-i.md)
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## icon
 
 ```TypeScript

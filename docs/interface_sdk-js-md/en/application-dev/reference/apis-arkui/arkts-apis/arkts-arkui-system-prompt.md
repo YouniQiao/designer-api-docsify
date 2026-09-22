@@ -1,4 +1,4 @@
-# @system.prompt
+# @system.prompt(Prompt)
 
 ## Modules to Import
 

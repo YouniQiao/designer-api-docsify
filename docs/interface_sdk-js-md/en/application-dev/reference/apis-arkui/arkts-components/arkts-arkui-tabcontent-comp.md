@@ -41,6 +41,7 @@ Creates the **TabContent** component, which represents the content associated wi
 | [DrawableTabBarIndicator](arkts-arkui-tabcontent-comp-drawabletabbarindicator-i.md) | Uses an image resource as the indicator. |
 | [IndicatorStyle](arkts-arkui-tabcontent-comp-indicatorstyle-i.md) | Represents an indicator style object. |
 | [LabelStyle](arkts-arkui-tabcontent-comp-labelstyle-i.md) | Represents a style object for the label text and font. |
+| [TabBarBadgeStyle](arkts-arkui-tabcontent-comp-tabbarbadgestyle-i.md) | Represents a tab bar badge style object. |
 | [TabBarIconStyle](arkts-arkui-tabcontent-comp-tabbariconstyle-i.md) | Represents a label icon style object. |
 | [TabBarOptions](arkts-arkui-tabcontent-comp-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. |
 
@@ -49,6 +50,7 @@ Creates the **TabContent** component, which represents the content associated wi
 | Name | Description |
 | --- | --- |
 | [DrawableDescriptor](arkts-arkui-tabcontent-comp-drawabledescriptor-t.md) | Defines the input parameter object of the **drawable** attribute in the **DrawableTabBarIndicator** object. |
+| [TabBarBadgeType](arkts-arkui-tabcontent-comp-tabbarbadgetype-t.md) | Types for TabBar badge. |
 
 ### Enums
 

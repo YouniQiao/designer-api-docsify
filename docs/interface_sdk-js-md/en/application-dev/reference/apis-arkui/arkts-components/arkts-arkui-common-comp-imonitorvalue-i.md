@@ -4,7 +4,7 @@
 declare interface IMonitorValue<T>
 ```
 
-Define IMonitorValue interface
+Provides the specific information about the state variable changes monitored by **\@Monitor**, obtained through the **value** API of **IMonitor**. **T** is the state variable type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define IMonitorValue interface
 before: T
 ```
 
-Get the previous value.
+Value of the state variable before the change.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ Get the previous value.
 now: T
 ```
 
-Get current value.
+Current value of the state variable.
 
 **Type:** T
 
@@ -56,7 +56,7 @@ Get current value.
 path: string
 ```
 
-Monitored path input by the user.
+Path of the state variable.
 
 **Type:** string
 

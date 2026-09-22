@@ -4,7 +4,7 @@
 export declare struct DatePickerComponent
 ```
 
-DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
+The **DatePickerComponent** is used to select dates (year, month, and day) and times (hour, minute, and second).
 
 ## Child Components
 
@@ -28,7 +28,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 options: DatePickerComponentOptions
 ```
 
-Defines options for the date time picker component.
+Options of the date and time picker component.
 
 **Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 

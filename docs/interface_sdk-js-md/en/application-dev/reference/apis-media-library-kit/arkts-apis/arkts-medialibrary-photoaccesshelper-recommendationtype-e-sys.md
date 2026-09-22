@@ -103,3 +103,19 @@ Images generated using the 3D Gaussian technology will be recommended.
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## FEATURED_SINGLE_PET
+
+```TypeScript
+FEATURED_SINGLE_PET = 18
+```
+
+Recommended pet
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

@@ -36,10 +36,10 @@ Creates and returns an instance of the specified type T.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | any | Yes | Function arguments. |
+| args | any | Yes | Constructor arguments passed when creating an instance of type **T**, used to initialize the instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Instance of the T type. |
+| T | Instance of type **T** created using the **new** API. By default, no constructor arguments are passed. |

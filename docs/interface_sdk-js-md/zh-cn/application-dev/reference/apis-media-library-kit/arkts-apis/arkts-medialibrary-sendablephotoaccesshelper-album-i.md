@@ -42,7 +42,7 @@ commitModify(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | 14000011 | Internal system error |
 
 **示例**
@@ -95,7 +95,7 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | 14000011 | Internal system error |
 
 **示例**

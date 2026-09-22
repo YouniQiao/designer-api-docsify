@@ -443,7 +443,7 @@
   - [Size](arkts-arkui-componentutils-size-i.md)
   - [TranslateResult](arkts-arkui-componentutils-translateresult-i.md)
   - [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md)
-- [@ohos.arkui.dialog](arkts-arkui-arkui-dialog.md)
+- [@ohos.arkui.dialog(弹出框)](arkts-arkui-arkui-dialog.md)
   - [dialog](arkts-arkui-dialog-n.md)
     - [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
     <!--Del-->
@@ -576,7 +576,7 @@
   - [TaskCallback](arkts-arkui-taskcallback-t.md)
   - [TypeDecorator](arkts-arkui-typedecorator-t.md)
   - [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md)
-- [@ohos.arkui.theme](arkts-arkui-arkui-theme.md)
+- [@ohos.arkui.theme(主题换肤)](arkts-arkui-arkui-theme.md)
   - [ThemeControl](arkts-arkui-arkui-theme-themecontrol-c.md)
   - [Colors](arkts-arkui-arkui-theme-colors-i.md)
   - [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
@@ -927,7 +927,7 @@
     - [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md)
     - [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md)
   - [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
-- [@ohos.prompt](arkts-arkui-prompt.md)
+- [@ohos.prompt(弹窗)](arkts-arkui-prompt.md)
   - [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md)
   - [showDialog](arkts-arkui-prompt-showdialog-f.md)
   - [showToast](arkts-arkui-prompt-showtoast-f.md)
@@ -937,7 +937,7 @@
   - [ShowDialogOptions](arkts-arkui-prompt-showdialogoptions-i.md)
   - [ShowDialogSuccessResponse](arkts-arkui-prompt-showdialogsuccessresponse-i.md)
   - [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md)
-- [@ohos.promptAction](arkts-arkui-promptaction.md)
+- [@ohos.promptAction(弹窗)](arkts-arkui-promptaction.md)
   - [promptAction](arkts-arkui-promptaction-n.md)
     - [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md)
     - [closeToast](arkts-arkui-promptaction-closetoast-f.md)
@@ -976,7 +976,7 @@
   - [DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)
   - [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
   - [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
-- [@ohos.router](arkts-arkui-router.md)
+- [@ohos.router(页面路由(不推荐))](arkts-arkui-router.md)
   - [back](arkts-arkui-router-back-f.md)
   - [clear](arkts-arkui-router-clear-f.md)
   - [disableAlertBeforeBackPage](arkts-arkui-router-disablealertbeforebackpage-f.md)
@@ -1077,7 +1077,7 @@
   - [Size(系统接口)](arkts-arkui-screenshot-size-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DisplayIntentType(系统接口)](arkts-arkui-screenshot-displayintenttype-e-sys.md)<!--DelEnd-->
-- [@ohos.uiAppearance(UI Appearance)](arkts-arkui-uiappearance.md)
+- [@ohos.uiAppearance(用户界面外观)](arkts-arkui-uiappearance.md)
   - [getDarkMode](arkts-arkui-uiappearance-getdarkmode-f.md)
   - [getFontScale](arkts-arkui-uiappearance-getfontscale-f.md)
   - [getFontWeightScale](arkts-arkui-uiappearance-getfontweightscale-f.md)

@@ -4,7 +4,7 @@
 declare class PersistentStorage
 ```
 
-For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
+Provides the persistent storage capability for UI states. It persists selected AppStorage properties to a file and restores these property values from the file and writes them to AppStorage when applications restart. For details about how to use it on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
 
 > **NOTE:** 
 
@@ -20,7 +20,7 @@ For details about how to use PersistentStorage on the UI, see [PersistentStorage
 static DeleteProp(key: string): void
 ```
 
-Performs the reverse operation of [PersistProp](#persistprop). Specifically, this API deletes the property corresponding to the specified key from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
+Performs the reverse operation of [PersistProp](#persistprop). It deletes the property corresponding to **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md), after which subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) no longer affect PersistentStorage. To persist the property again, call the [PersistProp](#persistprop) API again.
 
 **Since:** 7
 
@@ -50,7 +50,7 @@ PersistentStorage.DeleteProp('highScore');
 static deleteProp(key: string): void
 ```
 
-Performs the reverse operation of [persistProp](#persistprop). Specifically, this API deletes the property corresponding to the specified **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the [persistProp](#persistprop) API.
+Performs the reverse operation of [persistProp](#persistprop). It deletes the property corresponding to **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md), after which subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) no longer affect PersistentStorage. To persist the property again, call the [persistProp](#persistprop) API again.
 
 **Since:** 10
 
@@ -132,20 +132,18 @@ let keys: Array<string> = PersistentStorage.keys();
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
+Persists the property corresponding to **key** in [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
 
 The order for determining the type and value of a property is as follows:
 
-1. If the property with the specified key is found in the
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
-
+1. If the property corresponding to **key** exists in the
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding key is created in AppStorage and initialized with the property value found in PersistentStorage.
 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for
 the property. If the property is found, it is persisted.
-
 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
 **defaultValue**, and persisted.
 
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+According to the preceding initialization process, if the property exists in AppStorage, its value will overwrite the value in the PersistentStorage file. Since AppStorage stores data in memory, this operation causes the data in the persistent file to be overwritten by the in-memory data, making the persistent data meaningless.
 
 **Since:** 7
 
@@ -162,7 +160,7 @@ According to the preceding initialization process, if the property exists in App
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Property name. |
-| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. The value cannot be **null** or **undefined**. |
+| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage or AppStorage. The default value cannot be **null** or **undefined**. |
 
 **Examples**
 
@@ -180,16 +178,14 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 
 The order for determining the type and value of a property is as follows:
 
-1. If the property with the specified key is found in the
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
-
+1. If the property corresponding to **key** exists in the
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding key is created in AppStorage and initialized with the property value found in PersistentStorage.
 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for
 the property. If the property is found, it is persisted.
-
 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
 **defaultValue**, and persisted.
 
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+According to the preceding initialization process, if the property exists in AppStorage, its value will overwrite the value in the PersistentStorage file. Since AppStorage stores data in memory, this operation causes the data in the persistent file to be overwritten by the in-memory data, making the persistent data meaningless.
 
 **Since:** 10
 
@@ -202,7 +198,7 @@ According to the preceding initialization process, if the property exists in App
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Property name. |
-| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. Since API version 12, the value can be **null** or **undefined**. |
+| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage or AppStorage. Since API version 12, the value can be **null** or **undefined**. |
 
 **Examples**
 
@@ -219,7 +215,7 @@ static PersistProps(
   ): void
 ```
 
-Persists multiple properties. This API is similar to [PersistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to [PersistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup. This API should be called before access to AppStorage.
 
 **Since:** 7
 
@@ -235,7 +231,7 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | Yes | Array of properties to persist.<br>**key**: property name. <br>**defaultValue**: default value. The rule is the same as that for **PersistProp**. |
+| properties | {       key: string;       defaultValue: any;     }[] | Yes | Array of properties to persist, where **key** indicates the property name and **defaultValue** indicates the default value. The rules are the same as those of **PersistProp**. |
 
 **Examples**
 
@@ -249,7 +245,7 @@ PersistentStorage.PersistProps([{ key: 'highScore', defaultValue: '0' }, { key: 
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-Persists multiple properties. This API is similar to [persistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to [persistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup. This API is usually called before access to AppStorage.
 
 **Since:** 10
 
@@ -261,7 +257,7 @@ Persists multiple properties. This API is similar to [persistProp](#persistprop)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist. |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist, where each item contains a property name and a default value. |
 
 **Examples**
 

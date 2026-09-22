@@ -5,7 +5,7 @@ declare class SyncedPropertyOneWay<T> extends SubscribedAbstractProperty<T>
   implements ISinglePropertyChangeSubscriber<T>
 ```
 
-Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with one-way synchronization.
+Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md) to receive one-way synchronization of the parent component's state value. The value is updated when the parent component state changes.
 
 **Inheritance/Implementation:** SyncedPropertyOneWay extends SubscribedAbstractProperty<T> and implements ISinglePropertyChangeSubscriber<T>
 
@@ -35,7 +35,7 @@ Called when the object is about to be destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber to remove. |
+| unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber to remove, which must be the subscriber who has established a subscription relationship. If not passed, all subscribers are removed. |
 
 ## constructor
 
@@ -43,7 +43,7 @@ Called when the object is about to be destroyed.
 constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)
 ```
 
-Constructor.
+Constructor. When the subscription relationship is no longer needed, call [unlinkSuscriber](arkts-arkui-subscribedabstractproperty-c-sys.md#unlinksuscriber) to unsubscribe (the subscriber ID is obtained through [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)), or call [aboutToBeDeleted()](#abouttobedeleted) of this object to cancel the subscription.
 
 **Since:** 7
 
@@ -58,8 +58,8 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Yes | Data source for the one-way synchronized property. |
-| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber. |
-| info | string | No | Additional information about the subscriber. |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber used to receive property change notifications. If not passed, no subscription relationship is established. |
+| info | string | No | Variable information used to identify the subscription relationship. Defaults to **undefined** if not passed. |
 
 ## get
 
@@ -67,7 +67,7 @@ Constructor.
 get(): T
 ```
 
-Obtains the current value of the property.
+Obtains data.
 
 **Since:** 7
 
@@ -81,7 +81,7 @@ Obtains the current value of the property.
 
 | Type | Description |
 | --- | --- |
-| T | Instance of the T type. |
+| T | Current data value of the one-way synchronized property. |
 
 ## hasChanged
 
@@ -103,7 +103,7 @@ Notifies subscribers that the property value has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Instance of the T type. |
+| newValue | T | Yes | New value after the change. |
 
 ## set
 
@@ -125,7 +125,7 @@ Sets a new value for the property.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Instance of the T type. |
+| newValue | T | Yes | New value to set. |
 
 ## source_
 
@@ -133,7 +133,7 @@ Sets a new value for the property.
 private source_
 ```
 
-Data source for the two-way synchronized property.
+A data source for the one-way synchronized property.
 
 **Since:** 7
 

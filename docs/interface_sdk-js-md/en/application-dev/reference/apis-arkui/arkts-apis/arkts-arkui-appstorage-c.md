@@ -4,7 +4,16 @@
 declare class AppStorage
 ```
 
-For details about how to use AppStorage, see [AppStorage: Storing Application-wide UI State](../../../ui/state-management/arkts-appstorage.md).
+AppStorage is the global UI state storage center bound to applications. It is created by the UI framework at application startup, which is used to store UI state data in runtime memory, and implement application-level global state sharing. For details about how to use it on the UI, see [AppStorage: Storing Application-wide UI State](../../../ui/state-management/arkts-appstorage.md).
+
+> **NOTE:** 
+
+> Since API version 12, AppStorage supports
+> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
+> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
+> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type) types,
+> as well as **null**, **undefined**, and
+> [union types](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage).
 
 **Since:** 7
 
@@ -82,7 +91,7 @@ Deletes the property corresponding to **propName** from [AppStorage](../../../ui
 
 The deletion is only successful if the property has no subscribers. If there is a subscriber, the deletion fails and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
 
-Subscribers include properties bound using [Link](#link) and [Prop](#prop) APIs, as well as those decorated with [\@StorageLink('propName')](../../../ui/state-management/arkts-appstorage.md#storagelink) and [\@StorageProp('propName')](../../../ui/state-management/arkts-appstorage.md#storageprop). This means that if \@StorageLink('propName') and \@StorageProp('propName') are used in a custom component or if there is still a **SubscribedAbstractProperty** instance in a synchronization relationship with the property, the property cannot be deleted from AppStorage.
+Subscribers include properties bound using [Link](#link) and [Prop](#prop) APIs, as well as those decorated with [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) and [@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop). This means that if there is still an **\@StorageLink('propName') / \@StorageProp('propName')** decorated variable or a **SubscribedAbstractProperty** instance in a synchronization with the property, the property cannot be deleted from AppStorage.
 
 **Since:** 7
 
@@ -129,7 +138,7 @@ The deletion is only successful if the property has no subscribers. If there is 
 
 The property subscribers include the following:
 
-1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) or
+1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) and
 [\@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)
 
 2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) returned by
@@ -452,9 +461,7 @@ linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPr
 static link<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-Establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, the two-way bound data of the property in AppStorage is returned.
-
-Any update of the data is synchronized back to AppStorage, which then synchronizes the update to all data and custom components bound to the property.
+Establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** exists in AppStorage, the two-way bound data of the corresponding property in AppStorage is returned. Unlike the one-way data binding of [prop](#prop), modifications through **link** are synchronized back to AppStorage, and AppStorage synchronizes the changes to all data and custom components bound to this **propName**.
 
 If the given property does not exist in AppStorage, **undefined** is returned.
 
@@ -491,11 +498,11 @@ linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPr
 static Prop(propName: string): any
 ```
 
-Establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, the one-way bound data of the property in AppStorage is returned. If the given property does not exist in AppStorage, **undefined** is returned. Updates of the one-way bound data are not synchronized back to AppStorage.
+Establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** exists in AppStorage, the one-way bound data of the corresponding property in AppStorage is returned. If the given **propName** does not exist in AppStorage, **undefined** is returned. Modifications to the one-way bound data are not synchronized back to AppStorage.
 
 > **NOTE:** 
 
-> Prop supports only simple types.
+> **Prop** supports only the **S** type (number, boolean, string).
 
 **Since:** 7
 
@@ -534,7 +541,7 @@ prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get
 static prop<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-Establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, the one-way bound data of the property in AppStorage is returned. If the given property does not exist in AppStorage, **undefined** is returned. Updates of the one-way bound data are not synchronized back to AppStorage.
+Establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** exists in AppStorage, the one-way bound data of the corresponding property in AppStorage is returned. If **propName** does not exist in AppStorage, **undefined** is returned. Modifications to the one-way bound data are not synchronized back to AppStorage.
 
 **Since:** 10
 
@@ -569,9 +576,9 @@ prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get
 static ref<T>(propName: string): AbstractProperty<T> | undefined
 ```
 
-Returns a reference to the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the provided **propName** does not exist, this API returns **undefined**.
+Returns a reference to the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** does not exist, this API returns **undefined**.
 
-This API is similar to [link](#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
+This API is basically the same as [link](#link), except that it does not require manual release of the returned variable of the [AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md) type.
 
 **Since:** 12
 
@@ -589,7 +596,7 @@ This API is similar to [link](#link) but does not require manually releasing the
 
 | Type | Description |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; &#124; undefined | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; &#124; undefined | Reference to the property corresponding to **propName** in AppStorage, or **undefined** if the corresponding **propName** does not exist in AppStorage. |
 
 **Examples**
 
@@ -606,7 +613,7 @@ refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == r
 static Set<T>(propName: string, newValue: T): boolean
 ```
 
-Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property. Starting from API version 12, **newValue** can be **null** or **undefined**.
+Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of **newValue** is the same as the current value of the property corresponding to **propName**, no assignment is performed, and the state variable does not instruct the UI to update the value of the property. Unlike [SetOrCreate](#setorcreate), **Set** takes effect only when **propName** already exists, and returns **false** if **propName** does not exist. Since API version 12, **newValue** can be **null** or **undefined**.
 
 **Since:** 7
 
@@ -623,7 +630,7 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| newValue | T | Yes | New value of the property corresponding to **propName**. Since API version 12, the value can be **null** or **undefined**. |
 
 **Return value:**
 
@@ -645,16 +652,7 @@ let res1: boolean = AppStorage.Set('PropB', 47); // false
 static set<T>(propName: string, newValue: T): boolean
 ```
 
-Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage supports
-> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
-> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
-> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
-> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
-> types.
+Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of **newValue** is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property. Unlike [setOrCreate](#setorcreate), **set** takes effect only when **propName** already exists, and returns **false** if **propName** does not exist.
 
 **Since:** 10
 
@@ -667,7 +665,7 @@ Sets the value of the property corresponding to **propName** in [AppStorage](../
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| newValue | T | Yes | New value of the property corresponding to **propName**. Since API version 12, the value can be **null** or **undefined**. |
 
 **Return value:**
 
@@ -712,7 +710,7 @@ Similar to the [Link](#link) API, establishes a two-way data binding with the pr
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of SubscribedAbstractProperty&lt;T&gt;, which is the two-way bound data of the property corresponding to **propName** in AppStorage. |
 
 **Examples**
 
@@ -729,15 +727,6 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 ```
 
 Similar to the [link](#link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two- way bound data.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage supports
-> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
-> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
-> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
-> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
-> types.
 
 **Since:** 10
 
@@ -756,7 +745,7 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**, which is two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of SubscribedAbstractProperty&lt;T&gt;, which is the two-way bound data of the property corresponding to **propName** in AppStorage. |
 
 **Examples**
 
@@ -772,7 +761,7 @@ let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 5
 static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-Similar to the [Prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one- way bound data. The value of **defaultValue** must be of the **S** type and cannot be **null** or **undefined**.
+Similar to the [Prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** exists in AppStorage, this API returns the one-way bound data of the corresponding property. If the given **propName** does not exist, this API creates and initializes the property corresponding to **propName** in AppStorage using **defaultValue** and returns its one-way bound data. The value of **defaultValue** must be of the **S** type and cannot be **null** or **undefined**.
 
 **Since:** 7
 
@@ -795,7 +784,7 @@ Similar to the [Prop](#prop) API, establishes a one-way data binding with the pr
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty&lt;S&gt;**. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of SubscribedAbstractProperty&lt;S&gt;, which is the one-way bound data of the property corresponding to **propName** in AppStorage. |
 
 **Examples**
 
@@ -810,16 +799,7 @@ let prop: SubscribedAbstractProperty<number> = AppStorage.SetAndProp('PropB', 49
 static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one- way bound data.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage supports
-> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
-> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
-> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
-> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
-> types.
+Similar to the [prop](#prop) API, establishes a one-way data binding with the property corresponding to propName in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given **propName** exists in AppStorage, the one-way bound data of the corresponding property is returned. If the given **propName** does not exist, this API creates and initializes the property corresponding to **propName** in AppStorage using **defaultValue** and returns its one-way bound data.
 
 **Since:** 10
 
@@ -838,7 +818,7 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of SubscribedAbstractProperty&lt;T&gt;, which is the one-way bound data of the property corresponding to **propName** in AppStorage. |
 
 **Examples**
 
@@ -855,16 +835,7 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 
 Similar to the [ref](#ref) API, returns a reference to the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its reference.
 
-This API is similar to [setAndLink](#setandlink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage supports
-> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
-> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
-> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
-> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
-> types.
+This API is basically the same as [setAndLink](#setandlink), except that it does not require manual release of the returned variable of the[AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
 
 **Since:** 12
 
@@ -883,7 +854,7 @@ This API is similar to [setAndLink](#setandlink) but does not require manually r
 
 | Type | Description |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty&lt;T&gt;**, which is a reference to the property in AppStorage corresponding to **propName**. |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty&lt;T&gt;**, which is a reference to the property corresponding to **propName** in AppStorage. |
 
 **Examples**
 
@@ -899,9 +870,7 @@ let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA
 static SetOrCreate<T>(propName: string, newValue: T): void
 ```
 
-Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a new value, if the property exists. If the property does not exist, this API creates it with the value of **newValue**.
-
-The value of **newValue** cannot be **null** or **undefined**.
+Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a new value, if **propName** exists and the value of **newValue** is different from the value of the property corresponding to **propName**. If the new value is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property. If **propName** does not exist, this API creates it with the value of **newValue**. Since API version 12, **newValue** can be **null** or **undefined**.
 
 **Since:** 7
 
@@ -918,7 +887,7 @@ The value of **newValue** cannot be **null** or **undefined**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value, which cannot be **null** or **undefined**. |
+| newValue | T | Yes | New value of the property corresponding to **propName**. Since API version 12, the value can be **null** or **undefined**. |
 
 **Examples**
 
@@ -934,16 +903,7 @@ static setOrCreate<T>(propName: string, newValue: T): void
 
 Sets the value of the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a new value, if the property exists and the new value is different from the current value. If the new value is the same as the current value of the property, no assignment is performed, and the state variable does not instruct the UI to update the value of the property.
 
-If the property does not exist, this API creates it with the value of **newValue**. This **setOrCreate** API can create only one AppStorage key-value pair each time. To create multiple key-value pairs, call this API multiple times.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage supports
-> [Map](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-map-type),
-> [Set](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-set-type),
-> [Date](../../../ui/state-management/arkts-appstorage.md#decorating-variables-of-the-date-type), **null**,
-> **undefined**, and [union](../../../ui/state-management/arkts-appstorage.md#using-union-types-in-appstorage)
-> types.
+If **propName** does not exist, this API creates it with the value of **newValue**. This **setOrCreate** API can create only one AppStorage key-value pair each time. To create multiple key-value pairs, call this API multiple times.
 
 **Since:** 10
 
@@ -956,7 +916,7 @@ If the property does not exist, this API creates it with the value of **newValue
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | propName | string | Yes | Property name in AppStorage. |
-| newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
+| newValue | T | Yes | New value of the property corresponding to **propName**. Since API version 12, the value can be **null** or **undefined**. |
 
 **Examples**
 
@@ -1028,7 +988,7 @@ let res: number = AppStorage.size(); // 1
 static staticClear(): boolean
 ```
 
-Deletes all properties.
+Deletes all properties from [AppStorage](../../../ui/state-management/arkts-appstorage.md). The deletion is only successful if none of the properties in AppStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned. For details about the subscriber, see [delete](#delete).
 
 **Since:** 7
 
@@ -1044,7 +1004,7 @@ Deletes all properties.
 
 | Type | Description |
 | --- | --- |
-| boolean | Deletes all properties. Returns **true** if all properties are deleted; returns **false** if any of the properties is being referenced by a state variable. |
+| boolean | Result of deleting all properties from AppStorage. Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Examples**
 

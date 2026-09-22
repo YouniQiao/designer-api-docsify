@@ -4,7 +4,7 @@
 declare class PersistentStorage
 ```
 
-For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
+Provides the persistent storage capability for UI states. It persists selected AppStorage properties to a file and restores these property values from the file and writes them to AppStorage when applications restart. For details about how to use it on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
 
 > **NOTE:** 
 
@@ -20,7 +20,7 @@ For details about how to use PersistentStorage on the UI, see [PersistentStorage
 constructor(appStorage: AppStorage, storage: Storage)
 ```
 
-Constructor.
+A constructor.
 
 **Since:** 7
 
@@ -34,5 +34,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage. |
-| storage | [Storage](arkts-arkui-storage-c-sys.md) | Yes | Storage. |
+| appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage object. PersistentStorage performs persistent management based on this object. |
+| storage | [Storage](arkts-arkui-storage-c-sys.md) | Yes | Persistent storage object, used to actually read and write persistent data. |

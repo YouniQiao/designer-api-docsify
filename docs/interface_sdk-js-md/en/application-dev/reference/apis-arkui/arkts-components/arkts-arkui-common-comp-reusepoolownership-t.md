@@ -4,7 +4,9 @@
 declare type ReusePoolOwnership = 'shared' | 'perInstance'
 ```
 
-Defining the reuse type of a custom component.
+Defines the ownership type of the global reuse pool.
+
+'shared': All instances of the **@Component** / **@ComponentV2** class share the same reuse pool instance. This is applicable to scenarios where multiple component instances of the same type need to reuse the same resources, maximizing reuse pool utilization and reducing memory usage.'perInstance': Each instance of **@Component** / **@ComponentV2** has an independent reuse pool instance. This is applicable to scenarios where the reuse resources of each component instance need to be isolated, preventing reuse resources of different instances from affecting each other.
 
 **Since:** 26.0.0
 

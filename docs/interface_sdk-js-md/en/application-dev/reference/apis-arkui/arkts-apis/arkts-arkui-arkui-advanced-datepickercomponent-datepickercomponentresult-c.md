@@ -4,7 +4,7 @@
 export declare class DatePickerComponentResult
 ```
 
-DatePickerComponentResult defines the selection result of the date time picker.
+Defines the selection result of the date and time picker, including the year, month, day, hour, minute, and second selected by the user. It is used to pass the specific date and time values in the **onChange** and **onScrollStop** callbacks.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 day?: number
 ```
 
-Day of the selected date. The value should be an integer.
+Day of the selected date.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Day of the selected date. The value should be an integer.
 hour?: number
 ```
 
-Hour part of the selected time. The value should be an integer.
+Hour of the selected time.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Hour part of the selected time. The value should be an integer.
 minute?: number
 ```
 
-Minute part of the selected time. The value should be an integer.
+Minute of the selected time.
 
 **Type:** number
 
@@ -76,7 +76,7 @@ Minute part of the selected time. The value should be an integer.
 month?: number
 ```
 
-Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December. The value should be an integer.
+Month index of the selected date, starting from 0. The value **0** indicates January, and **11** indicates December.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 second?: number
 ```
 
-Second part of the selected time. The value should be an integer.
+Second of the selected time.
 
 **Type:** number
 
@@ -112,7 +112,7 @@ Second part of the selected time. The value should be an integer.
 year?: number
 ```
 
-Year of the selected date. The value should be an integer.
+Year of the selected date.
 
 **Type:** number
 

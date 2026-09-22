@@ -4,7 +4,7 @@
 declare class ReadonlyEnvKey
 ```
 
-Defines the readonly system environment key.
+Defines the set of read-only system environment variable keys, which are used to obtain the corresponding system environment variables through the **\@Env** decorator.
 
 **Since:** 26.0.0
 

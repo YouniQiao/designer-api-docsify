@@ -20,7 +20,7 @@ Playback duration of each image frame, in milliseconds.
 
 Default value: **0**
 
-Negative numbers are not supported. Setting negative values will cause the image to stay in the current frame for a long time, affecting normal playback.
+Negative values are not supported. Setting a negative value causes the image to stay on the current frame for a long time, affecting normal playback.
 
 **Type:** number
 
@@ -87,6 +87,16 @@ src: string | Resource | PixelMap
 ```
 
 Image path. The image format can be .jpg,jpeg,svg,png,bmp,webp,ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
+
+**String format description:**
+
+- Supports loading local image paths and network image addresses. When a relative path is used to reference a local  
+image, cross-package or cross-module invocation is not supported. Files in the **resources** directory cannot be accessed through relative paths. You need to use the Resource type (such as **$r** or **$rawfile**) to reference them. For details about how to reference images, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).  
+- Supports `http` and `https` network image addresses. When using a network image, you must apply for the  
+`ohos.permission.INTERNET` permission.  
+- Supports strings with the `file://` path prefix. The application sandbox URI is  
+`file://&lt;bundleName&gt;/&lt;sandboxPath&gt;`. For the sandbox path, you need to use [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) to convert the path into an application sandbox URI, and then pass it for display. At the same time, ensure that the files under the directory package path have read permission.  
+- Supports `Base64` strings.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md)
 

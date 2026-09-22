@@ -4,7 +4,7 @@
 interface IPropertySubscriber
 ```
 
-Provides an interface for attribute subscribers.
+A property subscriber API, which defines the methods that the subscriber needs to implement to receive property change notifications and lifecycle callbacks.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Called when the object is about to be destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Component that owns the current property. |
+| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Custom component that owns the current property. If not passed, no associated custom component is specified. |
 
 ## id
 
@@ -54,4 +54,4 @@ Obtains the ID.
 
 | Type | Description |
 | --- | --- |
-| number | Variable ID obtained. |
+| number | Unique ID of the subscriber. |

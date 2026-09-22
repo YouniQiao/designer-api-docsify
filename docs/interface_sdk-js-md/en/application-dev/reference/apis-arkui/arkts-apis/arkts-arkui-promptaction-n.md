@@ -1,4 +1,4 @@
-# promptAction
+# promptAction(Prompt)
 
 ```TypeScript
 declare namespace promptAction

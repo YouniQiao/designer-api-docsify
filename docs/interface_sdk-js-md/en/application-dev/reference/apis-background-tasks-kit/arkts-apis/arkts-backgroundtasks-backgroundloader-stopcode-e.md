@@ -6,7 +6,7 @@ export enum StopCode
 
 Enumerates the stop code, which is used to ON_STOP function.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
@@ -18,7 +18,7 @@ SUCCESS = 0
 
 Success code.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ SYSTEM_ERROR = 1
 
 System error during task execution.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ PERCEPTIBLE_ERROR = 2
 
 Perceptible anomalies during task execution.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ TIMEOUT_ERROR = 3
 
 Timeout during task execution.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +74,7 @@ EXECUTE_ERROR = 4
 
 Anomalies during task execution.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 

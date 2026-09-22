@@ -33,7 +33,7 @@ Dumps VM heap data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | the parameter check failed, Parameter type error |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error. |
 
 **Examples**
 

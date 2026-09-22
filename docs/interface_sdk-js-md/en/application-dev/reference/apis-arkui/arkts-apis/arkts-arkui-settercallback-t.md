@@ -18,7 +18,7 @@ Defines a callback used to set a value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Parameter of the T type. |
+| newValue | T | Yes | New value to be set. This parameter is passed when the bound value is changed. |
 
 **Examples**
 

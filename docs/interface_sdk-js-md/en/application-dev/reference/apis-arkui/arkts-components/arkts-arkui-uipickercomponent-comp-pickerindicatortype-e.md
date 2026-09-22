@@ -32,7 +32,7 @@ Identifies the selected item by adding a background to it.
 DIVIDER = 1
 ```
 
-Identifies the selected item by adding dividers above and below its edges.
+Identifies the selected item by adding dividers at the upper and lower edges of the selected item.
 
 **Since:** 22
 

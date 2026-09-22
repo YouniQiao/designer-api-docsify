@@ -406,4 +406,16 @@ Defines the system material attribute, which can be set, reset, and obtained as 
 
 **Since**: 26.0.0
 
+### NODE_TRANSFORM_3D
+
+```c
+NODE_TRANSFORM_3D = 128
+```
+
+**Description**
+
+Defines the 3D transform attribute, which sets the 3D transformation matrix of the component. When 3D transformation with the perspective effect is involved, the display effect of [NODE_TRANSFORM](capi-native-node-h.md#arkui_nodeattributetype) may be incorrect. In this case, this attribute is recommended. This attribute can be set, reset, and obtained as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0...15].f32: 16 floating-point numbers, indicating a 4x4 transformation matrix. The array length must be <b>16</b>.</li> <li>.object: pointer to an [ArkUI_Matrix4](capi-arkui-nativemodule-arkui-matrix4.md) object, indicating a 4x4 transformation matrix. Either .value or .object is used to set the matrix. If both are set at the same time, .value takes priority.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0...15].f32: 16 floating-point numbers, indicating the current 3D transformation matrix.</li> </ul>
+
+**Since**: 26.0.1
+
 

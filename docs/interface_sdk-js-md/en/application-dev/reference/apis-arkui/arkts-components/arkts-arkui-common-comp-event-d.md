@@ -4,7 +4,7 @@
 declare const Event: PropertyDecorator
 ```
 
-Defining Event PropertyDecorator.
+**\@Event** decorates a callback function, which is used as the output of a custom component in [state management V2](../../../ui/state-management/arkts-state-management-overview.md). **\@Event** is usually used together with [
 
 **Since:** 12
 

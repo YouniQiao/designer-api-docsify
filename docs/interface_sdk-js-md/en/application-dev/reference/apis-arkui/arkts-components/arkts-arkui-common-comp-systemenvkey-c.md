@@ -4,7 +4,7 @@
 declare class SystemEnvKey<T>
 ```
 
-Defines the class of System Env Key.
+Defines the type corresponding to the system environment variable key.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the class of System Env Key.
 protected constructor()
 ```
 
-constructor.
+Creates an instance of this class.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ constructor.
 private type?: T
 ```
 
-The corresponding type of the system env key.
+Data type of the value corresponding to the system environment variable key. The default value is **undefined**.
 
 **Type:** T
 

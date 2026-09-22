@@ -583,6 +583,72 @@ Sets whether the tabs fade out when they exceed the container width. It is recom
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the tabs fade out when they exceed the container width.<br>**true** (default): The tab fades out when they exceed the container width.<br> **false**: The tabs are clipped without any fade effect when they exceed the container width. |
 
+## maxSidebarWidth
+
+```TypeScript
+maxSidebarWidth(value: Optional<Length>)
+```
+
+Sets the maximum width of the sidebar tab bar. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Maximum width of the sidebar tab bar. The width of the sidebar tab bar does not exceed this value. <br>If this attribute is not set or is set to **undefined**, no maximum width is imposed on the sidebar tab bar, which means the sidebar tab bar can be as wide as the **Tabs** component. <br>The set value is expected to be greater than or equal to that of [minSidebarWidth](#minsidebarwidth). |
+
+## minContentWidth
+
+```TypeScript
+minContentWidth(value: Optional<Length>)
+```
+
+Sets the minimum width of the content area of the **Tabs** component. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Minimum width of the content area. The width of the content area does not become smaller than this value; if the remaining space is insufficient, the content area is clipped.<br>If this attribute is not set or is set to **undefined**, no minimum width is imposed on the content area, which means the content area can be compressed to **0vp**. |
+
+## minSidebarWidth
+
+```TypeScript
+minSidebarWidth(value: Optional<Length>)
+```
+
+Sets the minimum width of the sidebar tab bar. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Minimum width of the sidebar tab bar. The width of the sidebar tab bar does not become smaller than this value. <br>If this attribute is not set or is set to **undefined**, no minimum width is imposed on the sidebar tab bar, which means the sidebar tab bar can be compressed to **0vp**. <br>The set value is expected to be less than or equal to that of [maxSidebarWidth](#maxsidebarwidth). |
+
 ## nestedScroll
 
 ```TypeScript
@@ -932,6 +998,50 @@ Sets whether the tabs are scrollable.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the tabs are scrollable.<br>**true** (default): The tabs are scrollable.<br> **false**: The tabs are not scrollable. |
 
+## sidebarBackgroundBlurStyle
+
+```TypeScript
+sidebarBackgroundBlurStyle(value: Optional<BlurStyle>)
+```
+
+Sets the background blur style of the sidebar tab bar. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[BlurStyle](arkts-arkui-common-comp-blurstyle-e.md)&gt; | Yes | Background blur style of the sidebar tab bar.<br>Default value: **BlurStyle.NONE**. |
+
+## sidebarBackgroundColor
+
+```TypeScript
+sidebarBackgroundColor(value: Optional<ResourceColor>)
+```
+
+Sets the background color of the sidebar tab bar. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Background color of the sidebar tab bar. |
+
 ## sidebarBottomBar
 
 ```TypeScript
@@ -975,6 +1085,28 @@ Sets the display style of the sidebar for the **Tab** component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[TabsSidebarDisplayStyle](arkts-arkui-tabs-comp-tabssidebardisplaystyle-e.md)&gt; | Yes |  |
+
+## sidebarDivider
+
+```TypeScript
+sidebarDivider(value: Optional<DividerStyle>)
+```
+
+Sets the divider between the sidebar tab bar and the content area. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[DividerStyle](arkts-arkui-tabs-comp-dividerstyle-i.md)&gt; | Yes | Divider style between the sidebar tab bar and the content area. The divider is displayed vertically, where **strokeWidth** is its width, and **startMargin** and **endMargin** are the distances from the top and bottom of the sidebar, respectively.<br>**DividerStyle**: divider style.<br>**undefined**: no divider is displayed (default). |
 
 ## sidebarFooter
 
@@ -1084,7 +1216,7 @@ Sets the selected color of the tab board in sidebar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab board in sidebar mode.<br>Default value: **#19007DFF**. |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab board in sidebar mode. |
 
 ## sidebarSelectedIconColor
 
@@ -1106,7 +1238,7 @@ Sets the selected color of the tab icon in sidebar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab icon in sidebar mode.<br>Default value: **#ff182431**. |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab icon in sidebar mode. |
 
 ## sidebarSelectedTextColor
 
@@ -1128,7 +1260,7 @@ Sets the selected color of the tab text in sidebar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab text in sidebar mode.<br>Default value: **#ff182431**. |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab text in sidebar mode. |
 
 ## sidebarUnselectedIconColor
 
@@ -1150,7 +1282,7 @@ Sets the unselected color of the tab icon in sidebar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab icon in sidebar mode.<br>Default value: **#99182431**. |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab icon in sidebar mode. |
 
 ## sidebarUnselectedTextColor
 
@@ -1172,7 +1304,29 @@ Sets the unselected color of the tab text in sidebar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab text in sidebar mode.<br>Default value: **#99182431**. |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab text in sidebar mode. |
+
+## sidebarWidth
+
+```TypeScript
+sidebarWidth(value: Optional<Length>)
+```
+
+Sets the width of the sidebar tab bar. This attribute takes effect only when the tab bar is displayed as a sidebar.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Width of the sidebar tab bar.<br>Default value: **240vp**. |
 
 ## vertical
 

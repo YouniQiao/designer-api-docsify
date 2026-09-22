@@ -4,7 +4,7 @@
 declare class TextPickerDialog
 ```
 
-A text picker dialog box is a dialog box that allows users to select text from the given range.
+Creates a text picker based on the specified selection range and displays it in a dialog box. This component is applicable to scenarios where users need to select text from preset options, such as setting pages, entering data in AbilityForm, and filtering data.
 
 **Since:** 8
 
@@ -17,6 +17,13 @@ static show(options?: TextPickerDialogOptions)
 ```
 
 Shows a text picker in the given settings.
+
+> **NOTE:** 
+> 
+> Since API version 10, you can use the
+> [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog) API in
+> [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the text picker dialog box is shown in the intended
+> UI instance.
 
 **Since:** 8
 
@@ -34,4 +41,4 @@ Shows a text picker in the given settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. |
+| options | [TextPickerDialogOptions](arkts-arkui-textpicker-comp-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. The dialog can be properly displayed only when the range parameter is provided. Other parameters are optional. |

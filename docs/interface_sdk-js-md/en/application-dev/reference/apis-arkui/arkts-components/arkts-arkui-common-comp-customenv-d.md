@@ -4,7 +4,13 @@
 declare function CustomEnv<T>(key: CustomEnvKey<T>): PropertyDecorator
 ```
 
-Defines the custom environment PropertyDecorator.
+This component is used to obtain custom environment variables.
+
+See the developer guide: [\@CustomEnv: Custom Environment Variable](../../../ui/arkts-custom-env-property.md).
+
+Obtains custom environment variables. A custom environment variable key is created through [CustomEnvKey.create()](arkts-arkui-common-comp-customenvkey-c.md#create) and passed as a parameter to the **\@CustomEnv** decorator.
+
+A variable decorated by **\@CustomEnv** reads the environment variable value corresponding to the key. If the environment variable is not set, the locally declared default value is used.
 
 **Since:** 26.0.0
 

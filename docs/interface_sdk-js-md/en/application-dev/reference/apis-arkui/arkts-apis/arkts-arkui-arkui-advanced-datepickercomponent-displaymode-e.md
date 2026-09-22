@@ -4,7 +4,7 @@
 export declare enum DisplayMode
 ```
 
-DisplayMode enum defines the display mode of the picker.
+Enumerates the display modes of the picker.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ DisplayMode enum defines the display mode of the picker.
 DATE = 0
 ```
 
-Displays only the date.
+Date only.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Displays only the date.
 TIME = 1
 ```
 
-Displays only the time.
+Time only.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Displays only the time.
 DATE_TIME = 2
 ```
 
-Displays both date and time.
+Both date and time.
 
 **Since:** 26.0.0
 

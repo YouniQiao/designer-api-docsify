@@ -6,7 +6,7 @@
 declare const appStorage: AppStorage
 ```
 
-Defines the application-level storage.
+An application-level global state storage instance that provides state data storage and access capabilities within the application scope.
 
 **Type:** [AppStorage](arkts-arkui-appstorage-c.md)
 

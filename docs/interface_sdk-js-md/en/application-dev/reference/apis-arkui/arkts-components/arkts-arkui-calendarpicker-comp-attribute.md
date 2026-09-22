@@ -35,7 +35,7 @@ Sets how the picker is aligned with the entry component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md) | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. |
-| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** <br>Unit: vp. |
 
 <a id="edgealign-1"></a>
 
@@ -59,8 +59,8 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md)&gt; | Yes | Alignment type.<br>Default value: **CalendarAlign.END**.<br>If the value of **alignType** is **undefined**, the default value is used. |
-| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
+| alignType | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md)&gt; | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. <br>If the value of **alignType** is **undefined**, the default value is used. |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** <br>Unit: vp. |
 
 ## markToday
 
@@ -82,7 +82,7 @@ Whether to highlight the current system date.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to highlight the current system date.<br>- **true**: Highlight the current system date.<br>- **false**: Do not highlight the current system date.<br>Default value: **false**. |
+| enabled | boolean | Yes | Whether to highlight the current system date.<br>- **true**: Highlight the current system date. <br>- **false**: Do not highlight the current system date. <br>Default value: **false**. |
 
 ## onChange
 
@@ -104,7 +104,7 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;Date&gt; | Yes | Selected date value.<br>**Since:** 18 |
+| callback | Callback&lt;Date&gt; | Yes | Called when a date is selected. The callback parameter is the selected date of the **Date** type. You can obtain the selected date in the callback function and perform corresponding processing.<br>**Since:** 18 |
 
 <a id="onchange-1"></a>
 
@@ -132,7 +132,7 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes | Selected date value.<br>If **callback** is set to **undefined**, the callback function is not used. |
+| callback | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes | Called when a date is selected. The callback parameter is the selected date.<br>If **callback** is set to **undefined**, the callback function is not used. |
 
 ## textStyle
 
@@ -154,7 +154,7 @@ Sets the font color, font size, and font weight in the entry area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} |
 
 <a id="textstyle-1"></a>
 
@@ -178,4 +178,4 @@ Sets the font color, font size, and font weight in the entry area. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>}<br>If the value of **style** is **undefined**, the default value is used. |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Font color, font size, and font weight in the entry area.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>If the value of **style** is **undefined**, the default value is used. |

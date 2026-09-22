@@ -4,7 +4,7 @@
 declare class CustomEnvKey<S>
 ```
 
-Defines the custom environment Key.
+Defines the type of the key for a custom environment variable.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the custom environment Key.
 protected constructor()
 ```
 
-constructor.
+Creates an instance of this class.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ constructor.
 static create<T>(): CustomEnvKey<T>
 ```
 
-create CustomEnvKey
+Creates a custom environment variable key, which serves as a parameter of the **\@CustomEnv** decorator.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ create CustomEnvKey
 
 | Type | Description |
 | --- | --- |
-| [CustomEnvKey](arkts-arkui-common-comp-customenvkey-c.md)&lt;T&gt; | [CustomEnvKey](arkts-arkui-common-comp-customenvkey-c.md) |
+| [CustomEnvKey](arkts-arkui-common-comp-customenvkey-c.md)&lt;T&gt; | Custom environment variable key, used to identify the custom environment variable to obtain. |
 
 ## type
 
@@ -54,7 +54,7 @@ create CustomEnvKey
 private type?: S
 ```
 
-The corresponding type of the custom env key.
+Type of the key for a custom environment variable.
 
 **Type:** S
 

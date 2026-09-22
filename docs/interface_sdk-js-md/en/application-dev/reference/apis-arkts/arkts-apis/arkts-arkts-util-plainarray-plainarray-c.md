@@ -398,7 +398,7 @@ Obtains the key of the element at the specified position in this PlainArray.
 
 | Type | Description |
 | --- | --- |
-| number | Key of the element. If no match is found, **-1** is returned. |
+| number | Key of the element. If no match is found, **undefined** is returned. |
 
 **Error codes:**
 

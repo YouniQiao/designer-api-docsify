@@ -4,7 +4,7 @@
 declare const Once: PropertyDecorator
 ```
 
-Defining Once PropertyDecorator.
+**\@Once** is an auxiliary decorator used in [State Management V2](../../../ui/state-management/arkts-state-management-overview.md). It must be used together with [
 
 **Since:** 12
 

@@ -4,7 +4,12 @@
 declare abstract class SubscribedAbstractProperty<T>
 ```
 
-Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
+An object of a one-way or two-way synchronized property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). It is used to establish a data synchronization relationship with a property in AppStorage or LocalStorage. A **SubscribedAbstractProperty** instance needs to be manually released through the [aboutToBeDeleted](#abouttobedeleted) API to cancel the synchronization relationship and invalidate the instance.
+
+> **NOTE:** 
+
+> Since API version 12, AppStorage and LocalStorage support the **Map**, **Set**, and **Date** types, as well as
+> **null**, **undefined**, and union types.
 
 **Since:** 9
 
@@ -16,7 +21,7 @@ Represents a synchronized property from [AppStorage](../../../ui/state-managemen
 abstract aboutToBeDeleted(): void
 ```
 
-Cancels the synchronization relationship between the [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md), whether it is a one-way or two-way binding. After **aboutToBeDeleted** is called, the **SubscribedAbstractProperty** instance is invalidated, meaning it can no longer be used to call the [set](arkts-arkui-localstorage-c.md#set) or [get](arkts-arkui-localstorage-c.md#get) API.
+Cancels the one-way or two-way synchronization relationship between the [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md), and invalidates the **SubscribedAbstractProperty** instance. That is, after **aboutToBeDeleted** is called, [set](#set) or [get](#get) can no longer be called using the **SubscribedAbstractProperty** instance.
 
 **Since:** 10
 
@@ -54,7 +59,7 @@ Reads the data of the synchronized property from [AppStorage](../../../ui/state-
 info(): string
 ```
 
-Property name.
+Returns the name of the synchronized property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 10
 
@@ -66,7 +71,7 @@ Property name.
 
 | Type | Description |
 | --- | --- |
-| string | Property name. |
+| string | Name of the property synchronized in AppStorage or LocalStorage. |
 
 ## set
 
@@ -75,11 +80,6 @@ abstract set(newValue: T): void
 ```
 
 Sets the data of the synchronized property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type. Since API version 12, it can be **null** or **undefined**.
-
-> **NOTE:** 
-
-> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
-> **undefined**, and union types.
 
 **Since:** 9
 
@@ -95,4 +95,4 @@ Sets the data of the synchronized property in [AppStorage](../../../ui/state-man
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | Data to set. Since API version 12, the value can be **null** or **undefined**. |
+| newValue | T | Yes | New value of the synchronized property in AppStorage or LocalStorage. Since API version 12, the value can be **null** or **undefined**. |

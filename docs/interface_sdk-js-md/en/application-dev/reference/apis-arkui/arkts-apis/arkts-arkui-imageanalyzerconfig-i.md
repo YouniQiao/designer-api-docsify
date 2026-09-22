@@ -4,7 +4,7 @@
 declare interface ImageAnalyzerConfig
 ```
 
-Provides AI image analyzer configuration.
+Provides image AI analyzer configuration.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides AI image analyzer configuration.
 types: ImageAnalyzerType[]
 ```
 
-AI image analysis types.
+Image AI analysis type.
 
 **Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 

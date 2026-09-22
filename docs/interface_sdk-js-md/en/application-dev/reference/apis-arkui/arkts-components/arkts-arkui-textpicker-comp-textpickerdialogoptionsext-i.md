@@ -4,7 +4,7 @@
 declare interface TextPickerDialogOptionsExt extends TextPickerOptions
 ```
 
-Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
+Inherits from [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md).
 
 **Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md)
 
@@ -18,7 +18,7 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 onCancel?: VoidCallback
 ```
 
-Called when the Cancel button in the dialog is clicked.
+Triggered when the Cancel button in the dialog box is clicked.
 
 **Since:** 20
 
@@ -34,7 +34,17 @@ Called when the Cancel button in the dialog is clicked.
 onDidAppear?: VoidCallback
 ```
 
-Callback function when the dialog appears.
+Event callback after the dialog box appears.
+
+**NOTE:** 
+
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt;
+(onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear.
+2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take
+effect next time the dialog box appears.
+3. If you quickly tap to display and then close a dialog box, the **onWillDisappear** callback may take effect
+before the **onDidAppear** callback. In this case, the parameter settings in **onDidAppear** may not take effect in the current dialog box.
+4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
 
 **Since:** 20
 
@@ -50,7 +60,12 @@ Callback function when the dialog appears.
 onDidDisappear?: VoidCallback
 ```
 
-Callback function when the dialog disappears.
+Event callback after the dialog box disappears.
+
+**NOTE:** 
+
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt;
+(onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear.
 
 **Since:** 20
 
@@ -66,7 +81,14 @@ Callback function when the dialog disappears.
 onWillAppear?: VoidCallback
 ```
 
-Callback function before the dialog openAnimation starts.
+Event callback when the dialog box is about to appear.
+
+**NOTE:** 
+
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt;
+(onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear.
+2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take
+effect next time the dialog box appears.
 
 **Since:** 20
 
@@ -82,7 +104,14 @@ Callback function before the dialog openAnimation starts.
 onWillDisappear?: VoidCallback
 ```
 
-Callback function before the dialog closeAnimation starts.
+Event callback when the dialog box is about to disappear.
+
+**NOTE:** 
+
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt;
+(onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear.
+2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before  
+**onDidAppear**.
 
 **Since:** 20
 
@@ -98,7 +127,14 @@ Callback function before the dialog closeAnimation starts.
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of accept button.
+Style of the accept button.
+
+**NOTE:** 
+
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If
+both are set to **true**, the **primary** field will remain at the default value of **false**.
+2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition,
+even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -116,7 +152,9 @@ Style of accept button.
 alignment?: DialogAlignment
 ```
 
-Defines the dialog alignment of the screen.
+Alignment mode of the dialog box in the vertical direction.
+
+Default value: **DialogAlignment.Default**
 
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
@@ -134,7 +172,13 @@ Defines the dialog alignment of the screen.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Defines the textPickerDialog's background blur Style
+Background blur style of the dialog box.
+
+Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
+
+**NOTE:** 
+
+Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md)
 
@@ -154,7 +198,11 @@ Defines the textPickerDialog's background blur Style
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Defines the textPickerDialog's background blur style with options
+Background blur effect parameters, which are used to customize the display style of the pop-up window background blur. You can configure attributes such as the color mode, adaptive color, and zoom ratio to achieve different background blur visual effects.
+
+**NOTE:** 
+
+If this parameter is not set, the default effect of **BlurStyle.COMPONENT_ULTRA_THICK** is used. If this parameter is set, the effect of **backgroundBlurStyle** is overwritten.
 
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md)
 
@@ -172,7 +220,13 @@ Defines the textPickerDialog's background blur style with options
 backgroundColor?: ResourceColor
 ```
 
-Defines the textPickerDialog's background color
+Backplane color of the dialog box.
+
+Default value: **Color.Transparent**
+
+**NOTE:** 
+
+When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -192,7 +246,11 @@ Defines the textPickerDialog's background color
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Defines the textPickerDialog's background effect with options
+Background effect parameters, which are used to customize the display effect of the dialog box background. You can configure attributes such as the blur radius, saturation, brightness, and color to achieve different background visual effects.
+
+**NOTE:** 
+
+If this parameter is not set, the blur effect of the dialog box background is determined by the value of **backgroundBlurStyle**. If this parameter is set, the value of **backgroundBlurStyle** will be overridden. Since API version 26.0.0, **backgroundEffect** and **backgroundBlurStyle** do not take effect after **systemMaterial** is set.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-common-comp-backgroundeffectoptions-i.md)
 
@@ -210,7 +268,14 @@ Defines the textPickerDialog's background effect with options
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of cancel button.
+Style of the cancel button.
+
+**NOTE:** 
+
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If
+both are set to **true**, the **primary** field will remain at the default value of **false**.
+2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition,
+even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md)
 
@@ -228,9 +293,12 @@ Style of cancel button.
 canLoop?: boolean
 ```
 
-Can scroll loop if true is set, on the contrary it can not.
+Whether to enable loop scrolling.
 
-Default Value: true
+- **true**: Enable loop scrolling.  
+- **false**: Disable loop scrolling.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -250,7 +318,13 @@ Default Value: true
 defaultPickerItemHeight?: number | string
 ```
 
-Called when the default height of the selected element is set.
+Height of the picker item. For the number type, the value range is [0, +∞). For the string type, only numeric string values, for example, **"56"**, are supported.
+
+Default value: 56 vp (selected) and 36 vp (unselected). The set value applies to both selected and unselected items.
+
+**NOTE:** 
+
+If the value of **defaultPickerItemHeight** is negative, the default value is used.
 
 **Type:** number &#124; string
 
@@ -268,7 +342,9 @@ Called when the default height of the selected element is set.
 defaultTextStyle?: TextPickerTextStyle
 ```
 
-Defines to set the default text style for options.
+Style of the text items when the text style change animation during the scrolling process is disabled. It is effective only when **disableTextStyleAnimation** is **true**.
+
+Default value: same as the default value of the [Text](arkts-arkui-text-comp.md#text) component
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)
 
@@ -286,7 +362,16 @@ Defines to set the default text style for options.
 disableTextStyleAnimation?: boolean
 ```
 
-Defines whether to disable the text style animation.
+Whether to disable the animation effect of text style changes during scrolling.
+
+- **true**: Disable the animation effect of text style changes.  
+- **false**: Do not disable the animation effect of text style changes.
+
+Default value: **false**.
+
+**NOTE:** 
+
+When this API is used with **true**, there are no text style changes, including the font size, weight, and color, during scrolling, and all text is displayed in the style set by **defaultTextStyle**. If **defaultTextStyle** is not set, the default style of the [Text](arkts-arkui-text-comp.md#text) component is used.
 
 **Type:** boolean
 
@@ -304,7 +389,29 @@ Defines whether to disable the text style animation.
 disappearTextStyle?: TextPickerTextStyle
 ```
 
-Text style of disappearing items.
+Style of edge items (the second item above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.
+
+Default value:
+
+{
+
+color: '#ff182431',
+
+font: {
+
+size: '14fp',
+
+weight: FontWeight.Regular
+
+},
+
+minFontSize: 0,
+
+maxFontSize: 0,
+
+overflow: TextOverflow.CLIP
+
+}
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)
 
@@ -322,7 +429,20 @@ Text style of disappearing items.
 enableHapticFeedback?: boolean
 ```
 
-Enable or disable haptic feedback.
+Whether to enable haptic feedback.
+
+- **true**: Enable haptic feedback.  
+- **false**: Disable haptic feedback.
+
+Default value: **true**.
+
+**NOTE:** 
+
+1. Whether this parameter takes effect after being set to **true** depends on hardware support.
+2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in  
+**module** in **src/main/module.json5** of the project.
+
+"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
@@ -342,7 +462,12 @@ Enable or disable haptic feedback.
 enableHoverMode?: boolean
 ```
 
-Defines whether to respond to the hover mode.
+Whether to respond when the device is in semi-folded mode.
+
+- **true**: Respond when the device is in semi-folded mode.  
+- **false**: Do not respond when the device is in semi-folded mode.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -362,7 +487,9 @@ Defines whether to respond to the hover mode.
 hoverModeArea?: HoverModeAreaType
 ```
 
-Defines the dialog's display area in hover mode.
+Default display area of a dialog box in hover mode. This parameter is valid only when **enableHoverMode** is set to **true**.
+
+Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** [HoverModeAreaType](arkts-arkui-common-comp-hovermodeareatype-e.md)
 
@@ -382,7 +509,9 @@ Defines the dialog's display area in hover mode.
 maskRect?: Rectangle
 ```
 
-Mask Region of dialog. The size cannot exceed the main window.
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
+
+Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **Type:** [Rectangle](arkts-arkui-common-comp-rectangle-i.md)
 
@@ -400,7 +529,9 @@ Mask Region of dialog. The size cannot exceed the main window.
 offset?: Offset
 ```
 
-Defines the dialog offset.
+Offset of the dialog box based on the **alignment** settings. Set this parameter when you need to fine-tune the position of the dialog box. If this parameter is not set, the dialog box is displayed based on the **alignment** settings.
+
+Default value: **{ dx: 0 , dy: 0 }**
 
 **Type:** Offset
 
@@ -418,7 +549,7 @@ Defines the dialog offset.
 onAccept?: Callback<TextPickerResult>
 ```
 
-Called when the OK button in the dialog is clicked.
+Triggered when the OK button in the dialog box is clicked.
 
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpicker-comp-textpickerresult-i.md)&gt;
 
@@ -436,7 +567,9 @@ Called when the OK button in the dialog is clicked.
 onChange?: Callback<TextPickerResult>
 ```
 
-This event is triggered when a TextPicker text is selected in dialog.
+Callback triggered when the text picker in the dialog box snaps to the selected item. This callback is used to obtain the final selection result.
+
+This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use **onEnterSelectedArea** instead.
 
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpicker-comp-textpickerresult-i.md)&gt;
 
@@ -454,7 +587,11 @@ This event is triggered when a TextPicker text is selected in dialog.
 onEnterSelectedArea?: Callback<TextPickerResult>
 ```
 
-This event is triggered when an item enters the selected area in dialog.
+Represents the callback triggered during the scrolling of the text picker when an item enters the divider area. Compared to the **onChange** event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area.
+
+**NOTE:** 
+
+In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason is that it identifies nodes where items enter the divider area during scrolling. However, items that change in response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
 
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpicker-comp-textpickerresult-i.md)&gt;
 
@@ -472,7 +609,7 @@ This event is triggered when an item enters the selected area in dialog.
 onScrollStop?: Callback<TextPickerResult>
 ```
 
-This event is triggered when a TextPicker text is selected and scrolling has stopped in dialog.
+Callback triggered when the picker scrolling stops. This callback is used to listen for the physical scrolling stop event. The difference between the **onChange** and **onScrollStop** events is that the **onChange** event focuses on the selected option, while the **onScrollStop** event focuses on the end of the scrolling action.
 
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpicker-comp-textpickerresult-i.md)&gt;
 
@@ -490,7 +627,17 @@ This event is triggered when a TextPicker text is selected and scrolling has sto
 selectedBackgroundStyle?: PickerBackgroundStyle
 ```
 
-Background style of selected items.
+Background color of the selected item.
+
+Default value:
+
+{
+
+color: $r('sys.color.comp_background_tertiary'),
+
+borderRadius: $r('sys.float.corner_radius_level12')
+
+}
 
 **Type:** [PickerBackgroundStyle](arkts-arkui-textpicker-comp-pickerbackgroundstyle-i.md)
 
@@ -510,7 +657,29 @@ Background style of selected items.
 selectedTextStyle?: TextPickerTextStyle
 ```
 
-Text style of selected items
+Style of the selected item, covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.
+
+Default value:
+
+{
+
+color: '#ff007dff',
+
+font: {
+
+size: '20fp',
+
+weight: FontWeight.Medium
+
+},
+
+minFontSize: 0,
+
+maxFontSize: 0,
+
+overflow: TextOverflow.CLIP
+
+}
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)
 
@@ -528,7 +697,9 @@ Text style of selected items
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Defines the dialog's shadow.
+Shadow of the dialog box.
+
+Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
 **Type:** [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md)
 
@@ -546,7 +717,13 @@ Defines the dialog's shadow.
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+System material of the dialog box. Set this parameter when you need to use the predefined material effect to quickly achieve a unified visual effect.
+
+**NOTE:** 
+
+- The default value is the **ImmersiveMaterial** object whose style is **ImmersiveStyle.ULTRA_THICK** in  
+**ImmersiveOptions**. If this parameter is set to **undefined**, the default value is used. Different materials have different effects.  
+- This API affects the background color ([backgroundColor](arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)), background blur ([backgroundBlurStyle](arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle)), background effect ([backgroundEffect](arkts-arkui-common-comp-commonmethod-c.md#backgroundeffect)), border color ([borderColor](arkts-arkui-common-comp-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-common-comp-commonmethod-c.md#borderwidth)), and shadow ([shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow)). When the system material is set, the preceding APIs do not take effect.
 
 **Type:** [SystemUiMaterial](arkts-arkui-common-comp-systemuimaterial-t.md)
 
@@ -564,7 +741,29 @@ Set system-styled materials for dialog. Different materials have different effec
 textStyle?: TextPickerTextStyle
 ```
 
-Text style of normal items
+Style of candidate items (the first item immediately above or below the selected item), covering the following: text color, font size, font weight, maximum font size, minimum font size, text overflow mode.
+
+Default value:
+
+{
+
+color: '#ff182431',
+
+font: {
+
+size: '16fp',
+
+weight: FontWeight.Regular
+
+},
+
+minFontSize: 0,
+
+maxFontSize: 0,
+
+overflow: TextOverflow.CLIP
+
+}
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)
 

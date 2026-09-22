@@ -4,7 +4,7 @@
 export class PixelMapDrawableDescriptor extends DrawableDescriptor
 ```
 
-Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+Implements a **PixelMapDrawableDescriptor** object, which can be created by passing in a **PixelMap** object. This API inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md).
 
 **Inheritance/Implementation:** PixelMapDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
@@ -88,7 +88,7 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; [ResourceStr](arkts-arkui-resourcestr-t.md) | No | **PixelMap** image data. You can use application resources, system resources, sandbox paths (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 strings to create **PixelMapDrawableDescriptor** objects. |
+| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; [ResourceStr](arkts-arkui-resourcestr-t.md) | No | Image resource. A PixelMap image data, application resource, system resource, sandbox path (**file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**), and Base64 character string can be passed to create a **PixelMapDrawableDescriptor** object. |
 
 **Examples**
 

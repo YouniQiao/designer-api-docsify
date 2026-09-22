@@ -565,8 +565,8 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -659,8 +659,8 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -783,8 +783,8 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -878,8 +878,8 @@ requestInStream(url: string, callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -959,8 +959,8 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -1067,8 +1067,8 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |
@@ -1172,7 +1172,7 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [2300001](../errorcode-net-http.md#2300001-不支持的协议) | Unsupported protocol. |
 | [2300003](../errorcode-net-http.md#2300003-url格式错误) | Invalid URL format or missing URL. |
 | [2300005](../errorcode-net-http.md#2300005-代理服务器域名解析失败) | Failed to resolve the proxy name. |

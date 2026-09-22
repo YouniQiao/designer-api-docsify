@@ -1,4 +1,4 @@
-# @ohos.prompt
+# @ohos.prompt(Prompt)
 
 @namespace prompt
 

@@ -410,7 +410,7 @@ onCancel(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () =&gt; void | 是 |  |
+| callback | () =&gt; void | 是 | Callback invoked when the cancel button in the dialog box is clicked. |
 
 ## onChange
 

@@ -4,9 +4,9 @@
 declare const Entry: ClassDecorator & ((options?: LocalStorage | EntryOptions) => ClassDecorator)
 ```
 
-Defines Entry ClassDecorator.
+A custom component decorated by \@Entry serves as the entry to a UI page and is identified by the framework as the root component of the page. It is suitable for building standalone UI pages.
 
-Entry is a ClassDecorator and it supports LocalStorage or EntryOptions as parameters.
+In a single UI page, only one custom component decorated by \@Entry is allowed as the page entry.
 
 **Since:** 7
 

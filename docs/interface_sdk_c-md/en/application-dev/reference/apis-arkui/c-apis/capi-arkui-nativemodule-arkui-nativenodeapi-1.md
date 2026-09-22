@@ -234,7 +234,7 @@ Attaches a component to a parent node, with the position specified by **position
 | -- | -- |
 | ArkUI_NodeHandle parent | Pointer to the parent node. |
 |  ArkUI_NodeHandle child | Pointer to the child node. |
-|  int32_t position | Inserting position. The value range is [-2147483648, 2147483647]. If the value is a negative number or invalid, the component is inserted at the end of the parent node. |
+|  int32_t position | Inserting position. The value range is [0, current child count]. If the value is a negative number or invalid, the component is inserted at the end of the parent node. |
 
 **Returns**:
 
@@ -260,7 +260,7 @@ Sets attributes. You are advised to call this API in the main thread. In actual 
 | -- | -- |
 | ArkUI_NodeHandle node | Node whose attribute needs to be set. |
 |  [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype) attribute | Type of attribute to set. |
-| value | Indicates the attribute value. |
+|  const ArkUI_AttributeItem* item | Indicates the attribute value. |
 
 **Returns**:
 

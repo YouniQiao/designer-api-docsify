@@ -4,7 +4,7 @@
 export declare const ComponentActive: MethodDecorator
 ```
 
-The function decorated is invoked before a custom component becomes active.
+After a custom component transitions from the inactive state to the active state, the function decorated by **\@ComponentActive** is called. In the component reuse and recycling scenario, when a cached component is reused (that is, re-added to the node tree from the reuse pool), the component transitions from the inactive state to the active state, triggering this callback.
 
 **Since:** 26.0.0
 

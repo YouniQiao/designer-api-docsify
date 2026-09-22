@@ -4,7 +4,7 @@
 declare class ReadonlySystemEnvKey<T> extends SystemEnvKey<T>
 ```
 
-Define read-only system environment variable keys.
+Defines a read-only system environment variable key, which inherits from [SystemEnvKey&lt;T&gt;](arkts-arkui-common-comp-systemenvkey-c.md).
 
 **Inheritance/Implementation:** ReadonlySystemEnvKey extends SystemEnvKey<T>
 

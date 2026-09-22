@@ -4,7 +4,7 @@
 declare interface MonitorDecoratorOptions
 ```
 
-Defines MonitorDecoratorOptions interface
+Represents the configuration options of the **@Monitor** decorator.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines MonitorDecoratorOptions interface
 enableWildcard?: boolean
 ```
 
-Enables wildcard feature. Set to true to enable wildcard feature, set to false to disable it. The default value is true.
+Whether to support the wildcard capability. The value **true** indicates to enable the wildcard capability, allowing the use of wildcards (**'*'**) in the path for fuzzy monitoring, and **false** indicates to disable the wildcard capability. The default value is **true**.
 
 **Type:** boolean
 

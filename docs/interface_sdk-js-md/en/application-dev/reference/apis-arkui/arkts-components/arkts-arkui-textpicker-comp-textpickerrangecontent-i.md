@@ -16,7 +16,7 @@ Defines the content for single-column picker options.
 icon: string | Resource
 ```
 
-Image resource. If the value is a string, such as **"/common/hello.png"**, it represents the path to the image.
+Image resource. When **icon** is of the string type, it indicates the path of the image, for example, "/common/ hello.png"; when **icon** is of the Resource type, it indicates a resource reference.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -36,9 +36,12 @@ text?: string | Resource
 
 Text information.
 
-An empty character string is used by default.
+Default value: empty string
 
-Note: Text truncation occurs when content exceeds column width.
+**Note:** 
+
+1. When this attribute is not set, the default value is used.
+2. When the text length is greater than the column width, the text is truncated.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

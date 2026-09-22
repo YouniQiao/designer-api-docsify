@@ -4,7 +4,12 @@
 declare interface AbstractProperty<T>
 ```
 
-Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
+A reference to a property in AppStorage or LocalStorage. It provides the capabilities to read and modify referenced property data and query property names. Unlike **SubscribedAbstractProperty**, an **AbstractProperty** instance does not need to be manually released.
+
+> **NOTE:** 
+
+> Since API version 12, AppStorage and LocalStorage support the **Map**, **Set**, and **Date** types, as well as
+> **null**, **undefined**, and union types.
 
 **Since:** 12
 
@@ -58,11 +63,6 @@ set(newValue: T): void
 
 Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**.
 
-> **NOTE:** 
-
-> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
-> **undefined**, and union types.
-
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,4 +73,4 @@ Updates the data of the referenced property in [AppStorage](../../../ui/state-ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | New data to update. The value can be **null** or **undefined**. |
+| newValue | T | Yes | New value of the property referenced in AppStorage/LocalStorage. The value can be **null** or **undefined**. |

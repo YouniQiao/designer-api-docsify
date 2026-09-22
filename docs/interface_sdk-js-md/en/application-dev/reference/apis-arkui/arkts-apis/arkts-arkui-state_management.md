@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Storage](arkts-arkui-storage-c-sys.md) | Defines the base class of storage. |
+| [Storage](arkts-arkui-storage-c-sys.md) | A background API for persistent storage, which provides data persistence capabilities based on key-value pairs, including data reading, writing, clearing, and deletion. PersistentStorage uses this API to implement local persistence of AppStorage data, making it suitable for scenarios where flexible local persistent storage of application data is required. |
 <!--DelEnd-->
 
 ### Enums
