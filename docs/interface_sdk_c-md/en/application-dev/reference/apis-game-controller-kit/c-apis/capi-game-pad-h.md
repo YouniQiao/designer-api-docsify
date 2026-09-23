@@ -44,6 +44,8 @@ Defines APIs for gamepads.
 | [GameController_ErrorCode OH_GamePad_ButtonY_UnregisterButtonInputMonitor(void)](#oh_gamepad_buttony_unregisterbuttoninputmonitor) | Unregisters the callback for Y button events. |
 | [GameController_ErrorCode OH_GamePad_ButtonC_RegisterButtonInputMonitor(GamePad_ButtonInputMonitorCallback inputMonitorCallback)](#oh_gamepad_buttonc_registerbuttoninputmonitor) | Registers a callback for C button events. |
 | [GameController_ErrorCode OH_GamePad_ButtonC_UnregisterButtonInputMonitor(void)](#oh_gamepad_buttonc_unregisterbuttoninputmonitor) | Unregisters the callback for C button events. |
+| [GameController_ErrorCode OH_GamePad_ButtonNonstandard_RegisterButtonInputMonitor(GamePad_ButtonInputMonitorCallback inputMonitorCallback)](#oh_gamepad_buttonnonstandard_registerbuttoninputmonitor) | Registers a callback for nonstandard button events. |
+| [GameController_ErrorCode OH_GamePad_ButtonNonstandard_UnregisterButtonInputMonitor(void)](#oh_gamepad_buttonnonstandard_unregisterbuttoninputmonitor) | Unregisters the callback for nonstandard button events. |
 | [GameController_ErrorCode OH_GamePad_Dpad_LeftButton_RegisterButtonInputMonitor(GamePad_ButtonInputMonitorCallback inputMonitorCallback)](#oh_gamepad_dpad_leftbutton_registerbuttoninputmonitor) | Registers a callback for D-pad Left button events. |
 | [GameController_ErrorCode OH_GamePad_Dpad_LeftButton_UnregisterButtonInputMonitor(void)](#oh_gamepad_dpad_leftbutton_unregisterbuttoninputmonitor) | Unregisters the callback for D-pad Left button events. |
 | [GameController_ErrorCode OH_GamePad_Dpad_RightButton_RegisterButtonInputMonitor(GamePad_ButtonInputMonitorCallback inputMonitorCallback)](#oh_gamepad_dpad_rightbutton_registerbuttoninputmonitor) | Registers a callback for D-pad Right button events. |
@@ -721,6 +723,57 @@ Unregisters the callback for C button events.
 **System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| GameController_ErrorCode | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
+
+### OH_GamePad_ButtonNonstandard_RegisterButtonInputMonitor()
+
+```c
+GameController_ErrorCode OH_GamePad_ButtonNonstandard_RegisterButtonInputMonitor(GamePad_ButtonInputMonitorCallback inputMonitorCallback)
+```
+
+**Description**
+
+Registers a callback for nonstandard button events.
+
+**System capability**: SystemCapability.Game.GameController
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| GamePad_ButtonInputMonitorCallback inputMonitorCallback | [in] Callback function [GamePad_ButtonInputMonitorCallback](capi-game-pad-event-h.md#gamepad_buttoninputmonitorcallback), which cannot be null. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| GameController_ErrorCode | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If       inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
+
+**Reference**:
+
+[OH_GamePad_ButtonNonstandard_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonnonstandard_unregisterbuttoninputmonitor) unregisters the callback for nonstandard  button events
+
+
+### OH_GamePad_ButtonNonstandard_UnregisterButtonInputMonitor()
+
+```c
+GameController_ErrorCode OH_GamePad_ButtonNonstandard_UnregisterButtonInputMonitor(void)
+```
+
+**Description**
+
+Unregisters the callback for nonstandard button events.
+
+**System capability**: SystemCapability.Game.GameController
+
+**Since**: 26.0.1
 
 **Returns**:
 

@@ -291,7 +291,7 @@ Obtains the device type based on the network ID of the specified device.
 
 | Type | Description |
 | --- | --- |
-| number | &lt;!--RP2--&gt;Device type obtained.&lt;!--RP2End--&gt; |
+| number | <!--RP2-->Device type obtained.<!--RP2End--> |
 
 **Error codes:**
 
@@ -466,7 +466,7 @@ Obtains the local device type.
 
 | Type | Description |
 | --- | --- |
-| number | &lt;!--RP1--&gt;Local device type obtained.&lt;!--RP1End--&gt; |
+| number | <!--RP1-->Local device type obtained.<!--RP1End--> |
 
 **Error codes:**
 

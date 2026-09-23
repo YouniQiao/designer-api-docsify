@@ -6,9 +6,11 @@ declare class CounterV2InlineStyleOptions extends CounterV2CommonOptions
 
 Defines the attributes and events of the inline number **CounterV2**.
 
+This API inherits from [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md) and contains all attributes of the parent API. This topic only shows the newly added attributes. For inherited attributes, see the parent API.
+
 > **NOTE:** 
 > 
-> **min** must be less than or equal to **max**. If **min** is greater than **max**, **max** is used.
+> 1. **min** must be less than or equal to **max**. If **min** is greater than **max**, **max** is used.
 
 **Inheritance/Implementation:** CounterV2InlineStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 

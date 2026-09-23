@@ -34,18 +34,18 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | Declare interface OperateIconV2Options |
 | [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | Declare interface OperateItemV2Options |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md) | Declare enum IconTypeV2 |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [OnActionCallback](arkts-arkui-onactioncallback-t.md) | Callback function when operate the icon. |
 | [OnChangeCallback](arkts-arkui-onchangecallback-t.md) | Callback function when operate the checkbox/switch/radio. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md) | Declare enum IconTypeV2 |
 
 ## Examples
 

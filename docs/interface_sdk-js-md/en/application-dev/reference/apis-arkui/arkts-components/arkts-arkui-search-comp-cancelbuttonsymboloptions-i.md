@@ -16,7 +16,7 @@ Defines the CancelButton symbol options.
 icon?: SymbolGlyphModifier
 ```
 
-Symbol icon of the Cancel button on the right.
+Symbol icon of the clear button on the right. If not set, the default clear icon style is used.
 
 **Type:** [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
@@ -34,7 +34,7 @@ Symbol icon of the Cancel button on the right.
 style?: CancelButtonStyle
 ```
 
-Display state of the Cancel button on the right.
+Display state of the clear button on the right. Default value: CancelButtonStyle.INPUT.
 
 **Type:** [CancelButtonStyle](arkts-arkui-search-comp-cancelbuttonstyle-e.md)
 

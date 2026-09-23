@@ -2,7 +2,11 @@
 
 The **Menu** component is a vertical list of items presented to the user.
 
-> **NOTE** > > - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their > > - The **Menu** component must be used together with the > [bindMenu](arkts-arkui-common-comp-commonmethod-c.md#bindmenu) or > [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) > method. It does not work when used alone.
+> **NOTE:** 
+> 
+> - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate their
+> 
+> - The **Menu** component must be used together with the [bindMenu](arkts-arkui-common-comp-commonmethod-c.md#bindmenu) or [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu)method. It does not work when used alone.
 
 ## Child Components
 

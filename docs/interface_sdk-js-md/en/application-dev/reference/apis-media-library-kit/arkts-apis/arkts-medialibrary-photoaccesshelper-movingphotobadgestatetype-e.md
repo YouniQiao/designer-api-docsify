@@ -4,9 +4,7 @@
 export enum MovingPhotoBadgeStateType
 ```
 
-Enumerates the types of the moving photo badge.
-
-@enum { int } MovingPhotoBadgeStateType
+Enumerates the states of moving photo badges.
 
 **Since:** 22
 
@@ -43,7 +41,7 @@ The moving photo effect is enabled.
 ## MOVING_PHOTO_DISABLED
 
 ```TypeScript
-MOVING_PHOTO_DISABLED =	2
+MOVING_PHOTO_DISABLED = 2
 ```
 
 The moving photo effect is disabled.

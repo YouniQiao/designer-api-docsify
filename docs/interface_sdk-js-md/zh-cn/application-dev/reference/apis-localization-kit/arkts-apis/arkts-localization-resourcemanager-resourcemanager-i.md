@@ -253,87 +253,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## closeRawFileDescriptor
-
-```TypeScript
-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
-```
-
-关闭resources/rawfile目录下rawfile文件的文件描述符（fd）。使用callback异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [closeRawFd](#closerawfd)(path: string, callback: _AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.closeRawFileDescriptor("test.txt", (error: Error) => {
-        if (error != null) {
-            console.error("error is " + error);
-        }
-    });
-});
-```
-
-<a id="closerawfiledescriptor-1"></a>
-
-## closeRawFileDescriptor
-
-```TypeScript
-closeRawFileDescriptor(path: string): Promise<void>
-```
-
-关闭resources/rawfile目录下rawfile文件的文件描述符（fd）。使用Promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [closeRawFd](#closerawfd-1)(path: string)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.closeRawFileDescriptor("test.txt");
-});
-```
-
 ## getBoolean
 
 ```TypeScript
@@ -2306,168 +2225,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## getMedia
-
-```TypeScript
-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
-```
-
-获取指定资源ID对应的媒体文件内容。使用callback异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getMediaContent](#getmediacontent)(resId: number, callback: _AsyncCallback&lt;Uint8Array&gt;)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
-
-**示例**
-
-```TypeScript
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMedia($r('app.media.test').id, (error: Error, value: Uint8Array) => {
-        if (error != null) {
-            console.error("error is " + error);
-        } else {
-            let media = value;
-        }
-    });
-});
-```
-
-<a id="getmedia-1"></a>
-
-## getMedia
-
-```TypeScript
-getMedia(resId: number): Promise<Uint8Array>
-```
-
-获取指定资源ID对应的媒体文件内容。使用Promise异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getMediaContent](#getmediacontent)(resId: number)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMedia($r('app.media.test').id).then((value: Uint8Array) => {
-        let media = value;
-    }).catch((error: BusinessError) => {
-        console.error("getMedia promise error is " + error);
-    });
-});
-```
-
-## getMediaBase64
-
-```TypeScript
-getMediaBase64(resId: number, callback: AsyncCallback<string>): void
-```
-
-获取指定资源ID对应的图片资源Base64编码。使用callback异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getMediaContentBase64](#getmediacontentbase64)(resId: number, callback: _AsyncCallback&lt;string&gt;)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
-
-**示例**
-
-```TypeScript
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMediaBase64($r('app.media.test').id, ((error: Error, value: string) => {
-        if (error != null) {
-            console.error("error is " + error);
-        } else {
-            let media = value;
-        }
-    });
-});
-```
-
-<a id="getmediabase64-1"></a>
-
-## getMediaBase64
-
-```TypeScript
-getMediaBase64(resId: number): Promise<string>
-```
-
-获取指定资源ID对应的图片资源Base64编码。使用Promise异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getMediaContentBase64](#getmediacontentbase64)(resId: number)
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMediaBase64($r('app.media.test').id).then((value: string) => {
-        let media = value;
-    }).catch((error: BusinessError) => {
-        console.error("getMediaBase64 promise error is " + error);
-    });
-});
-```
-
 ## getMediaBase64ByName
 
 ```TypeScript
@@ -3064,6 +2821,243 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediacontent-4"></a>
+
+## getMediaContent
+
+```TypeScript
+getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
+```
+
+获取指定资源ID对应的媒体文件内容。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id,
+                (error: BusinessError, value: Uint8Array) => {
+                    if (error != null) {
+                        console.error("error is " + error);
+                    } else {
+                        let media = value;
+                    }
+                });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getmediacontent-5"></a>
+
+## getMediaContent
+
+```TypeScript
+getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Array>): void
+```
+
+获取指定资源ID对应的指定屏幕密度媒体文件内容。使用callback异步回调。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
+                if (error != null) {
+                    console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getmediacontent-6"></a>
+
+## getMediaContent
+
+```TypeScript
+getMediaContent(resId: number): Promise<Uint8Array>
+```
+
+获取指定资源ID对应的媒体文件内容。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaContent promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getmediacontent-7"></a>
+
+## getMediaContent
+
+```TypeScript
+getMediaContent(resId: number, density: number): Promise<Uint8Array>
+```
+
+获取指定资源ID对应的指定屏幕密度媒体文件内容。使用Promise异步回调。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getMediaContent
 
 ```TypeScript
@@ -3322,15 +3316,15 @@ try {
 }
 ```
 
-<a id="getmediacontent-4"></a>
+<a id="getmediacontentbase64-4"></a>
 
-## getMediaContent
+## getMediaContentBase64
 
 ```TypeScript
-getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
+getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源ID对应的媒体文件内容。使用callback异步回调。
+获取指定资源ID对应的图片资源Base64编码。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -3343,7 +3337,7 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3363,68 +3357,9 @@ export default class EntryAbility extends UIAbility {
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
         try {
             // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id,
-                (error: BusinessError, value: Uint8Array) => {
-                    if (error != null) {
-                        console.error("error is " + error);
-                    } else {
-                        let media = value;
-                    }
-                });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getmediacontent-5"></a>
-
-## getMediaContent
-
-```TypeScript
-getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Array>): void
-```
-
-获取指定资源ID对应的指定屏幕密度媒体文件内容。使用callback异步回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID对应的媒体文件内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
                 if (error != null) {
-                    console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+                    console.error("error is " + error);
                 } else {
                     let media = value;
                 }
@@ -3432,81 +3367,21 @@ export default class EntryAbility extends UIAbility {
         } catch (error) {
             let code = (error as BusinessError).code;
             let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
         }
     }
 }
 ```
 
-<a id="getmediacontent-6"></a>
+<a id="getmediacontentbase64-5"></a>
 
-## getMediaContent
-
-```TypeScript
-getMediaContent(resId: number): Promise<Uint8Array>
-```
-
-获取指定资源ID对应的媒体文件内容。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
+## getMediaContentBase64
 
 ```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
+getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<string>): void
 ```
 
-<a id="getmediacontent-7"></a>
-
-## getMediaContent
-
-```TypeScript
-getMediaContent(resId: number, density: number): Promise<Uint8Array>
-```
-
-获取指定资源ID对应的指定屏幕密度媒体文件内容。使用Promise异步回调。
+获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -3520,12 +3395,7 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 **错误码：**
 
@@ -3545,15 +3415,138 @@ export default class EntryAbility extends UIAbility {
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
         try {
             // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
+                if (error != null) {
+                    console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
             });
         } catch (error) {
             let code = (error as BusinessError).code;
             let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getmediacontentbase64-6"></a>
+
+## getMediaContentBase64
+
+```TypeScript
+getMediaContentBase64(resId: number): Promise<string>
+```
+
+获取指定资源ID对应的图片资源Base64编码。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaContentBase64 promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getmediacontentbase64-7"></a>
+
+## getMediaContentBase64
+
+```TypeScript
+getMediaContentBase64(resId: number, density: number): Promise<string>
+```
+
+获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用Promise异步回调。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
         }
     }
 }
@@ -3814,242 +3807,6 @@ try {
   let code = (error as BusinessError).code;
   let message = (error as BusinessError).message;
   console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-}
-```
-
-<a id="getmediacontentbase64-4"></a>
-
-## getMediaContentBase64
-
-```TypeScript
-getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
-```
-
-获取指定资源ID对应的图片资源Base64编码。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getmediacontentbase64-5"></a>
-
-## getMediaContentBase64
-
-```TypeScript
-getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<string>): void
-```
-
-获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用callback异步回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getmediacontentbase64-6"></a>
-
-## getMediaContentBase64
-
-```TypeScript
-getMediaContentBase64(resId: number): Promise<string>
-```
-
-获取指定资源ID对应的图片资源Base64编码。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContentBase64 promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getmediacontentbase64-7"></a>
-
-## getMediaContentBase64
-
-```TypeScript
-getMediaContentBase64(resId: number, density: number): Promise<string>
-```
-
-获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用Promise异步回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| density | number | 是 | 资源获取需要的屏幕密度，0表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
 }
 ```
 
@@ -4691,6 +4448,2726 @@ export default class EntryAbility extends UIAbility {
         }
     }
 }
+```
+
+## getRawFd
+
+```TypeScript
+getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
+```
+
+获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。
+
+> **说明：** 
+> 
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFd("test.txt", (error: BusinessError, value: resourceManager.RawFileDescriptor) => {
+                if (error != null) {
+                    console.error(`callback getRawFd failed error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let fd = value.fd;
+                    let offset = value.offset;
+                    let length = value.length;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getRawFd failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getrawfd-1"></a>
+
+## getRawFd
+
+```TypeScript
+getRawFd(path: string): Promise<RawFileDescriptor>
+```
+
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
+                let fd = value.fd;
+                let offset = value.offset;
+                let length = value.length;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getRawFd error error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getRawFdSync
+
+```TypeScript
+getRawFdSync(path: string): RawFileDescriptor
+```
+
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。
+
+> **说明：** 
+> 
+> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
+> [closeRawFd](#closerawfd)关闭
+> fd，避免资源泄露。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | rawfile文件所在HAP的文件描述符（fd）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFdSync("test.txt");
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getRawFdSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getRawFileContent
+
+```TypeScript
+getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
+```
+
+获取resources/rawfile目录下对应的rawfile文件内容。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回获取的rawfile文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFileContent("test.txt", (error: BusinessError, value: Uint8Array) => {
+                if (error != null) {
+                    console.error("error is " + error);
+                } else {
+                    let rawFile = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getRawFileContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getrawfilecontent-1"></a>
+
+## getRawFileContent
+
+```TypeScript
+getRawFileContent(path: string): Promise<Uint8Array>
+```
+
+获取resources/rawfile目录下对应的rawfile文件内容。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回获取的rawfile文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
+                let rawFile = value;
+            }).catch((error: BusinessError) => {
+                console.error("getRawFileContent promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getRawFileContentSync
+
+```TypeScript
+getRawFileContentSync(path: string): Uint8Array
+```
+
+获取resources/rawfile目录下对应的rawfile文件内容，使用同步形式返回。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Uint8Array | 返回获取的rawfile文件内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFileContentSync("test.txt");
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getRawFileContentSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getRawFileList
+
+```TypeScript
+getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
+```
+
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。
+
+> **说明：** 
+> 
+> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回rawfile子目录下的文件夹及文件列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+        this.context.resourceManager.getRawFileList("", (error: BusinessError, value: Array<string>) => {
+            if (error != null) {
+                console.error(`callback getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+            } else {
+                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+                // 打印输出结果: getRawFileList, result: ["test.txt"]
+            }
+        });
+    }
+}
+```
+
+<a id="getrawfilelist-1"></a>
+
+## getRawFileList
+
+```TypeScript
+getRawFileList(path: string): Promise<Array<string>>
+```
+
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回rawfile子目录下的文件夹及文件列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+        this.context.resourceManager.getRawFileList("")
+            .then((value: Array<string>) => {
+                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+                // 打印输出结果: getRawFileList, result: ["test.txt"]
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
+## getRawFileListSync
+
+```TypeScript
+getRawFileListSync(path: string): Array<string>
+```
+
+获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。
+
+> **说明：** 
+> 
+> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;string&gt; | rawfile子目录下的文件夹及文件列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+            // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+            let fileList: Array<string> = this.context.resourceManager.getRawFileListSync("");
+            console.info(`getRawFileListSync, result: ${JSON.stringify(fileList)}`);
+            // 打印输出结果: getRawFileListSync, result: ["test.txt"] 
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getRawFileListSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getResourceName
+
+```TypeScript
+getResourceName(resId: number): string
+```
+
+获取指定资源ID对应的资源名称。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 资源ID值对应的资源名称。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.string.test'仅作示例，请替换为实际使用的资源
+            let resName: string = this.context.resourceManager.getResourceName($r('app.string.test').id);
+            console.info(`getResourceName, result: ${resName}`);
+            // 打印输出结果: getResourceName, result: test
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getResourceName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getStringArrayByName
+
+```TypeScript
+getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void
+```
+
+获取指定资源名称对应的字符串数组。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源名称对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayByName("test", (error: BusinessError, value: Array<string>) => {
+            if (error != null) {
+                console.error(`callback getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+            } else {
+                let strArray = value;
+                console.info(`getStringArrayByName, result: ${value[0]}`);
+                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+            }
+        });
+    }
+}
+```
+
+<a id="getstringarraybyname-1"></a>
+
+## getStringArrayByName
+
+```TypeScript
+getStringArrayByName(resName: string): Promise<Array<string>>
+```
+
+获取指定资源名称对应的字符串数组。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源名称对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayByName("test")
+            .then((value: Array<string>) => {
+                console.info(`getStringArrayByName, result: ${value[0]}`);
+                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
+## getStringArrayByNameSync
+
+```TypeScript
+getStringArrayByNameSync(resName: string): Array<string>
+```
+
+获取指定资源名称对应的字符串数组，使用同步方式返回。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;string&gt; | 对应资源名称的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            let strArray: Array<string> = this.context.resourceManager.getStringArrayByNameSync("test");
+            console.info(`getStringArrayByNameSync, result: ${strArray[0]}`);
+            // 打印输出结果: getStringArrayByNameSync, result: I'm one of the array's values.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringArrayByNameSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getstringarrayvalue-2"></a>
+
+## getStringArrayValue
+
+```TypeScript
+getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): void
+```
+
+获取指定资源ID对应的字符串数组。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
+            (error: BusinessError, value: Array<string>) => {
+                if (error != null) {
+                    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    console.info(`getStringArrayValue, result: ${value[0]}`);
+                    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+                }
+            });
+    }
+}
+```
+
+<a id="getstringarrayvalue-3"></a>
+
+## getStringArrayValue
+
+```TypeScript
+getStringArrayValue(resId: number): Promise<Array<string>>
+```
+
+获取指定资源ID对应的字符串数组。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源ID值对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
+            .then((value: Array<string>) => {
+                console.info(`getStringArrayValue, result: ${value[0]}`);
+                // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
+## getStringArrayValue
+
+```TypeScript
+getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void
+```
+
+获取指定resource对象对应的字符串数组。使用callback异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: number, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回resource对象对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.strarray.test').id
+};
+this.context.resourceManager.getStringArrayValue(resource, (error: BusinessError, value: Array<string>) => {
+  if (error != null) {
+    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+  } else {
+    console.info(`getStringArrayValue, result: ${value[0]}`);
+    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+  }
+});
+```
+
+<a id="getstringarrayvalue-1"></a>
+
+## getStringArrayValue
+
+```TypeScript
+getStringArrayValue(resource: Resource): Promise<Array<string>>
+```
+
+获取指定resource对象对应的字符串数组。使用Promise异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回resource对象对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.strarray.test').id
+};
+this.context.resourceManager.getStringArrayValue(resource)
+  .then((value: Array<string>) => {
+    console.info(`getStringArrayValue, result: ${value[0]}`);
+    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+  })
+  .catch((error: BusinessError) => {
+    console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+  });
+```
+
+## getStringArrayValueSync
+
+```TypeScript
+getStringArrayValueSync(resId: number): Array<string>
+```
+
+获取指定资源ID对应的字符串数组，使用同步方式返回。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;string&gt; | 资源ID值对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+            let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync($r('app.strarray.test').id);
+            console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
+            // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getstringarrayvaluesync-1"></a>
+
+## getStringArrayValueSync
+
+```TypeScript
+getStringArrayValueSync(resource: Resource): Array<string>
+```
+
+获取指定resource对象对应的字符串数组，使用同步方式返回。
+
+**起始版本：** 10
+
+**废弃版本：** 20
+
+**替代接口：** [getStringArrayValueSync](#getstringarrayvaluesync)(resId: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Array&lt;string&gt; | resource对象对应的字符串数组。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/strarray.json
+{
+  "strarray": [
+    {
+      "name": "test",
+      "value": [
+        {
+          "value": "I'm one of the array's values."
+        }
+      ]
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.strarray.test').id
+};
+try {
+  let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync(resource);
+  console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
+  // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+## getStringByName
+
+```TypeScript
+getStringByName(resName: string, callback: _AsyncCallback<string>): void
+```
+
+获取指定资源名称对应的字符串。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回获取的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringByName("test", (error: BusinessError, value: string) => {
+            if (error != null) {
+                console.error(`callback getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+            } else {
+                console.info(`getStringByName, result: ${value}`);
+                // 打印输出结果: getStringByName, result: I'm a test string resource.
+            }
+        });
+    }
+}
+```
+
+<a id="getstringbyname-1"></a>
+
+## getStringByName
+
+```TypeScript
+getStringByName(resName: string): Promise<string>
+```
+
+获取指定资源名称对应的字符串。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回资源名称对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringByName("test").then((value: string) => {
+            console.info(`getStringByName, result: ${value}`);
+            // 打印输出结果: getStringByName, result: I'm a test string resource.
+        }).catch((error: BusinessError) => {
+            console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    }
+}
+```
+
+## getStringByNameSync
+
+```TypeScript
+getStringByNameSync(resName: string): string
+```
+
+获取指定资源名称对应的字符串，使用同步方式返回。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 资源名称对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringByNameSync("test");
+            console.info(`getStringByNameSync, result: ${testStr}`);
+            // 打印输出结果: getStringByNameSync, result: I'm a test string resource.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getstringbynamesync-1"></a>
+
+## getStringByNameSync
+
+```TypeScript
+getStringByNameSync(resName: string, ...args: Array<string | number>): string
+```
+
+获取指定资源名称对应的字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 资源名称对应的格式化字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
+            console.info(`getStringByNameSync, result: ${testStr}`);
+            // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## getStringSync
+
+```TypeScript
+getStringSync(resId: number): string
+```
+
+获取指定资源ID对应的字符串，使用同步方式返回。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 资源ID值对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.string.test'仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id);
+            console.info(`getStringSync, result: ${testStr}`);
+            // 打印输出结果: getStringSync, result: I'm a test string resource.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getstringsync-1"></a>
+
+## getStringSync
+
+```TypeScript
+getStringSync(resId: number, ...args: Array<string | number>): string
+```
+
+获取指定资源ID对应的字符串，并使用args参数依次替换字符串中的格式化占位符。使用同步方式返回。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 资源ID值对应的格式化字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.string.test'仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
+            console.info(`getStringSync, result: ${testStr}`);
+            // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getstringsync-3"></a>
+
+## getStringSync
+
+```TypeScript
+getStringSync(resource: Resource): string
+```
+
+获取指定resource对象对应的字符串，使用同步方式返回。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getStringSync](#getstringsync)(resId: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | resource对象对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+try {
+  let testStr = this.context.resourceManager.getStringSync(resource);
+  console.info(`getStringSync, result: ${testStr}`);
+  // 打印输出结果: getStringSync, result: I'm a test string resource.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+<a id="getstringsync-4"></a>
+
+## getStringSync
+
+```TypeScript
+getStringSync(resource: Resource, ...args: Array<string | number>): string
+```
+
+获取指定resource对象对应的字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
+
+**起始版本：** 10
+
+**废弃版本：** 20
+
+**替代接口：** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | resource对象对应的格式化字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+try {
+  let testStr = this.context.resourceManager.getStringSync(resource, "format string", 10, 98.78);
+  console.info(`getStringSync, result: ${testStr}`);
+  // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+<a id="getstringvalue-2"></a>
+
+## getStringValue
+
+```TypeScript
+getStringValue(resId: number, callback: _AsyncCallback<string>): void
+```
+
+获取指定资源ID对应的字符串。使用callback异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回获取的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.string.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
+            console.info(`getStringValue, result: ${value}`);
+            // 打印输出结果: getStringValue, result: I'm a test string resource.
+        }).catch((error: BusinessError) => {
+            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
+  if (error != null) {
+    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+  } else {
+    console.info(`getStringValue, result: ${value}`);
+    // 打印输出结果: getStringValue, result: I'm a test string resource.
+  }
+});
+```
+
+<a id="getstringvalue-3"></a>
+
+## getStringValue
+
+```TypeScript
+getStringValue(resId: number): Promise<string>
+```
+
+获取指定资源ID对应的字符串。使用Promise异步回调。
+
+**起始版本：** 9
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.string.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
+            console.info(`getStringValue, result: ${value}`);
+            // 打印输出结果: getStringValue, result: I'm a test string resource.
+        }).catch((error: BusinessError) => {
+            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    }
+}
+```
+
+## getStringValue
+
+```TypeScript
+getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
+```
+
+获取指定resource对象对应的字符串。使用callback异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getStringValue](#getstringvalue)(resId: number, callback: _AsyncCallback&lt;string&gt;)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回resource对象对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
+  if (error != null) {
+    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+  } else {
+    console.info(`getStringValue, result: ${value}`);
+    // 打印输出结果: getStringValue, result: I'm a test string resource.
+  }
+});
+```
+
+<a id="getstringvalue-1"></a>
+
+## getStringValue
+
+```TypeScript
+getStringValue(resource: Resource): Promise<string>
+```
+
+获取指定resource对象对应的字符串。使用Promise异步回调。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getStringValue](#getstringvalue)(resId: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回resource对象对应的字符串。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
+  if (error != null) {
+    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+  } else {
+    console.info(`getStringValue, result: ${value}`);
+    // 打印输出结果: getStringValue, result: I'm a test string resource.
+  }
+});
+```
+
+## getSymbol
+
+```TypeScript
+getSymbol(resId: number) : number
+```
+
+获取指定资源ID对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
+
+**起始版本：** 11
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 资源ID值对应的Symbol字符Unicode码（十进制）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'sys.symbol.message'仅作示例，请替换为实际使用的资源
+            let symbolValue = this.context.resourceManager.getSymbol($r('sys.symbol.message').id);
+            console.info(`getSymbol, result: ${symbolValue}`);
+            // 打印输出结果: getSymbol, result: 983183
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+<a id="getsymbol-1"></a>
+
+## getSymbol
+
+```TypeScript
+getSymbol(resource: Resource) : number
+```
+
+获取指定resource对象对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
+
+**起始版本：** 11
+
+**废弃版本：** 20
+
+**替代接口：** [getSymbol](#getsymbol)(resId: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | resource对象对应的Symbol字符Unicode码（十进制）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('sys.symbol.message').id
+};
+try {
+  let symbolValue = this.context.resourceManager.getSymbol(resource);
+  console.info(`getSymbol, result: ${symbolValue}`);
+  // 打印输出结果: getSymbol, result: 983183
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+## getSymbolByName
+
+```TypeScript
+getSymbolByName(resName: string) : number
+```
+
+获取指定资源名称对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
+
+**起始版本：** 11
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resName | string | 是 | 资源名称。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 资源名称对应的Symbol字符Unicode码（十进制）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "message"仅作示例，请替换为实际使用的资源
+            let symbolValue = this.context.resourceManager.getSymbolByName("message");
+            console.info(`getSymbolByName, result: ${symbolValue}`);
+            // 打印输出结果: getSymbolByName, result: 983183
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getSymbolByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## isRawDir
+
+```TypeScript
+isRawDir(path: string): boolean
+```
+
+判断指定路径是否为rawfile下的目录，使用同步方式返回。
+
+**起始版本：** 12
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对于resources/rawfile目录的rawfile文件或子目录路径。格式为不以"/"开头的相对路径，如"test.txt"、"subdir"。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否为rawfile下的目录。<br> - true：表示是rawfile下的目录。<br> - false：表示非rawfile下的目录。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 假设rawfile根目录下存在非空文件夹sub，则isRawDir返回结果为true
+            // "sub"仅作示例，请替换为实际使用的目录名称
+            let isRawDir = this.context.resourceManager.isRawDir("sub");
+            // 打印输出结果: sub isRawDir, result: true
+            console.info(`sub isRawDir, result: ${isRawDir}`);
+
+            // 假设rawfile根目录下存在test.txt文件，则isRawDir返回结果为false
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            isRawDir = this.context.resourceManager.isRawDir("test.txt");
+            // 打印输出结果: test.txt isRawDir, result: false
+            console.info(`test.txt isRawDir, result: ${isRawDir}`);
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`isRawDir failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## removeResource
+
+```TypeScript
+removeResource(path: string) : void
+```
+
+应用运行时移除指定的overlay资源，还原被覆盖前的资源。
+
+> **说明：** 
+> 
+> rawfile和resfile目录不支持资源覆盖。
+
+**起始版本：** 10
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 待移除的HSP或HAP资源包的绝对路径。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) | Invalid overlay path. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
+        let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
+        try {
+            this.context.resourceManager.removeResource(path);
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`removeResource failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## updateOverrideConfiguration
+
+```TypeScript
+updateOverrideConfiguration(configuration: Configuration): void
+```
+
+更新差异化资源管理对象的配置。
+
+无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getoverrideresourcemanager)接口获取的差异化资源管理对象，调用该方法均可更新差异化资源管理对象的配置。
+
+**起始版本：** 12
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            let resMgr = this.context.resourceManager;
+            let overrideConfig = resMgr.getOverrideConfiguration();
+            overrideConfig.colorMode = resourceManager.ColorMode.DARK;
+            let overrideResMgr = resMgr.updateOverrideConfiguration(overrideConfig);
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`updateOverrideConfiguration failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+## closeRawFileDescriptor
+
+```TypeScript
+closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
+```
+
+关闭resources/rawfile目录下rawfile文件的文件描述符（fd）。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [closeRawFd](#closerawfd)(path: string, callback: _AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.closeRawFileDescriptor("test.txt", (error: Error) => {
+        if (error != null) {
+            console.error("error is " + error);
+        }
+    });
+});
+```
+
+<a id="closerawfiledescriptor-1"></a>
+
+## closeRawFileDescriptor
+
+```TypeScript
+closeRawFileDescriptor(path: string): Promise<void>
+```
+
+关闭resources/rawfile目录下rawfile文件的文件描述符（fd）。使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [closeRawFd](#closerawfd-1)(path: string)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.closeRawFileDescriptor("test.txt");
+});
+```
+
+## getMedia
+
+```TypeScript
+getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
+```
+
+获取指定资源ID对应的媒体文件内容。使用callback异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getMediaContent](#getmediacontent)(resId: number, callback: _AsyncCallback&lt;Uint8Array&gt;)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
+
+**示例**
+
+```TypeScript
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMedia($r('app.media.test').id, (error: Error, value: Uint8Array) => {
+        if (error != null) {
+            console.error("error is " + error);
+        } else {
+            let media = value;
+        }
+    });
+});
+```
+
+<a id="getmedia-1"></a>
+
+## getMedia
+
+```TypeScript
+getMedia(resId: number): Promise<Uint8Array>
+```
+
+获取指定资源ID对应的媒体文件内容。使用Promise异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getMediaContent](#getmediacontent)(resId: number)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回资源ID值对应的媒体文件内容。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMedia($r('app.media.test').id).then((value: Uint8Array) => {
+        let media = value;
+    }).catch((error: BusinessError) => {
+        console.error("getMedia promise error is " + error);
+    });
+});
+```
+
+## getMediaBase64
+
+```TypeScript
+getMediaBase64(resId: number, callback: AsyncCallback<string>): void
+```
+
+获取指定资源ID对应的图片资源Base64编码。使用callback异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getMediaContentBase64](#getmediacontentbase64)(resId: number, callback: _AsyncCallback&lt;string&gt;)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+
+**示例**
+
+```TypeScript
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMediaBase64($r('app.media.test').id, ((error: Error, value: string) => {
+        if (error != null) {
+            console.error("error is " + error);
+        } else {
+            let media = value;
+        }
+    });
+});
+```
+
+<a id="getmediabase64-1"></a>
+
+## getMediaBase64
+
+```TypeScript
+getMediaBase64(resId: number): Promise<string>
+```
+
+获取指定资源ID对应的图片资源Base64编码。使用Promise异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getMediaContentBase64](#getmediacontentbase64)(resId: number)
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| resId | number | 是 | 资源ID值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的图片资源Base64编码。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMediaBase64($r('app.media.test').id).then((value: string) => {
+        let media = value;
+    }).catch((error: BusinessError) => {
+        console.error("getMediaBase64 promise error is " + error);
+    });
+});
 ```
 
 ## getPluralString
@@ -5559,202 +8036,6 @@ try {
 }
 ```
 
-## getRawFd
-
-```TypeScript
-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
-```
-
-获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。
-
-> **说明：** 
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
-> [closeRawFd](#closerawfd)关闭
-> fd，避免资源泄露。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | 是 | 回调函数，返回的rawfile文件所在HAP的文件描述符（fd）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFd("test.txt", (error: BusinessError, value: resourceManager.RawFileDescriptor) => {
-                if (error != null) {
-                    console.error(`callback getRawFd failed error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let fd = value.fd;
-                    let offset = value.offset;
-                    let length = value.length;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getRawFd failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getrawfd-1"></a>
-
-## getRawFd
-
-```TypeScript
-getRawFd(path: string): Promise<RawFileDescriptor>
-```
-
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
-> [closeRawFd](#closerawfd)关闭
-> fd，避免资源泄露。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md)&gt; | Promise对象，返回rawfile文件所在HAP的文件描述符（fd）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
-                let fd = value.fd;
-                let offset = value.offset;
-                let length = value.length;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getRawFd error error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## getRawFdSync
-
-```TypeScript
-getRawFdSync(path: string): RawFileDescriptor
-```
-
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。
-
-> **说明：** 
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或
-> [closeRawFd](#closerawfd)关闭
-> fd，避免资源泄露。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | rawfile文件所在HAP的文件描述符（fd）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFdSync("test.txt");
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFdSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
 ## getRawFile
 
 ```TypeScript
@@ -5840,178 +8121,6 @@ resourceManager.getResourceManager((error, mgr) => {
         console.error("getRawFile promise error is " + error);
     });
 });
-```
-
-## getRawFileContent
-
-```TypeScript
-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
-```
-
-获取resources/rawfile目录下对应的rawfile文件内容。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回获取的rawfile文件内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContent("test.txt", (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let rawFile = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getRawFileContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getrawfilecontent-1"></a>
-
-## getRawFileContent
-
-```TypeScript
-getRawFileContent(path: string): Promise<Uint8Array>
-```
-
-获取resources/rawfile目录下对应的rawfile文件内容。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回获取的rawfile文件内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
-                let rawFile = value;
-            }).catch((error: BusinessError) => {
-                console.error("getRawFileContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## getRawFileContentSync
-
-```TypeScript
-getRawFileContentSync(path: string): Uint8Array
-```
-
-获取resources/rawfile目录下对应的rawfile文件内容，使用同步形式返回。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Uint8Array | 返回获取的rawfile文件内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContentSync("test.txt");
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFileContentSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
 ```
 
 ## getRawFileDescriptor
@@ -6103,249 +8212,6 @@ resourceManager.getResourceManager((error, mgr) => {
         console.error("getRawFileDescriptor promise error is " + error);
     });
 });
-```
-
-## getRawFileList
-
-```TypeScript
-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
-```
-
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。
-
-> **说明：** 
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回rawfile子目录下的文件夹及文件列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-        this.context.resourceManager.getRawFileList("", (error: BusinessError, value: Array<string>) => {
-            if (error != null) {
-                console.error(`callback getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
-                // 打印输出结果: getRawFileList, result: ["test.txt"]
-            }
-        });
-    }
-}
-```
-
-<a id="getrawfilelist-1"></a>
-
-## getRawFileList
-
-```TypeScript
-getRawFileList(path: string): Promise<Array<string>>
-```
-
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回rawfile子目录下的文件夹及文件列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-        this.context.resourceManager.getRawFileList("")
-            .then((value: Array<string>) => {
-                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
-                // 打印输出结果: getRawFileList, result: ["test.txt"]
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
-
-## getRawFileListSync
-
-```TypeScript
-getRawFileListSync(path: string): Array<string>
-```
-
-获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。
-
-> **说明：** 
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。<br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | rawfile子目录下的文件夹及文件列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-            // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-            let fileList: Array<string> = this.context.resourceManager.getRawFileListSync("");
-            console.info(`getRawFileListSync, result: ${JSON.stringify(fileList)}`);
-            // 打印输出结果: getRawFileListSync, result: ["test.txt"] 
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFileListSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## getResourceName
-
-```TypeScript
-getResourceName(resId: number): string
-```
-
-获取指定资源ID对应的资源名称。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 资源ID值对应的资源名称。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let resName: string = this.context.resourceManager.getResourceName($r('app.string.test').id);
-            console.info(`getResourceName, result: ${resName}`);
-            // 打印输出结果: getResourceName, result: test
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getResourceName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
 ```
 
 ## getString
@@ -6510,1769 +8376,6 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-## getStringArrayByName
-
-```TypeScript
-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void
-```
-
-获取指定资源名称对应的字符串数组。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源名称对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayByName("test", (error: BusinessError, value: Array<string>) => {
-            if (error != null) {
-                console.error(`callback getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                let strArray = value;
-                console.info(`getStringArrayByName, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
-            }
-        });
-    }
-}
-```
-
-<a id="getstringarraybyname-1"></a>
-
-## getStringArrayByName
-
-```TypeScript
-getStringArrayByName(resName: string): Promise<Array<string>>
-```
-
-获取指定资源名称对应的字符串数组。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源名称对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayByName("test")
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayByName, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
-
-## getStringArrayByNameSync
-
-```TypeScript
-getStringArrayByNameSync(resName: string): Array<string>
-```
-
-获取指定资源名称对应的字符串数组，使用同步方式返回。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 对应资源名称的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let strArray: Array<string> = this.context.resourceManager.getStringArrayByNameSync("test");
-            console.info(`getStringArrayByNameSync, result: ${strArray[0]}`);
-            // 打印输出结果: getStringArrayByNameSync, result: I'm one of the array's values.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringArrayByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## getStringArrayValue
-
-```TypeScript
-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void
-```
-
-获取指定resource对象对应的字符串数组。使用callback异步回调。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: number, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回resource对象对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.strarray.test').id
-};
-this.context.resourceManager.getStringArrayValue(resource, (error: BusinessError, value: Array<string>) => {
-  if (error != null) {
-    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringArrayValue, result: ${value[0]}`);
-    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-  }
-});
-```
-
-<a id="getstringarrayvalue-1"></a>
-
-## getStringArrayValue
-
-```TypeScript
-getStringArrayValue(resource: Resource): Promise<Array<string>>
-```
-
-获取指定resource对象对应的字符串数组。使用Promise异步回调。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getStringArrayValue](#getstringarrayvalue)(resId: number)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回resource对象对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.strarray.test').id
-};
-this.context.resourceManager.getStringArrayValue(resource)
-  .then((value: Array<string>) => {
-    console.info(`getStringArrayValue, result: ${value[0]}`);
-    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
-
-<a id="getstringarrayvalue-2"></a>
-
-## getStringArrayValue
-
-```TypeScript
-getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): void
-```
-
-获取指定资源ID对应的字符串数组。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
-            (error: BusinessError, value: Array<string>) => {
-                if (error != null) {
-                    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    console.info(`getStringArrayValue, result: ${value[0]}`);
-                    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-                }
-            });
-    }
-}
-```
-
-<a id="getstringarrayvalue-3"></a>
-
-## getStringArrayValue
-
-```TypeScript
-getStringArrayValue(resId: number): Promise<Array<string>>
-```
-
-获取指定资源ID对应的字符串数组。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回资源ID值对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayValue, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
-
-## getStringArrayValueSync
-
-```TypeScript
-getStringArrayValueSync(resId: number): Array<string>
-```
-
-获取指定资源ID对应的字符串数组，使用同步方式返回。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | 资源ID值对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-            let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync($r('app.strarray.test').id);
-            console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
-            // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getstringarrayvaluesync-1"></a>
-
-## getStringArrayValueSync
-
-```TypeScript
-getStringArrayValueSync(resource: Resource): Array<string>
-```
-
-获取指定resource对象对应的字符串数组，使用同步方式返回。
-
-**起始版本：** 10
-
-**废弃版本：** 20
-
-**替代接口：** [getStringArrayValueSync](#getstringarrayvaluesync)(resId: number)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Array&lt;string&gt; | resource对象对应的字符串数组。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.strarray.test').id
-};
-try {
-  let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync(resource);
-  console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
-  // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
-}
-```
-
-## getStringByName
-
-```TypeScript
-getStringByName(resName: string, callback: _AsyncCallback<string>): void
-```
-
-获取指定资源名称对应的字符串。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回获取的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringByName("test", (error: BusinessError, value: string) => {
-            if (error != null) {
-                console.error(`callback getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                console.info(`getStringByName, result: ${value}`);
-                // 打印输出结果: getStringByName, result: I'm a test string resource.
-            }
-        });
-    }
-}
-```
-
-<a id="getstringbyname-1"></a>
-
-## getStringByName
-
-```TypeScript
-getStringByName(resName: string): Promise<string>
-```
-
-获取指定资源名称对应的字符串。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源名称对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringByName("test").then((value: string) => {
-            console.info(`getStringByName, result: ${value}`);
-            // 打印输出结果: getStringByName, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
-
-## getStringByNameSync
-
-```TypeScript
-getStringByNameSync(resName: string): string
-```
-
-获取指定资源名称对应的字符串，使用同步方式返回。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 资源名称对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringByNameSync("test");
-            console.info(`getStringByNameSync, result: ${testStr}`);
-            // 打印输出结果: getStringByNameSync, result: I'm a test string resource.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getstringbynamesync-1"></a>
-
-## getStringByNameSync
-
-```TypeScript
-getStringByNameSync(resName: string, ...args: Array<string | number>): string
-```
-
-获取指定资源名称对应的字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 资源名称对应的格式化字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
-            console.info(`getStringByNameSync, result: ${testStr}`);
-            // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## getStringSync
-
-```TypeScript
-getStringSync(resId: number): string
-```
-
-获取指定资源ID对应的字符串，使用同步方式返回。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 资源ID值对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id);
-            console.info(`getStringSync, result: ${testStr}`);
-            // 打印输出结果: getStringSync, result: I'm a test string resource.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getstringsync-1"></a>
-
-## getStringSync
-
-```TypeScript
-getStringSync(resId: number, ...args: Array<string | number>): string
-```
-
-获取指定资源ID对应的字符串，并使用args参数依次替换字符串中的格式化占位符。使用同步方式返回。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 资源ID值对应的格式化字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
-            console.info(`getStringSync, result: ${testStr}`);
-            // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getstringsync-3"></a>
-
-## getStringSync
-
-```TypeScript
-getStringSync(resource: Resource): string
-```
-
-获取指定resource对象对应的字符串，使用同步方式返回。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getStringSync](#getstringsync)(resId: number)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | resource对象对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-try {
-  let testStr = this.context.resourceManager.getStringSync(resource);
-  console.info(`getStringSync, result: ${testStr}`);
-  // 打印输出结果: getStringSync, result: I'm a test string resource.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-}
-```
-
-<a id="getstringsync-4"></a>
-
-## getStringSync
-
-```TypeScript
-getStringSync(resource: Resource, ...args: Array<string | number>): string
-```
-
-获取指定resource对象对应的字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-**起始版本：** 10
-
-**废弃版本：** 20
-
-**替代接口：** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-| args | Array&lt;string &#124; number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字$d`、`%数字$f`和`%数字$s`。<br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。<br>- `%数字$d`中的数字表示参数索引，从`1`开始计数。如`%1$d`表示使用`args[0]`格式化，`%2$d`表示使用`args[1]`格式化，依此类推。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | resource对象对应的格式化字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-try {
-  let testStr = this.context.resourceManager.getStringSync(resource, "format string", 10, 98.78);
-  console.info(`getStringSync, result: ${testStr}`);
-  // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-}
-```
-
-## getStringValue
-
-```TypeScript
-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
-```
-
-获取指定resource对象对应的字符串。使用callback异步回调。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getStringValue](#getstringvalue)(resId: number, callback: _AsyncCallback&lt;string&gt;)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回resource对象对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // 打印输出结果: getStringValue, result: I'm a test string resource.
-  }
-});
-```
-
-<a id="getstringvalue-1"></a>
-
-## getStringValue
-
-```TypeScript
-getStringValue(resource: Resource): Promise<string>
-```
-
-获取指定resource对象对应的字符串。使用Promise异步回调。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getStringValue](#getstringvalue)(resId: number)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回resource对象对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // 打印输出结果: getStringValue, result: I'm a test string resource.
-  }
-});
-```
-
-<a id="getstringvalue-2"></a>
-
-## getStringValue
-
-```TypeScript
-getStringValue(resId: number, callback: _AsyncCallback<string>): void
-```
-
-获取指定资源ID对应的字符串。使用callback异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-| callback | [_AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basic-services-base.md)&lt;string&gt; | 是 | 回调函数，返回获取的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.string.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
-            console.info(`getStringValue, result: ${value}`);
-            // 打印输出结果: getStringValue, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // 打印输出结果: getStringValue, result: I'm a test string resource.
-  }
-});
-```
-
-<a id="getstringvalue-3"></a>
-
-## getStringValue
-
-```TypeScript
-getStringValue(resId: number): Promise<string>
-```
-
-获取指定资源ID对应的字符串。使用Promise异步回调。
-
-**起始版本：** 9
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回资源ID值对应的字符串。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.string.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
-            console.info(`getStringValue, result: ${value}`);
-            // 打印输出结果: getStringValue, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
-
-## getSymbol
-
-```TypeScript
-getSymbol(resId: number) : number
-```
-
-获取指定资源ID对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resId | number | 是 | 资源ID值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 资源ID值对应的Symbol字符Unicode码（十进制）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'sys.symbol.message'仅作示例，请替换为实际使用的资源
-            let symbolValue = this.context.resourceManager.getSymbol($r('sys.symbol.message').id);
-            console.info(`getSymbol, result: ${symbolValue}`);
-            // 打印输出结果: getSymbol, result: 983183
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-<a id="getsymbol-1"></a>
-
-## getSymbol
-
-```TypeScript
-getSymbol(resource: Resource) : number
-```
-
-获取指定resource对象对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
-
-**起始版本：** 11
-
-**废弃版本：** 20
-
-**替代接口：** [getSymbol](#getsymbol)(resId: number)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resourcemanager-resource-t.md) | 是 | 资源信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | resource对象对应的Symbol字符Unicode码（十进制）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('sys.symbol.message').id
-};
-try {
-  let symbolValue = this.context.resourceManager.getSymbol(resource);
-  console.info(`getSymbol, result: ${symbolValue}`);
-  // 打印输出结果: getSymbol, result: 983183
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
-}
-```
-
-## getSymbolByName
-
-```TypeScript
-getSymbolByName(resName: string) : number
-```
-
-获取指定资源名称对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| resName | string | 是 | 资源名称。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 资源名称对应的Symbol字符Unicode码（十进制）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "message"仅作示例，请替换为实际使用的资源
-            let symbolValue = this.context.resourceManager.getSymbolByName("message");
-            console.info(`getSymbolByName, result: ${symbolValue}`);
-            // 打印输出结果: getSymbolByName, result: 983183
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getSymbolByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## isRawDir
-
-```TypeScript
-isRawDir(path: string): boolean
-```
-
-判断指定路径是否为rawfile下的目录，使用同步方式返回。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 相对于resources/rawfile目录的rawfile文件或子目录路径。格式为不以"/"开头的相对路径，如"test.txt"、"subdir"。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 是否为rawfile下的目录。<br> - true：表示是rawfile下的目录。<br> - false：表示非rawfile下的目录。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 假设rawfile根目录下存在非空文件夹sub，则isRawDir返回结果为true
-            // "sub"仅作示例，请替换为实际使用的目录名称
-            let isRawDir = this.context.resourceManager.isRawDir("sub");
-            // 打印输出结果: sub isRawDir, result: true
-            console.info(`sub isRawDir, result: ${isRawDir}`);
-
-            // 假设rawfile根目录下存在test.txt文件，则isRawDir返回结果为false
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            isRawDir = this.context.resourceManager.isRawDir("test.txt");
-            // 打印输出结果: test.txt isRawDir, result: false
-            console.info(`test.txt isRawDir, result: ${isRawDir}`);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`isRawDir failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -8296,108 +8399,5 @@ try {
   this.context.resourceManager.release();
 } catch (error) {
   console.error("release error is " + error);
-}
-```
-
-## removeResource
-
-```TypeScript
-removeResource(path: string) : void
-```
-
-应用运行时移除指定的overlay资源，还原被覆盖前的资源。
-
-> **说明：** 
-> 
-> rawfile和resfile目录不支持资源覆盖。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| path | string | 是 | 待移除的HSP或HAP资源包的绝对路径。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) | Invalid overlay path. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
-        let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
-        try {
-            this.context.resourceManager.removeResource(path);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`removeResource failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
-
-## updateOverrideConfiguration
-
-```TypeScript
-updateOverrideConfiguration(configuration: Configuration): void
-```
-
-更新差异化资源管理对象的配置。
-
-无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getoverrideresourcemanager)接口获取的差异化资源管理对象，调用该方法均可更新差异化资源管理对象的配置。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| configuration | [Configuration](arkts-localization-resourcemanager-configuration-c.md) | 是 | 指定差异化资源的配置。通过[getOverrideConfiguration](#getoverrideconfiguration)获取差异化配置后，根据需求修改配置项，再作为参数传入。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let resMgr = this.context.resourceManager;
-            let overrideConfig = resMgr.getOverrideConfiguration();
-            overrideConfig.colorMode = resourceManager.ColorMode.DARK;
-            let overrideResMgr = resMgr.updateOverrideConfiguration(overrideConfig);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`updateOverrideConfiguration failed, error code: ${code}, message: ${message}.`);
-        }
-    }
 }
 ```

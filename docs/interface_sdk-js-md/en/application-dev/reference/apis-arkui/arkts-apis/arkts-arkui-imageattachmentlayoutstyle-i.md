@@ -16,11 +16,11 @@ Defines the ImageAttachment Layout Style.
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-Radius of the image border corners.
+Rounded corner.
 
-Default value: **0**.
+Default value: **0**
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
@@ -40,9 +40,9 @@ margin?: LengthMetrics | Margin
 
 Image margin.
 
-Default value: **0**.
+Default value: **0**
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [Margin](arkts-arkui-margin-t.md)
 
@@ -62,9 +62,9 @@ padding?: LengthMetrics | Padding
 
 Image padding.
 
-Default value: **0**.
+Default value: **0**
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; Padding
 

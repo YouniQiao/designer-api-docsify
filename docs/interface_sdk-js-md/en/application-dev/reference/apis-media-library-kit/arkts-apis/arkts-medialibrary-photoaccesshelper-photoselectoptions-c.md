@@ -166,9 +166,7 @@ Support selection order adjustment.
 maxPhotoSelectNumber?: number
 ```
 
-Maximum number of photos that can be selected.
-
-A maximum of 500 photos can be selected. The default value is **500**.
+Maximum number of photos that can be selected. A maximum of 500 photos can be selected. The default value is **500**. The value should be an integer.
 
 **Type:** number
 
@@ -186,9 +184,7 @@ A maximum of 500 photos can be selected. The default value is **500**.
 maxVideoSelectNumber?: number
 ```
 
-Maximum number of videos that can be selected.
-
-A maximum of 500 videos can be selected. The default value is **500**.
+Maximum number of videos that can be selected. A maximum of 500 videos can be selected. The default value is **500**. The value should be an integer.
 
 **Type:** number
 

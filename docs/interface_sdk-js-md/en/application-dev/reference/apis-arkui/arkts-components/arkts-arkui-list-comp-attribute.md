@@ -399,32 +399,6 @@ Sets the effect used when the scroll boundary is reached.
 | value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.Spring** |
 | options | [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }**<br>**Since:** 11 |
 
-## editMode
-
-```TypeScript
-editMode(value: boolean)
-```
-
-Sets whether to enable edit mode. For details about how to delete selected list items, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-3-setting-the-edit-mode).
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 9. No substitute is provided.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable edit mode.<br>Default value: **false** (the edit mode is disabled). |
-
 ## editModeOptions
 
 ```TypeScript
@@ -711,28 +685,6 @@ Triggered when the editing mode status changes.
 | --- | --- | --- | --- |
 | callback | Callback&lt;boolean&gt; &#124; undefined | Yes | Callback triggered when editing mode status changes.<br>Passing undefined will unregister the callback. |
 
-## onItemDelete
-
-```TypeScript
-onItemDelete(event: (index: number) => boolean)
-```
-
-Triggered when a list item is deleted.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (index: number) =&gt; boolean | Yes |  |
-
 ## onItemDragEnter
 
 ```TypeScript
@@ -924,34 +876,6 @@ This event is triggered once when **initialIndex** is **0** during list initiali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the list reaches the start position. |
-
-## onScroll
-
-```TypeScript
-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
-```
-
-Triggered when the list scrolls.
-
-**Since:** 7
-
-**Deprecated since:** 12
-
-**Substitutes:** onDidScroll
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | Callback when scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the list content scrolls up and negative when the list content scrolls down.<br>Unit: vp scrollState: Current scroll state. |
 
 ## onScrollFrameBegin
 
@@ -1254,3 +1178,79 @@ Sets whether to synchronously load all child components in the list.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to synchronously load all child components in the list.<br>**true**: yes; **false**: no Default value: **true**<br>**NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the list are delayed to the next frame for layout. |
+
+## editMode
+
+```TypeScript
+editMode(value: boolean)
+```
+
+Sets whether to enable edit mode. For details about how to delete selected list items, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-3-setting-the-edit-mode).
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 9. No substitute is provided.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to enable edit mode.<br>Default value: **false** (the edit mode is disabled). |
+
+## onItemDelete
+
+```TypeScript
+onItemDelete(event: (index: number) => boolean)
+```
+
+Triggered when a list item is deleted.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (index: number) =&gt; boolean | Yes |  |
+
+## onScroll
+
+```TypeScript
+onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
+```
+
+Triggered when the list scrolls.
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Substitutes:** onDidScroll
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | Callback when scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the list content scrolls up and negative when the list content scrolls down.<br>Unit: vp scrollState: Current scroll state. |

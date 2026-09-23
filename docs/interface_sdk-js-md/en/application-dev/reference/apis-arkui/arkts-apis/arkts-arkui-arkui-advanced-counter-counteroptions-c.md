@@ -6,6 +6,8 @@ declare class CounterOptions
 
 Defines the type and style of the **Counter** component.
 
+When you select a **Counter** type, you must select the corresponding **Counter** style. If the style parameter does not match the type, the default style of that type is used.
+
 **Since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -46,7 +48,7 @@ direction?: Direction
 
 Layout direction. This parameter is passed when adapting to right-to-left languages (such as Arabic) or implementing a mirrored layout. **Direction.Auto**: automatically follows the system language direction (default). **Direction.Ltr**: left-to-right layout, applicable to most languages. **Direction.Rtl**: right-to-left layout, applicable to RTL languages such as Arabic.
 
-Default value: **Direction.Auto**.
+Default value: **Direction.Auto**
 
 If this parameter is set to **undefined**, the default value is used.
 
@@ -110,16 +112,7 @@ If this parameter is set to **undefined**, the default value is used.
 type: CounterType
 ```
 
-Type of the current Counter. It must be used with the corresponding style parameters. For details about the mapping, see the Counter Type and Style Mapping table below.
-
-When you select a **Counter** type, you must select the corresponding **Counter** style. If the style parameter does not match the type, the default style of that type is used.
-
-| Counter Type | Counter Style |  
-| ----------------------- | ------------------ |  
-| [CounterType.LIST](arkts-arkui-arkui-advanced-counter-countertype-e.md) | [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) |
-| [CounterType.COMPACT](arkts-arkui-arkui-advanced-counter-countertype-e.md) | [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) |
-| [CounterType.INLINE](arkts-arkui-arkui-advanced-counter-countertype-e.md) | [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) |
-| [CounterType.INLINE_DATE](arkts-arkui-arkui-advanced-counter-countertype-e.md) | [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) |
+Type of the current Counter. It must be used with the corresponding style parameters. For details about the mapping, see the Counter Type and Style Mapping table.
 
 **Type:** [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md)
 

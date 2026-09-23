@@ -748,41 +748,6 @@ function offPhotoOutputPhotoAssetAvailable(photoOutput: camera.PhotoOutput): voi
 }
 ```
 
-## off('captureStart')
-
-```TypeScript
-off(type: 'captureStart', callback?: AsyncCallback<number>): void
-```
-
-Unsubscribes from capture start events.
-
-> **NOTE:** 
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
-
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](#offcapturestartwithinfo)(type: 'captureStartWithInfo', callback?: AsyncCallback&lt;CaptureStartInfo&gt;)
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
-
-**Examples**
-
-```TypeScript
-function unregisterPhotoOutputCaptureStart(photoOutput: camera.PhotoOutput): void {
-  photoOutput.off('captureStart');
-}
-```
-
 ## off('captureStartWithInfo')
 
 ```TypeScript
@@ -988,6 +953,41 @@ function unregisterPhotoOutputError(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
+## off('captureStart')
+
+```TypeScript
+off(type: 'captureStart', callback?: AsyncCallback<number>): void
+```
+
+Unsubscribes from capture start events.
+
+> **NOTE:** 
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [off](#offcapturestartwithinfo)(type: 'captureStartWithInfo', callback?: AsyncCallback&lt;CaptureStartInfo&gt;)
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+
+**Examples**
+
+```TypeScript
+function unregisterPhotoOutputCaptureStart(photoOutput: camera.PhotoOutput): void {
+  photoOutput.off('captureStart');
+}
+```
+
 ## offCapturePhotoAvailable
 
 ```TypeScript
@@ -1112,51 +1112,6 @@ function photoAssetAvailableCallback(err: BusinessError, photoAsset: photoAccess
 
 function onPhotoOutputPhotoAssetAvailable(photoOutput: camera.PhotoOutput): void {
   photoOutput.on('photoAssetAvailable', photoAssetAvailableCallback);
-}
-```
-
-## on('captureStart')
-
-```TypeScript
-on(type: 'captureStart', callback: AsyncCallback<number>): void
-```
-
-Subscribes to capture start events. This API uses an asynchronous callback to return the result.
-
-> **NOTE:** 
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
-
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [on](#oncapturestartwithinfo)(type: 'captureStartWithInfo', callback: AsyncCallback&lt;CaptureStartInfo&gt;)
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. This event is triggered and returned when the bottom layer starts exposure each time a photo is taken. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the capture ID. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, captureId: number): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`photo capture started, captureId : ${captureId}`);
-}
-
-function registerPhotoOutputCaptureStart(photoOutput: camera.PhotoOutput): void {
-  photoOutput.on('captureStart', callback);
 }
 ```
 
@@ -1452,6 +1407,51 @@ function callback(err: BusinessError): void {
 
 function registerPhotoOutputError(photoOutput: camera.PhotoOutput): void {
   photoOutput.on('error', callback);
+}
+```
+
+## on('captureStart')
+
+```TypeScript
+on(type: 'captureStart', callback: AsyncCallback<number>): void
+```
+
+Subscribes to capture start events. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](#oncapturestartwithinfo)(type: 'captureStartWithInfo', callback: AsyncCallback&lt;CaptureStartInfo&gt;)
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'captureStart' | Yes | Event type. The value is fixed at **'captureStart'**. The event can be listened for when a photoOutput instance is created. This event is triggered and returned when the bottom layer starts exposure each time a photo is taken. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the capture ID. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, captureId: number): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`photo capture started, captureId : ${captureId}`);
+}
+
+function registerPhotoOutputCaptureStart(photoOutput: camera.PhotoOutput): void {
+  photoOutput.on('captureStart', callback);
 }
 ```
 

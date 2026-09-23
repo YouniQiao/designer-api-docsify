@@ -24,7 +24,7 @@ import { advertising } from '@kit.AdsKit';
 
 Custom parameters.
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+<!--RP1--><!--RP1End-->
 
 **Type:** number &#124; boolean &#124; string &#124; undefined
 

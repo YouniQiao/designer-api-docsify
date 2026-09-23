@@ -16,7 +16,7 @@ Defines font configurations.
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-Font weight configuration. The default value is inherited from [FontWeightConfigs] (#fontweightconfigs24).
+Font weight configuration. The default value inherits [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md). **Model constraint:** This interface can only be used in the Stage model.
 
 **Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 

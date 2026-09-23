@@ -54,86 +54,6 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 ```
 
-## convertToText
-
-```TypeScript
-convertToText(callback: AsyncCallback<string>): void
-```
-
-Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [toPlainText](#toplaintext)()
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: Incorrect parameters types. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-        return;
-    }
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-});
-```
-
-<a id="converttotext-1"></a>
-
-## convertToText
-
-```TypeScript
-convertToText(): Promise<string>
-```
-
-Forcibly converts the content in a **PasteData** object to text. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [toPlainText](#toplaintext)()
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
-
 ## getData
 
 ```TypeScript
@@ -259,6 +179,86 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, '<html>hello</html>');
 let text: string = record.toPlainText();
 console.info(`Succeeded in converting to text. Text: ${text}`);
+```
+
+## convertToText
+
+```TypeScript
+convertToText(callback: AsyncCallback<string>): void
+```
+
+Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [toPlainText](#toplaintext)()
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: Incorrect parameters types. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+record.convertToText((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    console.info(`Succeeded in converting to text. Data: ${data}`);
+});
+```
+
+<a id="converttotext-1"></a>
+
+## convertToText
+
+```TypeScript
+convertToText(): Promise<string>
+```
+
+Forcibly converts the content in a **PasteData** object to text. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [toPlainText](#toplaintext)()
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+record.convertToText().then((data: string) => {
+    console.info(`Succeeded in converting to text. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
 ```
 
 ## data

@@ -41,6 +41,13 @@ import { hid } from '@kit.ConnectivityKit';
 | [HidHostProfile](arkts-connectivity-hid-hidhostprofile-i-sys.md) | Manager hid host profile. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-hid-baseprofile-t.md) | Base interface of profile. |
+| [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) | Bluetooth device address. |
+
 ### Enums
 
 | Name | Description |
@@ -50,10 +57,3 @@ import { hid } from '@kit.ConnectivityKit';
 | [ReportType](arkts-connectivity-hid-reporttype-e.md) | Describe the report type. |
 | [ServiceType](arkts-connectivity-hid-servicetype-e.md) | Describe the l2cap service type. |
 | [Subclass](arkts-connectivity-hid-subclass-e.md) | Describe the subclass. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-hid-baseprofile-t.md) | Base interface of profile. |
-| [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md) | Bluetooth device address. |

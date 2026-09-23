@@ -184,32 +184,6 @@ Sets whether to display dates in lunar calendar format. Compared with [lunar](#l
 | --- | --- | --- | --- |
 | isLunar | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to display dates in lunar calendar format.<br>- **true**: Display dates in lunar calendar format. <br>- **false**: Do not display dates in lunar calendar format. <br>Default value: **false** <br>If the value of **isLunar** is **undefined**, the default value is used. |
 
-## onChange
-
-```TypeScript
-onChange(callback: (value: DatePickerResult) => void)
-```
-
-Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [onDateChange](#ondatechange)(callback: Callback&lt;Date&gt;)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (value: DatePickerResult) =&gt; void | Yes | Callback used to return the selected time, including the year, month, and day fields. |
-
 ## onDateChange
 
 ```TypeScript
@@ -351,3 +325,29 @@ Sets the text style for candidate items (the first item immediately above or bel
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md)&gt; | Yes | Text color, font size, and font weight of the candidate items.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>} <br>} <br>If the value of **style** is undefined, the default value is used. |
+
+## onChange
+
+```TypeScript
+onChange(callback: (value: DatePickerResult) => void)
+```
+
+Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
+
+This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [onDateChange](#ondatechange)(callback: Callback&lt;Date&gt;)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: DatePickerResult) =&gt; void | Yes | Callback used to return the selected time, including the year, month, and day fields. |

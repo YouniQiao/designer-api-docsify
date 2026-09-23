@@ -16,17 +16,17 @@
 | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Defines the optional build options. |
 | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Provides optional parameters for creating a BuilderNode. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Enumerates the node rendering types. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [InputEventType](arkts-arkui-inputeventtype-t.md) | Defines the type of input event to be dispatched. For details, see [postInputEvent](arkts-arkui-buildernode-c.md#postinputevent). |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Enumerates the node rendering types. |
 
 ## Examples
 

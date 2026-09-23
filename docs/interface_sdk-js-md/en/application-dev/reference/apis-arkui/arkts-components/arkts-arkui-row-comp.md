@@ -2,7 +2,10 @@
 
 Defines a container that lays out child components horizontally. It supports setting the spacing between child components and the alignment mode, and is suitable for scenarios where multiple child components need to be arranged horizontally, such as toolbars, tab bars, and button groups.
 
-> **NOTE** > > If no width or height is set for the **Row** component, it adapts to the size of child components in the main axis > or cross axis direction.
+> **NOTE:** 
+> 
+> If no width or height is set for the **Row** component, it adapts to the size of child components in the main axis
+> or cross axis direction.
 
 ## Child Components
 

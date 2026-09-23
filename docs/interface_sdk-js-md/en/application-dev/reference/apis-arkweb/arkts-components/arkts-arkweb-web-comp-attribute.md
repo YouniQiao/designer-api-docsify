@@ -436,13 +436,13 @@ enableAutoFill(value: boolean)
 
 Sets whether to enable web page autofill. By default, this feature is enabled.
 
-&lt;!--RP1--&gt;
+<!--RP1-->
 
 > **NOTE:** 
 > 
 > The autofill feature of this API depends on SmartFill service and Password Autofill Service.
 
-&lt;!--RP1End--&gt;
+<!--RP1End-->
 
 **Since:** 23
 
@@ -1747,28 +1747,6 @@ Triggered when this web page receives a new favicon.
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnFaviconReceivedEvent](arkts-arkweb-web-comp-onfaviconreceivedevent-i.md)&gt; | Yes | Callback invoked when the current web page receives a new favicon.<br>**Since:** 12 |
 
-## onFileSelectorShow
-
-```TypeScript
-onFileSelectorShow(callback: (event?: { callback: Function, fileSelector: object }) => void)
-```
-
-Triggered to process an HTML form whose input type is **file**, in response to the tapping of the **Select File** button.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [onShowFileSelector](#onshowfileselector)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (event?: { callback: Function, fileSelector: object }) =&gt; void | Yes | Callback to be executed when the file selector is triggered. |
-
 ## onFirstContentfulPaint
 
 ```TypeScript
@@ -2917,28 +2895,6 @@ To support errors for loading subframe resources, use the [OnSslErrorEvent](#ons
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnSslErrorEventReceiveEvent](arkts-arkweb-web-comp-onsslerroreventreceiveevent-i.md)&gt; | Yes | Callback invoked when the web page receives an SSL error.<br>**Since:** 12 |
 
-## onSslErrorReceive
-
-```TypeScript
-onSslErrorReceive(callback: (event?: { handler: Function, error: object }) => void)
-```
-
-Triggered when an SSL error occurs during resource loading.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [onSslErrorEventReceive](#onsslerroreventreceive)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (event?: { handler: Function, error: object }) =&gt; void | Yes | Callback triggered when a web page detects an SSL error. |
-
 ## onTextSelectionChange
 
 ```TypeScript
@@ -3004,28 +2960,6 @@ Triggered when an apple-touch-icon URL is received.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnTouchIconUrlReceivedEvent](arkts-arkweb-web-comp-ontouchiconurlreceivedevent-i.md)&gt; | Yes | Callback invoked when an apple-touch-icon URL is received.<br>**Since:** 12 |
-
-## onUrlLoadIntercept
-
-```TypeScript
-onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest}) => boolean)
-```
-
-Triggered when the **Web** component is about to access a URL. This API is used to determine whether to block the access.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** onLoadIntercept
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (event?: { data: string &#124; WebResourceRequest}) =&gt; boolean | Yes | URL information.<br>The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
 
 ## onVerifyPin
 
@@ -3143,6 +3077,26 @@ Triggered to notify the user of a new window creation request when [multiWindowA
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnWindowNewExtEvent](arkts-arkweb-web-comp-onwindownewextevent-i.md)&gt; | Yes | Callback invoked when the web page requests the user to create a window. |
 
+## onZoomChange
+
+```TypeScript
+onZoomChange(callback: OnZoomChangeCallback)
+```
+
+The callback is triggered when the browser zoom factor of the page changes.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnZoomChangeCallback](arkts-arkweb-web-comp-onzoomchangecallback-t.md) | Yes | The triggered callback when the browser zoom factor of the page changes. The callback is triggered only by browser zoom changes (for example, [setZoomFactor](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setzoomfactor)); page display scale changes (pinch zoom) are notified by [onScaleChange](#onscalechange) instead. |
+
 ## optimizeParserBudget
 
 ```TypeScript
@@ -3206,28 +3160,6 @@ Sets whether to load web pages by using the overview mode. That is, zoom out the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | overviewModeAccess | boolean | Yes | Whether to load web pages in overview mode.<br>The value **true** means to use overview mode, and **false** means not to use it. <br>The default value is **false** when undefined or null is passed in. |
-
-## password
-
-```TypeScript
-password(password: boolean)
-```
-
-Sets whether to save the password. This API is an empty API.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** enableAutofill
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| password | boolean | Yes | Whether to allow the web component to save passwords. The value **true** means the web component is allowed to save passwords, and **false** means the opposite. If **undefined** or **null** is passed, the default value **false** is used. |
 
 ## pinchSmooth
 
@@ -3390,56 +3322,6 @@ Selects the layout mode of the vertical scrollbar within the **Web** component, 
 | --- | --- | --- | --- |
 | policy | [ScrollbarLayoutPolicy](arkts-arkweb-web-comp-scrollbarlayoutpolicy-e.md) | Yes | Sets the layout mode of the vertical scrollbar within the **Web** component. Options: **CONTENT** (follows the web page CSS **direction** attribute), **SYSTEM** (lays out according to the left-to-right or right-to-left writing direction of the system language. For right-to-left languages, the scrollbar is laid out on the left side. This applies to all nested scrollbars within the web page). |
 
-## selectionMenuOptions
-
-```TypeScript
-selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
-```
-
-Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.
-
-The API only supports the selection of plain text; if the selected content contains images or other non-text elements, the **action** information may display garbled content.
-
-> **NOTE:** 
-> 
-> When used together with [editMenuOptions](#editmenuoptions), this API does not take effect.
-
-**Since:** 12
-
-**Deprecated since:** 20
-
-**Substitutes:** editMenuOptions
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | Yes | Extended options of the custom context menu on selection. <br>The number of menu options, menu content size, and start icon size must be the same as those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu) component. |
-
-## tableData
-
-```TypeScript
-tableData(tableData: boolean)
-```
-
-Sets whether to save form data. When this attribute is not explicitly called, the **Web** component is allowed to save form data by default. This API is an empty API.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** enableAutofill
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tableData | boolean | Yes | Whether to allow the Web component to save form data. The value **true** means the Web component is allowed to save form data, and **false** means the opposite. If **undefined** or **null** is passed, the value is **true**. |
-
 ## textAutosizing
 
 ```TypeScript
@@ -3475,28 +3357,6 @@ After automatic font sizing takes effect, any text smaller than 16 px is enlarge
 | --- | --- | --- | --- |
 | textAutosizing | boolean | Yes | Whether to enable automatic text resizing.<br>The value **true** means to enable automatic text resizing, and **false** means the opposite. <br>When **undefined** or **null** is passed in, the value is **true**. |
 
-## textZoomAtio
-
-```TypeScript
-textZoomAtio(textZoomAtio: number)
-```
-
-Sets the text zoom ratio of the page.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [textZoomRatio](#textzoomratio)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| textZoomAtio | number | Yes | Text zoom percentage of the page to set. The value 100 indicates the original size, a value greater than 100 indicates zoom-in, and a value less than 100 indicates zoom-out.<br>The value range is (0, 2147483647]. |
-
 ## textZoomRatio
 
 ```TypeScript
@@ -3516,28 +3376,6 @@ Sets the text zoom ratio of the page. When this attribute is not explicitly call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | textZoomRatio | number | Yes | Text zoom percentage for the page. The value **100** indicates the original size, a value greater than **100** indicates zoom in, and a value less than **100** indicates zoom out.<br>The value is an integer in the range (0, 2147483647]. |
-
-## userAgent
-
-```TypeScript
-userAgent(userAgent: string)
-```
-
-Sets the user agent.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** setCustomUserAgent
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| userAgent | string | Yes | User agent to set. |
 
 ## verticalScrollBarAccess
 
@@ -3697,28 +3535,6 @@ When this attribute is not explicitly called, the default standard font family o
 | --- | --- | --- | --- |
 | family | string | Yes | Standard font family to set.<br>When **null** or **undefined** is passed in, the sans-serif font family is **sans-serif**. |
 
-## wideViewModeAccess
-
-```TypeScript
-wideViewModeAccess(wideViewModeAccess: boolean)
-```
-
-Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;** tag. This API is an empty API.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [metaViewport](#metaviewport)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag.<br>The value **true** means to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag, and **false** means the opposite. |
-
 ## zoomAccess
 
 ```TypeScript
@@ -3758,3 +3574,207 @@ If this attribute is not explicitly called, zooming by pressing **Ctrl + '-/+'**
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | zoomControlAccess | boolean | Yes | Whether to allow zooming through key combinations. The value **true** means the zooming is supported, and **false** means the opposite. If null or undefined is passed, the default value **false** is used. |
+
+## onFileSelectorShow
+
+```TypeScript
+onFileSelectorShow(callback: (event?: { callback: Function, fileSelector: object }) => void)
+```
+
+Triggered to process an HTML form whose input type is **file**, in response to the tapping of the **Select File** button.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [onShowFileSelector](#onshowfileselector)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (event?: { callback: Function, fileSelector: object }) =&gt; void | Yes | Callback to be executed when the file selector is triggered. |
+
+## onSslErrorReceive
+
+```TypeScript
+onSslErrorReceive(callback: (event?: { handler: Function, error: object }) => void)
+```
+
+Triggered when an SSL error occurs during resource loading.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [onSslErrorEventReceive](#onsslerroreventreceive)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (event?: { handler: Function, error: object }) =&gt; void | Yes | Callback triggered when a web page detects an SSL error. |
+
+## onUrlLoadIntercept
+
+```TypeScript
+onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest}) => boolean)
+```
+
+Triggered when the **Web** component is about to access a URL. This API is used to determine whether to block the access.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** onLoadIntercept
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (event?: { data: string &#124; WebResourceRequest}) =&gt; boolean | Yes | URL information.<br>The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
+
+## password
+
+```TypeScript
+password(password: boolean)
+```
+
+Sets whether to save the password. This API is an empty API.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** enableAutofill
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| password | boolean | Yes | Whether to allow the web component to save passwords. The value **true** means the web component is allowed to save passwords, and **false** means the opposite. If **undefined** or **null** is passed, the default value **false** is used. |
+
+## selectionMenuOptions
+
+```TypeScript
+selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
+```
+
+Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.
+
+The API only supports the selection of plain text; if the selected content contains images or other non-text elements, the **action** information may display garbled content.
+
+> **NOTE:** 
+> 
+> When used together with [editMenuOptions](#editmenuoptions), this API does not take effect.
+
+**Since:** 12
+
+**Deprecated since:** 20
+
+**Substitutes:** editMenuOptions
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | Yes | Extended options of the custom context menu on selection. <br>The number of menu options, menu content size, and start icon size must be the same as those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu) component. |
+
+## tableData
+
+```TypeScript
+tableData(tableData: boolean)
+```
+
+Sets whether to save form data. When this attribute is not explicitly called, the **Web** component is allowed to save form data by default. This API is an empty API.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** enableAutofill
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tableData | boolean | Yes | Whether to allow the Web component to save form data. The value **true** means the Web component is allowed to save form data, and **false** means the opposite. If **undefined** or **null** is passed, the value is **true**. |
+
+## textZoomAtio
+
+```TypeScript
+textZoomAtio(textZoomAtio: number)
+```
+
+Sets the text zoom ratio of the page.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [textZoomRatio](#textzoomratio)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| textZoomAtio | number | Yes | Text zoom percentage of the page to set. The value 100 indicates the original size, a value greater than 100 indicates zoom-in, and a value less than 100 indicates zoom-out.<br>The value range is (0, 2147483647]. |
+
+## userAgent
+
+```TypeScript
+userAgent(userAgent: string)
+```
+
+Sets the user agent.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** setCustomUserAgent
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| userAgent | string | Yes | User agent to set. |
+
+## wideViewModeAccess
+
+```TypeScript
+wideViewModeAccess(wideViewModeAccess: boolean)
+```
+
+Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;** tag. This API is an empty API.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [metaViewport](#metaviewport)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag.<br>The value **true** means to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag, and **false** means the opposite. |

@@ -1878,7 +1878,7 @@ This API will be deprecated. Use [off](#off-1) instead.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [off](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#offmedialibraryavailability)
+**Substitutes:** [off](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#off)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -2015,7 +2015,7 @@ This API will be deprecated. Use [on](#on-1) instead.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [on](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#onmedialibraryavailability)
+**Substitutes:** [on](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#on)
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

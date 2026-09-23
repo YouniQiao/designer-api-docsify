@@ -60,6 +60,22 @@ Bundle name of the application.
 
 **System API:** This is a system API.
 
+## uid
+
+```TypeScript
+readonly uid: number
+```
+
+UID of the application.
+
+**Type:** number
+
+**Since:** 10
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
 ## instanceKey
 
 ```TypeScript
@@ -75,22 +91,6 @@ Key value of an application instance.
 **Deprecated since:** 15
 
 **Substitutes:** [appInstanceKey](#appinstancekey)
-
-**System capability:** SystemCapability.Notification.Notification
-
-**System API:** This is a system API.
-
-## uid
-
-```TypeScript
-readonly uid: number
-```
-
-UID of the application.
-
-**Type:** number
-
-**Since:** 10
 
 **System capability:** SystemCapability.Notification.Notification
 

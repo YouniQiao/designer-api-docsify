@@ -57,6 +57,23 @@
 | [VoiceButtonOptions](arkts-arkui-voicebuttonoptions-i-sys.md) | 语音按钮选项。 |
 <!--DelEnd-->
 
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [Affinity](arkts-arkui-affinity-t.md) | 位置亲和度枚举。 |
+| [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md) | 输入内容发生变化时，触发该回调。 |
+| [FontVariation](arkts-arkui-fontvariation-t.md) | 可变字体的属性。 |
+| [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 输入法扩展信息。 |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | 用于描述文本布局中单行文字的度量信息。 |
+| [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md) | 菜单创建时触发。 |
+| [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md) | 文本变化后回调。 |
+| [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md) | 当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。入参和返回值只包含一级菜单项，不包含二级菜单项。 |
+| [Paragraph](arkts-arkui-paragraph-t.md) | 保存文本内容及样式的载体，支持排版与绘制操作。 |
+| [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 矩形区域高度规格枚举。 |
+| [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 矩形区域宽度规格枚举。 |
+| [TextBox](arkts-arkui-textbox-t.md) | 文本矩形区域。 |
+
 ### 枚举
 
 | 名称 | 说明 |
@@ -73,7 +90,7 @@
 | [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md) | 定义文本数据检测类型。 |
 | [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md) | 定义删除文本方向。 |
 | [TextDirection](arkts-arkui-textdirection-e.md) | 文本排版方向。 |
-| [TextEncoding](arkts-arkui-textencoding-e.md) | 枚举文本布局查询接口支持的文本编码类型。 |
+| [TextEncoding](arkts-arkui-textencoding-e.md) | 文本布局查询接口支持的文本编码类型。 |
 | [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md) | 菜单的显示模式。 |
 | [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) | 文本垂直对齐的方式。默认值BASELINE，沿基线对齐。 |
 
@@ -86,20 +103,3 @@
 | [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md) | 键盘模糊效果。 |
 | [TextChangeReason](arkts-arkui-textchangereason-e-sys.md) | 组件内容变化原因。 |
 <!--DelEnd-->
-
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [Affinity](arkts-arkui-affinity-t.md) | 位置亲和度枚举。 |
-| [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md) | 输入内容发生变化时，触发该回调。 |
-| [FontVariation](arkts-arkui-fontvariation-t.md) | 可变字体的属性。 |
-| [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | 输入法扩展信息。 |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | 用于描述文本布局中单行文字的度量信息。 |
-| [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md) | 菜单创建时触发。 |
-| [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md) | 文本变换后回调。 |
-| [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md) | 当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。入参和返回值只包含一级菜单项，不包含二级菜单项。 |
-| [Paragraph](arkts-arkui-paragraph-t.md) | 保存文本内容及样式的载体，支持排版与绘制操作。 |
-| [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 矩形区域高度规格枚举。 |
-| [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 矩形区域宽度规格枚举。 |
-| [TextBox](arkts-arkui-textbox-t.md) | 文本矩形区域。 |

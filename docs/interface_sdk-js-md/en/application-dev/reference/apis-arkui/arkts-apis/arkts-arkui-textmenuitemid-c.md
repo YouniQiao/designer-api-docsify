@@ -30,13 +30,13 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | ID of the **TextMenuItemId** object to compare. |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | TextMenuItemId object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the two **TextMenuItemId** objects are the same.<br>**true** if the objects are equal; **false** otherwise. |
+| boolean | Whether two TextMenuItemId values are equal.<br>The value **true** indicates that they are equal, and **false** indicates that they are not equal. |
 
 ## of
 
@@ -58,13 +58,13 @@ Creates a **TextMenuItemId** object based on **id**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Menu ID. |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Menu item identifier, used to create a TextMenuItemId object to identify the menu option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | **TextMenuItemId** object. |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Menu item identifier object created based on the passed-in ID, used to identify a menu option. |
 
 ## address
 
@@ -72,7 +72,7 @@ Creates a **TextMenuItemId** object based on **id**.
 static readonly address: TextMenuItemId
 ```
 
-ID for the navigation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected address, launching the map app.
+Navigate, a first-level menu item. Provides a jump service for the selected address and opens the map application.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -90,7 +90,7 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
+<!--RP1--><!--RP1End-->Polishes, summarizes, and formats the selected text, a first-level menu item. This menu item depends on the large model capability; otherwise, it does not take effect.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -108,7 +108,7 @@ static readonly AI_WRITER: TextMenuItemId
 static readonly askAI: TextMenuItemId
 ```
 
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
+<!--RP2--><!--RP2End-->Provides AI query capability for the selected text, a first-level menu item. This menu item depends on the large model capability; otherwise, it does not take effect.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -126,7 +126,7 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item **Password Vault** is displayed. This menu item is supported exclusively for the Search, TextInput, TextArea, and RichEditor components.
+Auto fill, a first-level menu item. Tapping it expands the second-level menu item "Password vault". It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md#search), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor).
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -144,7 +144,7 @@ ID for the autofill menu item. It is a level-1 menu item. When a menu item is ta
 static readonly CAMERA_INPUT: TextMenuItemId
 ```
 
-ID for the camera input menu item. It is a level-1 menu item.
+Camera input, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -162,7 +162,7 @@ ID for the camera input menu item. It is a level-1 menu item.
 static readonly COLLABORATION_SERVICE: TextMenuItemId
 ```
 
-ID for the collaboration service menu item. It is a level-1 menu item.
+Collaboration service, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -180,7 +180,7 @@ ID for the collaboration service menu item. It is a level-1 menu item.
 static readonly COPY: TextMenuItemId
 ```
 
-ID for the default copy menu item. It is a level-1 menu item.
+Default copy, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -198,7 +198,7 @@ ID for the default copy menu item. It is a level-1 menu item.
 static readonly CUT: TextMenuItemId
 ```
 
-ID for the default cut menu item. It is a level-1 menu item.
+Default cut, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -216,7 +216,7 @@ ID for the default cut menu item. It is a level-1 menu item.
 static readonly dateTime: TextMenuItemId
 ```
 
-ID for the event creation menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected date and time, launching the page for creating a calendar event.
+New schedule, a first-level menu item. Provides a jump service for the selected date and time and opens the new schedule page.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -234,7 +234,7 @@ ID for the event creation menu item. It is a level-1 menu item. This menu item p
 static readonly email: TextMenuItemId
 ```
 
-ID for the email menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected email address, launching the email app.
+New email, a first-level menu item. Provides a jump service for the selected email address and opens the email application.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -252,7 +252,7 @@ ID for the email menu item. It is a level-1 menu item. This menu item provides t
 static readonly passwordVault: TextMenuItemId
 ```
 
-ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for [Search](../arkts-components/arkts-arkui-search-comp.md#search), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor).
+Password vault, a second-level menu item. Tapping this menu item opens the password vault application, which provides the capability of auto-filling account and password. It is supported only by [Search](../arkts-components/arkts-arkui-search-comp.md#search), [TextInput](../arkts-components/arkts-arkui-textinput-comp.md#text_input), [TextArea](../arkts-components/arkts-arkui-textarea-comp.md#text_area), or [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor).
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -270,7 +270,7 @@ ID for the password vault menu item. It is a level-2 menu item. Tapping this men
 static readonly PASTE: TextMenuItemId
 ```
 
-ID for the default paste menu item. It is a level-1 menu item.
+Default paste, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -288,7 +288,7 @@ ID for the default paste menu item. It is a level-1 menu item.
 static readonly phoneNumber: TextMenuItemId
 ```
 
-ID for the phone call menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected phone number, launching the phone dialer page.
+Call, a first-level menu item. Provides a jump service for the selected phone number and opens the dialing page.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -306,7 +306,7 @@ ID for the phone call menu item. It is a level-1 menu item. This menu item provi
 static readonly SEARCH: TextMenuItemId
 ```
 
-ID for the search menu item. It is a level-1 menu item. This menu item launches a browser to search for the selected text.
+Search, a first-level menu item. Provides search service for the selected text and opens the browser to search the selected text content.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -324,7 +324,7 @@ ID for the search menu item. It is a level-1 menu item. This menu item launches 
 static readonly SELECT_ALL: TextMenuItemId
 ```
 
-ID for the default select-all menu item. It is a level-1 menu item.
+Default select all, a first-level menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -342,7 +342,7 @@ ID for the default select-all menu item. It is a level-1 menu item.
 static readonly SHARE: TextMenuItemId
 ```
 
-ID for the share menu item. It is a level-1 menu item. This menu item launches a window for sharing the selected text.
+Share, a first-level menu item. Provides share service for the selected text and opens the share window to share the selected text content.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -360,7 +360,7 @@ ID for the share menu item. It is a level-1 menu item. This menu item launches a
 static readonly TRANSLATE: TextMenuItemId
 ```
 
-ID for the translate menu item. It is a level-1 menu item. The translation service is provided for the selected text.
+Translation, a first-level menu item. Provides translation service for the selected text.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -378,7 +378,7 @@ ID for the translate menu item. It is a level-1 menu item. The translation servi
 static readonly url: TextMenuItemId
 ```
 
-ID for the URL menu item. It is a level-1 menu item. This menu item provides the redirection service for the selected URL, launching a browser search or app page.
+Open link, a first-level menu item. Provides a jump service for the selected URL and opens the browser to search or the application page.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 

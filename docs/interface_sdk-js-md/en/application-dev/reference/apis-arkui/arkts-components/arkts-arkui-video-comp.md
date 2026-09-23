@@ -2,7 +2,17 @@
 
 The **Video** component is used to play a video and control its playback state. It supports playback, pause, progress control, playback speed, full-screen switching, and other functions.
 
-> **NOTE** > > > The **Video** component provides only simple video playback and cannot support complex video playback control > scenarios. For complex development scenarios, you are advised to use the > [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the > [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent) component. > <br> > > When the **Video** component uses [expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea) to expand the safe area, the > video display content area of the component cannot be expanded.
+> **NOTE:** 
+> 
+> 
+> The **Video** component provides only simple video playback and cannot support complex video playback control
+> scenarios. For complex development scenarios, you are advised to use the
+> [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the
+> [XComponent](arkts-arkui-xcomponent-comp.md#xcomponent) component.
+> <br>
+> 
+> When the **Video** component uses [expandSafeArea](arkts-arkui-common-comp-commonmethod-c.md#expandsafearea) to expand the safe area, the
+> video display content area of the component cannot be expanded.
 
 ## Required Permissions
 

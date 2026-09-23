@@ -16,7 +16,7 @@ Defines the CancelButton options.
 icon?: IconOptions
 ```
 
-Icon of the Cancel button on the right.
+Icon of the clear button on the right. If not passed, the default clear icon style is used.
 
 **Type:** [IconOptions](arkts-arkui-search-comp-iconoptions-i.md)
 
@@ -34,7 +34,7 @@ Icon of the Cancel button on the right.
 style?: CancelButtonStyle
 ```
 
-Display state of the Cancel button on the right.
+Display state of the clear button on the right. Default value: CancelButtonStyle.INPUT.
 
 **Type:** [CancelButtonStyle](arkts-arkui-search-comp-cancelbuttonstyle-e.md)
 

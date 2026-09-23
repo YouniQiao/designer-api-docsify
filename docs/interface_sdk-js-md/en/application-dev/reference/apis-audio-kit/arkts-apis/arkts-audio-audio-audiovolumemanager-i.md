@@ -418,54 +418,6 @@ try {
 }
 ```
 
-## off('volumeChange')
-
-```TypeScript
-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
-```
-
-Unsubscribes from the system volume change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**Deprecated since:** 20
-
-**Substitutes:** streamVolumeChange
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioVolumeManager.off('volumeChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let volumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-};
-
-audioVolumeManager.on('volumeChange', volumeChangeCallback);
-
-audioVolumeManager.off('volumeChange', volumeChangeCallback);
-```
-
 ## off('appVolumeChange')
 
 ```TypeScript
@@ -546,15 +498,15 @@ audioVolumeManager.on('streamVolumeChange', audio.StreamUsage.STREAM_USAGE_MUSIC
 audioVolumeManager.off('streamVolumeChange', streamVolumeChangeCallback);
 ```
 
-## on('volumeChange')
+## off('volumeChange')
 
 ```TypeScript
-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
+off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 ```
 
-Subscribes to the system volume change event, which is triggered when the system volume is changed. This API uses an asynchronous callback to return the result.
+Unsubscribes from the system volume change event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 12
 
 **Deprecated since:** 20
 
@@ -567,23 +519,31 @@ Subscribes to the system volume change event, which is triggered when the system
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | No | Callback used to return the changed volume. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 **Examples**
 
 ```TypeScript
-audioVolumeManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
+// Cancel all subscriptions to the event.
+audioVolumeManager.off('volumeChange');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let volumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
   console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
   console.info(`Volume level: ${volumeEvent.volume} `);
   console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
+};
+
+audioVolumeManager.on('volumeChange', volumeChangeCallback);
+
+audioVolumeManager.off('volumeChange', volumeChangeCallback);
 ```
 
 ## on('appVolumeChange')
@@ -654,6 +614,46 @@ audioVolumeManager.on('streamVolumeChange', audio.StreamUsage.STREAM_USAGE_MUSIC
   console.info(`StreamUsage of stream: ${streamVolumeEvent.streamUsage} `);
   console.info(`Volume level: ${streamVolumeEvent.volume} `);
   console.info(`Whether to updateUI: ${streamVolumeEvent.updateUi} `);
+});
+```
+
+## on('volumeChange')
+
+```TypeScript
+on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
+```
+
+Subscribes to the system volume change event, which is triggered when the system volume is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Deprecated since:** 20
+
+**Substitutes:** streamVolumeChange
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'volumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to return the changed volume. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+audioVolumeManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
 });
 ```
 

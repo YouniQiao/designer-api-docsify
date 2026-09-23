@@ -46,7 +46,7 @@ Obtains a **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Layout manager object. |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Layout manager object used to obtain text layout information, such as the number of lines, line metrics, and glyph positions. |
 
 ## setSelection
 
@@ -60,14 +60,16 @@ If both **selectionStart** and **selectionEnd** are set to **-1**, the entire co
 
 The component must be focused for the API call to have effect.
 
-Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display a menu; if a menu is already open, calling the API will close it.
+Since API version 12, on PC/2-in-1 devices, calling the setSelection API does not pop up a menu regardless of the value of **options**. In addition, if a menu already exists in the component, calling the setSelection API closes the menu.
 
 On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply after the API is called:
 
-1. If the component has a menu with a selection handle,
-the menu remains open and is relocated according to the selection.
-2. If the component has a menu without a selection handle,
-the menu remains open and its position remains unchanged.
+1. If the component has a menu with a selection handle, the menu remains open and is relocated according to the
+selection.
+
+2. If the component has a menu without a selection handle, the menu remains open and its position remains
+unchanged.
+
 3. If there is no menu open, no menu will appear after the selection.
 
 **Since:** 12
@@ -82,6 +84,6 @@ the menu remains open and its position remains unchanged.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the selection.<br>Values less than 0 are treated as **0**. |
-| selectionEnd | number | Yes | End position of the selection.<br>If the value exceeds the text length, the current text length is used instead. |
+| selectionStart | number | Yes | Start position of the selection.<br>If the value is less than 0, it is processed as 0. If the value is greater than the text length, it is processed as the current text length. <br>Special value effect: when both selectionStart and selectionEnd are -1, all text is selected. |
+| selectionEnd | number | Yes | End position of the selection.<br>If the value is less than 0, it is processed as 0. If the value is greater than the text length, it is processed as the current text length. <br>Special value effect: when both selectionStart and selectionEnd are -1, all text is selected. |
 | options | [SelectionOptions](../arkts-components/arkts-arkui-common-comp-selectionoptions-i.md) | No | Configuration of options. The default value is inherited from [SelectionOptions](../arkts-components/arkts-arkui-common-comp-selectionoptions-i.md). |

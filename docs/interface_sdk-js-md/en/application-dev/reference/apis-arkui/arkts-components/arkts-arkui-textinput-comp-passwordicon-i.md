@@ -16,9 +16,11 @@ PasswordIcon object.
 offIconSrc?: string | Resource
 ```
 
-Displays the icon when the password is toggled to hidden in the password input mode.
+Icon displayed when the password visibility cannot be toggled in password input mode. The system-provided password icon is used by default.
 
-The string type can be used to load network images and local images.
+The string format can be used to load network images and local images.
+
+Network images support URLs in HTTP or HTTPS format; local images support the application resource path format.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -36,9 +38,11 @@ The string type can be used to load network images and local images.
 onIconSrc?: string | Resource
 ```
 
-Displays the icon when the password is toggled to visible in the password input mode.
+Icon displayed when the password visibility can be toggled in password input mode. The system-provided password icon is used by default.
 
-The string type can be used to load network images and local images.
+The string format can be used to load network images and local images.
+
+Network images support URLs in HTTP or HTTPS format; local images support the application resource path format.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

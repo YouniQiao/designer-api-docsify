@@ -306,6 +306,48 @@ HDR mode of the file.
 
 **System API:** This is a system API.
 
+## COMPOSITE_DISPLAY_STATUS
+
+```TypeScript
+COMPOSITE_DISPLAY_STATUS = 'composite_display_status'
+```
+
+Display status of the composite image asset.
+
+**Since:** 23
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## ASSET_SOURCE_TYPE
+
+```TypeScript
+ASSET_SOURCE_TYPE = 'file_source_type'
+```
+
+Source type of assets, read only
+
+**Since:** 22
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## FUSION_ASSET_STORAGE_PATH
+
+```TypeScript
+FUSION_ASSET_STORAGE_PATH = 'storage_path'
+```
+
+Storage path of fusion assets, read only
+
+**Since:** 22
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## CLOUD_ID
 
 ```TypeScript
@@ -334,20 +376,6 @@ Whether a JPEG-compatible copy exists.
 
 **System API:** This is a system API.
 
-## COMPOSITE_DISPLAY_STATUS
-
-```TypeScript
-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'
-```
-
-Display status of the composite image asset.
-
-**Since:** 23
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## VIDEO_MODE
 
 ```TypeScript
@@ -355,34 +383,6 @@ VIDEO_MODE = 'video_mode'
 ```
 
 Log mode of a video file.
-
-**Since:** 22
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## ASSET_SOURCE_TYPE
-
-```TypeScript
-ASSET_SOURCE_TYPE = 'file_source_type'
-```
-
-Source type of assets, read only
-
-**Since:** 22
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## FUSION_ASSET_STORAGE_PATH
-
-```TypeScript
-FUSION_ASSET_STORAGE_PATH = 'storage_path'
-```
-
-Storage path of fusion assets, read only
 
 **Since:** 22
 
@@ -516,22 +516,6 @@ Unique id of asset.
 
 **System API:** This is a system API.
 
-## HIDDEN_TIME
-
-```TypeScript
-HIDDEN_TIME = 'hidden_time'
-```
-
-hidden time of asset.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## THUMB_STATUS
 
 ```TypeScript
@@ -570,7 +554,23 @@ Size of lcd file, read only
 FILE_HIDDEN = 'file_hidden'
 ```
 
-File hidden state of filemanager.
+file hidden state of filemanager.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## HIDDEN_TIME
+
+```TypeScript
+HIDDEN_TIME = 'hidden_time'
+```
+
+hidden time of asset.
 
 **Since:** 26.0.0
 
@@ -703,6 +703,54 @@ The mode of the music master.
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## LIVEPHOTO_4D_LATEST_PAIR
+
+```TypeScript
+LIVEPHOTO_4D_LATEST_PAIR = 'livephoto_4d_latest_pair'
+```
+
+Record the UNIQUE_ID of the source photo used to generate this 4d livephoto.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## LOCAL_ENHANCEMENT_ABILITY
+
+```TypeScript
+LOCAL_ENHANCEMENT_ABILITY = 'local_enhancement_ability'
+```
+
+Local AI-enhanced task type.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## LOCAL_ENHANCEMENT_STATUS
+
+```TypeScript
+LOCAL_ENHANCEMENT_STATUS = 'local_enhancement_status'
+```
+
+Local AI-enhanced task status.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

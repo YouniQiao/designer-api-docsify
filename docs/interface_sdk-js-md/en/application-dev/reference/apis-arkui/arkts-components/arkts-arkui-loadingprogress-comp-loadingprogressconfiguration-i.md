@@ -18,9 +18,9 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 enableLoading: boolean
 ```
 
-Whether to show the loading animation.
+Whether to display the LoadingProgress animation.
 
-Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
+Default value: true, where true means to display the LoadingProgress animation and false means not to display the LoadingProgress animation.
 
 **Type:** boolean
 

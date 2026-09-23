@@ -77,6 +77,15 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 | [setStaticSubscriberState](arkts-basicservices-commoneventmanager-setstaticsubscriberstate-f-sys.md#setstaticsubscriberstate-2) | Enables or disables static subscription to a common event for the current app. This API uses a promise to return the result. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) | Describes the data of a common event. |
+| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Describes the content and properties of a common event. |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Describes information about a common event subscriber. |
+| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | Describes the subscriber of a common event. |
+
 ### Enums
 
 | Name | Description |
@@ -90,12 +99,3 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 | --- | --- |
 | [Support](arkts-basicservices-commoneventmanager-support-e-sys.md) | System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [CommonEventData](arkts-basicservices-commoneventmanager-commoneventdata-t.md) | Describes the data of a common event. |
-| [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Describes the content and properties of a common event. |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Describes information about a common event subscriber. |
-| [CommonEventSubscriber](arkts-basicservices-commoneventmanager-commoneventsubscriber-t.md) | Describes the subscriber of a common event. |

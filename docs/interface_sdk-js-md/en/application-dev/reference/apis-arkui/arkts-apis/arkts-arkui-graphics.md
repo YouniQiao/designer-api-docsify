@@ -53,13 +53,6 @@ The **Graphics** module provides APIs for defining attributes of a custom node.
 | [Vector3](arkts-arkui-graphics-vector3-i.md) | Represents a vector including three values: x, y, and z. |
 | [Vector4](arkts-arkui-graphics-vector4-i.md) | Defines a vector that contains the x, y, z, and w coordinate values. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Enumerates length units. |
-| [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | Enumerates length units. |
-
 ### Types
 
 | Name | Description |
@@ -75,3 +68,10 @@ The **Graphics** module provides APIs for defining attributes of a custom node.
 | [Rotation](arkts-arkui-rotation-t.md) | Sets the rotation angle of the component. |
 | [Scale](arkts-arkui-scale-t.md) | Sets the scale factor of the component. |
 | [Translation](arkts-arkui-translation-t.md) | Sets the translation amount of the component. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Enumerates length units. |
+| [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | Enumerates length units. |

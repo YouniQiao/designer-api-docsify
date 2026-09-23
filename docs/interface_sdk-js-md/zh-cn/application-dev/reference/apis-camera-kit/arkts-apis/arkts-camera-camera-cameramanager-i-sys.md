@@ -251,39 +251,6 @@ function isPreLaunchSupported(context: common.BaseContext): boolean {
 }
 ```
 
-## muteCamera
-
-```TypeScript
-muteCamera(mute: boolean): void
-```
-
-Mutes or unmutes the camera device.
-
-**起始版本：** 10
-
-**废弃版本：** 12
-
-**替代接口：** [muteCameraPersistent](#mutecamerapersistent)
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| mute | boolean | 是 | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-
-**示例**
-
-```TypeScript
-function muteCamera(cameraManager: camera.CameraManager): void {
-  let mute: boolean = true;
-  cameraManager.muteCamera(mute);
-}
-```
-
 ## muteCameraPersistent
 
 ```TypeScript
@@ -599,5 +566,38 @@ function setPrelaunchConfig(context: common.BaseContext): void {
       }
     }
   }
+}
+```
+
+## muteCamera
+
+```TypeScript
+muteCamera(mute: boolean): void
+```
+
+Mutes or unmutes the camera device.
+
+**起始版本：** 10
+
+**废弃版本：** 12
+
+**替代接口：** [muteCameraPersistent](#mutecamerapersistent)
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| mute | boolean | 是 | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
+
+**示例**
+
+```TypeScript
+function muteCamera(cameraManager: camera.CameraManager): void {
+  let mute: boolean = true;
+  cameraManager.muteCamera(mute);
 }
 ```

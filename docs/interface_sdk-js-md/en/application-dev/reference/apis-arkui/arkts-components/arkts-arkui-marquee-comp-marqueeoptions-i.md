@@ -22,11 +22,7 @@ Describes the initialization options of the **Marquee** component.
 delay?: number
 ```
 
-The waiting time between each round of the marquee.
-
-Default value: 0.
-
-Unit: ms.
+Sets the delay between two rounds of scrolling. +∞). A value less than 0 is equivalent to 0. Unit: millisecond. Default value: 0 Value Range: [0.
 
 **Type:** number
 
@@ -46,13 +42,11 @@ Unit: ms.
 fromStart?: boolean
 ```
 
-Whether the text scrolls from the start.
+Sets the scrolling direction of the text.
 
-**true**: Scroll from the start.
+true: the text scrolls forward from the beginning; false: the text scrolls in reverse.
 
-**false**: Scroll from the end.
-
-Default value: **true**.
+Default Value: true
 
 **Type:** boolean
 
@@ -73,13 +67,13 @@ Default value: **true**.
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
+Sets the loop count of repeated scrolling. When the value is less than or equal to 0, the scrolling loops infinitely.
 
-Default value: **-1**
+Default Value: -1
 
-**NOTE:** 
+**Note:** 
 
-Regardless of the value, the marquee scrolls only once on an ArkTS widget.
+On ArkTS widgets, this parameter scrolls only once when visible regardless of the value set. When it is set to a finite number greater than 0 and playback is complete, you cannot reset the scroll count and restart playback by changing the start parameter.
 
 **Type:** number
 
@@ -100,9 +94,9 @@ Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee.
+Spacing between two rounds of marquee scrolling. When the unit attribute of the LengthMetrics object is LengthUnit.PERCENT, this setting does not take effect and the default value is used.
 
-Default value is marquee width.
+Default Value: width of the Marquee component.
 
 **Type:** LengthMetrics
 
@@ -122,7 +116,7 @@ Default value is marquee width.
 src: string
 ```
 
-Text to scroll.
+Text to be scrolled.
 
 **Type:** string
 
@@ -140,13 +134,13 @@ Text to scroll.
 start: boolean
 ```
 
-Whether to start scrolling.
+Controls whether the marquee enters the playing state.
 
-**true**: yes; **false**: no
+true: play; false: do not play.
 
-**NOTE:** 
+**Note:** 
 
-This parameter cannot be used to restart scrolling that has been completed.
+When the loop parameter is set to a finite number greater than 0 and playback is complete, you cannot reset the scroll count and restart playback by changing the start parameter.
 
 **Type:** boolean
 
@@ -164,11 +158,13 @@ This parameter cannot be used to restart scrolling that has been completed.
 step?: number
 ```
 
-Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.
+Text step of the scrolling animation.
 
-Default value: **6**
+Value Range: [0, text width]. When step is greater than the text width of the Marquee, the default value is used.
 
-Unit: vp
+Default Value: 6
+
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

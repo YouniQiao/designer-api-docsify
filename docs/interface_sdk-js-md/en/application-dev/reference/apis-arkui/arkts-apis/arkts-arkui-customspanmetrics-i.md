@@ -16,9 +16,11 @@ Defines the CustomSpanMetrics interface.
 height?: number
 ```
 
-Height of the custom span.
+Height of the custom drawing span.
 
-Unit: vp
+Default value: if not passed, the **fontSize** value of the **Text** component is used as the height of **CustomSpan**.
+
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -36,9 +38,9 @@ Unit: vp
 width: number
 ```
 
-Width of the custom span.
+Width of the custom drawing span.
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

@@ -170,6 +170,71 @@ async function PackBinaryImageToTiffFile(context: Context) {
 }
 ```
 
+<a id="packing-4"></a>
+
+## packing
+
+```TypeScript
+packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
+```
+
+Compresses or re-encodes an image. This API uses a promise to return the result.
+
+**Since:** 13
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| picture | [Picture](arkts-image-image-picture-i.md) | Yes | Picture to compress or re-encode. |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Packing(context: Context) {
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
+  let ops: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
+  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  let funcName = "Packing";
+  if (imagePackerObj != null) {
+    let opts: image.PackingOption = {
+      format: "image/jpeg",
+      quality: 98,
+      desiredDynamicRange: image.PackingDynamicRange.AUTO,
+      needsPackProperties: true};
+    await imagePackerObj.packing(pictureObj, opts).then((data: ArrayBuffer) => {
+      console.info(funcName, 'Succeeded in packing the image.'+ data);
+    }).catch((error: BusinessError) => {
+      console.error(funcName, `Failed to pack the image.code ${error.code},message is ${error.message}`);
+    });
+  }
+}
+```
+
 ## packing
 
 ```TypeScript
@@ -387,71 +452,6 @@ async function Packing() {
   }).catch((error: BusinessError) => {
     console.error(`Failed to create PixelMap.code ${error.code},message is ${error.message}`);
   })
-}
-```
-
-<a id="packing-4"></a>
-
-## packing
-
-```TypeScript
-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
-```
-
-Compresses or re-encodes an image. This API uses a promise to return the result.
-
-**Since:** 13
-
-**System capability:** SystemCapability.Multimedia.Image.ImagePacker
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| picture | [Picture](arkts-image-image-picture-i.md) | Yes | Picture to compress or re-encode. |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Packing(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  let funcName = "Packing";
-  if (imagePackerObj != null) {
-    let opts: image.PackingOption = {
-      format: "image/jpeg",
-      quality: 98,
-      desiredDynamicRange: image.PackingDynamicRange.AUTO,
-      needsPackProperties: true};
-    await imagePackerObj.packing(pictureObj, opts).then((data: ArrayBuffer) => {
-      console.info(funcName, 'Succeeded in packing the image.'+ data);
-    }).catch((error: BusinessError) => {
-      console.error(funcName, `Failed to pack the image.code ${error.code},message is ${error.message}`);
-    });
-  }
 }
 ```
 

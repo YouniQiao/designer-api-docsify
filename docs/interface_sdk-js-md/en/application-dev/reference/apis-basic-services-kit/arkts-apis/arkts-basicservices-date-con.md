@@ -1,5 +1,21 @@
 # Constants
 
+## TIME_FORMAT
+
+```TypeScript
+const TIME_FORMAT: string
+```
+
+Specifies whether the time is displayed in 12-hour or 24-hour format.
+
+<p>If the value is `12`, the 12-hour format is used. If the value is `24`, the 24-hour format is used.
+
+**Type:** string
+
+**Since:** 7
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
 ## AUTO_GAIN_TIME
 
 ```TypeScript
@@ -51,21 +67,5 @@ Indicates the date format.
 **Since:** 7
 
 **Deprecated since:** 21
-
-**System capability:** SystemCapability.Applications.Settings.Core
-
-## TIME_FORMAT
-
-```TypeScript
-const TIME_FORMAT: string
-```
-
-Specifies whether the time is displayed in 12-hour or 24-hour format.
-
-<p>If the value is `12`, the 12-hour format is used. If the value is `24`, the 24-hour format is used.
-
-**Type:** string
-
-**Since:** 7
 
 **System capability:** SystemCapability.Applications.Settings.Core

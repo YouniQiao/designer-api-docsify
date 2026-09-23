@@ -2,7 +2,13 @@
 
 **TimePicker** is a component for selecting a time by sliding. It supports 12/24-hour formats, multiple time formats (hour/minute/second), loop scrolling, style customization, and time range restrictions. It is suitable for scenarios where users need to select a time, such as schedule arrangement, time reservation, and task management. It improves user experience, reduces input errors, and can be quickly integrated into applications.
 
-> **NOTE** > > - This component is supported since API version 8. New APIs added in later versions are marked with a superscript > to indicate their > > - It is not recommended to modify attribute data of this component during animation. > > - The maximum number of displayed rows differs between landscape and portrait modes. In portrait mode, the default > is 5 rows. In landscape mode, it depends on the system configuration, and the default is 3 rows when not > configured. You can use the following parameter to view the specific configuration value: $r(' > sys.float.ohos_id_picker_show_count_landscape').
+> **NOTE:** 
+> 
+> - This component is supported since API version 8. New APIs added in later versions are marked with a superscript to indicate their
+> 
+> - It is not recommended to modify attribute data of this component during animation.
+> 
+> - The maximum number of displayed rows differs between landscape and portrait modes. In portrait mode, the default is 5 rows. In landscape mode, it depends on the system configuration, and the default is 3 rows when not configured. You can use the following parameter to view the specific configuration value: $r('sys.float.ohos_id_picker_show_count_landscape').
 
 ## Child Components
 

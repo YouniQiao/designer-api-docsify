@@ -2,7 +2,7 @@
 
 The **Button** component can be used to create different types of buttons.
 
-> **NOTE**
+> **NOTE:** 
 
 ## Child Components
 

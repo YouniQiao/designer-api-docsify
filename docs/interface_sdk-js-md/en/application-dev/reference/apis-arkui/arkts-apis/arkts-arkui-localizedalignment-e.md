@@ -4,9 +4,7 @@
 declare enum LocalizedAlignment
 ```
 
-LocalizedAlignment enumeration description.
-
-@enum { string }
+Enumerated type that supports the align and [layoutGravity](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#layoutgravity) attributes.
 
 **Since:** 20
 
@@ -18,7 +16,7 @@ LocalizedAlignment enumeration description.
 TOP_START = "top_start"
 ```
 
-Top Start.
+Top start.
 
 **Since:** 20
 
@@ -36,7 +34,7 @@ Top Start.
 TOP = "top"
 ```
 
-The top is centered horizontally.
+Horizontally centered on the top.
 
 **Since:** 20
 
@@ -54,7 +52,7 @@ The top is centered horizontally.
 TOP_END = "top_end"
 ```
 
-Top tail end.
+Top end.
 
 **Since:** 20
 
@@ -72,7 +70,7 @@ Top tail end.
 START = "start"
 ```
 
-The starting end is centered longitudinally.
+Vertically centered start.
 
 **Since:** 20
 
@@ -90,7 +88,7 @@ The starting end is centered longitudinally.
 CENTER = "center"
 ```
 
-Center horizontal and vertical.
+Horizontally and vertically centered.
 
 **Since:** 20
 
@@ -108,7 +106,7 @@ Center horizontal and vertical.
 END = "end"
 ```
 
-The tail end is centered longitudinally.
+Vertically centered end.
 
 **Since:** 20
 
@@ -126,7 +124,7 @@ The tail end is centered longitudinally.
 BOTTOM_START = "bottom_start"
 ```
 
-Bottom starting end.
+Bottom start.
 
 **Since:** 20
 
@@ -144,7 +142,7 @@ Bottom starting end.
 BOTTOM = "bottom"
 ```
 
-The bottom is centered horizontally.
+Horizontally centered on the bottom.
 
 **Since:** 20
 

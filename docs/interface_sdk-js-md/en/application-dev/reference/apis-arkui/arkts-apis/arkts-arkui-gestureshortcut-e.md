@@ -4,7 +4,7 @@
 declare enum GestureShortcut
 ```
 
-Define the smart gesture shortcut priority enumeration.
+Enumerates the smart gesture response priorities of the component.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Define the smart gesture shortcut priority enumeration.
 PRIMARY = 0
 ```
 
-Primary priority.
+Smart gesture response priority. This is the only value supported by the current smart gesture response configuration.
 
 **Since:** 26.0.0
 

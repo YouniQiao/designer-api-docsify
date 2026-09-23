@@ -4,9 +4,7 @@
 declare enum DividerMode
 ```
 
-Menu divider mode.
-
-@enum { number }
+Enumerates divider modes.
 
 **Since:** 19
 
@@ -18,7 +16,7 @@ Menu divider mode.
 FLOATING_ABOVE_MENU = 0
 ```
 
-Menu divider mode floating above menu.
+The divider floats above the menu without affecting the layout height. This is the default mode.
 
 **Since:** 19
 
@@ -34,7 +32,7 @@ Menu divider mode floating above menu.
 EMBEDDED_IN_MENU = 1
 ```
 
-Menu divider mode embedded in menu.
+The divider is embedded in the menu and affects the layout height.
 
 **Since:** 19
 

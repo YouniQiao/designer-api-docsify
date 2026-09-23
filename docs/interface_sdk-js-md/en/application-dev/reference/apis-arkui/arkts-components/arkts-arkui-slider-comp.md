@@ -2,7 +2,7 @@
 
 The **Slider** component is used to quickly adjust settings, such as the volume and brightness.
 
-> **NOTE**
+> **NOTE:** 
 
 ## Child Components
 

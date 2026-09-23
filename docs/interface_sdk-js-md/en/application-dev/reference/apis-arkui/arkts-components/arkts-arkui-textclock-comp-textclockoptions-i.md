@@ -9,8 +9,8 @@ Options used to build the **TextClock** component.
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ Options used to build the **TextClock** component.
 controller?: TextClockController
 ```
 
-Controller to control the status of the **&lt;TextClock&gt;** component.
+Binds a controller to control the state of the text clock. Pass this parameter when the start and stop of the clock need to be controlled by code. If it is not passed, the clock still runs and displays normally, but its start and stop cannot be controlled by code.
 
 **Type:** [TextClockController](arkts-arkui-textclock-comp-textclockcontroller-c.md)
 
@@ -40,15 +40,15 @@ Controller to control the status of the **&lt;TextClock&gt;** component.
 timeZoneOffset?: number
 ```
 
-Time zone offset.
+Sets the time zone offset, in hours.
 
-The value range is [-14, 12], indicating UTC+12 to UTC-12. A negative value indicates Eastern Standard Time, and a positive value indicates Western Standard Time. For example, **-8** indicates UTC+8. If the value is a floating point number within the value range, it is rounded off, with the decimal portion discarded.
+The value ranges from -14 to 12, indicating the range from UTC+12 to UTC-12, where a negative value indicates an east time zone and a positive value indicates a west time zone. For example, UTC+8 is -8. When the value is a floating-point number within this range, it is rounded to an integer, with the decimal part discarded.
 
-For countries or regions crossing the International Date Line, use -13 (UTC+13) and -14 (UTC+14) to ensure time consistency across the country or region. If the set value is not within the valid range, the time zone offset of the current system will be used.
+For countries or regions that span the International Date Line, use -13 (UTC+13) and -14 (UTC+14) to ensure that the entire country or region is in the same time zone. When the value is outside the range, the time zone offset of the current system is used.
 
-Default value: time zone offset of the current system
+Default value: the time zone offset of the current system
 
-The value is not rounded when it is a floating point number in the { 9.5, 3.5, -3.5, -4.5, -5.5, -5.75, -6.5, -9.5, -10.5, -12.75 } set.
+When the value is a floating-point number in the set { 9.5, 3.5, -3.5, -4.5, -5.5, -5.75, -6.5, -9.5, -10.5, -12.75}, it is not rounded.
 
 **Type:** number
 

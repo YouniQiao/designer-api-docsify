@@ -4,7 +4,7 @@
 type ImageCompleteCallback = (result: ImageLoadResult) => void
 ```
 
-Defines the callback triggered when the image is successfully loaded or decoded.
+Triggered when the image is successfully loaded and decoded.
 
 **Since:** 12
 

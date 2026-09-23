@@ -4,7 +4,7 @@
 declare class DisappearSymbolEffect extends SymbolEffect
 ```
 
-Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
+Inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-comp-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope)
 ```
 
-A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
+A constructor used to create a **DisappearSymbolEffect** instance, which comes with a disappear animation effect.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Animation scope. For specific enumeration values and descriptions, see EffectScope Enumeration Description.<br>Default value: EffectScope.LAYER |
 
 ## scope
 
@@ -42,9 +42,9 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 scope?: EffectScope
 ```
 
-Effect scope.
+Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.
 
-Default value: **EffectScope.LAYER**
+Default value: EffectScope.LAYER
 
 **Type:** [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md)
 

@@ -16,6 +16,39 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 import { url } from '@kit.ArkTS';
 ```
 
+<a id="constructor-1"></a>
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+A no-argument constructor used to create a URL. It returns a URL object after parseURL is called. It is not used independently.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let mm = 'https://username:password@host:8080';
+let a = new url.URL("/", mm); // Output 'https://username:password@host:8080/';
+let b = new url.URL(mm); // Output 'https://username:password@host:8080/';
+new url.URL('path/path1', b); // Output 'https://username:password@host:8080/path/path1';
+let c = new url.URL('/path/path1', b);  // Output 'https://username:password@host:8080/path/path1'; 
+new url.URL('/path/path1', c); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', a); // Output 'https://username:password@host:8080/path/path1';
+new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
+new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
+new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
+new url.URL('https://www.example.com', ); // Output https://www.example.com/
+new url.URL('https://www.example.com', b); // Output https://www.example.com/
+```
+
 ## constructor
 
 ```TypeScript
@@ -38,39 +71,6 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 | --- | --- | --- | --- |
 | url | string | Yes | url url |
 | base | string &#124; URL | No | base base |
-
-**Examples**
-
-```TypeScript
-let mm = 'https://username:password@host:8080';
-let a = new url.URL("/", mm); // Output 'https://username:password@host:8080/';
-let b = new url.URL(mm); // Output 'https://username:password@host:8080/';
-new url.URL('path/path1', b); // Output 'https://username:password@host:8080/path/path1';
-let c = new url.URL('/path/path1', b);  // Output 'https://username:password@host:8080/path/path1'; 
-new url.URL('/path/path1', c); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', a); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
-new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-new url.URL('https://www.example.com', ); // Output https://www.example.com/
-new url.URL('https://www.example.com', b); // Output https://www.example.com/
-```
-
-<a id="constructor-1"></a>
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-A no-argument constructor used to create a URL. It returns a URL object after parseURL is called. It is not used independently.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Utils.Lang
 
 **Examples**
 
@@ -369,6 +369,22 @@ Gets and sets the serialized query portion of the URL.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## username
+
+```TypeScript
+username: string
+```
+
+Gets and sets the username portion of the URL.
+
+**Type:** string
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
 ## searchParams
 
 ```TypeScript
@@ -384,21 +400,5 @@ Gets the URLSearchParams object that represents the URL query parameter. This pr
 **Deprecated since:** 9
 
 **Substitutes:** params
-
-**System capability:** SystemCapability.Utils.Lang
-
-## username
-
-```TypeScript
-username: string
-```
-
-Gets and sets the username portion of the URL.
-
-**Type:** string
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang

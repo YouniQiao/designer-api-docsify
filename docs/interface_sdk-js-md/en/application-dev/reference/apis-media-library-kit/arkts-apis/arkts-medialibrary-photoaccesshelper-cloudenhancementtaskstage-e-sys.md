@@ -29,7 +29,7 @@ The cloud enhancement task is abnormal.
 ## TASK_STAGE_PREPARING
 
 ```TypeScript
-TASK_STAGE_PREPARING
+TASK_STAGE_PREPARING = 0
 ```
 
 The cloud enhancement task is being prepared.
@@ -43,7 +43,7 @@ The cloud enhancement task is being prepared.
 ## TASK_STAGE_UPLOADING
 
 ```TypeScript
-TASK_STAGE_UPLOADING
+TASK_STAGE_UPLOADING = 1
 ```
 
 The cloud enhancement task is uploading data.
@@ -57,7 +57,7 @@ The cloud enhancement task is uploading data.
 ## TASK_STAGE_EXECUTING
 
 ```TypeScript
-TASK_STAGE_EXECUTING
+TASK_STAGE_EXECUTING = 2
 ```
 
 The cloud enhancement task is being executed.
@@ -71,7 +71,7 @@ The cloud enhancement task is being executed.
 ## TASK_STAGE_DOWNLOADING
 
 ```TypeScript
-TASK_STAGE_DOWNLOADING
+TASK_STAGE_DOWNLOADING = 3
 ```
 
 The cloud enhancement task is downloading data.
@@ -85,7 +85,7 @@ The cloud enhancement task is downloading data.
 ## TASK_STAGE_FAILED
 
 ```TypeScript
-TASK_STAGE_FAILED
+TASK_STAGE_FAILED = 4
 ```
 
 The cloud enhancement task failed.
@@ -99,7 +99,7 @@ The cloud enhancement task failed.
 ## TASK_STAGE_COMPLETED
 
 ```TypeScript
-TASK_STAGE_COMPLETED
+TASK_STAGE_COMPLETED = 5
 ```
 
 The cloud enhancement task is complete.

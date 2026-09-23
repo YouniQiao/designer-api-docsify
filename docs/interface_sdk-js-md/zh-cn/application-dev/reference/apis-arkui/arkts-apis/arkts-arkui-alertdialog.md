@@ -29,18 +29,18 @@
 | [AlertDialogParam](arkts-arkui-alertdialogparam-i-sys.md) | 警告弹窗的样式。 |
 <!--DelEnd-->
 
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | 弹窗的显示顺序。 |
+
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
 | [DialogAlignment](arkts-arkui-dialogalignment-e.md) | 警告弹窗的对齐方式。 |
 | [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md) | 警告弹窗中按钮的对齐方式。 |
-
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [LevelOrder](arkts-arkui-levelorder-t.md) | 弹窗的显示顺序。 |
 
 ## 示例
 

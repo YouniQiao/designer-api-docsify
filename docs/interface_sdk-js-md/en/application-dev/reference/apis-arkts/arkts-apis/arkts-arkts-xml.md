@@ -31,14 +31,14 @@ import { xml } from '@kit.ArkTS';
 | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Parse options for XmlPullParser. |
 | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | A simple API for XML handling |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [EventType](arkts-arkts-xml-eventtype-e.md) | The event types represented by XML elements. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md) | The type of ParseOptions attributeWithTagCallbackFunction. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [EventType](arkts-arkts-xml-eventtype-e.md) | The event types represented by XML elements. |

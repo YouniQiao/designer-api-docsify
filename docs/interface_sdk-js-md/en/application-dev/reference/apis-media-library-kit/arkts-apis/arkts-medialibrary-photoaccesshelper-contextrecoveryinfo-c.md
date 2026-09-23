@@ -150,11 +150,9 @@ Sorting rule of the grid interface when the user last selected an image. The def
 time: number
 ```
 
-Time of the top-left image in the grid interface when the user last selected an image.
-
+Time of the top-left image in the grid interface when the user last selected an image.  
 - For albums sorted by capture time, the capture time is returned.  
-- For albums sorted by save time, the save time is returned. The default value is **0**.
-
+- For albums sorted by save time, the save time is returned. The default value is **0**.  
 Unit: ms, The value must be greater than or equal to 0.
 
 **Type:** number

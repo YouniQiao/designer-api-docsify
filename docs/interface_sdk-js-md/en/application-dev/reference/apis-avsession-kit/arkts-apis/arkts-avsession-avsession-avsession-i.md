@@ -1006,45 +1006,6 @@ Unregister rewind command callback. When canceling the callback, need to update 
 currentAVSession.off('rewind');
 ```
 
-## off('playFromAssetId')
-
-```TypeScript
-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
-```
-
-Unregister playFromAssetId command callback.
-
-**Since:** 11
-
-**Deprecated since:** 20
-
-**Substitutes:** off
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) =&gt; void | No | Used to handle ('playFromAssetId') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.off('playFromAssetId');
-```
-
 ## off('playWithAssetId')
 
 ```TypeScript
@@ -1569,6 +1530,45 @@ Unsubscribes from custom data changes.
 currentAVSession.off('customDataChange');
 ```
 
+## off('playFromAssetId')
+
+```TypeScript
+off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
+```
+
+Unregister playFromAssetId command callback.
+
+**Since:** 11
+
+**Deprecated since:** 20
+
+**Substitutes:** off
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
+| callback | (assetId: number) =&gt; void | No | Used to handle ('playFromAssetId') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.off('playFromAssetId');
+```
+
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -2050,47 +2050,6 @@ Register rewind command callback. As long as it is registered, it means that the
 ```TypeScript
 currentAVSession.on('rewind', (time?: number) => {
   console.info('on rewind entry');
-});
-```
-
-## on('playFromAssetId')
-
-```TypeScript
-on(type: 'playFromAssetId', callback: (assetId: number) => void): void
-```
-
-Register playFromAssetId command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
-
-**Since:** 11
-
-**Deprecated since:** 20
-
-**Substitutes:** on
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) =&gt; void | Yes | Used to handle ('playFromAssetId') command |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-
-**Examples**
-
-```TypeScript
-currentAVSession.on('playFromAssetId', (assetId: number) => {
-  console.info('on playFromAssetId entry');
 });
 ```
 
@@ -2654,6 +2613,47 @@ Register listener for custom data sent from remote device.
 ```TypeScript
 currentAVSession.on('customDataChange', (callback) => {
     console.info(`Caught customDataChange event,the new callback is: ${JSON.stringify(callback)}`);
+});
+```
+
+## on('playFromAssetId')
+
+```TypeScript
+on(type: 'playFromAssetId', callback: (assetId: number) => void): void
+```
+
+Register playFromAssetId command callback. As long as it is registered, it means that the ability supports this command. If you cancel the callback, you need to call off off When canceling the callback, need to update the supported commands list. Each playback command only supports registering one callback, and the new callback will replace the previous one.
+
+**Since:** 11
+
+**Deprecated since:** 20
+
+**Substitutes:** on
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
+| callback | (assetId: number) =&gt; void | Yes | Used to handle ('playFromAssetId') command |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+
+**Examples**
+
+```TypeScript
+currentAVSession.on('playFromAssetId', (assetId: number) => {
+  console.info('on playFromAssetId entry');
 });
 ```
 

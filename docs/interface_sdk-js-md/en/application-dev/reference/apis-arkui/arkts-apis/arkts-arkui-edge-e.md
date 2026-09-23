@@ -4,7 +4,7 @@
 declare enum Edge
 ```
 
-Edge.
+Controls the alignment position of the scrollable component in the layout.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Edge.
 Top
 ```
 
-The top is centered horizontally.
+Top edge in the vertical direction.
 
 **Since:** 7
 
@@ -30,7 +30,9 @@ The top is centered horizontally.
 Center
 ```
 
-Center horizontal and vertical.
+Center position in the vertical direction.
+
+This API is deprecated since API version 9.
 
 **Since:** 7
 
@@ -44,7 +46,7 @@ Center horizontal and vertical.
 Bottom
 ```
 
-The bottom is centered horizontally.
+Bottom edge in the vertical direction.
 
 **Since:** 7
 
@@ -58,7 +60,9 @@ The bottom is centered horizontally.
 Baseline
 ```
 
-Cross axis direction text baseline alignment.
+Text baseline position in the cross axis direction.
+
+This API is deprecated since API version 9.
 
 **Since:** 7
 
@@ -72,7 +76,7 @@ Cross axis direction text baseline alignment.
 Start
 ```
 
-Align the head of the cross axis direction.
+Start position in the horizontal direction.
 
 **Since:** 7
 
@@ -86,7 +90,9 @@ Align the head of the cross axis direction.
 Middle
 ```
 
-Middle
+Center position in the horizontal direction.
+
+This API is deprecated since API version 9.
 
 **Since:** 7
 
@@ -100,7 +106,7 @@ Middle
 End
 ```
 
-Align the head of the cross axis direction.
+End position in the horizontal direction.
 
 **Since:** 7
 

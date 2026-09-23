@@ -45,14 +45,6 @@ import { vpn } from '@kit.NetworkKit';
 | [VpnConnection](arkts-network-vpn-vpnconnection-i-sys.md) | Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling [vpn.createVpnConnection](arkts-network-vpn-createvpnconnection-f-sys.md). |
 <!--DelEnd-->
 
-<!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [SysVpnType](arkts-network-vpn-sysvpntype-e-sys.md) | Defines the type for the VPN network. |
-<!--DelEnd-->
-
 ### Types
 
 | Name | Description |
@@ -60,3 +52,11 @@ import { vpn } from '@kit.NetworkKit';
 | [AbilityContext](arkts-network-vpn-abilitycontext-t.md) | The context of an ability. It allows access to ability-specific resources. |
 | [LinkAddress](arkts-network-vpn-linkaddress-t.md) | Defines the network link address information. |
 | [RouteInfo](arkts-network-vpn-routeinfo-t.md) | Defines the network route information. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [SysVpnType](arkts-network-vpn-sysvpntype-e-sys.md) | Defines the type for the VPN network. |
+<!--DelEnd-->

@@ -248,89 +248,6 @@ try {
 }
 ```
 
-## destroy
-
-```TypeScript
-destroy(callback: AsyncCallback<void>): void
-```
-
-销毁当前窗口，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [destroyWindow()](#destroywindow)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.destroy((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (err.code) {
-    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the window.');
-});
-```
-
-<a id="destroy-1"></a>
-
-## destroy
-
-```TypeScript
-destroy(): Promise<void>
-```
-
-销毁当前窗口，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[destroyWindow()](#destroywindow)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [destroyWindow](#destroywindow)()
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.destroy();
-promise.then(() => {
-  console.info('Succeeded in destroying the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## destroyWindow
 
 ```TypeScript
@@ -587,205 +504,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## getAvoidArea
-
-```TypeScript
-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
-```
-
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
-
-主窗口/子窗口：
-
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
-仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
-- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
-- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
-
-全局悬浮窗、模态窗或系统窗口：
-
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
-为空。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回窗口内容避让区域。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-windowClass.getAvoidArea(type, (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-});
-```
-
-<a id="getavoidarea-1"></a>
-
-## getAvoidArea
-
-```TypeScript
-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
-```
-
-获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
-
-主窗口/子窗口：
-
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
-仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
-- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
-- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
-
-全局悬浮窗、模态窗或系统窗口：
-
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
-为空。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Promise对象。返回窗口内容避让区域。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-let promise = windowClass.getAvoidArea(type);
-promise.then((data) => {
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## getColorSpace
-
-```TypeScript
-getColorSpace(): Promise<ColorSpace>
-```
-
-获取当前窗口色域模式，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getwindowcolorspace)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowColorSpace](#getwindowcolorspace)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise对象。返回当前色域模式。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getColorSpace();
-promise.then((data) => {
-  console.info('Succeeded in getting window color space. Cause:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="getcolorspace-1"></a>
-
-## getColorSpace
-
-```TypeScript
-getColorSpace(callback: AsyncCallback<ColorSpace>): void
-```
-
-获取当前窗口色域模式，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getwindowcolorspace)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowColorSpace](#getwindowcolorspace)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | 是 | 回调函数。当获取成功，err为undefined，data为当前色域模式。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getColorSpace((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting window colorspace. Cause:' + JSON.stringify(data));
-});
-```
-
 ## getDecorButtonStyle
 
 ```TypeScript
@@ -1006,88 +724,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 };
-```
-
-## getProperties
-
-```TypeScript
-getProperties(callback: AsyncCallback<WindowProperties>): void
-```
-
-获取当前窗口的属性，使用callback异步回调，返回WindowProperties。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getwindowproperties)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowProperties](#getwindowproperties)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 | 回调函数。返回当前窗口属性。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getProperties((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-});
-```
-
-<a id="getproperties-1"></a>
-
-## getProperties
-
-```TypeScript
-getProperties(): Promise<WindowProperties>
-```
-
-获取当前窗口的属性，使用Promise异步回调，返回WindowProperties。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getwindowproperties)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getWindowProperties](#getwindowproperties)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Promise对象。返回当前窗口属性。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getProperties();
-promise.then((data) => {
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-});
 ```
 
 ## getStatusBarProperty
@@ -2312,172 +1948,6 @@ try {
 }
 ```
 
-## isShowing
-
-```TypeScript
-isShowing(callback: AsyncCallback<boolean>): void
-```
-
-判断当前窗口是否已显示，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#iswindowshowing)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [isWindowShowing](#iswindowshowing)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isShowing((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-});
-```
-
-<a id="isshowing-1"></a>
-
-## isShowing
-
-```TypeScript
-isShowing(): Promise<boolean>
-```
-
-判断当前窗口是否已显示，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#iswindowshowing)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [isWindowShowing](#iswindowshowing)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isShowing();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## isSupportWideGamut
-
-```TypeScript
-isSupportWideGamut(): Promise<boolean>
-```
-
-判断当前窗口是否支持广色域模式，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isSupportWideGamut();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window support WideGamut. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="issupportwidegamut-1"></a>
-
-## isSupportWideGamut
-
-```TypeScript
-isSupportWideGamut(callback: AsyncCallback<boolean>): void
-```
-
-判断当前窗口是否支持广色域模式，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](#iswindowsupportwidegamut-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isSupportWideGamut((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window support WideGamut Data: ' + JSON.stringify(data));
-});
-```
-
 ## isSystemAvoidAreaEnabled
 
 ```TypeScript
@@ -3528,102 +2998,6 @@ promise.then(() => {
 });
 ```
 
-## moveTo
-
-```TypeScript
-moveTo(x: number, y: number): Promise<void>
-```
-
-移动窗口位置，使用Promise异步回调。
-
-全屏模式窗口不支持该操作。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](#movewindowto)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | number | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
-| y | number | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在y轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.moveTo(300, 300);
-promise.then(() => {
-  console.info('Succeeded in moving the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="moveto-1"></a>
-
-## moveTo
-
-```TypeScript
-moveTo(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-移动窗口位置，使用callback异步回调。
-
-全屏模式窗口不支持该操作。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [moveWindowTo()](#movewindowto)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| x | number | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
-| y | number | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.moveTo(300, 300, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in moving the window.');
-});
-```
-
 ## moveWindowTo
 
 ```TypeScript
@@ -4322,47 +3696,6 @@ try {
 } catch (exception) {
   console.error(`Failed to disable the listener for window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
-```
-
-## off('systemAvoidAreaChange')
-
-```TypeScript
-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
-```
-
-关闭当前窗口系统避让区变化的监听。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [off('avoidAreaChange')](#offavoidareachange)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 否 | 回调函数。返回当前避让区。若传入参数，则关闭该监听。若未传入参数，则关闭所有系统避让区变化的监听。 |
-
-**示例**
-
-```TypeScript
-const callback = (avoidArea: window.AvoidArea) => {
-  // ...
-}
-windowClass.on('systemAvoidAreaChange', callback);
-windowClass.off('systemAvoidAreaChange', callback);
-// 如果通过on开启多个callback进行监听，同时关闭所有监听：
-windowClass.off('systemAvoidAreaChange');
 ```
 
 ## off('avoidAreaChange')
@@ -5482,6 +4815,47 @@ try {
 }
 ```
 
+## off('systemAvoidAreaChange')
+
+```TypeScript
+off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
+```
+
+关闭当前窗口系统避让区变化的监听。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [off('avoidAreaChange')](#offavoidareachange)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 否 | 回调函数。返回当前避让区。若传入参数，则关闭该监听。若未传入参数，则关闭所有系统避让区变化的监听。 |
+
+**示例**
+
+```TypeScript
+const callback = (avoidArea: window.AvoidArea) => {
+  // ...
+}
+windowClass.on('systemAvoidAreaChange', callback);
+windowClass.off('systemAvoidAreaChange', callback);
+// 如果通过on开启多个callback进行监听，同时关闭所有监听：
+windowClass.off('systemAvoidAreaChange');
+```
+
 ## on('rotationChange')
 
 ```TypeScript
@@ -5752,43 +5126,6 @@ try {
 }
 ```
 
-## on('systemAvoidAreaChange')
-
-```TypeScript
-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
-```
-
-开启当前窗口系统避让区变化的监听。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [on('avoidAreaChange')](#onavoidareachange)替
-> 代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回当前避让区。 |
-
-**示例**
-
-```TypeScript
-windowClass.on('systemAvoidAreaChange', (data) => {
-  console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
-});
-```
-
 ## on('avoidAreaChange')
 
 ```TypeScript
@@ -5809,7 +5146,7 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
 让区域。
 
-&lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
+<!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
 **起始版本：** 9
 
@@ -6843,6 +6180,43 @@ try {
 }
 ```
 
+## on('systemAvoidAreaChange')
+
+```TypeScript
+on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
+```
+
+开启当前窗口系统避让区变化的监听。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [on('avoidAreaChange')](#onavoidareachange)替
+> 代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'systemAvoidAreaChange' | 是 | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回当前避让区。 |
+
+**示例**
+
+```TypeScript
+windowClass.on('systemAvoidAreaChange', (data) => {
+  console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
+});
+```
+
 <a id="raisetoapptop-1"></a>
 
 ## raiseToAppTop
@@ -7158,126 +6532,6 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
-```
-
-## resetSize
-
-```TypeScript
-resetSize(width: number, height: number): Promise<void>
-```
-
-基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
-
-应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
-
-应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过[getWindowLimits](#getwindowlimits)接口进行查询。
-
-系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
-
-设置的宽度与高度受到此限制约束，规则：
-
-若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
-
-若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
-
-全屏模式窗口不支持该操作。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](#resize)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [resize](#resize)(width: number, height: number)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
-| height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.resetSize(500, 1000);
-promise.then(() => {
-  console.info('Succeeded in changing the window size.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="resetsize-1"></a>
-
-## resetSize
-
-```TypeScript
-resetSize(width: number, height: number, callback: AsyncCallback<void>): void
-```
-
-基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。
-
-应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
-
-应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过[getWindowLimits](#getwindowlimits)接口进行查询。
-
-系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
-
-设置的宽度与高度受到此限制约束，规则：
-
-若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
-
-若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
-
-全屏模式窗口不支持该操作。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [resize()](#resize)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
-| height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.resetSize(500, 1000, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in changing the window size.');
-});
 ```
 
 ## resize
@@ -7838,289 +7092,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setBackgroundColor
-
-```TypeScript
-setBackgroundColor(color: string): Promise<void>
-```
-
-设置窗口的背景色，使用Promise异步回调。Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-let promise = windowClass.setBackgroundColor(color);
-promise.then(() => {
-  console.info('Succeeded in setting the background color.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setbackgroundcolor-1"></a>
-
-## setBackgroundColor
-
-```TypeScript
-setBackgroundColor(color: string, callback: AsyncCallback<void>): void
-```
-
-设置窗口的背景色，使用callback异步回调。Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-windowClass.setBackgroundColor(color, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the background color.');
-});
-```
-
-## setBrightness
-
-```TypeScript
-setBrightness(brightness: number): Promise<void>
-```
-
-允许应用窗口设置屏幕亮度值，使用Promise异步回调。
-
-当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBrightness()](#setwindowbrightness)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| brightness | number | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-let promise = windowClass.setBrightness(brightness);
-promise.then(() => {
-  console.info('Succeeded in setting the brightness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setbrightness-1"></a>
-
-## setBrightness
-
-```TypeScript
-setBrightness(brightness: number, callback: AsyncCallback<void>): void
-```
-
-允许应用窗口设置屏幕亮度值，使用callback异步回调。
-
-当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBrightness()](#setwindowbrightness)
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| brightness | number | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-windowClass.setBrightness(brightness, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the brightness.');
-});
-```
-
-## setColorSpace
-
-```TypeScript
-setColorSpace(colorSpace: ColorSpace): Promise<void>
-```
-
-设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](#setwindowcolorspace)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 设置色域模式。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT);
-promise.then(() => {
-  console.info('Succeeded in setting window colorspace.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setcolorspace-1"></a>
-
-## setColorSpace
-
-```TypeScript
-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
-```
-
-设置当前窗口为广色域模式或默认色域模式，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](#setwindowcolorspace-1)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 设置色域模式。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting window colorspace.');
-});
-```
-
 ## setContentAspectRatio
 
 ```TypeScript
@@ -8356,83 +7327,6 @@ struct Index {
 }
 ```
 
-## setDimBehind
-
-```TypeScript
-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
-```
-
-窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用callback异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为[0.0, 1.0]，取1.0时表示最暗。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setDimBehind(0.5, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the dimness.');
-});
-```
-
-<a id="setdimbehind-1"></a>
-
-## setDimBehind
-
-```TypeScript
-setDimBehind(dimBehindValue: number): Promise<void>
-```
-
-窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用Promise异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为0-1，1表示最暗。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setDimBehind(0.5);
-promise.then(() => {
-  console.info('Succeeded in setting the dimness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setDragKeyFramePolicy
 
 ```TypeScript
@@ -8612,100 +7506,6 @@ try {
 }
 ```
 
-## setFocusable
-
-```TypeScript
-setFocusable(isFocusable: boolean): Promise<void>
-```
-
-设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从点击前的获焦窗口切换到该窗口，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](#setwindowfocusable)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isFocusable | boolean | 是 | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考[不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-let promise = windowClass.setFocusable(isFocusable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be focusable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setfocusable-1"></a>
-
-## setFocusable
-
-```TypeScript
-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
-```
-
-设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从操作前的获焦窗口切换到该窗口，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](#setwindowfocusable-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isFocusable | boolean | 是 | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考[不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-windowClass.setFocusable(isFocusable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be focusable.');
-});
-```
-
 ## setFollowParentMultiScreenPolicy
 
 ```TypeScript
@@ -8847,147 +7647,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setFullScreen
-
-```TypeScript
-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-设置主窗口或子窗口的布局是否为全屏布局，使用callback异步回调。
-
-全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
-
-非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
-> 屏。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      windowClass.setFullScreen(isFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in enabling the full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-<a id="setfullscreen-1"></a>
-
-## setFullScreen
-
-```TypeScript
-setFullScreen(isFullScreen: boolean): Promise<void>
-```
-
-设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。
-
-全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
-
-非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
-> 屏。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      let promise = windowClass.setFullScreen(isFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in enabling the full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## setGestureBackEnabled
 
 ```TypeScript
@@ -9104,326 +7763,6 @@ try {
 } catch (exception) {
   console.error(`Failed to set the window immersive mode enabled status. Cause code: ${exception.code}, message: ${exception.message}`);
 }
-```
-
-## setKeepScreenOn
-
-```TypeScript
-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
-```
-
-设置屏幕是否为常亮状态，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](#setwindowkeepscreenon)替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-let promise = windowClass.setKeepScreenOn(isKeepScreenOn);
-promise.then(() => {
-  console.info('Succeeded in setting the screen to be always on.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setkeepscreenon-1"></a>
-
-## setKeepScreenOn
-
-```TypeScript
-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
-```
-
-设置屏幕是否为常亮状态，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](#setwindowkeepscreenon-1)
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-windowClass.setKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the screen to be always on.');
-});
-```
-
-## setLayoutFullScreen
-
-```TypeScript
-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。
-
-沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
-
-非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      windowClass.setLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-<a id="setlayoutfullscreen-1"></a>
-
-## setLayoutFullScreen
-
-```TypeScript
-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
-```
-
-设置主窗口或子窗口的布局是否为沉浸式布局，使用Promise异步回调。
-
-沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
-
-非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      let promise = windowClass.setLayoutFullScreen(isLayoutFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-## setOutsideTouchable
-
-```TypeScript
-setOutsideTouchable(touchable: boolean): Promise<void>
-```
-
-设置是否允许可点击子窗口之外的区域，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。
-> 
-> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touchable | boolean | 是 | 设置是否可点击。true表示可点击；false表示不可点击。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setOutsideTouchable(true);
-promise.then(() => {
-  console.info('Succeeded in setting the area to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setoutsidetouchable-1"></a>
-
-## setOutsideTouchable
-
-```TypeScript
-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
-```
-
-设置是否允许可点击子窗口之外的区域，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。
-> 
-> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| touchable | boolean | 是 | 设置是否可点击。true表示可点击；false表示不可点击。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setOutsideTouchable(true, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the area to be touchable.');
-});
 ```
 
 ## setParentWindow
@@ -9692,100 +8031,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 }
-```
-
-## setPrivacyMode
-
-```TypeScript
-setPrivacyMode(isPrivacyMode: boolean): Promise<void>
-```
-
-设置窗口是否为隐私模式，使用Promise异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](#setwindowprivacymode)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-let promise = windowClass.setPrivacyMode(isPrivacyMode);
-promise.then(() => {
-  console.info('Succeeded in setting the window to privacy mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setprivacymode-1"></a>
-
-## setPrivacyMode
-
-```TypeScript
-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
-```
-
-设置窗口是否为隐私模式，使用callback异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](#setwindowprivacymode-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-windowClass.setPrivacyMode(isPrivacyMode, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to privacy mode.');
-});
 ```
 
 <a id="setraisebyclickenabled-1"></a>
@@ -10168,9 +8413,9 @@ try {
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-设置主窗口状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏，使用Promise异步回调。
+设置主窗口状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏，使用Promise异步回调。
 
-调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
+调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 11
 
@@ -10625,294 +8870,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setSystemBarEnable
-
-```TypeScript
-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
-```
-
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。
-
-从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
-
-调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      windowClass.setSystemBarEnable(names, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar to be invisible.');
-      });
-    });
-  }
-}
-```
-
-<a id="setsystembarenable-1"></a>
-
-## setSystemBarEnable
-
-```TypeScript
-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
-```
-
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。
-
-从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
-
-调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      let promise = windowClass.setSystemBarEnable(names);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar to be invisible.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-## setSystemBarProperties
-
-```TypeScript
-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
-```
-
-设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
-
-子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API version 8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      windowClass.setSystemBarProperties(systemBarProperties, (err) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar properties.');
-      });
-    });
-  }
-}
-```
-
-<a id="setsystembarproperties-1"></a>
-
-## setSystemBarProperties
-
-```TypeScript
-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
-```
-
-设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用Promise异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
-
-子窗口调用后不生效。
-
-> **说明：** 
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
-> 替代。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API version 8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      let promise = windowClass.setSystemBarProperties(systemBarProperties);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar properties.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## setTitleAndDockHoverShown
 
 ```TypeScript
@@ -10984,100 +8941,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 }
-```
-
-## setTouchable
-
-```TypeScript
-setTouchable(isTouchable: boolean): Promise<void>
-```
-
-设置窗口是否为可触状态，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](#setwindowtouchable)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-let promise = windowClass.setTouchable(isTouchable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="settouchable-1"></a>
-
-## setTouchable
-
-```TypeScript
-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
-```
-
-设置窗口是否为可触状态，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](#setwindowtouchable-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-windowClass.setTouchable(isTouchable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be touchable.');
-});
 ```
 
 ## setTouchableAreas
@@ -12188,86 +10051,6 @@ try {
 }
 ```
 
-## setWindowLayoutFullScreen
-
-```TypeScript
-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。系统窗口调用不生效。
-
-沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
-
-非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
-
-> **说明：** 
-> 
-> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
-
-**起始版本：** 9
-
-**废弃版本：** 12
-
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;仍然显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen = true;
-      try {
-        windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the window layout to full-screen mode.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 <a id="setwindowlayoutfullscreen-1"></a>
 
 ## setWindowLayoutFullScreen
@@ -12278,9 +10061,9 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 设置应用主窗口或应用子窗口的布局是否为沉浸式布局，使用Promise异步回调。其余窗口调用不生效也不报错。
 
-沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
+沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
 
-非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
 
 **起始版本：** 9
 
@@ -12335,6 +10118,86 @@ export default class EntryAbility extends UIAbility {
           console.info('Succeeded in setting the window layout to full-screen mode.');
         }).catch((err: BusinessError) => {
           console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
+## setWindowLayoutFullScreen
+
+```TypeScript
+setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。系统窗口调用不生效。
+
+沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
+
+非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
+
+> **说明：** 
+> 
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+
+**起始版本：** 9
+
+**废弃版本：** 12
+
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、<!--RP15-->三键导航栏<!--RP15End-->仍然显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen = true;
+      try {
+        windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
+          const errCode: number = err.code;
+          if (errCode) {
+            console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in setting the window layout to full-screen mode.');
         });
       } catch (exception) {
         console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -12840,88 +10703,6 @@ try {
 }
 ```
 
-## setWindowSystemBarEnable
-
-```TypeScript
-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
-```
-
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。
-
-从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
-
-调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
-
-> **说明：** 
-> 
-> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 替代。
-
-**起始版本：** 9
-
-**废弃版本：** 12
-
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-
-**示例**
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      try {
-        windowClass.setWindowSystemBarEnable(names, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the system bar to be invisible.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 <a id="setwindowsystembarenable-1"></a>
 
 ## setWindowSystemBarEnable
@@ -12930,9 +10711,9 @@ export default class EntryAbility extends UIAbility {
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用Promise异步回调。
 
-调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
+调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 9
 
@@ -12997,27 +10778,29 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setWindowSystemBarProperties
+## setWindowSystemBarEnable
 
 ```TypeScript
-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用callback异步回调。
 
-子窗口调用后不生效。
+从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
 
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
 > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -13027,21 +10810,21 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 **示例**
 
 ```TypeScript
+// 此处以状态栏等均不显示为例
 // EntryAbility.ets
 import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -13059,24 +10842,18 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API version 8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
+      let names: Array<'status' | 'navigation'> = [];
       try {
-        windowClass.setWindowSystemBarProperties(systemBarProperties, (err: BusinessError) => {
+        windowClass.setWindowSystemBarEnable(names, (err: BusinessError) => {
           const errCode: number = err.code;
           if (errCode) {
-            console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+            console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
             return;
           }
-          console.info('Succeeded in setting the system bar properties.');
+          console.info('Succeeded in setting the system bar to be invisible.');
         });
       } catch (exception) {
-        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
+        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
       }
     });
   }
@@ -13154,6 +10931,92 @@ export default class EntryAbility extends UIAbility {
           console.info('Succeeded in setting the system bar properties.');
         }).catch((err: BusinessError) => {
           console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
+## setWindowSystemBarProperties
+
+```TypeScript
+setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+```
+
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+子窗口调用后不生效。
+
+> **说明：** 
+> 
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> 替代。
+
+**起始版本：** 9
+
+**废弃版本：** 12
+
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let systemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // 以下两个属性从API version 8开始支持
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      try {
+        windowClass.setWindowSystemBarProperties(systemBarProperties, (err: BusinessError) => {
+          const errCode: number = err.code;
+          if (errCode) {
+            console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in setting the system bar properties.');
         });
       } catch (exception) {
         console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -13618,89 +11481,6 @@ export default class EntryAbility extends UIAbility {
     })
   }
 }
-```
-
-## show
-
-```TypeScript
-show(callback: AsyncCallback<void>): void
-```
-
-显示当前窗口，使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [showWindow()](#showwindow)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.show((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in showing the window.');
-});
-```
-
-<a id="show-1"></a>
-
-## show
-
-```TypeScript
-show(): Promise<void>
-```
-
-显示当前窗口，使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[showWindow()](#showwindow)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [showWindow](#showwindow)()
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.show();
-promise.then(() => {
-  console.info('Succeeded in showing the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-});
 ```
 
 ## showWindow
@@ -14376,4 +12156,2224 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
+```
+
+## destroy
+
+```TypeScript
+destroy(callback: AsyncCallback<void>): void
+```
+
+销毁当前窗口，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [destroyWindow()](#destroywindow)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.destroy((err: BusinessError) => {
+  const errCode: number = err.code;
+  if (err.code) {
+    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying the window.');
+});
+```
+
+<a id="destroy-1"></a>
+
+## destroy
+
+```TypeScript
+destroy(): Promise<void>
+```
+
+销毁当前窗口，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[destroyWindow()](#destroywindow)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [destroyWindow](#destroywindow)()
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.destroy();
+promise.then(() => {
+  console.info('Succeeded in destroying the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## getAvoidArea
+
+```TypeScript
+getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
+```
+
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
+
+主窗口/子窗口：
+
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
+
+全局悬浮窗、模态窗或系统窗口：
+
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 | 回调函数。返回窗口内容避让区域。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let type = window.AvoidAreaType.TYPE_SYSTEM;
+windowClass.getAvoidArea(type, (err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
+});
+```
+
+<a id="getavoidarea-1"></a>
+
+## getAvoidArea
+
+```TypeScript
+getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
+```
+
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
+
+主窗口/子窗口：
+
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
+
+全局悬浮窗、模态窗或系统窗口：
+
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowAvoidArea](#getwindowavoidarea)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 | 表示避让区类型。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Promise对象。返回窗口内容避让区域。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let type = window.AvoidAreaType.TYPE_SYSTEM;
+let promise = windowClass.getAvoidArea(type);
+promise.then((data) => {
+  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## getColorSpace
+
+```TypeScript
+getColorSpace(): Promise<ColorSpace>
+```
+
+获取当前窗口色域模式，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getwindowcolorspace)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowColorSpace](#getwindowcolorspace)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise对象。返回当前色域模式。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.getColorSpace();
+promise.then((data) => {
+  console.info('Succeeded in getting window color space. Cause:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="getcolorspace-1"></a>
+
+## getColorSpace
+
+```TypeScript
+getColorSpace(callback: AsyncCallback<ColorSpace>): void
+```
+
+获取当前窗口色域模式，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getwindowcolorspace)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowColorSpace](#getwindowcolorspace)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | 是 | 回调函数。当获取成功，err为undefined，data为当前色域模式。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.getColorSpace((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting window colorspace. Cause:' + JSON.stringify(data));
+});
+```
+
+## getProperties
+
+```TypeScript
+getProperties(callback: AsyncCallback<WindowProperties>): void
+```
+
+获取当前窗口的属性，使用callback异步回调，返回WindowProperties。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getwindowproperties)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowProperties](#getwindowproperties)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 | 回调函数。返回当前窗口属性。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.getProperties((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
+});
+```
+
+<a id="getproperties-1"></a>
+
+## getProperties
+
+```TypeScript
+getProperties(): Promise<WindowProperties>
+```
+
+获取当前窗口的属性，使用Promise异步回调，返回WindowProperties。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getwindowproperties)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getWindowProperties](#getwindowproperties)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Promise对象。返回当前窗口属性。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.getProperties();
+promise.then((data) => {
+  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## isShowing
+
+```TypeScript
+isShowing(callback: AsyncCallback<boolean>): void
+```
+
+判断当前窗口是否已显示，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#iswindowshowing)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [isWindowShowing](#iswindowshowing)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.isShowing((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
+});
+```
+
+<a id="isshowing-1"></a>
+
+## isShowing
+
+```TypeScript
+isShowing(): Promise<boolean>
+```
+
+判断当前窗口是否已显示，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#iswindowshowing)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [isWindowShowing](#iswindowshowing)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.isShowing();
+promise.then((data) => {
+  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## isSupportWideGamut
+
+```TypeScript
+isSupportWideGamut(): Promise<boolean>
+```
+
+判断当前窗口是否支持广色域模式，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.isSupportWideGamut();
+promise.then((data) => {
+  console.info('Succeeded in checking whether the window support WideGamut. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="issupportwidegamut-1"></a>
+
+## isSupportWideGamut
+
+```TypeScript
+isSupportWideGamut(callback: AsyncCallback<boolean>): void
+```
+
+判断当前窗口是否支持广色域模式，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.isSupportWideGamut((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in checking whether the window support WideGamut Data: ' + JSON.stringify(data));
+});
+```
+
+## moveTo
+
+```TypeScript
+moveTo(x: number, y: number): Promise<void>
+```
+
+移动窗口位置，使用Promise异步回调。
+
+全屏模式窗口不支持该操作。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](#movewindowto)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | number | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在y轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.moveTo(300, 300);
+promise.then(() => {
+  console.info('Succeeded in moving the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="moveto-1"></a>
+
+## moveTo
+
+```TypeScript
+moveTo(x: number, y: number, callback: AsyncCallback<void>): void
+```
+
+移动窗口位置，使用callback异步回调。
+
+全屏模式窗口不支持该操作。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [moveWindowTo()](#movewindowto)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| x | number | 是 | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | number | 是 | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.moveTo(300, 300, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in moving the window.');
+});
+```
+
+## resetSize
+
+```TypeScript
+resetSize(width: number, height: number): Promise<void>
+```
+
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
+
+应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
+
+应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过[getWindowLimits](#getwindowlimits)接口进行查询。
+
+系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
+
+设置的宽度与高度受到此限制约束，规则：
+
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
+
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
+
+全屏模式窗口不支持该操作。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](#resize)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [resize](#resize)(width: number, height: number)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.resetSize(500, 1000);
+promise.then(() => {
+  console.info('Succeeded in changing the window size.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="resetsize-1"></a>
+
+## resetSize
+
+```TypeScript
+resetSize(width: number, height: number, callback: AsyncCallback<void>): void
+```
+
+基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。
+
+应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
+
+应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过[getWindowLimits](#getwindowlimits)接口进行查询。
+
+系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
+
+设置的宽度与高度受到此限制约束，规则：
+
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
+
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
+
+全屏模式窗口不支持该操作。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [resize()](#resize)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| width | number | 是 | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| height | number | 是 | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码[401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.resetSize(500, 1000, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in changing the window size.');
+});
+```
+
+## setBackgroundColor
+
+```TypeScript
+setBackgroundColor(color: string): Promise<void>
+```
+
+设置窗口的背景色，使用Promise异步回调。Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let color: string = '#00ff33';
+let promise = windowClass.setBackgroundColor(color);
+promise.then(() => {
+  console.info('Succeeded in setting the background color.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setbackgroundcolor-1"></a>
+
+## setBackgroundColor
+
+```TypeScript
+setBackgroundColor(color: string, callback: AsyncCallback<void>): void
+```
+
+设置窗口的背景色，使用callback异步回调。Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](#setwindowbackgroundcolor)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| color | string | 是 | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let color: string = '#00ff33';
+windowClass.setBackgroundColor(color, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the background color.');
+});
+```
+
+## setBrightness
+
+```TypeScript
+setBrightness(brightness: number): Promise<void>
+```
+
+允许应用窗口设置屏幕亮度值，使用Promise异步回调。
+
+当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](#setwindowbrightness)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brightness | number | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let brightness: number = 1;
+let promise = windowClass.setBrightness(brightness);
+promise.then(() => {
+  console.info('Succeeded in setting the brightness.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setbrightness-1"></a>
+
+## setBrightness
+
+```TypeScript
+setBrightness(brightness: number, callback: AsyncCallback<void>): void
+```
+
+允许应用窗口设置屏幕亮度值，使用callback异步回调。
+
+当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](#setwindowbrightness)
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brightness | number | 是 | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let brightness: number = 1;
+windowClass.setBrightness(brightness, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the brightness.');
+});
+```
+
+## setColorSpace
+
+```TypeScript
+setColorSpace(colorSpace: ColorSpace): Promise<void>
+```
+
+设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](#setwindowcolorspace)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 设置色域模式。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT);
+promise.then(() => {
+  console.info('Succeeded in setting window colorspace.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setcolorspace-1"></a>
+
+## setColorSpace
+
+```TypeScript
+setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
+```
+
+设置当前窗口为广色域模式或默认色域模式，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](#setwindowcolorspace-1)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 设置色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting window colorspace.');
+});
+```
+
+## setDimBehind
+
+```TypeScript
+setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
+```
+
+窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为[0.0, 1.0]，取1.0时表示最暗。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setDimBehind(0.5, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the dimness.');
+});
+```
+
+<a id="setdimbehind-1"></a>
+
+## setDimBehind
+
+```TypeScript
+setDimBehind(dimBehindValue: number): Promise<void>
+```
+
+窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用Promise异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| dimBehindValue | number | 是 | 表示靠后的窗口的暗度值，取值范围为0-1，1表示最暗。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setDimBehind(0.5);
+promise.then(() => {
+  console.info('Succeeded in setting the dimness.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## setFocusable
+
+```TypeScript
+setFocusable(isFocusable: boolean): Promise<void>
+```
+
+设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从点击前的获焦窗口切换到该窗口，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](#setwindowfocusable)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isFocusable | boolean | 是 | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考[不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isFocusable: boolean = true;
+let promise = windowClass.setFocusable(isFocusable);
+promise.then(() => {
+  console.info('Succeeded in setting the window to be focusable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setfocusable-1"></a>
+
+## setFocusable
+
+```TypeScript
+setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
+```
+
+设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从操作前的获焦窗口切换到该窗口，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](#setwindowfocusable-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isFocusable | boolean | 是 | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考[不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isFocusable: boolean = true;
+windowClass.setFocusable(isFocusable, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to be focusable.');
+});
+```
+
+## setFullScreen
+
+```TypeScript
+setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+设置主窗口或子窗口的布局是否为全屏布局，使用callback异步回调。
+
+全屏布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
+
+非全屏布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
+> 屏。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示全屏；false表示非全屏。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isFullScreen: boolean = true;
+      windowClass.setFullScreen(isFullScreen, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in enabling the full-screen mode.');
+      });
+    });
+  }
+}
+```
+
+<a id="setfullscreen-1"></a>
+
+## setFullScreen
+
+```TypeScript
+setFullScreen(isFullScreen: boolean): Promise<void>
+```
+
+设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。
+
+全屏布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
+
+非全屏布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
+> 屏。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isFullScreen | boolean | 是 | 是否设为全屏布局（该全屏布局影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示全屏；false表示非全屏。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isFullScreen: boolean = true;
+      let promise = windowClass.setFullScreen(isFullScreen);
+      promise.then(() => {
+        console.info('Succeeded in enabling the full-screen mode.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setKeepScreenOn
+
+```TypeScript
+setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
+```
+
+设置屏幕是否为常亮状态，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon)替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isKeepScreenOn: boolean = true;
+let promise = windowClass.setKeepScreenOn(isKeepScreenOn);
+promise.then(() => {
+  console.info('Succeeded in setting the screen to be always on.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setkeepscreenon-1"></a>
+
+## setKeepScreenOn
+
+```TypeScript
+setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
+```
+
+设置屏幕是否为常亮状态，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon-1)
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isKeepScreenOn | boolean | 是 | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isKeepScreenOn: boolean = true;
+windowClass.setKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the screen to be always on.');
+});
+```
+
+## setLayoutFullScreen
+
+```TypeScript
+setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。
+
+沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
+
+非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen: boolean = true;
+      windowClass.setLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the window layout to full-screen mode.');
+      });
+    });
+  }
+}
+```
+
+<a id="setlayoutfullscreen-1"></a>
+
+## setLayoutFullScreen
+
+```TypeScript
+setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
+```
+
+设置主窗口或子窗口的布局是否为沉浸式布局，使用Promise异步回调。
+
+沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。
+
+非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | 是 | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、<!--RP15-->三键导航栏<!--RP15End-->显示）。true表示沉浸式布局；false表示非沉浸式布局。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen: boolean = true;
+      let promise = windowClass.setLayoutFullScreen(isLayoutFullScreen);
+      promise.then(() => {
+        console.info('Succeeded in setting the window layout to full-screen mode.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setOutsideTouchable
+
+```TypeScript
+setOutsideTouchable(touchable: boolean): Promise<void>
+```
+
+设置是否允许可点击子窗口之外的区域，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
+> 
+> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| touchable | boolean | 是 | 设置是否可点击。true表示可点击；false表示不可点击。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setOutsideTouchable(true);
+promise.then(() => {
+  console.info('Succeeded in setting the area to be touchable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setoutsidetouchable-1"></a>
+
+## setOutsideTouchable
+
+```TypeScript
+setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
+```
+
+设置是否允许可点击子窗口之外的区域，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
+> 
+> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| touchable | boolean | 是 | 设置是否可点击。true表示可点击；false表示不可点击。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setOutsideTouchable(true, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the area to be touchable.');
+});
+```
+
+## setPrivacyMode
+
+```TypeScript
+setPrivacyMode(isPrivacyMode: boolean): Promise<void>
+```
+
+设置窗口是否为隐私模式，使用Promise异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](#setwindowprivacymode)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isPrivacyMode: boolean = true;
+let promise = windowClass.setPrivacyMode(isPrivacyMode);
+promise.then(() => {
+  console.info('Succeeded in setting the window to privacy mode.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setprivacymode-1"></a>
+
+## setPrivacyMode
+
+```TypeScript
+setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
+```
+
+设置窗口是否为隐私模式，使用callback异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](#setwindowprivacymode-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isPrivacyMode | boolean | 是 | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isPrivacyMode: boolean = true;
+windowClass.setPrivacyMode(isPrivacyMode, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to privacy mode.');
+});
+```
+
+## setSystemBarEnable
+
+```TypeScript
+setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
+```
+
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用callback异步回调。
+
+从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+// 此处以状态栏等均不显示为例
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let names: Array<'status' | 'navigation'> = [];
+      windowClass.setSystemBarEnable(names, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the system bar to be invisible.');
+      });
+    });
+  }
+}
+```
+
+<a id="setsystembarenable-1"></a>
+
+## setSystemBarEnable
+
+```TypeScript
+setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
+```
+
+<!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用Promise异步回调。
+
+从API version 12开始，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | 是 | 设置窗口全屏模式时状态栏和<!--RP15-->三键导航栏<!--RP15End-->是否显示。<br>例如，需全部显示，该参数设置为['status','navigation']；设置为[]，则不显示。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+// 此处以状态栏等均不显示为例
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let names: Array<'status' | 'navigation'> = [];
+      let promise = windowClass.setSystemBarEnable(names);
+      promise.then(() => {
+        console.info('Succeeded in setting the system bar to be invisible.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setSystemBarProperties
+
+```TypeScript
+setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+```
+
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用callback异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let systemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // 以下两个属性从API version 8开始支持
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      windowClass.setSystemBarProperties(systemBarProperties, (err) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the system bar properties.');
+      });
+    });
+  }
+}
+```
+
+<a id="setsystembarproperties-1"></a>
+
+## setSystemBarProperties
+
+```TypeScript
+setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
+```
+
+设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用Promise异步回调，<!--RP5-->该接口在2in1设备上调用不生效。<!--RP5End-->
+
+子窗口调用后不生效。
+
+> **说明：** 
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 | <!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let systemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // 以下两个属性从API version 8开始支持
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      let promise = windowClass.setSystemBarProperties(systemBarProperties);
+      promise.then(() => {
+        console.info('Succeeded in setting the system bar properties.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setTouchable
+
+```TypeScript
+setTouchable(isTouchable: boolean): Promise<void>
+```
+
+设置窗口是否为可触状态，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](#setwindowtouchable)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isTouchable = true;
+let promise = windowClass.setTouchable(isTouchable);
+promise.then(() => {
+  console.info('Succeeded in setting the window to be touchable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="settouchable-1"></a>
+
+## setTouchable
+
+```TypeScript
+setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
+```
+
+设置窗口是否为可触状态，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](#setwindowtouchable-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isTouchable = true;
+windowClass.setTouchable(isTouchable, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to be touchable.');
+});
+```
+
+## show
+
+```TypeScript
+show(callback: AsyncCallback<void>): void
+```
+
+显示当前窗口，使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [showWindow()](#showwindow)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.show((err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in showing the window.');
+});
+```
+
+<a id="show-1"></a>
+
+## show
+
+```TypeScript
+show(): Promise<void>
+```
+
+显示当前窗口，使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[showWindow()](#showwindow)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [showWindow](#showwindow)()
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.show();
+promise.then(() => {
+  console.info('Succeeded in showing the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
+});
 ```

@@ -145,6 +145,21 @@ import { print } from '@kit.BasicServicesKit';
 | [PrinterExtensionInfo](arkts-basicservices-print-printerextensioninfo-i-sys.md) | Provides the printer extension information. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md) | Defines a callback that takes the printer event and printer information as parameters. |
+| [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | Defines the callback type used in registering to listen for watermark handling. The value of jobId indicates the print job ID. The value of fd indicates the fd. |
+
+<!--Del-->
+### Types(System API)
+
+| Name | Description |
+| --- | --- |
+| [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | Defines the callback type used in registering to listen for printerInfoQuery event. The value of printerInfo indicates the printer info. The value of ppdInfo indicates all the printer ppd info. |
+<!--DelEnd-->
+
 ### Enums
 
 | Name | Description |
@@ -168,18 +183,3 @@ import { print } from '@kit.BasicServicesKit';
 | [PrintPageType](arkts-basicservices-print-printpagetype-e.md) | Enumerates the print page types. |
 | [PrintQuality](arkts-basicservices-print-printquality-e.md) | Enumerates the print qualities. |
 | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | Watermark handling result. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md) | Defines a callback that takes the printer event and printer information as parameters. |
-| [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | Defines the callback type used in registering to listen for watermark handling. The value of jobId indicates the print job ID. The value of fd indicates the fd. |
-
-<!--Del-->
-### Types(System API)
-
-| Name | Description |
-| --- | --- |
-| [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | Defines the callback type used in registering to listen for printerInfoQuery event. The value of printerInfo indicates the printer info. The value of ppdInfo indicates all the printer ppd info. |
-<!--DelEnd-->

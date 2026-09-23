@@ -16,84 +16,6 @@ interface SystemPasteboard
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
-## clear
-
-```TypeScript
-clear(callback: AsyncCallback<void>): void
-```
-
-清空系统剪贴板内容，使用callback异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**示例**
-
-```TypeScript
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clear((err, data) => {
-    if (err) {
-        console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-        return;
-    }
-    console.info('Succeeded in clearing the PasteData.');
-});
-```
-
-<a id="clear-1"></a>
-
-## clear
-
-```TypeScript
-clear(): Promise<void>
-```
-
-清空系统剪贴板内容，使用Promise异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [clearData](#cleardata)()
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clear().then((data) => {
-    console.info('Succeeded in clearing the PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
-
 ## clearData
 
 ```TypeScript
@@ -592,92 +514,6 @@ systemPasteboard.getMimeTypes().then((data: Array<string>) => {
 });
 ```
 
-## getPasteData
-
-```TypeScript
-getPasteData(callback: AsyncCallback<PasteData>): void
-```
-
-读取系统剪贴板内容，使用callback异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
-systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteData) => {
-    if (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-        return;
-    }
-    // 获取剪贴板中的纯文本内容
-    let text: string = pasteData.getPrimaryText();
-});
-```
-
-<a id="getpastedata-1"></a>
-
-## getPasteData
-
-```TypeScript
-getPasteData(): Promise<PasteData>
-```
-
-读取系统剪贴板内容，使用Promise异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [getData](#getdata)()
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise对象，返回系统剪贴板数据。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
-systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
-    // 获取剪贴板中的纯文本内容
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
-
 ## getUnifiedData
 
 ```TypeScript
@@ -931,86 +767,6 @@ try {
 } catch (err) {
     console.error(`Failed to check the DataType. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
-```
-
-## hasPasteData
-
-```TypeScript
-hasPasteData(callback: AsyncCallback<boolean>): void
-```
-
-判断系统剪贴板中是否有内容，使用callback异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-        return;
-    }
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-});
-```
-
-<a id="haspastedata-1"></a>
-
-## hasPasteData
-
-```TypeScript
-hasPasteData(): Promise<boolean>
-```
-
-判断系统剪贴板中是否有内容，使用Promise异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [hasData](#hasdata)()
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasPasteData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
 ```
 
 ## hasRemoteData
@@ -1453,93 +1209,6 @@ try {
 };
 ```
 
-## setPasteData
-
-```TypeScript
-setPasteData(data: PasteData, callback: AsyncCallback<void>): void
-```
-
-将数据写入系统剪贴板，使用callback异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**示例**
-
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setPasteData(pasteData, (err, data) => {
-    if (err) {
-        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-        return;
-    }
-    console.info('Succeeded in setting PasteData.');
-});
-```
-
-<a id="setpastedata-1"></a>
-
-## setPasteData
-
-```TypeScript
-setPasteData(data: PasteData): Promise<void>
-```
-
-将数据写入系统剪贴板，使用Promise异步回调。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [setData](#setdata-1)(data: PasteData)
-
-**系统能力：** SystemCapability.MiscServices.Pasteboard
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setPasteData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
-
 ## setUnifiedData
 
 ```TypeScript
@@ -1656,4 +1325,335 @@ try {
 } catch (err) {
     console.error(`Failed to set UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 };
+```
+
+## clear
+
+```TypeScript
+clear(callback: AsyncCallback<void>): void
+```
+
+清空系统剪贴板内容，使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+
+**示例**
+
+```TypeScript
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clear((err, data) => {
+    if (err) {
+        console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    console.info('Succeeded in clearing the PasteData.');
+});
+```
+
+<a id="clear-1"></a>
+
+## clear
+
+```TypeScript
+clear(): Promise<void>
+```
+
+清空系统剪贴板内容，使用Promise异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [clearData](#cleardata)()
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clear().then((data) => {
+    console.info('Succeeded in clearing the PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
+## getPasteData
+
+```TypeScript
+getPasteData(callback: AsyncCallback<PasteData>): void
+```
+
+读取系统剪贴板内容，使用callback异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 读取系统剪贴板内容
+systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteData) => {
+    if (err) {
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    // 获取剪贴板中的纯文本内容
+    let text: string = pasteData.getPrimaryText();
+});
+```
+
+<a id="getpastedata-1"></a>
+
+## getPasteData
+
+```TypeScript
+getPasteData(): Promise<PasteData>
+```
+
+读取系统剪贴板内容，使用Promise异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [getData](#getdata)()
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise对象，返回系统剪贴板数据。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 读取系统剪贴板内容
+systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
+    // 获取剪贴板中的纯文本内容
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
+## hasPasteData
+
+```TypeScript
+hasPasteData(callback: AsyncCallback<boolean>): void
+```
+
+判断系统剪贴板中是否有内容，使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+});
+```
+
+<a id="haspastedata-1"></a>
+
+## hasPasteData
+
+```TypeScript
+hasPasteData(): Promise<boolean>
+```
+
+判断系统剪贴板中是否有内容，使用Promise异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [hasData](#hasdata)()
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasPasteData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
+## setPasteData
+
+```TypeScript
+setPasteData(data: PasteData, callback: AsyncCallback<void>): void
+```
+
+将数据写入系统剪贴板，使用callback异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+
+**示例**
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setPasteData(pasteData, (err, data) => {
+    if (err) {
+        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    console.info('Succeeded in setting PasteData.');
+});
+```
+
+<a id="setpastedata-1"></a>
+
+## setPasteData
+
+```TypeScript
+setPasteData(data: PasteData): Promise<void>
+```
+
+将数据写入系统剪贴板，使用Promise异步回调。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [setData](#setdata-1)(data: PasteData)
+
+**系统能力：** SystemCapability.MiscServices.Pasteboard
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setPasteData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
 ```

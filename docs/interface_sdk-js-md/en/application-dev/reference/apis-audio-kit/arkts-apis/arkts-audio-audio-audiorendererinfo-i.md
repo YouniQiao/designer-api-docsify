@@ -16,24 +16,6 @@ Describes audio renderer information.
 import { audio } from '@kit.AudioKit';
 ```
 
-## content
-
-```TypeScript
-content?: ContentType
-```
-
-Audio content type.
-
-**Type:** [ContentType](arkts-audio-audio-contenttype-e.md)
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** usage
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
 ## rendererFlags
 
 ```TypeScript
@@ -81,3 +63,21 @@ Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-a
 **Since:** 19
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
+
+## content
+
+```TypeScript
+content?: ContentType
+```
+
+Audio content type.
+
+**Type:** [ContentType](arkts-audio-audio-contenttype-e.md)
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** usage
+
+**System capability:** SystemCapability.Multimedia.Audio.Core

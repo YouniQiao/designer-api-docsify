@@ -147,6 +147,339 @@ try {
 }
 ```
 
+## getAshmemSize
+
+```TypeScript
+getAshmemSize(): number
+```
+
+Obtains the memory size of this **Ashmem** object.
+
+**Since:** 8
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | **Ashmem** size obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let size = ashmem.getAshmemSize();
+  hilog.info(0x0000, 'testTag', ' size is ' + size);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error is ' + error);
+}
+```
+
+## mapReadonlyAshmem
+
+```TypeScript
+mapReadonlyAshmem(): void
+```
+
+Maps the shared file to the read-only virtual address space of the process.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapReadonlyAshmem();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## mapReadWriteAshmem
+
+```TypeScript
+mapReadWriteAshmem(): void
+```
+
+Maps the shared file to the readable and writable virtual address space of the process.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapReadWriteAshmem();
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## mapTypedAshmem
+
+```TypeScript
+mapTypedAshmem(mapType: number): void
+```
+
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mapType | number | Yes | Protection level of the memory region to which the shared file is mapped. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapTypedAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## readDataFromAshmem
+
+```TypeScript
+readDataFromAshmem(size: number, offset: number): ArrayBuffer
+```
+
+Reads data from the shared file associated with this **Ashmem** object.
+
+> **NOTE:** 
+> 
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+
+**Since:** 11
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Size of the data to read. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArrayBuffer | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let buffer = new ArrayBuffer(1024);
+  let int32View = new Int32Array(buffer);
+  for (let i = 0; i < int32View.length; i++) {
+    int32View[i] = i * 2 + 1;
+  }
+  let size = buffer.byteLength;
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapReadWriteAshmem();
+  ashmem.writeDataToAshmem(buffer, size, 0);
+  let readResult = ashmem.readDataFromAshmem(size, 0);
+  let readInt32View = new Int32Array(readResult);
+  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## setProtectionType
+
+```TypeScript
+setProtectionType(protectionType: number): void
+```
+
+Sets the protection level of the memory region to which the shared file is mapped.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| protectionType | number | Yes | Protection type to set. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) | Failed to call ioctl. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.setProtectionType(rpc.Ashmem.PROT_READ);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorMessage ' + e.message);
+}
+```
+
+## unmapAshmem
+
+```TypeScript
+unmapAshmem(): void
+```
+
+Deletes the mappings for the specified address range of this **Ashmem** object.
+
+**Since:** 8
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.unmapAshmem();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error is ' + error);
+}
+```
+
+## writeDataToAshmem
+
+```TypeScript
+writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
+```
+
+Writes data to the shared file associated with this **Ashmem** object.
+
+> **NOTE:** 
+> 
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+
+**Since:** 11
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Data to write. |
+| size | number | Yes | Size of the data to write. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let buffer = new ArrayBuffer(1024);
+  let int32View = new Int32Array(buffer);
+  for (let i = 0; i < int32View.length; i++) {
+    int32View[i] = i * 2 + 1;
+  }
+  let size = buffer.byteLength;
+  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  ashmem.mapReadWriteAshmem();
+  ashmem.writeDataToAshmem(buffer, size, 0);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
 ## createAshmem
 
 ```TypeScript
@@ -231,39 +564,6 @@ try {
   let ashmem2 = rpc.Ashmem.createAshmemFromExisting(ashmem);
   let size = ashmem2.getAshmemSize();
   hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
-## getAshmemSize
-
-```TypeScript
-getAshmemSize(): number
-```
-
-Obtains the memory size of this **Ashmem** object.
-
-**Since:** 8
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | **Ashmem** size obtained. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let size = ashmem.getAshmemSize();
-  hilog.info(0x0000, 'testTag', ' size is ' + size);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error is ' + error);
 }
@@ -386,118 +686,6 @@ try {
 }
 ```
 
-## mapReadonlyAshmem
-
-```TypeScript
-mapReadonlyAshmem(): void
-```
-
-Maps the shared file to the read-only virtual address space of the process.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadonlyAshmem();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-## mapReadWriteAshmem
-
-```TypeScript
-mapReadWriteAshmem(): void
-```
-
-Maps the shared file to the readable and writable virtual address space of the process.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-## mapTypedAshmem
-
-```TypeScript
-mapTypedAshmem(mapType: number): void
-```
-
-Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is specified by this **Ashmem** object.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mapType | number | Yes | Protection level of the memory region to which the shared file is mapped. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapTypedAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## readAshmem
 
 ```TypeScript
@@ -552,70 +740,6 @@ try {
   ashmem.writeAshmem(ByteArrayVar, 5, 0);
   let readResult = ashmem.readAshmem(5, 0);
   hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readResult);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-## readDataFromAshmem
-
-```TypeScript
-readDataFromAshmem(size: number, offset: number): ArrayBuffer
-```
-
-Reads data from the shared file associated with this **Ashmem** object.
-
-> **NOTE:** 
-> 
-> Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
-
-**Since:** 11
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
-| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| ArrayBuffer | Data read. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  let readResult = ashmem.readDataFromAshmem(size, 0);
-  let readInt32View = new Int32Array(readResult);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
@@ -720,74 +844,6 @@ try {
 }
 ```
 
-## setProtectionType
-
-```TypeScript
-setProtectionType(protectionType: number): void
-```
-
-Sets the protection level of the memory region to which the shared file is mapped.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| protectionType | number | Yes | Protection type to set. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) | Failed to call ioctl. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.setProtectionType(rpc.Ashmem.PROT_READ);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorMessage ' + e.message);
-}
-```
-
-## unmapAshmem
-
-```TypeScript
-unmapAshmem(): void
-```
-
-Deletes the mappings for the specified address range of this **Ashmem** object.
-
-**Since:** 8
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.unmapAshmem();
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## writeAshmem
 
 ```TypeScript
@@ -839,62 +895,6 @@ try {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'Rpc write to ashmem fail, errorCode ' + e.code);
   hilog.error(0x0000, 'testTag', 'Rpc write to ashmem fail, errorMessage ' + e.message);
-}
-```
-
-## writeDataToAshmem
-
-```TypeScript
-writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
-```
-
-Writes data to the shared file associated with this **Ashmem** object.
-
-> **NOTE:** 
-> 
-> Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
-
-**Since:** 11
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
-| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
 }
 ```
 

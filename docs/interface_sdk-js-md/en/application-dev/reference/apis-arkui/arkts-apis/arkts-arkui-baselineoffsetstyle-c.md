@@ -4,7 +4,7 @@
 declare class BaselineOffsetStyle
 ```
 
-Describes the text baseline offset style.
+Describes the text baseline offset object. It is suitable for scenarios that require fine-tuning the vertical position of text, such as aligning superscript and subscript text with normal text in chemical formulas and mathematical expressions.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ A constructor used to create a text baseline offset style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text baseline offset options. This API does not work if **unit** of **LengthMetrics** is percent. |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Setting item for the text baseline offset. If the unit value of **LengthMetrics** is **PERCENT**, this setting does not take effect. |
 
 ## baselineOffset
 
@@ -38,9 +38,9 @@ A constructor used to create a text baseline offset style.
 readonly baselineOffset: number
 ```
 
-Text baseline offset.
+Text baseline offset of the styled string.
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

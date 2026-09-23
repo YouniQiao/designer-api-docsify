@@ -114,99 +114,6 @@ try {
 }
 ```
 
-## queryOsAccountDistributedInfo
-
-```TypeScript
-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
-```
-
-获取分布式账号信息。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | 是 | 回调函数。当获取分布式账号信息成功时，err为undefined，data为获取到的分布式账号信息对象；否则err为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取分布式账号的单实例对象
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo(
-  (err: BusinessError, data: distributedAccount.DistributedInfo) => {
-    if (err) {
-      console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('distributed information: ' + JSON.stringify(data));
-    }
-  });
-```
-
-<a id="queryosaccountdistributedinfo-1"></a>
-
-## queryOsAccountDistributedInfo
-
-```TypeScript
-queryOsAccountDistributedInfo(): Promise<DistributedInfo>
-```
-
-获取分布式账号信息。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)()
-
-**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.OsAccount
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise对象，返回分布式账号信息对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取分布式账号的单实例对象
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-  console.info('distributed information: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## setOsAccountDistributedInfo
 
 ```TypeScript
@@ -322,6 +229,99 @@ try {
   const err = e as BusinessError;
   console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
 }
+```
+
+## queryOsAccountDistributedInfo
+
+```TypeScript
+queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
+```
+
+获取分布式账号信息。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | 是 | 回调函数。当获取分布式账号信息成功时，err为undefined，data为获取到的分布式账号信息对象；否则err为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取分布式账号的单实例对象
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo(
+  (err: BusinessError, data: distributedAccount.DistributedInfo) => {
+    if (err) {
+      console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('distributed information: ' + JSON.stringify(data));
+    }
+  });
+```
+
+<a id="queryosaccountdistributedinfo-1"></a>
+
+## queryOsAccountDistributedInfo
+
+```TypeScript
+queryOsAccountDistributedInfo(): Promise<DistributedInfo>
+```
+
+获取分布式账号信息。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)()
+
+**需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise对象，返回分布式账号信息对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取分布式账号的单实例对象
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+  console.info('distributed information: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## updateOsAccountDistributedInfo

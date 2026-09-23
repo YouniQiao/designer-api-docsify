@@ -4,7 +4,7 @@
 declare enum InputType
 ```
 
-Sets the single-line text box type.
+Type of the single-line text input box.
 
 **Since:** 7
 

@@ -18,9 +18,9 @@ max?: number
 
 - When set to a value greater than 0, this parameter indicates the maximum value in the **values** list.  
 - When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values**  
-list, and the values are displayed proportionally based on their relative sizes.
+list, and the values are displayed proportionally.
 
-Default value: **100**
+Default Value: **100**
 
 **Type:** number
 
@@ -40,7 +40,9 @@ type?: DataPanelType
 
 Type of the data panel (dynamic modification is not supported).
 
-Default value: **DataPanelType.Circle**
+The value options are as follows: **DataPanelType.Line** (linear data panel, suitable for displaying comparisons of multiple data segments in limited space) and **DataPanelType.Circle** (circle data panel, suitable for intuitively displaying data proportion relationships).
+
+If not passed, the default value is **DataPanelType.Circle**.
 
 **Type:** [DataPanelType](arkts-arkui-datapanel-comp-datapaneltype-e.md)
 
@@ -58,7 +60,7 @@ Default value: **DataPanelType.Circle**
 values: number[]
 ```
 
-Data value list. A maximum of nine values are supported. If more than nine values are set, only the first nine ones are used. A value less than 0 evaluates to the value **0**.
+Data value list. The array length range is [0, 9]. If more than nine values are set, only the first nine ones are used. A value less than 0 evaluates to the value **0**.
 
 **Type:** number[]
 

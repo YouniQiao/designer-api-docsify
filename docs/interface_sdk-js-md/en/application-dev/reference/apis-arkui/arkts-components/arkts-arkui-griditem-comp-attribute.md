@@ -54,34 +54,6 @@ Sets the start column number of the component.
 | --- | --- | --- | --- |
 | value | number | Yes | Start column number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-grid-comp-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout) and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns). <br>Value range: [0, Total number of columns – 1]. |
 
-## forceRebuild
-
-```TypeScript
-forceRebuild(value: boolean)
-```
-
-Whether to re-create the component when it is being built.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component
-> is automatically determined based on the component attributes and child component changes. No manual
-> configuration is required.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Sets whether to re-create the component when it is being built.<br>Default value: **false**. |
-
 ## onSelect
 
 ```TypeScript
@@ -195,3 +167,31 @@ This attribute must be used before the polymorphic style is set. Otherwise, the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the grid item is selected. The **value** means that the grid item is selected, and **false** means that the grid item is in the default state.<br>Default value: **false**. |
+
+## forceRebuild
+
+```TypeScript
+forceRebuild(value: boolean)
+```
+
+Whether to re-create the component when it is being built.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component
+> is automatically determined based on the component attributes and child component changes. No manual
+> configuration is required.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Sets whether to re-create the component when it is being built.<br>Default value: **false**. |

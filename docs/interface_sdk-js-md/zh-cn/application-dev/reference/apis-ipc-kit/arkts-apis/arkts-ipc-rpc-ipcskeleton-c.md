@@ -67,61 +67,6 @@ try {
 }
 ```
 
-## flushCommands
-
-```TypeScript
-static flushCommands(object: IRemoteObject): number
-```
-
-静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 如果操作成功，返回0；如果输入对象为空或RemoteObject，或者操作失败，返回错误代码。 |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let remoteObject = new TestRemoteObject('aaa');
-  let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
-  hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
-}
-```
-
 ## getCallingDeviceID
 
 ```TypeScript
@@ -462,6 +407,61 @@ class Stub extends rpc.RemoteObject {
     }
     return true;
   }
+}
+```
+
+## flushCommands
+
+```TypeScript
+static flushCommands(object: IRemoteObject): number
+```
+
+静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 是 | 指定的RemoteProxy。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 如果操作成功，返回0；如果输入对象为空或RemoteObject，或者操作失败，返回错误代码。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let remoteObject = new TestRemoteObject('aaa');
+  let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
+  hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
 }
 ```
 

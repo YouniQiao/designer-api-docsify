@@ -52,8 +52,8 @@ Adds resources from the application sandbox based on the file URI. For details a
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900002 | The file corresponding to the URI is not in the app sandbox. |
-| 14000011 | System inner fail |
-| 14000016 | Operation Not Support |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
+| 14000016 | Operation type not support. Possible causes:<br>1. A previous asset creation or modification request has not been applied yet. |
 
 **Examples**
 
@@ -110,8 +110,8 @@ Adds a resource using **ArrayBuffer** data.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
-| 14000016 | Operation Not Support |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
+| 14000016 | Operation type not support. Possible causes:<br>1. A previous asset creation or modification request has not been applied yet. |
 
 **Examples**
 
@@ -159,7 +159,7 @@ Constructor used to initialize an asset change request.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The constructor was not called with the new keyword; <br>2. Parameter parsing failed, please check the number and types of parameters; <br>3. The asset parameter is not a valid PhotoAsset object; <br>4. System memory insufficient, please retry; <br>5. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -217,7 +217,7 @@ Create an asset change request based on the file type and filename extension.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The context parameter is invalid or not properly initialized, please pass a valid Context obtained from the application context; <br>2. User file service initialization failed, possible causes: 1. Database exception; 2. IPC timeout. Please check if the context is valid and retry; <br>3. System memory insufficient, please retry; <br>4. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -281,7 +281,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900002 | The file corresponding to the URI is not in the app sandbox. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The context parameter is invalid or not properly initialized, please pass a valid Context obtained from the application context; <br>2. IPC communication error, please retry; <br>3. System memory insufficient, please retry; <br>4. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -337,7 +337,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 13900002 | The file corresponding to the URI is not in the app sandbox. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The context parameter is invalid or not properly initialized, please pass a valid Context obtained from the application context; <br>2. IPC communication error, please retry; <br>3. System memory insufficient, please retry; <br>4. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -389,9 +389,9 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The context parameter is invalid or not properly initialized, please pass a valid Context obtained from the application context; <br>2. User file service initialization failed, possible causes: 1. Database exception; 2. IPC timeout. Please check if the context is valid and retry; <br>3. The assets array contains elements that are not valid PhotoAsset objects; <br>4. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs; <br>5. System memory insufficient, please retry. |
 
 **Examples**
 
@@ -451,10 +451,10 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000002 | The uri format is incorrect or does not exist. |
-| 14000011 | System inner fail |
+| 14000002 | The URI format is incorrect or the URI does not exist. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The context parameter is invalid or not properly initialized, please pass a valid Context obtained from the application context; <br>2. User file service initialization failed, possible causes: 1. Database exception; 2. IPC timeout. Please check if the context is valid and retry; <br>3. The uriList array contains elements that are not valid string URIs, each element must be a valid file URI string; <br>4. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs; <br>5. System memory insufficient, please retry. |
 
 **Examples**
 
@@ -497,8 +497,8 @@ Discards the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000011 | Internal system error |
-| 14000016 | Operation Not Support |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, IPC communication error, please retry. |
+| 14000016 | Operation type not support. Possible causes:<br>1. The operation type is not supported, the asset is a moving photo which does not support this operation; <br>2. A previous asset creation or modification request has not been applied yet, please call applyChanges first; <br>3. The asset is not a moving photo, this operation is only supported for moving photos. |
 
 **Examples**
 
@@ -548,8 +548,8 @@ Obtains the asset in this asset change request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000011 | System inner fail |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System memory insufficient, please retry; <br>3. PC timeout, please retry. |
 
 **Examples**
 
@@ -600,10 +600,10 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
-| 14000011 | System inner fail. Possible causes:<br>1. The database is corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
-| 14000016 | Operation Not Support |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
+| 14000016 | Operation type not support. Possible causes:<br>1. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs <br>2. A previous asset creation or modification request has not been applied yet. |
 
 **Examples**
 
@@ -635,7 +635,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 saveCameraPhoto(): void
 ```
 
-Saves the photo taken by the camera.
+This interface is used to save photos taken by the camera in the photographing scenario. When a photo is taken in non-YUV format, the encoding format of the photo resource is the same as that of [CameraFormat] configured for the camera. When a photo is taken in YUV format, the encoding format cannot be specified by this API, and the image resources are saved in the default JPG format.
 
 **Since:** 12
 
@@ -645,8 +645,8 @@ Saves the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000011 | System inner fail |
-| 14000016 | Operation Not Support |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
+| 14000016 | Operation type not support. Possible causes:<br>1. A previous asset creation or modification request has not been applied yet. |
 
 **Examples**
 
@@ -674,7 +674,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 saveCameraPhoto(imageFileType: ImageFileType): void
 ```
 
-Saves the photo taken by the camera.
+This API is used to specify the encoding format for saving photos taken by the camera. When a photo is taken in non-YUV format, the encoding format of the photo resource is the same as that of [CameraFormat] configured on the camera. When a photo is taken in YUV format, this API encodes the YUV object into the specified format based on [ImageFileType]. When this interface is used together with [addResource], the encoding format of the photo resource is the same as that of the resource added by [addResource].
 
 **Since:** 13
 
@@ -690,8 +690,8 @@ Saves the photo taken by the camera.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000011 | System inner fail |
-| 14000016 | Operation Not Support |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
+| 14000016 | Operation type not support. Possible causes:<br>1. The operation type is not supported, the asset is a moving photo which does not support this operation; <br>2. A previous asset creation or modification request has not been applied yet, please call applyChanges first; <br>3. The asset is not a moving photo, this operation is only supported for moving photos. |
 
 **Examples**
 
@@ -737,7 +737,7 @@ Favorites or unfavorites this file asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14000011 | System inner fail |
+| 14000011 | System inner fail. Possible causes:<br>1. This operation is not supported for assets in shared albums. |
 
 **Examples**
 
@@ -789,7 +789,7 @@ Sets the orientation of this image.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | Internal system error |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.System internal error, possible causes: 1. Database exception; 2. File system exception; 3. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -843,7 +843,7 @@ Sets the media asset title.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
-| 14000011 | System inner fail |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. The asset parameter is not a valid PhotoAsset object; <br>2. System memory insufficient, please retry; <br>3. IPC timeout, please retry. |
 
 **Examples**
 

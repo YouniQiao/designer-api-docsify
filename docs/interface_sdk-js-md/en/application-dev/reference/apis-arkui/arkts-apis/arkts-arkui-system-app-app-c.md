@@ -155,63 +155,6 @@ export default {
 }
 ```
 
-## requestFullWindow
-
-```TypeScript
-static requestFullWindow(options?: RequestFullWindowOptions): void
-```
-
-Requests the application to run in full window. In some scenarios, such as semi-modal FA, the FA runs in non-full window. In this case, you can call this API. This API is invalid for an application already in full-window mode.
-
-**Since:** 3
-
-**Deprecated since:** 8
-
-**Substitutes:** startAbility
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | No | Transition time from non-full window to full window, in milliseconds. By default, the value is in direct proportion to the distance between the non-full window and the full window. |
-
-**Examples**
-
-```TypeScript
-import app, { AppResponse } from '@system.app';
-export default class Req {
-  requestFullWindow() {
-    app.requestFullWindow({
-      duration: 200
-    });
-  }
-}
-```
-
-## screenOnVisible
-
-```TypeScript
-static screenOnVisible(options?: ScreenOnVisibleOptions): void
-```
-
-Defines whether to keep the application visible when the screen is woken up.
-
-This API is deprecated since API version 8.
-
-**Since:** 3
-
-**Deprecated since:** 8
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |
-
 ## setImageCacheCount
 
 ```TypeScript
@@ -450,3 +393,60 @@ export default {
     }
 }
 ```
+
+## requestFullWindow
+
+```TypeScript
+static requestFullWindow(options?: RequestFullWindowOptions): void
+```
+
+Requests the application to run in full window. In some scenarios, such as semi-modal FA, the FA runs in non-full window. In this case, you can call this API. This API is invalid for an application already in full-window mode.
+
+**Since:** 3
+
+**Deprecated since:** 8
+
+**Substitutes:** startAbility
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | No | Transition time from non-full window to full window, in milliseconds. By default, the value is in direct proportion to the distance between the non-full window and the full window. |
+
+**Examples**
+
+```TypeScript
+import app, { AppResponse } from '@system.app';
+export default class Req {
+  requestFullWindow() {
+    app.requestFullWindow({
+      duration: 200
+    });
+  }
+}
+```
+
+## screenOnVisible
+
+```TypeScript
+static screenOnVisible(options?: ScreenOnVisibleOptions): void
+```
+
+Defines whether to keep the application visible when the screen is woken up.
+
+This API is deprecated since API version 8.
+
+**Since:** 3
+
+**Deprecated since:** 8
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |

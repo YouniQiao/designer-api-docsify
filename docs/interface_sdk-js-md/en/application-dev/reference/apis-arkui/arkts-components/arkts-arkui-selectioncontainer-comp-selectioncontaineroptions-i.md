@@ -4,7 +4,7 @@
 export interface SelectionContainerOptions
 ```
 
-Describes the initialization options of the SelectionContainer component.
+Provides the initial configuration options of the component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 controller: SelectionContainerController
 ```
 
-SelectionContainer controller.
+Controller of the SelectionContainer.
 
 **Type:** [SelectionContainerController](arkts-arkui-selectioncontainer-comp-selectioncontainercontroller-c.md)
 

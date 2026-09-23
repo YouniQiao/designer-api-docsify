@@ -16,7 +16,7 @@ Enumerates style types of **LoadingProgress**. This API is not recommended for u
 Default
 ```
 
-Default loading style.
+Default loading style. Setting this value is not supported since API version 8.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Default loading style.
 Circular
 ```
 
-Circular loading style.
+Circular loading style. Setting this value is not supported since API version 8.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Circular loading style.
 Orbital
 ```
 
-Comet-shaped loading style.
+Comet-shaped loading style. This is the default style since API version 8.
 
 **Since:** 8
 

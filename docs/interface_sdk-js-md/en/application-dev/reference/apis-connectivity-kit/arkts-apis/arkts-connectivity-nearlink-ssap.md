@@ -48,6 +48,12 @@ import { ssap } from '@kit.ConnectivityKit';
 | [Service](arkts-connectivity-ssap-service-i-sys.md) | Represents the NearLink service. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Enumerates the connection states with a remote device. |
+
 ### Enums
 
 | Name | Description |
@@ -55,9 +61,3 @@ import { ssap } from '@kit.ConnectivityKit';
 | [Operation](arkts-connectivity-ssap-operation-e.md) | Enumerates the operation types supported by a property. |
 | [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | Enumerates the property descriptor types. |
 | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Enumerates the write types supported by a property. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Enumerates the connection states with a remote device. |

@@ -180,72 +180,6 @@ let storage: LocalStorage = new LocalStorage(initialData);
 let value: number = storage.get('PropA') as number; // 47
 ```
 
-## GetShared
-
-```TypeScript
-static GetShared(): LocalStorage
-```
-
-Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [getShared](#getshared)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | **LocalStorage** instance shared across the current stage. |
-
-**Examples**
-
-```TypeScript
-let storage: LocalStorage = LocalStorage.GetShared();
-```
-
-## getShared
-
-```TypeScript
-static getShared(): LocalStorage
-```
-
-Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
-
-> **NOTE:** 
-
-> Since API version 12, you can use
-> [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the
-> **LocalStorage** instance in the UI execution context.
-
-**Since:** 10
-
-**Deprecated since:** 18
-
-**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 10.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | **LocalStorage** instance shared across the current stage. |
-
 ## has
 
 ```TypeScript
@@ -667,3 +601,69 @@ let initialData: Record<string, number> = { 'PropA': 47 };
 let storage: LocalStorage = new LocalStorage(initialData);
 let res: number = storage.size(); // 1
 ```
+
+## GetShared
+
+```TypeScript
+static GetShared(): LocalStorage
+```
+
+Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [getShared](#getshared)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) | **LocalStorage** instance shared across the current stage. |
+
+**Examples**
+
+```TypeScript
+let storage: LocalStorage = LocalStorage.GetShared();
+```
+
+## getShared
+
+```TypeScript
+static getShared(): LocalStorage
+```
+
+Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
+
+> **NOTE:** 
+
+> Since API version 12, you can use
+> [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the
+> **LocalStorage** instance in the UI execution context.
+
+**Since:** 10
+
+**Deprecated since:** 18
+
+**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [LocalStorage](arkts-arkui-localstorage-c.md) | **LocalStorage** instance shared across the current stage. |

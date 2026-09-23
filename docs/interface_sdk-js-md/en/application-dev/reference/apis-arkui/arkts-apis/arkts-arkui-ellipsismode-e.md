@@ -4,7 +4,7 @@
 declare enum EllipsisMode
 ```
 
-The position of ellipsis.
+Sets the position of ellipsis.
 
 **Since:** 11
 

@@ -145,7 +145,7 @@ Checks whether a value is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** contains
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -207,7 +207,7 @@ Checks whether a range is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** contains
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -689,7 +689,7 @@ Obtains a string representation that contains this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
+**Substitutes:** toString
 
 **System capability:** SystemCapability.Utils.Lang
 

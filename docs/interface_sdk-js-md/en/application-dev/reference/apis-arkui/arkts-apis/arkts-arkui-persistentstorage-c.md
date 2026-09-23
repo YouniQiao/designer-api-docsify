@@ -14,6 +14,120 @@ Provides the persistent storage capability for UI states. It persists selected A
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## deleteProp
+
+```TypeScript
+static deleteProp(key: string): void
+```
+
+Performs the reverse operation of [persistProp](#persistprop). It deletes the property corresponding to **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md), after which subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) no longer affect PersistentStorage. To persist the property again, call the [persistProp](#persistprop) API again.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name in PersistentStorage. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.deleteProp('highScore');
+```
+
+## keys
+
+```TypeScript
+static keys(): Array<string>
+```
+
+Returns an array of all persisted property names.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;string&gt; | Returns an array of all persisted property names. |
+
+**Examples**
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
+
+## persistProp
+
+```TypeScript
+static persistProp<T>(key: string, defaultValue: T): void
+```
+
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
+
+The order for determining the type and value of a property is as follows:
+
+1. If the property corresponding to **key** exists in the
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding key is created in AppStorage and initialized with the property value found in PersistentStorage.
+2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for
+the property. If the property is found, it is persisted.
+3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
+**defaultValue**, and persisted.
+
+According to the preceding initialization process, if the property exists in AppStorage, its value will overwrite the value in the PersistentStorage file. Since AppStorage stores data in memory, this operation causes the data in the persistent file to be overwritten by the in-memory data, making the persistent data meaningless.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Property name. |
+| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage or AppStorage. Since API version 12, the value can be **null** or **undefined**. |
+
+**Examples**
+
+For details about how to use persistProp, see [Accessing a PersistentStorage-Initialized Property from AppStorage](../../../ui/state-management/arkts-persiststorage.md#accessing-a-persistentstorage-initialized-property-from-appstorage).
+
+## persistProps
+
+```TypeScript
+static persistProps(props: PersistPropsOptions[]): void
+```
+
+Persists multiple properties. This API is similar to [persistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup. This API is usually called before access to AppStorage.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist, where each item contains a property name and a default value. |
+
+**Examples**
+
+```TypeScript
+PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
+```
+
 ## DeleteProp
 
 ```TypeScript
@@ -44,32 +158,6 @@ Performs the reverse operation of [PersistProp](#persistprop). It deletes the pr
 PersistentStorage.DeleteProp('highScore');
 ```
 
-## deleteProp
-
-```TypeScript
-static deleteProp(key: string): void
-```
-
-Performs the reverse operation of [persistProp](#persistprop). It deletes the property corresponding to **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md), after which subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) no longer affect PersistentStorage. To persist the property again, call the [persistProp](#persistprop) API again.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Property name in PersistentStorage. |
-
-**Examples**
-
-```TypeScript
-PersistentStorage.deleteProp('highScore');
-```
-
 ## Keys
 
 ```TypeScript
@@ -98,32 +186,6 @@ Returns an array of all persisted property names.
 
 ```TypeScript
 let keys: Array<string> = PersistentStorage.Keys();
-```
-
-## keys
-
-```TypeScript
-static keys(): Array<string>
-```
-
-Returns an array of all persisted property names.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Returns an array of all persisted property names. |
-
-**Examples**
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.keys();
 ```
 
 ## PersistProp
@@ -168,42 +230,6 @@ According to the preceding initialization process, if the property exists in App
 PersistentStorage.PersistProp('highScore', '0');
 ```
 
-## persistProp
-
-```TypeScript
-static persistProp<T>(key: string, defaultValue: T): void
-```
-
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage.
-
-The order for determining the type and value of a property is as follows:
-
-1. If the property corresponding to **key** exists in the
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding key is created in AppStorage and initialized with the property value found in PersistentStorage.
-2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for
-the property. If the property is found, it is persisted.
-3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
-**defaultValue**, and persisted.
-
-According to the preceding initialization process, if the property exists in AppStorage, its value will overwrite the value in the PersistentStorage file. Since AppStorage stores data in memory, this operation causes the data in the persistent file to be overwritten by the in-memory data, making the persistent data meaningless.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Property name. |
-| defaultValue | T | Yes | Default value used for initialization if the specified **key** is not found in PersistentStorage or AppStorage. Since API version 12, the value can be **null** or **undefined**. |
-
-**Examples**
-
-For details about how to use persistProp, see [Accessing a PersistentStorage-Initialized Property from AppStorage](../../../ui/state-management/arkts-persiststorage.md#accessing-a-persistentstorage-initialized-property-from-appstorage).
-
 ## PersistProps
 
 ```TypeScript
@@ -237,30 +263,4 @@ Persists multiple properties. This API is similar to [PersistProp](#persistprop)
 
 ```TypeScript
 PersistentStorage.PersistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
-```
-
-## persistProps
-
-```TypeScript
-static persistProps(props: PersistPropsOptions[]): void
-```
-
-Persists multiple properties. This API is similar to [persistProp](#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup. This API is usually called before access to AppStorage.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes | Array of properties to persist, where each item contains a property name and a default value. |
-
-**Examples**
-
-```TypeScript
-PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
 ```

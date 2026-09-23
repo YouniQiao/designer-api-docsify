@@ -4,7 +4,7 @@
 declare abstract class CustomSpan
 ```
 
-Describes the custom span. Only the base class is provided. You need to define the specific implementation.
+Defines a custom drawing span that provides only a base class, with the specific implementation defined by developers. It is suitable for scenarios that require embedding custom drawing content in the text flow, such as drawing custom icons, progress bars, and special decoration effects in text.
 
 The drag preview of a custom span is blank.
 
@@ -48,7 +48,7 @@ Called to draw a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | DrawContext | Yes | Drawing context.<br>**NOTE:** <br>The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
+| context | DrawContext | Yes | Graphics drawing context.<br>**NOTE:** <br>The canvas obtained through the canvas method of **DrawContext** is the canvas of the **Text** component, and the drawing will not exceed the range of the **Text** component. |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
 ## onMeasure
@@ -71,10 +71,10 @@ Called to obtain the size of a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | Yes | Font size of the text. |
+| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | Yes | Measurement information of the custom-drawn span. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | Size of the custom span.<br>**NOTE:** <br>The final height of the custom span is subject to the line height of the **Text** component. If no value is specified for **height**, the custom span takes the **fontSize** value of the **Text** component as its height. If the value specified is greater than the height of other child components on the same line, the custom span takes the line height of the **Text** component as its height. |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | Size information of the custom drawing span.<br>**Note:** <br>The final height of **CustomSpan** is determined by the line height of the current **Text** component. If **height** is not set, the **fontSize** value of the **Text** component is used as the height of **CustomSpan** by default. If **height** is greater than the height of other child components in the current line, **height** is used as the line height of the **Text** component. |

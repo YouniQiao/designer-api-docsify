@@ -60,9 +60,9 @@ max?: number
 
 Maximum value of **Counter**.
 
-Default value: **999**.
+Default value: **999**
 
-Value range: [min, +∞).
+Value range: [min, +∞)
 
 If the value exceeds the range (that is, the set value is less than **min**), **min** is used.
 
@@ -88,9 +88,9 @@ min?: number
 
 Minimum value of **Counter**.
 
-Default value: **0**.
+Default value: **0**
 
-Value range: (-∞, max].
+Value range: (-∞, max]
 
 If the value exceeds the range (that is, the set value is greater than **max**), **max** is used.
 
@@ -118,17 +118,15 @@ Width of the number text.
 
 Default value: adaptive text width.
 
-Value range: [0, +∞).
+Value range: [0, +∞)
 
-Unit: vp.
+Unit: vp
 
 If the value exceeds the range (that is, the set value is less than 0), **0** is used.
 
 If the value is **undefined**, the default value is used.
 
 **Type:** number
-
-**Default:** 0
 
 **Since:** 11
 
@@ -146,7 +144,7 @@ value?: number
 
 Initial value of **Counter**.
 
-Default value: **0**.
+Default value: **0**
 
 Value range: [min, max], where **min** and **max** correspond to the minimum and maximum values of **Counter** respectively (the default value of **min** is **0** and **max** is **999**).
 

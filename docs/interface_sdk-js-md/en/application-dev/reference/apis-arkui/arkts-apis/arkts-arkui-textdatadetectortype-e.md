@@ -80,7 +80,7 @@ Address.
 DATE_TIME = 4
 ```
 
-Time.
+Date and time
 
 **Since:** 12
 

@@ -16,7 +16,7 @@ Defines the ImageAttachmentInterface.
 colorFilter?: ColorFilterType
 ```
 
-Image color filter of the styled string.
+Color filter effect of the image in the styled string. If this parameter is not passed, no color filter is applied and the image is displayed in its original color.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -34,7 +34,7 @@ Image color filter of the styled string.
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-Image layout.
+Image layout. If this parameter is not passed, the default layout is used (the margin, padding, and corner radius are all 0).
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -52,7 +52,7 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
+Sets the scaling type of the image. The current enum type does not support **ImageFit.MATRIX**. For details about the enums, see **ImageFit**.
 
 Default value: **ImageFit.Cover**
 
@@ -90,9 +90,9 @@ Resizable image options of the styled string.
 size?: SizeOptions
 ```
 
-Image size, which does not support percentage values.
+Image size. Percentage values are not supported.
 
-The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+The default value of size is related to the value of **objectFit**. Different **objectFit** values correspond to different default values of size. For example, when **objectFit** is **Cover**, the image height is the component height minus the top and bottom padding of the component, and the image width is the component width minus the left and right padding of the component.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -128,7 +128,7 @@ Image data source.
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
+Alignment of the image relative to the text.
 
 Default value: **ImageSpanAlignment.BOTTOM**
 

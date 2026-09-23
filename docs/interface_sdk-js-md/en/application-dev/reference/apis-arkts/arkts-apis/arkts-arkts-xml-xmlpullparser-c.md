@@ -48,6 +48,26 @@ let uint8Array = textEncoder.encodeInto(strXml);
 let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
 ```
 
+## parseXml
+
+```TypeScript
+parseXml(option: ParseOptions): void
+```
+
+Parses XML information.
+
+**Since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Yes | XML parsing options. |
+
 ## parse
 
 ```TypeScript
@@ -103,23 +123,3 @@ that.parse(options);
 // title
 // note
 ```
-
-## parseXml
-
-```TypeScript
-parseXml(option: ParseOptions): void
-```
-
-Parses XML information.
-
-**Since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Yes | XML parsing options. |

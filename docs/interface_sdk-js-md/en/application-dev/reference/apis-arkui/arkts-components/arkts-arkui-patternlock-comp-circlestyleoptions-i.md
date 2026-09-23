@@ -16,9 +16,9 @@ Describes the parameters of the ring style.
 color?: ResourceColor
 ```
 
-Color of the background circle.
+Background ring color.
 
-Default value: **'#33182431'**
+Default value: '#33182431' (dark gray, 20% opacity).
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -36,11 +36,11 @@ Default value: **'#33182431'**
 enableForeground?: boolean
 ```
 
-Whether the background circle is displayed above the grid dot.
+Whether the background ring is displayed above the grid dots.
 
-**true**: The background ring is displayed above the grid dot to cover the grid dot. **false**: The background ring is displayed below the grid dot and does not cover the grid dot.
+true: the background ring is displayed above the grid dots and covers them; false: the background ring is displayed below the grid dots and does not cover them.
 
-Default value: **false**
+Default value: false.
 
 **Type:** boolean
 
@@ -58,11 +58,11 @@ Default value: **false**
 enableWaveEffect?: boolean
 ```
 
-Whether to enable the wave effect after a grid dot is selected.
+Switch for the wave effect after a grid dot is selected.
 
-**true** to enable; **false** otherwise.
+true: displays the wave effect; false: does not display the wave effect.
 
-Default value: **true**
+Default value: true.
 
 **Type:** boolean
 
@@ -80,9 +80,11 @@ Default value: **true**
 radius?: LengthMetrics
 ```
 
-Radius of the background circle.
+Radius of the background ring.
 
-Default value: 1.833 times (that is, 11/6) of the value of [circleRadius](arkts-arkui-patternlock-comp-attribute.md#circleradius)
+Default value: approximately 1.833 times (that is, 11/6) of [circleRadius](arkts-arkui-patternlock-comp-attribute.md#circleradius).
+
+Value range: greater than 0.
 
 **Type:** LengthMetrics
 

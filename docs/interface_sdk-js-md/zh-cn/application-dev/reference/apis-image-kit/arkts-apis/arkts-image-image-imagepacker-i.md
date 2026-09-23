@@ -172,6 +172,71 @@ async function PackBinaryImageToTiffFile(context: Context) {
 }
 ```
 
+<a id="packing-4"></a>
+
+## packing
+
+```TypeScript
+packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
+```
+
+将图像压缩或重新编码。使用Promise异步回调。
+
+**起始版本：** 13
+
+**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| picture | [Picture](arkts-image-image-picture-i.md) | 是 | 编码的Picture对象。 |
+| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function Packing(context: Context) {
+  const resourceMgr = context.resourceManager;
+  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
+  let ops: image.SourceOptions = {
+    sourceDensity: 98,
+  }
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
+  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
+  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
+  const imagePackerObj: image.ImagePacker = image.createImagePacker();
+  let funcName = "Packing";
+  if (imagePackerObj != null) {
+    let opts: image.PackingOption = {
+      format: "image/jpeg",
+      quality: 98,
+      desiredDynamicRange: image.PackingDynamicRange.AUTO,
+      needsPackProperties: true};
+    await imagePackerObj.packing(pictureObj, opts).then((data: ArrayBuffer) => {
+      console.info(funcName, 'Succeeded in packing the image.'+ data);
+    }).catch((error: BusinessError) => {
+      console.error(funcName, `Failed to pack the image.code ${error.code},message is ${error.message}`);
+    });
+  }
+}
+```
+
 ## packing
 
 ```TypeScript
@@ -401,71 +466,6 @@ async function Packing() {
   }).catch((error: BusinessError) => {
     console.error(`Failed to create PixelMap.code ${error.code},message is ${error.message}`);
   })
-}
-```
-
-<a id="packing-4"></a>
-
-## packing
-
-```TypeScript
-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
-```
-
-将图像压缩或重新编码。使用Promise异步回调。
-
-**起始版本：** 13
-
-**系统能力：** SystemCapability.Multimedia.Image.ImagePacker
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| picture | [Picture](arkts-image-image-picture-i.md) | 是 | 编码的Picture对象。 |
-| options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Packing(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  let funcName = "Packing";
-  if (imagePackerObj != null) {
-    let opts: image.PackingOption = {
-      format: "image/jpeg",
-      quality: 98,
-      desiredDynamicRange: image.PackingDynamicRange.AUTO,
-      needsPackProperties: true};
-    await imagePackerObj.packing(pictureObj, opts).then((data: ArrayBuffer) => {
-      console.info(funcName, 'Succeeded in packing the image.'+ data);
-    }).catch((error: BusinessError) => {
-      console.error(funcName, `Failed to pack the image.code ${error.code},message is ${error.message}`);
-    });
-  }
 }
 ```
 

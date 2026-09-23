@@ -4,7 +4,7 @@
 declare enum SharedTransitionEffectType
 ```
 
-SharedTransitionEffectType enumeration description
+Sets the animation type.
 
 **Since:** 7
 

@@ -56,32 +56,6 @@ Sets the font color of all text within the menu.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of all text within the menu. |
 
-## fontSize
-
-```TypeScript
-fontSize(value: Length)
-```
-
-Sets the size of all text within the menu.
-
-> **NOTE:** 
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [font](#font)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Size of all text within the menu. If the value of the Length type is a number, the unit is fp. Percentage values are not supported. |
-
 ## menuItemDivider
 
 ```TypeScript
@@ -193,3 +167,29 @@ Sets the submenu expand symbol of the menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | symbol | [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | Submenu expand symbol of the menu.<br>1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed.<br>2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_down').fontSize('24vp')**<br>3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion.<br>Default value: **$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp')** |
+
+## fontSize
+
+```TypeScript
+fontSize(value: Length)
+```
+
+Sets the size of all text within the menu.
+
+> **NOTE:** 
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [font](#font)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Size of all text within the menu. If the value of the Length type is a number, the unit is fp. Percentage values are not supported. |

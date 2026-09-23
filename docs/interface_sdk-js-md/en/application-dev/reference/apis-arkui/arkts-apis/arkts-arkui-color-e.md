@@ -4,7 +4,7 @@
 declare enum Color
 ```
 
-common enum of color
+Sets the color type.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ common enum of color
 White
 ```
 
-White.
+![white](../../../reference/apis-arkui/arkui-ts/figures/white.png)
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ White.
 Black
 ```
 
-Black.
+![black](../../../reference/apis-arkui/arkui-ts/figures/black.png)
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Black.
 Blue
 ```
 
-Blue.
+![blue](../../../reference/apis-arkui/arkui-ts/figures/blue.png)
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Blue.
 Brown
 ```
 
-Brown.
+![brown](../../../reference/apis-arkui/arkui-ts/figures/brown.png)
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ Brown.
 Gray
 ```
 
-Gray.
+![gray](../../../reference/apis-arkui/arkui-ts/figures/gray.png)
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Gray.
 Green
 ```
 
-Green.
+![green](../../../reference/apis-arkui/arkui-ts/figures/green.png)
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ Green.
 Grey
 ```
 
-Grey.
+![gray](../../../reference/apis-arkui/arkui-ts/figures/gray.png)
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Grey.
 Orange
 ```
 
-Orange.
+![orange](../../../reference/apis-arkui/arkui-ts/figures/orange.png)
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ Orange.
 Pink
 ```
 
-Pink.
+![pink](../../../reference/apis-arkui/arkui-ts/figures/pink.png)
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ Pink.
 Red
 ```
 
-Red.
+![red](../../../reference/apis-arkui/arkui-ts/figures/red.png)
 
 **Since:** 7
 
@@ -196,7 +196,7 @@ Red.
 Yellow
 ```
 
-Yellow.
+![yellow](../../../reference/apis-arkui/arkui-ts/figures/yellow.png)
 
 **Since:** 7
 
@@ -214,7 +214,7 @@ Yellow.
 Transparent
 ```
 
-Transparent.
+Transparent
 
 **Since:** 9
 

@@ -1989,7 +1989,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
 <a id="random-1"></a>
 
@@ -2024,7 +2024,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
 ## round
 
@@ -2076,7 +2076,7 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Yes |  |
+| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Yes | An object with one or more of the following properties, precision {double} rounding {Rounding} toExpNeg {double} toExpPos {double} maxE {double} minE {double} modulo {Modulo} crypto {boolean} defaults {true} |
 
 **Error codes:**
 
@@ -2084,7 +2084,7 @@ Configures the 'global' settings for this particular Decimal constructor.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
 ## sign
 
@@ -2791,8 +2791,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**System capability:** 
-- API version 18 and later: SystemCapability.Utils.Lang
+**System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 

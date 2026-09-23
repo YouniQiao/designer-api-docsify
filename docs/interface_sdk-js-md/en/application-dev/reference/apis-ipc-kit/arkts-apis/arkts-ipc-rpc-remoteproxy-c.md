@@ -18,93 +18,6 @@ Provides APIs to implement **IRemoteObject**.
 import { rpc } from '@kit.IPCKit';
 ```
 
-## addDeathRecipient
-
-```TypeScript
-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
-```
-
-Adds a callback for receiving death notifications of the remote object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to add. |
-| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
-
-**Examples**
-
-> NOTE
-> 
-> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, addDeathRecipient() of the proxy object is called to add a callback for receiving the death notification of the remove object.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-if (proxy != undefined) {
-  let deathRecipient = new MyDeathRecipient();
-  proxy.addDeathRecipient(deathRecipient, 0);
-}
-```
-
 ## getDescriptor
 
 ```TypeScript
@@ -187,81 +100,6 @@ if (proxy != undefined) {
     hilog.error(0x0000, 'testTag', 'rpc get interface descriptor fail, errorCode ' + e.code);
     hilog.error(0x0000, 'testTag', 'rpc get interface descriptor fail, errorMessage ' + e.message);
   }
-}
-```
-
-## getInterfaceDescriptor
-
-```TypeScript
-getInterfaceDescriptor(): string
-```
-
-Obtains the interface descriptor of this proxy object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Interface descriptor obtained. |
-
-**Examples**
-
-> NOTE
-> 
-> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, getInterfaceDescriptor() of the proxy object is called to obtain the interface descriptor of the current proxy object.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-if (proxy != undefined) {
-  let descriptor: string = proxy.getInterfaceDescriptor();
-  hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
 }
 ```
 
@@ -427,87 +265,6 @@ if (proxy != undefined) {
 }
 ```
 
-## queryLocalInterface
-
-```TypeScript
-queryLocalInterface(interface: string): IRemoteBroker
-```
-
-Obtains the **LocalInterface** object of an interface token.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| interface | string | Yes | Interface descriptor. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns **Null** by default, which indicates a proxy interface. |
-
-**Examples**
-
-> NOTE
-> 
-> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, queryLocalInterface() of the proxy object is called to obtain the interface descriptor.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-if (proxy != undefined) {
-  let broker: rpc.IRemoteBroker = proxy.queryLocalInterface("testObject");
-  hilog.info(0x0000, 'testTag', 'queryLocalInterface is ' + broker);
-}
-```
-
 ## registerDeathRecipient
 
 ```TypeScript
@@ -596,94 +353,6 @@ if (proxy != undefined) {
     hilog.error(0x0000, 'testTag', 'proxy register deathRecipient fail, errorCode ' + e.code);
     hilog.error(0x0000, 'testTag', 'proxy register deathRecipient fail, errorMessage ' + e.message);
   }
-}
-```
-
-## removeDeathRecipient
-
-```TypeScript
-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
-```
-
-Removes the callback used to receive death notifications of the remote object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to remove. |
-| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
-
-**Examples**
-
-> NOTE
-> 
-> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, removeDeathRecipient() of the proxy object is called to remove the callback used to receive the death notification of the remote object.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-if (proxy != undefined) {
-  let deathRecipient = new MyDeathRecipient();
-  proxy.addDeathRecipient(deathRecipient, 0);
-  proxy.removeDeathRecipient(deathRecipient, 0);
 }
 ```
 
@@ -914,6 +583,429 @@ try {
   }
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+## unregisterDeathRecipient
+
+```TypeScript
+unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
+```
+
+Unregisters from the callback used to receive death notifications of the remote object.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
+| flags | number | Yes | Flag of the death notification. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+
+**Examples**
+
+> NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, unregisterDeathRecipient() of the proxy object is called to unregister the callback for receiving the death notification of the remote object.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  try {
+    let deathRecipient = new MyDeathRecipient();
+    proxy.registerDeathRecipient(deathRecipient, 0);
+    proxy.unregisterDeathRecipient(deathRecipient, 0);
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorCode ' + e.code);
+    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorMessage ' + e.message);
+  }
+}
+```
+
+## addDeathRecipient
+
+```TypeScript
+addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
+```
+
+Adds a callback for receiving death notifications of the remote object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient: DeathRecipient, flags: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to add. |
+| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
+
+**Examples**
+
+> NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, addDeathRecipient() of the proxy object is called to add a callback for receiving the death notification of the remove object.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  let deathRecipient = new MyDeathRecipient();
+  proxy.addDeathRecipient(deathRecipient, 0);
+}
+```
+
+## getInterfaceDescriptor
+
+```TypeScript
+getInterfaceDescriptor(): string
+```
+
+Obtains the interface descriptor of this proxy object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Interface descriptor obtained. |
+
+**Examples**
+
+> NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, getInterfaceDescriptor() of the proxy object is called to obtain the interface descriptor of the current proxy object.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+if (proxy != undefined) {
+  let descriptor: string = proxy.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'descriptor is ' + descriptor);
+}
+```
+
+## queryLocalInterface
+
+```TypeScript
+queryLocalInterface(interface: string): IRemoteBroker
+```
+
+Obtains the **LocalInterface** object of an interface token.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| interface | string | Yes | Interface descriptor. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns **Null** by default, which indicates a proxy interface. |
+
+**Examples**
+
+> NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, queryLocalInterface() of the proxy object is called to obtain the interface descriptor.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+if (proxy != undefined) {
+  let broker: rpc.IRemoteBroker = proxy.queryLocalInterface("testObject");
+  hilog.info(0x0000, 'testTag', 'queryLocalInterface is ' + broker);
+}
+```
+
+## removeDeathRecipient
+
+```TypeScript
+removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
+```
+
+Removes the callback used to receive death notifications of the remote object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient: DeathRecipient, flags: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to remove. |
+| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
+
+**Examples**
+
+> NOTE
+> 
+> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+// If the FA model is used, import featureAbility from @kit.AbilityKit.
+// import { featureAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { Want, common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let proxy: rpc.IRemoteObject | undefined;
+let connect: common.ConnectOptions = {
+  onConnect: (elementName, remoteProxy) => {
+    hilog.info(0x0000, 'testTag', 'js onConnect called');
+    proxy = remoteProxy;
+  },
+  onDisconnect: (elementName) => {
+    hilog.info(0x0000, 'testTag', 'onDisconnect');
+  },
+  onFailed: () => {
+    hilog.info(0x0000, 'testTag', 'onFailed');
+  }
+};
+let want: Want = {
+  // Obtain the package name and ability name on the server.
+  bundleName: "com.ohos.server",
+  abilityName: "com.ohos.server.EntryAbility",
+};
+
+// Use this method to connect to the ability for the FA model.
+// FA.connectAbility(want,connect);
+
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
+// Save the connection ID, which will be used for the subsequent service disconnection.
+let connectionId = context.connectServiceExtensionAbility(want, connect);
+```
+
+The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, removeDeathRecipient() of the proxy object is called to remove the callback used to receive the death notification of the remote object.
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+if (proxy != undefined) {
+  let deathRecipient = new MyDeathRecipient();
+  proxy.addDeathRecipient(deathRecipient, 0);
+  proxy.removeDeathRecipient(deathRecipient, 0);
 }
 ```
 
@@ -1276,98 +1368,6 @@ try {
   }
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + error);
-}
-```
-
-## unregisterDeathRecipient
-
-```TypeScript
-unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
-```
-
-Unregisters from the callback used to receive death notifications of the remote object.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
-| flags | number | Yes | Flag of the death notification. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-
-**Examples**
-
-> NOTE
-> 
-> In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
-```
-
-The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, unregisterDeathRecipient() of the proxy object is called to unregister the callback for receiving the death notification of the remote object.
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-if (proxy != undefined) {
-  try {
-    let deathRecipient = new MyDeathRecipient();
-    proxy.registerDeathRecipient(deathRecipient, 0);
-    proxy.unregisterDeathRecipient(deathRecipient, 0);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorCode ' + e.code);
-    hilog.error(0x0000, 'testTag', 'proxy unregister deathRecipient fail, errorMessage ' + e.message);
-  }
 }
 ```
 

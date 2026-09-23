@@ -4,7 +4,7 @@
 declare enum IncrementalUpdatePolicy
 ```
 
-Defines incremental update policies for text rendering.
+Incremental update policy for text rendering.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines incremental update policies for text rendering.
 NONE = 0
 ```
 
-Disable incremental updates. Full layout rendering is used.
+Disables incremental update and uses full layout rendering.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Disable incremental updates. Full layout rendering is used.
 PARAGRAPH_CACHE = 1
 ```
 
-Enable incremental updates with paragraph-level cache.
+Enables incremental update and uses paragraph-level cache. This policy takes effect only when the styled string object bound to the text remains unchanged. If the styled string object changes, the cache cannot be hit.
 
 **Since:** 26.0.0
 

@@ -48,7 +48,7 @@ The marquee completes one scroll movement. If the number of **loops** is not 1, 
 FINISH = 2
 ```
 
-All loops of the marquee are completed.
+The marquee completes all specified loops or stops scrolling (for example, when **start** in [TextMarqueeOptions](arkts-arkui-text-comp-textmarqueeoptions-i.md) is set to **false**).
 
 **Since:** 18
 

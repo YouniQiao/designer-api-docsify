@@ -4,7 +4,7 @@
 declare enum LineCapStyle
 ```
 
-LineCapStyle enumeration description
+Sets the line endpoint style.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ LineCapStyle enumeration description
 Butt
 ```
 
-The two ends of the dividing line are parallel lines.
+The ends of the line are squared off, and the line does not extend beyond its two endpoints.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ The two ends of the dividing line are parallel lines.
 Round
 ```
 
-The two ends of the dividing line are semicircles.
+The line is extended at the endpoints by a half circle whose diameter is equal to the line width.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ The two ends of the dividing line are semicircles.
 Square
 ```
 
-Extends half a circle at the end of the path with a width equal to half the line width and a height equal to the line width.
+The line is extended at the endpoints by a rectangle whose width is equal to half the line width and height equal to the line width.
 
 **Since:** 7
 

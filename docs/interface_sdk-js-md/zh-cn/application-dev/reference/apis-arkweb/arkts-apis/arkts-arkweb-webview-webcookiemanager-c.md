@@ -737,84 +737,6 @@ struct WebComponent {
 }
 ```
 
-## deleteEntireCookie
-
-```TypeScript
-static deleteEntireCookie(): void
-```
-
-清除所有cookie。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [clearAllCookiesSync](#clearallcookiessync)
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteEntireCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteEntireCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## deleteSessionCookie
-
-```TypeScript
-static deleteSessionCookie(): void
-```
-
-清除所有会话cookie。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteSessionCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteSessionCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## existCookie
 
 ```TypeScript
@@ -1347,70 +1269,6 @@ struct WebComponent {
 }
 ```
 
-## getCookie
-
-```TypeScript
-static getCookie(url: string): string
-```
-
-获取指定url对应cookie的值。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [fetchCookieSync](#fetchcookiesync)
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| url | string | 是 | 要获取cookie的url，建议使用完整的url。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 指定url对应的cookie的值。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getCookie')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.getCookie('https://www.example.com');
-            console.info("value: " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isCookieAllowed
 
 ```TypeScript
@@ -1781,6 +1639,198 @@ struct WebComponent {
 }
 ```
 
+## setLazyInitializeWebEngine
+
+```TypeScript
+static setLazyInitializeWebEngine(lazy: boolean): void
+```
+
+设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。
+
+> **说明：** 
+> 
+> - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
+> 
+> - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化ArkWeb内核，后续需自行初始化ArkWeb内核。
+
+**起始版本：** 22
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| lazy | boolean | 是 | Controls whether to delay the initialization of the web engine. |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+webview.WebCookieManager.setLazyInitializeWebEngine(true);
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
+    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## deleteEntireCookie
+
+```TypeScript
+static deleteEntireCookie(): void
+```
+
+清除所有cookie。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [clearAllCookiesSync](#clearallcookiessync)
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteEntireCookie')
+        .onClick(() => {
+          webview.WebCookieManager.deleteEntireCookie();
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## deleteSessionCookie
+
+```TypeScript
+static deleteSessionCookie(): void
+```
+
+清除所有会话cookie。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteSessionCookie')
+        .onClick(() => {
+          webview.WebCookieManager.deleteSessionCookie();
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getCookie
+
+```TypeScript
+static getCookie(url: string): string
+```
+
+获取指定url对应cookie的值。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [fetchCookieSync](#fetchcookiesync)
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 要获取cookie的url，建议使用完整的url。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 指定url对应的cookie的值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getCookie')
+        .onClick(() => {
+          try {
+            let value = webview.WebCookieManager.getCookie('https://www.example.com');
+            console.info("value: " + value);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setCookie
 
 ```TypeScript
@@ -1834,56 +1884,6 @@ struct WebComponent {
             console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
           }
         })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## setLazyInitializeWebEngine
-
-```TypeScript
-static setLazyInitializeWebEngine(lazy: boolean): void
-```
-
-设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。
-
-> **说明：** 
-> 
-> - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
-> 
-> - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化ArkWeb内核，后续需自行初始化ArkWeb内核。
-
-**起始版本：** 22
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| lazy | boolean | 是 | Controls whether to delay the initialization of the web engine. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
       Web({ src: 'www.example.com', controller: this.controller })
     }
   }

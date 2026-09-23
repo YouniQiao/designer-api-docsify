@@ -526,38 +526,6 @@ Triggered when the scrollable component reaches the start position.
 | --- | --- |
 | T |  |
 
-## onScroll
-
-```TypeScript
-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
-```
-
-Triggered when the scrollable component scrolls.
-
-**Since:** 11
-
-**Deprecated since:** 12
-
-**Substitutes:** [onDidScroll](#ondidscroll)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | callback of scrollable, scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T |  |
-
 ## onScrollStart
 
 ```TypeScript
@@ -925,6 +893,38 @@ Sets the scrollbar width.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Unit: vp <br>Default value: &lt;em&gt;4&lt;/em&gt; <br>If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T |  |
+
+## onScroll
+
+```TypeScript
+onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
+```
+
+Triggered when the scrollable component scrolls.
+
+**Since:** 11
+
+**Deprecated since:** 12
+
+**Substitutes:** [onDidScroll](#ondidscroll)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | callback of scrollable, scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
 
 **Return value:**
 

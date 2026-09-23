@@ -4,7 +4,7 @@
 declare enum BorderStyle
 ```
 
-Border Style
+Sets the border style of an element.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Border Style
 Dotted
 ```
 
-Displays as a series of dots with a radius of half the borderWidth.
+Dotted border. The radius of a dot is half of **borderWidth**.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Displays as a series of dots with a radius of half the borderWidth.
 Dashed
 ```
 
-Shows as a series of short square dashed lines.
+Dashed border.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ Shows as a series of short square dashed lines.
 Solid
 ```
 
-Shows as a solid line.
+Solid border.
 
 **Since:** 7
 

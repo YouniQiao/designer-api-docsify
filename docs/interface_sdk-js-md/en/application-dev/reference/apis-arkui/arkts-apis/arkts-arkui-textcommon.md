@@ -40,7 +40,7 @@
 | [StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md) | Describes the text changes of the styled string. |
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | Defines a styled string controller. |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | Defines a text selection controller. |
-| [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Provides information about the text before and after a change, including the selection ranges. |
+| [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | Text change information, including the selection range before and after the change and the text content before the change. |
 | [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | This configuration is only available for the [Text](../arkts-components/arkts-arkui-text-comp.md#text) and [RichEditor](../arkts-components/arkts-arkui-richeditor-comp.md#rich_editor) components. |
 | [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | Implements an extended text editing controller. |
 | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | Defines the text layout options. |
@@ -57,23 +57,40 @@
 | [VoiceButtonOptions](arkts-arkui-voicebuttonoptions-i-sys.md) | Sets the voice button options. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [Affinity](arkts-arkui-affinity-t.md) | Enumerates the affinity modes. |
+| [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md) | Represents the callback triggered when the content in the text box changes. |
+| [FontVariation](arkts-arkui-fontvariation-t.md) | Properties of a variable font. |
+| [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Represents the extension configuration of an input method. |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | Describes the measurement information of a single line in the text layout. |
+| [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md) | Triggered when the menu is created. |
+| [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md) | Represents the callback invoked after text changes. |
+| [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md) | Triggered before the menu is displayed after the text selection area changes. Menu data can be configured within this callback. Both the input parameter and return value contain only level-1 menu items; level-2 menu items are not included. |
+| [Paragraph](arkts-arkui-paragraph-t.md) | Implements a carrier that stores the text content and style. It supports operations such as layout and drawing. |
+| [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Enumerates the rectangle height styles. |
+| [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Enumerates the rectangle width styles. |
+| [TextBox](arkts-arkui-textbox-t.md) | Describes the rectangle that contains the text. |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AutoCapitalizationMode](arkts-arkui-autocapitalizationmode-e.md) | Enumerates automatic capitalization modes. This only provides API capabilities; the specific implementation depends on the input method application. |
+| [AutoCapitalizationMode](arkts-arkui-autocapitalizationmode-e.md) | Automatic capitalization mode type. It only provides the API capability, and the specific implementation is determined by the input method app. |
 | [FlipDirection](arkts-arkui-flipdirection-e.md) | Enumerates the directions of the flip animation. The default value is **DOWN**. |
-| [IncrementalUpdatePolicy](arkts-arkui-incrementalupdatepolicy-e.md) | Defines incremental update policies for text rendering. |
+| [IncrementalUpdatePolicy](arkts-arkui-incrementalupdatepolicy-e.md) | Incremental update policy for text rendering. |
 | [KeyboardAppearance](arkts-arkui-keyboardappearance-e.md) | Enumerates the appearance modes of the keyboard. |
 | [MaxLinesMode](arkts-arkui-maxlinesmode-e.md) | Enumerates the display effects of the **TextArea** component when text exceeds the maximum number of lines. The default value is **CLIP** (truncating text at the maximum line count). |
 | [MenuType](arkts-arkui-menutype-e.md) | Enumerates the menu types. |
-| [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md) | An enumeration that defines the line corner style, i.e., the style of the brush when drawing a polyline at the corners of the line segments. |
+| [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md) | Defines the style of line corners, that is, the brush style at the corners of line segments when drawing polylines. |
 | [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md) | Enumerates the text superscript and subscript styles. |
 | [TextContentAlign](arkts-arkui-textcontentalign-e.md) | Enumerates the vertical alignment directions of the text content area. |
 | [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md) | Defines the text data detector type. |
 | [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md) | Defines the direction for deleting text. |
 | [TextDirection](arkts-arkui-textdirection-e.md) | Enumerates the text layout directions. |
-| [TextEncoding](arkts-arkui-textencoding-e.md) | Enumerates the text encoding types supported by text layout query APIs. |
+| [TextEncoding](arkts-arkui-textencoding-e.md) | Text encoding types supported by the text layout query APIs. |
 | [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md) | Enumerates the text menu display modes. |
 | [TextVerticalAlign](arkts-arkui-textverticalalign-e.md) | Defines the vertical alignment mode of text. The default value is **BASELINE** (aligning along the baseline). |
 
@@ -86,20 +103,3 @@
 | [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md) | Enumerates keyboard gradient effects. |
 | [TextChangeReason](arkts-arkui-textchangereason-e-sys.md) | Enumerates the reasons for component content changes. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [Affinity](arkts-arkui-affinity-t.md) | Enumerates the affinity modes. |
-| [EditableTextOnChangeCallback](arkts-arkui-editabletextonchangecallback-t.md) | Represents the callback triggered when the content in the text box changes. |
-| [FontVariation](arkts-arkui-fontvariation-t.md) | Define the FontVariation type. |
-| [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Represents the extension configuration of an input method. |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | Describes the measurement information of a single line in the text layout. |
-| [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md) | Callback function when the selection menu create. |
-| [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md) | Represents the callback invoked after text changes. |
-| [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md) | Triggered before the menu is displayed after the text selection area changes. Menu data can be configured within this callback. Both the input parameter and return value contain only level-1 menu items; level-2 menu items are not included. |
-| [Paragraph](arkts-arkui-paragraph-t.md) | Implements a carrier that stores the text content and style. It supports operations such as layout and drawing. |
-| [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Enumerates the rectangle height styles. |
-| [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Enumerates the rectangle width styles. |
-| [TextBox](arkts-arkui-textbox-t.md) | Describes the rectangle that contains the text. |

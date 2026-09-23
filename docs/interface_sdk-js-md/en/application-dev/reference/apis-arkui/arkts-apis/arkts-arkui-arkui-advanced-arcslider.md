@@ -32,12 +32,6 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderStyleOptions**. |
 | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderValueOptions**. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md) | Defines the position of the arc slider on the screen. |
-
 ### Types
 
 | Name | Description |
@@ -45,6 +39,12 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 | [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | Defines the callback invoked to notify the application when the progress value of the arc slider changes. |
 | [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | Defines the callback invoked to notify the application when the arc slider is enlarged or reduced. |
 | [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | Defines the callback invoked to notify the application when the arc slider is touched. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md) | Defines the position of the arc slider on the screen. |
 
 ## Examples
 

@@ -1661,7 +1661,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isShow | boolean | 是 | 是否显示全屏模态页面。<br>-true：显示全屏模态页面。<br>-false：隐藏全屏模态页面。<br>从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。<br>从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
-| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 配置全屏模态页面内容。builder中的根节点需唯一。&lt;!--RP1--&gt;&lt;!--RP1End--&gt; |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | 是 | 配置全屏模态页面内容。builder中的根节点需唯一。<!--RP1--><!--RP1End--> |
 | type | [ModalTransition](arkts-arkui-common-comp-modaltransition-e.md) | 否 | 全屏模态页面的系统转场方式。<br>取值原则：DEFAULT-上下切换过渡，NONE-无动画过渡，ALPHA-透明渐变过渡。<br> 默认值：ModalTransition.DEFAULT，即上下切换过渡。<br>**说明：** <br> 与transition同时设置时，此属性不生效，仅transition生效。 |
 
 **返回值：**
@@ -4093,66 +4093,6 @@ grayscale(grayscale: Optional<number>): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
-## gridOffset
-
-```TypeScript
-gridOffset(value: number): T
-```
-
-默认偏移列数。
-
-**起始版本：** 11
-
-**废弃版本：** 14
-
-**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 默认偏移列数，指useSizeType属性没有设置对应尺寸的偏移（offset）时，当前组件沿着父组件Start方向偏移的列数，即组件起始位置相对于父组件Start方向偏移n列，需为非负整数。传入负数时，使用默认值0。当useSizeType设置了对应尺寸的offset时，gridOffset设置无效。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 配置该属性后，当前组件在父组件水平方向的布局不再跟随父组件原有的布局方式，而是沿着父组件的Start方向偏移一定位移。<br>- 偏移位移 & nbsp;= & nbsp;（列宽 & nbsp;+ & nbsp;间距）\* & nbsp;偏移列数。<br>- 设置了偏移(gridOffset)的组件之后的兄弟组件会根据该组件进行相对布局。<br>默认值：0 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
-
-## gridSpan
-
-```TypeScript
-gridSpan(value: number): T
-```
-
-默认占用列数。
-
-**起始版本：** 11
-
-**废弃版本：** 14
-
-**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | number | 是 | 默认占用列数，指useSizeType属性没有设置对应尺寸的列数（span）时，占用的栅格列数，需为非负整数。传入负数或超出GridContainer总列数时，使用默认值1。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 设置了栅格span属性，组件的宽度由栅格布局决定。<br>默认值：1 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
-
 ## groupDefaultFocus
 
 ```TypeScript
@@ -5292,7 +5232,7 @@ obscured(reasons: Array<ObscuredReasons>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：[]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在[Image](arkts-arkui-image-comp.md#image)组件、[Text](arkts-arkui-text-comp.md#text)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component系统接口)组件&lt;sup&gt;12+&lt;/sup&gt;<!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styled_string.md)时，不支持隐私遮罩。 |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：[]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在[Image](arkts-arkui-image-comp.md#image)组件、[Text](arkts-arkui-text-comp.md#text)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component系统接口)组件&lt;sup&gt;12+&lt;/sup&gt;<!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styledstring.md#styled_string)时，不支持隐私遮罩。 |
 
 **返回值：**
 
@@ -8531,36 +8471,6 @@ toolbar(value: CustomBuilder): T
 | --- | --- |
 | T | 返回当前组件。 |
 
-## touchable
-
-```TypeScript
-touchable(value: boolean): T
-```
-
-设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。
-
-> **说明：** 
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [hitTestBehavior](#hittestbehavior)
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | boolean | 是 | 设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。默认值：true，可以响应交互事件。设置为false时，不可以响应交互事件。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
-
 ## transform
 
 ```TypeScript
@@ -8922,39 +8832,6 @@ useShadowBatching(use: Optional<boolean>): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
-## useSizeType
-
-```TypeScript
-useSizeType(value: {
-    xs?: number | { span: number; offset: number };
-    sm?: number | { span: number; offset: number };
-    md?: number | { span: number; offset: number };
-    lg?: number | { span: number; offset: number };
-  }): T
-```
-
-设置在特定设备宽度类型下的占用列数和偏移列数。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | 是 | 设置在特定设备宽度类型下的占用列数和偏移列数，span：占用列数（需为非负整数）。传入负数或超出GridContainer总列数时，使用默认值；offset：偏移列数（需为非负整数）。传入负数时，使用默认值0。<br>当值为number类型时，仅设置列数，当格式如{"span":&nbsp;1,&nbsp;"offset":&nbsp;0}时，指同时设置占用列数与偏移列数。<br>-&nbsp;xs：指设备宽度类型为SizeType.XS（&lt;320vp）时的占用列数和偏移列数。<br>-&nbsp;sm：指设备宽度类型为SizeType.SM（320vp-600vp）时的占用列数和偏移列数。<br>-&nbsp;md：指设备宽度类型为SizeType.MD（600vp-840vp）时的占用列数和偏移列数。<br>-&nbsp;lg：指设备宽度类型为SizeType.LG（≥840vp）时的占用列数和偏移列数。<br>各尺寸类型的详细断点配置请参见[GridContainer](ts-container-gridcontainer.md)。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T |  |
-
 ## visibility
 
 ```TypeScript
@@ -9116,3 +8993,126 @@ zIndex(value: number): T
 | 类型 | 说明 |
 | --- | --- |
 | T | 返回当前组件。 |
+
+## gridOffset
+
+```TypeScript
+gridOffset(value: number): T
+```
+
+默认偏移列数。
+
+**起始版本：** 11
+
+**废弃版本：** 14
+
+**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 默认偏移列数，指useSizeType属性没有设置对应尺寸的偏移（offset）时，当前组件沿着父组件Start方向偏移的列数，即组件起始位置相对于父组件Start方向偏移n列，需为非负整数。传入负数时，使用默认值0。当useSizeType设置了对应尺寸的offset时，gridOffset设置无效。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 配置该属性后，当前组件在父组件水平方向的布局不再跟随父组件原有的布局方式，而是沿着父组件的Start方向偏移一定位移。<br>- 偏移位移 & nbsp;= & nbsp;（列宽 & nbsp;+ & nbsp;间距）\* & nbsp;偏移列数。<br>- 设置了偏移(gridOffset)的组件之后的兄弟组件会根据该组件进行相对布局。<br>默认值：0 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
+
+## gridSpan
+
+```TypeScript
+gridSpan(value: number): T
+```
+
+默认占用列数。
+
+**起始版本：** 11
+
+**废弃版本：** 14
+
+**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | number | 是 | 默认占用列数，指useSizeType属性没有设置对应尺寸的列数（span）时，占用的栅格列数，需为非负整数。传入负数或超出GridContainer总列数时，使用默认值1。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。<br>- 设置了栅格span属性，组件的宽度由栅格布局决定。<br>默认值：1 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T |  |
+
+## touchable
+
+```TypeScript
+touchable(value: boolean): T
+```
+
+设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。
+
+> **说明：** 
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [hitTestBehavior](#hittestbehavior)
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | boolean | 是 | 设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。默认值：true，可以响应交互事件。设置为false时，不可以响应交互事件。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 返回当前组件。 |
+
+## useSizeType
+
+```TypeScript
+useSizeType(value: {
+    xs?: number | { span: number; offset: number };
+    sm?: number | { span: number; offset: number };
+    md?: number | { span: number; offset: number };
+    lg?: number | { span: number; offset: number };
+  }): T
+```
+
+设置在特定设备宽度类型下的占用列数和偏移列数。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | 是 | 设置在特定设备宽度类型下的占用列数和偏移列数，span：占用列数（需为非负整数）。传入负数或超出GridContainer总列数时，使用默认值；offset：偏移列数（需为非负整数）。传入负数时，使用默认值0。<br>当值为number类型时，仅设置列数，当格式如{"span":&nbsp;1,&nbsp;"offset":&nbsp;0}时，指同时设置占用列数与偏移列数。<br>-&nbsp;xs：指设备宽度类型为SizeType.XS（&lt;320vp）时的占用列数和偏移列数。<br>-&nbsp;sm：指设备宽度类型为SizeType.SM（320vp-600vp）时的占用列数和偏移列数。<br>-&nbsp;md：指设备宽度类型为SizeType.MD（600vp-840vp）时的占用列数和偏移列数。<br>-&nbsp;lg：指设备宽度类型为SizeType.LG（≥840vp）时的占用列数和偏移列数。<br>各尺寸类型的详细断点配置请参见[GridContainer](ts-container-gridcontainer.md)。<br>**说明：** <br>- 调用该属性时，其父组件或祖先组件必须是GridContainer。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T |  |

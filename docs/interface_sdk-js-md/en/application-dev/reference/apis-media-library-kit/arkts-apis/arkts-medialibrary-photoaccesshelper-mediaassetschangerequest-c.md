@@ -78,7 +78,7 @@ Favorites or unfavorites this file asset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| favoriteState | boolean | Yes | Whether to favorite the file. **true** to favorite, **false** otherwise. |
+| favoriteState | boolean | Yes | Whether to favorite the file asset. **true** to favorite, **false** otherwise. |
 
 **Error codes:**
 

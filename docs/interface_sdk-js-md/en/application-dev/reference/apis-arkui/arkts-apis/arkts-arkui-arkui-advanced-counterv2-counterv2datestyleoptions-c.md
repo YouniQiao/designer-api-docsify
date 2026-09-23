@@ -6,6 +6,8 @@ declare class CounterV2DateStyleOptions extends CounterV2CommonOptions
 
 Defines the attributes and events of the inline date **CounterV2**.
 
+This API inherits from [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md) and contains all attributes of the parent API. This topic only lists the newly added attributes. For inherited attributes, see the parent API.
+
 **Inheritance/Implementation:** CounterV2DateStyleOptions extends [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)
 
 **Since:** 26.0.0

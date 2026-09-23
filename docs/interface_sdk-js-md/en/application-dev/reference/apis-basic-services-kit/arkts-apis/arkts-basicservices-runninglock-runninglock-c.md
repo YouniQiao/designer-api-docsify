@@ -119,6 +119,57 @@ class RunningLockTest {
 }
 ```
 
+## unhold
+
+```TypeScript
+unhold(): void
+```
+
+Releases this running lock.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.RUNNING_LOCK
+
+**System capability:** SystemCapability.PowerManager.PowerManager.Core
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+
+**Examples**
+
+```TypeScript
+// RunningLockTest.ets
+class RunningLockTest {
+    public static recordLock: runningLock.RunningLock;
+
+    public static unholdRunningLock(): void {
+        if (RunningLockTest.recordLock) {
+            RunningLockTest.recordLock.unhold();
+            console.info('unhold running lock success');
+        } else {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
+                if (typeof err === 'undefined') {
+                    console.info('create running lock: ' + lock);
+                    RunningLockTest.recordLock = lock;
+                    try {
+                        lock.unhold();
+                        console.info('unhold running lock success');
+                    } catch(err) {
+                        console.error('unhold running lock failed, err: ' + err);
+                    }
+                } else {
+                    console.error('create running lock failed, err: ' + err);
+                }
+            });
+        }
+    }
+}
+```
+
 ## isUsed
 
 ```TypeScript
@@ -189,57 +240,6 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 .catch((err: Error) => {
     console.error('create running lock failed, err: ' + err);
 });
-```
-
-## unhold
-
-```TypeScript
-unhold(): void
-```
-
-Releases this running lock.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.RUNNING_LOCK
-
-**System capability:** SystemCapability.PowerManager.PowerManager.Core
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
-
-**Examples**
-
-```TypeScript
-// RunningLockTest.ets
-class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
-
-    public static unholdRunningLock(): void {
-        if (RunningLockTest.recordLock) {
-            RunningLockTest.recordLock.unhold();
-            console.info('unhold running lock success');
-        } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-                if (typeof err === 'undefined') {
-                    console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
-                    try {
-                        lock.unhold();
-                        console.info('unhold running lock success');
-                    } catch(err) {
-                        console.error('unhold running lock failed, err: ' + err);
-                    }
-                } else {
-                    console.error('create running lock failed, err: ' + err);
-                }
-            });
-        }
-    }
-}
 ```
 
 ## unlock

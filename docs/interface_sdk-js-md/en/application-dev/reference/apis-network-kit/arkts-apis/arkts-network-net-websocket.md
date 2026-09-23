@@ -41,12 +41,6 @@ import { webSocket } from '@kit.NetworkKit';
 | [WebSocketServer](arkts-network-websocket-websocketserver-i.md) | Defines a **WebSocketServer** object. You need to use [webSocket.createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md) to create a **WebSocketServer** object before using its methods. |
 | [WebSocketServerConfig](arkts-network-websocket-websocketserverconfig-i.md) | Defines the WebSocketServer configuration. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md) | Enumerates the TLS protocol types. |
-
 ### Types
 
 | Name | Description |
@@ -55,3 +49,9 @@ import { webSocket } from '@kit.NetworkKit';
 | [HttpProxy](arkts-network-websocket-httpproxy-t.md) | Defines the global HTTP proxy configuration of the network. |
 | [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md) | Represents the HTTP proxy configuration. |
 | [ResponseHeaders](arkts-network-websocket-responseheaders-t.md) | Enumerates the response headers sent by the server. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [TlsProtocol](arkts-network-websocket-tlsprotocol-e.md) | Enumerates the TLS protocol types. |

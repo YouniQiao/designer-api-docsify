@@ -63,6 +63,14 @@ new(pattern: string, flags?: string): RegExp
 | pattern | string | Yes |  |
 | flags | string | No |  |
 
+## prototype
+
+```TypeScript
+readonly prototype: RegExp
+```
+
+**Type:** RegExp
+
 ## "$&"
 
 ```TypeScript
@@ -242,14 +250,6 @@ leftContext: string
 **Type:** string
 
 **Deprecated since:** legacy feature for browser compatibility
-
-## prototype
-
-```TypeScript
-readonly prototype: RegExp
-```
-
-**Type:** RegExp
 
 ## rightContext
 

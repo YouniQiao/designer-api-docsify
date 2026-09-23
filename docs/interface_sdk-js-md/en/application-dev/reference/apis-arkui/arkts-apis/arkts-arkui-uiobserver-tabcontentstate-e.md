@@ -4,7 +4,7 @@
 export enum TabContentState
 ```
 
-TabContent state.
+Enumerates the **TabContent** component states.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ TabContent state.
 ON_SHOW = 0
 ```
 
-When the TabContent is shown.
+The **TabContent** component is displayed.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ When the TabContent is shown.
 ON_HIDE = 1
 ```
 
-When the TabContent is hidden.
+The **TabContent** component is hidden.
 
 **Since:** 12
 

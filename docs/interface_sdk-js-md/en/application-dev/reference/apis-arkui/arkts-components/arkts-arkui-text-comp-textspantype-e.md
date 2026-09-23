@@ -8,7 +8,15 @@ Provides the [span](arkts-arkui-span-comp.md#span) type information.
 
 > **NOTE:** 
 > 
-> The system follows the priority order below when determining the menu type to display during text interactions: &gt;
+> The system follows the priority order below when determining the menu type to display during text interactions:
+> 
+> 1. Check whether a menu is registered for **TextSpanType.TEXT** and **TextResponseType.LONG_PRESS**.
+> 
+> 2. Check whether a menu is registered for **TextSpanType.TEXT** and **TextResponseType.DEFAULT**.
+> 
+> 3. Check whether a menu is registered for **TextSpanType.DEFAULT** and **TextResponseType.LONG_PRESS**.
+> 
+> 4. Check whether a menu is registered for **TextSpanType.DEFAULT** and **TextResponseType.DEFAULT**.
 
 **Since:** 11
 

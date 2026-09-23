@@ -1898,62 +1898,6 @@ try {
 }
 ```
 
-## readRawData
-
-```TypeScript
-readRawData(size: number): number[]
-```
-
-从MessageSequence读取原始数据。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: number)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| size | number | 是 | 要读取的原始数据的大小，以字节为单位。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number[] | 返回原始数据（以字节为单位）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-  let size = arr.length;
-  let result = sequence.readRawData(size);
-  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## readRawDataBuffer
 
 ```TypeScript
@@ -3740,60 +3684,6 @@ try {
 }
 ```
 
-## writeRawData
-
-```TypeScript
-writeRawData(rawData: number[], size: number): void
-```
-
-将原始数据写入MessageSequence对象。
-
-> **说明：** 
-> 
-> 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
-> 
-> 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
-
-**起始版本：** 9
-
-**废弃版本：** 11
-
-**替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rawData | number[] | 是 | 要写入的原始数据，大小不能超过128MB。 |
-| size | number | 是 | 发送的原始数据大小，以字节为单位。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## writeRawDataBuffer
 
 ```TypeScript
@@ -4148,6 +4038,116 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   data.writeStringArray(['abc', 'def']);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## readRawData
+
+```TypeScript
+readRawData(size: number): number[]
+```
+
+从MessageSequence读取原始数据。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [readRawDataBuffer](#readrawdatabuffer)(size: number)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| size | number | 是 | 要读取的原始数据的大小，以字节为单位。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number[] | 返回原始数据（以字节为单位）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let arr = [1, 2, 3, 4, 5];
+  sequence.writeRawData(arr, arr.length);
+  let size = arr.length;
+  let result = sequence.readRawData(size);
+  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## writeRawData
+
+```TypeScript
+writeRawData(rawData: number[], size: number): void
+```
+
+将原始数据写入MessageSequence对象。
+
+> **说明：** 
+> 
+> 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。
+> 
+> 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
+
+**起始版本：** 9
+
+**废弃版本：** 11
+
+**替代接口：** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rawData | number[] | 是 | 要写入的原始数据，大小不能超过128MB。 |
+| size | number | 是 | 发送的原始数据大小，以字节为单位。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let arr = [1, 2, 3, 4, 5];
+  sequence.writeRawData(arr, arr.length);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);

@@ -74,6 +74,38 @@ Extra information. You are advised to use this property to replace **extraInfo**
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## requestCode
+
+```TypeScript
+requestCode: number
+```
+
+Custom request code, which is used to identify the operation to execute.
+
+**Type:** number
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## wants
+
+```TypeScript
+wants: Array<Want>
+```
+
+Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability expansion. If multiple values are passed in, only the first member in the array is used.
+
+**Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## operationType
 
 ```TypeScript
@@ -96,22 +128,6 @@ This attribute is supported since API version 7 and deprecated since API version
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## requestCode
-
-```TypeScript
-requestCode: number
-```
-
-Custom request code, which is used to identify the operation to execute.
-
-**Type:** number
-
-**Since:** 7
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## wantAgentFlags
 
 ```TypeScript
@@ -129,22 +145,6 @@ This attribute is supported since API version 7 and deprecated since API version
 **Deprecated since:** 11
 
 **Substitutes:** [actionFlags](#actionflags)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## wants
-
-```TypeScript
-wants: Array<Want>
-```
-
-Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability expansion. If multiple values are passed in, only the first member in the array is used.
-
-**Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
-
-**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

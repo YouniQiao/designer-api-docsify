@@ -418,130 +418,6 @@ try {
 }
 ```
 
-## isActive
-
-```TypeScript
-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
-```
-
-Checks whether a stream is active. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**Deprecated since:** 20
-
-**Substitutes:** [isStreamActive](#isstreamactive)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-if (err) {
-  console.error(`Failed to obtain the active status of the stream. ${err}`);
-  return;
-}
-  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
-
-<a id="isactive-1"></a>
-
-## isActive
-
-```TypeScript
-isActive(volumeType: AudioVolumeType): Promise<boolean>
-```
-
-Checks whether a stream is active. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Deprecated since:** 20
-
-**Substitutes:** [isStreamActive](#isstreamactive)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
-});
-```
-
-## isActiveSync
-
-```TypeScript
-isActiveSync(volumeType: AudioVolumeType): boolean
-```
-
-Checks whether a stream is active. This API returns the result synchronously.
-
-**Since:** 10
-
-**Deprecated since:** 20
-
-**Substitutes:** [isStreamActive](#isstreamactive)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: boolean = audioStreamManager.isActiveSync(audio.AudioVolumeType.MEDIA);
-  console.info(`Indicate that the active status of the stream is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the active status of the stream ${error}.`);
-}
-```
-
 ## isAudioLoopbackSupported
 
 ```TypeScript
@@ -1141,4 +1017,128 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 audioStreamManager.on('audioCapturerChange', (audioCapturerChangeInfoArray: audio.AudioCapturerChangeInfoArray) =>  {
   console.info(`Succeeded in using on function, AudioCapturerChangeInfoArray: ${JSON.stringify(audioCapturerChangeInfoArray)}.`);
 });
+```
+
+## isActive
+
+```TypeScript
+isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
+```
+
+Checks whether a stream is active. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Deprecated since:** 20
+
+**Substitutes:** [isStreamActive](#isstreamactive)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
+if (err) {
+  console.error(`Failed to obtain the active status of the stream. ${err}`);
+  return;
+}
+  console.info(`Callback invoked to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
+
+<a id="isactive-1"></a>
+
+## isActive
+
+```TypeScript
+isActive(volumeType: AudioVolumeType): Promise<boolean>
+```
+
+Checks whether a stream is active. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Deprecated since:** 20
+
+**Substitutes:** [isStreamActive](#isstreamactive)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
+  console.info(`Promise returned to indicate that the active status of the stream is obtained ${value}.`);
+});
+```
+
+## isActiveSync
+
+```TypeScript
+isActiveSync(volumeType: AudioVolumeType): boolean
+```
+
+Checks whether a stream is active. This API returns the result synchronously.
+
+**Since:** 10
+
+**Deprecated since:** 20
+
+**Substitutes:** [isStreamActive](#isstreamactive)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let value: boolean = audioStreamManager.isActiveSync(audio.AudioVolumeType.MEDIA);
+  console.info(`Indicate that the active status of the stream is obtained ${value}.`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to obtain the active status of the stream ${error}.`);
+}
 ```

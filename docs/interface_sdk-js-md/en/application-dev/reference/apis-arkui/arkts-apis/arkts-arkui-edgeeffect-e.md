@@ -4,7 +4,7 @@
 declare enum EdgeEffect
 ```
 
-Sliding effect
+Defines the sliding effect of the scrollable container.
 
 **Since:** 7
 
@@ -16,7 +16,11 @@ Sliding effect
 Spring
 ```
 
-Elastic physical action, sliding to the edge can continue to slide for a distance based on the initial speed or touch event, and spring back when released.
+Spring effect. When at one of the edges, the component can move beyond the bounds based on initial velocity or through touches, and produces a bounce effect when the user releases their finger.
+
+In API version 22 and earlier versions, the spring effect of the scrollable component does not take effect when the scrollbar is dragged.
+
+In API version 23 and later versions, the spring effect of the scrollable component takes effect when the scrollbar is dragged by fingers, but does not take effect when the scrollbar is dragged by a mouse.
 
 **Since:** 7
 
@@ -32,7 +36,7 @@ Elastic physical action, sliding to the edge can continue to slide for a distanc
 Fade
 ```
 
-Fade.
+Fade effect. When at one of the edges, the component produces a fade effect.
 
 **Since:** 7
 
@@ -48,7 +52,7 @@ Fade.
 None
 ```
 
-Sliding to the edge has no effect.
+No effect when the component is at one of the edges.
 
 **Since:** 7
 

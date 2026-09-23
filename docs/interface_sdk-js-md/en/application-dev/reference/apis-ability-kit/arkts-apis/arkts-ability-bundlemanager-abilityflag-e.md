@@ -100,7 +100,7 @@ Used to obtain the ability information of system applications.
 GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 ```
 
-Used to obtain the ability information that passes &lt;!--RP3--&gt; [domain name verification](../../../application-models/app-linking-startup.md#working-principles)&lt;!--RP3End--&gt;.
+Used to obtain the ability information that passes <!--RP3--> [domain name verification](../../../application-models/app-linking-startup.md#working-principles)<!--RP3End-->.
 
 **Since:** 20
 

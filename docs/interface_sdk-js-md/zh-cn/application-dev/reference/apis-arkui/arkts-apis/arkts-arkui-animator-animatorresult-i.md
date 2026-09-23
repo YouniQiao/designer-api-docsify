@@ -62,26 +62,6 @@ finish(): void
 animator.finish();
 ```
 
-## oncancel
-
-```TypeScript
-oncancel: () => void
-```
-
-动画被取消时回调。
-
-**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onCancel](#oncancel)。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** onCancel
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## onCancel
 
 ```TypeScript
@@ -95,26 +75,6 @@ onCancel: () => void
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onfinish
-
-```TypeScript
-onfinish: () => void
-```
-
-动画完成时回调。
-
-**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFinish](#onfinish)。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** onFinish
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,32 +93,6 @@ onFinish: () => void
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onframe
-
-```TypeScript
-onframe: (progress: number) => void
-```
-
-接收到帧时回调。
-
-**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFrame](#onframe)。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** onFrame
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| progress | number | 是 |  |
 
 ## onFrame
 
@@ -185,26 +119,6 @@ progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | progress | number | 是 |  |
-
-## onrepeat
-
-```TypeScript
-onrepeat: () => void
-```
-
-动画重复时回调。
-
-**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onRepeat](#onrepeat)。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** onRepeat
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onRepeat
 
@@ -470,6 +384,92 @@ struct AnimatorTest {
   }
 }
 ```
+
+## oncancel
+
+```TypeScript
+oncancel: () => void
+```
+
+动画被取消时回调。
+
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onCancel](#oncancel)。
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onCancel
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onfinish
+
+```TypeScript
+onfinish: () => void
+```
+
+动画完成时回调。
+
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFinish](#onfinish)。
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onFinish
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onframe
+
+```TypeScript
+onframe: (progress: number) => void
+```
+
+接收到帧时回调。
+
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFrame](#onframe)。
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onFrame
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| progress | number | 是 |  |
+
+## onrepeat
+
+```TypeScript
+onrepeat: () => void
+```
+
+动画重复时回调。
+
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onRepeat](#onrepeat)。
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onRepeat
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## update
 

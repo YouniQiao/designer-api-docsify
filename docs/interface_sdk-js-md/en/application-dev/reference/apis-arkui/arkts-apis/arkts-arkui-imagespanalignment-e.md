@@ -4,7 +4,7 @@
 declare enum ImageSpanAlignment
 ```
 
-The alignment mode of the image relative to the line height.
+Sets the alignment mode of the image relative to the line height.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ The image is bottom aligned with the line.
 CENTER
 ```
 
-The image is centered aligned with the line.
+The image is center aligned with the line.
 
 **Since:** 10
 

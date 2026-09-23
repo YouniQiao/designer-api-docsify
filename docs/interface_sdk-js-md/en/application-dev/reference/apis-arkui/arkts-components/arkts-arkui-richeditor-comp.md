@@ -2,7 +2,11 @@
 
 **RichEditor** is a component that supports interactive text editing and mixture of text and imagery.
 
-> **NOTE** > > - This component is supported since API version 10. Newly added content in later versions is marked with a > superscript to indicate the version in which it was introduced. > > - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
+> **NOTE:** 
+> 
+> - This component is supported since API version 10. Newly added content in later versions is marked with a superscript to indicate the version in which it was introduced.
+> 
+> - This component supports [WithTheme](arkts-arkui-withtheme-comp.md#with_themedefines-withtheme-component) since API version 26.0.0.
 
 ## Child Components
 

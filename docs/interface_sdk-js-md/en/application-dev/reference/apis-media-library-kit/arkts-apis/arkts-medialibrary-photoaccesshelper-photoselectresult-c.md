@@ -54,9 +54,7 @@ Whether the selected media file is the original image. **true** if yes, **false*
 movingPhotoBadgeStates: Array<MovingPhotoBadgeStateType>
 ```
 
-Array of moving photo badge states for the media files selected from Gallery.
-
-If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
+Array of moving photo badge states for the media files selected from Gallery. If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
 
 **Type:** Array&lt;[MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 

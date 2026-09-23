@@ -4,7 +4,7 @@
 declare enum LineBreakStrategy
 ```
 
-The line break rule.
+Sets the line break rule.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Places as many words on a line as possible and moves to the next line only if no
 HIGH_QUALITY = 1
 ```
 
-Fills in lines as much as possible on the basis of **BALANCED**, which may results in a large blank area on the last line.
+Fills in lines as much as possible on the basis of **BALANCED**, which may result in a large blank area on the last line.
 
 **Since:** 12
 

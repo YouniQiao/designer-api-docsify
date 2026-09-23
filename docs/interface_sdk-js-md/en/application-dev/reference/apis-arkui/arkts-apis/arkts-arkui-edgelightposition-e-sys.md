@@ -4,7 +4,7 @@
 declare enum EdgeLightPosition
 ```
 
-Defines the position of the edge light effect.
+Defines the edge light position.
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 interface UIFontGenericInfo
 ```
 
-UI font configuration of the system.
+Defines a list of supported generic font families.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { font } from '@kit.ArkUI';
 adjust: Array<UIFontAdjustInfo>
 ```
 
-Weight of the font when displayed, which corresponds to the original weight.
+Font weight value mapping list, which maps the original weight values of the fonts to the actually displayed weight values.
 
 **Type:** Array&lt;[UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md)&gt;
 
@@ -40,7 +40,7 @@ Weight of the font when displayed, which corresponds to the original weight.
 alias: Array<UIFontAliasInfo>
 ```
 
-Font alias configuration information.
+Alias list of the font family, used to provide alternative names for the fonts.
 
 **Type:** Array&lt;[UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md)&gt;
 

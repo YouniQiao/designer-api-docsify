@@ -4,7 +4,7 @@
 declare enum TextAreaType
 ```
 
-Multi-line text input box type.
+Type of the multi-line text input box.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Basic input mode with no special restrictions.
 NUMBER = 2
 ```
 
-Digit input mode.
+Numeric-only input mode.
 
 **Since:** 11
 
@@ -50,7 +50,7 @@ PHONE_NUMBER = 3
 
 Phone number input mode.
 
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
+Supports digits, spaces, +, -, *, #, (, and ), with no length limit.
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ EMAIL = 5
 
 Email address input mode.
 
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # $ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
+Supports digits, letters, underscores, decimal points, !, #, $, %, &, ', *, +, -, /, =, ?, ^,`, {, |, }, ~, and the @ character (only one @ character is allowed).
 
 **Since:** 11
 
@@ -84,9 +84,9 @@ This mode accepts only digits, letters, underscores (_), dots (.), and the follo
 NUMBER_DECIMAL = 12
 ```
 
-Decimal number input mode.
+Numeric input mode with a decimal point.
 
-The value can contain digits and one decimal point.
+Supports digits and a decimal point (only one decimal point is allowed).
 
 **Since:** 12
 
@@ -118,7 +118,7 @@ URL input mode with no special restrictions.
 ONE_TIME_CODE = 14
 ```
 
-One-time code (verification code) input mode with no special restrictions.
+Verification code input mode with no special restrictions. In this mode, the system input method is pulled up by default when the component gains focus.
 
 **Since:** 20
 

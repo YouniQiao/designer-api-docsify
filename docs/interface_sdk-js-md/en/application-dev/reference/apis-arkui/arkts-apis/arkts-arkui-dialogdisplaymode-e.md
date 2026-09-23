@@ -4,9 +4,7 @@
 declare enum DialogDisplayMode
 ```
 
-Dialog display mode.
-
-@enum { DialogDisplayMode }
+Enumerates the display modes of the dialog box in the subwindow.
 
 **Since:** 26.0.0
 
@@ -18,7 +16,7 @@ Dialog display mode.
 SCREEN_BASED = 0
 ```
 
-The dialog displayed based on screen.
+The dialog box is displayed in the center of the screen.
 
 **Since:** 26.0.0
 
@@ -34,7 +32,7 @@ The dialog displayed based on screen.
 WINDOW_BASED = 1
 ```
 
-The dialog displayed based on application window.
+The dialog box is displayed in the center of the application window.
 
 **Since:** 26.0.0
 

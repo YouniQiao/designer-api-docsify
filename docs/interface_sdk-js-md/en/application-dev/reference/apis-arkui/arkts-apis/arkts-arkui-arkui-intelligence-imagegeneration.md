@@ -62,17 +62,17 @@ import { imageGeneration } from '@kit.ArkUI';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md) | Provides stream output result type definition. |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [CustomImportCallback](arkts-arkui-imagegeneration-customimportcallback-t-sys.md) | Async callback type for custom import operation. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md) | Provides stream output result type definition. |
 <!--DelEnd-->

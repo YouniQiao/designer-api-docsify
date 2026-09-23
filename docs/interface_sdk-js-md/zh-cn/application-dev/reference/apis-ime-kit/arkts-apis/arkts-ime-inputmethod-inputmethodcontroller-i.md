@@ -2108,92 +2108,6 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 });
 ```
 
-## stopInput
-
-```TypeScript
-stopInput(callback: AsyncCallback<boolean>): void
-```
-
-结束输入会话。使用callback异步回调。<br> <br>  
-> **说明：** <br>
-> <br>
-> 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [stopInputSession](#stopinputsession)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-});
-```
-
-<a id="stopinput-1"></a>
-
-## stopInput
-
-```TypeScript
-stopInput(): Promise<boolean>
-```
-
-结束输入会话。使用promise异步回调。<br> <br>  
-> **说明：** <br>
-> <br>
-> 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
-
-**起始版本：** 6
-
-**废弃版本：** 9
-
-**替代接口：** [stopInputSession](#stopinputsession)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示会话结束成功；返回false表示会话结束失败。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## stopInputSession
 
 ```TypeScript
@@ -2484,5 +2398,91 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
   console.info('Succeeded in updating cursorInfo.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## stopInput
+
+```TypeScript
+stopInput(callback: AsyncCallback<boolean>): void
+```
+
+结束输入会话。使用callback异步回调。<br> <br>  
+> **说明：** <br>
+> <br>
+> 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [stopInputSession](#stopinputsession)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当会话结束成功，err为undefined，data为true；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+});
+```
+
+<a id="stopinput-1"></a>
+
+## stopInput
+
+```TypeScript
+stopInput(): Promise<boolean>
+```
+
+结束输入会话。使用promise异步回调。<br> <br>  
+> **说明：** <br>
+> <br>
+> 该接口需要编辑框与输入法绑定时才能调用，即点击编辑控件后，才可调用该接口结束输入会话。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [stopInputSession](#stopinputsession)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示会话结束成功；返回false表示会话结束失败。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
 });
 ```

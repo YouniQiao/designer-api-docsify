@@ -4,7 +4,7 @@
 declare interface SelectionOptions
 ```
 
-Defines the selection options.
+Provides the configuration options for text selection.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the selection options.
 menuPolicy?: MenuPolicy
 ```
 
-Menu display policy. Default value: MenuPolicy.DEFAULT.
+Policy for menu popup. Default value: MenuPolicy.DEFAULT.
 
 **Type:** [MenuPolicy](arkts-arkui-common-comp-menupolicy-e.md)
 

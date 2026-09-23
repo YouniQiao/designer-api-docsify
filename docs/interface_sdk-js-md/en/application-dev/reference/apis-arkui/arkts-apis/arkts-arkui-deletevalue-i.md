@@ -16,7 +16,7 @@ Provides an interface for deleting value from text.
 deleteOffset: number
 ```
 
-Position of the deleted text.
+Position index of the value to delete, starting from 0.
 
 **Type:** number
 

@@ -2,7 +2,10 @@
 
 A container that lays out child components along the vertical direction. It is suitable for scenarios where multiple child components need to be arranged sequentially in the vertical direction, such as list items, form items, and card content. It supports setting attributes such as child component spacing and alignment, enabling quick implementation of vertical linear layout.
 
-> **NOTE** > > If no height or width is set for the **Column** component, it adapts to the size of child components in the main > axis (vertical direction) or cross axis (horizontal direction).
+> **NOTE:** 
+> 
+> If no height or width is set for the **Column** component, it adapts to the size of child components in the main
+> axis (vertical direction) or cross axis (horizontal direction).
 
 ## Child Components
 

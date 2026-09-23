@@ -4,9 +4,7 @@
 export type OperationValueType = number | number | string | boolean
 ```
 
-Indicates possible value types
-
-@typedef { long | double | string | boolean }
+Defines the values needed for matching different predicates.
 
 **Since:** 22
 
@@ -18,7 +16,7 @@ Indicates possible value types
 
 | Type | Description |
 | --- | --- |
-| long |  |
-| double |  |
-| string |  |
-| boolean |  |
+| long | Used for numeric fields. It can be a long integer. |
+| double | Used for numeric fields. It can be a decimal number. |
+| string | Used for string fields. It can be any value. |
+| boolean | Used for boolean fields. |

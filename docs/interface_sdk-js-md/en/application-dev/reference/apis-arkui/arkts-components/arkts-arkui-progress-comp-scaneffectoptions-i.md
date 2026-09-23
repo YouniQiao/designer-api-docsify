@@ -16,13 +16,13 @@ Defines the scan effect options.
 enableScanEffect?: boolean
 ```
 
-Whether to enable the scan effect. Only the progress indicator of the [linear, ring, and capsule](arkts-arkui-progress-comp-progresstype-e.md) type is supported.
+Whether to enable the scan effect. This parameter is supported only for the progress bar whose [ProgressType](arkts-arkui-progress-comp-progresstype-e.md) is Linear, Ring, or Capsule.
 
-**true**: The scan effect is enabled.
+true: enable the scan effect.
 
-**false**: The scan effect is disabled.
+false: disable the scan effect.
 
-Default value: **false**
+Default value: false
 
 **Type:** boolean
 

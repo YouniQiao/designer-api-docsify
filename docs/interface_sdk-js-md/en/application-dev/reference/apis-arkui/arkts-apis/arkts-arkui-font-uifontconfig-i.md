@@ -22,7 +22,7 @@ import { font } from '@kit.ArkUI';
 fallbackGroups: Array<UIFontFallbackGroupInfo>
 ```
 
-List of fallback generic font families.
+List of system fallback font groups, used to specify the fallback fonts to use when the primary font does not support certain characters.
 
 **Type:** Array&lt;[UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)&gt;
 
@@ -40,7 +40,7 @@ List of fallback generic font families.
 fontDir: Array<string>
 ```
 
-Path to the system font file.
+List of paths where the system font files are located. Each array element is an absolute system path.
 
 **Type:** Array&lt;string&gt;
 
@@ -58,7 +58,7 @@ Path to the system font file.
 generic: Array<UIFontGenericInfo>
 ```
 
-List of supported generic font families.
+List of generic font families supported by the system.
 
 **Type:** Array&lt;[UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)&gt;
 

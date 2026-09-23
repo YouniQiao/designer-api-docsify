@@ -187,23 +187,6 @@ Split a string into substrings using the specified separator and return them as 
 | separator | string &#124; RegExp | Yes |  |
 | limit | number | No |  |
 
-## substr
-
-```TypeScript
-substr(from: number, length?: number): string
-```
-
-Gets a substring beginning at the specified location and having the specified length.
-
-**Deprecated since:** legacy feature for browser compatibility
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| from | number | Yes |  |
-| length | number | No |  |
-
 ## substring
 
 ```TypeScript
@@ -286,6 +269,23 @@ valueOf(): string
 ```
 
 Returns the primitive value of the specified object.
+
+## substr
+
+```TypeScript
+substr(from: number, length?: number): string
+```
+
+Gets a substring beginning at the specified location and having the specified length.
+
+**Deprecated since:** legacy feature for browser compatibility
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes |  |
+| length | number | No |  |
 
 ## [index: number]
 

@@ -4,7 +4,7 @@
 type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>
 ```
 
-Callback function when the selection menu create.
+Triggered when the menu is created.
 
 **Since:** 26.0.0
 
@@ -18,10 +18,10 @@ Callback function when the selection menu create.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | currently displayed menu items. |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items currently displayed.<br>**NOTE:** <br>Modifications to the name, icon, and shortcut prompt of the default menu items do not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Return the menu items will displayed after operations. |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Processed menu items. |

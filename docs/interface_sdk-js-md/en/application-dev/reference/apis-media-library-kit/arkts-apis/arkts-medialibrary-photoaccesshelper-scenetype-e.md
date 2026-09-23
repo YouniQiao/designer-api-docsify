@@ -4,9 +4,7 @@
 export enum SceneType
 ```
 
-Enumeration type of scene.
-
-@enum { int } SceneType
+Enumerates the scene types of the moving photo playback.
 
 **Since:** 23
 

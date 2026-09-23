@@ -16,28 +16,6 @@ Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-t
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-## supportedProfiles
-
-```TypeScript
-supportedProfiles: number[]
-```
-
-Supported profiles.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](arkts-connectivity-tag-taginfo-i.md)** instead.
-
-**Type:** number[]
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [technology](#technology)
-
-**Required permissions:** ohos.permission.NFC_TAG
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
 ## technology
 
 ```TypeScript
@@ -71,5 +49,27 @@ Tag unique identifier (UID), which consists of hexadecimal numbers ranging from 
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## supportedProfiles
+
+```TypeScript
+supportedProfiles: number[]
+```
+
+Supported profiles.
+
+Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](arkts-connectivity-tag-taginfo-i.md)** instead.
+
+**Type:** number[]
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [technology](#technology)
+
+**Required permissions:** ohos.permission.NFC_TAG
 
 **System capability:** SystemCapability.Communication.NFC.Tag

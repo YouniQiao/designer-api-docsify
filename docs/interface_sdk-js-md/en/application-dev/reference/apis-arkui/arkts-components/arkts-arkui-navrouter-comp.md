@@ -2,7 +2,10 @@
 
 The **NavRouter** component provides default processing logic for responding to clicks, eliminating the need for manual logic definition.
 
-> **NOTE** > > This component is deprecated since API version 13. You are advised to use [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) in > conjunction with the **navDestination** attribute for page routing.
+> **NOTE:** 
+> 
+> This component is deprecated since API version 13. You are advised to use [NavPathStack](arkts-arkui-navigation-comp-navpathstack-c.md) in
+> conjunction with the **navDestination** attribute for page routing.
 
 ## Child Components
 

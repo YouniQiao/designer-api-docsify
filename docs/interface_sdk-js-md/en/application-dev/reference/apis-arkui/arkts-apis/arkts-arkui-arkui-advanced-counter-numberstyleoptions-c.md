@@ -118,7 +118,7 @@ Label text of the Counter.
 
 Usage scenario: pass this parameter when you need to display descriptive text (such as 'Price', 'Quantity', etc.) next to the Counter.
 
-Default value: ''.
+Default value: ''
 
 If the value is **undefined**, the default value is used.
 

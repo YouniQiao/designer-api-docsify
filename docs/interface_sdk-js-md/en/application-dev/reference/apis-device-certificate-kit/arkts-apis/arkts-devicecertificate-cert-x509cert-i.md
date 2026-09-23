@@ -1385,75 +1385,6 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
-## getSerialNumber
-
-```TypeScript
-getSerialNumber(): number
-```
-
-Obtains the X.509 certificate serial number.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 9 and deprecated since API version 10. Use
-> [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [getCertSerialNumber](#getcertserialnumber)
-
-**System capability:** SystemCapability.Security.Cert
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | X.509 certificate serial number obtained. |
-
-**Examples**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// Certificate binary data, which needs to match your case.
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob, (error, x509Cert) => {
-  if (error) {
-    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Cert result: success.');
-    let serialNumber = x509Cert.getSerialNumber();
-    console.info('serialNumber = ' + serialNumber);
-  }
-});
-```
-
 ## getSignature
 
 ```TypeScript
@@ -2653,5 +2584,74 @@ cert.createX509Cert(encodingBlob).then(x509Cert => {
   }
 }).catch((error: BusinessError) => {
   console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+## getSerialNumber
+
+```TypeScript
+getSerialNumber(): number
+```
+
+Obtains the X.509 certificate serial number.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 9 and deprecated since API version 10. Use
+> [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [getCertSerialNumber](#getcertserialnumber)
+
+**System capability:** SystemCapability.Security.Cert
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | X.509 certificate serial number obtained. |
+
+**Examples**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+// Convert the string into a Uint8Array.
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// Certificate binary data, which needs to match your case.
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+  'Qw==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // Assign a value based on the encodingData format. FORMAT_PEM and FORMAT_DER are supported.
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Cert(encodingBlob, (error, x509Cert) => {
+  if (error) {
+    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createX509Cert result: success.');
+    let serialNumber = x509Cert.getSerialNumber();
+    console.info('serialNumber = ' + serialNumber);
+  }
 });
 ```

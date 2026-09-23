@@ -195,6 +195,12 @@ import { image } from '@kit.ImageKit';
 | [SourceOptions](arkts-image-image-sourceoptions-i-sys.md) | Defines image source initialization options. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). |
+
 ### Enums
 
 | Name | Description |
@@ -237,12 +243,6 @@ import { image } from '@kit.ImageKit';
 | [ResolutionQuality](arkts-image-image-resolutionquality-e-sys.md) | Enumerates the image quality levels. |
 | [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md) | Enumerates SVG resource limit levels. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). |
 
 ### Constants
 

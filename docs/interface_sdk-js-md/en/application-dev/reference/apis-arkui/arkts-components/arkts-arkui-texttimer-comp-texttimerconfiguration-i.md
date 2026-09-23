@@ -20,9 +20,11 @@ You need a custom class to implement the **ContentModifier** API.
 count: number
 ```
 
-Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 86400000 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise, the default value is used as the initial countdown time.
+Initial time of the timer, in milliseconds. This parameter takes effect when isCountDown is set to true.
 
-Default value: **60000**
+Default Value: 60000
+
+Value Range: (0, 86400000), that is, no more than 24 hours. If the value is out of the range, the default value is used.
 
 **Type:** number
 
@@ -42,7 +44,7 @@ Default value: **60000**
 elapsedTime: number
 ```
 
-Elapsed time of the timer, in the minimum unit of the format.
+Elapsed time of the timer, in the minimum unit of the configured format.
 
 **Type:** number
 
@@ -60,11 +62,11 @@ Elapsed time of the timer, in the minimum unit of the format.
 isCountDown: boolean
 ```
 
-Whether the timer is a countdown.
+Whether to count down.
 
-**true**: The timer counts down, e.g., from 30s to 0s. **false**: The timer counts up, e.g., from 0s to 30s.
+true: The timer counts down, for example, from 30 seconds~0 seconds; false: The timer counts up, for example, from 0 seconds~30 seconds.
 
-Default value: **false**
+Default Value: false
 
 **Type:** boolean
 
@@ -84,11 +86,11 @@ Default value: **false**
 started: boolean
 ```
 
-Whether the timer has already started.
+Whether the timer has started.
 
-**true**: The timer has started. **false**: The timer has not started.
+true: The timer has started; false: The timer has not started.
 
-Default value: **false**
+Default Value: false
 
 **Type:** boolean
 
@@ -106,13 +108,15 @@ Default value: **false**
 startTime?: number
 ```
 
-The start time of the timer.It is effective when isCountDown is false.
+Initial time of the timer in the count-up mode. This parameter takes effect only when isCountDown is set to false.
 
-Default value: **0**
+Value Range: [-2147483648, 2147483647]. Negative values are supported.
 
-Unit: ms.
+Default Value: 0
 
-When the value is negative, the timer starts with a negative value and continues with a positive value after 0.
+Unit: ms
+
+When the value is negative, the timer starts counting from the negative value, passes 0, and then continues counting toward positive values.
 
 **Type:** number
 

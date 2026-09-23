@@ -114,6 +114,20 @@ Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## name
+
+```TypeScript
+readonly name: string
+```
+
+Mandatory. Name of the input method package.
+
+**Type:** string
+
+**Since:** 9
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
 ## methodId
 
 ```TypeScript
@@ -129,20 +143,6 @@ Unique ID of the input method. Mandatory.
 **Deprecated since:** 9
 
 **Substitutes:** [id](#id)
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-## name
-
-```TypeScript
-readonly name: string
-```
-
-Mandatory. Name of the input method package.
-
-**Type:** string
-
-**Since:** 9
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

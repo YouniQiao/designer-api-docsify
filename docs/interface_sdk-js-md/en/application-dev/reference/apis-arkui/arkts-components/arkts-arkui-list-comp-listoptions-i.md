@@ -69,9 +69,7 @@ Scroller, which can be bound to scrollable components. Anonymous Object Rectific
 space?: number | string
 ```
 
-Spacing between list items along the main axis. <br>Default value: **0** <br>If the parameter type is number, the unit is vp. Anonymous Object Rectification.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. <br>If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. <br> Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. </p>
+Spacing between list items along the main axis. Default value: **0**. <br>If the parameter type is number, the unit is vp. Anonymous Object Rectification. <p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. <br>If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. <br> Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. </p>
 
 **Type:** number &#124; string
 

@@ -336,55 +336,6 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
-## onDoNotDisturbDateChange
-
-```TypeScript
-onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
-```
-
-Called when the DND time settings are changed.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [onDoNotDisturbChanged](#ondonotdisturbchanged)
-
-**System capability:** SystemCapability.Notification.Notification
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Yes |  |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import Notification from '@ohos.notification';
-
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("subscribeCallback");
-  }
-};
-
-let onDoNotDisturbDateChangeCallback = (mode: Notification.DoNotDisturbDate) => {
-  console.info('===> onDoNotDisturbDateChange:' + mode);
-}
-
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDoNotDisturbDateChange: onDoNotDisturbDateChangeCallback
-};
-
-notificationSubscribe.subscribe(subscriber, subscribeCallback);
-```
-
 ## onEnabledNotificationChanged
 
 ```TypeScript
@@ -585,6 +536,55 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
+```
+
+## onDoNotDisturbDateChange
+
+```TypeScript
+onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
+```
+
+Called when the DND time settings are changed.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [onDoNotDisturbChanged](#ondonotdisturbchanged)
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Yes |  |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import Notification from '@ohos.notification';
+
+let subscribeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("subscribeCallback");
+  }
+};
+
+let onDoNotDisturbDateChangeCallback = (mode: Notification.DoNotDisturbDate) => {
+  console.info('===> onDoNotDisturbDateChange:' + mode);
+}
+
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onDoNotDisturbDateChange: onDoNotDisturbDateChangeCallback
+};
+
+notificationSubscribe.subscribe(subscriber, subscribeCallback);
 ```
 
 ## onBadgeEnabledChanged

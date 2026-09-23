@@ -10,7 +10,7 @@ WebDownloadItem is a class in the ArkWeb framework used to represent and manage 
 > 
 > - During the download process, the download progress is notified to the user through WebDownloadDelegate, and the user can operate the download task through the WebDownloadItem parameter.
 > 
-> - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255bytes&lt;!--RP1--&gt;&lt;!--RP1End--&gt;.
+> - The maximum length of the download file path (including the file name) supported by WebDownloadItem is 255bytes<!--RP1--><!--RP1End-->.
 
 **Since:** 11
 

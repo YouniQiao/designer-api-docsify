@@ -62,26 +62,6 @@ See ArkTS-based Declarative Development Paradigm.
 animator.finish();
 ```
 
-## oncancel
-
-```TypeScript
-oncancel: () => void
-```
-
-Called when this animation is canceled.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
-
-**Since:** 6
-
-**Deprecated since:** 12
-
-**Substitutes:** onCancel
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## onCancel
 
 ```TypeScript
@@ -95,26 +75,6 @@ Called when this animation is canceled.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onfinish
-
-```TypeScript
-onfinish: () => void
-```
-
-Called when this animation is finished.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
-
-**Since:** 6
-
-**Deprecated since:** 12
-
-**Substitutes:** onFinish
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -133,32 +93,6 @@ Called when this animation is finished.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onframe
-
-```TypeScript
-onframe: (progress: number) => void
-```
-
-Called when a frame is received.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
-
-**Since:** 6
-
-**Deprecated since:** 12
-
-**Substitutes:** onFrame
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| progress | number | Yes |  |
 
 ## onFrame
 
@@ -183,26 +117,6 @@ Called when a frame is received.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | progress | number | Yes |  |
-
-## onrepeat
-
-```TypeScript
-onrepeat: () => void
-```
-
-Called when this animation repeats.
-
-Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
-
-**Since:** 6
-
-**Deprecated since:** 12
-
-**Substitutes:** onRepeat
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onRepeat
 
@@ -468,6 +382,92 @@ struct AnimatorTest {
   }
 }
 ```
+
+## oncancel
+
+```TypeScript
+oncancel: () => void
+```
+
+Called when this animation is canceled.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
+
+**Since:** 6
+
+**Deprecated since:** 12
+
+**Substitutes:** onCancel
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onfinish
+
+```TypeScript
+onfinish: () => void
+```
+
+Called when this animation is finished.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
+
+**Since:** 6
+
+**Deprecated since:** 12
+
+**Substitutes:** onFinish
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onframe
+
+```TypeScript
+onframe: (progress: number) => void
+```
+
+Called when a frame is received.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
+
+**Since:** 6
+
+**Deprecated since:** 12
+
+**Substitutes:** onFrame
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| progress | number | Yes |  |
+
+## onrepeat
+
+```TypeScript
+onrepeat: () => void
+```
+
+Called when this animation repeats.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
+
+**Since:** 6
+
+**Deprecated since:** 12
+
+**Substitutes:** onRepeat
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## update
 

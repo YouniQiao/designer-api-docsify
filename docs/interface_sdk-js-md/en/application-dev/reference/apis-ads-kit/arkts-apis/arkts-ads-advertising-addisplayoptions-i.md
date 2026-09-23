@@ -27,7 +27,7 @@ Custom parameter.
 - refreshTime: An optional custom parameter for the AutoAdComponent,  
 used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000]. If not set or the value is non-numeric or less than or equal to 0, no rotation occurs, and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000, and values greater than 120000 are set to 120000.
 
-&lt;!--RP3--&gt;&lt;!--RP3End--&gt;
+<!--RP3--><!--RP3End-->
 
 **Type:** number &#124; boolean &#124; string &#124; undefined
 

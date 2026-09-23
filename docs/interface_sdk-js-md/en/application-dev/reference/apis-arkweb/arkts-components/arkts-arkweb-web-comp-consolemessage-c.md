@@ -10,6 +10,22 @@ ConsoleMessage is an object that encapsulates JavaScript console output informat
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+<a id="constructor-1"></a>
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Constructs a **ConsoleMessage** object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
 ## constructor
 
 ```TypeScript
@@ -34,22 +50,6 @@ Constructs a **ConsoleMessage** object.
 | sourceId | string | Yes | Path and name of the web page source file. |
 | lineNumber | number | Yes | Line number of **ConsoleMessage**. |
 | messageLevel | [MessageLevel](arkts-arkweb-web-comp-messagelevel-e.md) | Yes | Log level of **ConsoleMessage**. |
-
-<a id="constructor-1"></a>
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-Constructs a **ConsoleMessage** object.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Web.Webview.Core
 
 ## getLineNumber
 

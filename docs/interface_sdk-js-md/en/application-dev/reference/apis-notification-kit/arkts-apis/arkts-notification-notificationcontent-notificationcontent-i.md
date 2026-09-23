@@ -10,24 +10,6 @@ Describes the notification contents.
 
 **System capability:** SystemCapability.Notification.Notification
 
-## contentType
-
-```TypeScript
-contentType?: notification.ContentType
-```
-
-Notification content type.
-
-**Type:** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** [notificationContentType](#notificationcontenttype)
-
-**System capability:** SystemCapability.Notification.Notification
-
 ## longText
 
 ```TypeScript
@@ -109,5 +91,23 @@ System live view notification content. Third-party applications are not supporte
 **Type:** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
 **Since:** 11
+
+**System capability:** SystemCapability.Notification.Notification
+
+## contentType
+
+```TypeScript
+contentType?: notification.ContentType
+```
+
+Notification content type.
+
+**Type:** [notification.ContentType](arkts-notification-notification-contenttype-depr-e.md)
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** [notificationContentType](#notificationcontenttype)
 
 **System capability:** SystemCapability.Notification.Notification

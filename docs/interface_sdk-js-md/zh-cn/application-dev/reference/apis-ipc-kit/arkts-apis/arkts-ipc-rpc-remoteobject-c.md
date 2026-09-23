@@ -18,57 +18,6 @@ class RemoteObject extends IRemoteObject
 import { rpc } from '@kit.IPCKit';
 ```
 
-## attachLocalInterface
-
-```TypeScript
-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
-```
-
-此接口用于把接口描述符和IRemoteBroker对象绑定。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 是 | 将与描述符绑定的IRemoteBroker对象。 |
-| descriptor | string | 是 | 用于与IRemoteBroker对象绑定的描述符。 |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-    this.attachLocalInterface(this, descriptor);
-  }
-  addDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
-    // 方法逻辑需开发者根据业务需要实现
-    return true;
-  }
-  removeDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
-    // 方法逻辑需开发者根据业务需要实现
-    return true;
-  }
-}
-let testRemoteObject = new TestRemoteObject('testObject');
-```
-
 ## constructor
 
 ```TypeScript
@@ -232,54 +181,6 @@ try {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-## getInterfaceDescriptor
-
-```TypeScript
-getInterfaceDescriptor(): string
-```
-
-查询接口描述符。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 返回接口描述符。 |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-
-try {
-  let testRemoteObject = new TestRemoteObject('testObject');
-  let descriptor = testRemoteObject.getInterfaceDescriptor();
-  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 
@@ -653,111 +554,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
-## onRemoteRequest
-
-```TypeScript
-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
-```
-
-sendRequest请求的响应处理函数，服务端在该函数里处理请求，回复结果。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | number | 是 | 对端发送的服务请求码。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 携带客户端调用参数的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 写入结果的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-## queryLocalInterface
-
-```TypeScript
-queryLocalInterface(descriptor: string): IRemoteBroker
-```
-
-查询并获取当前接口描述符对应的远端对象是否已经存在。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| descriptor | string | 是 | 需要查询的接口描述符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 如果接口描述符对应的远端对象存在，则返回该远端对象，否则返回Null。 |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // 根据业务实际逻辑，进行相应处理
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject('testObject');
-  testRemoteObject.queryLocalInterface('testObject');
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
-
 ## sendMessageRequest
 
 ```TypeScript
@@ -921,6 +717,210 @@ try {
     });
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+## attachLocalInterface
+
+```TypeScript
+attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
+```
+
+此接口用于把接口描述符和IRemoteBroker对象绑定。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 是 | 将与描述符绑定的IRemoteBroker对象。 |
+| descriptor | string | 是 | 用于与IRemoteBroker对象绑定的描述符。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+    this.attachLocalInterface(this, descriptor);
+  }
+  addDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
+    // 方法逻辑需开发者根据业务需要实现
+    return true;
+  }
+  removeDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
+    // 方法逻辑需开发者根据业务需要实现
+    return true;
+  }
+}
+let testRemoteObject = new TestRemoteObject('testObject');
+```
+
+## getInterfaceDescriptor
+
+```TypeScript
+getInterfaceDescriptor(): string
+```
+
+查询接口描述符。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 返回接口描述符。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject('testObject');
+  let descriptor = testRemoteObject.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+## onRemoteRequest
+
+```TypeScript
+onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
+```
+
+sendRequest请求的响应处理函数，服务端在该函数里处理请求，回复结果。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 对端发送的服务请求码。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 携带客户端调用参数的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 写入结果的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true：操作成功，false：操作失败。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+## queryLocalInterface
+
+```TypeScript
+queryLocalInterface(descriptor: string): IRemoteBroker
+```
+
+查询并获取当前接口描述符对应的远端对象是否已经存在。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| descriptor | string | 是 | 需要查询的接口描述符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 如果接口描述符对应的远端对象存在，则返回该远端对象，否则返回Null。 |
+
+**示例**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject('testObject');
+  testRemoteObject.queryLocalInterface('testObject');
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 

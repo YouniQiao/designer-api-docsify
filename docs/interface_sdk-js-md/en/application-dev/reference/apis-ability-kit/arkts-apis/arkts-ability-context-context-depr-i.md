@@ -410,52 +410,6 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 | --- | --- |
 | Promise&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | The ohos.bundle.ElementName object of the current capability. |
 
-## getExternalCacheDir
-
-```TypeScript
-getExternalCacheDir(callback: AsyncCallback<string>): void
-```
-
-Obtains the absolute path to the application-specific cache directory
-
-**Since:** 6
-
-**Deprecated since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
-
-<a id="getexternalcachedir-1"></a>
-
-## getExternalCacheDir
-
-```TypeScript
-getExternalCacheDir(): Promise<string>
-```
-
-Obtains the absolute path to the application-specific cache directory
-
-**Since:** 6
-
-**Deprecated since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Return the cache directory of the application. |
-
 ## getFilesDir
 
 ```TypeScript
@@ -896,6 +850,126 @@ Sets the display orientation of the current ability.
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
+## verifyPermission
+
+```TypeScript
+verifyPermission(permission: string, options?: PermissionOptions): Promise<number>
+```
+
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| permission | string | Yes | The name of the specified permission. |
+| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | No | Permission Options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | asynchronous callback with `0` if the PID and UID have the permission; callback with `-1` otherwise. |
+
+<a id="verifypermission-1"></a>
+
+## verifyPermission
+
+```TypeScript
+verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void
+```
+
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| permission | string | Yes | The name of the specified permission |
+| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | Yes | Permission Options |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
+
+<a id="verifypermission-2"></a>
+
+## verifyPermission
+
+```TypeScript
+verifyPermission(permission: string, callback: AsyncCallback<number>): void
+```
+
+Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| permission | string | Yes | The name of the specified permission |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
+
+## getExternalCacheDir
+
+```TypeScript
+getExternalCacheDir(callback: AsyncCallback<string>): void
+```
+
+Obtains the absolute path to the application-specific cache directory
+
+**Since:** 6
+
+**Deprecated since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
+
+<a id="getexternalcachedir-1"></a>
+
+## getExternalCacheDir
+
+```TypeScript
+getExternalCacheDir(): Promise<string>
+```
+
+Obtains the absolute path to the application-specific cache directory
+
+**Since:** 6
+
+**Deprecated since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Return the cache directory of the application. |
+
 ## setShowOnLockScreen
 
 ```TypeScript
@@ -1005,77 +1079,3 @@ Sets whether to wake up the screen when this ability is restored.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
-
-## verifyPermission
-
-```TypeScript
-verifyPermission(permission: string, options?: PermissionOptions): Promise<number>
-```
-
-Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| permission | string | Yes | The name of the specified permission. |
-| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | No | Permission Options. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | asynchronous callback with `0` if the PID and UID have the permission; callback with `-1` otherwise. |
-
-<a id="verifypermission-1"></a>
-
-## verifyPermission
-
-```TypeScript
-verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void
-```
-
-Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| permission | string | Yes | The name of the specified permission |
-| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | Yes | Permission Options |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
-
-<a id="verifypermission-2"></a>
-
-## verifyPermission
-
-```TypeScript
-verifyPermission(permission: string, callback: AsyncCallback<number>): void
-```
-
-Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| permission | string | Yes | The name of the specified permission |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |

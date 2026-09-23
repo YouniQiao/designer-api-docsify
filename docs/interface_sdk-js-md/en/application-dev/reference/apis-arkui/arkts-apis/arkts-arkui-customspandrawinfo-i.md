@@ -16,9 +16,9 @@ Defines the CustomSpanDrawInfo interface.
 baseline: number
 ```
 
-Baseline offset of the line where the custom span is located.
+Baseline offset of the line where the custom drawing span is located.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -36,9 +36,9 @@ Unit: px
 lineBottom: number
 ```
 
-Bottom margin of the custom span relative to the **Text** component.
+Bottom margin of the custom drawing span relative to the **Text** component.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -56,9 +56,9 @@ Unit: px
 lineTop: number
 ```
 
-Top margin of the custom span relative to the **Text** component.
+Top margin of the custom drawing span relative to the **Text** component.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -76,9 +76,9 @@ Unit: px
 x: number
 ```
 
-Offset of the custom span relative to the mounted component.
+Offset of the custom drawing span relative to the mounted component.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

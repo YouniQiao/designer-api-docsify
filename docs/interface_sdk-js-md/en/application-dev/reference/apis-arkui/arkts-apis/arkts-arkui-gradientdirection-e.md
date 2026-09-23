@@ -4,7 +4,7 @@
 declare enum GradientDirection
 ```
 
-GradientDirection enumeration description
+Sets the direction of the linear gradient.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ From top to bottom.
 LeftTop = 4
 ```
 
-From upper left to lower right.
+From top left to bottom right.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ From upper left to lower right.
 LeftBottom = 5
 ```
 
-From lower left to upper right.
+From bottom left to top right.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ From lower left to upper right.
 RightTop = 6
 ```
 
-From upper right to lower left.
+From top right to bottom left.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ From upper right to lower left.
 RightBottom = 7
 ```
 
-From lower right to upper left.
+From bottom right to top left.
 
 **Since:** 7
 

@@ -4,9 +4,7 @@
 export interface ScrollEventInfo
 ```
 
-ScrollEvent info.
-
-@interface ScrollEventInfo
+Provides the scroll event information.
 
 **Since:** 12
 
@@ -24,7 +22,7 @@ import { uiObserver } from '@kit.ArkUI';
 axis?: Axis
 ```
 
-Scroll axis.
+Scroll direction of the scrollable component.
 
 **Type:** [Axis](arkts-arkui-axis-e.md)
 
@@ -42,7 +40,7 @@ Scroll axis.
 id: string
 ```
 
-Scroll id.
+ID of the scrollable component.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ Scroll id.
 offset: number
 ```
 
-Changed ScrollEvent offset.
+Current offset of the scrollable component.
 
 **Type:** number
 
@@ -78,7 +76,7 @@ Changed ScrollEvent offset.
 scrollEvent: ScrollEventType
 ```
 
-Changed ScrollEvent type.
+Enumerates the scroll event types.
 
 **Type:** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
@@ -96,7 +94,7 @@ Changed ScrollEvent type.
 uniqueId: number
 ```
 
-The uniqueId of the scrollable component.
+Unique ID of the scrollable component.
 
 **Type:** number
 

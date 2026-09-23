@@ -38,6 +38,12 @@ import { a2dp } from '@kit.ConnectivityKit';
 | [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md) | Manager a2dp source profile. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md) | Base interface of profile. |
+
 ### Enums
 
 | Name | Description |
@@ -49,9 +55,3 @@ import { a2dp } from '@kit.ConnectivityKit';
 | [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md) | Describes the codec sample rate. |
 | [CodecType](arkts-connectivity-a2dp-codectype-e.md) | Describes the codec type. |
 | [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | The enum of a2dp playing state. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md) | Base interface of profile. |

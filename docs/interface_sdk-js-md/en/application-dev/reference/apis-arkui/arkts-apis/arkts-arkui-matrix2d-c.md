@@ -117,71 +117,6 @@ Obtains the inverse of the current matrix. It is commonly used to undo previous 
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-c.md) | Inverse matrix result, which can be used for reverse transformation or to undo previous transformation operations. |
 
-## multiply
-
-```TypeScript
-multiply(other?: Matrix2D): Matrix2D
-```
-
-Multiplies the current matrix by the target matrix. This API is an empty API and has no actual effect.
-
-This API is deprecated since API version 10 and has no actual drawing effect, so no example is provided.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix.<br>Invalid values **undefined** and **null** are treated as invalid inputs. <br>Default value: **null**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | This API is an empty implementation, and its return value has no practical meaning. |
-
-## rotate
-
-```TypeScript
-rotate(rx?: number, ry?: number): Matrix2D
-```
-
-Performs a rotation operation on the current matrix. This API is an empty API and has no actual effect.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [rotate](#rotate)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rx | number | No | Horizontal coordinate of the rotation point. The value range is unlimited.<br>Default unit: vp <br>The abnormal values **undefined** and **null** are processed as invalid values, and **NaN** and **Infinity** cause **Matrix2D** exceptions. <br>Default value: **0** |
-| ry | number | No | Vertical coordinate of the rotation point. The value range is unlimited.<br>Default unit: vp <br>The abnormal values **undefined** and **null** are processed as invalid values, and **NaN** and **Infinity** cause **Matrix2D** exceptions. <br>Default value: **0** |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | Result matrix object after rotation, which can be used to perform rotation transformation on graphics. |
-
 <a id="rotate-1"></a>
 
 ## rotate
@@ -215,6 +150,39 @@ Performs a left-multiply rotation operation on the current matrix, centered at t
 | Type | Description |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-c.md) | Resulting matrix object after rotation, which can be used to perform rotation transformation on graphics. |
+
+## rotate
+
+```TypeScript
+rotate(rx?: number, ry?: number): Matrix2D
+```
+
+Performs a rotation operation on the current matrix. This API is an empty API and has no actual effect.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [rotate](#rotate)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is unlimited.<br>Default unit: vp <br>The abnormal values **undefined** and **null** are processed as invalid values, and **NaN** and **Infinity** cause **Matrix2D** exceptions. <br>Default value: **0** |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is unlimited.<br>Default unit: vp <br>The abnormal values **undefined** and **null** are processed as invalid values, and **NaN** and **Infinity** cause **Matrix2D** exceptions. <br>Default value: **0** |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Result matrix object after rotation, which can be used to perform rotation transformation on graphics. |
 
 ## scale
 
@@ -277,6 +245,38 @@ Performs a left-multiply translation operation on the current matrix. It is comm
 | Type | Description |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-c.md) | Result matrix object after translation, which can be used to perform translation transformation on graphics. |
+
+## multiply
+
+```TypeScript
+multiply(other?: Matrix2D): Matrix2D
+```
+
+Multiplies the current matrix by the target matrix. This API is an empty API and has no actual effect.
+
+This API is deprecated since API version 10 and has no actual drawing effect, so no example is provided.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix.<br>Invalid values **undefined** and **null** are treated as invalid inputs. <br>Default value: **null**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | This API is an empty implementation, and its return value has no practical meaning. |
 
 ## rotateX
 

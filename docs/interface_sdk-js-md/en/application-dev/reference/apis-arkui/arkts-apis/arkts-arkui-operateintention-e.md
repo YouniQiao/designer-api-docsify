@@ -4,7 +4,7 @@
 declare enum OperateIntention
 ```
 
-Define the smart gesture's operation intention.
+Enumerates the original operation intentions of smart gestures.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Define the smart gesture's operation intention.
 TAP = 0
 ```
 
-Tap intention.
+Tap gesture.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Tap intention.
 SLIDE_FORWARD = 1
 ```
 
-Slide forward intention.
+Slide gesture.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Slide forward intention.
 BACK_PRESS = 2
 ```
 
-Back press intention.
+Wrist flip gesture.
 
 **Since:** 26.0.0
 

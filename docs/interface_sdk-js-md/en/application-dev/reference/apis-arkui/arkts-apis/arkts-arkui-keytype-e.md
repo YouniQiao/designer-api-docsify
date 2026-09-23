@@ -48,7 +48,7 @@ The key is released.
 CANCEL = 3
 ```
 
-The key event is canceled.
+The key event is canceled. In the [global monitoring of basic input events](../../../reference/apis-arkui/arkui-ts/ts-inputeventmonitor.md), blocking the **Up** event propagation automatically dispatches a **CANCEL** event.
 
 **Since:** 26.0.0
 

@@ -334,42 +334,6 @@ const uriInstance = uri.URI.createFromParts("mailto", "no body", "top");
 console.info(uriInstance.toString()); // mailto:no%20body#top
 ```
 
-## equals
-
-```TypeScript
-equals(other: URI): boolean
-```
-
-Check whether this URI is equivalent to other URI objects.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [equalsTo](#equalsto)
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | other other URI object to be compared |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-uriInstance.equals(uriInstance1); // true
-```
-
 ## equalsTo
 
 ```TypeScript
@@ -658,6 +622,42 @@ Converts this URI into an encoded string.
 ```TypeScript
 const result = new uri.URI('https://username:password@host:8080/directory/file?ab=pppppp#qwer da');
 let result1 = result.toString(); // https://username:password@host:8080/directory/file?ab=pppppp#qwer%20da
+```
+
+## equals
+
+```TypeScript
+equals(other: URI): boolean
+```
+
+Check whether this URI is equivalent to other URI objects.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [equalsTo](#equalsto)
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | other other URI object to be compared |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
+
+**Examples**
+
+```TypeScript
+const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
+uriInstance.equals(uriInstance1); // true
 ```
 
 ## authority

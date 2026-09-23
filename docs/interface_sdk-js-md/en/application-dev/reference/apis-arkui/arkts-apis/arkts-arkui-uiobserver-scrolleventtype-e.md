@@ -4,9 +4,7 @@
 export enum ScrollEventType
 ```
 
-ScrollEvent type.
-
-@enum { number }
+Enumerates the scroll event types.
 
 **Since:** 12
 
@@ -18,7 +16,7 @@ ScrollEvent type.
 SCROLL_START = 0
 ```
 
-When the ScrollEvent starts.
+The scroll event starts.
 
 **Since:** 12
 
@@ -34,7 +32,7 @@ When the ScrollEvent starts.
 SCROLL_STOP = 1
 ```
 
-When the ScrollEvent stops.
+The scroll event ends.
 
 **Since:** 12
 

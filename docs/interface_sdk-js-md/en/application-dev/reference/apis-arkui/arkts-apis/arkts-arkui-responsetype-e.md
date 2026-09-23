@@ -4,7 +4,7 @@
 declare enum ResponseType
 ```
 
-How menu display is triggered.
+Sets how menu display is triggered.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ How menu display is triggered.
 RightClick
 ```
 
-Shows the shortcut menu by right-clicking the text.
+The menu is displayed when the component is right-clicked.
 
 **Since:** 8
 

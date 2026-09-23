@@ -4,7 +4,7 @@
 declare enum EnterKeyType
 ```
 
-Type of the Enter key.
+Type of the Enter key on the input method.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Type of the Enter key.
 Go = 2
 ```
 
-The Enter key is labeled "Go."
+Displayed as the start style.
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ The Enter key is labeled "Go."
 Search = 3
 ```
 
-The Enter key is labeled "Search."
+Displayed as the search style.
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ The Enter key is labeled "Search."
 Send = 4
 ```
 
-The Enter key is labeled "Send."
+Displayed as the send style.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ The Enter key is labeled "Send."
 Next = 5
 ```
 
-The Enter key is labeled "Next."
+Displayed as the next step style.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ The Enter key is labeled "Next."
 Done = 6
 ```
 
-The Enter key is labeled "Done."
+Displayed as the done style.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ The Enter key is labeled "Done."
 PREVIOUS = 7
 ```
 
-The Enter key is labeled "Previous."
+Displayed as the previous step style.
 
 **Since:** 11
 
@@ -102,7 +102,7 @@ The Enter key is labeled "Previous."
 NEW_LINE = 8
 ```
 
-The Enter key is labeled "New Line."
+Displayed as the new line style.
 
 **Since:** 11
 

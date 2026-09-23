@@ -4,7 +4,7 @@
 declare enum BadgePosition
 ```
 
-Enumerates the display positions of a badge.
+Enumerates the badge display positions.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the display positions of a badge.
 RightTop
 ```
 
-The badge is displayed in the upper right corner of the parent component.
+The badge is displayed in the upper right corner.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ The badge is displayed in the upper right corner of the parent component.
 Right
 ```
 
-The badge is vertically centered on the right of the parent component.
+The badge is displayed vertically centered on the right.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ The badge is vertically centered on the right of the parent component.
 Left
 ```
 
-The badge is vertically centered on the left of the parent component.
+The badge is displayed vertically centered on the left.
 
 **Since:** 7
 

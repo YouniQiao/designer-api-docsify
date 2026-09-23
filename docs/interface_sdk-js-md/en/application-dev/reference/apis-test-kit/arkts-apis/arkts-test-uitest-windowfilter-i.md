@@ -37,28 +37,6 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **Test API:** This API is used only in automated test scripts.
 
-## actived
-
-```TypeScript
-actived?: boolean
-```
-
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
-
-This API is supported since API version 9 and deprecated since API version 11. You are advised to use [active](#active) instead.
-
-**Type:** boolean
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** active
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## bundleName
 
 ```TypeScript
@@ -126,6 +104,28 @@ Window title, which is used to filter the target window in multi-window scenario
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## actived
+
+```TypeScript
+actived?: boolean
+```
+
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
+
+This API is supported since API version 9 and deprecated since API version 11. You are advised to use [active](#active) instead.
+
+**Type:** boolean
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** active
 
 **System capability:** SystemCapability.Test.UiTest
 

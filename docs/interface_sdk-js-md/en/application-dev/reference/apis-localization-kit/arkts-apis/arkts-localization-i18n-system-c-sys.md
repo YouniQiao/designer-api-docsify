@@ -678,52 +678,6 @@ try {
 }
 ```
 
-## setSystemLocale
-
-```TypeScript
-static setSystemLocale(locale: string): void
-```
-
-Sets the system locale.
-
-**Since:** 9
-
-**Deprecated since:** 20
-
-**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
-
-**System capability:** SystemCapability.Global.I18n
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  i18n.System.setSystemLocale('zh-CN'); // Set the system locale to zh-CN.
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.setSystemLocale failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## setSystemMeasurement
 
 ```TypeScript
@@ -1031,5 +985,51 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setUsingLocalDigit failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## setSystemLocale
+
+```TypeScript
+static setSystemLocale(locale: string): void
+```
+
+Sets the system locale.
+
+**Since:** 9
+
+**Deprecated since:** 20
+
+**Required permissions:** ohos.permission.UPDATE_CONFIGURATION
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemLocale('zh-CN'); // Set the system locale to zh-CN.
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemLocale failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```

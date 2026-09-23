@@ -204,7 +204,7 @@ const deviceType: string
 
 Device type. For details, see [deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes).
 
-Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
+Example: <!--RP1-->wearable<!--RP1End-->
 
 **Type:** string
 
@@ -244,9 +244,9 @@ Example: 2502EM400567
 const displayVersion: string
 ```
 
-Product version.&lt;!--RP14--&gt;&lt;!--RP14End--&gt;
+Product version.<!--RP14--><!--RP14End-->
 
-Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
+Example: <!--RP8-->XXX X.X.X.X<!--RP8End-->
 
 **Type:** string
 
@@ -260,11 +260,11 @@ Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 const distributionOSApiName: string
 ```
 
-Distribution OS API name.<!--Del--> It is defined by the issuer.<!--DelEnd-->.&lt;!--RP16--&gt; **NOTE:** 
+Distribution OS API name.<!--Del--> It is defined by the issuer.<!--DelEnd-->.<!--RP16--> **NOTE:** 
 
 It is not recommended that this field be used to determine the version number.
 
-Example: 5.0.1&lt;!--RP16End--&gt;
+Example: 5.0.1<!--RP16End-->
 
 **Type:** string
 
@@ -278,7 +278,7 @@ Example: 5.0.1&lt;!--RP16End--&gt;
 const distributionOSApiVersion: number
 ```
 
-Distribution OS API version.<!--Del--> It is defined by the issuer.<!--DelEnd-->.&lt;!--RP15--&gt;&lt;!--RP15End--&gt;
+Distribution OS API version.<!--Del--> It is defined by the issuer.<!--DelEnd-->.<!--RP15--><!--RP15End-->
 
 Example: 50001
 
@@ -326,7 +326,7 @@ Example: Release
 const distributionOSVersion: string
 ```
 
-Distribution OS version<!--Del-->, which is defined by the issuer<!--DelEnd-->.&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
+Distribution OS version<!--Del-->, which is defined by the issuer<!--DelEnd-->.<!--RP11--><!--RP11End-->
 
 Example: 5.0.0
 
@@ -376,33 +376,11 @@ const hardwareModel: string
 
 Hardware model.
 
-Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
+Example: <!--RP6-->TASA00CVN1<!--RP6End-->
 
 **Type:** string
 
 **Since:** 6
-
-**System capability:** SystemCapability.Startup.SystemInfo
-
-## hardwareProfile
-
-```TypeScript
-const hardwareProfile: string
-```
-
-Hardware profile.
-
-**NOTE:** 
-
-This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead.
-
-Example: default
-
-**Type:** string
-
-**Since:** 6
-
-**Deprecated since:** 9
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -460,7 +438,7 @@ const marketName: string
 
 Marketing name.
 
-Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
+Example: <!--RP2-->Mate XX<!--RP2End-->
 
 **Type:** string
 
@@ -512,9 +490,9 @@ Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 const osFullName: string
 ```
 
-System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
+System version. The version number is in the format of **<!--RP12-->OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. <!--RP12End-->To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
 
-Example: &lt;!--RP10--&gt;OpenHarmony-5.0.0.1&lt;!--RP10End--&gt;
+Example: <!--RP10-->OpenHarmony-5.0.0.1<!--RP10End-->
 
 **Type:** string
 
@@ -538,7 +516,7 @@ and may require tolerance of instability.
 of instability.  
 - **Release**: Official release open to all developers. This release promises that all APIs are stable.
 
-Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
+Example: <!--RP9-->Canary/Beta/Release<!--RP9End-->
 
 **Type:** string
 
@@ -572,7 +550,7 @@ const productModel: string
 
 Product model.
 
-Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
+Example: <!--RP4-->TAS-AL00<!--RP4End-->
 
 **Type:** string
 
@@ -608,7 +586,7 @@ const productSeries: string
 
 Product series.
 
-Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
+Example: <!--RP3-->TAS<!--RP3End-->
 
 **Type:** string
 
@@ -682,7 +660,7 @@ const securityPatchTag: string
 
 Security patch tag.
 
-Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
+Example: <!--RP7-->2021/01/01<!--RP7End-->
 
 **Type:** string
 
@@ -738,7 +716,7 @@ const softwareModel: string
 
 Software model.
 
-Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
+Example: <!--RP5-->TAS-AL00<!--RP5End-->
 
 **Type:** string
 
@@ -781,5 +759,27 @@ Version ID, which is a concatenation of **deviceType**, **manufacture**, **brand
 **Type:** string
 
 **Since:** 6
+
+**System capability:** SystemCapability.Startup.SystemInfo
+
+## hardwareProfile
+
+```TypeScript
+const hardwareProfile: string
+```
+
+Hardware profile.
+
+**NOTE:** 
+
+This API is supported since API version 6 and deprecated since API version 9. You are advised to use [SystemCapability](../../../reference/syscap.md) instead.
+
+Example: default
+
+**Type:** string
+
+**Since:** 6
+
+**Deprecated since:** 9
 
 **System capability:** SystemCapability.Startup.SystemInfo

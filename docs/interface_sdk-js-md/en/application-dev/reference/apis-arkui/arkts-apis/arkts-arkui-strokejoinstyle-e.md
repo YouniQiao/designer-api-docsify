@@ -4,7 +4,7 @@
 declare enum StrokeJoinStyle
 ```
 
-An enumeration that defines the line corner style, i.e., the style of the brush when drawing a polyline at the corners of the line segments.
+Defines the style of line corners, that is, the brush style at the corners of line segments when drawing polylines.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ An enumeration that defines the line corner style, i.e., the style of the brush 
 MITER_JOIN = 0
 ```
 
-The corner type is an acute angle.
+Sharp corner.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ The corner type is an acute angle.
 ROUND_JOIN = 1
 ```
 
-The corner type is round.
+Rounded corner.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ The corner type is round.
 BEVEL_JOIN = 2
 ```
 
-The corner type is flat.
+Beveled corner.
 
 **Since:** 26.0.0
 

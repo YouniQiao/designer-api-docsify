@@ -4,7 +4,7 @@
 declare class BounceSymbolEffect extends SymbolEffect
 ```
 
-Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
+Inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-comp-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope, direction?: EffectDirection)
 ```
 
-A constructor used to create a **ScaleSymbolEffect** instance, which comes with a scaling animation effect.
+A constructor used to create a **BounceSymbolEffect** instance, which comes with a bounce animation effect.
 
 **Since:** 12
 
@@ -34,8 +34,8 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
-| direction | [EffectDirection](arkts-arkui-symbolglyph-comp-effectdirection-e.md) | No | Effect direction.<br>Default value: **EffectDirection.DOWN** |
+| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.<br>Default value: EffectScope.LAYER |
+| direction | [EffectDirection](arkts-arkui-symbolglyph-comp-effectdirection-e.md) | No | Animation direction. For details about the specific enumeration values and descriptions, see EffectDirection Enumeration Description.<br>Default value: EffectDirection.DOWN |
 
 ## direction
 
@@ -43,9 +43,9 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 direction?: EffectDirection
 ```
 
-Effect direction.
+Animation direction. For details about the specific enumeration values and descriptions, see EffectDirection Enumeration Description.
 
-Default value: **EffectDirection.DOWN**
+Default value: EffectDirection.DOWN
 
 **Type:** [EffectDirection](arkts-arkui-symbolglyph-comp-effectdirection-e.md)
 
@@ -65,9 +65,9 @@ Default value: **EffectDirection.DOWN**
 scope?: EffectScope
 ```
 
-Effect scope.
+Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.
 
-Default value: **EffectScope.LAYER**
+Default value: EffectScope.LAYER
 
 **Type:** [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md)
 

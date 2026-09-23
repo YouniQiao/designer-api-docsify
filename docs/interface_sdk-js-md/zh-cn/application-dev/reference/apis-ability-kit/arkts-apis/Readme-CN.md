@@ -906,7 +906,8 @@
   - [unlockMission(系统接口)](arkts-ability-missionmanager-unlockmission-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unregisterMissionListener(系统接口)](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
-- [@ohos.application.uriPermissionManager(URI权限管理)](arkts-ability-application-uripermissionmanager.md)
+<!--Del-->
+- [@ohos.application.uriPermissionManager(URI权限管理)](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->
   <!--Del-->
   - [grantUriPermission(系统接口)](arkts-ability-uripermissionmanager-granturipermission-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1483,7 +1484,8 @@
   - [MissionParameter(系统接口)](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ContinueState(系统接口)](arkts-ability-distributedmissionmanager-continuestate-e-sys.md)<!--DelEnd-->
-- [@ohos.privacyManager(Privacy Management)](arkts-ability-privacymanager.md)
+<!--Del-->
+- [@ohos.privacyManager(Privacy Management)](arkts-ability-privacymanager.md)<!--DelEnd-->
   <!--Del-->
   - [addPermissionUsedRecord(系统接口)](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1667,7 +1669,8 @@
   - [AutoFillTriggerType(自动填充拉起类型)](arkts-ability-autofilltriggertype.md)<!--DelEnd-->
     <!--Del-->
     - [AutoFillTriggerType(系统接口)](arkts-ability-autofilltriggertype-e-sys.md)<!--DelEnd-->
-  - [AutoFillType(自动填充类型)](arkts-ability-autofilltype.md)
+  <!--Del-->
+  - [AutoFillType(自动填充类型)](arkts-ability-autofilltype.md)<!--DelEnd-->
     <!--Del-->
     - [AutoFillType(系统接口)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
   <!--Del-->

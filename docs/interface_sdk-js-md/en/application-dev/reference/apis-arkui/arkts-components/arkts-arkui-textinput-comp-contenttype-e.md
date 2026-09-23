@@ -4,7 +4,7 @@
 declare enum ContentType
 ```
 
-Enumerates the content types for autofill.
+Enumerates autofill types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the content types for autofill.
 USER_NAME = 0
 ```
 
-Username. Password Vault, when enabled, can automatically save and fill in usernames.
+[User name] When the password vault is enabled, supports auto-save and auto-fill of the user name.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Username. Password Vault, when enabled, can automatically save and fill in usern
 PASSWORD = 1
 ```
 
-Password. Password Vault, when enabled, can automatically save and fill in passwords.
+[Password] When the password vault is enabled, supports auto-save and auto-fill of the password.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Password. Password Vault, when enabled, can automatically save and fill in passw
 NEW_PASSWORD = 2
 ```
 
-New password. Password Vault, when enabled, can automatically generate a new password.
+[New password] When the password vault is enabled, supports automatic generation of a new password.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ New password. Password Vault, when enabled, can automatically generate a new pas
 FULL_STREET_ADDRESS = 3
 ```
 
-Full street address. The scenario-based autofill feature, when enabled, can automatically save and fill in full street addresses.
+[Detailed address] When contextual auto-fill is enabled, supports auto-save and auto-fill of the detailed address.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ Full street address. The scenario-based autofill feature, when enabled, can auto
 HOUSE_NUMBER = 4
 ```
 
-House number. The scenario-based autofill feature, when enabled, can automatically save and fill in house numbers.
+[House number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the house number.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ House number. The scenario-based autofill feature, when enabled, can automatical
 DISTRICT_ADDRESS = 5
 ```
 
-District and county. The scenario-based autofill feature, when enabled, can automatically save and fill in districts and counties.
+[District/county] When contextual auto-fill is enabled, supports auto-save and auto-fill of the district/county.
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ District and county. The scenario-based autofill feature, when enabled, can auto
 CITY_ADDRESS = 6
 ```
 
-City. The scenario-based autofill feature, when enabled, can automatically save and fill in cities.
+[City] When contextual auto-fill is enabled, supports auto-save and auto-fill of the city.
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ City. The scenario-based autofill feature, when enabled, can automatically save 
 PROVINCE_ADDRESS = 7
 ```
 
-Province. The scenario-based autofill feature, when enabled, can automatically save and fill in provinces.
+[Province] When contextual auto-fill is enabled, supports auto-save and auto-fill of the province.
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ Province. The scenario-based autofill feature, when enabled, can automatically s
 COUNTRY_ADDRESS = 8
 ```
 
-Country. The scenario-based autofill feature, when enabled, can automatically save and fill in countries.
+[Country] When contextual auto-fill is enabled, supports auto-save and auto-fill of the country.
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ Country. The scenario-based autofill feature, when enabled, can automatically sa
 PERSON_FULL_NAME = 9
 ```
 
-Full name. The scenario-based autofill feature, when enabled, can automatically save and fill in full names.
+[Full name] When contextual auto-fill is enabled, supports auto-save and auto-fill of the full name.
 
 **Since:** 12
 
@@ -176,7 +176,7 @@ Full name. The scenario-based autofill feature, when enabled, can automatically 
 PERSON_LAST_NAME = 10
 ```
 
-Last name. The scenario-based autofill feature, when enabled, can automatically save and fill in last names.
+[Last name] When contextual auto-fill is enabled, supports auto-save and auto-fill of the last name.
 
 **Since:** 12
 
@@ -192,7 +192,7 @@ Last name. The scenario-based autofill feature, when enabled, can automatically 
 PERSON_FIRST_NAME = 11
 ```
 
-First name. The scenario-based autofill feature, when enabled, can automatically save and fill in first names.
+[First name] When contextual auto-fill is enabled, supports auto-save and auto-fill of the first name.
 
 **Since:** 12
 
@@ -208,7 +208,7 @@ First name. The scenario-based autofill feature, when enabled, can automatically
 PHONE_NUMBER = 12
 ```
 
-Phone number. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers.
+[Phone number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the phone number.
 
 **Since:** 12
 
@@ -224,7 +224,7 @@ Phone number. The scenario-based autofill feature, when enabled, can automatical
 PHONE_COUNTRY_CODE = 13
 ```
 
-Country code. The scenario-based autofill feature, when enabled, can automatically save and fill in country codes.
+[Country code] When contextual auto-fill is enabled, supports auto-save and auto-fill of the country code.
 
 **Since:** 12
 
@@ -240,7 +240,7 @@ Country code. The scenario-based autofill feature, when enabled, can automatical
 FULL_PHONE_NUMBER = 14
 ```
 
-Phone number with country code. The scenario-based autofill feature, when enabled, can automatically save and fill in phone numbers with country codes.
+[Phone number with country code] When contextual auto-fill is enabled, supports auto-save and auto-fill of the phone number with country code.
 
 **Since:** 12
 
@@ -256,7 +256,7 @@ Phone number with country code. The scenario-based autofill feature, when enable
 EMAIL_ADDRESS = 15
 ```
 
-Email address. The scenario-based autofill feature, when enabled, can automatically save and fill in email addresses.
+[Email address] When contextual auto-fill is enabled, supports auto-save and auto-fill of the email address.
 
 **Since:** 12
 
@@ -272,7 +272,7 @@ Email address. The scenario-based autofill feature, when enabled, can automatica
 BANK_CARD_NUMBER = 16
 ```
 
-Bank card number. The scenario-based autofill feature, when enabled, can automatically save and fill in bank card numbers.
+[Bank card number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the bank card number.
 
 **Since:** 12
 
@@ -288,7 +288,7 @@ Bank card number. The scenario-based autofill feature, when enabled, can automat
 ID_CARD_NUMBER = 17
 ```
 
-ID card number. The scenario-based autofill feature, when enabled, can automatically save and fill in ID card numbers.
+[ID card number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the ID card number.
 
 **Since:** 12
 
@@ -304,7 +304,7 @@ ID card number. The scenario-based autofill feature, when enabled, can automatic
 NICKNAME = 23
 ```
 
-Nickname. The scenario-based autofill feature, when enabled, can automatically save and fill in nicknames.
+[Nickname] When contextual auto-fill is enabled, supports auto-save and auto-fill of the nickname.
 
 **Since:** 12
 
@@ -320,7 +320,7 @@ Nickname. The scenario-based autofill feature, when enabled, can automatically s
 DETAIL_INFO_WITHOUT_STREET = 24
 ```
 
-Address information without street address. The scenario-based autofill feature, when enabled, can automatically save and fill in address information without street addresses.
+[Address without street] When contextual auto-fill is enabled, supports auto-save and auto-fill of the address without street.
 
 **Since:** 12
 
@@ -336,7 +336,7 @@ Address information without street address. The scenario-based autofill feature,
 FORMAT_ADDRESS = 25
 ```
 
-Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard addresses.
+[Standard address] When contextual auto-fill is enabled, supports auto-save and auto-fill of the standard address.
 
 **Since:** 12
 
@@ -352,7 +352,7 @@ Standard address. The scenario-based autofill feature, when enabled, can automat
 PASSPORT_NUMBER = 26
 ```
 
-Passport number. The scenario-based autofill feature, when enabled, can automatically save and fill in passport numbers.
+[Passport number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the passport number.
 
 **Since:** 18
 
@@ -368,7 +368,7 @@ Passport number. The scenario-based autofill feature, when enabled, can automati
 VALIDITY = 27
 ```
 
-Passport validity period. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validity periods.
+[Passport validity] When contextual auto-fill is enabled, supports auto-save and auto-fill of the passport validity.
 
 **Since:** 18
 
@@ -384,7 +384,7 @@ Passport validity period. The scenario-based autofill feature, when enabled, can
 ISSUE_AT = 28
 ```
 
-Passport place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill in the place of issue for passports.
+[Passport issuing place] When contextual auto-fill is enabled, supports auto-save and auto-fill of the passport issuing place.
 
 **Since:** 18
 
@@ -400,7 +400,7 @@ Passport place of issue. The scenario-based autofill feature, when enabled, can 
 ORGANIZATION = 29
 ```
 
-Invoice title. The scenario-based autofill feature, when enabled, can automatically save and fill in invoice titles.
+[Invoice title name] When contextual auto-fill is enabled, supports auto-save and auto-fill of the invoice title name.
 
 **Since:** 18
 
@@ -416,7 +416,7 @@ Invoice title. The scenario-based autofill feature, when enabled, can automatica
 TAX_ID = 30
 ```
 
-Tax ID. The scenario-based autofill feature, when enabled, can automatically save and fill in tax IDs.
+[Tax ID] When contextual auto-fill is enabled, supports auto-save and auto-fill of the tax ID.
 
 **Since:** 18
 
@@ -432,7 +432,7 @@ Tax ID. The scenario-based autofill feature, when enabled, can automatically sav
 ADDRESS_CITY_AND_STATE = 31
 ```
 
-Location. The scenario-based autofill feature, when enabled, can automatically save and fill in locations.
+[Region] When contextual auto-fill is enabled, supports auto-save and auto-fill of the region.
 
 **Since:** 18
 
@@ -448,7 +448,7 @@ Location. The scenario-based autofill feature, when enabled, can automatically s
 FLIGHT_NUMBER = 32
 ```
 
-Flight number. Currently not supported for automatic saving and auto-filling.
+[Flight number] Auto-save and auto-fill are not supported yet.
 
 **Since:** 18
 
@@ -464,7 +464,7 @@ Flight number. Currently not supported for automatic saving and auto-filling.
 LICENSE_NUMBER = 33
 ```
 
-Driver's license number. Currently not supported for automatic saving and auto-filling.
+[Driver's license number] Auto-save and auto-fill are not supported yet.
 
 **Since:** 18
 
@@ -480,7 +480,7 @@ Driver's license number. Currently not supported for automatic saving and auto-f
 LICENSE_FILE_NUMBER = 34
 ```
 
-Driver's license file number. Currently not supported for automatic saving and auto-filling.
+[Driver's license file number] Auto-save and auto-fill are not supported yet.
 
 **Since:** 18
 
@@ -496,7 +496,7 @@ Driver's license file number. Currently not supported for automatic saving and a
 LICENSE_PLATE = 35
 ```
 
-License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers.
+[License plate number] When contextual auto-fill is enabled, supports auto-save and auto-fill of the license plate number.
 
 **Since:** 18
 
@@ -512,7 +512,7 @@ License plate number. The scenario-based autofill feature, when enabled, can aut
 ENGINE_NUMBER = 36
 ```
 
-Vehicle registration engine number. Currently not supported for automatic saving and auto-filling.
+[Engine number] Auto-save and auto-fill are not supported yet.
 
 **Since:** 18
 
@@ -528,7 +528,7 @@ Vehicle registration engine number. Currently not supported for automatic saving
 LICENSE_CHASSIS_NUMBER = 37
 ```
 
-Chassis number. Currently not supported for automatic saving and auto-filling.
+[Chassis number] Auto-save and auto-fill are not supported yet.
 
 **Since:** 18
 

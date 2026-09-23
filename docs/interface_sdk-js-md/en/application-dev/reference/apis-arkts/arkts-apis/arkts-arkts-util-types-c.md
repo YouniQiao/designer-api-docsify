@@ -284,88 +284,6 @@ console.info("result = " + result);
 // Output: result = true
 ```
 
-## isBooleanObject
-
-```TypeScript
-isBooleanObject(value: Object): boolean
-```
-
-Checks whether the value is of the Boolean type.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
-
-**Since:** 8
-
-**Deprecated since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is of the Boolean type; otherwise, **false** is returned. |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBooleanObject(new Boolean(true));
-console.info("result = " + result);
-// Output: result = true
-```
-
-## isBoxedPrimitive
-
-```TypeScript
-isBoxedPrimitive(value: Object): boolean
-```
-
-Checks whether the value is of the Boolean, Number, String, or Symbol type.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
-
-**Since:** 8
-
-**Deprecated since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is of the Boolean, Number, String, or Symbol type; otherwise, **false** is returned. |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBoxedPrimitive(new Boolean(false));
-console.info("result = " + result);
-// Output: result = true
-```
-
 ## isDataView
 
 ```TypeScript
@@ -920,47 +838,6 @@ console.info("result = " + result);
 // Output: result = true
 ```
 
-## isNumberObject
-
-```TypeScript
-isNumberObject(value: Object): boolean
-```
-
-Checks whether the value is of the Number type.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
-
-**Since:** 8
-
-**Deprecated since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is of the Number type; otherwise, **false** is returned. |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isNumberObject(new Number(0));
-console.info("result = " + result);
-// Output: result = true
-```
-
 ## isPromise
 
 ```TypeScript
@@ -1173,95 +1050,6 @@ Checks whether the value is of the SharedArrayBuffer type.
 ```TypeScript
 let type = new util.types();
 let result = type.isSharedArrayBuffer(new SharedArrayBuffer(0));
-console.info("result = " + result);
-// Output: result = true
-```
-
-## isStringObject
-
-```TypeScript
-isStringObject(value: Object): boolean
-```
-
-Checks whether the value is a string object.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
-
-**Since:** 8
-
-**Deprecated since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is a string object; otherwise, **false** is returned. |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isStringObject(new String('foo'));
-console.info("result = " + result);
-// Output: result = true
-```
-
-## isSymbolObject
-
-```TypeScript
-isSymbolObject(value: Object): boolean
-```
-
-Checks whether the value is a symbol object.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
-
-**Since:** 8
-
-**Deprecated since:** 14
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | Object | Yes | Object to check. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result. The value **true** is returned if the value is a symbol object; otherwise, **false** is returned. |
-
-**Examples**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export const symbols = Symbol('foo');
-```
-
-```TypeScript
-import { symbols } from './test'
-
-let type = new util.types();
-let result = type.isSymbolObject(Object(symbols));
 console.info("result = " + result);
 // Output: result = true
 ```
@@ -1508,6 +1296,218 @@ Checks whether the value is of the WeakSet type.
 ```TypeScript
 let type = new util.types();
 let result = type.isWeakSet(new WeakSet());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isBooleanObject
+
+```TypeScript
+isBooleanObject(value: Object): boolean
+```
+
+Checks whether the value is of the Boolean type.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Boolean type; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBooleanObject(new Boolean(true));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isBoxedPrimitive
+
+```TypeScript
+isBoxedPrimitive(value: Object): boolean
+```
+
+Checks whether the value is of the Boolean, Number, String, or Symbol type.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Boolean, Number, String, or Symbol type; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let type = new util.types();
+let result = type.isBoxedPrimitive(new Boolean(false));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isNumberObject
+
+```TypeScript
+isNumberObject(value: Object): boolean
+```
+
+Checks whether the value is of the Number type.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Number type; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let type = new util.types();
+let result = type.isNumberObject(new Number(0));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isStringObject
+
+```TypeScript
+isStringObject(value: Object): boolean
+```
+
+Checks whether the value is a string object.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a string object; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+let type = new util.types();
+let result = type.isStringObject(new String('foo'));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isSymbolObject
+
+```TypeScript
+isSymbolObject(value: Object): boolean
+```
+
+Checks whether the value is a symbol object.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a symbol object; otherwise, **false** is returned. |
+
+**Examples**
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export const symbols = Symbol('foo');
+```
+
+```TypeScript
+import { symbols } from './test'
+
+let type = new util.types();
+let result = type.isSymbolObject(Object(symbols));
 console.info("result = " + result);
 // Output: result = true
 ```

@@ -4,7 +4,7 @@
 declare enum OptionWidthMode
 ```
 
-Decide whether the width of select menu fit the trigger or content
+Sets the width mode of the drop-down menu.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Decide whether the width of select menu fit the trigger or content
 FIT_CONTENT = 'fit_content'
 ```
 
-The menu width fit the content.
+If this value is set, the width of the drop-down menu is 2 columns by default.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ The menu width fit the content.
 FIT_TRIGGER = 'fit_trigger'
 ```
 
-The menu width fit the trigger.
+Inherits the width of the drop-down list button.
 
 **Since:** 11
 

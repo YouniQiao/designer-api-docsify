@@ -119,73 +119,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## createModuleContext
-
-```TypeScript
-createModuleContext(moduleName: string): Context
-```
-
-Creates the context based on the module name.
-
-> **NOTE:** 
-> 
-> - Only the context of other modules in the current application and the context of the intra-application HSP can be obtained. The context of other applications cannot be obtained.
-> 
-> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)instead. Otherwise, resource acquisition may fail.
-> 
-> - Creating a module context involves resource querying and initialization, which can be time-consuming. In scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
-> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| moduleName | string | Yes | Module name. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Context](arkts-ability-context-c.md) | Context created. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      // Create a context based on the module name.
-      moduleContext = this.context.createModuleContext('entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## getApplicationContext
 
 ```TypeScript
@@ -387,6 +320,73 @@ export default class EntryAbility extends UIAbility {
     // Check whether the current Context is of the specified ContextType type.
     let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
     hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
+  }
+}
+```
+
+## createModuleContext
+
+```TypeScript
+createModuleContext(moduleName: string): Context
+```
+
+Creates the context based on the module name.
+
+> **NOTE:** 
+> 
+> - Only the context of other modules in the current application and the context of the intra-application HSP can be obtained. The context of other applications cannot be obtained.
+> 
+> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)instead. Otherwise, resource acquisition may fail.
+> 
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
+> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| moduleName | string | Yes | Module name. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Context](arkts-ability-context-c.md) | Context created. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+**Examples**
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      // Create a context based on the module name.
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
   }
 }
 ```

@@ -12,7 +12,7 @@ Describes the picture-attached notification. This API is inherited from Notifica
 > 
 > - When a user taps a group notification to view the notification details, the display effect of this notification changes to the expanded state.
 > 
-> - The actual display effect depends on the device capabilities and the notification center UI style&lt;!--RP1--&gt;&lt;!--RP1End--&gt;.
+> - The actual display effect depends on the device capabilities and the notification center UI style<!--RP1--><!--RP1End-->.
 
 **Inheritance/Implementation:** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 

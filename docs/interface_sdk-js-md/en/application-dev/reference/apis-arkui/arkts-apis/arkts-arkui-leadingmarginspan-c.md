@@ -4,7 +4,7 @@
 declare abstract class LeadingMarginSpan
 ```
 
-Defines custom indentation for text paragraphs. Only a base class is provided; the specific implementation is left to developers.
+Defines the custom indentation of a text paragraph, which provides only a base class, with the specific implementation defined by developers. It is suitable for scenarios that require drawing custom markers, icons, and other content at the beginning of the first line or each line of a paragraph, such as custom symbols before list items and decoration patterns at the beginning of a paragraph.
 
 **Since:** 22
 
@@ -30,7 +30,7 @@ Returns the indentation distance for a text paragraph.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Paragraph indentation distance. The value cannot be in percentage.<br>Default value: **0**. <br> |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Indentation of the text paragraph. Percentage is not supported.<br>Default value: **0** <br> |
 
 ## onDraw
 
@@ -52,5 +52,5 @@ Draws a custom pattern. This API is triggered once for each line of text in a pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | DrawContext | Yes | Drawing context.<br>The **canvas** method of **DrawContext** obtains the canvas of the component. As such, the custom span does not extend beyond the area of the component. |
+| context | DrawContext | Yes | Graphics drawing context.<br>The canvas method of **DrawContext** obtains the canvas of the component, and drawing does not exceed the component bounds. |
 | drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | Yes | Custom drawing information. |

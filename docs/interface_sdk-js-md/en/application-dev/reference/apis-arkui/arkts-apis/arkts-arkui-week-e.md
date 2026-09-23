@@ -4,7 +4,7 @@
 declare enum Week
 ```
 
-Week Enum value
+Enumerates the days of the week.
 
 **Since:** 7
 

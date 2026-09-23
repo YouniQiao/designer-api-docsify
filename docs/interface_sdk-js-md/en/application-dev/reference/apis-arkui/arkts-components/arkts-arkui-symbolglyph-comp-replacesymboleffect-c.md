@@ -4,7 +4,7 @@
 declare class ReplaceSymbolEffect extends SymbolEffect
 ```
 
-Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
+Inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-comp-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope)
 ```
 
-A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
+A constructor used to create a **ReplaceSymbolEffect** instance, which comes with a replace animation effect.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.<br>Default value: EffectScope.LAYER |
 
 <a id="constructor-1"></a>
 
@@ -60,8 +60,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
-| replaceType | [ReplaceEffectType](arkts-arkui-symbolglyph-comp-replaceeffecttype-e.md) | No | Replacement effect type.<br>Default value: **ReplaceEffectType.SEQUENTIAL** |
+| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Animation scope.<br>Default value: EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-symbolglyph-comp-replaceeffecttype-e.md) | No | Replacement animation type.<br>Default value: ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 
@@ -69,9 +69,9 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 replaceType?: ReplaceEffectType
 ```
 
-Replacement effect type.
+Replacement Animation Type. For details about the specific enumeration values and descriptions, see ReplaceEffectType Enumeration Description.
 
-Default value: **ReplaceEffectType.SEQUENTIAL**.
+Default value: ReplaceEffectType.SEQUENTIAL
 
 **Type:** [ReplaceEffectType](arkts-arkui-symbolglyph-comp-replaceeffecttype-e.md)
 
@@ -91,9 +91,9 @@ Default value: **ReplaceEffectType.SEQUENTIAL**.
 scope?: EffectScope
 ```
 
-Effect scope.
+Animation Scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.
 
-Default value: **EffectScope.LAYER**
+Default value: EffectScope.LAYER
 
 **Type:** [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md)
 

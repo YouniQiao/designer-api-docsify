@@ -8,13 +8,6 @@ Defines the type and style of the **CounterV2** component.
 
 When you select a **CounterV2** type, you must select the corresponding **CounterV2** style. If the style parameter does not match the type, the default style of that type is used.
 
-| CounterV2 Type | CounterV2 Style |  
-| ----------------------- | ------------------ |  
-| [CounterV2Type.LIST](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | [CounterV2NumberStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) |
-| [CounterV2Type.COMPACT](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | [CounterV2NumberStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) |
-| [CounterV2Type.INLINE](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) |
-| [CounterV2Type.INLINE_DATE](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | [CounterV2DateStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2datestyleoptions-c.md) |
-
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -4,7 +4,7 @@
 declare enum ClickEffectLevel
 ```
 
-Enum of click effect level.
+Sets the click effect level and animation parameters.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enum of click effect level.
 LIGHT = 0
 ```
 
-Small area (light)
+Small area (light), spring animation, stiffness: 410, damping: 38, initial velocity: 1, default scale 90%.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Small area (light)
 MIDDLE = 1
 ```
 
-Medium area (stable)
+Medium area (stable), spring animation, stiffness: 350, damping: 35, initial velocity: 0.5, default scale 95%.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Medium area (stable)
 HEAVY = 2
 ```
 
-Large area (heavy)
+Large area (heavy), spring animation, stiffness: 240, damping: 28, initial velocity: 0, default scale 95%.
 
 **Since:** 10
 

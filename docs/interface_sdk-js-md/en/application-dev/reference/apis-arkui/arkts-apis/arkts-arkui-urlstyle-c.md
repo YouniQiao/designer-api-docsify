@@ -32,7 +32,7 @@ A constructor used to create a URL object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | Options of the hyperlink. |
+| url | string | Yes | Hyperlink URL setting. Must be a valid URL address. |
 
 ## url
 

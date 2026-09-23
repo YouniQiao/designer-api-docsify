@@ -4,9 +4,7 @@
 declare enum TitleHeight
 ```
 
-Title height.
-
-@enum { number }
+Sets the recommended height of the title bar.
 
 **Since:** 9
 
@@ -18,7 +16,7 @@ Title height.
 MainOnly
 ```
 
-Title height when only main title is available.
+Recommended height (56 vp) of the title bar when only the main title is available.
 
 **Since:** 9
 
@@ -32,7 +30,7 @@ Title height when only main title is available.
 MainWithSub
 ```
 
-Title height when main title and subtitle are both available.
+Recommended height (82 vp) of the title bar when both the main title and subtitle exist.
 
 **Since:** 9
 

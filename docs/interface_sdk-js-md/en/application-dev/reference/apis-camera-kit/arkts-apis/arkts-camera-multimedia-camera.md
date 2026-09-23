@@ -207,6 +207,12 @@ import { camera } from '@kit.CameraKit';
 | [ZoomQuery](arkts-camera-camera-zoomquery-i-sys.md) | ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ImageType](arkts-camera-camera-imagetype-t.md) | Defines the image container type, which is used to obtain full-quality images or uncompressed images (YUV). |
+
 ### Enums
 
 | Name | Description |
@@ -286,9 +292,3 @@ import { camera } from '@kit.CameraKit';
 | [UsageType](arkts-camera-camera-usagetype-e-sys.md) | Enum for usage type used in capture session. |
 | [VideoMetaType](arkts-camera-camera-videometatype-e-sys.md) | Video meta type. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ImageType](arkts-camera-camera-imagetype-t.md) | Defines the image container type, which is used to obtain full-quality images or uncompressed images (YUV). |

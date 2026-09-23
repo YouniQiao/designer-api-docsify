@@ -37,7 +37,7 @@ Favorites.
 ## VIDEO
 
 ```TypeScript
-VIDEO
+VIDEO = 1026
 ```
 
 Video album.

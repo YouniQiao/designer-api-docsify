@@ -4,9 +4,7 @@
 declare enum PixelRoundCalcPolicy
 ```
 
-Pixel Round Direction
-
-@enum { number }
+Enumerates the pixel rounding policies for component boundaries.
 
 **Since:** 11
 
@@ -18,7 +16,7 @@ Pixel Round Direction
 NO_FORCE_ROUND = 0
 ```
 
-No Force round the component boundary coordinates to integer pixel.
+The value is not rounded off.
 
 **Since:** 11
 
@@ -36,7 +34,7 @@ No Force round the component boundary coordinates to integer pixel.
 FORCE_CEIL = 1
 ```
 
-Force ceil the component boundary coordinates to integer pixel.
+Rounded-up calculation.
 
 **Since:** 11
 
@@ -54,7 +52,7 @@ Force ceil the component boundary coordinates to integer pixel.
 FORCE_FLOOR = 2
 ```
 
-Force floor the component boundary coordinates to integer pixel.
+Rounded-down calculation.
 
 **Since:** 11
 

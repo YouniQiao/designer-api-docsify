@@ -2,7 +2,15 @@
 
 A component that allows users to select text, images, or hybrid content through scrolling. Users can create a single- column data picker, a multi-column non-linked data picker, and a multi-column linkage data picker as needed. It is applicable to needs where users select data from preset options, such as date selection, region selection, and configuration item settings. The component supports features such as cyclic scrolling, custom text styles, divider style, fade effect, selection item height adjustment, haptic feedback, and crown sensitivity setting, providing a smooth scrolling interaction experience and flexible data display.
 
-> **NOTE** > > - This component is supported since API version 8. New APIs added in later versions are marked with a superscript > to indicate their > > - It is not recommended for developers to modify attribute data during animation. > > - The maximum display rows differ between landscape and portrait modes. In portrait mode, the default is 5 rows. In > landscape mode, it depends on the system configuration, and the default is 3 rows when not configured. You can view > the specific configuration value through the following parameter: $r('sys.float.ohos_id_picker_show_count_landscape > '). > > - The multi-column non-linked data picker and the multi-column linkage data picker are collectively referred to as > the multi-column data picker in the following sections.
+> **NOTE:** 
+> 
+> - This component is supported since API version 8. New APIs added in later versions are marked with a superscript to indicate their
+> 
+> - It is not recommended for developers to modify attribute data during animation.
+> 
+> - The maximum display rows differ between landscape and portrait modes. In portrait mode, the default is 5 rows. In landscape mode, it depends on the system configuration, and the default is 3 rows when not configured. You can view the specific configuration value through the following parameter: $r('sys.float.ohos_id_picker_show_count_landscape ').
+> 
+> - The multi-column non-linked data picker and the multi-column linkage data picker are collectively referred to as the multi-column data picker in the following sections.
 
 ## Child Components
 

@@ -254,64 +254,6 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Whether to enable haptic feedback.<br>**true**: Enable haptic feedback. **false**: Disable haptic feedback.<br>Default value: **true** |
 
-## maxLabel
-
-```TypeScript
-maxLabel(value: string)
-```
-
-Sets the maximum value.
-
-> **NOTE:** 
-> 
-> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
-> **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** max
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | Maximum value. |
-
-## minLabel
-
-```TypeScript
-minLabel(value: string)
-```
-
-Sets the minimum value.
-
-> **NOTE:** 
-> 
-> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
-> **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** min
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | Minimum value. |
-
 ## minResponsiveDistance
 
 ```TypeScript
@@ -753,3 +695,61 @@ When [SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md) is set to **OutSet*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-slider-comp-sliderstyle-e.md).InSet** |
+
+## maxLabel
+
+```TypeScript
+maxLabel(value: string)
+```
+
+Sets the maximum value.
+
+> **NOTE:** 
+> 
+> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** max
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Maximum value. |
+
+## minLabel
+
+```TypeScript
+minLabel(value: string)
+```
+
+Sets the minimum value.
+
+> **NOTE:** 
+> 
+> This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use
+> **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** min
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Minimum value. |

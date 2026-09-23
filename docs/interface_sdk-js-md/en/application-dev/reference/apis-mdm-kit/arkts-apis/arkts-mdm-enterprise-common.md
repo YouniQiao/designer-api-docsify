@@ -34,6 +34,12 @@ import { common } from '@kit.MDMKit';
 | [InstallationResult](arkts-mdm-common-installationresult-i.md) | An object that holds the application installation result. |
 | [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | Defines the policy change event. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |
+
 ### Enums
 
 | Name | Description |
@@ -43,9 +49,3 @@ import { common } from '@kit.MDMKit';
 | [QueryPolicy](arkts-mdm-common-querypolicy-e.md) | The policy of query enterprise device management policy. |
 | [Result](arkts-mdm-common-result-e.md) | Enumerates application installation results. |
 | [StartupScene](arkts-mdm-common-startupscene-e.md) | Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first- time startup wizard are complete, the device system calls the [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted) API to notify the device administrator application. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). |

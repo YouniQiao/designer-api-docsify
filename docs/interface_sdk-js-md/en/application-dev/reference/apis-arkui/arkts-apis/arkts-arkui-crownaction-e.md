@@ -16,7 +16,9 @@ Enumerates the crown actions.
 BEGIN = 0
 ```
 
-Rotation crown behavior begins.
+The crown starts rotating.
+
+**Note:** Supported from API version 18 and deprecated from API version 24.
 
 **Since:** 18
 
@@ -34,7 +36,7 @@ Rotation crown behavior begins.
 UPDATE = 1
 ```
 
-Rotation crown behavior update.
+The crown is rotating.
 
 **Since:** 18
 
@@ -50,7 +52,7 @@ Rotation crown behavior update.
 END = 2
 ```
 
-The rotation crown behavior ends.
+The crown stops rotating.
 
 **Since:** 18
 

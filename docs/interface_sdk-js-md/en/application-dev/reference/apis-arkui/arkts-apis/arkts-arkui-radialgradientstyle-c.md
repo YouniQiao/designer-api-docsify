@@ -18,7 +18,7 @@ Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](
 constructor(options: RadialGradientOptions)
 ```
 
-A constructor used to create a **RadialGradientOptions** object.
+A constructor used to create a **RadialGradientStyle** object.
 
 **Since:** 20
 

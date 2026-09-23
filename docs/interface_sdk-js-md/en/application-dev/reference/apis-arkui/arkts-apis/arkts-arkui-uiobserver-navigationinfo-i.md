@@ -58,7 +58,7 @@ Navigation controller of the **Navigation** component.
 uniqueId?: number
 ```
 
-Unique ID of the **Navigation** component, which can be obtained through [queryNavigationInfo](../arkts-components/arkts-arkui-common-comp-basecustomcomponent-c.md#querynavigationinfo).
+Unique ID of the **Navigation** component, which can be obtained through [queryNavigationInfo](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#querynavigationinfo12).
 
 **Type:** number
 

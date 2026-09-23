@@ -63,20 +63,6 @@ import { abilityManager } from '@kit.AbilityKit';
 | [AtomicServiceStartupRule](arkts-ability-abilitymanager-atomicservicestartuprule-i-sys.md) | Describes the rule for launching an embedded atomic service. |
 <!--DelEnd-->
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md) | Enumerates the ability states. This enum can be used together with [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) to return the ability state. |
-
-<!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [UserStatus](arkts-ability-abilitymanager-userstatus-e-sys.md) | Enumerates the assertion result for different user operations. |
-<!--DelEnd-->
-
 ### Types
 
 | Name | Description |
@@ -93,4 +79,18 @@ import { abilityManager } from '@kit.AbilityKit';
 | [ExtensionRunningInfo](arkts-ability-abilitymanager-extensionrunninginfo-t-sys.md) | Defines the level-2 module ExtensionRunningInfo. |
 | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is destroyed. |
 | [PreloadedUIExtensionAbilityLoadedFn](arkts-ability-abilitymanager-preloadeduiextensionabilityloadedfn-t-sys.md) | Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is loaded. |
+<!--DelEnd-->
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md) | Enumerates the ability states. This enum can be used together with [AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md) to return the ability state. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [UserStatus](arkts-ability-abilitymanager-userstatus-e-sys.md) | Enumerates the assertion result for different user operations. |
 <!--DelEnd-->

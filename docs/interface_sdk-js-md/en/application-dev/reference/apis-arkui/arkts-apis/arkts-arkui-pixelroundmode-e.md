@@ -4,9 +4,7 @@
 declare enum PixelRoundMode
 ```
 
-Pixel Round Mode
-
-@enum { number }
+Enumerates pixel rounding modes.
 
 **Since:** 18
 
@@ -18,7 +16,7 @@ Pixel Round Mode
 PIXEL_ROUND_ON_LAYOUT_FINISH = 0
 ```
 
-Do pixel round on layout finish.
+Performs pixel rounding after the component finishes measuring its size and position. Default value.
 
 **Since:** 18
 
@@ -36,7 +34,7 @@ Do pixel round on layout finish.
 PIXEL_ROUND_AFTER_MEASURE = 1
 ```
 
-Do pixel round after measure.
+Performs pixel rounding after the component finishes measuring its size.
 
 **Since:** 18
 

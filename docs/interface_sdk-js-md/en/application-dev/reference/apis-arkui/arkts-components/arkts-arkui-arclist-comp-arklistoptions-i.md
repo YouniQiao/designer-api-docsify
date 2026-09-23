@@ -22,7 +22,7 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 header?: ComponentContent
 ```
 
-Header component.
+Header component of **ArcList**, used to display a title or custom content at the top of the list. If not set, no header component is displayed.
 
 **Type:** ComponentContent
 
@@ -38,7 +38,11 @@ Header component.
 initialIndex?: number
 ```
 
-Item displayed at the beginning of the viewport when the **ArcList** component is loaded for the first time, that is, the first item to be displayed.<br>Default value: **0**<br> **NOTE:** <br>If the set value is a negative number or is greater than the index of the last item, the value is invalid. In this case, the default value will be used.
+Index value of the item displayed at the start position of the viewport when **ArcList** is initially loaded.
+
+Default value: **0**
+
+**Note:** If the value is set to a negative number or exceeds the index value of the last item in the current **ArcList**, it is considered invalid, and the default value is used.
 
 **Type:** number
 
@@ -54,7 +58,9 @@ Item displayed at the beginning of the viewport when the **ArcList** component i
 scroller?: Scroller
 ```
 
-Controller of the scrollable component. After being bound to **ArcList**, the controller can control the scrolling of **ArcList**.<br>**NOTE:** <br>The scroller cannot be bound to other scrollable components.
+Controller of the scrollable component. After being bound to **ArcList**, it can be used to control the scrolling of **ArcList**. If not set, no scroll controller is bound.
+
+**Note:** It is not allowed to bind the same scroll control object with other scrollable components, such as [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow).
 
 **Type:** [Scroller](arkts-arkui-scroll-comp-scroller-c.md)
 

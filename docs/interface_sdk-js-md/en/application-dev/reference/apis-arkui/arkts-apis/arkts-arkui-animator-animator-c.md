@@ -16,6 +16,56 @@ Creates an **Animator** object.
 import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
+<a id="create-1"></a>
+
+## create
+
+```TypeScript
+static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
+```
+
+Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) &#124; [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+
+**Examples**
+
+See ArkTS-based Declarative Development Paradigm.
+
+> NOTE
+> 
+> For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+
+```TypeScript
+import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
+let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
+animator.create(options); // You are advised to use UIContext.createAnimator().
+```
+
 ## create
 
 ```TypeScript
@@ -77,56 +127,6 @@ let options: AnimatorOptions = {
   begin: 200.0,
   end: 400.0
 };
-animator.create(options); // You are advised to use UIContext.createAnimator().
-```
-
-<a id="create-1"></a>
-
-## create
-
-```TypeScript
-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
-```
-
-Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) &#124; [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-> NOTE
-> 
-> For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
-
-```TypeScript
-import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
-let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
 animator.create(options); // You are advised to use UIContext.createAnimator().
 ```
 

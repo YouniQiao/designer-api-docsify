@@ -2828,125 +2828,6 @@ struct WebComponent {
 }
 ```
 
-## getHitTest
-
-```TypeScript
-getHitTest(): WebHitTestType
-```
-
-获取当前被点击区域的元素类型。
-
-**起始版本：** 9
-
-**废弃版本：** 18
-
-**替代接口：** [getLastHitTest](#getlasthittest)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | 被点击区域的元素类型。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTest')
-        .onClick(() => {
-          try {
-            let hitTestType = this.controller.getHitTest();
-            console.info("hitTestType: " + hitTestType);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## getHitTestValue
-
-```TypeScript
-getHitTestValue(): HitTestValue
-```
-
-获取当前被点击区域的元素信息。
-
-**起始版本：** 9
-
-**废弃版本：** 18
-
-**替代接口：** [getLastHitTest](#getlasthittest)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTestValue')
-        .onClick(() => {
-          try {
-            let hitValue = this.controller.getHitTestValue();
-            console.info("hitType: " + hitValue.type);
-            console.info("extra: " + hitValue.extra);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getLastHitTest
 
 ```TypeScript
@@ -4190,6 +4071,32 @@ struct WebComponent {
   }
 }
 ```
+
+## getZoomFactor
+
+```TypeScript
+getZoomFactor(): number
+```
+
+获取当前网页的浏览器级缩放倍率。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 当前浏览器级缩放倍率。**1**表示不缩放。<br>取值范围：[0.25, 5.0]，默认值为**1**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -11079,6 +10986,32 @@ struct WebComponent {
 }
 ```
 
+## setZoomFactor
+
+```TypeScript
+setZoomFactor(zoomFactor: number): void
+```
+
+调用此接口设置当前网页的浏览器级缩放倍率。文字与图片同时缩放，页面重新布局（reflow）以适应Web组件宽度。该接口与[zoom](#zoom)、[zoomIn](#zoomin)、[zoomOut](#zoomout)（仅视觉缩放，不触发重新布局）以及[textZoomRatio](../arkts-components/arkts-arkweb-web-comp-attribute.md#textzoomratio)（仅缩放文字）相互独立。缩放倍率仅作用于当前Web组件实例，页面内跨文档跳转后保持不变。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| zoomFactor | number | 是 | 要设置的浏览器级缩放倍率。**1**表示不缩放，小于**1**表示缩小，大于**1**表示放大。<br>取值范围：[0.25, 5]。<br>超出该范围的值会被裁剪到边界值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
 ## slideScroll
 
 ```TypeScript
@@ -12062,6 +11995,125 @@ struct WebComponent {
         .onClick(() => {
           try {
             this.controller.zoomOut();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getHitTest
+
+```TypeScript
+getHitTest(): WebHitTestType
+```
+
+获取当前被点击区域的元素类型。
+
+**起始版本：** 9
+
+**废弃版本：** 18
+
+**替代接口：** [getLastHitTest](#getlasthittest)
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | 被点击区域的元素类型。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getHitTest')
+        .onClick(() => {
+          try {
+            let hitTestType = this.controller.getHitTest();
+            console.info("hitTestType: " + hitTestType);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getHitTestValue
+
+```TypeScript
+getHitTestValue(): HitTestValue
+```
+
+获取当前被点击区域的元素信息。
+
+**起始版本：** 9
+
+**废弃版本：** 18
+
+**替代接口：** [getLastHitTest](#getlasthittest)
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | 点击区域的元素信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getHitTestValue')
+        .onClick(() => {
+          try {
+            let hitValue = this.controller.getHitTestValue();
+            console.info("hitType: " + hitValue.type);
+            console.info("extra: " + hitValue.extra);
           } catch (error) {
             console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
           }

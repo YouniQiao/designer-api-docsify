@@ -52,42 +52,26 @@ console.info("result = " + result);
 // Output: result = -1
 ```
 
-## compareTo
+<a id="constructor-1"></a>
+
+## constructor
 
 ```TypeScript
-compareTo(another: RationalNumber): number
+constructor()
 ```
 
-Compares the current RationalNumber object to the given object.
+A constructor used to create a **RationalNumber** object.
 
-**Since:** 8
+**Since:** 9
 
-**Deprecated since:** 9
-
-**Substitutes:** compare
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Returns 0 or 1, or -1, depending on the comparison. |
 
 **Examples**
 
 ```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let rational = util.RationalNumber.createRationalFromString("3/4");
-let result = rationalNumber.compareTo(rational);
-console.info("result = " + result);
-// Output: result = -1
+let rationalNumber = new util.RationalNumber();
 ```
 
 ## constructor
@@ -117,28 +101,6 @@ A constructor used to create a **RationalNumber** object.
 
 ```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
-```
-
-<a id="constructor-1"></a>
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-A constructor used to create a **RationalNumber** object.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
 ```
 
 ## createRationalFromString
@@ -224,35 +186,6 @@ let result = rationalNumber.equals(rational);
 console.info("result = " + result);
 // Output: result = false
 ```
-
-## getCommonDivisor
-
-```TypeScript
-static getCommonDivisor(number1: number, number2: number): number
-```
-
-Obtains the greatest common divisor of two specified integers.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [getCommonFactor](#getcommonfactor)
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| number1 | number | Yes | The first integer used to get the greatest common divisor. |
-| number2 | number | Yes | The second integer used to get the greatest common divisor. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Greatest common divisor obtained. |
 
 ## getCommonFactor
 
@@ -598,3 +531,70 @@ let result = rationalNumber.valueOf();
 console.info("result = " + result);
 // Output: result = 0.5
 ```
+
+## compareTo
+
+```TypeScript
+compareTo(another: RationalNumber): number
+```
+
+Compares the current RationalNumber object to the given object.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** compare
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Returns 0 or 1, or -1, depending on the comparison. |
+
+**Examples**
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
+let rational = util.RationalNumber.createRationalFromString("3/4");
+let result = rationalNumber.compareTo(rational);
+console.info("result = " + result);
+// Output: result = -1
+```
+
+## getCommonDivisor
+
+```TypeScript
+static getCommonDivisor(number1: number, number2: number): number
+```
+
+Obtains the greatest common divisor of two specified integers.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [getCommonFactor](#getcommonfactor)
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Greatest common divisor obtained. |

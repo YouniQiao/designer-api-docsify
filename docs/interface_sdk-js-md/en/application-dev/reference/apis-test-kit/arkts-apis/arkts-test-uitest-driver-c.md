@@ -868,7 +868,7 @@ Simulates a fling operation. This API uses a promise to return the result.
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
 | stepLen | number | Yes | Sliding step length, in pixels. If the value is a negative number, error code 401 is returned.<br>Unit: px |
-| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 600 |
+| speed | number | Yes | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used.<br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 

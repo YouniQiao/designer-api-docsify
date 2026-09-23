@@ -4,7 +4,7 @@
 declare enum MarqueeUpdateStrategy
 ```
 
-The scrolling strategy for the marquee after its attributes are updated.
+Sets the scrolling strategy for the marquee after its attributes are updated.
 
 **Since:** 12
 

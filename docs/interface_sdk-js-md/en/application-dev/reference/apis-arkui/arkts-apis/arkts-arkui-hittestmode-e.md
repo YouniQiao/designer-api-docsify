@@ -125,7 +125,7 @@ The node itself and its child nodes respond to the hit test, preventing all sibl
 BLOCK_DESCENDANTS
 ```
 
-The node itself does not respond to the hit test, and all its descendants (children, grandchildren, and more) also do not respond to the hit test. It does not affect the hit test of ancestor nodes.
+The node itself does not respond to the hit test, and all descendants (children, grandchildren, etc.) also do not respond to the hit test. It does not affect the hit test of ancestor nodes.
 
 **Since:** 20
 

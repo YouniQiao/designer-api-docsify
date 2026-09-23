@@ -9,7 +9,7 @@ Implements the controller of the **TextClock** component. You can bind the contr
 ## Objects to Import
 
 ```ts
-controller: TextClockController = new TextClockController()
+controller: TextClockController = new TextClockController();
 ```
 
 **Since:** 8
@@ -38,7 +38,7 @@ A constructor used to create a **TextClockController** instance.
 start()
 ```
 
-Starts the **&lt;TextClock\&gt;** component.
+Starts the text clock. Before using this API, bind the TextClockController to the TextClock component.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Starts the **&lt;TextClock\&gt;** component.
 stop()
 ```
 
-Stops the **&lt;TextClock\&gt;** component.
+Stops the text clock. Before using this API, bind the TextClockController to the TextClock component.
 
 **Since:** 8
 

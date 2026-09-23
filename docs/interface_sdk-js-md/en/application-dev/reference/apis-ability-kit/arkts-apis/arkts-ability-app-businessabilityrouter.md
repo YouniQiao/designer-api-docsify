@@ -36,17 +36,17 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) | Obtains business ability info. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
 <!--DelEnd-->

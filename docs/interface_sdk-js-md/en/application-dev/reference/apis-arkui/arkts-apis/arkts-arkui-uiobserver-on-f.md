@@ -172,7 +172,7 @@ struct Index {
 export function on(type: 'scrollEvent', options: ObserverOptions, callback: Callback<ScrollEventInfo>): void
 ```
 
-Registers a callback function to be called when the scroll event start or stop.
+Listens for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
 
 **Since:** 12
 
@@ -186,9 +186,9 @@ Registers a callback function to be called when the scroll event start or stop.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| type | 'scrollEvent' | Yes | Event type. The value **'scrollEvent'** indicates the start and end of a scroll event. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | ID of the target scrollable component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | Callback used to return the result. It returns the information about the scroll event. |
 
 
 ## on('scrollEvent')
@@ -197,7 +197,7 @@ Registers a callback function to be called when the scroll event start or stop.
 export function on(type: 'scrollEvent', callback: Callback<ScrollEventInfo>): void
 ```
 
-Registers a callback function to be called when the scroll event start or stop.
+Listens for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
 
 **Since:** 12
 
@@ -211,8 +211,8 @@ Registers a callback function to be called when the scroll event start or stop.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | Yes | The type of event to listen for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| type | 'scrollEvent' | Yes | Event type. The value **'scrollEvent'** indicates the start and end of a scroll event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | Yes | Callback used to return the result. It returns the information about the scroll event. |
 
 
 ## on('routerPageUpdate')
@@ -432,7 +432,7 @@ struct Index {
 export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#ontabchange), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](../../../reference/apis-arkui/arkts-apis-uicontext-uiobserver.md#ontabchange22), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 
@@ -508,7 +508,7 @@ struct TabsExample {
 export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#ontabchange), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** switch events. Unlike [on('tabChange')](../../../reference/apis-arkui/arkts-apis-uicontext-uiobserver.md#ontabchange22), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 

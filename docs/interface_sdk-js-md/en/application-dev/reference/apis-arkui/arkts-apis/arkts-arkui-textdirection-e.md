@@ -16,7 +16,7 @@ Enumerates the text layout directions.
 LTR = 0
 ```
 
-From left to right.
+Text layout direction is from left to right.
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ From left to right.
 RTL = 1
 ```
 
-From right to left.
+Text layout direction is from right to left.
 
 **Since:** 22
 
@@ -48,7 +48,7 @@ From right to left.
 DEFAULT = 2
 ```
 
-Follows the component layout direction.
+The text layout direction follows the component layout direction.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Follows the component layout direction.
 AUTO = 3
 ```
 
-Follows the writing direction of the content. For example, for right-to-left (RTL) languages (such as Tibetan and Uyghur), the text is laid out from right to left. For left-to-right (LTR) languages (such as Chinese and English), the text is laid out from left to right.
+The layout direction follows the actual text content. If the text is in an RTL (Right-to-Left) language (such as Tibetan or Uyghur), the text layout direction is from right to left. If the text is in an LTR (Left-to-Right) language (such as Chinese or English), the text layout direction is from left to right.
 
 **Since:** 23
 

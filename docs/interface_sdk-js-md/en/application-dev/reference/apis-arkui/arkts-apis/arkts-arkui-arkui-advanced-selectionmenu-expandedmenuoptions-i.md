@@ -26,7 +26,7 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 action?: () => void
 ```
 
-Action triggered when the menu option is clicked.
+Callback invoked when an option in the menu is tapped. When not set, no response occurs upon tapping.
 
 **Since:** 11
 

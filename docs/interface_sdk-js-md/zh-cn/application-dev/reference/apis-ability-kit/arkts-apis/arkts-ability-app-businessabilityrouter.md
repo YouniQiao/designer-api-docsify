@@ -34,17 +34,17 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### 枚举（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | 此枚举值用于标识过滤条件类型。 |
-<!--DelEnd-->
-
-<!--Del-->
 ### 类型（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
 | [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) | 业务路由信息。 |
+<!--DelEnd-->
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | 此枚举值用于标识过滤条件类型。 |
 <!--DelEnd-->

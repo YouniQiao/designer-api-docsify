@@ -417,53 +417,6 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
-## getPixelMap
-
-```TypeScript
-getPixelMap(): image.PixelMap
-```
-
-Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [getEffectPixelMap](#geteffectpixelmap)
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | [image.PixelMap of the source image with the effect chain applied.](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) |
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-
-const colorBuffer = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  let pixel = effectKit.createEffect(pixelMap).grayscale().getPixelMap();
-  console.info('getPixelBytesNumber = ', pixel.getPixelBytesNumber());
-});
-```
-
 ## grayscale
 
 ```TypeScript
@@ -731,4 +684,51 @@ struct Index {
     .width('100%')
   }
 }
+```
+
+## getPixelMap
+
+```TypeScript
+getPixelMap(): image.PixelMap
+```
+
+Obtains image.PixelMap of the source image to which the effect chain has been added. It is commonly used in scenarios where the processed image needs to be saved or displayed.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 9 and deprecated since API version 11. Use getEffectPixelMap instead.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [getEffectPixelMap](#geteffectpixelmap)
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | [image.PixelMap of the source image with the effect chain applied.](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) |
+
+**Examples**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+
+const colorBuffer = new ArrayBuffer(96);
+let opts: image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+};
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  let pixel = effectKit.createEffect(pixelMap).grayscale().getPixelMap();
+  console.info('getPixelBytesNumber = ', pixel.getPixelBytesNumber());
+});
 ```

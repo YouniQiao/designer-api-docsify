@@ -4,7 +4,7 @@
 declare enum LineJoinStyle
 ```
 
-Line Join Style
+Sets the line connection style.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Line Join Style
 Miter
 ```
 
-Connect path segments using bevels.
+Miter is used to connect paths.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Connect path segments using bevels.
 Round
 ```
 
-Connect path segments using sharp corners.
+Round is used to connect paths.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ Connect path segments using sharp corners.
 Bevel
 ```
 
-Connect path segments using fillets.
+Bevel is used to connect paths.
 
 **Since:** 7
 

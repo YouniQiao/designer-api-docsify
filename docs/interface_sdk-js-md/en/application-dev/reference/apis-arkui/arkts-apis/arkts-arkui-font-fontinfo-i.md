@@ -62,7 +62,7 @@ Whether the system font is italic.
 
 Default value: **false**
 
-**true**: The system font is italic. **false**: The system font is not italic.
+The value **true** indicates an italic font, and **false** indicates a non-italic font.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ Whether the system font is monospaced.
 
 Default value: **false**
 
-**true**: The system font is monospaced. **false**: The system font is not monospaced.
+The value **true** indicates a monospaced font, and **false** indicates a non-monospaced font.
 
 **Type:** boolean
 
@@ -156,11 +156,11 @@ Subfamily of the system font.
 symbolic: boolean
 ```
 
-Whether the system font supports symbols.
+Whether the system font supports symbolic fonts.
 
 Default value: **false**
 
-**true**: The system font supports symbols. **false**: The system font does not support symbols.
+The value **true** indicates that symbolic fonts are supported, and **false** indicates that symbolic fonts are not supported.
 
 **Type:** boolean
 
@@ -180,9 +180,7 @@ weight: number
 
 Weight of the system font.
 
-Value range: [100, 900], with intervals of 100, corresponding to the values in the [FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md) enum
-
-Default value: **100**
+Value range: [100, 900], with an interval of 100, corresponding to the values in [FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md).
 
 **Type:** number
 
@@ -202,7 +200,7 @@ width: number
 
 Width of the system font.
 
-Value range: [1, 9], with intervals of 1, corresponding to the values in the [FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md) enum
+Value range: [1, 9], with an interval of 1, corresponding to the values in [FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md).
 
 **Type:** number
 

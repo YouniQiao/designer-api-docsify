@@ -4,7 +4,7 @@
 declare enum TextCase
 ```
 
-The style of the text case.
+Sets the text case.
 
 **Since:** 7
 

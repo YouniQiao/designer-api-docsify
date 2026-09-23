@@ -48,24 +48,6 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
-## location
-
-```TypeScript
-location?: Location
-```
-
-Geographical location of the recorded video. By default, the geographical location information is not recorded. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
-
-**Type:** [Location](arkts-media-media-location-i.md)
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [location](arkts-media-media-avmetadata-i.md#location)
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
 ## maxDuration
 
 ```TypeScript
@@ -110,24 +92,6 @@ Recording profile. This parameter is mandatory.<br>**Atomic service API**: This 
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
-## rotation
-
-```TypeScript
-rotation?: number
-```
-
-Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
-
-**Type:** number
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [videoOrientation](arkts-media-media-avmetadata-i.md#videoorientation)
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
 ## url
 
 ```TypeScript
@@ -155,5 +119,41 @@ Type of the video source to record. This parameter is mandatory for video record
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **Since:** 9
+
+**System capability:** SystemCapability.Multimedia.Media.AVRecorder
+
+## location
+
+```TypeScript
+location?: Location
+```
+
+Geographical location of the recorded video. By default, the geographical location information is not recorded. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
+
+**Type:** [Location](arkts-media-media-location-i.md)
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [location](arkts-media-media-avmetadata-i.md#location)
+
+**System capability:** SystemCapability.Multimedia.Media.AVRecorder
+
+## rotation
+
+```TypeScript
+rotation?: number
+```
+
+Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
+
+**Type:** number
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [videoOrientation](arkts-media-media-avmetadata-i.md#videoorientation)
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

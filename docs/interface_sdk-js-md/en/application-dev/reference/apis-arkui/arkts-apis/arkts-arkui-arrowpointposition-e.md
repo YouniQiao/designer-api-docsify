@@ -4,7 +4,7 @@
 declare enum ArrowPointPosition
 ```
 
-ArrowPointPosition enumeration description
+Sets the position of the bubble arrow.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ ArrowPointPosition enumeration description
 START = 'Start'
 ```
 
-Target start position
+On the leftmost side of the parent component in the horizontal layout; on the top of the parent component in the vertical layout.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Target start position
 CENTER = 'Center'
 ```
 
-Target center position
+In the center of the parent component.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Target center position
 END = 'End'
 ```
 
-Target end position
+On the rightmost side of the parent component in the horizontal layout; at the bottom of the parent component in the vertical layout.
 
 **Since:** 11
 

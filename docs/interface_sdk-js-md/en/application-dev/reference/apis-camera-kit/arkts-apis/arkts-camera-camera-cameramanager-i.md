@@ -133,52 +133,6 @@ function createCameraInput(camera: camera.CameraDevice, cameraManager: camera.Ca
 }
 ```
 
-## createCaptureSession
-
-```TypeScript
-createCaptureSession(): CaptureSession
-```
-
-Creates a **CaptureSession** instance. This API returns the result synchronously.
-
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [createSession](#createsession)
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [CaptureSession](arkts-camera-camera-capturesession-i.md) | **CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createCaptureSession(cameraManager: camera.CameraManager): camera.CaptureSession | undefined {
-  let captureSession: camera.CaptureSession | undefined = undefined;
-  try {
-    captureSession = cameraManager.createCaptureSession();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`createCaptureSession error. error code: ${err.code}`);
-  }
-  return captureSession;
-}
-```
-
 ## createDeferredPreviewOutput
 
 ```TypeScript
@@ -283,6 +237,60 @@ function createMetadataOutput(cameraManager: camera.CameraManager, cameraOutputC
 }
 ```
 
+<a id="createphotooutput-1"></a>
+
+## createPhotoOutput
+
+```TypeScript
+createPhotoOutput(profile?: Profile): PhotoOutput
+```
+
+Creates a **PhotoOutput** instance. This API returns the result synchronously.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). <br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPhotoOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager): camera.PhotoOutput | undefined {
+  let profile: camera.Profile = cameraOutputCapability.photoProfiles[0];
+  let photoOutput: camera.PhotoOutput | undefined = undefined;
+  try {
+    photoOutput = cameraManager.createPhotoOutput(profile);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The createPhotoOutput call failed. error code: ${err.code}`);
+  }
+  return photoOutput;
+}
+```
+
 ## createPhotoOutput
 
 ```TypeScript
@@ -321,60 +329,6 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPhotoOutput(cameraOutputCapability: camera.CameraOutputCapability, cameraManager: camera.CameraManager): camera.PhotoOutput | undefined {
-  let profile: camera.Profile = cameraOutputCapability.photoProfiles[0];
-  let photoOutput: camera.PhotoOutput | undefined = undefined;
-  try {
-    photoOutput = cameraManager.createPhotoOutput(profile);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The createPhotoOutput call failed. error code: ${err.code}`);
-  }
-  return photoOutput;
-}
-```
-
-<a id="createphotooutput-1"></a>
-
-## createPhotoOutput
-
-```TypeScript
-createPhotoOutput(profile?: Profile): PhotoOutput
-```
-
-Creates a **PhotoOutput** instance. This API returns the result synchronously.
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). <br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [PhotoOutput](arkts-camera-camera-photooutput-i.md) | **PhotoOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 **Examples**
 
@@ -891,43 +845,6 @@ function getSupportedFullOutputCapability(camera: camera.CameraDevice, cameraMan
 }
 ```
 
-## getSupportedOutputCapability
-
-```TypeScript
-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
-```
-
-Obtains the output capability supported by a camera device. This API returns the result synchronously.
-
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [getSupportedOutputCapability](#getsupportedoutputcapability-1)(camera: CameraDevice, mode: SceneMode)
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
-
-**Examples**
-
-```TypeScript
-function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager): camera.CameraOutputCapability {
-  let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedOutputCapability(camera);
-  return cameraOutputCapability;
-}
-```
-
 <a id="getsupportedoutputcapability-1"></a>
 
 ## getSupportedOutputCapability
@@ -962,6 +879,43 @@ Obtains the output capability supported by a camera device in a given scene mode
 ```TypeScript
 function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager, sceneMode: camera.SceneMode): camera.CameraOutputCapability {
   let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedOutputCapability(camera, sceneMode);
+  return cameraOutputCapability;
+}
+```
+
+## getSupportedOutputCapability
+
+```TypeScript
+getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
+```
+
+Obtains the output capability supported by a camera device. This API returns the result synchronously.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [getSupportedOutputCapability](#getsupportedoutputcapability-1)(camera: CameraDevice, mode: SceneMode)
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | Camera output capability obtained. |
+
+**Examples**
+
+```TypeScript
+function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager: camera.CameraManager): camera.CameraOutputCapability {
+  let cameraOutputCapability: camera.CameraOutputCapability = cameraManager.getSupportedOutputCapability(camera);
   return cameraOutputCapability;
 }
 ```
@@ -1467,5 +1421,51 @@ Sets the torch mode to [ON](arkts-camera-camera-torchmode-e.md#on) with the spec
 function SetTorchModeOnWithLevel(cameraManager: camera.CameraManager, torchLevel: number): void {
   cameraManager.setTorchModeOnWithLevel(torchLevel);
   return ;
+}
+```
+
+## createCaptureSession
+
+```TypeScript
+createCaptureSession(): CaptureSession
+```
+
+Creates a **CaptureSession** instance. This API returns the result synchronously.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [createSession](#createsession)
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | **CaptureSession** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createCaptureSession(cameraManager: camera.CameraManager): camera.CaptureSession | undefined {
+  let captureSession: camera.CaptureSession | undefined = undefined;
+  try {
+    captureSession = cameraManager.createCaptureSession();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`createCaptureSession error. error code: ${err.code}`);
+  }
+  return captureSession;
 }
 ```

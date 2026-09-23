@@ -4,7 +4,7 @@
 declare interface TextChangeOptions
 ```
 
-Provides information about the text before and after a change, including the selection ranges.
+Text change information, including the selection range before and after the change and the text content before the change.
 
 **Since:** 15
 

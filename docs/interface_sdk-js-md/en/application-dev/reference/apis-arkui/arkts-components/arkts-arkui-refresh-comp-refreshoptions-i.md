@@ -36,48 +36,6 @@ Custom content in the refreshing area. NOTE In API version 10 and earlier versio
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## friction
-
-```TypeScript
-friction?: number | string
-```
-
-Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62
-
-- 0 indicates that the component is not sensitive to the pull-down gesture.  
-- 100 indicates that the component is highly sensitive to the pull-down gesture.  
-- A larger value indicates a more sensitive response of the component to the pull-down gesture.
-
-**Type:** number &#124; string
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [pullDownRatio](arkts-arkui-refresh-comp-attribute.md#pulldownratio)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## offset
-
-```TypeScript
-offset?: number | string
-```
-
-Distance from the pull-down starting point to the top of the component. Default value: **16**. Unit: vp. If the type is string, the pixel unit must be explicitly specified, for example, **'10px'**; if the unit is not specified, for example, **'10'**, the default unit vp is used. Note: This API is supported since API version 8 and deprecated since API version 11. No substitute is provided. NOTE The value range of **offset** is [0vp, 64vp]. If the value is greater than 64 vp, the value 64 vp will be used. The value cannot be a percentage or a negative number.
-
-**Type:** number &#124; string
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## promptText
 
 ```TypeScript
@@ -129,5 +87,47 @@ Custom content in the refreshing area. NOTE If this parameter and the **builder*
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## friction
+
+```TypeScript
+friction?: number | string
+```
+
+Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62
+
+- 0 indicates that the component is not sensitive to the pull-down gesture.  
+- 100 indicates that the component is highly sensitive to the pull-down gesture.  
+- A larger value indicates a more sensitive response of the component to the pull-down gesture.
+
+**Type:** number &#124; string
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [pullDownRatio](arkts-arkui-refresh-comp-attribute.md#pulldownratio)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## offset
+
+```TypeScript
+offset?: number | string
+```
+
+Distance from the pull-down starting point to the top of the component. Default value: **16**. Unit: vp. If the type is string, the pixel unit must be explicitly specified, for example, **'10px'**; if the unit is not specified, for example, **'10'**, the default unit vp is used. Note: This API is supported since API version 8 and deprecated since API version 11. No substitute is provided. NOTE The value range of **offset** is [0vp, 64vp]. If the value is greater than 64 vp, the value 64 vp will be used. The value cannot be a percentage or a negative number.
+
+**Type:** number &#124; string
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

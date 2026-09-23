@@ -16,7 +16,7 @@ Defines the Gesture Events.
 onClick?: Callback<ClickEvent>
 ```
 
-Callback for click events.
+Click event.
 
 **Type:** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-common-comp-clickevent-i.md)&gt;
 
@@ -34,7 +34,7 @@ Callback for click events.
 onLongPress?: Callback<GestureEvent>
 ```
 
-Callback for long press events.
+Long press event.
 
 **Type:** Callback&lt;[GestureEvent](../arkts-components/arkts-arkui-tapgesture-comp-gestureevent-i.md)&gt;
 
@@ -52,7 +52,7 @@ Callback for long press events.
 onTouch?: Callback<TouchEvent>
 ```
 
-Callback for touch events.
+Touch event.
 
 **Type:** Callback&lt;[TouchEvent](../arkts-components/arkts-arkui-common-comp-touchevent-i.md)&gt;
 

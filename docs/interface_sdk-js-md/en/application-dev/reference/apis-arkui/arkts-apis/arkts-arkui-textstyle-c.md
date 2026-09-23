@@ -30,7 +30,7 @@ A constructor used to create a text style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | No | Font style options. |
+| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | No | Font style setting item.<br>Default value: when not passed, inherits the default values of the **TextStyleInterface** properties. |
 
 ## fontColor
 
@@ -56,9 +56,7 @@ Text color of the styled string.
 readonly fontConfigs?: FontConfigs
 ```
 
-Font configuration of the styled string.
-
-Default value: **undefined**, indicating that fontConfigs is not set.
+Font configuration of the styled string. indicating that **fontConfigs** is not set. Default value: **undefined**.
 
 **Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -76,9 +74,9 @@ Default value: **undefined**, indicating that fontConfigs is not set.
 readonly fontFamily?: string
 ```
 
-Font family of the styled string.
+Text font of the styled string.
 
-Returns **undefined** by default.
+Default value: **undefined**.
 
 **Type:** string
 
@@ -96,9 +94,9 @@ Returns **undefined** by default.
 readonly fontSize?: number
 ```
 
-Font size of the styled string.
+Text font size of the styled string.
 
-Unit: vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -116,7 +114,7 @@ Unit: vp
 readonly fontStyle?: FontStyle
 ```
 
-Font style of the styled string.
+Text font style of the styled string.
 
 **Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
@@ -134,11 +132,7 @@ Font style of the styled string.
 readonly fontVariations?: Array<FontVariation>
 ```
 
-Array of variable font attributes.
-
-Default value: **undefined**, indicating that variable font attributes are not set.
-
-**Since**: 26.0.0
+Attribute array of the variable font. indicating that the variable font attributes are not set. Default value: **undefined**.
 
 **Type:** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
@@ -156,7 +150,13 @@ Default value: **undefined**, indicating that variable font attributes are not s
 readonly fontWeight?: number
 ```
 
-Font weight of the styled string.
+Text font weight of the styled string.
+
+Default value: **400**
+
+**NOTE:** 
+
+The return value is of the string type. For details about the relationship between the return value and the set value, see the table below.
 
 **Type:** number
 
@@ -176,7 +176,7 @@ readonly strokeColor?: ResourceColor
 
 Text stroke color of the styled string.
 
-Default value: same as the text color.
+Default value: the font color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -194,11 +194,9 @@ Default value: same as the text color.
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style of the styled string.
+Text stroke join style of the styled string. For details about the enum values, see **StrokeJoinStyle**.
 
-Default value: **StrokeJoinStyle.MITER_JOIN**.
-
-**Since**: 26.0.0.
+Default value: **StrokeJoinStyle.MITER_JOIN**, indicating a miter join with a sharp corner.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
@@ -218,7 +216,7 @@ readonly strokeWidth?: number
 
 Text stroke width of the styled string.
 
-Default value: **0**, in vp.
+Default value: **0**, in [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units).
 
 **Type:** number
 
@@ -236,7 +234,7 @@ Default value: **0**, in vp.
 readonly superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the styled string.
+Superscript and subscript of the styled string.
 
 Default value: **SuperscriptStyle.NORMAL**.
 

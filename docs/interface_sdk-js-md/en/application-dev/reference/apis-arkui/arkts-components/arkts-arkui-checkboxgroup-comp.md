@@ -2,7 +2,7 @@
 
 The **CheckboxGroup** component is used to select or deselect all check boxes in a group.
 
-> **NOTE**
+> **NOTE:** 
 
 ## Child Components
 

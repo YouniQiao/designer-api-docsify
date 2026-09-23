@@ -16,35 +16,6 @@ Provides methods to query of obtain interface descriptors, add or delete death n
 import { rpc } from '@kit.IPCKit';
 ```
 
-## addDeathRecipient
-
-```TypeScript
-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
-```
-
-Adds a callback for receiving death notifications of the remote object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to register. |
-| flags | number | Yes | Flag of the death notification. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
-
 ## getDescriptor
 
 ```TypeScript
@@ -68,28 +39,6 @@ Obtains the interface descriptor (which is a string) of this object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-
-## getInterfaceDescriptor
-
-```TypeScript
-getInterfaceDescriptor(): string
-```
-
-Obtains the interface descriptor (which is a string) of this object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** getDescriptor()
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Interface descriptor obtained. |
 
 ## getLocalInterface
 
@@ -139,34 +88,6 @@ Checks whether this object is dead.
 | --- | --- |
 | boolean | Returns **true** if the object is dead; returns **false** otherwise. |
 
-## queryLocalInterface
-
-```TypeScript
-queryLocalInterface(descriptor: string): IRemoteBroker
-```
-
-Obtains the string of the interface descriptor.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** getLocalInterface(descriptor: string)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| descriptor | string | Yes | Interface descriptor. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
-
 ## registerDeathRecipient
 
 ```TypeScript
@@ -193,35 +114,6 @@ Registers a callback for receiving death notifications of the remote object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
 | [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) | Operation allowed only for the proxy object. |
 | [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-
-## removeDeathRecipient
-
-```TypeScript
-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
-```
-
-Removes the callback used to receive death notifications of the remote object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
-| flags | number | Yes | Flag of the death notification. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
 
 ## sendMessageRequest
 
@@ -296,6 +188,141 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+
+## unregisterDeathRecipient
+
+```TypeScript
+unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
+```
+
+Unregisters from the callback used to receive death notifications of the remote object.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
+| flags | number | Yes | Flag of the death notification. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) | Operation allowed only for the proxy object. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+
+## addDeathRecipient
+
+```TypeScript
+addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
+```
+
+Adds a callback for receiving death notifications of the remote object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to register. |
+| flags | number | Yes | Flag of the death notification. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
+
+## getInterfaceDescriptor
+
+```TypeScript
+getInterfaceDescriptor(): string
+```
+
+Obtains the interface descriptor (which is a string) of this object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** getDescriptor()
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Interface descriptor obtained. |
+
+## queryLocalInterface
+
+```TypeScript
+queryLocalInterface(descriptor: string): IRemoteBroker
+```
+
+Obtains the string of the interface descriptor.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** getLocalInterface(descriptor: string)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| descriptor | string | Yes | Interface descriptor. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
+
+## removeDeathRecipient
+
+```TypeScript
+removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
+```
+
+Removes the callback used to receive death notifications of the remote object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
+| flags | number | Yes | Flag of the death notification. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
 
 ## sendRequest
 
@@ -399,30 +426,3 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
-
-## unregisterDeathRecipient
-
-```TypeScript
-unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
-```
-
-Unregisters from the callback used to receive death notifications of the remote object.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
-| flags | number | Yes | Flag of the death notification. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) | Operation allowed only for the proxy object. |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |

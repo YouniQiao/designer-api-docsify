@@ -244,7 +244,7 @@ ASCII values are allowed.
 const OPTION_AUTO_CAP_CHARACTERS: number
 ```
 
-Characters are allowed.
+Characters are auto-capitalized.
 
 **Type:** number
 
@@ -258,7 +258,7 @@ Characters are allowed.
 const OPTION_AUTO_CAP_SENTENCES: number
 ```
 
-Sentences are allowed.
+Sentences are auto-capitalized.
 
 **Type:** number
 

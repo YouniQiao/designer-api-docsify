@@ -49,14 +49,14 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 | [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue-1) | Traces an integer with the trace output level specified. It is used to mark the name and value of a predefined integer variable to be traced. |
 | [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md) | Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using **registerTraceListener()**. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Enumerates trace output levels. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | Defines a callback to listen for whether the trace capture is enabled. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Enumerates trace output levels. |

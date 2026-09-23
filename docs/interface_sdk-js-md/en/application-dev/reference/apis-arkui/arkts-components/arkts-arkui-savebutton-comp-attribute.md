@@ -4,7 +4,7 @@
 declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 ```
 
-Universal attributes are not supported. This component supports the attributes listed below, as well as [universal attributes of security components](../arkts-apis/arkts-arkui-security_component.md). Only the following events are supported.
+Universal attributes are not supported. This component supports the attributes listed below, as well as [universal attributes of security components](../arkts-apis/arkts-arkui-securitycomponent.md#security_component). Only the following events are supported.
 
 **Inheritance/Implementation:** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 

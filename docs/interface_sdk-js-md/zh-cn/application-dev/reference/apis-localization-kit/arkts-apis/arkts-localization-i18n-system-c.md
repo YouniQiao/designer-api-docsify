@@ -384,40 +384,6 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
 ```
 
-## getSystemLocale
-
-```TypeScript
-static getSystemLocale(): string
-```
-
-
-> [System.getSystemLocaleInstance](#getsystemlocaleinstance)代替。
-> 获取系统当前设置的区域。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**替代接口：** [getSystemLocaleInstance](#getsystemlocaleinstance)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Global.I18n
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 表示区域ID的字符串。 |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
-```
-
 ## getSystemLocaleInstance
 
 ```TypeScript
@@ -695,4 +661,38 @@ try {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setAppPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
 }
+```
+
+## getSystemLocale
+
+```TypeScript
+static getSystemLocale(): string
+```
+
+
+> [System.getSystemLocaleInstance](#getsystemlocaleinstance)代替。
+> 获取系统当前设置的区域。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**替代接口：** [getSystemLocaleInstance](#getsystemlocaleinstance)
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Global.I18n
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 表示区域ID的字符串。 |
+
+**示例**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
 ```

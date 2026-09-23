@@ -6,6 +6,12 @@ declare enum CounterV2Type
 
 Specifies the **CounterV2** type.
 
+For the display effect of each **CounterV2** component type, see [Example 1: List CounterV2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-CounterV2.md),
+
+[Example 2: Compact CounterV2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-CounterV2.md),
+
+[Example 3: Inline Number CounterV2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-CounterV2.md), and [Example 4: Inline Date CounterV2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-CounterV2.md).
+
 **Since:** 26.0.0
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

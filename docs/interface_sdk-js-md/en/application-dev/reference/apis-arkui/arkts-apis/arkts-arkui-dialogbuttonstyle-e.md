@@ -4,7 +4,7 @@
 declare enum DialogButtonStyle
 ```
 
-The Button Style of dialog,
+Sets the button style for dialog boxes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The Button Style of dialog,
 DEFAULT = 0
 ```
 
-Default Style.
+Blue text on white background (blue text on black background in dark theme).
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ Default Style.
 HIGHLIGHT = 1
 ```
 
-Highlight Style.
+White text on blue background.
 
 **Since:** 10
 

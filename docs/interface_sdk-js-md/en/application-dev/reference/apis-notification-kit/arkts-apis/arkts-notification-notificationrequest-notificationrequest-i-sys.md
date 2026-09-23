@@ -58,26 +58,6 @@ Notification classification. Not supported currently.
 
 **System API:** This is a system API.
 
-## creatorInstanceKey
-
-```TypeScript
-readonly creatorInstanceKey?: number
-```
-
-Creator instance key.
-
-**Type:** number
-
-**Since:** 12
-
-**Deprecated since:** 15
-
-**Substitutes:** [appInstanceKey](#appinstancekey)
-
-**System capability:** SystemCapability.Notification.Notification
-
-**System API:** This is a system API.
-
 ## deviceId
 
 ```TypeScript
@@ -268,6 +248,26 @@ Intelligent notification unification information. This parameter is left empty b
 **Type:** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **Since:** 12
+
+**System capability:** SystemCapability.Notification.Notification
+
+**System API:** This is a system API.
+
+## creatorInstanceKey
+
+```TypeScript
+readonly creatorInstanceKey?: number
+```
+
+Creator instance key.
+
+**Type:** number
+
+**Since:** 12
+
+**Deprecated since:** 15
+
+**Substitutes:** [appInstanceKey](#appinstancekey)
 
 **System capability:** SystemCapability.Notification.Notification
 

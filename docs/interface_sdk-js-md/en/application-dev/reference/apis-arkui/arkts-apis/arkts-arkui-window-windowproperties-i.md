@@ -32,24 +32,6 @@ Screen brightness of the window. The brightness can be set by calling [setWindow
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## dimBehindValue
-
-```TypeScript
-dimBehindValue: number
-```
-
-Dimness of the window that is not on top. The value is a floating-point number in the range [0.0, 1.0], and the value **1.0** means the dimmest.
-
-Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
-
-**Type:** number
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## displayId
 
 ```TypeScript
@@ -196,24 +178,6 @@ Whether the window is in privacy mode. **true** if the window is in privacy mode
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## isRoundCorner
-
-```TypeScript
-isRoundCorner: boolean
-```
-
-Whether the window has rounded corners. **true** if the window has rounded corners; **false** otherwise.
-
-Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
-
-**Type:** boolean
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## isTransparent
 
 ```TypeScript
@@ -262,26 +226,6 @@ Whether the window is touchable. **true** if touchable, **false** otherwise.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## type
-
-```TypeScript
-type: WindowType
-```
-
-Window type.
-
-**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
-
-**Since:** 7
-
-**Deprecated since:** 26.0.0
-
-**Substitutes:** [windowType](#windowtype)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## windowRect
 
 ```TypeScript
@@ -313,5 +257,61 @@ Window type
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## dimBehindValue
+
+```TypeScript
+dimBehindValue: number
+```
+
+Dimness of the window that is not on top. The value is a floating-point number in the range [0.0, 1.0], and the value **1.0** means the dimmest.
+
+Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+
+**Type:** number
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## isRoundCorner
+
+```TypeScript
+isRoundCorner: boolean
+```
+
+Whether the window has rounded corners. **true** if the window has rounded corners; **false** otherwise.
+
+Note: This property is supported since API version 7 and deprecated since API version 9. Currently, no substitute is available.
+
+**Type:** boolean
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## type
+
+```TypeScript
+type: WindowType
+```
+
+Window type.
+
+**Type:** [WindowType](arkts-arkui-window-windowtype-e.md)
+
+**Since:** 7
+
+**Deprecated since:** 26.0.0
+
+**Substitutes:** [windowType](#windowtype)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

@@ -305,7 +305,7 @@ Sets the number of elements to display per page.
 > 
 > - This API can be called within [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 18.
 
-When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)&lt;!--RP1--&gt;&lt;!--RP1End--&gt;, the number of displayed navigation dots follows the rules below.
+When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)<!--RP1--><!--RP1End-->, the number of displayed navigation dots follows the rules below.
 
 | Total Children Count  
 > Visible Children Count|Swiping by Group Enabled|Loop Status|Number of Navigation
@@ -545,28 +545,6 @@ Sets whether the navigation indicator is interactive.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the navigation indicator is interactive.<br>The value **true** means that the navigation indicator is interactive, and **false** means the opposite.<br>If the input parameter is invalid, the value **true** is used. |
-
-## indicatorStyle
-
-```TypeScript
-indicatorStyle(value?: IndicatorStyle)
-```
-
-Sets the style of the navigation indicator.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [indicator](#indicator)(value: DotIndicator | DigitIndicator | boolean)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | No | Style of the navigation indicator. |
 
 ## interval
 
@@ -1043,3 +1021,25 @@ Sets whether vertical swiping is used.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether vertical swiping is used. The value **true** means vertical swiping, and **false** means horizontal swiping.<br>Default value: **false**. |
+
+## indicatorStyle
+
+```TypeScript
+indicatorStyle(value?: IndicatorStyle)
+```
+
+Sets the style of the navigation indicator.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [indicator](#indicator)(value: DotIndicator | DigitIndicator | boolean)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | No | Style of the navigation indicator. |

@@ -360,60 +360,6 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 | --- | --- | --- | --- |
 | height | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes | Fade height of the upper and lower edges of the content area.<br>Default value: 36vp <br>Value range: [0, +∞), percentage supported. <br>**Note:** <br>1. When height is set to a percentage, 100% means half the height of the TextPicker. <br>2. When height is set to 0, the fade effect is not displayed. <br>3. When height is set to a number that exceeds half the height of the TextPicker, the default value is used. <br>4. When the value of height is undefined or negative, the default value is used. |
 
-## onAccept
-
-```TypeScript
-onAccept(callback: (value: string, index: number) => void)
-```
-
-Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 10. This API has been completely
-> removed, and there is no substitute API.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (value: string, index: number) =&gt; void | Yes |  |
-
-## onCancel
-
-```TypeScript
-onCancel(callback: () => void)
-```
-
-Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 10. This API has been completely
-> removed. There is no substitute API.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | () =&gt; void | Yes | Callback invoked when the cancel button in the dialog box is clicked. |
-
 ## onChange
 
 ```TypeScript
@@ -765,3 +711,57 @@ Sets the text color, font size, font weight, maximum font size, minimum font siz
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) &#124; [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)&gt; | Yes | Text color, font size, font weight, maximum font size, minimum font size, and truncation mode of the text to be selected.<br>Default value: <br>{<br>color: '#ff182431', <br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular <br>}, <br>minFontSize: 0, <br>maxFontSize: 0, <br>overflow: TextOverflow.Clip <br>} <br>When the value of style is undefined, the default value is used. |
+
+## onAccept
+
+```TypeScript
+onAccept(callback: (value: string, index: number) => void)
+```
+
+Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 10. This API has been completely
+> removed, and there is no substitute API.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (value: string, index: number) =&gt; void | Yes |  |
+
+## onCancel
+
+```TypeScript
+onCancel(callback: () => void)
+```
+
+Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box](arkts-arkui-textpicker-comp.md#text_picker).
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 10. This API has been completely
+> removed. There is no substitute API.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | () =&gt; void | Yes | Callback invoked when the cancel button in the dialog box is clicked. |

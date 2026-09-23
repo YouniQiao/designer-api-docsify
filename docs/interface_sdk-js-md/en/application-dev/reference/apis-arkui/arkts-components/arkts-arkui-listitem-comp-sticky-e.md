@@ -20,7 +20,7 @@ Enumerates the sticky effects for list items.
 None
 ```
 
-No sticky.
+No sticky effect.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ No sticky.
 Normal
 ```
 
-The list item is sticky with no special effects.
+The current item sticks to the top.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ The list item is sticky with no special effects.
 Opacity
 ```
 
-The list item is sticky with opacity changes.
+The current item sticks to the top with an opacity change effect.
 
 **Since:** 7
 

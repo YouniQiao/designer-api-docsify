@@ -4,7 +4,7 @@
 declare class PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
 ```
 
-This component can only inherit the [universal attributes of security components](../arkts-apis/arkts-arkui-security_component.md).
+This component can only inherit the [universal attributes of security components](../arkts-apis/arkts-arkui-securitycomponent.md#security_component).
 
 <br>Only the following events are supported.
 

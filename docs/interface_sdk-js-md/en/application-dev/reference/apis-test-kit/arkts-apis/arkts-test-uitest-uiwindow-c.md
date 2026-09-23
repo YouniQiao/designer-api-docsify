@@ -362,50 +362,6 @@ async function demo() {
 }
 ```
 
-## isActived
-
-```TypeScript
-isActived(): Promise<boolean>
-```
-
-Checks whether a window is active. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [isActive](#isactive)
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isActived();
-}
-```
-
 ## isFocused
 
 ```TypeScript
@@ -707,5 +663,49 @@ async function demo() {
   let driver: Driver = Driver.create();
   let window: UiWindow = await driver.findWindow({ active: true });
   await window.split();
+}
+```
+
+## isActived
+
+```TypeScript
+isActived(): Promise<boolean>
+```
+
+Checks whether a window is active. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [isActive](#isactive)
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+**Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ active: true });
+  let focused = await window.isActived();
 }
 ```

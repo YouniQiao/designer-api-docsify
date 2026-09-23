@@ -38,12 +38,6 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [setUserGrantedState](arkts-notification-notificationextensionsubscription-setusergrantedstate-f-sys.md) | Sets the enabling state of the **Allow access to notifications on this device** switch for a specified application. This API uses a promise to return the result. |
 <!--DelEnd-->
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Describes the type that enables notification extension subscription. |
-
 ### Types
 
 | Name | Description |
@@ -53,3 +47,9 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md) | Describes the information about the notification extension subscription. |
 | [NotificationInfo](arkts-notification-notificationextensionsubscription-notificationinfo-t.md) | Describes the notification information delivered to the [onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage) callback of ExtensionAbility for notification subscriptions. |
 | [UserGrantSetting](arkts-notification-notificationextensionsubscription-usergrantsetting-t.md) | Describes the user authorization settings. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Describes the type that enables notification extension subscription. |

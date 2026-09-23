@@ -24,7 +24,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 public albumSubtype: AlbumSubtype
 ```
 
-Album subtype
+Album subtype.
 
 **Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
 
@@ -114,7 +114,7 @@ The subfield of default cover order.
 public orderType: number
 ```
 
-order type The value must be an integer within [0,1].
+order type. The value must be an integer within [0,1].
 
 **Type:** number
 

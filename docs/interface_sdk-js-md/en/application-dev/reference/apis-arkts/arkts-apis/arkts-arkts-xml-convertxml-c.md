@@ -16,138 +16,6 @@ ConvertXML representation refers to extensible markup language.
 import { convertxml } from '@kit.ArkTS';
 ```
 
-## convert
-
-```TypeScript
-convert(xml: string, options?: ConvertOptions): Object
-```
-
-Converts an XML text to a JavaScript object.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | Input XML text. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Object | JavaScript object. |
-
-**Examples**
-
-```TypeScript
-let xml =
-  '<?xml version="1.0" encoding="utf-8"?>' +
-    '<note importance="high" logged="true">' +
-    '    <title>Happy</title>' +
-    '    <todo>Work</todo>' +
-    '    <todo>Play</todo>' +
-    '</note>';
-let conv = new convertxml.ConvertXML();
-let options: convertxml.ConvertOptions = {
-  trim: false,
-  declarationKey: "_declaration",
-  instructionKey: "_instruction",
-  attributesKey: "_attributes",
-  textKey: "_text",
-  cdataKey: "_cdata",
-  doctypeKey: "_doctype",
-  commentKey: "_comment",
-  parentKey: "_parent",
-  typeKey: "_type",
-  nameKey: "_name",
-  elementsKey: "_elements"
-};
-let result = JSON.stringify(conv.convert(xml, options));
-console.info(result);
-// Output (non-compact)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
-```
-
-## convertToJSObject
-
-```TypeScript
-convertToJSObject(xml: string, options?: ConvertOptions): Object
-```
-
-Converts an XML text to an object of the object type.
-
-**Since:** 9
-
-**Deprecated since:** 14
-
-**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| xml | string | Yes | If the XML text to convert contains the ampersand ( & ), replace it with the entity reference **&amp;**. |
-| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Object | JavaScript object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
-
-**Examples**
-
-```TypeScript
-try {
-  let xml =
-    '<?xml version="1.0" encoding="utf-8"?>' +
-      '<note importance="high" logged="true">' +
-      '    <title>Happy</title>' +
-      '    <todo>Work</todo>' +
-      '    <todo>Play</todo>' +
-      '</note>';
-  let conv = new convertxml.ConvertXML();
-  let options: convertxml.ConvertOptions = {
-    trim: false,
-    declarationKey: "_declaration",
-    instructionKey: "_instruction",
-    attributesKey: "_attributes",
-    textKey: "_text",
-    cdataKey: "_cdata",
-    doctypeKey: "_doctype",
-    commentKey: "_comment",
-    parentKey: "_parent",
-    typeKey: "_type",
-    nameKey: "_name",
-    elementsKey: "_elements"
-  };
-  let result = JSON.stringify(conv.convertToJSObject(xml, options));
-  console.info(result);
-} catch (e) {
-  console.error((e as Object).toString());
-}
-// Output (non-compact)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
-```
-
 ## fastConvertToJSObject
 
 ```TypeScript
@@ -296,4 +164,136 @@ try {
 }
 // Output (non-compact)
 // {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"instruction","_name":"custom-pi","_instruction":"processing=\"example\""},{"_type":"element","_name":"catalog","_attributes":{"id":"books"},"_elements":[{"_type":"comment","_comment":" Bestseller Example "},{"_type":"element","_name":"book","_parent":"catalog","_attributes":{"category":"fiction","ref":"B101"},"_elements":[{"_type":"element","_name":"title","_parent":"book","_elements":[{"_type":"text","_text":"Echoes & Whispers"}]},{"_type":"element","_name":"price","_parent":"book","_attributes":{"unit":"USD"},"_elements":[{"_type":"text","_text":"19.99"}]},{"_type":"element","_name":"descr","_parent":"book","_elements":[{"_type":"cdata","_cdata":"<b>suspense</b>novel & Legendary Stories"}]},{"_type":"element","_name":"popular","_parent":"book"}]}]}]}
+```
+
+## convert
+
+```TypeScript
+convert(xml: string, options?: ConvertOptions): Object
+```
+
+Converts an XML text to a JavaScript object.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | Input XML text. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Object | JavaScript object. |
+
+**Examples**
+
+```TypeScript
+let xml =
+  '<?xml version="1.0" encoding="utf-8"?>' +
+    '<note importance="high" logged="true">' +
+    '    <title>Happy</title>' +
+    '    <todo>Work</todo>' +
+    '    <todo>Play</todo>' +
+    '</note>';
+let conv = new convertxml.ConvertXML();
+let options: convertxml.ConvertOptions = {
+  trim: false,
+  declarationKey: "_declaration",
+  instructionKey: "_instruction",
+  attributesKey: "_attributes",
+  textKey: "_text",
+  cdataKey: "_cdata",
+  doctypeKey: "_doctype",
+  commentKey: "_comment",
+  parentKey: "_parent",
+  typeKey: "_type",
+  nameKey: "_name",
+  elementsKey: "_elements"
+};
+let result = JSON.stringify(conv.convert(xml, options));
+console.info(result);
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
+```
+
+## convertToJSObject
+
+```TypeScript
+convertToJSObject(xml: string, options?: ConvertOptions): Object
+```
+
+Converts an XML text to an object of the object type.
+
+**Since:** 9
+
+**Deprecated since:** 14
+
+**Substitutes:** [fastConvertToJSObject](#fastconverttojsobject)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| xml | string | Yes | If the XML text to convert contains the ampersand ( & ), replace it with the entity reference **&amp;**. |
+| options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Object | JavaScript object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+
+**Examples**
+
+```TypeScript
+try {
+  let xml =
+    '<?xml version="1.0" encoding="utf-8"?>' +
+      '<note importance="high" logged="true">' +
+      '    <title>Happy</title>' +
+      '    <todo>Work</todo>' +
+      '    <todo>Play</todo>' +
+      '</note>';
+  let conv = new convertxml.ConvertXML();
+  let options: convertxml.ConvertOptions = {
+    trim: false,
+    declarationKey: "_declaration",
+    instructionKey: "_instruction",
+    attributesKey: "_attributes",
+    textKey: "_text",
+    cdataKey: "_cdata",
+    doctypeKey: "_doctype",
+    commentKey: "_comment",
+    parentKey: "_parent",
+    typeKey: "_type",
+    nameKey: "_name",
+    elementsKey: "_elements"
+  };
+  let result = JSON.stringify(conv.convertToJSObject(xml, options));
+  console.info(result);
+} catch (e) {
+  console.error((e as Object).toString());
+}
+// Output (non-compact)
+// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
 ```

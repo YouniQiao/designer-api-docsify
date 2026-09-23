@@ -16,11 +16,11 @@ Configures the line spacing of text and whether it applies only between lines.
 onlyBetweenLines?: boolean
 ```
 
-Whether line spacing applies only between lines.
+Whether the line spacing of the text takes effect only between lines.
 
-**true**: Line spacing applies only between lines; no extra spacing is added above the first line or below the last line. **false**: Extra line spacing is added both above the first line and below the last line.
+When set to true, the line spacing applies only between lines, with no extra line spacing above the first line or below the last line. When set to false, line spacing exists both above the first line and below the last line.
 
-Default value: **false**
+Default value: false
 
 **Type:** boolean
 

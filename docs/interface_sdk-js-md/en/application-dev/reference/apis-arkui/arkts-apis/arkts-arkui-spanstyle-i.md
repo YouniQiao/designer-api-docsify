@@ -18,8 +18,6 @@ length: number
 
 Length of the styled string style.
 
-If the value is less than 0 or exceeds the difference between the string length and the value of **start**, it is treated as the difference between the string length and the value of **start**.
-
 **Type:** number
 
 **Since:** 12
@@ -72,7 +70,7 @@ Style key.
 styledValue: StyledStringValue
 ```
 
-Style object.
+Style object used to match the style of the styled string.
 
 **Type:** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 

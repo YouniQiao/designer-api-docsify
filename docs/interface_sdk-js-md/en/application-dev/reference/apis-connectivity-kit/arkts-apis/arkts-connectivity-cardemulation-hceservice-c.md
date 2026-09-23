@@ -194,108 +194,6 @@ export default {
 }
 ```
 
-## sendResponse
-
-```TypeScript
-sendResponse(responseApdu: number[]): void
-```
-
-Sends a response to the peer card reader.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [transmit](#transmit) instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [transmit](#transmit)
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| responseApdu | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-
-**Examples**
-
-ArkTS example:
-
-For details, see the example of [transmit](#transmit).
-
-JS example:
-
-```TypeScript
-<!-- Applicable to lite wearables -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        Test
-    </text>
-    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* Applicable to lite wearables */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// Applicable to lite wearables
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.on("hceCmd", (err, res) => {
-            if(err.data === 0) {
-                console.info('callback => Operation hceCmd succeeded. Data: ${JSON.stringify(res)}');
-                hceService.sendResponse([0x00,0xa4,0x04,0x00,
-                    0x0e,0x32,0x50,0x41,0x59,0x2e,0x53,0x59,0x53,0x2e,0x44,0x44,
-                    0x46,0x30,0x31,0x00]);
-            } else {
-                console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
-            }
-        });
-    }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -330,107 +228,6 @@ Starts HCE, including enabling this application to run in the foreground prefere
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 
-## startHCE
-
-```TypeScript
-startHCE(aidList: string[]): boolean
-```
-
-Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [start](#start) instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [start](#start)
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aidList | string[] | Yes | List of AIDs to register. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if HCE is started or has been started; returns **false** otherwise. |
-
-**Examples**
-
-ArkTS example:
-
-For details, see the example of on.
-
-JS example:
-
-```TypeScript
-<!-- Applicable to lite wearables -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        Test
-    </text>
-    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* Applicable to lite wearables */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// Applicable to lite wearables
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.startHCE([
-            "F0010203040506", "A0000000041010"
-        ]);
-    }
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -463,99 +260,6 @@ Stops HCE, including canceling the subscription of APDU data, exiting this appli
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-
-## stopHCE
-
-```TypeScript
-stopHCE(): boolean
-```
-
-Stops HCE, including exiting the current application from the foreground, releasing the dynamically registered AID list, and canceling the subscription of **hceCmd**.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [stop](#stop) instead.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [stop](#stop)
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | **true** if HCE is stopped or disabled; **false** otherwise. |
-
-**Examples**
-
-ArkTS example:
-
-For details, see the example of on.
-
-JS example:
-
-```TypeScript
-<!-- Applicable to lite wearables -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        Test
-    </text>
-    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* Applicable to lite wearables */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// Applicable to lite wearables
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.stopHCE();
-    }
-}
-```
 
 ## transmit
 
@@ -704,4 +408,300 @@ hceService.transmit(responseData, () => {
   console.info("transmit Promise success.");
 });
 console.info("transmit Promise end.");
+```
+
+## sendResponse
+
+```TypeScript
+sendResponse(responseApdu: number[]): void
+```
+
+Sends a response to the peer card reader.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [transmit](#transmit) instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [transmit](#transmit)
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| responseApdu | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+ArkTS example:
+
+For details, see the example of [transmit](#transmit).
+
+JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.on("hceCmd", (err, res) => {
+            if(err.data === 0) {
+                console.info('callback => Operation hceCmd succeeded. Data: ${JSON.stringify(res)}');
+                hceService.sendResponse([0x00,0xa4,0x04,0x00,
+                    0x0e,0x32,0x50,0x41,0x59,0x2e,0x53,0x59,0x53,0x2e,0x44,0x44,
+                    0x46,0x30,0x31,0x00]);
+            } else {
+                console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
+            }
+        });
+    }
+}
+```
+
+## startHCE
+
+```TypeScript
+startHCE(aidList: string[]): boolean
+```
+
+Starts HCE, including enabling this application to run in the foreground preferentially and dynamically registering the AID list.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [start](#start) instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [start](#start)
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| aidList | string[] | Yes | List of AIDs to register. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if HCE is started or has been started; returns **false** otherwise. |
+
+**Examples**
+
+ArkTS example:
+
+For details, see the example of on.
+
+JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.startHCE([
+            "F0010203040506", "A0000000041010"
+        ]);
+    }
+}
+```
+
+## stopHCE
+
+```TypeScript
+stopHCE(): boolean
+```
+
+Stops HCE, including exiting the current application from the foreground, releasing the dynamically registered AID list, and canceling the subscription of **hceCmd**.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [stop](#stop) instead.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [stop](#stop)
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | **true** if HCE is stopped or disabled; **false** otherwise. |
+
+**Examples**
+
+ArkTS example:
+
+For details, see the example of on.
+
+JS example:
+
+```TypeScript
+<!-- Applicable to lite wearables -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        Test
+    </text>
+    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.stopHCE();
+    }
+}
 ```

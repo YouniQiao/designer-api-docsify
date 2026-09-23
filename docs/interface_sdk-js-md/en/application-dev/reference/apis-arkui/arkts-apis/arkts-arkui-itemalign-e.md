@@ -4,7 +4,7 @@
 declare enum ItemAlign
 ```
 
-ItemAlign enumeration description
+Sets the alignment mode of an element on the cross axis of the container.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ ItemAlign enumeration description
 Auto
 ```
 
-Use the default configuration in the Flex container.
+The default configuration of the flex container is used.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Use the default configuration in the Flex container.
 Start
 ```
 
-The element is in the Flex container with the cross-axis direction head aligned.
+The element in the flex container is aligned with the cross-start edge.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ The element is in the Flex container with the cross-axis direction head aligned.
 Center
 ```
 
-The element is centered in the Flex container with the cross axis direction aligned.
+The element in the flex container is centered along the cross axis.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ The element is centered in the Flex container with the cross axis direction alig
 End
 ```
 
-The element is bottom aligned in the Flex container with the cross axis direction.
+The element in the flex container is aligned with the cross-end edge.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ The element is bottom aligned in the Flex container with the cross axis directio
 Baseline
 ```
 
-Element In the Flex container, the cross-axis direction text baseline is aligned.
+The element aligns with the text baseline along the cross axis direction in a Flex container.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Element In the Flex container, the cross-axis direction text baseline is aligned
 Stretch
 ```
 
-Element In a Flex container, the fill is stretched across the axis and, when no dimension is set, to the container size.
+The element stretches to fill along the cross axis direction in a Flex container. When the container is Flex and **Wrap** is set to **FlexWrap.Wrap** or **FlexWrap.WrapReverse**, the element stretches to the size of the element with the longest cross axis length in the current row/column. In other cases, the element stretches to the container size regardless of whether the element size is set.
 
 **Since:** 7
 

@@ -1989,7 +1989,7 @@ static random(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable. |
 
 <a id="random-1"></a>
 
@@ -2024,7 +2024,7 @@ static random(significantDigits: number): Decimal
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable. |
 
 ## round
 
@@ -2076,7 +2076,7 @@ static set(config: DecimalConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | 是 |  |
+| config | [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | 是 | 包含以下一个或多个属性的对象，precision {double} rounding {Rounding} toExpNeg {double} toExpPos {double} maxE {double} minE {double} modulo {Modulo} crypto {boolean} defaults {true} |
 
 **错误码：**
 
@@ -2084,7 +2084,7 @@ static set(config: DecimalConfig): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable. |
 
 ## sign
 

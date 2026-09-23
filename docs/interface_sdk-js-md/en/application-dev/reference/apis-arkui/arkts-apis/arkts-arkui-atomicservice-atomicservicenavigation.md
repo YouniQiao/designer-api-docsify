@@ -28,6 +28,12 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 | [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md) | Defines sidebar options. |
 | [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md) | Title bar options. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md) | Defines the content of the **NavDestination** component. |
+
 ### Enums
 
 | Name | Description |
@@ -36,12 +42,6 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 | [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md) | Enumerates the opacity levels of the navigation bar background. |
 | [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md) | Provides options for background color blending modes. |
 | [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md) | Enumerates the title bar types. The default type is **ROUND_ICON**. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md) | Defines the content of the **NavDestination** component. |
 
 ## Examples
 

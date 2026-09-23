@@ -50,24 +50,6 @@ Obtains the bundle name of the application to which this form belongs.
 
 **System capability:** SystemCapability.Ability.Form
 
-## colorMode
-
-```TypeScript
-colorMode: ColorMode
-```
-
-Obtains the color mode of this form.
-
-**Type:** [ColorMode](arkts-form-forminfo-colormode-e.md)
-
-**Since:** 9
-
-**Deprecated since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Ability.Form
-
 ## customizeData
 
 ```TypeScript
@@ -385,6 +367,24 @@ Obtains the updateEnabled.
 **Type:** boolean
 
 **Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Ability.Form
+
+## colorMode
+
+```TypeScript
+colorMode: ColorMode
+```
+
+Obtains the color mode of this form.
+
+**Type:** [ColorMode](arkts-form-forminfo-colormode-e.md)
+
+**Since:** 9
+
+**Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,7 +4,7 @@
 declare type OnPasteCallback = (content: string, event: PasteEvent) => void
 ```
 
-Defines the callback used to return the pasted text content.
+Paste callback.
 
 **Since:** 18
 
@@ -18,5 +18,5 @@ Defines the callback used to return the pasted text content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string | Yes | Text to be pasted. |
-| event | [PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md) | Yes | Custom paste event. |
+| content | string | Yes | Pasted text content. |
+| event | [PasteEvent](arkts-arkui-richeditor-comp-pasteevent-i.md) | Yes | User-defined paste event. |

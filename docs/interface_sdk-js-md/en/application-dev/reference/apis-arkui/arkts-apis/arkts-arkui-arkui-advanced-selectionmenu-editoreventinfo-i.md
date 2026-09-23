@@ -22,7 +22,7 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 content?: RichEditorSelection
 ```
 
-Information about the selected content.
+Information about the selected content, including the selected text or image spans and the selection range.
 
 **Type:** [RichEditorSelection](../arkts-components/arkts-arkui-richeditor-comp-richeditorselection-i.md)
 

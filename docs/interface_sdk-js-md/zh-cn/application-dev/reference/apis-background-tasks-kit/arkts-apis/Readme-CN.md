@@ -162,7 +162,8 @@
   <!--Del-->
   - [ResourceType(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-resourcetype-e-sys.md)<!--DelEnd-->
   - [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
-- [@ohos.resourceschedule.deviceStandby(设备待机模块)](arkts-backgroundtasks-resourceschedule-devicestandby.md)
+<!--Del-->
+- [@ohos.resourceschedule.deviceStandby(设备待机模块)](arkts-backgroundtasks-resourceschedule-devicestandby.md)<!--DelEnd-->
   <!--Del-->
   - [getExemptedApps(系统接口)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -175,7 +176,8 @@
   - [ResourceRequest(系统接口)](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ResourceType(系统接口)](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.resourceschedule.usageStatistics(设备使用信息统计)](arkts-backgroundtasks-resourceschedule-usagestatistics.md)
+<!--Del-->
+- [@ohos.resourceschedule.usageStatistics(设备使用信息统计)](arkts-backgroundtasks-resourceschedule-usagestatistics.md)<!--DelEnd-->
   <!--Del-->
   - [isIdleState(系统接口)](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -252,6 +254,7 @@
   - [WorkSchedulerExtensionAbility](arkts-backgroundtasks-workschedulerextensionability-c.md)
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
-  - [WorkSchedulerExtensionContext(延迟任务调度回调上下文)](arkts-backgroundtasks-workschedulerextensioncontext.md)
+  <!--Del-->
+  - [WorkSchedulerExtensionContext(延迟任务调度回调上下文)](arkts-backgroundtasks-workschedulerextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [WorkSchedulerExtensionContext(系统接口)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

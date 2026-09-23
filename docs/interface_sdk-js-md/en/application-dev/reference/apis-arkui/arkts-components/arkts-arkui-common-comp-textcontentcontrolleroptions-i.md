@@ -16,7 +16,11 @@ Provides configuration options for text insertion operations in text input compo
 offset?: number
 ```
 
-Insertion position for the text.
+Position to insert text. Value range: [0, text length]. If the value is out of range, it is automatically corrected to a valid boundary position.
+
+**Note:** 
+
+Pass this parameter when text needs to be inserted at a specified position (rather than at the end). If not passed, text is inserted at the end by default.
 
 **Type:** number
 

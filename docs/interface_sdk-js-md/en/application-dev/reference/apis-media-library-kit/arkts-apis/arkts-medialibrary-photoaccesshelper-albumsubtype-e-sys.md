@@ -13,7 +13,7 @@ Enumerate the album subtypes.
 ## HIDDEN
 
 ```TypeScript
-HIDDEN
+HIDDEN = 1027
 ```
 
 Hidden album.
@@ -27,7 +27,7 @@ Hidden album.
 ## TRASH
 
 ```TypeScript
-TRASH
+TRASH = 1028
 ```
 
 Trash.
@@ -41,7 +41,7 @@ Trash.
 ## SCREENSHOT
 
 ```TypeScript
-SCREENSHOT
+SCREENSHOT = 1029
 ```
 
 Album for screenshots and screen recording files.
@@ -55,7 +55,7 @@ Album for screenshots and screen recording files.
 ## CAMERA
 
 ```TypeScript
-CAMERA
+CAMERA = 1030
 ```
 
 Album for images and videos taken by the camera.
@@ -127,7 +127,7 @@ Geographic location album.
 ## GEOGRAPHY_CITY
 
 ```TypeScript
-GEOGRAPHY_CITY
+GEOGRAPHY_CITY = 4100
 ```
 
 City album.
@@ -141,7 +141,7 @@ City album.
 ## SHOOTING_MODE
 
 ```TypeScript
-SHOOTING_MODE
+SHOOTING_MODE = 4101
 ```
 
 Shooting mode album.
@@ -155,7 +155,7 @@ Shooting mode album.
 ## PORTRAIT
 
 ```TypeScript
-PORTRAIT
+PORTRAIT = 4102
 ```
 
 Portrait album.
@@ -169,7 +169,7 @@ Portrait album.
 ## GROUP_PHOTO
 
 ```TypeScript
-GROUP_PHOTO
+GROUP_PHOTO = 4103
 ```
 
 Group photo album.
@@ -197,7 +197,7 @@ Highlights album.
 ## HIGHLIGHT_SUGGESTIONS
 
 ```TypeScript
-HIGHLIGHT_SUGGESTIONS
+HIGHLIGHT_SUGGESTIONS = 4105
 ```
 
 Highlights suggestion album.

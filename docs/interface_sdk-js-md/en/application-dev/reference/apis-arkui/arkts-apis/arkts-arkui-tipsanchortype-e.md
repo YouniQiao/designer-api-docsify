@@ -4,9 +4,7 @@
 declare enum TipsAnchorType
 ```
 
-Follow position type.
-
-@enum { number }
+Enumerates anchor types of the tooltip.
 
 **Since:** 20
 
@@ -18,7 +16,7 @@ Follow position type.
 TARGET
 ```
 
-Follow the component.
+The tooltip follows the target component.
 
 **Since:** 20
 
@@ -34,7 +32,7 @@ Follow the component.
 CURSOR
 ```
 
-Follow the cursor.
+The tooltip follows the cursor position.
 
 **Since:** 20
 

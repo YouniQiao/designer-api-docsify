@@ -4,9 +4,7 @@
 declare enum AppRotation
 ```
 
-Enumerates the app rotation.
-
-@enum { number }
+Defines the rotation angle of the application's orientation.
 
 **Since:** 12
 
@@ -18,7 +16,7 @@ Enumerates the app rotation.
 ROTATION_0 = 0
 ```
 
-App does not rotate to display vertically.
+0 degrees.
 
 **Since:** 12
 
@@ -34,7 +32,7 @@ App does not rotate to display vertically.
 ROTATION_90 = 1
 ```
 
-App rotates 90 degrees clockwise to display horizontally.
+90 degrees.
 
 **Since:** 12
 
@@ -50,7 +48,7 @@ App rotates 90 degrees clockwise to display horizontally.
 ROTATION_180 = 2
 ```
 
-App rotates 180 degrees clockwise to display vertically in reverse.
+180 degrees.
 
 **Since:** 12
 
@@ -66,7 +64,7 @@ App rotates 180 degrees clockwise to display vertically in reverse.
 ROTATION_270 = 3
 ```
 
-App rotates 270 degrees clockwise to display horizontally in reverse.
+270 degrees.
 
 **Since:** 12
 

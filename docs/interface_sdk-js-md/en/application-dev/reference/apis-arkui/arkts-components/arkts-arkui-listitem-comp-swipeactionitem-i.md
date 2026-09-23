@@ -4,9 +4,9 @@
 declare interface SwipeActionItem
 ```
 
-Describes the swipe action item. For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left).
+Used to configure the **start** or **end** swipe-out item in [SwipeActionOptions](arkts-arkui-listitem-comp-swipeactionoptions-i.md), including the action item displayed when swiping out, the distance threshold of the long-distance action area, and the callbacks for entering and exiting the long-distance action area, triggering the action when the finger is lifted, and state changes.
 
-For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
+When used as a **start** swipe-out item, it is displayed on the left of the **ListItem** when the **List** is in vertical layout, and above the **ListItem** when the **List** is in horizontal layout. When used as an end swipe-out item, it is displayed on the right of the **ListItem** when the **List** is in vertical layout, and below the **ListItem** when the **List** is in horizontal layout.
 
 **Since:** 10
 

@@ -4,7 +4,7 @@
 declare interface BadgeParamWithNumber extends BadgeParam
 ```
 
-Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all attributes of **BadgeParam**.
+BadgeParamWithNumber inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all the attributes of BadgeParam.
 
 **Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md)
 
@@ -18,13 +18,13 @@ Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all a
 count: number
 ```
 
-Number of notifications.
+Number of reminder messages.
 
 **NOTE:** 
 
-If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed.
+When the value is less than or equal to 0 and less than **maxCount**, the badge is not displayed.
 
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
+Value range: [-2147483648, 2147483647]. If the value is out of range, 4294967296 is added to or subtracted from it to keep it within the range. If the value is not an integer, the decimal part is discarded, for example, 5.5 becomes 5.
 
 **Type:** number
 
@@ -42,11 +42,11 @@ Value range: [-2147483648, 2147483647]. If the value is out of the range, 429496
 maxCount?: number
 ```
 
-Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For example, if **maxCount** is 99, **99+** is displayed.
+Maximum number of messages. When the number exceeds the maximum, only **maxCount+** is displayed. For example, when **maxCount** is 99, `99+` is displayed.
 
 Default value: **99**
 
-Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
+Value range: [-2147483648, 2147483647]. If the value is out of range, 4294967296 is added to or subtracted from it to keep it within the range. If the value is not an integer, the decimal part is discarded, for example, 5.5 becomes 5.
 
 **Type:** number
 

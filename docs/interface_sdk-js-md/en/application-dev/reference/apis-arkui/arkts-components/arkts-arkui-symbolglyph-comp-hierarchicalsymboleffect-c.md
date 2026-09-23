@@ -4,7 +4,7 @@
 declare class HierarchicalSymbolEffect extends SymbolEffect
 ```
 
-Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
+Inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-comp-symboleffect-c.md)
 
@@ -34,7 +34,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](arkts-arkui-symbolglyph-comp-effectfillstyle-e.md) | No | Effect fill style.<br>Default value: **EffectFillStyle.CUMULATIVE** |
+| fillStyle | [EffectFillStyle](arkts-arkui-symbolglyph-comp-effectfillstyle-e.md) | No | Animation mode. For the specific enumeration values and descriptions, see EffectFillStyle Enumeration Description.<br>Default value: EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -42,9 +42,9 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 fillStyle?: EffectFillStyle
 ```
 
-Effect fill style.
+Animation mode.
 
-Default value: **EffectFillStyle.CUMULATIVE**
+Default value: EffectFillStyle.CUMULATIVE
 
 **Type:** [EffectFillStyle](arkts-arkui-symbolglyph-comp-effectfillstyle-e.md)
 

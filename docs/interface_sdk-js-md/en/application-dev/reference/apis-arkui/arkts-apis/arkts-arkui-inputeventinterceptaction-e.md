@@ -4,7 +4,7 @@
 declare enum InputEventInterceptAction
 ```
 
-Defines the input event intercept action.
+Enumerates the input event interception actions, used to control whether input events continue to be delivered to the UI framework, applicable to scenarios where input events need to be allowed or blocked based on business rules.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines the input event intercept action.
 CONTINUE = 0
 ```
 
-Continue to deliver the event to the UI framework.
+The event is permitted to propagate to the UI framework.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Continue to deliver the event to the UI framework.
 BLOCK = 1
 ```
 
-Block the event from being delivered to the UI framework.
+The event is blocked from propagating to the UI framework.
 
 **Since:** 26.0.0
 

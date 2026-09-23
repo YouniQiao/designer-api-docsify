@@ -4,7 +4,7 @@
 declare enum BarState
 ```
 
-Used to set the status of the scroll bar.
+Sets the scroll bar status.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Not displayed.
 Auto
 ```
 
-On-demand display (displayed when you touch it and disappears after 2 seconds).
+Displayed when the screen is touched and hidden after 2s.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ On-demand display (displayed when you touch it and disappears after 2 seconds).
 On
 ```
 
-Resident display.
+Always displayed.
 
 **Since:** 7
 

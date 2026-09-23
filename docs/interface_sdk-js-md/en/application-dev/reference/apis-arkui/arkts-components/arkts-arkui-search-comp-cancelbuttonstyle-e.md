@@ -16,7 +16,7 @@ Enum for the style of cancel button.
 CONSTANT
 ```
 
-The Cancel button is always displayed.
+Constant display style of the clear button.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ The Cancel button is always displayed.
 INVISIBLE
 ```
 
-The Cancel button is always hidden.
+Constant hidden style of the clear button.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ The Cancel button is always hidden.
 INPUT
 ```
 
-The Cancel button is displayed when there is text input.
+Input style of the clear button.
 
 **Since:** 10
 

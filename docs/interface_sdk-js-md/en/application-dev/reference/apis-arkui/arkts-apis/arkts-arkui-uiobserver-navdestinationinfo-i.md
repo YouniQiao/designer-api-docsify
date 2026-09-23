@@ -4,7 +4,7 @@
 export interface NavDestinationInfo
 ```
 
-Information about the **NavDestination** component, returned by the system to developers.
+Provides information about the **NavDestination** component, returned by the system to developers.
 
 **Since:** 11
 
@@ -22,7 +22,9 @@ import { uiObserver } from '@kit.ArkUI';
 index: number
 ```
 
-Index of the **NavDestination** component in the navigation stack. The value must be greater than or equal to 0.
+Index of the **NavDestination** component in the navigation stack.
+
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -40,7 +42,7 @@ Index of the **NavDestination** component in the navigation stack. The value mus
 mode?: NavDestinationMode
 ```
 
-Mode of the **NavDestination** component. Default value: NavDestinationMode.Standard.
+Mode of the **NavDestination** component.
 
 **Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestination-comp-navdestinationmode-e.md)
 

@@ -167,74 +167,6 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
-## on('volumeChange')
-
-```TypeScript
-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
-```
-
-Listens for system volume change events. This method uses a callback to get volume change events.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** volumeChange
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
-
-**Examples**
-
-```TypeScript
-audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
-## on('ringerModeChange')
-
-```TypeScript
-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
-```
-
-Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** ringerModeChange
-
-**System capability:** SystemCapability.Multimedia.Audio.Communication
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
-
-**Examples**
-
-```TypeScript
-audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
-  console.info(`Updated ringermode: ${ringerMode}`);
-});
-```
-
 ## setAudioScene
 
 ```TypeScript
@@ -362,5 +294,73 @@ audioManager.setExtraParameters('key_example', kvpairs).then(() => {
   console.info('Promise returned to indicate a successful setting of the extra parameters.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set the audio extra parameters ${err}`);
+});
+```
+
+## on('volumeChange')
+
+```TypeScript
+on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
+```
+
+Listens for system volume change events. This method uses a callback to get volume change events.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** volumeChange
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+
+**Examples**
+
+```TypeScript
+audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+});
+```
+
+## on('ringerModeChange')
+
+```TypeScript
+on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ringerModeChange
+
+**System capability:** SystemCapability.Multimedia.Audio.Communication
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
+
+**Examples**
+
+```TypeScript
+audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
+  console.info(`Updated ringermode: ${ringerMode}`);
 });
 ```

@@ -272,6 +272,12 @@ import { sensor } from '@kit.SensorServiceKit';
 | [SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md) | Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | Defines the reporting frequency mode of the sensor. |
+
 ### Enums
 
 | Name | Description |
@@ -287,9 +293,3 @@ import { sensor } from '@kit.SensorServiceKit';
 | --- | --- |
 | [SensorId](arkts-sensorservice-sensor-sensorid-e-sys.md) | Enumerates the sensor types. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | Defines the reporting frequency mode of the sensor. |

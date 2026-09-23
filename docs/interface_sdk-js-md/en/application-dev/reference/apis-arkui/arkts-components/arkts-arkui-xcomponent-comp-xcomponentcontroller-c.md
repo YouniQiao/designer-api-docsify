@@ -300,33 +300,6 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 | --- | --- | --- | --- |
 | rotationOptions | [SurfaceRotationOptions](arkts-arkui-xcomponent-comp-surfacerotationoptions-i.md) | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
 
-## setXComponentSurfaceSize
-
-```TypeScript
-setXComponentSurfaceSize(value: {
-    surfaceWidth: number;
-    surfaceHeight: number;
-  }): void
-```
-
-Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
-
-Unit: px.
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [setXComponentSurfaceRect](#setxcomponentsurfacerect)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | Width and Height of the surface held by the XComponent. |
-
 ## startImageAnalyzer
 
 ```TypeScript
@@ -417,3 +390,30 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | [DrawingCanvas](arkts-arkui-canvas-comp-drawingcanvas-t.md) | Yes | The canvas previously obtained from lockCanvas. |
+
+## setXComponentSurfaceSize
+
+```TypeScript
+setXComponentSurfaceSize(value: {
+    surfaceWidth: number;
+    surfaceHeight: number;
+  }): void
+```
+
+Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+
+Unit: px.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [setXComponentSurfaceRect](#setxcomponentsurfacerect)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | Yes | Width and Height of the surface held by the XComponent. |

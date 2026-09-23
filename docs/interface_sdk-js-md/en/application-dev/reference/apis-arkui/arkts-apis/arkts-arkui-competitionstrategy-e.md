@@ -4,7 +4,7 @@
 declare enum CompetitionStrategy
 ```
 
-Defines whether the dispatched event is a competitive gesture. In the competitive scenario, only one of the original node and target node of the gesture responds. In the non‑competitive scenario, both nodes can respond simultaneously.
+Defines whether the dispatched event is a competitive gesture. In the competitive scenario, only one of the original node and target node of the gesture responds. In the non-competitive scenario, both the original node and target node of the gesture can respond.
 
 **Since:** 24
 

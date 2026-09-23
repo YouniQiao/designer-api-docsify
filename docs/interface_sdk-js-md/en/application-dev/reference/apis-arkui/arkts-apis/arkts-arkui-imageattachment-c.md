@@ -136,7 +136,7 @@ readonly size?: SizeOptions
 
 Image size of the styled string.
 
-Number-type values use px as the unit.
+The unit of the returned number value is `px`.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -154,11 +154,7 @@ Number-type values use px as the unit.
 readonly sizeInVp?: SizeOptions
 ```
 
-Image size of the styled string.
-
-Number-type values use vp as the unit.
-
-If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
+Image size of the styled string. The unit of the returned number value is `vp`. If the ImageAttachment size is set to a negative value or undefined, undefined is returned.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 

@@ -2,7 +2,11 @@
 
 The **Polygon** component is used to draw a polygon. This component defines the shape of a polygon by setting a list of vertex coordinates, and supports attribute configuration such as fill color and border style. The component uses a two-dimensional coordinate system and connects the vertices in sequence to form a closed polygon area. It is suitable for drawing custom polygon shapes such as triangles, quadrilaterals, and pentagons, as well as for implementing visualization scenarios such as charts and icons that require polygon elements.
 
-> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class.
+> **NOTE:** 
+> 
+> Since API version 20, this component supports updating constructor parameters through the
+> [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
+> [AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md) class.
 
 ## Child Components
 

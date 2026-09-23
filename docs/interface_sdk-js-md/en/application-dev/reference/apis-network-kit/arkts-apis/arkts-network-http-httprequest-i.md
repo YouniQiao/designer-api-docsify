@@ -123,52 +123,6 @@ httpRequest.request(url, {
 });
 ```
 
-## off("headerReceive")
-
-```TypeScript
-off(type: "headerReceive", callback?: AsyncCallback<Object>): void
-```
-
-Unregisters the observer for HTTP Response Header events.
-
-**Since:** 6
-
-**Deprecated since:** 8
-
-**Substitutes:** [off_headersReceive](#offheadersreceive)
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
-**Examples**
-
-### off("headerReceive")
-
-off(type: "headerReceive", callback?: AsyncCallback<Object>): void
-
-Unregisters the observer for HTTP Response Header events.
-
-> NOTE
-> 
-> This API is supported since API version 6 and deprecated since API version 8. You are advised to use [off("headersReceive")](#offheadersreceive) instead.
-
-System capability: SystemCapability.Communication.NetStack
-
-Parameters
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
 ## off("headersReceive")
 
 ```TypeScript
@@ -422,19 +376,19 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
 httpRequest.off("dataSendProgress");
 ```
 
-## on("headerReceive")
+## off("headerReceive")
 
 ```TypeScript
-on(type: "headerReceive", callback: AsyncCallback<Object>): void
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 ```
 
-Registers an observer for HTTP Response Header events.
+Unregisters the observer for HTTP Response Header events.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](#onheadersreceive)
+**Substitutes:** [off_headersReceive](#offheadersreceive)
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -443,17 +397,19 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
-### on("headerReceive")
+### off("headerReceive")
 
-on(type: "headerReceive", callback: AsyncCallback<Object>): void
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 
-Registers an observer for HTTP Response Header events.
+Unregisters the observer for HTTP Response Header events.
 
-> NOTEThis API is supported since API version 6 and deprecated since API version 8. You are advised to use [on("headersReceive")](#onheadersreceive) instead.
+> NOTE
+> 
+> This API is supported since API version 6 and deprecated since API version 8. You are advised to use [off("headersReceive")](#offheadersreceive) instead.
 
 System capability: SystemCapability.Communication.NetStack
 
@@ -461,12 +417,9 @@ Parameters
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
+httpRequest.off("headerReceive");
 ```
 
 ## on("headersReceive")
@@ -692,6 +645,53 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
   console.info("dataSendProgress:" + JSON.stringify(data));
 });
 httpRequest.off("dataSendProgress");
+```
+
+## on("headerReceive")
+
+```TypeScript
+on(type: "headerReceive", callback: AsyncCallback<Object>): void
+```
+
+Registers an observer for HTTP Response Header events.
+
+**Since:** 6
+
+**Deprecated since:** 8
+
+**Substitutes:** [on_headersReceive](#onheadersreceive)
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
+
+**Examples**
+
+### on("headerReceive")
+
+on(type: "headerReceive", callback: AsyncCallback<Object>): void
+
+Registers an observer for HTTP Response Header events.
+
+> NOTEThis API is supported since API version 6 and deprecated since API version 8. You are advised to use [on("headersReceive")](#onheadersreceive) instead.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headerReceive", (data: BusinessError) => {
+  console.error("error:" + JSON.stringify(data));
+});
 ```
 
 ## once("headersReceive")

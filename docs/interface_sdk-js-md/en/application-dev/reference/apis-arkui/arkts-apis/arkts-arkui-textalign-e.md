@@ -4,7 +4,7 @@
 declare enum TextAlign
 ```
 
-The horizontal alignment of the text paragraph.
+Sets the horizontal alignment of the text.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ Aligned with both margins.
 LEFT = 4
 ```
 
-The text is aligned in the left direction.
+Left aligned.
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ The text is aligned in the left direction.
 RIGHT = 5
 ```
 
-The text is aligned in the right direction.
+Right aligned.
 
 **Since:** 23
 

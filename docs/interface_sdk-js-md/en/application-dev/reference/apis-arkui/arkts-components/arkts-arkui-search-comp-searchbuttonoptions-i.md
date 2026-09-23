@@ -16,11 +16,11 @@ Defines the SearchButton options.
 autoDisable?: Boolean
 ```
 
-Whether to disable the search button when there is no text input.
+Whether the button is grayed out and not clickable when the Search component has no text content.
 
-Default value: **false**
+Default value: false
 
-**true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
+true indicates that the button graying-out feature is enabled, and false indicates that it is not enabled.
 
 **Type:** Boolean
 
@@ -40,7 +40,7 @@ Default value: **false**
 fontColor?: ResourceColor
 ```
 
-Font color of the button.
+Font color of the text button. **Atomic service API:** This API is supported in atomic services since API version 11.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +58,9 @@ Font color of the button.
 fontSize?: Length
 ```
 
-Font size of the button. It cannot be set in percentage.
+Font size of the text button. If no unit is specified, the default unit is vp. Percentage is not supported. If a percentage is passed in, it does not take effect.
+
+Default value: follows the theme. **Atomic service API:** This API is supported in atomic services since API version 11.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

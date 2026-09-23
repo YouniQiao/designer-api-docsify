@@ -4,7 +4,7 @@
 declare type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => void
 ```
 
-Defines the callback for submission.
+Callback for submission.
 
 **Since:** 18
 
@@ -18,5 +18,5 @@ Defines the callback for submission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](arkts-arkui-textinput-comp-enterkeytype-e.md) | Yes | Type of the Enter key. |
-| event | [SubmitEvent](arkts-arkui-textinput-comp-submitevent-i.md) | Yes | Submit event. It can be used to control whether to dismiss the keyboard. |
+| enterKey | [EnterKeyType](arkts-arkui-textinput-comp-enterkeytype-e.md) | Yes | Enter key type of the input method. |
+| event | [SubmitEvent](arkts-arkui-textinput-comp-submitevent-i.md) | Yes | Submit event. You can control whether to collapse the keyboard. |

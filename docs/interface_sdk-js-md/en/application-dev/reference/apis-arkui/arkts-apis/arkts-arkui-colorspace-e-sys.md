@@ -16,7 +16,7 @@ Enumerates color space types for specifying color rendering modes.
 BT2020 = 2
 ```
 
-BT2020 ColorSpace.
+BT2020 color space, which has a wider color gamut and is suitable for high-end display devices.
 
 **Since:** 26.0.0
 

@@ -18,7 +18,7 @@ This module provides the requested ad content.
 
 Custom parameters.
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+<!--RP1--><!--RP1End-->
 
 **Type:** Object
 

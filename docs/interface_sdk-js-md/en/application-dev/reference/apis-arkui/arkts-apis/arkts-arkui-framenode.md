@@ -16,7 +16,7 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 
 | Name | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | **FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a [BuilderNode](arkts-arkui-buildernode-c.md) (that holds the FrameNode) to a [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-attribute.md#nodecontainerattribute) or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| [FrameNode](arkts-arkui-framenode-c.md) | **FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a [BuilderNode](arkts-arkui-buildernode-c.md) (that holds the FrameNode) to a [NodeContainer](../arkts-components/arkts-arkui-nodecontainer-comp-attribute.md#nodecontainerattribute) or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> |
 | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach-comp.md#lazy_for_each) API functionality. |
 
 ### Interfaces
@@ -28,6 +28,12 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Describes the layout constraints of the component. |
 | [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-framenode-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |
+
 ### Enums
 
 | Name | Description |
@@ -35,9 +41,3 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | Enumerates the modes of counting child nodes. |
 | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | Enumerates the expansion mode of child nodes. |
 | [UIState](arkts-arkui-framenode-uistate-e.md) | Enumerates polymorphic style states, which are used to process polymorphic styles. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-framenode-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |

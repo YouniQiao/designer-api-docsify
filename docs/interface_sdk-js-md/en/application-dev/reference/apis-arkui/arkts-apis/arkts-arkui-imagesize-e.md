@@ -4,7 +4,7 @@
 declare enum ImageSize
 ```
 
-ImageSize enumeration description
+Sets the width and height effect of an image.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ ImageSize enumeration description
 Auto
 ```
 
-Keep the scale of the original image unchanged.
+The original image aspect ratio is retained.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Keep the scale of the original image unchanged.
 Cover
 ```
 
-Keep the aspect ratio to zoom in or out the image so that both sides of the image are greater than or equal to the display boundary.
+The image is scaled with its aspect ratio retained for both sides to be greater than or equal to the display boundaries.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ Keep the aspect ratio to zoom in or out the image so that both sides of the imag
 Contain
 ```
 
-Keep the aspect ratio to zoom out or zoom in so that the image is completely displayed within the display boundary.
+The image is scaled with its aspect ratio retained for the content to be completely displayed within the display boundaries.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ Keep the aspect ratio to zoom out or zoom in so that the image is completely dis
 FILL = 3
 ```
 
-Zoom in or out without maintaining the aspect ratio so that the image fills the display boundary.
+The image is scaled to fill the display area, and its aspect ratio is not retained.
 
 **Since:** 12
 

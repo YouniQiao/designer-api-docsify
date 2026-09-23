@@ -16,78 +16,6 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-## displayOptionalInputMethod
-
-```TypeScript
-displayOptionalInputMethod(callback: AsyncCallback<void>): void
-```
-
-显示输入法选择对话框。使用callback异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法选择对话框显示成功。err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in displaying optionalInputMethod.');
-});
-```
-
-<a id="displayoptionalinputmethod-1"></a>
-
-## displayOptionalInputMethod
-
-```TypeScript
-displayOptionalInputMethod(): Promise<void>
-```
-
-显示输入法选择对话框。使用promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().displayOptionalInputMethod().then(() => {
-  console.info('Succeeded in displaying optionalInputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
-
 ## getAllInputMethods
 
 ```TypeScript
@@ -462,78 +390,6 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 })
 ```
 
-## listInputMethod
-
-```TypeScript
-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
-```
-
-查询已安装的输入法列表。使用callback异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getInputMethods](#getinputmethods)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数。当返回已安装的输入法列表成功，err为undefined，data为获取到的InputMethodProperty列表；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputMethod.InputMethodProperty>) => {
-  if (err) {
-    console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in listing inputMethod.');
-});
-```
-
-<a id="listinputmethod-1"></a>
-
-## listInputMethod
-
-```TypeScript
-listInputMethod(): Promise<Array<InputMethodProperty>>
-```
-
-查询已安装的输入法列表。使用promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getInputMethods](#getinputmethods)
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise对象，返回已安装输入法列表。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in listing inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
-
 ## listInputMethodSubtype
 
 ```TypeScript
@@ -703,6 +559,150 @@ inputMethod.getSetting()
     console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name} ` +
       `, inputMethodSubtype.id: ${inputMethodSubtype.id}`);
   });
+```
+
+## displayOptionalInputMethod
+
+```TypeScript
+displayOptionalInputMethod(callback: AsyncCallback<void>): void
+```
+
+显示输入法选择对话框。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法选择对话框显示成功。err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in displaying optionalInputMethod.');
+});
+```
+
+<a id="displayoptionalinputmethod-1"></a>
+
+## displayOptionalInputMethod
+
+```TypeScript
+displayOptionalInputMethod(): Promise<void>
+```
+
+显示输入法选择对话框。使用promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().displayOptionalInputMethod().then(() => {
+  console.info('Succeeded in displaying optionalInputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+## listInputMethod
+
+```TypeScript
+listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
+```
+
+查询已安装的输入法列表。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getInputMethods](#getinputmethods)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数。当返回已安装的输入法列表成功，err为undefined，data为获取到的InputMethodProperty列表；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputMethod.InputMethodProperty>) => {
+  if (err) {
+    console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in listing inputMethod.');
+});
+```
+
+<a id="listinputmethod-1"></a>
+
+## listInputMethod
+
+```TypeScript
+listInputMethod(): Promise<Array<InputMethodProperty>>
+```
+
+查询已安装的输入法列表。使用promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getInputMethods](#getinputmethods)
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise对象，返回已安装输入法列表。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in listing inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## showOptionalInputMethods

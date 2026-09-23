@@ -2836,125 +2836,6 @@ struct WebComponent {
 }
 ```
 
-## getHitTest
-
-```TypeScript
-getHitTest(): WebHitTestType
-```
-
-Obtains the element type of the area being clicked.
-
-**Since:** 9
-
-**Deprecated since:** 18
-
-**Substitutes:** [getLastHitTest](#getlasthittest)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Element type of the area being clicked. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTest')
-        .onClick(() => {
-          try {
-            let hitTestType = this.controller.getHitTest();
-            console.info("hitTestType: " + hitTestType);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## getHitTestValue
-
-```TypeScript
-getHitTestValue(): HitTestValue
-```
-
-Obtains the element information of the area being clicked.
-
-**Since:** 9
-
-**Deprecated since:** 18
-
-**Substitutes:** [getLastHitTest](#getlasthittest)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Element information of the area being clicked. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTestValue')
-        .onClick(() => {
-          try {
-            let hitValue = this.controller.getHitTestValue();
-            console.info("hitType: " + hitValue.type);
-            console.info("extra: " + hitValue.extra);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getLastHitTest
 
 ```TypeScript
@@ -4197,6 +4078,32 @@ struct WebComponent {
   }
 }
 ```
+
+## getZoomFactor
+
+```TypeScript
+getZoomFactor(): number
+```
+
+Gets the current browser zoom factor of this web page.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Current browser zoom factor. The value **1** indicates that the page is not zoomed.<br>Value range: [0.25, 5.0]. The default value is **1**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -11094,6 +11001,32 @@ struct WebComponent {
 }
 ```
 
+## setZoomFactor
+
+```TypeScript
+setZoomFactor(zoomFactor: number): void
+```
+
+Sets the browser zoom factor of this web page. Both text and images are scaled simultaneously, and the page is re-laid out (reflow) to fit the width of the **Web** component. This API works independently of [zoom](#zoom), [zoomIn](#zoomin), and [zoomOut](#zoomout) (visual scaling without re-layout) and [textZoomRatio](../arkts-components/arkts-arkweb-web-comp-attribute.md#textzoomratio) (text-only scaling). The zoom factor takes effect on the current web component instance only and is retained after in-page cross-document navigation.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| zoomFactor | number | Yes | Browser zoom factor to set. The value **1** indicates that the page is not zoomed. A value smaller than **1** indicates zoom-out, and a value greater than **1** indicates zoom-in.<br>Value range: [0.25, 5]. <br>Values beyond this range are clamped to the boundary. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
 ## slideScroll
 
 ```TypeScript
@@ -12077,6 +12010,125 @@ struct WebComponent {
         .onClick(() => {
           try {
             this.controller.zoomOut();
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getHitTest
+
+```TypeScript
+getHitTest(): WebHitTestType
+```
+
+Obtains the element type of the area being clicked.
+
+**Since:** 9
+
+**Deprecated since:** 18
+
+**Substitutes:** [getLastHitTest](#getlasthittest)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Element type of the area being clicked. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getHitTest')
+        .onClick(() => {
+          try {
+            let hitTestType = this.controller.getHitTest();
+            console.info("hitTestType: " + hitTestType);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getHitTestValue
+
+```TypeScript
+getHitTestValue(): HitTestValue
+```
+
+Obtains the element information of the area being clicked.
+
+**Since:** 9
+
+**Deprecated since:** 18
+
+**Substitutes:** [getLastHitTest](#getlasthittest)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Element information of the area being clicked. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getHitTestValue')
+        .onClick(() => {
+          try {
+            let hitValue = this.controller.getHitTestValue();
+            console.info("hitType: " + hitValue.type);
+            console.info("extra: " + hitValue.extra);
           } catch (error) {
             console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
           }

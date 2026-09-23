@@ -16,9 +16,9 @@ Provides the options for customizing the context menu on selection.
 showMode?: TextMenuShowMode
 ```
 
-Menu display mode.
+Display mode of the menu.
 
-Default value: **TextMenuShowMode.DEFAULT**
+Default value: TextMenuShowMode.DEFAULT
 
 **Type:** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 

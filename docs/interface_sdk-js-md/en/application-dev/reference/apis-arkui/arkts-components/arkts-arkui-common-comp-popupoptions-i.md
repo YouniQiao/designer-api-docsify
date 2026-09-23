@@ -637,28 +637,6 @@ If both **placementOnTop** and **placement** are set, the latter prevails. If th
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## placementOnTop
-
-```TypeScript
-placementOnTop?: boolean
-```
-
-Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed above the bound component; **false**: The popup is displayed below the bound component.
-
-**NOTE:** 
-
-This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use **placement** instead.
-
-**Type:** boolean
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [placement](#placement)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## popupColor
 
 ```TypeScript
@@ -973,5 +951,27 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## placementOnTop
+
+```TypeScript
+placementOnTop?: boolean
+```
+
+Whether to display the popup above the component. The default value is **false**. **true**: The popup is displayed above the bound component; **false**: The popup is displayed below the bound component.
+
+**NOTE:** 
+
+This parameter is supported since API version 7 and deprecated since API version 10. You are advised to use **placement** instead.
+
+**Type:** boolean
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [placement](#placement)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

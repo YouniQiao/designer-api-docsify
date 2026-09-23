@@ -71,7 +71,8 @@
     - [SyncStatus(system api)](arkts-arkdata-clouddata-syncstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [Constants(system api)](arkts-arkdata-clouddata-con-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudExtension(Device-Cloud Sharing Extension)](arkts-arkdata-data-cloudextension.md)
+<!--Del-->
+- [@ohos.data.cloudExtension(Device-Cloud Sharing Extension)](arkts-arkdata-data-cloudextension.md)<!--DelEnd-->
   <!--Del-->
   - [createAssetLoaderStub(system api)](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)<!--DelEnd-->
   <!--Del-->

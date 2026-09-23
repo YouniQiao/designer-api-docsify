@@ -403,54 +403,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | Y-coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
-## getX
-
-```TypeScript
-getX(): number
-```
-
-Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
-> **NOTE:** 
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [getWindowX](#getwindowx)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | X-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
-
-## getY
-
-```TypeScript
-getY(): number
-```
-
-Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
-> **NOTE:** 
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [getWindowY](#getwindowy)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Y-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
-
 ## isRemote
 
 ```TypeScript
@@ -573,6 +525,54 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+
+## getX
+
+```TypeScript
+getX(): number
+```
+
+Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
+
+> **NOTE:** 
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [getWindowX](#getwindowx)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | X-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
+
+## getY
+
+```TypeScript
+getY(): number
+```
+
+Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
+
+> **NOTE:** 
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [getWindowY](#getwindowy)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
 
 ## autoHideComponentUniqueIds
 

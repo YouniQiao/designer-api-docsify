@@ -64,12 +64,6 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md) | Represents a class constructor. |
 | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md) | Represents a class constructor that accepts arbitrary arguments. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | Current lifecycle status of a custom component. |
-
 ### Types
 
 | Name | Description |
@@ -83,3 +77,9 @@ import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, Mu
 | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md) | Obtains the default constructor. |
 | [TaskCallback](arkts-arkui-taskcallback-t.md) | Defines a synchronous callback. |
 | [TypeDecorator](arkts-arkui-typedecorator-t.md) | Defines the attribute decorator, which is used to decorate attributes of the custom class in a nested class. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | Current lifecycle status of a custom component. |

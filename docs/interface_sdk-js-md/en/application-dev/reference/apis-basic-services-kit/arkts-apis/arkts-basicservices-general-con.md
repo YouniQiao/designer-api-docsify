@@ -16,6 +16,20 @@ Specifies whether the accelerometer is used to change screen orientation, that i
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
+## DEVICE_NAME
+
+```TypeScript
+const DEVICE_NAME: string
+```
+
+Indicates the device name.
+
+**Type:** string
+
+**Since:** 7
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
 ## ACCESSIBILITY_STATUS
 
 ```TypeScript
@@ -151,20 +165,6 @@ Specifies whether developer options are enabled.
 **Since:** 7
 
 **Deprecated since:** 21
-
-**System capability:** SystemCapability.Applications.Settings.Core
-
-## DEVICE_NAME
-
-```TypeScript
-const DEVICE_NAME: string
-```
-
-Indicates the device name.
-
-**Type:** string
-
-**Since:** 7
 
 **System capability:** SystemCapability.Applications.Settings.Core
 

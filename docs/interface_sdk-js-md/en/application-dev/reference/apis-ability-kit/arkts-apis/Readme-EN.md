@@ -956,7 +956,8 @@
   - [unlockMission(system api)](arkts-ability-missionmanager-unlockmission-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unregisterMissionListener(system api)](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
-- [@ohos.application.uriPermissionManager(URI Permission Manager)](arkts-ability-application-uripermissionmanager.md)
+<!--Del-->
+- [@ohos.application.uriPermissionManager(URI Permission Manager)](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->
   <!--Del-->
   - [grantUriPermission(system api)](arkts-ability-uripermissionmanager-granturipermission-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1569,7 +1570,8 @@
   - [MissionParameter(system api)](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ContinueState(system api)](arkts-ability-distributedmissionmanager-continuestate-e-sys.md)<!--DelEnd-->
-- [@ohos.privacyManager(Privacy Management)](arkts-ability-privacymanager.md)
+<!--Del-->
+- [@ohos.privacyManager(Privacy Management)](arkts-ability-privacymanager.md)<!--DelEnd-->
   <!--Del-->
   - [addPermissionUsedRecord(system api)](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)<!--DelEnd-->
   <!--Del-->

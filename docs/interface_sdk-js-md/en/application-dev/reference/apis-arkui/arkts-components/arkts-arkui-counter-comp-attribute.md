@@ -4,9 +4,7 @@
 declare class CounterAttribute extends CommonMethod<CounterAttribute>
 ```
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
 
 **Inheritance/Implementation:** CounterAttribute extends CommonMethod<CounterAttribute>
 
@@ -34,7 +32,7 @@ Sets whether to enable the decrement button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the decrement button.<br>Default value: **true**. The value **true** means to enable the decrement button, and the value **false** means the opposite. |
+| value | boolean | Yes | Whether to enable or disable the decrement button.<br>Default value: **true**, which means the decrement button is enabled; **false** means the decrement button is disabled. |
 
 ## enableInc
 
@@ -56,7 +54,7 @@ Sets whether to enable the increment button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the increment button.<br>Default value: **true**. The value **true** means to enable the increment button, and the value **false** means the opposite. |
+| value | boolean | Yes | Whether to disable or enable the increment button.<br>Default value: **true**, which means the increment button is enabled; **false** means the button is disabled. |
 
 ## onDec
 
@@ -78,7 +76,7 @@ Invoked when the value decreases.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when the value decreases.<br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when the value of the Counter decreases.<br>**Since:** 18 |
 
 ## onInc
 
@@ -100,4 +98,4 @@ Invoked when the value increases.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when the value increases.<br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when the counter value increases.<br>**Since:** 18 |

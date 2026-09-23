@@ -4,9 +4,9 @@
 declare interface SwipeActionOptions
 ```
 
-The top layer of the @builder function corresponding to start and end must be a single component. Otherwise, undefined behavior occurs. If the top layer of the @builder function is a statement such as if/else or ForEach, ensure that these statements can generate a single component.
+In the **@builder** functions corresponding to **start** and **end**, the top-level component must be a single component. If the top level is a rendering control statement such as **if**\/**else** or **ForEach**, ensure that it can generate only a single component. Otherwise, undefined behavior may occur.
 
-The swipe gesture works only in the list item area. If a swipe causes a child component to extend beyond the list item area, the portion outside the area does not respond to the swipe.
+The swipe gesture works only in the list item area. If a child component is swiped out of the list item area, the portion outside the list item does not respond to the swipe gesture. Therefore, in multi-column mode, you are advised not to set the swipe-out component too wide.
 
 **Since:** 9
 

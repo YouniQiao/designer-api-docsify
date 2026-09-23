@@ -2,7 +2,7 @@
 
 **XComponent** provides a [surface](../../../ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and media data input into your view. You can customize the position and size of the surface as needed. For details, see [Native XComponent](../../../ui/napi-xcomponent-guidelines.md).
 
-> **NOTE**
+> **NOTE:** 
 
 ## Child Components
 

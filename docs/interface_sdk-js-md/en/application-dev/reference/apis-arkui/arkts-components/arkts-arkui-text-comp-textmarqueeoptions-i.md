@@ -18,6 +18,8 @@ delay?: number
 
 Time interval between scroll movements.
 
+The value range is [0, +∞). If the value is a negative number, the default value is used.
+
 Default value: **0**
 
 Unit: millisecond
@@ -106,7 +108,7 @@ marqueeStartPolicy?: MarqueeStartPolicy
 
 Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.
 
-Default value: **MarqueeStartPolicy.DEFAULT**
+Default value: **MarqueeStartPolicy.ON_FOCUS** for TVs and **MarqueeStartPolicy.DEFAULT** for other devices
 
 **Type:** [MarqueeStartPolicy](arkts-arkui-text-comp-marqueestartpolicy-e.md)
 
@@ -146,9 +148,11 @@ Default value: **MarqueeUpdatePolicy.DEFAULT**
 spacing?: LengthMetrics
 ```
 
-Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.
+Spacing between two rounds of the marquee. Unit: vp. When the unit attribute of the LengthMetrics object is LengthUnit.PERCENT, the current setting does not take effect and the default value is used.
 
-Default value: **48.0vp**
+Default value: 48.0vp
+
+**Atomic service API:** Since API version 23, this API can be used in atomic services.
 
 **Type:** LengthMetrics
 
@@ -187,6 +191,10 @@ step?: number
 ```
 
 Step length of the scrolling animation text.
+
+Unit: vp
+
+Value range: (0, Text width]. If this parameter is set to a value less than or equal to 0, the default value is used.
 
 Default value: **4.0** (in vp)
 

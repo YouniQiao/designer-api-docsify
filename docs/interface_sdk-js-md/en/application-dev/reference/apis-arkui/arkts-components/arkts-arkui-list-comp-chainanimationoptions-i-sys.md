@@ -4,7 +4,7 @@
 declare interface ChainAnimationOptions
 ```
 
-Defines the chain animation options.
+Defines a collection of chain animation effect attributes, used to set the maximum spacing, minimum spacing, animation intensity, conduction coefficient, edge effect, stiffness, and damping of the list. When the list requires fine-grained control over the chained linkage elastic effect, different animation feels can be achieved by adjusting the parameters in this object.
 
 **Since:** 10
 

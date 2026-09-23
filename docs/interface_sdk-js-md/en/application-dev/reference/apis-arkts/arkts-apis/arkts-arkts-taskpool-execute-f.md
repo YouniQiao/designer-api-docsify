@@ -31,8 +31,7 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unknown&gt; | <br>**Since:** 9 - 11 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Since:** 11 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -153,8 +152,7 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;unknown&gt; | <br>**Since:** 9 - 17 |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Since:** 11 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 

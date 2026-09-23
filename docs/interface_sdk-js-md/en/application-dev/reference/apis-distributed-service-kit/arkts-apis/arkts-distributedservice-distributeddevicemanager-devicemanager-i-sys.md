@@ -582,49 +582,6 @@ try {
 }
 ```
 
-## restoreLocalDeivceName
-
-```TypeScript
-restoreLocalDeivceName(): void
-```
-
-Restores the local device name by resetting the network settings.
-
-**Since:** 18
-
-**Deprecated since:** 24
-
-**Substitutes:** [restoreLocalDeviceName](#restorelocaldevicename)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.restoreLocalDeivceName();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('restoreLocalDeivceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## restoreLocalDeviceName
 
 ```TypeScript
@@ -834,5 +791,48 @@ try {
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
+
+## restoreLocalDeivceName
+
+```TypeScript
+restoreLocalDeivceName(): void
+```
+
+Restores the local device name by resetting the network settings.
+
+**Since:** 18
+
+**Deprecated since:** 24
+
+**Substitutes:** [restoreLocalDeviceName](#restorelocaldevicename)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain the service. |
+
+**Examples**
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.restoreLocalDeivceName();
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('restoreLocalDeivceName errCode:' + e.code + ',errMessage:' + e.message);
 }
 ```

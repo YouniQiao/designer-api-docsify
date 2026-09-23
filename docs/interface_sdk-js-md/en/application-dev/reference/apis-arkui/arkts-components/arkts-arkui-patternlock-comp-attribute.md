@@ -4,9 +4,7 @@
 declare class PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 ```
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
-
-In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
 
 **Inheritance/Implementation:** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
@@ -42,7 +40,7 @@ Sets the background circle style for the dots in a grid when they are in the act
 activeColor(value: ResourceColor)
 ```
 
-Sets the fill color of the grid dot in the activated state, which is when the dot is highlighted but not selected.
+Sets the fill color of the grid dots in the active state, which is the state where a finger passes over a dot but the dot is not yet selected. If this attribute is not set, the default fill color is **'#ff182431'** (dark gray).
 
 **Since:** 9
 
@@ -54,7 +52,7 @@ Sets the fill color of the grid dot in the activated state, which is when the do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the activated state.<br>Default value: **'#ff182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the active state. |
 
 ## autoReset
 
@@ -62,7 +60,7 @@ Sets the fill color of the grid dot in the activated state, which is when the do
 autoReset(value: boolean)
 ```
 
-Sets whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.
+Sets whether to reset the component state when the component area is pressed again after password input is complete. If this API is not used to set it, the component state is reset by default.
 
 **Since:** 9
 
@@ -74,7 +72,7 @@ Sets whether to allow the user to reset the component status (that is, clear the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.<br>**true**: yes; **false**: no<br>Default value: **true** |
+| value | boolean | Yes | Whether to reset the component state when the component area is pressed again after password input is complete.<br>true: reset the component state (that is, clear the previously entered password); false: do not reset the component state. |
 
 ## backgroundColor
 
@@ -82,7 +80,7 @@ Sets whether to allow the user to reset the component status (that is, clear the
 backgroundColor(value: ResourceColor)
 ```
 
-Sets the background color.
+Sets the background color. If this attribute is not set, the background is transparent by default, that is, no background color is applied.
 
 > **NOTE:** 
 > 
@@ -106,7 +104,7 @@ Sets the background color.
 circleRadius(value: Length)
 ```
 
-Sets the radius of the dots in a grid. If this attribute is set to **0** or a negative value, the default value is used.
+Sets the radius of the grid dots. If this attribute is not set, the default radius is **6vp**.
 
 **Since:** 9
 
@@ -118,7 +116,7 @@ Sets the radius of the dots in a grid. If this attribute is set to **0** or a ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the dots in a grid.<br>Default value: **6vp**<br>Value range: (0, sideLength/11]. If the value is less than or equal to **0**, the default value is used. If the value exceeds the maximum value, the maximum value is used. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Radius of the grid dot.<br>Value range: (0, sideLength/11]. If the value is less than or equal to 0, the default value is used. If the value exceeds the maximum, the maximum value is used. |
 
 ## onDotConnect
 
@@ -127,8 +125,6 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 ```
 
 Invoked when a grid dot is connected during pattern password input.
-
-The callback parameter is an array of digits, where each digit represents the index of a selected grid dot, listed in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8.
 
 > **NOTE:** 
 > 
@@ -146,7 +142,7 @@ The callback parameter is an array of digits, where each digit represents the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback&lt;number&gt; | Yes | Invoked when a grid dot is connected during pattern password input. |
+| callback | import('../api/@ohos.base').Callback&lt;number&gt; | Yes | Triggered when a grid dot is selected during password input. The callback parameter is the index of the selected grid dot (the dots in the first row are numbered 0, 1, and 2 from left to right; the dots in the second row are numbered 3, 4, and 5 from left to right; the dots in the third row are numbered 6, 7, and 8 from left to right). |
 
 ## onPatternComplete
 
@@ -155,6 +151,13 @@ onPatternComplete(callback: (input: Array<number>) => void)
 ```
 
 Invoked when the pattern password input is complete.
+
+> **NOTE:** 
+> 
+> This callback is triggered when password input ends and returns the complete password array. Relationship with
+> [onDotConnect](#ondotconnect): onDotConnect is triggered in real time when each dot is
+> selected, while onPatternComplete is triggered when input ends. The two can be used together to implement real-
+> time feedback and final verification.
 
 **Since:** 9
 
@@ -174,7 +177,7 @@ Invoked when the pattern password input is complete.
 pathColor(value: ResourceColor)
 ```
 
-Sets the path color.
+Sets the color of the connecting lines. If this attribute is not set, the default line color is **'#33182431'** (dark gray with 20% opacity).
 
 **Since:** 9
 
@@ -186,7 +189,7 @@ Sets the path color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Path color.<br>Default value: **'#33182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the line. |
 
 ## pathStrokeWidth
 
@@ -194,7 +197,7 @@ Sets the path color.
 pathStrokeWidth(value: number | string)
 ```
 
-Sets the width of the path stroke. If this attribute is set to **0** or a negative value, the path stroke is not displayed.
+Sets the width of the connecting lines. If this attribute is not set, the default line width is **12vp**.
 
 **Since:** 9
 
@@ -206,7 +209,7 @@ Sets the width of the path stroke. If this attribute is set to **0** or a negati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Width of the path stroke.<br>Value constraint: (0, sideLength/3]. Default value: 12. <br>Unit: vp. |
+| value | number &#124; string | Yes | Width of the line.<br>Unit: vp <br>Value range: (0, sideLength/3]. If the value is set to 0 or a negative number, the line is not displayed. If the value exceeds the maximum, the maximum value is used. |
 
 ## regularColor
 
@@ -214,7 +217,7 @@ Sets the width of the path stroke. If this attribute is set to **0** or a negati
 regularColor(value: ResourceColor)
 ```
 
-Sets the fill color of the grid dot in the unselected state.
+Sets the fill color of the grid dots in the unselected state. If this attribute is not set, the default fill color is **'#ff182431'** (dark gray).
 
 **Since:** 9
 
@@ -226,7 +229,7 @@ Sets the fill color of the grid dot in the unselected state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the unselected state.<br>Default value: **'#ff182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the unselected state. |
 
 ## selectedColor
 
@@ -234,7 +237,7 @@ Sets the fill color of the grid dot in the unselected state.
 selectedColor(value: ResourceColor)
 ```
 
-Fill color of the grid dot in the selected state.
+Sets the fill color of the grid dots in the selected state. If this attribute is not set, the default fill color is **'#ff182431'** (dark gray).
 
 **Since:** 9
 
@@ -246,7 +249,7 @@ Fill color of the grid dot in the selected state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the selected state.<br>Default value: **'#ff182431'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color of the grid dot in the selected state. |
 
 ## sideLength
 
@@ -254,7 +257,7 @@ Fill color of the grid dot in the selected state.
 sideLength(value: Length)
 ```
 
-Sets the width and height (same value) of the component. If this attribute is set to **0** or a negative number, the component is not displayed.
+Sets the width and height of the component (the width and height are equal). If the value is set to **0** or a negative number, the component is not displayed. If this attribute is not set, the default width and height are **288vp**.
 
 > **NOTE:** 
 > 
@@ -272,7 +275,7 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width and height of the component. Default value: **288vp** |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width and height of the component.<br>Value range: greater than 0. <br>If the value is set to 0 or a negative number, the component is not displayed. |
 
 ## skipUnselectedPoint
 
@@ -280,7 +283,7 @@ Sets the width and height (same value) of the component. If this attribute is se
 skipUnselectedPoint(skipped: boolean)
 ```
 
-Sets whether unselected dots in the grid are automatically skipped when the password path passes over them.
+Sets whether unselected grid dots are skipped when the password path passes over them. If this API is not used to set it, unselected grid dots are selected by default when the password path passes over them.
 
 **Since:** 15
 
@@ -294,4 +297,4 @@ Sets whether unselected dots in the grid are automatically skipped when the pass
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| skipped | boolean | Yes | Whether unselected dots in the grid are automatically skipped when the password path passes over them.<br>**true** to skip the unselected dots when the password path passes over them; **false** otherwise. Default value: **false** |
+| skipped | boolean | Yes | Whether to skip the selection of unselected grid dots when the password path passes through them.<br>true: skip the selection; false: select automatically. |

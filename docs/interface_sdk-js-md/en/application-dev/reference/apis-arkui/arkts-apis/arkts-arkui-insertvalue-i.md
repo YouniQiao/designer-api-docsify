@@ -16,7 +16,7 @@ Defines the inserted text value info.
 insertOffset: number
 ```
 
-Position of the inserted text.
+Position index of the inserted value, starting from 0.
 
 **Type:** number
 

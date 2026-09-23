@@ -62,28 +62,6 @@ File name. The default value is obtained from the file path.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
-## mimeType
-
-```TypeScript
-mimeType?: string
-```
-
-MIME type of the file, which is obtained from the file name. The default value is the file name extension.
-
-This API is deprecated since API version 18. You are advised to use **contentType** instead.
-
-**Type:** string
-
-**Since:** 10
-
-**Deprecated since:** 18
-
-**Substitutes:** [contentType](#contenttype)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
 ## path
 
 ```TypeScript
@@ -123,3 +101,25 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Test API:** This API is used only in automated test scripts.
+
+## mimeType
+
+```TypeScript
+mimeType?: string
+```
+
+MIME type of the file, which is obtained from the file name. The default value is the file name extension.
+
+This API is deprecated since API version 18. You are advised to use **contentType** instead.
+
+**Type:** string
+
+**Since:** 10
+
+**Deprecated since:** 18
+
+**Substitutes:** [contentType](#contenttype)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Request.FileTransferAgent

@@ -4,7 +4,7 @@
 declare enum AnimationStatus
 ```
 
-Animation status.
+Sets the animation playback status.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Animation status.
 Initial = 0
 ```
 
-Initial state of the animation.
+The animation is in the initial state.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Initial state of the animation.
 Running = 1
 ```
 
-The animation is playing.
+The animation is being played.
 
 **Since:** 7
 

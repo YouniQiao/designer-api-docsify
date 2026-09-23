@@ -4,7 +4,7 @@
 declare enum CopyOptions
 ```
 
-Copy options.
+Sets the copy options.
 
 **Since:** 9
 

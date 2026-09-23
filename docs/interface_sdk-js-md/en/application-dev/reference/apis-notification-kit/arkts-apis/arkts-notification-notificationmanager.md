@@ -234,32 +234,6 @@ import { notificationManager } from '@kit.NotificationKit';
 | [SystemLiveViewSubscriber](arkts-notification-notificationmanager-systemliveviewsubscriber-i-sys.md) | Subscriber of the system live view notification. |
 <!--DelEnd-->
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [ContentType](arkts-notification-notificationmanager-contenttype-e.md) | Enumerates the notification content types. |
-| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md) | Describes the priority type of a notification. |
-| [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) | Enumerates the notification level. |
-| [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Enumerates the notification slot types. |
-
-<!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md) | Defines the notification reminder type. |
-| [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md) | Defines the DND time type. |
-| [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md) | Each bit can control the notification mode. When the bitwise OR operation is performed on **notificationControlFlags** and the enumerated values in the following table, the notification mode is disabled. |
-| [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | Describes the enabling status of the priority notification for an application. |
-| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e-sys.md) | Describes the priority type of a notification. |
-| [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md) | Describes the application notification strategy. |
-| [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md) | Enumerates the custom ringtone types. |
-| [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Enumerates the notification slot types. |
-| [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md) | Defines the notification source type. |
-| [SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md) | Describes the switch state of notifications. |
-<!--DelEnd-->
-
 ### Types
 
 | Name | Description |
@@ -304,4 +278,30 @@ import { notificationManager } from '@kit.NotificationKit';
 | [Trigger](arkts-notification-notificationmanager-trigger-t-sys.md) | Defines the details for triggering a geofence. |
 | [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md) | Enumerates the trigger types. |
 | [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md) | Describes the fields of notification intelligent unification information. |
+<!--DelEnd-->
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [ContentType](arkts-notification-notificationmanager-contenttype-e.md) | Enumerates the notification content types. |
+| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e.md) | Describes the priority type of a notification. |
+| [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) | Enumerates the notification level. |
+| [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Enumerates the notification slot types. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md) | Defines the notification reminder type. |
+| [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md) | Defines the DND time type. |
+| [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md) | Each bit can control the notification mode. When the bitwise OR operation is performed on **notificationControlFlags** and the enumerated values in the following table, the notification mode is disabled. |
+| [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | Describes the enabling status of the priority notification for an application. |
+| [PriorityNotificationType](arkts-notification-notificationmanager-prioritynotificationtype-e-sys.md) | Describes the priority type of a notification. |
+| [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md) | Describes the application notification strategy. |
+| [RingtoneType](arkts-notification-notificationmanager-ringtonetype-e-sys.md) | Enumerates the custom ringtone types. |
+| [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Enumerates the notification slot types. |
+| [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md) | Defines the notification source type. |
+| [SwitchState](arkts-notification-notificationmanager-switchstate-e-sys.md) | Describes the switch state of notifications. |
 <!--DelEnd-->

@@ -257,34 +257,6 @@ Called when the Scroll did zoom.
 | --- | --- | --- | --- |
 | event | [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md) | Yes | callback of zoom. |
 
-## onScroll
-
-```TypeScript
-onScroll(event: (xOffset: number, yOffset: number) => void)
-```
-
-Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
-
-**Since:** 7
-
-**Deprecated since:** 12
-
-**Substitutes:** onWillScroll
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (xOffset: number, yOffset: number) =&gt; void | Yes | callback when scroll, xOffset: Actual scroll offset relative to the previous frame.<br>Unit: vp yOffset: Vertical offset relative to the previous frame. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward.<br>Unit: vp |
-
 ## onScrollEdge
 
 ```TypeScript
@@ -308,32 +280,6 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [OnScrollEdgeCallback](arkts-arkui-scroll-comp-onscrolledgecallback-t.md) | Yes | Edge position to scroll to.<br>**Since:** 18 |
-
-## onScrollEnd
-
-```TypeScript
-onScrollEnd(event: () => void)
-```
-
-Triggered when scrolling stops.
-
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** onScrollStop
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | () =&gt; void | Yes |  |
 
 ## onScrollFrameBegin
 
@@ -654,3 +600,57 @@ Current zoom scale. This parameter supports !! for two-way binding of variables.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scale | number | Yes | Current zoom scale.<br>Default value: 1. <br>Value range: (0, +∞). |
+
+## onScroll
+
+```TypeScript
+onScroll(event: (xOffset: number, yOffset: number) => void)
+```
+
+Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+
+**Since:** 7
+
+**Deprecated since:** 12
+
+**Substitutes:** onWillScroll
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (xOffset: number, yOffset: number) =&gt; void | Yes | callback when scroll, xOffset: Actual scroll offset relative to the previous frame.<br>Unit: vp yOffset: Vertical offset relative to the previous frame. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward.<br>Unit: vp |
+
+## onScrollEnd
+
+```TypeScript
+onScrollEnd(event: () => void)
+```
+
+Triggered when scrolling stops.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** onScrollStop
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | () =&gt; void | Yes |  |

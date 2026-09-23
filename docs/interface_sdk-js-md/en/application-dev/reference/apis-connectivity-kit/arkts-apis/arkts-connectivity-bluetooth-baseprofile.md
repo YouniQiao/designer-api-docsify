@@ -31,6 +31,12 @@ import { baseProfile } from '@kit.ConnectivityKit';
 | [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i-sys.md) | Base interface of profile. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Indicate the profile connection state. |
+
 ### Enums
 
 | Name | Description |
@@ -45,9 +51,3 @@ import { baseProfile } from '@kit.ConnectivityKit';
 | --- | --- |
 | [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) | Enum for connection strategy of the profile |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Indicate the profile connection state. |

@@ -4,7 +4,7 @@
 declare enum TextHeightAdaptivePolicy
 ```
 
-The mode of adjusting the text font size to adapt to the layout.
+Sets the mode of adjusting the text font size to adapt to the layout.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The mode of adjusting the text font size to adapt to the layout.
 MAX_LINES_FIRST
 ```
 
-the text height adaptation mode to [maxLines](../arkts-components/arkts-arkui-textarea-comp-attribute.md#maxlines) first.
+Sets the text height adaptation mode to [maxLines](../arkts-components/arkts-arkui-textarea-comp-attribute.md#maxlines) first.
 
 **Since:** 10
 

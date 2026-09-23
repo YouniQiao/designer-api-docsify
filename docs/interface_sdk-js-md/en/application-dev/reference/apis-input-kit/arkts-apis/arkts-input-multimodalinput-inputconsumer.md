@@ -57,18 +57,18 @@ import { inputConsumer } from '@kit.InputKit';
 <!--DelEnd-->
 
 <!--Del-->
+### Types(System API)
+
+| Name | Description |
+| --- | --- |
+| [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | Callback function when the shortcut key registered by the system application meets the conditions. |
+<!--DelEnd-->
+
+<!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
 | [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) | [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md) |
 | [ShieldMode](arkts-input-inputconsumer-shieldmode-e-sys.md) | Enumerates shortcut key shield modes. |
-<!--DelEnd-->
-
-<!--Del-->
-### Types(System API)
-
-| Name | Description |
-| --- | --- |
-| [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | Callback function when the shortcut key registered by the system application meets the conditions. |
 <!--DelEnd-->

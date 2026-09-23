@@ -2,7 +2,11 @@
 
 The **ScrollBar** component is designed to be used together with scrollable components such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow).
 
-> **NOTE** > > - This component is supported since API version 8. Updates will be marked with a superscript to indicate their > earliest API version. > > - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the > [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the > parent component of the **ScrollBar** component contains a scrollable component, such as > [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), or > [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow), you are advised to set the size in the main axis direction of the **ScrollBar**; > otherwise, the size in the main axis direction of **ScrollBar** may become infinite.
+> **NOTE:** 
+> 
+> - This component is supported since API version 8. Updates will be marked with a superscript to indicate their earliest API version.
+> 
+> - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of the **ScrollBar** component contains a scrollable component, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), or [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow), you are advised to set the size in the main axis direction of the **ScrollBar**;otherwise, the size in the main axis direction of **ScrollBar** may become infinite.
 
 ## Child Components
 

@@ -67,61 +67,6 @@ try {
 }
 ```
 
-## flushCommands
-
-```TypeScript
-static flushCommands(object: IRemoteObject): number
-```
-
-Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let remoteObject = new TestRemoteObject("aaa");
-  let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
-  hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
-}
-```
-
 ## getCallingDeviceID
 
 ```TypeScript
@@ -462,6 +407,61 @@ class Stub extends rpc.RemoteObject {
     }
     return true;
   }
+}
+```
+
+## flushCommands
+
+```TypeScript
+static flushCommands(object: IRemoteObject): number
+```
+
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [flushCmdBuffer](#flushcmdbuffer)(object: IRemoteObject)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | **RemoteProxy** specified. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let remoteObject = new TestRemoteObject("aaa");
+  let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
+  hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
 }
 ```
 

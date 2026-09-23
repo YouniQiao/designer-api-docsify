@@ -4,7 +4,7 @@
 declare interface BadgeParamWithString extends BadgeParam
 ```
 
-Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all attributes of **BadgeParam**.
+BadgeParamWithString inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all the properties of BadgeParam.
 
 **Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md)
 
@@ -18,11 +18,13 @@ Inherits from [BadgeParam](arkts-arkui-badge-comp-badgeparam-i.md) and has all a
 value: ResourceStr
 ```
 
-Text string of the badge content.
+Text string of the prompt content.
 
 **NOTE:** 
 
-The ResourceStr type is supported since API version 20.
+When **value** is an empty string, no text is displayed and only a dot badge is displayed.
+
+Since API version 20, the ResourceStr type is supported.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

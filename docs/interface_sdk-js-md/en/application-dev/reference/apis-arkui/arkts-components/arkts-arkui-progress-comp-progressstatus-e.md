@@ -16,7 +16,7 @@ Current state of the progress indicator.
 LOADING
 ```
 
-Loading.
+Loading state. Enables the check-update animation, in which case the set progress value does not take effect.
 
 **Since:** 10
 

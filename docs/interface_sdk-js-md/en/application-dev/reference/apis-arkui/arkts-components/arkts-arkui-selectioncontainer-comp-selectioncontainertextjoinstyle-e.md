@@ -4,7 +4,7 @@
 export declare enum SelectionContainerTextJoinStyle
 ```
 
-Defines text join style for SelectionContainer.
+Provides the concatenation method for text aggregation.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines text join style for SelectionContainer.
 NEWLINE = 0
 ```
 
-Join text with line break (`\n`) between text nodes.
+Joined with a newline character `\n` between different text nodes.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Join text with line break (`\n`) between text nodes.
 DIRECT = 1
 ```
 
-Join text directly without separator between text nodes.
+Joined directly between different text nodes without a separator.
 
 **Since:** 26.0.0
 

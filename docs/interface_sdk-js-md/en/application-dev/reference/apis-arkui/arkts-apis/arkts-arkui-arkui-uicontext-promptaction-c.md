@@ -1347,21 +1347,21 @@ struct Index {
 }
 ```
 
+<a id="showactionmenu-1"></a>
+
 ## showActionMenu
 
 ```TypeScript
-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void
+showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
 ```
 
-Shows an action menu in the given settings. This API uses an asynchronous callback to return the result.
+Creates and displays an action menu. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [showActionMenu](#showactionmenu)
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1370,7 +1370,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
-| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | Yes | Callback used to return the action menu response result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -1504,42 +1504,6 @@ struct Index {
 }
 ```
 
-<a id="showactionmenu-1"></a>
-
-## showActionMenu
-
-```TypeScript
-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
-```
-
-Creates and displays an action menu. This API uses an asynchronous callback to return the result.
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-
-**Examples**
-
-See [showActionMenu](#showactionmenu)
-
 <a id="showactionmenu-2"></a>
 
 ## showActionMenu
@@ -1616,6 +1580,42 @@ struct Index {
   }
 }
 ```
+
+## showActionMenu
+
+```TypeScript
+showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void
+```
+
+Shows an action menu in the given settings. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [showActionMenu](#showactionmenu)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | Yes | Callback used to return the action menu response result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+
+**Examples**
+
+See [showActionMenu](#showactionmenu)
 
 ## showDialog
 

@@ -4,7 +4,7 @@
 declare enum VerticalAlign
 ```
 
-VerticalAlign enumeration description
+Sets the vertical alignment mode of child components.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ VerticalAlign enumeration description
 Top
 ```
 
-Top alignment.
+Top aligned.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Top alignment.
 Center
 ```
 
-Center alignment. The default alignment mode is used.
+Center aligned. This is the default alignment mode.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Center alignment. The default alignment mode is used.
 Bottom
 ```
 
-Bottom alignment.
+Bottom aligned.
 
 **Since:** 7
 

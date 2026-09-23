@@ -132,47 +132,6 @@ let router: Router = uiContext.getRouter();
 router.clear();
 ```
 
-## getLength
-
-```TypeScript
-getLength(): string
-```
-
-Obtains the number of pages in the current stack.
-
-> **NOTE:** 
-
-**Since:** 10
-
-**Deprecated since:** 23
-
-**Substitutes:** [getStackSize](#getstacksize)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Number of pages in the stack. The maximum value is **32**. |
-
-**Examples**
-
-See the example for [PushUrl](#pushurl).
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-let size = router.getLength();        
-console.info('pages stack size = ' + size);
-```
-
 ## getParams
 
 ```TypeScript
@@ -1873,4 +1832,45 @@ try {
   let code = (error as BusinessError).code;
   console.error(`showAlertBeforeBackPage failed, code is ${code}, message is ${message}`);
 }
+```
+
+## getLength
+
+```TypeScript
+getLength(): string
+```
+
+Obtains the number of pages in the current stack.
+
+> **NOTE:** 
+
+**Since:** 10
+
+**Deprecated since:** 23
+
+**Substitutes:** [getStackSize](#getstacksize)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Number of pages in the stack. The maximum value is **32**. |
+
+**Examples**
+
+See the example for [PushUrl](#pushurl).
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let size = router.getLength();        
+console.info('pages stack size = ' + size);
 ```

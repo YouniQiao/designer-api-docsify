@@ -331,7 +331,8 @@
   - [FollowXMode(system api)](arkts-basicservices-configpolicy-followxmode-e-sys.md)<!--DelEnd-->
 - [@ohos.customization.customConfig(Custom Configurations)](arkts-basicservices-customization-customconfig.md)
   - [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md)
-- [@ohos.deviceAttest](arkts-basicservices-deviceattest.md)
+<!--Del-->
+- [@ohos.deviceAttest](arkts-basicservices-deviceattest.md)<!--DelEnd-->
   <!--Del-->
   - [getAttestStatus(system api)](arkts-basicservices-deviceattest-getatteststatus-f-sys.md)<!--DelEnd-->
   <!--Del-->

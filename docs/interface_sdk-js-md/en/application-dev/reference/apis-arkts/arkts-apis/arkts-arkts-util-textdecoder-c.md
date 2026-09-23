@@ -110,6 +110,50 @@ console.info('retStr = ' + retStr);
 // Output: retStr = utf-8
 ```
 
+## decodeToString
+
+```TypeScript
+decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
+```
+
+Decodes the input content into a string.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | Uint8Array | Yes | Uint8Array object to decode. |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | String obtained. |
+
+**Examples**
+
+```TypeScript
+let textDecoderOptions: util.TextDecoderOptions = {
+  fatal: false,
+  ignoreBOM : true
+}
+let decodeToStringOptions: util.DecodeToStringOptions = {
+  stream: false
+}
+let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+let uint8 = new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]);
+let retStr = textDecoder.decodeToString(uint8, decodeToStringOptions);
+console.info("retStr = " + retStr);
+// Output: retStr = abc
+```
+
 ## decode
 
 ```TypeScript
@@ -152,50 +196,6 @@ uint8[4] = 0x62;
 uint8[5] = 0x63;
 console.info("input num:");
 let retStr = textDecoder.decode(uint8, {stream: false});
-console.info("retStr = " + retStr);
-// Output: retStr = abc
-```
-
-## decodeToString
-
-```TypeScript
-decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
-```
-
-Decodes the input content into a string.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | String obtained. |
-
-**Examples**
-
-```TypeScript
-let textDecoderOptions: util.TextDecoderOptions = {
-  fatal: false,
-  ignoreBOM : true
-}
-let decodeToStringOptions: util.DecodeToStringOptions = {
-  stream: false
-}
-let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
-let uint8 = new Uint8Array([0xEF, 0xBB, 0xBF, 0x61, 0x62, 0x63]);
-let retStr = textDecoder.decodeToString(uint8, decodeToStringOptions);
 console.info("retStr = " + retStr);
 // Output: retStr = abc
 ```

@@ -16,7 +16,7 @@ Enumerates progress indicator styles.
 Linear
 ```
 
-Linear style.
+Linear style. The progress bar is gradually filled from one end to the other along a straight line.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Linear style.
 Ring
 ```
 
-The ring is gradually displayed until completely filled.
+Ring without scale. The ring is gradually displayed until it is completely filled.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Eclipse style, which visualizes the progress in a way similar to the moon waxing
 ScaleRing
 ```
 
-Ring style with scales, which is similar to the clock scale style.
+Ring with scale. Displays a progress effect similar to a clock scale. Since API version 9, when the outer ring of the scale overlaps, it is automatically converted to a ring without scale.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Ring style with scales, which is similar to the clock scale style.
 Capsule
 ```
 
-Capsule style. At both ends, the progress indicator works in the same manner as the eclipse style. In the middle part of the capsule, the progress indicator works in the same manner as the linear style. When the height is greater than the width, the progress indicator adapts to vertical display.
+Capsule style. The progress display effect at the arc ends is the same as that of Eclipse, and the progress display effect in the middle is the same as that of Linear. Since API version 9, when the height is greater than the width, it is adaptively displayed vertically.
 
 **Since:** 8
 

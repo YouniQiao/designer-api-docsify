@@ -235,30 +235,6 @@ Triggered when an index item is selected, with the callback parameter being the 
 | --- | --- | --- | --- |
 | callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-alphabetindexer-comp-onalphabetindexerselectcallback-t.md) | Yes | Event triggered when an index item is selected.<br>**Since:** 18 |
 
-## onSelected
-
-```TypeScript
-onSelected(callback: (index: number) => void)
-```
-
-Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
-
-> **NOTE:** 
-
-**Since:** 7
-
-**Deprecated since:** 8
-
-**Substitutes:** [onSelect](#onselect)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (index: number) =&gt; void | Yes | Index of the selected item. |
-
 ## popupBackground
 
 ```TypeScript
@@ -602,3 +578,27 @@ Sets whether to display the pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to display the pop-up window.<br>Default value: **false**.<br>**true**: Display the pop-up window.<br>**false**: Do not display the pop-up window. |
+
+## onSelected
+
+```TypeScript
+onSelected(callback: (index: number) => void)
+```
+
+Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
+
+> **NOTE:** 
+
+**Since:** 7
+
+**Deprecated since:** 8
+
+**Substitutes:** [onSelect](#onselect)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (index: number) =&gt; void | Yes | Index of the selected item. |

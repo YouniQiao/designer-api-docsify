@@ -4,7 +4,7 @@
 declare enum ListItemSwipeActionDirection
 ```
 
-Enumerates the swipe action menu display directions for ListItem components.
+Enumerates the swipe action menu display directions for **ListItem** components.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates the swipe action menu display directions for ListItem components.
 START = 0
 ```
 
-When the List direction is vertical, it indicates the left in LTR mode and right in RTL mode. When the List direction is horizontal, it indicates the top.
+For vertical lists: left side in LTR mode, right side in RTL mode. For horizontal lists: top side.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ When the List direction is vertical, it indicates the left in LTR mode and right
 END = 1
 ```
 
-When the List direction is vertical, it indicates the right in LTR mode and left in RTL mode. When the List direction is horizontal, it indicates the bottom.
+For vertical lists: right side in LTR mode, left side in RTL mode. For horizontal lists: bottom side.
 
 **Since:** 21
 

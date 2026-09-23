@@ -32,7 +32,7 @@ A constructor used to create a **LinearGradientStyle** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LinearGradientOptions](../arkts-components/arkts-arkui-common-comp-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-common-comp-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. <br>The default value of direction in [LinearGradientOptions](../arkts-components/arkts-arkui-common-comp-lineargradientoptions-i.md) is processed as NONE in [GradientDirection](arkts-arkui-gradientdirection-e.md). |
 
 ## options
 

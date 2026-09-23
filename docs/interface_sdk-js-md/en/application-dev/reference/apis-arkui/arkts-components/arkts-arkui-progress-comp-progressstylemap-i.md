@@ -16,7 +16,7 @@ Defines the mapping between progress indicators and styles.
 [ProgressType.Capsule]: CapsuleStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the capsule progress bar.
+Capsule progress indicator style.
 
 **Type:** [CapsuleStyleOptions](arkts-arkui-progress-comp-capsulestyleoptions-i.md) &#124; [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md)
 
@@ -34,7 +34,7 @@ Progress bar style corresponding to the capsule progress bar.
 [ProgressType.Eclipse]: EclipseStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to a round progress bar.
+Eclipse progress indicator style.
 
 **Type:** [EclipseStyleOptions](arkts-arkui-progress-comp-eclipsestyleoptions-i.md) &#124; [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md)
 
@@ -52,7 +52,7 @@ Progress bar style corresponding to a round progress bar.
 [ProgressType.Linear]: LinearStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the linear progress bar.
+Linear progress indicator style.
 
 **Type:** [LinearStyleOptions](arkts-arkui-progress-comp-linearstyleoptions-i.md) &#124; [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md)
 
@@ -70,7 +70,7 @@ Progress bar style corresponding to the linear progress bar.
 [ProgressType.Ring]: RingStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the ring unscaled progress bar.
+Ring progress indicator style.
 
 **Type:** [RingStyleOptions](arkts-arkui-progress-comp-ringstyleoptions-i.md) &#124; [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md)
 
@@ -88,7 +88,7 @@ Progress bar style corresponding to the ring unscaled progress bar.
 [ProgressType.ScaleRing]: ScaleRingStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the ring scaled progress bar.
+ScaleRing progress indicator style.
 
 **Type:** [ScaleRingStyleOptions](arkts-arkui-progress-comp-scaleringstyleoptions-i.md) &#124; [ProgressStyleOptions](arkts-arkui-progress-comp-progressstyleoptions-i.md)
 

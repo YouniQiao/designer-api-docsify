@@ -16,212 +16,6 @@ interface AppAccountManager
 import { appAccount } from '@kit.BasicServicesKit';
 ```
 
-## addAccount
-
-```TypeScript
-addAccount(name: string, callback: AsyncCallback<void>): void
-```
-
-根据账号名添加应用账号。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createaccount)替
-> 代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [createAccount](#createaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.addAccount('WangWu', (err: BusinessError) => { 
-  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-<a id="addaccount-1"></a>
-
-## addAccount
-
-```TypeScript
-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
-```
-
-根据账号名和额外信息添加应用账号。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createaccount-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => { 
-  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-<a id="addaccount-2"></a>
-
-## addAccount
-
-```TypeScript
-addAccount(name: string, extraInfo?: string): Promise<void>
-```
-
-根据账号名和额外信息添加应用账号。使用Promise异步回调。
-
-> **说明：** 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createaccount-2)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | 否 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等），默认为空，表示创建的该账号无额外信息需要添加。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.addAccount('LiSi', 'token101').then(()=> { 
-  console.info('addAccount Success');
-}).catch((err: BusinessError) => {
-  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## addAccountImplicitly
-
-```TypeScript
-addAccountImplicitly(
-      owner: string,
-      authType: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void
-```
-
-根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [createAccountImplicitly](#createaccountimplicitly)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [createAccountImplicitly](#createaccountimplicitly)(owner: string, callback: AuthCallback)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | { [key: string]: any } | 是 | 鉴权所需要的可选项。可选项可根据自己需要设置。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调对象，返回添加结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
-
 ## auth
 
 ```TypeScript
@@ -386,85 +180,6 @@ struct Index {
       const err = e as BusinessError;
       console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
     }
-  }
-
-  build() {}
-}
-```
-
-## authenticate
-
-```TypeScript
-authenticate(
-      name: string,
-      owner: string,
-      authType: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void
-```
-
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [auth](#auth)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | { [key: string]: any } | 是 | 鉴权所需的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 回调对象，返回鉴权结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
   }
 
   build() {}
@@ -686,100 +401,6 @@ try {
 }
 ```
 
-## checkAppAccountSyncEnable
-
-```TypeScript
-checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
-```
-
-检查指定应用账号是否开启数据同步功能。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkdatasyncenabled)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, result: boolean) => { 
-  if (err) {
-    console.error(`checkAppAccountSyncEnable code: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('checkAppAccountSyncEnable result: ' + result);
-  }
-});
-```
-
-<a id="checkappaccountsyncenable-1"></a>
-
-## checkAppAccountSyncEnable
-
-```TypeScript
-checkAppAccountSyncEnable(name: string): Promise<boolean>
-```
-
-检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkdatasyncenabled-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => { 
-  console.info('checkAppAccountSyncEnable, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`checkAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## checkAuthTokenVisibility
 
 ```TypeScript
@@ -990,108 +611,6 @@ try {
   const err = e as BusinessError;
   console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
 }
-```
-
-## checkOAuthTokenVisibility
-
-```TypeScript
-checkOAuthTokenVisibility(
-      name: string,
-      authType: string,
-      bundleName: string,
-      callback: AsyncCallback<boolean>
-    ): void
-```
-
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkauthtokenvisibility)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo',
-  (err: BusinessError, data: boolean) => {
-    if (err) {
-      console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('checkOAuthTokenVisibility isVisible: ' + data);
-    }
-  });
-```
-
-<a id="checkoauthtokenvisibility-1"></a>
-
-## checkOAuthTokenVisibility
-
-```TypeScript
-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
-```
-
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | 是 | 用于检查可见性的应用包名。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定鉴权类型的OAuth令牌对特定应用的可见，返回false表示不可见。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
-  data: boolean) => {
-  console.info('checkOAuthTokenVisibility isVisible: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
-});
 ```
 
 ## createAccount
@@ -1416,93 +935,6 @@ struct Index {
 }
 ```
 
-## deleteAccount
-
-```TypeScript
-deleteAccount(name: string, callback: AsyncCallback<void>): void
-```
-
-删除应用账号。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeaccount)替
-> 代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [removeAccount](#removeaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => { 
-  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-<a id="deleteaccount-1"></a>
-
-## deleteAccount
-
-```TypeScript
-deleteAccount(name: string): Promise<void>
-```
-
-删除应用账号。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeaccount-1)替
-> 代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [removeAccount](#removeaccount-1)(name: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteAccount('ZhaoLiu').then(() => { 
-  console.info('deleteAccount Success');
-}).catch((err: BusinessError) => {
-  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## deleteAuthToken
 
 ```TypeScript
@@ -1714,468 +1146,6 @@ try {
 }
 ```
 
-## deleteOAuthToken
-
-```TypeScript
-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
-```
-
-删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteauthtoken)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx',
-  (err: BusinessError) => {
-    if (err) {
-      console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('deleteOAuthToken successful.');
-    }
-  });
-```
-
-<a id="deleteoauthtoken-1"></a>
-
-## deleteOAuthToken
-
-```TypeScript
-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
-```
-
-删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteauthtoken-1)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
-  console.info('deleteOAuthToken successfully');
-}).catch((err: BusinessError) => {
-  console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## disableAppAccess
-
-```TypeScript
-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
-```
-
-禁止指定第三方应用账号对指定包名称的第三方应用进行访问。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => { 
-  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-<a id="disableappaccess-1"></a>
-
-## disableAppAccess
-
-```TypeScript
-disableAppAccess(name: string, bundleName: string): Promise<void>
-```
-
-禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 要禁用访问的第三方应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
-  console.info('disableAppAccess Success');
-}).catch((err: BusinessError) => {
-  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## enableAppAccess
-
-```TypeScript
-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
-```
-
-允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => {
-  if (err) {
-    console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('enableAppAccess successful.');
-  }
-});
-```
-
-<a id="enableappaccess-1"></a>
-
-## enableAppAccess
-
-```TypeScript
-enableAppAccess(name: string, bundleName: string): Promise<void>
-```
-
-允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setappaccess-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
-  console.info('enableAppAccess Success');
-}).catch((err: BusinessError) => {
-  console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## getAccountCredential
-
-```TypeScript
-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
-```
-
-获取指定应用账号的凭据。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getcredential)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCredential](#getcredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: BusinessError, result: string) => { 
-  if (err) {
-    console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getAccountCredential result: ' + result);
-  }
-});
-```
-
-<a id="getaccountcredential-1"></a>
-
-## getAccountCredential
-
-```TypeScript
-getAccountCredential(name: string, credentialType: string): Promise<string>
-```
-
-获取指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getcredential-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCredential](#getcredential-1)(name: string, credentialType: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((data: string) => { 
-  console.info('getAccountCredential, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## getAccountExtraInfo
-
-```TypeScript
-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
-```
-
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: string) => { 
-  if (err) {
-    console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getAccountExtraInfo result: ' + result);
-  }
-});
-```
-
-<a id="getaccountextrainfo-1"></a>
-
-## getAccountExtraInfo
-
-```TypeScript
-getAccountExtraInfo(name: string): Promise<string>
-```
-
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定应用账号的额外信息。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => { 
-  console.info('getAccountExtraInfo, result: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## getAccountsByOwner
 
 ```TypeScript
@@ -2273,93 +1243,6 @@ try {
   const err = e as BusinessError;
   console.error(`getAccountsByOwner exception: code is ${err.code}, message is ${err.message}`);
 }
-```
-
-## getAllAccessibleAccounts
-
-```TypeScript
-getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
-```
-
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAllAccounts](#getallaccounts)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getAllAccounts](#getallaccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
-
-**需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount.AppAccountInfo[])=>{
-  if (err) {
-    console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getAllAccessibleAccounts data: ' + JSON.stringify(data));
-  }
-});
-```
-
-<a id="getallaccessibleaccounts-1"></a>
-
-## getAllAccessibleAccounts
-
-```TypeScript
-getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
-```
-
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getallaccounts)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getAllAccounts](#getallaccounts)()
-
-**需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Promise对象，返回全部应用已授权账号信息对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountInfo[]) => { 
-  console.info('getAllAccessibleAccounts: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
-});
 ```
 
 ## getAllAccounts
@@ -2650,192 +1533,6 @@ try {
 }
 ```
 
-## getAllOAuthTokens
-
-```TypeScript
-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
-```
-
-获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getallauthtokens)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
-  (err: BusinessError, data: appAccount.OAuthTokenInfo[]) => {
-    if (err) {
-      console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
-    }
-  });
-```
-
-<a id="getalloauthtokens-1"></a>
-
-## getAllOAuthTokens
-
-```TypeScript
-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
-```
-
-获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getallauthtokens-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Promise对象，返回授权令牌数组。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
-  data: appAccount.OAuthTokenInfo[]) => {
-  console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## getAssociatedData
-
-```TypeScript
-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
-```
-
-根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, result: string) => { 
-  if (err) {
-    console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getAssociatedData result: ' + result);
-  }
-});
-```
-
-<a id="getassociateddata-1"></a>
-
-## getAssociatedData
-
-```TypeScript
-getAssociatedData(name: string, key: string): Promise<string>
-```
-
-获取指定应用账号的关联数据。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getcustomdata-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回关联数据的取值。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => { 
-  console.info('getAssociatedData: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## getAuthCallback
 
 ```TypeScript
@@ -2965,212 +1662,6 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
-```
-
-## getAuthenticatorCallback
-
-```TypeScript
-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
-```
-
-获取鉴权会话的认证器回调。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getauthcallback)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sessionId | string | 是 | 鉴权会话的标识。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
-    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
-    appAccountManager.getAuthenticatorCallback(sessionId,
-        (err: BusinessError, callback: appAccount.AuthenticatorCallback) => {
-        if (err.code != appAccount.ResultCode.SUCCESS) {
-            console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-            return;
-        }
-        callback.onResult(appAccount.ResultCode.SUCCESS, {
-          name: 'LiSi',
-          owner: 'com.example.accountjsdemo',
-          authType: 'getSocialData',
-          token: 'xxxxxx'
-        });
-      });
-  }
-}
-```
-
-<a id="getauthenticatorcallback-1"></a>
-
-## getAuthenticatorCallback
-
-```TypeScript
-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
-```
-
-获取鉴权会话的认证器回调。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getauthcallback-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthCallback](#getauthcallback-1)(sessionId: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| sessionId | string | 是 | 鉴权会话的标识。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Promise对象，返回鉴权会话的认证器回调对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
-    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
-    appAccountManager.getAuthenticatorCallback(sessionId).then((
-      callback: appAccount.AuthenticatorCallback) => {
-      callback.onResult(appAccount.ResultCode.SUCCESS, {
-        name: 'LiSi',
-        owner: 'com.example.accountjsdemo',
-        authType: 'getSocialData',
-        token: 'xxxxxx'
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
-## getAuthenticatorInfo
-
-```TypeScript
-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
-```
-
-获取指定应用的认证器信息。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryauthenticatorinfo)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
-  (err: BusinessError, data: appAccount.AuthenticatorInfo) => {
-    if (err) {
-      console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getAuthenticatorInfo data: ' + JSON.stringify(data));
-    }
-  });
-```
-
-<a id="getauthenticatorinfo-1"></a>
-
-## getAuthenticatorInfo
-
-```TypeScript
-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
-```
-
-获取指定应用的认证器信息。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryauthenticatorinfo-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Promise对象，返回指定应用的认证器信息对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
-  data: appAccount.AuthenticatorInfo) => { 
-  console.info('getAuthenticatorInfo: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
-});
 ```
 
 ## getAuthList
@@ -3637,25 +2128,15 @@ try {
 }
 ```
 
-## getOAuthList
+## off('accountChange')
 
 ```TypeScript
-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
+off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用callback异步回调。
+取消订阅账号信息变更事件。
 
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getauthlist)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthList](#getauthlist)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3663,165 +2144,38 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
 
-**示例**
+**错误码：**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, data: string[]) => {
-  if (err) {
-    console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getOAuthList data: ' + JSON.stringify(data));
-  }
-});
-```
-
-<a id="getoauthlist-1"></a>
-
-## getOAuthList
-
-```TypeScript
-getOAuthList(name: string, authType: string): Promise<Array<string>>
-```
-
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getauthlist-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthList](#getauthlist-1)(name: string, authType: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
+| 错误码ID | 错误信息 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
 
 **示例**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) => {
-  console.info('getOAuthList data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
-});
-```
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
 
-## getOAuthToken
-
-```TypeScript
-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
-```
-
-获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getauthtoken)
-> 替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData',
-  (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getOAuthToken token: ' + data);
-    }
-  });
-```
-
-<a id="getoauthtoken-1"></a>
-
-## getOAuthToken
-
-```TypeScript
-getOAuthToken(name: string, owner: string, authType: string): Promise<string>
-```
-
-获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getauthtoken-1)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((data: string) => {
-  console.info('getOAuthToken token: ' + data);
-}).catch((err: BusinessError) => {
-  console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
-});
+try {
+  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+try {
+  appAccountManager.off('accountChange', changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
 ```
 
 ## off('change')
@@ -3873,13 +2227,13 @@ try {
 }
 ```
 
-## off('accountChange')
+## on('accountChange')
 
 ```TypeScript
-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
+on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
+订阅指定应用的账号信息变更事件。
 
 **起始版本：** 9
 
@@ -3890,15 +2244,16 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or owners. |
+| [12400001](../errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 **示例**
 
@@ -3914,12 +2269,6 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
-try {
-  appAccountManager.off('accountChange', changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -3967,51 +2316,6 @@ try {
 } catch (e) {
   const err = e as BusinessError;
   console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## on('accountChange')
-
-```TypeScript
-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
-```
-
-订阅指定应用的账号信息变更事件。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or owners. |
-| [12400001](../errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-
-try {
-  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -4324,193 +2628,6 @@ try {
 }
 ```
 
-## setAccountCredential
-
-```TypeScript
-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
-```
-
-设置指定应用账号的凭据。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setcredential)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCredential](#setcredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定应用账号的凭据成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001', (err: BusinessError) => { 
-  if (err) {
-    console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('setAccountCredential successful.');
-  }
-});
-```
-
-<a id="setaccountcredential-1"></a>
-
-## setAccountCredential
-
-```TypeScript
-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
-```
-
-设置指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setcredential-1)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001').then(() => { 
-  console.info('setAccountCredential Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## setAccountExtraInfo
-
-```TypeScript
-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
-```
-
-设置指定应用账号的额外信息。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) => { 
-  if (err) {
-    console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('setAccountExtraInfo successful.');
-  }
-});
-```
-
-<a id="setaccountextrainfo-1"></a>
-
-## setAccountExtraInfo
-
-```TypeScript
-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
-```
-
-设置指定应用账号的额外信息。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => { 
-  console.info('setAccountExtraInfo Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## setAppAccess
 
 ```TypeScript
@@ -4614,196 +2731,6 @@ try {
   const err = e as BusinessError;
   console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
 }
-```
-
-## setAppAccountSyncEnable
-
-```TypeScript
-setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
-```
-
-开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setdatasyncenabled)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setDataSyncEnabled](#setdatasyncenabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError) => {
-  if (err) {
-    console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('setAppAccountSyncEnable successful.');
-  }
-});
-```
-
-<a id="setappaccountsyncenable-1"></a>
-
-## setAppAccountSyncEnable
-
-```TypeScript
-setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
-```
-
-开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setdatasyncenabled-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => { 
-  console.info('setAppAccountSyncEnable Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-## setAssociatedData
-
-```TypeScript
-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
-```
-
-设置指定应用账号的关联数据。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata)
-> 替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
-| value | string | 是 | 关联数据的取值。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessError) => {
-  if (err) {
-    console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('setAssociatedData successful.');
-  }
-});
-```
-
-<a id="setassociateddata-1"></a>
-
-## setAssociatedData
-
-```TypeScript
-setAssociatedData(name: string, key: string, value: string): Promise<void>
-```
-
-设置指定应用账号的关联数据。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setcustomdata-1)替代。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
-| value | string | 是 | 关联数据的取值。最大长度为1024个字符。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => { 
-  console.info('setAssociatedData Success');
-}).catch((err: BusinessError) => {
-  console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
-});
 ```
 
 ## setAuthenticatorProperties
@@ -5449,6 +3376,2194 @@ try {
 }
 ```
 
+## verifyCredential
+
+```TypeScript
+verifyCredential(name: string, owner: string, callback: AuthCallback): void
+```
+
+验证指定账号的凭据有效性。使用callback异步回调。
+
+**起始版本：** 9
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调函数，返回验证结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+<a id="verifycredential-1"></a>
+
+## verifyCredential
+
+```TypeScript
+verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void
+```
+
+验证指定账号的凭据。使用callback异步回调。
+
+**起始版本：** 9
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | 是 | 验证凭据的选项。 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调函数，返回验证结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
+| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300114](../errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: appAccount.VerifyCredentialOptions = {
+  credentialType: 'pin',
+  credential: '123456'
+};
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, {
+    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
+      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+    },
+    onRequestRedirected: (request: Want) => {
+      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## addAccount
+
+```TypeScript
+addAccount(name: string, callback: AsyncCallback<void>): void
+```
+
+根据账号名添加应用账号。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount)替
+> 代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [createAccount](#createaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.addAccount('WangWu', (err: BusinessError) => { 
+  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+<a id="addaccount-1"></a>
+
+## addAccount
+
+```TypeScript
+addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
+```
+
+根据账号名和额外信息添加应用账号。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => { 
+  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+<a id="addaccount-2"></a>
+
+## addAccount
+
+```TypeScript
+addAccount(name: string, extraInfo?: string): Promise<void>
+```
+
+根据账号名和额外信息添加应用账号。使用Promise异步回调。
+
+> **说明：** 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [createAccount](#createaccount-2)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| extraInfo | string | 否 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等），默认为空，表示创建的该账号无额外信息需要添加。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.addAccount('LiSi', 'token101').then(()=> { 
+  console.info('addAccount Success');
+}).catch((err: BusinessError) => {
+  console.error(`addAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## addAccountImplicitly
+
+```TypeScript
+addAccountImplicitly(
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void
+```
+
+根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [createAccountImplicitly](#createaccountimplicitly)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [createAccountImplicitly](#createaccountimplicitly)(owner: string, callback: AuthCallback)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| options | { [key: string]: any } | 是 | 鉴权所需要的可选项。可选项可根据自己需要设置。 |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 认证器回调对象，返回添加结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
+
+## authenticate
+
+```TypeScript
+authenticate(
+      name: string,
+      owner: string,
+      authType: string,
+      options: { [key: string]: any },
+      callback: AuthenticatorCallback
+    ): void
+```
+
+对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [auth](#auth)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| options | { [key: string]: any } | 是 | 鉴权所需的可选项。 |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | 是 | 回调对象，返回鉴权结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: number, result: Record<string, Object>): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(() => {
+      console.info('startAbility successfully');
+    }).catch((err: BusinessError) => {
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    });
+  }
+
+  build() {}
+}
+```
+
+## checkAppAccountSyncEnable
+
+```TypeScript
+checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
+```
+
+检查指定应用账号是否开启数据同步功能。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkDataSyncEnabled](#checkdatasyncenabled)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, result: boolean) => { 
+  if (err) {
+    console.error(`checkAppAccountSyncEnable code: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('checkAppAccountSyncEnable result: ' + result);
+  }
+});
+```
+
+<a id="checkappaccountsyncenable-1"></a>
+
+## checkAppAccountSyncEnable
+
+```TypeScript
+checkAppAccountSyncEnable(name: string): Promise<boolean>
+```
+
+检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [checkDataSyncEnabled](#checkdatasyncenabled-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => { 
+  console.info('checkAppAccountSyncEnable, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`checkAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## checkOAuthTokenVisibility
+
+```TypeScript
+checkOAuthTokenVisibility(
+      name: string,
+      authType: string,
+      bundleName: string,
+      callback: AsyncCallback<boolean>
+    ): void
+```
+
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo',
+  (err: BusinessError, data: boolean) => {
+    if (err) {
+      console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('checkOAuthTokenVisibility isVisible: ' + data);
+    }
+  });
+```
+
+<a id="checkoauthtokenvisibility-1"></a>
+
+## checkOAuthTokenVisibility
+
+```TypeScript
+checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
+```
+
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| bundleName | string | 是 | 用于检查可见性的应用包名。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定鉴权类型的OAuth令牌对特定应用的可见，返回false表示不可见。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
+  data: boolean) => {
+  console.info('checkOAuthTokenVisibility isVisible: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`checkOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## deleteAccount
+
+```TypeScript
+deleteAccount(name: string, callback: AsyncCallback<void>): void
+```
+
+删除应用账号。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [removeAccount](#removeaccount)替
+> 代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [removeAccount](#removeaccount)(name: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => { 
+  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+<a id="deleteaccount-1"></a>
+
+## deleteAccount
+
+```TypeScript
+deleteAccount(name: string): Promise<void>
+```
+
+删除应用账号。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [removeAccount](#removeaccount-1)替
+> 代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [removeAccount](#removeaccount-1)(name: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteAccount('ZhaoLiu').then(() => { 
+  console.info('deleteAccount Success');
+}).catch((err: BusinessError) => {
+  console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## deleteOAuthToken
+
+```TypeScript
+deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
+```
+
+删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [deleteAuthToken](#deleteauthtoken)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| token | string | 是 | 授权令牌。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx',
+  (err: BusinessError) => {
+    if (err) {
+      console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('deleteOAuthToken successful.');
+    }
+  });
+```
+
+<a id="deleteoauthtoken-1"></a>
+
+## deleteOAuthToken
+
+```TypeScript
+deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
+```
+
+删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [deleteAuthToken](#deleteauthtoken-1)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| token | string | 是 | 授权令牌。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
+  console.info('deleteOAuthToken successfully');
+}).catch((err: BusinessError) => {
+  console.error(`deleteOAuthToken err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## disableAppAccess
+
+```TypeScript
+disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
+```
+
+禁止指定第三方应用账号对指定包名称的第三方应用进行访问。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => { 
+  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+<a id="disableappaccess-1"></a>
+
+## disableAppAccess
+
+```TypeScript
+disableAppAccess(name: string, bundleName: string): Promise<void>
+```
+
+禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 要禁用访问的第三方应用账号的名称。最大长度为512个字符。 |
+| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
+  console.info('disableAppAccess Success');
+}).catch((err: BusinessError) => {
+  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## enableAppAccess
+
+```TypeScript
+enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
+```
+
+允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => {
+  if (err) {
+    console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('enableAppAccess successful.');
+  }
+});
+```
+
+<a id="enableappaccess-1"></a>
+
+## enableAppAccess
+
+```TypeScript
+enableAppAccess(name: string, bundleName: string): Promise<void>
+```
+
+允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setAppAccess](#setappaccess-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(() => { 
+  console.info('enableAppAccess Success');
+}).catch((err: BusinessError) => {
+  console.error(`enableAppAccess err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAccountCredential
+
+```TypeScript
+getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
+```
+
+获取指定应用账号的凭据。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCredential](#getcredential)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCredential](#getcredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: BusinessError, result: string) => { 
+  if (err) {
+    console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getAccountCredential result: ' + result);
+  }
+});
+```
+
+<a id="getaccountcredential-1"></a>
+
+## getAccountCredential
+
+```TypeScript
+getAccountCredential(name: string, credentialType: string): Promise<string>
+```
+
+获取指定应用账号的凭据。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCredential](#getcredential-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCredential](#getcredential-1)(name: string, credentialType: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((data: string) => { 
+  console.info('getAccountCredential, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAccountCredential err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAccountExtraInfo
+
+```TypeScript
+getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
+```
+
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: string) => { 
+  if (err) {
+    console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getAccountExtraInfo result: ' + result);
+  }
+});
+```
+
+<a id="getaccountextrainfo-1"></a>
+
+## getAccountExtraInfo
+
+```TypeScript
+getAccountExtraInfo(name: string): Promise<string>
+```
+
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回指定应用账号的额外信息。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => { 
+  console.info('getAccountExtraInfo, result: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAllAccessibleAccounts
+
+```TypeScript
+getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
+```
+
+获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getAllAccounts](#getallaccounts)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getAllAccounts](#getallaccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
+
+**需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount.AppAccountInfo[])=>{
+  if (err) {
+    console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getAllAccessibleAccounts data: ' + JSON.stringify(data));
+  }
+});
+```
+
+<a id="getallaccessibleaccounts-1"></a>
+
+## getAllAccessibleAccounts
+
+```TypeScript
+getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
+```
+
+获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：<br> 本应用的账户。<br> 第三方应用的账户。要获取此类信息，<br> 您的应用必须已获得第三方应用的授权。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getallaccounts)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getAllAccounts](#getallaccounts)()
+
+**需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Promise对象，返回全部应用已授权账号信息对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountInfo[]) => { 
+  console.info('getAllAccessibleAccounts: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAllAccessibleAccounts err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAllOAuthTokens
+
+```TypeScript
+getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
+```
+
+获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAllAuthTokens](#getallauthtokens)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
+  (err: BusinessError, data: appAccount.OAuthTokenInfo[]) => {
+    if (err) {
+      console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
+    }
+  });
+```
+
+<a id="getalloauthtokens-1"></a>
+
+## getAllOAuthTokens
+
+```TypeScript
+getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
+```
+
+获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAllAuthTokens](#getallauthtokens-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Promise对象，返回授权令牌数组。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
+  data: appAccount.OAuthTokenInfo[]) => {
+  console.info('getAllOAuthTokens data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getAllOAuthTokens err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAssociatedData
+
+```TypeScript
+getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
+```
+
+根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCustomData](#getcustomdata)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, result: string) => { 
+  if (err) {
+    console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getAssociatedData result: ' + result);
+  }
+});
+```
+
+<a id="getassociateddata-1"></a>
+
+## getAssociatedData
+
+```TypeScript
+getAssociatedData(name: string, key: string): Promise<string>
+```
+
+获取指定应用账号的关联数据。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [getCustomData](#getcustomdata-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getCustomData](#getcustomdata-1)(name: string, key: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回关联数据的取值。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => { 
+  console.info('getAssociatedData: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getAssociatedData err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getAuthenticatorCallback
+
+```TypeScript
+getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
+```
+
+获取鉴权会话的认证器回调。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthCallback](#getauthcallback)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthCallback](#getauthcallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sessionId | string | 是 | 鉴权会话的标识。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    appAccountManager.getAuthenticatorCallback(sessionId,
+        (err: BusinessError, callback: appAccount.AuthenticatorCallback) => {
+        if (err.code != appAccount.ResultCode.SUCCESS) {
+            console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
+            return;
+        }
+        callback.onResult(appAccount.ResultCode.SUCCESS, {
+          name: 'LiSi',
+          owner: 'com.example.accountjsdemo',
+          authType: 'getSocialData',
+          token: 'xxxxxx'
+        });
+      });
+  }
+}
+```
+
+<a id="getauthenticatorcallback-1"></a>
+
+## getAuthenticatorCallback
+
+```TypeScript
+getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
+```
+
+获取鉴权会话的认证器回调。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthCallback](#getauthcallback-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthCallback](#getauthcallback-1)(sessionId: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| sessionId | string | 是 | 鉴权会话的标识。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Promise对象，返回鉴权会话的认证器回调对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    appAccountManager.getAuthenticatorCallback(sessionId).then((
+      callback: appAccount.AuthenticatorCallback) => {
+      callback.onResult(appAccount.ResultCode.SUCCESS, {
+        name: 'LiSi',
+        owner: 'com.example.accountjsdemo',
+        authType: 'getSocialData',
+        token: 'xxxxxx'
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
+## getAuthenticatorInfo
+
+```TypeScript
+getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
+```
+
+获取指定应用的认证器信息。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [queryAuthenticatorInfo](#queryauthenticatorinfo)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
+  (err: BusinessError, data: appAccount.AuthenticatorInfo) => {
+    if (err) {
+      console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAuthenticatorInfo data: ' + JSON.stringify(data));
+    }
+  });
+```
+
+<a id="getauthenticatorinfo-1"></a>
+
+## getAuthenticatorInfo
+
+```TypeScript
+getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
+```
+
+获取指定应用的认证器信息。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [queryAuthenticatorInfo](#queryauthenticatorinfo-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Promise对象，返回指定应用的认证器信息对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
+  data: appAccount.AuthenticatorInfo) => { 
+  console.info('getAuthenticatorInfo: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getAuthenticatorInfo err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getOAuthList
+
+```TypeScript
+getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
+```
+
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthList](#getauthlist)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthList](#getauthlist)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, data: string[]) => {
+  if (err) {
+    console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('getOAuthList data: ' + JSON.stringify(data));
+  }
+});
+```
+
+<a id="getoauthlist-1"></a>
+
+## getOAuthList
+
+```TypeScript
+getOAuthList(name: string, authType: string): Promise<Array<string>>
+```
+
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthList](#getauthlist-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthList](#getauthlist-1)(name: string, authType: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) => {
+  console.info('getOAuthList data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`getOAuthList err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## getOAuthToken
+
+```TypeScript
+getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
+```
+
+获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthToken](#getauthtoken)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData',
+  (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOAuthToken token: ' + data);
+    }
+  });
+```
+
+<a id="getoauthtoken-1"></a>
+
+## getOAuthToken
+
+```TypeScript
+getOAuthToken(name: string, owner: string, authType: string): Promise<string>
+```
+
+获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> [getAuthToken](#getauthtoken-1)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
+| authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((data: string) => {
+  console.info('getOAuthToken token: ' + data);
+}).catch((err: BusinessError) => {
+  console.error(`getOAuthToken err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## setAccountCredential
+
+```TypeScript
+setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
+```
+
+设置指定应用账号的凭据。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setCredential](#setcredential)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCredential](#setcredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定应用账号的凭据成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001', (err: BusinessError) => { 
+  if (err) {
+    console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('setAccountCredential successful.');
+  }
+});
+```
+
+<a id="setaccountcredential-1"></a>
+
+## setAccountCredential
+
+```TypeScript
+setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
+```
+
+设置指定应用账号的凭据。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setCredential](#setcredential-1)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credential001').then(() => { 
+  console.info('setAccountCredential Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAccountCredential err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## setAccountExtraInfo
+
+```TypeScript
+setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
+```
+
+设置指定应用账号的额外信息。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) => { 
+  if (err) {
+    console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('setAccountExtraInfo successful.');
+  }
+});
+```
+
+<a id="setaccountextrainfo-1"></a>
+
+## setAccountExtraInfo
+
+```TypeScript
+setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
+```
+
+设置指定应用账号的额外信息。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => { 
+  console.info('setAccountExtraInfo Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAccountExtraInfo err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## setAppAccountSyncEnable
+
+```TypeScript
+setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
+```
+
+开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setDataSyncEnabled](#setdatasyncenabled)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setDataSyncEnabled](#setdatasyncenabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError) => {
+  if (err) {
+    console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('setAppAccountSyncEnable successful.');
+  }
+});
+```
+
+<a id="setappaccountsyncenable-1"></a>
+
+## setAppAccountSyncEnable
+
+```TypeScript
+setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
+```
+
+开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setDataSyncEnabled](#setdatasyncenabled-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => { 
+  console.info('setAppAccountSyncEnable Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAppAccountSyncEnable err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
+## setAssociatedData
+
+```TypeScript
+setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
+```
+
+设置指定应用账号的关联数据。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata)
+> 替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCustomData](#setcustomdata)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
+| value | string | 是 | 关联数据的取值。最大长度为1024个字符。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessError) => {
+  if (err) {
+    console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('setAssociatedData successful.');
+  }
+});
+```
+
+<a id="setassociateddata-1"></a>
+
+## setAssociatedData
+
+```TypeScript
+setAssociatedData(name: string, key: string, value: string): Promise<void>
+```
+
+设置指定应用账号的关联数据。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> [setCustomData](#setcustomdata-1)替代。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
+| key | string | 是 | 关联数据的键名。最大长度为1024个字符。 |
+| value | string | 是 | 关联数据的取值。最大长度为1024个字符。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => { 
+  console.info('setAssociatedData Success');
+}).catch((err: BusinessError) => {
+  console.error(`setAssociatedData err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## setOAuthToken
 
 ```TypeScript
@@ -5645,119 +5760,4 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 }).catch((err: BusinessError) => {
   console.error(`setOAuthTokenVisibility err: code is ${err.code}, message is ${err.message}`);
 });
-```
-
-## verifyCredential
-
-```TypeScript
-verifyCredential(name: string, owner: string, callback: AuthCallback): void
-```
-
-验证指定账号的凭据有效性。使用callback异步回调。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调函数，返回验证结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
-| [12300114](../errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', {
-    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
-      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
-      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
-    },
-    onRequestRedirected: (request: Want) => {
-      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-<a id="verifycredential-1"></a>
-
-## verifyCredential
-
-```TypeScript
-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void
-```
-
-验证指定账号的凭据。使用callback异步回调。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | 是 | 验证凭据的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调函数，返回验证结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
-| [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
-| [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
-| [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300010](../errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
-| [12300113](../errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
-| [12300114](../errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: appAccount.VerifyCredentialOptions = {
-  credentialType: 'pin',
-  credential: '123456'
-};
-try {
-  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, {
-    onResult: (resultCode: number, result?: appAccount.AuthResult) => {
-      console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
-      console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
-    },
-    onRequestRedirected: (request: Want) => {
-      console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
-}
 ```

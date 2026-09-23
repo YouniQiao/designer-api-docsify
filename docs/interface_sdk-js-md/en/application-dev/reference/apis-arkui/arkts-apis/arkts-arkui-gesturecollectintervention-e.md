@@ -4,7 +4,7 @@
 declare enum GestureCollectIntervention
 ```
 
-Define the gesture and events collection intervention operations.
+Enumerates the intervention types for gesture and event collection, applicable to scenarios where gestures need to be retained or discarded by priority during gesture and event collection.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Define the gesture and events collection intervention operations.
 CONTINUE = 0
 ```
 
-Continue the normal collection process. No intervention will be applied.
+Continues the normal gesture and event collection flow. No intervention is performed.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Continue the normal collection process. No intervention will be applied.
 DISCARD_LOWER = 1
 ```
 
-Discard all pending lower-priority gestures and events. This includes gestures from left sibling nodes and ancestor nodes (parent and above). Only the already collected gestures from the current node and higher-priority nodes will be retained.
+Discards all low-priority gestures and events to be collected. The gestures of the left sibling node and ancestor nodes (parent nodes and above) are discarded. Only the gestures already collected on the current node and higher- priority nodes are retained.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Discard all pending lower-priority gestures and events. This includes gestures f
 DISCARD_HIGHER = 2
 ```
 
-Discard already collected higher-priority gestures and events. This removes gestures from right sibling nodes that have been collected. The collection will continue with lower-priority gestures (left siblings and ancestors).
+Discards all collected high-priority gestures and events. The gestures of the right sibling node and the current node are discarded. Continues processing the collection flow for lower-priority gestures (left sibling and ancestor nodes).
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Discard already collected higher-priority gestures and events. This removes gest
 DISCARD_SELF = 3
 ```
 
-Discard gestures and events from the current node itself. The current node's gestures and events will be excluded from the gesture tree. Gestures from sibling nodes (both left and right) and ancestor nodes will still be collected.
+Discards the gestures and events of the current node. The gestures and events of the current node are excluded from the gesture tree. The gestures of the sibling nodes (left and right) and the ancestor nodes are still collected.
 
 **Since:** 26.0.0
 
@@ -80,7 +80,7 @@ Discard gestures and events from the current node itself. The current node's ges
 DISCARD_LOWER_PRIORITY_SIBLINGS = 4
 ```
 
-Discard gestures and events from left sibling nodes that are pending collection. Gestures and events from the current node and already collected right sibling nodes will be retained. The collection will continue with ancestor nodes.
+Discards the gestures and events to be collected from the left sibling node. The gestures and events of the current node and the collected gestures and events of the right sibling node are retained. Continues processing the collection flow for the parent and ancestor nodes.
 
 **Since:** 26.0.0
 

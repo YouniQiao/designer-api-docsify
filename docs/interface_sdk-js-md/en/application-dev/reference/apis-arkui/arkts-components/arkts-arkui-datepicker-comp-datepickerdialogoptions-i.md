@@ -14,34 +14,6 @@ Inherited from [DatePickerOptions](arkts-arkui-datepicker-comp-datepickeroptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## onAccept
-
-```TypeScript
-onAccept?: (value: DatePickerResult) => void
-```
-
-Triggered when the "OK" button in the dialog box is tapped. The callback parameter value is the currently selected date, including the year, month, and day.
-
-**NOTE:** 
-
-Supported since API version 8 and deprecated since API version 10. Use **onDateAccept** instead.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** onDateAccept
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | Yes |  |
-
 ## onCancel
 
 ```TypeScript
@@ -57,34 +29,6 @@ Triggered when the "Cancel" button in the dialog box is tapped. Callback signatu
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: (value: DatePickerResult) => void
-```
-
-Triggered when the current selected item changes as the sliding picker in the dialog box is swiped. The callback parameter value is the currently selected date, including the year, month, and day.
-
-**NOTE:** 
-
-Supported since API version 8 and deprecated since API version 10. Use onDateChange instead.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** onDateChange
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 
@@ -201,6 +145,62 @@ effect before **onDidAppear**.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onAccept
+
+```TypeScript
+onAccept?: (value: DatePickerResult) => void
+```
+
+Triggered when the "OK" button in the dialog box is tapped. The callback parameter value is the currently selected date, including the year, month, and day.
+
+**NOTE:** 
+
+Supported since API version 8 and deprecated since API version 10. Use **onDateAccept** instead.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** onDateAccept
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | Yes |  |
+
+## onChange
+
+```TypeScript
+onChange?: (value: DatePickerResult) => void
+```
+
+Triggered when the current selected item changes as the sliding picker in the dialog box is swiped. The callback parameter value is the currently selected date, including the year, month, and day.
+
+**NOTE:** 
+
+Supported since API version 8 and deprecated since API version 10. Use onDateChange instead.
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** onDateChange
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md) | Yes |  |
 
 ## acceptButtonStyle
 

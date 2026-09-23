@@ -6,7 +6,7 @@ export enum ExtensionAbilityType
 
 Enumerates the types of ExtensionAbility components.
 
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+<!--RP2--><!--RP2End-->
 
 **Since:** 9
 

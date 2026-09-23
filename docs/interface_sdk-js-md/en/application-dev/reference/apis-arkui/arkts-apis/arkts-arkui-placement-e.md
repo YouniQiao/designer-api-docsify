@@ -4,7 +4,7 @@
 declare enum Placement
 ```
 
-Placement enumeration description
+Sets the position of the bubble.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ Placement enumeration description
 Left
 ```
 
-Left placement
+The bubble is on the left of the component, aligned with the left center of the component.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Left placement
 Right
 ```
 
-Right placement
+The bubble is on the right of the component, aligned with the right center of the component.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Right placement
 Top
 ```
 
-Top placement
+The bubble is on the top of the component, aligned with the top center of the component.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Top placement
 Bottom
 ```
 
-Bottom placement
+The bubble is on the bottom of the component, aligned with the bottom center of the component.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Bottom placement
 TopLeft
 ```
 
-TopLeft placement
+The bubble is on the top of the component. Since API version 9, it is aligned with the left edge of the component.
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ TopLeft placement
 TopRight
 ```
 
-TopRight placement
+The bubble is on the top of the component. Since API version 9, it is aligned with the right edge of the component.
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ TopRight placement
 BottomLeft
 ```
 
-BottomLeft placement
+The bubble is on the bottom of the component. Since API version 9, it is aligned with the left edge of the component.
 
 **Since:** 8
 
@@ -128,7 +128,7 @@ BottomLeft placement
 BottomRight
 ```
 
-BottomRight placement
+The bubble is on the bottom of the component. Since API version 9, it is aligned with the right edge of the component.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ BottomRight placement
 LeftTop
 ```
 
-LeftTop placement
+The bubble is on the left of the component, aligned with the top edge of the component.
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ LeftTop placement
 LeftBottom
 ```
 
-LeftBottom placement
+The bubble is on the left of the component, aligned with the bottom edge of the component.
 
 **Since:** 9
 
@@ -176,7 +176,7 @@ LeftBottom placement
 RightTop
 ```
 
-RightTop placement
+The bubble is on the right of the component, aligned with the top edge of the component.
 
 **Since:** 9
 
@@ -192,7 +192,7 @@ RightTop placement
 RightBottom
 ```
 
-RightBottom placement
+The bubble is on the right of the component, aligned with the bottom edge of the component.
 
 **Since:** 9
 

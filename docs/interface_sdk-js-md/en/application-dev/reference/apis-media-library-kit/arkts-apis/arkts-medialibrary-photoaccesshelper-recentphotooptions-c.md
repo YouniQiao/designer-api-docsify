@@ -4,7 +4,7 @@
 export class RecentPhotoOptions
 ```
 
-RecentPhotoOptions Object
+Represents the configuration options of the recent images or videos.
 
 **Since:** 20
 

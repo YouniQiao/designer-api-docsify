@@ -58,7 +58,7 @@ Describes the parameters of the date picker.
 end?: Date
 ```
 
-End date of the picker. It applies to scenarios where the upper limit of selectable dates needs to be restricted, for example, setting the expiration date of a validity period. &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
+End date of the picker. It applies to scenarios where the upper limit of selectable dates needs to be restricted, for example, setting the expiration date of a validity period. <!--RP2--><!--RP2End-->
 
 Default value: **Date('2100-12-31')**
 
@@ -140,7 +140,7 @@ Since API version 10, this parameter supports two-way binding through [$$](../..
 start?: Date
 ```
 
-Start date of the picker. It applies to scenarios where the lower limit of selectable dates needs to be restricted, for example, only dates after a certain date are allowed to be selected. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+Start date of the picker. It applies to scenarios where the lower limit of selectable dates needs to be restricted, for example, only dates after a certain date are allowed to be selected. <!--RP1--><!--RP1End-->
 
 Default value: **Date('1970-01-01')**
 

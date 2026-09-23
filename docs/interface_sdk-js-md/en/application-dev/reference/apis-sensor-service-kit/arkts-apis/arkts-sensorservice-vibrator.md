@@ -75,6 +75,13 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i-sys.md) | Describes the vibration attribute. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios. |
+| [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1). |
+
 ### Enums
 
 | Name | Description |
@@ -83,10 +90,3 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md) | Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects correspond to the specific **EffectId** values. For details, see the sample code that demonstrates how to use [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md) to deliver the vibration effect defined by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md). |
 | [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md) | Vibration event type. |
 | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Enumerates vibration stop modes. This parameter is required for [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md). |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios. |
-| [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1). |

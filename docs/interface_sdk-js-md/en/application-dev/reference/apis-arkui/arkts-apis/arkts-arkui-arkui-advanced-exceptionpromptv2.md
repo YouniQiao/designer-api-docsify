@@ -26,18 +26,18 @@ import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2
 | --- | --- |
 | [PromptOptionsV2Config](arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2config-i.md) | Configuration information interface for PromptOptionsV2. Used to construct PromptOptionsV2 object. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2. |
-
 ### Types
 
 | Name | Description |
 | --- | --- |
 | [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md) | Declare the callback function type to be called when clicking the icon button. @typedef { function } OnActionTextClickCallback |
 | [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md) | Declare the callback function type to be called when clicking the text on the left. @typedef { function } OnTipClickCallback |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md) | Control margin status of ExceptionPromptV2. |
 
 ## Examples
 

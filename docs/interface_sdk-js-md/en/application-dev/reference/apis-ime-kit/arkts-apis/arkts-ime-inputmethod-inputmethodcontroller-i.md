@@ -2074,92 +2074,6 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 });
 ```
 
-## stopInput
-
-```TypeScript
-stopInput(callback: AsyncCallback<boolean>): void
-```
-
-Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [stopInputSession](#stopinputsession)
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-});
-```
-
-<a id="stopinput-1"></a>
-
-## stopInput
-
-```TypeScript
-stopInput(): Promise<boolean>
-```
-
-Ends this input session. This API uses a promise to return the result. <br> <br>  
-> **NOTE:** <br>
-> <br>
-> This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [stopInputSession](#stopinputsession)
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## stopInputSession
 
 ```TypeScript
@@ -2441,5 +2355,91 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
   console.info('Succeeded in updating cursorInfo.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## stopInput
+
+```TypeScript
+stopInput(callback: AsyncCallback<boolean>): void
+```
+
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>  
+> **NOTE:** <br>
+> <br>
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [stopInputSession](#stopinputsession)
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+});
+```
+
+<a id="stopinput-1"></a>
+
+## stopInput
+
+```TypeScript
+stopInput(): Promise<boolean>
+```
+
+Ends this input session. This API uses a promise to return the result. <br> <br>  
+> **NOTE:** <br>
+> <br>
+> This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [stopInputSession](#stopinputsession)
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
 });
 ```

@@ -2,7 +2,11 @@
 
 **FolderStack** extends the [Stack](arkts-arkui-stack-comp.md#stack) container, adding the <!--RP1-->foldable screen hover<!--RP1End--> capability. By setting child component IDs in the **upperItems** array of the [FolderStackOptions](arkts-arkui-folderstack-comp-folderstackoptions-i.md) configuration, the corresponding child components automatically avoid the fold crease area and move to the upper screen. **FolderStack** is designed for the hover status scenario of dual- fold devices, such as video playback and video conferencing apps, where the video image automatically moves to the upper screen while the control panel remains on the lower screen. This component addresses the adaptation challenges of dual-fold devices, delivering benefits such as improved user experience and simplified layout adaptation for developers.
 
-> **NOTE** > > - The hover capability of this component is designed for <!--RP2-->dual-fold<!--RP2End--> devices and takes effect > only on dual-fold devices. You can use FoldStatus to determine the fold status of the device. > > - When the parent component of this component is an > [if/else: conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) node, the > foldable screen hover capability becomes invalid.
+> **NOTE:** 
+> 
+> - The hover capability of this component is designed for <!--RP2-->dual-fold<!--RP2End--> devices and takes effect only on dual-fold devices. You can use FoldStatus to determine the fold status of the device.
+> 
+> - When the parent component of this component is an [if/else: conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) node, the foldable screen hover capability becomes invalid.
 
 ## Child Components
 
@@ -44,7 +48,7 @@ A foldable screen hover layout container that extends [Stack](arkts-arkui-stack-
 
 | Name | Description |
 | --- | --- |
-| [OnFoldStatusChangeCallback](arkts-arkui-folderstack-comp-onfoldstatuschangecallback-t.md) | Triggered when the fold status changes&lt;!--RP4--&gt;, which takes effect only in landscape mode&lt;!--RP4End--&gt;. |
+| [OnFoldStatusChangeCallback](arkts-arkui-folderstack-comp-onfoldstatuschangecallback-t.md) | Triggered when the fold status changes<!--RP4-->, which takes effect only in landscape mode<!--RP4End-->. |
 | [OnHoverStatusChangeCallback](arkts-arkui-folderstack-comp-onhoverstatuschangecallback-t.md) | Defines the current callback invoked when the hover state of the device changes. |
 | [WindowStatusType](arkts-arkui-folderstack-comp-windowstatustype-t.md) | Enumerates the window modes. |
 

@@ -29,7 +29,7 @@ Obtain both the quick thumbnail and the quality thumbnail.
 ## REQUEST_FAST_THUMBNAIL
 
 ```TypeScript
-REQUEST_FAST_THUMBNAIL
+REQUEST_FAST_THUMBNAIL = 1
 ```
 
 Obtain only the quick thumbnail.
@@ -43,7 +43,7 @@ Obtain only the quick thumbnail.
 ## REQUEST_QUALITY_THUMBNAIL
 
 ```TypeScript
-REQUEST_QUALITY_THUMBNAIL
+REQUEST_QUALITY_THUMBNAIL = 2
 ```
 
 Obtain only the quality thumbnail.

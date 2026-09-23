@@ -4,7 +4,7 @@
 declare enum FlexAlign
 ```
 
-FlexAlign enumeration description.
+Sets the alignment mode of an element on the main axis of the container.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ FlexAlign enumeration description.
 Start
 ```
 
-The element is aligned at the head of the principal axis, the first element is aligned with the head of the row, and subsequent elements are aligned with the previous one.
+The child components are aligned with the start edge of the main axis. The first component is aligned with the main -start, and subsequent components are aligned with the previous one.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ The element is aligned at the head of the principal axis, the first element is a
 Center
 ```
 
-The elements are centered in the direction of the principal axis, and the first element is the same distance from the beginning of the row as the last element is from the end of the row.
+The child components are aligned in the center of the main axis. The space between the first component and the main -start is the same as that between the last component and the main-end.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ The elements are centered in the direction of the principal axis, and the first 
 End
 ```
 
-The element is aligned at the tail of the principal axis, the last element is aligned at the end of the row, and the other elements are aligned with the next.
+The child components are aligned with the end edge of the main axis. The last component is aligned with the main- end, and other components are aligned with the next one.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ The element is aligned at the tail of the principal axis, the last element is al
 SpaceBetween
 ```
 
-Elastic elements are evenly distributed in the direction of the Flex principal axis, with the same distance between adjacent elements. The first element aligns with the beginning of the line, and the last element aligns with the end of the line.
+The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The first component is aligned with the main-start, the last component is aligned with the main-end, and the remaining components are distributed so that the space between any two adjacent components is the same.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 SpaceAround
 ```
 
-Elastic elements are evenly distributed in the direction of the Flex principal axis, with the same distance between adjacent elements. Half the distance between adjacent elements as the distance between the first element and the distance between the last element and the end of the row.
+The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The space between the first component and main-start, and that between the last component and main-end are both half the size of the space between two adjacent components.
 
 **Since:** 7
 
@@ -96,7 +96,7 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 SpaceEvenly
 ```
 
-Elements in the Flex axis direction are evenly spaced. The spacing between adjacent elements, the spacing between the first element and the beginning of the row, and the spacing between the last element and the end of the row are the same.
+The child components are evenly distributed along the main axis. The space between the first component and main- start, the space between the last component and main-end, and the space between any two adjacent components are the same.
 
 **Since:** 7
 

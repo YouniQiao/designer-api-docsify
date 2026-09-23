@@ -39,7 +39,7 @@
 - [Mdm Kit (451)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-accountmanager.md)
 - [Mechanic Kit (68)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-mechanic-distributedhardware-mechanicmanager.md)
 - [Media Kit (244)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-media-multimedia-media.md)
-- [Media Library Kit (237)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)
+- [Media Library Kit (247)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photoaccesshelper.md)
 - [Multimodal Awareness Kit (119)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-multimodalawareness-carawareness.md)
 - [Network Kit (484)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-network-kit/arkts-apis/arkts-network-app-ability-vpnextensionability.md)
 - [Neural Network Runtime Kit (13)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neuralnetworkruntime.md)

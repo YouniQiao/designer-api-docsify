@@ -194,103 +194,6 @@ export default {
 }
 ```
 
-## sendResponse
-
-```TypeScript
-sendResponse(responseApdu: number[]): void
-```
-
-发送APDU数据到对端读卡设备。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [transmit](#transmit)
-
-**需要权限：** ohos.permission.NFC_CARD_EMULATION
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Communication.NFC.CardEmulation
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| responseApdu | number[] | 是 | 发送到对端读卡设备的符合APDU协议的数据，每个number十六进制表示，范围是0x00~0xFF。 |
-
-**示例**
-
-ArkTS示例：
-
-示例请参见[transmit](#transmit)接口的示例。
-
-JS示例：
-
-```TypeScript
-<!-- 适用于轻量级智能穿戴设备 -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        测试
-    </text>
-    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* 适用于轻量级智能穿戴设备 */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// 适用于轻量级智能穿戴设备
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.on("hceCmd", (err, res) => {
-            if(err.data === 0) {
-                console.info('callback => Operation hceCmd succeeded. Data: ${JSON.stringify(res)}');
-                hceService.sendResponse([0x00,0xa4,0x04,0x00,
-                    0x0e,0x32,0x50,0x41,0x59,0x2e,0x53,0x59,0x53,0x2e,0x44,0x44,
-                    0x46,0x30,0x31,0x00]);
-            } else {
-                console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
-            }
-        });
-    }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -325,102 +228,6 @@ start(elementName: ElementName, aidList: string[]): void
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-nfc卡模拟状态异常) | Card emulation running state is abnormal in service. |
 
-## startHCE
-
-```TypeScript
-startHCE(aidList: string[]): boolean
-```
-
-启动HCE业务功能。包括设置当前应用为前台优先，动态注册AID列表。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [start](#start)
-
-**需要权限：** ohos.permission.NFC_CARD_EMULATION
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Communication.NFC.CardEmulation
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| aidList | string[] | 是 | 动态注册卡模拟的AID列表。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 启动HCE功能或HCE已启动， false: 启动失败。 |
-
-**示例**
-
-ArkTS示例：
-
-示例请参见on接口的示例。
-
-JS示例：
-
-```TypeScript
-<!-- 适用于轻量级智能穿戴设备 -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        测试
-    </text>
-    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* 适用于轻量级智能穿戴设备 */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// 适用于轻量级智能穿戴设备
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.startHCE([
-            "F0010203040506", "A0000000041010"
-        ]);
-    }
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -453,94 +260,6 @@ stop(elementName: ElementName): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-nfc卡模拟状态异常) | Card emulation running state is abnormal in service. |
-
-## stopHCE
-
-```TypeScript
-stopHCE(): boolean
-```
-
-停止HCE业务功能。包括退出当前应用前台优先，释放动态注册的AID列表，释放hceCmd的订阅。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [stop](#stop)
-
-**需要权限：** ohos.permission.NFC_CARD_EMULATION
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Communication.NFC.CardEmulation
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | true: 禁用HCE功能或HCE已禁用，false: 禁用失败。 |
-
-**示例**
-
-ArkTS示例：
-
-示例请参见on接口的示例。
-
-JS示例：
-
-```TypeScript
-<!-- 适用于轻量级智能穿戴设备 -->
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        测试
-    </text>
-    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
-</div>
-```
-
-```TypeScript
-/* 适用于轻量级智能穿戴设备 */
-/* xxx.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-```
-
-```TypeScript
-// 适用于轻量级智能穿戴设备
-// xxx.js
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-export default  {
-    data: {
-        fontSize: '30px',
-        fontColor: '#FF1AFF00',
-    },
-    onClick() {
-        var hceService = new cardEmulation.HceService();
-        hceService.stopHCE();
-    }
-}
-```
 
 ## transmit
 
@@ -689,4 +408,285 @@ hceService.transmit(responseData, () => {
   console.info("transmit Promise success.");
 });
 console.info("transmit Promise end.");
+```
+
+## sendResponse
+
+```TypeScript
+sendResponse(responseApdu: number[]): void
+```
+
+发送APDU数据到对端读卡设备。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [transmit](#transmit)
+
+**需要权限：** ohos.permission.NFC_CARD_EMULATION
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Communication.NFC.CardEmulation
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| responseApdu | number[] | 是 | 发送到对端读卡设备的符合APDU协议的数据，每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+ArkTS示例：
+
+示例请参见[transmit](#transmit)接口的示例。
+
+JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="sendResponse" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* 适用于轻量级智能穿戴设备 */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.on("hceCmd", (err, res) => {
+            if(err.data === 0) {
+                console.info('callback => Operation hceCmd succeeded. Data: ${JSON.stringify(res)}');
+                hceService.sendResponse([0x00,0xa4,0x04,0x00,
+                    0x0e,0x32,0x50,0x41,0x59,0x2e,0x53,0x59,0x53,0x2e,0x44,0x44,
+                    0x46,0x30,0x31,0x00]);
+            } else {
+                console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
+            }
+        });
+    }
+}
+```
+
+## startHCE
+
+```TypeScript
+startHCE(aidList: string[]): boolean
+```
+
+启动HCE业务功能。包括设置当前应用为前台优先，动态注册AID列表。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [start](#start)
+
+**需要权限：** ohos.permission.NFC_CARD_EMULATION
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Communication.NFC.CardEmulation
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| aidList | string[] | 是 | 动态注册卡模拟的AID列表。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 启动HCE功能或HCE已启动， false: 启动失败。 |
+
+**示例**
+
+ArkTS示例：
+
+示例请参见on接口的示例。
+
+JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="startHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* 适用于轻量级智能穿戴设备 */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.startHCE([
+            "F0010203040506", "A0000000041010"
+        ]);
+    }
+}
+```
+
+## stopHCE
+
+```TypeScript
+stopHCE(): boolean
+```
+
+停止HCE业务功能。包括退出当前应用前台优先，释放动态注册的AID列表，释放hceCmd的订阅。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [stop](#stop)
+
+**需要权限：** ohos.permission.NFC_CARD_EMULATION
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Communication.NFC.CardEmulation
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | true: 禁用HCE功能或HCE已禁用，false: 禁用失败。 |
+
+**示例**
+
+ArkTS示例：
+
+示例请参见on接口的示例。
+
+JS示例：
+
+```TypeScript
+<!-- 适用于轻量级智能穿戴设备 -->
+<!-- xxx.hml -->
+<div class="container">
+    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+        测试
+    </text>
+    <input type="button" value="stopHCE" style="width: 240px; height: 50px; margin: 5px;" onclick="onClick"></input>
+</div>
+```
+
+```TypeScript
+/* 适用于轻量级智能穿戴设备 */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// 适用于轻量级智能穿戴设备
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.stopHCE();
+    }
+}
 ```

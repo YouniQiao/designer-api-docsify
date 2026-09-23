@@ -32,7 +32,7 @@ Access token ID of the application, which is used in the [application access con
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**: application installed from AppGallery. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;&lt;li&gt;**enterprise**: enterprise internal application. These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. <!--RP2-- ><!--RP2End-->&lt;li&gt;**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md). <!--DelEnd-->&lt;!--RP3--&gt;&lt;!--RP3End--&gt;&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. &lt;!--RP4--&gt;&lt;!--RP4End--&gt;&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. <!-- RP5-->&lt;!--RP5End--&gt;&lt;li&gt;none: others.
+Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**: application installed from AppGallery. <!--RP1--><!--RP1End-->&lt;li&gt;**enterprise**: enterprise internal application. These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. <!--RP2-- ><!--RP2End-->&lt;li&gt;**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md). <!--DelEnd--><!--RP3--><!--RP3End-->&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. <!--RP4--><!--RP4End-->&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. <!-- RP5--><!--RP5End-->&lt;li&gt;none: others.
 
 **Type:** string
 
@@ -351,26 +351,6 @@ Resource information of the application label. The resource information obtained
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## metadata
-
-```TypeScript
-readonly metadata: Map<string, Array<Metadata>>
-```
-
-Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
-
-Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
-
-**Type:** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
-
-**Since:** 9
-
-**Deprecated since:** 10
-
-**Substitutes:** [metadataArray](#metadataarray)
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
 ## metadataArray
 
 ```TypeScript
@@ -524,5 +504,25 @@ UID of the application.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## metadata
+
+```TypeScript
+readonly metadata: Map<string, Array<Metadata>>
+```
+
+Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+
+Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
+
+**Type:** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [metadataArray](#metadataarray)
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

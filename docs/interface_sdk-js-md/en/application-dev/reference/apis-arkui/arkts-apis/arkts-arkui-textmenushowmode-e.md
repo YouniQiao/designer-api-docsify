@@ -16,7 +16,7 @@ Enumerates the text menu display modes.
 DEFAULT = 0
 ```
 
-The menu is displayed in the current window.
+Displayed in the current window.
 
 **Since:** 16
 
@@ -32,19 +32,19 @@ The menu is displayed in the current window.
 PREFER_WINDOW = 1
 ```
 
-The menu is preferentially displayed in a separate window. If a separate window is not supported, the menu is displayed in the current window.
+Preferentially displayed in a separate window. If a separate window is not supported, it is displayed in the current window.
 
 **NOTE:** 
 
-Displaying the text selection menu in a separate window is not supported for window types other than the app main window, app sub-window, system modal window, and system desktop window.
+Except for app main windows, app subwindows, system modal windows, and system desktop windows, other types of windows do not support displaying the text selection menu in a separate window.
 
-Displaying the text selection menu in a separate window is not supported in the previewer.
+The previewer does not support displaying the text selection menu in a separate window.
 
-Displaying the text selection menu in a separate window is not supported in [UIExtension](arkts-arkui-arkui-uiextension.md).
+[UIExtension](arkts-arkui-arkui-uiextension.md) does not support displaying the text selection menu in a separate window.
 
-When a text component is displayed in a child window of [Popup](arkts-arkui-arkui-advanced-popup.md), [Dialog](arkts-arkui-arkui-advanced-dialog.md), [Toast](../../../ui/arkts-create-toast.md), or [Menu](../arkts-components/arkts-arkui-menu-comp.md#menu), the corresponding text selection menu cannot be displayed in a separate window.
+When a text component is already displayed in a subwindow-type [Popup](arkts-arkui-arkui-advanced-popup.md), [Dialog](arkts-arkui-arkui-advanced-dialog.md), [Toast](../../../ui/arkts-create-toast.md), or [Menu](../arkts-components/arkts-arkui-menu-comp.md#menu), the corresponding text selection menu cannot be displayed in a separate window.
 
-When **autoFill** is available for **TextInput** or **TextArea**, the corresponding text selection menu cannot be displayed in a separate window.
+When TextInput and TextArea support triggering AutoFill, the corresponding text selection menu cannot be displayed in a separate window.
 
 **Since:** 16
 

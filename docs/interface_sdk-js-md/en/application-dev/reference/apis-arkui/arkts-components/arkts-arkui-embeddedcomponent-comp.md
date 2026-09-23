@@ -4,7 +4,7 @@ The **EmbeddedComponent** is a component used to embed into the current page the
 
 It is usually used in modular development scenarios where process isolation is required.
 
-> **NOTE**
+> **NOTE:** 
 
 ## Constraints
 

@@ -2,7 +2,11 @@
 
 **DatePicker** is a component for selecting a date through scrolling interaction. It supports switching between the Gregorian and lunar calendars, and allows you to configure the date range, selection mode, and text style. It is used in application scenarios where users need to select a date, providing a unified date selection interaction experience, improving user experience, and reducing development workload.
 
-> **NOTE** > > - Avoid changing component attributes during animation processes. > > - The maximum number of rows that can be displayed varies by screen orientation: In portrait mode, the default > number of rows is 5. In landscape mode, the number of rows depends on the system configuration. If no system > configuration is set, the default is 3 rows. To check the specific system configuration value for landscape mode, > use **$r('sys.float.ohos_id_picker_show_count_landscape')**.
+> **NOTE:** 
+> 
+> - Avoid changing component attributes during animation processes.
+> 
+> - The maximum number of rows that can be displayed varies by screen orientation: In portrait mode, the default number of rows is 5. In landscape mode, the number of rows depends on the system configuration. If no system configuration is set, the default is 3 rows. To check the specific system configuration value for landscape mode,use **$r('sys.float.ohos_id_picker_show_count_landscape')**.
 
 ## Child Components
 

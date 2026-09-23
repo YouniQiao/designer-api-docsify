@@ -4,7 +4,7 @@
 declare interface BadgeParam
 ```
 
-Provides basic parameters for creating a badge.
+Contains the basic parameters for creating a Badge component.
 
 **Since:** 7
 
@@ -16,15 +16,15 @@ Provides basic parameters for creating a badge.
 position?: BadgePosition | Position
 ```
 
-Position to display the badge relative to the parent component.
+Badge display position.
 
 Default value: **BadgePosition.RightTop**
 
 **NOTE:** 
 
-With the **Position** type, percentage values are not supported. If an invalid value is set, the default value **(0,0)**, which indicates the upper left corner of the component, will be used.
+When **Position** is used as an input parameter, percentage is not supported. If an invalid value is set, it is processed as (0,0), which is the upper left corner of the component.
 
-With the **BadgePosition** type, the position is mirrored based on the Direction property.
+When **BadgePosition** is used as an input parameter, the mirrored display is controlled by the Direction attribute.
 
 **Type:** [BadgePosition](arkts-arkui-badge-comp-badgeposition-e.md) &#124; Position
 
@@ -44,7 +44,7 @@ With the **BadgePosition** type, the position is mirrored based on the Direction
 style: BadgeStyle
 ```
 
-Style of the badge, including the font color, font size, badge color, and badge size.
+Style of the **Badge** component, including the text color, size, badge color, and badge size.
 
 **Type:** [BadgeStyle](arkts-arkui-badge-comp-badgestyle-i.md)
 

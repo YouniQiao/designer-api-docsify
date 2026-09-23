@@ -30,26 +30,6 @@ Audio capturer information.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
-## playbackCaptureConfig
-
-```TypeScript
-playbackCaptureConfig?: AudioPlaybackCaptureConfig
-```
-
-Defines configuration for capturing played audio.
-
-This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
-
-**Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
-
-**Since:** 10
-
-**Deprecated since:** 12
-
-**Substitutes:** OH_AVScreenCapture in native interface.
-
-**System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
-
 ## playbackCaptureMode
 
 ```TypeScript
@@ -79,3 +59,23 @@ Audio stream information.
 **Since:** 8
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+## playbackCaptureConfig
+
+```TypeScript
+playbackCaptureConfig?: AudioPlaybackCaptureConfig
+```
+
+Defines configuration for capturing played audio.
+
+This API is supported since API version 10 and deprecated since API version 12. You are advised to use [AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
+
+**Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
+
+**Since:** 10
+
+**Deprecated since:** 12
+
+**Substitutes:** OH_AVScreenCapture in native interface.
+
+**System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture

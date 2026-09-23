@@ -36,7 +36,9 @@ icon?: ResourceStr
 
 Menu icon.
 
-Online images are not supported.
+Network images are not supported.
+
+Default value: undefined, which means no menu icon is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -74,7 +76,9 @@ labelInfo?: ResourceStr
 
 Shortcut key hint.
 
-This field is only supported on 2-in-1 devices.
+This field is supported only on 2-in-1 devices.
+
+Default value: undefined, which means no shortcut key hint is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

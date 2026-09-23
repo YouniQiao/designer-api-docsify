@@ -4,9 +4,7 @@
 export interface TextChangeEventInfo
 ```
 
-Text change event info
-
-@interface TextChangeEventInfo
+Provides information about text changes in input fields.
 
 **Since:** 22
 
@@ -24,7 +22,7 @@ import { uiObserver } from '@kit.ArkUI';
 content: string
 ```
 
-Current content of text field component .
+Text content after the change.
 
 **Type:** string
 
@@ -42,7 +40,7 @@ Current content of text field component .
 id: string
 ```
 
-The id of text input component.
+ID of the text input component.
 
 **Type:** string
 
@@ -60,7 +58,7 @@ The id of text input component.
 uniqueId: number
 ```
 
-The uniqueId of the text input component.
+Unique ID of the text input component.
 
 **Type:** number
 

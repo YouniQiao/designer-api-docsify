@@ -75,24 +75,6 @@ Whether to allow notifications of this slot type to be published.
 
 **System capability:** SystemCapability.Notification.Notification
 
-## level
-
-```TypeScript
-level?: notification.SlotLevel
-```
-
-Notification level.
-
-**Type:** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
-
-**Since:** 7
-
-**Deprecated since:** 20
-
-**Substitutes:** [notificationLevel](#notificationlevel)
-
-**System capability:** SystemCapability.Notification.Notification
-
 ## lightColor
 
 ```TypeScript
@@ -180,24 +162,6 @@ File name of the custom ringtone for notifications from this channel. The file i
 
 **System capability:** SystemCapability.Notification.Notification
 
-## type
-
-```TypeScript
-type?: notification.SlotType
-```
-
-Channel type.
-
-**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** [notificationType](#notificationtype)
-
-**System capability:** SystemCapability.Notification.Notification
-
 ## vibrationEnabled
 
 ```TypeScript
@@ -226,5 +190,41 @@ Vibration mode of the notification. This is a reserved capability and is not sup
 **Type:** Array&lt;number&gt;
 
 **Since:** 7
+
+**System capability:** SystemCapability.Notification.Notification
+
+## level
+
+```TypeScript
+level?: notification.SlotLevel
+```
+
+Notification level.
+
+**Type:** [notification.SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
+
+**Since:** 7
+
+**Deprecated since:** 20
+
+**Substitutes:** [notificationLevel](#notificationlevel)
+
+**System capability:** SystemCapability.Notification.Notification
+
+## type
+
+```TypeScript
+type?: notification.SlotType
+```
+
+Channel type.
+
+**Type:** [notification.SlotType](arkts-notification-notification-slottype-depr-e.md)
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** [notificationType](#notificationtype)
 
 **System capability:** SystemCapability.Notification.Notification

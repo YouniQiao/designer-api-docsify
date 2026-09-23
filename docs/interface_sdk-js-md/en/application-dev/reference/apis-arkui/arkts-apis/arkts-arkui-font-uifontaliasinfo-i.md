@@ -4,7 +4,7 @@
 interface UIFontAliasInfo
 ```
 
-UI font configuration of the system.
+Defines font alias configuration information.
 
 **Since:** 11
 
@@ -40,9 +40,9 @@ Alias name.
 weight: number
 ```
 
-Weight of the fonts included in the font family. If the value is greater than 0, the font family contains only the fonts with the specified weight. If the value is 0, the font family contains all fonts.
+When the value of **weight** is greater than 0, this font family contains only fonts of the specified weight. When the value of **weight** is 0, this font family contains all fonts.
 
-Valid values are **0**, **100**, **400**, **700**, and **900**.
+The value options can be **0**, **100**, **400**, **700**, and **900**.
 
 **Type:** number
 

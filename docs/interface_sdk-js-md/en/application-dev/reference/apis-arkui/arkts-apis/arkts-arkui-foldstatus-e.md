@@ -4,7 +4,7 @@
 declare enum FoldStatus
 ```
 
-Enumerates the fold status.
+Sets the folding status of the device.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the fold status.
 FOLD_STATUS_UNKNOWN = 0
 ```
 
-Fold Status Unknown.
+The folding status of the device is unknown.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Fold Status Unknown.
 FOLD_STATUS_EXPANDED = 1
 ```
 
-Fold Status Expanded.
+The device is fully open.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Fold Status Expanded.
 FOLD_STATUS_FOLDED = 2
 ```
 
-Fold Status Folded.
+The device is folded (completely closed).
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Fold Status Folded.
 FOLD_STATUS_HALF_FOLDED = 3
 ```
 
-Fold Status Half Folded.
+The device is half-folded, somewhere between fully open and completely folded.
 
 **Since:** 11
 

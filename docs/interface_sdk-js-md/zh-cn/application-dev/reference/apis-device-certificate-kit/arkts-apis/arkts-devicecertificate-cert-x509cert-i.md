@@ -1385,75 +1385,6 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
-## getSerialNumber
-
-```TypeScript
-getSerialNumber(): number
-```
-
-表示获取X.509证书序列号。
-
-> **说明：** 
-> 
-> 从API version 9开始支持，从API version 10开始废弃，建议使用
-> [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
-
-**起始版本：** 9
-
-**废弃版本：** 10
-
-**替代接口：** [getCertSerialNumber](#getcertserialnumber)
-
-**系统能力：** SystemCapability.Security.Cert
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 表示X.509证书序列号。 |
-
-**示例**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob, (error, x509Cert) => {
-  if (error) {
-    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Cert result: success.');
-    let serialNumber = x509Cert.getSerialNumber();
-    console.info('serialNumber = ' + serialNumber);
-  }
-});
-```
-
 ## getSignature
 
 ```TypeScript
@@ -2653,5 +2584,74 @@ cert.createX509Cert(encodingBlob).then(x509Cert => {
   }
 }).catch((error: BusinessError) => {
   console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
+## getSerialNumber
+
+```TypeScript
+getSerialNumber(): number
+```
+
+表示获取X.509证书序列号。
+
+> **说明：** 
+> 
+> 从API version 9开始支持，从API version 10开始废弃，建议使用
+> [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [getCertSerialNumber](#getcertserialnumber)
+
+**系统能力：** SystemCapability.Security.Cert
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 表示X.509证书序列号。 |
+
+**示例**
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+// 证书二进制数据，需业务自行赋值。
+let certData = '-----BEGIN CERTIFICATE-----\n' +
+  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
+  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
+  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
+  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
+  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
+  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
+  'Qw==\n' +
+  '-----END CERTIFICATE-----\n';
+
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(certData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Cert(encodingBlob, (error, x509Cert) => {
+  if (error) {
+    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
+  } else {
+    console.info('createX509Cert result: success.');
+    let serialNumber = x509Cert.getSerialNumber();
+    console.info('serialNumber = ' + serialNumber);
+  }
 });
 ```

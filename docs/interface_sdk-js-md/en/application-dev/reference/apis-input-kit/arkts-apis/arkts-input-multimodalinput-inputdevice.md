@@ -64,13 +64,6 @@ import { inputDevice } from '@kit.InputKit';
 | [DeviceListener](arkts-input-inputdevice-devicelistener-i.md) | Provides hot swap information about an input device. |
 | [InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md) | Provides information about an input device. |
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Enumerates function key types. |
-| [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md) | Enumerates keyboard types. |
-
 ### Types
 
 | Name | Description |
@@ -78,3 +71,10 @@ import { inputDevice } from '@kit.InputKit';
 | [AxisType](arkts-input-inputdevice-axistype-t.md) | Defines the axis type of an input device. |
 | [ChangedType](arkts-input-inputdevice-changedtype-t.md) | Enumerates hot swap events. |
 | [SourceType](arkts-input-inputdevice-sourcetype-t.md) | Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Enumerates function key types. |
+| [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md) | Enumerates keyboard types. |

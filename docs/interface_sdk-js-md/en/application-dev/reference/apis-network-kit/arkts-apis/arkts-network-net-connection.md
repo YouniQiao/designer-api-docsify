@@ -130,6 +130,14 @@ import { connection } from '@kit.NetworkKit';
 | [TraceRouteOptions](arkts-network-connection-tracerouteoptions-i.md) | Defines options for route tracing. |
 | [UdpNetPortStatesInfo](arkts-network-connection-udpnetportstatesinfo-i.md) | Describes the UDP port state information. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [HttpRequest](arkts-network-connection-httprequest-t.md) | Defines an HTTP request, which can be created using [http.createHttp](arkts-network-http-createhttp-f.md). |
+| [TCPSocket](arkts-network-connection-tcpsocket-t.md) | Defines a TCPSocket object, which can be created using [socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md). |
+| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Defines a **UDPSocket** object, which can be created using [socket.constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md). |
+
 ### Enums
 
 | Name | Description |
@@ -150,11 +158,3 @@ import { connection } from '@kit.NetworkKit';
 | --- | --- |
 | [ProxyMode](arkts-network-connection-proxymode-e-sys.md) | Enumerates the proxy modes. This API uses a promise to return the result. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [HttpRequest](arkts-network-connection-httprequest-t.md) | Defines an HTTP request, which can be created using [http.createHttp](arkts-network-http-createhttp-f.md). |
-| [TCPSocket](arkts-network-connection-tcpsocket-t.md) | Defines a TCPSocket object, which can be created using [socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md). |
-| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Defines a **UDPSocket** object, which can be created using [socket.constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md). |

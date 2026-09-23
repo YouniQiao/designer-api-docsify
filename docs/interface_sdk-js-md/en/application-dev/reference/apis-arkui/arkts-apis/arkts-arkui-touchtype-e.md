@@ -58,7 +58,7 @@ A finger moves on the screen in pressed state.
 Cancel
 ```
 
-A touch event is canceled. Examples: 1. touching the home button to return to the home screen while keeping a finger on the screen; 2. folding a foldable phone to switch to the external screen while keeping a finger on the screen.
+A touch event is canceled. For example: 1. When a finger is held on the screen and the Home key is tapped to return to the home screen, **Cancel** is triggered; 2. <!--RP2--><!--RP2End-->When a stylus operation occurs during a finger touch, the finger touch operation receives a Cancel event.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ A finger is pressed in accessibility mode.
 HOVER_MOVE = 10
 ```
 
-The mouse pointer moves in accessibility mode.
+The touch moves in accessibility mode.
 
 **Since:** 20
 
@@ -104,7 +104,7 @@ The mouse pointer moves in accessibility mode.
 HOVER_EXIT = 11
 ```
 
-The mouse pointer exits the component in accessibility mode.
+A finger is lifted in accessibility mode.
 
 **Since:** 20
 
@@ -120,7 +120,7 @@ The mouse pointer exits the component in accessibility mode.
 HOVER_CANCEL = 12
 ```
 
-The triggered event is canceled in accessibility mode.
+The current event is canceled in accessibility mode.
 
 **Since:** 20
 

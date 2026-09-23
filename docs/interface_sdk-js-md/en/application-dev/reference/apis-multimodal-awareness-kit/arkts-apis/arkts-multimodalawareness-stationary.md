@@ -32,15 +32,15 @@ import { stationary } from '@kit.MultimodalAwarenessKit';
 | --- | --- |
 | [ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md) | Defines the response interface to receive the device status. |
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Enumerates the device status types. |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Enumerates the device status events. |
 | [ActivityState](arkts-multimodalawareness-stationary-activitystate-e.md) | Enumerates the device statuses. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Enumerates the device status types. |

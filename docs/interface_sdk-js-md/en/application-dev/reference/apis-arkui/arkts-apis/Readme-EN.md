@@ -562,7 +562,7 @@
 - [@ohos.arkui.layoutAlgorithm](arkts-arkui-arkui-layoutalgorithm.md)
 - [@ohos.arkui.lazyLayoutAlgorithm](arkts-arkui-arkui-lazylayoutalgorithm.md)
 - [@ohos.arkui.node(Custom Node)](arkts-arkui-arkui-node.md)
-- [@ohos.arkui.observer](arkts-arkui-arkui-observer.md)
+- [@ohos.arkui.observer(Observer)](arkts-arkui-arkui-observer.md)
   - [off](arkts-arkui-uiobserver-off-f.md)
   - [on](arkts-arkui-uiobserver-on-f.md)
   - [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)
@@ -1388,7 +1388,7 @@
   - [RouterOptions](arkts-arkui-system-router-routeroptions-i.md)
   - [RouterState](arkts-arkui-system-router-routerstate-i.md)
   - [ParamsInterface](arkts-arkui-paramsinterface-t.md)
-- [action_sheet(ActionSheet)](arkts-arkui-action_sheet.md)
+- [action_sheet(ActionSheet)](arkts-arkui-actionsheet.md)
   - [ActionSheet](arkts-arkui-actionsheet-c.md)
   - [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
   - [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
@@ -1399,7 +1399,7 @@
   - [SheetInfo](arkts-arkui-sheetinfo-i.md)
   - [ImmersiveMode](arkts-arkui-immersivemode-t.md)
   - [LevelMode](arkts-arkui-levelmode-t.md)
-- [alert_dialog(AlertDialog)](arkts-arkui-alert_dialog.md)
+- [alert_dialog(AlertDialog)](arkts-arkui-alertdialog.md)
   - [AlertDialog](arkts-arkui-alertdialog-c.md)
   - [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
   - [AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)
@@ -1414,7 +1414,7 @@
   - [LevelOrder](arkts-arkui-levelorder-t.md)
   - [DialogAlignment](arkts-arkui-dialogalignment-e.md)
   - [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md)
-- [common_ts_ets_api(System API)](arkts-arkui-common_ts_ets_api.md)
+- [common_ts_ets_api(System API)](arkts-arkui-commontsetsapi.md)
   - [AppStorage](arkts-arkui-appstorage-c.md)
   - [Environment](arkts-arkui-environment-c.md)
   <!--Del-->
@@ -1441,16 +1441,16 @@
   - [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)
   <!--Del-->
   - [Constants(system api)](arkts-arkui-commontsetsapi-con-sys.md)<!--DelEnd-->
-- [context_menu](arkts-arkui-context_menu.md)
+- [context_menu](arkts-arkui-contextmenu.md)
   - [ContextMenu](arkts-arkui-contextmenu-c.md)
-- [custom_dialog_controller(CustomDialog)](arkts-arkui-custom_dialog_controller.md)
+- [custom_dialog_controller(CustomDialog)](arkts-arkui-customdialogcontroller.md)
   - [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
   - [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md)
   <!--Del-->
   - [CustomDialogControllerOptions(system api)](arkts-arkui-customdialogcontrolleroptions-i-sys.md)<!--DelEnd-->
   - [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)
   - [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md)
-- [enums](arkts-arkui-enums.md)
+- [enums(Enums)](arkts-arkui-enums.md)
   - [Nullable](arkts-arkui-nullable-t.md)
   - [AccessibilityHoverType](arkts-arkui-accessibilityhovertype-e.md)
   - [Alignment](arkts-arkui-alignment-e.md)
@@ -1585,7 +1585,7 @@
   - [setInterval](arkts-arkui-global-setinterval-f.md)
   - [setTimeout](arkts-arkui-global-settimeout-f.md)
   - [console](arkts-arkui-global-console-c.md)
-- [image_common](arkts-arkui-image_common.md)
+- [image_common](arkts-arkui-imagecommon.md)
   - [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md)
   - [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
   - [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md)
@@ -1607,18 +1607,18 @@
   - [setAppBgColor(system api)](arkts-arkui-inspector-setappbgcolor-f-sys.md)<!--DelEnd-->
 - [matrix2d](arkts-arkui-matrix2d.md)
   - [Matrix2D](arkts-arkui-matrix2d-c.md)
-- [security_component](arkts-arkui-security_component.md)
+- [security_component](arkts-arkui-securitycomponent.md)
   - [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)
   <!--Del-->
   - [SecurityComponentMethod(system api)](arkts-arkui-securitycomponentmethod-c-sys.md)<!--DelEnd-->
   - [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)
   - [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md)
-- [state_management](arkts-arkui-state_management.md)
+- [state_management](arkts-arkui-statemanagement.md)
   <!--Del-->
   - [Storage(system api)](arkts-arkui-storage-c-sys.md)<!--DelEnd-->
   - [ColorMode](arkts-arkui-colormode-e.md)
   - [LayoutDirection](arkts-arkui-layoutdirection-e.md)
-- [styled_string](arkts-arkui-styled_string.md)
+- [styled_string](arkts-arkui-styledstring.md)
   - [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md)
   - [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md)
   - [CustomSpan](arkts-arkui-customspan-c.md)
@@ -1662,7 +1662,7 @@
   - [StyledStringUnmarshallCallback(system api)](arkts-arkui-styledstringunmarshallcallback-t-sys.md)<!--DelEnd-->
   - [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
   - [StyledStringKey](arkts-arkui-styledstringkey-e.md)
-- [text_common](arkts-arkui-text_common.md)
+- [text_common](arkts-arkui-textcommon.md)
   - [ColorShaderStyle](arkts-arkui-colorshaderstyle-c.md)
   - [ContentTransition](arkts-arkui-contenttransition-c.md)
   - [LinearGradientStyle](arkts-arkui-lineargradientstyle-c.md)

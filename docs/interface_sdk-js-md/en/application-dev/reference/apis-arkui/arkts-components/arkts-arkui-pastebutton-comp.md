@@ -1,6 +1,6 @@
 # PasteButton
 
-**PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**</br>
+**PasteButton** is a security component that provides paste functionality. When users tap this component, the application temporarily gains pasteboard read permissions. <br>**Description**&lt;/br&gt;
 
 ## Key Enums
 

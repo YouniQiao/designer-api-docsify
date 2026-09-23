@@ -18,77 +18,6 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 import { audio } from '@kit.AudioKit';
 ```
 
-## getAudioParameter
-
-```TypeScript
-getAudioParameter(key: string, callback: AsyncCallback<string>): void
-```
-
-Obtains the value of an audio parameter. This method uses an asynchronous callback to return the query result.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the audio parameter whose value is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the value of the audio parameter. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getAudioParameter('key_example', (err: BusinessError, value: string) => {
-  if (err) {
-    console.error(`Failed to obtain the value of the audio parameter. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate that the value of the audio parameter is obtained ${value}.`);
-});
-```
-
-<a id="getaudioparameter-1"></a>
-
-## getAudioParameter
-
-```TypeScript
-getAudioParameter(key: string): Promise<string>
-```
-
-Obtains the value of an audio parameter. This method uses a promise to return the query result.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Key of the audio parameter whose value is to be obtained. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;string&gt; | Promise used to return the value of the audio parameter. |
-
-**Examples**
-
-```TypeScript
-audioManager.getAudioParameter('key_example').then((value: string) => {
-  console.info(`Promise returned to indicate that the value of the audio parameter is obtained ${value}.`);
-});
-```
-
 ## getAudioScene
 
 ```TypeScript
@@ -238,6 +167,480 @@ Obtains a device enhancement manager instance.
 import { audio } from '@kit.AudioKit';
 
 let audioDeviceEnhanceManager: audio.AudioDeviceEnhanceManager = audioManager.getDeviceEnhanceManager();
+```
+
+## getRecordingManager
+
+```TypeScript
+getRecordingManager(): AudioRecordingManager
+```
+
+Obtains a recording manager instance. Provides recording strategy management, including collaborative recording and recording control capabilities.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | Returns an instance of audio record manager. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
+```
+
+## getRoutingManager
+
+```TypeScript
+getRoutingManager(): AudioRoutingManager
+```
+
+Obtains an AudioRoutingManager instance.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | AudioRoutingManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioRoutingManager: audio.AudioRoutingManager = audioManager.getRoutingManager();
+```
+
+## getSessionManager
+
+```TypeScript
+getSessionManager(): AudioSessionManager
+```
+
+Obtains an AudioSessionManager instance.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | AudioSessionManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioSessionManager: audio.AudioSessionManager = audioManager.getSessionManager();
+```
+
+## getSpatializationManager
+
+```TypeScript
+getSpatializationManager(): AudioSpatializationManager
+```
+
+Obtains an AudioSpatializationManager instance.
+
+**Since:** 18
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | AudioSpatializationManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+let audioSpatializationManager: audio.AudioSpatializationManager = audioManager.getSpatializationManager();
+```
+
+## getStreamManager
+
+```TypeScript
+getStreamManager(): AudioStreamManager
+```
+
+Obtains an AudioStreamManager instance.
+
+**Since:** 9
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | AudioStreamManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioStreamManager: audio.AudioStreamManager = audioManager.getStreamManager();
+```
+
+## getVolumeManager
+
+```TypeScript
+getVolumeManager(): AudioVolumeManager
+```
+
+Obtains an AudioVolumeManager instance.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | AudioVolumeManager instance. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioVolumeManager: audio.AudioVolumeManager = audioManager.getVolumeManager();
+```
+
+## off('audioSceneChange')
+
+```TypeScript
+off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
+```
+
+Unsubscribes from the audio scene change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**System capability:** SystemCapability.Multimedia.Audio.Communication
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used to return the current audio scene. |
+
+**Examples**
+
+```TypeScript
+// Cancel all subscriptions to the event.
+audioManager.off('audioSceneChange');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let audioSceneChangeCallback = (audioScene: audio.AudioScene) => {
+  console.info(`audio scene : ${audioScene}.`);
+};
+
+audioManager.on('audioSceneChange', audioSceneChangeCallback);
+
+audioManager.off('audioSceneChange', audioSceneChangeCallback);
+```
+
+## off('deviceChange')
+
+```TypeScript
+off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
+```
+
+Unsubscribes from the audio device change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** deviceChange
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
+
+**Examples**
+
+```TypeScript
+// Cancel all subscriptions to the event.
+audioManager.off('deviceChange');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let deviceChangeCallback = (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`device change type : ${deviceChanged.type} `);
+  console.info(`device descriptor size : ${deviceChanged.deviceDescriptors.length} `);
+  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceRole} `);
+  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceType} `);
+};
+
+audioManager.on('deviceChange', deviceChangeCallback);
+
+audioManager.off('deviceChange', deviceChangeCallback);
+```
+
+## off('interrupt')
+
+```TypeScript
+off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void
+```
+
+Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** audioInterrupt
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
+| interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | No | Callback used to return the event information. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let interAudioInterrupt: audio.AudioInterrupt = {
+  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
+  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
+  pauseWhenDucked: true
+};
+
+// Cancel all subscriptions to the event.
+audioManager.off('interrupt', interAudioInterrupt);
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let interruptCallback = (interruptAction: audio.InterruptAction) => {
+  if (interruptAction.actionType === 0) {
+    console.info('An event to gain the audio focus starts.');
+    console.info(`Focus hint: ${interruptAction.hint} `);
+  }
+  if (interruptAction.actionType === 1) {
+    console.info('An audio interruption event starts.');
+    console.info(`Audio interruption hint: ${interruptAction.hint} `);
+  }
+};
+
+audioManager.on('interrupt', interAudioInterrupt, interruptCallback);
+
+audioManager.off('interrupt', interAudioInterrupt, interruptCallback);
+```
+
+## on('audioSceneChange')
+
+```TypeScript
+on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
+```
+
+Subscribes to the audio scene change event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**System capability:** SystemCapability.Multimedia.Audio.Communication
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the current audio scene. |
+
+**Examples**
+
+```TypeScript
+audioManager.on('audioSceneChange', (audioScene: audio.AudioScene) => {
+  console.info(`audio scene : ${audioScene}.`);
+});
+```
+
+## on('deviceChange')
+
+```TypeScript
+on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
+```
+
+Subscribes to the event indicating that the connection status of an audio device is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** deviceChange
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
+
+**Examples**
+
+```TypeScript
+audioManager.on('deviceChange', (deviceChanged: audio.DeviceChangeAction) => {
+  console.info(`device change type : ${deviceChanged.type} `);
+  console.info(`device descriptor size : ${deviceChanged.deviceDescriptors.length} `);
+  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceRole} `);
+  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceType} `);
+});
+```
+
+## on('interrupt')
+
+```TypeScript
+on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
+```
+
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
+
+Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt), this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** audioInterrupt
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
+| interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | Yes | Callback used to return the event information. |
+
+**Examples**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let interAudioInterrupt: audio.AudioInterrupt = {
+  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
+  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
+  pauseWhenDucked: true
+};
+
+audioManager.on('interrupt', interAudioInterrupt, (interruptAction: audio.InterruptAction) => {
+  if (interruptAction.actionType === 0) {
+    console.info('An event to gain the audio focus starts.');
+    console.info(`Focus hint: ${interruptAction.hint} `);
+  }
+  if (interruptAction.actionType === 1) {
+    console.info('An audio interruption event starts.');
+    console.info(`Audio interruption hint: ${interruptAction.hint} `);
+  }
+});
+```
+
+## getAudioParameter
+
+```TypeScript
+getAudioParameter(key: string, callback: AsyncCallback<string>): void
+```
+
+Obtains the value of an audio parameter. This method uses an asynchronous callback to return the query result.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the audio parameter whose value is to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the value of the audio parameter. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.getAudioParameter('key_example', (err: BusinessError, value: string) => {
+  if (err) {
+    console.error(`Failed to obtain the value of the audio parameter. ${err}`);
+    return;
+  }
+  console.info(`Callback invoked to indicate that the value of the audio parameter is obtained ${value}.`);
+});
+```
+
+<a id="getaudioparameter-1"></a>
+
+## getAudioParameter
+
+```TypeScript
+getAudioParameter(key: string): Promise<string>
+```
+
+Obtains the value of an audio parameter. This method uses a promise to return the query result.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Key of the audio parameter whose value is to be obtained. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the value of the audio parameter. |
+
+**Examples**
+
+```TypeScript
+audioManager.getAudioParameter('key_example').then((value: string) => {
+  console.info(`Promise returned to indicate that the value of the audio parameter is obtained ${value}.`);
+});
 ```
 
 ## getDevices
@@ -465,34 +868,6 @@ audioManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
 });
 ```
 
-## getRecordingManager
-
-```TypeScript
-getRecordingManager(): AudioRecordingManager
-```
-
-Obtains a recording manager instance. Provides recording strategy management, including collaborative recording and recording control capabilities.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | Returns an instance of audio record manager. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
-```
-
 ## getRingerMode
 
 ```TypeScript
@@ -559,111 +934,6 @@ Obtains the ringer mode. This API uses a promise to return the result.
 audioManager.getRingerMode().then((value: audio.AudioRingMode) => {
   console.info(`Promise returned to indicate that the ringer mode is obtained ${value}.`);
 });
-```
-
-## getRoutingManager
-
-```TypeScript
-getRoutingManager(): AudioRoutingManager
-```
-
-Obtains an AudioRoutingManager instance.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | AudioRoutingManager instance. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioRoutingManager: audio.AudioRoutingManager = audioManager.getRoutingManager();
-```
-
-## getSessionManager
-
-```TypeScript
-getSessionManager(): AudioSessionManager
-```
-
-Obtains an AudioSessionManager instance.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | AudioSessionManager instance. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioSessionManager: audio.AudioSessionManager = audioManager.getSessionManager();
-```
-
-## getSpatializationManager
-
-```TypeScript
-getSpatializationManager(): AudioSpatializationManager
-```
-
-Obtains an AudioSpatializationManager instance.
-
-**Since:** 18
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | AudioSpatializationManager instance. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-let audioSpatializationManager: audio.AudioSpatializationManager = audioManager.getSpatializationManager();
-```
-
-## getStreamManager
-
-```TypeScript
-getStreamManager(): AudioStreamManager
-```
-
-Obtains an AudioStreamManager instance.
-
-**Since:** 9
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | AudioStreamManager instance. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioStreamManager: audio.AudioStreamManager = audioManager.getStreamManager();
 ```
 
 ## getVolume
@@ -739,34 +1009,6 @@ Obtains the volume of a stream. This API uses a promise to return the result.
 audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
   console.info(`Promise returned to indicate that the volume is obtained ${value} .`);
 });
-```
-
-## getVolumeManager
-
-```TypeScript
-getVolumeManager(): AudioVolumeManager
-```
-
-Obtains an AudioVolumeManager instance.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | AudioVolumeManager instance. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioVolumeManager: audio.AudioVolumeManager = audioManager.getVolumeManager();
 ```
 
 ## isActive
@@ -1140,248 +1382,6 @@ Mutes a volume type. This method uses a promise to return the result.
 ```TypeScript
 audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
-});
-```
-
-## off('audioSceneChange')
-
-```TypeScript
-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
-```
-
-Unsubscribes from the audio scene change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-**System capability:** SystemCapability.Multimedia.Audio.Communication
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used to return the current audio scene. |
-
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioManager.off('audioSceneChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let audioSceneChangeCallback = (audioScene: audio.AudioScene) => {
-  console.info(`audio scene : ${audioScene}.`);
-};
-
-audioManager.on('audioSceneChange', audioSceneChangeCallback);
-
-audioManager.off('audioSceneChange', audioSceneChangeCallback);
-```
-
-## off('deviceChange')
-
-```TypeScript
-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
-```
-
-Unsubscribes from the audio device change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** deviceChange
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
-
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioManager.off('deviceChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let deviceChangeCallback = (deviceChanged: audio.DeviceChangeAction) => {
-  console.info(`device change type : ${deviceChanged.type} `);
-  console.info(`device descriptor size : ${deviceChanged.deviceDescriptors.length} `);
-  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceRole} `);
-  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceType} `);
-};
-
-audioManager.on('deviceChange', deviceChangeCallback);
-
-audioManager.off('deviceChange', deviceChangeCallback);
-```
-
-## off('interrupt')
-
-```TypeScript
-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void
-```
-
-Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** audioInterrupt
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
-| interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | No | Callback used to return the event information. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let interAudioInterrupt: audio.AudioInterrupt = {
-  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
-  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
-  pauseWhenDucked: true
-};
-
-// Cancel all subscriptions to the event.
-audioManager.off('interrupt', interAudioInterrupt);
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let interruptCallback = (interruptAction: audio.InterruptAction) => {
-  if (interruptAction.actionType === 0) {
-    console.info('An event to gain the audio focus starts.');
-    console.info(`Focus hint: ${interruptAction.hint} `);
-  }
-  if (interruptAction.actionType === 1) {
-    console.info('An audio interruption event starts.');
-    console.info(`Audio interruption hint: ${interruptAction.hint} `);
-  }
-};
-
-audioManager.on('interrupt', interAudioInterrupt, interruptCallback);
-
-audioManager.off('interrupt', interAudioInterrupt, interruptCallback);
-```
-
-## on('audioSceneChange')
-
-```TypeScript
-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
-```
-
-Subscribes to the audio scene change event. This API uses an asynchronous callback to return the result.
-
-**Since:** 20
-
-**System capability:** SystemCapability.Multimedia.Audio.Communication
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the current audio scene. |
-
-**Examples**
-
-```TypeScript
-audioManager.on('audioSceneChange', (audioScene: audio.AudioScene) => {
-  console.info(`audio scene : ${audioScene}.`);
-});
-```
-
-## on('deviceChange')
-
-```TypeScript
-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
-```
-
-Subscribes to the event indicating that the connection status of an audio device is changed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** deviceChange
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
-
-**Examples**
-
-```TypeScript
-audioManager.on('deviceChange', (deviceChanged: audio.DeviceChangeAction) => {
-  console.info(`device change type : ${deviceChanged.type} `);
-  console.info(`device descriptor size : ${deviceChanged.deviceDescriptors.length} `);
-  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceRole} `);
-  console.info(`device change descriptor : ${deviceChanged.deviceDescriptors[0].deviceType} `);
-});
-```
-
-## on('interrupt')
-
-```TypeScript
-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
-```
-
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
-
-Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt), this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** audioInterrupt
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
-| interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | Yes | Callback used to return the event information. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let interAudioInterrupt: audio.AudioInterrupt = {
-  streamUsage: audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION,
-  contentType: audio.ContentType.CONTENT_TYPE_UNKNOWN,
-  pauseWhenDucked: true
-};
-
-audioManager.on('interrupt', interAudioInterrupt, (interruptAction: audio.InterruptAction) => {
-  if (interruptAction.actionType === 0) {
-    console.info('An event to gain the audio focus starts.');
-    console.info(`Focus hint: ${interruptAction.hint} `);
-  }
-  if (interruptAction.actionType === 1) {
-    console.info('An audio interruption event starts.');
-    console.info(`Audio interruption hint: ${interruptAction.hint} `);
-  }
 });
 ```
 

@@ -4,7 +4,7 @@
 export class RequestReadPermissionResult
 ```
 
-Request read permission result
+Describes the authorized URIs and invalid URIs.
 
 **Since:** 23
 

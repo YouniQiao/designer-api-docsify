@@ -670,32 +670,6 @@ This event is triggered once when the grid is initialized and once when the grid
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the grid reaches the start position. |
 
-## onScroll
-
-```TypeScript
-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
-```
-
-Called When sliding the grid.
-
-**Since:** 10
-
-**Deprecated since:** 12
-
-**Substitutes:** onDidScroll
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | callback of grid scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the **Grid** component is scrolled up and negative when it is scrolled down.<br>Unit: vp scrollState: Current scroll state. |
-
 ## onScrollBarUpdate
 
 ```TypeScript
@@ -1057,3 +1031,29 @@ Sets whether to synchronously load all child components in the grid.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to synchronously load all child components in the grid.<br> **true**: yes; **false**: no Default value: **true**<br> **NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |
+
+## onScroll
+
+```TypeScript
+onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
+```
+
+Called When sliding the grid.
+
+**Since:** 10
+
+**Deprecated since:** 12
+
+**Substitutes:** onDidScroll
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | callback of grid scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the **Grid** component is scrolled up and negative when it is scrolled down.<br>Unit: vp scrollState: Current scroll state. |

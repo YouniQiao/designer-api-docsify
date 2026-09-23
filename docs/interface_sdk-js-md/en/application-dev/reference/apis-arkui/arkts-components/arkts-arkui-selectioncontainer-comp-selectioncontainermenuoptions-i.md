@@ -4,7 +4,7 @@
 export interface SelectionContainerMenuOptions
 ```
 
-Defines selection menu options for SelectionContainer.
+Provides the configuration options in the selection menu.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 onAppear?: Callback<string>
 ```
 
-Called when the selection menu appears. The callback parameter is the selected text concatenated in the visual order of Text components.
+Triggered when the selection menu appears. The callback parameter is the selected text concatenated in the visual order of the Text components, and the concatenation method is determined by the textJoinStyle configuration. The default value is empty, and this callback is not triggered.
 
 **Type:** Callback&lt;string&gt;
 
@@ -40,7 +40,7 @@ Called when the selection menu appears. The callback parameter is the selected t
 onDisappear?: Callback<void>
 ```
 
-Called when the selection menu disappears.
+Triggered when the selection menu disappears. The default value is empty, and this callback is not triggered.
 
 **Type:** Callback&lt;void&gt;
 
@@ -58,7 +58,7 @@ Called when the selection menu disappears.
 onMenuHide?: Callback<string>
 ```
 
-Called when the selection menu is hidden. The callback parameter is the selected text concatenated in the visual order of Text components.
+Triggered when the selection menu is hidden. The callback parameter is the selected text concatenated in the visual order of the Text components, and the concatenation method is determined by the textJoinStyle configuration. The default value is empty, and this callback is not triggered.
 
 **Type:** Callback&lt;string&gt;
 
@@ -76,7 +76,7 @@ Called when the selection menu is hidden. The callback parameter is the selected
 onMenuShow?: Callback<string>
 ```
 
-Called when the selection menu is displayed. The callback parameter is the selected text concatenated in the visual order of Text components.
+Triggered when the selection menu is shown. The callback parameter is the selected text concatenated in the visual order of the Text components, and the concatenation method is determined by the textJoinStyle configuration. The default value is empty, and this callback is not triggered.
 
 **Type:** Callback&lt;string&gt;
 

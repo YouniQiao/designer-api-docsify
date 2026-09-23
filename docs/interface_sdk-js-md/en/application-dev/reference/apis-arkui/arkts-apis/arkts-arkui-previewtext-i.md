@@ -16,7 +16,7 @@ Preview text.
 offset: number
 ```
 
-Start position of the preview text.
+Start index of the preview text content, starting from 0.
 
 **Type:** number
 

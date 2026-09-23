@@ -55,78 +55,6 @@ try {
 }
 ```
 
-## connectTag
-
-```TypeScript
-connectTag(): boolean
-```
-
-和标签建立连接。在从标签读取数据或将数据写入标签之前，必须调用此方法。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** connect
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 连接建立成功返回true，失败返回false。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let connectStatus : boolean = tag.getIsoDep(tagInfo).connectTag();
-console.info("connectStatus: " + connectStatus);
-```
-
-## getMaxSendLength
-
-```TypeScript
-getMaxSendLength(): number
-```
-
-查询可以发送到标签的最大数据长度。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getMaxTransmitSize](#getmaxtransmitsize)
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 可以发送到标签的最大数据长度，非负数。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let maxSendLen = tag.getIsoDep(tagInfo).getMaxSendLength(); 
-console.info("tag maxSendLen: " + maxSendLen);
-```
-
 ## getMaxTransmitSize
 
 ```TypeScript
@@ -171,78 +99,6 @@ try {
 } catch (businessError) {
     console.error("tag getMaxTransmitSize businessError: " + businessError);
 }
-```
-
-## getSendDataTimeout
-
-```TypeScript
-getSendDataTimeout(): number
-```
-
-查询发送数据到Tag的等待超时时间，单位是毫秒。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getTimeout](#gettimeout)
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | 发送数据到Tag的等待超时时间，单位是毫秒，非负数。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let sendDataTimeout = tag.getIsoDep(tagInfo).getSendDataTimeout(); 
-console.info("tag sendDataTimeout: " + sendDataTimeout);
-```
-
-## getTagInfo
-
-```TypeScript
-getTagInfo(): tag.TagInfo
-```
-
-获取该Tag被分发时，NFC服务所提供的Tag数据对象。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [tag.TagInfo](arkts-connectivity-tag-taginfo-i.md) | NFC服务所提供的Tag数据对象。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let tagInfo : TagInfo = tag.getIsoDep(tagInfo).getTagInfo();
-console.info("tag tagInfo: " + tagInfo);
 ```
 
 ## getTimeout
@@ -333,69 +189,6 @@ try {
 }
 ```
 
-## isTagConnected
-
-```TypeScript
-isTagConnected(): boolean
-```
-
-检查是否已与标签建立连接。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** isConnected
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 已建立连接返回 true，未建立连接返回false。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let isTagConnected = tag.getIsoDep(tagInfo).isTagConnected(); 
-console.info("isTagConnected: " + isTagConnected);
-```
-
-## reset
-
-```TypeScript
-reset(): void
-```
-
-重置与标签的连接。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [resetConnection](#resetconnection)
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-tag.getIsoDep(tagInfo).reset();
-```
-
 ## resetConnection
 
 ```TypeScript
@@ -434,161 +227,6 @@ try {
 } catch (businessError) {
     console.error("tag resetConnection businessError: " + businessError);
 }
-```
-
-## sendData
-
-```TypeScript
-sendData(data: number[]): Promise<number[]>
-```
-
-发送指令到Tag上。使用Promise异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** transmit
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;number[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@ohos.base';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-function tagSessionDemo() {
-    // 如果没有连接，请先连接tag
-    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
-        if (!tag.getIsoDep(tagInfo).connectTag()) {
-            console.error("tagSession connectTag failed.");
-            return;
-        }
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
-    tag.getIsoDep(tagInfo).sendData(cmdData).then((response) => {
-        console.info("tagSession sendData Promise response: " + response);
-    }).catch((err : BusinessError) => {
-        console.error("tagSession sendData Promise err: " + err);
-    });
-}
-```
-
-<a id="senddata-1"></a>
-
-## sendData
-
-```TypeScript
-sendData(data: number[], callback: AsyncCallback<number[]>): void
-```
-
-发送指令到Tag上。使用callback异步回调。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** transmit
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | 是 | 回调函数，返回响应数据。每个number十六进制表示，范围是0x00~0xFF。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-function tagSessionDemo() {
-    // 如果没有连接，请先连接tag
-    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
-        if (!tag.getIsoDep(tagInfo).connectTag()) {
-            console.error("tagSession connectTag failed.");
-            return;
-        }
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
-    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response) => {
-        if (err) {
-            console.error("tagSession sendData AsyncCallback err: " + err);
-        } else {
-            console.info("tagSession sendData AsyncCallback response: " + response);
-        }
-    });
-}
-```
-
-## setSendDataTimeout
-
-```TypeScript
-setSendDataTimeout(timeout: number): boolean
-```
-
-设置发送数据到Tag的等待超时时间，单位是毫秒。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** setTimeout
-
-**需要权限：** ohos.permission.NFC_TAG
-
-**系统能力：** SystemCapability.Communication.NFC.Tag
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| timeout | number | 是 | 超时时间，单位毫秒，非负值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 设置超时时间成功返回true，设置失败返回false。 |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
-// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
-
-let timeoutMs = 700;  // 修改为预期的超时时间
-let setStatus = tag.getIsoDep(tagInfo).setSendDataTimeout(timeoutMs); 
-console.info("tag setSendDataTimeout setStatus: " + setStatus);
 ```
 
 ## setTimeout
@@ -779,4 +417,366 @@ function tagSessionDemo() {
         return;
     }
 }
+```
+
+## connectTag
+
+```TypeScript
+connectTag(): boolean
+```
+
+和标签建立连接。在从标签读取数据或将数据写入标签之前，必须调用此方法。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** connect
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 连接建立成功返回true，失败返回false。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let connectStatus : boolean = tag.getIsoDep(tagInfo).connectTag();
+console.info("connectStatus: " + connectStatus);
+```
+
+## getMaxSendLength
+
+```TypeScript
+getMaxSendLength(): number
+```
+
+查询可以发送到标签的最大数据长度。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getMaxTransmitSize](#getmaxtransmitsize)
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 可以发送到标签的最大数据长度，非负数。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let maxSendLen = tag.getIsoDep(tagInfo).getMaxSendLength(); 
+console.info("tag maxSendLen: " + maxSendLen);
+```
+
+## getSendDataTimeout
+
+```TypeScript
+getSendDataTimeout(): number
+```
+
+查询发送数据到Tag的等待超时时间，单位是毫秒。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getTimeout](#gettimeout)
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 发送数据到Tag的等待超时时间，单位是毫秒，非负数。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let sendDataTimeout = tag.getIsoDep(tagInfo).getSendDataTimeout(); 
+console.info("tag sendDataTimeout: " + sendDataTimeout);
+```
+
+## getTagInfo
+
+```TypeScript
+getTagInfo(): tag.TagInfo
+```
+
+获取该Tag被分发时，NFC服务所提供的Tag数据对象。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [tag.TagInfo](arkts-connectivity-tag-taginfo-i.md) | NFC服务所提供的Tag数据对象。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let tagInfo : TagInfo = tag.getIsoDep(tagInfo).getTagInfo();
+console.info("tag tagInfo: " + tagInfo);
+```
+
+## isTagConnected
+
+```TypeScript
+isTagConnected(): boolean
+```
+
+检查是否已与标签建立连接。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** isConnected
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 已建立连接返回 true，未建立连接返回false。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let isTagConnected = tag.getIsoDep(tagInfo).isTagConnected(); 
+console.info("isTagConnected: " + isTagConnected);
+```
+
+## reset
+
+```TypeScript
+reset(): void
+```
+
+重置与标签的连接。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [resetConnection](#resetconnection)
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+tag.getIsoDep(tagInfo).reset();
+```
+
+## sendData
+
+```TypeScript
+sendData(data: number[]): Promise<number[]>
+```
+
+发送指令到Tag上。使用Promise异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** transmit
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;number[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@ohos.base';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+function tagSessionDemo() {
+    // 如果没有连接，请先连接tag
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
+    tag.getIsoDep(tagInfo).sendData(cmdData).then((response) => {
+        console.info("tagSession sendData Promise response: " + response);
+    }).catch((err : BusinessError) => {
+        console.error("tagSession sendData Promise err: " + err);
+    });
+}
+```
+
+<a id="senddata-1"></a>
+
+## sendData
+
+```TypeScript
+sendData(data: number[], callback: AsyncCallback<number[]>): void
+```
+
+发送指令到Tag上。使用callback异步回调。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** transmit
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| data | number[] | 是 | 要发送的指令。每个number十六进制表示，范围是0x00~0xFF。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | 是 | 回调函数，返回响应数据。每个number十六进制表示，范围是0x00~0xFF。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+function tagSessionDemo() {
+    // 如果没有连接，请先连接tag
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response) => {
+        if (err) {
+            console.error("tagSession sendData AsyncCallback err: " + err);
+        } else {
+            console.info("tagSession sendData AsyncCallback response: " + response);
+        }
+    });
+}
+```
+
+## setSendDataTimeout
+
+```TypeScript
+setSendDataTimeout(timeout: number): boolean
+```
+
+设置发送数据到Tag的等待超时时间，单位是毫秒。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** setTimeout
+
+**需要权限：** ohos.permission.NFC_TAG
+
+**系统能力：** SystemCapability.Communication.NFC.Tag
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| timeout | number | 是 | 超时时间，单位毫秒，非负值。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 设置超时时间成功返回true，设置失败返回false。 |
+
+**示例**
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
+// getXXX，可以是getIsoDep、getNdef、getMifareClassic...
+
+let timeoutMs = 700;  // 修改为预期的超时时间
+let setStatus = tag.getIsoDep(tagInfo).setSendDataTimeout(timeoutMs); 
+console.info("tag setSendDataTimeout setStatus: " + setStatus);
 ```

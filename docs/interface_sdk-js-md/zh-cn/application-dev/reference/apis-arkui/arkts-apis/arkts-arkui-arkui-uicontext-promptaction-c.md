@@ -1345,19 +1345,21 @@ struct Index {
 }
 ```
 
+<a id="showactionmenu-1"></a>
+
 ## showActionMenu
 
 ```TypeScript
-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void
+showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
 ```
 
 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
 
-**起始版本：** 10
+**起始版本：** 11
 
-**废弃版本：** 11
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-**替代接口：** [showActionMenu](#showactionmenu)
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1365,8 +1367,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
-| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 是 | 回调函数，返回菜单的响应结果。 |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | 是 | 菜单响应结果。 |
 
 **错误码：**
 
@@ -1501,42 +1503,6 @@ struct Index {
 }
 ```
 
-<a id="showactionmenu-1"></a>
-
-## showActionMenu
-
-```TypeScript
-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
-```
-
-创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md)&gt; | 是 | 菜单响应结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-
-**示例**
-
-参见 [showActionMenu](#showactionmenu)
-
 <a id="showactionmenu-2"></a>
 
 ## showActionMenu
@@ -1615,6 +1581,40 @@ struct Index {
   }
 }
 ```
+
+## showActionMenu
+
+```TypeScript
+showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void
+```
+
+创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
+
+**起始版本：** 10
+
+**废弃版本：** 11
+
+**替代接口：** [showActionMenu](#showactionmenu)
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [promptAction.ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
+| callback | [promptAction.ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 是 | 回调函数，返回菜单的响应结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+
+**示例**
+
+参见 [showActionMenu](#showactionmenu)
 
 ## showDialog
 

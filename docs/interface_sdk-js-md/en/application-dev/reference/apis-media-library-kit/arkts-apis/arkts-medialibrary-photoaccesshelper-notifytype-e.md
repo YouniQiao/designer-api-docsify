@@ -13,7 +13,7 @@ Enumerates the notification event types.
 ## NOTIFY_ADD
 
 ```TypeScript
-NOTIFY_ADD
+NOTIFY_ADD = 0
 ```
 
 A file asset or album is added.
@@ -25,7 +25,7 @@ A file asset or album is added.
 ## NOTIFY_UPDATE
 
 ```TypeScript
-NOTIFY_UPDATE
+NOTIFY_UPDATE = 1
 ```
 
 A file asset or album is updated.
@@ -37,7 +37,7 @@ A file asset or album is updated.
 ## NOTIFY_REMOVE
 
 ```TypeScript
-NOTIFY_REMOVE
+NOTIFY_REMOVE = 2
 ```
 
 A file asset or album is removed.
@@ -49,7 +49,7 @@ A file asset or album is removed.
 ## NOTIFY_ALBUM_ADD_ASSET
 
 ```TypeScript
-NOTIFY_ALBUM_ADD_ASSET
+NOTIFY_ALBUM_ADD_ASSET = 3
 ```
 
 A file asset is added to the album.
@@ -61,7 +61,7 @@ A file asset is added to the album.
 ## NOTIFY_ALBUM_REMOVE_ASSET
 
 ```TypeScript
-NOTIFY_ALBUM_REMOVE_ASSET
+NOTIFY_ALBUM_REMOVE_ASSET = 4
 ```
 
 A file asset is removed from the album.

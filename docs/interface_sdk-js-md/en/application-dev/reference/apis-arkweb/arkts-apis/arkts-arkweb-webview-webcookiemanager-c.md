@@ -737,84 +737,6 @@ struct WebComponent {
 }
 ```
 
-## deleteEntireCookie
-
-```TypeScript
-static deleteEntireCookie(): void
-```
-
-Deletes all cookies.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [clearAllCookiesSync](#clearallcookiessync)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteEntireCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteEntireCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## deleteSessionCookie
-
-```TypeScript
-static deleteSessionCookie(): void
-```
-
-Deletes all session cookies.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [clearSessionCookieSync](#clearsessioncookiesync)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteSessionCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteSessionCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## existCookie
 
 ```TypeScript
@@ -1345,70 +1267,6 @@ struct WebComponent {
 }
 ```
 
-## getCookie
-
-```TypeScript
-static getCookie(url: string): string
-```
-
-Obtains the cookie value of the specified URL.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [fetchCookieSync](#fetchcookiesync)
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Cookie value corresponding to the specified URL. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getCookie')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.getCookie('https://www.example.com');
-            console.info("value: " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isCookieAllowed
 
 ```TypeScript
@@ -1779,6 +1637,200 @@ struct WebComponent {
 }
 ```
 
+## setLazyInitializeWebEngine
+
+```TypeScript
+static setLazyInitializeWebEngine(lazy: boolean): void
+```
+
+Sets whether to delay the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not delayed by default.
+
+> **NOTE:** 
+> 
+> - This API is a global static method. It must be called before using ArkWeb components and initializing the ArkWeb kernel. Otherwise, the setting does not take effect.
+> 
+> - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel separately afterwards.
+> 
+> -Since API version 26.0.1, when set to **true**, CookieManager interfaces can be used in asynchronous threads.
+
+**Since:** 22
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| lazy | boolean | Yes | Controls whether to delay the initialization of the web engine. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+webview.WebCookieManager.setLazyInitializeWebEngine(true);
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  aboutToAppear(): void {
+    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
+    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
+  }
+
+  build() {
+    Column() {
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## deleteEntireCookie
+
+```TypeScript
+static deleteEntireCookie(): void
+```
+
+Deletes all cookies.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [clearAllCookiesSync](#clearallcookiessync)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteEntireCookie')
+        .onClick(() => {
+          webview.WebCookieManager.deleteEntireCookie();
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## deleteSessionCookie
+
+```TypeScript
+static deleteSessionCookie(): void
+```
+
+Deletes all session cookies.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [clearSessionCookieSync](#clearsessioncookiesync)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('deleteSessionCookie')
+        .onClick(() => {
+          webview.WebCookieManager.deleteSessionCookie();
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+## getCookie
+
+```TypeScript
+static getCookie(url: string): string
+```
+
+Obtains the cookie value of the specified URL.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [fetchCookieSync](#fetchcookiesync)
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Cookie value corresponding to the specified URL. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
+
+**Examples**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('getCookie')
+        .onClick(() => {
+          try {
+            let value = webview.WebCookieManager.getCookie('https://www.example.com');
+            console.info("value: " + value);
+          } catch (error) {
+            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
+          }
+        })
+      Web({ src: 'www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 ## setCookie
 
 ```TypeScript
@@ -1832,58 +1884,6 @@ struct WebComponent {
             console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
           }
         })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## setLazyInitializeWebEngine
-
-```TypeScript
-static setLazyInitializeWebEngine(lazy: boolean): void
-```
-
-Sets whether to delay the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not delayed by default.
-
-> **NOTE:** 
-> 
-> - This API is a global static method. It must be called before using ArkWeb components and initializing the ArkWeb kernel. Otherwise, the setting does not take effect.
-> 
-> - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel separately afterwards.
-> 
-> -Since API version 26.0.1, when set to **true**, CookieManager interfaces can be used in asynchronous threads.
-
-**Since:** 22
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| lazy | boolean | Yes | Controls whether to delay the initialization of the web engine. |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
       Web({ src: 'www.example.com', controller: this.controller })
     }
   }

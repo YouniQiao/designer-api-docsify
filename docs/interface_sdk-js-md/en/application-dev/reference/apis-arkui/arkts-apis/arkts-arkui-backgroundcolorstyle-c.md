@@ -16,7 +16,7 @@ Describes the text background color style.
 constructor(textBackgroundStyle: TextBackgroundStyle)
 ```
 
-A constructor used to create a text background style.
+A constructor used to create the text background color. If this API is not used to set the value, the default background color is **Color.Transparent** and the corner radius is **0**.
 
 **Since:** 14
 
@@ -30,7 +30,7 @@ A constructor used to create a text background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-span-comp-textbackgroundstyle-i.md) | Yes | Options of the text background color.<br>Default value:<br>{<br> color: Color.Transparent,<br> radius: 0<br>} |
+| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-span-comp-textbackgroundstyle-i.md) | Yes | Text background color setting item. |
 
 ## textBackgroundStyle
 
@@ -42,13 +42,13 @@ Text background color of the styled string.
 
 Default value:
 
-{
+**{
 
 color: Color.Transparent,
 
 radius: 0
 
-}
+}**
 
 **Type:** [TextBackgroundStyle](../arkts-components/arkts-arkui-span-comp-textbackgroundstyle-i.md)
 

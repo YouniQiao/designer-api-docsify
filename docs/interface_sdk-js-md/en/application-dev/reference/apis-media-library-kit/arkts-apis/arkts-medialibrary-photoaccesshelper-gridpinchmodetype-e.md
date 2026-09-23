@@ -4,9 +4,7 @@
 export enum GridPinchModeType
 ```
 
-Enumeration type of grid pinch mode.
-
-@enum { int } GridPinchModeType
+Enumerates the grid pinch mode types.
 
 **Since:** 23
 

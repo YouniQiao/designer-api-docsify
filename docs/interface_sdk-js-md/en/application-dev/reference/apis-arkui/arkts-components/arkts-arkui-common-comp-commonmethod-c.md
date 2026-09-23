@@ -4073,78 +4073,6 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 | --- | --- |
 | T | Current component. |
 
-## gridOffset
-
-```TypeScript
-gridOffset(value: number): T
-```
-
-Default offset column count, which refers to the number of columns by which the current component is offset along the Start direction of its parent component when the useSizeType attribute does not set the offset for the corresponding size. That is, the starting position of the component is offset by n columns relative to the Start direction of the parent component. It must be a non-negative integer. When passing a negative number, use the default value 0. When useSizeType sets the offset for the corresponding size, the gridOffset setting does not take effect.
-
-> **NOTE:** 
-> 
-> - When calling this attribute, its parent component or ancestor component must be GridContainer.
-> - After this attribute is configured, the layout of the current component in the horizontal direction of the parent component no longer follows the original layout mode of the parent component. Instead, the component is offset by a certain distance along the Start direction of the parent component.
-> - Offset distance = (column width + spacing)* offset column count.
-> - Sibling components after the component with the offset (gridOffset) set are laid out relative to this component.
-
-**Since:** 7
-
-**Deprecated since:** 14
-
-**Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | Default offset column count. Default value: **0** |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T |  |
-
-## gridSpan
-
-```TypeScript
-gridSpan(value: number): T
-```
-
-Default column count, which refers to the grid column count occupied when the useSizeType attribute does not set the column count (span) for the corresponding size. It must be a non-negative integer. When passing a negative number or a value exceeding the total column count of GridContainer, use the default value 1.
-
-> **NOTE:** 
-> 
-> - When calling this attribute, its parent component or ancestor component must be GridContainer.
-> - When the grid span attribute is set, the width of the component is determined by the grid layout.
-
-**Since:** 7
-
-**Deprecated since:** 14
-
-**Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | Default column count. Default value: **1** |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T |  |
-
 ## groupDefaultFocus
 
 ```TypeScript
@@ -5267,7 +5195,7 @@ Sets how the component content is obscured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.<br>This API is only available for the [Image](arkts-arkui-image-comp.md#image)<!--Del-->, [FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component)&lt;sup&gt;12+&lt;/sup&gt;,<!--DelEnd--> and [Text](arkts-arkui-text-comp.md#text) components.<br>**NOTE:** <br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any [styled string](../arkts-apis/arkts-arkui-styled_string.md) configured. <br>Default value: []. |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.<br>This API is only available for the [Image](arkts-arkui-image-comp.md#image)<!--Del-->, [FormComponent](arkts-arkui-formcomponent-comp-sys.md#form_component)&lt;sup&gt;12+&lt;/sup&gt;,<!--DelEnd--> and [Text](arkts-arkui-text-comp.md#text) components.<br>**NOTE:** <br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any [styled string](../arkts-apis/arkts-arkui-styledstring.md#styled_string) configured. <br>Default value: []. |
 
 **Return value:**
 
@@ -8490,34 +8418,6 @@ Config toolbar for current component.
 | --- | --- |
 | T |  |
 
-## touchable
-
-```TypeScript
-touchable(value: boolean): T
-```
-
-Whether the component can respond to finger interactions such as click and touch events.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [hitTestBehavior](#hittestbehavior)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component can respond to finger interactions such as click and touch events.<br>**true** (default): The component can respond to finger interactions. **false**: The component cannot respond to finger interactions. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | Current component. |
-
 ## transform
 
 ```TypeScript
@@ -8879,39 +8779,6 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 | --- | --- |
 | T | Current component. |
 
-## useSizeType
-
-```TypeScript
-useSizeType(value: {
-    xs?: number | { span: number; offset: number };
-    sm?: number | { span: number; offset: number };
-    md?: number | { span: number; offset: number };
-    lg?: number | { span: number; offset: number };
-  }): T
-```
-
-Sets the number of occupied columns and offset columns for a specific device width type.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | Yes |  |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T |  |
-
 ## visibility
 
 ```TypeScript
@@ -9070,3 +8937,136 @@ Sets the stacking order of the component.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+## gridOffset
+
+```TypeScript
+gridOffset(value: number): T
+```
+
+Default offset column count, which refers to the number of columns by which the current component is offset along the Start direction of its parent component when the useSizeType attribute does not set the offset for the corresponding size. That is, the starting position of the component is offset by n columns relative to the Start direction of the parent component. It must be a non-negative integer. When passing a negative number, use the default value 0. When useSizeType sets the offset for the corresponding size, the gridOffset setting does not take effect.
+
+> **NOTE:** 
+> 
+> - When calling this attribute, its parent component or ancestor component must be GridContainer.
+> - After this attribute is configured, the layout of the current component in the horizontal direction of the parent component no longer follows the original layout mode of the parent component. Instead, the component is offset by a certain distance along the Start direction of the parent component.
+> - Offset distance = (column width + spacing)* offset column count.
+> - Sibling components after the component with the offset (gridOffset) set are laid out relative to this component.
+
+**Since:** 7
+
+**Deprecated since:** 14
+
+**Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Default offset column count. Default value: **0** |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T |  |
+
+## gridSpan
+
+```TypeScript
+gridSpan(value: number): T
+```
+
+Default column count, which refers to the grid column count occupied when the useSizeType attribute does not set the column count (span) for the corresponding size. It must be a non-negative integer. When passing a negative number or a value exceeding the total column count of GridContainer, use the default value 1.
+
+> **NOTE:** 
+> 
+> - When calling this attribute, its parent component or ancestor component must be GridContainer.
+> - When the grid span attribute is set, the width of the component is determined by the grid layout.
+
+**Since:** 7
+
+**Deprecated since:** 14
+
+**Substitutes:** grid_col/GridColInterface and grid_row/GridRowInterface
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Default column count. Default value: **1** |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T |  |
+
+## touchable
+
+```TypeScript
+touchable(value: boolean): T
+```
+
+Whether the component can respond to finger interactions such as click and touch events.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [hitTestBehavior](#hittestbehavior)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether the component can respond to finger interactions such as click and touch events.<br>**true** (default): The component can respond to finger interactions. **false**: The component cannot respond to finger interactions. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
+## useSizeType
+
+```TypeScript
+useSizeType(value: {
+    xs?: number | { span: number; offset: number };
+    sm?: number | { span: number; offset: number };
+    md?: number | { span: number; offset: number };
+    lg?: number | { span: number; offset: number };
+  }): T
+```
+
+Sets the number of occupied columns and offset columns for a specific device width type.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | {     xs?: number &#124; { span: number; offset: number };     sm?: number &#124; { span: number; offset: number };     md?: number &#124; { span: number; offset: number };     lg?: number &#124; { span: number; offset: number };   } | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T |  |

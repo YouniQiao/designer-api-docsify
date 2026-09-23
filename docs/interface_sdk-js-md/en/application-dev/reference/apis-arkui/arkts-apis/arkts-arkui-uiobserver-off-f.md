@@ -61,7 +61,7 @@ Unsubscribes from status changes of the **NavDestination** component.
 export function off(type: 'scrollEvent', options: ObserverOptions, callback?: Callback<ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+Unregisters the listener for the start and end of scroll events of a specific scrollable component identified by its ID. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
 
 **Since:** 12
 
@@ -75,9 +75,9 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
+| type | 'scrollEvent' | Yes | Event type. The value **'scrollEvent'** indicates the start and end of a scroll event. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | Yes | ID of the target scrollable component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | Callback used to return the result. It returns the information about the scroll event. |
 
 **Examples**
 
@@ -155,7 +155,7 @@ struct Index {
 export function off(type: 'scrollEvent', callback?: Callback<ScrollEventInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+Unregisters the listener for the start and end of scroll events of all scrollable components. Supported components include [List](../arkts-components/arkts-arkui-list-comp.md#list), [Grid](../arkts-components/arkts-arkui-grid-comp.md#grid), [Scroll](../arkts-components/arkts-arkui-scroll-comp.md#scroll), [WaterFlow](../arkts-components/arkts-arkui-waterflow-comp.md#water_flow), and [ArcList](../arkts-components/arkts-arkui-arclist-comp.md#ohosarkuiarclist).
 
 **Since:** 12
 
@@ -169,8 +169,8 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scrollEvent' | Yes | The type of event to remove the listener for. Must be 'scrollEvent'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'scrollEvent' | Yes | Event type. The value **'scrollEvent'** indicates the start and end of a scroll event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No | Callback used to return the result. It returns the information about the scroll event. |
 
 
 ## off('routerPageUpdate')

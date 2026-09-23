@@ -4,7 +4,7 @@
 declare enum FlexDirection
 ```
 
-FlexDirection enumeration description
+Sets the direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ FlexDirection enumeration description
 Row
 ```
 
-The main axis is consistent with the row direction as the layout mode.
+The child components are arranged in the same direction as the main axis runs along the rows.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ The main axis is consistent with the row direction as the layout mode.
 Column
 ```
 
-The main axis is consistent with the column direction as the layout mode.
+The child components are arranged in the same direction as the main axis runs down the columns.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ The main axis is consistent with the column direction as the layout mode.
 RowReverse
 ```
 
-The layout is in the opposite direction to the Row direction.
+The child components are arranged opposite to the **Row** direction.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ The layout is in the opposite direction to the Row direction.
 ColumnReverse
 ```
 
-Layout in the opposite direction to the column.
+The child components are arranged opposite to the **Column** direction.
 
 **Since:** 7
 

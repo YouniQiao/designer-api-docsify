@@ -2,7 +2,10 @@
 
 The **Radio** component allows users to select from a set of mutually exclusive options.
 
-> **NOTE** > > Since API version 12, the default indicator type for the **Radio** component changes from > **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
+> **NOTE:** 
+> 
+> Since API version 12, the default indicator type for the **Radio** component changes from
+> **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
 
 ## Child Components
 

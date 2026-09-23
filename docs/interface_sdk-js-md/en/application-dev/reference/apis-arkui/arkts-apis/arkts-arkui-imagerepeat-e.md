@@ -4,7 +4,7 @@
 declare enum ImageRepeat
 ```
 
-ImageRepeat enumeration description
+Sets the image repeat pattern.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ ImageRepeat enumeration description
 NoRepeat
 ```
 
-Do not draw the picture again.
+The image is not repeatedly drawn.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Do not draw the picture again.
 X
 ```
 
-Repeat the drawing only on the horizontal axis.
+The image is repeatedly drawn only along the horizontal axis.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Repeat the drawing only on the horizontal axis.
 Y
 ```
 
-Repeat the drawing only on the vertical axis.
+Images are repeatedly drawn only on the vertical axis.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Repeat the drawing only on the vertical axis.
 XY
 ```
 
-Draw the picture repeatedly on both axes.
+The image is repeatedly drawn along both axes.
 
 **Since:** 7
 

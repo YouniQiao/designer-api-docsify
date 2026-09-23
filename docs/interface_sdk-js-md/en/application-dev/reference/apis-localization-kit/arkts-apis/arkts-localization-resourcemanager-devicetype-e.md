@@ -6,9 +6,9 @@ export enum DeviceType
 
 Enumerates the device types.
 
-&lt;!--RP1--&gt;
+<!--RP1-->
 
-&lt;!--RP1End--&gt;
+<!--RP1End-->
 
 **Since:** 6
 

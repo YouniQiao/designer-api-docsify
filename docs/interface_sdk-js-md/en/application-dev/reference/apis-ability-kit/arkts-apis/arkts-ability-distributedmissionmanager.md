@@ -48,14 +48,6 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [ContinueState](arkts-ability-distributedmissionmanager-continuestate-e-sys.md) | Enumerates the mission continuation states. |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
@@ -67,4 +59,12 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | Defines the callback invoked after synchronization starts. It is used as an input parameter in [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener-1). |
 | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Defines the parameters required for registering a listener. It is used as an input parameter in [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener-1). |
 | [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | Defines the parameters required for mission synchronization. It is used an input parameter in [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions-1). |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [ContinueState](arkts-ability-distributedmissionmanager-continuestate-e-sys.md) | Enumerates the mission continuation states. |
 <!--DelEnd-->

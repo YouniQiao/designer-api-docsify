@@ -18,7 +18,7 @@ componentHeight: number
 
 Height of the component.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -38,7 +38,7 @@ componentWidth: number
 
 Width of the component.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -56,13 +56,13 @@ Unit: px
 contentHeight: number
 ```
 
-Actual rendered height of the image.
+Height of the image actually drawn.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **NOTE:** 
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Valid only when loadingStatus returns 1.
 
 **Type:** number
 
@@ -80,13 +80,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetX: number
 ```
 
-Offset of the rendered content relative to the component on the x-axis.
+X-axis offset of the actually drawn content relative to the component itself.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **NOTE:** 
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Valid only when loadingStatus returns 1.
 
 **Type:** number
 
@@ -104,13 +104,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentOffsetY: number
 ```
 
-Offset of the rendered content relative to the component on the y-axis
+Y-axis offset of the actually drawn content relative to the component itself.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **NOTE:** 
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Valid only when loadingStatus returns 1.
 
 **Type:** number
 
@@ -128,13 +128,13 @@ This parameter is valid only when the return value of **loadingStatus** is **1**
 contentWidth: number
 ```
 
-Actual rendered width of the image.
+Width of the image actually drawn.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **NOTE:** 
 
-This parameter is valid only when the return value of **loadingStatus** is **1**.
+Valid only when loadingStatus returns 1.
 
 **Type:** number
 
@@ -154,7 +154,7 @@ height: number
 
 Height of the image.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -172,11 +172,11 @@ Unit: px
 loadingStatus: number
 ```
 
-Loading status of the image.
+Status value of image loading success.
 
 **NOTE:** 
 
-If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
+When the returned status value is 0, it indicates image data load success. When the returned status value is 1, it indicates image decoding success.
 
 **Type:** number
 
@@ -196,7 +196,7 @@ width: number
 
 Width of the image.
 
-Unit: px
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

@@ -1,5 +1,23 @@
 # Constants
 
+## ON
+
+```TypeScript
+declare const ON: On
+```
+
+The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true).
+
+**Type:** [On](arkts-test-uitest-on-c.md)
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
 ## BY
 
 ```TypeScript
@@ -15,24 +33,6 @@ The static builder for building [By](arkts-test-uitest-by-c.md)object convenient
 **Deprecated since:** 9
 
 **Substitutes:** ON
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
-## ON
-
-```TypeScript
-declare const ON: On
-```
-
-The static builder for building [On](arkts-test-uitest-on-c.md)object conveniently,usage example:ON.text('txt').enabled(true).
-
-**Type:** [On](arkts-test-uitest-on-c.md)
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
 

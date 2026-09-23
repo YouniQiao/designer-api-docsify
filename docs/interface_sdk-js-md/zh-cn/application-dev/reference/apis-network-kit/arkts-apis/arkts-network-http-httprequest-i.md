@@ -97,38 +97,6 @@ httpRequest.request(url, {
 });
 ```
 
-## off("headerReceive")
-
-```TypeScript
-off(type: "headerReceive", callback?: AsyncCallback<Object>): void
-```
-
-取消订阅HTTP Response Header事件。
-
-**起始版本：** 6
-
-**废弃版本：** 8
-
-**替代接口：** [off_headersReceive](#offheadersreceive)
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | "headerReceive" | 是 | 取消订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
 ## off("headersReceive")
 
 ```TypeScript
@@ -294,19 +262,19 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
 httpRequest.off("dataSendProgress");
 ```
 
-## on("headerReceive")
+## off("headerReceive")
 
 ```TypeScript
-on(type: "headerReceive", callback: AsyncCallback<Object>): void
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 ```
 
-订阅HTTP Response Header 事件。
+取消订阅HTTP Response Header事件。
 
 **起始版本：** 6
 
 **废弃版本：** 8
 
-**替代接口：** [on_headersReceive](#onheadersreceive)
+**替代接口：** [off_headersReceive](#offheadersreceive)
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -314,19 +282,16 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | "headerReceive" | 是 | 订阅的事件类型，'headerReceive'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
+| type | "headerReceive" | 是 | 取消订阅的事件类型，'headerReceive'。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
+httpRequest.off("headerReceive");
 ```
 
 ## on("headersReceive")
@@ -492,6 +457,41 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
   console.info("dataSendProgress:" + JSON.stringify(data));
 });
 httpRequest.off("dataSendProgress");
+```
+
+## on("headerReceive")
+
+```TypeScript
+on(type: "headerReceive", callback: AsyncCallback<Object>): void
+```
+
+订阅HTTP Response Header 事件。
+
+**起始版本：** 6
+
+**废弃版本：** 8
+
+**替代接口：** [on_headersReceive](#onheadersreceive)
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | "headerReceive" | 是 | 订阅的事件类型，'headerReceive'。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let httpRequest = http.createHttp();
+httpRequest.on("headerReceive", (data: BusinessError) => {
+  console.error("error:" + JSON.stringify(data));
+});
 ```
 
 ## once("headersReceive")

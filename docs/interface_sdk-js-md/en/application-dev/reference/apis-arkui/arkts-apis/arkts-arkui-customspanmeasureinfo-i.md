@@ -16,9 +16,9 @@ Defines the CustomSpanMeasureInfo interface.
 fontSize: number
 ```
 
-Text font size.
+Font size of the text.
 
-Unit: fp
+Unit: [fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -36,11 +36,11 @@ Unit: fp
 layoutPolicy?: LayoutPolicy
 ```
 
-Width layout policy of the parent component of the custom span.
+Width layout policy of the parent component where the custom drawing span is located.
 
 **NOTE:** 
 
-When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
+When the value is **null** or **undefined**, it indicates that the parent component has no width layout policy set.
 
 **Type:** [LayoutPolicy](../arkts-components/arkts-arkui-common-comp-layoutpolicy-c.md)
 
@@ -58,9 +58,11 @@ When the value is **null** or **undefined**, the parent component does not have 
 maxWidth?: number
 ```
 
-Maximum width constraint of the custom span within the parent component's content area.
+Maximum width constraint of the content area of the parent component where the custom drawing span is located.
 
-Unit: px
+Default value: uses its own width.
+
+Unit: [px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 

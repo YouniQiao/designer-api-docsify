@@ -4,7 +4,7 @@
 declare enum SmartGestureAction
 ```
 
-Define the actions for smart gesture shortcut.
+Enumerates smart gesture action types.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ No action.
 PAGE_FORWARD = 1
 ```
 
-Page forward action.
+Page forward, including downward and rightward swipes.
 
 **Since:** 26.0.0
 
@@ -48,7 +48,7 @@ Page forward action.
 SCROLL_FORWARD = 2
 ```
 
-Scroll forward action.
+Scroll forward, including downward and rightward swipes.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Scroll forward action.
 SELECT = 3
 ```
 
-Select action.
+Select the component.
 
 **Since:** 26.0.0
 
@@ -80,7 +80,7 @@ Select action.
 CLICK = 4
 ```
 
-Click action.
+Click the component.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ Click action.
 BACK_PRESS = 5
 ```
 
-Back press action.
+Go back.
 
 **Since:** 26.0.0
 

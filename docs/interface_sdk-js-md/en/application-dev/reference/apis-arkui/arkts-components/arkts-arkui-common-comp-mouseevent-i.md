@@ -276,50 +276,6 @@ Before API version 26.0.0, the return value of **rawDeltaY** was not the origina
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## screenX
-
-```TypeScript
-screenX: number
-```
-
-X coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowX** instead.
-
-**Type:** number
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [windowX](#windowx)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## screenY
-
-```TypeScript
-screenY: number
-```
-
-Y coordinate of the mouse position in the coordinate system of the current application window.
-
-Unit: vp.
-
-Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowY** instead.
-
-**Type:** number
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [windowY](#windowy)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## windowX
 
 ```TypeScript
@@ -393,5 +349,49 @@ Unit: vp.
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## screenX
+
+```TypeScript
+screenX: number
+```
+
+X coordinate of the mouse position in the coordinate system of the current application window.
+
+Unit: vp.
+
+Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowX** instead.
+
+**Type:** number
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [windowX](#windowx)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## screenY
+
+```TypeScript
+screenY: number
+```
+
+Y coordinate of the mouse position in the coordinate system of the current application window.
+
+Unit: vp.
+
+Note: This API is supported since API version 8 and deprecated since API version 10. You are advised to use **windowY** instead.
+
+**Type:** number
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [windowY](#windowy)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

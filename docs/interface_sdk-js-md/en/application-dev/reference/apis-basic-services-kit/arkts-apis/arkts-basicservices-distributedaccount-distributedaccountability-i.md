@@ -114,99 +114,6 @@ try {
 }
 ```
 
-## queryOsAccountDistributedInfo
-
-```TypeScript
-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
-```
-
-Queries the distributed account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
-> instead.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
-
-**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo(
-  (err: BusinessError, data: distributedAccount.DistributedInfo) => {
-    if (err) {
-      console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('distributed information: ' + JSON.stringify(data));
-    }
-  });
-```
-
-<a id="queryosaccountdistributedinfo-1"></a>
-
-## queryOsAccountDistributedInfo
-
-```TypeScript
-queryOsAccountDistributedInfo(): Promise<DistributedInfo>
-```
-
-Queries the distributed account information. This API uses a promise to return the result.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
-> instead.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)()
-
-**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise used to return the distributed account information obtained. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-  console.info('distributed information: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## setOsAccountDistributedInfo
 
 ```TypeScript
@@ -322,6 +229,99 @@ try {
   const err = e as BusinessError;
   console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
 }
+```
+
+## queryOsAccountDistributedInfo
+
+```TypeScript
+queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
+```
+
+Queries the distributed account information. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> instead.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
+
+**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Yes | Callback used to return the result. If the distributed account information is obtained successfully, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo(
+  (err: BusinessError, data: distributedAccount.DistributedInfo) => {
+    if (err) {
+      console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('distributed information: ' + JSON.stringify(data));
+    }
+  });
+```
+
+<a id="queryosaccountdistributedinfo-1"></a>
+
+## queryOsAccountDistributedInfo
+
+```TypeScript
+queryOsAccountDistributedInfo(): Promise<DistributedInfo>
+```
+
+Queries the distributed account information. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> instead.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)()
+
+**Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md)&gt; | Promise used to return the distributed account information obtained. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+  console.info('distributed information: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 ## updateOsAccountDistributedInfo

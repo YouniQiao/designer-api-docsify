@@ -4,7 +4,7 @@
 declare interface TextDecorationOptions
 ```
 
-Provides text decoration options.
+Provides the text decoration options.
 
 **Since:** 12
 
@@ -16,7 +16,9 @@ Provides text decoration options.
 color?: ResourceColor
 ```
 
-Color of the text decoration. Default value: Color.Black.
+Sets the color of the text decoration line.
+
+Default value: Color.Black.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -34,7 +36,9 @@ Color of the text decoration. Default value: Color.Black.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration. Default value: TextDecorationStyle.SOLID.
+Sets the style of the text decoration line.
+
+Default value: TextDecorationStyle.SOLID.
 
 **Type:** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
 
@@ -52,7 +56,13 @@ Style of the text decoration. Default value: TextDecorationStyle.SOLID.
 thicknessScale?: number
 ```
 
-The scale value of decoration thickness. Value constraint: Negative values are handled as default values. Default value: 1.
+Sets the thickness scaling ratio of the text decoration line.
+
+Default value: 1.0
+
+Value range: [0, +∞)
+
+**Note:** Negative values are processed as the default value.
 
 **Type:** number
 
@@ -70,7 +80,7 @@ The scale value of decoration thickness. Value constraint: Negative values are h
 type: TextDecorationType
 ```
 
-Type of the text decoration.
+Sets the text decoration line type.
 
 **Type:** [TextDecorationType](../arkts-apis/arkts-arkui-textdecorationtype-e.md)
 

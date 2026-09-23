@@ -4,7 +4,7 @@
 declare enum FontWeight
 ```
 
-The font weight of the text
+Sets the font weight.
 
 **Since:** 7
 

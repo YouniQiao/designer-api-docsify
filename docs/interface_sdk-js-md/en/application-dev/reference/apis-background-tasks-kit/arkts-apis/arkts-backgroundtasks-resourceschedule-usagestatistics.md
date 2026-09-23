@@ -72,19 +72,19 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [GroupType](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md) | Declares group type. |
-| [IntervalType](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md) | Declares interval type. |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [AppStatsMap](arkts-backgroundtasks-usagestatistics-appstatsmap-t-sys.md) |  |
 | [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md) |  |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [GroupType](arkts-backgroundtasks-usagestatistics-grouptype-e-sys.md) | Declares group type. |
+| [IntervalType](arkts-backgroundtasks-usagestatistics-intervaltype-e-sys.md) | Declares interval type. |
 <!--DelEnd-->

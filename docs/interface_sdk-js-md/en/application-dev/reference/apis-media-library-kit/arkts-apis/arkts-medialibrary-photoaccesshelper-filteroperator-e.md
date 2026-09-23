@@ -4,9 +4,7 @@
 export enum FilterOperator
 ```
 
-Enumeration type of filter operator.
-
-@enum { int } FilterOperator
+Enumerates the operators that can be used for filtering.
 
 **Since:** 19
 

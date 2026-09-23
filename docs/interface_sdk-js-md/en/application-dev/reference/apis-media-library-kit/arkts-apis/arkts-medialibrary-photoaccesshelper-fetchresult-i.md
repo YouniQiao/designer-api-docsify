@@ -34,8 +34,8 @@ Closes this FetchResult instance to invalidate it. After this instance is releas
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid argument. Possible causes: 1. Parameter count exceeds the limit; 2. The current object is invalid. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -138,8 +138,8 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -192,8 +192,8 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -239,8 +239,8 @@ Obtains the total number of files in the result set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.The query result set has been closed via close() or is in an invalid state, please re-execute the query. |
 
 **Examples**
 
@@ -286,8 +286,8 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -340,8 +340,8 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -440,8 +440,8 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | 1.Parameter count exceeds the limit;<br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -494,8 +494,8 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -543,8 +543,8 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -602,8 +602,8 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -653,8 +653,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -713,8 +713,8 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -772,7 +772,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1.The indexSet is null, undefined or empty. <br>2.The indexSet length is bigger than 500. <br>3.The max value of indexSet is equal or bigger than the fetch result length. <br>4.The min value of indexSet is less than 0. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Invalid parameter. Possible causes:<br>1.The index is out of range, must be within [0, count); <br>2.The FetchResType is not supported, must be a valid FetchResType enum value. |
 
 **Examples**
 
@@ -828,7 +828,7 @@ Obtains the file asset array of a specified length (second parameter) from the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application<br>**Applicable version:** 21 - 22 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. A non-system application calls a system API.<br>**Applicable version:** 21 - 22 |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails.<br>Possible causes: index or offset validity check failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. |
 
@@ -888,8 +888,8 @@ Checks whether the cursor is in the last row of the result set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument |
-| 14000011 | System inner fail |
+| 13900020 | Invalid parameter. Possible causes:<br>1.The object is not a valid instance. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.The query result set has been closed via close() or is in an invalid state, please re-execute the query. |
 
 **Examples**
 

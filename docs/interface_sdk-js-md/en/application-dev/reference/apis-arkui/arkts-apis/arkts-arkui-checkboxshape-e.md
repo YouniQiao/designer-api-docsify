@@ -4,7 +4,7 @@
 declare enum CheckBoxShape
 ```
 
-common enum of the checkbox shape
+Sets the shape of check boxes.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ Circle.
 ROUNDED_SQUARE = 1
 ```
 
-Rounded Square.
+Rounded square.
 
 **Since:** 11
 

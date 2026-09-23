@@ -1012,51 +1012,6 @@ off(type: 'rewind', callback?: () => void): void
 currentAVSession.off('rewind');
 ```
 
-## off('playFromAssetId')
-
-```TypeScript
-off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
-```
-
-取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-> **说明：** 
-> 
-> 从API version 11开始支持，从API version 20开始废弃。建议使用
-> [off('playWithAssetId')](#offplaywithassetid)取消
-> 媒体ID播放事件监听。
-
-**起始版本：** 11
-
-**废弃版本：** 20
-
-**替代接口：** off
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'playFromAssetId' | 是 | 关闭对应的监听事件，支持的事件是`'playFromAssetId'`。 |
-| callback | (assetId: number) =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-
-**示例**
-
-```TypeScript
-currentAVSession.off('playFromAssetId');
-```
-
 ## off('playWithAssetId')
 
 ```TypeScript
@@ -1581,6 +1536,51 @@ Unsubscribes from custom data changes.
 currentAVSession.off('customDataChange');
 ```
 
+## off('playFromAssetId')
+
+```TypeScript
+off(type: 'playFromAssetId', callback?: (assetId: number) => void): void
+```
+
+取消媒体ID播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+> **说明：** 
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用
+> [off('playWithAssetId')](#offplaywithassetid)取消
+> 媒体ID播放事件监听。
+
+**起始版本：** 11
+
+**废弃版本：** 20
+
+**替代接口：** off
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'playFromAssetId' | 是 | 关闭对应的监听事件，支持的事件是`'playFromAssetId'`。 |
+| callback | (assetId: number) =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。<br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。参数assetId是媒体ID。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+**示例**
+
+```TypeScript
+currentAVSession.off('playFromAssetId');
+```
+
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -2086,53 +2086,6 @@ on(type: 'rewind', callback: (time ?: number) => void): void
 ```TypeScript
 currentAVSession.on('rewind', (time?: number) => {
   console.info('on rewind entry');
-});
-```
-
-## on('playFromAssetId')
-
-```TypeScript
-on(type: 'playFromAssetId', callback: (assetId: number) => void): void
-```
-
-设置媒体ID播放监听事件。
-
-> **说明：** 
-> 
-> 从API version 11开始支持，从API version 20开始废弃。建议使用
-> [on('playWithAssetId')](#onplaywithassetid)设置媒体
-> ID播放监听事件。
-
-**起始版本：** 11
-
-**废弃版本：** 20
-
-**替代接口：** on
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'playFromAssetId' | 是 | 事件回调类型，支持的事件是`'playFromAssetId'`，当媒体ID播放时，触发该事件回调。 |
-| callback | (assetId: number) =&gt; void | 是 | 回调函数。参数assetId是媒体ID。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-
-**示例**
-
-```TypeScript
-currentAVSession.on('playFromAssetId', (assetId: number) => {
-  console.info('on playFromAssetId entry');
 });
 ```
 
@@ -2724,6 +2677,53 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 ```TypeScript
 currentAVSession.on('customDataChange', (callback) => {
     console.info(`Caught customDataChange event,the new callback is: ${JSON.stringify(callback)}`);
+});
+```
+
+## on('playFromAssetId')
+
+```TypeScript
+on(type: 'playFromAssetId', callback: (assetId: number) => void): void
+```
+
+设置媒体ID播放监听事件。
+
+> **说明：** 
+> 
+> 从API version 11开始支持，从API version 20开始废弃。建议使用
+> [on('playWithAssetId')](#onplaywithassetid)设置媒体
+> ID播放监听事件。
+
+**起始版本：** 11
+
+**废弃版本：** 20
+
+**替代接口：** on
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'playFromAssetId' | 是 | 事件回调类型，支持的事件是`'playFromAssetId'`，当媒体ID播放时，触发该事件回调。 |
+| callback | (assetId: number) =&gt; void | 是 | 回调函数。参数assetId是媒体ID。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+
+**示例**
+
+```TypeScript
+currentAVSession.on('playFromAssetId', (assetId: number) => {
+  console.info('on playFromAssetId entry');
 });
 ```
 

@@ -56,9 +56,9 @@ day?: number
 
 Initial day of the inline date type.
 
-Default value: **1**.
+Default value: **1**
 
-Value range: [1, 31].
+Value range: [1, 31]
 
 **Note:** The specific value range of days in each month is determined by the actual number of days in that month.
 
@@ -86,9 +86,9 @@ month?: number
 
 Initial month of the inline date type.
 
-Default value: **1**.
+Default value: **1**
 
-Value range: [1, 12].
+Value range: [1, 12]
 
 If the value is out of the range, the default value is used.
 
@@ -114,9 +114,9 @@ year?: number
 
 Initial year of the inline date type.
 
-Default value: **1**.
+Default value: **1**
 
-Value range: [1, 5000].
+Value range: [1, 5000]
 
 If the value is out of the range, the default value is used.
 

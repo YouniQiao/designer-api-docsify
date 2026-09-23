@@ -196,7 +196,7 @@ Constructor
 | [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) | Rotation parameter option of the rotation angle on each axis. |
 | [RotateOptions](arkts-arkui-common-comp-rotateoptions-i.md) | Defines component rotation parameters. |
 | [ScaleOptions](arkts-arkui-common-comp-scaleoptions-i.md) | Defines the options of scale. |
-| [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | Defines the selection options. |
+| [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | Provides the configuration options for text selection. |
 | [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) | Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis. |
 | [sharedTransitionOptions](arkts-arkui-common-comp-sharedtransitionoptions-i.md) | Parameters of the shared element transition animation. |
 | [SheetDismiss](arkts-arkui-common-comp-sheetdismiss-i.md) | Component sheet dismiss |
@@ -212,7 +212,7 @@ Constructor
 | [SweepGradientOptions](arkts-arkui-common-comp-sweepgradientoptions-i.md) | Defines the sweep gradient parameters. |
 | [SystemAdaptiveOptions](arkts-arkui-common-comp-systemadaptiveoptions-i.md) | Provides parameters for system adaptive adjustments. By default, the system performs adaptive adjustments based on chip performance. |
 | [TextContentControllerOptions](arkts-arkui-common-comp-textcontentcontrolleroptions-i.md) | Provides configuration options for text insertion operations in text input components. |
-| [TextDecorationOptions](arkts-arkui-common-comp-textdecorationoptions-i.md) | Provides text decoration options. |
+| [TextDecorationOptions](arkts-arkui-common-comp-textdecorationoptions-i.md) | Provides the text decoration options. |
 | [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | Defines the parameters of the tooltip. |
 | [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**. |
 | [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | Type of the touch event. |

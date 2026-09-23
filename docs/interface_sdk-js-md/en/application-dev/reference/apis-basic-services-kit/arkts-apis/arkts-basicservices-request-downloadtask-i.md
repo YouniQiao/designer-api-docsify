@@ -722,6 +722,238 @@ try {
 }
 ```
 
+## restore
+
+```TypeScript
+restore(callback: AsyncCallback<boolean>): void
+```
+
+Restores the download task. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.INTERNET
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in resuming the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+<a id="restore-1"></a>
+
+## restore
+
+```TypeScript
+restore(): Promise<boolean>
+```
+
+Restores the download task. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.INTERNET
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore().then((result: boolean) => {
+      console.info('Succeeded in resuming the download task.')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## suspend
+
+```TypeScript
+suspend(callback: AsyncCallback<boolean>): void
+```
+
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.INTERNET
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in pausing the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+<a id="suspend-1"></a>
+
+## suspend
+
+```TypeScript
+suspend(): Promise<boolean>
+```
+
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.INTERNET
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend().then((result: boolean) => {
+      console.info('Succeeded in pausing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## pause
 
 ```TypeScript
@@ -1058,122 +1290,6 @@ downloadTask.remove().then((result) => {
 });
 ```
 
-## restore
-
-```TypeScript
-restore(callback: AsyncCallback<boolean>): void
-```
-
-Restores the download task. This API uses an asynchronous callback to return the result.
-
-> **NOTE:** 
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.INTERNET
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.restore((err: BusinessError, result: boolean) => {
-      if (err) {
-        console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in resuming the download task.');
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-<a id="restore-1"></a>
-
-## restore
-
-```TypeScript
-restore(): Promise<boolean>
-```
-
-Restores the download task. This API uses a promise to return the result.
-
-> **NOTE:** 
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.INTERNET
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.restore().then((result: boolean) => {
-      console.info('Succeeded in resuming the download task.')
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## resume
 
 ```TypeScript
@@ -1256,120 +1372,4 @@ downloadTask.resume().then(() => {
 }).catch((err: BusinessError) => {
   console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
 });
-```
-
-## suspend
-
-```TypeScript
-suspend(callback: AsyncCallback<boolean>): void
-```
-
-Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result.
-
-> **NOTE:** 
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.INTERNET
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.suspend((err: BusinessError, result: boolean) => {
-      if (err) {
-        console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in pausing the download task.');
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-<a id="suspend-1"></a>
-
-## suspend
-
-```TypeScript
-suspend(): Promise<boolean>
-```
-
-Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result.
-
-> **NOTE:** 
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.INTERNET
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    downloadTask.suspend().then((result: boolean) => {
-      console.info('Succeeded in pausing the download task.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
 ```

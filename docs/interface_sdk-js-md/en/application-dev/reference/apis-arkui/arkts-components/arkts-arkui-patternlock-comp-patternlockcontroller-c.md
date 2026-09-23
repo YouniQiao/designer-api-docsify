@@ -4,12 +4,12 @@
 declare class PatternLockController
 ```
 
-Controller of the **PatternLock** component, which is used to reset the component status and challenge result of the pattern password.
+Controller of the **PatternLock** component, used to reset the component state and set the pattern password state.
 
 ## Objects to Import
 
-```ts
-patternLockController: PatternLockController = new PatternLockController()
+```typescript
+let patternLockController: PatternLockController = new PatternLockController();
 ```
 
 **Since:** 9
@@ -36,7 +36,7 @@ A constructor used to create a **PatternLockController** instance.
 reset()
 ```
 
-Resets the component status.
+Resets the component state. This API takes effect only when the corresponding controller parameter is passed in when the **PatternLock** component is constructed. If it is not passed in, the call does not take effect.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ Resets the component status.
 setChallengeResult(result: PatternLockChallengeResult): void
 ```
 
-Challenge result of the pattern password.
+Sets the correct or incorrect state of the pattern password. This API takes effect only when the corresponding controller parameter is passed in when the **PatternLock** component is constructed. If it is not passed in, the call does not take effect.
 
 **Since:** 11
 

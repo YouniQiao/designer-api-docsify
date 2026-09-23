@@ -16,7 +16,7 @@ Defines the settings for images of the ResourceStr type.
 colorFilter?: ColorFilterType
 ```
 
-Image color filter of the styled string.
+Color filter effect of the image in the styled string. If this parameter is not passed, no color filter is applied and the image is displayed in its original color.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -52,9 +52,9 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
+Scaling type of the image. The current enum type does not support **ImageFit.MATRIX**. For details about the enums and their descriptions, see **ImageFit**.
 
-Default value: **ImageFit.Cover**
+Default value: **ImageFit.Cover**.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -108,7 +108,9 @@ Image data source.
 size?: SizeOptions
 ```
 
-Image size.
+Image size. Percentage values are not supported.
+
+The default value of **size** depends on the value of **objectFit**. Different **objectFit** values correspond to different default size values.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -148,7 +150,7 @@ Default value: **false**
 syncLoad?: boolean
 ```
 
-Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.
+Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and no placeholder image is displayed.
 
 **true**: synchronous loading; **false**: asynchronous loading.
 
@@ -170,9 +172,9 @@ Default value: **false**
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
+Alignment of the image relative to the text. For details about the enums and their descriptions, see **ImageSpanAlignment**.
 
-Default value: **ImageSpanAlignment.BOTTOM**
+Default value: **ImageSpanAlignment.BOTTOM**.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

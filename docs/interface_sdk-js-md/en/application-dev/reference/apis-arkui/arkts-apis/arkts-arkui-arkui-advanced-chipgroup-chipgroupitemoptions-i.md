@@ -196,34 +196,6 @@ If the value is **undefined**, the default value is used.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## suffixIcon
-
-```TypeScript
-suffixIcon?: IconOptions
-```
-
-Suffix image icon property. Set this parameter when an image icon needs to be displayed after the chip to provide an additional action or status hint.
-
-Default value: no suffix image icon displayed.
-
-If the value is **undefined**, the default value is used.
-
-**Note:** When a value is passed to **suffixIcon**, **allowClose** does not take effect.
-
-**Type:** [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
-
-**Since:** 12
-
-**Deprecated since:** 14
-
-**Substitutes:** [suffixImageIcon](#suffiximageicon)
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## suffixImageIcon
 
 ```TypeScript
@@ -292,5 +264,33 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## suffixIcon
+
+```TypeScript
+suffixIcon?: IconOptions
+```
+
+Suffix image icon property. Set this parameter when an image icon needs to be displayed after the chip to provide an additional action or status hint.
+
+Default value: no suffix image icon displayed.
+
+If the value is **undefined**, the default value is used.
+
+**Note:** When a value is passed to **suffixIcon**, **allowClose** does not take effect.
+
+**Type:** [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md)
+
+**Since:** 12
+
+**Deprecated since:** 14
+
+**Substitutes:** [suffixImageIcon](#suffiximageicon)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

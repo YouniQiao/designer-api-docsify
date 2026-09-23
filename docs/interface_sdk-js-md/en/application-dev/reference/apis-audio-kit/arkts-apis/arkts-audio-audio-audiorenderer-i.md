@@ -1051,110 +1051,6 @@ try {
 }
 ```
 
-## getRenderRate
-
-```TypeScript
-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
-```
-
-Obtains the audio renderer rate. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [getSpeed](#getspeed)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate((err: BusinessError, renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-});
-```
-
-<a id="getrenderrate-1"></a>
-
-## getRenderRate
-
-```TypeScript
-getRenderRate(): Promise<AudioRendererRate>
-```
-
-Obtains the audio renderer rate. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [getSpeed](#getspeed)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Promise used to return the render rate. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate().then((renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-## getRenderRateSync
-
-```TypeScript
-getRenderRateSync(): AudioRendererRate
-```
-
-Obtains the audio renderer rate. This API returns the result synchronously.
-
-**Since:** 10
-
-**Deprecated since:** 11
-
-**Substitutes:** [getSpeed](#getspeed)
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Audio render rate. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let renderRate: audio.AudioRendererRate = audioRenderer.getRenderRateSync();
-  console.info(`getRenderRate: ${renderRate}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -2591,85 +2487,6 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The s
 audioRenderer.setLoudnessGain(1.0);
 ```
 
-## setRenderRate
-
-```TypeScript
-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
-```
-
-Sets the render rate. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** setSpeed
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error('Failed to set params');
-  } else {
-    console.info('Callback invoked to indicate a successful render rate setting.');
-  }
-});
-```
-
-<a id="setrenderrate-1"></a>
-
-## setRenderRate
-
-```TypeScript
-setRenderRate(rate: AudioRendererRate): Promise<void>
-```
-
-Sets the render rate. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** setSpeed
-
-**System capability:** SystemCapability.Multimedia.Audio.Renderer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() => {
-  console.info('setRenderRate SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## setSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -2957,6 +2774,189 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 audioRenderer.stop().then(() => {
   console.info('Renderer stopped successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+## getRenderRate
+
+```TypeScript
+getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
+```
+
+Obtains the audio renderer rate. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [getSpeed](#getspeed)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the render rate obtained; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getRenderRate((err: BusinessError, renderRate: audio.AudioRendererRate) => {
+  console.info(`getRenderRate: ${renderRate}`);
+});
+```
+
+<a id="getrenderrate-1"></a>
+
+## getRenderRate
+
+```TypeScript
+getRenderRate(): Promise<AudioRendererRate>
+```
+
+Obtains the audio renderer rate. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [getSpeed](#getspeed)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Promise used to return the render rate. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getRenderRate().then((renderRate: audio.AudioRendererRate) => {
+  console.info(`getRenderRate: ${renderRate}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+## getRenderRateSync
+
+```TypeScript
+getRenderRateSync(): AudioRendererRate
+```
+
+Obtains the audio renderer rate. This API returns the result synchronously.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [getSpeed](#getspeed)
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Audio render rate. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let renderRate: audio.AudioRendererRate = audioRenderer.getRenderRateSync();
+  console.info(`getRenderRate: ${renderRate}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+## setRenderRate
+
+```TypeScript
+setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
+```
+
+Sets the render rate. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** setSpeed
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL, (err: BusinessError) => {
+  if (err) {
+    console.error('Failed to set params');
+  } else {
+    console.info('Callback invoked to indicate a successful render rate setting.');
+  }
+});
+```
+
+<a id="setrenderrate-1"></a>
+
+## setRenderRate
+
+```TypeScript
+setRenderRate(rate: AudioRendererRate): Promise<void>
+```
+
+Sets the render rate. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** setSpeed
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | Yes | Audio render rate. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() => {
+  console.info('setRenderRate SUCCESS');
 }).catch((err: BusinessError) => {
   console.error(`ERROR: ${err}`);
 });

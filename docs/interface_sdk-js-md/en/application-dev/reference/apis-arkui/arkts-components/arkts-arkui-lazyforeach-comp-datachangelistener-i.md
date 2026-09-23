@@ -39,35 +39,6 @@ Invoked when data is added to the position indicated by the specified index.
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
-## onDataAdded
-
-```TypeScript
-onDataAdded(index: number): void
-```
-
-Invoked when data is added to the position indicated by the specified index.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataAdd](#ondataadd) instead.
-
-**Since:** 7
-
-**Deprecated since:** 8
-
-**Substitutes:** [onDataAdd](#ondataadd)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-
 ## onDataChange
 
 ```TypeScript
@@ -89,35 +60,6 @@ Invoked when data in the position indicated by the specified index is changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the position where data is changed. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-
-## onDataChanged
-
-```TypeScript
-onDataChanged(index: number): void
-```
-
-Invoked when data in the position indicated by the specified index is changed.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataChange](#ondatachange) instead.
-
-**Since:** 7
-
-**Deprecated since:** 8
-
-**Substitutes:** [onDataChange](#ondatachange)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Listener for data changes. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataDelete
 
@@ -146,35 +88,6 @@ Invoked when data is deleted from the position indicated by the specified index.
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
-## onDataDeleted
-
-```TypeScript
-onDataDeleted(index: number): void
-```
-
-Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataDelete](#ondatadelete) instead.
-
-**Since:** 7
-
-**Deprecated since:** 8
-
-**Substitutes:** [onDataDelete](#ondatadelete)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-
 ## onDataMove
 
 ```TypeScript
@@ -193,37 +106,6 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 **Model restriction:** This API can be used in both the stage model and FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| from | number | Yes | Original position of data. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-| to | number | Yes | Target position of data. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
-
-## onDataMoved
-
-```TypeScript
-onDataMoved(from: number, to: number): void
-```
-
-Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
-
-> **NOTE:** 
-> 
-> - This API is supported since API version 7 and deprecated since API version 8. Use [onDataMove](#ondatamove) instead.
-> 
-> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data must be called.
-
-**Since:** 7
-
-**Deprecated since:** 8
-
-**Substitutes:** [onDataMove](#ondatamove)
-
-**Model restriction:** This API can be used in both the stage model and FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -304,3 +186,121 @@ Invoked when data is processed in batches to notify the component of refreshing.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataOperations | [DataOperation](arkts-arkui-lazyforeach-comp-dataoperation-t.md)[] | Yes | Array of data operations performed. |
+
+## onDataAdded
+
+```TypeScript
+onDataAdded(index: number): void
+```
+
+Invoked when data is added to the position indicated by the specified index.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataAdd](#ondataadd) instead.
+
+**Since:** 7
+
+**Deprecated since:** 8
+
+**Substitutes:** [onDataAdd](#ondataadd)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+
+## onDataChanged
+
+```TypeScript
+onDataChanged(index: number): void
+```
+
+Invoked when data in the position indicated by the specified index is changed.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataChange](#ondatachange) instead.
+
+**Since:** 7
+
+**Deprecated since:** 8
+
+**Substitutes:** [onDataChange](#ondatachange)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Listener for data changes. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+
+## onDataDeleted
+
+```TypeScript
+onDataDeleted(index: number): void
+```
+
+Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataDelete](#ondatadelete) instead.
+
+**Since:** 7
+
+**Deprecated since:** 8
+
+**Substitutes:** [onDataDelete](#ondatadelete)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+
+## onDataMoved
+
+```TypeScript
+onDataMoved(from: number, to: number): void
+```
+
+Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
+
+> **NOTE:** 
+> 
+> - This API is supported since API version 7 and deprecated since API version 8. Use [onDataMove](#ondatamove) instead.
+> 
+> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data must be called.
+
+**Since:** 7
+
+**Deprecated since:** 8
+
+**Substitutes:** [onDataMove](#ondatamove)
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Original position of data. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| to | number | Yes | Target position of data. The value range is [0, data source length - 1].<br>If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |

@@ -86,26 +86,6 @@ Whether the OS account is activated. The value **true** means the specified acco
 
 **System capability:** SystemCapability.Account.OsAccount
 
-## isActived
-
-```TypeScript
-isActived: boolean
-```
-
-Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
-
-**Type:** boolean
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [isActivated](#isactivated)
-
-**System capability:** SystemCapability.Account.OsAccount
-
 ## isCreateCompleted
 
 ```TypeScript
@@ -131,24 +111,6 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 **Type:** boolean
 
 **Since:** 11
-
-**System capability:** SystemCapability.Account.OsAccount
-
-## isVerified
-
-```TypeScript
-isVerified: boolean
-```
-
-Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
-
-**Type:** boolean
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** [isUnlocked](#isunlocked)
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -233,5 +195,43 @@ Type of the OS account.
 **Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **Since:** 7
+
+**System capability:** SystemCapability.Account.OsAccount
+
+## isActived
+
+```TypeScript
+isActived: boolean
+```
+
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
+
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
+
+**Type:** boolean
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [isActivated](#isactivated)
+
+**System capability:** SystemCapability.Account.OsAccount
+
+## isVerified
+
+```TypeScript
+isVerified: boolean
+```
+
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
+
+**Type:** boolean
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** [isUnlocked](#isunlocked)
 
 **System capability:** SystemCapability.Account.OsAccount

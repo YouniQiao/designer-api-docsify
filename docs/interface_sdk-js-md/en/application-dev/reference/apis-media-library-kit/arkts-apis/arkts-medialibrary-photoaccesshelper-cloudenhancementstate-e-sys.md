@@ -29,7 +29,7 @@ Cloud enhancement is unavailable.
 ## AVAILABLE
 
 ```TypeScript
-AVAILABLE
+AVAILABLE = 1
 ```
 
 Cloud enhancement is available.
@@ -43,7 +43,7 @@ Cloud enhancement is available.
 ## EXECUTING
 
 ```TypeScript
-EXECUTING
+EXECUTING = 2
 ```
 
 Cloud enhancement is being executed.
@@ -57,7 +57,7 @@ Cloud enhancement is being executed.
 ## COMPLETED
 
 ```TypeScript
-COMPLETED
+COMPLETED = 3
 ```
 
 Cloud enhancement has been completed.

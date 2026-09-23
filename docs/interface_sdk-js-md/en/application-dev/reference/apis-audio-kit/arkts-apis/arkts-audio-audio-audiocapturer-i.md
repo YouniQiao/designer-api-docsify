@@ -1382,97 +1382,6 @@ audioCapturer.start((err: BusinessError) => {
 });
 ```
 
-## read
-
-```TypeScript
-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void
-```
-
-Reads the buffer from the audio capturer. This method uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** readData
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Number of bytes to read. |
-| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info('Succeeded in doing getBufferSize.');
-  audioCapturer.read(bufferSize, true, (err: BusinessError, buffer: ArrayBuffer) => {
-    if (err) {
-      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in doing read.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="read-1"></a>
-
-## read
-
-```TypeScript
-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
-```
-
-Reads the buffer. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 11
-
-**Substitutes:** readData
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Number of bytes to read. |
-| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioCapturer.getBufferSize().then((bufferSize: number) => {
-  console.info('Succeeded in doing getBufferSize.');
-  audioCapturer.read(bufferSize, true).then((buffer: ArrayBuffer) => {
-    console.info('Succeeded in doing read.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## release
 
 ```TypeScript
@@ -1880,6 +1789,97 @@ audioCapturer.stop().then(() => {
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## read
+
+```TypeScript
+read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void
+```
+
+Reads the buffer from the audio capturer. This method uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** readData
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Number of bytes to read. |
+| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true, (err: BusinessError, buffer: ArrayBuffer) => {
+    if (err) {
+      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in doing read.');
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="read-1"></a>
+
+## read
+
+```TypeScript
+read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
+```
+
+Reads the buffer. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 11
+
+**Substitutes:** readData
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Number of bytes to read. |
+| isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioCapturer.getBufferSize().then((bufferSize: number) => {
+  console.info('Succeeded in doing getBufferSize.');
+  audioCapturer.read(bufferSize, true).then((buffer: ArrayBuffer) => {
+    console.info('Succeeded in doing read.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBufferSize. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

@@ -20,11 +20,13 @@ Inherits from [CommonProgressStyleOptions](arkts-arkui-progress-comp-commonprogr
 scaleCount?: number
 ```
 
-Number of divisions on the ring-style process indicator.
+Sets the total number of scale marks on the ring progress bar.
 
-Default value: **120**
+Default value: 120
 
-Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside this range, the progress indicator is displayed in the indeterminate ring style. By default, the minimum width and height are 77 vp.
+Value range: [2, min(width, height)*π/scaleWidth]. When the value exceeds the value range, the style is displayed as a ring progress bar without scale marks.
+
+When both scaleCount and scaleWidth are equal to their default values, setting the component width or height to less than 77vp displays a ring progress bar without scale marks.
 
 **Type:** number
 
@@ -42,9 +44,17 @@ Value range: [2, min(width, height)/scaleWidth/2/π]. If the value is outside th
 scaleWidth?: Length
 ```
 
-Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.
+Sets the thickness of the scale marks on the ring progress bar (percentage setting not supported).
 
-Default value: **2.0vp**
+Default value: 2.0vp
+
+Value range: a value greater than 0.
+
+When the value exceeds the value range or an invalid value is set, the default value is used.
+
+When the scale mark thickness is greater than the progress bar width, the system default thickness is used.
+
+When both scaleCount and scaleWidth are equal to their default values, setting the component width or height to less than 77vp displays a ring progress bar without scale marks.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -62,11 +72,13 @@ Default value: **2.0vp**
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
+Sets the progress bar width (percentage setting not supported).
 
-Default value: **4.0vp**
+Default value: 4.0vp
 
-If the value is out of the range, the default value is used.
+Value range: a value greater than 0.
+
+When the value exceeds the value range or an invalid value is set, the default value is used.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

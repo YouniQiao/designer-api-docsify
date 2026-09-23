@@ -9,21 +9,6 @@ interface RegExp
 ```TypeScript
 ```
 
-## compile
-
-```TypeScript
-compile(pattern: string, flags?: string): this
-```
-
-**Deprecated since:** legacy feature for browser compatibility
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pattern | string | Yes |  |
-| flags | string | No |  |
-
 ## exec
 
 ```TypeScript
@@ -51,6 +36,21 @@ Returns a Boolean value that indicates whether or not a pattern exists in a sear
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | string | string | Yes |  |
+
+## compile
+
+```TypeScript
+compile(pattern: string, flags?: string): this
+```
+
+**Deprecated since:** legacy feature for browser compatibility
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pattern | string | Yes |  |
+| flags | string | No |  |
 
 ## global
 

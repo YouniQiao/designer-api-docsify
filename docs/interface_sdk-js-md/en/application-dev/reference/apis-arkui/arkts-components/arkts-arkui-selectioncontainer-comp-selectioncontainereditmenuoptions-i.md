@@ -4,7 +4,7 @@
 export interface SelectionContainerEditMenuOptions
 ```
 
-Defines custom edit menu options for SelectionContainer.
+Provides the custom edit menu options of **SelectionContainer**.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 onCreateMenu?: OnCreateMenuCallback
 ```
 
-Passes the default menu, invokes before every display to generate a menu for triggering click events.
+Triggered before the menu is displayed each time. It passes in the default menu items and returns the processed menu items. The default value is empty, and this callback is not triggered.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Passes the default menu, invokes before every display to generate a menu for tri
 onMenuItemClick?: OnMenuItemClickWithTextCallback
 ```
 
-Invoked upon clicking an item, capable of intercepting the default system menu execution behavior.
+Triggered when a menu item is clicked. It can intercept the default menu execution behavior of the system. The default value is empty, and this callback is not triggered.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ Invoked upon clicking an item, capable of intercepting the default system menu e
 onPrepareMenu?: OnPrepareMenuCallback
 ```
 
-Callback before displaying the menu when the selection text changes.
+Triggered after the selected text content changes and before the menu is displayed. The menu data can be adjusted in this callback. The default value is empty, and this callback is not triggered.
 
 **Since:** 26.0.0
 

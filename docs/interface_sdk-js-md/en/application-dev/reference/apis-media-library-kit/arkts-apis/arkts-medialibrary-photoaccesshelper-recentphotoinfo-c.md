@@ -4,7 +4,7 @@
 export class RecentPhotoInfo
 ```
 
-Recent photo info
+Describes the information about the recent image or video.
 
 **Since:** 20
 

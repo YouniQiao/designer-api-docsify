@@ -4,7 +4,7 @@
 declare enum Alignment
 ```
 
-Alignment enumeration description.
+Defines the alignment mode for child elements in the container drawing area.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Alignment enumeration description.
 TopStart
 ```
 
-Top Start.
+Top start.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Top Start.
 Top
 ```
 
-The top is centered horizontally.
+Horizontally centered on the top.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ The top is centered horizontally.
 TopEnd
 ```
 
-Top tail end.
+Top end.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Top tail end.
 Start
 ```
 
-The starting end is centered longitudinally.
+Vertically centered start.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ The starting end is centered longitudinally.
 Center
 ```
 
-Center horizontal and vertical.
+Horizontally and vertically centered.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Center horizontal and vertical.
 End
 ```
 
-The tail end is centered longitudinally.
+Vertically centered end.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ The tail end is centered longitudinally.
 BottomStart
 ```
 
-Bottom starting end.
+Bottom start.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Bottom starting end.
 Bottom
 ```
 
-The bottom is centered horizontally.
+Horizontally centered on the bottom.
 
 **Since:** 7
 

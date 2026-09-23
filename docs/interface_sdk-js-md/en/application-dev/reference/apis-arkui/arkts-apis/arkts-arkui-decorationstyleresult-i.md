@@ -16,7 +16,7 @@ Provides the text decoration information returned by the backend.
 color: ResourceColor
 ```
 
-Color of the text decoration.
+Color of the decoration line.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -34,7 +34,9 @@ Color of the text decoration.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration.
+Style of the decoration line.
+
+Default value: TextDecorationStyle.SOLID
 
 **Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
@@ -52,13 +54,13 @@ Style of the text decoration.
 thicknessScale?: number
 ```
 
-Scale factor of the text decoration thickness.
+Scale ratio of the decoration line thickness.
 
-Default value: **1.0**
+Default value: 1.0
 
 Value range: [0, +∞)
 
-Note: Negative values are treated as the default value.
+**Note:** Negative values are processed as the default value.
 
 **Type:** number
 
@@ -76,7 +78,7 @@ Note: Negative values are treated as the default value.
 type: TextDecorationType
 ```
 
-Type of the text decoration.
+Type of the decoration line.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 

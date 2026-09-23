@@ -21,6 +21,99 @@ Provides the capability to query device environment states. It can inject system
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## envProp
+
+```TypeScript
+static envProp<S>(key: string, value: S): boolean
+```
+
+Stores the built-in environment variable key of [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
+
+If **envProp** is not called, reading environment variables directly from AppStorage will fail to obtain the corresponding environment variable values. You are advised to call this API at application startup.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
+| value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
+
+**Examples**
+
+For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
+
+## envProps
+
+```TypeScript
+static envProps(props: EnvPropsOptions[]): void
+```
+
+Works in a way similar to the [envProp](#envprop) API, with the difference that it allows for initialization of multiple properties in batches. If **envProps** is not called, reading environment variables directly from AppStorage will fail to obtain the corresponding environment variable values. You are advised to call this API at application startup to store system environment variables in batches into [AppStorage](../../../ui/state-management/arkts-appstorage.md).
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
+
+**Examples**
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
+
+## keys
+
+```TypeScript
+static keys(): Array<string>
+```
+
+Returns the property key array of environment variables.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;string&gt; | Array of property keys of environment variables. |
+
+**Examples**
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
+
 ## EnvProp
 
 ```TypeScript
@@ -60,39 +153,6 @@ If **EnvProp** is not called, reading environment variables directly from AppSto
 Environment.EnvProp('accessibilityEnabled', 'default');
 ```
 
-## envProp
-
-```TypeScript
-static envProp<S>(key: string, value: S): boolean
-```
-
-Stores the built-in environment variable key of [Environment](../../../ui/state-management/arkts-environment.md) into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
-
-If **envProp** is not called, reading environment variables directly from AppStorage will fail to obtain the corresponding environment variable values. You are advised to call this API at application startup.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](#built-in-environment-variables). |
-| value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
-
-**Examples**
-
-For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
-
 ## EnvProps
 
 ```TypeScript
@@ -131,35 +191,6 @@ Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, 
 }, { key: 'prop', defaultValue: 'hhhh' }]);
 ```
 
-## envProps
-
-```TypeScript
-static envProps(props: EnvPropsOptions[]): void
-```
-
-Works in a way similar to the [envProp](#envprop) API, with the difference that it allows for initialization of multiple properties in batches. If **envProps** is not called, reading environment variables directly from AppStorage will fail to obtain the corresponding environment variable values. You are advised to call this API at application startup to store system environment variables in batches into [AppStorage](../../../ui/state-management/arkts-appstorage.md).
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
-
-**Examples**
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-```
-
 ## Keys
 
 ```TypeScript
@@ -185,34 +216,3 @@ Returns the property key array of environment variables.
 | Array&lt;string&gt; | Array of property keys of environment variables. |
 
 **Examples**
-
-## keys
-
-```TypeScript
-static keys(): Array<string>
-```
-
-Returns the property key array of environment variables.
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;string&gt; | Array of property keys of environment variables. |
-
-**Examples**
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
-```

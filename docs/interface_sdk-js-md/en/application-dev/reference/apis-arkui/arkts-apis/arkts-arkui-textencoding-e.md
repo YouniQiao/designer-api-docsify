@@ -4,7 +4,7 @@
 declare enum TextEncoding
 ```
 
-Enumerates the text encoding types supported by text layout query APIs.
+Text encoding types supported by the text layout query APIs.
 
 **Since:** 26.0.0
 

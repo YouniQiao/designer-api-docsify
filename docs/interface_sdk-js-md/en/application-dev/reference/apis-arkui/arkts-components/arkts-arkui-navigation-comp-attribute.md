@@ -712,30 +712,6 @@ Sets a default placeholder page for the right column in the **Navigation** compo
 | --- | --- | --- | --- |
 | placeholder | ComponentContent | Yes | Default placeholder page for the right column in the **Navigation** component's split-column mode. |
 
-## subTitle
-
-```TypeScript
-subTitle(value: string)
-```
-
-Sets the page subtitle.
-
-> **NOTE:** 
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [title](#title)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | string | Yes | Page subtitle. |
-
 ## systemBarStyle
 
 ```TypeScript
@@ -826,30 +802,6 @@ Sets the display mode of the page title bar.
 | --- | --- | --- | --- |
 | value | [NavigationTitleMode](arkts-arkui-navigation-comp-navigationtitlemode-e.md) | Yes | Display mode of the page title bar.<br>Default value: **NavigationTitleMode.Free** |
 
-## toolBar
-
-```TypeScript
-toolBar(value: object | CustomBuilder)
-```
-
-Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed. Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area. If any item contains overlong text and there are fewer than five items, the toolbar will reduce the text size progressively, wrap the text over two lines if necessary, and then clip the text to fit.
-
-**object**
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [toolbarConfiguration](#toolbarconfiguration)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | object &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the toolbar. |
-
 ## toolbarConfiguration
 
 ```TypeScript
@@ -880,3 +832,51 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 | --- | --- | --- | --- |
 | value | Array&lt;[ToolbarItem](arkts-arkui-navigation-comp-toolbaritem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the toolbar. When configured with Array&lt;[ToolbarItem](arkts-arkui-navigation-comp-toolbaritem-i.md)&gt;, the toolbar follows the rules below:<br>Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.<br>In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed into an automatically generated **More** icon. In landscape mode, toolbar behavior depends on the display mode: <br>- If the display mode is [Split](arkts-arkui-navigation-comp-navigationmode-e.md), the toolbar maintains the portrait mode. <br>- If the display mode is [Stack](arkts-arkui-navigation-comp-navigationmode-e.md), the toolbar must be used together with Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt; of the **menus** attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.<br>When configured with [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
 | options | [NavigationToolbarOptions](arkts-arkui-navigation-comp-navigationtoolbaroptions-i.md) | No | Toolbar options. Toolbar options include the background color, background blur style and blur option, background properties, and layout mode of the toolbar, as well as whether to hide the toolbar text, and options for the toolbar's more button menu..<br>**Since:** 11 |
+
+## subTitle
+
+```TypeScript
+subTitle(value: string)
+```
+
+Sets the page subtitle.
+
+> **NOTE:** 
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [title](#title)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | string | Yes | Page subtitle. |
+
+## toolBar
+
+```TypeScript
+toolBar(value: object | CustomBuilder)
+```
+
+Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed. Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area. If any item contains overlong text and there are fewer than five items, the toolbar will reduce the text size progressively, wrap the text over two lines if necessary, and then clip the text to fit.
+
+**object**
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [toolbarConfiguration](#toolbarconfiguration)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | object &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Content of the toolbar. |

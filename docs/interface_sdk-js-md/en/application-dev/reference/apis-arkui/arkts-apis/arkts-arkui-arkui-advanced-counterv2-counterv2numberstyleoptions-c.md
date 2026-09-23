@@ -6,6 +6,8 @@ declare class CounterV2NumberStyleOptions extends CounterV2InlineStyleOptions
 
 Defines the attributes and events of the list and compact **CounterV2**.
 
+This API inherits from [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) and contains all attributes of the parent API and [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md). This topic only describes the newly added attributes. For inherited attributes, see the parent API.
+
 **Inheritance/Implementation:** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
 
 **Since:** 26.0.0

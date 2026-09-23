@@ -42,18 +42,18 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md) | Enumerates the resource information flags, which indicate the type of resource information to obtain. |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Defines the icon and name of an application. |
 | [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md) | Enumerates the resource information flags, which indicate the type of resource information to obtain. |
 <!--DelEnd-->

@@ -56,7 +56,7 @@ Obtains the preview text.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | Preview text. |
+| [PreviewText](arkts-arkui-previewtext-i.md) | Preview text information, including the start position index and text content of the preview text. |
 
 ## isEditing
 
@@ -100,13 +100,13 @@ Sets the offset of the caret.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Offset of the caret. If the offset is outside the range of all content, the setting fails. |
+| offset | number | Yes | Caret offset position. The value ranges from 0 to the text length. If the value exceeds the content range, the setting fails. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the caret offset is set successfully.<br>Returns **true** if it is set successfully; returns **false** otherwise. |
+| boolean | Whether the cursor is set successfully.<br>The value **true** indicates that the cursor is set successfully, and **false** indicates the opposite. |
 
 ## stopEditing
 

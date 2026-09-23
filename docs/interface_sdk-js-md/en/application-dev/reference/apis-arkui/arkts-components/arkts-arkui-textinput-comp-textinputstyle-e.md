@@ -16,7 +16,7 @@ Text input style.
 Default
 ```
 
-Default style. The caret width is fixed at 1.5 vp, and the caret height is subject to the background height and font size of the selected text.
+Default style. The cursor is 1.5 vp wide, and the cursor height is related to the text selection highlight height and font size.
 
 **Since:** 9
 
@@ -30,13 +30,15 @@ Default style. The caret width is fixed at 1.5 vp, and the caret height is subje
 Inline
 ```
 
-Inline style. The background height of the selected text is the same as the height of the text box.
+Inline input style, also called inline mode. The text selection highlight height is the same as the input box height.
 
-This style is used in scenarios where editing and non-editing states are obvious, for example, renaming in the file list view.
+Inline input is used in scenarios where there is a clear distinction between the editing state and the non-editing state, for example, renaming in a file list view.
 
-The **showError** attribute is not supported for this style.
+The showError attribute is not supported.
 
-In the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style), text cannot be dragged into the text box.
+The showCounter attribute is not supported, and the character counter is not displayed in inline mode.
+
+In inline mode, dragging text into the input box is not supported.
 
 **Since:** 9
 

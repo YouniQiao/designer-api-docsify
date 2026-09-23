@@ -29,18 +29,18 @@
 | [AlertDialogParam](arkts-arkui-alertdialogparam-i-sys.md) | Enumerates the alert dialog box styles. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Defines the display order of the dialog box. |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [DialogAlignment](arkts-arkui-dialogalignment-e.md) | Enumerates the alignment modes of the alert dialog boxes. |
 | [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md) | Enumerates the alignment modes of the buttons in the alert dialog box. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [LevelOrder](arkts-arkui-levelorder-t.md) | Defines the display order of the dialog box. |
 
 ## Examples
 

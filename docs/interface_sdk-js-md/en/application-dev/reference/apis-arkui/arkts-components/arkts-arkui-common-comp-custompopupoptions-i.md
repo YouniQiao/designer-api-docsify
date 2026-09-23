@@ -522,28 +522,6 @@ Whether to apply a mask with the specified color to the popup. The value **true*
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## maskColor
-
-```TypeScript
-maskColor?: Color | string | Resource | number
-```
-
-Color of the popup mask.
-
-**NOTE:** 
-
-This parameter is deprecated since API version 10. You are advised to use **mask** instead.
-
-**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; number
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [mask](#mask)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## offset
 
 ```TypeScript
@@ -847,5 +825,27 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## maskColor
+
+```TypeScript
+maskColor?: Color | string | Resource | number
+```
+
+Color of the popup mask.
+
+**NOTE:** 
+
+This parameter is deprecated since API version 10. You are advised to use **mask** instead.
+
+**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; number
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** [mask](#mask)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

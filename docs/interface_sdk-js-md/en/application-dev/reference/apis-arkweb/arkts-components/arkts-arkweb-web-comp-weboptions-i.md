@@ -52,7 +52,7 @@ Whether the current Webview is created in incognito mode. The value **true** ind
 
 Default value: **false**.
 
-The value is **false** when undefined or null is passed in.&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+The value is **false** when undefined or null is passed in.<!--RP1--><!--RP1End-->
 
 **Type:** boolean
 

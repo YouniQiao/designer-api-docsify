@@ -4,7 +4,7 @@
 declare enum TextOverflow
 ```
 
-Display mode when the text is too long.
+Sets the display mode when the text is too long.
 
 **Since:** 7
 

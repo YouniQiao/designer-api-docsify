@@ -547,9 +547,9 @@ Obtains the distributed table name of a remote device based on the local table n
 
 > **NOTE:** 
 
-> The value of **device** can be obtained by &lt;!--RP1--&gt;
+> The value of **device** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
+> . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
 **Since:** 8
@@ -608,9 +608,9 @@ Obtains the distributed table name of a remote device based on the local table n
 
 > **NOTE:** 
 
-> The value of **device** can be obtained by &lt;!--RP1--&gt;
+> The value of **device** can be obtained by <!--RP1-->
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
+> . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
 **Since:** 8

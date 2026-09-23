@@ -4,9 +4,7 @@
 export enum GridLevel
 ```
 
-Enumeration type of grid level.
-
-@enum { int } GridLevel
+Enumerates the levels of grid columns after Picker is started.
 
 **Since:** 23
 

@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Caret color.
 
-Default value: **'#ff007dff'**
+Default value: '#ff007dff', which indicates blue.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,9 +36,9 @@ Default value: **'#ff007dff'**
 width?: Length
 ```
 
-Caret size. It cannot be set in percentage.
+Caret size. Percentage is not supported.
 
-Default value: **'2vp'**
+Default value: '2vp'
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

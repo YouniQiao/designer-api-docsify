@@ -30,7 +30,7 @@ A constructor used to create a text line height style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height setting. If the unit value of **LengthMetrics** is **PERCENT**, the current setting does not take effect. When the **value** of **LengthMetrics** is greater than 0, the text line height setting takes effect; otherwise, the text line height adapts to the font size. |
 
 <a id="constructor-1"></a>
 
@@ -40,17 +40,15 @@ A constructor used to create a text line height style.
 constructor(lineHeight: LengthMetrics, lineHeightMultiple?: number)
 ```
 
-A constructor used to create a text line height and multiple.
+A constructor used to create the text line height and multiple.
 
 > **NOTE:** 
 > 
-> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),only **lineHeightMultiple** takes effect. The line height is the product of the highest font height in the line and the multiplier.
+> - When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md),only **lineHeightMultiple** takes effect, and the line height is the product of the maximum font height of the line and the multiple.
 > 
-> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect. Use **lineHeight** and [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
+> - When **lineHeightMultiple** is less than 0 or **undefined**, it does not take effect, and **lineHeight** and [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) are used to set the line height and line spacing.
 > 
-> - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
-
-**Since**: 26.0.0
+> - When **lineHeightMultiple** is equal to 0, it is equivalent to setting it to 1.
 
 **Since:** 26.0.0
 
@@ -64,8 +62,8 @@ A constructor used to create a text line height and multiple.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
-| lineHeightMultiple | number | No | Multiplier for the text line height.<br>Value range: 0, +∞). Decimals are supported. |
+| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height setting. When the value of **LengthMetrics** is greater than 0, the text line height setting takes effect; otherwise, the text line height adapts to the font size. |
+| lineHeightMultiple | number | No | Multiple of the text line height. <br> decimals supported. <br>The value must be greater than or equal to 0. <br>**NOTE:** <br>When set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md), only **lineHeightMultiple** takes effect, and the line height is the product of the maximum font height of the line and the multiple. <br>It does not take effect when the value is less than 0 or **undefined**. <br>When the value is 0, it is equivalent to setting it to 1. |
 
 ## lineHeight
 
@@ -75,7 +73,7 @@ readonly lineHeight: number
 
 Text line height of the styled string.
 
-Unit: [vp
+Unit: [vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#basic-pixel-units)
 
 **Type:** number
 
@@ -93,9 +91,9 @@ Unit: [vp
 readonly lineHeightMultiple?: number
 ```
 
-Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.
+Multiple of the text line height. The actual line height is the product of the maximum font height of the line and the multiple.
 
-**Since**: 26.0.0
+**Note:** When **lineHeightMultiple** is set together with **lineHeight** or [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md), only **lineHeightMultiple** takes effect. **lineHeightMultiple** does not take effect when it is less than 0 or **undefined**. When **lineHeightMultiple** is 0, it is equivalent to setting it to 1.
 
 **Type:** number
 

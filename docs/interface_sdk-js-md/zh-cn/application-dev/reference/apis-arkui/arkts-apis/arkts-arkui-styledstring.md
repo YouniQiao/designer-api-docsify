@@ -1,85 +1,85 @@
 # styled_string
 
-## Summary
+## 汇总
 
-### Classes
+### 类
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | Describes the text background color style. |
-| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | Describes the text baseline offset style. |
-| [CustomSpan](arkts-arkui-customspan-c.md) | Describes the custom span. Only the base class is provided. You need to define the specific implementation. |
-| [DecorationStyle](arkts-arkui-decorationstyle-c.md) | Describes the text decorative line style. |
-| [GestureStyle](arkts-arkui-gesturestyle-c.md) | Describes the event gesture style. |
-| [ImageAttachment](arkts-arkui-imageattachment-c.md) | Describes the image attachment. |
-| [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) | Defines custom indentation for text paragraphs. Only a base class is provided; the specific implementation is left to developers. |
-| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | Describes the letter spacing style. |
-| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | Describes the text line height style. |
-| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | Describes the text line spacing style. |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class. |
-| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style. |
-| [StyledString](arkts-arkui-styledstring-c.md) | [StyledString](arkts-arkui-styledstring-c.md) |
-| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | Describes the text shadow style. |
-| [TextStyle](arkts-arkui-textstyle-c.md) | Describes the text style. |
-| [UrlStyle](arkts-arkui-urlstyle-c.md) | Describes the hyperlink style. |
-| [UserDataSpan](arkts-arkui-userdataspan-c.md) | Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation. |
+| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | 文本背景颜色对象说明。 |
+| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | 文本基线偏移量对象说明。适用于需要微调文本垂直位置的场景，例如化学公式、数学表达式中的上下标文本与正常文本的对齐调整。 |
+| [CustomSpan](arkts-arkui-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。适用于需要在文本流中嵌入自定义绘制内容的场景，例如在文本中绘制自定义图标、进度条、特殊装饰效果等。 |
+| [DecorationStyle](arkts-arkui-decorationstyle-c.md) | 文本装饰线样式对象说明。 |
+| [GestureStyle](arkts-arkui-gesturestyle-c.md) | 事件手势对象说明。 |
+| [ImageAttachment](arkts-arkui-imageattachment-c.md) | 图片对象说明。 |
+| [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) | 文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。 |
+| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | 文本字符间距对象说明。适用于需要调整字符间距的场景，例如标题文字加宽间距以增强视觉效果、密集文本缩小间距以节省空间等。 |
+| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | 文本行高对象说明。 |
+| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | 文本行间距对象说明。适用于需要调整段落内各行间距的场景，例如提升文本阅读舒适度、调整文档排版密度等。 |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 继承于[StyledString](arkts-arkui-styledstring-c.md)类。 |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | 文本段落样式对象说明。 |
+| [StyledString](arkts-arkui-styledstring-c.md) | 属性字符串。 |
+| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | 文本阴影对象说明。 |
+| [TextStyle](arkts-arkui-textstyle-c.md) | 文本字体样式对象说明。 |
+| [UrlStyle](arkts-arkui-urlstyle-c.md) | 超链接对象说明。 |
+| [UserDataSpan](arkts-arkui-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。 |
 
 <!--Del-->
-### Classes(System API)
+### 类（系统接口）
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c-sys.md) | [StyledString](arkts-arkui-styledstring-c.md) |
+| [StyledString](arkts-arkui-styledstring-c-sys.md) | 属性字符串。 |
 <!--DelEnd-->
 
-### Interfaces
+### 接口
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Defines the CustomSpanDrawInfo interface. |
-| [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | Defines the CustomSpanMeasureInfo interface. |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | Defines the CustomSpanMetrics interface. |
-| [DecorationOptions](arkts-arkui-decorationoptions-i.md) | Provides additional configuration options for the text decoration line style. |
-| [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Describes the API object for text decoration line styles. |
-| [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | Defines the Gesture Events. |
-| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Defines the ImageAttachmentInterface. |
-| [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md) | Defines the ImageAttachment Layout Style. |
-| [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | Provides the custom drawing information. |
-| [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) |
-| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | Defines the settings for images of the ResourceStr type. |
-| [SpanStyle](arkts-arkui-spanstyle-i.md) | Describes the span style. |
-| [StyleOptions](arkts-arkui-styleoptions-i.md) | Describes the style options. |
-| [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) |
+| [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | 定义自定义绘制Span的绘制信息接口。 |
+| [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | 定义自定义绘制Span的测量信息接口。 |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | 定义自定义绘制Span的尺寸信息接口。 |
+| [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 文本装饰线样式的额外配置选项对象说明。 |
+| [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 文本装饰线样式接口对象说明。 |
+| [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | 定义事件手势接口。 |
+| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 定义图片设置项接口。 |
+| [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md) | 定义图片布局样式。 |
+| [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | 自定义绘制信息。 |
+| [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 文本段落样式。 |
+| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | ResourceStr类型图片设置项。 |
+| [SpanStyle](arkts-arkui-spanstyle-i.md) | 属性字符串样式。 |
+| [StyleOptions](arkts-arkui-styleoptions-i.md) | 属性字符串样式。 |
+| [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 文本字体样式。 |
 
-### Enums
+### 类型
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [StyledStringKey](arkts-arkui-styledstringkey-e.md) | Sets the style for a range styled string. |
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [AttachmentType](arkts-arkui-attachmenttype-t.md) | Defines the image attachment type, which is used to set images of PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md) type for styled strings. |
-| [ColorFilterType](arkts-arkui-colorfiltertype-t.md) | Defines the type for image color filter settings. |
-| [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | Defines the style for a styled string. |
+| [AttachmentType](arkts-arkui-attachmenttype-t.md) | 图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片。 |
+| [ColorFilterType](arkts-arkui-colorfiltertype-t.md) | 图片颜色滤镜设置项类型。 |
+| [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | 样式对象类型，用于设置属性字符串的样式。 |
 
 <!--Del-->
-### Types(System API)
+### 类型（系统接口）
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
-| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Defines a custom marshalling object for styled strings, which you need to define marshalling and unmarshalling methods. |
-| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
+| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 属性字符串[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化回调类型。 |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 属性字符串自定义序列化对象类型，需要开发者定义序列化和反序列化的方式。 |
+| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | 属性字符串反序列化ArrayBuffer得到[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)回调类型。 |
 <!--DelEnd-->
 
-## Examples
+### 枚举
 
-### Example 1: Marshalling and Unmarshalling Styled Strings
+| 名称 | 说明 |
+| --- | --- |
+| [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 范围属性字符串样式。 |
 
-This example implements the serialization and deserialization of a styled string through the marshalling and unmarshalling methods.
+## 示例
+
+### 示例1 (属性字符串序列化和反序列化)
+
+该示例通过marshalling、unmarshalling方法实现了属性字符串序列化和反序列化的功能。
 
 
 
@@ -90,9 +90,9 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
-  @State textTitle: string = 'Marshalling and unmarshalling APIs';
+  @State textTitle: string = '序列化和反序列化接口';
   @State textResult: string = 'Hello world';
-  @State serializeStr: string = 'Marshalling';
+  @State serializeStr: string = '序列化';
   @State flag: boolean = false;
   private textAreaController: TextAreaController = new TextAreaController();
   private buff: Uint8Array = new Uint8Array();
@@ -103,7 +103,7 @@ struct Index {
     fontSize: LengthMetrics.vp(30),
     fontStyle: FontStyle.Normal
   });
-  // Create a styled string object.
+  // 创建属性字符串对象
   styledString: StyledString = new StyledString('Hello world',
     [{
       start: 0,
@@ -125,12 +125,12 @@ struct Index {
         .onClick(async () => {
           this.flag = !this.flag;
           if (!this.flag) {
-            console.info('Debug: Unmarshalling');
-            // Deserialize the ArrayBuffer to restore the styled string object.
+            console.info('Debug: 反序列化');
+            // 反序列化ArrayBuffer，恢复属性字符串对象
             let styles: StyledString = await StyledString.unmarshalling(this.buff.buffer);
-            this.textTitle = 'After decodeTlv is called, the result of unmarshalling is: ';
+            this.textTitle = '调用unmarshalling接口后，反序列化的结果显示：';
             if (styles == undefined) {
-              console.error('Debug: Failed to obtain the styled string.');
+              console.error('Debug: styledString 获取失败！！！');
               return;
             }
             this.textResult = styles.getString();
@@ -149,16 +149,16 @@ struct Index {
             }
             let subStr = styles.subStyledString(0, 2);
             console.info('Debug: subStr = ' + subStr.getString());
-            this.serializeStr = 'Marshalling';
+            this.serializeStr = '序列化';
           } else {
-            console.info('Debug: Marshalling');
-            // Serialize the styled string to return an ArrayBuffer for storage or transfer.
+            console.info('Debug: 序列化');
+            // 序列化属性字符串，返回ArrayBuffer用于存储或传递
             let resultBuffer = StyledString.marshalling(this.styledString);
             this.buff = new Uint8Array(resultBuffer);
-            this.textTitle = 'After encodeTlv is called, the result of marshalling is: ';
+            this.textTitle = '调用marshalling接口后，序列化的结果显示：';
             this.textResult = this.buff.toString();
             console.info('Debug: buff = ' + this.buff.toString());
-            this.serializeStr = 'Unmarshalling';
+            this.serializeStr = '反序列化';
           }
         })
     }.margin(10)
@@ -174,9 +174,9 @@ struct Index {
 }
 ```
 
-### Example 2: Marshalling and Unmarshalling Styled Strings with UserDataSpan
+### 示例2 (带UserDataSpan的属性字符串序列化和反序列化)
 
-This example demonstrates the marshalling and unmarshalling of styled strings that include custom user data spans using the marshalling and unmarshalling APIs.
+该示例通过marshalling、unmarshalling函数实现了属性字符串及其UserDataSpan序列化和反序列化的功能。
 
 ```TypeScript
 enum MyUserDataType {
@@ -194,7 +194,7 @@ class MyUserData extends UserDataSpan {
     const text = 'MyUserData1';
     const buffer = new ArrayBuffer(text.length + 1);
     const uint8View = new Uint8Array(buffer);
-    // Write the type.
+    // 写入类型
     uint8View[0] = MyUserDataType.TYPE1;
     for (let i = 0; i < text.length; i++) {
       uint8View[i + 1] = text.charCodeAt(i);
@@ -252,7 +252,7 @@ struct MarshallExample1 {
           }]);
 
           let buffer = StyledString.marshalling(myStyledString, (marshallingValue: StyledStringMarshallingValue) => {
-            // Call the corresponding serialization method based on the specific type of UserDataSpan.
+            // 根据UserDataSpan的具体类型，调用对应的序列化方法
             if (marshallingValue instanceof MyUserData) {
               console.info('StyledString.marshalling MyUserData');
               return marshallingValue.marshalling();
@@ -265,7 +265,7 @@ struct MarshallExample1 {
           });
 
           let newStyledString = await StyledString.unmarshalling(buffer, (value: ArrayBuffer) => {
-            // Read the type identifier from the buffer, and call the corresponding deserialization method based on the type.
+            // 从buffer中读取类型标识，根据类型调用对应的反序列化方法
             const uint8View = new Uint8Array(value);
             let type = uint8View[0];
             console.info('unmarshalling length:' + uint8View.length);
@@ -281,7 +281,7 @@ struct MarshallExample1 {
             return new MyUserData();
           });
           if (newStyledString == undefined) {
-            console.error('Failed to obtain newStyledString.');
+            console.error('newStyledString 获取失败！');
             return;
           }
           this.controller.setStyledString(newStyledString);
@@ -296,9 +296,9 @@ struct MarshallExample1 {
 }
 ```
 
-### Example 1: Processing Styled Strings
+### 示例1（属性字符串处理）
 
-This example shows how to perform insertion, deletion, replacement, and viewing of styled strings using the [insertString](arkts-arkui-mutablestyledstring-c.md#insertstring), [removeStyles](arkts-arkui-mutablestyledstring-c.md#removestyles), [replaceStyle](arkts-arkui-mutablestyledstring-c.md#replacestyle), and [getStyles](arkts-arkui-styledstring-c.md#getstyles) APIs, available since API version 12.
+从API version 12开始，该示例通过[insertString](arkts-arkui-mutablestyledstring-c.md#insertstring)、[removeStyles](arkts-arkui-mutablestyledstring-c.md#removestyles)、[replaceStyle](arkts-arkui-mutablestyledstring-c.md#replacestyle)、[getStyles](arkts-arkui-styledstring-c.md#getstyles)接口实现属性字符串的插入、删除、替换、查看。
 
 
 
@@ -311,17 +311,17 @@ struct StyledStringProcessDemo {
   scroll: Scroller = new Scroller();
   fontStyleAttr1: TextStyle = new TextStyle({ fontColor: Color.Blue });
   fontStyleAttr2: TextStyle = new TextStyle({ fontColor: Color.Orange });
-  // Create a readable and writable styled string object: mutableStyledString1.
-  mutableStyledString1: MutableStyledString = new MutableStyledString('45-minute workout');
-  // Create the mutableStyledString2 object whose input parameters contain strings and styles.
+  // 创建可读写属性字符串的对象mutableStyledString1
+  mutableStyledString1: MutableStyledString = new MutableStyledString('运动45分钟');
+  // 创建构造入参有字符串和样式的对象mutableStyledString2
   mutableStyledString2: MutableStyledString = new MutableStyledString('test hello world', [{
     start: 0,
     length: 5,
     styledKey: StyledStringKey.FONT,
     styledValue: this.fontStyleAttr1
   }]);
-  // Create a read-only styled string object: styledString2.
-  styledString2: StyledString = new StyledString('45-minute workout');
+  // 创建只读属性字符串对象styledString2
+  styledString2: StyledString = new StyledString('运动45分钟');
   spanStyle1: SpanStyle = {
     start: 0,
     length: 5,
@@ -350,10 +350,10 @@ struct StyledStringProcessDemo {
     Column() {
       Scroll(this.scroll) {
         Column() {
-          // Display the styled string.
+          // 显示属性字符串
           Text(undefined, { controller: this.controller1 })
           Text(undefined, { controller: this.controller3 }).key('mutableStyledString2')
-          Button('Change string1 Value')
+          Button('修改string1的值')
             .onClick(() => {
               let result = this.mutableStyledString1.equals(this.styledString2);
               if (result) {
@@ -363,12 +363,12 @@ struct StyledStringProcessDemo {
               }
             })
 
-          // If the styled string conflicts with the span, the span is ignored. The attributes of the Text component take effect if they do not conflict with the styled string.
+          // 属性字符串与Span冲突时忽略Span,以及样式与Text组件属性未冲突部分生效Text设置的属性
           Text(undefined, { controller: this.controller2 }) {
             Span('span and styledString test')
               .fontColor(Color.Yellow)
               .decoration({ type: TextDecorationType.LineThrough })
-            // Replace $r('app.media.startIcon') with the image resource file you use.
+            // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
             ImageSpan($r('app.media.startIcon'))
           }
           .key('styledString2')
@@ -391,12 +391,12 @@ struct StyledStringProcessDemo {
           .margin({ top: 10 })
           .draggable(true)
 
-          // The following is for comparison with the preceding.
+          // 以上冲突测试对照组
           Text() {
             Span(this.string1)
               .fontColor(this.color1)
               .decoration({ type: TextDecorationType.LineThrough })
-            // Replace $r('app.media.startIcon') with the image resource file you use.
+            // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
             ImageSpan($r('app.media.startIcon'))
               .width(50).height(50)
           }
@@ -415,7 +415,7 @@ struct StyledStringProcessDemo {
           .decoration({ type: TextDecorationType.LineThrough, color: Color.Yellow })
           .baselineOffset(2)
 
-          Button('Set Style and Replace Text')
+          Button('设置样式及替换文本')
             .onClick(() => {
               this.mutableStyledString1.replaceStyle({
                 start: 2,
@@ -423,7 +423,7 @@ struct StyledStringProcessDemo {
                 styledKey: StyledStringKey.FONT,
                 styledValue: this.fontStyleAttr1
               });
-              this.mutableStyledString1.insertString(0, 'Blood Pressure: 85 (High), ');
+              this.mutableStyledString1.insertString(0, '压力85偏高，');
               this.mutableStyledString1.setStyle({
                 start: 2,
                 length: 2,
@@ -434,7 +434,7 @@ struct StyledStringProcessDemo {
             })
             .margin({ top: 10 })
 
-          Button('Query and Clear Style')
+          Button('查询样式及清空样式')
             .onClick(() => {
               let styles = this.mutableStyledString1.getStyles(0, this.mutableStyledString1.length);
               if (styles.length == 2) {
@@ -471,9 +471,9 @@ struct StyledStringProcessDemo {
 }
 ```
 
-### Example 2: Binding Events
+### 示例2（设置事件）
 
-This example demonstrates how to bind events to styled strings using the styledKey and styledValue APIs of StyleOptions, available since API version 12.
+从API version 12开始，该示例通过StyleOptions中的styledKey、styledValue接口实现属性字符串绑定事件。
 
 
 
@@ -505,7 +505,7 @@ struct StyledStringBindEventsDemo {
       this.backgroundColor1 = Color.Red;
     }
   });
-  // Create the event object mutableStyledString3.
+  // 创建事件的对象mutableStyledString3
   mutableStyledString3: MutableStyledString = new MutableStyledString('hello world', [{
     start: 0,
     length: 5,
@@ -541,8 +541,8 @@ struct StyledStringBindEventsDemo {
     Column() {
       Scroll(this.scroll) {
         Column({ space: 30 }) {
-          Button('Change Background Color in Response to Event').backgroundColor(this.backgroundColor1).width('80%')
-          // Styled string that contains an event
+          Button('响应属性字符串事件改变背景色').backgroundColor(this.backgroundColor1).width('80%')
+          // 包含事件的属性字符串
           Text(undefined, { controller: this.controller3 }).fontSize(30)
             .copyOption(CopyOptions.InApp)
             .draggable(true)
@@ -561,9 +561,9 @@ struct StyledStringBindEventsDemo {
 }
 ```
 
-### Example 3: Setting the Text Style
+### 示例3（设置文本样式）
 
-This example shows how to query and set styles for styled strings using the [getStyles](arkts-arkui-styledstring-c.md#getstyles) and setStyle APIs, available since API version 12.
+从API version 12开始，该示例通过[getStyles](arkts-arkui-styledstring-c.md#getstyles)、[setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle)接口实现属性字符串查询和设置样式。
 
 
 
@@ -591,8 +591,8 @@ struct StyledStringSetTextStyleDemo {
     fontFamily: 'Arial',
     superscript: SuperscriptStyle.SUBSCRIPT
   });
-  // Create a styled string object with multiple text styles: mutableStyledString1.
-  mutableStyledString1: MutableStyledString = new MutableStyledString('45-minute workout', [{
+  // 创建多重TextStyle样式的对象mutableStyledString1
+  mutableStyledString1: MutableStyledString = new MutableStyledString('运动45分钟', [{
     start: 0,
     length: 2,
     styledKey: StyledStringKey.FONT,
@@ -604,7 +604,7 @@ struct StyledStringSetTextStyleDemo {
     styledValue: this.fontStyleAttr2
   }
   ]);
-  // Create a styled string object with multiple styles: mutableStyledString2.
+  // 创建有多种样式组合对象mutableStyledString2
   mutableStyledString2: MutableStyledString = new MutableStyledString('test hello world', [{
     start: 0,
     length: 5,
@@ -662,11 +662,11 @@ struct StyledStringSetTextStyleDemo {
   build() {
     Column() {
       Column({ space: 10 }) {
-        // Display the attribute string configured with various font styles. The Text component also configures the conflicting parts to take effect from the attribute string configuration, while the non-conflicting ranges take effect from the Text component's attribute settings.
+        // 显示配置了字体各种样式的属性字符串，Text组件亦配置冲突部分生效属性字符串配置，未冲突区间生效Text组件属性设置值
         Text(undefined, this.options)
           .fontColor(this.fontColor1)
           .font({ size: 20, weight: 500, style: FontStyle.Normal })
-        // Display the styled string for which the text shadow, text decorative line, letter spacing, and baseline offset are configured. If the styled string conflicts with the style settings in the Text component, the style set in the styled string takes effect.
+        // 显示配置了文本阴影、划线、字符间距、基线偏移量的属性字符串，Text组件亦配置生效属性字符串配置
         Text(undefined, { controller: this.controller2 })
           .fontSize(30)
           .copyOption(CopyOptions.InApp)
@@ -679,7 +679,7 @@ struct StyledStringSetTextStyleDemo {
             offsetX: -10,
             offsetY: 10
           })
-        Button('Query Font Style')
+        Button('查询字体样式')
           .onClick(() => {
             let styles = this.mutableStyledString1.getStyles(0, this.mutableStyledString1.length);
             if (styles.length !== 0) {
@@ -700,7 +700,7 @@ struct StyledStringSetTextStyleDemo {
             }
           })
           .margin({ top: 10 })
-        Button('Query Other Styles')
+        Button('查询其他文本样式')
           .onClick(() => {
             let styles = this.mutableStyledString2.getStyles(0, this.mutableStyledString2.length);
             if (styles.length !== 0) {
@@ -738,7 +738,7 @@ struct StyledStringSetTextStyleDemo {
             }
           })
           .margin({ top: 10 })
-        Button('Update mutableStyledString1 Style')
+        Button('更新mutableStyledString1样式')
           .onClick(() => {
             this.mutableStyledString1.setStyle(this.spanStyle1);
             this.controller.setStyledString(this.mutableStyledString1);
@@ -751,9 +751,9 @@ struct StyledStringSetTextStyleDemo {
 }
 ```
 
-### Example 4: Setting Images
+### 示例4（设置图片）
 
-This example illustrates how to set images in styled strings using the [ImageAttachment](arkts-arkui-imageattachmentinterface-i.md) API, available since API version 12.
+从API version 12开始，该示例通过ImageAttachment接口实现属性字符串设置图片。
 
 
 
@@ -784,9 +784,9 @@ struct StyledStringSetImageDemo {
 
   async aboutToAppear() {
     console.info('aboutToAppear initial imagePixelMap');
-    // Replace $r('app.media.startIcon') with the image resource file you use.
+    // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
     this.imagePixelMap =
-      await this.getPixmapFromMedia($r('app.media.startIcon')); 
+      await this.getPixmapFromMedia($r('app.media.startIcon'));
   }
 
   private async getPixmapFromMedia(resource: Resource) {
@@ -806,7 +806,7 @@ struct StyledStringSetImageDemo {
           .copyOption(CopyOptions.InApp)
           .draggable(true)
           .fontSize(30)
-        Button('Set Image')
+        Button('设置图片')
           .onClick(() => {
             if (this.imagePixelMap !== undefined) {
               this.mutableStr = new MutableStyledString(new ImageAttachment({
@@ -819,12 +819,12 @@ struct StyledStringSetImageDemo {
               this.controller.setStyledString(this.mutableStr);
             }
           })
-        Button('Set Resource Type Image')
+        Button('设置资源类型图片')
           .onClick(() => {
             if (this.imagePixelMap !== undefined) {
               this.mutableStr = new MutableStyledString(new ImageAttachment({
-                // Replace $r('app.media.sky') with the image resource file you use.
-                resourceValue: $r('app.media.sky'), 
+                // $r('app.media.sky')需要替换为开发者所需的图像资源文件。
+                resourceValue: $r('app.media.sky'),
                 size: { width: 50, height: 50 },
                 layoutStyle: { borderRadius: LengthMetrics.vp(10) },
                 verticalAlign: ImageSpanAlignment.BASELINE,
@@ -834,7 +834,7 @@ struct StyledStringSetImageDemo {
               this.controller.setStyledString(this.mutableStr);
             }
           })
-        Button('Image: Get')
+        Button('Image之Get')
           .onClick(() => {
             let imageArray = this.mutableStr.getStyles(0, 1, StyledStringKey.IMAGE);
             for (let i = 0; i < imageArray.length; ++i) {
@@ -857,23 +857,23 @@ struct StyledStringSetImageDemo {
             }
           })
         Image(this.imagePixelMap3).width(50).height(50)
-        Button('Image: Append')
+        Button('Image之Append')
           .onClick(() => {
             let str = new StyledString('123');
             this.mutableStr.appendStyledString(str);
             this.controller.setStyledString(this.mutableStr);
           })
-        Button('Image: Before Insert')
+        Button('Image之Insert 前')
           .onClick(() => {
             this.mutableStr.insertString(0, '123');
             this.controller.setStyledString(this.mutableStr);
           })
-        Button('Image: After Insert')
+        Button('Image之Insert 后')
           .onClick(() => {
             this.mutableStr.insertString(1, '123');
             this.controller.setStyledString(this.mutableStr);
           })
-        Button('Image: Replace')
+        Button('Image之replace')
           .onClick(() => {
             this.mutableStr.replaceString(2, 5, '789');
             this.controller.setStyledString(this.mutableStr);
@@ -886,9 +886,9 @@ struct StyledStringSetImageDemo {
 }
 ```
 
-### Example 5: Setting the Text Line Height and Paragraph Style
+### 示例5（设置文本行高和段落样式）
 
-This example illustrates how to configure the line height and paragraph style of a styled string using the LineHeightStyle and ParagraphStyle APIs, available since API version 12.
+从API version 12开始，该示例通过LineHeightStyle、ParagraphStyle接口实现属性字符串设置文本行高和段落样式。
 
 
 
@@ -927,12 +927,12 @@ struct StyledStringSetLineheightParagraphstyleDemo {
   };
   titleParagraphStyleAttr: ParagraphStyle =
     new ParagraphStyle({ textAlign: TextAlign.Center, paragraphSpacing: LengthMetrics.px(10) });
-  // Indent the first line of the first paragraph by 15 vp.
+  // 第一段落首行缩进15vp
   paragraphStyleAttr1: ParagraphStyle = new ParagraphStyle({ textIndent: LengthMetrics.vp(15) });
-  // Indent the second paragraph by 15 vp, with a placeholder in the first line.
+  // 第二段落缩进15vp且首行有placeholder占位显示
   paragraphStyleAttr2: ParagraphStyle =
     new ParagraphStyle({ textAlign: TextAlign.Start, leadingMargin: this.leadingMarginPlaceholder1 });
-  // Set the maximum number of lines and text overflow mode for the third paragraph, without setting the indent.
+  // 第三段落不设置缩进配置最大行数及超长显示方式
   paragraphStyleAttr3: ParagraphStyle = new ParagraphStyle({
     textAlign: TextAlign.End,
     textVerticalAlign: TextVerticalAlign.BASELINE,
@@ -940,12 +940,12 @@ struct StyledStringSetLineheightParagraphstyleDemo {
     wordBreak: WordBreak.BREAK_ALL,
     overflow: TextOverflow.Ellipsis
   });
-  // Line height style object
+  // 行高样式对象
   lineHeightStyle1: LineHeightStyle = new LineHeightStyle(new LengthMetrics(24));
-  // Create a paragraph style object paragraphStyledString1.
+  // 创建含段落样式的对象paragraphStyledString1
   paragraphStyledString1: StyledString =
     new StyledString(
-      'Paragraph title\nStart of the first paragraph 0123456789 End of the first paragraph\nStart of the second paragraph hello world End of the second paragraph\nThird paragraph ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+      '段落标题\n正文第一段落开始0123456789正文第一段落结束\n正文第二段落开始hello world正文第二段落结束\n正文第三段落ABCDEFGHIJKLMNOPQRSTUVWXYZ。',
       [
         {
           start: 0,
@@ -1016,7 +1016,7 @@ struct StyledStringSetLineheightParagraphstyleDemo {
           .copyOption(CopyOptions.InApp)
           .draggable(true)
 
-        // Query the paragraph style.
+        // 查询段落样式
         Text()
           .onClick(() => {
             let styles = this.paragraphStyledString1.getStyles(0, this.paragraphStyledString1.length);
@@ -1046,11 +1046,11 @@ struct StyledStringSetLineheightParagraphstyleDemo {
 }
 ```
 
-### Example 6: Setting Custom Spans
+### 示例6（设置自定义绘制Span）
 
-This example illustrates how to configure custom spans for a styled string using [CustomSpan](arkts-arkui-customspan-c.md) and [measureTextSize](../arkts-apis-uicontext-measureutils.md#measuretextsize12), supported since API version 12.
+从API version 12开始，该示例通过[CustomSpan](arkts-arkui-customspan-c.md)接口和[measureTextSize](../arkts-apis-uicontext-measureutils.md#measuretextsize12)实现属性字符串设置自定义绘制Span。
 
-Since API version 26.0.0, the maxWidth and layoutPolicy properties are added to [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md).
+从API版本26.0.0开始，CustomSpanMeasureInfo新增maxWidth、layoutPolicy属性。
 
 
 
@@ -1073,7 +1073,7 @@ class MyCustomSpan extends CustomSpan {
     this.setPx(gUIContext.vp2px(2));
     let textSize =
       gUIContext.getMeasureUtils().measureTextSize({ textContent: this.word, fontSize: this.wordFontSize });
-    // Since API version 26.0.0, CustomSpanMeasureInfo supports the maxWidth and layoutPolicy attributes.
+    // 从API版本26.0.0开始CustomSpanMeasureInfo支持maxWidth与layoutPolicy属性
     if (measureInfo.layoutPolicy != LayoutPolicy.fixAtIdealSize) {
       this.width = Math.min(textSize.width as number, measureInfo.maxWidth as number);
     } else {
@@ -1101,7 +1101,7 @@ class MyCustomSpan extends CustomSpan {
     const textBlob = drawing.TextBlob.makeFromString(this.word, font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
     canvas.attachBrush(brush);
     canvas.drawRect({
-      // Center the drawn rectangle within the span size.
+      // 绘制的矩形在Span占位大小的范围里居中
       left: options.x + gUIContext.vp2px(this.paddingLeft),
       right: options.x + this.width + 2 * gUIContext.vp2px(this.paddingLeft) + gUIContext.vp2px(this.paddingRight),
       top: options.lineTop,
@@ -1115,7 +1115,7 @@ class MyCustomSpan extends CustomSpan {
       blue: 141
     });
     canvas.attachBrush(brush);
-    // Center the text in the drawn rectangle.
+    // 文字在绘制的矩形里居中
     canvas.drawTextBlob(textBlob, options.x + 2 * gUIContext.vp2px(this.paddingLeft),
       options.baseline - gUIContext.vp2px(this.paddingBottom));
     canvas.detachBrush();
@@ -1161,7 +1161,7 @@ struct StyledStringSetCustomspanDemo {
     }
     this.isPageShow = false;
 
-    this.style.appendStyledString(new MutableStyledString('Text drawing Sample code CustomSpan', [
+    this.style.appendStyledString(new MutableStyledString('文本绘制 示例代码 CustomSpan', [
       {
         start: 0,
         length: 5,
@@ -1180,7 +1180,7 @@ struct StyledStringSetCustomspanDemo {
     }
     ]));
     this.style.appendStyledString(new StyledString(this.customSpan2));
-    this.style.appendStyledString(new StyledString('Custom Drawing', [{
+    this.style.appendStyledString(new StyledString('自定义绘制', [{
       start: 0,
       length: 5,
       styledKey: StyledStringKey.FONT,
@@ -1197,7 +1197,7 @@ struct StyledStringSetCustomspanDemo {
           .fontSize(30)
 
         Button('invalidate').onClick(() => {
-          this.customSpan1.setWord('Hello');
+          this.customSpan1.setWord('你好');
           this.customSpan1.invalidate();
         })
       }
@@ -1208,9 +1208,9 @@ struct StyledStringSetCustomspanDemo {
 }
 ```
 
-### Example 7: Storing Custom Extension Information
+### 示例7（支持存储自定义扩展信息）
 
-This example illustrates how to store custom extension information within styled strings using the [UserDataSpan](arkts-arkui-userdataspan-c.md) API, available since API version 12.
+从API version 12开始，该示例通过[UserDataSpan](arkts-arkui-userdataspan-c.md)接口实现属性字符串支持存储自定义扩展信息的功能。
 
 
 
@@ -1259,9 +1259,9 @@ struct StyledStringSetUserdataspanDemo {
 }
 ```
 
-### Example 8: Setting a Hyperlink
+### 示例8（设置超链接）
 
-This example demonstrates how to set a hyperlink within a styled string using the UrlStyle API, available since API version 14.
+从API version 14开始，该示例通过UrlStyle接口，实现了对属性字符串中超链接设置的支持。
 
 
 
@@ -1293,9 +1293,9 @@ struct StyledStringSetUrlstyleDemo {
 }
 ```
 
-### Example 9: Setting a Color Filter for an Image
+### 示例9 （给图片设置colorFilter）
 
-This example demonstrates how to apply a color filter to an image by setting colorFilter for [ImageAttachment](arkts-arkui-imageattachmentinterface-i.md), available since API version 15.
+从API version 15开始，该示例通过给ImageAttachment设置colorFilter实现了给图像设置颜色滤镜效果。
 
 
 
@@ -1328,7 +1328,7 @@ struct StyledStringSetImageColorfilterDemo {
           .fontSize(30)
           .onAppear(() => {
             this.mutableStr = new MutableStyledString(new ImageAttachment({
-              // Replace $r('app.media.startIcon') with the image resource file you use.
+              // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
               resourceValue: $r('app.media.startIcon'),
               size: { width: 50, height: 50 },
               layoutStyle: { borderRadius: LengthMetrics.vp(10) },
@@ -1345,7 +1345,7 @@ struct StyledStringSetImageColorfilterDemo {
         Button('set image color filter')
           .onClick(() => {
             this.mutableStr2 = new MutableStyledString(new ImageAttachment({
-              // Replace $r('app.media.startIcon') with the image resource file you use.
+              // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
               resourceValue: $r('app.media.startIcon'),
               size: { width: 50, height: 50 },
               layoutStyle: { borderRadius: LengthMetrics.vp(10) },
@@ -1364,9 +1364,9 @@ struct StyledStringSetImageColorfilterDemo {
 }
 ```
 
-### Example 10: Inserting, Deleting, and Replacing Styled Strings
+### 示例10（属性字符串的插入、删除、替换）
 
-This example demonstrates how to insert, delete, and replace styled strings using the [subStyledString](arkts-arkui-styledstring-c.md#substyledstring), [removeString](arkts-arkui-mutablestyledstring-c.md#removestring), [removeStyle](arkts-arkui-mutablestyledstring-c.md#removestyle), [clearStyles](arkts-arkui-mutablestyledstring-c.md#clearstyles), [replaceStyledString](arkts-arkui-mutablestyledstring-c.md#replacestyledstring), and [insertStyledString](arkts-arkui-mutablestyledstring-c.md#insertstyledstring) APIs, available since API version 12.
+从API version 12开始，该示例通过[subStyledString](arkts-arkui-styledstring-c.md#substyledstring)、[removeString](arkts-arkui-mutablestyledstring-c.md#removestring)、[removeStyle](arkts-arkui-mutablestyledstring-c.md#removestyle)、[clearStyles](arkts-arkui-mutablestyledstring-c.md#clearstyles)、[replaceStyledString](arkts-arkui-mutablestyledstring-c.md#replacestyledstring)、[insertStyledString](arkts-arkui-mutablestyledstring-c.md#insertstyledstring)接口实现属性字符串的插入、删除、替换。
 
 
 
@@ -1440,11 +1440,11 @@ struct StyledStringModifyDemo {
 }
 ```
 
-### Example 11: Configuring the Text Stroke for a Styled String
+### 示例11（属性字符串的文本描边）
 
-This example illustrates how to configure the text stroke for a styled string by setting strokeWidth and strokeColor of TextStyle, available since API version 20.
+从API version 20开始，该示例通过TextStyle设置strokeWidth和strokeColor接口实现属性字符串的文本描边。
 
-Since API version 26.0.0, the strokeJoinStyle API is added to TextStyle to implement the text corner stroke style.
+从API版本26.0.0开始，TextStyle新增strokeJoinStyle接口实现文本拐角描边样式。
 
 
 
@@ -1496,13 +1496,13 @@ struct StyledStringStrokewidthStrokecolorDemo {
 
   build() {
     Column() {
-      // Solid text
+      // 实心字
       Text(undefined, { controller: this.controller })
         .margin({ top: 10, bottom: 50 })
         .draggable(true)
         .onDragStart(() => {
         })
-      // Hollow text
+      // 空心字
       Text(undefined, { controller: this.controller1 })
         .margin({ top: 10, bottom: 50 })
         .draggable(true)
@@ -1515,9 +1515,9 @@ struct StyledStringStrokewidthStrokecolorDemo {
 }
 ```
 
-### Example 12: Implementing Conversion Using fromHtml and toHtml
+### 示例12（fromHtml和toHtml互相转换）
 
-This example illustrates how to convert HTML content to styled strings and back using the [fromHtml](arkts-arkui-styledstring-c.md#fromhtml) (available since API version 12) and [toHtml](arkts-arkui-styledstring-c.md#tohtml) (available since API version 14) APIs. Supported HTML tags include strong, b20+, em20+, i20+, u20+, del20+, s20+, a20+, sub20+, and sup20+, along with their background-color style attributes.
+该示例通过[fromHtml](arkts-arkui-styledstring-c.md#fromhtml)（从API version 12开始）、[toHtml](arkts-arkui-styledstring-c.md#tohtml)（从API version 14开始）接口，将HTML中strong、b20+、em20+、i20+、u20+、del20+、s20+、a20+、sub20+、sup20+标签及其style属性中的background-color转换为属性字符串并转回HTML。
 
 
 
@@ -1526,37 +1526,37 @@ This example illustrates how to convert HTML content to styled strings and back 
 @Entry
 @Component
 struct StyledStringHtmlConvertDemo {
-  // The b, em, i, u, del, s, a, sup, and sub tags are supported since API version 20.
+  // 从API version 20开始支持b、em、i、u、del、s、a、sup、sub标签
   @State html: string =
     '<p>This is <b>b</b> <strong>strong</strong> <em>em</em> <i>i</i> <u>u</u> <del>del</del> <s>s</s> <span style = "foreground-color:blue"> <a href=\'https://www.example.com\'>www.example</a> </span> <span style="background-color: red;">red span</span> <sup>superscript</sup> and <sub>subscript</sub></p>';
   @State spanString: StyledString | undefined = undefined;
-  @State resultText: string = ''; // State for saving the result text.
+  @State resultText: string = ''; // 保存结果文本的状态
   controller: TextController = new TextController;
 
   build() {
     Column() {
-      // Display the spanString after conversion.
+      // 显示转换后的spanString
       Text(undefined, { controller: this.controller }).height(100)
 
-      // Display each step result in the text area.
+      // TextArea显示每个步骤的结果
       TextArea({ text: this.html })
         .width('100%')
         .height(100)
         .margin(5)
 
-      // Button 1: Convert HTML to SpanString
+      // 按钮1:将HTML转换为SpanString
       Button('Convert HTML to SpanString').onClick(async () => {
         this.spanString = await StyledString.fromHtml(this.html);
         this.controller.setStyledString(this.spanString);
         this.resultText = 'Converted HTML to SpanString successfully.';
       }).margin(5)
 
-      // Button 2: Convert SpanString to HTML.
+      // 按钮2:将SpanString转换为HTML
       Button('Convert SpanString to HTML').onClick(() => {
         if (this.spanString) {
-          // Convert spanString to HTML and update state if content changes.
+          // 将spanString转换为HTML并替换当前的HTML状态
           const newHtml = StyledString.toHtml(this.spanString);
-          if (newHtml !== this.html) { // Avoid redundant updates.
+          if (newHtml !== this.html) { // 通过检查内容是否已经相同来防止重复
             this.html = newHtml;
           }
           this.resultText = 'Converted SpanString to HTML successfully.';
@@ -1565,19 +1565,19 @@ struct StyledStringHtmlConvertDemo {
         }
       }).margin(5)
 
-      // Button 3: Convert HTML back to SpanString.
+      // 按钮3:将HTML转换回SpanString
       Button('Convert HTML back to SpanString').onClick(async () => {
         this.spanString = await StyledString.fromHtml(this.html);
         this.controller.setStyledString(this.spanString);
         this.resultText = 'Converted HTML back to SpanString successfully.';
       }).margin(5)
 
-      // Reset: Restore HTML and SpanString.
+      // 重置：重置HTML和SpanString
       Button('Reset').onClick(() => {
         this.html =
           '<p>This is <b>b</b> <strong>strong</strong> <em>em</em> <i>i</i> <u>u</u> <del>del</del> <s>s</s> <span style = "foreground-color:blue"> <a href=\'https: //www.example.com\'>www.example</a> </span> <span style="background-color: red;">red span</span> <sup>superscript</sup> and <sub>subscript</sub></p>';
         this.spanString = undefined;
-        this.controller.setStyledString(new StyledString('')); // Use an empty StyledString instance.
+        this.controller.setStyledString(new StyledString('')); // 使用空的StyledString实例
         this.resultText = 'Reset HTML and SpanString successfully.';
       }).margin(5)
     }.width('100%').padding(20)
@@ -1585,9 +1585,9 @@ struct StyledStringHtmlConvertDemo {
 }
 ```
 
-### Example 13: Implementing Multiple Decoration Lines and Bold Decoration Lines
+### 示例13（多装饰线与加粗装饰线）
 
-This example illustrates how to display multiple decoration lines and bold decoration lines by configuring enableMultiType and thicknessScale in the DecorationStyle API, available since API version 20.
+从API version 20开始，该示例通过DecorationStyle中设置enableMultiType、thicknessScale接口，实现多装饰线显示与加粗装饰线的效果。
 
 
 
@@ -1656,9 +1656,9 @@ struct StyledStringSetDecorationstyleDemo {
 }
 ```
 
-### Example 14: Obtaining the Image Size in vp
+### 示例14（获取以vp为单位的图片尺寸）
 
-This example illustrates how to configure styled strings with images and obtain the image size in vp using the [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) API, available since API version 21.
+从API version 21开始，该示例通过ImageAttachmentInterface实现属性字符串设置图片，并且获取该图片以vp为单位的尺寸。
 
 
 
@@ -1718,7 +1718,7 @@ struct StyledStringImageAttachmentInterfaceDemo {
           .copyOption(CopyOptions.InApp)
           .draggable(true)
           .fontSize(30)
-        Button('Set Image Size to 50 vp × 50 vp')
+        Button('设置图片 50vp x 50vp')
           .onClick(() => {
             if (this.imagePixelMap !== undefined) {
               this.mutableStr.appendStyledString(new MutableStyledString(new ImageAttachment({
@@ -1732,7 +1732,7 @@ struct StyledStringImageAttachmentInterfaceDemo {
               this.updateImageInfoStr();
             }
           }).margin(10)
-        Button('Set Image Size to 70 vp × 70 vp')
+        Button('设置图片 70vp x 70vp')
           .onClick(() => {
             if (this.imagePixelMap !== undefined) {
               this.mutableStr.appendStyledString(new MutableStyledString(new ImageAttachment({
@@ -1755,9 +1755,9 @@ struct StyledStringImageAttachmentInterfaceDemo {
 }
 ```
 
-### Example 15: Setting Custom Paragraph Indentation
+### 示例15（设置段落自定义缩进）
 
-This example illustrates how to set paragraph indentation and customize indentation patterns using the LeadingMarginSpan API, available since API version 22.
+从API version 22开始，该示例通过LeadingMarginSpan设置段落缩进，并且自定义缩进图案。
 
 
 
@@ -1767,7 +1767,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 import { LengthMetrics } from '@kit.ArkUI';
 
 /**
- * Implement LeadingMarginSpan to define custom paragraph indentation.
+ * 实现LeadingMarginSpan
  */
 class MyLeadingMarginSpan extends LeadingMarginSpan {
   text: string = '';
@@ -1781,13 +1781,13 @@ class MyLeadingMarginSpan extends LeadingMarginSpan {
     return this.text;
   }
 
-  // Return the indentation distance.
+  // 返回缩进距离
   getLeadingMargin(): LengthMetrics {
     console.info('getLeadingMargin');
     return LengthMetrics.vp(10);
   }
 
-  // Callback for drawing custom patterns in the indentation area. Triggered for each line in the paragraph.
+  // 回调给开发者行信息，用于canvas绘制
   onDraw(context: DrawContext, options: LeadingMarginSpanDrawInfo) {
     console.info('x = ' + options.x + ', direction = ' + options.direction + ', top = ' + options.top
       + ', bottom = ' + options.bottom + ', baseline = ' + options.baseline
@@ -1797,7 +1797,7 @@ class MyLeadingMarginSpan extends LeadingMarginSpan {
       return;
     }
 
-    // Draw a text symbol.
+    // 绘制文本符号
     const font = new drawing.Font();
     font.setSize(20);
     const textBlob = drawing.TextBlob.makeFromString(this.text, font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
@@ -1814,7 +1814,7 @@ struct leadingMarginSpanDemo {
   leadingMarginSpan: LeadingMarginSpan = new MyLeadingMarginSpan('●');
   paragraphStyleAttr2: ParagraphStyle =
     new ParagraphStyle({ leadingMarginSpan: this.leadingMarginSpan });
-  style: StyledString = new StyledString('Paragraph Title\nParagraph content 101234567890123456789012345678901234567890123456789',
+  style: StyledString = new StyledString('段落标题\n段落内容101234567890123456789012345678901234567890123456789',
     [
       {
         start: 0,
@@ -1846,7 +1846,7 @@ struct leadingMarginSpanDemo {
             this.textController.setStyledString(this.style);
             this.controller.setStyledString(this.style);
           }).margin({ top: 10 })
-        // Query the paragraph style.
+        // 查询段落样式
         Button('getStyles')
           .onClick(() => {
             let styles = this.style.getStyles(0, this.style.length);
@@ -1874,9 +1874,9 @@ struct leadingMarginSpanDemo {
 }
 ```
 
-### Example 16: Displaying an SVG Image Using the supportSvg2 Property
+### 示例16（使用supportSvg2属性时，SVG图片的显示效果）
 
-Since API version 22, this example sets the supportSvg2 property for [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) to enable the [improved SVG usability](ts-image-svg2-capabilities.md#improved-svg-usability) capability of the [Enhanced SVG Tag Parsing](ts-image-svg2-capabilities.md) feature.
+从API version 22开始，该示例通过给[ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md)设置supportSvg2属性，使[SVG标签解析能力增强功能](ts-image-svg2-capabilities.md)的[SVG易用性提升](ts-image-svg2-capabilities.md#svg易用性提升)能力生效。
 
 
 
@@ -1890,7 +1890,7 @@ struct StyledStringProcessDemo {
   controller: TextController = new TextController();
   controller1: TextController = new TextController();
   imageAttachment: ImageAttachment = new ImageAttachment({
-    // Replace $r('app.media.ice') with the image resource file required by the developer.
+    // $r('app.media.ice')需要替换为开发者所需的图像资源文件。
     resourceValue: $r('app.media.ice'),
     size: { width: 50, height: 50 },
     layoutStyle: { borderRadius: LengthMetrics.vp(10) },
@@ -1902,7 +1902,7 @@ struct StyledStringProcessDemo {
       drawing.Tool.makeColorFromResourceColor(Color.Blue), drawing.BlendMode.SRC_IN)
   })
   imageAttachment1: ImageAttachment = new ImageAttachment({
-    // Replace $r('app.media.ice') with the image resource file required by the developer.
+    // $r('app.media.ice')需要替换为开发者所需的图像资源文件。
     resourceValue: $r('app.media.ice'),
     size: { width: 50, height: 50 },
     layoutStyle: { borderRadius: LengthMetrics.vp(10) },
@@ -1928,11 +1928,11 @@ struct StyledStringProcessDemo {
     Column() {
       Scroll(this.scroller) {
         Column() {
-          Text('Styled string with supportSvg2: false')
+          Text('属性字符串不支持svg2')
           Text(undefined, { controller: this.controller1 })
             .draggable(true)
             .fontSize(30)
-          Text('Styled string with supportSvg2: true')
+          Text('属性字符串支持svg2')
           Text(undefined, { controller: this.controller })
             .draggable(true)
             .fontSize(30)
@@ -1944,11 +1944,11 @@ struct StyledStringProcessDemo {
 }
 ```
 
-### Example 17: Setting the Font Configuration
+### 示例17（设置字体配置）
 
-This example implements the font configuration of a styled string through [fontConfigs](ts-text-common.md#fontconfigs24) in [TextStyleInterface](arkts-arkui-textstyleinterface-i.md).
+该示例通过TextStyleInterface中的[fontConfigs](ts-text-common.md#fontconfigs24对象说明)实现属性字符串的字体配置。
 
-Since API version 24, the fontConfigs property is added to TextStyleInterface.
+从API version 24开始，TextStyleInterface新增fontConfigs属性。
 
 
 
@@ -1964,7 +1964,7 @@ struct StyledStringFontConfigsDemo {
   scroller: Scroller = new Scroller();
 
   aboutToAppear() {
-    // Example 1: Enable mutable font weights.
+    // 示例1：启用可变字重
     let textStyle1: TextStyle = new TextStyle({
       fontColor: Color.Gray,
       fontSize: LengthMetrics.vp(18)
@@ -1975,7 +1975,7 @@ struct StyledStringFontConfigsDemo {
       styledKey: StyledStringKey.FONT,
       styledValue: textStyle1
     }]);
-    // Set the font configuration for the text 'font weight 850'.
+    // 为'字体粗细850'这段文本设置字体配置
     let textStyle2: TextStyle = new TextStyle({
       fontColor: Color.Blue,
       fontSize: LengthMetrics.vp(24),
@@ -1986,7 +1986,7 @@ struct StyledStringFontConfigsDemo {
         }
       }
     });
-    let styledString2: StyledString = new StyledString('Font weight: 850', [{
+    let styledString2: StyledString = new StyledString('字体粗细850', [{
       start: 0,
       length: 7,
       styledKey: StyledStringKey.FONT,
@@ -1995,12 +1995,12 @@ struct StyledStringFontConfigsDemo {
     styledString1.appendStyledString(styledString2);
     this.controller1.setStyledString(styledString1);
 
-    // Example 2: Disable the text font weight from automatically updating with the device font weight level.
+    // 示例2：禁用设备字体粗细级别自动更新
     let textStyle3: TextStyle = new TextStyle({
       fontColor: Color.Gray,
       fontSize: LengthMetrics.vp(18)
     });
-    let styledString3: MutableStyledString = new MutableStyledString('StyledString with disabled FontConfigs: ', [{
+    let styledString3: MutableStyledString = new MutableStyledString('禁用跟随设备字重级别更新: ', [{
       start: 0,
       length: 12,
       styledKey: StyledStringKey.FONT,
@@ -2016,7 +2016,7 @@ struct StyledStringFontConfigsDemo {
         }
       }
     });
-    let styledString4: StyledString = new StyledString('Font weight: 600', [{
+    let styledString4: StyledString = new StyledString('字体粗细600', [{
       start: 0,
       length: 7,
       styledKey: StyledStringKey.FONT,
@@ -2029,7 +2029,7 @@ struct StyledStringFontConfigsDemo {
   build() {
     Scroll(this.scroller) {
       Column() {
-        Text('Example 1: Enable mutable font weight adjustment and set the font weight to a non-hundred value.')
+        Text('示例1：启用可变字体粗细调节，支持设置字体粗细为非整百')
           .fontSize(16)
           .margin({ bottom: 5 })
 
@@ -2037,7 +2037,7 @@ struct StyledStringFontConfigsDemo {
           .fontSize(20)
           .margin({ bottom: 20 })
 
-        Text('Example 2: Disable the text font weight from automatically updating with the device font weight level.')
+        Text('示例2：设置文本字体粗细不跟随设备字重级别自动更新')
           .fontSize(16)
           .margin({ bottom: 5 })
 
@@ -2052,31 +2052,33 @@ struct StyledStringFontConfigsDemo {
 }
 ```
 
-### Example 18: Conversion Using fromHtml
+### 示例18（fromHtml转换）
 
-This example converts the <cite>, <dfn>, <small>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ol>, <ul>, and <li> tags in HTML into a styled string through the [fromHtml](arkts-arkui-styledstring-c.md#fromhtml) API.
+该示例通过[fromHtml](arkts-arkui-styledstring-c.md#fromhtml)接口，将HTML中<cite>、<dfn>、<small>、<h1>、<h2>、<h3>、<h4>、<h5>、<h6>、<ol>、<ul>、<li>标签转换为属性字符串。
 
-Since API version 26.0.0, fromHtml additionally supports the <cite>, <dfn>, <small>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ol>, <ul>, and <li> tags.
+从API版本26.0.0开始，fromHtml新增支持<cite>、<dfn>、<small>、<h1>、<h2>、<h3>、<h4>、<h5>、<h6>、<ol>、<ul>、<li>标签。
+
+
 
 ```TypeScript
 @Entry
 @Component
 struct html_convert_demo {
-  @State html: string = '<p><cite>cite</cite><dfn>dfn</dfn></p><p>normal<small>small<small>smaller</small></small></p><h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6><ol><li>Item 1</li><li>Item 2</li></ol><ul><li>Item A</li><li>Item B</li></ul>';
+  @State html: string = '<p><cite>cite</cite><dfn>dfn</dfn></p><p>normal<small>small<small>smaller</small></small></p><h1>一级标题</h1><h2>二级标题</h2><h3>三级标题</h3><h4>四级标题</h4><h5>五级标题</h5><h6>六级标题</h6><ol><li>Item 1</li><li>Item 2</li></ol><ul><li>Item A</li><li>Item B</li></ul>';
   @State spanString: StyledString | undefined = undefined;
   controller: TextController = new TextController;
 
   build() {
     Column() {
-      // Display the converted spanString.
+      // 显示转换后的spanString
       Text(undefined, { controller: this.controller })
-      // Display the result of each step in TextArea.
+      // TextArea显示每个步骤的结果
       TextArea({ text: this.html })
         .width('100%')
         .height(100)
         .margin(5)
 
-      Button('Convert HTML to SpanString').onClick(async () => {
+      Button('将HTML转换为SpanString').onClick(async () => {
         this.spanString = await StyledString.fromHtml(this.html);
         this.controller.setStyledString(this.spanString);
       }).margin(5)
@@ -2085,11 +2087,13 @@ struct html_convert_demo {
 }
 ```
 
-### Example 19: Setting the Properties of a Variable Font
+### 示例19（设置可变字体的属性）
 
-This example sets the properties of a variable font through the fontVariations property of TextStyle.
+该示例通过TextStyle的fontVariations属性设置可变字体的属性。
 
-Since API version 26.0.0, the fontVariations property is added to TextStyle.
+从API版本26.0.0开始，TextStyle新增了fontVariations属性。
+
+
 
 ```TypeScript
 // xxx.ets
@@ -2101,7 +2105,7 @@ struct StyledStringExample {
 
   aboutToAppear() {
     let textStyle = new TextStyle({
-      // wght represents the font weight attribute of a variable font.
+      // wght代表可变字体的字重属性
       fontVariations: [{ axis: 'wght', value: this.weightValue }]
     });
     let styledString = new StyledString('Hello World !', [{
@@ -2114,12 +2118,12 @@ struct StyledStringExample {
   build() {
     Column() {
       Text(undefined, { controller: this.controller })
-      Button('Font weight: ' + this.weightValue)
+      Button('字重: ' + this.weightValue)
         .margin(10)
         .onClick(() => {
           this.weightValue += 100;
           let textStyle = new TextStyle({
-            // wght represents the font weight attribute of a variable font.
+            // wght代表可变字体的字重属性
             fontVariations: [{ axis: 'wght', value: this.weightValue }]
           });
           let styledString = new StyledString('Hello World !', [{
@@ -2134,11 +2138,13 @@ struct StyledStringExample {
 }
 ```
 
-### Example 20: Setting the Text Shader Effect
+### 示例20（设置文本着色器效果）
 
-This example implements the text shader effect through the shaderStyle API in ParagraphStyle.
+该示例通过ParagraphStyle中shaderStyle接口实现文本着色效果。
 
-Since API version 26.0.0, the shaderStyle API is added to ParagraphStyle.
+从API版本26.0.0开始，ParagraphStyle新增shaderStyle接口。
+
+
 
 ```TypeScript
 @Entry
@@ -2233,25 +2239,25 @@ struct ShaderColorStyle {
 
   build() {
     Column({ space: 5 }) {
-      Text('Linear gradient with angle of 45°').fontSize(18).width('90%')
+      Text('angle为45°的线性渐变').fontSize(18).width('90%')
         .margin({ top: 40, left: 40 })
       Text(undefined, { controller: this.controller1 })
         .fontSize(20)
         .width('80%')
         .margin({ top: 10 })
-      Text('Linear gradient with direction of LeftTop').fontSize(18).width('90%')
+      Text('direction为LeftTop的线性渐变').fontSize(18).width('90%')
         .margin({ top: 40, left: 40 })
       Text(undefined, { controller: this.controller2 })
         .fontSize(20)
         .width('80%')
         .margin({ top: 10 })
-      Text('Radial gradient').fontSize(18).width('90%')
+      Text('径向渐变').fontSize(18).width('90%')
         .margin({ top: 40, left: 40 })
       Text(undefined, { controller: this.controller3 })
         .fontSize(20)
         .width('80%')
         .margin({ top: 10 })
-      Text('Solid color').fontSize(18).width('90%')
+      Text('纯色').fontSize(18).width('90%')
         .margin({ top: 40, left: 40 })
       Text(undefined, { controller: this.controller4 })
         .fontSize(20)
@@ -2262,11 +2268,13 @@ struct ShaderColorStyle {
 }
 ```
 
-### Example 21: Setting the Text Tail Indentation
+### 示例21（设置文本尾部缩进）
 
-This example sets the text tail indentation for a styled string through the tailIndents property in ParagraphStyle.
+该示例通过ParagraphStyle中的tailIndents属性，为属性字符串设置文本尾部缩进。
 
-Since API version 26.0.0, the tailIndents property is added to the ParagraphStyle API.
+从API版本26.0.0开始，ParagraphStyle接口新增tailIndents属性。
+
+
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -2275,7 +2283,7 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Component
 struct TailIndentsExample {
   styledString1:StyledString =
-    new StyledString('tailIndents not set\ntailIndents not set\ntailIndents not set\ntailIndents not set\ntailIndents not set', [
+    new StyledString('未设置tailIndents\n未设置tailIndents\n未设置tailIndents\n未设置tailIndents\n未设置tailIndents', [
       {
         start: 0,
         length: 120,
@@ -2285,7 +2293,7 @@ struct TailIndentsExample {
     ])
 
   styledString2:StyledString =
-    new StyledString('Set a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value', [
+    new StyledString('设置tailIndents单值\n设置tailIndents单值\n设置tailIndents单值\n设置tailIndents单值\n设置tailIndents单值', [
       {
         start: 0,
         length: 120,
@@ -2303,7 +2311,7 @@ struct TailIndentsExample {
     ])
 
   styledString3:StyledString =
-    new StyledString('Set tailIndents array_Set tailIndents array_Set tailIndents array_Set tailIndents array_Set tailIndents array_Set tailIndents array', [
+    new StyledString('设置tailIndents数组_设置tailIndents数组_设置tailIndents数组_设置tailIndents数组_设置tailIndents数组_设置tailIndents数组', [
       {
         start: 0,
         length: 120,
@@ -2355,6 +2363,58 @@ struct TailIndentsExample {
     }
     .height('100%')
     .width('100%')
+  }
+}
+```
+
+### 示例22（设置图片拉伸）
+
+该示例通过设置ImageAttachment中的resizable属性，对图片不同方向进行拉伸。
+
+从API版本26.1.0开始，ImageAttachment接口新增resizable属性。
+
+```TypeScript
+@Entry
+@Component
+struct StyledStringResizablePage {
+  controller: TextController = new TextController();
+  build() {
+    Column({ space: 20 }) {
+      Text('StyledString resizable Demo')
+        .fontSize(28)
+        .fontWeight(FontWeight.Bold)
+
+      Text(undefined, { controller: this.controller })
+        .width('90%')
+        .margin({ top: 10 })
+        .fontSize(28)
+        .onAppear(() => {
+          let mutableStyledString2: MutableStyledString = new MutableStyledString(new ImageAttachment({
+            resourceValue: $r('app.media.landscape'),
+            size: { width: 260, height: 260 },
+            resizable: {
+              slice: {
+                left: '200px',
+                top: '200px',
+                right: '20px',
+                bottom: '20px'
+              }
+            }
+          }));
+          let mutableStyledString: MutableStyledString = new MutableStyledString(new ImageAttachment({
+            resourceValue: $r('app.media.landscape'),
+            size: { width: 260, height: 260 },
+          }));
+          mutableStyledString.insertString(0, "原图\n")
+          mutableStyledString.insertString(mutableStyledString.length, "\n设置Resizable后\n")
+          mutableStyledString.appendStyledString(mutableStyledString2);
+          this.controller.setStyledString(mutableStyledString);
+        })
+    }
+    .width('100%')
+    .height('100%')
+    .padding(20)
+    .alignItems(HorizontalAlign.Center)
   }
 }
 ```

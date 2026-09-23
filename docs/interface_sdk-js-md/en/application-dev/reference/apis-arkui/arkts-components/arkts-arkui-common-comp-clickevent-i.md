@@ -160,50 +160,6 @@ Whether the event is triggered by a left-hand or right-hand tap.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## screenX
-
-```TypeScript
-screenX: number
-```
-
-X coordinate of the click position in the coordinate system of the current application window.
-
-Unit: vp
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowX** instead.
-
-**Type:** number
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [windowX](#windowx)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## screenY
-
-```TypeScript
-screenY: number
-```
-
-Y coordinate of the click position in the coordinate system of the current application window.
-
-Unit: vp
-
-Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowY** instead.
-
-**Type:** number
-
-**Since:** 7
-
-**Deprecated since:** 10
-
-**Substitutes:** [windowY](#windowy)
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## windowX
 
 ```TypeScript
@@ -281,5 +237,49 @@ Unit: vp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## screenX
+
+```TypeScript
+screenX: number
+```
+
+X coordinate of the click position in the coordinate system of the current application window.
+
+Unit: vp
+
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowX** instead.
+
+**Type:** number
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [windowX](#windowx)
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## screenY
+
+```TypeScript
+screenY: number
+```
+
+Y coordinate of the click position in the coordinate system of the current application window.
+
+Unit: vp
+
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **windowY** instead.
+
+**Type:** number
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [windowY](#windowy)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

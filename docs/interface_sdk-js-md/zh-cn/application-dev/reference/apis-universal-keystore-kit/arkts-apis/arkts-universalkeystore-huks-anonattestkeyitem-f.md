@@ -20,7 +20,7 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+<!--RP1--><!--RP1End-->
 
 **起始版本：** 11
 
@@ -167,7 +167,7 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 > 
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
+<!--RP1--><!--RP1End-->
 
 **起始版本：** 11
 

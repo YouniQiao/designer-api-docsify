@@ -4,7 +4,7 @@
 declare enum FontStyle
 ```
 
-Font style.
+Sets the font style.
 
 **Since:** 7
 

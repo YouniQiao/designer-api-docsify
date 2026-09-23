@@ -86,7 +86,7 @@ Whether the Counter can obtain focus.
 
 **Note:** This attribute takes effect for the list and compact types of Counter, but not for the inline number and inline date types.
 
-Default value: **true**.
+Default value: **true**
 
 **true**: The Counter can obtain focus (selected when the Counter needs to be operated via keyboard or focus navigation); **false**: The Counter cannot obtain focus (selected when focus interaction is not required).
 
@@ -114,7 +114,7 @@ Step of the Counter. This is used when you need to quickly adjust the value (for
 
 Value range: an integer greater than or equal to 1.
 
-Default value: **1**.
+Default value: **1**
 
 If the value is out of range, the default value is used.
 

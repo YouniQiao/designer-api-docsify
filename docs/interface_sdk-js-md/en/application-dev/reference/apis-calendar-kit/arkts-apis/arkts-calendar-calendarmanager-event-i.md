@@ -214,7 +214,7 @@ Reminder time of the event, in minutes. For example, if the value is 5, the remi
 service?: EventService
 ```
 
-&lt;!--RP1--&gt;Event service. If this parameter is not set, no one-click service is available. This function is not supported currently.&lt;!--RP1End--&gt;
+<!--RP1-->Event service. If this parameter is not set, no one-click service is available. This function is not supported currently.<!--RP1End-->
 
 **Type:** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 

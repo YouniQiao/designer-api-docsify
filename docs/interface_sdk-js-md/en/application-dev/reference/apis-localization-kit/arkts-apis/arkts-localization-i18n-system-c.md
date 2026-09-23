@@ -384,38 +384,6 @@ import { i18n } from '@kit.LocalizationKit';
 let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
 ```
 
-## getSystemLocale
-
-```TypeScript
-static getSystemLocale(): string
-```
-
-Obtains the current system locale.
-
-**Since:** 9
-
-**Deprecated since:** 20
-
-**Substitutes:** [getSystemLocaleInstance](#getsystemlocaleinstance)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**System capability:** SystemCapability.Global.I18n
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Locale ID. |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLocale: string = i18n.System.getSystemLocale(); // If the system language is simplified Chinese and the system region is China, then systemLocale is zh-Hans-CN.
-```
-
 ## getSystemLocaleInstance
 
 ```TypeScript
@@ -693,4 +661,36 @@ try {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setAppPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
 }
+```
+
+## getSystemLocale
+
+```TypeScript
+static getSystemLocale(): string
+```
+
+Obtains the current system locale.
+
+**Since:** 9
+
+**Deprecated since:** 20
+
+**Substitutes:** [getSystemLocaleInstance](#getsystemlocaleinstance)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**System capability:** SystemCapability.Global.I18n
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Locale ID. |
+
+**Examples**
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLocale: string = i18n.System.getSystemLocale(); // If the system language is simplified Chinese and the system region is China, then systemLocale is zh-Hans-CN.
 ```

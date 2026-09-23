@@ -4,7 +4,7 @@
 declare enum TransitionType
 ```
 
-TransitionType enumeration description.
+Sets the transition type.
 
 **Since:** 7
 

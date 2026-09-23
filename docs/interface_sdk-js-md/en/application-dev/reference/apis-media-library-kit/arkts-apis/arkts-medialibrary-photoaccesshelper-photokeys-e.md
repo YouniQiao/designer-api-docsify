@@ -351,7 +351,7 @@ Detailed time. The value is a string of time when the image or video was taken i
 ## DATE_TAKEN_MS
 
 ```TypeScript
-DATE_TAKEN_MS = 'date_taken_ms'
+DATE_TAKEN_MS  = 'date_taken_ms'
 ```
 
 Unix timestamp when the image was captured, in milliseconds.
@@ -386,6 +386,18 @@ File name extension.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## CHANGE_TIME
+
+```TypeScript
+CHANGE_TIME = 'change_time'
+```
+
+Time when the photo is changed.
+
+**Since:** 23
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## ASPECT_RATIO
 
 ```TypeScript
@@ -397,18 +409,6 @@ Aspect ratio of the image or video.
 **Since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## CHANGE_TIME
-
-```TypeScript
-CHANGE_TIME = 'change_time'
-```
-
-Time when the photo is changed.
-
-**Since:** 23
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

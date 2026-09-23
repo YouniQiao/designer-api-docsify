@@ -46,17 +46,17 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 <!--DelEnd-->
 
 <!--Del-->
-### Enums(System API)
-
-| Name | Description |
-| --- | --- |
-| [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md) | Enumerates input types, which are used to identify the input modes supported by the system panel. Different input types correspond to different input scenarios and panel layouts. |
-<!--DelEnd-->
-
-<!--Del-->
 ### Types(System API)
 
 | Name | Description |
 | --- | --- |
 | [CommandDataType](arkts-ime-inputmethodsystempanelmanager-commanddatatype-t-sys.md) | Describes the private data type, which varies depending on its function. |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md) | Enumerates input types, which are used to identify the input modes supported by the system panel. Different input types correspond to different input scenarios and panel layouts. |
 <!--DelEnd-->

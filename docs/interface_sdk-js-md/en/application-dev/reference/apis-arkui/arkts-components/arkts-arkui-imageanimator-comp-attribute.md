@@ -272,33 +272,6 @@ Triggered when the animation starts to play.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation starts to play. |
 
-## preDecode
-
-```TypeScript
-preDecode(value: number)
-```
-
-Sets the number of images to be pre-decoded.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is
-> available.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | number | Yes | Number of images to be pre-decoded. For example, the value **2** indicates that two images following the currently playing one are pre-decoded, to improve performance.<br>Default value: **0** |
-
 ## reverse
 
 ```TypeScript
@@ -346,3 +319,30 @@ Sets the playback state of the animation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | Yes | Playback state.<br>Default value: **AnimationStatus.Initial** |
+
+## preDecode
+
+```TypeScript
+preDecode(value: number)
+```
+
+Sets the number of images to be pre-decoded.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is
+> available.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | number | Yes | Number of images to be pre-decoded. For example, the value **2** indicates that two images following the currently playing one are pre-decoded, to improve performance.<br>Default value: **0** |

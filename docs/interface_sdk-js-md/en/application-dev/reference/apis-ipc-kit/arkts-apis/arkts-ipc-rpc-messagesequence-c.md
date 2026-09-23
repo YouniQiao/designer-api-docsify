@@ -1822,62 +1822,6 @@ try {
 }
 ```
 
-## readRawData
-
-```TypeScript
-readRawData(size: number): number[]
-```
-
-Reads raw data from this **MessageSequence** object.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| size | number | Yes | Size of the raw data to read. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number[] | Raw data obtained, in bytes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-  let size = arr.length;
-  let result = sequence.readRawData(size);
-  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## readRawDataBuffer
 
 ```TypeScript
@@ -3543,60 +3487,6 @@ try {
 }
 ```
 
-## writeRawData
-
-```TypeScript
-writeRawData(rawData: number[], size: number): void
-```
-
-Writes raw data to this **MessageSequence** object.
-
-> **NOTE:** 
-> 
-> - This API cannot be called for multiple times in one parcel communication.
-> 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,pay attention to the SELinux configuration.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
-| size | number | Yes | Size of the raw data, in bytes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let arr = [1, 2, 3, 4, 5];
-  sequence.writeRawData(arr, arr.length);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## writeRawDataBuffer
 
 ```TypeScript
@@ -3926,6 +3816,116 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   data.writeStringArray(["abc", "def"]);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## readRawData
+
+```TypeScript
+readRawData(size: number): number[]
+```
+
+Reads raw data from this **MessageSequence** object.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [readRawDataBuffer](#readrawdatabuffer)(size: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | number | Yes | Size of the raw data to read. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number[] | Raw data obtained, in bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let arr = [1, 2, 3, 4, 5];
+  sequence.writeRawData(arr, arr.length);
+  let size = arr.length;
+  let result = sequence.readRawData(size);
+  hilog.info(0x0000, 'testTag', 'sequence read raw data result is ' + result);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+## writeRawData
+
+```TypeScript
+writeRawData(rawData: number[], size: number): void
+```
+
+Writes raw data to this **MessageSequence** object.
+
+> **NOTE:** 
+> 
+> - This API cannot be called for multiple times in one parcel communication.
+> 
+> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,pay attention to the SELinux configuration.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [writeRawDataBuffer](#writerawdatabuffer)(rawData: ArrayBuffer, size: number)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
+| size | number | Yes | Size of the raw data, in bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sequence = rpc.MessageSequence.create();
+  let arr = [1, 2, 3, 4, 5];
+  sequence.writeRawData(arr, arr.length);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);

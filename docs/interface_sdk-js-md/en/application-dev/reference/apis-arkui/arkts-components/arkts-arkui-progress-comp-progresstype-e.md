@@ -32,7 +32,7 @@ Linear type. Since API version 9, the progress indicator adapts to vertical disp
 Ring = 1
 ```
 
-The ring is gradually displayed until completely filled.
+Ring type without scales. The ring gradually displays until it is fully filled.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Eclipse type, which visualizes the progress in a way similar to the moon waxing 
 ScaleRing = 3
 ```
 
-Ring style with scales, which is similar to the clock scale style.
+Ring style with scales, which is similar to the clock scale style. Since API version 9, the progress indicator automatically switches to a non-scaled ring style when the outer scales overlap.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Ring style with scales, which is similar to the clock scale style.
 Capsule = 4
 ```
 
-Capsule style. At both ends, the progress indicator works in the same manner as the eclipse style. In the middle part of the capsule, the progress indicator works in the same manner as the linear style. When the height is greater than the width, the progress indicator adapts to vertical display.
+Capsule style. The progress display effect at the arc ends is the same as that of Eclipse, and the progress display effect in the middle section is the same as that of Linear. Since API version 9, when the height is greater than the width, the component is displayed vertically in an adaptive manner.
 
 **Since:** 8
 

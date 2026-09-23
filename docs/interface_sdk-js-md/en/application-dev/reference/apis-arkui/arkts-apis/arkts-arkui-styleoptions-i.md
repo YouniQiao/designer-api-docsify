@@ -16,9 +16,9 @@ Describes the style options.
 length?: number
 ```
 
-Length of the styled string style.
+Length for setting the style of the styled string.
 
-If the value is less than 0 or exceeds the difference between the string length and the value of **start**, it is treated as the difference between the string length and the value of **start**.
+If the value of **length** is less than 0 or exceeds the difference between the string length and **start**, it is processed as the difference between the string length and **start**.
 
 **Type:** number
 
@@ -36,9 +36,9 @@ If the value is less than 0 or exceeds the difference between the string length 
 start?: number
 ```
 
-Start position of the styled string style.
+Start position for setting the style of the styled string.
 
-If the value is less than 0 or exceeds the string length, it is treated as **0**.
+If the value of **start** is less than 0 or exceeds the string length, it is processed as 0.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Style key.
 styledValue: StyledStringValue
 ```
 
-Style object.
+Style object used to set the style of the styled string.
 
 **Type:** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 

@@ -4,7 +4,7 @@
 export declare class SelectionContainerController
 ```
 
-Defines the controller of the SelectionContainer component.
+Provides the controller of the **SelectionContainer** component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 clearTextSelection(): void
 ```
 
-Clears the current text selection of the SelectionContainer, and closes the selection menu if it is currently shown.
+Clears the current text selection state of **SelectionContainer**. If the selection menu is being displayed, it is also closed.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Clears the current text selection of the SelectionContainer, and closes the sele
 closeSelectionMenu(): void
 ```
 
-Closes the custom or default selection menu of the SelectionContainer.
+Closes the custom or default selection menu of **SelectionContainer**.
 
 **Since:** 26.0.0
 

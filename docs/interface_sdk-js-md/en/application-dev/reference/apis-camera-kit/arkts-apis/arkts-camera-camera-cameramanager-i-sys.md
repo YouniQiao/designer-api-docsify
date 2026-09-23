@@ -251,39 +251,6 @@ function isPreLaunchSupported(context: common.BaseContext): boolean {
 }
 ```
 
-## muteCamera
-
-```TypeScript
-muteCamera(mute: boolean): void
-```
-
-Mutes or unmutes the camera device.
-
-**Since:** 10
-
-**Deprecated since:** 12
-
-**Substitutes:** [muteCameraPersistent](#mutecamerapersistent)
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-function muteCamera(cameraManager: camera.CameraManager): void {
-  let mute: boolean = true;
-  cameraManager.muteCamera(mute);
-}
-```
-
 ## muteCameraPersistent
 
 ```TypeScript
@@ -655,5 +622,38 @@ function setPrelaunchConfig(context: common.BaseContext): void {
       }
     }
   }
+}
+```
+
+## muteCamera
+
+```TypeScript
+muteCamera(mute: boolean): void
+```
+
+Mutes or unmutes the camera device.
+
+**Since:** 10
+
+**Deprecated since:** 12
+
+**Substitutes:** [muteCameraPersistent](#mutecamerapersistent)
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mute | boolean | Yes | Mutes or unmutes the camera device. **true** to mute, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+function muteCamera(cameraManager: camera.CameraManager): void {
+  let mute: boolean = true;
+  cameraManager.muteCamera(mute);
 }
 ```

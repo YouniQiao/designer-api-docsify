@@ -294,6 +294,12 @@ import { sensor } from '@kit.SensorServiceKit';
 | [SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md) | 吸收比率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。用于表示吸收比率传感器上报的响应数据，包含电磁波吸收率信息。 |
 <!--DelEnd-->
 
+### 类型
+
+| 名称 | 说明 |
+| --- | --- |
+| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | 传感器上报频率模式，提供预定义的频率档位，方便开发者快速设置常用的上报频率。 |
+
 ### 枚举
 
 | 名称 | 说明 |
@@ -309,9 +315,3 @@ import { sensor } from '@kit.SensorServiceKit';
 | --- | --- |
 | [SensorId](arkts-sensorservice-sensor-sensorid-e-sys.md) | 表示当前支持订阅或取消订阅的传感器类型。 |
 <!--DelEnd-->
-
-### 类型
-
-| 名称 | 说明 |
-| --- | --- |
-| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | 传感器上报频率模式，提供预定义的频率档位，方便开发者快速设置常用的上报频率。 |

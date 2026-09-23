@@ -89,6 +89,14 @@ import { ble } from '@kit.ConnectivityKit';
 | [ScanOptions](arkts-connectivity-ble-scanoptions-i-sys.md) | Describes the parameters for scan. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md) | Bluetooth device address. |
+| [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Indicate the transport of a remote device. |
+| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | Indicate the profile connection state. |
+
 ### Enums
 
 | Name | Description |
@@ -113,11 +121,3 @@ import { ble } from '@kit.ConnectivityKit';
 | --- | --- |
 | [EnhanceMode](arkts-connectivity-ble-enhancemode-e-sys.md) | Scan enhance mode. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md) | Bluetooth device address. |
-| [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Indicate the transport of a remote device. |
-| [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md) | Indicate the profile connection state. |

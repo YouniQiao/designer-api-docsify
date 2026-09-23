@@ -4,7 +4,7 @@
 declare enum PlayMode
 ```
 
-Animation playback mode.
+Sets the animation playback mode.
 
 **Since:** 7
 

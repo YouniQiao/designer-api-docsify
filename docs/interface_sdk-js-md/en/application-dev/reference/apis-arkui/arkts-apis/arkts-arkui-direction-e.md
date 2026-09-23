@@ -4,7 +4,7 @@
 declare enum Direction
 ```
 
-Sets the horizontal layout of elements.
+Defines the horizontal layout direction of elements.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Sets the horizontal layout of elements.
 Ltr
 ```
 
-Elements are laid out from left to right.
+Components are arranged from left to right.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Elements are laid out from left to right.
 Rtl
 ```
 
-Elements are laid out from right to left.
+Components are arranged from right to left.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Elements are laid out from right to left.
 Auto
 ```
 
-Use the default layout direction.
+The default layout direction is used.
 
 **Since:** 7
 

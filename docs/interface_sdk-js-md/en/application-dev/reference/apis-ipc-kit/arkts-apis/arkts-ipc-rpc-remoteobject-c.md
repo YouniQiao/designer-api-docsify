@@ -18,57 +18,6 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 import { rpc } from '@kit.IPCKit';
 ```
 
-## attachLocalInterface
-
-```TypeScript
-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
-```
-
-Binds an interface descriptor to an **IRemoteBroker** object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | **IRemoteBroker** object. |
-| descriptor | string | Yes | Interface descriptor. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-    this.attachLocalInterface(this, descriptor);
-  }
-  addDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
-    // Implement the method logic based on service requirements.
-    return true;
-  }
-  removeDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
-    // Implement the method logic based on service requirements.
-    return true;
-  }
-}
-let testRemoteObject = new TestRemoteObject("testObject");
-```
-
 ## constructor
 
 ```TypeScript
@@ -232,54 +181,6 @@ try {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
   hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-## getInterfaceDescriptor
-
-```TypeScript
-getInterfaceDescriptor(): string
-```
-
-Obtains the interface descriptor.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | Interface descriptor obtained. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  let descriptor = testRemoteObject.getInterfaceDescriptor();
-  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 
@@ -655,111 +556,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
-## onRemoteRequest
-
-```TypeScript
-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
-```
-
-Called to return a response to **sendRequest()**. The server processes the request and returns a response in this function.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | number | Yes | Service request code sent by the remote end. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that holds the parameters called by the client. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object carrying the result. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-## queryLocalInterface
-
-```TypeScript
-queryLocalInterface(descriptor: string): IRemoteBroker
-```
-
-Checks whether the remote object corresponding to the specified interface token exists.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| descriptor | string | Yes | Interface descriptor. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns the remote object if a match is found; returns **Null** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  testRemoteObject.queryLocalInterface("testObject");
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
-
 ## sendMessageRequest
 
 ```TypeScript
@@ -923,6 +719,210 @@ try {
     });
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+## attachLocalInterface
+
+```TypeScript
+attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
+```
+
+Binds an interface descriptor to an **IRemoteBroker** object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [modifyLocalInterface](#modifylocalinterface)(localInterface: IRemoteBroker, descriptor: string)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | **IRemoteBroker** object. |
+| descriptor | string | Yes | Interface descriptor. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyDeathRecipient implements rpc.DeathRecipient {
+  onRemoteDied() {
+    hilog.info(0x0000, 'testTag', 'server died');
+  }
+}
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+    this.attachLocalInterface(this, descriptor);
+  }
+  addDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
+    // Implement the method logic based on service requirements.
+    return true;
+  }
+  removeDeathRecipient(recipient: MyDeathRecipient, flags: number): boolean {
+    // Implement the method logic based on service requirements.
+    return true;
+  }
+}
+let testRemoteObject = new TestRemoteObject("testObject");
+```
+
+## getInterfaceDescriptor
+
+```TypeScript
+getInterfaceDescriptor(): string
+```
+
+Obtains the interface descriptor.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Interface descriptor obtained. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let descriptor = testRemoteObject.getInterfaceDescriptor();
+  hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+## onRemoteRequest
+
+```TypeScript
+onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
+```
+
+Called to return a response to **sendRequest()**. The server processes the request and returns a response in this function.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [onRemoteMessageRequest](#onremotemessagerequest)(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| code | number | Yes | Service request code sent by the remote end. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object that holds the parameters called by the client. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | **MessageParcel** object carrying the result. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+## queryLocalInterface
+
+```TypeScript
+queryLocalInterface(descriptor: string): IRemoteBroker
+```
+
+Checks whether the remote object corresponding to the specified interface token exists.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor: string)
+
+**System capability:** SystemCapability.Communication.IPC.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| descriptor | string | Yes | Interface descriptor. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns the remote object if a match is found; returns **Null** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  testRemoteObject.queryLocalInterface("testObject");
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 

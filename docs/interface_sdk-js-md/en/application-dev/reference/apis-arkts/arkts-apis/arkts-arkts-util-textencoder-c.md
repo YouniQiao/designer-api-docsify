@@ -96,43 +96,6 @@ Creates a **TextEncoder** object.
 let textEncoder = util.TextEncoder.create("utf-8");
 ```
 
-## encode
-
-```TypeScript
-encode(input?: string): Uint8Array
-```
-
-Encodes the input content in to a Uint8Array object.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [encodeInto](#encodeinto)
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| input | string | No | String to encode. The default value is an empty string. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Uint8Array | Uint8Array object obtained. |
-
-**Examples**
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-let result = textEncoder.encode("\uD800¥¥");
-console.info("result = " + result);
-// Output: result = 237,160,128,194,165,194,165
-```
-
 ## encodeInto
 
 ```TypeScript
@@ -251,6 +214,43 @@ console.info("result.read = " + result.read);
 // Output: result.read = 4
 console.info("result.written = " + result.written);
 // Output: result.written = 4
+```
+
+## encode
+
+```TypeScript
+encode(input?: string): Uint8Array
+```
+
+Encodes the input content in to a Uint8Array object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [encodeInto](#encodeinto)
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| input | string | No | String to encode. The default value is an empty string. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Uint8Array | Uint8Array object obtained. |
+
+**Examples**
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encode("\uD800¥¥");
+console.info("result = " + result);
+// Output: result = 237,160,128,194,165,194,165
 ```
 
 ## encoding

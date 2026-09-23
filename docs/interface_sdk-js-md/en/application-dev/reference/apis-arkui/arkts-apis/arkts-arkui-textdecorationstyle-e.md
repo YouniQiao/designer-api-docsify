@@ -4,7 +4,7 @@
 declare enum TextDecorationStyle
 ```
 
-The style of the text decoration.
+Sets the style of the text decoration.
 
 **Since:** 12
 

@@ -29,7 +29,7 @@ Number of inserted pictures.
 ## REMOVED_PIC_COUNT
 
 ```TypeScript
-REMOVED_PIC_COUNT
+REMOVED_PIC_COUNT = 1
 ```
 
 Number of removed pictures.
@@ -43,7 +43,7 @@ Number of removed pictures.
 ## SHARED_SCREENSHOT_COUNT
 
 ```TypeScript
-SHARED_SCREENSHOT_COUNT
+SHARED_SCREENSHOT_COUNT = 2
 ```
 
 Number of times that a full-length image in a highlights album is shared.
@@ -57,7 +57,7 @@ Number of times that a full-length image in a highlights album is shared.
 ## SHARED_COVER_COUNT
 
 ```TypeScript
-SHARED_COVER_COUNT
+SHARED_COVER_COUNT = 3
 ```
 
 Number of times that a highlights cover is shared.
@@ -71,7 +71,7 @@ Number of times that a highlights cover is shared.
 ## RENAMED_COUNT
 
 ```TypeScript
-RENAMED_COUNT
+RENAMED_COUNT = 4
 ```
 
 Number of times that a highlights album is renamed.
@@ -85,7 +85,7 @@ Number of times that a highlights album is renamed.
 ## CHANGED_COVER_COUNT
 
 ```TypeScript
-CHANGED_COVER_COUNT
+CHANGED_COVER_COUNT = 5
 ```
 
 Number of times that a cover is changed.
@@ -113,7 +113,7 @@ Number of times that the pictures in a highlights album are played.
 ## RENDER_VIEWED_DURATION
 
 ```TypeScript
-RENDER_VIEWED_DURATION
+RENDER_VIEWED_DURATION = 101
 ```
 
 Time used to play the pictures in a highlights album.
@@ -127,7 +127,7 @@ Time used to play the pictures in a highlights album.
 ## ART_LAYOUT_VIEWED_TIMES
 
 ```TypeScript
-ART_LAYOUT_VIEWED_TIMES
+ART_LAYOUT_VIEWED_TIMES = 102
 ```
 
 Number of times that a highlights album is viewed.
@@ -141,7 +141,7 @@ Number of times that a highlights album is viewed.
 ## ART_LAYOUT_VIEWED_DURATION
 
 ```TypeScript
-ART_LAYOUT_VIEWED_DURATION
+ART_LAYOUT_VIEWED_DURATION = 103
 ```
 
 Time used to view a highlights album.

@@ -4,7 +4,7 @@
 declare enum HorizontalAlign
 ```
 
-HorizontalAlign enumeration description.
+Sets the horizontal alignment mode of child components.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ HorizontalAlign enumeration description.
 Start
 ```
 
-Aligns the start end in the language direction.
+Aligned with the start edge in the same direction as the language in use.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Aligns the start end in the language direction.
 Center
 ```
 
-Center alignment. The default alignment mode is used.
+Aligned with the center. This is the default alignment mode.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Center alignment. The default alignment mode is used.
 End
 ```
 
-Aligns the ends in the language direction.
+Aligned with the end edge in the same direction as the language in use.
 
 **Since:** 7
 

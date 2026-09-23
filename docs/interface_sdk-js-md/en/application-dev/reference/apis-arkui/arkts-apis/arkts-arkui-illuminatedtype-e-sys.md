@@ -4,7 +4,7 @@
 declare enum IlluminatedType
 ```
 
-Enum of Illuminated type
+Defines the illumination types, which specify whether a component can be illuminated by a light source and the type of illumination.
 
 **Since:** 11
 

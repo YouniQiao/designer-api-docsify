@@ -4,9 +4,7 @@
 declare enum EmbeddedType
 ```
 
-Enum of EmbeddedType
-
-@enum { number }
+Enumerates the types of the providers that can be started by the **EmbeddedComponent**.
 
 **Since:** 12
 
@@ -18,7 +16,7 @@ Enum of EmbeddedType
 EMBEDDED_UI_EXTENSION = 0
 ```
 
-The EmbeddedComponent show the UI in EmbeddedUIExtensionAbility.
+EmbeddedUIExtensionAbility.
 
 **Since:** 12
 

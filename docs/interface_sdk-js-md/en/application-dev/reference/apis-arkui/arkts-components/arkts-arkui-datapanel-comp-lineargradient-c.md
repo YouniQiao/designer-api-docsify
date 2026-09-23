@@ -16,7 +16,7 @@ LinearGradient class
 constructor(colorStops: ColorStop[])
 ```
 
-Creates a linear gradient color object.
+Describes the linear gradient.
 
 **Since:** 10
 

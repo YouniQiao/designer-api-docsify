@@ -4,7 +4,7 @@
 declare enum ListItemStyle
 ```
 
-Enumerates the card styles of the List component.
+Enumerates the card styles of the **ListItem** component.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ No style.
 CARD = 1
 ```
 
-Show default style.
+Default card style.
 
 **Since:** 10
 

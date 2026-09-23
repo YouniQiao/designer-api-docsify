@@ -692,52 +692,6 @@ try {
 }
 ```
 
-## setSystemLocale
-
-```TypeScript
-static setSystemLocale(locale: string): void
-```
-
-设置系统区域。
-
-**起始版本：** 9
-
-**废弃版本：** 20
-
-**需要权限：** ohos.permission.UPDATE_CONFIGURATION
-
-**系统能力：** SystemCapability.Global.I18n
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家或地区组成。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  i18n.System.setSystemLocale('zh-CN');  // 设置系统当前区域ID为 "zh-CN"
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.setSystemLocale failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## setSystemMeasurement
 
 ```TypeScript
@@ -1045,5 +999,51 @@ try {
 } catch(error) {
   let err: BusinessError = error as BusinessError;
   console.error(`call System.setUsingLocalDigit failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## setSystemLocale
+
+```TypeScript
+static setSystemLocale(locale: string): void
+```
+
+设置系统区域。
+
+**起始版本：** 9
+
+**废弃版本：** 20
+
+**需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家或地区组成。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemLocale('zh-CN');  // 设置系统当前区域ID为 "zh-CN"
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemLocale failed, error code: ${err.code}, message: ${err.message}.`);
 }
 ```

@@ -4,9 +4,7 @@
 export enum PhotoSource
 ```
 
-Enumeration of PhotoSource type
-
-@enum { int } PhotoSource
+Enumerates the sources of the image or video data.
 
 **Since:** 20
 

@@ -157,49 +157,6 @@ let router: Router = uiContext.getRouter();
 router.clear();
 ```
 
-## getLength
-
-```TypeScript
-getLength(): string
-```
-
-获取当前在页面栈内的页面数量。
-
-> **说明：** 
-> 
-> 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getstacksize)替代。
-
-**起始版本：** 10
-
-**废弃版本：** 23
-
-**替代接口：** [getStackSize](#getstacksize)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| string | 页面数量，页面栈支持最大数值是32。 |
-
-**示例**
-
-完整示例请参考[PushUrl](#pushurl)中的示例。
-
-```TypeScript
-import { Router , UIContext } from '@kit.ArkUI';
-let uiContext: UIContext = this.getUIContext();
-
-let router: Router = uiContext.getRouter();
-let size = router.getLength();        
-console.info('pages stack size = ' + size);
-```
-
 ## getParams
 
 ```TypeScript
@@ -1909,4 +1866,47 @@ try {
   let code = (error as BusinessError).code;
   console.error(`showAlertBeforeBackPage failed, code is ${code}, message is ${message}`);
 }
+```
+
+## getLength
+
+```TypeScript
+getLength(): string
+```
+
+获取当前在页面栈内的页面数量。
+
+> **说明：** 
+> 
+> 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getstacksize)替代。
+
+**起始版本：** 10
+
+**废弃版本：** 23
+
+**替代接口：** [getStackSize](#getstacksize)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 页面数量，页面栈支持最大数值是32。 |
+
+**示例**
+
+完整示例请参考[PushUrl](#pushurl)中的示例。
+
+```TypeScript
+import { Router , UIContext } from '@kit.ArkUI';
+let uiContext: UIContext = this.getUIContext();
+
+let router: Router = uiContext.getRouter();
+let size = router.getLength();        
+console.info('pages stack size = ' + size);
 ```

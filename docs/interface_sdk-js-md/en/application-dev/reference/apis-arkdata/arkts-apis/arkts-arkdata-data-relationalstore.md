@@ -105,6 +105,19 @@ import { relationalStore } from '@kit.ArkData';
 | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i-sys.md) | Defines the RDB store configuration. |
 <!--DelEnd-->
 
+### Types
+
+| Name | Description |
+| --- | --- |
+| [Assets](arkts-arkdata-relationalstore-assets-t.md) | Indicates several assets in one column |
+| [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md) | Indicates the primary key and UTC time of the modified rows. |
+| [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md) | The type of the priority key can be number or string |
+| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | Indicates a row of data with an array. |
+| [RowsData](arkts-arkdata-relationalstore-rowsdata-t.md) | Indicates multiple rows of data with an array. |
+| [UTCTime](arkts-arkdata-relationalstore-utctime-t.md) | The time is in UTC format. |
+| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record&lt;string, ValueType&gt; |
+| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | Indicates possible value types |
+
 ### Enums
 
 | Name | Description |
@@ -140,16 +153,3 @@ import { relationalStore } from '@kit.ArkData';
 | [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md) | Describes the data origin sources. |
 | [HAMode](arkts-arkdata-relationalstore-hamode-e-sys.md) | Enumerates the high availability modes of the RDB store. |
 <!--DelEnd-->
-
-### Types
-
-| Name | Description |
-| --- | --- |
-| [Assets](arkts-arkdata-relationalstore-assets-t.md) | Indicates several assets in one column |
-| [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md) | Indicates the primary key and UTC time of the modified rows. |
-| [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md) | The type of the priority key can be number or string |
-| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | Indicates a row of data with an array. |
-| [RowsData](arkts-arkdata-relationalstore-rowsdata-t.md) | Indicates multiple rows of data with an array. |
-| [UTCTime](arkts-arkdata-relationalstore-utctime-t.md) | The time is in UTC format. |
-| [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) | Values in buckets are stored in key-value pairs, change {[key: string]: ValueType;} to Record&lt;string, ValueType&gt; |
-| [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) | Indicates possible value types |

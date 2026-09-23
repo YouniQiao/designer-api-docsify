@@ -6,7 +6,7 @@ type Usage = 'unknown' | 'alarm' | 'ring' | 'notification' | 'communication''tou
 
 Enumerates the vibration scenarios.
 
-&lt;!--RP1End--&gt;
+<!--RP1End-->
 
 **Since:** 9
 

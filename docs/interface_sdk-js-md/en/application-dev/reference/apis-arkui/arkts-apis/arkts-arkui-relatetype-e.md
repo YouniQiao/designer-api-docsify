@@ -4,7 +4,7 @@
 declare enum RelateType
 ```
 
-RelateType enumeration description
+Sets the padding mode of a child component.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ RelateType enumeration description
 FILL
 ```
 
-Scales the current component to fill the parent component.
+The current child component is scaled to fill the parent component.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ Scales the current component to fill the parent component.
 FIT
 ```
 
-Scales the current component to fit the parent component.
+The current child component is scaled to adapt to the parent component.
 
 **Since:** 7
 

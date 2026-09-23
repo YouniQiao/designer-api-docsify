@@ -693,32 +693,6 @@ Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Gri
 | --- | --- | --- | --- |
 | event | () =&gt; void | 是 | 网格到达起始位置时触发的回调。 |
 
-## onScroll
-
-```TypeScript
-onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
-```
-
-网格滑动时触发。
-
-**起始版本：** 10
-
-**废弃版本：** 12
-
-**替代接口：** onDidScroll
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 网格滚动回调，scrollOffset为每帧滚动偏移量，ScrollState为当前滑动状态。 |
-
 ## onScrollBarUpdate
 
 ```TypeScript
@@ -1088,3 +1062,29 @@ syncLoad(enable: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 是否同步加载Grid区域内所有子组件。<br> true表示同步加载，false表示异步加载。默认值：true。<br> **说明：** <br>设置为false时，在首次显示、不带动画scrollToIndex跳转场景，若当帧布局耗时超过50ms，会将Grid区域内尚未布局的子组件延后到下一帧进行布局。 |
+
+## onScroll
+
+```TypeScript
+onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
+```
+
+网格滑动时触发。
+
+**起始版本：** 10
+
+**废弃版本：** 12
+
+**替代接口：** onDidScroll
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 网格滚动回调，scrollOffset为每帧滚动偏移量，ScrollState为当前滑动状态。 |

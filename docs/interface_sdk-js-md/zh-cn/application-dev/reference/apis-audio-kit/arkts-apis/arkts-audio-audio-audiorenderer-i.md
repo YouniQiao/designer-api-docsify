@@ -1047,122 +1047,6 @@ try {
 }
 ```
 
-## getRenderRate
-
-```TypeScript
-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
-```
-
-获取音频渲染速率。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 11
-
-**替代接口：** [getSpeed](#getspeed)
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | 是 | 回调函数。当获取当前渲染速率成功，err为undefined，data为获取到的当前渲染速率；否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate((err: BusinessError, renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-});
-```
-
-<a id="getrenderrate-1"></a>
-
-## getRenderRate
-
-```TypeScript
-getRenderRate(): Promise<AudioRendererRate>
-```
-
-获取音频渲染速率。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 11
-
-**替代接口：** [getSpeed](#getspeed)
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Promise对象，返回渲染速率。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.getRenderRate().then((renderRate: audio.AudioRendererRate) => {
-  console.info(`getRenderRate: ${renderRate}`);
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
-## getRenderRateSync
-
-```TypeScript
-getRenderRateSync(): AudioRendererRate
-```
-
-获取音频渲染速率。同步返回结果。
-
-> **说明：** 
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
-
-**起始版本：** 10
-
-**废弃版本：** 11
-
-**替代接口：** [getSpeed](#getspeed)
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 返回渲染速率。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let renderRate: audio.AudioRendererRate = audioRenderer.getRenderRateSync();
-  console.info(`getRenderRate: ${renderRate}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## getSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -2612,93 +2496,6 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 audioRenderer.setLoudnessGain(1.0);
 ```
 
-## setRenderRate
-
-```TypeScript
-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
-```
-
-设置音频渲染速率。使用callback异步回调。
-
-> **说明：** 
-> 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 11
-
-**替代接口：** setSpeed
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 是 | 渲染的速率。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音频渲染速率成功，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error('Failed to set params');
-  } else {
-    console.info('Callback invoked to indicate a successful render rate setting.');
-  }
-});
-```
-
-<a id="setrenderrate-1"></a>
-
-## setRenderRate
-
-```TypeScript
-setRenderRate(rate: AudioRendererRate): Promise<void>
-```
-
-设置音频渲染速率。使用Promise异步回调。
-
-> **说明：** 
-> 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
-
-**起始版本：** 8
-
-**废弃版本：** 11
-
-**替代接口：** setSpeed
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 是 | 渲染的速率。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() => {
-  console.info('setRenderRate SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`ERROR: ${err}`);
-});
-```
-
 ## setSilentModeAndMixWithOthers
 
 ```TypeScript
@@ -2984,6 +2781,209 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 audioRenderer.stop().then(() => {
   console.info('Renderer stopped successfully');
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+## getRenderRate
+
+```TypeScript
+getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
+```
+
+获取音频渲染速率。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 11
+
+**替代接口：** [getSpeed](#getspeed)
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | 是 | 回调函数。当获取当前渲染速率成功，err为undefined，data为获取到的当前渲染速率；否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getRenderRate((err: BusinessError, renderRate: audio.AudioRendererRate) => {
+  console.info(`getRenderRate: ${renderRate}`);
+});
+```
+
+<a id="getrenderrate-1"></a>
+
+## getRenderRate
+
+```TypeScript
+getRenderRate(): Promise<AudioRendererRate>
+```
+
+获取音频渲染速率。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 11
+
+**替代接口：** [getSpeed](#getspeed)
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Promise对象，返回渲染速率。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.getRenderRate().then((renderRate: audio.AudioRendererRate) => {
+  console.info(`getRenderRate: ${renderRate}`);
+}).catch((err: BusinessError) => {
+  console.error(`ERROR: ${err}`);
+});
+```
+
+## getRenderRateSync
+
+```TypeScript
+getRenderRateSync(): AudioRendererRate
+```
+
+获取音频渲染速率。同步返回结果。
+
+> **说明：** 
+> 
+> 从 API version 10开始支持，从API version 11开始废弃。建议使用[getSpeed](#getspeed)替代。
+
+**起始版本：** 10
+
+**废弃版本：** 11
+
+**替代接口：** [getSpeed](#getspeed)
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 返回渲染速率。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let renderRate: audio.AudioRendererRate = audioRenderer.getRenderRateSync();
+  console.info(`getRenderRate: ${renderRate}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
+## setRenderRate
+
+```TypeScript
+setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
+```
+
+设置音频渲染速率。使用callback异步回调。
+
+> **说明：** 
+> 
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 11
+
+**替代接口：** setSpeed
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 是 | 渲染的速率。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音频渲染速率成功，err为undefined，否则为错误对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL, (err: BusinessError) => {
+  if (err) {
+    console.error('Failed to set params');
+  } else {
+    console.info('Callback invoked to indicate a successful render rate setting.');
+  }
+});
+```
+
+<a id="setrenderrate-1"></a>
+
+## setRenderRate
+
+```TypeScript
+setRenderRate(rate: AudioRendererRate): Promise<void>
+```
+
+设置音频渲染速率。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用[setSpeed](#setspeed)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 11
+
+**替代接口：** setSpeed
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rate | [AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md) | 是 | 渲染的速率。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() => {
+  console.info('setRenderRate SUCCESS');
 }).catch((err: BusinessError) => {
   console.error(`ERROR: ${err}`);
 });

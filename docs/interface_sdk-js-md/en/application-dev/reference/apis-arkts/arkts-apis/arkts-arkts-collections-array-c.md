@@ -889,7 +889,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is the ArkTS Int8Array length minus 1 (i.e., starting from the end). If the index is greater than or equal to the length of the ArkTS array, **-1** is returned. If a negative number is passed in, it refers to the index of **fromIndex + array.length**. |
+| fromIndex | number | No | Index from which the search starts. The default value is the ArkTS array length minus 1 (i.e., starting from the end). If the index is greater than or equal to the length of the ArkTS array, **-1** is returned. If a negative number is passed in, it refers to the index of **fromIndex + array.length**. |
 
 **Return value:**
 

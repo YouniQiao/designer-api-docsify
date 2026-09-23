@@ -4,9 +4,7 @@
 export enum SingleSelectionMode
 ```
 
-Enumeration type of single selection mode
-
-@enum { number } SingleSelectionMode
+Enumerates the single selection mode types.
 
 **Since:** 18
 

@@ -8,8 +8,8 @@ Defines the controller for controlling the **TextTimer** component. A **TextTime
 
 ## Objects to Import
 
-```ts
-textTimerController: TextTimerController = new TextTimerController()
+``` ts
+textTimerController: TextTimerController = new TextTimerController();
 ```
 
 **Since:** 8
@@ -38,7 +38,7 @@ A constructor used to create a **TextTimerController** object.
 pause()
 ```
 
-Pauses the timer.
+Pauses the timer. This API must be called after the component is created.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Pauses the timer.
 reset()
 ```
 
-Resets the timer.
+Resets the timer. This API must be called after the component is created.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Resets the timer.
 start()
 ```
 
-Starts the timer.
+Starts the timer. This API must be called after the **TextTimer** component is created and the controller is bound.
 
 **Since:** 8
 

@@ -4,7 +4,7 @@
 declare class AppearSymbolEffect extends SymbolEffect
 ```
 
-Defines AppearSymbolEffect class, which inherits from **SymbolEffect**.
+Inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-comp-symboleffect-c.md)
 
@@ -34,7 +34,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
+| scope | [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md) | No | Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.<br>Default value: EffectScope.LAYER |
 
 ## scope
 
@@ -42,9 +42,9 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 scope?: EffectScope
 ```
 
-Effect scope.
+Animation scope. For details about the specific enumeration values and descriptions, see EffectScope Enumeration Description.
 
-Default value: **EffectScope.LAYER**
+Default value: EffectScope.LAYER
 
 **Type:** [EffectScope](arkts-arkui-symbolglyph-comp-effectscope-e.md)
 

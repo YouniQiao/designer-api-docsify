@@ -247,80 +247,6 @@ try {
 }
 ```
 
-## destroy
-
-```TypeScript
-destroy(callback: AsyncCallback<void>): void
-```
-
-Destroys this window. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.destroy((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (err.code) {
-    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the window.');
-});
-```
-
-<a id="destroy-1"></a>
-
-## destroy
-
-```TypeScript
-destroy(): Promise<void>
-```
-
-Destroys this window. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [destroyWindow](#destroywindow)()
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.destroy();
-promise.then(() => {
-  console.info('Succeeded in destroying the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## destroyWindow
 
 ```TypeScript
@@ -577,193 +503,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## getAvoidArea
-
-```TypeScript
-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
-```
-
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
-
-Main window/Child window:
-
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-windowClass.getAvoidArea(type, (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-let promise = windowClass.getAvoidArea(type);
-promise.then((data) => {
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="getavoidarea-1"></a>
-
-## getAvoidArea
-
-```TypeScript
-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
-```
-
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
-
-Main window/Child window:
-
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
-
-Global floating window, modal window, or system window:
-
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Promise used to return the area. |
-
-**Examples**
-
-See [getAvoidArea](#getavoidarea)
-
-## getColorSpace
-
-```TypeScript
-getColorSpace(): Promise<ColorSpace>
-```
-
-Obtains the color space of this window. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise used to return the current color space. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getColorSpace();
-promise.then((data) => {
-  console.info('Succeeded in getting window color space. Cause:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="getcolorspace-1"></a>
-
-## getColorSpace
-
-```TypeScript
-getColorSpace(callback: AsyncCallback<ColorSpace>): void
-```
-
-Obtains the color space of this window. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Yes | Callback used to return the result. When the color space is obtained successfully, **err** is **undefined**, and **data** is the current color space. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getColorSpace((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting window colorspace. Cause:' + JSON.stringify(data));
-});
-```
-
 ## getDecorButtonStyle
 
 ```TypeScript
@@ -983,80 +722,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 };
-```
-
-## getProperties
-
-```TypeScript
-getProperties(callback: AsyncCallback<WindowProperties>): void
-```
-
-Obtains the properties of this window. This API uses an asynchronous callback to return the result.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowProperties](#getwindowproperties)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes | Callback used to return the window properties. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getProperties((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-});
-```
-
-<a id="getproperties-1"></a>
-
-## getProperties
-
-```TypeScript
-getProperties(): Promise<WindowProperties>
-```
-
-Obtains the properties of this window. This API uses a promise to return the result.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [getWindowProperties](#getwindowproperties)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Promise used to return the window properties. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getProperties();
-promise.then((data) => {
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-});
 ```
 
 ## getStatusBarProperty
@@ -2299,154 +1964,6 @@ try {
 }
 ```
 
-## isShowing
-
-```TypeScript
-isShowing(callback: AsyncCallback<boolean>): void
-```
-
-Checks whether this window is displayed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [isWindowShowing](#iswindowshowing)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isShowing((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-});
-```
-
-<a id="isshowing-1"></a>
-
-## isShowing
-
-```TypeScript
-isShowing(): Promise<boolean>
-```
-
-Checks whether this window is displayed. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [isWindowShowing](#iswindowshowing)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the window is displayed, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isShowing();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## isSupportWideGamut
-
-```TypeScript
-isSupportWideGamut(): Promise<boolean>
-```
-
-Checks whether this window supports the wide-gamut color space. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isSupportWideGamut();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window support WideGamut. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="issupportwidegamut-1"></a>
-
-## isSupportWideGamut
-
-```TypeScript
-isSupportWideGamut(callback: AsyncCallback<boolean>): void
-```
-
-Checks whether this window supports the wide-gamut color space. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isSupportWideGamut((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window support WideGamut Data: ' + JSON.stringify(data));
-});
-```
-
 ## isSystemAvoidAreaEnabled
 
 ```TypeScript
@@ -3427,93 +2944,6 @@ promise.then(() => {
 });
 ```
 
-## moveTo
-
-```TypeScript
-moveTo(x: number, y: number): Promise<void>
-```
-
-Moves this window. This API uses a promise to return the result.
-
-This operation is not supported in a window in full-screen mode.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the y-axis origin. The value must be an integer. Non-integer values are rounded down. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.moveTo(300, 300);
-promise.then(() => {
-  console.info('Succeeded in moving the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="moveto-1"></a>
-
-## moveTo
-
-```TypeScript
-moveTo(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-Moves this window. This API uses an asynchronous callback to return the result.
-
-This operation is not supported in a window in full-screen mode.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.moveTo(300, 300, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in moving the window.');
-});
-```
-
 ## moveWindowTo
 
 ```TypeScript
@@ -4202,41 +3632,6 @@ try {
 } catch (exception) {
   console.error(`Failed to disable the listener for window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
-```
-
-## off('systemAvoidAreaChange')
-
-```TypeScript
-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
-```
-
-Unsubscribes from the event indicating changes to the area where this window cannot be displayed.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | No | Callback used to return the area. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
-
-**Examples**
-
-```TypeScript
-const callback = (avoidArea: window.AvoidArea) => {
-  // ...
-}
-windowClass.on('systemAvoidAreaChange', callback);
-windowClass.off('systemAvoidAreaChange', callback);
-// Unregister all the callbacks that have been registered through on().
-windowClass.off('systemAvoidAreaChange');
 ```
 
 ## off('avoidAreaChange')
@@ -5356,6 +4751,41 @@ try {
 }
 ```
 
+## off('systemAvoidAreaChange')
+
+```TypeScript
+off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
+```
+
+Unsubscribes from the event indicating changes to the area where this window cannot be displayed.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | No | Callback used to return the area. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+
+**Examples**
+
+```TypeScript
+const callback = (avoidArea: window.AvoidArea) => {
+  // ...
+}
+windowClass.on('systemAvoidAreaChange', callback);
+windowClass.off('systemAvoidAreaChange', callback);
+// Unregister all the callbacks that have been registered through on().
+windowClass.off('systemAvoidAreaChange');
+```
+
 ## offWindowFocusStateChange
 
 ```TypeScript
@@ -5685,37 +5115,6 @@ try {
 }
 ```
 
-## on('systemAvoidAreaChange')
-
-```TypeScript
-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
-```
-
-Subscribes to the event indicating changes to the area where this window cannot be displayed.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
-
-**Examples**
-
-```TypeScript
-windowClass.on('systemAvoidAreaChange', (data) => {
-  console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
-});
-```
-
 ## on('avoidAreaChange')
 
 ```TypeScript
@@ -5739,7 +5138,7 @@ Global floating window, modal window, or system window:
 
 - The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
 
-&lt;!--RP7--&gt;Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.&lt;!--RP7End--&gt;
+<!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
 **Since:** 9
 
@@ -6776,6 +6175,37 @@ try {
 }
 ```
 
+## on('systemAvoidAreaChange')
+
+```TypeScript
+on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
+```
+
+Subscribes to the event indicating changes to the area where this window cannot be displayed.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
+
+**Examples**
+
+```TypeScript
+windowClass.on('systemAvoidAreaChange', (data) => {
+  console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
+});
+```
+
 ## onWindowFocusStateChange
 
 ```TypeScript
@@ -7118,117 +6548,6 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
-```
-
-## resetSize
-
-```TypeScript
-resetSize(width: number, height: number): Promise<void>
-```
-
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
-
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
-
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
-
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This operation is not supported in a window in full-screen mode.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [resize](#resize)(width: number, height: number)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
-| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.resetSize(500, 1000);
-promise.then(() => {
-  console.info('Succeeded in changing the window size.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="resetsize-1"></a>
-
-## resetSize
-
-```TypeScript
-resetSize(width: number, height: number, callback: AsyncCallback<void>): void
-```
-
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
-
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
-
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
-
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
-
-The new window width and height you set must meet the following limits:
-
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
-
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-
-This operation is not supported in a window in full-screen mode.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
-| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.resetSize(500, 1000, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in changing the window size.');
-});
 ```
 
 ## resize
@@ -7789,257 +7108,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setBackgroundColor
-
-```TypeScript
-setBackgroundColor(color: string): Promise<void>
-```
-
-Sets the background color for this window. This API uses a promise to return the result. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-let promise = windowClass.setBackgroundColor(color);
-promise.then(() => {
-  console.info('Succeeded in setting the background color.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setbackgroundcolor-1"></a>
-
-## setBackgroundColor
-
-```TypeScript
-setBackgroundColor(color: string, callback: AsyncCallback<void>): void
-```
-
-Sets the background color for this window. This API uses an asynchronous callback to return the result. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-windowClass.setBackgroundColor(color, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the background color.');
-});
-```
-
-## setBrightness
-
-```TypeScript
-setBrightness(brightness: number): Promise<void>
-```
-
-Sets the screen brightness for this window. This API uses a promise to return the result.
-
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-let promise = windowClass.setBrightness(brightness);
-promise.then(() => {
-  console.info('Succeeded in setting the brightness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setbrightness-1"></a>
-
-## setBrightness
-
-```TypeScript
-setBrightness(brightness: number, callback: AsyncCallback<void>): void
-```
-
-Sets the screen brightness for this window. This API uses an asynchronous callback to return the result.
-
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-windowClass.setBrightness(brightness, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the brightness.');
-});
-```
-
-## setColorSpace
-
-```TypeScript
-setColorSpace(colorSpace: ColorSpace): Promise<void>
-```
-
-Sets a color space for this window. This API uses a promise to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space to set. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT);
-promise.then(() => {
-  console.info('Succeeded in setting window colorspace.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setcolorspace-1"></a>
-
-## setColorSpace
-
-```TypeScript
-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
-```
-
-Sets a color space for this window. This API uses an asynchronous callback to return the result.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting window colorspace.');
-});
-```
-
 ## setContentAspectRatio
 
 ```TypeScript
@@ -8276,83 +7344,6 @@ struct Index {
 }
 ```
 
-## setDimBehind
-
-```TypeScript
-setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
-```
-
-Sets the dimness of the window that is not on top. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dimBehindValue | number | Yes | Dimness of the window to set. The value range is [0.0, 1.0], and the value **1.0** means the dimmest. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setDimBehind(0.5, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the dimness.');
-});
-```
-
-<a id="setdimbehind-1"></a>
-
-## setDimBehind
-
-```TypeScript
-setDimBehind(dimBehindValue: number): Promise<void>
-```
-
-Sets the dimness of the window that is not on top. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| dimBehindValue | number | Yes | Dimness of the window to set. The value ranges from 0 to 1. The value **1** indicates the dimmest. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setDimBehind(0.5);
-promise.then(() => {
-  console.info('Succeeded in setting the dimness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setDragKeyFramePolicy
 
 ```TypeScript
@@ -8530,89 +7521,6 @@ try {
 }
 ```
 
-## setFocusable
-
-```TypeScript
-setFocusable(isFocusable: boolean): Promise<void>
-```
-
-Sets whether this window is focusable, that is, whether the window can gain focus after it is being clicked or using other methods. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-let promise = windowClass.setFocusable(isFocusable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be focusable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setfocusable-1"></a>
-
-## setFocusable
-
-```TypeScript
-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether this window is focusable, that is, whether the window can gain focus after it is being operated or using other methods. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-windowClass.setFocusable(isFocusable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be focusable.');
-});
-```
-
 ## setFollowParentMultiScreenPolicy
 
 ```TypeScript
@@ -8751,147 +7659,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setFullScreen
-
-```TypeScript
-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result.
-
-Full-screen mode means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
-
-Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
-> to implement the full-screen mode.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;). **true** to set full-screen mode, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      windowClass.setFullScreen(isFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in enabling the full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-<a id="setfullscreen-1"></a>
-
-## setFullScreen
-
-```TypeScript
-setFullScreen(isFullScreen: boolean): Promise<void>
-```
-
-Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result.
-
-Full-screen mode means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
-
-Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
-> to implement the full-screen mode.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;). **true** to set full-screen mode, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      let promise = windowClass.setFullScreen(isFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in enabling the full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## setGestureBackEnabled
 
 ```TypeScript
@@ -9010,299 +7777,6 @@ try {
 }
 ```
 
-## setKeepScreenOn
-
-```TypeScript
-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
-```
-
-Sets whether to keep the screen always on. This API uses a promise to return the result.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-let promise = windowClass.setKeepScreenOn(isKeepScreenOn);
-promise.then(() => {
-  console.info('Succeeded in setting the screen to be always on.');
-}).catch((err: BusinessError) => {
-  console.info(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setkeepscreenon-1"></a>
-
-## setKeepScreenOn
-
-```TypeScript
-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-windowClass.setKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the screen to be always on.');
-});
-```
-
-## setLayoutFullScreen
-
-```TypeScript
-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result.
-
-An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;.) **true** if immersive, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      windowClass.setLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-<a id="setlayoutfullscreen-1"></a>
-
-## setLayoutFullScreen
-
-```TypeScript
-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
-```
-
-Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result.
-
-An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt;.) **true** if immersive, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      let promise = windowClass.setLayoutFullScreen(isLayoutFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-## setOutsideTouchable
-
-```TypeScript
-setOutsideTouchable(touchable: boolean): Promise<void>
-```
-
-Sets whether the area outside the child window is touchable. This API uses a promise to return the result.
-
-> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
-> supported and no substitute API is provided.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setOutsideTouchable(true);
-promise.then(() => {
-  console.info('Succeeded in setting the area to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setoutsidetouchable-1"></a>
-
-## setOutsideTouchable
-
-```TypeScript
-setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether the area outside the child window is touchable. This API uses an asynchronous callback to return the result.
-
-> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
-> supported and no substitute API is provided.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setOutsideTouchable(true, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the area to be touchable.');
-});
-```
-
 ## setParentWindow
 
 ```TypeScript
@@ -9371,9 +7845,9 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 
 Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window.
 
-Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
+Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
 
-Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 9
 
@@ -9446,9 +7920,9 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 
 Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see [Display Orientation Switching](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-landscape-and-portrait-development).
 
-Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
+Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
 
-Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
+Starting from <!--RP1-->OpenHarmony 6.1<!--RP1End-->, this API can be called by the main window and the system window with **WindowType** set to **TYPE_WALLET_SWIPE_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set, the last orientation request will be restored. When the display orientation is set for the system window whose **WindowType** is **TYPE_WALLET_SWIPE_CARD** and takes effect, the foreground application will transition to the background.
 
 **Since:** 9
 
@@ -9577,89 +8051,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 }
-```
-
-## setPrivacyMode
-
-```TypeScript
-setPrivacyMode(isPrivacyMode: boolean): Promise<void>
-```
-
-Sets whether this window is in privacy mode. This API uses a promise to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-let promise = windowClass.setPrivacyMode(isPrivacyMode);
-promise.then(() => {
-  console.info('Succeeded in setting the window to privacy mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="setprivacymode-1"></a>
-
-## setPrivacyMode
-
-```TypeScript
-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-windowClass.setPrivacyMode(isPrivacyMode, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to privacy mode.');
-});
 ```
 
 <a id="setraisebyclickenabled-1"></a>
@@ -10044,9 +8435,9 @@ try {
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-Sets whether to show or hide the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; of the main window. This API uses a promise to return the result.
+Sets whether to show or hide the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> of the main window. This API uses a promise to return the result.
 
-The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 11
 
@@ -10538,270 +8929,6 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setSystemBarEnable
-
-```TypeScript
-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
-```
-
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses an asynchronous callback to return the result.
-
-From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt;
-
-The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-// The following assumes that all of them are hidden.
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      windowClass.setSystemBarEnable(names, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar to be invisible.');
-      });
-    });
-  }
-}
-```
-
-<a id="setsystembarenable-1"></a>
-
-## setSystemBarEnable
-
-```TypeScript
-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
-```
-
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses a promise to return the result.
-
-From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt;
-
-The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-// The following assumes that all of them are hidden.
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      let promise = windowClass.setSystemBarEnable(names);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar to be invisible.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-## setSystemBarProperties
-
-```TypeScript
-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
-```
-
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt;
-
-This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let SystemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // The following properties are supported since API version 8.
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      windowClass.setSystemBarProperties(SystemBarProperties, (err) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar properties.');
-      });
-    });
-  }
-}
-```
-
-<a id="setsystembarproperties-1"></a>
-
-## setSystemBarProperties
-
-```TypeScript
-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
-```
-
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.<!--RP5 End-->
-
-This API does not take effect when it is called by a child window.
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let SystemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // The following properties are supported since API version 8.
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      let promise = windowClass.setSystemBarProperties(SystemBarProperties);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar properties.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## setTitleAndDockHoverShown
 
 ```TypeScript
@@ -10873,89 +9000,6 @@ export default class EntryAbility extends UIAbility {
     });
   }
 }
-```
-
-## setTouchable
-
-```TypeScript
-setTouchable(isTouchable: boolean): Promise<void>
-```
-
-Sets whether this window is touchable. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-let promise = windowClass.setTouchable(isTouchable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-<a id="settouchable-1"></a>
-
-## setTouchable
-
-```TypeScript
-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether this window is touchable. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-windowClass.setTouchable(isTouchable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be touchable.');
-});
 ```
 
 ## setTouchableAreas
@@ -12018,81 +10062,6 @@ try {
 }
 ```
 
-## setWindowLayoutFullScreen
-
-```TypeScript
-setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
-```
-
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window.
-
-An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them.
-
-A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (In immersive layout mode, the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; remain visible.) **true** if immersive, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen = true;
-      try {
-        windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the window layout to full-screen mode.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 <a id="setwindowlayoutfullscreen-1"></a>
 
 ## setWindowLayoutFullScreen
@@ -12103,9 +10072,9 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported.
 
-An immersive layout means that the layout does not avoid the status bar or &lt;!--RP15--&gt;three-button navigation bar &lt;!--RP15End--&gt;, and components may overlap with them.
+An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
 
-A non-immersive layout means that the layout avoids the status bar and &lt;!--RP15--&gt;three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
 
 **Since:** 9
 
@@ -12160,6 +10129,81 @@ export default class EntryAbility extends UIAbility {
           console.info('Succeeded in setting the window layout to full-screen mode.');
         }).catch((err: BusinessError) => {
           console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
+## setWindowLayoutFullScreen
+
+```TypeScript
+setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window.
+
+An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
+
+A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (In immersive layout mode, the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> remain visible.) **true** if immersive, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen = true;
+      try {
+        windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
+          const errCode: number = err.code;
+          if (errCode) {
+            console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in setting the window layout to full-screen mode.');
         });
       } catch (exception) {
         console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -12630,82 +10674,6 @@ try {
 }
 ```
 
-## setWindowSystemBarEnable
-
-```TypeScript
-setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
-```
-
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses an asynchronous callback to return the result.
-
-From API version 12, &lt;!--RP5--&gt;this API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt;
-
-The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
-
-**Since:** 9
-
-**Deprecated since:** 12
-
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-
-**Examples**
-
-```TypeScript
-// The following assumes that all of them are hidden.
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      try {
-        windowClass.setWindowSystemBarEnable(names, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the system bar to be invisible.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 <a id="setwindowsystembarenable-1"></a>
 
 ## setWindowSystemBarEnable
@@ -12714,9 +10682,9 @@ export default class EntryAbility extends UIAbility {
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-&lt;!--RP14--&gt;Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.&lt;!--RP14End--&gt; This API uses a promise to return the result.
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.
 
-The return value does not indicate that the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
 
 **Since:** 9
 
@@ -12781,21 +10749,23 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## setWindowSystemBarProperties
+## setWindowSystemBarEnable
 
 ```TypeScript
-setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. &lt;!--RP5--&gt;This API does not take effect on 2-in-1 devices.&lt;!--RP5End--&gt;
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.
 
-This API does not take effect when it is called by a child window.
+From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
+
+The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -12805,21 +10775,21 @@ This API does not take effect when it is called by a child window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
 **Examples**
 
 ```TypeScript
+// The following assumes that all of them are hidden.
 // EntryAbility.ets
 import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -12837,24 +10807,18 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       windowClass = data;
-      let SystemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // The following properties are supported since API version 8.
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
+      let names: Array<'status' | 'navigation'> = [];
       try {
-        windowClass.setWindowSystemBarProperties(SystemBarProperties, (err: BusinessError) => {
+        windowClass.setWindowSystemBarEnable(names, (err: BusinessError) => {
           const errCode: number = err.code;
           if (errCode) {
-            console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+            console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
             return;
           }
-          console.info('Succeeded in setting the system bar properties.');
+          console.info('Succeeded in setting the system bar to be invisible.');
         });
       } catch (exception) {
-        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
+        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
       }
     });
   }
@@ -12932,6 +10896,86 @@ export default class EntryAbility extends UIAbility {
           console.info('Succeeded in setting the system bar properties.');
         }).catch((err: BusinessError) => {
           console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+        });
+      } catch (exception) {
+        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
+      }
+    });
+  }
+}
+```
+
+## setWindowSystemBarProperties
+
+```TypeScript
+setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+```
+
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->
+
+This API does not take effect when it is called by a child window.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let SystemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // The following properties are supported since API version 8.
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      try {
+        windowClass.setWindowSystemBarProperties(SystemBarProperties, (err: BusinessError) => {
+          const errCode: number = err.code;
+          if (errCode) {
+            console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in setting the system bar properties.');
         });
       } catch (exception) {
         console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
@@ -13392,80 +11436,6 @@ export default class EntryAbility extends UIAbility {
     })
   }
 }
-```
-
-## show
-
-```TypeScript
-show(callback: AsyncCallback<void>): void
-```
-
-Shows this window. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.show((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in showing the window.');
-});
-```
-
-<a id="show-1"></a>
-
-## show
-
-```TypeScript
-show(): Promise<void>
-```
-
-Shows this window. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [showWindow](#showwindow)()
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.show();
-promise.then(() => {
-  console.info('Succeeded in showing the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-});
 ```
 
 ## showWindow
@@ -14148,4 +12118,2034 @@ export default class EntryAbility extends UIAbility {
     }
   }
 }
+```
+
+## destroy
+
+```TypeScript
+destroy(callback: AsyncCallback<void>): void
+```
+
+Destroys this window. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.destroy((err: BusinessError) => {
+  const errCode: number = err.code;
+  if (err.code) {
+    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in destroying the window.');
+});
+```
+
+<a id="destroy-1"></a>
+
+## destroy
+
+```TypeScript
+destroy(): Promise<void>
+```
+
+Destroys this window. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [destroyWindow](#destroywindow)()
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.destroy();
+promise.then(() => {
+  console.info('Succeeded in destroying the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## getAvoidArea
+
+```TypeScript
+getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
+```
+
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
+
+Main window/Child window:
+
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+
+Global floating window, modal window, or system window:
+
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes | Callback used to return the area. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let type = window.AvoidAreaType.TYPE_SYSTEM;
+windowClass.getAvoidArea(type, (err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let type = window.AvoidAreaType.TYPE_SYSTEM;
+let promise = windowClass.getAvoidArea(type);
+promise.then((data) => {
+  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="getavoidarea-1"></a>
+
+## getAvoidArea
+
+```TypeScript
+getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
+```
+
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area. This API uses an asynchronous callback to return the result.
+
+Main window/Child window:
+
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+
+Global floating window, modal window, or system window:
+
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowAvoidArea](#getwindowavoidarea)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Promise used to return the area. |
+
+**Examples**
+
+See [getAvoidArea](#getavoidarea)
+
+## getColorSpace
+
+```TypeScript
+getColorSpace(): Promise<ColorSpace>
+```
+
+Obtains the color space of this window. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Promise used to return the current color space. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.getColorSpace();
+promise.then((data) => {
+  console.info('Succeeded in getting window color space. Cause:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="getcolorspace-1"></a>
+
+## getColorSpace
+
+```TypeScript
+getColorSpace(callback: AsyncCallback<ColorSpace>): void
+```
+
+Obtains the color space of this window. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowColorSpace](#getwindowcolorspace)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorSpace](arkts-arkui-window-colorspace-e.md)&gt; | Yes | Callback used to return the result. When the color space is obtained successfully, **err** is **undefined**, and **data** is the current color space. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.getColorSpace((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting window colorspace. Cause:' + JSON.stringify(data));
+});
+```
+
+## getProperties
+
+```TypeScript
+getProperties(callback: AsyncCallback<WindowProperties>): void
+```
+
+Obtains the properties of this window. This API uses an asynchronous callback to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowProperties](#getwindowproperties)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes | Callback used to return the window properties. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.getProperties((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
+});
+```
+
+<a id="getproperties-1"></a>
+
+## getProperties
+
+```TypeScript
+getProperties(): Promise<WindowProperties>
+```
+
+Obtains the properties of this window. This API uses a promise to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [getWindowProperties](#getwindowproperties)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Promise used to return the window properties. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.getProperties();
+promise.then((data) => {
+  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## isShowing
+
+```TypeScript
+isShowing(callback: AsyncCallback<boolean>): void
+```
+
+Checks whether this window is displayed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [isWindowShowing](#iswindowshowing)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.isShowing((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
+});
+```
+
+<a id="isshowing-1"></a>
+
+## isShowing
+
+```TypeScript
+isShowing(): Promise<boolean>
+```
+
+Checks whether this window is displayed. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [isWindowShowing](#iswindowshowing)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the window is displayed, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.isShowing();
+promise.then((data) => {
+  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## isSupportWideGamut
+
+```TypeScript
+isSupportWideGamut(): Promise<boolean>
+```
+
+Checks whether this window supports the wide-gamut color space. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.isSupportWideGamut();
+promise.then((data) => {
+  console.info('Succeeded in checking whether the window support WideGamut. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="issupportwidegamut-1"></a>
+
+## isSupportWideGamut
+
+```TypeScript
+isSupportWideGamut(callback: AsyncCallback<boolean>): void
+```
+
+Checks whether this window supports the wide-gamut color space. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.isSupportWideGamut((err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in checking whether the window support WideGamut Data: ' + JSON.stringify(data));
+});
+```
+
+## moveTo
+
+```TypeScript
+moveTo(x: number, y: number): Promise<void>
+```
+
+Moves this window. This API uses a promise to return the result.
+
+This operation is not supported in a window in full-screen mode.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
+| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the y-axis origin. The value must be an integer. Non-integer values are rounded down. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.moveTo(300, 300);
+promise.then(() => {
+  console.info('Succeeded in moving the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="moveto-1"></a>
+
+## moveTo
+
+```TypeScript
+moveTo(x: number, y: number, callback: AsyncCallback<void>): void
+```
+
+Moves this window. This API uses an asynchronous callback to return the result.
+
+This operation is not supported in a window in full-screen mode.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [moveWindowTo](#movewindowto)(x: number, y: number, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
+| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.moveTo(300, 300, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in moving the window.');
+});
+```
+
+## resetSize
+
+```TypeScript
+resetSize(width: number, height: number): Promise<void>
+```
+
+Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+
+The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
+
+The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
+
+The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
+
+The new window width and height you set must meet the following limits:
+
+If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
+
+If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+
+This operation is not supported in a window in full-screen mode.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [resize](#resize)(width: number, height: number)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
+| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.resetSize(500, 1000);
+promise.then(() => {
+  console.info('Succeeded in changing the window size.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="resetsize-1"></a>
+
+## resetSize
+
+```TypeScript
+resetSize(width: number, height: number, callback: AsyncCallback<void>): void
+```
+
+Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
+
+The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
+
+The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getwindowlimits) to obtain size limits.
+
+The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
+
+The new window width and height you set must meet the following limits:
+
+If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
+
+If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+
+This operation is not supported in a window in full-screen mode.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [resize](#resize)(width: number, height: number, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
+| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.resetSize(500, 1000, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in changing the window size.');
+});
+```
+
+## setBackgroundColor
+
+```TypeScript
+setBackgroundColor(color: string): Promise<void>
+```
+
+Sets the background color for this window. This API uses a promise to return the result. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let color: string = '#00ff33';
+let promise = windowClass.setBackgroundColor(color);
+promise.then(() => {
+  console.info('Succeeded in setting the background color.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setbackgroundcolor-1"></a>
+
+## setBackgroundColor
+
+```TypeScript
+setBackgroundColor(color: string, callback: AsyncCallback<void>): void
+```
+
+Sets the background color for this window. This API uses an asynchronous callback to return the result. In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowBackgroundColor](#setwindowbackgroundcolor)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let color: string = '#00ff33';
+windowClass.setBackgroundColor(color, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the background color.');
+});
+```
+
+## setBrightness
+
+```TypeScript
+setBrightness(brightness: number): Promise<void>
+```
+
+Sets the screen brightness for this window. This API uses a promise to return the result.
+
+When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let brightness: number = 1;
+let promise = windowClass.setBrightness(brightness);
+promise.then(() => {
+  console.info('Succeeded in setting the brightness.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setbrightness-1"></a>
+
+## setBrightness
+
+```TypeScript
+setBrightness(brightness: number, callback: AsyncCallback<void>): void
+```
+
+Sets the screen brightness for this window. This API uses an asynchronous callback to return the result.
+
+When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowBrightness](#setwindowbrightness)(brightness: number, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let brightness: number = 1;
+windowClass.setBrightness(brightness, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the brightness.');
+});
+```
+
+## setColorSpace
+
+```TypeScript
+setColorSpace(colorSpace: ColorSpace): Promise<void>
+```
+
+Sets a color space for this window. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space to set. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT);
+promise.then(() => {
+  console.info('Succeeded in setting window colorspace.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setcolorspace-1"></a>
+
+## setColorSpace
+
+```TypeScript
+setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
+```
+
+Sets a color space for this window. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space to set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting window colorspace.');
+});
+```
+
+## setDimBehind
+
+```TypeScript
+setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
+```
+
+Sets the dimness of the window that is not on top. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dimBehindValue | number | Yes | Dimness of the window to set. The value range is [0.0, 1.0], and the value **1.0** means the dimmest. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setDimBehind(0.5, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the dimness.');
+});
+```
+
+<a id="setdimbehind-1"></a>
+
+## setDimBehind
+
+```TypeScript
+setDimBehind(dimBehindValue: number): Promise<void>
+```
+
+Sets the dimness of the window that is not on top. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dimBehindValue | number | Yes | Dimness of the window to set. The value ranges from 0 to 1. The value **1** indicates the dimmest. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setDimBehind(0.5);
+promise.then(() => {
+  console.info('Succeeded in setting the dimness.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## setFocusable
+
+```TypeScript
+setFocusable(isFocusable: boolean): Promise<void>
+```
+
+Sets whether this window is focusable, that is, whether the window can gain focus after it is being clicked or using other methods. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isFocusable: boolean = true;
+let promise = windowClass.setFocusable(isFocusable);
+promise.then(() => {
+  console.info('Succeeded in setting the window to be focusable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setfocusable-1"></a>
+
+## setFocusable
+
+```TypeScript
+setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether this window is focusable, that is, whether the window can gain focus after it is being operated or using other methods. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in [Input Box and Input Method Interaction in Non-Focus Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isFocusable: boolean = true;
+windowClass.setFocusable(isFocusable, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to be focusable.');
+});
+```
+
+## setFullScreen
+
+```TypeScript
+setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result.
+
+Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
+
+Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
+> to implement the full-screen mode.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and<!--RP15-->three-button navigation bar<!--RP15End-->). **true** to set full-screen mode, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isFullScreen: boolean = true;
+      windowClass.setFullScreen(isFullScreen, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in enabling the full-screen mode.');
+      });
+    });
+  }
+}
+```
+
+<a id="setfullscreen-1"></a>
+
+## setFullScreen
+
+```TypeScript
+setFullScreen(isFullScreen: boolean): Promise<void>
+```
+
+Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result.
+
+Full-screen mode means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar&lt;!- -RP15End--&gt;, and components may overlap with them.
+
+Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!--RP 15End-->, and components do not overlap with them.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 6 and deprecated since API version 9. You are advised to use
+> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
+> to implement the full-screen mode.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and<!--RP15-->three-button navigation bar<!--RP15End-->). **true** to set full-screen mode, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isFullScreen: boolean = true;
+      let promise = windowClass.setFullScreen(isFullScreen);
+      promise.then(() => {
+        console.info('Succeeded in enabling the full-screen mode.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setKeepScreenOn
+
+```TypeScript
+setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
+```
+
+Sets whether to keep the screen always on. This API uses a promise to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isKeepScreenOn: boolean = true;
+let promise = windowClass.setKeepScreenOn(isKeepScreenOn);
+promise.then(() => {
+  console.info('Succeeded in setting the screen to be always on.');
+}).catch((err: BusinessError) => {
+  console.info(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setkeepscreenon-1"></a>
+
+## setKeepScreenOn
+
+```TypeScript
+setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isKeepScreenOn: boolean = true;
+windowClass.setKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the screen to be always on.');
+});
+```
+
+## setLayoutFullScreen
+
+```TypeScript
+setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result.
+
+An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
+
+A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and<!--RP15-->three-button navigation bar<!--RP15End-->.) **true** if immersive, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen: boolean = true;
+      windowClass.setLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the window layout to full-screen mode.');
+      });
+    });
+  }
+}
+```
+
+<a id="setlayoutfullscreen-1"></a>
+
+## setLayoutFullScreen
+
+```TypeScript
+setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
+```
+
+Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result.
+
+An immersive layout means that the layout does not avoid the status bar or <!--RP15-->three-button navigation bar <!--RP15End-->, and components may overlap with them.
+
+A non-immersive layout means that the layout avoids the status bar and <!--RP15-->three-button navigation bar<!-- RP15End-->, and components do not overlap with them.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and<!--RP15-->three-button navigation bar<!--RP15End-->.) **true** if immersive, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let isLayoutFullScreen: boolean = true;
+      let promise = windowClass.setLayoutFullScreen(isLayoutFullScreen);
+      promise.then(() => {
+        console.info('Succeeded in setting the window layout to full-screen mode.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setOutsideTouchable
+
+```TypeScript
+setOutsideTouchable(touchable: boolean): Promise<void>
+```
+
+Sets whether the area outside the child window is touchable. This API uses a promise to return the result.
+
+> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
+> supported and no substitute API is provided.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.setOutsideTouchable(true);
+promise.then(() => {
+  console.info('Succeeded in setting the area to be touchable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setoutsidetouchable-1"></a>
+
+## setOutsideTouchable
+
+```TypeScript
+setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether the area outside the child window is touchable. This API uses an asynchronous callback to return the result.
+
+> Starting from API version 9, the area outside the child window is touchable by default. This API is no longer
+> supported and no substitute API is provided.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.setOutsideTouchable(true, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the area to be touchable.');
+});
+```
+
+## setPrivacyMode
+
+```TypeScript
+setPrivacyMode(isPrivacyMode: boolean): Promise<void>
+```
+
+Sets whether this window is in privacy mode. This API uses a promise to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isPrivacyMode: boolean = true;
+let promise = windowClass.setPrivacyMode(isPrivacyMode);
+promise.then(() => {
+  console.info('Succeeded in setting the window to privacy mode.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="setprivacymode-1"></a>
+
+## setPrivacyMode
+
+```TypeScript
+setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isPrivacyMode: boolean = true;
+windowClass.setPrivacyMode(isPrivacyMode, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to privacy mode.');
+});
+```
+
+## setSystemBarEnable
+
+```TypeScript
+setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
+```
+
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses an asynchronous callback to return the result.
+
+From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
+
+The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+// The following assumes that all of them are hidden.
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let names: Array<'status' | 'navigation'> = [];
+      windowClass.setSystemBarEnable(names, (err: BusinessError) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the system bar to be invisible.');
+      });
+    });
+  }
+}
+```
+
+<a id="setsystembarenable-1"></a>
+
+## setSystemBarEnable
+
+```TypeScript
+setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
+```
+
+<!--RP14-->Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.<!--RP14End--> This API uses a promise to return the result.
+
+From API version 12, <!--RP5-->this API does not take effect on 2-in-1 devices.<!--RP5End-->
+
+The return value does not indicate that the status bar and <!--RP15-->three-button navigation bar<!--RP15End--> are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| names | Array&lt;'status' &#124; 'navigation'&gt; | Yes | Whether to show the status bar and<!--RP15-->three-button navigation bar<!--RP15End--> in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// The following assumes that all of them are hidden.
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let names: Array<'status' | 'navigation'> = [];
+      let promise = windowClass.setSystemBarEnable(names);
+      promise.then(() => {
+        console.info('Succeeded in setting the system bar to be invisible.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setSystemBarProperties
+
+```TypeScript
+setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
+```
+
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses an asynchronous callback to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5End-->
+
+This API does not take effect when it is called by a child window. The configuration does not take effect in non- full-screen mode (such as floating window or split-screen mode).
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let SystemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // The following properties are supported since API version 8.
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      windowClass.setSystemBarProperties(SystemBarProperties, (err) => {
+        const errCode: number = err.code;
+        if (errCode) {
+          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in setting the system bar properties.');
+      });
+    });
+  }
+}
+```
+
+<a id="setsystembarproperties-1"></a>
+
+## setSystemBarProperties
+
+```TypeScript
+setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
+```
+
+Sets the properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar of the main window. This API uses a promise to return the result. <!--RP5-->This API does not take effect on 2-in-1 devices.<!--RP5 End-->
+
+This API does not take effect when it is called by a child window.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | <!--Del-->Properties of the <!--Del-->three-button navigation bar and <!--DelEnd-->status bar. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+// EntryAbility.ets
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    let windowClass: window.Window | undefined = undefined;
+    windowStage.getMainWindow((err: BusinessError, data) => {
+      const errCode: number = err.code;
+      if (errCode) {
+        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      windowClass = data;
+      let SystemBarProperties: window.SystemBarProperties = {
+        statusBarColor: '#ff00ff',
+        navigationBarColor: '#00ff00',
+        // The following properties are supported since API version 8.
+        statusBarContentColor: '#ffffff',
+        navigationBarContentColor: '#00ffff'
+      };
+      let promise = windowClass.setSystemBarProperties(SystemBarProperties);
+      promise.then(() => {
+        console.info('Succeeded in setting the system bar properties.');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+## setTouchable
+
+```TypeScript
+setTouchable(isTouchable: boolean): Promise<void>
+```
+
+Sets whether this window is touchable. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isTouchable = true;
+let promise = windowClass.setTouchable(isTouchable);
+promise.then(() => {
+  console.info('Succeeded in setting the window to be touchable.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+<a id="settouchable-1"></a>
+
+## setTouchable
+
+```TypeScript
+setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
+```
+
+Sets whether this window is touchable. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isTouchable = true;
+windowClass.setTouchable(isTouchable, (err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the window to be touchable.');
+});
+```
+
+## show
+
+```TypeScript
+show(callback: AsyncCallback<void>): void
+```
+
+Shows this window. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+windowClass.show((err: BusinessError) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in showing the window.');
+});
+```
+
+<a id="show-1"></a>
+
+## show
+
+```TypeScript
+show(): Promise<void>
+```
+
+Shows this window. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [showWindow](#showwindow)()
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = windowClass.show();
+promise.then(() => {
+  console.info('Succeeded in showing the window.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
+});
 ```

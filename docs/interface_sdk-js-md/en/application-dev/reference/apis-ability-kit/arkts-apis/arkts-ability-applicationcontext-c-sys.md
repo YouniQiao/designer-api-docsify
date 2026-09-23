@@ -16,6 +16,98 @@ ApplicationContext inherits from Context and provides application-level manageme
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## preloadUIExtensionAbility
+
+```TypeScript
+preloadUIExtensionAbility(want: Want): Promise<void>
+```
+
+Preloads a UIExtensionAbility instance. This API uses a promise to return the result.
+
+The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.
+
+A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
+
+| Name| Type| Mandatory| Description|  
+| -------- | -------- | -------- | -------- |  
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+
+**Since:** 12
+
+**Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the UIExtensionAbility. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+**Examples**
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    // Construct the want parameter for preloading the UIExtensionAbility.
+    let want: Want = {
+      bundleName: 'com.ohos.uiextensionprovider',
+      abilityName: 'UIExtensionProvider',
+      moduleName: 'entry',
+      parameters: {
+        // Consistent with the "type" field configuration of the UIExtensionAbility in module.json5.
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+    try {
+      // Obtain the ApplicationContext instance.
+      let applicationContext = this.context.getApplicationContext();
+      // Preload the UIExtensionAbility.
+      applicationContext.preloadUIExtensionAbility(want)
+        .then(() => {
+          // Handle the preload success.
+          console.info('preloadUIExtensionAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Handle the preload failure.
+          console.error('preloadUIExtensionAbility failed');
+        });
+    } catch (err) {
+      // Handle the input parameter error exception.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`preloadUIExtensionAbility failed. code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
+
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -119,98 +211,6 @@ export default class MyAbility extends UIAbility {
         console.info(`The process running information is: ${JSON.stringify(data)}`);
       }
     })
-  }
-}
-```
-
-## preloadUIExtensionAbility
-
-```TypeScript
-preloadUIExtensionAbility(want: Want): Promise<void>
-```
-
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result.
-
-The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.
-
-A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
-
-| Name| Type| Mandatory| Description|  
-| -------- | -------- | -------- | -------- |  
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
-
-**Since:** 12
-
-**Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the UIExtensionAbility. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-
-**Examples**
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    // Construct the want parameter for preloading the UIExtensionAbility.
-    let want: Want = {
-      bundleName: 'com.ohos.uiextensionprovider',
-      abilityName: 'UIExtensionProvider',
-      moduleName: 'entry',
-      parameters: {
-        // Consistent with the "type" field configuration of the UIExtensionAbility in module.json5.
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-    try {
-      // Obtain the ApplicationContext instance.
-      let applicationContext = this.context.getApplicationContext();
-      // Preload the UIExtensionAbility.
-      applicationContext.preloadUIExtensionAbility(want)
-        .then(() => {
-          // Handle the preload success.
-          console.info('preloadUIExtensionAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Handle the preload failure.
-          console.error('preloadUIExtensionAbility failed');
-        });
-    } catch (err) {
-      // Handle the input parameter error exception.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`preloadUIExtensionAbility failed. code: ${code}, msg: ${message}`);
-    }
   }
 }
 ```

@@ -4,7 +4,7 @@
 declare enum ReplaceEffectType
 ```
 
-The replace effect type of symbol.
+Enumerates symbol replacement effect types.
 
 **Since:** 20
 

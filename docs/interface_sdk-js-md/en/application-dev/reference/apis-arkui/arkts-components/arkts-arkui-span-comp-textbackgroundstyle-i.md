@@ -16,7 +16,7 @@ Define the background style of span.
 color?: ResourceColor
 ```
 
-Text background color.
+Text background color. Transparent by default, meaning no background color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -34,7 +34,7 @@ Text background color.
 radius?: Dimension | BorderRadiuses
 ```
 
-Rounded corner radius of the text background.
+Corner radius of the text background. No rounded corners by default.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 

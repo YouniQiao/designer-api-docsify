@@ -34,7 +34,9 @@ Current text content.
 options?: TextChangeOptions
 ```
 
-Information about the text change.
+Changed text content information.
+
+Default value: undefined.
 
 **Type:** [TextChangeOptions](arkts-arkui-textchangeoptions-i.md)
 
@@ -52,7 +54,9 @@ Information about the text change.
 previewText?: PreviewText
 ```
 
-Preview text.
+Preview text content information.
+
+Default value: undefined, indicating no preview text content.
 
 **Type:** [PreviewText](arkts-arkui-previewtext-i.md)
 

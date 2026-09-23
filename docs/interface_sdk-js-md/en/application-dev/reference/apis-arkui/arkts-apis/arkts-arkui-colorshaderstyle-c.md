@@ -18,7 +18,7 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-a
 constructor(color: ResourceColor)
 ```
 
-A constructor used to create a **ResourceColor** object.
+A constructor used to create a **ColorShaderStyle** object.
 
 **Since:** 20
 

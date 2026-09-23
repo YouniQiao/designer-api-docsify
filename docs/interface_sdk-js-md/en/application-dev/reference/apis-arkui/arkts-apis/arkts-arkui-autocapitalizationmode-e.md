@@ -4,7 +4,7 @@
 declare enum AutoCapitalizationMode
 ```
 
-Enumerates automatic capitalization modes. This only provides API capabilities; the specific implementation depends on the input method application.
+Automatic capitalization mode type. It only provides the API capability, and the specific implementation is determined by the input method app.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates automatic capitalization modes. This only provides API capabilities; 
 NONE = 0
 ```
 
-Default state; automatic capitalization is disabled.
+Default state, no automatic case conversion is performed.
 
 **Since:** 20
 

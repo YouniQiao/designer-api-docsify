@@ -86,7 +86,7 @@ Font style. The default value is **NORMAL**.
 fontWeight?: FontWeight
 ```
 
-Font weight. The default value is **W400**. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font thickness does not change when the font weight value is set to less than **W600**, and a faux bold effect may be triggered when the font weight value is set to **W600** or greater.
+Font weight. The default value is **W400**. Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, only variable fonts in system fonts support font weight adjustment. Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font thickness does not change when the font weight value is set to less than **W600**, and a faux bold effect may be triggered when the font weight value is set to **W600** or greater.
 
 **Type:** [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)
 

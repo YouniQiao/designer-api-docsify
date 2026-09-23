@@ -4,7 +4,7 @@
 declare interface ListItemOptions
 ```
 
-Defines ListItem component configuration options.
+Defines **ListItem** component configuration options.
 
 **Since:** 10
 

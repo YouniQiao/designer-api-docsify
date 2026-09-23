@@ -271,53 +271,6 @@ for(let i = 0; i < 10; i++) {
 }
 ```
 
-## equal
-
-```TypeScript
-equal(obj: Object): boolean
-```
-
-Checks whether the elements of this LightWeightSet are the same as those of **obj**.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
-
-**Since:** 8
-
-**Deprecated since:** 12
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| obj | Object | Yes | **LightWeightSet** instance to be used for comparison. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbers and the elements in them are the same; returns **false** in other cases. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
-
-**Examples**
-
-```TypeScript
-let lightWeightSet = new LightWeightSet<string>();
-lightWeightSet.add("squirrel");
-lightWeightSet.add("sparrow");
-let obj = ["sparrow", "squirrel"];
-let result = lightWeightSet.equal(obj);
-console.info("result:", result);  // result: true
-```
-
 ## forEach
 
 ```TypeScript
@@ -783,6 +736,53 @@ for (let value of values) {
 }
 // value: sparrow
 // value: squirrel
+```
+
+## equal
+
+```TypeScript
+equal(obj: Object): boolean
+```
+
+Checks whether the elements of this LightWeightSet are the same as those of **obj**.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
+
+**Since:** 8
+
+**Deprecated since:** 12
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | Object | Yes | **LightWeightSet** instance to be used for comparison. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbers and the elements in them are the same; returns **false** in other cases. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
+
+**Examples**
+
+```TypeScript
+let lightWeightSet = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let obj = ["sparrow", "squirrel"];
+let result = lightWeightSet.equal(obj);
+console.info("result:", result);  // result: true
 ```
 
 ## length
