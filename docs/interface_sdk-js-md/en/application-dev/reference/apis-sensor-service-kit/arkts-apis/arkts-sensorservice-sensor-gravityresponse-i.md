@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 x: number
 ```
 
-Gravitational acceleration along the x-axis of the device, in m/s?.
+Gravity acceleration along the x-axis of the device, in m/s².
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Gravitational acceleration along the x-axis of the device, in m/s?.
 y: number
 ```
 
-Gravitational acceleration along the y-axis of the device, in m/s?.
+Gravity acceleration along the y-axis of the device, in m/s².
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Gravitational acceleration along the y-axis of the device, in m/s?.
 z: number
 ```
 
-Gravitational acceleration along the z-axis of the device, in m/s?.
+Gravity acceleration along the z-axis of the device, in m/s².
 
 **Type:** number
 

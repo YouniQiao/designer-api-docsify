@@ -4,7 +4,7 @@
 declare interface IDataSource
 ```
 
-Data source of **LazyForEach**.
+Defines the data source of **LazyForEach**. The developer needs to implement this API to provide data access and data change notification capabilities, including obtaining the total number of data items, obtaining data by index, and registering and unregistering data change listeners.
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ Obtains the data item that matches the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the data record to obtain. The value range is [0, data source length - 1]. |
+| index | number | Yes | Index of the data. The value range is [0, data source length - 1]. When the value exceeds the range, the behavior is determined by the data source implementation. Developers are advised to perform boundary checks. |
 
 **Return value:**
 
@@ -58,7 +58,7 @@ Registers a listener for data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-lazyforeach-comp-datachangelistener-i.md) | Yes | Listener for data changes. |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-comp-datachangelistener-i.md) | Yes | Data change listener, used to notify components to refresh when the data source changes. |
 
 ## totalCount
 
@@ -102,4 +102,4 @@ Unregisters the listener for data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-lazyforeach-comp-datachangelistener-i.md) | Yes | Listener for data changes. |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-comp-datachangelistener-i.md) | Yes | Data change listener, used to notify components to refresh when the data source changes. |

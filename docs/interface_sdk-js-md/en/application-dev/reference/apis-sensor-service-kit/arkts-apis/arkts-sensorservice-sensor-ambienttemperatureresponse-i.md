@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 temperature: number
 ```
 
-Ambient temperature, in degree Celsius.
+Ambient temperature, in °C.
 
 **Type:** number
 

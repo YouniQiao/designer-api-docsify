@@ -4,7 +4,7 @@
 export interface SubscribeBarometerOptions
 ```
 
-Defines the type of data to return for a subscription to data changes of the barometer sensor.
+Configures the parameters for subscribing to the barometric pressure sensor, including the callback function.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when an API call fails.
+Callback invoked when an API call fails. The callback parameters are **data** of the string type and **code** of the number type, where **data** indicates the error information and **code** indicates the error code. If this parameter is not specified, no callback notification is sent when the API call fails.
 
 **Since:** 3
 
@@ -51,7 +51,7 @@ Callback invoked when an API call fails.
 success: (data: BarometerResponse) => void
 ```
 
-Callback invoked when the barometer sensor data changes.
+Callback invoked when the barometric pressure sensor data changes. The callback parameter is a **BarometerResponse** object.
 
 **Since:** 3
 

@@ -14,6 +14,11 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 
 Stops vibration in the specified mode. This API uses a promise to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)&lt;sup&gt;9+&lt;/sup&gt; instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -68,6 +73,12 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 ```
 
 Stops vibration in the specified mode. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)
+> &lt;sup&gt;9+&lt;/sup&gt; instead.
 
 **Since:** 8
 

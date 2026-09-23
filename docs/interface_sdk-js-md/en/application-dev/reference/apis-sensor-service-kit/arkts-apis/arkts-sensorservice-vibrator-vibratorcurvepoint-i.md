@@ -50,7 +50,7 @@ Gain relative to the vibration intensity. This parameter is optional. The value 
 time: number
 ```
 
-Start time offset, in ms.
+Start time offset, in milliseconds.
 
 **Type:** number
 

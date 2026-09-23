@@ -22,7 +22,7 @@ Binds a [TextController](../arkts-components/arkts-arkui-text-comp-textcontrolle
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for controller binding. |
 | controller | [TextController](../arkts-components/arkts-arkui-text-comp-textcontroller-c.md) | Yes | **TextController** instance to bind. |
-| nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
+| nodeType | 'Text' | Yes | Type of the target node bound to the controller. Set to **Text**. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ See the example for createNode('Swiper')12+.
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-Binds the [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) to the [Scroll](arkts-arkui-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) to the [Scroll](arkts-arkui-typenode-scroll-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0. Versions earlier than API version 26.0.0 do not support this.
 
 **Since:** 15
 
@@ -165,7 +165,7 @@ typeNode.bindController(node, scroller, 'Scroll');
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) instance to the [List](arkts-arkui-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) instance to the [List](arkts-arkui-typenode-list-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0. Versions earlier than API version 26.0.0 do not support this.
 
 **Since:** 20
 
@@ -205,7 +205,7 @@ typeNode.bindController(node, scroller, 'List');
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-Binds the [TextInputController](../arkts-components/arkts-arkui-textinput-comp-textinputcontroller-c.md) to the [TextInput](arkts-arkui-typenode-textinput-t.md) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the input box controller [TextInputController](../arkts-components/arkts-arkui-textinput-comp-textinputcontroller-c.md) to the [TextInput](arkts-arkui-typenode-textinput-t.md) node. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, an exception is thrown. Since API version 26.0.0, this API supports nodes created in a declarative manner. Versions earlier than API version 26.0.0 do not support this.
 
 **Since:** 20
 
@@ -319,7 +319,7 @@ typeNode.bindController(node, scroller, 'WaterFlow');
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-Binds a [TextAreaController](../arkts-components/arkts-arkui-textarea-comp-textareacontroller-c.md) instance to the [TextArea](arkts-arkui-typenode-textarea-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the input box controller [TextAreaController](../arkts-components/arkts-arkui-textarea-comp-textareacontroller-c.md) to the [TextArea](arkts-arkui-typenode-textarea-t.md) node. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, an exception is thrown. Since API version 26.0.0, this API supports nodes created in a declarative manner. Versions earlier than API version 26.0.0 do not support this.
 
 **Since:** 20
 
@@ -393,7 +393,7 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) instance to the [Grid](arkts-arkui-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) instance to the [Grid](arkts-arkui-typenode-grid-t.md) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0. Versions earlier than API version 26.0.0 do not support this.
 
 **Since:** 20
 

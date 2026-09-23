@@ -4,7 +4,7 @@
 interface VibratorEvent
 ```
 
-Vibration event.
+Enumerates vibration events.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 duration?: number
 ```
 
-Vibration duration. This parameter is optional, in ms. The value range is (0,5000]. The default value is **48** for short vibration and **1000** for long vibration.
+Vibration duration, in ms. This parameter is optional. The value is an integer in the range (0, 5000]. The default value is **48** for short vibration and **1000** for long vibration.
 
 **Type:** number
 

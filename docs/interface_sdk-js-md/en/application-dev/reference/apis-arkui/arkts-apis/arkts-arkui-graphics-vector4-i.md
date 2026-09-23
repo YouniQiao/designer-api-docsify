@@ -16,7 +16,7 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 w: number
 ```
 
-W coordinate value of the vector.
+Value of the vector along the w-axis.
 
 Value range: (-∞, +∞).
 
@@ -36,7 +36,7 @@ Value range: (-∞, +∞).
 x: number
 ```
 
-X coordinate value of the vector.
+Value of the vector along the x-axis.
 
 Value range: (-∞, +∞).
 
@@ -56,7 +56,7 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Y coordinate value of the vector.
+Value of the vector along the y-axis.
 
 Value range: (-∞, +∞).
 
@@ -76,7 +76,7 @@ Value range: (-∞, +∞).
 z: number
 ```
 
-Z coordinate value of the vector.
+Value of the vector along the z-axis.
 
 Value range: (-∞, +∞).
 

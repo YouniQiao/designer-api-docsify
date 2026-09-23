@@ -22,7 +22,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 events: Array<VibratorEvent>
 ```
 
-Vibration event array, which is the **VibratorPattern** object returned by **build() **.
+Array of vibration events.
 
 **Type:** Array&lt;[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)&gt;
 
@@ -36,7 +36,7 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 time: number
 ```
 
-Absolute vibration start time, in ms.
+Absolute start time of the vibration, in milliseconds.
 
 **Type:** number
 

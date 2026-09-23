@@ -4,11 +4,11 @@
 export class ComponentContent<T extends Object> extends Content
 ```
 
-You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development:
+You can create an entity encapsulation component in either of the following ways: **ComponentContent** requires manual content updates through the update API, which is mainly suitable for decoupled encapsulation scenarios such as dialog boxes. **ReactiveComponentContent** supports automatic updates of responsive data, complete lifecycle management, and component reuse, making it suitable for high-performance rendering scenarios such as long lists.
 
 **ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see [BuilderNode](arkts-arkui-buildernode-c.md).
 
-**ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md).
+**ReactiveComponentContent** represents an entity encapsulation of component content, and its objects can be created and transmitted outside of UI components. It supports automatic updates of responsive data, complete lifecycle management, and component reuse, making it suitable for scenarios requiring high-performance rendering such as long lists. Its underlying layer uses **ReactiveBuilderNode**. For specific usage specifications, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md).
 
 > **NOTE:** 
 > 
@@ -130,7 +130,7 @@ A constructor used to create a **ComponentContent** object.
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[T]&gt; | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
-| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
+| args | T | Yes | Arguments of the builder function wrapped by the **WrappedBuilder** object. The type **T** must be consistent with the parameter type specified in `WrappedBuilder&lt;[T]&gt;`. It is used to pass external data to the builder function for building UI content. |
 
 **Examples**
 
@@ -217,8 +217,8 @@ A constructor used to create a **ComponentContent** object.
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[T]&gt; | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
-| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
-| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
+| args | T | Yes | Arguments of the builder function encapsulated by the **WrappedBuilder** object. The type **T** must be consistent with the parameter type specified in `WrappedBuilder&lt;[T]&gt;`. It is used to pass external data to the builder function for building UI content. |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Build options, which are used to configure the build behavior of **@Builder**. All attributes in **BuildOptions** are optional. |
 
 **Examples**
 
@@ -291,10 +291,13 @@ Immediately releases the reference relationship between this **ComponentContent*
 
 > **NOTE:** 
 > 
-> After calling **dispose()**, the **ComponentContent** object cancels its reference to the backend entity node. If
-> the frontend object **ComponentContent** cannot be released, memory leaks may occur. To avoid this, be sure to
-> call **dispose()** on the **ComponentContent** object when you no longer need it. This reduces the complexity of
-> reference relationships and lowers the risk of memory leaks.
+> After the **ComponentContent** object calls **dispose**, the reference relationship with the backend entity node
+> is released. Calling other APIs of this object after the call to **dispose** may cause crashes or return default
+> values. It is recommended to check the node validity through the [isDisposed](#isdisposed)
+> API before operating it. If the frontend object **ComponentContent** cannot be released, memory leaks may easily
+> occur. You are advised to proactively call **dispose** to release the backend node when the
+> **ComponentContent object** is no longer needed, to reduce the complexity of reference relationships and lower
+> the risk of memory leaks.
 
 **Since:** 12
 
@@ -372,14 +375,14 @@ struct Index {
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-Sets whether the current **ComponentContent** object inherits the freeze policy from its parent component's custom components. When inheritance is disabled (set to **false**), the **ComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state.
+Sets whether the current **ComponentContent** object inherits the freeze policy from its parent component's custom components. The freeze policy controls whether a component pauses state refresh when inactive. When inheritance is disabled (set to **false**), the **ComponentContent** object's freeze policy is set to **false**. This API is suitable for scenarios such as multi-page navigation (**Navigation**) that require freeze management of inactive components.
 
 > **NOTE:** 
 > 
-> When **inheritFreezeOptions** is set to **true** for **ComponentContent** and the parent component is a custom
-> component, BuilderNode, ComponentContent, ReactiveBuilderNode, or ReactiveComponentContent, the freeze policy of
-> the parent component is inherited. If the child component is a custom component, its freeze policy is not
-> transferred to the child component.
+> When **inheritFreezeOptions** is set to **true** for ComponentContent and the parent component is a custom
+> component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or **ReactiveComponentContent**, the
+> freeze policy of the parent component is inherited. When the child component is a custom component, the freeze
+> policy of ComponentContent is not transferred to the child component.
 
 **Since:** 20
 
@@ -393,7 +396,7 @@ Sets whether the current **ComponentContent** object inherits the freeze policy 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the current **ComponentContent** object inherits the freeze policy from its parent component's custom components. The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
+| enabled | boolean | Yes | Whether the **ComponentContent** object inherits the freeze policy from its parent component's custom components.<br>**true**: Inherits the freeze policy from its parent component's custom components. **false**: Does not inherit the freeze policy from its parent component's custom components. <br>**Note:**  The value **true** takes effect only when the parent component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or **ReactiveComponentContent**. |
 
 **Examples**
 
@@ -726,7 +729,7 @@ component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Com
 reuse(param?: Object): void
 ```
 
-Triggers component reuse for custom components under this **ComponentContent**. For details about component reuse, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). For details about the scenarios involving **ComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). Since API version 26.0.0, custom components in **ComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
+Triggers component reuse for custom components in **ComponentContent**. For details about component reuse, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md). For the unbinding scenarios of **ComponentContent**, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). **ComponentContent** transfers reuse events between its internal and external custom components through the reuse and [recycle](#recycle) APIs. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis). Since API version 26.0.0, custom components in **ComponentContent** support V2 component reuse. For details, see [@Reusable V2 Decorator: Reusing V2 Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
 **Since:** 12
 
@@ -740,7 +743,7 @@ Triggers component reuse for custom components under this **ComponentContent**. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameters for **ComponentContent** reuse. This parameter is passed to all top-level custom components within the **ComponentContent** during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ComponentContent directly uses the data source during construction. |
+| param | Object | No | Parameters for **ComponentContent** reuse. This parameter is passed to all top-level custom components within the **ComponentContent** during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md#abouttoreuse) lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ComponentContent directly uses the data source during construction. |
 
 ## update
 
@@ -748,7 +751,7 @@ Triggers component reuse for custom components under this **ComponentContent**. 
 update(args: T): void
 ```
 
-Updates the builder function parameters encapsulated by the [WrappedBuilder](../../../ui/state-management/arkts-wrapBuilder.md) object. The parameter type must be the same as that passed by constructor.
+Updates the arguments of the builder function encapsulated by the [WrappedBuilder](../../../ui/state-management/arkts-wrapBuilder.md) object, keeping consistent with the parameter type specified in the constructor. This API is suitable for scenarios where component content needs to change dynamically, such as updating dialog box content.
 
 **Since:** 12
 
@@ -762,7 +765,7 @@ Updates the builder function parameters encapsulated by the [WrappedBuilder](../
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | T | Yes | Updates the builder function parameters encapsulated by the [WrappedBuilder](../../../ui/state-management/arkts-wrapBuilder.md) object. The parameter type must be the same as that passed by constructor. |
+| args | T | Yes | Arguments used to update the builder function encapsulated by the [WrappedBuilder](../../../ui/state-management/arkts-wrapBuilder.md) object. The parameter type must be the same as that passed by the constructor. |
 
 **Examples**
 
@@ -822,7 +825,7 @@ struct Index {
 updateConfiguration(): void
 ```
 
-Transfers a system environment change event and triggers full update of a node. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
+Transfers a system environment change event and triggers full update of a node. This API is suitable for scenarios where the node needs to respond to system configuration changes, such as switching between light and dark modes, language changes, and font size adjustments. For details about system environment changes, see [@ohos.app.ability.Configuration (Environment Variables)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md).
 
 > **NOTE:** 
 > 

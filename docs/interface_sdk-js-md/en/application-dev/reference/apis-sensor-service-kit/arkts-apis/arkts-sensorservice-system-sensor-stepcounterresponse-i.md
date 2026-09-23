@@ -4,7 +4,7 @@
 export interface StepCounterResponse
 ```
 
-Callback invoked when the step counter sensor data changes.
+Defines a response object of the callback function invoked when the step counter sensor data changes, including the accumulated step count recorded after the step counter sensor is restarted.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 steps: number
 ```
 
-Number of counted steps after the sensor is restarted.
+Number of counted steps after the sensor is restarted. Value range: an integer greater than or equal to 0. The value is the actually reported physical quantity. The step count restarts from 0 after the sensor is restarted.
 
 **Type:** number
 

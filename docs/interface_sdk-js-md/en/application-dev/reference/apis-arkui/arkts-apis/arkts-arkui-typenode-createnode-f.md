@@ -6,7 +6,7 @@
 function createNode(context: UIContext, nodeType: 'Text'): Text
 ```
 
-Creates a FrameNode of the **Text** type.
+Creates a FrameNode of the **Text** type. When **typeNode** is used to create a **Text** node, after the UI instance corresponding to the passed **UIContext** is destroyed, calling this API returns an invalid FrameNode that cannot be properly mounted and displayed.
 
 **Since:** 12
 
@@ -1085,7 +1085,7 @@ struct FrameNodeTypeTest {
 function createNode(context: UIContext, nodeType: 'Image'): Image
 ```
 
-Creates a FrameNode of the **Image** type.
+Creates a FrameNode of the **Image** type. When **typeNode** is used to create an **Image** node, after the UI instance corresponding to the passed **UIContext** is destroyed, calling this API returns an invalid FrameNode that cannot be properly mounted and displayed.
 
 **Since:** 12
 
@@ -1178,7 +1178,7 @@ Creates a FrameNode of the **List** type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
-| nodeType | 'List' | Yes | Node type, which is **List** in this API. |
+| nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
 **Return value:**
 
@@ -2114,7 +2114,7 @@ struct FrameNodeTypeTest {
 function createNode(context: UIContext, nodeType: 'Select'): Select
 ```
 
-Creates a FrameNode of the **Select** type.
+Creates a FrameNode of the **Select** type. When **typeNode** is used to create a **Select** node, after the UI instance corresponding to the passed **UIContext** is destroyed, calling this API returns an invalid FrameNode that cannot be properly mounted and displayed.
 
 **Since:** 18
 
@@ -2253,7 +2253,7 @@ struct FrameNodeTypeTest {
 function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle
 ```
 
-Creates a FrameNode of the **Toggle** type.
+Creates a FrameNode of the **Toggle** type. When **typeNode** is used to create a **Toggle** node, after the UI instance corresponding to the passed **UIContext** is destroyed, calling this API returns an invalid FrameNode that cannot be properly mounted and displayed.
 
 **Since:** 18
 
@@ -2269,7 +2269,7 @@ Creates a FrameNode of the **Toggle** type.
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
-| options | [ToggleOptions](../arkts-components/arkts-arkui-toggle-comp-toggleoptions-i.md) | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
+| options | [ToggleOptions](../arkts-components/arkts-arkui-toggle-comp-toggleoptions-i.md) | No | Options for creating a **Toggle** node. The switch style can only be set through the **type** attribute in **ToggleOptions**. When this parameter is not passed, the **type** attribute of **Toggle** must be set through the **initialize** API. |
 
 **Return value:**
 

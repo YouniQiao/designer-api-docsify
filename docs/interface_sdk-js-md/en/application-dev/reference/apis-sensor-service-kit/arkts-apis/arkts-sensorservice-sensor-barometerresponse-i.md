@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 pressure: number
 ```
 
-Atmospheric pressure, in units of hPa.
+Atmospheric pressure, in hPa.
 
 **Type:** number
 

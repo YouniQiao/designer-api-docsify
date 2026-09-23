@@ -164,24 +164,6 @@ Callback triggered when the ImageGeneratorDialog changes in size or position.
 
 **System API:** This is a system API.
 
-## recoverFromCache
-
-```TypeScript
-recoverFromCache?: boolean
-```
-
-Whether to recover from cache for AI image generation. The persistent cache file is used to store configuration parameters for AI image generation.
-
-**Type:** boolean
-
-**Since:** 26.0.1
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
 ## textGenerationModel
 
 ```TypeScript

@@ -4,7 +4,7 @@
 enum VibratorEventType
 ```
 
-Vibration event type.
+Enumerates vibration event types.
 
 **Since:** 18
 

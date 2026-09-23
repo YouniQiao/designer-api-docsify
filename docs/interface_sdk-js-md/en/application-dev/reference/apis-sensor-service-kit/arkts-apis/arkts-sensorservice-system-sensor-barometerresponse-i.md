@@ -4,7 +4,7 @@
 export interface BarometerResponse
 ```
 
-Defines a **BarometerResponse** object.
+Defines a response object of the callback function after the barometric pressure sensor data is changed, including the atmospheric pressure value.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 pressure: number
 ```
 
-Pressure, in pascal.
+Atmospheric pressure, in Pa. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor. The standard atmospheric pressure is about 101,325 Pa.
 
 **Type:** number
 

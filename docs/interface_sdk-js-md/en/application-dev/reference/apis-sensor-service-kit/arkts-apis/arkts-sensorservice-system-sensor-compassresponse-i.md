@@ -4,7 +4,7 @@
 export interface CompassResponse
 ```
 
-Defines a **CompassResponse** object.
+Callback function response object after the compass data changes, including the degree of the direction that the device faces.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 direction: number
 ```
 
-Direction of the device, in degrees.
+Direction of the device, in degrees. The value range is [0, 360). The value **0** indicates north. The value is equal to the reported physical quantity.
 
 **Type:** number
 

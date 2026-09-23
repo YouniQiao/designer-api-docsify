@@ -42,7 +42,7 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
 
@@ -107,7 +107,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
 

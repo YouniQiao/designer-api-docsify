@@ -929,13 +929,13 @@ getChildrenCount(countMode?: ChildrenCountMode): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | 否 | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | 否 | 子节点计数模式。默认值为ChildrenCountMode.ALL_EXPAND。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Returns the number of children of the current FrameNode based on the count mode. |
+| number | 根据计数模式返回的当前FrameNode的子节点数量。 |
 
 **示例**
 

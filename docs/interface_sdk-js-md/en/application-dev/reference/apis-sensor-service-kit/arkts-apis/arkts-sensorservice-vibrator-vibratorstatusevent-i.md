@@ -50,7 +50,7 @@ Vibrator status. The value **true** indicates that the device is online, and the
 timestamp: number
 ```
 
-Event timestamp, in ms.
+Timestamp when the event is reported, in milliseconds.
 
 **Type:** number
 

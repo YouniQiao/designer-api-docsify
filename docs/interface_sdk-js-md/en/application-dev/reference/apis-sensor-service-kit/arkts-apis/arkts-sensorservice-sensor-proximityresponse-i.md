@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 distance: number
 ```
 
-Proximity between the visible object and the device monitor. The value **0** means the two are close to each other, and a value greater than 0 means that they are far away from each other.
+Proximity between the visible object and the device monitor. Value range: **0** indicates that the object is close to the device, and a value greater than 0 indicates that the object is far away from the device.
 
 **Type:** number
 

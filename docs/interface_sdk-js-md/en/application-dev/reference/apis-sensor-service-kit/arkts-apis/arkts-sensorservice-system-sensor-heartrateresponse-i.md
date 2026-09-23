@@ -4,7 +4,7 @@
 export interface HeartRateResponse
 ```
 
-Defines a **HeartRateResponse** object.
+Defines a response object of the callback function after the heart rate sensor data is changed, including the heart rate value.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 heartRate: number
 ```
 
-Heart rate.
+Heart rate, in bpm. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor. The resting heart rate of a normal adult ranges from 60 to 100 bpm.
 
 **Type:** number
 

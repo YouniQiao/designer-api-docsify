@@ -6,7 +6,7 @@
 function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined
 ```
 
-Obtains the **UIScrollEvent** object associated with the **Scroll** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIScrollEvent** object held by the **Scroll** node, which is used to set scroll events. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, **undefined** is returned. This API does not support nodes created in a declarative manner. The scroll events set through this API coexist with declaratively defined events. The set scroll events do not override the original declarative events. When both event callbacks are set, the declarative event callback takes precedence.
 
 **Since:** 19
 
@@ -42,7 +42,7 @@ See Scroll Event Example.
 function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 ```
 
-Obtains the **UIListEvent** object associated with the **List** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIListEvent** object held by the **List** node, which is used to set scroll events. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, **undefined** is returned. This API does not support nodes created in a declarative manner. The scroll events set through this API coexist with declaratively defined events. The set scroll events do not override the original declarative events. When both event callbacks are set, the declarative event callback takes precedence.
 
 **Since:** 19
 
@@ -78,7 +78,7 @@ See Scroll Event Example.
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object held by the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node, which is used to set scroll events. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, **undefined** is returned. This API does not support nodes created in a declarative manner. The scroll events set through this API coexist with declaratively defined events. The set scroll events do not override the original declarative events. When both event callbacks are set, the declarative event callback takes precedence.
 
 **Since:** 19
 
@@ -114,7 +114,7 @@ See Scroll Event Example.
 function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 ```
 
-Obtains the **UIGridEvent** object associated with the **Grid** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIGridEvent** object held by the **Grid** node, which is used to set scroll events. If the node is not created via ArkTS, whether cross-language access is supported must be set. If cross-language access is not supported, **undefined** is returned. This API does not support nodes created in a declarative manner. The scroll events set through this API coexist with declaratively defined events. The set scroll events do not override the original declarative events. When both event callbacks are set, the declarative event callback takes precedence.
 
 **Since:** 19
 

@@ -4,7 +4,7 @@
 export declare class ShapeClip
 ```
 
-Sets the clipping shape.
+Sets graphics clipping, which supports multiple shapes such as rectangles, rounded rectangles, circles, ellipses, and custom paths. It can clip a RenderNode by shape so that only the content within the clipping area is displayed.
 
 **Since:** 12
 

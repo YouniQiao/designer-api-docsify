@@ -4,7 +4,7 @@
 declare type Initializer<T> = () => T
 ```
 
-Defines a decorator for updating attributes.
+Defines the type of the initialization function for component attributes, which is used to create and return an attribute instance of the component.
 
 **Since:** 12
 

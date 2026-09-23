@@ -506,8 +506,6 @@
   <!--Del-->
   - [closeGeneratorNodeGraph(system api)](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [hasRecoverCacheInGeneratorDialog(system api)](arkts-arkui-imagegeneration-hasrecovercacheingeneratordialog-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [hideGeneratorDialog(system api)](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [hideGeneratorNodeGraph(system api)](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md)<!--DelEnd-->
@@ -836,7 +834,7 @@
   - [TrailOptimization(system api)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
 <!--Del-->
-- [@ohos.deviceStatus.dragInteraction](arkts-arkui-devicestatus-draginteraction.md)<!--DelEnd-->
+- [@ohos.deviceStatus.dragInteraction(Drag Interaction)](arkts-arkui-devicestatus-draginteraction.md)<!--DelEnd-->
   <!--Del-->
   - [getDataSummary(system api)](arkts-arkui-draginteraction-getdatasummary-f-sys.md)<!--DelEnd-->
   <!--Del-->

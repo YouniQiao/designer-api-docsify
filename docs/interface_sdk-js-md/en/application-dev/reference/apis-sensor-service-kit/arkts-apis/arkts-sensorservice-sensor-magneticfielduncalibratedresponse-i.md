@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 biasX: number
 ```
 
-Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
+Uncalibrated magnetic field strength bias along the x-axis (estimated magnetic field deviation), in μT.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
 biasY: number
 ```
 
-Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
+Uncalibrated magnetic field strength bias along the y-axis (estimated magnetic field deviation), in μT.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
 biasZ: number
 ```
 
-Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
+Uncalibrated magnetic field strength bias along the z-axis (estimated magnetic field deviation), in μT.
 
 **Type:** number
 
@@ -66,7 +66,7 @@ Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
 x: number
 ```
 
-Uncalibrated magnetic field strength on the x-axis, in μT.
+Uncalibrated magnetic field strength along the x-axis, in μT.
 
 **Type:** number
 
@@ -80,7 +80,7 @@ Uncalibrated magnetic field strength on the x-axis, in μT.
 y: number
 ```
 
-Uncalibrated magnetic field strength on the y-axis, in μT.
+Uncalibrated magnetic field strength along the y-axis, in μT.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Uncalibrated magnetic field strength on the y-axis, in μT.
 z: number
 ```
 
-Uncalibrated magnetic field strength on the z-axis, in μT.
+Uncalibrated magnetic field strength along the z-axis, in μT.
 
 **Type:** number
 

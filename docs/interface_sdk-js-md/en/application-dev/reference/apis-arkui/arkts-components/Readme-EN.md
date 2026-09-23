@@ -1547,7 +1547,7 @@
   - [RRect(system api)](arkts-arkui-remotewindow-comp-rrect-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WindowAnimationTarget(system api)](arkts-arkui-remotewindow-comp-windowanimationtarget-i-sys.md)<!--DelEnd-->
-- [Repeat(Defines Repeat component.)](arkts-arkui-repeat-comp.md)
+- [Repeat](arkts-arkui-repeat-comp.md)
   - [Repeat properties/events](arkts-arkui-repeat-comp-attribute.md)
   - [RepeatItem](arkts-arkui-repeat-comp-repeatitem-i.md)
   - [TemplateOptions](arkts-arkui-repeat-comp-templateoptions-i.md)

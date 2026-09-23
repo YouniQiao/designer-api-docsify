@@ -4,7 +4,7 @@
 interface RotationMatrixResponse
 ```
 
-Describes the response for setting the rotation matrix.
+Response object for setting the rotation matrix, which describes the calculation results of the rotation matrix and tilt matrix.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 inclination: Array<number>
 ```
 
-Inclination matrix.
+Tilt matrix, which is a one-dimensional array with a length of 9 and indicates the geomagnetic tilt transformation matrix.
 
 **Type:** Array&lt;number&gt;
 
@@ -36,7 +36,7 @@ Inclination matrix.
 rotation: Array<number>
 ```
 
-Rotation matrix.
+Rotation matrix, which is a one-dimensional array with a length of 9, indicating the rotation status of the device in three-dimensional space.
 
 **Type:** Array&lt;number&gt;
 

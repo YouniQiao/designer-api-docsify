@@ -4,7 +4,7 @@
 declare class ColorMetrics
 ```
 
-Used to mix colors.
+Provides a unified representation and encapsulation of colors. It supports color mixing as well as obtaining the color components in the R, G, B, and Alpha channels.
 
 **Since:** 12
 

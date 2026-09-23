@@ -22,6 +22,8 @@ Unit: vp.
 
 Value range: [0, +∞).
 
+A negative value is treated as the default value.
+
 **Type:** number
 
 **Since:** 11
@@ -43,6 +45,8 @@ Width of the component.
 Unit: vp.
 
 Value range: [0, +∞).
+
+A negative value is treated as the default value.
 
 **Type:** number
 

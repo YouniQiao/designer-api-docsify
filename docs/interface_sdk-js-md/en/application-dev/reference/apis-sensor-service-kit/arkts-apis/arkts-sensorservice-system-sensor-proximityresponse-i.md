@@ -4,7 +4,9 @@
 export interface ProximityResponse
 ```
 
-Callback invoked when the proximity sensor data changes.
+Callback function response object after the proximity sensor data changes, including the distance between a visible object and the device screen.
+
+**Device behavior differences**: This API can be called on wearables and lite wearables, but has no effect on other device types.
 
 **Since:** 3
 
@@ -26,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 distance: number
 ```
 
-Distance between a visible object and the device screen.
+Distance between a visible object and the device screen. Value range: **0** indicates that the object is close to the screen (near state), and a value greater than 0 indicates that the object is far away from the screen (far state). The specific value of the far state is determined by the hardware sensor.
 
 **Type:** number
 

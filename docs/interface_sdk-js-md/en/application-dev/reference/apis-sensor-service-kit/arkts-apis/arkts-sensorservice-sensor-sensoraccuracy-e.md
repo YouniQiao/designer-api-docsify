@@ -6,6 +6,8 @@ enum SensorAccuracy
 
 Enumerates the accuracy levels of sensor data.
 
+**Atomic service API**: This API can be used in atomic services since API version 11.
+
 **Since:** 11
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -16,7 +18,7 @@ Enumerates the accuracy levels of sensor data.
 ACCURACY_UNRELIABLE = 0
 ```
 
-The sensor data is unreliable.
+Unreliable sensor data, which has the lowest accuracy level. The data reliability cannot be ensured.
 
 **Since:** 11
 
@@ -30,7 +32,7 @@ The sensor data is unreliable.
 ACCURACY_LOW = 1
 ```
 
-The sensor data is at a low accuracy level.
+Low-accuracy sensor data, which is of low accuracy and is applicable only to rough estimation scenarios.
 
 **Since:** 11
 
@@ -44,7 +46,7 @@ The sensor data is at a low accuracy level.
 ACCURACY_MEDIUM = 2
 ```
 
-The sensor data is at a medium accuracy level.
+Medium-accuracy sensor data, which is of medium accuracy and is applicable to common application scenarios.
 
 **Since:** 11
 
@@ -58,7 +60,7 @@ The sensor data is at a medium accuracy level.
 ACCURACY_HIGH = 3
 ```
 
-The sensor data is at a high accuracy level.
+High-accuracy sensor data, which is of high accuracy and is applicable to scenarios that require high precision.
 
 **Since:** 11
 

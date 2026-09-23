@@ -16,7 +16,7 @@ Enumerates length units.
 DEFAULT = 0
 ```
 
-Length in vp.
+Length type, used to describe the length in units of the default vp.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Length in vp.
 PX = 1
 ```
 
-Length in px.
+Length type, used to describe the length in units of px.
 
 **Since:** 12
 

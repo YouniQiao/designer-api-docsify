@@ -4,7 +4,7 @@
 export interface GyroscopeResponse
 ```
 
-Defines a **GyroscopeResponse** object.
+Defines a response object of the callback function after the gyroscope sensor data changes, including the rotational velocity data of the device on the x, y, and z axes.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 x: number
 ```
 
-Rotation angular velocity of the X axis.
+Rotation angular velocity of the X axis, in rad/s. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ Rotation angular velocity of the X axis.
 y: number
 ```
 
-Rotation angular velocity of the Y axis.
+Rotation angular velocity of the Y axis, in rad/s. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 
@@ -72,7 +72,7 @@ Rotation angular velocity of the Y axis.
 z: number
 ```
 
-Rotation angular velocity of the Z axis.
+Rotation angular velocity of the Z axis, in rad/s. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 

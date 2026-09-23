@@ -77,7 +77,7 @@ Constructor
 | [AnimatableArithmetic](arkts-arkui-common-comp-animatablearithmetic-i.md) | The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\&lt;T\&gt;** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\&lt;T\&gt;** API. |
 | [AnimateParam](arkts-arkui-common-comp-animateparam-i.md) | Defines parameters related to animation effects. |
 | [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | Defines the options for the AreaChangeEvent. |
-| [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md) | Defines the attribute modifier. |
+| [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md) | You need a custom class to implement the **AttributeModifier** API. |
 | [AxisEvent](arkts-arkui-common-comp-axisevent-i.md) | Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [BackgroundBlurStyleOptions](arkts-arkui-common-comp-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle |
 | [BackgroundBrightnessOptions](arkts-arkui-common-comp-backgroundbrightnessoptions-i.md) | Provides background brightness options. |

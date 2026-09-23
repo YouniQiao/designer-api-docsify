@@ -18,4 +18,4 @@ Defines builder function to render one template type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| repeatItem | [RepeatItem](arkts-arkui-repeat-comp-repeatitem-i.md)&lt;T&gt; | Yes | State variable that combines **item** and **index**. |
+| repeatItem | [RepeatItem](arkts-arkui-repeat-comp-repeatitem-i.md)&lt;T&gt; | Yes | State variable that combines item and index.<br>When this parameter is omitted, it is ignored by default. Do not use this parameter in the closure function implementation; otherwise, a compile error occurs. |

@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 biasX: number
 ```
 
-Uncalibrated angular velocity bias of rotation around the x-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity bias (estimated angular velocity bias) of the x-axis, in rad/s.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Uncalibrated angular velocity bias of rotation around the x-axis of the device, 
 biasY: number
 ```
 
-Uncalibrated angular velocity bias of rotation around the y-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity bias (estimated angular velocity bias) along the y-axis of the device, in rad/s.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Uncalibrated angular velocity bias of rotation around the y-axis of the device, 
 biasZ: number
 ```
 
-Uncalibrated angular velocity bias of rotation around the z-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity bias (estimated angular velocity bias) along the z-axis of the device, in rad/s.
 
 **Type:** number
 
@@ -66,7 +66,7 @@ Uncalibrated angular velocity bias of rotation around the z-axis of the device, 
 x: number
 ```
 
-Uncalibrated angular velocity of rotation around the x-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity of the x-axis, in rad/s.
 
 **Type:** number
 
@@ -80,7 +80,7 @@ Uncalibrated angular velocity of rotation around the x-axis of the device, in ra
 y: number
 ```
 
-Uncalibrated angular velocity of rotation around the y-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity of the y-axis, in rad/s.
 
 **Type:** number
 
@@ -94,7 +94,7 @@ Uncalibrated angular velocity of rotation around the y-axis of the device, in ra
 z: number
 ```
 
-Uncalibrated angular velocity of rotation around the z-axis of the device, in rad/s.
+Uncalibrated rotational angular velocity of the z-axis, in rad/s.
 
 **Type:** number
 

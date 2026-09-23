@@ -446,7 +446,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 > 
 > 1. 仅支持ArcList、Grid、List、WaterFlow组件。
 > 
-> 2. 在[LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each)、[ForEach](arkts-arkui-foreach-comp-attribute.md)、[Repeat](arkts-arkui-repeat-comp.md#repeatdefines-repeat-component)刷新数据源时，需确保在数据刷新完成之后再调用此接口。
+> 2. 在[LazyForEach](arkts-arkui-lazyforeach-comp.md#lazy_for_each)、[ForEach](arkts-arkui-foreach-comp-attribute.md)、[Repeat](arkts-arkui-repeat-comp.md#repeat)刷新数据源时，需确保在数据刷新完成之后再调用此接口。
 > 
 > 3. 从API version 11开始，在List中支持[contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset)和[contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset)。从API version 22开始，在Grid和WaterFlow组件中支持设置contentStartOffset和contentEndOffset。
 > 

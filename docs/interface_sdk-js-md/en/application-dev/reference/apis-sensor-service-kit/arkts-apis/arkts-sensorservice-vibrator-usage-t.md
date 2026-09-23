@@ -6,6 +6,8 @@ type Usage = 'unknown' | 'alarm' | 'ring' | 'notification' | 'communication''tou
 
 Enumerates the vibration scenarios.
 
+**Atomic service API**: This API can be used in atomic services since API version 11.
+
 <!--RP1End-->
 
 **Since:** 9

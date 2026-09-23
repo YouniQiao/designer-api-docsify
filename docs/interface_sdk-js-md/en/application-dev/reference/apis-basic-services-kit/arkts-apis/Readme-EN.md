@@ -1239,7 +1239,7 @@
   - [SetBrightnessModeOptions](arkts-basicservices-system-brightness-setbrightnessmodeoptions-i.md)
   - [SetBrightnessOptions](arkts-basicservices-system-brightness-setbrightnessoptions-i.md)
   - [SetKeepScreenOnOptions](arkts-basicservices-system-brightness-setkeepscreenonoptions-i.md)
-- [@system.device](arkts-basicservices-system-device.md)
+- [@system.device(Device Information)](arkts-basicservices-system-device.md)
   - [Device](arkts-basicservices-system-device-device-c.md)
   - [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md)
   - [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md)

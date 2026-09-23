@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 x: number
 ```
 
-Magnetic field strength on the x-axis, in μT.
+Magnetic field strength along the x-axis, in μT.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Magnetic field strength on the x-axis, in μT.
 y: number
 ```
 
-Magnetic field strength on the y-axis, in μT.
+Magnetic field strength along the y-axis, in μT.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Magnetic field strength on the y-axis, in μT.
 z: number
 ```
 
-Magnetic field strength on the z-axis, in μT.
+Magnetic field strength along the z-axis, in μT.
 
 **Type:** number
 

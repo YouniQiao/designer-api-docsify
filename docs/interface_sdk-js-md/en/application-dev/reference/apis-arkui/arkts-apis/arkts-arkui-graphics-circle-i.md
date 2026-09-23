@@ -18,6 +18,8 @@ centerX: number
 
 X-coordinate of the center of the circle, in px.
 
+Value range: (-∞, +∞)
+
 **Type:** number
 
 **Since:** 12
@@ -35,6 +37,8 @@ centerY: number
 ```
 
 Y-coordinate of the center of the circle, in px.
+
+Value range: (-∞, +∞)
 
 **Type:** number
 
@@ -55,6 +59,8 @@ radius: number
 Radius of the circle, in px.
 
 Value range: [0, +∞).
+
+A negative value is treated as the default value.
 
 **Type:** number
 

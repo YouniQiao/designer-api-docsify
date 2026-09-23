@@ -83,7 +83,7 @@ function activateCooperate(targetNetworkId: string, inputDeviceId: number): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
-| inputDeviceId | number | 是 | Identifier of the input device for screen hopping. |
+| inputDeviceId | number | 是 | 待穿越输入设备标识符。 |
 
 **返回值：**
 

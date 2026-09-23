@@ -16,7 +16,7 @@ Defines position of moved data.
 from: number
 ```
 
-Start position for the movement. The value range is [0, data source length - 1].
+Start position of the move. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Start position for the movement. The value range is [0, data source length - 1].
 to: number
 ```
 
-End position for the movement. The value range is [0, data source length - 1].
+Target position of the move. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 

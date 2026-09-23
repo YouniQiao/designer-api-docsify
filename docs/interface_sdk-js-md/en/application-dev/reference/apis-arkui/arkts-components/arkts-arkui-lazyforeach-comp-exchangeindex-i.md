@@ -16,7 +16,7 @@ Defines position of exchange data.
 end: number
 ```
 
-Second position for the exchange. The value range is [0, data source length - 1].
+Second swap position. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Second position for the exchange. The value range is [0, data source length - 1]
 start: number
 ```
 
-First position for the exchange. The value range is [0, data source length - 1].
+First swap position. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 

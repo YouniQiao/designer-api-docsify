@@ -21,9 +21,9 @@ export type Matrix4 = [
 ]
 ```
 
-Sets a 4x4 matrix.
+Sets a 4 x 4 matrix.
 
-The **Matrix4** type is used to set transformation information for components. The following is an example:  
+This type is a 4 x 4 matrix represented by `number[]` of length 16, which is used to set transformation information for components. The following is an example:  
 ```
 const transform: Matrix4 = [
 1, 0, 45, 0,

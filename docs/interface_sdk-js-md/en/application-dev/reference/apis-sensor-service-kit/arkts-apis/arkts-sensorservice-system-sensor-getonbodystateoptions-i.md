@@ -4,7 +4,7 @@
 export interface GetOnBodyStateOptions
 ```
 
-Defines the callback invoked upon change in the wearing state of the device that houses the sensor.
+Sets the parameters for subscribing to the device wearing status, including the callback function. The wearing status can be worn or not worn.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 complete?: () => void
 ```
 
-Callback invoked when the API call is complete.
+Callback invoked when the API call is complete. This callback will be executed regardless of whether the API call succeeds or fails. If this parameter is not specified, no callback notification is sent when the API call is complete.
 
 **Since:** 3
 
@@ -44,7 +44,7 @@ Callback invoked when the API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when an API call fails.
+Callback invoked when an API call fails. The callback parameters are **data** of the string type and **code** of the number type, where **data** indicates the error information and **code** indicates the error code. If this parameter is not specified, no callback notification is sent when the API call fails.
 
 **Since:** 3
 
@@ -69,7 +69,7 @@ Callback invoked when an API call fails.
 success: (data: OnBodyStateResponse) => void
 ```
 
-Callback upon a successful API call.
+Callback invoked when the API call succeeds. The callback parameter is an **OnBodyStateResponse** object.
 
 **Since:** 3
 

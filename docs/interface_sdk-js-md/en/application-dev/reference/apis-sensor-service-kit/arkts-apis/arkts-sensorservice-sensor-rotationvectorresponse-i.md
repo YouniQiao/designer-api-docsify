@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 w: number
 ```
 
-Scalar, which describes the rotation status of the device relative to a reference direction, in radians
+Scalar component of the rotation vector, which describes the rotation status of the device relative to a reference direction. Unit: radian.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Scalar, which describes the rotation status of the device relative to a referenc
 x: number
 ```
 
-X-component of the rotation vector.
+X-axis component of the rotation vector, indicating the projection of the device rotation status on the X axis.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ X-component of the rotation vector.
 y: number
 ```
 
-Y-component of the rotation vector.
+Y-axis component of the rotation vector, indicating the projection of the device rotation status on the Y axis.
 
 **Type:** number
 
@@ -66,7 +66,7 @@ Y-component of the rotation vector.
 z: number
 ```
 
-Z-component of the rotation vector.
+Z-axis component of the rotation vector, indicating the projection of the device rotation status on the z-axis.
 
 **Type:** number
 

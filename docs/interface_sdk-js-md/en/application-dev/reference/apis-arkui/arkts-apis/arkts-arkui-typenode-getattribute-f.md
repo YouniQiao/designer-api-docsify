@@ -93,7 +93,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which attributes are obtained. |
 | nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
 
 **Return value:**

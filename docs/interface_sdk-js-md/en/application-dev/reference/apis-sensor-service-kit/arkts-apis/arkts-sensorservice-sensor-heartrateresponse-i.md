@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 heartRate: number
 ```
 
-Heart rate, in beats per minute (bpm).
+Heart rate of a user, in bpm.
 
 **Type:** number
 

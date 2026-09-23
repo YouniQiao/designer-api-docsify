@@ -36,7 +36,7 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | **LengthMetrics** object. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | **LengthMetrics** object after the auto-refresh property is set. |
 
 **Examples**
 
@@ -77,8 +77,8 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property.<br>Value range: [0, +∞). |
-| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | Unit of the length property. |
+| value | number | Yes | Value of the length property.<br>Value range: (-∞, +∞). |
+| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | Unit of the length property. The default value is vp. |
 
 ## fp
 
@@ -106,7 +106,7 @@ Creates a length property in fp.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object in units of fp. |
 
 ## lpx
 
@@ -134,7 +134,7 @@ Creates a length property in lpx.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object in units of lpx. |
 
 ## percent
 
@@ -156,13 +156,13 @@ Creates a length property in percent. The value **1** indicates 100%.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property.<br>Value range: [0, 1]. |
+| value | number | Yes | Value of the length property.<br>Value range: [0, 1]. <br>A value out of range is treated as a boundary value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object in units of percentage, where a value of **1** indicates 100%. |
 
 ## px
 
@@ -190,7 +190,7 @@ Creates a length property in px.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object in units of px. |
 
 ## resource
 
@@ -218,7 +218,7 @@ Represents the length of a resource of the Resource type.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object of a Resource-type resource. |
 
 **Examples**
 
@@ -292,7 +292,7 @@ Creates a length property in vp.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Length property object in units of vp. |
 
 ## unit
 
@@ -321,6 +321,10 @@ public value: number
 ```
 
 Value of the length property.
+
+Value range: (-∞, +∞).
+
+When **unit** is set to **PERCENT**, **value** indicates a percentage (1 indicates 100%), and the reference size depends on the specific usage scenario; for other units, **value** indicates the absolute length in the corresponding unit.
 
 **Type:** number
 

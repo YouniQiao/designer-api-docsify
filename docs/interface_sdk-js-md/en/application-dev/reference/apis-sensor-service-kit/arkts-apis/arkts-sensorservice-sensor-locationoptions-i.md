@@ -4,7 +4,7 @@
 interface LocationOptions
 ```
 
-Describes the geographical location.
+Indicates the geographical location, which is used to pass the longitude, latitude, and altitude information for calculating the geomagnetic field.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 altitude: number
 ```
 
-Altitude, in m.
+Altitude. Unit: m
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Altitude, in m.
 latitude: number
 ```
 
-Latitude, in degrees.
+Latitude. Value range: [-90, 90]. Unit: degree
 
 **Type:** number
 
@@ -50,7 +50,7 @@ Latitude, in degrees.
 longitude: number
 ```
 
-Longitude, in degrees.
+Longitude. Value range: [-180, 180]. Unit: degree
 
 **Type:** number
 

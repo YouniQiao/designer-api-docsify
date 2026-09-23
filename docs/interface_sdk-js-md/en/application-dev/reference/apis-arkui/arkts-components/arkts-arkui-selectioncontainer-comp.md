@@ -12,7 +12,7 @@ The **SelectionContainer** component provides cross-node text selection, copying
 > 
 > - Dragging is not supported when text is selected in **SelectionContainer**.
 > 
-> - Text under the [Repeat](arkts-arkui-repeat-comp.md#repeatdefines-repeat-component) component in **SelectionContainer** does not support cross-node selection.
+> - Text under the [Repeat](arkts-arkui-repeat-comp.md#repeat) component in **SelectionContainer** does not support cross-node selection.
 > 
 > - Only the text content in **Text** components participates in cross-node selection and text concatenation.
 

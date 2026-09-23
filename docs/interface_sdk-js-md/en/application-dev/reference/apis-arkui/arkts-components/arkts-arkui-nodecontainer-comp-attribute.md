@@ -4,7 +4,7 @@
 declare class NodeContainerAttribute extends CommonMethod<NodeContainerAttribute>
 ```
 
-The [universal attributes](arkts-arkui-common-comp.md#common) are supported.
+The [universal attributes](arkts-arkui-common-comp.md#common) are supported, but the [attribute modifier](arkts-arkui-common-comp-attributemodifier-i.md) is not supported.
 
 The [universal events](arkts-arkui-common-comp.md#common) are supported.
 

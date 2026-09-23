@@ -4,7 +4,7 @@
 export interface SubscribeHeartRateOptions
 ```
 
-Defines the type of data to return for a subscription to data changes of the heart rate sensor.
+Configures the parameters for subscribing to the heart rate sensor, including the callback function. The callback frequency of heart rate data is fixed at 5 seconds per time and cannot be configured using the interval parameter.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when an API call fails.
+Callback invoked when an API call fails. The callback parameters are **data** of the string type and **code** of the number type, where **data** indicates the error information and **code** indicates the error code. If this parameter is not specified, no callback notification is sent when the API call fails.
 
 **Since:** 3
 
@@ -55,7 +55,7 @@ Callback invoked when an API call fails.
 success: (data: HeartRateResponse) => void
 ```
 
-Callback invoked when the heart rate sensor data changes. This callback is invoked every five seconds.
+Callback invoked when the heart rate sensor data changes. The callback parameter is a **HeartRateResponse** object. The callback frequency is fixed at 5 seconds.
 
 **Since:** 3
 

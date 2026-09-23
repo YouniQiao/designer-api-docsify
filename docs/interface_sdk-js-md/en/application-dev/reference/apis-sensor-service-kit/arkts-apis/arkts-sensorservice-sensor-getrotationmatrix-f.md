@@ -192,7 +192,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Promise used to return the rotation matrix. |
+| Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Promise used to return the rotation matrix. The **RotationMatrixResponse** object contains the rotation matrix and tilt matrix of the device, which can be used to calculate the posture and orientation of the device. |
 
 **Error codes:**
 

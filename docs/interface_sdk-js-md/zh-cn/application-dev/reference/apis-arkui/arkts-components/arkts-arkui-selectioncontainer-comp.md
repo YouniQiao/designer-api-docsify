@@ -12,7 +12,7 @@ SelectionContainer组件用于为多个文本节点提供跨节点文本选中�
 > 
 > - SelectionContainer内选中文本时不支持拖拽。
 > 
-> - SelectionContainer内[Repeat](arkts-arkui-repeat-comp.md#repeatdefines-repeat-component)组件下的文本不支持跨节点选中。
+> - SelectionContainer内[Repeat](arkts-arkui-repeat-comp.md#repeat)组件下的文本不支持跨节点选中。
 > 
 > - 仅Text组件中的文本内容参与跨节点选中与文本拼接。
 

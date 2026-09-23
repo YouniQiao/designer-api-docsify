@@ -12,7 +12,7 @@ import { sensor } from '@kit.SensorServiceKit';
 function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 ```
 
-Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result.
+Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result. To obtain the sensor list synchronously, use **getSensorListSync**.
 
 **Since:** 9
 
@@ -73,7 +73,7 @@ Obtains information about all sensors on the device. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt;&gt; | Promise used to return the sensor list. |
+| Promise&lt;Array&lt;[Sensor](arkts-sensorservice-sensor-sensor-i.md)&gt;&gt; | Promise used to return the sensor list. Each **Sensor** object contains the sensor type ID, name, version, manufacturer, maximum range, resolution, power, and other attributes. |
 
 **Error codes:**
 

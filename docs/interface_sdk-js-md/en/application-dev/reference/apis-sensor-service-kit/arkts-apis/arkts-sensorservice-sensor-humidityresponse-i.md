@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 humidity: number
 ```
 
-Ambient relative humidity, in a percentage (%).
+Relative humidity of the environment, in percentage, indicating the relative humidity percentage of the environment.
 
 **Type:** number
 

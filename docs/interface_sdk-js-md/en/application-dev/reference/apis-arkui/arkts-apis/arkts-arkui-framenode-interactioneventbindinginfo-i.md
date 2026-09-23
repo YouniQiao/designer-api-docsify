@@ -38,7 +38,7 @@ builtInEventRegistered: boolean
 
 Whether the component has built-in events (events that are defined internally by the component and do not require manual binding).
 
-The value **true** means that the component has built-in events, and **false** means the opposite.
+The value **true** indicates that the component has built-in events, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -76,9 +76,9 @@ The value **true** means that the event is bound through node event registration
 nodeEventRegistered: boolean
 ```
 
-Whether the event is bound through a custom component node. For the implementation example, see [Basic Event Example](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).
+Whether the event is bound through a custom component node. For details, see [Basic Event Example](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).
 
-The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
+The value **true** indicates that the event is bound through a custom component node, and **false** indicates the opposite.
 
 **Type:** boolean
 

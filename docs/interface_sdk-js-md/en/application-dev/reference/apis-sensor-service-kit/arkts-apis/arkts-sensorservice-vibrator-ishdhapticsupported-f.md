@@ -22,7 +22,7 @@ Checks whether HD vibration is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Boolean value indicating whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite. |
+| boolean | Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

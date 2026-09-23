@@ -4,7 +4,9 @@
 export interface SubscribeLightOptions
 ```
 
-Defines the type of data to return for a subscription to data changes of the ambient light sensor.
+Sets the parameters for subscribing to the ambient light sensor, including the callback function.
+
+**Device behavior differences**: This API can be called on wearables and lite wearables, but has no effect on other device types.
 
 **Since:** 3
 
@@ -26,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 fail?: (data: string, code: number) => void
 ```
 
-Callback invoked when an API call fails.
+Callback invoked when an API call fails. The callback parameters are **data** of the string type and **code** of the number type, where **data** indicates the error information and **code** indicates the error code. If this parameter is not specified, no callback notification is sent when the API call fails.
 
 **Since:** 3
 
@@ -51,7 +53,7 @@ Callback invoked when an API call fails.
 success: (data: LightResponse) => void
 ```
 
-Callback invoked when the ambient light sensor data changes.
+Callback function invoked when the ambient light sensor data changes. The callback parameter is a **LightResponse** object.
 
 **Since:** 3
 

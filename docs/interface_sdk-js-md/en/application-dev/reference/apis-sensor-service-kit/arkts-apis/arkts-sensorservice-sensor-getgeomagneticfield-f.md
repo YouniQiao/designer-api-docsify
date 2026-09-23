@@ -14,6 +14,12 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -58,6 +64,12 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 ```
 
 Obtains the geomagnetic field of a geographic location. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)
+> instead.
 
 **Since:** 8
 

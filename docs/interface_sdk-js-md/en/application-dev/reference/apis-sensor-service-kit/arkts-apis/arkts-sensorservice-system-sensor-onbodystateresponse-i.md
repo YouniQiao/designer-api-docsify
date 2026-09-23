@@ -4,7 +4,7 @@
 export interface OnBodyStateResponse
 ```
 
-Specifies whether the device that houses the sensor is worn.
+Defines a response object of the device wearing status, including the data indicating whether the device is worn.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 value: boolean
 ```
 
-Boolean value indicating whether the device is worn. The value **true** indicates that the device is worn, and the value **false** indicates the opposite.
+Whether the device is worn The value **true** indicates that the device is worn, and the value **false** indicates that the device is not worn.
 
 **Type:** boolean
 

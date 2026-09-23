@@ -16,7 +16,7 @@ Represents an operation for exchanging data.
 index: ExchangeIndex
 ```
 
-Positions for the exchange. The value range is [0, data source length - 1].
+Exchange position. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** [ExchangeIndex](arkts-arkui-lazyforeach-comp-exchangeindex-i.md)
 
@@ -52,7 +52,7 @@ New keys to assign to the exchanged data. The original keys are used by default.
 type: DataOperationType.EXCHANGE
 ```
 
-Type of data exchange.
+Data exchange type.
 
 **Type:** [DataOperationType.EXCHANGE](arkts-arkui-lazyforeach-comp-dataoperationtype-e.md)
 

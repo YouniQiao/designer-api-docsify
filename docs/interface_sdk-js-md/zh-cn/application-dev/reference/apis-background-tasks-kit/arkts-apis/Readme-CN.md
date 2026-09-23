@@ -91,11 +91,15 @@
   - [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
   - [常量](arkts-backgroundtasks-backgroundloader-con.md)
 - [@ohos.resourceschedule.backgroundProcessManager(后台子进程管控)](arkts-backgroundtasks-resourceschedule-backgroundprocessmanager.md)
+  <!--Del-->
+  - [clearBackgroundApps(系统接口)](arkts-backgroundtasks-backgroundprocessmanager-clearbackgroundapps-f-sys.md)<!--DelEnd-->
   - [getPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md)
   - [isPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-ispowersavemode-f.md)
   - [resetProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-resetprocesspriority-f.md)
   - [setPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-setpowersavemode-f.md)
   - [setProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md)
+  <!--Del-->
+  - [ClearType(系统接口)](arkts-backgroundtasks-backgroundprocessmanager-cleartype-e-sys.md)<!--DelEnd-->
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
 - [@ohos.resourceschedule.backgroundTaskManager(后台任务管理)](arkts-backgroundtasks-resourceschedule-backgroundtaskmanager.md)

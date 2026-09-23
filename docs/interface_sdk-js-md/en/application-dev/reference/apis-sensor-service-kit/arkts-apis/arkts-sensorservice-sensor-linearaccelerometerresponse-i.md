@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 x: number
 ```
 
-Linear acceleration along the x-axis of the device, in m/s?.
+Linear acceleration along the x-axis of the device, excluding the gravity component, in m/s².
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Linear acceleration along the x-axis of the device, in m/s?.
 y: number
 ```
 
-Linear acceleration along the y-axis of the device, in m/s?.
+Linear acceleration along the y-axis of the device, excluding the gravity component, in m/s².
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Linear acceleration along the y-axis of the device, in m/s?.
 z: number
 ```
 
-Linear acceleration along the z-axis of the device, in m/s?.
+Linear acceleration along the z-axis of the device, excluding the gravity component, in m/s².
 
 **Type:** number
 

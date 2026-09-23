@@ -6,6 +6,8 @@ interface SensorInfoParam
 
 Defines sensor parameters, including **deviceId** and **sensorIndex**.
 
+**Atomic service API**: This API can be used in atomic services since API version 19.
+
 **Since:** 19
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -22,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 deviceId?: number
 ```
 
-Device ID. The default value is -1, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) to obtain the device ID.
+ID of the device to which the target sensor belongs. The default value is **-1**, which indicates the local device. You can obtain the ID of a remote device through [sensor.on('sensorStatusChange')](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) or [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md).
 
 **Type:** number
 
@@ -38,7 +40,7 @@ Device ID. The default value is -1, indicating the local device. You can use [ge
 sensorIndex?: number
 ```
 
-Sensor index. The default value is **0**, indicating the default sensor on the device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) to obtain the sensor index.
+Index of the target sensor. A sensor type may have multiple instances. The default value is **0**, which indicates the default sensor on the device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md) or [sensor.on('sensorStatusChange')](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) to obtain the sensor index.
 
 **Type:** number
 

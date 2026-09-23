@@ -4,7 +4,7 @@
 interface GeomagneticResponse
 ```
 
-Describes a geomagnetic response object.
+Sets the geomagnetic response object, which describes the geomagnetic field information of a specified geographical location.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 deflectionAngle: number
 ```
 
-Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field), in degrees.
+Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field). in degrees.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ Magnetic dip, also called magnetic inclination, which is the angle measured from
 levelIntensity: number
 ```
 
-Horizontal intensity of the magnetic field vector field, in nT.
+Horizontal magnetic field strength, which is the total strength of the geomagnetic field on the horizontal plane. in nT.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ Horizontal intensity of the magnetic field vector field, in nT.
 totalIntensity: number
 ```
 
-Total intensity of the magnetic field vector, in nT.
+Total intensity of the geomagnetic field vector in three-dimensional space. in nT.
 
 **Type:** number
 
@@ -78,7 +78,7 @@ Total intensity of the magnetic field vector, in nT.
 x: number
 ```
 
-North component of the geomagnetic field, in nT.
+X component (north component) of the geomagnetic field, in nT.
 
 **Type:** number
 
@@ -92,7 +92,7 @@ North component of the geomagnetic field, in nT.
 y: number
 ```
 
-East component of the geomagnetic field, in nT.
+Y component (east component) of the geomagnetic field, in nT.
 
 **Type:** number
 
@@ -106,7 +106,7 @@ East component of the geomagnetic field, in nT.
 z: number
 ```
 
-Vertical component of the geomagnetic field, in nT.
+Z component (vertical component) of the geomagnetic field, in nT.
 
 **Type:** number
 

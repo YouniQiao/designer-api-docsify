@@ -16,7 +16,7 @@ Enumerates length units.
 PX = 0
 ```
 
-Length in px.
+Length type used to describe the length in units of px.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Length in px.
 VP = 1
 ```
 
-Length in vp.
+Length type used to describe the length in units of vp.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Length in vp.
 FP = 2
 ```
 
-Length in fp.
+Length type used to describe the length in units of fp.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Length in fp.
 PERCENT = 3
 ```
 
-Length in percentage.
+Length type used to describe the length in units of %.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ Length in percentage.
 LPX = 4
 ```
 
-Length in lpx.
+Length type used to describe the length in units of lpx.
 
 **Since:** 12
 

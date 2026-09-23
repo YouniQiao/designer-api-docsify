@@ -4,7 +4,9 @@
 export interface LightResponse
 ```
 
-Defines a **LightResponse** object.
+Callback invoked when the ambient light sensor data changes. The response object contains the ambient light intensity data.
+
+**Device behavior differences**: This API can be called on wearables and lite wearables, but has no effect on other device types.
 
 **Since:** 3
 
@@ -26,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 intensity: number
 ```
 
-Light intensity, in lux.
+Ambient light intensity, in lux. Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 

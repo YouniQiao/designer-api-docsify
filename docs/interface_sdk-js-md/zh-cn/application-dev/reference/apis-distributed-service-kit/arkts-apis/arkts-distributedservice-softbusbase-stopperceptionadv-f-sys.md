@@ -43,5 +43,5 @@ function stopPerceptionAdv(type: PerceptionType): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, A non-system application calls a system API. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [2000001](../errorcode-conversation.md#2000001-内部错误) | Internal error. An unexpected system error occurred. |
-| 2000003 | Temporary error. The request failed due to a temporary error and can be retried. |
-| 2006001 | Underlying module error. The request failed due to an error in another underlying module and can be retried after a period of time. |
+| [2000003](../errorcode-softbusBase.md#2000003-临时错误) | Temporary error. The request failed due to a temporary error and can be retried. |
+| [2006001](../errorcode-softbusBase.md#2006001-底层模块错误) | Underlying module error. The request failed due to an error in another underlying module and can be retried after a period of time. |

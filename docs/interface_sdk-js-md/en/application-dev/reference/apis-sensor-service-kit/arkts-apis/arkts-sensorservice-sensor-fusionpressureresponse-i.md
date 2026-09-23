@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 fusionPressure: number
 ```
 
-Pressure percentage on the fused pressure sensor, in percentage (%)
+Fused pressure, indicating the percentage of the pressure value applied to the fused pressure sensor, in percentage.
 
 **Type:** number
 

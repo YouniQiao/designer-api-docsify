@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 steps: number
 ```
 
-Number of steps a user has walked.
+Number of steps a user has walked. Unit: step
 
 **Type:** number
 

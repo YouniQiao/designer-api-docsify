@@ -41,7 +41,7 @@ A maximum of 100 contacts can be imported at a time. Importing contact portraits
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
 | [16700004](../errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) | The number of contacts exceeds the limit. |

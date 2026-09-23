@@ -4,7 +4,9 @@
 export interface DeviceOrientationResponse
 ```
 
-Defines a **DeviceOrientationResponse** object.
+Defines a response object of the callback function after the device orientation sensor data changes, including the three rotation angles of the device.
+
+**Device behavior differences**: This API can be called on wearables and lite wearables, but has no effect on other device types.
 
 **Since:** 6
 
@@ -26,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 alpha: number
 ```
 
-Rotation angle around the Z axis when the X/Y axis of the device coincides with the X/Y axis of the earth.
+Rotation angle around the Z axis when the X/Y axis of the device coincides with the X/Y axis of the eart, in degrees. Value range: [0, 360]
 
 **Type:** number
 
@@ -46,7 +48,7 @@ Rotation angle around the Z axis when the X/Y axis of the device coincides with 
 beta: number
 ```
 
-Rotation angle around the X axis when the Y/Z axis of the device coincides with the Y/Z axis of the earth.
+Rotation angle around the X axis when the Y/Z axis of the device coincides with the Y/Z axis of the earth. in degrees. The value range is [-180, 180].
 
 **Type:** number
 
@@ -66,7 +68,7 @@ Rotation angle around the X axis when the Y/Z axis of the device coincides with 
 gamma: number
 ```
 
-Rotation angle around the Y axis when the X/Z axis of the device coincides with the X/Z axis of the earth.
+Rotation angle around the Y axis when the X/Z axis of the device coincides with the X/Z axis of the earth. in degrees. The value range is [-90, 90].
 
 **Type:** number
 

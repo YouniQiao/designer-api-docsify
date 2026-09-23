@@ -16,7 +16,7 @@ Represents an operation for changing data.
 index: number
 ```
 
-Index of the data to be changed. The value range is [0, data source length - 1].
+Index of the changed data. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ New key to assign to the changed data. The original key is used by default.
 type: DataOperationType.CHANGE
 ```
 
-Type of data change.
+Data change type.
 
 **Type:** [DataOperationType.CHANGE](arkts-arkui-lazyforeach-comp-dataoperationtype-e.md)
 

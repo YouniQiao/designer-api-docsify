@@ -4,9 +4,9 @@
 declare class RefreshAttribute extends CommonMethod<RefreshAttribute>
 ```
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md#common), the following attributes are supported.
 
-In addition to the universal events, the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md#common), the following events are supported.
 
 **Inheritance/Implementation:** RefreshAttribute extends CommonMethod<RefreshAttribute>
 
@@ -34,7 +34,7 @@ Sets the maximum pull-down distance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number&gt; | Yes | Maximum pull-down distance. The minimum value for the maximum pull-down distance is 0. Values less than 0 are treated as **0**. If this value is less than the refresh offset (**refreshOffset**), the refresh action will not be triggered when the pull-down gesture is released.<br>If set to **undefined** or **null**, this parameter is considered not set.<br>Default value: **undefined**.<br>Unit: vp |
+| distance | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;number&gt; | Yes | Maximum pull-down distance.<br>Value range: [0, +∞). A value less than 0 is treated as 0. When this value is less than the pull-down offset **refreshOffset** for refresh, releasing the pull-down gesture on **Refresh** does not trigger refresh.<br>**undefined** and **null** are treated as if this attribute is not set.<br>Default value: **undefined**<br>Unit: vp |
 
 <a id="maxpulldowndistance-1"></a>
 
@@ -60,7 +60,7 @@ If this API is not set, the maximum pull-down distance is **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; undefined | Yes | Maximum pull-down distance.<br>Default value: **undefined**.<br>Unit: vp<br>Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12), the refresh action will not be triggered when the pull-down gesture is released. <br>If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
+| distance | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; undefined | Yes | Maximum pull-down distance. <br>Default value: **undefined**. <br>Unit: vp <br>Value range: [0, +∞). If the value is less than 0, **0** is used. If this value is less than the [refreshOffset](#refreshoffset), the refresh action will not be triggered when the pull-down gesture is released. <br>If this parameter is set to **undefined** or **null**, it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
 
 ## onOffsetChange
 
@@ -94,7 +94,7 @@ Called when the pull-down distance changes.
 onRefreshing(callback: () => void)
 ```
 
-Called when the component starts refreshing.
+Triggered when the component enters the refresh state. It is equivalent to the case where **state** is **Refresh** in the **onStateChange** callback. If you only need to listen for the start of refresh, use **onRefreshing** for simplicity. If you need to track all refresh state changes (**Inactive**, **Drag**, **OverDrag**, **Refresh**, **Done**), use **onStateChange**.
 
 **Since:** 8
 
@@ -174,7 +174,7 @@ Sets whether to initiate a refresh when the pull-down distance exceeds the value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to initiate a refresh when the pull-down distance exceeds the value of [refreshOffset](#refreshoffset). The value **true** means to initiate a refresh, and **false** means the opposite.<br>Default value: **true** |
+| value | boolean | Yes | Whether to initiate a refresh when the pull-down distance exceeds the value of [refreshOffset](#refreshoffset). The value **true** means to initiate a refresh, and **false** means the opposite. <br>Default value: **true** |
 
 ## pullUpToCancelRefresh
 
@@ -218,7 +218,7 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Pull-down offset, in vp.<br>Default value: 96 vp when [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) is set and 64 vp when [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) is not set.<br>If the value specified is 0 or less than 0, the default value is used. |
+| value | number | Yes | Pull-down offset, in vp.<br>Value range: (0, +∞).<br>Default value: 64 vp when the [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) parameter is not set, and 96 vp when the [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) parameter is set. <br>If the value is **0** or a negative number, the default value is used. |
 
 <a id="refreshoffset-1"></a>
 
@@ -244,4 +244,4 @@ If this API and [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) are n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Pull-down offset.<br>Unit: vp<br>Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |
+| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Pull-down offset.<br>Unit: vp<br>Value range: (0, +∞).<br>Default value: 64 vp when the [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) parameter is not set, and 96vp when the [promptText](arkts-arkui-refresh-comp-refreshoptions-i.md) parameter is set.<br>If the value is **0** or a negative number, the default value is used. |

@@ -4,7 +4,7 @@
 export interface AccelerometerResponse
 ```
 
-Defines the callback invoked when the acceleration sensor data changes.
+Callback invoked when the acceleration sensor data changes. The callback returns the acceleration data of the device on the x, y, and z axes.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, Devi
 x: number
 ```
 
-Acceleration on the x-axis.
+Acceleration along the x-axis of the device, in m/s². Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ Acceleration on the x-axis.
 y: number
 ```
 
-Acceleration on the y-axis.
+Acceleration along the y-axis of the device, in m/s². Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor.
 
 **Type:** number
 
@@ -72,7 +72,7 @@ Acceleration on the y-axis.
 z: number
 ```
 
-Acceleration on the z-axis.
+Acceleration along the z-axis of the device, in m/s². Value range: The value is the actually reported physical quantity, which is determined by the hardware sensor. The acceleration along the z-axis is about 9.8 m/s² (gravity acceleration) when the device is still.
 
 **Type:** number
 

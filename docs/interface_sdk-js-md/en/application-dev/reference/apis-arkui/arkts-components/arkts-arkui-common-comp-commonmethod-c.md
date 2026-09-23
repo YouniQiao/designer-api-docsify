@@ -933,9 +933,9 @@ Sets the aspect ratio of the component, which can be obtained using the followin
 attributeModifier(modifier: AttributeModifier<T>): T
 ```
 
-Sets the attribute modifier.
+Creates an attribute modifier.
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -947,13 +947,13 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;T&gt; | Yes | The if/else syntax is supported. You need a custom class to implement the AttributeModifier API. |
+| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;T&gt; | Yes | Dynamically sets the attribute method on the current component, supporting the use of if/else syntax.<br>modifier: attribute modifier. Developers need to define a custom class to implement the AttributeModifier interface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## backdropBlur
 
@@ -3213,7 +3213,11 @@ Sets the preview image processing mode, badge count, and interaction behavior du
 drawModifier(modifier: DrawModifier | undefined): T
 ```
 
-Sets the drawModifier of the current component.
+Creates a drawing modifier.
+
+> **NOTE:** 
+> 
+> This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -3227,13 +3231,13 @@ Sets the drawModifier of the current component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | Yes | drawModifier used to draw, or undefined if it is not available. Default value: undefined A custom modifier applies only to the FrameNode of the currently bound component, not to its subnodes. |
+| modifier | [DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | Yes | Custom drawing modifier, which defines the logic of custom drawing. <br>If no custom drawing modifier is set, the component uses the original default drawing behavior and does not perform custom drawing. <br>Default value: **undefined**. <br>**Note:** <br>Each custom drawing modifier takes effect only on the [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) of the currently bound component, and does not take effect on its child nodes. Each DrawModifier instance can be set to only one component, and repeated setting is prohibited. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component, used for chained calls. |
 
 ## enableClickSoundEffect
 
@@ -7584,9 +7588,15 @@ Reuse id is used for identify the reuse type of each @ComponentV2 custom compone
 reuseId(id: string): T
 ```
 
-Reuse id is used for identify the reuse type for each custom node.
+Reuse identifier, used to divide custom components into reuse groups. This API can be used only in the stage model.
 
-**Since:** 11
+> **NOTE:** 
+> 
+> - Set the corresponding reuseId based on the different layout forms or types of components to improve the precision of reuse matching. For best practices, see Component Reuse -[Using reuseId to Mark Components with Layout Changes](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/arkts-component_reuse#using-reuseid-to-mark-components-with-layout-changes).
+> 
+> - This API cannot be called in [attributeModifier](#attributemodifier).
+
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7598,13 +7608,13 @@ Reuse id is used for identify the reuse type for each custom node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The id for reusable custom node. |
+| id | string | Yes | Reuse identifier used to divide custom components into reuse groups. It is recommended that different reuseId values be set for components with different layouts or types to prevent components from being incorrectly reused and improve reuse efficiency. This attribute takes effect only on custom components decorated by @Reusable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## rotate
 

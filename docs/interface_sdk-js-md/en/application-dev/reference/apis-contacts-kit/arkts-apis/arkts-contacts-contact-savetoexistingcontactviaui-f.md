@@ -38,7 +38,7 @@ Saves the information to an existing contact through UI interaction.. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700101](../errorcode-contacts.md#16700101-database-query-failed) | Failed to get value from contacts data. |
 | [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) | Failed to set value to contacts data. |

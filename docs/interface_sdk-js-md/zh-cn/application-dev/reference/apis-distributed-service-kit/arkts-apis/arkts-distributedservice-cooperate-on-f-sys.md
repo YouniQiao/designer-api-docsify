@@ -28,8 +28,8 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperate' | 是 | 监听类型，取值为'cooperate' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 | Callback used to return the result. |
+| type | 'cooperate' | 是 | 监听类型，取值为'cooperate'。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 | 回调函数，异步返回键鼠穿越状态消息。 |
 
 **错误码：**
 
@@ -77,7 +77,7 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperateMessage' | 是 | 监听类型，取值为'cooperateMessage' |
+| type | 'cooperateMessage' | 是 | 监听类型，取值为'cooperateMessage'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CooperateMessage](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md)&gt; | 是 | 回调函数，异步返回键鼠穿越状态消息。 |
 
 **错误码：**
@@ -124,8 +124,8 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'cooperateMouse' | 是 | 监听类型，取值为'cooperateMouse' |
-| networkId | string | 是 | 目标设备描述符 |
+| type | 'cooperateMouse' | 是 | 监听类型，取值为'cooperateMouse'。 |
+| networkId | string | 是 | 目标设备描述符。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
 
 **错误码：**

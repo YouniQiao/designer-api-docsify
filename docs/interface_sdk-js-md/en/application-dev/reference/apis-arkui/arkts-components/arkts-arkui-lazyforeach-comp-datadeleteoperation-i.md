@@ -16,9 +16,7 @@ Represents an operation for deleting data.
 count?: number
 ```
 
-Number of data records to delete.
-
-Default value: **1**
+Number of data items to delete. It must be a positive integer (greater than 0), and the sum of **index** and **count** must not exceed the data source length. The default value is 1. If a negative number is passed in, this operation is ignored. If 0 is passed in, the data item at the **index** position is abnormally marked for deletion. If the sum of **index** and **count** exceeds the data source length, rendering may be abnormal.
 
 **Type:** number
 
@@ -38,7 +36,7 @@ Default value: **1**
 index: number
 ```
 
-Index at which to start deleting data. The value range is [0, data source length - 1].
+Index of the start position for deletion. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** number
 
@@ -56,7 +54,7 @@ Index at which to start deleting data. The value range is [0, data source length
 type: DataOperationType.DELETE
 ```
 
-Type of data deletion.
+Data deletion type.
 
 **Type:** [DataOperationType.DELETE](arkts-arkui-lazyforeach-comp-dataoperationtype-e.md)
 

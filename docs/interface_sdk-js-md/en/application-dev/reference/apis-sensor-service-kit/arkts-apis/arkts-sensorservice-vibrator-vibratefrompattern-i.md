@@ -22,7 +22,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 pattern: VibratorPattern
 ```
 
-Vibration event array, which is the **VibratorPattern** object returned by **build() **.
+Array of vibration events.
 
 **Type:** [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)
 

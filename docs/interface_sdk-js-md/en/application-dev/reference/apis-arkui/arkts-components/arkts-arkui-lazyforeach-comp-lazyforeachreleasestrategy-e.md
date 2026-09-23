@@ -4,7 +4,7 @@
 declare enum LazyForEachReleaseStrategy
 ```
 
-Enumerates the release strategies for LazyForEach discarded nodes.
+Selects the resource release strategy of **LazyForEach**.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates the release strategies for LazyForEach discarded nodes.
 BATCH = 0
 ```
 
-Release all discarded nodes during the next idle period.
+**BATCH** is the resource release strategy used by default. This strategy releases the resources of all discarded nodes in the current frame. If node reuse exists, the node reuse rate can be maximized. However, if a node has a deep component hierarchy or a large number of child components, releasing the resources of a single node takes a long time. Releasing a large number of nodes in the current frame may cause an oversized frame and affect performance.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Release all discarded nodes during the next idle period.
 PROGRESSIVE = 1
 ```
 
-Release discarded nodes one by one during the next idle period based on the remaining time of the current frame. Unreleased nodes will continue to be released in subsequent idle periods based on the available idle time.
+**PROGRESSIVE** is a strategy that automatically adjusts node release based on the node release time and the remaining time of the current frame. If the remaining time of the current frame is insufficient to release the remaining nodes, the release is postponed to subsequent frames, avoiding oversized frames and optimizing performance. In this case, **LazyForEach** continues to hold the nodes, which may reduce the reuse rate. When a large number of nodes are generated and cannot be released in time, memory usage increases accordingly. Developers need to pay attention to the impact on performance and memory and select a proper resource release strategy.
 
 **Since:** 26.0.0
 

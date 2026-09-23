@@ -16,11 +16,13 @@ Sets or returns the layout size and position of the component.
 height: number
 ```
 
-Component height.
+Height of the component.
 
 Unit: vp.
 
 Value range: [0, +∞).
+
+A negative value is treated as the default value.
 
 **Type:** number
 
@@ -38,11 +40,13 @@ Value range: [0, +∞).
 width: number
 ```
 
-Component width.
+Width of the component.
 
 Unit: vp.
 
 Value range: [0, +∞).
+
+A negative value is treated as the default value.
 
 **Type:** number
 

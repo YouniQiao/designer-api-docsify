@@ -14,6 +14,12 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 Converts a rotation vector into a rotation matrix. This API uses an asynchronous callback to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -57,6 +63,11 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 ```
 
 Converts a rotation vector into a rotation matrix. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md) instead.
 
 **Since:** 8
 
@@ -106,6 +117,12 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -148,6 +165,12 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 ```
 
 Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)
+> instead.
 
 **Since:** 8
 

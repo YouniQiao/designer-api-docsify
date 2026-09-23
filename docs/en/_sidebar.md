@@ -6,7 +6,7 @@
 - [Arkgraphics2D (424)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit.md)
 - [Arkgraphics3D (97)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-graphics-scene.md)
 - [Arkts (317)](interface_sdk-js-md/en/application-dev/reference/apis-arkts/arkts-apis/arkts-arkts-buffer.md)
-- [Arkui (2162)](interface_sdk-js-md/en/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-animation-windowanimationmanager.md)
+- [Arkui (2161)](interface_sdk-js-md/en/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-animation-windowanimationmanager.md)
 - [Arkweb (134)](interface_sdk-js-md/en/application-dev/reference/apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist.md)
 - [Asset Store Kit (52)](interface_sdk-js-md/en/application-dev/reference/apis-asset-store-kit/arkts-apis/arkts-assetstore-security-asset.md)
 - [Audio Kit (301)](interface_sdk-js-md/en/application-dev/reference/apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md)

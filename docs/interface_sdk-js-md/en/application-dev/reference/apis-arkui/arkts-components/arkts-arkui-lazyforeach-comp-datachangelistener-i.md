@@ -4,14 +4,14 @@
 declare interface DataChangeListener
 ```
 
-Listener for data changes.
+Defines the data change listener, used to notify the **LazyForEach** component to perform corresponding rendering updates when the data source changes. It supports listening for multiple data change types, including data addition, deletion, change, move, swap, and reload.
 
 > **NOTE:** 
 > 
-> In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value
-> is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside
-> the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,
-> the value of **index** can equal the data source length.)
+> In the methods of **DataChangeListener** other than **onDatasetChange**, when a parameter contains index and its
+> value is negative, it is replaced with 0 by default. In **onDatasetChange**, when a single **DataOperation**
+> parameter contains index and its value is outside the index range of the data source (in **DataAddOperation**,
+> **index** can be equal to the data source length), rendering exceptions may occur.
 
 **Since:** 7
 
@@ -24,6 +24,10 @@ onDataAdd(index: number): void
 ```
 
 Invoked when data is added to the position indicated by the specified index.
+
+> **NOTE:** 
+> 
+> This API cannot be used together with the **onDatasetChange** API.
 
 **Since:** 8
 
@@ -45,7 +49,11 @@ Invoked when data is added to the position indicated by the specified index.
 onDataChange(index: number): void
 ```
 
-Invoked when data in the position indicated by the specified index is changed.
+Notifies components that the data at the **index** position has changed. Called after the data change is complete.
+
+> **NOTE:** 
+> 
+> This API cannot be used together with the **onDatasetChange** API.
 
 **Since:** 8
 
@@ -71,8 +79,8 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 > **NOTE:** 
 > 
-> Before **onDataDelete** is called, ensure that the corresponding data in **dataSource** has been deleted.
-> Otherwise, undefined behavior will occur during page rendering.
+> - Ensure that the corresponding data in **dataSource** has been deleted before **onDataDelete** is called.Otherwise, undefined behavior may occur during page rendering.
+> - This API cannot be used together with the **onDatasetChange** API.
 
 **Since:** 8
 
@@ -98,8 +106,8 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 > **NOTE:** 
 > 
-> The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data
-> must be called.
+> - The key must remain unchanged before and after the data move. If the key changes, use the data deletion and data addition APIs instead.
+> - This API cannot be used together with the **onDatasetChange** API.
 
 **Since:** 8
 
@@ -124,6 +132,10 @@ onDataReloaded(): void
 
 Invoked when all data is reloaded. For data items whose key remains unchanged, the original child component is used. For data items whose key changes, a new child component is created.
 
+> **NOTE:** 
+> 
+> This API cannot be used together with the **onDatasetChange** API.
+
 **Since:** 7
 
 **Model restriction:** This API can be used in both the stage model and FA model.
@@ -140,7 +152,13 @@ Invoked when all data is reloaded. For data items whose key remains unchanged, t
 onDataReloaded(reuseImmediately: boolean): void
 ```
 
-Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and recycle pool is empty, old child components will be recycled and then be reused as new child components. If no old child component can be reused, new child components will be created.
+Notifies components to reload all data and configures whether old child components can be reused during the update. This API must be used together with **@Reusable/@ReusableV2**. It is invoked after the data reload is complete.
+
+When reuse of old child components during the update is allowed and this API is used together with [@Reusable](../../../ui/state-management/arkts-reusable.md)/[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md), components in the reuse pool are used first. If no component in the reuse pool can be reused but there is a reusable component among the old child components of **LazyForEach**, that component is recycled and reused as a new child component. If no reusable component exists among the old child components of **LazyForEach** either, a new child component is created.
+
+When reuse of old child components during the update is allowed but **@Reusable/@ReusableV2** is not used, data items whose keys do not change use the original child components, while those whose keys change have their child components rebuilt.
+
+When reuse of old child components during the update is not allowed, data items whose keys do not change use the original child components. For data items whose keys change, if **@Reusable/@ReusableV2** is used and a component is available in the reuse pool, the old component is reused; otherwise, a new child component is created.
 
 **Since:** 26.0.1
 
@@ -154,7 +172,7 @@ Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reuseImmediately | boolean | Yes | Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.<br> **true**: Enable the feature. <br>**false**: Disable the feature. |
+| reuseImmediately | boolean | Yes | Whether old child components can be reused during the update.<br>**true**: old child components can be reused during the update. <br>**false**: old child components cannot be reused during the update. |
 
 ## onDatasetChange
 

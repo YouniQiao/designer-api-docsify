@@ -27,7 +27,6 @@ import { imageGeneration } from '@kit.ArkUI';
 | --- | --- |
 | [closeGeneratorDialog](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md) | Close the AI image generation task popup. |
 | [closeGeneratorNodeGraph](arkts-arkui-imagegeneration-closegeneratornodegraph-f-sys.md) | Close the AI node graph Sheet. |
-| [hasRecoverCacheInGeneratorDialog](arkts-arkui-imagegeneration-hasrecovercacheingeneratordialog-f-sys.md) | Check whether cache files that can be restored exist in GeneratorDialog. The persistent cache file is used to store configuration parameters for AI image generation. |
 | [hideGeneratorDialog](arkts-arkui-imagegeneration-hidegeneratordialog-f-sys.md) | Hide the AI image generation task popup. |
 | [hideGeneratorNodeGraph](arkts-arkui-imagegeneration-hidegeneratornodegraph-f-sys.md) | Hide the AI node graph Sheet. |
 | [openGeneratorNodeGraph](arkts-arkui-imagegeneration-opengeneratornodegraph-f-sys.md) | Open the AI node graph Sheet. |

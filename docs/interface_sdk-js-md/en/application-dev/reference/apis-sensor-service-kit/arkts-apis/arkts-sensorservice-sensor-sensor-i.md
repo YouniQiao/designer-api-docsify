@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 deviceId?: number
 ```
 
-Device ID.
+Device ID. The value is **-1** indicates the local device. Default value: **-1**.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Device ID.
 deviceName?: string
 ```
 
-Device name.
+Device name, which identifies the source device of the sensor.
 
 **Type:** string
 
@@ -50,7 +50,7 @@ Device name.
 firmwareVersion:string
 ```
 
-Firmware version of the sensor.
+Sensor firmware version, which identifies the current version of the sensor firmware.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Firmware version of the sensor.
 hardwareVersion:string
 ```
 
-Hardware version of the sensor.
+Sensor hardware version.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ Hardware version of the sensor.
 isLocalSensor?: boolean
 ```
 
-Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false** indicates the opposite.
+Whether the sensor is a local sensor. The **true** indicates a local sensor, and **false** indicates a non-local sensor (that is, a sensor on a remote device). The default value is **true**.
 
 **Type:** boolean
 
@@ -92,7 +92,7 @@ Whether the sensor is a local sensor. The value **true** indicates a local senso
 isMockSensor?: boolean
 ```
 
-Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false** indicates the opposite.
+Indicates whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and **false** indicates a real sensor. The default value is **false**.
 
 **Type:** boolean
 
@@ -106,7 +106,7 @@ Whether the sensor is a mock sensor. The value **true** indicates a mock sensor,
 maxRange:number
 ```
 
-Maximum measurement range of the sensor.
+Maximum measurement range of the sensor. The unit depends on the sensor type (for example, m/s² for an acceleration sensor).
 
 **Type:** number
 
@@ -120,7 +120,7 @@ Maximum measurement range of the sensor.
 maxSamplePeriod:number
 ```
 
-Maximum sampling period.
+Maximum sampling period of the sensor, in ns
 
 **Type:** number
 
@@ -134,7 +134,7 @@ Maximum sampling period.
 minSamplePeriod:number
 ```
 
-Minimum sampling period.
+Minimum sampling period of the sensor, in ns
 
 **Type:** number
 
@@ -148,7 +148,7 @@ Minimum sampling period.
 power:number
 ```
 
-Estimated sensor power, in mA.
+Estimated power consumption of the sensor, in mA.
 
 **Type:** number
 
@@ -162,7 +162,7 @@ Estimated sensor power, in mA.
 precision:number
 ```
 
-Precision of the sensor.
+Precision of the sensor. The unit depends on the sensor type.
 
 **Type:** number
 
@@ -176,7 +176,7 @@ Precision of the sensor.
 sensorId:number
 ```
 
-Sensor type ID.
+Sensor type ID, corresponding to the enumerated values of [SensorId](arkts-sensorservice-sensor-sensorid-e.md).
 
 **Type:** number
 
@@ -190,7 +190,7 @@ Sensor type ID.
 sensorIndex?: number
 ```
 
-Sensor index.
+Sensor index. Multiple instances of sensors of the same type may exist, which are distinguished by **sensorIndex**. The default value is **0**.
 
 **Type:** number
 
@@ -204,7 +204,7 @@ Sensor index.
 sensorName:string
 ```
 
-Sensor name.
+Sensor name, which identifies the type and model of the sensor.
 
 **Type:** string
 
@@ -218,7 +218,7 @@ Sensor name.
 vendorName:string
 ```
 
-Vendor of the sensor.
+Sensor vendor name, which identifies the sensor manufacturer.
 
 **Type:** string
 

@@ -14,6 +14,12 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -54,6 +60,11 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 ```
 
 Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md) instead.
 
 **Since:** 8
 

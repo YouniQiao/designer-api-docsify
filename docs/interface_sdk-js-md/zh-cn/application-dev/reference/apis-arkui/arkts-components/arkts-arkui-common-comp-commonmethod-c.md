@@ -933,9 +933,9 @@ aspectRatio(value: number): T
 attributeModifier(modifier: AttributeModifier<T>): T
 ```
 
-Sets the attribute modifier.
+动态设置组件的属性方法。
 
-**起始版本：** 12
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -947,13 +947,13 @@ Sets the attribute modifier.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;T&gt; | 是 |  |
+| modifier | [AttributeModifier](arkts-arkui-common-comp-attributemodifier-i.md)&lt;T&gt; | 是 | 在当前组件上，动态设置属性方法，支持使用if/else语法。<br>modifier: 属性修改器，开发者需要自定义class实现AttributeModifier接口。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## backdropBlur
 
@@ -3238,7 +3238,10 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 drawModifier(modifier: DrawModifier | undefined): T
 ```
 
-Sets the drawModifier of the current component.
+设置组件的自定义绘制修改器。
+
+> **说明：** 
+> 该接口不支持在[attributeModifier](#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -3252,13 +3255,13 @@ Sets the drawModifier of the current component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | 是 | drawModifier used to draw, or undefined if it is not available. |
+| modifier | [DrawModifier](arkts-arkui-common-comp-drawmodifier-c.md) &#124; undefined | 是 | 自定义绘制修改器，其中定义了自定义绘制的逻辑。<br>默认值：undefined，未设置自定义绘制修改器时，组件使用原有默认绘制行为，不进行自定义绘制。<br>**说明：** <br>每个自定义绘制修改器只对当前绑定组件的FrameNode生效，对其子节点不生效。每个DrawModifier实例只能设置到一个组件上，禁止重复设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
+| T | 返回当前组件，用于链式调用。 |
 
 ## enableClickSoundEffect
 
@@ -7630,9 +7633,14 @@ reuse(options: ReuseOptions): T
 reuseId(id: string): T
 ```
 
-Reuse id is used for identify the reuse type for each custom node.
+复用标识，用于划分自定义组件的复用组。该接口仅可在Stage模型下使用。
 
-**起始版本：** 11
+> **说明：** 
+> 
+> - 根据组件的不同布局形态或类型设置对应的reuseId，以提升复用匹配的精确度。最佳实践请参考组件复用-[使用reuseId标记布局发生变化的组件](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-component_reuse#使用reuseid标记布局发生变化的组件)。
+> - 该接口不支持在[attributeModifier](#attributemodifier)中调用。
+
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7644,13 +7652,13 @@ Reuse id is used for identify the reuse type for each custom node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | The id for reusable custom node. |
+| id | string | 是 | 复用标识，用于划分自定义组件的复用组。建议为不同布局或类型的组件设置不同的reuseId，以避免组件被错误复用，提升复用效率。仅在@Reusable装饰的自定义组件上生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T |  |
+| T | 返回当前组件。 |
 
 ## rotate
 

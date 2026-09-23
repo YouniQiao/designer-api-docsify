@@ -4,7 +4,12 @@
 export interface VibrateOptions
 ```
 
-Defines the vibration options.
+Defines the configuration parameters for triggering device vibration, including the vibration mode and callback function. When calling [Vibrator.vibrate()](arkts-sensorservice-vibrator-vibrate-f.md), you can use **VibrateOptions** to specify the vibration mode (short or long vibration) and the callback function for listening for the vibration triggering success, failure, and completion events. After **VibrateOptions** is passed, the device vibrates in the specified mode. When the vibration is successfully triggered, the **success** function is called back. If the vibration fails to be triggered, the **fail** function is called back. When the API call is complete, the **complete** function is called back.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 3 and deprecated since API version 8. You are advised to use
+> [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) instead.
 
 **Since:** 3
 
@@ -28,7 +33,7 @@ import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 complete?: () => void
 ```
 
-Called when the API call is complete.
+Callback function invoked when the vibration API call is complete. Usage scenarios: Use this callback when you need to perform clearance or status update operations after the vibration API call is complete (regardless of whether the call is successful or fails). If this parameter is not specified, no callback notification will be sent when the API call is complete. Effect: The system calls this callback function regardless of whether the vibration is successfully triggered. No parameter is returned.
 
 **Since:** 3
 
@@ -48,7 +53,7 @@ Called when the API call is complete.
 fail?: (data: string, code: number) => void
 ```
 
-Called when the API call fails.
+Callback invoked when the vibration fails to be triggered. Use scenarios: This callback is used to obtain error information upon failure to trigger vibration. For example, the permission is not granted or the device does not support vibration. If this parameter is not specified, no callback notification will be sent when the vibration fails to be triggered. Effect: When the vibration fails to be triggered, the system calls this callback function and passes the error information data and error code. The callback function signature is **(data: string, code: number) =&gt; void**, where **data** is the error information string and **code** is the error code number, indicating the specific error type.
 
 **Since:** 3
 
@@ -75,7 +80,7 @@ Called when the API call fails.
 success: () => void
 ```
 
-Called when the vibrator data changes.
+Callback invoked when the vibration is successfully triggered. Use scenarios: This callback is used to send notices upon successful vibration triggering. Effect: After the vibration is successfully triggered, the system calls this callback function. No parameter is returned.
 
 **Since:** 3
 
@@ -95,7 +100,7 @@ Called when the vibrator data changes.
 mode?: 'number' | 'short'
 ```
 
-Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default value is **long**.
+Vibration mode, which specifies the duration type of device vibration. The options include **'long'** (long vibration) and **'short'** (short vibration). The default value is **'long'**. Use scenarios: You can select the vibration mode based on your requirements. For example, use **'long'** for incoming call notifications to continuously remind users, and use **'short'** for button touch feedback to provide instant feedback. If this parameter is not specified, long vibration is performed by default. Restrictions: This parameter applies only to lite wearables.
 
 **Type:** 'number' &#124; 'short'
 

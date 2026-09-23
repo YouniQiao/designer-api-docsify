@@ -4,7 +4,7 @@
 declare class ColorMetrics
 ```
 
-Used to mix colors.
+Provides a unified representation and encapsulation of colors. It supports color mixing as well as obtaining the color components in the R, G, B, and Alpha channels.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | **ColorMetrics** object. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | **ColorMetrics** object after the auto-refresh property is set. |
 
 **Examples**
 
@@ -99,7 +99,7 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. Only certain attributes support color configuration in the display-p3 color space.
+Instantiates the **ColorMetrics** class using ColorSpace and RGBA colorS. Only the red, green, and blue attributes support color configuration in the display-p3 color space, and the alpha attribute is not affected by the color space.
 
 **Since:** 20
 
@@ -113,17 +113,17 @@ Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | ColorSpace | Yes | Color space used to specify the color. If ColorSpace.DISPLAY_P3 is used, the [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace) API must be called to set the current window to the wide color gamut mode. |
-| red | number | Yes | Red component of the color. The value is a floating point number ranging from 0 to 1. |
-| green | number | Yes | Green component of the color. The value is a floating point number ranging from 0 to 1. |
-| blue | number | Yes | Blue component of the color. The value is a floating point number ranging from 0 to 1. |
-| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1.0. The default value is **1.0** (fully opaque). |
+| colorSpace | ColorSpace | Yes | Color space. To use ColorSpace.DISPLAY_P3, call [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace) on the corresponding window to set the current window to wide color gamut mode. |
+| red | number | Yes | Red component of the color. The value is a floating point number ranging from 0 to 1. A value out of range is treated as a boundary value. |
+| green | number | Yes | Green component of the color. The value is a floating point number ranging from 0 to 1. A value out of range is treated as a boundary value. |
+| blue | number | Yes | Blue component of the color. The value is a floating point number ranging from 0 to 1. A value out of range is treated as a boundary value. |
+| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1.0. The default value is 1.0 (fully opaque).<br> **Note:** If alpha is less than 0, the color is fully transparent. If alpha is greater than 1, the color is opaque. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | color object corresponding to a color in RGBA format in the specified color space. |
 
 ## numeric
 
@@ -145,13 +145,13 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Color in HEX format.<br>RGB and ARGB color values are supported. |
+| value | number | Yes | Color in HEX format. RGB and ARGB color values are supported.<br>Value range: [0, 0xffffffff] <br>A value out of range is treated as a boundary value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Color object corresponding to a color in HEX format. |
 
 ## resourceColor
 
@@ -159,7 +159,7 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 static resourceColor(color: ResourceColor): ColorMetrics
 ```
 
-Instantiates the **ColorMetrics** class using a color in resource reference format.
+Instantiates the **ColorMetrics** class using a color in Resource format.
 
 **Since:** 12
 
@@ -173,13 +173,13 @@ Instantiates the **ColorMetrics** class using a color in resource reference form
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Color in resource reference format. |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Color in Resource format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Color object corresponding to the color in Resource format. |
 
 **Error codes:**
 
@@ -208,16 +208,16 @@ Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| red | number | Yes | Red component of the color. The value is an integer ranging from 0 to 255. |
-| green | number | Yes | Green component of the color. The value is an integer ranging from 0 to 255. |
-| blue | number | Yes | Blue component of the color. The value is an integer ranging from 0 to 255. |
-| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1. 0. The default value is **1.0** (fully opaque).<br> Note: If alpha is less than 0, the color is fully transparent. If alpha is greater than 1, the color is opaque. |
+| red | number | Yes | Red component of the color. The value is an integer ranging from 0 to 255. A value out of range is treated as a boundary value. |
+| green | number | Yes | Green component of the color. The value is an integer ranging from 0 to 255. A value out of range is treated as a boundary value. |
+| blue | number | Yes | Blue component of the color. The value is an integer ranging from 0 to 255. A value out of range is treated as a boundary value. |
+| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1. 0. The default value is 1.0 (fully opaque).<br> **Note:** If alpha is less than 0, the color is fully transparent. If alpha is greater than 1, the color is opaque. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Instance of the **ColorMetrics** class. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Color object corresponding to the color in RGB or RGBA format. |
 
 ## alpha
 

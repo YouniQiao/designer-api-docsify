@@ -4,7 +4,7 @@
 export class RenderNode
 ```
 
-The **RenderNode** module provides APIs for creating a RenderNode in custom drawing settings with C APIs.
+The **RenderNode** module provides APIs for creating a RenderNode in custom drawing settings with C APIs. **RenderNode** also supports capabilities such as render node tree management (adding, removing, and querying child nodes), visual attribute settings like background color and opacity, transformations (scaling, rotation, translation, and transformation matrices), shadows, borders, masks and clipping, and blur effects. It is suitable for custom rendering and node tree management scenarios in the stage model.
 
 > **NOTE:** 
 > 
@@ -229,7 +229,7 @@ struct Index {
 dispose(): void
 ```
 
-Releases this RenderNode immediately.
+Immediately releases the current RenderNode. After this API is called, the RenderNode will release its reference to the backend entity node. Calling APIs of this node again may cause a crash or return default values. You can query whether the node has been released through the [isDisposed](#isdisposed) API.
 
 **Since:** 12
 
@@ -505,7 +505,7 @@ Obtains the child node in the specified position of this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the child node to obtain. |
+| index | number | Yes | Sequence number of the child node to query, starting from 0. Value range: [0, Number of child nodes - 1]. **null** is returned if the value is out of range. Negative indexes are not supported. |
 
 **Return value:**
 
@@ -949,7 +949,7 @@ struct Index {
 invalidate(): void
 ```
 
-Triggers the re-rendering of this RenderNode.
+Triggers re-rendering of the RenderNode, during which the [draw](#draw) API is called. If you inherit the RenderNode and implement the **draw** API, calling **invalidate()** will re-execute the drawing logic in the **draw** API.
 
 **Since:** 11
 
@@ -1028,7 +1028,7 @@ struct Index {
 isDisposed(): boolean
 ```
 
-Checks whether this RenderNode object has released its reference to its backend entity node. Frontend nodes maintain references to corresponding backend entity nodes. After a node calls the **dispose** API to release this reference, subsequent API calls may cause crashes or return default values. This API facilitates validation of node validity prior to operations, thereby mitigating risks in scenarios where calls after disposal are required.
+Queries whether the current RenderNode object has released its reference to the backend entity node. After a node calls the **dispose** API, calling other APIs may cause a crash or return default values. You are advised to call this API to check the validity of the node before operating on it, to avoid potential risks.
 
 **Since:** 20
 
@@ -1042,7 +1042,7 @@ Checks whether this RenderNode object has released its reference to its backend 
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the reference to the backend node is released. The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+| boolean | Whether the reference to the backend node is released. The value **true** indicates that the reference to the backend node is released, and **false** indicates the opposite. |
 
 **Examples**
 
@@ -1208,7 +1208,7 @@ struct Index {
 set backgroundBlur(blurValue: BackgroundBlur | undefined)
 ```
 
-Sets a background blur effect.
+Sets the background blur effect of the current RenderNode, which blurs the background area of the node.
 
 **Type:** [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md)
 
@@ -1808,7 +1808,7 @@ struct Index {
 set contentBlur(blurValue: ContentBlur | undefined)
 ```
 
-Sets a content blur effect.
+Sets the content blur effect of the current RenderNode, which blurs the drawn content of the node.
 
 **Type:** [ContentBlur](arkts-arkui-graphics-contentblur-i.md)
 
@@ -1926,7 +1926,7 @@ struct Index {
 set foregroundBlur(blurValue: ForegroundBlur | undefined)
 ```
 
-Sets a foreground blur effect.
+Sets the foreground blur effect of the current RenderNode, which blurs the foreground area of the node.
 
 **Type:** [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md)
 
@@ -2121,7 +2121,7 @@ struct Index {
 set label(label: string)
 ```
 
-Sets the label for this RenderNode. If the RenderNode was created with **new**, the set label will appear in the node Inspector information.
+Sets the label of the current RenderNode. If the current node is a RenderNode created through **new**, the label information will be displayed in the attribute of the node's **Inspector** information.
 
 **Type:** string
 
@@ -2198,7 +2198,7 @@ struct Index {
 set lengthMetricsUnit(unit: LengthMetricsUnit)
 ```
 
-Sets the metric unit used by attributes of this RenderNode.
+Sets the metric unit used by attributes of the RenderNode. This API is suitable for scenarios that require precise pixel control (such as using px) or following the system default layout (such as using DEFAULT).
 
 **Type:** [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
 
@@ -2293,7 +2293,7 @@ struct Index {
 set markNodeGroup(isNodeGroup: boolean)
 ```
 
-Sets whether to enable drawing priority for this node and its child nodes. When this feature is enabled, visual attributes like opacity are applied during composition after drawing completes. The configuration result is as follows.
+Sets whether to enable drawing priority for this node and its child nodes. When this feature is enabled, visual attributes like opacity are applied during composition after drawing completes. This API is suitable for scenarios where multiple semi-transparent nodes overlap and correct compositing of the opacity effect is required. The configuration result is as follows.
 
 ![markNodeGroup](../../../reference/apis-arkui/figures/renderNode-markNodeGroup.png)
 
@@ -2552,7 +2552,7 @@ struct Index {
 set position(position: Position)
 ```
 
-Sets the position for this RenderNode.
+Sets the position of the current RenderNode. When used together with frame, the one set later prevails.
 
 **Type:** [Position](arkts-arkui-position-t.md)
 
@@ -2631,7 +2631,7 @@ struct Index {
 set rotation(rotation: Rotation)
 ```
 
-Sets the rotation angle for this RenderNode.
+Sets the rotation angle of the current RenderNode. Rotation is performed centered on the pivot set by pivot.
 
 **Type:** [Rotation](arkts-arkui-rotation-t.md)
 
@@ -2710,7 +2710,7 @@ struct Index {
 set scale(scale: Scale)
 ```
 
-Sets the scale factor for this RenderNode.
+Sets the scale factor of the current RenderNode. Scaling is performed centered on the pivot set by pivot.
 
 **Type:** [Scale](arkts-arkui-scale-t.md)
 
@@ -2789,7 +2789,7 @@ struct Index {
 set shadowAlpha(alpha: number)
 ```
 
-Sets the alpha value of the shadow color for this RenderNode.
+Sets the alpha value of the shadow color of the current RenderNode. If this attribute is set, the opacity of the shadow color is determined by this attribute, overriding the alpha value in shadowColor.
 
 **Type:** number
 
@@ -2951,7 +2951,7 @@ struct Index {
 set shadowElevation(elevation: number)
 ```
 
-Sets the shadow elevation for this RenderNode.
+Sets the shadow elevation of the current RenderNode. The shadow elevation simulates the height of the light source relative to the node. A larger value results in a more diffused shadow.
 
 **Type:** number
 
@@ -3418,7 +3418,7 @@ struct Index {
 set size(size: Size)
 ```
 
-Sets the size for this RenderNode.
+Sets the size of the current RenderNode. When used together with frame, the one set later prevails.
 
 **Type:** Size
 

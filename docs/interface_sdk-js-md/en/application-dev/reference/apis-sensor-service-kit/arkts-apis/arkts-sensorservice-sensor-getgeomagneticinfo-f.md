@@ -23,7 +23,7 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
-| timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
+| timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. This parameter indicates the number of milliseconds since 1970-01-01 00:00:00-00 UTC. The value must be a positive integer. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
 
 **Error codes:**
@@ -81,7 +81,7 @@ Obtains the geomagnetic field of a geographic location at a certain time. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
-| timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
+| timeMillis | number | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. This parameter indicates the number of milliseconds since 1970-01-01 00:00:00-00 UTC. The value must be a positive integer. |
 
 **Return value:**
 

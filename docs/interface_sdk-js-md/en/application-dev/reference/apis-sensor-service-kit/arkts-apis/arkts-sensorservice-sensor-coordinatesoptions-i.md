@@ -4,7 +4,7 @@
 interface CoordinatesOptions
 ```
 
-Describes the coordinate options.
+Coordinate option object, which is used to specify the transformation direction of the coordinate system.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from '@kit.SensorServiceKit';
 x: number
 ```
 
-X coordinate direction.
+X coordinate direction, which is used to specify the direction of the rotation matrix transformation on the X axis.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ X coordinate direction.
 y: number
 ```
 
-Y coordinate direction.
+Y coordinate direction, which is used to specify the direction of the rotation matrix transformation on the Y axis.
 
 **Type:** number
 

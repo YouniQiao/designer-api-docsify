@@ -4,7 +4,9 @@
 interface Response
 ```
 
-Describes the timestamp of the sensor data.
+Defines the base class for the timestamp and accuracy information of sensor data. All sensor response types inherit from this class.
+
+**Atomic service API**: This API can be used in atomic services since API version 11.
 
 **Since:** 8
 
@@ -22,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 accuracy: SensorAccuracy
 ```
 
-Accuracy of the sensor data.
+Accuracy of the sensor data, indicating the reliability of the reported data.
 
 **Type:** [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md)
 

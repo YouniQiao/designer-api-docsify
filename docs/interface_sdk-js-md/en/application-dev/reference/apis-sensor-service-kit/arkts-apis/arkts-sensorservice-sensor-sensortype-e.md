@@ -6,6 +6,11 @@ enum SensorType
 
 Enumerates the sensor types.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md) instead.
+
 **Since:** 8
 
 **Deprecated since:** 9

@@ -204,5 +204,5 @@ import { media } from '@kit.MediaKit';
 | [AVErrorCode](arkts-media-media-averrorcode-e-sys.md) | [Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。 |
 | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | 录制的元数据源类型枚举。 |
 | [PixelFormat](arkts-media-media-pixelformat-e-sys.md) | 获取视频缩略图时，输出的缩略图采用的颜色格式枚举。 |
-| [ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md) | Enumerates the states available for the system screen recorder. |
+| [ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md) | 系统录屏应用录屏状态的枚举值。 |
 <!--DelEnd-->

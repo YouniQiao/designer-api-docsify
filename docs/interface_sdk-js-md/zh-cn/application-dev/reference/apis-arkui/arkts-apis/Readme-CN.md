@@ -766,7 +766,7 @@
   - [TrailOptimization(系统接口)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
 <!--Del-->
-- [@ohos.deviceStatus.dragInteraction](arkts-arkui-devicestatus-draginteraction.md)<!--DelEnd-->
+- [@ohos.deviceStatus.dragInteraction(拖拽)](arkts-arkui-devicestatus-draginteraction.md)<!--DelEnd-->
   <!--Del-->
   - [getDataSummary(系统接口)](arkts-arkui-draginteraction-getdatasummary-f-sys.md)<!--DelEnd-->
   <!--Del-->

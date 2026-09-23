@@ -16,9 +16,7 @@ Enumerates the sensor types.
 ACCELEROMETER = 1
 ```
 
-Acceleration sensor.
-
-This API can be used in atomic services since API version 11.
+Accelerometer sensor, which is used to measure the acceleration of the device. <br>**Atomic service API**: This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -32,9 +30,7 @@ This API can be used in atomic services since API version 11.
 GYROSCOPE = 2
 ```
 
-Gyroscope sensor.
-
-This API can be used in atomic services since API version 11.
+Gyroscope sensor, which is used to measure the angular velocity of the device. <br>**Atomic service API**: This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -48,7 +44,7 @@ This API can be used in atomic services since API version 11.
 AMBIENT_LIGHT = 5
 ```
 
-Ambient light sensor.
+Ambient light sensor, which is used to measure the ambient light intensity.
 
 **Since:** 9
 
@@ -60,7 +56,7 @@ Ambient light sensor.
 MAGNETIC_FIELD = 6
 ```
 
-Magnetic field sensor.
+Magnetic field sensor, which is used to measure the ambient magnetic field strength around the device.
 
 **Since:** 9
 
@@ -72,7 +68,7 @@ Magnetic field sensor.
 BAROMETER = 8
 ```
 
-Barometer sensor.
+Barometric pressure sensor, which is used to measure atmospheric pressure.
 
 **Since:** 9
 
@@ -84,7 +80,7 @@ Barometer sensor.
 HALL = 10
 ```
 
-Hall effect sensor.
+Hall effect sensor, which is used to detect whether there is a magnetic force around the device.
 
 **Since:** 9
 
@@ -96,7 +92,7 @@ Hall effect sensor.
 PROXIMITY = 12
 ```
 
-Proximity sensor.
+Proximity sensor, which is used to detect the proximity between an object and the device display.
 
 **Since:** 9
 
@@ -108,7 +104,7 @@ Proximity sensor.
 HUMIDITY = 13
 ```
 
-Humidity sensor.
+Humidity sensor, which is used to measure the relative humidity of the environment.
 
 **Since:** 9
 
@@ -120,9 +116,7 @@ Humidity sensor.
 ORIENTATION = 256
 ```
 
-Orientation sensor.
-
-This API can be used in atomic services since API version 11.
+Orientation sensor, which is used to measure the rotation angle of the device. <br>**Atomic service API**: This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -136,7 +130,7 @@ This API can be used in atomic services since API version 11.
 GRAVITY = 257
 ```
 
-Gravity sensor.
+Gravity sensor, which is used to measure the gravity acceleration of the device.
 
 **Since:** 9
 
@@ -148,7 +142,7 @@ Gravity sensor.
 LINEAR_ACCELEROMETER = 258
 ```
 
-Linear acceleration sensor.
+Linear acceleration sensor, which is used to measure the linear acceleration of the device excluding the effect of gravity.
 
 **Since:** 9
 
@@ -160,7 +154,7 @@ Linear acceleration sensor.
 ROTATION_VECTOR = 259
 ```
 
-Rotation vector sensor.
+Rotation vector sensor type, which is used to describe the rotation status of the device relative to a reference direction.
 
 **Since:** 9
 
@@ -172,7 +166,7 @@ Rotation vector sensor.
 AMBIENT_TEMPERATURE = 260
 ```
 
-Ambient temperature sensor.
+Ambient temperature sensor, which is used to measure the ambient temperature.
 
 **Since:** 9
 
@@ -184,7 +178,7 @@ Ambient temperature sensor.
 MAGNETIC_FIELD_UNCALIBRATED = 261
 ```
 
-Uncalibrated magnetic field sensor.
+Uncalibrated magnetic field sensor, which is used to measure the uncalibrated ambient magnetic field strength and its bias.
 
 **Since:** 9
 
@@ -196,7 +190,7 @@ Uncalibrated magnetic field sensor.
 GYROSCOPE_UNCALIBRATED = 263
 ```
 
-Uncalibrated gyroscope sensor.
+Uncalibrated gyroscope sensor, which is used to measure the uncalibrated angular velocity of the device and its bias.
 
 **Since:** 9
 
@@ -208,7 +202,7 @@ Uncalibrated gyroscope sensor.
 SIGNIFICANT_MOTION = 264
 ```
 
-Significant motion sensor.
+Significant motion sensor, which is used to detect whether the device is moving significantly.
 
 **Since:** 9
 
@@ -220,7 +214,7 @@ Significant motion sensor.
 PEDOMETER_DETECTION = 265
 ```
 
-Pedometer detection sensor.
+Pedometer detection sensor, which is used to detect the step counting action of a user.
 
 **Since:** 9
 
@@ -232,7 +226,7 @@ Pedometer detection sensor.
 PEDOMETER = 266
 ```
 
-Pedometer sensor.
+Step counter sensor, which is used to count the number of steps a user has taken.
 
 **Since:** 9
 
@@ -244,7 +238,7 @@ Pedometer sensor.
 HEART_RATE = 278
 ```
 
-Heart rate sensor.
+Heart rate sensor, which is used to measure the heart rate of a user.
 
 **Since:** 9
 
@@ -256,7 +250,7 @@ Heart rate sensor.
 WEAR_DETECTION = 280
 ```
 
-Wear detection sensor.
+Wear detection sensor, which is used to detect whether the device is being worn.
 
 **Since:** 9
 
@@ -268,7 +262,7 @@ Wear detection sensor.
 ACCELEROMETER_UNCALIBRATED = 281
 ```
 
-Uncalibrated acceleration sensor.
+Uncalibrated acceleration sensor, which is used to measure the uncalibrated acceleration of the device and its bias.
 
 **Since:** 9
 
@@ -280,9 +274,7 @@ Uncalibrated acceleration sensor.
 FUSION_PRESSURE = 283
 ```
 
-Fused pressure sensor.
-
-This sensor is available only on smart watches.
+Fused pressure sensor, which is used to measure the fusion pressure value. This sensor is available only on smart watches.
 
 **Since:** 22
 

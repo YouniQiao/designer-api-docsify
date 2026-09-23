@@ -1,6 +1,6 @@
 # ContentSlot
 
-The **ContentSlot** component is a component designed to render and manage components created on the native layer using C APIs.
+Renders components created using C-API on the native side and manages these components through the Content manager.
 
 With support for hybrid development, the **ContentSlot** component is recommended when the container is an ArkTS component and the child component is created on the native side.
 
@@ -10,7 +10,7 @@ With support for hybrid development, the **ContentSlot** component is recommende
 ContentSlot(content: Content)
 ```
 
-Called when content is added to a placeholder component
+Creates a **ContentSlot** placeholder component for rendering components created on the native side in the Content manager.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ Called when content is added to a placeholder component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [Content](arkts-arkui-contentslot-comp-content-t.md) | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the native side, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as manage the child components of **ContentSlot**. |
+| content | [Content](arkts-arkui-contentslot-comp-content-t.md) | Yes | Manager of **ContentSlot**. Through the APIs provided by the native side, it can register and trigger the callback for **ContentSlot** attach/detach events (i.e., when a component node is added to or removed from the component rendering tree) and manage child components of **ContentSlot**. |
 
 ## Summary
 

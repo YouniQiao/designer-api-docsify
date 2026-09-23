@@ -24,7 +24,7 @@ import { sensor } from '@kit.SensorServiceKit';
 scalar: number
 ```
 
-Pedometer detection. This parameter specifies whether a user takes a step. The value **0** means that the user does not take a step, and **1** means that the user takes a step.
+Pedometer detection scalar. The value can be **1** (a step counting event is detected, indicating that the user is walking) or **0** (no step counting event is detected, indicating that the user is not moving).
 
 **Type:** number
 

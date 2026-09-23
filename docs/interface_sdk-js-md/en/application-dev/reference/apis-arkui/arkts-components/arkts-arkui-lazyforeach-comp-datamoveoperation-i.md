@@ -16,7 +16,7 @@ Represents an operation for moving data.
 index: MoveIndex
 ```
 
-Positions for the movement. The value range is [0, data source length - 1].
+Move position. The value range is [0, data source length - 1]. Rendering is abnormal when the value exceeds the value range.
 
 **Type:** [MoveIndex](arkts-arkui-lazyforeach-comp-moveindex-i.md)
 
@@ -52,7 +52,7 @@ New key to assign to the moved data. The original key is used by default.
 type: DataOperationType.MOVE
 ```
 
-Type of data movement.
+Data move type.
 
 **Type:** [DataOperationType.MOVE](arkts-arkui-lazyforeach-comp-dataoperationtype-e.md)
 

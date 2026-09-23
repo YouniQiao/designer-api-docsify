@@ -4,7 +4,7 @@
 class VibratorPatternBuilder
 ```
 
-Provide methods for adding long or short vibration events and generate VibratorPattern objects.
+Provides methods for adding continuous and transient vibration events and generating a **VibratorPattern** object.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 addContinuousEvent(time: number, duration: number, options?: ContinuousParam): VibratorPatternBuilder
 ```
 
-Adds a long vibration event as a **VibratorPattern** object.
+Adds a continuous vibration event. After the event is added, use the [build](#build) method to generate a [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) object.
 
 **Since:** 18
 
@@ -90,7 +90,7 @@ try {
 addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilder
 ```
 
-Adds a short vibration event as a **VibratorPattern** object.
+Adds a transient vibration event. After the event is added, use the [build](#build) method to generate a [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) object.
 
 **Since:** 18
 

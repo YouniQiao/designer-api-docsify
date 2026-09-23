@@ -42,7 +42,7 @@ If the returned contact synchronization information is empty, the invoking party
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 **Examples**

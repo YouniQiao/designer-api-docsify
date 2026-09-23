@@ -6,6 +6,8 @@ interface GyroscopeResponse extends Response
 
 Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
+**Atomic service API**: This API can be used in atomic services since API version 11.
+
 **Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
 **Since:** 8
@@ -24,7 +26,7 @@ import { sensor } from '@kit.SensorServiceKit';
 x: number
 ```
 
-Angular velocity of rotation around the x-axis of the device, in rad/s. The value is equal to the reported physical quantity.
+Rotational angular velocity of the x-axis. in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** number
 
@@ -40,7 +42,7 @@ Angular velocity of rotation around the x-axis of the device, in rad/s. The valu
 y: number
 ```
 
-Angular velocity of rotation around the y-axis of the device, in rad/s. The value is equal to the reported physical quantity.
+Rotational angular velocity of the y-axis. in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** number
 
@@ -56,7 +58,7 @@ Angular velocity of rotation around the y-axis of the device, in rad/s. The valu
 z: number
 ```
 
-Angular velocity of rotation around the z-axis of the device, in rad/s. The value is equal to the reported physical quantity.
+Rotational angular velocity of the z-axis. in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** number
 

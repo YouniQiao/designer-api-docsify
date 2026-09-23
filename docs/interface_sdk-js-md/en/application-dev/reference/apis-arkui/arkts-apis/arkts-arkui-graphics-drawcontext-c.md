@@ -4,7 +4,7 @@
 export class DrawContext
 ```
 
-Graphics drawing context, which provides the canvas width and height required for drawing.
+Graphics drawing context, which provides the canvas used for drawing and its width and height.
 
 **Since:** 11
 

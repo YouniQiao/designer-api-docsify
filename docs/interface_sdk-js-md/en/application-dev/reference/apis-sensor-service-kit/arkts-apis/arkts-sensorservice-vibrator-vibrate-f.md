@@ -14,6 +14,12 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 Triggers vibration based on a specified duration. This API uses an asynchronous callback to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -56,6 +62,12 @@ function vibrate(duration: number): Promise<void>
 ```
 
 Triggers vibration based on a specified duration. This API uses a promise to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+> instead.
 
 **Since:** 8
 
@@ -103,6 +115,12 @@ function vibrate(effectId: EffectId): Promise<void>
 
 Triggers vibration based on a specified effect. This API uses a promise to return the result.
 
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+> instead.
+
 **Since:** 8
 
 **Deprecated since:** 9
@@ -148,6 +166,12 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 ```
 
 Triggers vibration based on a specified effect. This API uses an asynchronous callback to return the result.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
+> instead.
 
 **Since:** 8
 

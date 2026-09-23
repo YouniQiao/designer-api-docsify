@@ -4,7 +4,13 @@
 interface DataReloadOperation
 ```
 
-Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD** operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator** to perform a comparison of keys with their corresponding values.
+Reloads all data operations and configures whether to allow reuse of old child components during the update. When **onDatasetChange** contains a **DataOperationType.RELOAD** operation, all other operations become invalid, and the framework calls **keyGenerator** to compare keys.
+
+When reuse of old child components during the update is allowed and used together with [@Reusable](../../../ui/state-management/arkts-reusable.md)/[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md), components in the reuse pool are used first. If no reusable component is available in the reuse pool but a reusable component exists among the old child components of **LazyForEach**, that component will be recycled and reused as a new child component. If no reusable component exists among the old child components of **LazyForEach** either, a new child component will be created.
+
+When reuse of old child components during the update is allowed but **@Reusable/@ReusableV2** is not used, data items whose keys do not change will use the original child components, while those whose keys change will have their child components rebuilt.
+
+When reuse of old child components during the update is not allowed, data items whose keys do not change will use the original child components. For data items whose keys change, if **@Reusable/@ReusableV2** is used and a component is available in the reuse pool, the old component will be reused; otherwise, a new child component will be created.
 
 **Since:** 12
 
@@ -16,7 +22,7 @@ Represents an operation for reloading data. If the **onDatasetChange** event con
 reuseImmediately?: boolean
 ```
 
-Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty. **true**: Enable the feature. **false**: Disable the feature. Default value: **false**.
+Whether to reuse the old child components during the update. **true**: allows reusing the old child components during the update. **false**: does not allow reusing the old child components during the update. Default value: **false**. When the value is **undefined** or **null**, the default value is used.
 
 **Type:** boolean
 
@@ -34,7 +40,7 @@ Whether to enable the feature that reuse old child components when \@Reuseable o
 type: DataOperationType.RELOAD
 ```
 
-Type of data reloading.
+Type for reloading all data.
 
 **Type:** [DataOperationType.RELOAD](arkts-arkui-lazyforeach-comp-dataoperationtype-e.md)
 
