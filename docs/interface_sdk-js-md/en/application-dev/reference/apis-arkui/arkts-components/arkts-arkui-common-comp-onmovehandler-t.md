@@ -4,7 +4,7 @@
 declare type OnMoveHandler = (from: number, to: number) => void
 ```
 
-Defines the onMove callback.
+Defines the callback triggered when data is moved during drag-and-drop sorting.
 
 **Since:** 12
 
@@ -18,5 +18,5 @@ Defines the onMove callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Index number for moving elements. |
-| to | number | Yes | Target index number for moving elements. |
+| from | number | Yes | Start index of the drag operation. The value range is [0, data source length - 1]. |
+| to | number | Yes | End index of the drag operation. The value range is [0, data source length - 1]. |

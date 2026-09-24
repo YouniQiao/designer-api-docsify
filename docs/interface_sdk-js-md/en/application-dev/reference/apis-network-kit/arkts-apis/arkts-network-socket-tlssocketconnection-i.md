@@ -46,7 +46,7 @@ Closes a **TLSSocketServer** connection. This API uses an asynchronous callback 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
@@ -118,7 +118,7 @@ Closes a **TLSSocketServer** connection. This API uses a promise to return the r
 | --- | --- |
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
@@ -1378,7 +1378,7 @@ Sends a message to the client after a **TLSSocketServer** connection is establis
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**
@@ -1458,7 +1458,7 @@ Sends a message to the server after a **TLSSocketServer** connection is establis
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
 **Examples**

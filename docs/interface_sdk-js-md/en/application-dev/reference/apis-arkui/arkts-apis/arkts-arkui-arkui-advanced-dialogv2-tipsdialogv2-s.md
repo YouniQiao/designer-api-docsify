@@ -98,6 +98,8 @@ imageBorderColor?: ColorMetrics
 
 Sets the borderColor of TipsDialogV2 image.
 
+Default value: **Color.Black**
+
 **Type:** ColorMetrics
 
 **Since:** 18
@@ -153,6 +155,8 @@ imageSize?: SizeOptions
 ```
 
 Sets the TipsDialogV2 image size.
+
+Default value: **64*64vp**
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 

@@ -4,7 +4,9 @@
 declare enum ContentClipMode
 ```
 
-Enum of scrollable containers' content clip mode.
+Enumerates the content clipping modes for the scrollable container.
+
+The figure below illustrates the clipping areas corresponding to each enumeration value after the component has been configured with margin and padding attributes.
 
 **Since:** 14
 
@@ -16,7 +18,7 @@ Enum of scrollable containers' content clip mode.
 CONTENT_ONLY = 0
 ```
 
-Clip to content rect inside margin & padding.
+Clip to the content area, corresponding to the green area in the figure.
 
 **Since:** 14
 
@@ -32,7 +34,7 @@ Clip to content rect inside margin & padding.
 BOUNDARY = 1
 ```
 
-Clip to scrollable's outer rect, including padding but inside margin.
+Clip to the component area, corresponding to the entire blue area in the figure.
 
 **Since:** 14
 
@@ -48,7 +50,7 @@ Clip to scrollable's outer rect, including padding but inside margin.
 SAFE_AREA = 2
 ```
 
-Clip to the safeArea of scrollable container.
+Clip to the safe area configured for the component, corresponding to the entire yellow area in the figure.
 
 **Since:** 14
 

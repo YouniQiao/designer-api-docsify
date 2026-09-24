@@ -4,7 +4,7 @@
 declare interface FadingEdgeOptions
 ```
 
-Defines the fadingEdge options.
+Implements an object used to configure the [fadingEdge](arkts-arkui-common-comp-scrollablecommonmethod-c.md#fadingedge) attribute.
 
 **Since:** 14
 

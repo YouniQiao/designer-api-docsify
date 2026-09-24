@@ -16,7 +16,7 @@ The ErrorObserver module defines an observer to listen for application errors. I
 onException?(errObject: Error): void
 ```
 
-Called when the application encounters an exception and reports it to the JavaScript layer.
+Called when the application encounters an exception and reports it to the JavaScript layer. Currently, only the default Error object (containing name, message, and stack) is supported; custom modification, inheritance, or extension is not supported.
 
 **Since:** 10
 

@@ -479,7 +479,7 @@ Sends data through a local socket connection. This API uses a promise to return 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301011 | Operation would block. |
+| [2301011](../errorcode-net-socket.md#2301011-operation-would-block) | Operation would block. |
 
 **Examples**
 

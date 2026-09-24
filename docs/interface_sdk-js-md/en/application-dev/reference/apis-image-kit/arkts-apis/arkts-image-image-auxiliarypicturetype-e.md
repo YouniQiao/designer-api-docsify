@@ -107,3 +107,35 @@ LHDR gain map.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
+
+## OXY_MAP
+
+```TypeScript
+OXY_MAP = 11
+```
+
+Oxygen saturation map.
+
+It records the oxygen saturation level for face area pixels, and could be used for skin analysis.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+## MEL_MAP
+
+```TypeScript
+MEL_MAP = 12
+```
+
+Melanin concentration map.
+
+It records the melanin distribution in face area, and could be used for skin analysis.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Image.Core

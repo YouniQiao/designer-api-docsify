@@ -4,7 +4,7 @@
 declare interface UIScrollableCommonEvent extends UICommonEvent
 ```
 
-Defines a UIScrollableCommonEvent which is used to set event to target component.
+Configures scroll event callbacks.
 
 **Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md)
 
@@ -18,7 +18,9 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 setOnReachEnd(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling reaches the end position.
+Sets the callback for the [onReachEnd](arkts-arkui-common-comp-scrollablecommonmethod-c.md#onreachend) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -32,7 +34,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the **onReachEnd** event. |
 
 ## setOnReachStart
 
@@ -40,7 +42,9 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 setOnReachStart(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling reaches the start position.
+Sets the callback for the [onReachStart](arkts-arkui-common-comp-scrollablecommonmethod-c.md#onreachstart) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -54,7 +58,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the **onReachStart** event. |
 
 ## setOnScrollFrameBegin
 
@@ -62,7 +66,9 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when scrolling begin each frame.
+Sets the callback for the [onScrollFrameBegin](arkts-arkui-scroll-comp-attribute.md#onscrollframebegin) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -76,7 +82,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md) &#124; undefined | Yes | callback function, triggered when the scrolling begin each frame. |
+| callback | [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md) &#124; undefined | Yes | Callback for the **onScrollFrameBegin** event. |
 
 ## setOnScrollStart
 
@@ -84,7 +90,9 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 setOnScrollStart(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling started.
+Sets the callback for the [onScrollStart](arkts-arkui-common-comp-scrollablecommonmethod-c.md#onscrollstart) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -98,7 +106,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling started. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the **onScrollStart** event. |
 
 ## setOnScrollStop
 
@@ -106,7 +114,9 @@ Set or reset the callback which is triggered when the scrolling started.
 setOnScrollStop(callback: Callback<void> | undefined): void
 ```
 
-Set or reset the callback which is triggered when the scrolling stoped.
+Sets the callback for the [onScrollStop](arkts-arkui-common-comp-scrollablecommonmethod-c.md#onscrollstop) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -120,4 +130,4 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;void&gt; &#124; undefined | Yes | Callback for the **onScrollStop** event. |

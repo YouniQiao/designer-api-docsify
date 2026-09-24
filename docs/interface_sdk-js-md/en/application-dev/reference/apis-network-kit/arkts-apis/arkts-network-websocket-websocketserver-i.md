@@ -48,7 +48,7 @@ Closes a WebSocket connection. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| [2302006](../errorcode-net-webSocket.md#2302006-websocketserver-connection-does-not-exist) | websocket connection does not exist. |
 
 **Examples**
 
@@ -457,7 +457,7 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| 2302006 | websocket connection does not exist. |
+| [2302006](../errorcode-net-webSocket.md#2302006-websocketserver-connection-does-not-exist) | websocket connection does not exist. |
 
 **Examples**
 

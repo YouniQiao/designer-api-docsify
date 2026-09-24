@@ -18,6 +18,24 @@ interface KeyEvent
 import { inputEventClient } from '@kit.InputKit';
 ```
 
+## displayId
+
+```TypeScript
+displayId? : number
+```
+
+目标屏幕ID。取值应为≥0的整数。
+
+**类型：** number
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
+
+**系统接口：** 此接口为系统接口。
+
 ## isIntercepted
 
 ```TypeScript

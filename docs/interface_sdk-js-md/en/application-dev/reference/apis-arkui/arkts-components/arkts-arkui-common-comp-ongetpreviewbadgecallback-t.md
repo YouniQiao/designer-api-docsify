@@ -4,7 +4,7 @@
 declare type OnGetPreviewBadgeCallback = () => boolean | number
 ```
 
-Defines the callback type used in onGetPreviewBadge of EditModeOptions.
+Called to obtain the number of selected items when the animation for gathering selected items upon long press is about to start.
 
 **Since:** 23
 

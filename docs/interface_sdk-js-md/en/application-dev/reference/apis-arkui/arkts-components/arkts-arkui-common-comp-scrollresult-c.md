@@ -4,7 +4,7 @@
 declare class ScrollResult
 ```
 
-The actual offset by which the scrollable scrolls.
+Implements a return value object of the [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) callback.
 
 **Since:** 12
 

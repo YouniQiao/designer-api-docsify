@@ -129,10 +129,10 @@ opacity: number
 ## reflectionMap
 
 ```TypeScript
-reflectionMap: image.PixelMap
+reflectionMap?: image.PixelMap
 ```
 
-用于玻璃表面环境反射的反射贴图。通过image模块创建为PixelMap实例。
+用于玻璃表面环境反射的反射贴图。通过image模块创建为PixelMap实例。不设置时，默认值为undefined，不应用反射效果。
 
 **类型：** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 

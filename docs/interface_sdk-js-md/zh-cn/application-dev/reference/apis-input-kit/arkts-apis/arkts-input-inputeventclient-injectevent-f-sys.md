@@ -12,7 +12,7 @@ import { inputEventClient } from '@kit.InputKit';
 function injectEvent({ KeyEvent: KeyEvent }): void
 ```
 
-按键(包括单个按键和组合键)注入。
+按键(包括单个按键和组合键)注入。自API版本26.0.1起，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。
 
 **起始版本：** 8
 
@@ -28,7 +28,7 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键注入描述信息。 |
+| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |  |
 
 **错误码：**
 

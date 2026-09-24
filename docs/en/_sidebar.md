@@ -22,7 +22,7 @@
 - [Content Embed Kit (23)](interface_sdk_c-md/en/application-dev/reference/apis-content-embed-kit/c-apis/capi-contentembed.md)
 - [Core File Kit (516)](interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md)
 - [Crypto Architecture Kit (141)](interface_sdk-js-md/en/application-dev/reference/apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-security-cryptoframework.md)
-- [Cstandard Library (7)](interface_sdk_c-md/en/application-dev/reference/apis-cstandard-library/c-apis/capi-muslmalloc.md)
+- [Cstandard Library (9)](interface_sdk_c-md/en/application-dev/reference/apis-cstandard-library/c-apis/capi-muslmalloc.md)
 - [Data Protection Kit (79)](interface_sdk-js-md/en/application-dev/reference/apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)
 - [Default (420)](interface_sdk-js-md/en/application-dev/reference/apis-default/arkts-apis/arkts-lib-es2015.md)
 - [Device Certificate Kit (173)](interface_sdk-js-md/en/application-dev/reference/apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-security-cert.md)

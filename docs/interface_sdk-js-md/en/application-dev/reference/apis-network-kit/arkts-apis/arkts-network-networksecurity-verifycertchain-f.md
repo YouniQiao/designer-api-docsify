@@ -48,5 +48,5 @@ Verifies the server certificate chain and returns a sorted chain.
 | [2305018](../errorcode-net-networkSecurity.md#2305018-self-signed-certificate) | Self-signed certificate. |
 | [2305024](../errorcode-net-networkSecurity.md#2305024-invalid-ca) | Invalid certificate authority (CA). |
 | [2305027](../errorcode-net-networkSecurity.md#2305027-untrusted-certificate) | Certificate is untrusted. |
-| 2305062 | Invalid hostname. |
+| [2305062](../errorcode-net-networkSecurity.md#2305062-hostname-verification-failed) | Invalid hostname. |
 | [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) | Invalid certificate verification context. |

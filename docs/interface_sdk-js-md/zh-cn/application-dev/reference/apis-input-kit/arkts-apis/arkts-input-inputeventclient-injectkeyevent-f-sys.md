@@ -12,7 +12,7 @@ import { inputEventClient } from '@kit.InputKit';
 function injectKeyEvent(keyEvent: KeyEventData): void
 ```
 
-按键(包括单个按键和组合键)事件注入。
+按键(包括单个按键和组合键)事件注入。自API版本26.0.1起，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。
 
 **起始版本：** 11
 

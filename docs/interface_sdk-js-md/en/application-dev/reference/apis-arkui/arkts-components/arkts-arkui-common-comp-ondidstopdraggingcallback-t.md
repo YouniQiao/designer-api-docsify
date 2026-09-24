@@ -4,7 +4,7 @@
 declare type OnDidStopDraggingCallback = (willFling: boolean) => void
 ```
 
-On scroll callback using in scrollable onDidStopDragging.
+Defines the callback invoked when the scrollable component stops being dragged.
 
 **Since:** 21
 
@@ -20,4 +20,4 @@ On scroll callback using in scrollable onDidStopDragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| willFling | boolean | Yes | whether start fling animation. |
+| willFling | boolean | Yes | Whether an inertial animation will follow. **true**: An inertial animation will follow. **false**: No inertial animation will follow. |

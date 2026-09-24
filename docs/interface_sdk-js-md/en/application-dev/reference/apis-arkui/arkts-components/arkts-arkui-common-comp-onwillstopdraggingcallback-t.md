@@ -4,7 +4,7 @@
 declare type OnWillStopDraggingCallback = (velocity: number) => void
 ```
 
-On scroll callback using in scrollable onWillStopDragging.
+Defines the callback invoked when the scrollable component is released.
 
 **Since:** 20
 
@@ -20,4 +20,4 @@ On scroll callback using in scrollable onWillStopDragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | The veolicity of the scroll view at the moment the touch was released. |
+| velocity | number | Yes | Scroll velocity. Positive for scrolling upward, negative for scrolling downward.<br>Unit: vp/s. |

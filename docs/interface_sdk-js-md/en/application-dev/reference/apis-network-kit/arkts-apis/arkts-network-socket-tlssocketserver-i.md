@@ -751,7 +751,7 @@ Listens for client connections after **bind** is successfully called to bind the
 | [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 
 **Examples**
 
@@ -828,7 +828,7 @@ Listens for client connections after **bind** is successfully called to bind the
 | [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
 | [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
 | [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-the-tls-connection) | Failed to close the TLS connection. |
 
 **Examples**
 

@@ -129,10 +129,10 @@ Overall opacity of the glass effect. The value range is [0, 1]; a value of 0 is 
 ## reflectionMap
 
 ```TypeScript
-reflectionMap: image.PixelMap
+reflectionMap?: image.PixelMap
 ```
 
-Reflection map used for environment reflections on the glass surface. Created through the image module as a PixelMap instance.
+Reflection map used for environment reflections on the glass surface. Created through the image module as a PixelMap instance. If not set, the default is undefined, and no reflection is applied.
 
 **Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 

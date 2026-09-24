@@ -52,9 +52,9 @@ Adds a member to a multicast group. This API uses an asynchronous callback to re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address in use. |
 
 **Examples**
 
@@ -116,8 +116,8 @@ Adds a member to a multicast group. This API uses a promise to return the result
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address in use. |
 
 **Examples**
 
@@ -170,8 +170,8 @@ Drops a member from a multicast group. This API uses an asynchronous callback to
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address in use. |
 
 **Examples**
 
@@ -233,8 +233,8 @@ Drops a member from a multicast group. This API uses a promise to return the res
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
-| 2301098 | Address in use. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address in use. |
 
 **Examples**
 
@@ -287,7 +287,7 @@ Obtains the loopback mode flag for multicast communication. This API uses an asy
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -340,7 +340,7 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -391,7 +391,7 @@ Obtains the TTL for multicast packets. This API uses an asynchronous callback to
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -446,7 +446,7 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -556,7 +556,7 @@ Sets the loopback mode flag for multicast communication. This API uses an asynch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -615,7 +615,7 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301088 | Not a socket. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -667,8 +667,8 @@ Sets the time to live (TTL) for multicast packets. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 
@@ -730,8 +730,8 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301022 | Invalid argument. |
-| 2301088 | Not a socket. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301088](../errorcode-net-socket.md#2301088-socket-operation-on-non-socket) | Not a socket. |
 
 **Examples**
 

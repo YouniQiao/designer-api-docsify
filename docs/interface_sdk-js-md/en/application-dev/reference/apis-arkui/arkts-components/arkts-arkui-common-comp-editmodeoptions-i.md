@@ -4,7 +4,7 @@
 declare interface EditModeOptions
 ```
 
-Define edit mode options.
+Sets attributes of the **List** or **Grid** component in edit mode.
 
 **Since:** 23
 

@@ -167,7 +167,7 @@
   - [ResourceType(system api)](arkts-backgroundtasks-backgroundtaskmanager-resourcetype-e-sys.md)<!--DelEnd-->
   - [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
 <!--Del-->
-- [@ohos.resourceschedule.deviceStandby](arkts-backgroundtasks-resourceschedule-devicestandby.md)<!--DelEnd-->
+- [@ohos.resourceschedule.deviceStandby(Device Standby)](arkts-backgroundtasks-resourceschedule-devicestandby.md)<!--DelEnd-->
   <!--Del-->
   - [getExemptedApps(system api)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md)<!--DelEnd-->
   <!--Del-->

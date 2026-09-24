@@ -4,7 +4,7 @@
 declare interface NestedScrollOptions
 ```
 
-Define nested scroll options
+Implements an object used to configure the [nestedScroll](arkts-arkui-common-comp-scrollablecommonmethod-c.md#nestedscroll) attribute.
 
 @interface NestedScrollOptions
 

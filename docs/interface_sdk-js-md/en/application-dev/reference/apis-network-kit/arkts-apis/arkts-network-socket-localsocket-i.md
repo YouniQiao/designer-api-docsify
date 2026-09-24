@@ -52,8 +52,8 @@ Binds the address of a local socket file. This API uses a promise to return the 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301098 | Address already in use. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address already in use. |
 
 **Examples**
 
@@ -150,9 +150,9 @@ Connects to the specified socket file. This API uses a promise to return the res
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301111 | Connection refused. |
-| 2301099 | Cannot assign requested address. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301111](../errorcode-net-socket.md#2301111-connection-refused) | Connection refused. |
+| [2301099](../errorcode-net-socket.md#2301099-cannot-allocate-requested-address) | Cannot assign requested address. |
 
 **Examples**
 
@@ -761,7 +761,7 @@ Sends data over a local socket connection. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
-| 2301011 | Operation would block. |
+| [2301011](../errorcode-net-socket.md#2301011-operation-would-block) | Operation would block. |
 
 **Examples**
 

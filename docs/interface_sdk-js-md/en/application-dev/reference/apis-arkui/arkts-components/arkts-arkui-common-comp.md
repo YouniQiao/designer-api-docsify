@@ -115,13 +115,13 @@ Constructor
 | [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) | Defines the information about the dragged item during drag. |
 | [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | Preview image processing mode and badge count during dragging. |
 | [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | Sets parameters for the drop process. |
-| [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | Define EdgeEffect Options. |
+| [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | Implements an object used to configure the [edgeEffect](arkts-arkui-common-comp-scrollablecommonmethod-c.md#edgeeffect) attribute. |
 | [EdgeLightParams](arkts-arkui-common-comp-edgelightparams-i-sys.md) | Defines the parameters of the edge light effect. |
-| [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | Define edit mode options. |
+| [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | Sets attributes of the **List** or **Grid** component in edit mode. |
 | [EntryOptions](arkts-arkui-common-comp-entryoptions-i.md) | Page entry configuration options, used to configure parameters such as the route name, state storage, and shared storage when decorating a page with @Entry. |
 | [EventTarget](arkts-arkui-common-comp-eventtarget-i.md) | Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [ExpectedFrameRateRange](arkts-arkui-common-comp-expectedframeraterange-i.md) | Sets the expected frame rate range for an animation. |
-| [FadingEdgeOptions](arkts-arkui-common-comp-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
+| [FadingEdgeOptions](arkts-arkui-common-comp-fadingedgeoptions-i.md) | Implements an object used to configure the [fadingEdge](arkts-arkui-common-comp-scrollablecommonmethod-c.md#fadingedge) attribute. |
 | [FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md) | Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [FocusMovement](arkts-arkui-common-comp-focusmovement-i.md) | Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies. |
 | [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | Inherits from [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) to define the foreground blur options. |
@@ -140,7 +140,7 @@ Constructor
 | [InputEventInterceptResult](arkts-arkui-common-comp-inputeventinterceptresult-i.md) | Input event interception result interface, used by the listener callback [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) to return the interception decision. |
 | [InputEventMonitor](arkts-arkui-common-comp-inputeventmonitor-i.md) | Input event monitor identity object. |
 | [InvertOptions](arkts-arkui-common-comp-invertoptions-i.md) | Describes the options for inverting the foreground color. |
-| [ItemDragEventHandler](arkts-arkui-common-comp-itemdrageventhandler-i.md) | Define item drag event handler. |
+| [ItemDragEventHandler](arkts-arkui-common-comp-itemdrageventhandler-i.md) | Defines callbacks for drag events on a data source, allowing you to respond to different drag operations. |
 | [ItemDragInfo](arkts-arkui-common-comp-itemdraginfo-i.md) | ItemDragInfo object description |
 | [KeyEvent](arkts-arkui-common-comp-keyevent-i.md) | KeyEvent object description. |
 | [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | Provides animation configuration options. |
@@ -169,7 +169,7 @@ Constructor
 | [MouseEvent](arkts-arkui-common-comp-mouseevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [MouseHistoricalPoint](arkts-arkui-common-comp-mousehistoricalpoint-i.md) | Mouse event historical point information. |
 | [MultiShadowOptions](arkts-arkui-common-comp-multishadowoptions-i.md) | Defines shadow style properties. |
-| [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Define nested scroll options |
+| [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Implements an object used to configure the [nestedScroll](arkts-arkui-common-comp-scrollablecommonmethod-c.md#nestedscroll) attribute. |
 | [OverlayOffset](arkts-arkui-common-comp-overlayoffset-i.md) | Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component. |
 | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) |  |
 | [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
@@ -220,7 +220,7 @@ Constructor
 | [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | Defines the options of translate. |
 | [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback. |
 | [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | Provides APIs for configuring gestures bound to a component. |
-| [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
+| [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | Configures scroll event callbacks. |
 | [VersionCondition](arkts-arkui-common-comp-versioncondition-i.md) | Defines VersionCondition interface |
 | [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
 | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Describes visible area change configuration options. |
@@ -261,16 +261,16 @@ Constructor
 | [MonitorDecorator](arkts-arkui-common-comp-monitordecorator-t.md) | Represents the actual type of the **@Monitor** decorator. |
 | [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) | The navigation destination information. |
 | [NavigationInfo](arkts-arkui-common-comp-navigationinfo-t.md) | The navigation information. |
-| [OnDidStopDraggingCallback](arkts-arkui-common-comp-ondidstopdraggingcallback-t.md) | On scroll callback using in scrollable onDidStopDragging. |
+| [OnDidStopDraggingCallback](arkts-arkui-common-comp-ondidstopdraggingcallback-t.md) | Defines the callback invoked when the scrollable component stops being dragged. |
 | [OnDragEventCallback](arkts-arkui-common-comp-ondrageventcallback-t.md) | Defines a callback for drag events. |
-| [OnGetPreviewBadgeCallback](arkts-arkui-common-comp-ongetpreviewbadgecallback-t.md) | Defines the callback type used in onGetPreviewBadge of EditModeOptions. |
-| [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | Defines the callback type used in onItemDragStart. |
-| [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | Defines the onMove callback. |
+| [OnGetPreviewBadgeCallback](arkts-arkui-common-comp-ongetpreviewbadgecallback-t.md) | Called to obtain the number of selected items when the animation for gathering selected items upon long press is about to start. |
+| [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | Called when a list or grid element starts to be dragged. |
+| [OnMoveHandler](arkts-arkui-common-comp-onmovehandler-t.md) | Defines the callback triggered when data is moved during drag-and-drop sorting. |
 | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) | Defines the callback type used in onNeedSoftkeyboard. Called when component is focused, the return value indicates whether keyboard is needed. |
-| [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | On scroll callback using in scrollable onDidScroll. |
-| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | Defines the callback type used in OnVisibleIndexesChange. |
-| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scrollable can scroll. |
-| [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | On scroll callback using in scrollable onWillStopDragging. |
+| [OnScrollCallback](arkts-arkui-common-comp-onscrollcallback-t.md) | Triggered when the scrollable component scrolls. |
+| [OnVisibleIndexesChangeCallback](arkts-arkui-common-comp-onvisibleindexeschangecallback-t.md) | Defines the callback type invoked when the indexes of the child components displayed by the lazy loading layout containers [LazyColumnLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazycolumnlayout.md), [LazyVGridLayout](arkts-arkui-lazyvgridlayout-comp.md#lazy_grid_layout), and [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md) change. |
+| [OnWillScrollCallback](arkts-arkui-common-comp-onwillscrollcallback-t.md) | Triggered when the scrollable component is about to scroll. |
+| [OnWillStopDraggingCallback](arkts-arkui-common-comp-onwillstopdraggingcallback-t.md) | Defines the callback invoked when the scrollable component is released. |
 | [Optional](arkts-arkui-common-comp-optional-t.md) | Defines the Optional type. The value can be **undefined**. |
 | [PathShape](arkts-arkui-common-comp-pathshape-t.md) | Defines the PathShape type. |
 | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Defines the PixelMap type object for ui component. |
@@ -317,7 +317,7 @@ Constructor
 | [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md) | Enumerates blur styles. |
 | [BlurStyleActivePolicy](arkts-arkui-common-comp-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style. |
 | [ChainStyle](arkts-arkui-common-comp-chainstyle-e.md) | Enumerates the chain styles in relative container. |
-| [ContentClipMode](arkts-arkui-common-comp-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
+| [ContentClipMode](arkts-arkui-common-comp-contentclipmode-e.md) | Enumerates the content clipping modes for the scrollable container. |
 | [DismissReason](arkts-arkui-common-comp-dismissreason-e.md) | Enumerates the reasons for popup dismissal. |
 | [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | Enum for distortion animation mode. |
 | [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | Enumerates drag animation types. |
@@ -326,7 +326,7 @@ Constructor
 | [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) | Sets the display mode of the drag preview. |
 | [DragResult](arkts-arkui-common-comp-dragresult-e.md) | Defines the result of a drag operation and the drop-selection state of a component. |
 | [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | Edge light animation mode enumeration. |
-| [EffectEdge](arkts-arkui-common-comp-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
+| [EffectEdge](arkts-arkui-common-comp-effectedge-e.md) | Enumerates the edges where the edge effect is applied. |
 | [EffectType](arkts-arkui-common-comp-effecttype-e.md) | Enum of using the effects template mode. |
 | [FinishCallbackType](arkts-arkui-common-comp-finishcallbacktype-e.md) | Defines the type of the **onFinish** callback. |
 | [HapticFeedbackMode](arkts-arkui-common-comp-hapticfeedbackmode-e.md) | Enumerates the haptic feedback modes used when the menu is displayed. |

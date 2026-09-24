@@ -18,6 +18,24 @@ Defines the key event to inject.
 import { inputEventClient } from '@kit.InputKit';
 ```
 
+## displayId
+
+```TypeScript
+displayId? : number
+```
+
+Target display ID. The value must be an integer greater than or equal to 0.
+
+**Type:** number
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
+
+**System API:** This is a system API.
+
 ## isIntercepted
 
 ```TypeScript

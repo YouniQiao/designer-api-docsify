@@ -4317,3 +4317,147 @@ Smart control key slide-down
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_CLICK
+
+```TypeScript
+KEYCODE_PTZ_CLICK = 3235
+```
+
+PTZ click
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_FOCUS_LEFT
+
+```TypeScript
+KEYCODE_PTZ_FOCUS_LEFT = 3236
+```
+
+PTZ focus left
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_FOCUS_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_FOCUS_RIGHT = 3237
+```
+
+PTZ focus right
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_EXPOSURE_LEFT
+
+```TypeScript
+KEYCODE_PTZ_EXPOSURE_LEFT = 3238
+```
+
+PTZ exposure left
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_EXPOSURE_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_EXPOSURE_RIGHT = 3239
+```
+
+PTZ exposure right
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_SHUTTER_LEFT
+
+```TypeScript
+KEYCODE_PTZ_SHUTTER_LEFT = 3240
+```
+
+PTZ shutter left
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_SHUTTER_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_SHUTTER_RIGHT = 3241
+```
+
+PTZ shutter right
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_APERTURE_LEFT
+
+```TypeScript
+KEYCODE_PTZ_APERTURE_LEFT = 3242
+```
+
+PTZ aperture left
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_APERTURE_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_APERTURE_RIGHT = 3243
+```
+
+PTZ aperture right
+
+**Model restriction:** This API can only be used in the stage model.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core

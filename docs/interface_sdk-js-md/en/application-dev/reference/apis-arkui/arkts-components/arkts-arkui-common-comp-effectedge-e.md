@@ -4,7 +4,7 @@
 declare enum EffectEdge
 ```
 
-Enumerates the effective edge of the edge effect.
+Enumerates the edges where the edge effect is applied.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumerates the effective edge of the edge effect.
 START = 1
 ```
 
-Effective only for the starting edge.
+Start edge.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Effective only for the starting edge.
 END = 2
 ```
 
-Effective only for the end edge.
+End edge.
 
 **Since:** 18
 

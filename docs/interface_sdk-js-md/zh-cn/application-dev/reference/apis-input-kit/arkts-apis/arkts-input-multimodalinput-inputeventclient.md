@@ -27,8 +27,8 @@ import { inputEventClient } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | 按键(包括单个按键和组合键)注入。 |
-| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md) | 按键(包括单个按键和组合键)事件注入。 |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | 按键(包括单个按键和组合键)注入。自API版本26.0.1起，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。 |
+| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md) | 按键(包括单个按键和组合键)事件注入。自API版本26.0.1起，调用者可指定按键事件注入的displayId。若指定的displayId不存在，则操作不生效。 |
 | [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md) | 鼠标/触控板事件注入。 |
 | [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md) | 触屏输入事件注入。 |
 | [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md) | 允许事件注入权限。 |

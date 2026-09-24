@@ -332,8 +332,8 @@ Binds the address of the local socket file. The server listens to and accepts lo
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
 | [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
-| 2301022 | Invalid argument. |
-| 2301098 | Address already in use. |
+| [2301022](../errorcode-net-socket.md#2301022-invalid-argument) | Invalid argument. |
+| [2301098](../errorcode-net-socket.md#2301098-network-address-already-in-use) | Address already in use. |
 
 **Examples**
 

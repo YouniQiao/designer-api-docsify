@@ -12,7 +12,7 @@ import { inputEventClient } from '@kit.InputKit';
 function injectKeyEvent(keyEvent: KeyEventData): void
 ```
 
-Injects key events (for both single keys and combination keys).
+Injects key events (for both single keys and combination keys). Since API version 26.0.1, the caller can specify the display ID for injecting a key event. If the specified display ID does not exist, the operation will not take effect.
 
 **Since:** 11
 

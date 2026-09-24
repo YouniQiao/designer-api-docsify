@@ -2429,7 +2429,6 @@ rekey(): Promise<void>
 | --- | --- |
 | [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
-| 15100006 | Failed to update the key. |
 
 **示例**
 

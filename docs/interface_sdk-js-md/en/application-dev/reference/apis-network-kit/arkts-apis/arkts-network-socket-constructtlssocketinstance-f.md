@@ -71,8 +71,8 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| 2303601 | Invalid socket FD. |
-| 2303602 | Socket is not connected. |
+| [2303601](../errorcode-net-socket.md#2303601-socket-file-descriptor-is-invalid) | Invalid socket FD. |
+| [2303602](../errorcode-net-socket.md#2303602-socket-is-not-connected) | Socket is not connected. |
 
 **Examples**
 

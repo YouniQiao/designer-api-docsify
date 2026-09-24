@@ -2832,3 +2832,21 @@ COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLIC
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
+
+## COMMON_EVENT_SKILL_CHANGED
+
+```TypeScript
+COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'
+```
+
+表示应用的技能信息已经发生变更的公共事件.
+
+要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SKILL权限.
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.Notification.CommonEvent

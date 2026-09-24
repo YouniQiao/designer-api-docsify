@@ -20,6 +20,26 @@ Images occupy a large amount of memory. When you finish using an AuxiliaryPictur
 import { image } from '@kit.ImageKit';
 ```
 
+## acquirePixelmap
+
+```TypeScript
+acquirePixelmap(): PixelMap | null
+```
+
+Obtains the PixelMap of this auxiliary picture.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) &#124; null | PixelMap object obtained. Returns null when the auxiliary picture does not contain PixelMap data. |
+
 ## getAuxiliaryPictureInfo
 
 ```TypeScript

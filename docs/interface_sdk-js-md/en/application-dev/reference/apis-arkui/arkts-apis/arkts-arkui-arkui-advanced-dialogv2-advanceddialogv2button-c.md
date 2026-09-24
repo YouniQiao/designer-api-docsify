@@ -88,9 +88,9 @@ buttonStyle?: ButtonStyleMode
 
 Describes the Button style.
 
-**Type:** [ButtonStyleMode](../arkts-components/arkts-arkui-button-comp-buttonstylemode-e.md)
+Default value: **ButtonStyleMode.NORMAL** for 2-in-1 devices and **ButtonStyleMode.TEXTUAL** for other devices
 
-**Default:** ButtonStyleMode.TEXTUAL
+**Type:** [ButtonStyleMode](../arkts-components/arkts-arkui-button-comp-buttonstylemode-e.md)
 
 **Since:** 18
 
