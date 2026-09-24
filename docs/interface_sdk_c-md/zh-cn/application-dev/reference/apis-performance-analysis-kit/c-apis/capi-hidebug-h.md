@@ -73,6 +73,7 @@
 | [HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)](#oh_hidebug_setmaxstackdepth) | - | 设置最大回栈深度。 |
 | [HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uint32_t size)](#oh_hidebug_setfiltersize) | - | 设置过滤大小。 |
 | [HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)](#oh_hidebug_setmaxdurationsec) | - | 设置最大采集持续时间（单位：秒）。 |
+| [HiDebug_ErrorCode OH_HiDebug_SetStackTraceMode(OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilerStackTraceMode mode)](#oh_hidebug_setstacktracemode) | - | 设置调用栈追踪模式。 |
 | [HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType type, OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofilerwithoptions) | - | 根据指定资源类型和配置启动分配栈trace日志采集。 |
 
 ### 变量
@@ -1093,6 +1094,33 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts,
 | -- | -- |
 | HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} 无效的最大持续时间。</li></ul> |
 
+### OH_HiDebug_SetStackTraceMode()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetStackTraceMode(OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilerStackTraceMode mode)
+```
+
+**描述：**
+
+设置调用栈追踪模式。
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
+| OH_HiDebug_ProfilerStackTraceMode mode | [in] 调用栈追踪模式。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE} 无效的调用栈追踪模式。</li></ul> |
+
 ### OH_HiDebug_StartProfilerWithOptions()
 
 ```c
@@ -1119,6 +1147,6 @@ HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType ty
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_RES_PROF_SUCCESS}启动资源采集成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts或callback是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}资源采集最大持续时间参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}资源采集过滤大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}资源采集最大回栈深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}资源采集统计间隔参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}资源采集采样大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH}最大异步嵌套深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH}最大异步任务回栈栈深参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}资源类型参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。</li><br>    <li>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}资源采集重复启动。</li><br>    <li>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}资源采集进程数超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CONFLICT}资源采集与命令行工具或系统采集任务冲突。</li><br>    <li>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}资源采集每日配额超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}系统CPU高负载，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}系统内存可用空间紧张，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}存储可用空间紧张，禁止采集。</li><br>   <li>{@link HIDEBUG_RES_PROF_FAILURE}启动资源采集失败。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_RES_PROF_SUCCESS}启动资源采集成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts或callback是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}资源采集最大持续时间参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}资源采集过滤大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}资源采集最大回栈深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}资源采集统计间隔参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}资源采集采样大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH}最大异步嵌套深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH}最大异步任务回栈栈深参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE} 调用栈追踪模式参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}资源类型参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。</li><br>    <li>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}资源采集重复启动。</li><br>    <li>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}资源采集进程数超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CONFLICT}资源采集与命令行工具或系统采集任务冲突。</li><br>    <li>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}资源采集每日配额超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}系统CPU高负载，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}系统内存可用空间紧张，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}存储可用空间紧张，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_FAILURE}启动资源采集失败。</li></ul> |
 
 

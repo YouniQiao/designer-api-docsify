@@ -4,9 +4,9 @@
 declare class GridAttribute extends ScrollableCommonMethod<GridAttribute>
 ```
 
-In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
+In addition to [universal attributes](arkts-arkui-common-comp.md#common) and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
-In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
+In addition to [universal events](arkts-arkui-common-comp.md#common) and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
 **Inheritance/Implementation:** GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
@@ -42,9 +42,9 @@ Sets the alignment mode of grid items in the grid. For details about the usage, 
 cachedCount(value: number)
 ```
 
-Sets the number of grid items to be cached (preloaded). It works only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with the [virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll) option enabled. <!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping). <!--DelEnd-->
+Sets the number of grid rows/columns to be preloaded on both sides along the main axis. This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll) enabled.<!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping). <!--DelEnd-->
 
-The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns.
+After caching is set, **cachedCount** grid rows/columns are preloaded on both sides of the display area of the **Grid** component along the main axis. During vertical scrolling, **cachedCount** rows are preloaded on the top and bottom sides respectively. During horizontal scrolling, **cachedCount** columns are preloaded on the left and right sides respectively.
 
 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll) enabled will release **GridItem** components that are outside the display and cache range.
 
@@ -60,7 +60,7 @@ The number of the grid items to be cached before and after the currently display
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**.<br>When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
+| value | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16. <br>Value range: [0, +∞). <br>Values less than 0 are treated as **1**. <br>When **value** is updated using a state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
 
 <a id="cachedcount-1"></a>
 
@@ -70,9 +70,9 @@ The number of the grid items to be cached before and after the currently display
 cachedCount(count: number, show: boolean)
 ```
 
-Sets the number of grid items to be cached (preloaded) and specifies whether to display the preloaded nodes.
+Sets the number of grid rows/columns to be preloaded on both sides along the main axis, and configures whether to display the preloaded nodes. This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll) enabled.
 
-The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns. This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+After caching is set, **cachedCount** grid rows/columns are preloaded on both sides of the display area of the **Grid** component along the main axis. During vertical scrolling, **cachedCount** rows are preloaded on the top and bottom sides respectively. During horizontal scrolling, **cachedCount** columns are preloaded on the left and right sides respectively. The preloaded nodes can be displayed together with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attribute.
 
 **Since:** 14
 
@@ -86,7 +86,7 @@ The number of the grid items to be cached before and after the currently display
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16.<br>Value range: [0, +∞).<br>Values less than 0 are treated as **1**. <br>When the count value is updated using the state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
+| count | number | Yes | Number of grid items to be cached (preloaded).<br>Default value: the number of rows visible on the screen for vertical scrolling, or the number of columns visible on the screen for horizontal scrolling. The maximum value is 16. <br>Value range: [0, +∞). <br>Values less than 0 are treated as **1**. <br>When the count value is updated using the state variable, the **Grid** component does not trigger a layout update. The number of cached nodes is updated only during the next layout. |
 | show | boolean | Yes | Whether to display the preloaded nodes. If this parameter is set to **true**, the preloaded **GridItem** is displayed. If this parameter is set to **false**, the preloaded **GridItem** is not displayed.<br> Default value: **false** |
 
 ## cellLength
@@ -96,6 +96,10 @@ cellLength(value: number)
 ```
 
 Sets the height per row or width per column.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only when neither **rowsTemplate** nor **columnsTemplate** is set.
 
 When **layoutDirection** is **Row** or **RowReverse**, the value indicates the height per row.
 
@@ -113,7 +117,7 @@ When **layoutDirection** is **Column** or **ColumnReverse**, the value indicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Height per row or width per column.<br>Default value: size of the first element<br>Unit: vp<br>Value range: (0, +∞). If the value is less than or equal to 0, the default value is used. |
+| value | number | Yes | Height of a row or width of a column.<br>Default value: when **layoutDirection** is **Row** or **RowReverse**, the height of the first **GridItem**; when **layoutDirection** is **Column** or **ColumnReverse**, the width of the first **GridItem**.<br>Unit: vp <br>Value range: (0, +∞). If the value is set to a value less than or equal to 0, the default value is used. |
 
 ## columnsGap
 
@@ -135,7 +139,7 @@ Sets the gap between columns. A value less than 0 evaluates to the default value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between columns.<br>Default value: **0**<br>Value range: [0, +∞). |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between columns.<br>Default value: **0**<br>Value range: [0, +∞). If a value less than 0 is set, the default value 0 is used. |
 
 ## columnsTemplate
 
@@ -143,7 +147,9 @@ Sets the gap between columns. A value less than 0 evaluates to the default value
 columnsTemplate(value: string)
 ```
 
-This parameter specifies the number of columns in the current grid layout.
+Sets the number of columns, fixed column width, or minimum column width of the grid. If this attribute is not set, one column will be used.
+
+For example, **&nbsp;'1fr&nbsp;1fr&nbsp;2fr'&nbsp;** indicates three columns, with the first column taking up 1/4 of the parent component's full width, the second column 1/4, and the third column 2/4.
 
 **columnsTemplate('repeat(auto-fit, track-size)')**: The layout automatically calculates the number of columns and the actual column width, while adhering to the minimum column width specified with **track-size**.
 
@@ -151,7 +157,11 @@ This parameter specifies the number of columns in the current grid layout.
 
 **columnsTemplate('repeat(auto-stretch, track-size)')**: The layout uses **columnsGap** to define the minimum gap between columns and automatically calculates the number of columns and the actual gap size based on the fixed column width specified by **track-size**.
 
-**repeat**, **auto-fit**, **auto-fill**, and **auto-stretch** are keywords. **track-size** indicates the column width, in the unit of px, vp (default), %, or any valid digit. The value must be greater than or equal to one valid column width. In auto-fit and auto-stretch modes, only a valid column width value is supported for **track-size**. Additionally, in auto-stretch mode, **track-size** only supports units such as px, vp, and valid numbers, but does not support percentage (%). The auto-fill mode supports one or more valid column widths, for example, columnsTemplate('repeat(auto-fill, 20)') or columnsTemplate('repeat(auto-fill, 20 80px)').
+**repeat**, **auto-fit**, **auto-fill**, and **auto-stretch** are keywords. **track-size** indicates the column width, in the unit of px, vp (default), %, or any valid digit. The value must be greater than or equal to one valid column width.
+
+In auto-fit and auto-stretch modes, only a valid column width value is supported for **track-size**. Additionally, in auto-stretch mode, **track-size** only supports units such as px, vp, and valid numbers, but does not support percentage (%). The auto-fill mode supports one or more valid column widths, for example, columnsTemplate('repeat(auto-fill, 20)') or columnsTemplate('repeat(auto-fill, 20 80px)').
+
+For details about the effect, see [Example 8](arkts-arkui-grid-comp.md#grid).
 
 If this attribute is set to **'0fr'**, the column width is 0, and grid item in the column is not displayed. If this attribute is set to any other invalid value, the grid item is displayed as one column.
 
@@ -167,7 +177,7 @@ If this attribute is set to **'0fr'**, the column width is 0, and grid item in t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes |  |
+| value | string | Yes | Number of columns or minimum column width of the grid. |
 
 <a id="columnstemplate-1"></a>
 
@@ -179,11 +189,11 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 Number of columns in the current grid layout. If this attribute is not set, one column will be used.
 
-When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate-1) for the usage.
+When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate) for the usage.
 
 When the value is of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **Grid** component.
 
-For example, the **ItemFillPolicy.BREAKPOINT_DEFAULT** component displays two columns when the component width falls within the sm or smaller breakpoint range, three columns for the md breakpoint range, and five columns for the lg or larger breakpoint range, with each column being 1 fr.
+For example, **ItemFillPolicy.BREAKPOINT_DEFAULT** displays two columns when the component width falls within the sm or smaller breakpoint range, three columns for the md breakpoint range, and five columns for the lg or larger breakpoint range, with each column being 1 fr.
 
 **Since:** 22
 
@@ -197,7 +207,7 @@ For example, the **ItemFillPolicy.BREAKPOINT_DEFAULT** component displays two co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of columns in the current grid layout. |
+| value | string &#124; [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | Yes | Number of columns in the current grid layout. When **value** is of the string type, it indicates a fixed number of columns or the **repeat** function form; when **value** is of the **ItemFillPolicy** type, the number of columns is automatically determined based on the breakpoint. |
 
 ## edgeEffect
 
@@ -228,7 +238,11 @@ Sets the effect used when the scroll boundary is reached.
 editMode(value: boolean)
 ```
 
-Sets whether to enable edit mode. In edit mode, the user can drag the grid items in the **Grid** component.
+Sets whether to enable edit mode. In edit mode, the user can drag the [grid items](arkts-arkui-griditem-comp.md#griditem) in the **Grid** component.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only when neither **rowsTemplate** nor **columnsTemplate** is set.
 
 **Since:** 8
 
@@ -264,7 +278,7 @@ Sets the options of the edit mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | No | Edit mode options. |
+| options | [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | No | Edit mode options, used to configure behaviors such as the multi-select gathering animation, preview badge, multi-select style, and two-finger swipe multi-select in Grid edit mode. Pass this parameter when the preceding behaviors need to be adjusted; if it is not passed, each option uses the default value in the **EditModeOptions** object description. |
 
 ## enableEditMode
 
@@ -272,7 +286,7 @@ Sets the options of the edit mode.
 enableEditMode(enabled: boolean | undefined)
 ```
 
-Sets whether to enable the edit mode for the **Grid** component. After the edit mode is enabled, you can swipe to select multiple GridItem components in the **Grid** component. If this API is not called, the edit mode is not enabled.
+Sets whether to enable the edit mode for the **Grid** component. After the edit mode is enabled, you can swipe to select multiple [GridItem](arkts-arkui-griditem-comp.md#griditem) components in the **Grid** component. If this API is not called, the edit mode is not enabled.
 
 **Since:** 26.0.0
 
@@ -286,7 +300,7 @@ Sets whether to enable the edit mode for the **Grid** component. After the edit 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean &#124; undefined | Yes | Whether to enable the edit mode. **true** means to enable the edit mode and swiping to select multiple items is supported; **false** or **undefined** means to disable the edit mode and swiping to select multiple items is not supported. |
+| enabled | boolean &#124; undefined | Yes | Whether to enable the editing mode. This parameter supports two-way binding with a variable through [!!](../../../ui/state-management/arkts-new-binding.md). When set to **true**, the editing mode is enabled and multiple items can be selected by swiping. When set to **false** or **undefined**, the editing mode is disabled and multiple items cannot be selected by swiping. |
 
 ## enableScrollInteraction
 
@@ -312,7 +326,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-comp-scroller-c.md).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-comp-scroller-c.md). <br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -334,7 +348,7 @@ Sets the focus wrap mode for cross-axis arrow keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT**<br>**NOTE:** <br>Abnormal values are treated as the default value, meaning that cross- axis arrow keys cannot wrap. |
+| mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | Yes | Focus wrap mode for cross-axis arrow keys.<br>Default value: **FocusWrapMode.DEFAULT** <br>**NOTE:** <br>Abnormal values are treated as the default value, meaning that cross-axis arrow keys cannot wrap. |
 
 ## friction
 
@@ -342,7 +356,7 @@ Sets the focus wrap mode for cross-axis arrow keys.
 friction(value: number | Resource)
 ```
 
-Sets the friction coefficient. It applies only to gestures in the scrolling area, and it affects only indirectly the scroll chaining during the inertial scrolling process.
+Sets the friction coefficient. It takes effect when the scroll area is swiped, and affects only the inertial scrolling process. It has an indirect impact on the chained effect during inertial scrolling.
 
 **Since:** 10
 
@@ -356,7 +370,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.<br>Default value: **0.9** for wearable devices and **0.6** for non-wearable devices<br>Since API version 11, the default value for non-wearable devices is **0.7**.<br>Since API version 12, the default value for non-wearable devices is **0.75**.<br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.<br>Default value: **0.9** for wearable devices and **0.6** for non-wearable devices <br>Since API version 11, the default value for non-wearable devices is **0.7**. <br>Since API version 12, the default value for non-wearable devices is **0.75**. <br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 ## layoutDirection
 
@@ -365,6 +379,10 @@ layoutDirection(value: GridDirection)
 ```
 
 Sets the main axis layout direction of the grid.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only when neither **rowsTemplate** nor **columnsTemplate** is set.
 
 **Since:** 8
 
@@ -388,6 +406,10 @@ maxCount(value: number)
 
 Sets the maximum number of rows or columns that can be displayed. A value less than 1 evaluates to the default value.
 
+> **NOTE:** 
+> 
+> This attribute takes effect only when neither **rowsTemplate** nor **columnsTemplate** is set.
+
 When **layoutDirection** is **Row** or **RowReverse**, the value indicates the maximum number of columns that can be displayed.
 
 When **layoutDirection** is **Column** or **ColumnReverse**, the value indicates the maximum number of rows that can be displayed.
@@ -406,7 +428,7 @@ If the value of **maxCount** is smaller than that of **minCount**, the default v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of rows or columns that can be displayed.<br>Default value: **Infinity** |
+| value | number | Yes | Maximum number of rows or columns that can be displayed.<br>Default value: **Infinity**<br>Value range: [1, +∞). If the value is set to less than 1, the default value **Infinity** is used. |
 
 ## minCount
 
@@ -415,6 +437,10 @@ minCount(value: number)
 ```
 
 Sets the minimum number of rows or columns that can be displayed. A value less than 1 evaluates to the default value.
+
+> **NOTE:** 
+> 
+> This attribute takes effect only when neither **rowsTemplate** nor **columnsTemplate** is set.
 
 When **layoutDirection** is **Row** or **RowReverse**, the value indicates the minimum number of columns that can be displayed.
 
@@ -434,7 +460,7 @@ If the value of **minCount** is greater than that of **maxCount**, both **minCou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum number of rows or columns that can be displayed.<br>Default value: **1** |
+| value | number | Yes | Minimum number of rows or columns that can be displayed.<br>Default value: **1**<br> Value range: [1, +∞). If a value less than 1 is set, the default value **1** is used. |
 
 ## multiSelectable
 
@@ -442,7 +468,7 @@ If the value of **minCount** is greater than that of **maxCount**, both **minCou
 multiSelectable(value: boolean)
 ```
 
-Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attributeand **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using Polymorphic Style (by default, **GridItem** has no selected state style).
+Sets whether to enable multiselect. After multiselect is enabled, you can use **GridItem**'s **selected** attributeand **onSelect** event to obtain the selection state of **GridItem**. Additionally, you can set the selected state style of **GridItem** using [Polymorphic Style](arkts-arkui-common-comp.md#common) (by default, **GridItem** has no selected state style).
 
 **Since:** 8
 
@@ -456,7 +482,7 @@ Sets whether to enable multiselect. After multiselect is enabled, you can use **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable multiselect.<br>Default value: **false**<br>**false**: Multiselect is disabled. **true**: Multiselect is enabled. |
+| value | boolean | Yes | Whether to enable multiselect.<br>Default value: **false** <br>**false**: Multiselect is disabled. **true**: Multiselect is enabled. |
 
 ## nestedScroll
 
@@ -478,7 +504,7 @@ Sets the nested scrolling options. Sets the nested scrolling modes for both forw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
+| value | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Yes | Nested scroll options, used to set the nested scrolling linkage behavior between the **Grid** component and its parent component. |
 
 ## onEditModeChange
 
@@ -486,7 +512,7 @@ Sets the nested scrolling options. Sets the nested scrolling modes for both forw
 onEditModeChange(callback: Callback<boolean> | undefined)
 ```
 
-Triggered when the editing mode status changes.
+Triggered when the edit mode state of [enableEditMode](#enableeditmode) changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -500,7 +526,7 @@ Triggered when the editing mode status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;boolean&gt; &#124; undefined | Yes | Callback triggered when editing mode status changes.<br>Passing undefined will unregister the callback. |
+| callback | Callback&lt;boolean&gt; &#124; undefined | Yes | Callback invoked when the edit mode state changes. The callback parameter is of the boolean type. The value **true** indicates entering the edit mode, and **false** indicates exiting the edit mode.<br>If **undefined** is passed in, the callback is canceled. |
 
 ## onItemDragEnter
 
@@ -508,7 +534,7 @@ Triggered when the editing mode status changes.
 onItemDragEnter(event: (event: ItemDragInfo) => void)
 ```
 
-Triggered when the dragged item enters the drop target of the grid.
+Triggered when a dragged item enters the range of a **GridItem**.
 
 **Since:** 8
 
@@ -530,7 +556,7 @@ Triggered when the dragged item enters the drop target of the grid.
 onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 ```
 
-After binding, a callback is triggered when the component is dragged out of the component range.
+Triggered when a dragged item leaves a **GridItem**.
 
 **Since:** 8
 
@@ -544,7 +570,7 @@ After binding, a callback is triggered when the component is dragged out of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number) =&gt; void | Yes |  |
+| event | (event: ItemDragInfo, itemIndex: number) =&gt; void | Yes | Information about the drag point. |
 
 ## onItemDragMove
 
@@ -552,7 +578,7 @@ After binding, a callback is triggered when the component is dragged out of the 
 onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void)
 ```
 
-After binding, a callback is triggered when the drag moves within the range of a placeable component.
+Triggered when a dragged item moves within the range of a **GridItem**.
 
 **Since:** 8
 
@@ -566,7 +592,7 @@ After binding, a callback is triggered when the drag moves within the range of a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) =&gt; void | Yes |  |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) =&gt; void | Yes | Information about the drag point. |
 
 ## onItemDragStart
 
@@ -574,15 +600,15 @@ After binding, a callback is triggered when the drag moves within the range of a
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-Triggered when a grid item starts to be dragged.
+Triggered when dragging of a **GridItem** starts.
 
 This event is triggered when the user long presses a grid item.
 
 Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event.
 
-The floating grid element being dragged can move within the application window. If it is necessary to restrict its movement range, this can be achieved through custom gestures. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem).
+The dragged and lifted **GridItem** can move within the app window. To restrict the movement range, you can implement it through a custom gesture. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem).
 
-Automatic scrolling is not supported when a grid item is dragged to the edge of the grid. You can use the universal drag event to implement this function. For details, see [Example 17: Dragging GridItem Components with Drag Events](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events).
+Automatic scrolling when dragging to the edge of the **Grid** is not supported. You can use the universal drag to implement it. For details, see [Example 17: Dragging Grid Items with Drag Events](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-17-dragging-grid-items-with-drag-events). Since API version 26.0.0, you can use the [onMove](arkts-arkui-common-comp-dynamicnode-c.md#onmove) API of [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) to implement this effect. For details, see [Example 22 (Dragging with OnMove)](arkts-arkui-grid-comp.md#grid). It also supports dragging of **GridItem** that spans rows and columns, but note that the **Grid** must be scrollable.
 
 **Since:** 8
 
@@ -596,7 +622,7 @@ Automatic scrolling is not supported when a grid item is dragged to the edge of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a grid element starts.<br>In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) &#124; void**. For details about the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md).<br>**Since:** 23 |
+| event | [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md) | Yes | Callback triggered when the drag of a **GridItem** starts. <br>In API version 22 and earlier versions, the type of this parameter is **(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) &#124; void**. For the meanings of the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-common-comp-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -606,7 +632,9 @@ onItemDrop(
   )
 ```
 
-The component bound to this event can be used as the drag release target. This callback is triggered when the drag behavior is stopped within the scope of the component.
+The **GridItem** bound with this event can serve as a drop target. This event is triggered when the **GridItem** stops being dragged.
+
+When the drop position is within the **GridItem**, **isSuccess** returns **true**; when it is outside the **GridItem**, **isSuccess** returns **false**.
 
 **Since:** 8
 
@@ -620,7 +648,7 @@ The component bound to this event can be used as the drag release target. This c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) =&gt; void | Yes |  |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) =&gt; void | Yes | Information about the drag point. |
 
 ## onReachEnd
 
@@ -628,9 +656,9 @@ The component bound to this event can be used as the drag release target. This c
 onReachEnd(event: () => void)
 ```
 
-Triggered when the grid reaches the end position. This callback is triggered when the content does not fill a full screen and the end of the last child component is within the **Grid** component.
+Triggered when the grid reaches the end position. It is triggered when the grid content does not fill one screen and the end of the last child component is within the **Grid**.
 
-If the edge effect is set to a spring effect, this event is triggered once when the swipe passes the end position, and triggered again when the swipe rebounds back to the end position.
+When the edge effect of the **Grid** is a spring effect, this event is triggered once when the swipe passes the end position and once again when the rebound returns to the end position.
 
 **Since:** 10
 
@@ -654,7 +682,7 @@ onReachStart(event: () => void)
 
 Triggered when the grid reaches the start position.
 
-This event is triggered once when the grid is initialized and once when the grid scrolls to the start position. If the edge effect is set to a spring effect, this event is triggered once when the swipe passes the initial position, and triggered again when the swipe rebounds back to the initial position.
+This event is triggered once when the **Grid** is initialized and once when the **Grid** scrolls to the start position. When the edge effect of the **Grid** is a spring effect, this event is triggered once when the swipe passes the start position and once again when the rebound returns to the start position.
 
 **Since:** 10
 
@@ -676,7 +704,9 @@ This event is triggered once when the grid is initialized and once when the grid
 onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute)
 ```
 
-Triggered at the end of each frame layout in the grid. You can use the callback to set the position and length of the scrollbar. This API is intended solely for setting the scroll position of the grid. Avoid implementing service logic within this API.
+Triggered at the end of each frame layout in the grid. You can use the callback to set the position and length of the scrollbar.
+
+This API is intended solely for setting the scroll position of the grid. Avoid implementing service logic within this API.
 
 **Since:** 10
 
@@ -690,7 +720,7 @@ Triggered at the end of each frame layout in the grid. You can use the callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (index: number, offset: number) =&gt; ComputedBarAttribute | Yes | callback of grid scroll, index: Index of the first item of the grid. offset: Offset of the displayed first item relative to the start position of the grid, in vp. return ComputedBarAttribute to update scrollbar position and height. |
+| event | (index: number, offset: number) =&gt; ComputedBarAttribute | Yes | callback of grid scroll, index: Index of the first item of the grid. offset: Offset of the displayed first item relative to the start position of the grid, in vp. return ComputedBarAttribute: Position and length of the scrollbar. |
 
 ## onScrollFrameBegin
 
@@ -732,7 +762,7 @@ This event is not triggered in the following scenarios:
 onScrollIndex(event: (first: number, last: number) => void)
 ```
 
-Called when the first or last item displayed in the grid changes.
+Triggered when the first or last item displayed in the grid changes, that is, when the index of either the first or last item changes. It is triggered once when the grid is initialized.
 
 **Since:** 7
 
@@ -812,7 +842,7 @@ Sets the gap between rows. A value less than 0 evaluates to the default value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between rows.<br>Default value: **0**<br>Value range: [0, +∞). |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Gap between rows.<br>Default value: 0<br>Value range: [0, +∞). If a value less than 0 is set, the default value 0 is used. |
 
 ## rowsTemplate
 
@@ -820,15 +850,19 @@ Sets the gap between rows. A value less than 0 evaluates to the default value.
 rowsTemplate(value: string)
 ```
 
-Lets you set the number of rows in the current grid layout,
+Sets the number of rows, fixed row height, or minimum row height of the grid. If this attribute is not set, one row will be used.
+
+For example, **'1fr 1fr 2fr'** indicates three rows, with the first row taking up 1/4 of the parent component's full height, the second row 1/4, and the third row 2/4.
 
 **rowsTemplate('repeat(auto-fit, track-size)')**: The layout automatically calculates the number of rows and the actual row height, while adhering to the minimum row height specified with **track-size**.
 
 **rowsTemplate('repeat(auto-fill, track-size)')**: The layout automatically calculates the number of rows based on the fixed row height specified with **track-size**.
 
-**rowsTemplate('repeat(auto-stretch, track-size)')**: The layout uses **rowsGap** to define the minimum gap between rows and automatically calculates the number of rows and the actual gap size based on the fixed row height specified by **track-size**.
+**rowsTemplate('repeat(auto-stretch, track-size)')**: The layout uses **rowsGap** to define the minimum gap between rows and automatically calculates the number of rows and the actual gap size based on the fixed row height specified with **track-size**.
 
-**repeat**, **auto-fit**, **auto-fill**, and **auto-stretch** are keywords. **track-size** indicates the row height, in the unit of px, vp (default), %, or any valid digit. The value must be greater than or equal to one valid row height. In auto-fit and auto-stretch modes, only a valid row height value is supported for **track-size**. Additionally, in auto-stretch mode, **track-size** only supports units such as px, vp, and valid numbers, but does not support percentage (%). The auto-fill mode supports one or more valid row heights, for example, rowsTemplate('repeat(auto-fill, 20)') or rowsTemplate('repeat(auto-fill, 20 80px)').
+**repeat**, **auto-fit**, **auto-fill**, and **auto-stretch** are keywords. **track-size** indicates the row height, in the unit of px, vp (default), %, or any valid digit. The value must be greater than or equal to one valid row height.
+
+In auto-fit and auto-stretch modes, only a valid row height value is supported for **track-size**. Additionally, in auto-stretch mode, **track-size** only supports units such as px, vp, and valid numbers, but does not support percentage (%). The auto-fill mode supports one or more valid row heights, for example, rowsTemplate('repeat(auto- fill, 20)') or rowsTemplate('repeat(auto-fill, 20 80px)').
 
 If this attribute is set to **'0fr'**, the row height is 0, and grid item in the row is not displayed. If this attribute is set to any other invalid value, the grid item is displayed as one row.
 
@@ -844,7 +878,7 @@ If this attribute is set to **'0fr'**, the row height is 0, and grid item in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes |  |
+| value | string | Yes | Number of rows or minimum row height of the grid. |
 
 ## scrollBar
 
@@ -866,7 +900,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto**<br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto** <br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
 
 ## scrollBarColor
 
@@ -888,7 +922,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: **'#182431'** (40% opacity)<br>A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**.<br>A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: **'#182431'** (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. <br>A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 <a id="scrollbarcolor-1"></a>
 
@@ -912,7 +946,7 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.<br>Default value: **'#182431'** (40% opacity)<br>A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.<br>Default value: **'#182431'** (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarWidth
 
@@ -920,7 +954,7 @@ Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), the p
 scrollBarWidth(value: number | string)
 ```
 
-Sets the scrollbar width. This attribute cannot be set in percentage. After the width is set, the scrollbar is displayed with the set width in normal state and pressed state. If the set width exceeds the height of the **Grid** component on the main axis, the scrollbar reverts to the default width.
+Sets the width of the scrollbar. Percentage values are not supported. After the width is set, the scrollbar width in both the normal state and the pressed state is the set value. If the scrollbar width exceeds the visible size of the **Grid** component along the main axis, the scrollbar width changes to the default value of 4 vp.
 
 **Since:** 7
 
@@ -934,7 +968,7 @@ Sets the scrollbar width. This attribute cannot be set in percentage. After the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Scrollbar width.<br>Default value: **4**<br>Unit: vp<br>If this parameter is set to a value less than or equal to 0, the default value is used. The value **0** means not to show the scrollbar. |
+| value | number &#124; string | Yes | Width of the scrollbar.<br>Default value: **4**<br>Unit: vp<br>Value range: [0, +∞). If the value is less than 0, the default value is used. If the value is 0, the scrollbar is not displayed. |
 
 <a id="scrollbarwidth-1"></a>
 
@@ -944,7 +978,7 @@ Sets the scrollbar width. This attribute cannot be set in percentage. After the 
 scrollBarWidth(value: number | string | Resource)
 ```
 
-Sets the scrollbar width. This attribute cannot be set in percentage. After the width is set, the scrollbar is displayed with the set width in normal state and pressed state. If the set width exceeds the height of the **Grid** component on the main axis, the scrollbar reverts to 4 vp. The **Resource** type is supported.
+Sets the width of the scrollbar. Percentage values are not supported. After the width is set, the scrollbar width in both the normal state and the pressed state is the set value. If the scrollbar width exceeds the visible size of the **Grid** component along the main axis, the scrollbar width changes to the default value of 4 vp. Resource type is supported.
 
 If this attribute is not set, the scrollbar width is 4 vp.
 
@@ -960,7 +994,7 @@ If this attribute is not set, the scrollbar width is 4 vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Unit: vp<br>The value range is [0, +∞). If this parameter is set to a value less than 0, **4vp** is used. The value **0** means not to show the scrollbar. |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Unit: vp <br>The value range is [0, +∞). If this parameter is set to a value less than 0, **4vp** is used. The value **0** means not to show the scrollbar. |
 
 ## supportAnimation
 
@@ -1030,7 +1064,7 @@ Sets whether to synchronously load all child components in the grid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the grid.<br> **true**: yes; **false**: no Default value: **true**<br> **NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the grid.<br> **true**: yes; **false**: no Default value: **true** <br> **NOTE:** <br>When this parameter is set to **false**, in the first display or **scrollToIndex** jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the grid are delayed to the next frame for layout. |
 
 ## onScroll
 

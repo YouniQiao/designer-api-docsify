@@ -1,6 +1,6 @@
 # Scroll
 
-Defines Scroll Component.
+A scrollable container component. When the layout size of a child component exceeds the size of its parent component, the content can be scrolled. It supports setting the scroll direction, scroll bar, edge effect, nested scroll, and free scroll zoom, and is suitable for scenarios where the content exceeds the display area or complex scroll interactions are required.
 
 ## Scroll
 
@@ -8,7 +8,7 @@ Defines Scroll Component.
 Scroll(scroller?: Scroller)
 ```
 
-Called when a scrollable container is set.
+Creates a **Scroll** component.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Called when a scrollable container is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No |  |
+| scroller | [Scroller](arkts-arkui-scroll-comp-scroller-c.md) | No | Controller of the scrollable component. It is used to bind to the scrollable component and control scrolling through the controller APIs. When not passed, the Scroll component cannot be controlled through the controller APIs.<br>**NOTE:** <br>It is not allowed to bind the same scroll control object to other scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow). |
 
 ## Summary
 
@@ -32,14 +32,14 @@ Called when a scrollable container is set.
 | --- | --- |
 | [OffsetOptions](arkts-arkui-scroll-comp-offsetoptions-i.md) | Provides parameters for setting the initial scrolling offset. |
 | [OffsetResult](arkts-arkui-scroll-comp-offsetresult-i.md) | Represents the offset values resulting from a scroll operation. |
-| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md) | The data returned by the event handler when onScrollFrameBegin. |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md) | Represents the actual scroll offset relative to the previous frame returned by [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md). |
 | [ScrollAnimationOptions](arkts-arkui-scroll-comp-scrollanimationoptions-i.md) | Provides parameters for customizing scroll animations. |
 | [ScrollEdgeOptions](arkts-arkui-scroll-comp-scrolledgeoptions-i.md) | Provides parameters for scrolling to the edge of a scrollable container. |
 | [ScrollOptions](arkts-arkui-scroll-comp-scrolloptions-i.md) | Provides parameters for scrolling to a specific position in a scrollable container. |
 | [ScrollPageOptions](arkts-arkui-scroll-comp-scrollpageoptions-i.md) | Provides parameters for page scrolling behavior. |
 | [ScrollSnapOptions](arkts-arkui-scroll-comp-scrollsnapoptions-i.md) | Defines a scroll snapping mode object. |
 | [ScrollToIndexOptions](arkts-arkui-scroll-comp-scrolltoindexoptions-i.md) | Provides parameters for scrolling to a specific index. |
-| [UIScrollEvent](arkts-arkui-scroll-comp-uiscrollevent-i.md) | Defines a UIScrollableCommonEvent which is used to set different common event to target component. |
+| [UIScrollEvent](arkts-arkui-scroll-comp-uiscrollevent-i.md) | Represents the return value of the [getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **Scroll** node. |
 
 ### Types
 
@@ -47,9 +47,9 @@ Called when a scrollable container is set.
 | --- | --- |
 | [OnScrollEdgeCallback](arkts-arkui-scroll-comp-onscrolledgecallback-t.md) | Represents the callback triggered when scrolling reaches an edge. |
 | [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md) | Represents the callback triggered before each frame scrolling starts. |
-| [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md) | callback of Scroll, using in onDidZoom. |
-| [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) | Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
-| [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scroll can scroll. |
+| [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md) | Defines the callback triggered when the scroll scaling of each frame is complete. |
+| [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) | Represents the callback triggered when the **Scroll** component scrolls. |
+| [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md) | Callback triggered before scrolling. |
 
 ### Enums
 

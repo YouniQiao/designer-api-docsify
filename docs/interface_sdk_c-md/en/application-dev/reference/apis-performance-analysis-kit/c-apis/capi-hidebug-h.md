@@ -73,6 +73,7 @@ Defines the APIs for debugging.
 | [HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, uint32_t depth)](#oh_hidebug_setmaxstackdepth) | - | Sets the maximum backtrace stack depth. |
 | [HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uint32_t size)](#oh_hidebug_setfiltersize) | - | Sets the filter size for allocations. |
 | [HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)](#oh_hidebug_setmaxdurationsec) | - | Sets the maximum profiling duration in seconds. |
+| [HiDebug_ErrorCode OH_HiDebug_SetStackTraceMode(OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilerStackTraceMode mode)](#oh_hidebug_setstacktracemode) | - | Sets the stack trace mode. |
 | [HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType type, OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofilerwithoptions) | - | Starts the profiler with the specified options and resource type. |
 
 ### Variable
@@ -1093,6 +1094,33 @@ Sets the maximum profiling duration in seconds.
 | -- | -- |
 | HiDebug_ErrorCode | Result code.      <ul><li>[HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Success.</li>      <li>[HIDEBUG_RES_PROF_INVALID_ARG](capi-hidebug-type-h.md#hidebug_errorcode) opts is a null pointer.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_DURATION](capi-hidebug-type-h.md#hidebug_errorcode) Invalid maximum duration.</li></ul> |
 
+### OH_HiDebug_SetStackTraceMode()
+
+```c
+HiDebug_ErrorCode OH_HiDebug_SetStackTraceMode(OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilerStackTraceMode mode)
+```
+
+**Description**
+
+Sets the stack trace mode.
+
+**System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
+| OH_HiDebug_ProfilerStackTraceMode mode | [in] Stack trace mode. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| HiDebug_ErrorCode | Result code.      <ul><li>[HIDEBUG_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Success.</li>      <li>[HIDEBUG_RES_PROF_INVALID_ARG](capi-hidebug-type-h.md#hidebug_errorcode) opts is a null pointer.</li>      <li>[HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE](capi-hidebug-type-h.md#hidebug_errorcode) Invalid stack trace mode.</li></ul> |
+
 ### OH_HiDebug_StartProfilerWithOptions()
 
 ```c
@@ -1119,6 +1147,6 @@ Starts the profiler with the specified options and resource type.
 
 | Type | Description |
 | -- | -- |
-| HiDebug_ErrorCode | Result code.      <ul><li>[HIDEBUG_RES_PROF_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Profiler started successfully.</li>      <li>[HIDEBUG_RES_PROF_INVALID_ARG](capi-hidebug-type-h.md#hidebug_errorcode) opts or callback is a null pointer.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_DURATION](capi-hidebug-type-h.md#hidebug_errorcode) Maximum duration is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_FILTER_SIZE](capi-hidebug-type-h.md#hidebug_errorcode) FilterSize is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum stack depth is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) StatisticsInterval is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) Sample interval is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum asynchronous nesting depth      is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum asynchronous task stack depth      is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE](capi-hidebug-type-h.md#hidebug_errorcode) ResourceType is invalid.</li>      <li>[HIDEBUG_RES_PROF_PERMISSION_DENIED](capi-hidebug-type-h.md#hidebug_errorcode) Permission denied.</li>      <li>[HIDEBUG_RES_PROF_ALREADY_STARTED](capi-hidebug-type-h.md#hidebug_errorcode) Profiler has already been started.</li>      <li>[HIDEBUG_RES_PROF_PROCESS_OVERLIMIT](capi-hidebug-type-h.md#hidebug_errorcode) Process exceeds the limit.</li>      <li>[HIDEBUG_RES_PROF_CONFLICT](capi-hidebug-type-h.md#hidebug_errorcode) Conflict.</li>      <li>[HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED](capi-hidebug-type-h.md#hidebug_errorcode) Daily quota exceeded.</li>      <li>[HIDEBUG_RES_PROF_CPU_OVERLOADED](capi-hidebug-type-h.md#hidebug_errorcode) CPU overloaded.</li>      <li>[HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Memory pressure is critical.</li>      <li>[HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Storage pressure is critical.</li>      <li>[HIDEBUG_RES_PROF_FAILURE](capi-hidebug-type-h.md#hidebug_errorcode) Failed to start the resource profiler.</li></ul> |
+| HiDebug_ErrorCode | Result code.      <ul><li>[HIDEBUG_RES_PROF_SUCCESS](capi-hidebug-type-h.md#hidebug_errorcode) Profiler started successfully.</li>      <li>[HIDEBUG_RES_PROF_INVALID_ARG](capi-hidebug-type-h.md#hidebug_errorcode) opts or callback is a null pointer.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_DURATION](capi-hidebug-type-h.md#hidebug_errorcode) Maximum duration is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_FILTER_SIZE](capi-hidebug-type-h.md#hidebug_errorcode) FilterSize is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum stack depth is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) StatisticsInterval is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL](capi-hidebug-type-h.md#hidebug_errorcode) Sample interval is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum asynchronous nesting depth      is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH](capi-hidebug-type-h.md#hidebug_errorcode) Maximum asynchronous task stack depth      is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE](capi-hidebug-type-h.md#hidebug_errorcode) Stack trace mode is invalid.</li>      <li>[HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE](capi-hidebug-type-h.md#hidebug_errorcode) Resource type is invalid.</li>      <li>[HIDEBUG_RES_PROF_PERMISSION_DENIED](capi-hidebug-type-h.md#hidebug_errorcode) Permission denied.</li>      <li>[HIDEBUG_RES_PROF_ALREADY_STARTED](capi-hidebug-type-h.md#hidebug_errorcode) Profiler has already been started.</li>      <li>[HIDEBUG_RES_PROF_PROCESS_OVERLIMIT](capi-hidebug-type-h.md#hidebug_errorcode) Process exceeds the limit.</li>      <li>[HIDEBUG_RES_PROF_CONFLICT](capi-hidebug-type-h.md#hidebug_errorcode) Conflict.</li>      <li>[HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED](capi-hidebug-type-h.md#hidebug_errorcode) Daily quota exceeded.</li>      <li>[HIDEBUG_RES_PROF_CPU_OVERLOADED](capi-hidebug-type-h.md#hidebug_errorcode) CPU overloaded.</li>      <li>[HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Memory pressure is critical.</li>      <li>[HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL](capi-hidebug-type-h.md#hidebug_errorcode) Storage pressure is critical.</li>      <li>[HIDEBUG_RES_PROF_FAILURE](capi-hidebug-type-h.md#hidebug_errorcode) Failed to start the resource profiler.</li></ul> |
 
 

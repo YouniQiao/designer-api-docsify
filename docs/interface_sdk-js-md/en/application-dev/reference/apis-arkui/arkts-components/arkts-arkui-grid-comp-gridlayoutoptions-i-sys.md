@@ -18,7 +18,7 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 ```
 
-Called to return the StartLineInfo based on target index for the scrollToIndex operation.
+Calculates the start row within the page when the **Grid** scrolls to a specified target index, used to support operations such as [scrollToIndex](Scroller#scrollToIndex). If not set, this callback is not enabled. It must be set simultaneously with **onGetStartIndexByOffset** to take effect.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Called to return the StartLineInfo based on target index for the scrollToIndex o
 onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback
 ```
 
-Called to return the StartLineInfo based on total offset for the fast or reverse sliding.
+Calculates the start row position of the current grid page based on the total scroll offset, used for fast scrolling or reverse scrolling scenarios. If not set, this callback is not enabled. It must be set simultaneously with **onGetStartIndexByIndex** to take effect.
 
 **Since:** 23
 

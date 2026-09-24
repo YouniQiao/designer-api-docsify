@@ -18,7 +18,7 @@ To improve the performance of **Grid** in scenarios such as jumps and column qua
 onGetIrregularSizeByIndex?: (index: number) => [number, number]
 ```
 
-Called to return the size of the irregular grid items with the specified index in [rows, columns].
+Number of rows and columns occupied by the grid item with an irregular size. This parameter is used together with **irregularIndexes**. In versions earlier than API version 12, the vertical scrolling grid does not support grid items spanning multiple rows, and the horizontal scrolling grid does not support grid items spanning multiple columns.
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ Called to return the size of the irregular grid items with the specified index i
 onGetRectByIndex?: (index: number) => [number, number, number, number]
 ```
 
-Called to return the size of the grid items with the specified index in [rowStart, columnStart, rowSpan, columnSpan].
+Position and size of the grid item with the specified index, in the format of [rowStart,columnStart,rowSpan,columnSpan], <br>where **rowStart** indicates the row start position, **columnStart** indicates the column start position, <br>**rowSpan** indicates the number of rows occupied by the grid item, and **columnSpan** indicates the number of columns occupied by the grid item. Their values are unitless. <br>The values of **rowStart** and **columnStart** are natural numbers greater than or equal to 0. If a negative value is set, the default value **0** is used. <br>The values of **rowSpan** and **columnSpan** are natural numbers greater than or equal to 1. If a decimal is set, it is rounded down. If the decimal set is less than 1, the value **1** is used. <br>**NOTE:** <br>Case 1: If a grid item finds that the start position specified for it is already occupied, it searches for an available start position from left to right and from top to bottom, starting from position [0,0]. <br>Case 2: If any space other than the start position specified for a grid item is occupied, the grid item is displayed within the available space left.
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ Called to return the size of the grid items with the specified index in [rowStar
 irregularIndexes?: number[]
 ```
 
-The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex** is not set, the grid item specified in this parameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrolls horizontally.
+Size of **GridItem** at the specified index in **Grid**. The size is irregular. When **onGetIrregularSizeByIndex** is not set, the grid item specified in this parameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrolls horizontally.
 
 **Type:** number[]
 
@@ -82,7 +82,7 @@ The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex*
 regularSize: [number, number]
 ```
 
-The size of most grid items, in [rows, columns], generally [1, 1]. The only supported value is **[1, 1]**, meaning that the grid item occupies one row and one column.
+Number of rows and columns occupied by a grid item with regular size. The only supported value is **[1, 1]**, meaning that the grid item occupies one row and one column.
 
 **Type:** [number, number]
 

@@ -1,6 +1,6 @@
 # ScrollBar
 
-The **ScrollBar** component is designed to be used together with scrollable components such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow).
+The **ScrollBar** component is used together with scrollable components, such as [ArcList](arkts-arkui-arclist-comp.md#ohosarkuiarclist), [List](arkts-arkui-list-comp.md#list), [Grid](arkts-arkui-grid-comp.md#grid), [Scroll](arkts-arkui-scroll-comp.md#scroll), and [WaterFlow](arkts-arkui-waterflow-comp.md#water_flow), to provide visual scrolling indication and control capabilities, and supports custom scrollbar styles.
 
 > **NOTE:** 
 > 
@@ -106,7 +106,7 @@ struct ScrollBarExample {
 
 ## Example 3: Enabling Nested Scrolling
 
-This example demonstrates how to enable nested scrolling for a **ScrollBar** component using the [enableNestedScroll](arkts-arkui-scrollbar-comp-attribute.md#enablenestedscroll) attribute. This feature is available from API version 20.
+Since API version 14, the ScrollBar component supports nested scrolling through the [enableNestedScroll](arkts-arkui-scrollbar-comp-attribute.md#enablenestedscroll) attribute. This example also uses the [scrollBarColor](arkts-arkui-scrollbar-comp-attribute.md#scrollbarcolor) attribute, supported since API version 20, to set the scrollbar color.
 
 ```ts
 import { ColorMetrics } from '@kit.ArkUI'

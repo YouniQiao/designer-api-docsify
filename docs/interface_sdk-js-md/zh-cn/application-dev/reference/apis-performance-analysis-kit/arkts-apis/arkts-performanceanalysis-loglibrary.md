@@ -1,4 +1,4 @@
-# @ohos.logLibrary
+# @ohos.logLibrary(系统维测日志获取)
 
 本模块提供了获取各类系统维测日志的能力。
 

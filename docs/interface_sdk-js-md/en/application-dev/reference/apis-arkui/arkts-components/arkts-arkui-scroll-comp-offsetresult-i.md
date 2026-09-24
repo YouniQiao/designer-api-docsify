@@ -16,7 +16,9 @@ Represents the offset values resulting from a scroll operation.
 xOffset: number
 ```
 
-Horizontal scrolling offset. <br>The unit of the return value is vp.
+Horizontal scroll offset.
+
+Unit: vp.
 
 **Type:** number
 
@@ -34,7 +36,9 @@ Horizontal scrolling offset. <br>The unit of the return value is vp.
 yOffset: number
 ```
 
-Vertical scrolling offset. <br>The unit of the return value is vp.
+Vertical scroll offset.
+
+Unit: vp.
 
 **Type:** number
 

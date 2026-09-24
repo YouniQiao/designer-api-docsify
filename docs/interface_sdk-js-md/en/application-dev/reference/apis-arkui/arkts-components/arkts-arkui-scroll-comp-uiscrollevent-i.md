@@ -4,7 +4,9 @@
 declare interface UIScrollEvent extends UIScrollableCommonEvent
 ```
 
-Defines a UIScrollableCommonEvent which is used to set different common event to target component.
+Represents the return value of the [getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **Scroll** node.
+
+**UIScrollEvent** inherits from [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md).
 
 **Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md)
 
@@ -18,7 +20,9 @@ Defines a UIScrollableCommonEvent which is used to set different common event to
 setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when the Scroll did scroll.
+Triggered for the [onDidScroll](arkts-arkui-scroll-comp-attribute.md#ondidscroll) event.
+
+Passing **undefined** as the input parameter resets the event callback.
 
 **Since:** 19
 
@@ -32,7 +36,7 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) &#124; undefined | Yes | callback function, triggered when the Scroll did scroll. |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onDidScroll** event. |
 
 ## setOnWillScroll
 
@@ -40,7 +44,9 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 ```
 
-Set or reset the callback which is triggered when the Scroll will scroll.
+Triggered for the [onWillScroll](arkts-arkui-scroll-comp-attribute.md#onwillscroll) event.
+
+Passing **undefined** as the input parameter resets the event callback.
 
 **Since:** 19
 
@@ -54,4 +60,4 @@ Set or reset the callback which is triggered when the Scroll will scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md) &#124; undefined | Yes | callback function, triggered when the Scroll will scroll. |
+| callback | [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md) &#124; undefined | Yes | Callback for the **onWillScroll** event. |

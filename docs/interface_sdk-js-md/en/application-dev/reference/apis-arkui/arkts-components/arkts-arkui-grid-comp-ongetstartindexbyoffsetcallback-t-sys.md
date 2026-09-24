@@ -4,7 +4,7 @@
 declare type OnGetStartIndexByOffsetCallback = (totalOffset: number) => StartLineInfo
 ```
 
-Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
+Calculates the start line position of the current page based on the total offset of the **Grid** component, which is used for fast scrolling or reverse scrolling. This callback must be set simultaneously with **onGetStartIndexByIndex** to take effect.
 
 **Since:** 23
 
@@ -24,4 +24,4 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 | Type | Description |
 | --- | --- |
-| [StartLineInfo](arkts-arkui-grid-comp-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](arkts-arkui-grid-comp-startlineinfo-i-sys.md) | Position of the start line in the grid. |

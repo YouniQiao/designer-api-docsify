@@ -4,7 +4,7 @@
 declare enum GridItemStyle
 ```
 
-Enumerates styles of grid items.
+Enumerates the **GridItem** styles, used to define the interaction state styles of **GridItem**.
 
 > **NOTE:** 
 > 
@@ -21,7 +21,7 @@ Enumerates styles of grid items.
 NONE = 0
 ```
 
-No style.
+No style. **Hover** and **Press** state styles are not displayed.
 
 **Since:** 11
 
@@ -37,7 +37,7 @@ No style.
 PLAIN = 1
 ```
 
-Hover or press style.
+Displays **Hover** and **Press** state styles. The **Hover** state is the style when the mouse hovers, and the **Press** state is the style when pressed.
 
 **Since:** 11
 

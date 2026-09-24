@@ -4,9 +4,7 @@ The **GridItem** component provides a single item in a grid.
 
 > **NOTE:** 
 > 
-> *
-> 
-> * This component can be used only as a child of Grid.
+> * This component can be used only as a child of [Grid](arkts-arkui-grid-comp.md#grid).
 > 
 > * When this component is used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are created when it is created. When this component is used with [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
 > **Grid**, its child components are created when it is laid out.
@@ -43,7 +41,7 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) enum type. |
+| value | [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | No | Optional parameters for **GridItem**. This object contains the **style** parameter of the [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) enum type. When not passed, the default style is used, that is, **GridItemStyle.NONE**.<br> |
 
 ## Summary
 
@@ -51,13 +49,13 @@ Creates a **GridItem** component.
 
 | Name | Description |
 | --- | --- |
-| [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | Defines the style of a grid item. |
+| [GridItemOptions](arkts-arkui-griditem-comp-griditemoptions-i.md) | Defines the **GridItem** style object, used to configure the style options of **GridItem**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) | Enumerates styles of grid items. |
+| [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md) | Enumerates the **GridItem** styles, used to define the interaction state styles of **GridItem**. |
 
 ## Examples
 

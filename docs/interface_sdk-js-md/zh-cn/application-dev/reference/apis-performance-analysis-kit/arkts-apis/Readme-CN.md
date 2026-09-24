@@ -217,7 +217,7 @@
   - [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md)
   - [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 <!--Del-->
-- [@ohos.logLibrary](arkts-performanceanalysis-loglibrary.md)<!--DelEnd-->
+- [@ohos.logLibrary(系统维测日志获取)](arkts-performanceanalysis-loglibrary.md)<!--DelEnd-->
   <!--Del-->
   - [copy(系统接口)](arkts-performanceanalysis-loglibrary-copy-f-sys.md)<!--DelEnd-->
   <!--Del-->

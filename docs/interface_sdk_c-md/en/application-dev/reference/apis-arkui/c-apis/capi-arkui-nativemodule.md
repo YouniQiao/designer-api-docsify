@@ -36,7 +36,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [navigation_router.h](capi-navigation-router-h.md) | Defines a set of navigation or router enum and interface. |
 | [scroll.h](capi-scroll-h.md) | Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs. |
 | [list_item.h](capi-list-item-h.md) | Provides shared list item-related type and function definitions for <b>NativeNode</b> APIs. |
-| [grid.h](capi-grid-h.md) | Provides Grid-related type and function definitions for <b>NativeNode</b> APIs. |
+| [node_grid.h](capi-node-grid-h.md) | Defines enumerations and APIs related to **Grid**. |
 | [custom_attributes.h](capi-custom-attributes-h.md) | Provides custom node event definitions for <b>NativeNode</b> APIs. |
 | [xcomponent.h](capi-xcomponent-h.md) | Defines xcomponent attribute enum value. |
 | [rich_editor.h](capi-rich-editor-h.md) | Defines structs, enumerations, and APIs related to <b>RichEditor</b>. <b>RichEditor</b> provides rich text editing capabilities, supporting custom text selection menus, styled string controllers, paragraph and text style settings, and haptic feedback control. It is suitable for scenarios where rich text editing and custom interaction menus need to be implemented in applications. |

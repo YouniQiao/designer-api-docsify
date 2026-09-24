@@ -44,6 +44,7 @@ Defines the code of the HiDebug module.
 | [HiDebug_CrashObjType](#hidebug_crashobjtype) | HiDebug_CrashObjType | Enumerates the data types of debugging information. |
 | [OH_HiDebug_ResourceType](#oh_hidebug_resourcetype) | OH_HiDebug_ResourceType | Enumerates the resource profiling types. |
 | [OH_HiDebug_MemListenerType](#oh_hidebug_memlistenertype) | OH_HiDebug_MemListenerType | Enumerates the memory listener callback types. You can process the related logic based on the callback type. |
+| [OH_HiDebug_ProfilerStackTraceMode](#oh_hidebug_profilerstacktracemode) | OH_HiDebug_ProfilerStackTraceMode | Defines an enum for stack trace mode. |
 
 ### Macro
 
@@ -147,6 +148,7 @@ Enumerates the error codes used in the HiDebug module.
 | HIDEBUG_RES_PROF_FAILURE = 11400430 |  |
 | HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH = 11400431 | Invalid maximum asynchronous nesting depth.<br>**Since**: 26.0.1 |
 | HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH = 11400432 | Invalid maximum asynchronous task stack depth.<br>**Since**: 26.0.1 |
+| HIDEBUG_RES_PROF_INVALID_STACK_TRACE_MODE = 11400433 | Invalid stack trace mode.<br>**Since**: 26.0.1 |
 
 ### HiDebug_TraceFlag
 
@@ -253,6 +255,25 @@ Enumerates the memory listener callback types. You can process the related logic
 | OH_HIDEBUG_DO_NOTHING = 0 |  |
 | OH_HIDEBUG_RUNNING_GC = 1 |  |
 | OH_HIDEBUG_DUMP_SNAPSHOT = 2 |  |
+
+### OH_HiDebug_ProfilerStackTraceMode
+
+```c
+enum OH_HiDebug_ProfilerStackTraceMode
+```
+
+**Description**
+
+Defines an enum for stack trace mode.
+
+**System capability**: SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Since**: 26.0.1
+
+| Enum item | Description |
+| -- | -- |
+| OH_HIDEBUG_STACK_TRACE_KEEP_ALL = 0 | Keep all traces including destroyed ones.<br>**Since**: 26.0.1 |
+| OH_HIDEBUG_STACK_TRACE_DISCARD_DESTROYED = 1 | Discard destroyed traces.<br>**Since**: 26.0.1 |
 
 
 ## Function description

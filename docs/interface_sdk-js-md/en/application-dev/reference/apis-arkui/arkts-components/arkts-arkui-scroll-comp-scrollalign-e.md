@@ -16,7 +16,7 @@ Enumerates alignment modes.
 START
 ```
 
-The start edge of the list item is flush with the start edge of the list.
+Start alignment. Aligns the start of the specified item with the start of the scrollable container.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ The start edge of the list item is flush with the start edge of the list.
 CENTER
 ```
 
-The list item is centered along the main axis of the list.
+Center alignment. Centers the specified item along the main axis within the scrollable container.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ The list item is centered along the main axis of the list.
 END
 ```
 
-The end edge of the list item is flush with the end edge of the list.
+End alignment. Aligns the end of the specified item with the end of the scrollable container.
 
 **Since:** 10
 
@@ -64,7 +64,9 @@ The end edge of the list item is flush with the end edge of the list.
 AUTO
 ```
 
-The list item is automatically aligned.
+Automatic alignment.
+
+If the specified item is entirely within the visible area, no adjustment is made. Otherwise, following the shortest -scroll-distance principle, either the start or the end of the item is aligned with the scrollable container to make the item fully visible.
 
 **Since:** 10
 

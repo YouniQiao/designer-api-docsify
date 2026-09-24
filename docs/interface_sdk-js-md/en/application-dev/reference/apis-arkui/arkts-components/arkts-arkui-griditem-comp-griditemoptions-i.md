@@ -4,7 +4,7 @@
 declare interface GridItemOptions
 ```
 
-Defines the style of a grid item.
+Defines the **GridItem** style object, used to configure the style options of **GridItem**.
 
 **Since:** 11
 
@@ -16,13 +16,13 @@ Defines the style of a grid item.
 style?: GridItemStyle
 ```
 
-Style of the grid item.
+Style of **GridItem**.
 
-Default value: **GridItemStyle.NONE**.
+Default value: **GridItemStyle.NONE**
 
-If this parameter is set to **GridItemStyle.NONE**, no style is applied.
+When set to **GridItemStyle.NONE**, no style is applied.
 
-If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
+When set to **GridItemStyle.PLAIN**, the **Hover** and **Press** state styles are displayed. The **Hover** state is the style when the mouse hovers over the item, and the **Press** state is the style when the item is pressed.
 
 **Type:** [GridItemStyle](arkts-arkui-griditem-comp-griditemstyle-e.md)
 

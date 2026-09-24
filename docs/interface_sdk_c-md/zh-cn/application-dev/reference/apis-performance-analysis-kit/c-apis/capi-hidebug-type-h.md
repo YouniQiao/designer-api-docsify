@@ -40,6 +40,7 @@ Defines the code of the HiDebug module.
 | -- | -- | -- |
 | [OH_HiDebug_ResourceType](#oh_hidebug_resourcetype) | OH_HiDebug_ResourceType | 定义资源采集类型的枚举。 |
 | [OH_HiDebug_MemListenerType](#oh_hidebug_memlistenertype) | OH_HiDebug_MemListenerType | 内存监听回调的类型枚举。开发者根据回调类型处理相关逻辑。 |
+| [OH_HiDebug_ProfilerStackTraceMode](#oh_hidebug_profilerstacktracemode) | OH_HiDebug_ProfilerStackTraceMode | 定义调用栈追踪模式枚举。 |
 
 ### 宏定义
 
@@ -139,6 +140,25 @@ enum OH_HiDebug_MemListenerType
 | OH_HIDEBUG_DO_NOTHING = 0 |  |
 | OH_HIDEBUG_RUNNING_GC = 1 |  |
 | OH_HIDEBUG_DUMP_SNAPSHOT = 2 |  |
+
+### OH_HiDebug_ProfilerStackTraceMode
+
+```c
+enum OH_HiDebug_ProfilerStackTraceMode
+```
+
+**描述：**
+
+定义调用栈追踪模式枚举。
+
+**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**起始版本：** 26.0.1
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_HIDEBUG_STACK_TRACE_KEEP_ALL = 0 | 保留所有调用栈追踪，包括已销毁的。<br>**起始版本：** 26.0.1 |
+| OH_HIDEBUG_STACK_TRACE_DISCARD_DESTROYED = 1 | 丢弃已销毁的调用栈追踪。<br>**起始版本：** 26.0.1 |
 
 
 ## 函数说明

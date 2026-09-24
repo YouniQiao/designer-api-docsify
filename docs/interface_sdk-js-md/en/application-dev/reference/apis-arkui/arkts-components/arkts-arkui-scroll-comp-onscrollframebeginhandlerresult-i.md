@@ -4,7 +4,13 @@
 interface OnScrollFrameBeginHandlerResult
 ```
 
-The data returned by the event handler when onScrollFrameBegin.
+Represents the actual scroll offset relative to the previous frame returned by [OnScrollFrameBeginCallback](arkts-arkui-scroll-comp-onscrollframebegincallback-t.md).
+
+> **NOTE:** 
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 

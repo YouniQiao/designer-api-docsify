@@ -4,7 +4,9 @@
 declare class ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
 ```
 
-Defines the scroll attribute functions.
+In addition to [universal attributes](arkts-arkui-common-comp.md#common) and [scrollable component common attributes](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following attributes are also supported.
+
+In addition to [universal events](arkts-arkui-common-comp.md#common) and [scrollable component common events](arkts-arkui-common-comp-scrollablecommonmethod-c.md), the following events are also supported.
 
 **Inheritance/Implementation:** ScrollAttribute extends ScrollableCommonMethod<ScrollAttribute>
 
@@ -32,8 +34,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; |
-| options | [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false } &lt;/em&gt; means the opposite.<br>Default value: &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt;<br>**Since:** 11 |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.None** |
+| options | [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | No | Whether to enable the effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** enables the sliding effect, and **{ alwaysEnabled: false }** disables it. When not passed, the default value is used.<br>Default value: **{ alwaysEnabled: true }**<br><br>**Since:** 11 |
 
 ## enableBouncesZoom
 
@@ -41,7 +43,7 @@ Sets the effect used when the scroll boundary is reached.
 enableBouncesZoom(enable: boolean)
 ```
 
-Enable bounces zoom scale.
+Sets whether to enable the zoom bounce effect.
 
 **Since:** 20
 
@@ -55,7 +57,7 @@ Enable bounces zoom scale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Enable bounces zoom scale.<br>Default value: true. |
+| enable | boolean | Yes | Whether to enable the zoom bounce effect. When the user zooms beyond the maximum or minimum zoom ratio, the content bounces back to the maximum or minimum zoom ratio after the gesture is released. The value **true** means to enable the effect, and **false** means to disable it.<br>Default value: **true** |
 
 ## enablePaging
 
@@ -63,7 +65,7 @@ Enable bounces zoom scale.
 enablePaging(value: boolean)
 ```
 
-Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enablePaging&lt;/em&gt; and &lt;em&gt;scrollSnap&lt;/em&gt; are set, &lt;em&gt;scrollSnap&lt;/em&gt; takes effect, but &lt;em&gt;enablePaging&lt;/em&gt; does not.
+Sets whether to enable swipe paging. If both swipe paging (**enablePaging**) and **scrollSnap** are set, **scrollSnap** takes effect first and **enablePaging** does not take effect. This attribute can be used in scenarios such as book page turning and card paging browsing.
 
 **Since:** 11
 
@@ -77,7 +79,7 @@ Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the swipe-to-turn-pages feature. Default value: false. The value &lt;em&gt;true&lt;/em&gt; means to enable the swipe-to-turn-pages feature, and &lt;em&gt;false&lt;/em&gt; means the opposite. |
+| value | boolean | Yes | Whether to support swipe paging. The value **true** means that swipe paging is supported, and **false** means the opposite.<br>Default value: **false** |
 
 ## enableScrollInteraction
 
@@ -85,7 +87,7 @@ Sets whether to enable the swipe-to-turn-pages feature. If both &lt;em&gt;enable
 enableScrollInteraction(value: boolean)
 ```
 
-Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt;false&lt;/em&gt;, scrolling by finger or mouse is not supported, but the scroll controller API is not affected. The component cannot be scrolled by dragging the mouse.
+Sets whether to support scroll gestures. It can be used to temporarily disable user gesture scrolling of the scroll component in scenarios where services such as custom dragging and custom scrolling need to take over the swipe gesture.
 
 **Since:** 10
 
@@ -99,7 +101,7 @@ Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures.<br>Default value: &lt;em&gt;true&lt;/em&gt; |
+| value | boolean | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-comp-scroller-c.md). <br>Default value: **true** |
 
 ## friction
 
@@ -107,7 +109,7 @@ Sets whether to support scroll gestures. When this attribute is set to &lt;em&gt
 friction(value: number | Resource)
 ```
 
-Sets the friction coefficient. It applies only to gestures in the scrolling area, and it affects only indirectly the scroll chaining during the inertial scrolling process. If this attribute is set to a value less than or equal to 0, the default value is used.
+Sets the friction coefficient. It takes effect when the scroll area is swiped, and affects only the inertial scrolling process. It has an indirect impact on the chained effect during inertial scrolling.
 
 **Since:** 10
 
@@ -121,7 +123,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.<br>Default value: &lt;em&gt;0.9&lt;/em&gt; for wearable devices and &lt;em&gt;0.6&lt;/em&gt; for non-wearable devices <br>Since API version 11, the default value for non-wearable devices is &lt;em&gt;0.7&lt;/em&gt;. <br>Since API version 12, the default value for non-wearable devices is &lt;em&gt;0.75&lt;/em&gt;. |
+| value | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Friction coefficient.<br>Default value: **0.9** for wearable devices and **0.6** for non-wearable devices <br>Since API version 11, the default value for non-wearable devices is **0.7**. <br>Since API version 12, the default value for non-wearable devices is **0.75**. <br>Value range: (0, +∞). If the value is less than or equal to 0, the default value is used. |
 
 ## initialOffset
 
@@ -129,7 +131,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 initialOffset(value: OffsetOptions)
 ```
 
-Sets the initial scrolling offset. This attribute takes effect only during the initial layout of the component. After the initial layout, dynamically changing the value of this attribute does not have any effect.
+Sets the initial scroll offset. It takes effect only during the first layout, and subsequent dynamic changes to this attribute value do not take effect. It can be used to locate a specified scroll position when the page is displayed for the first time.
 
 **Since:** 12
 
@@ -143,7 +145,7 @@ Sets the initial scrolling offset. This attribute takes effect only during the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-scroll-comp-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage, the initial scrolling offset is calculated as the product of the &lt;em&gt;Scroll&lt;/em&gt; component's size in the main axis direction and the percentage value. |
+| value | [OffsetOptions](arkts-arkui-scroll-comp-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage, the initial scrolling offset is calculated as the product of the **Scroll** component's size in the main axis direction and the percentage value. |
 
 ## maxZoomScale
 
@@ -151,7 +153,7 @@ Sets the initial scrolling offset. This attribute takes effect only during the i
 maxZoomScale(scale: number)
 ```
 
-Set maximum zoom scale.
+Sets the maximum gesture-based zoom scale for the **Scroll** component's content.
 
 **Since:** 20
 
@@ -165,7 +167,7 @@ Set maximum zoom scale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | Set maximum zoom scale.<br>Default value: 1. <br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| scale | number | Yes | Maximum gesture-based zoom scale for the **Scroll** component's content.<br>Default value: **1**. <br>Value range: (0, +∞). If the value is less than or equal to 0, the default value 1 is used. |
 
 ## minZoomScale
 
@@ -173,7 +175,7 @@ Set maximum zoom scale.
 minZoomScale(scale: number)
 ```
 
-Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt;em&gt;minZoomScale&lt;/em&gt; to a value other than 1 automatically enables the zoom gesture.
+Sets the minimum gesture-based zoom scale for the **Scroll** component's content.
 
 **Since:** 20
 
@@ -187,7 +189,7 @@ Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | Set minimum zoom scale.<br>Default value: 1. <br>Value range: (0, maxZoomScale]. If the value is greater than &lt;em&gt;maxZoomScale&lt;/em&gt;, &lt;em&gt;maxZoomScale&lt;/em&gt; is used. |
+| scale | number | Yes | Minimum gesture-based zoom scale for the **Scroll** component's content.<br>Default value: **1**. <br>Value range: (0, maxZoomScale]. If the value is less than or equal to 0, the default value **1** is used. If the value is greater than **maxZoomScale**, **maxZoomScale** is used. |
 
 ## nestedScroll
 
@@ -195,7 +197,7 @@ Set minimum zoom scale. Setting either &lt;em&gt;maxZoomScale&lt;/em&gt; and &lt
 nestedScroll(value: NestedScrollOptions)
 ```
 
-Sets the nested scrolling options. You can set the nested scrolling mode in the forward and backward directions to implement scrolling linkage with the parent component. Nested scrolling will not take effect when both of the following conditions are met: (1) The child &lt;em&gt;Scroll&lt;/em&gt; component has &lt;em&gt;enablePaging&lt;/em&gt; or &lt;em&gt;scrollSnap&lt;/em&gt; enabled. (2) The parent component is configured to have scrolling priority.
+Sets the nested scroll mode in both forward and backward directions to implement scroll linkage with the parent component. It is applicable to nested scroll scenarios such as linkage between a list in a page and an outer scroll area.
 
 **Since:** 10
 
@@ -209,7 +211,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Yes | Nested scrolling options.<br>Default value: &lt;em&gt;{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}&lt;/em&gt; |
+| value | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | Yes | Nested scroll options, used to configure the nested scroll modes in the forward and backward directions, including the **scrollForward** (forward scroll mode) and **scrollBackward** (backward scroll mode) fields. **NestedScrollMode.SELF_ONLY** indicates that only the component itself scrolls, **NestedScrollMode.SELF_FIRST** indicates that the component itself scrolls first, **NestedScrollMode.PARENT_FIRST** indicates that the parent component scrolls first, and **NestedScrollMode.PARALLEL** indicates that the component itself and the parent component scroll simultaneously.<br>Default value: **{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY }**<br>When **Scroll** sets [enablePaging](#enablepaging) or [scrollSnap](#scrollsnap) and also sets parent-first nested scroll, the nested scroll does not take effect. |
 
 ## onDidScroll
 
@@ -217,9 +219,16 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 onDidScroll(handler: ScrollOnScrollCallback)
 ```
 
-Triggered when the Scroll component scrolls.
+Triggered when the **Scroll** component scrolls.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+The return value is the scrolling offset amount in the current frame, along with the current scroll state.
+
+Trigger conditions:
+
+1. Triggered when the scroll component triggers scrolling. It supports keyboard and mouse operations and other
+input settings that trigger scrolling.
+2. The scroll controller API is called.
+3. The out-of-bounds bounce effect is active.
 
 **Since:** 12
 
@@ -233,7 +242,7 @@ Triggered when the Scroll component scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) | Yes | Callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
+| handler | [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md) | Yes | Represents the callback triggered when the **Scroll** component scrolls. |
 
 ## onDidZoom
 
@@ -241,7 +250,7 @@ Triggered when the Scroll component scrolls.
 onDidZoom(event: ScrollOnDidZoomCallback)
 ```
 
-Called when the Scroll did zoom.
+Triggered when the zoom operation of each frame is completed.
 
 **Since:** 20
 
@@ -255,7 +264,7 @@ Called when the Scroll did zoom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md) | Yes | callback of zoom. |
+| event | [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md) | Yes | Callback triggered when the zoom operation of each frame is completed. |
 
 ## onScrollEdge
 
@@ -263,9 +272,14 @@ Called when the Scroll did zoom.
 onScrollEdge(event: OnScrollEdgeCallback)
 ```
 
-Triggered when scrolling reaches the edge. Anonymous Object Rectification.
+Triggered when scrolling reaches the edge.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling reaches the edge after being started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Trigger conditions:
+
+1. Triggered when the scroll component scrolls to the edge. It supports keyboard and mouse operations and other
+input settings that trigger scrolling.
+2. The scroll controller API is called.
+3. The out-of-bounds bounce effect is active.
 
 **Since:** 7
 
@@ -279,7 +293,7 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnScrollEdgeCallback](arkts-arkui-scroll-comp-onscrolledgecallback-t.md) | Yes | Edge position to scroll to.<br>**Since:** 18 |
+| event | [OnScrollEdgeCallback](arkts-arkui-scroll-comp-onscrolledgecallback-t.md) | Yes | Edge position to scroll to. <br>For horizontal scrolling, [Edge.Center](../arkts-apis/arkts-arkui-edge-e.md) represents the start position, and [Edge.Baseline](../arkts-apis/arkts-arkui-edge-e.md) represents the end position. Note: The enum values [Edge.Center](../arkts-apis/arkts-arkui-edge-e.md) and [Edge.Baseline](../arkts-apis/arkts-arkui-edge-e.md) are deprecated. You are advised to use the onReachStart and onReachEnd to detect when the component reaches its boundary.<br>**Since:** 18 |
 
 ## onScrollFrameBegin
 
@@ -287,9 +301,23 @@ Triggered when scrolling reaches the edge. Anonymous Object Rectification.
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-Triggered when each frame scrolling starts. Anonymous Object Rectification.
+Triggered at the beginning of each scroll frame. The event parameter provides the pending scroll offset. The event handler can calculate the actual scroll amount based on the use case and return this value as its result. The **Scroll** component then scrolls according to the returned actual scroll amount.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This event is triggered when any of the following conditions is met: <br>1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation). <br>2. The &lt;em&gt;Scroll&lt;/em&gt; component scrolls by inertia. <br>3. Scrolling is triggered by calling the &lt;em&gt;fling&lt;/em&gt; API. <br>This event is not triggered when any of the following conditions is met: <br>1. A scroll control API other than &lt;em&gt;fling&lt;/em&gt; is called. <br>2. The out-of-bounds bounce effect is active. <br>3. The scrollbar is dragged. </p>
+The value of [offsetRemain](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md) can be negative.
+
+If the **onScrollFrameBegin** event and [scrollBy](arkts-arkui-scroll-comp-scroller-c.md#scrollby) method are used to implement nested scrolling, set the [EdgeEffect](#edgeeffect) attribute of the scrollable child component to **None**. For example, if a **List** component is nested in the **Scroll** container, [edgeEffect](arkts-arkui-list-comp-attribute.md#edgeeffect) of the **List** component must be set to **EdgeEffect.None**. Otherwise, swiping the **List** triggers its edge bounce animation, which results in failed nested scrolling.
+
+This event is triggered when any of the following conditions is met:
+
+1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
+2. The **Scroll** component scrolls by inertia.
+3. Scrolling is triggered by calling the [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) API.
+
+This event is not triggered when any of the following conditions is met:
+
+1. A scroll control API other than [fling](arkts-arkui-scroll-comp-scroller-c.md#fling) is called.
+2. The out-of-bounds bounce effect is active.
+3. The scrollbar is dragged.
 
 **Since:** 9
 
@@ -311,9 +339,13 @@ Triggered when each frame scrolling starts. Anonymous Object Rectification.
 onScrollStart(event: VoidCallback)
 ```
 
-Called when scrolling start. Anonymous Object Rectification.
+Triggered when scrolling starts and is initiated by the user's finger dragging the **Scroll** component or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroll-comp-scroller-c.md) starts.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Trigger conditions:
+
+1. Triggered when the scroll component starts scrolling. It supports keyboard and mouse operations and other input
+settings that trigger scrolling.
+2. The scroll controller API is called and then starts, with a transition animation.
 
 **Since:** 9
 
@@ -335,9 +367,13 @@ Called when scrolling start. Anonymous Object Rectification.
 onScrollStop(event: VoidCallback)
 ```
 
-Called when scrolling has stopped. Anonymous Object Rectification.
+Triggered when scrolling stops after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroll-comp-scroller-c.md) stops.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Trigger conditions:
+
+1. Triggered when the scroll component stops after scrolling is triggered. It supports keyboard and mouse
+operations and other input settings that trigger scrolling.
+2. The scroll controller API is called and then starts, with a transition animation.
 
 **Since:** 9
 
@@ -361,7 +397,22 @@ onWillScroll(handler: ScrollOnWillScrollCallback)
 
 Triggered before scrolling.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+The callback provides the amount of offset that is about to be scrolled in the current frame, along with the current scroll status and the source of the scrolling operation. The offset provided in the callback is the calculated intended scrolling offset, not the final actual scrolling offset. You can specify the intended scrolling offset for the **Scroll** through the return value of this callback.
+
+Trigger conditions:
+
+1. Triggered when the scroll component triggers scrolling. It supports keyboard and mouse operations and other
+input settings that trigger scrolling.
+2. The scroll controller API is called.
+3. The out-of-bounds bounce effect is active.
+
+> **NOTE:** 
+> 
+> The scrolling event callback is triggered frequently during scrolling. To avoid frame freezing or dropped frames,
+> do not perform time-consuming operations in this callback. For best practices, see
+> [High-Frequency Callback Scenarios]
+> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-time-optimization-of-the-main-thread
+> #section10112623611).
 
 **Since:** 12
 
@@ -383,7 +434,7 @@ Triggered before scrolling.
 onZoomStart(event: VoidCallback)
 ```
 
-Called when zooming has stated.
+Triggered when a zoom gesture starts.
 
 **Since:** 20
 
@@ -397,7 +448,7 @@ Called when zooming has stated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Zoom start callback. |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered when the zoom gesture starts. |
 
 ## onZoomStop
 
@@ -405,7 +456,7 @@ Called when zooming has stated.
 onZoomStop(event: VoidCallback)
 ```
 
-Called when zooming has stopped.
+Triggered when a zoom gesture stops.
 
 **Since:** 20
 
@@ -419,7 +470,7 @@ Called when zooming has stopped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Zoom stop callback. |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered when the zoom gesture stops. |
 
 ## scrollable
 
@@ -427,7 +478,7 @@ Called when zooming has stopped.
 scrollable(value: ScrollDirection)
 ```
 
-Sets the scrolling direction. The scroll offset is reset when this value is changed.
+Sets the scroll direction. After this value is modified, the scroll offset is reset. You can select vertical scroll, horizontal scroll, or free scroll based on the layout.
 
 **Since:** 7
 
@@ -441,7 +492,7 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scroll-comp-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: &lt;em&gt;ScrollDirection.Vertical&lt;/em&gt; |
+| value | [ScrollDirection](arkts-arkui-scroll-comp-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: **ScrollDirection.Vertical** |
 
 ## scrollBar
 
@@ -449,7 +500,9 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 scrollBar(barState: BarState)
 ```
 
-Sets the scrollbar state. If the container component cannot be scrolled, the scrollbar is not displayed. If the size of a child component of a container component is infinite, the scrollbar cannot be dragged or scrolled with the child component. Since API version 10, when the scrollable component has rounded corners, to prevent the scrollbar from being cut off by the corners, the scrollbar will automatically calculate the clearance distance from the top and bottom.
+Sets the scroll bar state. If the container component cannot scroll, the scroll bar is not displayed. If the size of the child component of the container component is infinite, the scroll bar does not support dragging and accompanying scrolling. This attribute can be used to control whether the scroll bar is always displayed, automatically displayed, or hidden.
+
+Since API version 10, when the scrollable component has rounded corners, to prevent the scrollbar from being cut off by the corners, the scrollbar will automatically calculate the clearance distance from the top and bottom.
 
 **Since:** 7
 
@@ -463,7 +516,7 @@ Sets the scrollbar state. If the container component cannot be scrolled, the scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto** |
 
 ## scrollBarColor
 
@@ -485,7 +538,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string | Yes | Scrollbar color.<br>Default value: **'#66182431'** <br>A number value indicates a HEX color in RGB or ARGB format, value range: [0x0, 0xFFFFFFFF], for example, **0xffffff**. <br>A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 <a id="scrollbarcolor-1"></a>
 
@@ -495,7 +548,7 @@ Sets the scrollbar color.
 scrollBarColor(color: Color | number | string | Resource)
 ```
 
-Sets the scrollbar color.
+Sets the scrollbar color. Compared with [scrollBarColor](#scrollbarcolor), this API supports the Resource type for the **color** parameter.
 
 **Since:** 22
 
@@ -509,7 +562,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | [Color](../arkts-apis/arkts-arkui-color-e.md) &#124; number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar color.<br>Default value: **'#66182431'**<br>A number value indicates a HEX color in RGB or ARGB format, with a value range of [0x0, 0xFFFFFFFF], for example, **0xffffff**. A string value indicates a color in RGB or ARGB format, for example, **'#ffffff'**. |
 
 ## scrollBarWidth
 
@@ -517,7 +570,7 @@ Sets the scrollbar color.
 scrollBarWidth(value: number | string)
 ```
 
-Sets the scrollbar width.
+Sets the width of the scroll bar. Percentage values are not supported. After the width is set, the scroll bar width in both the normal state and the pressed state is the set value. If the scroll bar width exceeds the visible size of the **Scroll** component along the main axis, the default value of 4 vp is used.
 
 **Since:** 7
 
@@ -531,7 +584,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Scrollbar width.<br>Default value: &lt;em&gt;4&lt;/em&gt; <br>Unit: vp <br>Values less than 0 are treated as the default value. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number &#124; string | Yes | Width of the scrollbar.<br>Default value: **4**<br>Unit: vp <br>Value range: If the value is less than 0, the default value 4 vp is used. If the value is 0, the scrollbar is not displayed. |
 
 <a id="scrollbarwidth-1"></a>
 
@@ -541,7 +594,9 @@ Sets the scrollbar width.
 scrollBarWidth(value: number | string | Resource)
 ```
 
-Sets the scrollbar width.
+Sets the width of the scrollbar. Percentage values are not supported. After the width is set, the scrollbar width in both the normal state and the pressed state is the set value. If the scrollbar width exceeds the visible size of the **Scroll** component along the main axis, the scrollbar width changes to the default value of 4 vp. Resource type is supported.
+
+If this attribute is not set, the scrollbar width is 4 vp.
 
 **Since:** 26.0.0
 
@@ -555,7 +610,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Unit: vp <br>Default value: &lt;em&gt;4&lt;/em&gt; <br>If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Scrollbar width.<br>Default value: **4**<br>Unit: vp <br>The value range is [0, +∞). If this parameter is set to a value less than 0, the default value **4vp** is used. The value **0** means not to show the scrollbar. |
 
 ## scrollSnap
 
@@ -563,7 +618,9 @@ Sets the scrollbar width.
 scrollSnap(value: ScrollSnapOptions)
 ```
 
-Sets the scroll snapping mode. During the snap animation, the scroll operation source type reported by the &lt;em&gt;onWillScroll&lt;/em&gt; event is &lt;em&gt;ScrollSource.FLING&lt;/em&gt;.
+Sets the scroll snap mode of the **Scroll** component, which is used to implement scenarios such as paging scroll and card alignment that require positioning to a specified position after scrolling ends.
+
+During the snap animation, the scroll operation source type reported by the [onWillScroll](#onwillscroll) event is **ScrollSource.FLING**.
 
 **Since:** 10
 
@@ -577,7 +634,7 @@ Sets the scroll snapping mode. During the snap animation, the scroll operation s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollSnapOptions](arkts-arkui-scroll-comp-scrollsnapoptions-i.md) | Yes | Scroll snapping mode. |
+| value | [ScrollSnapOptions](arkts-arkui-scroll-comp-scrollsnapoptions-i.md) | Yes | Scroll snap mode of the **Scroll** component. This object contains attributes such as **snapAlign** (alignment), **snapPagination** (pagination), **enableSnapToStart** (whether to snap to the start), and **enableSnapToEnd** (whether to snap to the end). |
 
 ## zoomScale
 
@@ -585,7 +642,7 @@ Sets the scroll snapping mode. During the snap animation, the scroll operation s
 zoomScale(scale: number)
 ```
 
-Current zoom scale. This parameter supports !! for two-way binding of variables.
+Sets the zoom scale of the **Scroll** component's content.
 
 **Since:** 20
 
@@ -599,7 +656,7 @@ Current zoom scale. This parameter supports !! for two-way binding of variables.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | Current zoom scale.<br>Default value: 1. <br>Value range: (0, +∞). |
+| scale | number | Yes | Zoom scale of the **Scroll** component's content. This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). <br>Default value: **1**. <br>Value range: (0, +∞). If the value is less than or equal to 0, the default value 1 is used. |
 
 ## onScroll
 
@@ -609,7 +666,12 @@ onScroll(event: (xOffset: number, yOffset: number) => void)
 
 Triggered to return the horizontal and vertical offsets, in vp, during scrolling when the specified scroll event occurs.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is started by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called. <br>3. This event supports the out-of-bounds bounce effect. </p>
+Trigger conditions:
+
+1. Triggered when the scroll component triggers scrolling. It supports keyboard and mouse operations and other
+input settings that trigger scrolling.
+2. The scroll controller API is called.
+3. The out-of-bounds bounce effect is active.
 
 **Since:** 7
 
@@ -627,7 +689,7 @@ Triggered to return the horizontal and vertical offsets, in vp, during scrolling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (xOffset: number, yOffset: number) =&gt; void | Yes | callback when scroll, xOffset: Actual scroll offset relative to the previous frame.<br>Unit: vp yOffset: Vertical offset relative to the previous frame. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward.<br>Unit: vp |
+| event | (xOffset: number, yOffset: number) =&gt; void | Yes | callback when scroll, xOffset: Actual scroll offset relative to the previous frame.<br>Unit: vp yOffset: Vertical offset relative to the previous frame. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp |
 
 ## onScrollEnd
 
@@ -637,7 +699,11 @@ onScrollEnd(event: () => void)
 
 Triggered when scrolling stops.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. This event is triggered when scrolling is stopped by the &lt;em&gt;Scroll&lt;/em&gt; component or other input settings, such as keyboard and mouse operations. <br>2. This event is triggered when the controller API is called, accompanied by a transition animation. </p>
+Trigger conditions:
+
+1. Triggered when the scroll component stops after scrolling is triggered. It supports keyboard and mouse
+operations and other input settings that trigger scrolling.
+2. The scroll controller API is called and then stops, with a transition animation.
 
 **Since:** 7
 
@@ -653,4 +719,4 @@ Triggered when scrolling stops.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes |  |
+| event | () =&gt; void | Yes | Callback triggered when scrolling stops. |

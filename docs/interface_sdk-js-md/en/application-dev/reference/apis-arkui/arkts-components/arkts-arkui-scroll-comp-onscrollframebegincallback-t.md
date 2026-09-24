@@ -19,10 +19,10 @@ Represents the callback triggered before each frame scrolling starts.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Amount to scroll by, in vp. |
-| state | [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | Yes | Current scroll state. |
+| state | [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | Yes | Current scroll state. Idle indicates the idle state, Scroll indicates the scroll state, and Fling indicates the inertial scroll state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md) | data - the scroll data return by handler |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-comp-onscrollframebeginhandlerresult-i.md) | Actual scroll amount. The **Scroll** component will scroll based on the **offsetRemain** in the return value. |

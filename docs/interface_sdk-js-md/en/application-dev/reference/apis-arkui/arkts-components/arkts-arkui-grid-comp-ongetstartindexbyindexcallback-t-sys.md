@@ -4,7 +4,7 @@
 declare type OnGetStartIndexByIndexCallback = (targetIndex: number) => StartLineInfo
 ```
 
-Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
+Calculates the start line on the page when the grid is scrolled to the specified target index. This API is used to support operations such as [scrollToIndex](Scroller#scrollToIndex). This callback must be set simultaneously with **onGetStartIndexByOffset** to take effect.
 
 **Since:** 23
 
@@ -18,10 +18,10 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetIndex | number | Yes | The target index to scroll to. |
+| targetIndex | number | Yes | Index of the target **GridItem** to be scrolled to. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StartLineInfo](arkts-arkui-grid-comp-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](arkts-arkui-grid-comp-startlineinfo-i-sys.md) | Position of the start line in the grid. |
