@@ -37,6 +37,6 @@ privateComputation的命名空间，提供隐私保护的计算能力。如隐�
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataSetSize](arkts-dataprotection-privacycomputation-datasetsize-e.md) | 枚举隐私协议支持的数据集大小。数据集大小定义单个结果密文可以包含的比较次数。的总数生成的结果密文由element.size/dataSetSize决定。选择一个根据隐私搜索中元素的数量和可接受的每个结果密文的大小。 |
+| [DataSetSize](arkts-dataprotection-privacycomputation-datasetsize-e.md) | 枚举隐私协议支持的数据集大小。数据集大小定义单个结果密文可以包含的比较次数。的总数生成的结果密文由elements.size/dataSetSize决定。选择一个根据隐私搜索中元素的数量和可接受的每个结果密文的大小。 |
 | [HashAlg](arkts-dataprotection-privacycomputation-hashalg-e.md) | 定义用于隐私保护计算的哈希算法。 |
 | [ProtocolType](arkts-dataprotection-privacycomputation-protocoltype-e.md) | 枚举隐私协议类型。协议类型决定隐私保护用于搜索操作的计算方法。 |

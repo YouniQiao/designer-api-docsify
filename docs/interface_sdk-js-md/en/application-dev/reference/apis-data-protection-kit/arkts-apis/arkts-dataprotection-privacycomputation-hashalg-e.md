@@ -10,10 +10,26 @@ Defines the hash algorithms used for privacy-preserving computation.
 
 **System capability:** SystemCapability.Security.Asset
 
+## NONE
+
+```TypeScript
+NONE = 0
+```
+
+No hash algorithm.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Security.Asset
+
 ## SHA256
 
 ```TypeScript
-SHA256 = 0
+SHA256 = 1
 ```
 
 The SHA256 hash algorithm.
@@ -26,10 +42,26 @@ The SHA256 hash algorithm.
 
 **System capability:** SystemCapability.Security.Asset
 
+## SHA384
+
+```TypeScript
+SHA384 = 2
+```
+
+The SHA384 hash algorithm.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Security.Asset
+
 ## SHA512
 
 ```TypeScript
-SHA512 = 1
+SHA512 = 3
 ```
 
 The SHA512 hash algorithm.

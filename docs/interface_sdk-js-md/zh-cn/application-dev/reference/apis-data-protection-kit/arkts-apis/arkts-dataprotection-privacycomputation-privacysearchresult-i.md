@@ -18,12 +18,12 @@ interface PrivacySearchResult
 ## resultCipherText
 
 ```TypeScript
-resultCipherText: Array<Uint8Array>
+resultCipherText: Uint8Array[]
 ```
 
 隐私搜索生成的结果密文数组。这些密文对搜索结果进行编码，需要通过getSearchResult进行解密。
 
-**类型：** Array&lt;Uint8Array&gt;
+**类型：** Uint8Array[]
 
 **起始版本：** 26.0.1
 

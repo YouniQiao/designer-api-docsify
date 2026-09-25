@@ -39,5 +39,8 @@ function getSearchResult(privacySearchResult: PrivacySearchResult, privacyProtoc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [24000001](../../apis-asset-store-kit/errorcode-asset.md#24000001-关键资产服务不可用) | The service is unavailable. |
 | [24000006](../../apis-asset-store-kit/errorcode-asset.md#24000006-系统内存不足) | Insufficient memory. |
+| [24000009](../../apis-asset-store-kit/errorcode-asset.md#24000009-算法库操作失败) | The cryptography operation failed. |
+| [24000017](../../apis-asset-store-kit/errorcode-asset.md#24000017-该子功能不支持) | The capability is not supported. |
 | [24000018](../../apis-asset-store-kit/errorcode-asset.md#24000018-参数校验失败) | Parameter verification failed. |

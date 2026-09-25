@@ -18,12 +18,12 @@ Defines the result of a privacy search operation, containing the result cipherte
 ## resultCipherText
 
 ```TypeScript
-resultCipherText: Array<Uint8Array>
+resultCipherText: Uint8Array[]
 ```
 
 The array of result ciphertexts generated during the privacy search. These ciphertexts encode the search result and need to be decrypted by getSearchResult.
 
-**Type:** Array&lt;Uint8Array&gt;
+**Type:** Uint8Array[]
 
 **Since:** 26.0.1
 
