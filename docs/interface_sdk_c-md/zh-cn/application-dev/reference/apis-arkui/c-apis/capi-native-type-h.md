@@ -1572,6 +1572,8 @@ Defines the state of the NavDestination component.
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_HIDE = 5 | Before the NavDestination hide. |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_APPEAR = 6 | Before the NavDestination mount to the component tree. |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_DISAPPEAR = 7 | Before the NavDestination removed from the component tree. |
+| ARKUI_NAV_DESTINATION_STATE_ON_ACTIVE = 8 |  |
+| ARKUI_NAV_DESTINATION_STATE_ON_INACTIVE = 9 |  |
 | ARKUI_NAV_DESTINATION_STATE_ON_BACK_PRESS = 100 | The NavDestination returns from the component. |
 
 ### ArkUI_RouterPageState
