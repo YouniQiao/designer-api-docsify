@@ -37,6 +37,8 @@ import { cliManager, CliHook, ExecToolParam, ExecCmdParam, ExecResultWrap } from
 | [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f-sys.md) | 根据工具名称获取单个工具的详细信息，使用Promise异步回调。 |
 | [queryTools](arkts-ability-climanager-querytools-f-sys.md) | 查询所有CLI工具的详细信息，使用Promise异步回调。 |
 | [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f-sys.md) | 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。 |
+| [registerCliHook](arkts-ability-climanager-registerclihook-f-sys.md) | 注册CLI Hook，用于拦截工具和命令的执行。同一时间只能注册一个CLI Hook；若已存在已注册的Hook，再次注册将失败。本接口仅在开发者模式下可用。如需更新已注册的Hook，请先调用unregisterCliHook取消注册，再重新注册。Hook对象必须实现CliHook中至少一个可选方法。 |
+| [unregisterCliHook](arkts-ability-climanager-unregisterclihook-f-sys.md) | 取消注册之前注册的CLI Hook。Hook对象必须与传递给registerCliHook的对象相同。若未注册Hook，调用将失败并抛出错误。 |
 <!--DelEnd-->
 
 ### 接口

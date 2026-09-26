@@ -835,8 +835,12 @@
   - [queryTools(系统接口)](arkts-ability-climanager-querytools-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [queryToolSummaries(系统接口)](arkts-ability-climanager-querytoolsummaries-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerCliHook(系统接口)](arkts-ability-climanager-registerclihook-f-sys.md)<!--DelEnd-->
   - [sendMessage](arkts-ability-climanager-sendmessage-f.md)
   - [subscribeSession](arkts-ability-climanager-subscribesession-f.md)
+  <!--Del-->
+  - [unregisterCliHook(系统接口)](arkts-ability-climanager-unregisterclihook-f-sys.md)<!--DelEnd-->
   - [CliSessionInfo](arkts-ability-climanager-clisessioninfo-i.md)
   - [ExecCmdOptions](arkts-ability-climanager-execcmdoptions-i.md)
   <!--Del-->
@@ -851,6 +855,10 @@
   - [invokeFunction(系统接口)](arkts-ability-functionmanager-invokefunction-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [queryFunctions(系统接口)](arkts-ability-functionmanager-queryfunctions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerFunctionHook(系统接口)](arkts-ability-functionmanager-registerfunctionhook-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterFunctionHook(系统接口)](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [InvokeOptions(系统接口)](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1689,6 +1697,16 @@
     - [BusinessAbilityInfo(系统接口)](arkts-ability-businessabilityinfo-i-sys.md)<!--DelEnd-->
   - [ChildProcessInformation](arkts-ability-childprocessinformation.md)
     - [ChildProcessInformation](arkts-ability-childprocessinformation-i.md)
+  <!--Del-->
+  - [CliHook(CLI Hook)](arkts-ability-clihook.md)<!--DelEnd-->
+    <!--Del-->
+    - [CliHook(系统接口)](arkts-ability-clihook-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecCmdParam(系统接口)](arkts-ability-clihook-execcmdparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecResultWrap(系统接口)](arkts-ability-clihook-execresultwrap-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecToolParam(系统接口)](arkts-ability-clihook-exectoolparam-i-sys.md)<!--DelEnd-->
   - [CliToolEvent(CLI工具会话事件)](arkts-ability-clitoolevent.md)
     - [CliToolEvent](arkts-ability-clitoolevent-i.md)
     - [ToolEventType](arkts-ability-clitoolevent-tooleventtype-e.md)
@@ -1730,6 +1748,14 @@
   - [ExtensionRunningInfo(ExtensionRunningInfo)](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo(系统接口)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FunctionHook(Function Hook)](arkts-ability-functionhook.md)<!--DelEnd-->
+    <!--Del-->
+    - [FunctionHook(系统接口)](arkts-ability-functionhook-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [FunctionResultWrap(系统接口)](arkts-ability-functionhook-functionresultwrap-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [InvokeFunctionParam(系统接口)](arkts-ability-functionhook-invokefunctionparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FunctionInfo(Function信息)](arkts-ability-functioninfo.md)<!--DelEnd-->
     <!--Del-->
