@@ -43,7 +43,7 @@
 - [Multimodal Awareness Kit (119)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-multimodalawareness-carawareness.md)
 - [Network Kit (484)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-network-kit/arkts-apis/arkts-network-app-ability-vpnextensionability.md)
 - [Neural Network Runtime Kit (13)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neuralnetworkruntime.md)
-- [Notification Kit (350)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability.md)
+- [Notification Kit (352)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability.md)
 - [Performance Analysis Kit (248)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger.md)
 - [Security Guard Kit (17)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-security-guard-kit/arkts-apis/arkts-securityguard-security-securityguard.md)
 - [Sensor Service Kit (144)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor.md)

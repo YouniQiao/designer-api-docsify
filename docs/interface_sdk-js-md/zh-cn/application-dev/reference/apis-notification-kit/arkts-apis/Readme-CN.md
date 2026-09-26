@@ -97,6 +97,8 @@
   <!--Del-->
   - [setUserGrantedState(系统接口)](arkts-notification-notificationextensionsubscription-setusergrantedstate-f-sys.md)<!--DelEnd-->
   - [subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md)
+  <!--Del-->
+  - [subscribeNotification(系统接口)](arkts-notification-notificationextensionsubscription-subscribenotification-f-sys.md)<!--DelEnd-->
   - [unsubscribe](arkts-notification-notificationextensionsubscription-unsubscribe-f.md)
   - [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
   - [GrantedBundleInfo](arkts-notification-notificationextensionsubscription-grantedbundleinfo-t.md)
@@ -123,6 +125,8 @@
   - [disableNotificationFeature(系统接口)](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [displayBadge(系统接口)](arkts-notification-notificationmanager-displaybadge-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getActiveNotification(系统接口)](arkts-notification-notificationmanager-getactivenotification-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getActiveNotificationByFilter(系统接口)](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md)<!--DelEnd-->
   - [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)

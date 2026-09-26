@@ -36,6 +36,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [getUserGrantedState](arkts-notification-notificationextensionsubscription-getusergrantedstate-f-sys.md) | Obtains the enabling state of the **Allow access to notifications on this device** switch of a specified application. This API uses a promise to return the result. |
 | [setUserGrantedBundleState](arkts-notification-notificationextensionsubscription-setusergrantedbundlestate-f-sys.md) | Sets the enabling state of device notification access for the specified application. This API uses a promise to return the result. |
 | [setUserGrantedState](arkts-notification-notificationextensionsubscription-setusergrantedstate-f-sys.md) | Sets the enabling state of the **Allow access to notifications on this device** switch for a specified application. This API uses a promise to return the result. |
+| [subscribeNotification](arkts-notification-notificationextensionsubscription-subscribenotification-f-sys.md) | Subscribes to notifications based on the priority strategy. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

@@ -108,7 +108,9 @@ parameters?: Array<Parameters>
 - "ohos.bms.param.disableInstallEventReport"：若对应value值为"true"，表示安装完成后不发送安装广播事件（从API version 26.0.1开始支持）。  
 若不传入该键或value值非"true"，则正常发送安装广播。&lt;/br&gt;  
 - "ohos.bms.param.bundleEnableState"：若对应value值为"false"，表示应用安装后处于禁用状态（enabled为false）。  
-若对应value值为"true"或不传入该键，表示应用安装后处于启用状态（enabled为true，默认行为）（从API version 26.0.1开始支持）。
+若对应value值为"true"或不传入该键，表示应用安装后处于启用状态（enabled为true，默认行为）（从API version 26.0.1开始支持）。  
+- "ohos.bms.param.notarizationCredentialStatus"：若对应value值为"1"，表示应用调用安装接口时，拥有公证凭据。  
+若对应value值为"0"或不传入该键，表示应用调用安装接口时，无公证凭据（从API version 26.0.1开始支持）。
 
 **类型：** Array&lt;Parameters&gt;
 

@@ -36,6 +36,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 | [getUserGrantedState](arkts-notification-notificationextensionsubscription-getusergrantedstate-f-sys.md) | 查询指定应用的“允许获取本机通知”的开关状态。使用Promise异步回调。 |
 | [setUserGrantedBundleState](arkts-notification-notificationextensionsubscription-setusergrantedbundlestate-f-sys.md) | 设置指定应用中“已获取的本机通知”的应用通知开关状态。使用Promise异步回调。 |
 | [setUserGrantedState](arkts-notification-notificationextensionsubscription-setusergrantedstate-f-sys.md) | 设置指定应用的“允许获取本机通知”的开关状态。使用Promise异步回调。 |
+| [subscribeNotification](arkts-notification-notificationextensionsubscription-subscribenotification-f-sys.md) | 根据优先通知过滤条件订阅通知。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 类型

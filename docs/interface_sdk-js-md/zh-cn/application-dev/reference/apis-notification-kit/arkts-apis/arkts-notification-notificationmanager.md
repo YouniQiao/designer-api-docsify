@@ -97,6 +97,7 @@ import { notificationManager } from '@kit.NotificationKit';
 | [disableNotificationFeature](arkts-notification-notificationmanager-disablenotificationfeature-f-sys.md#disablenotificationfeature-1) | 将应用包名添加到通知发布权限管控名单，以阻止应用发布通知。使用Promise异步回调。 |
 | [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displaybadge) | 设定指定应用的角标使能状态。使用callback异步回调。 |
 | [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displaybadge-1) | 设定指定应用的角标使能状态。使用Promise异步回调。 |
+| [getActiveNotification](arkts-notification-notificationmanager-getactivenotification-f-sys.md) | 根据通知的唯一标识hashCode获取当前未删除的通知信息。使用Promise异步回调。 |
 | [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) | 获取满足条件的普通实况通知信息。使用callback异步回调。 |
 | [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md#getactivenotificationbyfilter-2) | 获取满足条件的普通实况通知信息。使用Promise异步回调。 |
 | [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md#getallactivenotifications) | 获取当前未删除的所有通知。使用callback异步回调。 |
