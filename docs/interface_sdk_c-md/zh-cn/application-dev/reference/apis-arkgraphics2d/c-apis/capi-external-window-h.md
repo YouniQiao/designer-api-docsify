@@ -21,6 +21,7 @@
 | [Region](capi-nativewindow-region.md) | Region | 表示本地窗口OHNativeWindow需要更新内容的矩形区域（脏区）。 |
 | [OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) | OHHDRMetaData | HDR元数据结构体定义。 |
 | [OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) | OHExtDataHandle | 扩展数据句柄结构体定义。 |
+| [OH_NativeBuffer](capi-nativewindow-oh-nativebuffer.md) | OH_NativeBuffer | 提供对OH_NativeBuffer的访问功能。 |
 | [OHIPCParcel](capi-nativewindow-ohipcparcel.md) | OHIPCParcel | 提供对IPC序列化对象的访问功能。 |
 | [NativeWindow](capi-nativewindow-nativewindow.md) | - | 提供对OHNativeWindow的访问功能。 |
 | [NativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) | - | 提供对OHNativeWindowBuffer的访问功能。 |
@@ -309,7 +310,7 @@ OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(O
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_NativeBuffer* nativeBuffer | 一个指向OH_NativeBuffer的指针。 |
+| [OH_NativeBuffer](capi-nativewindow-oh-nativebuffer.md)* nativeBuffer | 一个指向OH_NativeBuffer的指针。 |
 
 **返回值：**
 

@@ -3,6 +3,8 @@
 <!--Del-->
 - [@ohos.app.form.formAgent(卡片代理-FormAgent)](arkts-form-app-form-formagent.md)<!--DelEnd-->
   <!--Del-->
+  - [getAvailableFormHostServices(系统接口)](arkts-form-formagent-getavailableformhostservices-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [requestPublishForm(系统接口)](arkts-form-formagent-requestpublishform-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormCrossBundle(系统接口)](arkts-form-formagent-updateformcrossbundle-f-sys.md)<!--DelEnd-->
@@ -83,6 +85,8 @@
   <!--Del-->
   - [recycleForms(系统接口)](arkts-form-formhost-recycleforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [registerFormHostService(系统接口)](arkts-form-formhost-registerformhostservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [releaseForm(系统接口)](arkts-form-formhost-releaseform-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestForm(系统接口)](arkts-form-formhost-requestform-f-sys.md)<!--DelEnd-->
@@ -97,6 +101,8 @@
   <!--Del-->
   - [shareForm(系统接口)](arkts-form-formhost-shareform-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [unregisterFormHostService(系统接口)](arkts-form-formhost-unregisterformhostservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [updateFormLocation(系统接口)](arkts-form-formhost-updateformlocation-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormLockedState(系统接口)](arkts-form-formhost-updateformlockedstate-f-sys.md)<!--DelEnd-->
@@ -107,6 +113,8 @@
   - [ChangeSceneAnimationStateRequest(系统接口)](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormCustomConfig(系统接口)](arkts-form-forminfo-formcustomconfig-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormHostServiceInfo(系统接口)](arkts-form-forminfo-formhostserviceinfo-i-sys.md)<!--DelEnd-->
   - [FormInfo](arkts-form-forminfo-forminfo-i.md)
   <!--Del-->
   - [FormInfo(系统接口)](arkts-form-forminfo-forminfo-i-sys.md)<!--DelEnd-->
@@ -122,7 +130,11 @@
   <!--Del-->
   - [OverflowRequest(系统接口)](arkts-form-forminfo-overflowrequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [PeerFormHostServiceInfo(系统接口)](arkts-form-forminfo-peerformhostserviceinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [PublishFormCrossBundleInfo(系统接口)](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PublishFormCrossDeviceResult(系统接口)](arkts-form-forminfo-publishformcrossdeviceresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PublishFormResult(系统接口)](arkts-form-forminfo-publishformresult-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-form-forminfo-rect-i.md)

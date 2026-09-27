@@ -36,12 +36,15 @@ import { formInfo } from '@kit.FormKit';
 | --- | --- |
 | [ChangeSceneAnimationStateRequest](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md) | 互动卡片状态切换请求信息。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。 |
 | [FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md) | 卡片自定义配置信息。 |
+| [FormHostServiceInfo](arkts-form-forminfo-formhostserviceinfo-i-sys.md) | 卡片使用方服务信息。 |
 | [FormInfo](arkts-form-forminfo-forminfo-i-sys.md) | 卡片配置信息。 |
 | [FormInfoFilter](arkts-form-forminfo-forminfofilter-i-sys.md) | 卡片信息过滤器，仅将符合过滤器内要求的卡片信息返回。 |
 | [FormProviderFilter](arkts-form-forminfo-formproviderfilter-i-sys.md) | Information about a running form. |
 | [FunInteractionParams](arkts-form-forminfo-funinteractionparams-i-sys.md) | 趣味交互卡片配置参数。 |
 | [OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md) | 互动卡片动效请求信息。 |
+| [PeerFormHostServiceInfo](arkts-form-forminfo-peerformhostserviceinfo-i-sys.md) | 远端卡片使用方服务信息。 |
 | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) | 跨应用加卡管控信息。 |
+| [PublishFormCrossDeviceResult](arkts-form-forminfo-publishformcrossdeviceresult-i-sys.md) | 跨设备发布卡片的结果。 |
 | [PublishFormResult](arkts-form-forminfo-publishformresult-i-sys.md) | 发布卡片加桌结果。 |
 | [RunningFormInfo](arkts-form-forminfo-runningforminfo-i-sys.md) | 已经添加到桌面的卡片信息。 |
 | [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md) | 场景动效卡片配置参数。 |

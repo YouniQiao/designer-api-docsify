@@ -82,7 +82,23 @@ INTERNAL_ERROR = 3
 NOT_SUPPORT = 4
 ```
 
-Indicates that the host does not support the form dimension.
+表示卡片不支持发布。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+## HOST_FORM_LIMIT
+
+```TypeScript
+HOST_FORM_LIMIT = 5
+```
+
+表示添加到使用方的卡片数量超过上限。
 
 **起始版本：** 26.0.1
 

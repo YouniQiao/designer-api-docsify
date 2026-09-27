@@ -194,7 +194,7 @@ GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 
 用于获取仅包含有桌面图标的应用的bundleInfo。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

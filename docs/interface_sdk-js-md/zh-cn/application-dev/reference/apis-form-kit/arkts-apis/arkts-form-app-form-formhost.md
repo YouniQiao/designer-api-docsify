@@ -84,6 +84,7 @@ import { formHost } from '@kit.FormKit';
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms) | 恢复被回收的卡片，并将它的状态更新为不可回收，如果卡片未被回收则只更新状态为不可回收。使用Promise异步回调。 |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms-1) | 恢复被回收的卡片，并将它的状态更新为不可回收。如果卡片未被回收，则只更新状态为不可回收。使用callback异步回调。 |
 | [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) | 立即回收卡片内存。使用Promise异步回调。 |
+| [registerFormHostService](arkts-form-formhost-registerformhostservice-f-sys.md) | 注册卡片使用方服务信息。注册成功后，可用于跨设备卡片发布。使用Promise异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，但卡片管理器服务仍然保留有关该卡片的缓存信息和存储信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-1) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-2) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用Promise异步回调。 |
@@ -97,6 +98,7 @@ import { formHost } from '@kit.FormKit';
 | [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md#setrouterproxy-1) | 设置卡片跳转代理。使用Promise异步回调，返回卡片跳转所需要Want信息。 |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform) | 指定formId和远程设备Id进行卡片分享。使用callback异步回调。 |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform-1) | 指定formId和远程设备Id进行卡片分享。使用Promise异步回调。 |
+| [unregisterFormHostService](arkts-form-formhost-unregisterformhostservice-f-sys.md) | 注销卡片使用方服务信息。注销后，对应的卡片使用方服务不可用于跨设备卡片发布。使用Promise异步回调。 |
 | [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) | 更新卡片位置。 |
 | [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | 通知卡片管控状态更新。使用Promise异步回调。 |
 | [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) | 调整卡片尺寸。 |

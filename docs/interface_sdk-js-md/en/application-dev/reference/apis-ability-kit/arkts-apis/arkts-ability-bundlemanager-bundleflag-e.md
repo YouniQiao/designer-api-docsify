@@ -195,7 +195,7 @@ GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 
 Used to obtain the bundle information of the application that has only a home screen icon.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

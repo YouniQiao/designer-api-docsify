@@ -69,7 +69,7 @@ Dimension_4_4 = 4
 ## Dimension_2_1
 
 ```TypeScript
-Dimension_2_1
+Dimension_2_1 = 5
 ```
 
 2 x 1 form。
