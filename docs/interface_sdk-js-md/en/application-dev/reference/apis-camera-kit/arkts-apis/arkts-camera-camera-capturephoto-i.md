@@ -65,3 +65,39 @@ Object of the full-quality image and the uncompressed image.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## oxygenPhoto
+
+```TypeScript
+oxygenPhoto?: ImageType
+```
+
+Object of the oxygen auxiliary photo.
+
+**Type:** [ImageType](arkts-camera-camera-imagetype-t.md)
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## pigmentationPhoto
+
+```TypeScript
+pigmentationPhoto?: ImageType
+```
+
+Object of the pigmentation auxiliary photo.
+
+**Type:** [ImageType](arkts-camera-camera-imagetype-t.md)
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core

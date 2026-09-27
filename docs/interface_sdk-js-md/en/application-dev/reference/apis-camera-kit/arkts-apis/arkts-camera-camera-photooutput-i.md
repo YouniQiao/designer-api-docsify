@@ -513,6 +513,40 @@ function getSupportedMovingPhotoVideoCodecType(photoOutput: camera.PhotoOutput):
 }
 ```
 
+## isAutoAuxiliaryPhotoDeliverySupported
+
+```TypeScript
+isAutoAuxiliaryPhotoDeliverySupported(auxPhotoType: CameraAuxiliaryPhotoType): boolean
+```
+
+Check if the automatic auxiliary photo delivery is supported.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| auxPhotoType | [CameraAuxiliaryPhotoType](arkts-camera-camera-cameraauxiliaryphototype-e.md) | Yes | Target auxiliary photo type for delivery. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | TRUE if the type of delivery image is supported; FALSE otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 7400115 | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
+
 ## isAutoExtendedGainmapDeliverySupported
 
 ```TypeScript
@@ -1497,6 +1531,37 @@ function registerCapturePhotoOutputPhotoAvailable(photoOutput: camera.PhotoOutpu
   photoOutput.onCapturePhotoAvailable(callback);
 }
 ```
+
+## setAutoAuxiliaryPhotosDeliveryEnabled
+
+```TypeScript
+setAutoAuxiliaryPhotosDeliveryEnabled(auxPhotoTypes: CameraAuxiliaryPhotoType[], enable: boolean): void
+```
+
+Enable or disable auto auxiliary photo delivery.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| auxPhotoTypes | [CameraAuxiliaryPhotoType](arkts-camera-camera-cameraauxiliaryphototype-e.md)[] | Yes | Target auxiliary photo types for delivery. |
+| enable | boolean | Yes | Target state for auto auxiliary photo delivery. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Check if the camera device supports the required auxiliary photo types by using capability query APIs. |
+| 7400115 | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## setMovingPhotoVideoCodecType
 

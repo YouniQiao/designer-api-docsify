@@ -218,6 +218,7 @@ import { camera } from '@kit.CameraKit';
 | Name | Description |
 | --- | --- |
 | [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md) | Enum for automotive camera position. |
+| [CameraAuxiliaryPhotoType](arkts-camera-camera-cameraauxiliaryphototype-e.md) | Enumerates the auxiliary photo types. |
 | [CameraConcurrentType](arkts-camera-camera-cameraconcurrenttype-e.md) | Enumerates the camera concurrency types. |
 | [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) | Enumerates the camera error codes, |
 | [CameraFormat](arkts-camera-camera-cameraformat-e.md) | Enumerates the camera output formats. |

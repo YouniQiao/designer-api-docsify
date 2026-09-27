@@ -36,6 +36,24 @@ Indicates the unique identifier obtained from the access token manager.
 
 **System API:** This is a system API.
 
+## dmSessionId
+
+```TypeScript
+dmSessionId?: string
+```
+
+Indicates the session ID of the dialog manager (DM), which uniquely identifies the agent session. The value consists of letters, digits, '_' and '-', with a maximum length of 256.
+
+**Type:** string
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
 ## isShellCommand
 
 ```TypeScript
@@ -47,6 +65,24 @@ Indicates whether the command is executed as a shell command.
 **Type:** boolean
 
 **Default:** true
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
+## toolCallId
+
+```TypeScript
+toolCallId?: string
+```
+
+Indicates the unique identifier assigned to a tool call by the agent. The value consists of letters, digits, '_' and '-', with a maximum length of 256.
+
+**Type:** string
 
 **Since:** 26.0.1
 

@@ -165,3 +165,35 @@ The camera service is abnormal.
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## UNSUPPORTED_MULTI_CAMERA_COMBINATION
+
+```TypeScript
+UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400113
+```
+
+Unsupported multiple camera combination.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## PARAM_OUT_OF_RANGE
+
+```TypeScript
+PARAM_OUT_OF_RANGE = 7400115
+```
+
+Parameter out of range.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
