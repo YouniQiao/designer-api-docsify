@@ -18,7 +18,7 @@ Universal attributes are not supported. This component supports the attributes l
 iconBorderRadius(radius: Dimension | BorderRadiuses)
 ```
 
-Sets the corner radius of the **SaveButton** component.
+Sets the corner radius of the icon of the **SaveButton** component.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually.<br>The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes | Corner radius of the icon of the **SaveButton** component. You can set the radius for each of the four corners individually.<br>The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
 
 ## iconSize
 
@@ -150,7 +150,7 @@ Sets the press effect of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise.<br>Default value: **false**.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the press effect setting does not take effect. |
+| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise.<br>Default value: **true**.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the press effect setting does not take effect. |
 
 ## symbolFontWeight
 

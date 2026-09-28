@@ -4,7 +4,19 @@
 class Ashmem
 ```
 
-Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the local device.
+Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection.
+
+The shared memory applies only to cross-process communication within the local device.
+
+- Large data transmission: When transmitting large amounts of data (such as images or files), shared memory can be  
+used to improve efficiency.  
+- Cross-process data sharing: Multiple processes need to share access to the same block of memory data.  
+- Transmission efficiency: Transmitting large data via shared memory avoids serialization overhead and improves  
+transmission efficiency.  
+- Memory reuse: Multiple processes can share access to the same memory, avoiding data duplication.  
+- Improved transmission performance: The shared memory mechanism significantly improves the efficiency of large  
+data transmission.  
+- Reduced memory usage: Avoiding multiple data copies helps save memory resources.
 
 **Since:** 8
 
@@ -313,7 +325,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
+| size | number | Yes | Size of the data to read, in bytes. |
 | offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
@@ -446,7 +458,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
+| size | number | Yes | Size of the data to write, in bytes. |
 | offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
@@ -869,7 +881,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
+| size | number | Yes | Size of the data to write, in bytes. |
 | offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
@@ -923,7 +935,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | number[] | Yes | Data to write. |
-| size | number | Yes | Size of the data to write. |
+| size | number | Yes | Size of the data to write, in bytes. |
 | offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
@@ -1004,7 +1016,7 @@ Mapped memory protection type, indicating that the mapped memory is readable.
 static readonly PROT_WRITE: number
 ```
 
-Mapped memory protection type, indicating that the mapped memory is readable.
+Mapped memory protection type, indicating that the mapped memory is writable.
 
 **Type:** number
 

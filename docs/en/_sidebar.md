@@ -45,7 +45,7 @@
 - [Media Library Kit (307)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent.md)
 - [Mind Spore Lite Kit (39)](interface_sdk-js-md/en/application-dev/reference/apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-ai-mindsporelite.md)
 - [Multimodal Awareness Kit (119)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-multimodalawareness-carawareness.md)
-- [Network Kit (485)](interface_sdk-js-md/en/application-dev/reference/apis-network-kit/arkts-apis/arkts-network-app-ability-vpnextensionability.md)
+- [Network Kit (496)](interface_sdk-js-md/en/application-dev/reference/apis-network-kit/arkts-apis/arkts-network-app-ability-vpnextensionability.md)
 - [Neural Network Runtime Kit (17)](interface_sdk_c-md/en/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neuralnetworkruntime.md)
 - [Notification Kit (352)](interface_sdk-js-md/en/application-dev/reference/apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability.md)
 - [Performance Analysis Kit (262)](interface_sdk-js-md/en/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger.md)

@@ -259,6 +259,6 @@
   - [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 - application<!--arkts-backgroundtaskskit-application-->
   <!--Del-->
-  - [WorkSchedulerExtensionContext(ExtensionAbility Context for Deferred Task Scheduling Callbacks)](arkts-backgroundtasks-workschedulerextensioncontext.md)<!--DelEnd-->
+  - [WorkSchedulerExtensionContext(Work Scheduler Callback Context)](arkts-backgroundtasks-workschedulerextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [WorkSchedulerExtensionContext(system api)](arkts-backgroundtasks-workschedulerextensioncontext-c-sys.md)<!--DelEnd-->

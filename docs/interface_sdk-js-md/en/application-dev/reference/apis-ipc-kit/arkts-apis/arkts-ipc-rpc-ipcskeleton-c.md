@@ -111,7 +111,7 @@ class Stub extends rpc.RemoteObject {
 static getCallingPid(): number
 ```
 
-Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the PID of the process will be returned.
+Obtains the PID of the caller. This API is a static method, which is called by the [RemoteObject](arkts-ipc-rpc-remoteobject-c.md) object in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest). If the method is not called in the IPC context, the PID of the current process is returned.
 
 **Since:** 7
 
@@ -187,7 +187,7 @@ class Stub extends rpc.RemoteObject {
 static getCallingUid(): number
 ```
 
-Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the UID of the process will be returned.
+Obtains the UID of the caller. This API is a static method, which is called by the [RemoteObject](arkts-ipc-rpc-remoteobject-c.md) object in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest). If the method is not called in the IPC context, the UID of the current process is returned.
 
 **Since:** 7
 
@@ -225,7 +225,7 @@ class Stub extends rpc.RemoteObject {
 static getContextObject(): IRemoteObject
 ```
 
-Obtains the system capability manager. This API is a static method.
+Obtains the system service manager (SAMGR) object. This method is static method.
 
 **Since:** 7
 
@@ -371,7 +371,7 @@ class Stub extends rpc.RemoteObject {
 static restoreCallingIdentity(identity: string): void
 ```
 
-Restores the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
+Restores the UID and PID to those of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required. This API is supported only in the IPC context [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest); otherwise, it returns directly.
 
 **Since:** 9
 
@@ -381,7 +381,7 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | A string containing the UID and PID of the remote user. The length of the string must be less than 40960. are returned by **resetCallingIdentity**. |
+| identity | string | Yes | String that contains the remote user UID and PID. Its length must be less than 40960. are returned by **resetCallingIdentity**. |
 
 **Error codes:**
 
@@ -471,7 +471,7 @@ try {
 static setCallingIdentity(identity: string): boolean
 ```
 
-Sets the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
+Sets the UID and PID to those of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 7
 

@@ -120,7 +120,7 @@ Creates a **MessageParcel** object. This method is a static method.
 
 | Type | Description |
 | --- | --- |
-| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | **MessageParcel** object created. |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Created **MessageParcel** object, which is used to encapsulate request and response data during IPC. |
 
 **Examples**
 
@@ -1566,7 +1566,7 @@ Reads the remote object from this **MessageParcel** object. You can use this met
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object read, which is used for IPC/RPC communication. |
 
 **Examples**
 
@@ -2517,7 +2517,7 @@ Writes a single character value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | **Char** value to write. |
+| val | number | Yes | **Char** value to write. The value range is [0, 65535], which corresponds to the Unicode character encoding range. Values outside this range may cause character encoding errors. |
 
 **Return value:**
 
@@ -2907,7 +2907,7 @@ Writes an interface token to this **MessageParcel** object. The remote object ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | string | Yes | Interface token to write. The length of the string must be less than 40960. |
+| token | string | Yes | Interface token of the string type. The length of the string must be less than 40960. |
 
 **Return value:**
 
@@ -2950,7 +2950,7 @@ Writes a long int value to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | Long int value to write. |
+| val | number | Yes | Long integer to write. |
 
 **Return value:**
 
@@ -3492,7 +3492,7 @@ Writes a string array to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
+| stringArray | string[] | Yes | String array to write. Each string element must be less than 40960 in length. |
 
 **Return value:**
 

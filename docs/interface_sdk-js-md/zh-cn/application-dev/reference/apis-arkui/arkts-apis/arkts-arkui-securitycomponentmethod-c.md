@@ -202,7 +202,7 @@ alignRules(alignRule: AlignRuleOption): T
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer]{@link./relative_container}时生效。该方法水平方向上以start和end分别替代上述[alignRules](#alignrules)的left和right，以便在RTL模式下能镜像显示，建议优先使用该方法。
+设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer](../arkts-components/arkts-arkui-relativecontainer-comp.md#relative_container)时生效。该方法水平方向上以start和end分别替代上述[alignRules](#alignrules)的left和right，以便在RTL模式下能镜像显示，建议优先使用该方法。
 
 **起始版本：** 15
 
@@ -481,7 +481,7 @@ enabled(respond: boolean): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Attribute of the security component. |
+| T | 安全控件的属性。 |
 
 ## fallbackLineSpacing
 
@@ -721,7 +721,7 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 当设置为TextHeightAdaptivePolicy.MAX_LINES_FIRST时，优先使用[maxLines](#maxlines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在[minFontSize](#minfontsize)和[maxFontSize](#maxfontsize)的范围内缩小字体以显示更多文本，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
 
-当设置为TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST时，优先使用[minFontSize](#minfontsize)属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和[maxFontSize](#maxfontsize)的范围内增大字体并使用最大可能的字体大小；如果使用minFontSize属性无法将文本布局在一行中，则尝试使用[maxLines]{@linkSecurityComponentMethod.maxLines}属性进行布局，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
+当设置为TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST时，优先使用[minFontSize](#minfontsize)属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和[maxFontSize](#maxfontsize)的范围内增大字体并使用最大可能的字体大小；如果使用minFontSize属性无法将文本布局在一行中，则尝试使用[maxLines](#maxlines)属性进行布局，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
 
 当设置为TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST时，优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在[minFontSize](#minfontsize)和[maxFontSize](#maxfontsize)的范围内缩小字体以满足布局约束。如果将字体大小缩小到minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行；如果设置了[maxLines](#maxlines)属性，布局后行数不超过maxLines值（可能存在横向截断）；如果未设置maxLines属性值，布局后的行数不限制。
 
@@ -925,7 +925,7 @@ maxFontSize(maxSize: number | string | Resource): T
 
 设置文本最大显示字号。
 
-- 配合[minFontSize](#minfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
+- 配合[minFontSize](#minfontsize)以及[maxLines](#maxlines)或布局  
 大小限制使用，可实现自适应字号，单独设置不生效。  
 - maxFontSize应大于minFontSize，若maxFontSize小于minFontSize，minFontSize将按maxFontSize处理。  
 - 当自适应字号生效时，设置的fontSize将不生效。  
@@ -971,7 +971,7 @@ maxLines(line: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | number &#124; [Resource](arkts-arkui-resource-t.md) | 是 | 文本的最大行数。<br>number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。**说明：** <br>设置的值小于1时，按默认值1000000处理。<br>**适用版本：** 18 - 19 |
+| line | number &#124; [Resource](arkts-arkui-resource-t.md) | 是 | 文本的最大行数。<br>number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。**说明：** <br>设置的值小于1时，按默认值1000000处理。<br>**适用版本：** 20 |
 
 **返回值：**
 
@@ -1017,7 +1017,7 @@ minFontSize(minSize: number | string | Resource): T
 
 设置文本最小显示字号。
 
-- 配合[maxFontSize](#maxfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
+- 配合[maxFontSize](#maxfontsize)以及[maxLines](#maxlines)或布局  
 大小限制使用，可实现自适应字号，单独设置不生效。  
 - minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理。  
 - minFontSize小于或等于0时，自适应字号不生效。  

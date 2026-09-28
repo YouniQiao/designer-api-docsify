@@ -34,7 +34,7 @@ A constructor used to create a **RemoteObject** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | string | Yes | Interface descriptor. The length of the string must be less than 40960. |
+| descriptor | string | Yes | Interface descriptor. Its length must be less than 40960. |
 
 **Examples**
 
@@ -206,7 +206,7 @@ Obtains the string of the interface descriptor.
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface token. |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | **IRemoteBroker** object bound to the specified interface descriptor. |
 
 **Error codes:**
 
@@ -258,7 +258,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | **IRemoteBroker** object. |
-| descriptor | string | Yes | **IRemoteBroker** object bound to the interface descriptor. The length of the descriptor must be less than 40960. |
+| descriptor | string | Yes | Descriptor used for binding with the **IRemoteBroker** object. Its length should be less than 40960. |
 
 **Error codes:**
 
@@ -314,10 +314,11 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 > **NOTE:** 
 > 
-> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and asynchronous message processing.
+> You are advised to override **onRemoteMessageRequest** preferentially, which can implement synchronous and
+> asynchronous message processing.
 > 
-> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+> If both **onRemoteRequest** and **onRemoteMessageRequest** are overridden, only **onRemoteMessageRequest**
+> takes effect.
 
 **Since:** 9
 
@@ -442,10 +443,11 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 > **NOTE:** 
 > 
-> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
+> You are advised to override the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
 > implement synchronous and asynchronous message processing.
-> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+> 
+> If both **onRemoteRequest** and **onRemoteMessageRequest** are overridden, only **onRemoteMessageRequest**
+> takes effect.
 
 **Since:** 23
 
@@ -461,7 +463,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that holds the parameters called by the client. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object to which the result is written. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
-| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | No | IPC context. |
+| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | No | IPC context. If this parameter is not specified, it defaults to **undefined**. Pass this parameter when you need to obtain information such as the caller's PID, UID, token ID, or device ID. You can obtain this information via **callingInfo.callerPid** and similar properties. If this parameter is not passed, IPC context information cannot be obtained directly, and you need to use other methods of **rpc.IPCSkeleton**, such as **getCallingPid** and **getCallingUid** |
 
 **Return value:**
 
@@ -567,7 +569,7 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If the asynchronous mode is set in **options**, the response result is returned immediately and **reply** is empty. The specific response needs to be obtained from the callback on the service side. If the synchronous mode is set in **options**, the response result is returned when **sendMessageRequest** returns, and **reply** contains the response content. This API returns the result asynchronously through a promise.
 
 **Since:** 9
 
@@ -586,7 +588,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Promise used to return a **requestResult** instance. |
+| Promise&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Promise used to return the response to the request. |
 
 **Error codes:**
 
@@ -654,7 +656,7 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. This API uses an asynchronous callback to return the result. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific response needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 9
 
@@ -668,7 +670,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | **MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Yes | Callback used to return the result. When the message is sent successfully, the data returned by the server can be read from **RequestResult**. |
 
 **Error codes:**
 
@@ -932,7 +934,7 @@ try {
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If the asynchronous mode is set in **options**, the API returns immediately and **reply** is empty. The specific response needs to be obtained from the callback on the service side. If the synchronous mode is set in **options**, the response is returned when **sendRequest** returns, and **reply** contains the response content.
 
 **Since:** 7
 
@@ -1006,7 +1008,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If the asynchronous mode is set in **options**, the response result is returned immediately and **reply** is empty. The specific response needs to be obtained from the callback on the service side. If the synchronous mode is set in **options**, the response result is returned when **sendRequest** returns, and **reply** contains the response content. This API returns the result asynchronously through a promise.
 
 **Since:** 8
 
@@ -1029,7 +1031,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return a **sendRequestResult** instance. |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return the response to the request. |
 
 **Examples**
 
@@ -1091,7 +1093,7 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. This API uses an asynchronous callback to return the result. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific response needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 

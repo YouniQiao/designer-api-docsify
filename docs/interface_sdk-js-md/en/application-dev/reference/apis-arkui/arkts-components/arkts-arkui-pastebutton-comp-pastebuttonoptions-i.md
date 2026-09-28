@@ -61,7 +61,7 @@ Icon style of the **PasteButton** component. Default value: No icon is displayed
 text?: PasteDescription
 ```
 
-Text on the **PasteButton** component. Default value: No text description is displayed. <br>If the icon is not transferred, the control is displayed in the default style.
+Text on the **PasteButton** component. Default value: No text description is displayed. <br>If neither **text** nor **icon** is provided, the component uses the default style.
 
 **Type:** [PasteDescription](arkts-arkui-pastebutton-comp-pastedescription-e.md)
 
